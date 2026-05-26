@@ -1,16 +1,16 @@
 <!--
-  GenAI Security Crosswalk
-  Source list : OWASP Top 10 for LLM Applications 2025 (LLM01–LLM10)
-  Framework   : MITRE ATLAS — Adversarial Threat Landscape for AI Systems
+  OWASP GenAI Crosswalk
+  Source list : OWASP Top 10 for LLM Applications 2025 (LLM01â€“LLM10)
+  Framework   : MITRE ATLAS â€” Adversarial Threat Landscape for AI Systems
   Version     : 2026-Q1
-  Maintained by: OWASP GenAI Data Security Initiative — https://genai.owasp.org
+  Maintained by: OWASP GenAI Data Security Initiative â€” https://genai.owasp.org
   License     : CC BY-SA 4.0
 -->
 
-# LLM Top 10 2025 × MITRE ATLAS
+# LLM Top 10 2025 Ã— MITRE ATLAS
 
 Mapping the [OWASP Top 10 for LLM Applications 2025](https://genai.owasp.org/llm-top-10/)
-to the [MITRE ATLAS](https://atlas.mitre.org) framework — the authoritative
+to the [MITRE ATLAS](https://atlas.mitre.org) framework â€” the authoritative
 knowledge base of adversary tactics, techniques, and procedures (TTPs)
 targeting AI and machine learning systems.
 
@@ -49,28 +49,28 @@ ATLAS organises adversarial AI techniques across a kill chain of tactics:
 
 | ID | Name | Severity | Primary ATLAS Techniques | Tier | Scope |
 |---|---|---|---|---|---|
-| LLM01 | Prompt Injection | Critical | AML.T0051.000, AML.T0051.001, AML.T0054 | Foundational–Advanced | Both |
-| LLM02 | Sensitive Information Disclosure | High | AML.T0021, AML.T0030, AML.T0024 | Foundational–Advanced | Both |
-| LLM03 | Supply Chain Vulnerabilities | High | AML.T0056, AML.T0048, AML.T0010 | Foundational–Hardening | Both |
-| LLM04 | Data and Model Poisoning | Critical | AML.T0032, AML.T0031, AML.T0027 | Hardening–Advanced | Both |
-| LLM05 | Insecure Output Handling | High | AML.T0037, AML.T0040 | Foundational–Hardening | Build |
-| LLM06 | Excessive Agency | High | AML.T0015, AML.T0068 | Foundational–Hardening | Build |
-| LLM07 | System Prompt Leakage | High | AML.T0041, AML.T0051.000 | Foundational–Hardening | Build |
-| LLM08 | Vector and Embedding Weaknesses | Medium | AML.T0063, AML.T0025 | Hardening–Advanced | Build |
-| LLM09 | Misinformation | Medium | AML.T0045, AML.T0047 | Foundational–Hardening | Both |
-| LLM10 | Unbounded Consumption | Medium | AML.T0029, AML.T0034 | Foundational–Hardening | Both |
+| LLM01 | Prompt Injection | Critical | AML.T0051.000, AML.T0051.001, AML.T0054 | Foundationalâ€“Advanced | Both |
+| LLM02 | Sensitive Information Disclosure | High | AML.T0021, AML.T0030, AML.T0024 | Foundationalâ€“Advanced | Both |
+| LLM03 | Supply Chain Vulnerabilities | High | AML.T0056, AML.T0048, AML.T0010 | Foundationalâ€“Hardening | Both |
+| LLM04 | Data and Model Poisoning | Critical | AML.T0032, AML.T0031, AML.T0027 | Hardeningâ€“Advanced | Both |
+| LLM05 | Insecure Output Handling | High | AML.T0037, AML.T0040 | Foundationalâ€“Hardening | Build |
+| LLM06 | Excessive Agency | High | AML.T0015, AML.T0068 | Foundationalâ€“Hardening | Build |
+| LLM07 | System Prompt Leakage | High | AML.T0041, AML.T0051.000 | Foundationalâ€“Hardening | Build |
+| LLM08 | Vector and Embedding Weaknesses | Medium | AML.T0063, AML.T0025 | Hardeningâ€“Advanced | Build |
+| LLM09 | Misinformation | Medium | AML.T0045, AML.T0047 | Foundationalâ€“Hardening | Both |
+| LLM10 | Unbounded Consumption | Medium | AML.T0029, AML.T0034 | Foundationalâ€“Hardening | Both |
 
 ---
 
 ## Audience tags
 
-- **Red teamer** — full file, primary reference for AI adversarial simulation
-- **Threat modeller** — full file, use ATLAS techniques as threat catalogue
-- **Security engineer** — LLM01, LLM02, LLM04, LLM07
-- **Developer** — LLM01, LLM05, LLM06, LLM07
-- **SOC analyst** — LLM01, LLM02, LLM04, LLM10
-- **ML / AI engineer** — LLM04, LLM08, LLM03
-- **OT engineer** — LLM01, LLM04, LLM10 (see ISA 62443 crosswalk for OT context)
+- **Red teamer** â€” full file, primary reference for AI adversarial simulation
+- **Threat modeller** â€” full file, use ATLAS techniques as threat catalogue
+- **Security engineer** â€” LLM01, LLM02, LLM04, LLM07
+- **Developer** â€” LLM01, LLM05, LLM06, LLM07
+- **SOC analyst** â€” LLM01, LLM02, LLM04, LLM10
+- **ML / AI engineer** â€” LLM04, LLM08, LLM03
+- **OT engineer** â€” LLM01, LLM04, LLM10 (see ISA 62443 crosswalk for OT context)
 
 ---
 
@@ -78,7 +78,7 @@ ATLAS organises adversarial AI techniques across a kill chain of tactics:
 
 ---
 
-### LLM01 — Prompt Injection
+### LLM01 â€” Prompt Injection
 
 **Severity:** Critical
 
@@ -89,11 +89,11 @@ user input field; indirect injection hides instructions in documents,
 emails, RAG content, or web pages the model processes.
 
 **Real-world references:**
-- ChatGPT plugin indirect injection (2023) — malicious web content
+- ChatGPT plugin indirect injection (2023) â€” malicious web content
   hijacked plugin actions
-- Samsung source code leak (2023) — employees fed proprietary code
+- Samsung source code leak (2023) â€” employees fed proprietary code
   to LLM, exfiltrated via model outputs
-- EchoLeak / Microsoft 365 Copilot (2025) — indirect injection via
+- EchoLeak / Microsoft 365 Copilot (2025) â€” indirect injection via
   email content caused silent data exfiltration
 
 #### MITRE ATLAS techniques
@@ -107,8 +107,8 @@ emails, RAG content, or web pages the model processes.
 #### Mitigations by tier
 
 **Foundational**
-- Treat all external content — documents, emails, web results, RAG
-  chunks — as untrusted input regardless of source
+- Treat all external content â€” documents, emails, web results, RAG
+  chunks â€” as untrusted input regardless of source
 - Implement input validation and prompt structure enforcement before
   content reaches the model
 - Separate system prompt context from user input context at the
@@ -123,7 +123,7 @@ emails, RAG content, or web pages the model processes.
   scenarios, run in CI/CD
 
 **Advanced**
-- Implement prompt integrity verification — cryptographically signed
+- Implement prompt integrity verification â€” cryptographically signed
   system prompts that cannot be overridden by user input
 - Deploy multi-layer defence: input filter + output monitor + action
   guardrail, independent of each other
@@ -142,23 +142,23 @@ emails, RAG content, or web pages the model processes.
 #### Cross-references
 - Agentic Top 10: ASI01 Agent Goal Hijack, ASI02 Tool Misuse
 - DSGAI 2026: DSGAI01 Sensitive Data Leakage, DSGAI15 Over-Broad Context Windows
-- Other frameworks: MITRE ATT&CK T1059 · STRIDE Tampering/Spoofing · CWE-20 · ASVS V5
+- Other frameworks: MITRE ATT&CK T1059 Â· STRIDE Tampering/Spoofing Â· CWE-20 Â· ASVS V5
 
 ---
 
-### LLM02 — Sensitive Information Disclosure
+### LLM02 â€” Sensitive Information Disclosure
 
 **Severity:** High
 
 LLMs inadvertently expose PII, financial data, proprietary source code,
-API keys, or confidential business information through their outputs —
+API keys, or confidential business information through their outputs â€”
 either from training data memorisation, over-permissive RAG retrieval,
 or improperly sanitised responses.
 
 **Real-world references:**
-- Samsung source code leak (2023) — proprietary code memorised and
+- Samsung source code leak (2023) â€” proprietary code memorised and
   surfaced in model outputs
-- Proof Pudding / CVE-2019-20634 — model inversion attack recovering
+- Proof Pudding / CVE-2019-20634 â€” model inversion attack recovering
   training data
 
 #### MITRE ATLAS techniques
@@ -176,14 +176,14 @@ or improperly sanitised responses.
   proprietary patterns before responses reach users
 - Apply differential privacy techniques during model training to
   limit memorisation of sensitive training data
-- Enforce access control on RAG data sources — users should only
+- Enforce access control on RAG data sources â€” users should only
   retrieve data they are authorised to see
 
 **Hardening**
 - Deploy data loss prevention (DLP) tooling on model output pipelines
-- Audit RAG retrieval scope regularly — over-permissive indexes are
+- Audit RAG retrieval scope regularly â€” over-permissive indexes are
   the most common source of disclosure incidents
-- Classify all training and retrieval data before ingestion — apply
+- Classify all training and retrieval data before ingestion â€” apply
   handling rules based on classification
 
 **Advanced**
@@ -206,23 +206,23 @@ or improperly sanitised responses.
 #### Cross-references
 - Agentic Top 10: ASI03 Identity & Privilege Abuse
 - DSGAI 2026: DSGAI01 Sensitive Data Leakage, DSGAI10 Synthetic Data Pitfalls, DSGAI18 Inference & Data Reconstruction
-- Other frameworks: ISO 27001 A.8.2 · NIST AI RMF MS-2.5 · CWE-200 · PCIDSS Req 3
+- Other frameworks: ISO 27001 A.8.2 Â· NIST AI RMF MS-2.5 Â· CWE-200 Â· PCIDSS Req 3
 
 ---
 
-### LLM03 — Supply Chain Vulnerabilities
+### LLM03 â€” Supply Chain Vulnerabilities
 
 **Severity:** High
 
 LLM applications depend on third-party model weights, fine-tuned
-adapters, training datasets, libraries, and plugins — any of which
+adapters, training datasets, libraries, and plugins â€” any of which
 can be compromised to introduce backdoors, biased behaviour, or
 malicious functionality before the model reaches production.
 
 **Real-world references:**
-- XZ Utils backdoor (2024) — illustrates how supply chain compromise
+- XZ Utils backdoor (2024) â€” illustrates how supply chain compromise
   in open-source components evades detection
-- Hugging Face malicious models — multiple instances of compromised
+- Hugging Face malicious models â€” multiple instances of compromised
   model weights uploaded to public repositories
 
 #### MITRE ATLAS techniques
@@ -240,20 +240,20 @@ malicious functionality before the model reaches production.
   model, adapter, dataset, and library in production
 - Verify cryptographic signatures of all downloaded model weights
   before deployment
-- Pin specific model versions — never pull latest in production without
+- Pin specific model versions â€” never pull latest in production without
   review
 
 **Hardening**
 - Scan all third-party model weights for known backdoor signatures
   before production promotion
-- Implement provenance verification for all training datasets — DBoM
+- Implement provenance verification for all training datasets â€” DBoM
   (Dataset Bill of Materials)
 - Conduct integrity checks on all dependencies at build time using
   automated tooling in CI/CD
 
 **Advanced**
 - Run sandboxed behavioural evaluation of new model versions before
-  production — test against your specific threat scenarios
+  production â€” test against your specific threat scenarios
 - Implement model watermarking to detect unauthorised modifications
 - Engage in responsible disclosure with model providers for supply
   chain vulnerability reporting
@@ -270,23 +270,23 @@ malicious functionality before the model reaches production.
 #### Cross-references
 - Agentic Top 10: ASI04 Agentic Supply Chain Vulnerabilities
 - DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning
-- Other frameworks: NIST SP 800-218A · BSIMM AM · CycloneDX ML SBOM · CWE-506
+- Other frameworks: NIST SP 800-218A Â· BSIMM AM Â· CycloneDX ML SBOM Â· CWE-506
 
 ---
 
-### LLM04 — Data and Model Poisoning
+### LLM04 â€” Data and Model Poisoning
 
 **Severity:** Critical
 
 Attackers inject malicious, misleading, or backdoor-triggering data
-into training datasets or fine-tuning pipelines — corrupting model
+into training datasets or fine-tuning pipelines â€” corrupting model
 behaviour in ways that are difficult to detect after training. Unlike
 prompt injection, the effect is baked into the model weights themselves.
 
 **Real-world references:**
 - Adversarial examples achieving 35% success rate in influencing model
   outputs even with defensive mechanisms (2024 research)
-- Nightshade (2023) — poison pixels in training images successfully
+- Nightshade (2023) â€” poison pixels in training images successfully
   corrupted image generation models
 
 #### MITRE ATLAS techniques
@@ -300,17 +300,17 @@ prompt injection, the effect is baked into the model weights themselves.
 #### Mitigations by tier
 
 **Foundational**
-- Validate and audit all training data sources before ingestion —
+- Validate and audit all training data sources before ingestion â€”
   apply source allowlisting for critical model training
 - Implement data provenance tracking from ingestion through training
-  to model version — full lineage
+  to model version â€” full lineage
 - Run anomaly detection on training datasets to identify unusual
   patterns or outliers before training begins
 
 **Hardening**
-- Apply adversarial training — include adversarial examples in
+- Apply adversarial training â€” include adversarial examples in
   training data to build model robustness
-- Implement multi-stage model validation post-training — test against
+- Implement multi-stage model validation post-training â€” test against
   known poisoning signatures before production
 - Use differential privacy during training to limit the influence of
   any single training example
@@ -320,7 +320,7 @@ prompt injection, the effect is baked into the model weights themselves.
   equivalent techniques before every production deployment
 - Implement certified robustness mechanisms for high-stakes model
   decisions
-- Maintain rollback capability — versioned model registry with ability
+- Maintain rollback capability â€” versioned model registry with ability
   to revert to a known-clean checkpoint
 
 #### Tools
@@ -335,16 +335,16 @@ prompt injection, the effect is baked into the model weights themselves.
 #### Cross-references
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning, DSGAI21 Disinformation via Data Poisoning
-- Other frameworks: NIST AI RMF MS-2.5 · ISO 42001 6.1.2 · CWE-693
+- Other frameworks: NIST AI RMF MS-2.5 Â· ISO 42001 6.1.2 Â· CWE-693
 
 ---
 
-### LLM05 — Insecure Output Handling
+### LLM05 â€” Insecure Output Handling
 
 **Severity:** High
 
-LLM-generated output is passed to downstream components — browsers,
-interpreters, APIs, databases — without sufficient validation or
+LLM-generated output is passed to downstream components â€” browsers,
+interpreters, APIs, databases â€” without sufficient validation or
 sanitisation, enabling XSS, command injection, SSRF, or SQL injection
 via AI-generated content.
 
@@ -364,7 +364,7 @@ via AI-generated content.
 #### Mitigations by tier
 
 **Foundational**
-- Treat all LLM output as untrusted input to downstream systems —
+- Treat all LLM output as untrusted input to downstream systems â€”
   apply the same validation you would to user-supplied data
 - Encode and sanitise all LLM output before rendering in browsers
   or passing to interpreters
@@ -372,11 +372,11 @@ via AI-generated content.
   commands, or eval functions
 
 **Hardening**
-- Implement output schema validation — define and enforce the
+- Implement output schema validation â€” define and enforce the
   structure of acceptable model responses
 - Deploy content security policies (CSP) to limit damage from
   any XSS that reaches the browser
-- Apply allowlisting on LLM-generated code before execution —
+- Apply allowlisting on LLM-generated code before execution â€”
   reject anything outside the permitted syntax
 
 **Advanced**
@@ -397,16 +397,16 @@ via AI-generated content.
 #### Cross-references
 - Agentic Top 10: ASI02 Tool Misuse, ASI05 Unexpected Code Execution
 - DSGAI 2026: DSGAI05 Data Integrity & Validation Failures, DSGAI12 Unsafe NL Data Gateways
-- Other frameworks: OWASP ASVS V5 · CWE-79 · CWE-89 · STRIDE Tampering
+- Other frameworks: OWASP ASVS V5 Â· CWE-79 Â· CWE-89 Â· STRIDE Tampering
 
 ---
 
-### LLM06 — Excessive Agency
+### LLM06 â€” Excessive Agency
 
 **Severity:** High
 
-LLMs granted too much autonomy — access to tools, APIs, filesystems,
-or databases without adequate constraints — can execute unintended or
+LLMs granted too much autonomy â€” access to tools, APIs, filesystems,
+or databases without adequate constraints â€” can execute unintended or
 harmful actions when manipulated through prompt injection or
 misaligned goal-following.
 
@@ -425,25 +425,25 @@ misaligned goal-following.
 #### Mitigations by tier
 
 **Foundational**
-- Apply principle of least agency — grant the minimum tool access
+- Apply principle of least agency â€” grant the minimum tool access
   and permissions required for the defined task
 - Require explicit human confirmation before any irreversible action:
   send, delete, publish, execute
 - Define and enforce a tool permission manifest for every LLM
-  deployment — reviewed before release
+  deployment â€” reviewed before release
 
 **Hardening**
-- Implement action logging with anomaly detection — flag tool
+- Implement action logging with anomaly detection â€” flag tool
   invocations that deviate from expected patterns
-- Scope API credentials per LLM task — no shared high-privilege
+- Scope API credentials per LLM task â€” no shared high-privilege
   service accounts across multiple LLM use cases
-- Deploy action guardrails as an independent layer from the model —
+- Deploy action guardrails as an independent layer from the model â€”
   not just model-level system prompt instructions
 
 **Advanced**
-- Formally specify permitted action graphs for each LLM agent — only
+- Formally specify permitted action graphs for each LLM agent â€” only
   pre-approved action sequences can execute
-- Implement runtime intent verification before high-impact actions —
+- Implement runtime intent verification before high-impact actions â€”
   model must provide a verifiable justification
 - Conduct red team exercises specifically targeting excessive agency
   through indirect prompt injection
@@ -459,22 +459,22 @@ misaligned goal-following.
 #### Cross-references
 - Agentic Top 10: ASI01 Agent Goal Hijack, ASI02 Tool Misuse, ASI10 Rogue Agents
 - DSGAI 2026: DSGAI06 Tool Plugin & Agent Data Exchange, DSGAI16 Endpoint & Browser Overreach
-- Other frameworks: AIUC-1 B006 · ISA/IEC 62443 SR 2.1 (OT) · STRIDE Elevation of Privilege
+- Other frameworks: AIUC-1 B006 Â· ISA/IEC 62443 SR 2.1 (OT) Â· STRIDE Elevation of Privilege
 
 ---
 
-### LLM07 — System Prompt Leakage
+### LLM07 â€” System Prompt Leakage
 
 **Severity:** High
 
 System prompts containing internal instructions, business logic,
 security controls, or sensitive configuration are extracted by
 adversaries through repeated querying, jailbreaking, or indirect
-injection — enabling targeted attacks against the model's specific
+injection â€” enabling targeted attacks against the model's specific
 defences.
 
 **Real-world references:**
-- Bing Chat / Sydney (2023) — full system prompt extracted through
+- Bing Chat / Sydney (2023) â€” full system prompt extracted through
   persistent adversarial questioning
 - Multiple enterprise LLM deployments with proprietary business
   logic leaked via prompt extraction
@@ -490,26 +490,26 @@ defences.
 
 **Foundational**
 - Never embed secrets, credentials, or sensitive data directly in
-  system prompts — use environment variables and secret managers
+  system prompts â€” use environment variables and secret managers
 - Instruct models to refuse requests to repeat or summarise their
-  system prompt — enforce at the guardrail layer, not just prompt
-- Minimise information density in system prompts — only what is
+  system prompt â€” enforce at the guardrail layer, not just prompt
+- Minimise information density in system prompts â€” only what is
   strictly necessary for the task
 
 **Hardening**
-- Implement prompt confidentiality monitoring — detect response
+- Implement prompt confidentiality monitoring â€” detect response
   patterns that indicate system prompt leakage
 - Conduct prompt extraction red team exercises against your specific
   deployment before go-live
-- Rotate system prompt versions periodically — limits the shelf life
+- Rotate system prompt versions periodically â€” limits the shelf life
   of extracted prompts
 
 **Advanced**
-- Implement system prompt tokenisation — replace sensitive phrases
+- Implement system prompt tokenisation â€” replace sensitive phrases
   with opaque tokens resolved at runtime
 - Deploy output classifiers trained to detect and block responses
   that contain system prompt content
-- Treat system prompt design as a security artefact — version
+- Treat system prompt design as a security artefact â€” version
   controlled, access controlled, reviewed on change
 
 #### Tools
@@ -522,11 +522,11 @@ defences.
 #### Cross-references
 - Agentic Top 10: ASI01 Agent Goal Hijack
 - DSGAI 2026: DSGAI15 Over-Broad Context Windows
-- Other frameworks: AIUC-1 B003 · CWE-200 · OWASP ASVS V14
+- Other frameworks: AIUC-1 B003 Â· CWE-200 Â· OWASP ASVS V14
 
 ---
 
-### LLM08 — Vector and Embedding Weaknesses
+### LLM08 â€” Vector and Embedding Weaknesses
 
 **Severity:** Medium
 
@@ -545,18 +545,18 @@ to return attacker-controlled content.
 #### Mitigations by tier
 
 **Foundational**
-- Implement access controls on vector store read and write operations —
+- Implement access controls on vector store read and write operations â€”
   not all users should be able to query all namespaces
-- Validate and sanitise all content before generating embeddings —
+- Validate and sanitise all content before generating embeddings â€”
   garbage in, garbage out applies to vector stores too
 - Monitor vector store ingestion for anomalous content patterns
 
 **Hardening**
-- Encrypt embedding vectors at rest and in transit — embeddings can
+- Encrypt embedding vectors at rest and in transit â€” embeddings can
   leak information about source content through inversion
-- Implement embedding anomaly detection — flag vectors that are
+- Implement embedding anomaly detection â€” flag vectors that are
   statistically outlying from the corpus
-- Apply trust-tiered retrieval — weight results by source provenance,
+- Apply trust-tiered retrieval â€” weight results by source provenance,
   not only semantic similarity
 
 **Advanced**
@@ -578,17 +578,17 @@ to return attacker-controlled content.
 #### Cross-references
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - DSGAI 2026: DSGAI13 Vector Store Platform Security, DSGAI18 Inference & Data Reconstruction
-- Other frameworks: NIST AI RMF MS-2.5 · AIUC-1 A · CWE-327
+- Other frameworks: NIST AI RMF MS-2.5 Â· AIUC-1 A Â· CWE-327
 
 ---
 
-### LLM09 — Misinformation
+### LLM09 â€” Misinformation
 
 **Severity:** Medium
 
 LLMs generate plausible but factually incorrect, misleading, or
 hallucinated content that users, downstream systems, or automated
-pipelines act upon — causing business decisions based on false
+pipelines act upon â€” causing business decisions based on false
 information, erosion of trust, or reputational damage.
 
 #### MITRE ATLAS techniques
@@ -603,17 +603,17 @@ information, erosion of trust, or reputational damage.
 **Foundational**
 - Implement RAG (Retrieval-Augmented Generation) to ground responses
   in verified, up-to-date source material
-- Display source citations alongside model responses — enable users
+- Display source citations alongside model responses â€” enable users
   to verify claims independently
-- Set clear user expectations about model limitations — especially
+- Set clear user expectations about model limitations â€” especially
   in high-stakes domains (medical, legal, financial)
 
 **Hardening**
-- Deploy confidence scoring on model outputs — flag low-confidence
+- Deploy confidence scoring on model outputs â€” flag low-confidence
   responses for human review before action
 - Implement cross-verification against authoritative sources for
   responses in regulated domains
-- Monitor for hallucination patterns in production — track fact
+- Monitor for hallucination patterns in production â€” track fact
   accuracy metrics over time
 
 **Advanced**
@@ -622,7 +622,7 @@ information, erosion of trust, or reputational damage.
 - Implement RLHF (Reinforcement Learning from Human Feedback) cycles
   to reduce hallucination in your specific domain
 - Deploy adversarial probing to identify topics where your model
-  hallucinates most frequently — guard those paths
+  hallucinates most frequently â€” guard those paths
 
 #### Tools
 
@@ -635,16 +635,16 @@ information, erosion of trust, or reputational damage.
 #### Cross-references
 - Agentic Top 10: ASI09 Human-Agent Trust Exploitation
 - DSGAI 2026: DSGAI21 Disinformation & Integrity Attacks via Data Poisoning
-- Other frameworks: EU AI Act Art. 13 · AIUC-1 F · ENISA AI Threat Landscape
+- Other frameworks: EU AI Act Art. 13 Â· AIUC-1 F Â· ENISA AI Threat Landscape
 
 ---
 
-### LLM10 — Unbounded Consumption
+### LLM10 â€” Unbounded Consumption
 
 **Severity:** Medium
 
-Uncontrolled resource consumption — CPU, memory, API tokens, network
-— caused by adversarial inputs designed to trigger expensive model
+Uncontrolled resource consumption â€” CPU, memory, API tokens, network
+â€” caused by adversarial inputs designed to trigger expensive model
 computations, recursive processing, or excessive API calls, resulting
 in denial of service or runaway cost.
 
@@ -666,20 +666,20 @@ in denial of service or runaway cost.
 **Foundational**
 - Implement rate limiting per user, session, and API key at the
   application layer before requests reach the model
-- Set hard token limits on input and output per request — reject
+- Set hard token limits on input and output per request â€” reject
   requests that exceed thresholds
 - Monitor API cost and token usage in real time with automated
   alerting on anomalous spikes
 
 **Hardening**
-- Implement request queuing and backpressure — prevent sudden surges
+- Implement request queuing and backpressure â€” prevent sudden surges
   from overwhelming backend inference capacity
-- Apply input complexity scoring — flag or throttle requests that
+- Apply input complexity scoring â€” flag or throttle requests that
   appear designed to maximise compute cost
 - Set per-tenant cost budgets with automatic suspension on breach
 
 **Advanced**
-- Deploy sponge example detection — identify inputs statistically
+- Deploy sponge example detection â€” identify inputs statistically
   designed to maximise token consumption
 - Implement adaptive rate limiting that adjusts thresholds based on
   system load in real time
@@ -697,7 +697,7 @@ in denial of service or runaway cost.
 #### Cross-references
 - Agentic Top 10: ASI08 Cascading Agent Failures
 - DSGAI 2026: DSGAI17 Data Availability & Resilience Failures
-- Other frameworks: CWE-400 · ISA/IEC 62443 SR 7.1 (OT) · NIST SP 800-82 (OT) · AIUC-1 D
+- Other frameworks: CWE-400 Â· ISA/IEC 62443 SR 7.1 (OT) Â· NIST SP 800-82 (OT) Â· AIUC-1 D
 
 ---
 
@@ -705,10 +705,10 @@ in denial of service or runaway cost.
 
 | Phase | LLM entries | Rationale |
 |---|---|---|
-| 1 — Do now | LLM01, LLM06, LLM07 | Highest exploitability, most active in the wild |
-| 2 — This sprint | LLM02, LLM05 | Data exposure and output handling close the most common breach paths |
-| 3 — This quarter | LLM03, LLM04 | Supply chain and poisoning require pipeline-level changes |
-| 4 — Ongoing | LLM08, LLM09, LLM10 | Defence-in-depth, monitoring, and resilience hardening |
+| 1 â€” Do now | LLM01, LLM06, LLM07 | Highest exploitability, most active in the wild |
+| 2 â€” This sprint | LLM02, LLM05 | Data exposure and output handling close the most common breach paths |
+| 3 â€” This quarter | LLM03, LLM04 | Supply chain and poisoning require pipeline-level changes |
+| 4 â€” Ongoing | LLM08, LLM09, LLM10 | Defence-in-depth, monitoring, and resilience hardening |
 
 ---
 
@@ -738,9 +738,9 @@ to visualise coverage across the LLM Top 10.
 
 | Date | Version | Change | Author |
 |---|---|---|---|
-| 2026-03-24 | 2026-Q1 | Initial mapping — LLM01–LLM10 full entries | OWASP GenAI Data Security Initiative |
+| 2026-03-24 | 2026-Q1 | Initial mapping â€” LLM01â€“LLM10 full entries | OWASP GenAI Data Security Initiative |
 
 ---
 
-*Part of the [GenAI Security Crosswalk](https://github.com/emmanuelgjr/GenAI-Security-Crosswalk) —
+*Part of the [OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk) â€”
 maintained by the [OWASP GenAI Data Security Initiative](https://genai.owasp.org)*

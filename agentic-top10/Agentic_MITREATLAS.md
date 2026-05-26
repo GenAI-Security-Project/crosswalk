@@ -1,21 +1,21 @@
 <!--
-  GenAI Security Crosswalk
-  Source list : OWASP Top 10 for Agentic Applications 2026 (ASI01–ASI10)
-  Framework   : MITRE ATLAS — Adversarial Threat Landscape for AI Systems
+  OWASP GenAI Crosswalk
+  Source list : OWASP Top 10 for Agentic Applications 2026 (ASI01â€“ASI10)
+  Framework   : MITRE ATLAS â€” Adversarial Threat Landscape for AI Systems
   Version     : 2026-Q1
-  Maintained by: OWASP GenAI Data Security Initiative — https://genai.owasp.org
+  Maintained by: OWASP GenAI Data Security Initiative â€” https://genai.owasp.org
   License     : CC BY-SA 4.0
 -->
 
-# Agentic Top 10 2026 × MITRE ATLAS
+# Agentic Top 10 2026 Ã— MITRE ATLAS
 
 Mapping the [OWASP Top 10 for Agentic Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
-to [MITRE ATLAS](https://atlas.mitre.org) — the authoritative adversarial
+to [MITRE ATLAS](https://atlas.mitre.org) â€” the authoritative adversarial
 AI threat knowledge base.
 
 Agentic systems dramatically expand the ATLAS threat surface. Where LLM
 attacks target a single inference step, agentic attacks exploit autonomy,
-memory persistence, tool access, and multi-agent orchestration — turning
+memory persistence, tool access, and multi-agent orchestration â€” turning
 ATLAS techniques into multi-stage attack chains with compounding blast
 radius. This mapping explicitly notes where agentic context amplifies
 the severity of a technique beyond its baseline LLM rating.
@@ -26,27 +26,27 @@ the severity of a technique beyond its baseline LLM rating.
 
 | ID | Name | Severity | Primary ATLAS Techniques | Agentic amplifier | Tier |
 |---|---|---|---|---|---|
-| ASI01 | Agent Goal Hijack | Critical | AML.T0051.000, AML.T0051.001, AML.T0054 | Autonomy turns single injection into multi-step attack chain | Foundational–Advanced |
-| ASI02 | Tool Misuse & Exploitation | Critical | AML.T0037, AML.T0015, AML.T0068 | Tool access converts prompt manipulation into real-world action | Foundational–Advanced |
-| ASI03 | Identity & Privilege Abuse | Critical | AML.T0022, AML.T0016, AML.T0024 | Cached credentials give attacker persistent access beyond session | Foundational–Advanced |
-| ASI04 | Agentic Supply Chain | High | AML.T0056, AML.T0048, AML.T0010 | Runtime dynamic loading means poisoned components affect all consumers | Hardening–Advanced |
-| ASI05 | Unexpected Code Execution | Critical | AML.T0040, AML.T0054, AML.T0037 | Code generation + execution capability creates RCE gateway | Foundational–Advanced |
-| ASI06 | Memory & Context Poisoning | High | AML.T0032, AML.T0063, AML.T0020 | Persistence across sessions amplifies impact of single injection | Hardening–Advanced |
-| ASI07 | Insecure Inter-Agent Comms | High | AML.T0043, AML.T0022, AML.T0016 | A2A spoofing misdirects entire agent clusters | Hardening–Advanced |
-| ASI08 | Cascading Agent Failures | High | AML.T0029, AML.T0034, AML.T0057 | Single fault fans out across all downstream agents | Foundational–Advanced |
-| ASI09 | Human-Agent Trust Exploitation | Medium | AML.T0045, AML.T0047, AML.T0049 | Agent fluency makes manipulation invisible to audit logs | Foundational–Hardening |
-| ASI10 | Rogue Agents | Critical | AML.T0054, AML.T0015, AML.T0057 | Compliant surface masks persistent hidden goal pursuit | Hardening–Advanced |
+| ASI01 | Agent Goal Hijack | Critical | AML.T0051.000, AML.T0051.001, AML.T0054 | Autonomy turns single injection into multi-step attack chain | Foundationalâ€“Advanced |
+| ASI02 | Tool Misuse & Exploitation | Critical | AML.T0037, AML.T0015, AML.T0068 | Tool access converts prompt manipulation into real-world action | Foundationalâ€“Advanced |
+| ASI03 | Identity & Privilege Abuse | Critical | AML.T0022, AML.T0016, AML.T0024 | Cached credentials give attacker persistent access beyond session | Foundationalâ€“Advanced |
+| ASI04 | Agentic Supply Chain | High | AML.T0056, AML.T0048, AML.T0010 | Runtime dynamic loading means poisoned components affect all consumers | Hardeningâ€“Advanced |
+| ASI05 | Unexpected Code Execution | Critical | AML.T0040, AML.T0054, AML.T0037 | Code generation + execution capability creates RCE gateway | Foundationalâ€“Advanced |
+| ASI06 | Memory & Context Poisoning | High | AML.T0032, AML.T0063, AML.T0020 | Persistence across sessions amplifies impact of single injection | Hardeningâ€“Advanced |
+| ASI07 | Insecure Inter-Agent Comms | High | AML.T0043, AML.T0022, AML.T0016 | A2A spoofing misdirects entire agent clusters | Hardeningâ€“Advanced |
+| ASI08 | Cascading Agent Failures | High | AML.T0029, AML.T0034, AML.T0057 | Single fault fans out across all downstream agents | Foundationalâ€“Advanced |
+| ASI09 | Human-Agent Trust Exploitation | Medium | AML.T0045, AML.T0047, AML.T0049 | Agent fluency makes manipulation invisible to audit logs | Foundationalâ€“Hardening |
+| ASI10 | Rogue Agents | Critical | AML.T0054, AML.T0015, AML.T0057 | Compliant surface masks persistent hidden goal pursuit | Hardeningâ€“Advanced |
 
 ---
 
 ## Audience tags
 
-- **Red teamer** — full file, primary reference for agentic AI adversarial simulation
-- **Threat modeller** — full file, map ATLAS techniques to your agent architecture
-- **Security engineer** — ASI01, ASI02, ASI03, ASI05
-- **SOC analyst** — ASI01, ASI03, ASI08, ASI10
-- **ML / AI engineer** — ASI04, ASI06, ASI07
-- **OT engineer** — ASI02, ASI08 with ISA/IEC 62443 and NIST SP 800-82 crosswalks
+- **Red teamer** â€” full file, primary reference for agentic AI adversarial simulation
+- **Threat modeller** â€” full file, map ATLAS techniques to your agent architecture
+- **Security engineer** â€” ASI01, ASI02, ASI03, ASI05
+- **SOC analyst** â€” ASI01, ASI03, ASI08, ASI10
+- **ML / AI engineer** â€” ASI04, ASI06, ASI07
+- **OT engineer** â€” ASI02, ASI08 with ISA/IEC 62443 and NIST SP 800-82 crosswalks
 
 ---
 
@@ -54,20 +54,20 @@ the severity of a technique beyond its baseline LLM rating.
 
 ---
 
-### ASI01 — Agent Goal Hijack
+### ASI01 â€” Agent Goal Hijack
 
 **Severity:** Critical | **Agentic amplifier:** +2 steps above baseline LLM prompt injection
 
 An attacker redirects the agent's objectives or decision logic through
 direct or indirect instruction injection. In an agentic context the
-impact exceeds a single bad response — the hijacked agent autonomously
+impact exceeds a single bad response â€” the hijacked agent autonomously
 executes multi-step attack chains across tools, APIs, and downstream
 agents before any human can intervene.
 
 **Real-world references:**
-- EchoLeak (2025) — indirect injection via email content turned
+- EchoLeak (2025) â€” indirect injection via email content turned
   Microsoft 365 Copilot into a silent multi-step data exfiltration engine
-- Bing Chat / Sydney (2023) — persistent adversarial prompting achieved
+- Bing Chat / Sydney (2023) â€” persistent adversarial prompting achieved
   full goal redirection across extended sessions
 
 #### MITRE ATLAS techniques
@@ -82,23 +82,23 @@ agents before any human can intervene.
 
 **Foundational**
 - Treat all external content processed by the agent as untrusted
-  regardless of source — documents, emails, web results, tool outputs
+  regardless of source â€” documents, emails, web results, tool outputs
 - Implement architectural separation between system goal definition
-  and external content processing — goals cannot be overridden by content
+  and external content processing â€” goals cannot be overridden by content
 - Deploy input filtering on all channels feeding agent context windows
 
 **Hardening**
 - Require human approval before the agent changes its stated goal
   or executes any action triggered by externally sourced content
-- Version-control agent goals and system prompts — alert on any
+- Version-control agent goals and system prompts â€” alert on any
   runtime deviation from the committed specification
 - Maintain adversarial test suite covering indirect injection via
   every content channel your agent processes
 
 **Advanced**
-- Cryptographically sign agent goal specifications — runtime goal
+- Cryptographically sign agent goal specifications â€” runtime goal
   state must match the signed original or execution halts
-- Implement intent verification layer — agent produces an auditable
+- Implement intent verification layer â€” agent produces an auditable
   justification before each tool invocation, verified against goal spec
 - Red team quarterly with novel indirect injection scenarios targeting
   your specific RAG sources, email channels, and tool descriptor paths
@@ -114,25 +114,25 @@ agents before any human can intervene.
 #### Cross-references
 - LLM Top 10: LLM01 Prompt Injection, LLM06 Excessive Agency
 - DSGAI 2026: DSGAI01 Sensitive Data Leakage, DSGAI15 Over-Broad Context Windows
-- Other frameworks: AIUC-1 B001/B005/B006 · STRIDE Tampering/Spoofing · CWE-20
+- Other frameworks: AIUC-1 B001/B005/B006 Â· STRIDE Tampering/Spoofing Â· CWE-20
 
 ---
 
-### ASI02 — Tool Misuse & Exploitation
+### ASI02 â€” Tool Misuse & Exploitation
 
-**Severity:** Critical | **Agentic amplifier:** +2 steps — prompt manipulation becomes real-world action
+**Severity:** Critical | **Agentic amplifier:** +2 steps â€” prompt manipulation becomes real-world action
 
-Agents misuse legitimate tools — APIs, databases, filesystems, shell
-commands — due to prompt manipulation, misalignment, or unsafe
+Agents misuse legitimate tools â€” APIs, databases, filesystems, shell
+commands â€” due to prompt manipulation, misalignment, or unsafe
 delegation. The danger is not the manipulation itself but what the
 tool does in response: delete, send, execute, publish.
 
 **Real-world references:**
-- Amazon Q (2025) — legitimate developer tools bent into destructive
+- Amazon Q (2025) â€” legitimate developer tools bent into destructive
   outputs through manipulated agent inputs
-- Postmark MCP impersonation (2025) — malicious MCP server BCC'd every
+- Postmark MCP impersonation (2025) â€” malicious MCP server BCC'd every
   agent-sent email to attacker via poisoned tool descriptor
-- Claude Desktop RCE (2025) — unrestricted AppleScript execution in
+- Claude Desktop RCE (2025) â€” unrestricted AppleScript execution in
   connectors allowed command injection via web search content
 
 #### MITRE ATLAS techniques
@@ -146,26 +146,26 @@ tool does in response: delete, send, execute, publish.
 #### Mitigations by tier
 
 **Foundational**
-- Apply least agency per tool — define the narrowest permission set
+- Apply least agency per tool â€” define the narrowest permission set
   each tool requires and enforce it at the orchestration layer
-- Validate all tool descriptors before agent loading — poisoned MCP
+- Validate all tool descriptors before agent loading â€” poisoned MCP
   descriptors are an active attack vector
-- Block toxic tool combinations at the orchestration layer — database
+- Block toxic tool combinations at the orchestration layer â€” database
   read + external network write should never coexist in one agent
 
 **Hardening**
 - Require explicit user confirmation for high-risk tool invocations:
   delete, send, publish, execute, payment
-- Log all tool invocations with full parameter capture — anomaly
+- Log all tool invocations with full parameter capture â€” anomaly
   detection on invocation patterns
-- Sandbox code execution tools — no host filesystem or network access
+- Sandbox code execution tools â€” no host filesystem or network access
   by default, explicit allowlist required
 
 **Advanced**
 - Automated tool-chain analysis pre-deployment to identify dangerous
   permission combinations before they reach production
 - Maintain signed, versioned inventory of all approved MCP servers
-  — agents cannot load unregistered tools at runtime
+  â€” agents cannot load unregistered tools at runtime
 - Runtime kill-switch per tool class triggered automatically on
   anomaly detection
 
@@ -180,16 +180,16 @@ tool does in response: delete, send, execute, publish.
 #### Cross-references
 - LLM Top 10: LLM05 Insecure Output Handling, LLM06 Excessive Agency
 - DSGAI 2026: DSGAI06 Tool Plugin & Agent Data Exchange, DSGAI12 Unsafe NL Data Gateways
-- Other frameworks: AIUC-1 B006/B007 · ISA/IEC 62443 SR 2.1 (OT) · CWE-94
+- Other frameworks: AIUC-1 B006/B007 Â· ISA/IEC 62443 SR 2.1 (OT) Â· CWE-94
 
 ---
 
-### ASI03 — Identity & Privilege Abuse
+### ASI03 â€” Identity & Privilege Abuse
 
-**Severity:** Critical | **Agentic amplifier:** +1 step — cached credentials outlast session
+**Severity:** Critical | **Agentic amplifier:** +1 step â€” cached credentials outlast session
 
-Agents inherit human or system credentials — session tokens, API keys,
-SSH keys, delegated permissions — and attackers exploit weak privilege
+Agents inherit human or system credentials â€” session tokens, API keys,
+SSH keys, delegated permissions â€” and attackers exploit weak privilege
 boundaries to reuse those credentials beyond their intended scope,
 enabling lateral movement and silent escalation that persists after
 the original session ends.
@@ -211,23 +211,23 @@ the original session ends.
 #### Mitigations by tier
 
 **Foundational**
-- Issue short-lived, task-scoped credentials per agent invocation —
+- Issue short-lived, task-scoped credentials per agent invocation â€”
   never long-lived tokens shared across tasks or sessions
-- Agent maximum privilege equals the authorising user's privilege —
+- Agent maximum privilege equals the authorising user's privilege â€”
   no escalation permitted under any condition
-- Store no credentials in agent memory or context beyond task lifetime —
+- Store no credentials in agent memory or context beyond task lifetime â€”
   purge on task completion
 
 **Hardening**
-- Full audit logging on all agent identity operations — token issuance,
+- Full audit logging on all agent identity operations â€” token issuance,
   use, expiry, and any anomalous access pattern
-- Zero-trust re-validation on every agent action — no ambient authority
+- Zero-trust re-validation on every agent action â€” no ambient authority
   from prior authentication
-- Confused deputy protections — agents cannot act on behalf of other
+- Confused deputy protections â€” agents cannot act on behalf of other
   agents without explicit, scoped, time-limited delegation
 
 **Advanced**
-- Ephemeral identity architecture — agent identity dynamically assigned
+- Ephemeral identity architecture â€” agent identity dynamically assigned
   per task, cryptographically bound, non-reusable
 - Continuous NHI (Non-Human Identity) monitoring for anomalous token
   usage patterns across all agent sessions
@@ -246,25 +246,25 @@ the original session ends.
 #### Cross-references
 - LLM Top 10: LLM06 Excessive Agency
 - DSGAI 2026: DSGAI02 Agent Identity & Credential Exposure
-- Other frameworks: OWASP NHI Top 10 · AIUC-1 A/B007/B008 · ISA/IEC 62443 SR 1.1 (OT)
+- Other frameworks: OWASP NHI Top 10 Â· AIUC-1 A/B007/B008 Â· ISA/IEC 62443 SR 1.1 (OT)
 
 ---
 
-### ASI04 — Agentic Supply Chain Vulnerabilities
+### ASI04 â€” Agentic Supply Chain Vulnerabilities
 
-**Severity:** High | **Agentic amplifier:** +1 step — runtime dynamic loading affects all consumers
+**Severity:** High | **Agentic amplifier:** +1 step â€” runtime dynamic loading affects all consumers
 
 Malicious or compromised tools, MCP servers, prompt templates, model
 files, or agent personas introduced into the runtime supply chain alter
-agent behaviour across every consumer — often fetched dynamically at
+agent behaviour across every consumer â€” often fetched dynamically at
 runtime with no static inventory and no signature verification.
 
 **Real-world references:**
-- GitHub MCP exploit (2025) — compromised MCP server in the wild
+- GitHub MCP exploit (2025) â€” compromised MCP server in the wild
   altered agent behaviour across all connected agents
-- Postmark MCP (2025) — first malicious MCP in the wild, discovered
+- Postmark MCP (2025) â€” first malicious MCP in the wild, discovered
   on npm, impersonated legitimate email service
-- AI agents autonomously installing hallucinated packages — active
+- AI agents autonomously installing hallucinated packages â€” active
   documented class of supply chain attacks
 
 #### MITRE ATLAS techniques
@@ -280,13 +280,13 @@ runtime with no static inventory and no signature verification.
 **Foundational**
 - Maintain cryptographically signed inventory of all MCP servers,
   tools, plugins, and model versions used in production
-- Verify signatures of all supply chain components before loading —
+- Verify signatures of all supply chain components before loading â€”
   reject unsigned or unrecognised components
-- Pin tool and MCP server versions in production — no dynamic
+- Pin tool and MCP server versions in production â€” no dynamic
   latest-version resolution
 
 **Hardening**
-- MCP server provenance verification before any agent connection —
+- MCP server provenance verification before any agent connection â€”
   validate identity and integrity of the server
 - Scan all prompt templates and tool descriptors for hidden
   instructions before deployment
@@ -295,10 +295,10 @@ runtime with no static inventory and no signature verification.
 
 **Advanced**
 - Sandboxed evaluation environment for all new tools and MCP servers
-  before production promotion — behavioural testing against your threat model
+  before production promotion â€” behavioural testing against your threat model
 - Dataset Bill of Materials (DBoM) for all training and retrieval data
   feeding agent knowledge bases
-- Automated runtime component integrity verification — continuous
+- Automated runtime component integrity verification â€” continuous
   hash checking of loaded components
 
 #### Tools
@@ -312,13 +312,13 @@ runtime with no static inventory and no signature verification.
 #### Cross-references
 - LLM Top 10: LLM03 Supply Chain Vulnerabilities
 - DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning
-- Other frameworks: NIST SP 800-218A · AIUC-1 B001/B003/B008 · BSIMM AM
+- Other frameworks: NIST SP 800-218A Â· AIUC-1 B001/B003/B008 Â· BSIMM AM
 
 ---
 
-### ASI05 — Unexpected Code Execution
+### ASI05 â€” Unexpected Code Execution
 
-**Severity:** Critical | **Agentic amplifier:** +2 steps — code generation + execution = RCE gateway
+**Severity:** Critical | **Agentic amplifier:** +2 steps â€” code generation + execution = RCE gateway
 
 Agents that generate and execute code for workflow automation, scripting,
 or data processing become remote code execution gateways when crafted
@@ -326,9 +326,9 @@ prompts or poisoned inputs cause them to run attacker-controlled logic
 with the agent's full system permissions.
 
 **Real-world references:**
-- AutoGPT RCE (2024) — crafted prompts triggered arbitrary code
+- AutoGPT RCE (2024) â€” crafted prompts triggered arbitrary code
   execution through the agent's code generation pipeline
-- PromptJacking: Claude Desktop RCEs (2025) — unrestricted AppleScript
+- PromptJacking: Claude Desktop RCEs (2025) â€” unrestricted AppleScript
   execution in connectors enabled command injection via web search content
 
 #### MITRE ATLAS techniques
@@ -342,25 +342,25 @@ with the agent's full system permissions.
 #### Mitigations by tier
 
 **Foundational**
-- Sandbox all agent code execution — no host filesystem, network,
+- Sandbox all agent code execution â€” no host filesystem, network,
   or shell access by default, explicit allowlist required
-- Static analysis of all agent-generated code before execution —
+- Static analysis of all agent-generated code before execution â€”
   reject anything outside permitted syntax and operation set
 - Apply B005 input filtering specifically targeting code injection
   patterns on all channels feeding code-generating agents
 
 **Hardening**
-- Resource limits on all code execution sandboxes — CPU, memory,
-  network, time — prevent escape via resource exhaustion
+- Resource limits on all code execution sandboxes â€” CPU, memory,
+  network, time â€” prevent escape via resource exhaustion
 - Block dynamic package installation by agents in production
-  environments — packages must be pre-approved and pinned
+  environments â€” packages must be pre-approved and pinned
 - Runtime execution monitoring with automatic kill on anomalous
   system call patterns
 
 **Advanced**
 - Hardware-level sandboxing (gVisor, Firecracker) for high-risk
   code execution workloads
-- Formal allowlist of permitted operations — anything outside the
+- Formal allowlist of permitted operations â€” anything outside the
   list is blocked at the kernel level, not the application level
 - Adversarial code generation red team exercises specifically
   targeting your agent's code execution paths
@@ -377,22 +377,22 @@ with the agent's full system permissions.
 #### Cross-references
 - LLM Top 10: LLM05 Insecure Output Handling
 - DSGAI 2026: DSGAI12 Unsafe NL Data Gateways
-- Other frameworks: AIUC-1 B005/B006/B009 · CWE-94 · OWASP ASVS V5
+- Other frameworks: AIUC-1 B005/B006/B009 Â· CWE-94 Â· OWASP ASVS V5
 
 ---
 
-### ASI06 — Memory & Context Poisoning
+### ASI06 â€” Memory & Context Poisoning
 
-**Severity:** High | **Agentic amplifier:** +1 step — persistence across sessions
+**Severity:** High | **Agentic amplifier:** +1 step â€” persistence across sessions
 
 Persistent corruption of agent memory, RAG stores, embeddings, or
-contextual knowledge — unlike prompt injection, the effect persists
+contextual knowledge â€” unlike prompt injection, the effect persists
 across sessions and continues altering agent behaviour long after the
 initial attack, potentially leaking secrets or shifting goals over time
 without triggering any single detectable event.
 
 **Real-world references:**
-- Gemini Memory Attack (2024) — indirect prompt injection caused
+- Gemini Memory Attack (2024) â€” indirect prompt injection caused
   Copilot to store malicious instructions in persistent memory,
   enabling long-term behavioural manipulation and data leakage
 
@@ -407,28 +407,28 @@ without triggering any single detectable event.
 #### Mitigations by tier
 
 **Foundational**
-- Classify all agent memory stores as sensitive data — apply access
+- Classify all agent memory stores as sensitive data â€” apply access
   controls on read and write operations
-- Implement audit logging on all persistent memory modifications —
+- Implement audit logging on all persistent memory modifications â€”
   who wrote what and when, with full content capture
 - Apply input filtering on all content before it is committed to
   persistent memory or RAG stores
 
 **Hardening**
-- Memory TTL (time-to-live) — periodic expiry and re-validation of
+- Memory TTL (time-to-live) â€” periodic expiry and re-validation of
   stored context against authoritative sources
-- Memory trust tiers — untrusted external content cannot write to
+- Memory trust tiers â€” untrusted external content cannot write to
   the same memory namespace as internal trusted content
-- Anomaly detection on memory write patterns — flag unusual sources,
+- Anomaly detection on memory write patterns â€” flag unusual sources,
   volumes, or content types
 
 **Advanced**
-- Cryptographic integrity verification of memory store contents —
+- Cryptographic integrity verification of memory store contents â€”
   detect tampering between write and read operations
 - Memory segmentation by trust domain enforced at the storage layer,
   not the application layer
 - Automated memory auditing for adversarial content on a scheduled
-  basis — not just at write time
+  basis â€” not just at write time
 
 #### Tools
 
@@ -441,17 +441,17 @@ without triggering any single detectable event.
 #### Cross-references
 - LLM Top 10: LLM04 Data & Model Poisoning, LLM08 Vector & Embedding Weaknesses
 - DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning, DSGAI13 Vector Store Platform Security
-- Other frameworks: AIUC-1 A/B002/B005 · NIST AI RMF MS-2.5 · CWE-693
+- Other frameworks: AIUC-1 A/B002/B005 Â· NIST AI RMF MS-2.5 Â· CWE-693
 
 ---
 
-### ASI07 — Insecure Inter-Agent Communication
+### ASI07 â€” Insecure Inter-Agent Communication
 
-**Severity:** High | **Agentic amplifier:** +1 step — A2A compromise scales to entire clusters
+**Severity:** High | **Agentic amplifier:** +1 step â€” A2A compromise scales to entire clusters
 
 Agent-to-agent communication channels lacking strong authentication,
 encryption, or schema validation enable spoofing, replay attacks,
-protocol downgrade, and agent-in-the-middle attacks — a single
+protocol downgrade, and agent-in-the-middle attacks â€” a single
 compromised channel can misdirect an entire multi-agent orchestration
 cluster.
 
@@ -466,26 +466,26 @@ cluster.
 #### Mitigations by tier
 
 **Foundational**
-- Authenticate all A2A messages — no ambient trust between agents
+- Authenticate all A2A messages â€” no ambient trust between agents
   regardless of network location
-- Encrypt all inter-agent communication channels — TLS 1.3 minimum
-- Validate schema of all A2A message payloads — reject malformed
+- Encrypt all inter-agent communication channels â€” TLS 1.3 minimum
+- Validate schema of all A2A message payloads â€” reject malformed
   or unexpected message structures
 
 **Hardening**
 - Full audit logging of all inter-agent messages with content capture
-  — essential for incident reconstruction
-- Replay attack protection — message nonces, timestamps, and sequence
+  â€” essential for incident reconstruction
+- Replay attack protection â€” message nonces, timestamps, and sequence
   numbers on all A2A channels
-- Short-lived agent identity certificates — no long-lived A2A trust
+- Short-lived agent identity certificates â€” no long-lived A2A trust
   tokens that persist beyond a single task
 
 **Advanced**
-- Mutual TLS (mTLS) for all A2A channels in production — both
+- Mutual TLS (mTLS) for all A2A channels in production â€” both
   parties authenticate before any message is exchanged
-- Zero-trust mesh for multi-agent orchestration — every message
+- Zero-trust mesh for multi-agent orchestration â€” every message
   independently verified against policy, regardless of source
-- A2A communication anomaly detection — flag unexpected message
+- A2A communication anomaly detection â€” flag unexpected message
   patterns, unusual agent pairings, or out-of-scope content
 
 #### Tools
@@ -498,16 +498,16 @@ cluster.
 
 #### Cross-references
 - DSGAI 2026: DSGAI02 Agent Identity & Credential Exposure
-- Other frameworks: OWASP NHI Top 10 · AIUC-1 B007/B008/E · ISA/IEC 62443 SR 3.1 (OT)
+- Other frameworks: OWASP NHI Top 10 Â· AIUC-1 B007/B008/E Â· ISA/IEC 62443 SR 3.1 (OT)
 
 ---
 
-### ASI08 — Cascading Agent Failures
+### ASI08 â€” Cascading Agent Failures
 
-**Severity:** High | **Agentic amplifier:** +1 step — single fault fans out at machine speed
+**Severity:** High | **Agentic amplifier:** +1 step â€” single fault fans out at machine speed
 
-A single-point failure — poisoned memory entry, bad plan, compromised
-tool call — propagates through interconnected multi-agent workflows
+A single-point failure â€” poisoned memory entry, bad plan, compromised
+tool call â€” propagates through interconnected multi-agent workflows
 and amplifies into system-wide incidents. In OT environments this can
 propagate from the AI orchestration layer into physical process control
 before any human can intervene.
@@ -533,25 +533,25 @@ crosswalks for OT-specific controls.
 #### Mitigations by tier
 
 **Foundational**
-- Implement circuit breakers — halt propagation automatically when
+- Implement circuit breakers â€” halt propagation automatically when
   failure rate, error count, or latency exceeds threshold
-- Define explicit fail-safe modes for every agent — fail closed,
+- Define explicit fail-safe modes for every agent â€” fail closed,
   not open, on unexpected state
-- Apply scope constraints on all agents — a failing agent cannot
+- Apply scope constraints on all agents â€” a failing agent cannot
   escalate its own permissions or access
 
 **Hardening**
 - Full audit trail of all agent actions enabling cascade path
   reconstruction post-incident
-- Segment sensitive agents from general-purpose agents — blast
+- Segment sensitive agents from general-purpose agents â€” blast
   radius limitation through architectural isolation
-- Rate limiting on A2A communication — prevent runaway message
+- Rate limiting on A2A communication â€” prevent runaway message
   loops between agents
 
 **Advanced**
-- Automated HITL triggers on cascade indicators — route to human
+- Automated HITL triggers on cascade indicators â€” route to human
   review before failure propagates beyond defined blast radius
-- Chaos engineering — intentional fault injection into multi-agent
+- Chaos engineering â€” intentional fault injection into multi-agent
   workflows to validate circuit breaker effectiveness
 - Real-time cascade detection with automated kill-switch per agent
   segment, independently of the model layer
@@ -567,16 +567,16 @@ crosswalks for OT-specific controls.
 #### Cross-references
 - LLM Top 10: LLM10 Unbounded Consumption
 - DSGAI 2026: DSGAI17 Data Availability & Resilience Failures
-- Other frameworks: AIUC-1 D · ISA/IEC 62443 SR 7.1 (OT) · NIST SP 800-82 (OT)
+- Other frameworks: AIUC-1 D Â· ISA/IEC 62443 SR 7.1 (OT) Â· NIST SP 800-82 (OT)
 
 ---
 
-### ASI09 — Human-Agent Trust Exploitation
+### ASI09 â€” Human-Agent Trust Exploitation
 
-**Severity:** Medium | **Agentic amplifier:** +0.5 — manipulation invisible to standard audit
+**Severity:** Medium | **Agentic amplifier:** +0.5 â€” manipulation invisible to standard audit
 
-Users anthropomorphise agents — trusting their fluency, expertise,
-and persuasive outputs — enabling hijacked or misaligned agents to
+Users anthropomorphise agents â€” trusting their fluency, expertise,
+and persuasive outputs â€” enabling hijacked or misaligned agents to
 manipulate humans into approving malicious commands or sharing
 sensitive data. The danger: the human performs the final action so
 forensics shows a legitimate user decision, not an agent manipulation.
@@ -593,42 +593,42 @@ forensics shows a legitimate user decision, not an agent manipulation.
 
 **Foundational**
 - Agents must clearly identify themselves as AI in all user-facing
-  interactions — enforced at the guardrail layer
-- Separate agent conversation interface from security approval flows —
+  interactions â€” enforced at the guardrail layer
+- Separate agent conversation interface from security approval flows â€”
   chat is never the consent mechanism for sensitive actions
 - Implement output filtering to detect and block manipulative language
   patterns in agent responses
 
 **Hardening**
 - Audit logging that distinguishes agent-influenced actions from
-  genuinely human-initiated actions — essential for forensics
-- User education on agent trust boundaries integrated into onboarding —
+  genuinely human-initiated actions â€” essential for forensics
+- User education on agent trust boundaries integrated into onboarding â€”
   not optional training
 - Independent review required for high-consequence agent recommendations
-  — second human, not second agent
+  â€” second human, not second agent
 
 **Advanced**
 - Behavioural analysis detecting when agents are nudging users toward
-  specific approvals — alert on persuasion pattern detection
+  specific approvals â€” alert on persuasion pattern detection
 - Structural separation between agent reasoning and user consent
-  flows — consent captured through independent, non-agent interface
+  flows â€” consent captured through independent, non-agent interface
 - Red team exercises simulating trust exploitation scenarios against
   your specific user population and agent deployment
 
 #### Cross-references
 - LLM Top 10: LLM09 Misinformation
 - DSGAI 2026: DSGAI21 Disinformation & Integrity Attacks
-- Other frameworks: EU AI Act Art. 52 · AIUC-1 C/F · ENISA AI Threat Landscape
+- Other frameworks: EU AI Act Art. 52 Â· AIUC-1 C/F Â· ENISA AI Threat Landscape
 
 ---
 
-### ASI10 — Rogue Agents
+### ASI10 â€” Rogue Agents
 
-**Severity:** Critical | **Agentic amplifier:** +2 steps — compliant surface masks persistent hidden goals
+**Severity:** Critical | **Agentic amplifier:** +2 steps â€” compliant surface masks persistent hidden goals
 
 Malicious or compromised agents appear compliant on the surface but
 pursue hidden goals, hijack workflows, or systematically deviate from
-their intended purpose — often the end-state of a successful ASI01 or
+their intended purpose â€” often the end-state of a successful ASI01 or
 ASI06 attack that has gone undetected across multiple sessions.
 
 #### MITRE ATLAS techniques
@@ -642,27 +642,27 @@ ASI06 attack that has gone undetected across multiple sessions.
 #### Mitigations by tier
 
 **Foundational**
-- Comprehensive audit logging of all agent actions from day one —
+- Comprehensive audit logging of all agent actions from day one â€”
   no deployment without full observability
 - Strict scope constraints enforced at the orchestration layer, not
-  the model layer — rogue agent cannot exceed its permission envelope
-- Safety guardrails as an independent layer from agent logic — not
+  the model layer â€” rogue agent cannot exceed its permission envelope
+- Safety guardrails as an independent layer from agent logic â€” not
   overridable by model output
 
 **Hardening**
-- Continuous behavioural monitoring — flag deviation from historical
+- Continuous behavioural monitoring â€” flag deviation from historical
   baseline for every deployed agent
-- Agent health checks on a defined schedule — periodic re-verification
+- Agent health checks on a defined schedule â€” periodic re-verification
   against intended purpose specification
-- Automated quarantine on anomaly detection — isolate suspected
+- Automated quarantine on anomaly detection â€” isolate suspected
   rogue agent pending human review before it can take further action
 
 **Advanced**
-- Multi-agent consensus for high-stakes decisions — no single agent
+- Multi-agent consensus for high-stakes decisions â€” no single agent
   can act unilaterally on irreversible actions
-- Formal behavioural specification for each agent — machine-verifiable
+- Formal behavioural specification for each agent â€” machine-verifiable
   contracts checked at runtime, not just design time
-- Full forensic reproducibility — every agent decision must be
+- Full forensic reproducibility â€” every agent decision must be
   reconstructable from logged inputs, state, and outputs
 
 #### Tools
@@ -676,7 +676,7 @@ ASI06 attack that has gone undetected across multiple sessions.
 #### Cross-references
 - LLM Top 10: LLM06 Excessive Agency
 - DSGAI 2026: DSGAI16 Endpoint & Browser Overreach
-- Other frameworks: MITRE ATT&CK T1078 · EU AI Act Art. 9 · AIUC-1 B001/B002/C/E
+- Other frameworks: MITRE ATT&CK T1078 Â· EU AI Act Art. 9 Â· AIUC-1 B001/B002/C/E
 
 ---
 
@@ -684,10 +684,10 @@ ASI06 attack that has gone undetected across multiple sessions.
 
 | Phase | ASI entries | Rationale |
 |---|---|---|
-| 1 — Do now | ASI01, ASI02, ASI03 | Highest exploitability, most active in wild, largest blast radius |
-| 2 — This sprint | ASI05, ASI10 | RCE and rogue agent — catastrophic if triggered |
-| 3 — This quarter | ASI04, ASI06, ASI07 | Supply chain and persistence close the long-dwell attack paths |
-| 4 — Ongoing | ASI08, ASI09 | Resilience, cascade engineering, and trust boundary hardening |
+| 1 â€” Do now | ASI01, ASI02, ASI03 | Highest exploitability, most active in wild, largest blast radius |
+| 2 â€” This sprint | ASI05, ASI10 | RCE and rogue agent â€” catastrophic if triggered |
+| 3 â€” This quarter | ASI04, ASI06, ASI07 | Supply chain and persistence close the long-dwell attack paths |
+| 4 â€” Ongoing | ASI08, ASI09 | Resilience, cascade engineering, and trust boundary hardening |
 
 ---
 
@@ -716,9 +716,9 @@ to visualise agentic attack coverage across your threat model.
 
 | Date | Version | Change | Author |
 |---|---|---|---|
-| 2026-03-24 | 2026-Q1 | Initial mapping — ASI01–ASI10 full entries | OWASP GenAI Data Security Initiative |
+| 2026-03-24 | 2026-Q1 | Initial mapping â€” ASI01â€“ASI10 full entries | OWASP GenAI Data Security Initiative |
 
 ---
 
-*Part of the [GenAI Security Crosswalk](https://github.com/emmanuelgjr/GenAI-Security-Crosswalk) —
+*Part of the [OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk) â€”
 maintained by the [OWASP GenAI Data Security Initiative](https://genai.owasp.org)*

@@ -1,24 +1,24 @@
 <!--
-  GenAI Security Crosswalk
-  Source list : OWASP Top 10 for LLM Applications 2025 (LLM01–LLM10)
+  OWASP GenAI Crosswalk
+  Source list : OWASP Top 10 for LLM Applications 2025 (LLM01â€“LLM10)
   Framework   : OWASP Application Security Verification Standard (ASVS) 4.0.3
   Version     : 2026-Q1
-  Maintained by: OWASP GenAI Data Security Initiative — https://genai.owasp.org
+  Maintained by: OWASP GenAI Data Security Initiative â€” https://genai.owasp.org
   License     : CC BY-SA 4.0
 -->
 
-# LLM Top 10 2025 × OWASP ASVS 4.0.3
+# LLM Top 10 2025 Ã— OWASP ASVS 4.0.3
 
 Mapping the [OWASP Top 10 for LLM Applications 2025](https://genai.owasp.org/llm-top-10/)
 to the [OWASP Application Security Verification Standard (ASVS) 4.0.3](https://owasp.org/www-project-application-security-verification-standard/)
-— the framework for testing and verifying the security of web
+â€” the framework for testing and verifying the security of web
 applications and APIs, organised into 14 chapters with three
 verification levels (L1/L2/L3).
 
 ASVS is the go-to reference for security architects, developers,
 and penetration testers building and assessing application security
 controls. LLM applications are web applications and APIs with
-additional AI-specific attack surfaces — all standard ASVS controls
+additional AI-specific attack surfaces â€” all standard ASVS controls
 apply, with specific requirements amplified by the LLM context.
 
 ---
@@ -31,21 +31,21 @@ apply, with specific requirements amplified by the LLM context.
 | V2 | Authentication | LLM API authentication, model access control |
 | V3 | Session Management | LLM session isolation, context persistence |
 | V4 | Access Control | LLM tool permissions, RAG access control |
-| V5 | Validation, Sanitization and Encoding | Prompt injection, output handling — most critical for LLMs |
+| V5 | Validation, Sanitization and Encoding | Prompt injection, output handling â€” most critical for LLMs |
 | V6 | Stored Cryptography | Embedding encryption, training data at rest |
 | V7 | Error Handling and Logging | LLM audit logging, exception handling |
 | V8 | Data Protection | RAG data protection, PII in LLM scope |
 | V9 | Communication | LLM API communication security |
-| V10 | Malicious Code | Supply chain — LLM components as software supply chain |
+| V10 | Malicious Code | Supply chain â€” LLM components as software supply chain |
 | V11 | Business Logic | LLM autonomous action logic validation |
 | V12 | Files and Resources | RAG file uploads, embedding store resources |
-| V13 | API and Web Service | LLM API security — rate limiting, output validation |
+| V13 | API and Web Service | LLM API security â€” rate limiting, output validation |
 | V14 | Configuration | LLM secure deployment configuration |
 
 **Verification levels:**
-- L1 — Opportunistic: passively verifiable, minimal security requirement
-- L2 — Standard: most applications with sensitive data
-- L3 — Advanced: high-value targets, high assurance required
+- L1 â€” Opportunistic: passively verifiable, minimal security requirement
+- L2 â€” Standard: most applications with sensitive data
+- L3 â€” Advanced: high-value targets, high assurance required
 
 ---
 
@@ -53,27 +53,27 @@ apply, with specific requirements amplified by the LLM context.
 
 | ID | Name | Severity | Primary ASVS Chapters / Requirements | Level | Tier |
 |---|---|---|---|---|---|
-| LLM01 | Prompt Injection | Critical | V5.1, V5.2, V1.1, V11.1 | L1–L3 | Foundational–Advanced |
-| LLM02 | Sensitive Information Disclosure | High | V8.1, V8.3, V4.1, V6.1 | L1–L3 | Foundational–Advanced |
-| LLM03 | Supply Chain Vulnerabilities | High | V10.2, V14.2, V1.1 | L2–L3 | Foundational–Hardening |
-| LLM04 | Data and Model Poisoning | Critical | V5.1, V10.2, V12.1 | L2–L3 | Hardening–Advanced |
-| LLM05 | Insecure Output Handling | High | V5.2, V5.3, V13.1 | L1–L3 | Foundational–Hardening |
-| LLM06 | Excessive Agency | High | V4.1, V11.1, V7.2 | L1–L3 | Foundational–Hardening |
-| LLM07 | System Prompt Leakage | High | V8.1, V4.1, V7.2 | L1–L2 | Foundational–Hardening |
-| LLM08 | Vector and Embedding Weaknesses | Medium | V4.1, V6.1, V12.1 | L2–L3 | Hardening–Advanced |
-| LLM09 | Misinformation | Medium | V11.1, V7.4, V5.2 | L1–L2 | Foundational–Hardening |
-| LLM10 | Unbounded Consumption | Medium | V13.1, V11.1, V7.4 | L1–L3 | Foundational–Hardening |
+| LLM01 | Prompt Injection | Critical | V5.1, V5.2, V1.1, V11.1 | L1â€“L3 | Foundationalâ€“Advanced |
+| LLM02 | Sensitive Information Disclosure | High | V8.1, V8.3, V4.1, V6.1 | L1â€“L3 | Foundationalâ€“Advanced |
+| LLM03 | Supply Chain Vulnerabilities | High | V10.2, V14.2, V1.1 | L2â€“L3 | Foundationalâ€“Hardening |
+| LLM04 | Data and Model Poisoning | Critical | V5.1, V10.2, V12.1 | L2â€“L3 | Hardeningâ€“Advanced |
+| LLM05 | Insecure Output Handling | High | V5.2, V5.3, V13.1 | L1â€“L3 | Foundationalâ€“Hardening |
+| LLM06 | Excessive Agency | High | V4.1, V11.1, V7.2 | L1â€“L3 | Foundationalâ€“Hardening |
+| LLM07 | System Prompt Leakage | High | V8.1, V4.1, V7.2 | L1â€“L2 | Foundationalâ€“Hardening |
+| LLM08 | Vector and Embedding Weaknesses | Medium | V4.1, V6.1, V12.1 | L2â€“L3 | Hardeningâ€“Advanced |
+| LLM09 | Misinformation | Medium | V11.1, V7.4, V5.2 | L1â€“L2 | Foundationalâ€“Hardening |
+| LLM10 | Unbounded Consumption | Medium | V13.1, V11.1, V7.4 | L1â€“L3 | Foundationalâ€“Hardening |
 
 ---
 
 ## Audience tags
 
-- **Developer** — full file, specific ASVS requirements to implement
-- **Security architect** — V1 architecture requirements, V11 business logic
-- **Penetration tester** — verification requirements per level for test planning
-- **Security engineer** — V5 validation, V4 access control, V13 API security
-- **Auditor** — ASVS level mapping for assurance assessment
-- **OT engineer** — LLM01, LLM06, LLM10 with ISA 62443 crosswalk for OT context
+- **Developer** â€” full file, specific ASVS requirements to implement
+- **Security architect** â€” V1 architecture requirements, V11 business logic
+- **Penetration tester** â€” verification requirements per level for test planning
+- **Security engineer** â€” V5 validation, V4 access control, V13 API security
+- **Auditor** â€” ASVS level mapping for assurance assessment
+- **OT engineer** â€” LLM01, LLM06, LLM10 with ISA 62443 crosswalk for OT context
 
 ---
 
@@ -81,55 +81,55 @@ apply, with specific requirements amplified by the LLM context.
 
 ---
 
-### LLM01 — Prompt Injection
+### LLM01 â€” Prompt Injection
 
 **Severity:** Critical
 
 Malicious instructions in user input or processed content manipulate
 LLM behaviour. ASVS Chapter V5 (Validation, Sanitisation and Encoding)
-is the primary chapter — it directly governs input handling, which is
+is the primary chapter â€” it directly governs input handling, which is
 the core of prompt injection defence.
 
 #### ASVS mapping
 
 | Requirement | ID | Level | How it applies |
 |---|---|---|---|
-| Verify all user input validated against an allowlist or rejected | V5.1.1 | L1 | All inputs to LLMs validated — indirect injection through processed content equally in scope |
-| Verify that HTTP request parts are validated, sanitised, or rejected | V5.1.2 | L1 | LLM API request validation — prompt structure, content type, and character set enforced |
+| Verify all user input validated against an allowlist or rejected | V5.1.1 | L1 | All inputs to LLMs validated â€” indirect injection through processed content equally in scope |
+| Verify that HTTP request parts are validated, sanitised, or rejected | V5.1.2 | L1 | LLM API request validation â€” prompt structure, content type, and character set enforced |
 | Verify output encoding prevents injection attacks | V5.2.1 | L1 | LLM output encoding before passing to downstream renderers or interpreters |
 | Verify application protects against OS command injection | V5.2.5 | L1 | LLM-generated content validated before execution in any shell or interpreter context |
-| Threat modelling of all data flows | V1.1.2 | L2 | LLM data flows threat-modelled — all injection paths identified and documented |
+| Threat modelling of all data flows | V1.1.2 | L2 | LLM data flows threat-modelled â€” all injection paths identified and documented |
 | Verify business logic limits prevent abuse of LLM functions | V11.1.2 | L2 | Business logic controls preventing prompt injection from triggering unauthorised actions |
 
 #### Mitigations by tier
 
 **Foundational (L1)**
-- V5.1.1: Implement input validation for all LLM API inputs —
+- V5.1.1: Implement input validation for all LLM API inputs â€”
   allowlist of permitted content structures, reject inputs
   containing known injection patterns
-- V5.1.2: Validate all HTTP request parts feeding the LLM —
+- V5.1.2: Validate all HTTP request parts feeding the LLM â€”
   headers, query parameters, request body, and file uploads
   all validated before LLM processing
 - V5.2.1: Implement output encoding for all LLM responses
   before rendering in browsers or passing to interpreters
 
 **Hardening (L2)**
-- V1.1.2: Include all LLM data flows in threat modelling —
+- V1.1.2: Include all LLM data flows in threat modelling â€”
   every injection path from user input to model context
   documented and mitigated
-- V11.1.2: Implement business logic controls — prompt injection
+- V11.1.2: Implement business logic controls â€” prompt injection
   cannot trigger actions outside the defined LLM use case
   regardless of what the model generates
-- Deploy runtime prompt injection detection — active monitoring
+- Deploy runtime prompt injection detection â€” active monitoring
   on all input channels
 
 **Advanced (L3)**
 - Implement architectural separation between system prompt
-  and user input — structural guarantee at the platform level
-- Conduct adversarial testing covering all injection vectors —
+  and user input â€” structural guarantee at the platform level
+- Conduct adversarial testing covering all injection vectors â€”
   direct, indirect via RAG, jailbreak, and multi-turn attacks
 - V5.2.5: Verify LLM-generated content is never executed
-  without explicit allowlist validation — no shell or eval
+  without explicit allowlist validation â€” no shell or eval
   access from model outputs
 
 #### Tools
@@ -143,16 +143,16 @@ the core of prompt injection defence.
 #### Cross-references
 - Agentic Top 10: ASI01 Agent Goal Hijack
 - DSGAI 2026: DSGAI01 Sensitive Data Leakage, DSGAI12 Unsafe NL Data Gateways
-- Other frameworks: CIS Controls CIS 16 · ISO 27001 A.8.28 · MITRE ATLAS AML.T0051
+- Other frameworks: CIS Controls CIS 16 Â· ISO 27001 A.8.28 Â· MITRE ATLAS AML.T0051
 
 ---
 
-### LLM02 — Sensitive Information Disclosure
+### LLM02 â€” Sensitive Information Disclosure
 
 **Severity:** High
 
 LLMs expose PII, financial data, proprietary code, or confidential
-information through outputs — from training data memorisation or
+information through outputs â€” from training data memorisation or
 over-permissive RAG retrieval.
 
 #### ASVS mapping
@@ -161,37 +161,37 @@ over-permissive RAG retrieval.
 |---|---|---|---|
 | Verify sensitive data is not cached or exposed in logs | V8.1.1 | L1 | LLM outputs containing sensitive data not logged in cleartext or cached without protection |
 | Verify PII is identified and protected | V8.3.4 | L1 | PII in LLM training data, RAG sources, and outputs identified and handled per policy |
-| Verify access control decisions enforce least privilege | V4.1.3 | L1 | RAG retrieval access controls — users retrieve only data they are authorised to access |
+| Verify access control decisions enforce least privilege | V4.1.3 | L1 | RAG retrieval access controls â€” users retrieve only data they are authorised to access |
 | Verify all sensitive data encrypted at rest | V6.1.1 | L2 | Training data, embeddings, RAG document stores, and prompt caches encrypted at rest |
-| Verify all sensitive data encrypted in transit | V9.1.1 | L1 | All LLM API communication and data flows encrypted in transit — TLS 1.2 minimum |
+| Verify all sensitive data encrypted in transit | V9.1.1 | L1 | All LLM API communication and data flows encrypted in transit â€” TLS 1.2 minimum |
 
 #### Mitigations by tier
 
 **Foundational (L1)**
 - V8.1.1: Ensure LLM outputs containing sensitive data are
-  not logged in cleartext — redact before logging, mask
+  not logged in cleartext â€” redact before logging, mask
   before caching
-- V8.3.4: Identify all PII in LLM scope — training data,
-  RAG sources, prompt templates, outputs — and apply
+- V8.3.4: Identify all PII in LLM scope â€” training data,
+  RAG sources, prompt templates, outputs â€” and apply
   handling requirements per classification
-- V4.1.3: Implement least-privilege access on RAG data sources —
+- V4.1.3: Implement least-privilege access on RAG data sources â€”
   enforce at the retrieval layer, not just application layer
 
 **Hardening (L2)**
-- V6.1.1: Encrypt all sensitive data at rest in LLM scope —
+- V6.1.1: Encrypt all sensitive data at rest in LLM scope â€”
   embedding databases, training data stores, prompt caches,
   and observability logs containing sensitive content
 - Deploy output scanning for PII before responses are
-  delivered — V8.3.4 technical enforcement
-- Audit RAG access controls per release — verify retrieval
+  delivered â€” V8.3.4 technical enforcement
+- Audit RAG access controls per release â€” verify retrieval
   scope matches authorised user access rights
 
 **Advanced (L3)**
 - Apply differential privacy in training and embedding
   generation for sensitive corpora
-- Conduct model inversion red team exercises — validate
+- Conduct model inversion red team exercises â€” validate
   sensitive training data cannot be reconstructed from outputs
-- Implement machine unlearning readiness — versioned
+- Implement machine unlearning readiness â€” versioned
   data-to-model linkage for erasure response
 
 #### Tools
@@ -204,49 +204,49 @@ over-permissive RAG retrieval.
 #### Cross-references
 - Agentic Top 10: ASI03 Identity & Privilege Abuse
 - DSGAI 2026: DSGAI01 Sensitive Data Leakage, DSGAI18 Inference & Data Reconstruction
-- Other frameworks: ISO 27001 A.8.11/A.8.12 · CIS Controls CIS 3 · GDPR Art. 25
+- Other frameworks: ISO 27001 A.8.11/A.8.12 Â· CIS Controls CIS 3 Â· GDPR Art. 25
 
 ---
 
-### LLM03 — Supply Chain Vulnerabilities
+### LLM03 â€” Supply Chain Vulnerabilities
 
 **Severity:** High
 
 LLM applications depend on third-party model weights, datasets,
-libraries, and plugins — any of which can be compromised.
+libraries, and plugins â€” any of which can be compromised.
 
 #### ASVS mapping
 
 | Requirement | ID | Level | How it applies |
 |---|---|---|---|
-| Verify third-party components are current and free from vulnerabilities | V10.2.1 | L2 | All LLM component libraries and dependencies scanned for CVEs — ML SBOM maintained |
-| Verify only minimal approved external libraries are used | V10.2.2 | L2 | Approved component list for LLM deployments — unsigned or unverified components rejected |
+| Verify third-party components are current and free from vulnerabilities | V10.2.1 | L2 | All LLM component libraries and dependencies scanned for CVEs â€” ML SBOM maintained |
+| Verify only minimal approved external libraries are used | V10.2.2 | L2 | Approved component list for LLM deployments â€” unsigned or unverified components rejected |
 | Verify build pipelines include security checks | V14.2.2 | L2 | CI/CD pipeline for LLM components includes integrity verification and vulnerability scanning |
 
 #### Mitigations by tier
 
 **Foundational (L1)**
-- Maintain ML SBOM as part of software asset inventory —
+- Maintain ML SBOM as part of software asset inventory â€”
   every LLM component inventoried with version and source
-- Pin all LLM component versions — no automatic updates
+- Pin all LLM component versions â€” no automatic updates
   in production without review
 
 **Hardening (L2)**
 - V10.2.1: Include LLM component CVE scanning in CI/CD
-  pipeline — model inference libraries and dependencies
+  pipeline â€” model inference libraries and dependencies
   scanned before each deployment
-- V10.2.2: Establish approved component list — only sourced
+- V10.2.2: Establish approved component list â€” only sourced
   from approved vendors, cryptographic signatures verified
 - V14.2.2: Integrate LLM component integrity checks into
-  build pipeline — unsigned or modified components rejected
+  build pipeline â€” unsigned or modified components rejected
 
 **Advanced (L3)**
-- Operate isolated model evaluation environment — backdoor
+- Operate isolated model evaluation environment â€” backdoor
   detection before each production promotion
-- Conduct adversarial supply chain testing — attempt to
+- Conduct adversarial supply chain testing â€” attempt to
   introduce compromised components and verify detection
 - Establish responsible disclosure relationship with LLM
-  vendors — defined vulnerability notification SLA
+  vendors â€” defined vulnerability notification SLA
 
 #### Tools
 
@@ -259,49 +259,49 @@ libraries, and plugins — any of which can be compromised.
 #### Cross-references
 - Agentic Top 10: ASI04 Agentic Supply Chain Vulnerabilities
 - DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning
-- Other frameworks: ISO 27001 A.5.19/A.5.21 · CIS Controls CIS 2 · NIST SP 800-218A
+- Other frameworks: ISO 27001 A.5.19/A.5.21 Â· CIS Controls CIS 2 Â· NIST SP 800-218A
 
 ---
 
-### LLM04 — Data and Model Poisoning
+### LLM04 â€” Data and Model Poisoning
 
 **Severity:** Critical
 
 Attackers inject malicious data into training datasets or fine-tuning
-pipelines — corrupting model behaviour in ways baked into the weights.
+pipelines â€” corrupting model behaviour in ways baked into the weights.
 
 #### ASVS mapping
 
 | Requirement | ID | Level | How it applies |
 |---|---|---|---|
-| Verify all inputs validated against allowlist | V5.1.1 | L1 | Training data pipeline input validation — anomalous data rejected before training |
-| Verify third-party components free of vulnerabilities | V10.2.1 | L2 | Training pipeline components scanned — compromised dependencies rejected |
-| Verify file uploads scanned for malware | V12.1.1 | L2 | Training data uploads scanned before ingestion — adversarial content detected |
+| Verify all inputs validated against allowlist | V5.1.1 | L1 | Training data pipeline input validation â€” anomalous data rejected before training |
+| Verify third-party components free of vulnerabilities | V10.2.1 | L2 | Training pipeline components scanned â€” compromised dependencies rejected |
+| Verify file uploads scanned for malware | V12.1.1 | L2 | Training data uploads scanned before ingestion â€” adversarial content detected |
 
 #### Mitigations by tier
 
 **Foundational (L1)**
 - V5.1.1: Implement input validation on training data
-  pipeline — anomaly detection, source validation, and
+  pipeline â€” anomaly detection, source validation, and
   schema verification before any training run
-- Establish model rollback capability — approved clean
+- Establish model rollback capability â€” approved clean
   version available for immediate revert
-- Source allowlisting for training data — only approved
+- Source allowlisting for training data â€” only approved
   sources enter production training pipelines
 
 **Hardening (L2)**
 - V10.2.1: Scan all training pipeline dependencies for
-  vulnerabilities — compromised libraries as a poisoning
+  vulnerabilities â€” compromised libraries as a poisoning
   attack vector
-- V12.1.1: Scan all training data uploads before ingestion —
+- V12.1.1: Scan all training data uploads before ingestion â€”
   adversarial content detected at the pipeline boundary
-- Include poisoning detection in security testing programme —
+- Include poisoning detection in security testing programme â€”
   backdoor trigger testing before each model promotion
 
 **Advanced (L3)**
 - Conduct post-training backdoor detection as mandatory
-  pre-deployment gate — neural cleanse or equivalent
-- Apply differential privacy during training — limits
+  pre-deployment gate â€” neural cleanse or equivalent
+- Apply differential privacy during training â€” limits
   influence of any single training example
 - Conduct adversarial testing specifically targeting
   your training pipeline and data sources
@@ -316,11 +316,11 @@ pipelines — corrupting model behaviour in ways baked into the weights.
 #### Cross-references
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning
-- Other frameworks: ISO 27001 A.8.27/A.8.29 · CIS Controls CIS 7 · NIST AI RMF MS-3.3
+- Other frameworks: ISO 27001 A.8.27/A.8.29 Â· CIS Controls CIS 7 Â· NIST AI RMF MS-3.3
 
 ---
 
-### LLM05 — Insecure Output Handling
+### LLM05 â€” Insecure Output Handling
 
 **Severity:** High
 
@@ -333,37 +333,37 @@ ASVS V5 is the most critical chapter for this vulnerability.
 | Requirement | ID | Level | How it applies |
 |---|---|---|---|
 | Verify output encoding of untrusted data in HTML context | V5.2.1 | L1 | LLM responses rendered in browser contexts encoded against XSS |
-| Verify output encoding in SQL query context | V5.3.5 | L1 | LLM-generated SQL parameterised — never raw LLM output in SQL context |
-| Verify output encoding in OS command context | V5.2.5 | L1 | LLM-generated commands validated — never raw output in shell context |
+| Verify output encoding in SQL query context | V5.3.5 | L1 | LLM-generated SQL parameterised â€” never raw LLM output in SQL context |
+| Verify output encoding in OS command context | V5.2.5 | L1 | LLM-generated commands validated â€” never raw output in shell context |
 | Verify application does not use eval or dynamic code | V5.2.4 | L1 | No eval or dynamic code execution of LLM-generated content |
 | Verify anti-CSRF tokens in state-changing operations | V4.2.2 | L1 | CSRF protection on endpoints where LLM output triggers state changes |
 
 #### Mitigations by tier
 
 **Foundational (L1)**
-- V5.2.1: Encode all LLM output before rendering in HTML —
+- V5.2.1: Encode all LLM output before rendering in HTML â€”
   treat model responses as untrusted user input for rendering
-- V5.3.5: Parameterise all database queries — never interpolate
+- V5.3.5: Parameterise all database queries â€” never interpolate
   LLM-generated content directly into SQL or NoSQL queries
 - V5.2.4: Never use eval, exec, or equivalent on LLM-generated
-  content — absolute prohibition enforced through code review
+  content â€” absolute prohibition enforced through code review
 
 **Hardening (L2)**
-- Implement output schema validation — only outputs conforming
+- Implement output schema validation â€” only outputs conforming
   to defined safe structures passed to downstream consumers
 - V5.2.5: Maintain allowlist of permitted operations for
-  any LLM-generated commands — reject anything outside
+  any LLM-generated commands â€” reject anything outside
   the allowlist before execution
-- Conduct DAST on all interfaces consuming LLM output —
+- Conduct DAST on all interfaces consuming LLM output â€”
   test XSS, injection, and command execution via model responses
 
 **Advanced (L3)**
 - Deploy dedicated output security layer independent of
-  the LLM — structural guarantee against output injection
-- Conduct adversarial output testing — attempt to generate
+  the LLM â€” structural guarantee against output injection
+- Conduct adversarial output testing â€” attempt to generate
   injection payloads through crafted inputs against your
   specific deployment and downstream consumers
-- Implement runtime output monitoring — flag responses
+- Implement runtime output monitoring â€” flag responses
   containing injection-pattern content before delivery
 
 #### Tools
@@ -377,11 +377,11 @@ ASVS V5 is the most critical chapter for this vulnerability.
 #### Cross-references
 - Agentic Top 10: ASI02 Tool Misuse, ASI05 Unexpected Code Execution
 - DSGAI 2026: DSGAI05 Data Integrity & Validation Failures, DSGAI12 Unsafe NL Data Gateways
-- Other frameworks: CIS Controls CIS 16 · ISO 27001 A.8.28 · CWE-79/CWE-89
+- Other frameworks: CIS Controls CIS 16 Â· ISO 27001 A.8.28 Â· CWE-79/CWE-89
 
 ---
 
-### LLM06 — Excessive Agency
+### LLM06 â€” Excessive Agency
 
 **Severity:** High
 
@@ -392,40 +392,40 @@ unintended or harmful actions when manipulated.
 
 | Requirement | ID | Level | How it applies |
 |---|---|---|---|
-| Verify access control enforces least privilege | V4.1.3 | L1 | LLM tool access enforced at minimum required scope — read-only by default |
+| Verify access control enforces least privilege | V4.1.3 | L1 | LLM tool access enforced at minimum required scope â€” read-only by default |
 | Verify all sensitive functions have access control | V4.1.1 | L1 | LLM cannot access sensitive functions (write, delete, execute) without explicit authorisation |
-| Verify all business logic decisions logged | V7.2.2 | L2 | All LLM tool invocations logged with full context — every tool call auditable |
+| Verify all business logic decisions logged | V7.2.2 | L2 | All LLM tool invocations logged with full context â€” every tool call auditable |
 | Verify business logic abuse scenarios identified | V11.1.2 | L2 | Business logic controls preventing tool misuse through prompt manipulation |
 
 #### Mitigations by tier
 
 **Foundational (L1)**
-- V4.1.3: Enforce least privilege on all LLM tool access —
+- V4.1.3: Enforce least privilege on all LLM tool access â€”
   read-only by default, write access requires explicit
   justification and is scoped to minimum required operations
 - V4.1.1: Implement access controls on all sensitive LLM
-  functions — delete, write, execute, send all require
+  functions â€” delete, write, execute, send all require
   verified authorisation, not just model instruction
-- Require human confirmation for all irreversible actions —
+- Require human confirmation for all irreversible actions â€”
   separate confirmation interface, not the LLM chat
 
 **Hardening (L2)**
-- V7.2.2: Log all LLM tool invocations with full context —
-  tool identity, parameters, user session, timestamp —
+- V7.2.2: Log all LLM tool invocations with full context â€”
+  tool identity, parameters, user session, timestamp â€”
   immutable audit trail for incident investigation
 - V11.1.2: Identify and document business logic abuse
-  scenarios — prompt injection paths to tool misuse
+  scenarios â€” prompt injection paths to tool misuse
   in threat model, mitigations verified in testing
-- Deploy action guardrails as independent layer from model —
+- Deploy action guardrails as independent layer from model â€”
   structural enforcement of permitted scope
 
 **Advanced (L3)**
-- Formally specify permitted action graphs — only
+- Formally specify permitted action graphs â€” only
   pre-approved action sequences can execute in production
 - Conduct red team exercises specifically testing excessive
   agency through indirect prompt injection
 - Include LLM excessive agency in formal security testing
-  scope — verify guardrails hold under adversarial conditions
+  scope â€” verify guardrails hold under adversarial conditions
 
 #### Tools
 
@@ -437,64 +437,64 @@ unintended or harmful actions when manipulated.
 #### Cross-references
 - Agentic Top 10: ASI01 Agent Goal Hijack, ASI02 Tool Misuse
 - DSGAI 2026: DSGAI06 Tool Plugin & Agent Data Exchange
-- Other frameworks: ISO 27001 A.8.2 · CIS Controls CIS 5/6 · AIUC-1 B006
+- Other frameworks: ISO 27001 A.8.2 Â· CIS Controls CIS 5/6 Â· AIUC-1 B006
 
 ---
 
-### LLM07 — System Prompt Leakage
+### LLM07 â€” System Prompt Leakage
 
 **Severity:** High
 
 System prompts containing internal instructions or security controls
-are extracted by adversaries — enabling targeted attacks.
+are extracted by adversaries â€” enabling targeted attacks.
 
 #### ASVS mapping
 
 | Requirement | ID | Level | How it applies |
 |---|---|---|---|
 | Verify sensitive data not cached in cleartext | V8.1.1 | L1 | System prompts not stored in cleartext application configuration or source code |
-| Verify access control enforces least privilege | V4.1.3 | L1 | System prompt access restricted to authorised personnel — read access logged |
-| Verify access control decisions logged | V7.2.1 | L2 | All access to system prompts logged — unauthorised access attempts detectable |
-| Verify secrets not in source code | V14.2.3 | L2 | System prompts not hardcoded in source code — stored in secret management system |
+| Verify access control enforces least privilege | V4.1.3 | L1 | System prompt access restricted to authorised personnel â€” read access logged |
+| Verify access control decisions logged | V7.2.1 | L2 | All access to system prompts logged â€” unauthorised access attempts detectable |
+| Verify secrets not in source code | V14.2.3 | L2 | System prompts not hardcoded in source code â€” stored in secret management system |
 
 #### Mitigations by tier
 
 **Foundational (L1)**
-- V8.1.1: Do not store system prompts in cleartext — not
+- V8.1.1: Do not store system prompts in cleartext â€” not
   in source code, configuration files, or environment
   variables without secret manager encryption
 - V4.1.3: Restrict system prompt access to minimum required
-  personnel — version controlled, access controlled,
+  personnel â€” version controlled, access controlled,
   all access logged
 - Remove all secrets, credentials, and sensitive identifiers
-  from system prompts — use runtime token resolution
+  from system prompts â€” use runtime token resolution
 
 **Hardening (L2)**
 - V7.2.1: Log all access to system prompt storage and
-  configuration — audit trail for unauthorised access
+  configuration â€” audit trail for unauthorised access
   detection and investigation
-- V14.2.3: Enforce no secrets in source code — system
+- V14.2.3: Enforce no secrets in source code â€” system
   prompts stored in secret management system, never
   committed to version control
-- Conduct prompt extraction testing before each deployment —
+- Conduct prompt extraction testing before each deployment â€”
   verify extraction resistance under known attack techniques
 
 **Advanced (L3)**
-- Implement system prompt tokenisation — sensitive phrases
+- Implement system prompt tokenisation â€” sensitive phrases
   replaced with opaque tokens resolved at runtime
 - Deploy output classifier to detect and block responses
   containing system prompt content
-- Red team exercises targeting system prompt recovery —
+- Red team exercises targeting system prompt recovery â€”
   document results and verify mitigations hold
 
 #### Cross-references
 - Agentic Top 10: ASI01 Agent Goal Hijack
 - DSGAI 2026: DSGAI15 Over-Broad Context Windows
-- Other frameworks: ISO 27001 A.5.12/A.8.24 · CIS Controls CIS 3/CIS 4 · CWE-200
+- Other frameworks: ISO 27001 A.5.12/A.8.24 Â· CIS Controls CIS 3/CIS 4 Â· CWE-200
 
 ---
 
-### LLM08 — Vector and Embedding Weaknesses
+### LLM08 â€” Vector and Embedding Weaknesses
 
 **Severity:** Medium
 
@@ -505,36 +505,36 @@ and inference of sensitive information from embeddings.
 
 | Requirement | ID | Level | How it applies |
 |---|---|---|---|
-| Verify least privilege access control on data | V4.1.3 | L1 | RBAC on all vector store collections — no unauthenticated access |
+| Verify least privilege access control on data | V4.1.3 | L1 | RBAC on all vector store collections â€” no unauthenticated access |
 | Verify all sensitive data encrypted at rest | V6.1.1 | L2 | All vector store content encrypted at rest |
-| Verify file upload malware scanning | V12.1.1 | L2 | Content validation on all vector store ingestion — adversarial content detected |
+| Verify file upload malware scanning | V12.1.1 | L2 | Content validation on all vector store ingestion â€” adversarial content detected |
 
 #### Mitigations by tier
 
 **Foundational (L1)**
-- V4.1.3: Enable RBAC on all vector store collections —
+- V4.1.3: Enable RBAC on all vector store collections â€”
   enforce least privilege, no unauthenticated access in
   any environment including development
-- Validate all content before embedding — input quality
+- Validate all content before embedding â€” input quality
   and integrity controls at the ingestion boundary
 - Patch all known vector database CVEs promptly
 
 **Hardening (L2)**
-- V6.1.1: Encrypt all vector store content at rest —
+- V6.1.1: Encrypt all vector store content at rest â€”
   embeddings are sensitive derived data requiring the
   same protection as source documents
-- V12.1.1: Implement content validation on ingestion —
+- V12.1.1: Implement content validation on ingestion â€”
   anomalous content, adversarial patterns, and path
   traversal attempts detected and rejected
-- Implement anomaly detection on query patterns — alert
+- Implement anomaly detection on query patterns â€” alert
   on bulk extraction and unusual retrieval volumes
 
 **Advanced (L3)**
-- Conduct embedding inversion testing — validate that
+- Conduct embedding inversion testing â€” validate that
   source content cannot be reconstructed from embeddings
 - Apply differential privacy in embedding generation
   for sensitive corpora
-- Adversarial retrieval testing — attempt to manipulate
+- Adversarial retrieval testing â€” attempt to manipulate
   retrieval results through crafted queries
 
 #### Tools
@@ -547,11 +547,11 @@ and inference of sensitive information from embeddings.
 #### Cross-references
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - DSGAI 2026: DSGAI13 Vector Store Platform Security
-- Other frameworks: ISO 27001 A.8.3/A.8.24 · CIS Controls CIS 3 · CWE-284
+- Other frameworks: ISO 27001 A.8.3/A.8.24 Â· CIS Controls CIS 3 Â· CWE-284
 
 ---
 
-### LLM09 — Misinformation
+### LLM09 â€” Misinformation
 
 **Severity:** Medium
 
@@ -562,36 +562,36 @@ systems act upon.
 
 | Requirement | ID | Level | How it applies |
 |---|---|---|---|
-| Verify business logic assumptions documented | V11.1.1 | L2 | LLM accuracy limitations documented as business logic assumptions — verification requirements defined |
-| Verify all security controls logged | V7.4.1 | L1 | LLM accuracy metrics and hallucination rate logged — production monitoring for output quality |
-| Verify outputs encoded before rendering | V5.2.1 | L1 | LLM advisory outputs clearly labelled — users cannot mistake model output for authoritative source |
+| Verify business logic assumptions documented | V11.1.1 | L2 | LLM accuracy limitations documented as business logic assumptions â€” verification requirements defined |
+| Verify all security controls logged | V7.4.1 | L1 | LLM accuracy metrics and hallucination rate logged â€” production monitoring for output quality |
+| Verify outputs encoded before rendering | V5.2.1 | L1 | LLM advisory outputs clearly labelled â€” users cannot mistake model output for authoritative source |
 
 #### Mitigations by tier
 
 **Foundational (L1)**
-- V5.2.1: Label all LLM advisory output — clear visual
+- V5.2.1: Label all LLM advisory output â€” clear visual
   distinction from authoritative content in all interfaces
-- V7.4.1: Log accuracy metrics and user feedback — enable
+- V7.4.1: Log accuracy metrics and user feedback â€” enable
   production monitoring for hallucination patterns
-- Require source citation in all LLM responses — users
+- Require source citation in all LLM responses â€” users
   verify against cited sources before acting
 
 **Hardening (L2)**
 - V11.1.1: Document LLM accuracy limitations as business
-  logic constraints — define which domains require
+  logic constraints â€” define which domains require
   independent verification before action
-- Deploy confidence scoring — low-confidence responses
+- Deploy confidence scoring â€” low-confidence responses
   flagged prominently, escalated to human review
 - Implement RAG grounded on authoritative, version-controlled
-  sources — not uncontrolled web content
+  sources â€” not uncontrolled web content
 
 **Advanced (L3)**
-- Conduct domain-specific accuracy testing before deployment —
+- Conduct domain-specific accuracy testing before deployment â€”
   hallucination rate measured per domain against acceptable
   thresholds
-- Build automated fact-checking for high-stakes output domains —
+- Build automated fact-checking for high-stakes output domains â€”
   accuracy gate before responses reach regulated workflows
-- Continuous drift detection in production — alert when
+- Continuous drift detection in production â€” alert when
   accuracy degrades beyond defined thresholds
 
 #### Tools
@@ -605,52 +605,52 @@ systems act upon.
 #### Cross-references
 - Agentic Top 10: ASI09 Human-Agent Trust Exploitation
 - DSGAI 2026: DSGAI21 Disinformation & Integrity Attacks
-- Other frameworks: ISO 27001 A.8.16 · CIS Controls CIS 14 · EU AI Act Art. 13
+- Other frameworks: ISO 27001 A.8.16 Â· CIS Controls CIS 14 Â· EU AI Act Art. 13
 
 ---
 
-### LLM10 — Unbounded Consumption
+### LLM10 â€” Unbounded Consumption
 
 **Severity:** Medium
 
-Adversarial inputs trigger disproportionate resource consumption —
+Adversarial inputs trigger disproportionate resource consumption â€”
 causing denial of service or runaway API cost.
 
 #### ASVS mapping
 
 | Requirement | ID | Level | How it applies |
 |---|---|---|---|
-| Verify API rate limiting | V13.1.1 | L1 | Rate limiting on all LLM API endpoints — per user, per session, per API key |
-| Verify API rejects large unexpected payloads | V13.1.3 | L1 | Token limits on LLM API inputs — requests exceeding limits rejected at the gateway |
-| Verify business logic rate limits | V11.1.4 | L2 | Business logic controls on LLM usage — per-tenant cost budgets, rate limit policies |
-| Verify error handling does not expose sensitive data | V7.4.1 | L1 | LLM resource exhaustion errors handled gracefully — no sensitive information in error responses |
+| Verify API rate limiting | V13.1.1 | L1 | Rate limiting on all LLM API endpoints â€” per user, per session, per API key |
+| Verify API rejects large unexpected payloads | V13.1.3 | L1 | Token limits on LLM API inputs â€” requests exceeding limits rejected at the gateway |
+| Verify business logic rate limits | V11.1.4 | L2 | Business logic controls on LLM usage â€” per-tenant cost budgets, rate limit policies |
+| Verify error handling does not expose sensitive data | V7.4.1 | L1 | LLM resource exhaustion errors handled gracefully â€” no sensitive information in error responses |
 
 #### Mitigations by tier
 
 **Foundational (L1)**
-- V13.1.1: Implement rate limiting on all LLM API endpoints —
+- V13.1.1: Implement rate limiting on all LLM API endpoints â€”
   hard caps per user, per session, and per API key
   enforced at the gateway before reaching the model
 - V13.1.3: Set hard token limits on input and output per
-  request — reject requests exceeding thresholds with
+  request â€” reject requests exceeding thresholds with
   a 429 response before inference begins
-- V7.4.1: Handle resource exhaustion errors gracefully —
+- V7.4.1: Handle resource exhaustion errors gracefully â€”
   no sensitive system information in error responses
 
 **Hardening (L2)**
 - V11.1.4: Implement per-tenant cost budgets with automatic
-  suspension — business logic control, not just monitoring
-- Implement circuit breakers — LLM service degradation
+  suspension â€” business logic control, not just monitoring
+- Implement circuit breakers â€” LLM service degradation
   isolated from other system availability
-- Per-tenant cost monitoring with automated alerting —
+- Per-tenant cost monitoring with automated alerting â€”
   anomalous consumption detected and responded to
 
 **Advanced (L3)**
-- Deploy sponge example detection — inputs designed to
+- Deploy sponge example detection â€” inputs designed to
   maximise computation identified and rejected
-- Adaptive rate limiting — thresholds adjust dynamically
+- Adaptive rate limiting â€” thresholds adjust dynamically
   based on system load
-- Conduct adversarial cost-maximisation testing — identify
+- Conduct adversarial cost-maximisation testing â€” identify
   inputs generating maximum token consumption for your
   model and guard those paths
 
@@ -665,13 +665,13 @@ causing denial of service or runaway API cost.
 #### Cross-references
 - Agentic Top 10: ASI08 Cascading Agent Failures
 - DSGAI 2026: DSGAI17 Data Availability & Resilience Failures
-- Other frameworks: ISO 27001 A.5.30 · CIS Controls CIS 4/CIS 12 · CWE-400
+- Other frameworks: ISO 27001 A.5.30 Â· CIS Controls CIS 4/CIS 12 Â· CWE-400
 
 ---
 
 ## ASVS verification checklist for LLM applications
 
-### L1 — Baseline (all LLM applications)
+### L1 â€” Baseline (all LLM applications)
 
 - [ ] V5.1.1: Input validation on all LLM API inputs
 - [ ] V5.2.1: Output encoding before rendering in HTML contexts
@@ -684,7 +684,7 @@ causing denial of service or runaway API cost.
 - [ ] V13.1.1: Rate limiting on all LLM API endpoints
 - [ ] V13.1.3: Token limits enforced at the gateway
 
-### L2 — Standard (applications with sensitive data)
+### L2 â€” Standard (applications with sensitive data)
 
 - [ ] V1.1.2: LLM data flows included in threat model
 - [ ] V6.1.1: All sensitive data encrypted at rest in LLM scope
@@ -697,7 +697,7 @@ causing denial of service or runaway API cost.
 - [ ] V11.1.4: Per-tenant cost budgets and rate limit policies
 - [ ] V14.2.2: Build pipeline includes LLM component integrity checks
 
-### L3 — Advanced (high-assurance requirements)
+### L3 â€” Advanced (high-assurance requirements)
 
 - [ ] Adversarial testing covering all injection vectors
 - [ ] Adversarial supply chain testing
@@ -711,11 +711,11 @@ causing denial of service or runaway API cost.
 
 | Phase | LLM entries | ASVS level | Priority requirements |
 |---|---|---|---|
-| 1 — L1 baseline | LLM01, LLM05, LLM06, LLM10 | L1 | V5.1.1, V5.2.1, V4.1.3, V13.1.1 |
-| 2 — L1 complete | LLM02, LLM07 | L1 | V8.1.1, V8.3.4, V4.1.1 |
-| 3 — L2 standard | LLM03, LLM04, LLM08 | L2 | V10.2.1, V10.2.2, V6.1.1, V12.1.1 |
-| 4 — L2 complete | LLM09 | L2 | V11.1.1, V7.2.2 |
-| 5 — L3 advanced | All | L3 | Adversarial testing, red team, inversion testing |
+| 1 â€” L1 baseline | LLM01, LLM05, LLM06, LLM10 | L1 | V5.1.1, V5.2.1, V4.1.3, V13.1.1 |
+| 2 â€” L1 complete | LLM02, LLM07 | L1 | V8.1.1, V8.3.4, V4.1.1 |
+| 3 â€” L2 standard | LLM03, LLM04, LLM08 | L2 | V10.2.1, V10.2.2, V6.1.1, V12.1.1 |
+| 4 â€” L2 complete | LLM09 | L2 | V11.1.1, V7.2.2 |
+| 5 â€” L3 advanced | All | L3 | Adversarial testing, red team, inversion testing |
 
 ---
 
@@ -732,9 +732,9 @@ causing denial of service or runaway API cost.
 
 | Date | Version | Change | Author |
 |---|---|---|---|
-| 2026-03-24 | 2026-Q1 | Initial mapping — LLM01–LLM10 full entries with L1/L2/L3 verification requirements | OWASP GenAI Data Security Initiative |
+| 2026-03-24 | 2026-Q1 | Initial mapping â€” LLM01â€“LLM10 full entries with L1/L2/L3 verification requirements | OWASP GenAI Data Security Initiative |
 
 ---
 
-*Part of the [GenAI Security Crosswalk](https://github.com/emmanuelgjr/GenAI-Security-Crosswalk) —
+*Part of the [OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk) â€”
 maintained by the [OWASP GenAI Data Security Initiative](https://genai.owasp.org)*

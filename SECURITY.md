@@ -3,7 +3,7 @@
 ## Scope of this policy
 
 This policy covers security vulnerabilities in the content and tooling
-of the **GenAI Security Crosswalk** repository — specifically:
+of the **OWASP GenAI Crosswalk** repository â€” specifically:
 
 - Factually incorrect security guidance that could mislead practitioners
   into deploying insecure controls
@@ -25,8 +25,8 @@ in this repository, please report it directly to that project.
 | Branch / Tag | Supported |
 |---|---|
 | `main` (latest) | ? Yes |
-| Tagged releases | ? Yes — current release only |
-| Older tags | ? No — update to latest |
+| Tagged releases | ? Yes â€” current release only |
+| Older tags | ? No â€” update to latest |
 
 ---
 
@@ -37,7 +37,7 @@ in this repository, please report it directly to that project.
 For issues that could mislead practitioners or introduce harmful content
 into the open-source security community, we ask for responsible disclosure:
 
-### Option 1 — GitHub private security advisory (preferred)
+### Option 1 â€” GitHub private security advisory (preferred)
 
 Use GitHub's built-in private vulnerability reporting:
 
@@ -47,7 +47,7 @@ Use GitHub's built-in private vulnerability reporting:
 
 This creates a private thread visible only to maintainers.
 
-### Option 2 — Direct contact
+### Option 2 â€” Direct contact
 
 Email the OWASP GenAI Data Security Initiative maintainers at:
 
@@ -117,5 +117,5 @@ https://owasp.org/www-policy/operational/bug-bounty
 
 ---
 
-*Part of the [GenAI Security Crosswalk](https://github.com/emmanuelgjr/GenAI-Security-Crosswalk) —
+*Part of the [OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk) â€”
 maintained by the [OWASP GenAI Data Security Initiative](https://genai.owasp.org)*

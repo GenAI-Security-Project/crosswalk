@@ -1,9 +1,9 @@
 <!--
-  GenAI Security Crosswalk
+  OWASP GenAI Crosswalk
   Source list : OWASP Top 10 for LLM Applications 2025 (LLM01-LLM10)
   Framework   : PCI DSS v4.0
   Version     : 2026-Q1
-  Maintained by: OWASP GenAI Data Security Initiative — https://genai.owasp.org
+  Maintained by: OWASP GenAI Data Security Initiative â€” https://genai.owasp.org
   License     : CC BY-SA 4.0
 -->
 
@@ -11,7 +11,7 @@
 
 Mapping the [OWASP Top 10 for LLM Applications 2025](https://genai.owasp.org/llm-top-10/)
 to [PCI DSS v4.0](https://www.pcisecuritystandards.org/document_library/)
-— the Payment Card Industry Data Security Standard, version 4.0,
+â€” the Payment Card Industry Data Security Standard, version 4.0,
 published March 2022 and mandatory from March 2025.
 
 ---
@@ -35,7 +35,7 @@ and their data pipelines:
 - Agents built on the LLM have tool access to payment systems
 
 PCI DSS v4.0 introduced significant updates relevant to LLM
-applications — most importantly the requirement for customised
+applications â€” most importantly the requirement for customised
 approach, which allows organisations to meet the intent of
 requirements using alternative methods. For novel LLM-specific
 controls that do not map cleanly to traditional PCI requirements,
@@ -105,11 +105,11 @@ PCI DSS v4.0 is organised into 12 requirements:
 
 ## Audience tags
 
-- **CISO / compliance lead** — full file, PCI DSS v4.0 alignment for LLM applications
-- **QSA / assessor** — requirement-to-control mapping for PCI assessment scope
-- **Payment / fintech product team** — CHD scope, cardholder data handling
-- **Security engineer** — Req 6, Req 10 technical control entries
-- **Risk manager** — Req 12.3 targeted risk analysis entries throughout
+- **CISO / compliance lead** â€” full file, PCI DSS v4.0 alignment for LLM applications
+- **QSA / assessor** â€” requirement-to-control mapping for PCI assessment scope
+- **Payment / fintech product team** â€” CHD scope, cardholder data handling
+- **Security engineer** â€” Req 6, Req 10 technical control entries
+- **Risk manager** â€” Req 12.3 targeted risk analysis entries throughout
 
 ---
 
@@ -117,13 +117,13 @@ PCI DSS v4.0 is organised into 12 requirements:
 
 ---
 
-### LLM01 — Prompt Injection
+### LLM01 â€” Prompt Injection
 
 **Severity:** Critical
 
 Malicious instructions manipulate LLM behaviour. In PCI scope,
 prompt injection against an LLM with CHD access is a critical
-finding — a successful attack could cause the model to exfiltrate
+finding â€” a successful attack could cause the model to exfiltrate
 cardholder data, generate fraudulent payment instructions, or
 bypass fraud detection logic.
 
@@ -132,46 +132,46 @@ scope, Requirement 6.2 (secure software development practices)
 requires that injection vulnerabilities are addressed in all
 bespoke software including LLM integrations. Requirement 6.4
 requires that public-facing applications are protected against
-known attacks — prompt injection is a known attack class for LLM
+known attacks â€” prompt injection is a known attack class for LLM
 applications and assessors will test for it.
 
 #### PCI DSS v4.0 mapping
 
 | Requirement | ID | How it applies |
 |---|---|---|
-| Secure software development | Req 6.2.4 | All injection vulnerabilities addressed in LLM integration code — prompt injection as a known injection class |
-| Public-facing application protection | Req 6.4.1 | LLM-powered customer-facing applications protected against prompt injection — WAF or equivalent, security testing |
-| Audit log review | Req 10.6.1 | Automated log analysis covering LLM injection indicators — anomalous inputs detected and reviewed |
+| Secure software development | Req 6.2.4 | All injection vulnerabilities addressed in LLM integration code â€” prompt injection as a known injection class |
+| Public-facing application protection | Req 6.4.1 | LLM-powered customer-facing applications protected against prompt injection â€” WAF or equivalent, security testing |
+| Audit log review | Req 10.6.1 | Automated log analysis covering LLM injection indicators â€” anomalous inputs detected and reviewed |
 | External and internal penetration testing | Req 11.3.1 | Penetration testing includes prompt injection scenarios for all LLM applications in PCI scope |
 
 #### Mitigations for PCI DSS compliance
 
 **Foundational**
 - Req 6.2.4: Implement input validation for all LLM
-  integrations in PCI scope — prompt injection addressed
+  integrations in PCI scope â€” prompt injection addressed
   as a known injection vulnerability class in secure
   development standards
 - Req 6.4.1: Apply web application protection to all
-  public-facing LLM applications — WAF rules or equivalent
+  public-facing LLM applications â€” WAF rules or equivalent
   coverage including injection detection
 - Document prompt injection as a targeted risk per
   Req 12.3.2 for all LLM systems in CDE scope
 
 **Hardening**
 - Req 11.3.1: Include prompt injection in penetration
-  testing scope — direct, indirect via RAG, and jailbreak
+  testing scope â€” direct, indirect via RAG, and jailbreak
   vectors for all LLM applications in PCI scope
 - Req 10.6.1: Deploy automated monitoring for injection
-  indicators — log review covers LLM-specific anomalies
+  indicators â€” log review covers LLM-specific anomalies
 - Implement architectural separation between system
-  prompt and user input — Req 6.2 secure design control
+  prompt and user input â€” Req 6.2 secure design control
 
 **Advanced**
-- Req 11.3.1: Conduct adversarial testing quarterly —
+- Req 11.3.1: Conduct adversarial testing quarterly â€”
   novel injection techniques tested against LLM
   applications in CDE before reaching production
 - Req 12.3.2: Update targeted risk analysis when new
-  injection techniques emerge — dynamic risk assessment
+  injection techniques emerge â€” dynamic risk assessment
 - Customised approach: Document injection-specific
   controls as customised approach evidence where
   standard WAF rules do not cover LLM-specific vectors
@@ -186,16 +186,16 @@ applications and assessors will test for it.
 #### Cross-references
 - Agentic Top 10: ASI01 Agent Goal Hijack
 - DSGAI 2026: DSGAI01 Sensitive Data Leakage, DSGAI12 Unsafe NL Data Gateways
-- Other frameworks: ISO 27001 A.8.28 · NIST AI RMF MS-2.5 · OWASP ASVS V5.1
+- Other frameworks: ISO 27001 A.8.28 Â· NIST AI RMF MS-2.5 Â· OWASP ASVS V5.1
 
 ---
 
-### LLM02 — Sensitive Information Disclosure
+### LLM02 â€” Sensitive Information Disclosure
 
 **Severity:** High
 
 LLMs expose sensitive information through outputs. In PCI scope
-this is a primary cardholder data protection concern — an LLM
+this is a primary cardholder data protection concern â€” an LLM
 that reproduces PANs, expiry dates, CVVs, or cardholder names
 from training data or RAG retrieval is a direct PCI DSS Requirement
 3 violation.
@@ -210,43 +210,43 @@ Environment) and full PCI DSS scope applies.
 
 | Requirement | ID | How it applies |
 |---|---|---|
-| Protect stored account data — SAD prohibition | Req 3.3.1 | SAD (CVV, PIN) must never be in LLM training data or RAG — stored after authorisation is prohibited |
-| Protect stored account data — PAN rendering | Req 3.4.1 | PANs in LLM outputs masked — only first six and last four digits displayed in any LLM response |
-| Protect stored account data — encryption | Req 3.5.1 | Any PAN in LLM scope encrypted with strong cryptography — AES-256 or equivalent |
-| Protect cardholder data in transit | Req 4.2.1 | All LLM API calls and RAG retrieval paths carrying CHD encrypted in transit — TLS 1.2 minimum |
-| Restrict access by need to know | Req 7.2.1 | LLM access to CHD restricted to minimum required — retrieval access controls prevent over-broad PAN access |
+| Protect stored account data â€” SAD prohibition | Req 3.3.1 | SAD (CVV, PIN) must never be in LLM training data or RAG â€” stored after authorisation is prohibited |
+| Protect stored account data â€” PAN rendering | Req 3.4.1 | PANs in LLM outputs masked â€” only first six and last four digits displayed in any LLM response |
+| Protect stored account data â€” encryption | Req 3.5.1 | Any PAN in LLM scope encrypted with strong cryptography â€” AES-256 or equivalent |
+| Protect cardholder data in transit | Req 4.2.1 | All LLM API calls and RAG retrieval paths carrying CHD encrypted in transit â€” TLS 1.2 minimum |
+| Restrict access by need to know | Req 7.2.1 | LLM access to CHD restricted to minimum required â€” retrieval access controls prevent over-broad PAN access |
 
 #### Mitigations for PCI DSS compliance
 
 **Foundational**
 - Req 3.3.1: Audit all LLM training data and RAG corpora
   for SAD before any LLM in CDE scope is trained or
-  deployed — SAD prohibition is absolute, no exceptions
-- Req 3.4.1: Implement PAN masking in all LLM outputs —
+  deployed â€” SAD prohibition is absolute, no exceptions
+- Req 3.4.1: Implement PAN masking in all LLM outputs â€”
   automated output redaction before responses leave
   the LLM service boundary
-- Req 3.5.1: Encrypt all stored CHD in LLM scope —
+- Req 3.5.1: Encrypt all stored CHD in LLM scope â€”
   training datasets, RAG document stores, embedding
   stores, prompt caches containing CHD
 
 **Hardening**
 - Req 4.2.1: Enforce TLS 1.2 minimum on all LLM data
-  flows carrying CHD — API calls, RAG retrieval,
+  flows carrying CHD â€” API calls, RAG retrieval,
   observability pipelines
 - Req 7.2.1: Apply need-to-know access controls on
-  RAG retrieval — LLM access to CHD restricted to
+  RAG retrieval â€” LLM access to CHD restricted to
   minimum required by the specific use case
 - Scope minimisation: Design LLM applications to
-  operate outside CDE where possible — tokenisation
+  operate outside CDE where possible â€” tokenisation
   before data reaches the LLM removes PCI scope
 
 **Advanced**
 - Apply differential privacy for any LLM trained on
-  CHD corpora — reduces risk of PAN reproduction from
+  CHD corpora â€” reduces risk of PAN reproduction from
   training data memorisation
-- Conduct PAN detection red team — query the LLM to
+- Conduct PAN detection red team â€” query the LLM to
   verify PANs cannot be reconstructed from outputs
-- Req 3.3.1: Verify SAD absence in all model artifacts —
+- Req 3.3.1: Verify SAD absence in all model artifacts â€”
   post-training audit of model outputs for SAD patterns
 
 #### Tools
@@ -259,57 +259,57 @@ Environment) and full PCI DSS scope applies.
 #### Cross-references
 - Agentic Top 10: ASI03 Identity and Privilege Abuse
 - DSGAI 2026: DSGAI01 Sensitive Data Leakage, DSGAI18 Inference and Data Reconstruction
-- Other frameworks: ISO 27001 A.8.11 · NIST AI RMF GV-1.6 · SOC 2 C2.1
+- Other frameworks: ISO 27001 A.8.11 Â· NIST AI RMF GV-1.6 Â· SOC 2 C2.1
 
 ---
 
-### LLM03 — Supply Chain Vulnerabilities
+### LLM03 â€” Supply Chain Vulnerabilities
 
 **Severity:** High
 
 LLM components sourced from third parties create supply chain
 risk. PCI DSS Requirement 12.8 (third-party service providers)
 applies to all vendors with access to or components that process
-CHD — model weight providers and dataset vendors accessing CDE
+CHD â€” model weight providers and dataset vendors accessing CDE
 data are TPSPs under PCI DSS.
 
 #### PCI DSS v4.0 mapping
 
 | Requirement | ID | How it applies |
 |---|---|---|
-| Third-party service providers | Req 12.8.1 | List of all TPSPs maintained — LLM component vendors with CDE access or data in scope |
-| TPSP agreements | Req 12.8.3 | Written agreements with LLM vendors — acknowledge responsibility for CHD security |
-| TPSP PCI DSS compliance | Req 12.8.4 | Monitor TPSP PCI DSS compliance status — LLM component vendors with CHD access have compliant status verified |
-| Security vulnerabilities | Req 6.3.3 | All LLM software components at latest security patches — ML libraries and inference runtime patched |
-| Secure system changes | Req 6.5.1 | Model component updates follow change management — security testing before production |
+| Third-party service providers | Req 12.8.1 | List of all TPSPs maintained â€” LLM component vendors with CDE access or data in scope |
+| TPSP agreements | Req 12.8.3 | Written agreements with LLM vendors â€” acknowledge responsibility for CHD security |
+| TPSP PCI DSS compliance | Req 12.8.4 | Monitor TPSP PCI DSS compliance status â€” LLM component vendors with CHD access have compliant status verified |
+| Security vulnerabilities | Req 6.3.3 | All LLM software components at latest security patches â€” ML libraries and inference runtime patched |
+| Secure system changes | Req 6.5.1 | Model component updates follow change management â€” security testing before production |
 
 #### Mitigations for PCI DSS compliance
 
 **Foundational**
 - Req 12.8.1: Maintain TPSP list including all LLM
-  component vendors with CDE access or processing CHD —
+  component vendors with CDE access or processing CHD â€”
   model providers, dataset vendors, inference platform
 - Req 12.8.3: Establish written agreements with LLM
-  vendors acknowledging CHD security responsibility —
+  vendors acknowledging CHD security responsibility â€”
   required before any CDE-adjacent LLM deployment
 - Req 6.3.3: Maintain ML SBOM and patch all LLM
   components to latest security patches on schedule
 
 **Hardening**
-- Req 12.8.4: Monitor LLM vendor PCI DSS compliance —
+- Req 12.8.4: Monitor LLM vendor PCI DSS compliance â€”
   obtain AOC (Attestation of Compliance) from vendors
   with CHD access, track compliance status annually
 - Req 6.5.1: Include model and component updates in
-  PCI change management — security testing before
+  PCI change management â€” security testing before
   any change to production LLM in CDE
-- Verify cryptographic signatures of all LLM components —
+- Verify cryptographic signatures of all LLM components â€”
   unsigned components rejected before CDE deployment
 
 **Advanced**
-- Operate isolated model evaluation before CDE deployment —
+- Operate isolated model evaluation before CDE deployment â€”
   Req 6.5 testing before change to production
 - Req 12.8.2: Document roles and responsibilities for
-  LLM vendor CHD security — who owns TPSP oversight,
+  LLM vendor CHD security â€” who owns TPSP oversight,
   what escalation path exists for vendor incidents
 - Customised approach: Document ML SBOM and component
   verification as a customised Req 12.8 monitoring control
@@ -324,11 +324,11 @@ data are TPSPs under PCI DSS.
 #### Cross-references
 - Agentic Top 10: ASI04 Agentic Supply Chain Vulnerabilities
 - DSGAI 2026: DSGAI04 Data Model and Artifact Poisoning
-- Other frameworks: ISO 27001 A.5.19/A.5.21 · NIST AI RMF MP-5.1 · NIST SP 800-218A
+- Other frameworks: ISO 27001 A.5.19/A.5.21 Â· NIST AI RMF MP-5.1 Â· NIST SP 800-218A
 
 ---
 
-### LLM04 — Data and Model Poisoning
+### LLM04 â€” Data and Model Poisoning
 
 **Severity:** Critical
 
@@ -342,40 +342,40 @@ and Req 11.3 (penetration testing) are the primary requirements.
 
 | Requirement | ID | How it applies |
 |---|---|---|
-| Secure system changes | Req 6.5.6 | All model promotions tested for unexpected functionality before CDE deployment — poisoning as unexpected functionality |
-| Audit log review | Req 10.6.1 | Automated monitoring of LLM outputs in CDE — poisoning indicators (systematic anomalous recommendations) detected |
+| Secure system changes | Req 6.5.6 | All model promotions tested for unexpected functionality before CDE deployment â€” poisoning as unexpected functionality |
+| Audit log review | Req 10.6.1 | Automated monitoring of LLM outputs in CDE â€” poisoning indicators (systematic anomalous recommendations) detected |
 | Penetration testing | Req 11.3.1 | Poisoning detection included in penetration testing programme for LLM applications in CDE |
-| Targeted risk analysis | Req 12.3.2 | Targeted risk analysis for training pipeline security — documented controls and frequency of review |
+| Targeted risk analysis | Req 12.3.2 | Targeted risk analysis for training pipeline security â€” documented controls and frequency of review |
 
 #### Mitigations for PCI DSS compliance
 
 **Foundational**
 - Req 6.5.6: Test all model promotions for unexpected
-  functionality — model integrity verification and output
+  functionality â€” model integrity verification and output
   distribution analysis before CDE deployment
-- Document training data governance — source allowlisting,
+- Document training data governance â€” source allowlisting,
   provenance, anomaly detection as Req 6.2 secure
   development practices
-- Establish model rollback capability — Req 6.5 change
+- Establish model rollback capability â€” Req 6.5 change
   reversal requirement met by clean checkpoint procedure
 
 **Hardening**
 - Req 10.6.1: Deploy automated monitoring of LLM outputs
-  in CDE — poisoning indicators (systematic anomalous
+  in CDE â€” poisoning indicators (systematic anomalous
   fraud scores, recommendation patterns) detected
 - Req 11.3.1: Include poisoning detection in penetration
-  testing — backdoor trigger testing for CDE LLM models
+  testing â€” backdoor trigger testing for CDE LLM models
 - Req 12.3.2: Document targeted risk analysis for training
-  pipeline — threat actors, attack vectors, controls,
+  pipeline â€” threat actors, attack vectors, controls,
   review frequency
 
 **Advanced**
 - Post-training backdoor detection as mandatory CDE
-  deployment gate — Req 6.5 testing before production
+  deployment gate â€” Req 6.5 testing before production
 - Req 10.6.1: Integrate model output anomaly detection
-  into PCI-scope SIEM — poisoning events treated as
+  into PCI-scope SIEM â€” poisoning events treated as
   security incidents per Req 12.10
-- Conduct training pipeline adversarial testing —
+- Conduct training pipeline adversarial testing â€”
   Req 11.3 penetration testing evidence
 
 #### Tools
@@ -388,11 +388,11 @@ and Req 11.3 (penetration testing) are the primary requirements.
 #### Cross-references
 - Agentic Top 10: ASI06 Memory and Context Poisoning
 - DSGAI 2026: DSGAI04 Data Model and Artifact Poisoning, DSGAI21 Disinformation via Data Poisoning
-- Other frameworks: NIST AI RMF MS-3.3 · MITRE ATLAS AML.T0032 · ISO 27001 A.8.27
+- Other frameworks: NIST AI RMF MS-3.3 Â· MITRE ATLAS AML.T0032 Â· ISO 27001 A.8.27
 
 ---
 
-### LLM05 — Insecure Output Handling
+### LLM05 â€” Insecure Output Handling
 
 **Severity:** High
 
@@ -406,37 +406,37 @@ CHD exfiltration. Req 6.2 (secure development) and Req 6.4
 
 | Requirement | ID | How it applies |
 |---|---|---|
-| Bespoke and custom software | Req 6.2.4 | Output handling in LLM integrations addresses all injection vulnerability classes — LLM output treated as untrusted |
-| Public-facing web application protection | Req 6.4.1 | All interfaces consuming LLM output in PCI scope protected — input validation on all downstream consumers |
-| Penetration testing | Req 11.3.1 | Output injection scenarios in penetration testing — SQL injection, command injection via LLM output |
+| Bespoke and custom software | Req 6.2.4 | Output handling in LLM integrations addresses all injection vulnerability classes â€” LLM output treated as untrusted |
+| Public-facing web application protection | Req 6.4.1 | All interfaces consuming LLM output in PCI scope protected â€” input validation on all downstream consumers |
+| Penetration testing | Req 11.3.1 | Output injection scenarios in penetration testing â€” SQL injection, command injection via LLM output |
 | Audit log review | Req 10.6.1 | Monitoring for injection patterns in LLM output channels within CDE |
 
 #### Mitigations for PCI DSS compliance
 
 **Foundational**
 - Req 6.2.4: Implement output validation as a secure
-  development requirement — LLM output treated as
+  development requirement â€” LLM output treated as
   untrusted input to all downstream CDE systems
 - Req 6.4.1: Apply application protection to all
-  interfaces consuming LLM output in PCI scope —
+  interfaces consuming LLM output in PCI scope â€”
   WAF or equivalent, schema validation
 - Never pass raw LLM output to payment processing
-  logic — Req 6.2 secure design requirement
+  logic â€” Req 6.2 secure design requirement
 
 **Hardening**
 - Req 11.3.1: Include output injection in penetration
-  testing scope — SQL injection, command injection
+  testing scope â€” SQL injection, command injection
   via LLM output, results documented
 - Req 10.6.1: Monitor LLM output channels for injection
-  patterns — automated log analysis covering CDE-facing
+  patterns â€” automated log analysis covering CDE-facing
   output paths
 - Conduct DAST on all CDE interfaces consuming LLM output
 
 **Advanced**
-- Deploy dedicated output security layer — Req 6.2
+- Deploy dedicated output security layer â€” Req 6.2
   defence-in-depth evidence
 - Req 11.3.1: Adversarial output testing against
-  specific payment logic consumers — document as
+  specific payment logic consumers â€” document as
   CDE penetration testing evidence
 
 #### Tools
@@ -449,57 +449,57 @@ CHD exfiltration. Req 6.2 (secure development) and Req 6.4
 #### Cross-references
 - Agentic Top 10: ASI02 Tool Misuse, ASI05 Unexpected Code Execution
 - DSGAI 2026: DSGAI05 Data Integrity and Validation Failures
-- Other frameworks: OWASP ASVS V5 · CIS Controls CIS 16 · CWE-79
+- Other frameworks: OWASP ASVS V5 Â· CIS Controls CIS 16 Â· CWE-79
 
 ---
 
-### LLM06 — Excessive Agency
+### LLM06 â€” Excessive Agency
 
 **Severity:** High
 
 LLMs with excessive autonomy execute unintended actions. In PCI
-scope, excessive agency against payment systems — an agent that
+scope, excessive agency against payment systems â€” an agent that
 can initiate refunds, modify transaction records, or query
-cardholder tables autonomously — is a critical access control
+cardholder tables autonomously â€” is a critical access control
 failure under Req 7 and Req 8.
 
 #### PCI DSS v4.0 mapping
 
 | Requirement | ID | How it applies |
 |---|---|---|
-| Restrict access to system components | Req 7.2.1 | LLM tool access to CDE systems restricted to minimum required — read-only by default, write access formally approved |
-| Access control system | Req 7.3.1 | Access control system enforces LLM tool scope — agent cannot exceed defined CDE access without explicit authorisation |
-| Logging and monitoring | Req 10.2.1 | All LLM tool invocations in CDE logged — tool identity, parameters, invoking user identity, timestamp |
-| Targeted risk analysis | Req 12.3.2 | Targeted risk analysis for LLM autonomous action scope in CDE — blast radius documented and accepted |
+| Restrict access to system components | Req 7.2.1 | LLM tool access to CDE systems restricted to minimum required â€” read-only by default, write access formally approved |
+| Access control system | Req 7.3.1 | Access control system enforces LLM tool scope â€” agent cannot exceed defined CDE access without explicit authorisation |
+| Logging and monitoring | Req 10.2.1 | All LLM tool invocations in CDE logged â€” tool identity, parameters, invoking user identity, timestamp |
+| Targeted risk analysis | Req 12.3.2 | Targeted risk analysis for LLM autonomous action scope in CDE â€” blast radius documented and accepted |
 
 #### Mitigations for PCI DSS compliance
 
 **Foundational**
 - Req 7.2.1: Restrict LLM tool access to minimum required
-  CDE access — read-only for analytics and advisory
+  CDE access â€” read-only for analytics and advisory
   functions, write access requires formal approval and
   documented business justification
 - Req 7.3.1: Enforce LLM tool scope through access
-  control system — agent cannot self-escalate beyond
+  control system â€” agent cannot self-escalate beyond
   defined CDE permission scope
 - Require human confirmation for all LLM-initiated
-  financial operations — Req 7 need-to-know requirement
+  financial operations â€” Req 7 need-to-know requirement
 
 **Hardening**
-- Req 10.2.1: Log all LLM tool invocations in CDE —
-  tool identity, parameters, user identity, timestamp —
+- Req 10.2.1: Log all LLM tool invocations in CDE â€”
+  tool identity, parameters, user identity, timestamp â€”
   immutable, meets Req 10 logging requirements
 - Req 12.3.2: Document targeted risk analysis for LLM
-  autonomous actions — CDE systems accessible, operations
+  autonomous actions â€” CDE systems accessible, operations
   possible, blast radius, controls implemented
 - Conduct quarterly access reviews for LLM tool
-  permissions — Req 7 periodic review requirement
+  permissions â€” Req 7 periodic review requirement
 
 **Advanced**
 - Formally specify permitted LLM action scope for each
-  CDE deployment — Req 7 documented least privilege
+  CDE deployment â€” Req 7 documented least privilege
 - Req 11.3.1: Test excessive agency via injection in
-  penetration testing — results documented as CDE
+  penetration testing â€” results documented as CDE
   security testing evidence
 
 #### Tools
@@ -512,11 +512,11 @@ failure under Req 7 and Req 8.
 #### Cross-references
 - Agentic Top 10: ASI01 Agent Goal Hijack, ASI02 Tool Misuse
 - DSGAI 2026: DSGAI06 Tool Plugin and Agent Data Exchange
-- Other frameworks: EU AI Act Art. 14 · ISO 42001 A.6.1.2 · AIUC-1 B006
+- Other frameworks: EU AI Act Art. 14 Â· ISO 42001 A.6.1.2 Â· AIUC-1 B006
 
 ---
 
-### LLM07 — System Prompt Leakage
+### LLM07 â€” System Prompt Leakage
 
 **Severity:** High
 
@@ -529,46 +529,46 @@ be protected as sensitive configuration data under Req 3 and Req 7.
 
 | Requirement | ID | How it applies |
 |---|---|---|
-| Protection of sensitive authentication data | Req 3.5.1 | System prompts containing CDE configuration treated as sensitive — encrypted at rest, access-controlled |
-| Restrict access by need to know | Req 7.2.1 | System prompt access restricted — only authorised personnel with documented business need |
-| Logging and monitoring | Req 10.2.1 | All access to system prompt storage logged — access to CDE configuration data requires audit trail |
-| Bespoke software security | Req 6.2.4 | System prompt design prevents leakage — no cleartext CDE identifiers, tokens resolved at runtime |
+| Protection of sensitive authentication data | Req 3.5.1 | System prompts containing CDE configuration treated as sensitive â€” encrypted at rest, access-controlled |
+| Restrict access by need to know | Req 7.2.1 | System prompt access restricted â€” only authorised personnel with documented business need |
+| Logging and monitoring | Req 10.2.1 | All access to system prompt storage logged â€” access to CDE configuration data requires audit trail |
+| Bespoke software security | Req 6.2.4 | System prompt design prevents leakage â€” no cleartext CDE identifiers, tokens resolved at runtime |
 
 #### Mitigations for PCI DSS compliance
 
 **Foundational**
 - Req 3.5.1: Classify system prompts containing CDE
-  references as sensitive configuration — encrypted at
+  references as sensitive configuration â€” encrypted at
   rest, access-controlled, version-controlled
 - Req 7.2.1: Restrict system prompt access to authorised
-  personnel with documented business need — access
+  personnel with documented business need â€” access
   control configuration as Req 7 evidence
 - Remove all CHD, CDE topology, and authentication
-  details from system prompts — use runtime token
+  details from system prompts â€” use runtime token
   resolution per Req 6.2
 
 **Hardening**
-- Req 10.2.1: Log all access to system prompt storage —
+- Req 10.2.1: Log all access to system prompt storage â€”
   access to CDE configuration data auditable per Req 10
-- Conduct prompt extraction testing — Req 11.3
+- Conduct prompt extraction testing â€” Req 11.3
   security testing evidence
-- Req 6.2.4: Implement system prompt tokenisation —
+- Req 6.2.4: Implement system prompt tokenisation â€”
   CDE identifiers replaced with opaque tokens
 
 **Advanced**
 - Req 11.3.1: Include prompt extraction in penetration
-  testing scope — CDE system prompt recovery tested
+  testing scope â€” CDE system prompt recovery tested
 - Deploy output classifier to block system prompt
-  content in responses — Req 6.4 application protection
+  content in responses â€” Req 6.4 application protection
 
 #### Cross-references
 - Agentic Top 10: ASI01 Agent Goal Hijack
 - DSGAI 2026: DSGAI15 Over-Broad Context Windows
-- Other frameworks: AIUC-1 B003/B009 · CWE-200 · ISO 27001 A.5.12
+- Other frameworks: AIUC-1 B003/B009 Â· CWE-200 Â· ISO 27001 A.5.12
 
 ---
 
-### LLM08 — Vector and Embedding Weaknesses
+### LLM08 â€” Vector and Embedding Weaknesses
 
 **Severity:** Medium
 
@@ -580,37 +580,37 @@ PCI scope assessments but within CDE data exposure risk.
 
 | Requirement | ID | How it applies |
 |---|---|---|
-| Protect stored account data | Req 3.4.1 | Embeddings derived from CHD-containing documents encrypted — PAN cannot be reconstructed from cleartext embeddings |
-| Protect stored account data — SAD | Req 3.5.1 | Vector stores in CDE scope encrypted with strong cryptography |
-| Restrict access | Req 7.2.1 | RBAC on all vector stores in CDE scope — no unauthenticated access |
-| Penetration testing | Req 11.3.1 | Vector store attacks in CDE penetration testing — RBAC bypass, bulk extraction, embedding inversion |
+| Protect stored account data | Req 3.4.1 | Embeddings derived from CHD-containing documents encrypted â€” PAN cannot be reconstructed from cleartext embeddings |
+| Protect stored account data â€” SAD | Req 3.5.1 | Vector stores in CDE scope encrypted with strong cryptography |
+| Restrict access | Req 7.2.1 | RBAC on all vector stores in CDE scope â€” no unauthenticated access |
+| Penetration testing | Req 11.3.1 | Vector store attacks in CDE penetration testing â€” RBAC bypass, bulk extraction, embedding inversion |
 
 #### Mitigations for PCI DSS compliance
 
 **Foundational**
 - Req 3.4.1: Ensure embeddings derived from CHD-containing
-  documents cannot reproduce PANs — PAN masking before
+  documents cannot reproduce PANs â€” PAN masking before
   embedding generation prevents scope contamination
 - Req 7.2.1: Enable RBAC on all vector stores in
-  PCI scope — no unauthenticated access in any environment
-- Req 3.5.1: Encrypt all vector stores in CDE scope —
+  PCI scope â€” no unauthenticated access in any environment
+- Req 3.5.1: Encrypt all vector stores in CDE scope â€”
   encryption at rest required
 
 **Hardening**
 - Scope design: Apply PAN tokenisation before embedding
-  generation — removes CHD from embedding scope, reducing
+  generation â€” removes CHD from embedding scope, reducing
   PCI scope of vector infrastructure
 - Req 11.3.1: Include embedding inversion in penetration
-  testing — validate CHD cannot be reconstructed, results
+  testing â€” validate CHD cannot be reconstructed, results
   documented as CDE testing evidence
-- Patch all vector database CVEs — Req 6.3 vulnerability
+- Patch all vector database CVEs â€” Req 6.3 vulnerability
   management requirement
 
 **Advanced**
 - Apply differential privacy to embeddings of CHD-adjacent
-  content — Req 3 advanced data protection measure
+  content â€” Req 3 advanced data protection measure
 - Req 11.3.1: Conduct RBAC bypass testing for all vector
-  stores in PCI scope — document as CDE testing evidence
+  stores in PCI scope â€” document as CDE testing evidence
 
 #### Tools
 
@@ -622,11 +622,11 @@ PCI scope assessments but within CDE data exposure risk.
 #### Cross-references
 - Agentic Top 10: ASI06 Memory and Context Poisoning
 - DSGAI 2026: DSGAI13 Vector Store Platform Security, DSGAI18 Inference and Data Reconstruction
-- Other frameworks: NIST AI RMF MS-2.5 · ISO 27001 A.8.3/A.8.24 · SOC 2 C2.1
+- Other frameworks: NIST AI RMF MS-2.5 Â· ISO 27001 A.8.3/A.8.24 Â· SOC 2 C2.1
 
 ---
 
-### LLM09 — Misinformation
+### LLM09 â€” Misinformation
 
 **Severity:** Medium
 
@@ -641,39 +641,39 @@ payment contexts.
 
 | Requirement | ID | How it applies |
 |---|---|---|
-| Targeted risk analysis | Req 12.3.2 | Targeted risk analysis for LLM advisory outputs in payment context — what decisions are influenced, what is the consequence of incorrect output |
-| Bespoke software security | Req 6.2 | LLM integration code specifies accuracy requirements — high-stakes payment outputs require verification before action |
-| Audit log review | Req 10.6.1 | Monitoring for LLM accuracy degradation — output quality metrics reviewed |
-| Security awareness programme | Req 12.6.1 | PCI staff trained on LLM output limitations — advisory status of AI recommendations communicated |
+| Targeted risk analysis | Req 12.3.2 | Targeted risk analysis for LLM advisory outputs in payment context â€” what decisions are influenced, what is the consequence of incorrect output |
+| Bespoke software security | Req 6.2 | LLM integration code specifies accuracy requirements â€” high-stakes payment outputs require verification before action |
+| Audit log review | Req 10.6.1 | Monitoring for LLM accuracy degradation â€” output quality metrics reviewed |
+| Security awareness programme | Req 12.6.1 | PCI staff trained on LLM output limitations â€” advisory status of AI recommendations communicated |
 
 #### Mitigations for PCI DSS compliance
 
 **Foundational**
 - Req 12.3.2: Document targeted risk analysis for LLM
-  advisory outputs in payment context — what payment
+  advisory outputs in payment context â€” what payment
   decisions are influenced by LLM, acceptable accuracy
   threshold, human verification requirements
 - Req 12.6.1: Include LLM output limitations in PCI
-  security awareness programme — staff handling CHD
+  security awareness programme â€” staff handling CHD
   through LLM trained on advisory status
 - Human verification for all LLM-influenced payment
-  decisions — Req 12.3 risk acceptance control
+  decisions â€” Req 12.3 risk acceptance control
 
 **Hardening**
-- Req 10.6.1: Implement production accuracy monitoring —
+- Req 10.6.1: Implement production accuracy monitoring â€”
   LLM output quality reviewed as part of CDE log
   analysis programme
 - Deploy RAG grounded on authoritative, PCI-approved
-  sources — Req 6.2 secure design for payment advisory
+  sources â€” Req 6.2 secure design for payment advisory
 - Req 12.3.2: Review and update targeted risk analysis
-  when LLM model is updated — accuracy characteristics
+  when LLM model is updated â€” accuracy characteristics
   may change post fine-tuning
 
 **Advanced**
 - Conduct domain-specific accuracy testing before CDE
-  deployment — Req 6.5 testing before production change
+  deployment â€” Req 6.5 testing before production change
 - Req 11.3.1: Include misinformation scenarios in
-  penetration testing for payment advisory LLM — document
+  penetration testing for payment advisory LLM â€” document
   as CDE testing evidence
 
 #### Tools
@@ -686,17 +686,17 @@ payment contexts.
 #### Cross-references
 - Agentic Top 10: ASI09 Human-Agent Trust Exploitation
 - DSGAI 2026: DSGAI21 Disinformation and Integrity Attacks
-- Other frameworks: EU AI Act Art. 13/50 · AIUC-1 F · NIST CSF 2.0 GV.OC-01
+- Other frameworks: EU AI Act Art. 13/50 Â· AIUC-1 F Â· NIST CSF 2.0 GV.OC-01
 
 ---
 
-### LLM10 — Unbounded Consumption
+### LLM10 â€” Unbounded Consumption
 
 **Severity:** Medium
 
 Adversarial inputs trigger disproportionate resource consumption.
 In PCI scope, availability of payment processing systems is a
-direct compliance requirement — resource exhaustion attacks
+direct compliance requirement â€” resource exhaustion attacks
 against LLM applications in CDE are covered under Req 1
 (network security) and Req 6.4 (application protection).
 
@@ -704,38 +704,38 @@ against LLM applications in CDE are covered under Req 1
 
 | Requirement | ID | How it applies |
 |---|---|---|
-| Network security controls | Req 1.3.2 | Network controls restrict inbound traffic to CDE — rate limiting at network layer for LLM applications |
-| Public-facing application protection | Req 6.4.1 | LLM-powered public-facing applications protected against DoS — rate limiting and payload limits enforced |
-| Audit log review | Req 10.6.1 | Automated monitoring for resource exhaustion patterns — unusual consumption volumes alerted |
-| Targeted risk analysis | Req 12.3.2 | Targeted risk analysis for LLM availability in CDE — DoS impact on payment processing, controls documented |
+| Network security controls | Req 1.3.2 | Network controls restrict inbound traffic to CDE â€” rate limiting at network layer for LLM applications |
+| Public-facing application protection | Req 6.4.1 | LLM-powered public-facing applications protected against DoS â€” rate limiting and payload limits enforced |
+| Audit log review | Req 10.6.1 | Automated monitoring for resource exhaustion patterns â€” unusual consumption volumes alerted |
+| Targeted risk analysis | Req 12.3.2 | Targeted risk analysis for LLM availability in CDE â€” DoS impact on payment processing, controls documented |
 
 #### Mitigations for PCI DSS compliance
 
 **Foundational**
 - Req 1.3.2: Implement network-layer rate limiting for
-  CDE-facing LLM applications — traffic controls at the
+  CDE-facing LLM applications â€” traffic controls at the
   network boundary as Req 1 network security control
 - Req 6.4.1: Enforce rate limiting and payload limits
-  on all public-facing LLM applications in PCI scope —
+  on all public-facing LLM applications in PCI scope â€”
   application protection against resource exhaustion
 - Req 12.3.2: Document targeted risk analysis for LLM
-  availability — DoS impact on payment processing,
+  availability â€” DoS impact on payment processing,
   RTO/RPO, controls documented and accepted
 
 **Hardening**
-- Req 10.6.1: Implement consumption anomaly monitoring —
+- Req 10.6.1: Implement consumption anomaly monitoring â€”
   automated detection of unusual resource utilisation
   patterns in CDE LLM applications
 - Define BCP for LLM service failures affecting payment
-  processing — Req 12 business continuity requirement
-- Per-user token limits and cost budgets — Req 6.4
+  processing â€” Req 12 business continuity requirement
+- Per-user token limits and cost budgets â€” Req 6.4
   application protection control
 
 **Advanced**
-- Deploy sponge example detection — Req 6.4 advanced
+- Deploy sponge example detection â€” Req 6.4 advanced
   application protection for CDE
 - Req 11.3.1: Conduct adversarial load testing against
-  CDE LLM applications — verify rate limiting holds,
+  CDE LLM applications â€” verify rate limiting holds,
   document as penetration testing evidence
 
 #### Tools
@@ -748,7 +748,7 @@ against LLM applications in CDE are covered under Req 1
 #### Cross-references
 - Agentic Top 10: ASI08 Cascading Agent Failures
 - DSGAI 2026: DSGAI17 Data Availability and Resilience Failures
-- Other frameworks: ISA/IEC 62443 SR 7.6 (OT) · CIS Controls CIS 12 · NIST CSF 2.0 PR.IR-01
+- Other frameworks: ISA/IEC 62443 SR 7.6 (OT) Â· CIS Controls CIS 12 Â· NIST CSF 2.0 PR.IR-01
 
 ---
 
@@ -773,7 +773,7 @@ against LLM applications in CDE are covered under Req 1
 ### Secure development (Req 6)
 
 - [ ] LLM integration code addresses prompt injection as injection class (Req 6.2.4)
-- [ ] Public-facing LLM applications protected — WAF or equivalent (Req 6.4.1)
+- [ ] Public-facing LLM applications protected â€” WAF or equivalent (Req 6.4.1)
 - [ ] Model updates through change management with security testing (Req 6.5)
 - [ ] Output validation for all LLM outputs in CDE (Req 6.2.4)
 - [ ] System prompts contain no CHD or CDE identifiers (Req 6.2.4)
@@ -814,11 +814,11 @@ against LLM applications in CDE are covered under Req 1
 
 | Phase | LLM entries | PCI DSS requirements | Rationale |
 |---|---|---|---|
-| 1 — Scope first | LLM02 | Req 3, Req 4 | CHD scope determination and data protection are the foundation — everything else depends on this |
-| 2 — Access and logging | LLM06, LLM07 | Req 7, Req 10 | Access control and audit logging are core PCI requirements |
-| 3 — Secure development | LLM01, LLM05 | Req 6.2, Req 6.4 | Injection and output security as secure development requirements |
-| 4 — Vendor and testing | LLM03, LLM04 | Req 12.8, Req 11.3 | TPSP programme and penetration testing programme |
-| 5 — Ongoing | LLM08-LLM10 | Req 12.3, Req 6.5 | Risk analysis, embedding scope, availability |
+| 1 â€” Scope first | LLM02 | Req 3, Req 4 | CHD scope determination and data protection are the foundation â€” everything else depends on this |
+| 2 â€” Access and logging | LLM06, LLM07 | Req 7, Req 10 | Access control and audit logging are core PCI requirements |
+| 3 â€” Secure development | LLM01, LLM05 | Req 6.2, Req 6.4 | Injection and output security as secure development requirements |
+| 4 â€” Vendor and testing | LLM03, LLM04 | Req 12.8, Req 11.3 | TPSP programme and penetration testing programme |
+| 5 â€” Ongoing | LLM08-LLM10 | Req 12.3, Req 6.5 | Risk analysis, embedding scope, availability |
 
 ---
 
@@ -835,9 +835,9 @@ against LLM applications in CDE are covered under Req 1
 
 | Date | Version | Change | Author |
 |---|---|---|---|
-| 2026-03-25 | 2026-Q1 | Initial mapping — LLM01-LLM10 full entries with PCI DSS v4.0 compliance checklist | OWASP GenAI Data Security Initiative |
+| 2026-03-25 | 2026-Q1 | Initial mapping â€” LLM01-LLM10 full entries with PCI DSS v4.0 compliance checklist | OWASP GenAI Data Security Initiative |
 
 ---
 
 Maintained by the OWASP GenAI Data Security Initiative.
-Part of the GenAI Security Crosswalk: https://github.com/emmanuelgjr/GenAI-Security-Crosswalk
+Part of the OWASP GenAI Crosswalk: https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk

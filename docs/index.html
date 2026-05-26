@@ -3,19 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OWASP GenAI Security Crosswalk</title>
-<meta name="description" content="The most comprehensive mapping of AI security risks to industry frameworks. 41 entries across LLM Top 10, Agentic Top 10, and DSGAI mapped to 23 frameworks.">
+<title>Crosswalk</title>
+<meta name="description" content="The most comprehensive mapping of AI security risks to industry frameworks. 41 entries across LLM Top 10, Agentic Top 10, and DSGAI mapped to 25 frameworks with 1,500+ controls. Submit your own standard for automated mapping.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="OWASP GenAI Security Crosswalk — 20 Frameworks × 41 Entries">
-<meta property="og:description" content="The most comprehensive mapping of AI security risks to industry frameworks. Score your coverage across EU AI Act, FedRAMP, DORA, NIST, ISO, and 15 more. Free, open-source, built for practitioners.">
-<meta property="og:url" content="https://emmanuelgjr.github.io/GenAI-Security-Crosswalk/">
-<meta property="og:image" content="https://emmanuelgjr.github.io/GenAI-Security-Crosswalk/og-image.svg">
+<meta property="og:title" content="Crosswalk — 25 Frameworks × 41 Entries × Classifier Pipeline">
+<meta property="og:description" content="Map AI security risks to industry frameworks. Score coverage across EU AI Act, FedRAMP, DORA, NIST, ISO, and 20 more. Submit any standard for automated mapping. Free, open-source.">
+<meta property="og:url" content="https://genai-security-project.github.io/crosswalk/">
+<meta property="og:image" content="https://genai-security-project.github.io/crosswalk/og-image.svg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="OWASP GenAI Security Crosswalk">
-<meta name="twitter:description" content="20 frameworks × 41 entries × 50 incidents. Score your AI security coverage in 60 seconds.">
-<meta name="twitter:image" content="https://emmanuelgjr.github.io/GenAI-Security-Crosswalk/og-image.svg">
+<meta name="twitter:title" content="Crosswalk">
+<meta name="twitter:description" content="25 frameworks × 41 entries × 114 incidents. Score your AI security coverage in 60 seconds.">
+<meta name="twitter:image" content="https://genai-security-project.github.io/crosswalk/og-image.svg">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
 <style>
 /* ══════════════════════════════════════════════════════════════════════════════
@@ -601,6 +601,121 @@ input, select { font-family: inherit; }
 .cell-popup-title { font-weight: 700; margin-bottom: 6px; }
 
 /* ══════════════════════════════════════════════════════════════════════════════
+   Crosswalk Visualizer page
+   ══════════════════════════════════════════════════════════════════════════════ */
+.cw-page { max-width: var(--max-w); margin: 0 auto; padding: 24px; }
+.cw-header { margin-bottom: 16px; }
+.cw-header h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 4px; }
+.cw-header p { color: var(--text-secondary); font-size: .9rem; }
+.cw-toolbar {
+  display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
+  padding: 12px; background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); margin-bottom: 12px;
+}
+.cw-breadcrumb {
+  display: flex; align-items: center; flex-wrap: wrap; gap: 6px;
+  padding: 10px 14px; background: var(--surface);
+  border: 1px solid var(--border); border-radius: var(--radius-lg);
+  margin-bottom: 12px; font-size: .85rem;
+}
+.cw-breadcrumb .crumb {
+  cursor: pointer; color: var(--accent); padding: 2px 6px;
+  border-radius: var(--radius); transition: background var(--transition);
+}
+.cw-breadcrumb .crumb:hover { background: var(--bg-alt); }
+.cw-breadcrumb .crumb.current { color: var(--text); font-weight: 600; cursor: default; }
+.cw-breadcrumb .crumb.current:hover { background: transparent; }
+.cw-breadcrumb .sep { color: var(--text-secondary); font-size: .75rem; }
+.cw-breadcrumb .back-btn {
+  margin-left: auto; padding: 4px 10px; font-size: .75rem;
+  border: 1px solid var(--border); background: var(--bg);
+  color: var(--text); border-radius: var(--radius); cursor: pointer;
+}
+.cw-breadcrumb .back-btn:hover { background: var(--bg-alt); }
+.cw-breadcrumb .back-btn:disabled { opacity: .4; cursor: not-allowed; }
+.cw-hint {
+  position: absolute; top: 10px; left: 10px;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 6px 10px; font-size: .7rem;
+  color: var(--text-secondary); pointer-events: none; max-width: 240px;
+}
+.cw-toolbar input[type="search"] {
+  flex: 1; min-width: 180px; padding: 6px 10px;
+  border: 1px solid var(--border); border-radius: var(--radius);
+  background: var(--bg); color: var(--text); font-size: .85rem;
+}
+.cw-fw-toggles { display: flex; flex-wrap: wrap; gap: 6px; }
+.cw-fw-chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 4px 10px; border-radius: 999px; font-size: .75rem;
+  border: 1px solid var(--border); cursor: pointer; user-select: none;
+  background: var(--bg); color: var(--text-secondary);
+}
+.cw-fw-chip.active { color: #fff; border-color: transparent; }
+.cw-fw-chip .dot { width: 8px; height: 8px; border-radius: 50%; }
+.cw-layout {
+  display: grid; grid-template-columns: 1fr 320px; gap: 12px;
+  height: calc(100vh - 280px); min-height: 520px;
+}
+.cw-graph-wrap {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); overflow: hidden; position: relative;
+}
+.cw-graph-wrap svg { width: 100%; height: 100%; display: block; cursor: grab; }
+.cw-graph-wrap svg:active { cursor: grabbing; }
+.cw-legend {
+  position: absolute; bottom: 10px; left: 10px;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 8px 10px; font-size: .7rem;
+  display: flex; flex-direction: column; gap: 3px; pointer-events: none;
+  box-shadow: var(--card-shadow);
+}
+.cw-legend-row { display: flex; align-items: center; gap: 6px; }
+.cw-legend-row .dot { width: 10px; height: 10px; border-radius: 50%; }
+.cw-stats {
+  position: absolute; top: 10px; right: 10px;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 6px 10px; font-size: .7rem;
+  color: var(--text-secondary); pointer-events: none;
+}
+.cw-side {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 14px; overflow-y: auto;
+}
+.cw-side .empty { color: var(--text-secondary); font-size: .85rem; font-style: italic; }
+.cw-side h3 { font-size: 1rem; margin-bottom: 4px; }
+.cw-side .fw-tag {
+  display: inline-block; padding: 2px 8px; border-radius: 999px;
+  font-size: .65rem; font-weight: 600; color: #fff; margin-bottom: 8px;
+}
+.cw-side .ctrl-id-line { font-family: ui-monospace, Menlo, monospace; font-size: .8rem; color: var(--text-secondary); margin-bottom: 8px; }
+.cw-side .notes { font-size: .8rem; color: var(--text); line-height: 1.45; margin-bottom: 10px; }
+.cw-side .neighbors { margin-top: 10px; }
+.cw-side .neighbors h4 { font-size: .75rem; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 6px; letter-spacing: .04em; }
+.cw-side .neighbor {
+  display: block; padding: 6px 8px; margin-bottom: 4px;
+  border-radius: var(--radius); background: var(--bg-alt);
+  font-size: .78rem; cursor: pointer; border: 1px solid transparent;
+}
+.cw-side .neighbor:hover { border-color: var(--accent); }
+.cw-side .neighbor .nb-fw { font-size: .65rem; color: var(--text-secondary); display: block; }
+.cw-node { stroke: #fff; stroke-width: 1.5px; cursor: pointer; }
+.cw-node.dim { opacity: .15; }
+.cw-node.selected { stroke: var(--accent); stroke-width: 3px; }
+.cw-link { stroke: #999; stroke-opacity: .35; }
+.cw-link.dim { stroke-opacity: .05; }
+.cw-link.highlight { stroke: var(--accent); stroke-opacity: .9; stroke-width: 2px; }
+.cw-link-suggested { stroke: var(--accent); }
+.cw-link-suggested.highlight { stroke-opacity: .7; }
+.cw-label { font-size: 9px; pointer-events: none; fill: var(--text); user-select: none; }
+.cw-label.dim { opacity: .15; }
+[data-theme="dark"] .cw-link { stroke: #cbd5e1; }
+@media (max-width: 900px) {
+  .cw-layout { grid-template-columns: 1fr; height: auto; }
+  .cw-graph-wrap { height: 60vh; }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
    Incidents page
    ══════════════════════════════════════════════════════════════════════════════ */
 .incident-summary {
@@ -729,6 +844,50 @@ input, select { font-family: inherit; }
 .rec-item .rec-covers { font-size: .8rem; color: var(--text-muted); }
 .score-actions {
   display: flex; gap: 10px; margin-bottom: 24px; flex-wrap: wrap;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════════
+   Gap Analysis page
+   ══════════════════════════════════════════════════════════════════════════════ */
+.gap-heatmap { width: 100%; border-collapse: collapse; font-size: .82rem; }
+.gap-heatmap th {
+  position: sticky; top: 60px; background: var(--bg); z-index: 2;
+  padding: 6px 10px; font-size: .72rem; font-weight: 600;
+  text-align: center; border-bottom: 2px solid var(--border);
+  white-space: nowrap;
+}
+.gap-heatmap th.rotate-header {
+  writing-mode: vertical-rl; text-orientation: mixed;
+  transform: rotate(180deg); height: 120px; vertical-align: bottom;
+}
+.gap-heatmap td { padding: 6px 10px; border-bottom: 1px solid var(--border); text-align: center; }
+.gap-heatmap td:first-child { text-align: left; font-weight: 600; white-space: nowrap; }
+.gap-heatmap td:nth-child(2) { text-align: left; max-width: 200px; overflow: hidden; text-overflow: ellipsis; }
+.gap-cell {
+  width: 28px; height: 28px; border-radius: 4px; display: inline-block;
+  cursor: pointer; transition: transform .1s;
+}
+.gap-cell:hover { transform: scale(1.3); }
+.gap-cell.full { background: var(--lo); }
+.gap-cell.partial { background: var(--me); }
+.gap-cell.none { background: var(--cr); }
+.gap-cell.na { background: var(--border); opacity: .3; }
+.gap-summary-cards {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 12px; margin-bottom: 24px;
+}
+.gap-summary-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 16px; text-align: center;
+}
+.gap-summary-big { font-size: 2rem; font-weight: 800; }
+.gap-legend {
+  display: flex; gap: 16px; align-items: center; font-size: .82rem;
+  margin-bottom: 16px; flex-wrap: wrap;
+}
+.gap-legend-dot {
+  width: 14px; height: 14px; border-radius: 3px; display: inline-block;
+  vertical-align: middle; margin-right: 4px;
 }
 
 /* ══════════════════════════════════════════════════════════════════════════════
@@ -890,17 +1049,20 @@ input, select { font-family: inherit; }
   <div class="nav-inner">
     <a href="#/" class="nav-logo" aria-label="Home">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-      <span>GenAI Crosswalk</span>
+      <span>Crosswalk</span>
     </a>
     <div class="nav-links" id="nav-links">
       <a href="#/explorer">Explorer</a>
       <a href="#/frameworks">Frameworks</a>
+      <a href="#/crosswalk">Crosswalk</a>
       <a href="#/incidents">Incidents</a>
       <a href="#/tools">Tools</a>
       <a href="#/recipes">Recipes</a>
       <a href="#/glossary">Glossary</a>
       <a href="#/score">Score</a>
-      <a href="#/leaderboard">Leaderboard</a>
+      <a href="#/gaps">Gaps</a>
+      <a href="#/submit">Submit</a>
+      <a href="#/review">Review</a>
       <a href="#/about">About</a>
     </div>
     <div class="nav-right">
@@ -908,7 +1070,7 @@ input, select { font-family: inherit; }
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="theme-icon-light"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="theme-icon-dark" style="display:none"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
       </button>
-      <a href="https://github.com/emmanuelgjr/GenAI-Security-Crosswalk" target="_blank" rel="noopener" class="nav-icon-btn" aria-label="GitHub repository" title="GitHub">
+      <a href="https://github.com/GenAI-Security-Project/crosswalk" target="_blank" rel="noopener" class="nav-icon-btn" aria-label="GitHub repository" title="GitHub">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
       </a>
       <button class="nav-icon-btn hamburger" id="hamburger" aria-label="Open menu">
@@ -922,12 +1084,15 @@ input, select { font-family: inherit; }
   <a href="#/">Home</a>
   <a href="#/explorer">Explorer</a>
   <a href="#/frameworks">Frameworks</a>
+  <a href="#/crosswalk">Crosswalk</a>
   <a href="#/incidents">Incidents</a>
   <a href="#/tools">Tools</a>
   <a href="#/recipes">Recipes</a>
   <a href="#/glossary">Glossary</a>
   <a href="#/score">Score</a>
-  <a href="#/leaderboard">Leaderboard</a>
+  <a href="#/gaps">Gaps</a>
+  <a href="#/submit">Submit</a>
+  <a href="#/review">Review</a>
   <a href="#/about">About</a>
 </div>
 
@@ -945,12 +1110,15 @@ input, select { font-family: inherit; }
 <!-- Footer -->
 <footer class="site-footer">
   OWASP GenAI Data Security Initiative &middot; CC BY-SA 4.0 &middot;
-  <a href="https://github.com/emmanuelgjr/GenAI-Security-Crosswalk" target="_blank" rel="noopener">GitHub</a>
+  <a href="https://github.com/GenAI-Security-Project/crosswalk" target="_blank" rel="noopener">GitHub</a>
 </footer>
 
 <!-- Data scripts -->
 <script src="data.js"></script>
 <script src="incidents.js"></script>
+<script src="backlinks.js"></script>
+<script src="frameworks-registry.js"></script>
+<script src="classifier-predictions.js"></script>
 
 <script>
 (function() {
@@ -1103,6 +1271,8 @@ input, select { font-family: inherit; }
   // ══════════════════════════════════════════════════════════════════════════════
   var DATA = window.CROSSWALK_DATA || [];
   var INCIDENTS = window.CROSSWALK_INCIDENTS || [];
+  var BACKLINKS = window.CROSSWALK_BACKLINKS || [];
+  var FW_REGISTRY = window.CROSSWALK_FRAMEWORKS || [];
 
   // Pre-compute some lookups
   var FRAMEWORKS = [];
@@ -1110,6 +1280,8 @@ input, select { font-family: inherit; }
   DATA.forEach(function(e) {
     e.mappings.forEach(function(m) { FW_SET.add(m.framework); });
   });
+  // Also include registry-only frameworks (e.g. CoSAI, EU AI Act CoP)
+  FW_REGISTRY.forEach(function(fw) { FW_SET.add(fw.name); });
   FRAMEWORKS = Array.from(FW_SET).sort();
 
   var ENTRY_MAP = {};
@@ -1117,6 +1289,30 @@ input, select { font-family: inherit; }
 
   var INCIDENT_MAP = {};
   INCIDENTS.forEach(function(inc) { INCIDENT_MAP[inc.id] = inc; });
+
+  // Backlink index: "framework::control_id" → backlink record
+  var BACKLINK_MAP = {};
+  BACKLINKS.forEach(function(bl) { BACKLINK_MAP[bl.framework + '::' + bl.control_id] = bl; });
+
+  // Framework registry lookup by display name
+  var FW_REGISTRY_MAP = {};
+  FW_REGISTRY.forEach(function(fw) { FW_REGISTRY_MAP[fw.name] = fw; });
+
+  // Classifier predictions
+  var PREDICTIONS = window.CROSSWALK_PREDICTIONS || [];
+  // Index: entry_id → array of predictions
+  var PRED_BY_ENTRY = {};
+  PREDICTIONS.forEach(function(p) {
+    if (!PRED_BY_ENTRY[p.entry_id]) PRED_BY_ENTRY[p.entry_id] = [];
+    PRED_BY_ENTRY[p.entry_id].push(p);
+  });
+  // Index: "entry_id::framework" → array of predictions
+  var PRED_BY_ENTRY_FW = {};
+  PREDICTIONS.forEach(function(p) {
+    var k = p.entry_id + '::' + p.framework;
+    if (!PRED_BY_ENTRY_FW[k]) PRED_BY_ENTRY_FW[k] = [];
+    PRED_BY_ENTRY_FW[k].push(p);
+  });
 
   var SOURCE_LABELS = {
     'LLM-Top10-2025': 'LLM Top 10 2025',
@@ -1126,7 +1322,7 @@ input, select { font-family: inherit; }
 
   // Placeholder entries — replace with real submissions
   var LEADERBOARD = [
-    { rank: 1, company: 'Example Corp', industry: 'Financial Services', score: 72, frameworks: 14, tier: 'Tool-Verified', date: '2026-03-28', badge: 'https://emmanuelgjr.github.io/GenAI-Security-Crosswalk/#/badge?score=72&fw=14' },
+    { rank: 1, company: 'Example Corp', industry: 'Financial Services', score: 72, frameworks: 14, tier: 'Tool-Verified', date: '2026-03-28', badge: 'https://genai-security-project.github.io/crosswalk/#/badge?score=72&fw=14' },
     { rank: 2, company: 'Acme AI Labs', industry: 'Technology', score: 65, frameworks: 11, tier: 'Self-Assessed', date: '2026-03-28', badge: '' },
     { rank: 3, company: 'SecureHealth Inc', industry: 'Healthcare', score: 58, frameworks: 9, tier: 'Self-Assessed', date: '2026-03-28', badge: '' }
   ];
@@ -1396,7 +1592,7 @@ input, select { font-family: inherit; }
     twitterItem.appendChild(document.createTextNode('X / Twitter'));
     twitterItem.addEventListener('click', function(e) {
       e.stopPropagation();
-      var text = title + ' — OWASP GenAI Security Crosswalk';
+      var text = title + ' — Crosswalk';
       window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(url) + '&text=' + encodeURIComponent(text), '_blank', 'width=600,height=400');
       menu.classList.remove('open');
     });
@@ -1424,14 +1620,18 @@ input, select { font-family: inherit; }
     '/': renderLanding,
     '/explorer': renderExplorer,
     '/frameworks': renderFrameworks,
+    '/crosswalk': renderCrosswalk,
     '/incidents': renderIncidents,
     '/tools': renderTools,
     '/recipes': renderRecipes,
     '/glossary': renderGlossary,
     '/score': renderScore,
+    '/gaps': renderGapAnalysis,
     '/leaderboard': renderLeaderboard,
     '/about': renderAbout,
-    '/badge': renderBadgePage
+    '/badge': renderBadgePage,
+    '/submit': renderSubmit,
+    '/review': renderReview
   };
 
   function getRoute() {
@@ -1447,15 +1647,16 @@ input, select { font-family: inherit; }
     var app = document.getElementById('app');
     app.innerHTML = '';
 
-    // Check for deep-link patterns: /explorer/ENTRY_ID, /incidents/INC_ID, /frameworks/FW_NAME
+    // Check for deep-link patterns: /explorer/ENTRY_ID, /incidents/INC_ID, /frameworks/FW_NAME, /frameworks/FW_NAME/CONTROL_ID
     var explorerMatch = path.match(/^\/explorer\/(.+)$/);
     var incidentMatch = path.match(/^\/incidents\/(.+)$/);
-    var frameworkMatch = path.match(/^\/frameworks\/(.+)$/);
+    var fwControlMatch = path.match(/^\/frameworks\/([^/]+)\/(.+)$/);
+    var frameworkMatch = !fwControlMatch ? path.match(/^\/frameworks\/(.+)$/) : null;
 
     var basePath = path;
     if (explorerMatch) basePath = '/explorer';
     if (incidentMatch) basePath = '/incidents';
-    if (frameworkMatch) basePath = '/frameworks';
+    if (frameworkMatch || fwControlMatch) basePath = '/frameworks';
 
     // Update nav active state
     document.querySelectorAll('.nav-links a, .mobile-menu a').forEach(function(a) {
@@ -1464,6 +1665,14 @@ input, select { font-family: inherit; }
       a.classList.toggle('active', linkPath === basePath);
     });
 
+    // Framework control detail — e.g. #/frameworks/NIST%20AI%20RMF%201.0/GV-1.7
+    if (fwControlMatch) {
+      var fwNameCtrl = decodeURIComponent(fwControlMatch[1]);
+      var ctrlId = decodeURIComponent(fwControlMatch[2]);
+      renderControlDetail(app, fwNameCtrl, ctrlId);
+      window.scrollTo(0, 0);
+      return;
+    }
     // Framework detail is a full page, not a modal
     if (frameworkMatch) {
       var fwName = decodeURIComponent(frameworkMatch[1]);
@@ -1474,19 +1683,22 @@ input, select { font-family: inherit; }
       }
     }
 
-    var renderFn = routes[basePath] || routes[path] || renderLanding;
+    function lookupRoute(key) {
+      return Object.prototype.hasOwnProperty.call(routes, key) ? routes[key] : null;
+    }
+    var renderFn = lookupRoute(basePath) || lookupRoute(path) || renderLanding;
     renderFn(app);
     window.scrollTo(0, 0);
 
     // Handle deep-link opening of modals
     if (explorerMatch) {
       var entryId = decodeURIComponent(explorerMatch[1]);
-      var target = ENTRY_MAP[entryId];
+      var target = Object.prototype.hasOwnProperty.call(ENTRY_MAP, entryId) ? ENTRY_MAP[entryId] : null;
       if (target) setTimeout(function() { openEntryModal(target); }, 150);
     }
     if (incidentMatch) {
       var incId = decodeURIComponent(incidentMatch[1]);
-      var targetInc = INCIDENT_MAP[incId];
+      var targetInc = Object.prototype.hasOwnProperty.call(INCIDENT_MAP, incId) ? INCIDENT_MAP[incId] : null;
       if (targetInc) setTimeout(function() { openIncidentModal(targetInc); }, 150);
     }
   }
@@ -1501,21 +1713,17 @@ input, select { font-family: inherit; }
 
     // Hero
     var hero = el('div', { className: 'hero' });
-    hero.appendChild(el('h1', {}, 'OWASP GenAI Security Crosswalk'));
+    hero.appendChild(el('h1', {}, 'Crosswalk'));
     hero.appendChild(el('p', { className: 'subtitle' }, 'The most comprehensive mapping of AI security risks to industry frameworks'));
 
-    var creator = el('p', { className: 'creator' });
-    creator.appendChild(document.createTextNode('Created and led by '));
-    creator.appendChild(el('a', { href: 'https://github.com/emmanuelgjr', target: '_blank', rel: 'noopener' }, 'Emmanuel Guilherme Junior'));
-    creator.appendChild(document.createTextNode(' — OWASP GenAI Data Security Initiative Lead'));
-    hero.appendChild(creator);
 
     // Stats
+    var totalRegControls = FW_REGISTRY.reduce(function(s, fw) { return s + (fw.controls || []).length; }, 0);
     var stats = [
       [FRAMEWORKS.length, 'Frameworks'],
       [totalMappings.toLocaleString(), 'Mappings'],
-      [INCIDENTS.length, 'Incidents'],
-      [DATA.length, 'Entries']
+      [DATA.length, 'Entries'],
+      [totalRegControls || INCIDENTS.length, totalRegControls ? 'Registry Controls' : 'Incidents']
     ];
     var statRow = el('div', { className: 'stat-row' });
     stats.forEach(function(s) {
@@ -1532,8 +1740,11 @@ input, select { font-family: inherit; }
     btn1.textContent = 'Explore Entries \u2192';
     var btn2 = el('a', { href: '#/score', className: 'btn-secondary' });
     btn2.textContent = 'Score Your Coverage \u2192';
+    var btn3 = el('a', { href: '#/submit', className: 'btn-secondary' });
+    btn3.textContent = 'Submit a Standard \u2192';
     ctas.appendChild(btn1);
     ctas.appendChild(btn2);
+    ctas.appendChild(btn3);
     hero.appendChild(ctas);
     container.appendChild(hero);
 
@@ -1556,7 +1767,7 @@ input, select { font-family: inherit; }
       {
         icon: '\uD83D\uDD0D',
         title: 'Explore risks & controls',
-        desc: 'Search 41 OWASP entries, filter by severity, click any entry to see all 20 framework mappings.',
+        desc: 'Search 41 OWASP entries, filter by severity, click any entry to see all 25 framework mappings.',
         link: '#/explorer',
         cta: 'Open explorer \u2192',
         who: 'Security engineers, architects, auditors'
@@ -1565,7 +1776,7 @@ input, select { font-family: inherit; }
         icon: '\uD83D\uDEE1\uFE0F',
         title: 'Run the eval tools',
         desc: 'Clone the repo, run Garak + PyRIT + LAAF against your models, generate compliance reports.',
-        link: 'https://github.com/emmanuelgjr/GenAI-Security-Crosswalk',
+        link: 'https://github.com/GenAI-Security-Project/crosswalk',
         cta: 'View on GitHub \u2192',
         who: 'Red teamers, AppSec engineers, developers'
       }
@@ -2346,11 +2557,12 @@ input, select { font-family: inherit; }
       group.mappings.forEach(function(m) {
         var row = el('tr');
         var ctrlTd = el('td', { className: 'ctrl-id' });
-        if (m.url) {
-          ctrlTd.appendChild(el('a', { href: m.url, target: '_blank', rel: 'noopener' }, m.control_id));
-        } else {
-          ctrlTd.textContent = m.control_id;
-        }
+        // Link to control detail view (pivot page)
+        var ctrlLink = el('a', { href: '#/frameworks/' + encodeURIComponent(fwName) + '/' + encodeURIComponent(m.control_id) }, m.control_id);
+        ctrlLink.style.textDecoration = 'none';
+        ctrlLink.style.color = 'var(--accent)';
+        ctrlLink.style.fontWeight = '600';
+        ctrlTd.appendChild(ctrlLink);
         row.appendChild(ctrlTd);
         row.appendChild(el('td', {}, m.control_name || ''));
         var tierSpan = el('span', { className: 'tier-badge tier-' + (m.tier || '') }, m.tier || '');
@@ -2363,6 +2575,221 @@ input, select { font-family: inherit; }
     });
 
     wrap.appendChild(mappingSection);
+
+    // ── Control Registry section (if framework is in the registry) ──
+    var regFw = FW_REGISTRY_MAP[fwName];
+    if (regFw && regFw.controls && regFw.controls.length) {
+      var regSection = el('div', { className: 'fw-detail-section' });
+      regSection.appendChild(el('div', { className: 'modal-section-title' }, 'Control Registry (' + regFw.controls.length + ' controls)'));
+      var regDesc = el('p', { style: 'font-size:.85rem;color:var(--text-secondary);margin:0 0 12px;' });
+      regDesc.textContent = 'Full control inventory from ' + regFw.publisher + '. Click any control to see which OWASP entries map to it.';
+      regSection.appendChild(regDesc);
+
+      // Group by function
+      var byFunc = {};
+      var funcOrder = [];
+      regFw.controls.forEach(function(c) {
+        var fn = c.function || 'General';
+        if (!byFunc[fn]) { byFunc[fn] = []; funcOrder.push(fn); }
+        byFunc[fn].push(c);
+      });
+
+      funcOrder.forEach(function(fn) {
+        var funcBlock = el('div', { style: 'margin-bottom:16px;' });
+        funcBlock.appendChild(el('h4', { style: 'font-size:.85rem;font-weight:700;color:var(--text);margin:0 0 8px;text-transform:uppercase;letter-spacing:.04em;' }, fn));
+        var ctrlList = el('div', { style: 'display:flex;flex-wrap:wrap;gap:6px;' });
+        byFunc[fn].forEach(function(c) {
+          var bl = BACKLINK_MAP[fwName + '::' + c.control_id];
+          var count = bl ? bl.entries.length : 0;
+          var chip = el('a', {
+            href: '#/frameworks/' + encodeURIComponent(fwName) + '/' + encodeURIComponent(c.control_id),
+            className: 'xref-chip',
+            title: c.title + (count ? ' — ' + count + ' OWASP entries' : ' — no OWASP mappings yet'),
+            style: 'text-decoration:none;' + (count ? '' : 'opacity:0.5;')
+          });
+          chip.textContent = c.control_id;
+          if (count) {
+            var badge = el('span', { style: 'font-size:.65rem;background:var(--accent);color:#fff;border-radius:8px;padding:1px 5px;margin-left:4px;' });
+            badge.textContent = count;
+            chip.appendChild(badge);
+          }
+          ctrlList.appendChild(chip);
+        });
+        funcBlock.appendChild(ctrlList);
+        regSection.appendChild(funcBlock);
+      });
+      wrap.appendChild(regSection);
+    }
+
+    container.appendChild(wrap);
+  }
+
+  // ══════════════════════════════════════════════════════════════════════════════
+  // Control Detail page — framework-rooted pivot view
+  // ══════════════════════════════════════════════════════════════════════════════
+  function renderControlDetail(container, fwName, controlId) {
+    var wrap = el('div', { className: 'fw-detail-page' });
+
+    // Back link to framework
+    var backLink = el('a', { href: '#/frameworks/' + encodeURIComponent(fwName), className: 'fw-detail-back' });
+    backLink.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>';
+    backLink.appendChild(document.createTextNode(' Back to ' + fwName));
+    wrap.appendChild(backLink);
+
+    // Find registry info
+    var regFw = FW_REGISTRY_MAP[fwName];
+    var regControl = regFw ? regFw.controls.find(function(c) { return c.control_id === controlId; }) : null;
+
+    // Find backlinks
+    var bl = BACKLINK_MAP[fwName + '::' + controlId];
+
+    // Also scan DATA directly if no backlink (handles controls mapped with slightly different names)
+    var matchedEntries = [];
+    if (bl) {
+      matchedEntries = bl.entries;
+    } else {
+      DATA.forEach(function(e) {
+        (e.mappings || []).forEach(function(m) {
+          if (m.framework === fwName && m.control_id === controlId) {
+            matchedEntries.push({
+              id: e.id,
+              name: e.name,
+              source_list: e.source_list,
+              severity: e.severity,
+              tier: m.tier,
+              scope: m.scope,
+              notes: m.notes || null
+            });
+          }
+        });
+      });
+    }
+
+    // Header
+    var header = el('div', { className: 'fw-detail-header' });
+    var badges = el('div', { style: 'display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:10px;' });
+    badges.appendChild(el('span', { className: 'badge-cat' }, fwName));
+    badges.appendChild(el('span', { className: 'badge-coverage cov-high' }, matchedEntries.length + ' OWASP entries'));
+    if (regControl && regControl.function) {
+      badges.appendChild(el('span', { className: 'badge-cat', style: 'background:var(--accent);color:#fff;' }, regControl.function));
+    }
+
+    // Share button
+    var ctrlShareUrl = window.location.origin + window.location.pathname + '#/frameworks/' + encodeURIComponent(fwName) + '/' + encodeURIComponent(controlId);
+    badges.appendChild(buildShareButton(ctrlShareUrl, controlId, 'margin-left:auto;'));
+    header.appendChild(badges);
+
+    header.appendChild(el('h1', { className: 'fw-detail-title' }, controlId));
+    if (regControl) {
+      header.appendChild(el('h2', { style: 'font-size:1.1rem;font-weight:400;color:var(--text-secondary);margin:4px 0 0;' }, regControl.title));
+    }
+    if (bl && bl.control_name) {
+      header.appendChild(el('p', { style: 'font-size:.9rem;color:var(--text-secondary);margin:8px 0 0;' }, bl.control_name));
+    }
+    if (regControl && regControl.description) {
+      header.appendChild(el('p', { className: 'fw-detail-desc', style: 'margin-top:12px;' }, regControl.description));
+    }
+    // External link
+    var extUrl = regControl && regControl.url ? regControl.url : null;
+    if (extUrl) {
+      var extLink = el('a', { href: extUrl, target: '_blank', rel: 'noopener', style: 'display:inline-block;margin-top:8px;font-size:.85rem;color:var(--accent);' });
+      extLink.textContent = 'View in framework source →';
+      header.appendChild(extLink);
+    }
+    wrap.appendChild(header);
+
+    // Parent/child controls (if registry exists)
+    if (regFw && regControl) {
+      var children = regFw.controls.filter(function(c) { return c.parent === controlId; });
+      var parent = regControl.parent ? regFw.controls.find(function(c) { return c.control_id === regControl.parent; }) : null;
+      if (parent || children.length) {
+        var hierSection = el('div', { className: 'fw-detail-section' });
+        hierSection.appendChild(el('div', { className: 'modal-section-title' }, 'Control Hierarchy'));
+        if (parent) {
+          var parentRow = el('div', { style: 'margin-bottom:8px;' });
+          parentRow.appendChild(el('span', { style: 'font-size:.75rem;color:var(--text-muted);text-transform:uppercase;' }, 'Parent: '));
+          var parentLink = el('a', { href: '#/frameworks/' + encodeURIComponent(fwName) + '/' + encodeURIComponent(parent.control_id), style: 'color:var(--accent);text-decoration:none;font-weight:600;' });
+          parentLink.textContent = parent.control_id + ' — ' + parent.title;
+          parentRow.appendChild(parentLink);
+          hierSection.appendChild(parentRow);
+        }
+        if (children.length) {
+          var childLabel = el('div', { style: 'font-size:.75rem;color:var(--text-muted);text-transform:uppercase;margin-bottom:6px;' });
+          childLabel.textContent = 'Sub-controls (' + children.length + ')';
+          hierSection.appendChild(childLabel);
+          var childChips = el('div', { style: 'display:flex;flex-wrap:wrap;gap:6px;' });
+          children.forEach(function(ch) {
+            var chBl = BACKLINK_MAP[fwName + '::' + ch.control_id];
+            var chCount = chBl ? chBl.entries.length : 0;
+            var chLink = el('a', {
+              href: '#/frameworks/' + encodeURIComponent(fwName) + '/' + encodeURIComponent(ch.control_id),
+              className: 'xref-chip',
+              style: 'text-decoration:none;' + (chCount ? '' : 'opacity:0.5;')
+            });
+            chLink.textContent = ch.control_id;
+            if (chCount) {
+              var chBadge = el('span', { style: 'font-size:.65rem;background:var(--accent);color:#fff;border-radius:8px;padding:1px 5px;margin-left:4px;' });
+              chBadge.textContent = chCount;
+              chLink.appendChild(chBadge);
+            }
+            childChips.appendChild(chLink);
+          });
+          hierSection.appendChild(childChips);
+        }
+        wrap.appendChild(hierSection);
+      }
+    }
+
+    // OWASP Entries that map to this control (the pivot!)
+    if (matchedEntries.length) {
+      var pivotSection = el('div', { className: 'fw-detail-section' });
+      pivotSection.appendChild(el('div', { className: 'modal-section-title' }, 'OWASP Entries Mapped to ' + controlId));
+      var pivotTable = el('table', { className: 'mapping-table fw-mapping' });
+      var pivotHead = el('thead');
+      var pivotHr = el('tr');
+      ['Entry', 'Name', 'Source List', 'Severity', 'Tier', 'Scope'].forEach(function(h) { pivotHr.appendChild(el('th', {}, h)); });
+      pivotHead.appendChild(pivotHr);
+      pivotTable.appendChild(pivotHead);
+      var pivotBody = el('tbody');
+      matchedEntries.forEach(function(me) {
+        var row = el('tr', { style: 'cursor:pointer;' });
+        row.addEventListener('click', function() { window.location.hash = '#/explorer/' + encodeURIComponent(me.id); });
+        var idTd = el('td');
+        idTd.appendChild(el('span', { className: 'badge-id ' + me.severity, style: 'cursor:pointer;' }, me.id));
+        row.appendChild(idTd);
+        row.appendChild(el('td', { style: 'font-weight:600;' }, me.name));
+        row.appendChild(el('td', {}, (SOURCE_LABELS[me.source_list] || me.source_list)));
+        row.appendChild(el('td', {}, el('span', { className: 'sev-badge sev-' + (me.severity || '').toLowerCase() }, me.severity || '—')));
+        row.appendChild(el('td', {}, el('span', { className: 'tier-badge tier-' + (me.tier || '') }, me.tier || '')));
+        row.appendChild(el('td', {}, me.scope || ''));
+        pivotBody.appendChild(row);
+      });
+      pivotTable.appendChild(pivotBody);
+      pivotSection.appendChild(pivotTable);
+
+      // Notes (if any entries have notes)
+      var hasNotes = matchedEntries.some(function(me) { return me.notes; });
+      if (hasNotes) {
+        var notesBlock = el('div', { style: 'margin-top:12px;' });
+        notesBlock.appendChild(el('div', { className: 'modal-section-title', style: 'font-size:.8rem;' }, 'Implementation Notes'));
+        matchedEntries.forEach(function(me) {
+          if (!me.notes) return;
+          var noteRow = el('div', { style: 'padding:6px 0;border-bottom:1px solid var(--border);font-size:.85rem;' });
+          noteRow.appendChild(el('strong', { style: 'color:var(--accent);' }, me.id + ': '));
+          noteRow.appendChild(document.createTextNode(me.notes));
+          notesBlock.appendChild(noteRow);
+        });
+        pivotSection.appendChild(notesBlock);
+      }
+
+      wrap.appendChild(pivotSection);
+    } else {
+      var emptySection = el('div', { className: 'fw-detail-section' });
+      emptySection.appendChild(el('div', { className: 'modal-section-title' }, 'OWASP Entries'));
+      emptySection.appendChild(el('p', { style: 'color:var(--text-muted);font-size:.9rem;' }, 'No OWASP entries currently map to this control.'));
+      wrap.appendChild(emptySection);
+    }
+
     container.appendChild(wrap);
   }
 
@@ -2645,7 +3072,7 @@ input, select { font-family: inherit; }
         return;
       }
 
-      var baseUrl = 'https://github.com/emmanuelgjr/GenAI-Security-Crosswalk/blob/main/shared/RECIPES.md';
+      var baseUrl = 'https://github.com/GenAI-Security-Project/crosswalk/blob/main/shared/RECIPES.md';
       visible.forEach(function(recipe) {
         var card = el('div', {
           className: 'incident-card',
@@ -2830,6 +3257,577 @@ input, select { font-family: inherit; }
     }
 
     renderCards();
+  }
+
+  // ══════════════════════════════════════════════════════════════════════════════
+  // Crosswalk Visualizer page
+  // ══════════════════════════════════════════════════════════════════════════════
+  var CW_D3_LOADED = false;
+  function loadD3(cb) {
+    if (window.d3) { CW_D3_LOADED = true; return cb(); }
+    if (CW_D3_LOADED) return cb();
+    var s = document.createElement('script');
+    s.src = 'https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js';
+    s.onload = function() { CW_D3_LOADED = true; cb(); };
+    s.onerror = function() { cb(new Error('Failed to load D3')); };
+    document.head.appendChild(s);
+  }
+
+  // Stable color per framework. OWASP source lists get distinct colors too.
+  var CW_PALETTE = [
+    '#ef4444', '#f59e0b', '#10b981', '#3b82f6', '#8b5cf6',
+    '#ec4899', '#14b8a6', '#f97316', '#6366f1', '#84cc16',
+    '#06b6d4', '#a855f7', '#eab308', '#22c55e', '#dc2626'
+  ];
+  var CW_OWASP_COLOR = {
+    'LLM-Top10-2025': '#dc2626',
+    'Agentic-Top10-2026': '#7c3aed',
+    'DSGAI-2026': '#0891b2'
+  };
+  function cwColorFor(framework, colorMap) {
+    if (CW_OWASP_COLOR[framework]) return CW_OWASP_COLOR[framework];
+    if (!colorMap[framework]) {
+      var i = Object.keys(colorMap).length % CW_PALETTE.length;
+      colorMap[framework] = CW_PALETTE[i];
+    }
+    return colorMap[framework];
+  }
+
+  // Build {nodes, links} from DATA. Owasp entries are nodes; each unique
+  // (framework, control_id) is a node; mapping → edge.
+  function buildCrosswalkGraph() {
+    var nodes = [];
+    var nodeIndex = {};
+    var links = [];
+    var colorMap = {};
+
+    function addNode(n) {
+      if (nodeIndex[n.id] != null) return nodeIndex[n.id];
+      n.color = cwColorFor(n.framework, colorMap);
+      nodeIndex[n.id] = nodes.length;
+      nodes.push(n);
+      return nodes.length - 1;
+    }
+
+    DATA.forEach(function(e) {
+      addNode({
+        id: 'OWASP::' + e.id,
+        label: e.id,
+        name: e.name,
+        framework: e.source_list,
+        kind: 'owasp',
+        entry: e,
+        severity: e.severity
+      });
+    });
+
+    DATA.forEach(function(e) {
+      var srcId = 'OWASP::' + e.id;
+      (e.mappings || []).forEach(function(m) {
+        var ctrlId = m.framework + '::' + m.control_id;
+        addNode({
+          id: ctrlId,
+          label: m.control_id,
+          name: m.control_name || m.control_id,
+          framework: m.framework,
+          kind: 'control',
+          tier: m.tier,
+          notes: m.notes,
+          url: m.url
+        });
+        links.push({ source: srcId, target: ctrlId, notes: m.notes });
+      });
+    });
+
+    return { nodes: nodes, links: links, colorMap: colorMap };
+  }
+
+  // Pre-compute source list metadata for level 0
+  var CW_SOURCE_META = {
+    'LLM-Top10-2025': { label: 'LLM Top 10', sub: '2025' },
+    'Agentic-Top10-2026': { label: 'Agentic Top 10', sub: '2026' },
+    'DSGAI-2026': { label: 'DSGAI', sub: '2026' }
+  };
+
+  function renderCrosswalk(container) {
+    var page = el('div', { className: 'cw-page' });
+
+    var header = el('div', { className: 'cw-header' });
+    header.appendChild(el('h2', {}, 'Crosswalk Visualizer'));
+    header.appendChild(el('p', {}, 'Interactive map of OWASP GenAI risks and the security frameworks that map to them. Filter by category, click any node for details.'));
+    page.appendChild(header);
+
+    var colorMap = {};
+
+    var showSuggested = false; // toggle for model-suggested edges
+
+    // Build a flat graph: OWASP risk nodes + framework nodes. Edges weighted by # of mapped controls.
+    function buildFlatGraph(filter) {
+      var nodes = [];
+      var nodeIdx = {};
+      var links = [];
+
+      function add(n) {
+        if (nodeIdx[n.id] != null) return;
+        nodeIdx[n.id] = nodes.length;
+        nodes.push(n);
+      }
+
+      // OWASP risk nodes
+      DATA.forEach(function(e) {
+        if (filter !== 'all' && filter !== 'risks' && filter !== e.source_list) return;
+        add({
+          id: 'R::' + e.id,
+          kind: 'risk',
+          entry: e,
+          label: e.id,
+          name: e.name,
+          framework: e.source_list,
+          color: cwColorFor(e.source_list, colorMap),
+          radius: 16
+        });
+      });
+
+      // Framework nodes — aggregate curated mappings
+      var fwAgg = {};
+      var linkSet = {}; // track unique links to avoid duplicates
+      DATA.forEach(function(e) {
+        if (filter !== 'all' && filter !== 'frameworks' && filter !== e.source_list) return;
+        (e.mappings || []).forEach(function(m) {
+          if (!fwAgg[m.framework]) fwAgg[m.framework] = { count: 0, controls: 0, perEntry: {} };
+          fwAgg[m.framework].controls += 1;
+          fwAgg[m.framework].perEntry[e.id] = (fwAgg[m.framework].perEntry[e.id] || 0) + 1;
+        });
+      });
+
+      // Add model-suggested frameworks if predictions exist and toggle is on
+      if (showSuggested && PREDICTIONS.length) {
+        PREDICTIONS.forEach(function(p) {
+          if (p.curated) return; // already counted above
+          if (filter !== 'all' && filter !== 'frameworks' && filter !== p.source_list) return;
+          if (!fwAgg[p.framework]) fwAgg[p.framework] = { count: 0, controls: 0, perEntry: {}, suggested: true };
+          // Don't inflate curated counts
+        });
+      }
+
+      Object.keys(fwAgg).forEach(function(fw) {
+        var agg = fwAgg[fw];
+        var entryIds = Object.keys(agg.perEntry);
+        add({
+          id: 'F::' + fw,
+          kind: 'framework',
+          label: fw,
+          framework: fw,
+          color: cwColorFor(fw, colorMap),
+          controls: agg.controls,
+          riskCount: entryIds.length,
+          radius: 14 + Math.sqrt(agg.controls) * 2
+        });
+        entryIds.forEach(function(eid) {
+          if (nodeIdx['R::' + eid] != null) {
+            var lk = eid + '::' + fw;
+            if (!linkSet[lk]) {
+              links.push({
+                source: 'R::' + eid,
+                target: 'F::' + fw,
+                count: agg.perEntry[eid],
+                kind: 'curated',
+                confidence: 1.0
+              });
+              linkSet[lk] = true;
+            }
+          }
+        });
+      });
+
+      // Add model-suggested edges (dashed, with confidence)
+      if (showSuggested && PREDICTIONS.length) {
+        // Aggregate predictions by entry+framework
+        var predAgg = {};
+        PREDICTIONS.forEach(function(p) {
+          if (p.curated) return;
+          if (filter !== 'all' && filter !== 'frameworks' && filter !== p.source_list) return;
+          var k = p.entry_id + '::' + p.framework;
+          if (!predAgg[k]) predAgg[k] = { entryId: p.entry_id, fw: p.framework, count: 0, maxConf: 0 };
+          predAgg[k].count += 1;
+          predAgg[k].maxConf = Math.max(predAgg[k].maxConf, p.confidence || 0);
+        });
+
+        Object.keys(predAgg).forEach(function(k) {
+          var pa = predAgg[k];
+          // Ensure framework node exists
+          if (!nodeIdx['F::' + pa.fw]) {
+            add({
+              id: 'F::' + pa.fw,
+              kind: 'framework',
+              label: pa.fw,
+              framework: pa.fw,
+              color: cwColorFor(pa.fw, colorMap),
+              controls: pa.count,
+              riskCount: 1,
+              radius: 14 + Math.sqrt(pa.count) * 2
+            });
+          }
+          var lk = pa.entryId + '::' + pa.fw;
+          if (!linkSet[lk] && nodeIdx['R::' + pa.entryId] != null) {
+            links.push({
+              source: 'R::' + pa.entryId,
+              target: 'F::' + pa.fw,
+              count: pa.count,
+              kind: 'suggested',
+              confidence: pa.maxConf
+            });
+            linkSet[lk] = true;
+          }
+        });
+      }
+
+      return { nodes: nodes, links: links };
+    }
+
+    // Filter chips (Rico-style)
+    var FILTERS = [
+      { id: 'all', label: 'All' },
+      { id: 'LLM-Top10-2025', label: 'LLM Top 10' },
+      { id: 'Agentic-Top10-2026', label: 'Agentic Top 10' },
+      { id: 'DSGAI-2026', label: 'DSGAI' },
+      { id: 'risks', label: 'Risks only' },
+      { id: 'frameworks', label: 'Frameworks only' }
+    ];
+    var currentFilter = 'all';
+    var hasPredictions = PREDICTIONS.length > 0;
+
+    var toolbar = el('div', { className: 'cw-toolbar' });
+    var search = el('input', { type: 'search', placeholder: 'Search risks or frameworks…' });
+    toolbar.appendChild(search);
+    var togglesWrap = el('div', { className: 'cw-fw-toggles' });
+    var chipEls = {};
+    FILTERS.forEach(function(f) {
+      var chip = el('span', { className: 'cw-fw-chip' + (f.id === 'all' ? ' active' : '') }, f.label);
+      chip.style.background = f.id === 'all' ? 'var(--accent)' : 'transparent';
+      chip.style.color = f.id === 'all' ? '#fff' : 'var(--text-secondary)';
+      chip.addEventListener('click', function() {
+        currentFilter = f.id;
+        Object.keys(chipEls).forEach(function(k) {
+          var c = chipEls[k];
+          c.classList.remove('active');
+          c.style.background = 'transparent';
+          c.style.color = 'var(--text-secondary)';
+        });
+        chip.classList.add('active');
+        chip.style.background = 'var(--accent)';
+        chip.style.color = '#fff';
+        renderGraph();
+      });
+      chipEls[f.id] = chip;
+      togglesWrap.appendChild(chip);
+    });
+    toolbar.appendChild(togglesWrap);
+
+    // Model-suggested edges toggle
+    if (hasPredictions) {
+      var suggestToggle = el('label', { style: 'display:flex;align-items:center;gap:6px;margin-left:12px;font-size:.8rem;color:var(--text-secondary);cursor:pointer;white-space:nowrap;' });
+      var suggestCb = el('input', { type: 'checkbox' });
+      suggestCb.style.cssText = 'accent-color:var(--accent);cursor:pointer;';
+      suggestCb.addEventListener('change', function() {
+        showSuggested = suggestCb.checked;
+        renderGraph();
+      });
+      suggestToggle.appendChild(suggestCb);
+      suggestToggle.appendChild(document.createTextNode('Show ML suggestions'));
+      var dashIcon = el('span', { style: 'display:inline-block;width:18px;height:2px;border-top:2px dashed var(--accent);vertical-align:middle;margin-left:2px;' });
+      suggestToggle.appendChild(dashIcon);
+      toolbar.appendChild(suggestToggle);
+    }
+
+    page.appendChild(toolbar);
+
+    // Layout
+    var layout = el('div', { className: 'cw-layout' });
+    var graphWrap = el('div', { className: 'cw-graph-wrap' });
+    var sidePanel = el('div', { className: 'cw-side' });
+    sidePanel.innerHTML = '<div class="empty">Click any node to see details. Scroll to zoom · drag to pan.</div>';
+    layout.appendChild(graphWrap);
+    layout.appendChild(sidePanel);
+    page.appendChild(layout);
+
+    var stats = el('div', { className: 'cw-stats' });
+    graphWrap.appendChild(stats);
+
+    container.appendChild(page);
+
+    var loading = el('div', {});
+    loading.style.cssText = 'position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--text-secondary);font-size:.9rem;';
+    loading.textContent = 'Loading visualization…';
+    graphWrap.appendChild(loading);
+
+    var d3 = null, svg = null, gZoom = null, sim = null;
+    var width = 0, height = 0;
+    var lastSelection = null;
+
+    function showDetail(d) {
+      lastSelection = d.id;
+      sidePanel.innerHTML = '';
+      var closeBtn = el('button', {}, '✕');
+      closeBtn.style.cssText = 'float:right;background:transparent;border:none;color:var(--text-secondary);font-size:1.1rem;cursor:pointer;padding:0;';
+      closeBtn.addEventListener('click', function() {
+        sidePanel.innerHTML = '<div class="empty">Click any node to see details. Scroll to zoom · drag to pan.</div>';
+        if (gZoom) gZoom.selectAll('.cw-node').classed('selected', false);
+        if (gZoom) gZoom.selectAll('.cw-link').classed('highlight', false);
+        lastSelection = null;
+      });
+      sidePanel.appendChild(closeBtn);
+
+      var tag = el('span', { className: 'fw-tag' }, d.kind === 'risk' ? d.framework : 'Framework');
+      tag.style.background = d.color;
+      sidePanel.appendChild(tag);
+      sidePanel.appendChild(el('h3', {}, d.kind === 'risk' ? (d.label + ' — ' + d.name) : d.label));
+
+      if (d.kind === 'risk') {
+        var e = d.entry;
+        sidePanel.appendChild(el('div', { className: 'ctrl-id-line' }, 'Severity: ' + (e.severity || '—')));
+        var fwSet = {};
+        (e.mappings || []).forEach(function(m) { fwSet[m.framework] = (fwSet[m.framework] || 0) + 1; });
+        sidePanel.appendChild(el('div', { className: 'notes' }, (e.mappings || []).length + ' control mappings across ' + Object.keys(fwSet).length + ' frameworks.'));
+
+        var openLink = el('a', { href: '#/explorer/' + encodeURIComponent(e.id) }, 'Open Resource →');
+        openLink.style.cssText = 'display:inline-block;padding:6px 12px;background:var(--accent);color:#fff;border-radius:var(--radius);font-size:.8rem;text-decoration:none;margin-bottom:12px;';
+        sidePanel.appendChild(openLink);
+
+        var nbWrap = el('div', { className: 'neighbors' });
+        nbWrap.appendChild(el('h4', {}, 'Mapped Frameworks'));
+        Object.keys(fwSet).sort().forEach(function(fw) {
+          var row = el('a', { className: 'neighbor', href: '#/frameworks/' + encodeURIComponent(fw) });
+          row.style.borderLeft = '3px solid ' + cwColorFor(fw, colorMap);
+          row.style.textDecoration = 'none';
+          row.style.color = 'inherit';
+          row.appendChild(document.createTextNode(fw));
+          var sub = el('span', { className: 'nb-fw' }, fwSet[fw] + ' control' + (fwSet[fw] === 1 ? '' : 's'));
+          row.appendChild(sub);
+          nbWrap.appendChild(row);
+        });
+        sidePanel.appendChild(nbWrap);
+
+        // Confidence histogram for ML predictions
+        var preds = PRED_BY_ENTRY[e.id];
+        if (preds && preds.length) {
+          var confSection = el('div', { className: 'neighbors', style: 'margin-top:12px;' });
+          confSection.appendChild(el('h4', {}, 'ML Confidence'));
+          var curated = preds.filter(function(p) { return p.curated; });
+          var suggested = preds.filter(function(p) { return !p.curated; });
+          confSection.appendChild(el('div', { style: 'font-size:.8rem;color:var(--text-secondary);margin-bottom:8px;' },
+            curated.length + ' curated (solid) / ' + suggested.length + ' suggested (dashed)'));
+
+          // Mini bar chart
+          var chartWrap = el('div', { style: 'display:flex;align-items:flex-end;gap:1px;height:40px;' });
+          var bins = [0,0,0,0,0,0,0,0,0,0];
+          preds.forEach(function(p) {
+            var b = Math.min(9, Math.floor((p.confidence || 0) * 10));
+            bins[b]++;
+          });
+          var maxBin = Math.max.apply(null, bins) || 1;
+          bins.forEach(function(count, i) {
+            var bar = el('div');
+            var h = Math.round(count / maxBin * 36);
+            var isSuggested = i < 5;
+            bar.style.cssText = 'width:100%;height:' + Math.max(1, h) + 'px;background:' +
+              (i >= 7 ? 'var(--accent)' : i >= 4 ? '#f59e0b' : '#94a3b8') +
+              ';border-radius:1px;flex:1;';
+            bar.title = (i*10) + '-' + ((i+1)*10) + '%: ' + count + ' predictions';
+            chartWrap.appendChild(bar);
+          });
+          confSection.appendChild(chartWrap);
+          var labels = el('div', { style: 'display:flex;justify-content:space-between;font-size:.6rem;color:var(--text-muted);margin-top:2px;' });
+          labels.appendChild(el('span', {}, '0%'));
+          labels.appendChild(el('span', {}, '50%'));
+          labels.appendChild(el('span', {}, '100%'));
+          confSection.appendChild(labels);
+
+          // Top suggested controls
+          if (suggested.length) {
+            var topSug = el('div', { style: 'margin-top:8px;' });
+            topSug.appendChild(el('div', { style: 'font-size:.75rem;color:var(--text-muted);text-transform:uppercase;margin-bottom:4px;' }, 'Top Suggestions'));
+            suggested.sort(function(a,b) { return b.confidence - a.confidence; });
+            suggested.slice(0,5).forEach(function(p) {
+              var sRow = el('div', { style: 'display:flex;justify-content:space-between;font-size:.8rem;padding:2px 0;border-bottom:1px dashed var(--border);' });
+              sRow.appendChild(el('span', {}, p.framework.slice(0,18) + ' ' + p.control_id));
+              var confBadge = el('span', { style: 'font-size:.7rem;padding:1px 5px;border-radius:6px;background:' +
+                (p.confidence >= 0.7 ? 'var(--accent)' : p.confidence >= 0.4 ? '#f59e0b' : '#94a3b8') + ';color:#fff;' });
+              confBadge.textContent = Math.round(p.confidence * 100) + '%';
+              sRow.appendChild(confBadge);
+              topSug.appendChild(sRow);
+            });
+            confSection.appendChild(topSug);
+          }
+          sidePanel.appendChild(confSection);
+        }
+
+      } else {
+        // framework node — list all OWASP risks that map to it, with control IDs
+        sidePanel.appendChild(el('div', { className: 'ctrl-id-line' }, d.controls + ' controls · maps to ' + d.riskCount + ' OWASP risks'));
+
+        var fwLink = el('a', { href: '#/frameworks/' + encodeURIComponent(d.framework) }, 'View Framework Details →');
+        fwLink.style.cssText = 'display:inline-block;padding:6px 12px;background:var(--accent);color:#fff;border-radius:var(--radius);font-size:.8rem;text-decoration:none;margin-bottom:12px;';
+        sidePanel.appendChild(fwLink);
+
+        var nbWrap = el('div', { className: 'neighbors' });
+        nbWrap.appendChild(el('h4', {}, 'Risks Covered'));
+        DATA.forEach(function(e) {
+          var matching = (e.mappings || []).filter(function(m) { return m.framework === d.framework; });
+          if (!matching.length) return;
+          var row = el('div', { className: 'neighbor' });
+          row.style.borderLeft = '3px solid ' + cwColorFor(e.source_list, colorMap);
+          var entryLink = el('a', { href: '#/explorer/' + encodeURIComponent(e.id), style: 'text-decoration:none;color:inherit;font-weight:600;' });
+          entryLink.textContent = e.id + ' — ' + e.name;
+          row.appendChild(entryLink);
+          // Render control IDs as individual clickable links
+          var ctrlWrap = el('span', { className: 'nb-fw', style: 'display:flex;flex-wrap:wrap;gap:3px;margin-top:2px;' });
+          matching.forEach(function(m, idx) {
+            var ctrlLink = el('a', {
+              href: '#/frameworks/' + encodeURIComponent(d.framework) + '/' + encodeURIComponent(m.control_id),
+              style: 'color:var(--accent);text-decoration:none;font-size:.75rem;'
+            });
+            ctrlLink.textContent = m.control_id;
+            ctrlWrap.appendChild(ctrlLink);
+            if (idx < matching.length - 1) ctrlWrap.appendChild(document.createTextNode(', '));
+          });
+          row.appendChild(ctrlWrap);
+          nbWrap.appendChild(row);
+        });
+        sidePanel.appendChild(nbWrap);
+      }
+
+      if (gZoom) {
+        gZoom.selectAll('.cw-node').classed('selected', function(n) { return n.id === d.id; });
+        gZoom.selectAll('.cw-link').classed('highlight', function(l) {
+          return (l.source.id || l.source) === d.id || (l.target.id || l.target) === d.id;
+        });
+      }
+    }
+
+    function applySearch() {
+      if (!gZoom) return;
+      var q = (search.value || '').toLowerCase().trim();
+      gZoom.selectAll('.cw-node-group').classed('dim', function(d) {
+        if (!q) return false;
+        var hay = (d.label + ' ' + (d.name || '') + ' ' + (d.framework || '')).toLowerCase();
+        return hay.indexOf(q) === -1;
+      });
+      gZoom.selectAll('.cw-link').classed('dim', function(l) {
+        if (!q) return false;
+        var s = l.source, t = l.target;
+        var hayS = ((s.label || '') + ' ' + (s.name || '') + ' ' + (s.framework || '')).toLowerCase();
+        var hayT = ((t.label || '') + ' ' + (t.name || '') + ' ' + (t.framework || '')).toLowerCase();
+        return hayS.indexOf(q) === -1 && hayT.indexOf(q) === -1;
+      });
+    }
+    search.addEventListener('input', applySearch);
+
+    function renderGraph() {
+      if (!d3) return;
+      var data = buildFlatGraph(currentFilter);
+      stats.textContent = data.nodes.length + ' nodes · ' + data.links.length + ' mappings';
+
+      gZoom.selectAll('*').remove();
+      if (sim) sim.stop();
+
+      width = graphWrap.clientWidth;
+      height = graphWrap.clientHeight;
+
+      var linkSel = gZoom.append('g').attr('class', 'cw-links')
+        .selectAll('line').data(data.links).enter().append('line')
+        .attr('class', function(l) { return 'cw-link' + (l.kind === 'suggested' ? ' cw-link-suggested' : ''); })
+        .attr('stroke-width', function(l) {
+          if (l.kind === 'suggested') return Math.max(0.5, l.confidence * 2.5);
+          return Math.min(5, 0.8 + Math.sqrt(l.count) * 0.9);
+        })
+        .attr('stroke-dasharray', function(l) { return l.kind === 'suggested' ? '4,3' : null; })
+        .attr('stroke-opacity', function(l) {
+          if (l.kind === 'suggested') return 0.2 + (l.confidence || 0) * 0.5;
+          return null;
+        });
+
+      var nodeG = gZoom.append('g').attr('class', 'cw-nodes')
+        .selectAll('g').data(data.nodes).enter().append('g')
+        .attr('class', 'cw-node-group')
+        .style('cursor', 'pointer')
+        .on('click', function(event, d) { event.stopPropagation(); showDetail(d); })
+        .call(d3.drag()
+          .on('start', function(event, d) { if (!event.active) sim.alphaTarget(0.3).restart(); d.fx = d.x; d.fy = d.y; })
+          .on('drag', function(event, d) { d.fx = event.x; d.fy = event.y; })
+          .on('end', function(event, d) { if (!event.active) sim.alphaTarget(0); d.fx = null; d.fy = null; }));
+
+      nodeG.append('circle')
+        .attr('class', 'cw-node')
+        .attr('r', function(d) { return d.radius; })
+        .attr('fill', function(d) { return d.color; });
+
+      nodeG.append('title').text(function(d) {
+        return d.kind === 'risk'
+          ? d.label + ' — ' + d.name + ' (' + d.framework + ')'
+          : d.label + ' (' + d.controls + ' controls, ' + d.riskCount + ' risks)';
+      });
+
+      // Label inside circle for risks (compact ID); below circle for frameworks
+      nodeG.filter(function(d) { return d.kind === 'risk'; })
+        .append('text')
+        .attr('text-anchor', 'middle').attr('dy', '0.35em')
+        .style('font-size', '9px').style('font-weight', '700').style('fill', '#fff')
+        .style('pointer-events', 'none')
+        .text(function(d) { return d.label; });
+
+      nodeG.filter(function(d) { return d.kind === 'framework'; })
+        .append('text')
+        .attr('text-anchor', 'middle')
+        .attr('dy', function(d) { return d.radius + 12; })
+        .style('font-size', '11px').style('font-weight', '600').style('fill', 'var(--text)')
+        .style('pointer-events', 'none')
+        .text(function(d) { return d.label.length > 22 ? d.label.slice(0, 20) + '…' : d.label; });
+
+      sim = d3.forceSimulation(data.nodes)
+        .force('link', d3.forceLink(data.links).id(function(d) { return d.id; }).distance(220).strength(0.18))
+        .force('charge', d3.forceManyBody().strength(function(d) { return d.kind === 'framework' ? -2200 : -1100; }).distanceMax(900))
+        .force('center', d3.forceCenter(width / 2, height / 2))
+        .force('collide', d3.forceCollide().radius(function(d) { return d.radius + 38; }).strength(1))
+        .force('x', d3.forceX(width / 2).strength(0.04))
+        .force('y', d3.forceY(height / 2).strength(0.04))
+        .alpha(1).alphaDecay(0.025);
+
+      sim.on('tick', function() {
+        linkSel
+          .attr('x1', function(d) { return d.source.x; })
+          .attr('y1', function(d) { return d.source.y; })
+          .attr('x2', function(d) { return d.target.x; })
+          .attr('y2', function(d) { return d.target.y; });
+        nodeG.attr('transform', function(d) { return 'translate(' + d.x + ',' + d.y + ')'; });
+      });
+
+      // Restore selection if still present
+      if (lastSelection) {
+        var still = data.nodes.find(function(n) { return n.id === lastSelection; });
+        if (still) showDetail(still);
+      }
+      applySearch();
+    }
+
+    loadD3(function(err) {
+      loading.remove();
+      if (err) {
+        graphWrap.appendChild(el('div', { style: 'padding:20px;color:var(--text-secondary);' }, 'Failed to load D3 from CDN. Check your network connection.'));
+        return;
+      }
+      d3 = window.d3;
+      width = graphWrap.clientWidth;
+      height = graphWrap.clientHeight;
+
+      svg = d3.select(graphWrap).append('svg').attr('viewBox', [0, 0, width, height]);
+      gZoom = svg.append('g');
+      svg.call(d3.zoom().scaleExtent([0.3, 4]).on('zoom', function(event) {
+        gZoom.attr('transform', event.transform);
+      }));
+
+      renderGraph();
+    });
   }
 
   // ══════════════════════════════════════════════════════════════════════════════
@@ -3143,6 +4141,336 @@ input, select { font-family: inherit; }
 
       modal.appendChild(body);
     });
+  }
+
+  // ══════════════════════════════════════════════════════════════════════════════
+  // Gap Analysis page
+  // ══════════════════════════════════════════════════════════════════════════════
+  function renderGapAnalysis(container) {
+    var hashParts = (window.location.hash || '').split('?');
+    var params = new URLSearchParams(hashParts[1] || '');
+    var initialSelected = params.get('fw') ? params.get('fw').split(',').map(decodeURIComponent) : [];
+    var selected = new Set(initialSelected);
+
+    var layout = el('div', { className: 'score-layout' });
+
+    // Sidebar
+    var sidebar = el('div', { className: 'score-sidebar' });
+    sidebar.appendChild(el('h3', {}, 'Select frameworks you implement'));
+
+    var selectAllBtn = el('button', { className: 'pill', style: 'margin-bottom:12px;' }, 'Select All');
+    selectAllBtn.addEventListener('click', function() {
+      var allChecked = selected.size === FRAMEWORKS.length;
+      checkboxes.forEach(function(cb) { cb.checked = !allChecked; });
+      if (allChecked) selected.clear();
+      else FRAMEWORKS.forEach(function(fw) { selected.add(fw); });
+      updateGaps();
+    });
+    sidebar.appendChild(selectAllBtn);
+
+    var checkboxList = el('div', { className: 'fw-checkbox-list' });
+    var checkboxes = [];
+    FRAMEWORKS.forEach(function(fw) {
+      var label = el('label', { className: 'fw-checkbox' });
+      var cb = el('input', { type: 'checkbox' });
+      if (selected.has(fw)) cb.checked = true;
+      cb.addEventListener('change', function() {
+        if (cb.checked) selected.add(fw);
+        else selected.delete(fw);
+        updateGaps();
+      });
+      checkboxes.push(cb);
+      label.appendChild(cb);
+      label.appendChild(document.createTextNode(fw));
+      checkboxList.appendChild(label);
+    });
+    sidebar.appendChild(checkboxList);
+
+    // Export buttons
+    sidebar.appendChild(el('hr', { style: 'border:none;border-top:1px solid var(--border);margin:16px 0;' }));
+    var exportPdfBtn = el('button', { className: 'pill', style: 'width:100%;margin-bottom:8px;' }, 'Export PDF');
+    exportPdfBtn.addEventListener('click', function() { exportGapPdf(); });
+    sidebar.appendChild(exportPdfBtn);
+
+    var exportCsvBtn = el('button', { className: 'pill', style: 'width:100%;' }, 'Export CSV');
+    exportCsvBtn.addEventListener('click', function() { exportGapCsv(); });
+    sidebar.appendChild(exportCsvBtn);
+
+    // Main content
+    var main = el('div', { className: 'score-main' });
+    main.appendChild(el('h2', { style: 'font-size:1.5rem;font-weight:800;margin-bottom:8px;' }, 'Gap Analysis'));
+    main.appendChild(el('p', { style: 'color:var(--text-secondary);margin-bottom:20px;font-size:.9rem;' },
+      'Select frameworks to see which OWASP risks have zero, partial, or full coverage across your compliance stack.'));
+
+    var summaryContainer = el('div', { className: 'gap-summary-cards' });
+    var legendContainer = el('div', { className: 'gap-legend' });
+    var tableContainer = el('div', { style: 'overflow-x:auto;' });
+
+    main.appendChild(summaryContainer);
+    main.appendChild(legendContainer);
+    main.appendChild(tableContainer);
+
+    layout.appendChild(sidebar);
+    layout.appendChild(main);
+    container.appendChild(layout);
+
+    // Source list groups
+    var SOURCE_GROUPS = [
+      { label: 'LLM Top 10', prefix: 'LLM', list: 'LLM-Top10-2025' },
+      { label: 'Agentic Top 10', prefix: 'ASI', list: 'Agentic-Top10-2026' },
+      { label: 'DSGAI 2026', prefix: 'DSGAI', list: 'DSGAI-2026' }
+    ];
+
+    function computeGaps() {
+      var selArr = Array.from(selected);
+      if (selArr.length === 0) return { entries: [], summary: { full: 0, partial: 0, none: 0 } };
+
+      var results = DATA.map(function(entry) {
+        var fwCoverage = {};
+        selArr.forEach(function(fw) {
+          var mappings = entry.mappings.filter(function(m) { return m.framework === fw; });
+          fwCoverage[fw] = mappings.length;
+        });
+        var coveredCount = selArr.filter(function(fw) { return fwCoverage[fw] > 0; }).length;
+        var status = coveredCount === 0 ? 'none' : (coveredCount === selArr.length ? 'full' : 'partial');
+        return {
+          id: entry.id,
+          name: entry.name,
+          severity: entry.severity,
+          source_list: entry.source_list,
+          fwCoverage: fwCoverage,
+          coveredCount: coveredCount,
+          totalSelected: selArr.length,
+          pct: selArr.length > 0 ? Math.round((coveredCount / selArr.length) * 100) : 0,
+          status: status
+        };
+      });
+
+      // Sort: group by source_list, then status (none first), then severity
+      var sevOrder = { Critical: 0, High: 1, Medium: 2, Low: 3 };
+      var statusOrder = { none: 0, partial: 1, full: 2 };
+      var sourceOrder = { 'LLM-Top10-2025': 0, 'Agentic-Top10-2026': 1, 'DSGAI-2026': 2 };
+      results.sort(function(a, b) {
+        var s = (sourceOrder[a.source_list] || 9) - (sourceOrder[b.source_list] || 9);
+        if (s !== 0) return s;
+        var d = statusOrder[a.status] - statusOrder[b.status];
+        if (d !== 0) return d;
+        return (sevOrder[a.severity] || 3) - (sevOrder[b.severity] || 3);
+      });
+
+      var summary = { full: 0, partial: 0, none: 0 };
+      results.forEach(function(r) { summary[r.status]++; });
+      return { entries: results, summary: summary };
+    }
+
+    function updateGaps() {
+      // Update URL
+      var fwParam = Array.from(selected).map(encodeURIComponent).join(',');
+      var newHash = '#/gaps' + (fwParam ? '?fw=' + fwParam : '');
+      history.replaceState(null, '', newHash);
+
+      summaryContainer.innerHTML = '';
+      legendContainer.innerHTML = '';
+      tableContainer.innerHTML = '';
+
+      if (selected.size === 0) {
+        tableContainer.appendChild(el('div', { className: 'empty-state' },
+          el('h3', {}, 'Select at least one framework to see your gap analysis')));
+        return;
+      }
+
+      var data = computeGaps();
+      var s = data.summary;
+
+      // Summary cards
+      var cards = [
+        { label: 'Full Coverage', value: s.full, cls: 'good', color: 'var(--lo)' },
+        { label: 'Partial Coverage', value: s.partial, cls: 'ok', color: 'var(--me)' },
+        { label: 'No Coverage', value: s.none, cls: 'none', color: 'var(--cr)' },
+        { label: 'Overall Score', value: Math.round(((s.full + s.partial * 0.5) / DATA.length) * 100) + '%', cls: s.none === 0 ? 'good' : (s.none <= 5 ? 'ok' : 'poor'), color: null }
+      ];
+      cards.forEach(function(c) {
+        var card = el('div', { className: 'gap-summary-card' });
+        var big = el('div', { className: 'gap-summary-big' });
+        big.style.color = c.color || '';
+        big.textContent = c.value;
+        card.appendChild(big);
+        card.appendChild(el('div', { className: 'score-label' }, c.label));
+        summaryContainer.appendChild(card);
+      });
+
+      // Legend
+      [
+        { cls: 'full', label: 'Full — all selected frameworks cover this risk' },
+        { cls: 'partial', label: 'Partial — some frameworks cover this risk' },
+        { cls: 'none', label: 'None — no selected framework covers this risk' }
+      ].forEach(function(l) {
+        var span = el('span');
+        var dot = el('span', { className: 'gap-legend-dot gap-cell ' + l.cls });
+        span.appendChild(dot);
+        span.appendChild(document.createTextNode(' ' + l.label));
+        legendContainer.appendChild(span);
+      });
+
+      // Heatmap table
+      var selArr = Array.from(selected);
+      var table = el('table', { className: 'gap-heatmap' });
+
+      // Header
+      var thead = el('thead');
+      var hRow = el('tr');
+      hRow.appendChild(el('th', {}, 'Entry'));
+      hRow.appendChild(el('th', {}, 'Risk'));
+      hRow.appendChild(el('th', {}, 'Sev'));
+      hRow.appendChild(el('th', {}, '%'));
+      selArr.forEach(function(fw) {
+        // Find short name from registry
+        var reg = FW_REGISTRY.find(function(r) { return r.name === fw; });
+        var shortName = reg ? (reg.short_name || fw) : fw;
+        hRow.appendChild(el('th', { className: 'rotate-header', title: fw }, shortName));
+      });
+      thead.appendChild(hRow);
+      table.appendChild(thead);
+
+      // Body — group by source list
+      var tbody = el('tbody');
+      var currentSource = '';
+      data.entries.forEach(function(row) {
+        // Source list separator
+        if (row.source_list !== currentSource) {
+          currentSource = row.source_list;
+          var sepRow = el('tr');
+          var sepCell = el('td', { colSpan: 4 + selArr.length, style: 'font-weight:700;background:var(--bg);padding:10px;font-size:.85rem;border-bottom:2px solid var(--border);' });
+          var group = SOURCE_GROUPS.find(function(g) { return g.list === currentSource; });
+          sepCell.textContent = group ? group.label : currentSource;
+          sepRow.appendChild(sepCell);
+          tbody.appendChild(sepRow);
+        }
+
+        var tr = el('tr');
+        // Entry ID
+        var idCell = el('td');
+        var idLink = el('a', {
+          href: '#/explorer/' + row.id,
+          style: 'color:var(--accent);text-decoration:none;font-family:var(--font-mono);font-weight:700;'
+        }, row.id);
+        idCell.appendChild(idLink);
+        tr.appendChild(idCell);
+
+        // Name
+        tr.appendChild(el('td', { style: 'max-width:200px;overflow:hidden;text-overflow:ellipsis;', title: row.name }, row.name));
+
+        // Severity
+        var sevTd = el('td');
+        sevTd.appendChild(el('span', { className: 'sev-dot ' + row.severity, style: 'width:8px;height:8px;display:inline-block;border-radius:50%;' }));
+        tr.appendChild(sevTd);
+
+        // Coverage %
+        var pctTd = el('td', { style: 'font-weight:700;font-family:var(--font-mono);font-size:.8rem;' });
+        pctTd.textContent = row.pct + '%';
+        pctTd.style.color = row.status === 'full' ? 'var(--lo)' : (row.status === 'partial' ? 'var(--me)' : 'var(--cr)');
+        tr.appendChild(pctTd);
+
+        // Framework cells
+        selArr.forEach(function(fw) {
+          var td = el('td');
+          var count = row.fwCoverage[fw] || 0;
+          var cellClass = count > 0 ? 'full' : 'none';
+          var cell = el('span', {
+            className: 'gap-cell ' + cellClass,
+            title: fw + ': ' + count + ' mapping(s) for ' + row.id
+          });
+          td.appendChild(cell);
+          tr.appendChild(td);
+        });
+
+        tbody.appendChild(tr);
+      });
+      table.appendChild(tbody);
+      tableContainer.appendChild(table);
+    }
+
+    function exportGapCsv() {
+      if (selected.size === 0) return;
+      var data = computeGaps();
+      var selArr = Array.from(selected);
+      var lines = ['Entry,Risk,Severity,Coverage %,' + selArr.join(',')];
+      data.entries.forEach(function(row) {
+        var cells = [row.id, '"' + row.name.replace(/"/g, '""') + '"', row.severity, row.pct + '%'];
+        selArr.forEach(function(fw) { cells.push(row.fwCoverage[fw] || 0); });
+        lines.push(cells.join(','));
+      });
+      var blob = new Blob([lines.join('\n')], { type: 'text/csv' });
+      var a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'gap-analysis.csv';
+      a.click();
+    }
+
+    function exportGapPdf() {
+      if (selected.size === 0) return;
+      // Use the browser print dialog with a print-specific view
+      var data = computeGaps();
+      var selArr = Array.from(selected);
+      var s = data.summary;
+
+      var html = '<!DOCTYPE html><html><head><meta charset="utf-8"><title>Gap Analysis Report</title>';
+      html += '<style>';
+      html += 'body{font-family:system-ui,sans-serif;padding:40px;font-size:12px;color:#1a1a1a;}';
+      html += 'h1{font-size:20px;margin-bottom:4px;}';
+      html += 'h2{font-size:14px;color:#666;font-weight:400;margin-bottom:20px;}';
+      html += '.summary{display:flex;gap:24px;margin-bottom:20px;}';
+      html += '.summary div{text-align:center;}';
+      html += '.summary .num{font-size:28px;font-weight:800;}';
+      html += '.summary .lbl{font-size:10px;color:#666;text-transform:uppercase;}';
+      html += 'table{width:100%;border-collapse:collapse;font-size:11px;}';
+      html += 'th{background:#f5f5f5;padding:6px 8px;text-align:left;border-bottom:2px solid #ddd;font-size:10px;}';
+      html += 'td{padding:5px 8px;border-bottom:1px solid #eee;}';
+      html += '.dot{width:12px;height:12px;border-radius:3px;display:inline-block;}';
+      html += '.full{background:#16a34a;}.partial{background:#ca8a04;}.none{background:#dc2626;}';
+      html += '.sep{font-weight:700;background:#f9f9f9;padding:8px;border-bottom:2px solid #ddd;}';
+      html += '@page{margin:1cm;size:landscape;}';
+      html += '</style></head><body>';
+      html += '<h1>Crosswalk — Gap Analysis</h1>';
+      html += '<h2>Frameworks: ' + selArr.join(', ') + '</h2>';
+      html += '<div class="summary">';
+      html += '<div><div class="num" style="color:#16a34a">' + s.full + '</div><div class="lbl">Full Coverage</div></div>';
+      html += '<div><div class="num" style="color:#ca8a04">' + s.partial + '</div><div class="lbl">Partial</div></div>';
+      html += '<div><div class="num" style="color:#dc2626">' + s.none + '</div><div class="lbl">No Coverage</div></div>';
+      html += '</div>';
+      html += '<table><thead><tr><th>Entry</th><th>Risk</th><th>Severity</th><th>Coverage</th>';
+      selArr.forEach(function(fw) {
+        var reg = FW_REGISTRY.find(function(r) { return r.name === fw; });
+        html += '<th>' + (reg ? (reg.short_name || fw) : fw) + '</th>';
+      });
+      html += '</tr></thead><tbody>';
+      var currentSource = '';
+      data.entries.forEach(function(row) {
+        if (row.source_list !== currentSource) {
+          currentSource = row.source_list;
+          var group = SOURCE_GROUPS.find(function(g) { return g.list === currentSource; });
+          html += '<tr><td class="sep" colspan="' + (4 + selArr.length) + '">' + (group ? group.label : currentSource) + '</td></tr>';
+        }
+        html += '<tr><td><b>' + row.id + '</b></td><td>' + row.name + '</td><td>' + row.severity + '</td>';
+        html += '<td><b>' + row.pct + '%</b></td>';
+        selArr.forEach(function(fw) {
+          var count = row.fwCoverage[fw] || 0;
+          html += '<td><span class="dot ' + (count > 0 ? 'full' : 'none') + '"></span> ' + count + '</td>';
+        });
+        html += '</tr>';
+      });
+      html += '</tbody></table>';
+      html += '<p style="margin-top:20px;font-size:10px;color:#999;">Generated by Crosswalk — ' + new Date().toISOString().slice(0, 10) + '</p>';
+      html += '</body></html>';
+
+      var printWin = window.open('', '_blank');
+      printWin.document.write(html);
+      printWin.document.close();
+      printWin.focus();
+      setTimeout(function() { printWin.print(); }, 500);
+    }
+
+    updateGaps();
   }
 
   // ══════════════════════════════════════════════════════════════════════════════
@@ -3625,7 +4953,7 @@ input, select { font-family: inherit; }
       if (selected.size > 0) {
         sharePanel.style.display = 'block';
         var fwParam = Array.from(selected).join(',');
-        var shareUrl = 'https://emmanuelgjr.github.io/GenAI-Security-Crosswalk/#/score?fw=' + encodeURIComponent(fwParam);
+        var shareUrl = 'https://genai-security-project.github.io/crosswalk/#/score?fw=' + encodeURIComponent(fwParam);
 
         // Render score card on canvas
         renderScoreCanvas(scoreCanvas, {
@@ -3672,7 +5000,7 @@ input, select { font-family: inherit; }
         twitterBtn.onclick = function() {
           var critCount = weakEntries.filter(function(e) { return e.entry.severity === 'Critical'; }).length;
           var highCount = weakEntries.filter(function(e) { return e.entry.severity === 'High'; }).length;
-          var tweetText = 'Just assessed our AI security posture against the OWASP GenAI Crosswalk \u2014 scored ' + overallPct + '% across ' + selected.size + ' frameworks.\n\n' +
+          var tweetText = 'Just assessed our AI security posture against the Crosswalk \u2014 scored ' + overallPct + '% across ' + selected.size + ' frameworks.\n\n' +
             critCount + ' critical gaps identified. ' + highCount + ' high-severity gaps.\n\n' +
             'Free tool:\n\n#AISecurity #OWASP #GenAI #Cybersecurity';
           var twitterUrl = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(tweetText) + '&url=' + encodeURIComponent(shareUrl);
@@ -3722,7 +5050,7 @@ input, select { font-family: inherit; }
     ctx.fillStyle = '#94a3b8';
     ctx.font = 'bold 18px system-ui, -apple-system, sans-serif';
     ctx.textAlign = 'left';
-    ctx.fillText('OWASP GenAI Security Crosswalk', 40, 38);
+    ctx.fillText('Crosswalk', 40, 38);
 
     // Title
     ctx.fillStyle = '#f8fafc';
@@ -3835,7 +5163,7 @@ input, select { font-family: inherit; }
     ctx.fillStyle = '#64748b';
     ctx.font = '14px system-ui, -apple-system, sans-serif';
     ctx.textAlign = 'left';
-    ctx.fillText('emmanuelgjr.github.io/GenAI-Security-Crosswalk', 40, H - 18);
+    ctx.fillText('genai-security-project.github.io/crosswalk', 40, H - 18);
 
     ctx.textAlign = 'right';
     var today = new Date();
@@ -3873,7 +5201,7 @@ input, select { font-family: inherit; }
   // ══════════════════════════════════════════════════════════════════════════════
   function generateBadgeSVG(score, fwCount) {
     var color = score < 40 ? '#dc2626' : score < 70 ? '#ea580c' : '#22c55e';
-    var label = 'GenAI Crosswalk';
+    var label = 'Crosswalk';
     var value = score + '% | ' + fwCount + ' fw';
     var labelWidth = 120;
     var valueWidth = 90;
@@ -3913,12 +5241,12 @@ input, select { font-family: inherit; }
     preview.innerHTML = svgStr;
     modal.appendChild(preview);
 
-    var badgeUrl = 'https://emmanuelgjr.github.io/GenAI-Security-Crosswalk/#/badge?score=' + score + '&fw=' + fwCount;
+    var badgeUrl = 'https://genai-security-project.github.io/crosswalk/#/badge?score=' + score + '&fw=' + fwCount;
 
     // Markdown
     modal.appendChild(el('div', { className: 'badge-modal-code-label' }, 'Markdown'));
     var mdCode = el('div', { className: 'badge-modal-code' });
-    var mdText = '![GenAI Crosswalk Score](' + badgeUrl + ')';
+    var mdText = '![Crosswalk Score](' + badgeUrl + ')';
     mdCode.textContent = mdText;
     mdCode.addEventListener('click', function() {
       if (navigator.clipboard) {
@@ -3933,7 +5261,7 @@ input, select { font-family: inherit; }
     // HTML
     modal.appendChild(el('div', { className: 'badge-modal-code-label' }, 'HTML'));
     var htmlCode = el('div', { className: 'badge-modal-code' });
-    var htmlText = '<a href="https://emmanuelgjr.github.io/GenAI-Security-Crosswalk/"><img src="' + badgeUrl + '" alt="GenAI Crosswalk Score"></a>';
+    var htmlText = '<a href="https://genai-security-project.github.io/crosswalk/"><img src="' + badgeUrl + '" alt="Crosswalk Score"></a>';
     htmlCode.textContent = htmlText;
     htmlCode.addEventListener('click', function() {
       if (navigator.clipboard) {
@@ -3981,7 +5309,7 @@ input, select { font-family: inherit; }
     preview.innerHTML = generateBadgeSVG(score, fwCount);
     content.appendChild(preview);
 
-    content.appendChild(el('p', { style: 'color:var(--text-secondary);margin-bottom:24px;' }, 'This badge shows a GenAI Crosswalk score of ' + score + '% across ' + fwCount + ' frameworks.'));
+    content.appendChild(el('p', { style: 'color:var(--text-secondary);margin-bottom:24px;' }, 'This badge shows a Crosswalk score of ' + score + '% across ' + fwCount + ' frameworks.'));
 
     var goBtn = el('a', { href: '#/score', className: 'btn-primary' }, 'Run Your Own Assessment');
     content.appendChild(goBtn);
@@ -3996,15 +5324,15 @@ input, select { font-family: inherit; }
     var content = el('div', { style: 'max-width:var(--max-w);margin:0 auto;padding:48px 24px;' });
 
     // Header
-    content.appendChild(el('h2', { style: 'font-size:1.75rem;font-weight:800;margin-bottom:8px;' }, 'GenAI Security Crosswalk Leaderboard'));
+    content.appendChild(el('h2', { style: 'font-size:1.75rem;font-weight:800;margin-bottom:8px;' }, 'Crosswalk Leaderboard'));
 
     var introBlock = el('div', { style: 'background:var(--bg-alt);border:1px solid var(--border);border-radius:var(--radius-lg);padding:16px 20px;margin-bottom:24px;' });
     introBlock.appendChild(el('p', { style: 'font-size:.9rem;color:var(--text-secondary);margin-bottom:8px;line-height:1.6;' },
-      'Companies that have assessed their AI security posture against the OWASP GenAI Crosswalk. Scores are self-reported unless independently attested. Validation tier shown for each entry.'));
+      'Companies that have assessed their AI security posture against the Crosswalk. Scores are self-reported unless independently attested. Validation tier shown for each entry.'));
     content.appendChild(introBlock);
 
     // Submit button
-    var submitUrl = 'https://github.com/emmanuelgjr/GenAI-Security-Crosswalk/issues/new?title=[Leaderboard]+Company+Name&body=**Company:**%0A**Industry:**%0A**Score:**%0A**Frameworks+selected:**%0A**Validation+tier:**%0A**Evidence+attached:**+yes/no%0A';
+    var submitUrl = 'https://github.com/GenAI-Security-Project/crosswalk/issues/new?title=[Leaderboard]+Company+Name&body=**Company:**%0A**Industry:**%0A**Score:**%0A**Frameworks+selected:**%0A**Validation+tier:**%0A**Evidence+attached:**+yes/no%0A';
     var submitBtn = el('a', { href: submitUrl, target: '_blank', rel: 'noopener', className: 'btn-primary', style: 'margin-bottom:32px;display:inline-flex;' });
     submitBtn.textContent = 'Submit Your Score \u2192';
     content.appendChild(submitBtn);
@@ -4091,7 +5419,7 @@ input, select { font-family: inherit; }
 
     var steps = [
       ['1.', 'Go to the ', '#/score', 'Score page', ' and assess your coverage'],
-      ['2.', 'Submit your results via ', 'https://github.com/emmanuelgjr/GenAI-Security-Crosswalk/issues/new?template=leaderboard_submission.md', 'GitHub Issue', ''],
+      ['2.', 'Submit your results via ', 'https://github.com/GenAI-Security-Project/crosswalk/issues/new?template=leaderboard_submission.md', 'GitHub Issue', ''],
       ['3.', 'Include: company name, industry, score, frameworks selected, validation tier', '', '', ''],
       ['4.', 'For Tool-Verified status: attach your Garak/PyRIT/LAAF JSON outputs to the issue', '', '', ''],
       ['5.', 'For Independent Attestation: include assessor name and contact for verification', '', '', ''],
@@ -4166,8 +5494,8 @@ input, select { font-family: inherit; }
   function renderAbout(container) {
     var content = el('div', { className: 'about-content' });
 
-    content.appendChild(el('h2', {}, 'About the OWASP GenAI Security Crosswalk'));
-    content.appendChild(el('p', {}, 'The GenAI Security Crosswalk is the most comprehensive open-source mapping of generative AI security risks to industry frameworks. It was created to help security teams, compliance officers, and AI engineers understand how AI-specific threats map to existing controls and standards.'));
+    content.appendChild(el('h2', {}, 'About the Crosswalk'));
+    content.appendChild(el('p', {}, 'The Crosswalk is the most comprehensive open-source mapping of generative AI security risks to industry frameworks. It was created to help security teams, compliance officers, and AI engineers understand how AI-specific threats map to existing controls and standards.'));
 
     content.appendChild(el('h3', {}, 'Creator & Initiative Lead'));
     var bio = el('p');
@@ -4183,7 +5511,9 @@ input, select { font-family: inherit; }
       ['2024 Q4', 'Expanded to 10 frameworks with community contributions. Added ASVS, ISO 27001, ISO 42001 mappings.'],
       ['2025 Q1', 'v1.0 release with query interface. Added CIS Controls, OWASP SAMM, PCI DSS, SOC 2 mappings.'],
       ['2025 Q3', 'Added Agentic Top 10 2026 entries. Expanded to 17 frameworks. Added incident database.'],
-      ['2026 Q1', 'v1.8.x: 20 frameworks, 67 mapping files, 50 incidents (100% entry coverage), 70+ tools, 21 recipes, 25 eval profiles, evidence-based scoring, leaderboard.']
+      ['2026 Q1', 'v2.0: 20 frameworks, 67 mapping files, 50 incidents (100% entry coverage), 70+ tools, 21 recipes, 25 eval profiles, evidence-based scoring, leaderboard.'],
+      ['2026 Q2', 'v3.0: Framework registry (14 frameworks, 505 controls), classifier pipeline (BGE + cross-encoder), backlink index, confidence-aware visualizer, Submit-a-Standard flow with GitHub Actions automation.'],
+      ['2026 Q2', 'v3.1: Registry expanded to 25 frameworks (1,514 controls, 100% GT coverage). Gap analysis heatmap. OSCAL catalog + GRC export. Bi-encoder fine-tuning pipeline. Framework version diffing.']
     ];
     events.forEach(function(ev) {
       var item = el('div', { className: 'timeline-item' });
@@ -4199,7 +5529,7 @@ input, select { font-family: inherit; }
     content.appendChild(el('h3', {}, 'Contributing'));
     var contrib = el('p');
     contrib.appendChild(document.createTextNode('Contributions are welcome! Visit the '));
-    contrib.appendChild(el('a', { href: 'https://github.com/emmanuelgjr/GenAI-Security-Crosswalk', target: '_blank', rel: 'noopener' }, 'GitHub repository'));
+    contrib.appendChild(el('a', { href: 'https://github.com/GenAI-Security-Project/crosswalk', target: '_blank', rel: 'noopener' }, 'GitHub repository'));
     contrib.appendChild(document.createTextNode(' to open issues, suggest new mappings, report incidents, or submit pull requests. See the CONTRIBUTING.md file for guidelines.'));
     content.appendChild(contrib);
 
@@ -4207,6 +5537,394 @@ input, select { font-family: inherit; }
     content.appendChild(el('p', {}, 'This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0). You are free to share and adapt the material for any purpose, including commercial, as long as you give appropriate credit and distribute under the same license.'));
 
     container.appendChild(content);
+  }
+
+  // ══════════════════════════════════════════════════════════════════════════════
+  // Submit-a-Standard page
+  // ══════════════════════════════════════════════════════════════════════════════
+  function renderSubmit(container) {
+    var REPO = 'GenAI-Security-Project/crosswalk';
+    var page = el('div', { style: 'max-width:800px;margin:0 auto;' });
+
+    page.appendChild(el('h2', {}, 'Submit a Standard'));
+    page.appendChild(el('p', { style: 'color:var(--text-secondary);margin-bottom:20px;' },
+      'Submit a security framework for automated mapping to all 41 OWASP GenAI entries. ' +
+      'Paste your framework controls as JSON below. Our classifier will propose mappings and open a PR for review.'));
+
+    // Example template
+    var exampleBtn = el('button', { style: 'font-size:.8rem;padding:4px 12px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);cursor:pointer;color:var(--text-secondary);margin-bottom:12px;' });
+    exampleBtn.textContent = 'Load example template';
+    page.appendChild(exampleBtn);
+
+    // Form
+    var form = el('div', { style: 'display:flex;flex-direction:column;gap:14px;' });
+
+    var nameRow = el('div', { style: 'display:grid;grid-template-columns:1fr 1fr;gap:12px;' });
+    var nameLabel = el('label', { style: 'font-size:.85rem;font-weight:600;' }, 'Framework Name *');
+    var nameInput = el('input', { type: 'text', placeholder: 'e.g., NIST SP 800-53 Rev 5', style: 'padding:8px 12px;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);color:var(--text);font-size:.9rem;' });
+    var nameDiv = el('div');
+    nameDiv.appendChild(nameLabel);
+    nameDiv.appendChild(nameInput);
+    nameRow.appendChild(nameDiv);
+
+    var verLabel = el('label', { style: 'font-size:.85rem;font-weight:600;' }, 'Version *');
+    var verInput = el('input', { type: 'text', placeholder: 'e.g., Rev 5', style: 'padding:8px 12px;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);color:var(--text);font-size:.9rem;' });
+    var verDiv = el('div');
+    verDiv.appendChild(verLabel);
+    verDiv.appendChild(verInput);
+    nameRow.appendChild(verDiv);
+    form.appendChild(nameRow);
+
+    var urlRow = el('div', { style: 'display:grid;grid-template-columns:1fr 1fr;gap:12px;' });
+    var urlLabel = el('label', { style: 'font-size:.85rem;font-weight:600;' }, 'Framework URL *');
+    var urlInput = el('input', { type: 'url', placeholder: 'https://...', style: 'padding:8px 12px;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);color:var(--text);font-size:.9rem;' });
+    var urlDiv = el('div');
+    urlDiv.appendChild(urlLabel);
+    urlDiv.appendChild(urlInput);
+    urlRow.appendChild(urlDiv);
+
+    var pubLabel = el('label', { style: 'font-size:.85rem;font-weight:600;' }, 'Publisher');
+    var pubInput = el('input', { type: 'text', placeholder: 'e.g., NIST', style: 'padding:8px 12px;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);color:var(--text);font-size:.9rem;' });
+    var pubDiv = el('div');
+    pubDiv.appendChild(pubLabel);
+    pubDiv.appendChild(pubInput);
+    urlRow.appendChild(pubDiv);
+    form.appendChild(urlRow);
+
+    // JSON textarea
+    var jsonLabel = el('label', { style: 'font-size:.85rem;font-weight:600;' }, 'Framework Controls (JSON) *');
+    form.appendChild(jsonLabel);
+    var jsonArea = el('textarea', {
+      rows: '16',
+      placeholder: '{\n  "id": "my-framework",\n  "name": "My Framework v1.0",\n  "version": "1.0",\n  "url": "https://...",\n  "controls": [\n    { "control_id": "C-1", "title": "Control name", "description": "..." }\n  ]\n}',
+      style: 'padding:12px;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);color:var(--text);font-family:monospace;font-size:.85rem;resize:vertical;'
+    });
+    form.appendChild(jsonArea);
+
+    // Validation status
+    var statusDiv = el('div', { style: 'font-size:.85rem;min-height:24px;' });
+    form.appendChild(statusDiv);
+
+    // Buttons
+    var btnRow = el('div', { style: 'display:flex;gap:10px;' });
+    var validateBtn = el('button', { style: 'padding:8px 20px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);cursor:pointer;font-weight:600;color:var(--text);' });
+    validateBtn.textContent = 'Validate';
+    var submitBtn = el('button', { style: 'padding:8px 20px;background:var(--accent);color:#fff;border:none;border-radius:var(--radius);cursor:pointer;font-weight:600;opacity:0.5;' });
+    submitBtn.textContent = 'Submit to GitHub';
+    submitBtn.disabled = true;
+    btnRow.appendChild(validateBtn);
+    btnRow.appendChild(submitBtn);
+    form.appendChild(btnRow);
+
+    page.appendChild(form);
+
+    // Example template loader
+    exampleBtn.addEventListener('click', function() {
+      var example = {
+        id: 'example-framework',
+        name: nameInput.value || 'Example Framework',
+        version: verInput.value || '1.0',
+        url: urlInput.value || 'https://example.com',
+        license: 'Public Domain',
+        publisher: pubInput.value || 'Example Org',
+        category: 'ai-governance',
+        controls: [
+          { control_id: 'EX-1', title: 'Risk assessment', description: 'Conduct risk assessments for AI systems.', parent: null, function: 'Governance' },
+          { control_id: 'EX-2', title: 'Data governance', description: 'Establish data governance for training data.', parent: null, function: 'Data' },
+          { control_id: 'EX-3', title: 'Model validation', description: 'Validate models before deployment.', parent: null, function: 'Testing' }
+        ]
+      };
+      jsonArea.value = JSON.stringify(example, null, 2);
+    });
+
+    // Validation
+    function validate() {
+      var text = jsonArea.value.trim();
+      if (!text) { statusDiv.textContent = ''; submitBtn.disabled = true; submitBtn.style.opacity = '0.5'; return null; }
+      try {
+        var fw = JSON.parse(text);
+        var errors = [];
+        if (!fw.id) errors.push('Missing "id"');
+        if (!fw.name) errors.push('Missing "name"');
+        if (!fw.controls || !Array.isArray(fw.controls)) errors.push('Missing or invalid "controls" array');
+        if (fw.controls) {
+          var ids = {};
+          fw.controls.forEach(function(c, i) {
+            if (!c.control_id) errors.push('controls[' + i + ']: missing control_id');
+            if (!c.title) errors.push('controls[' + i + ']: missing title');
+            if (ids[c.control_id]) errors.push('controls[' + i + ']: duplicate control_id "' + c.control_id + '"');
+            ids[c.control_id] = true;
+          });
+        }
+        if (errors.length) {
+          statusDiv.innerHTML = '<span style="color:#ef4444;">Validation errors: ' + errors.join(', ') + '</span>';
+          submitBtn.disabled = true;
+          submitBtn.style.opacity = '0.5';
+          return null;
+        }
+        // Auto-fill from JSON
+        if (fw.name && !nameInput.value) nameInput.value = fw.name;
+        if (fw.version && !verInput.value) verInput.value = fw.version;
+        if (fw.url && !urlInput.value) urlInput.value = fw.url;
+        if (fw.publisher && !pubInput.value) pubInput.value = fw.publisher;
+        statusDiv.textContent = '';
+        var okSpan = document.createElement('span');
+        okSpan.style.color = '#22c55e';
+        okSpan.textContent = 'Valid: ' + fw.controls.length + ' controls in "' + fw.name + '"';
+        statusDiv.appendChild(okSpan);
+        submitBtn.disabled = false;
+        submitBtn.style.opacity = '1';
+        return fw;
+      } catch (e) {
+        statusDiv.textContent = '';
+        var errSpan = document.createElement('span');
+        errSpan.style.color = '#ef4444';
+        errSpan.textContent = 'JSON parse error: ' + e.message;
+        statusDiv.appendChild(errSpan);
+        submitBtn.disabled = true;
+        submitBtn.style.opacity = '0.5';
+        return null;
+      }
+    }
+
+    validateBtn.addEventListener('click', validate);
+    jsonArea.addEventListener('input', function() {
+      submitBtn.disabled = true;
+      submitBtn.style.opacity = '0.5';
+      statusDiv.textContent = '';
+    });
+
+    // Submit — opens pre-filled GitHub Issue
+    submitBtn.addEventListener('click', function() {
+      var fw = validate();
+      if (!fw) return;
+      var name = nameInput.value || fw.name;
+      var version = verInput.value || fw.version || '';
+      var url = urlInput.value || fw.url || '';
+      var publisher = pubInput.value || fw.publisher || '';
+      var jsonText = jsonArea.value.trim();
+
+      var issueUrl = 'https://github.com/' + REPO + '/issues/new?' +
+        'template=submit-framework.yml' +
+        '&title=' + encodeURIComponent('[Framework Submission] ' + name) +
+        '&framework-name=' + encodeURIComponent(name) +
+        '&framework-url=' + encodeURIComponent(url) +
+        '&framework-version=' + encodeURIComponent(version) +
+        '&publisher=' + encodeURIComponent(publisher) +
+        '&framework-json=' + encodeURIComponent(jsonText);
+
+      window.open(issueUrl, '_blank');
+    });
+
+    // How it works section
+    var howSection = el('div', { style: 'margin-top:32px;padding:20px;background:var(--surface);border-radius:var(--radius);border:1px solid var(--border);' });
+    howSection.appendChild(el('h3', { style: 'margin-top:0;' }, 'How it works'));
+    var steps = [
+      ['1. Submit', 'Paste your framework controls as JSON and submit. This opens a GitHub Issue.'],
+      ['2. Classify', 'A GitHub Action runs the classifier pipeline (BGE bi-encoder + cross-encoder reranker) to propose mappings to all 41 OWASP entries.'],
+      ['3. Review', 'The classifier opens a PR with proposed mappings. Reviewers accept, reject, or edit each mapping.'],
+      ['4. Merge', 'Accepted mappings are merged into the crosswalk. Your framework appears on the live site.']
+    ];
+    steps.forEach(function(s) {
+      var step = el('div', { style: 'margin-bottom:10px;' });
+      step.appendChild(el('strong', {}, s[0] + ': '));
+      step.appendChild(document.createTextNode(s[1]));
+      howSection.appendChild(step);
+    });
+    page.appendChild(howSection);
+
+    container.appendChild(page);
+  }
+
+  // ══════════════════════════════════════════════════════════════════════════════
+  // Reviewer UI page
+  // ══════════════════════════════════════════════════════════════════════════════
+  function renderReview(container) {
+    var REPO = 'GenAI-Security-Project/crosswalk';
+    var page = el('div', { style: 'max-width:900px;margin:0 auto;' });
+
+    page.appendChild(el('h2', {}, 'Mapping Review Queue'));
+    page.appendChild(el('p', { style: 'color:var(--text-secondary);margin-bottom:20px;' },
+      'Review classifier-proposed mappings from framework submissions. ' +
+      'Each row shows a proposed mapping with confidence score and alternatives.'));
+
+    // Status bar
+    var statusBar = el('div', { style: 'padding:12px;background:var(--surface);border-radius:var(--radius);border:1px solid var(--border);margin-bottom:16px;font-size:.85rem;' });
+    statusBar.textContent = 'Loading pending reviews from GitHub...';
+    page.appendChild(statusBar);
+
+    // PR list
+    var prList = el('div', { className: 'review-pr-list' });
+    page.appendChild(prList);
+
+    // Local review mode (from classifier-predictions.js)
+    var localSection = el('div', { style: 'margin-top:24px;' });
+    localSection.appendChild(el('h3', {}, 'Local Predictions Review'));
+    localSection.appendChild(el('p', { style: 'color:var(--text-secondary);font-size:.85rem;margin-bottom:12px;' },
+      'Review the ' + PREDICTIONS.length + ' classifier predictions loaded from the current build. ' +
+      'Model-suggested mappings (not yet curated) are shown below.'));
+
+    // Filter to suggested-only
+    var suggested = PREDICTIONS.filter(function(p) { return !p.curated; });
+    var curatedPreds = PREDICTIONS.filter(function(p) { return p.curated; });
+
+    // Stats
+    var statsRow = el('div', { style: 'display:flex;gap:16px;margin-bottom:16px;' });
+    [
+      ['Total Predictions', PREDICTIONS.length],
+      ['Curated (verified)', curatedPreds.length],
+      ['Suggested (new)', suggested.length],
+      ['Avg Confidence', suggested.length ? (suggested.reduce(function(s,p){ return s + p.confidence; }, 0) / suggested.length * 100).toFixed(0) + '%' : 'N/A']
+    ].forEach(function(s) {
+      var card = el('div', { className: 'fw-stat-card' });
+      card.appendChild(el('div', { className: 'num' }, String(s[1])));
+      card.appendChild(el('div', { className: 'label' }, s[0]));
+      statsRow.appendChild(card);
+    });
+    localSection.appendChild(statsRow);
+
+    // Confidence threshold slider
+    var sliderRow = el('div', { style: 'display:flex;align-items:center;gap:10px;margin-bottom:12px;' });
+    sliderRow.appendChild(el('label', { style: 'font-size:.85rem;font-weight:600;white-space:nowrap;' }, 'Min confidence:'));
+    var slider = el('input', { type: 'range', min: '0', max: '100', value: '50', style: 'flex:1;accent-color:var(--accent);' });
+    var sliderVal = el('span', { style: 'font-size:.85rem;font-weight:600;min-width:36px;' }, '50%');
+    sliderRow.appendChild(slider);
+    sliderRow.appendChild(sliderVal);
+    localSection.appendChild(sliderRow);
+
+    // Review table
+    var tableWrap = el('div', { style: 'overflow-x:auto;' });
+    var table = el('table', { className: 'mapping-table fw-mapping' });
+
+    function renderTable(minConf) {
+      table.innerHTML = '';
+      var thead = el('thead');
+      var hr = el('tr');
+      ['Entry', 'Framework', 'Control', 'Title', 'Confidence', 'Action'].forEach(function(h) {
+        hr.appendChild(el('th', {}, h));
+      });
+      thead.appendChild(hr);
+      table.appendChild(thead);
+
+      var tbody = el('tbody');
+      var shown = 0;
+      suggested.sort(function(a, b) { return b.confidence - a.confidence; });
+      suggested.forEach(function(p) {
+        if (p.confidence * 100 < minConf) return;
+        shown++;
+        if (shown > 100) return; // cap at 100 rows
+
+        var row = el('tr');
+        // Entry
+        var entryTd = el('td');
+        var entryLink = el('a', { href: '#/explorer/' + encodeURIComponent(p.entry_id), style: 'text-decoration:none;color:var(--accent);font-weight:600;' });
+        entryLink.textContent = p.entry_id;
+        entryTd.appendChild(entryLink);
+        row.appendChild(entryTd);
+
+        // Framework
+        row.appendChild(el('td', { style: 'font-size:.85rem;' }, p.framework.length > 20 ? p.framework.slice(0, 18) + '...' : p.framework));
+
+        // Control
+        var ctrlTd = el('td');
+        var ctrlLink = el('a', {
+          href: '#/frameworks/' + encodeURIComponent(p.framework) + '/' + encodeURIComponent(p.control_id),
+          style: 'text-decoration:none;color:var(--accent);font-weight:600;font-size:.85rem;'
+        });
+        ctrlLink.textContent = p.control_id;
+        ctrlTd.appendChild(ctrlLink);
+        row.appendChild(ctrlTd);
+
+        // Title
+        row.appendChild(el('td', { style: 'font-size:.85rem;' }, (p.title || '').slice(0, 35)));
+
+        // Confidence
+        var confTd = el('td');
+        var confPct = Math.round(p.confidence * 100);
+        var confBar = el('div', { style: 'display:flex;align-items:center;gap:6px;' });
+        var bar = el('div', { style: 'flex:1;height:6px;background:var(--border);border-radius:3px;overflow:hidden;min-width:40px;' });
+        var fill = el('div', { style: 'height:100%;width:' + confPct + '%;background:' + (confPct >= 70 ? 'var(--accent)' : confPct >= 40 ? '#f59e0b' : '#94a3b8') + ';border-radius:3px;' });
+        bar.appendChild(fill);
+        confBar.appendChild(bar);
+        confBar.appendChild(el('span', { style: 'font-size:.75rem;font-weight:600;min-width:30px;' }, confPct + '%'));
+        confTd.appendChild(confBar);
+        row.appendChild(confTd);
+
+        // Action buttons
+        var actTd = el('td', { style: 'white-space:nowrap;' });
+        var acceptBtn = el('button', { style: 'font-size:.7rem;padding:2px 8px;background:#22c55e;color:#fff;border:none;border-radius:4px;cursor:pointer;margin-right:4px;' });
+        acceptBtn.textContent = 'Accept';
+        acceptBtn.addEventListener('click', function() {
+          row.style.background = 'rgba(34,197,94,0.1)';
+          acceptBtn.disabled = true;
+          rejectBtn.disabled = true;
+          acceptBtn.textContent = 'Accepted';
+        });
+        var rejectBtn = el('button', { style: 'font-size:.7rem;padding:2px 8px;background:#ef4444;color:#fff;border:none;border-radius:4px;cursor:pointer;' });
+        rejectBtn.textContent = 'Reject';
+        rejectBtn.addEventListener('click', function() {
+          row.style.opacity = '0.3';
+          acceptBtn.disabled = true;
+          rejectBtn.disabled = true;
+        });
+        actTd.appendChild(acceptBtn);
+        actTd.appendChild(rejectBtn);
+        row.appendChild(actTd);
+
+        tbody.appendChild(row);
+      });
+      table.appendChild(tbody);
+
+      if (shown === 0) {
+        var emptyRow = el('tr');
+        emptyRow.appendChild(el('td', { colSpan: '6', style: 'text-align:center;color:var(--text-muted);padding:20px;' }, 'No suggestions above this confidence threshold.'));
+        tbody.appendChild(emptyRow);
+      }
+    }
+
+    renderTable(50);
+    slider.addEventListener('input', function() {
+      var v = parseInt(slider.value);
+      sliderVal.textContent = v + '%';
+      renderTable(v);
+    });
+
+    tableWrap.appendChild(table);
+    localSection.appendChild(tableWrap);
+    page.appendChild(localSection);
+
+    // Try to load PRs from GitHub (best-effort, no auth required for public repos)
+    try {
+      fetch('https://api.github.com/repos/' + REPO + '/pulls?state=open&per_page=20')
+        .then(function(r) { return r.json(); })
+        .then(function(prs) {
+          var classifierPRs = prs.filter(function(pr) {
+            return pr.labels && pr.labels.some(function(l) { return l.name === 'classifier-output'; });
+          });
+          if (classifierPRs.length === 0) {
+            statusBar.textContent = 'No pending classifier PRs found. Submit a framework to get started!';
+            statusBar.style.background = 'var(--surface)';
+          } else {
+            statusBar.innerHTML = '<strong>' + classifierPRs.length + '</strong> pending classifier PR(s):';
+            classifierPRs.forEach(function(pr) {
+              var prRow = el('a', { href: pr.html_url, target: '_blank', rel: 'noopener', style: 'display:block;padding:8px 12px;margin-top:8px;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);text-decoration:none;color:var(--text);' });
+              prRow.appendChild(el('strong', {}, '#' + pr.number + ' '));
+              prRow.appendChild(document.createTextNode(pr.title));
+              var dateBadge = el('span', { style: 'float:right;font-size:.75rem;color:var(--text-muted);' });
+              dateBadge.textContent = new Date(pr.created_at).toLocaleDateString();
+              prRow.appendChild(dateBadge);
+              prList.appendChild(prRow);
+            });
+          }
+        })
+        .catch(function() {
+          statusBar.textContent = 'Could not fetch PRs from GitHub. Check your network connection.';
+        });
+    } catch(e) {
+      statusBar.textContent = 'GitHub API not available in this environment.';
+    }
+
+    container.appendChild(page);
   }
 
   // ══════════════════════════════════════════════════════════════════════════════

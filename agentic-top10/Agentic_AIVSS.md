@@ -1,16 +1,16 @@
 <!--
-  GenAI Security Crosswalk
+  OWASP GenAI Crosswalk
   Source list : OWASP Top 10 for Agentic Applications 2026 (ASI01-ASI10)
-  Framework   : OWASP AIVSS — AI Vulnerability Scoring System
+  Framework   : OWASP AIVSS â€” AI Vulnerability Scoring System
   Version     : 2026-Q1
-  Maintained by: OWASP GenAI Data Security Initiative — https://genai.owasp.org
+  Maintained by: OWASP GenAI Data Security Initiative â€” https://genai.owasp.org
   License     : CC BY-SA 4.0
 -->
 
-# Agentic Top 10 2026 × OWASP AIVSS
+# Agentic Top 10 2026 Ã— OWASP AIVSS
 
 Mapping the [OWASP Top 10 for Agentic Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
-to the [OWASP AI Vulnerability Scoring System (AIVSS)](https://aivss.owasp.org) —
+to the [OWASP AI Vulnerability Scoring System (AIVSS)](https://aivss.owasp.org) â€”
 the scoring framework designed to quantify the severity of vulnerabilities
 in AI and ML systems in a way that standard CVSS cannot adequately capture.
 
@@ -22,15 +22,15 @@ CVSS was designed for discrete software vulnerabilities with defined
 exploit paths and clear remediation. Agentic AI risks have properties
 that CVSS cannot express:
 
-- **Autonomy amplifier** — the same injection that produces a single
+- **Autonomy amplifier** â€” the same injection that produces a single
   bad response in a static LLM enables a complete multi-step attack
   chain in an agent. AIVSS captures the autonomy dimension.
-- **Persistence dimension** — memory poisoning and rogue agent risks
+- **Persistence dimension** â€” memory poisoning and rogue agent risks
   persist across sessions. CVSS temporal metrics do not capture this.
-- **Blast radius vs single system** — a cascading failure affects
+- **Blast radius vs single system** â€” a cascading failure affects
   multiple downstream systems simultaneously. CVSS scope captures
   this partially but not the agentic cascade dynamic.
-- **Human oversight counterfactual** — the presence or absence of a
+- **Human oversight counterfactual** â€” the presence or absence of a
   human in the loop fundamentally changes the severity of many agentic
   risks. AIVSS incorporates human oversight as a scoring dimension.
 
@@ -62,15 +62,15 @@ dimensions for agentic risk scoring are:
 Each ASI entry is scored under two scenarios to show how autonomy
 changes severity:
 
-- **Scenario A — Supervised deployment:** Human reviews and confirms
+- **Scenario A â€” Supervised deployment:** Human reviews and confirms
   all agent actions before execution. Human oversight mitigates but
   does not eliminate the risk.
-- **Scenario B — Autonomous deployment:** Agent executes actions
+- **Scenario B â€” Autonomous deployment:** Agent executes actions
   without per-action human confirmation. Represents highest-risk
   operational configuration.
 
 The AIVSS score difference between A and B is the **autonomy premium**
-— the additional severity introduced by removing human oversight.
+â€” the additional severity introduced by removing human oversight.
 
 ---
 
@@ -98,11 +98,11 @@ mandatory human oversight in high-stakes agentic deployments.
 
 ## Audience tags
 
-- **Risk manager** — full file, use AIVSS scores to prioritise remediation
-- **CISO** — autonomy premium table for board-level AI risk reporting
-- **Security architect** — per-entry scoring rationale for design decisions
-- **QSA / assessor** — severity evidence for EU AI Act and PCI DSS assessments
-- **Penetration tester** — scoring rationale to calibrate test severity ratings
+- **Risk manager** â€” full file, use AIVSS scores to prioritise remediation
+- **CISO** â€” autonomy premium table for board-level AI risk reporting
+- **Security architect** â€” per-entry scoring rationale for design decisions
+- **QSA / assessor** â€” severity evidence for EU AI Act and PCI DSS assessments
+- **Penetration tester** â€” scoring rationale to calibrate test severity ratings
 
 ---
 
@@ -110,7 +110,7 @@ mandatory human oversight in high-stakes agentic deployments.
 
 ---
 
-### ASI01 — Agent Goal Hijack
+### ASI01 â€” Agent Goal Hijack
 
 **Supervised score: 7.8 (High)**
 **Autonomous score: 9.8 (Critical)**
@@ -150,7 +150,7 @@ mandatory human oversight in high-stakes agentic deployments.
 Goal hijack in a supervised deployment requires the attacker to craft
 output that convincingly misleads a human reviewer. In autonomous
 deployment, the attack chain executes completely before any human
-sees the output — the entire kill chain completes within a single
+sees the output â€” the entire kill chain completes within a single
 agent session. The +2.0 premium reflects this fundamental change
 in the attacker's required sophistication.
 
@@ -165,7 +165,7 @@ in the attacker's required sophistication.
 
 ---
 
-### ASI02 — Tool Misuse & Exploitation
+### ASI02 â€” Tool Misuse & Exploitation
 
 **Supervised score: 7.5 (High)**
 **Autonomous score: 9.6 (Critical)**
@@ -211,7 +211,7 @@ in the attacker's required sophistication.
 
 ---
 
-### ASI03 — Identity & Privilege Abuse
+### ASI03 â€” Identity & Privilege Abuse
 
 **Supervised score: 8.1 (High)**
 **Autonomous score: 9.3 (Critical)**
@@ -239,7 +239,7 @@ in the attacker's required sophistication.
 
 The autonomy premium for ASI03 is lower (+1.2) than other entries
 because credential theft impact is largely independent of whether
-the agent is supervised — the stolen credential can be used directly
+the agent is supervised â€” the stolen credential can be used directly
 by the attacker outside the agent framework regardless.
 
 | Dimension | Value change | Rationale |
@@ -260,7 +260,7 @@ by the attacker outside the agent framework regardless.
 
 ---
 
-### ASI04 — Agentic Supply Chain Vulnerabilities
+### ASI04 â€” Agentic Supply Chain Vulnerabilities
 
 **Supervised score: 6.8 (Medium)**
 **Autonomous score: 8.4 (High)**
@@ -303,7 +303,7 @@ by the attacker outside the agent framework regardless.
 
 ---
 
-### ASI05 — Unexpected Code Execution
+### ASI05 â€” Unexpected Code Execution
 
 **Supervised score: 8.4 (High)**
 **Autonomous score: 9.9 (Critical)**
@@ -343,11 +343,11 @@ by the attacker outside the agent framework regardless.
 |---|---|---|
 | Hardware-level sandboxing | -0.7 | Raises AC for sandbox escape |
 | Static analysis before execution | -0.5 | Raises AC |
-| No-code-execution policy (preferred) | -9.9 | Eliminates risk entirely — strongest control |
+| No-code-execution policy (preferred) | -9.9 | Eliminates risk entirely â€” strongest control |
 
 ---
 
-### ASI06 — Memory & Context Poisoning
+### ASI06 â€” Memory & Context Poisoning
 
 **Supervised score: 6.5 (Medium)**
 **Autonomous score: 8.7 (High)**
@@ -396,7 +396,7 @@ influences every decision without any human noticing the pattern.
 
 ---
 
-### ASI07 — Insecure Inter-Agent Communication
+### ASI07 â€” Insecure Inter-Agent Communication
 
 **Supervised score: 6.9 (Medium)**
 **Autonomous score: 8.2 (High)**
@@ -439,7 +439,7 @@ influences every decision without any human noticing the pattern.
 
 ---
 
-### ASI08 — Cascading Agent Failures
+### ASI08 â€” Cascading Agent Failures
 
 **Supervised score: 7.1 (High)**
 **Autonomous score: 9.1 (Critical)**
@@ -483,14 +483,14 @@ influences every decision without any human noticing the pattern.
 
 ---
 
-### ASI09 — Human-Agent Trust Exploitation
+### ASI09 â€” Human-Agent Trust Exploitation
 
 **Supervised score: 5.4 (Medium)**
 **Autonomous score: 7.3 (High)**
 **Autonomy premium: +1.9**
 
 ASI09 is the only entry where supervised deployment is not
-inherently safer — the attack specifically targets the human supervisor.
+inherently safer â€” the attack specifically targets the human supervisor.
 The supervised score is lower because the attack requires a human
 to make a decision, providing at least some friction. The autonomous
 score rises because automated workflows can be manipulated into
@@ -535,7 +535,7 @@ approving actions with no human available to question the outcome.
 
 ---
 
-### ASI10 — Rogue Agents
+### ASI10 â€” Rogue Agents
 
 **Supervised score: 7.6 (High)**
 **Autonomous score: 9.7 (Critical)**
@@ -586,10 +586,10 @@ Use AIVSS scores to drive prioritisation in your AI risk register:
 
 | AIVSS range | Severity band | Risk register treatment |
 |---|---|---|
-| 9.0–10.0 | Critical | Immediate remediation before production; executive notification |
-| 7.0–8.9 | High | Remediation within 30 days; CISO visibility |
-| 4.0–6.9 | Medium | Remediation within 90 days; security engineering ownership |
-| 0.1–3.9 | Low | Remediation in next sprint cycle; accept with documented rationale |
+| 9.0â€“10.0 | Critical | Immediate remediation before production; executive notification |
+| 7.0â€“8.9 | High | Remediation within 30 days; CISO visibility |
+| 4.0â€“6.9 | Medium | Remediation within 90 days; security engineering ownership |
+| 0.1â€“3.9 | Low | Remediation in next sprint cycle; accept with documented rationale |
 
 **For autonomous deployments:** Use the Autonomous scenario score.
 **For supervised deployments:** Use the Supervised scenario score.
@@ -610,9 +610,9 @@ Use AIVSS scores to drive prioritisation in your AI risk register:
 
 | Date | Version | Change | Author |
 |---|---|---|---|
-| 2026-03-26 | 2026-Q1 | Initial scoring — ASI01–ASI10 dual-scenario AIVSS with autonomy premium analysis | OWASP GenAI Data Security Initiative |
+| 2026-03-26 | 2026-Q1 | Initial scoring â€” ASI01â€“ASI10 dual-scenario AIVSS with autonomy premium analysis | OWASP GenAI Data Security Initiative |
 
 ---
 
 Maintained by the OWASP GenAI Data Security Initiative.
-Part of the GenAI Security Crosswalk: https://github.com/emmanuelgjr/GenAI-Security-Crosswalk
+Part of the OWASP GenAI Crosswalk: https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk
