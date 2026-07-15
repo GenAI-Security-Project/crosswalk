@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OWASP Top 10 for Agentic AI — Risks & Mitigations | GenAI Crosswalk</title>
+<meta name="description" content="The OWASP Top 10 for Agentic AI: Agent Goal Hijack, Tool Misuse, Identity & Privilege Abuse, Agentic Supply Chain risk, and more — with severity ratings and tiered mitigations, mapped to 25 industry security frameworks by the OWASP GenAI Security Project.">
+<meta name="author" content="OWASP GenAI Security Project">
+<link rel="canonical" href="https://genai-security-project.github.io/crosswalk/agentic-ai-top10/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="OWASP GenAI Security Project">
+<meta property="og:title" content="OWASP Top 10 for Agentic AI — Risks & Mitigations">
+<meta property="og:description" content="Agent Goal Hijack, Tool Misuse & Exploitation, Identity & Privilege Abuse, and 7 more Agentic AI risk categories — with severity ratings, tiered mitigations, and mappings to 25 industry frameworks.">
+<meta property="og:url" content="https://genai-security-project.github.io/crosswalk/agentic-ai-top10/">
+<meta property="og:image" content="https://genai-security-project.github.io/crosswalk/og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="OWASP Top 10 for Agentic AI — Risks & Mitigations">
+<meta name="twitter:description" content="10 Agentic AI risk categories, severity-rated and mapped to 25 industry frameworks. Free, open-source, from OWASP.">
+<link rel="stylesheet" href="../assets/seo-static.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "OWASP Top 10 for Agentic AI",
+  "description": "The OWASP Top 10 for Agentic AI risk categories with severity ratings and mitigations, published by the OWASP GenAI Security Project.",
+  "url": "https://genai-security-project.github.io/crosswalk/agentic-ai-top10/",
+  "publisher": { "@type": "Organization", "name": "OWASP GenAI Security Project", "url": "https://genai.owasp.org" },
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "ASI01 Agent Goal Hijack" },
+    { "@type": "ListItem", "position": 2, "name": "ASI02 Tool Misuse & Exploitation" },
+    { "@type": "ListItem", "position": 3, "name": "ASI03 Identity & Privilege Abuse" },
+    { "@type": "ListItem", "position": 4, "name": "ASI04 Agentic Supply Chain Vulnerabilities" },
+    { "@type": "ListItem", "position": 5, "name": "ASI05 Unexpected Code Execution" },
+    { "@type": "ListItem", "position": 6, "name": "ASI06 Memory & Context Poisoning" },
+    { "@type": "ListItem", "position": 7, "name": "ASI07 Insecure Inter-Agent Communication" },
+    { "@type": "ListItem", "position": 8, "name": "ASI08 Cascading Agent Failures" },
+    { "@type": "ListItem", "position": 9, "name": "ASI09 Human-Agent Trust Exploitation" },
+    { "@type": "ListItem", "position": 10, "name": "ASI10 Rogue Agents" }
+  ]
+}
+</script>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="../" class="brand">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+    GenAI Crosswalk
+  </a>
+  <span class="crumbs"><a href="../">Home</a> / Agentic AI Top 10</span>
+</nav>
+
+<div class="hero">
+  <img class="logo" src="../owasp-genai-logo-white.png" alt="OWASP GenAI Security Project">
+  <h1>OWASP Top 10 for Agentic AI — Risks &amp; Mitigations</h1>
+  <p>The ten critical security risk categories for autonomous, tool-using AI agents, published by the <a href="https://genai.owasp.org">OWASP GenAI Security Project</a> and mapped to 25 industry frameworks in <a href="../">GenAI Crosswalk</a>.</p>
+</div>
+
+<main>
+  <p class="intro">Agentic AI systems — LLM-driven agents that plan, use tools, call APIs, and act with real-world consequences — introduce risks that go beyond traditional LLM Top 10 concerns. The OWASP Top 10 for Agentic AI (Agentic-Top10-2026) catalogs the ten most critical categories, each rated by severity and mapped to concrete mitigations across foundational, hardening, and advanced tiers.</p>
+
+  <h2>The 10 Agentic AI risk categories</h2>
+
+  <div class="entry-card">
+    <h3><span class="id">ASI01</span> Agent Goal Hijack <span class="badge critical">Critical</span></h3>
+    <p>Attackers redirect an agent's objectives or decision logic through direct or indirect prompt injection, poisoned content, malicious documents, or crafted tool outputs. The agent continues operating normally from the outside while serving the attacker's intent.</p>
+  </div>
+  <div class="entry-card">
+    <h3><span class="id">ASI02</span> Tool Misuse &amp; Exploitation <span class="badge critical">Critical</span></h3>
+    <p>Agents misuse legitimate tools due to prompt manipulation, goal hijack, misalignment, or unsafe delegation — calling tools with destructive parameters, chaining tools in unexpected sequences, or operating tools far beyond their intended scope.</p>
+  </div>
+  <div class="entry-card">
+    <h3><span class="id">ASI03</span> Identity &amp; Privilege Abuse <span class="badge critical">Critical</span></h3>
+    <p>Agents inherit human or system credentials — session tokens, API keys, SSH keys, delegated permissions — and attackers exploit weak privilege boundaries to use those credentials beyond their intended scope, enabling lateral movement.</p>
+  </div>
+  <div class="entry-card">
+    <h3><span class="id">ASI04</span> Agentic Supply Chain Vulnerabilities <span class="badge high">High</span></h3>
+    <p>Malicious or compromised tools, MCP servers, prompt templates, model files, or agent personas introduced into the runtime supply chain alter agent behaviour or expose data — often fetched dynamically at runtime with no static review.</p>
+  </div>
+  <div class="entry-card">
+    <h3><span class="id">ASI05</span> Unexpected Code Execution <span class="badge critical">Critical</span></h3>
+    <p>Agents that generate or execute code — for workflow automation, scripting, data processing — become remote code execution gateways when crafted prompts or poisoned inputs cause them to run attacker-controlled logic.</p>
+  </div>
+  <div class="entry-card">
+    <h3><span class="id">ASI06</span> Memory &amp; Context Poisoning <span class="badge high">High</span></h3>
+    <p>Persistent corruption of agent memory, RAG stores, embeddings, or contextual knowledge — unlike prompt injection, the effect persists across sessions, slowly shifting agent behaviour or leaking secrets over time.</p>
+  </div>
+  <div class="entry-card">
+    <h3><span class="id">ASI07</span> Insecure Inter-Agent Communication <span class="badge high">High</span></h3>
+    <p>Agent-to-agent (A2A) communication channels lacking strong authentication, encryption, or schema validation enable spoofing, replay attacks, protocol downgrade, and agent-in-the-middle attacks that misdirect entire multi-agent workflows.</p>
+  </div>
+  <div class="entry-card">
+    <h3><span class="id">ASI08</span> Cascading Agent Failures <span class="badge high">High</span></h3>
+    <p>Single-point faults — a poisoned memory entry, a bad plan, a compromised tool — propagate through multi-agent workflows and amplify into system-wide incidents. Especially critical in OT environments.</p>
+  </div>
+  <div class="entry-card">
+    <h3><span class="id">ASI09</span> Human-Agent Trust Exploitation <span class="badge medium">Medium</span></h3>
+    <p>Users anthropomorphise agents — trusting their fluency, apparent expertise, and persuasive outputs — enabling hijacked agents to manipulate humans into approving malicious commands, sharing sensitive data, or performing harmful actions.</p>
+  </div>
+  <div class="entry-card">
+    <h3><span class="id">ASI10</span> Rogue Agents <span class="badge critical">Critical</span></h3>
+    <p>Malicious or compromised agents that appear compliant on the surface but pursue hidden goals, hijack workflows, or systematically deviate from their intended purpose — often the end-state of a successful ASI01 or ASI06 attack.</p>
+  </div>
+
+  <h2>Mapped to 25 industry frameworks</h2>
+  <p>Every Agentic AI risk category above is mapped, control-by-control, to frameworks including <strong>NIST AI RMF</strong>, <strong>ISO/IEC 42001</strong>, <strong>MITRE ATLAS</strong>, <strong>AIUC-1</strong>, <strong>OWASP ASVS</strong>, <strong>EU AI Act</strong>, and 19 more — with severity, mitigation tier, and cross-references to the OWASP LLM Top 10 and DSGAI. Explore the full <a href="../ai-standards-crosswalk/">AI standards crosswalk</a> or use the interactive tool below.</p>
+
+  <div class="cta-row">
+    <a href="../#/explorer" class="btn btn-primary">Explore Full Mappings →</a>
+    <a href="../#/score" class="btn btn-secondary">Score Your Coverage →</a>
+    <a href="https://github.com/GenAI-Security-Project/crosswalk" class="btn btn-secondary" target="_blank" rel="noopener">View on GitHub</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <a href="https://genai.owasp.org" target="_blank" rel="noopener">OWASP GenAI Security Project</a> &middot; CC BY-SA 4.0 &middot;
+  <a href="https://github.com/GenAI-Security-Project/crosswalk" target="_blank" rel="noopener">GitHub</a>
+</footer>
+
+</body>
+</html>

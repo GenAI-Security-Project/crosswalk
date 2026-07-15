@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OWASP LLM Top 10 — Risks & Mitigations | GenAI Crosswalk</title>
+<meta name="description" content="The OWASP LLM Top 10: Prompt Injection, Sensitive Information Disclosure, Supply Chain Vulnerabilities, Data and Model Poisoning, and more — with severity ratings and tiered mitigations, mapped to 25 industry security frameworks by the OWASP GenAI Security Project.">
+<meta name="author" content="OWASP GenAI Security Project">
+<link rel="canonical" href="https://genai-security-project.github.io/crosswalk/llm-top10/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="OWASP GenAI Security Project">
+<meta property="og:title" content="OWASP LLM Top 10 — Risks & Mitigations">
+<meta property="og:description" content="Prompt Injection, Sensitive Information Disclosure, Supply Chain Vulnerabilities, and 7 more LLM risk categories — with severity ratings, tiered mitigations, and mappings to 25 industry frameworks.">
+<meta property="og:url" content="https://genai-security-project.github.io/crosswalk/llm-top10/">
+<meta property="og:image" content="https://genai-security-project.github.io/crosswalk/og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="OWASP LLM Top 10 — Risks & Mitigations">
+<meta name="twitter:description" content="10 LLM risk categories, severity-rated and mapped to 25 industry frameworks. Free, open-source, from OWASP.">
+<link rel="stylesheet" href="../assets/seo-static.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "OWASP LLM Top 10",
+  "description": "The OWASP LLM Top 10 risk categories with severity ratings and mitigations, published by the OWASP GenAI Security Project.",
+  "url": "https://genai-security-project.github.io/crosswalk/llm-top10/",
+  "publisher": { "@type": "Organization", "name": "OWASP GenAI Security Project", "url": "https://genai.owasp.org" },
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "LLM01 Prompt Injection" },
+    { "@type": "ListItem", "position": 2, "name": "LLM02 Sensitive Information Disclosure" },
+    { "@type": "ListItem", "position": 3, "name": "LLM03 Supply Chain Vulnerabilities" },
+    { "@type": "ListItem", "position": 4, "name": "LLM04 Data and Model Poisoning" },
+    { "@type": "ListItem", "position": 5, "name": "LLM05 Insecure Output Handling" },
+    { "@type": "ListItem", "position": 6, "name": "LLM06 Excessive Agency" },
+    { "@type": "ListItem", "position": 7, "name": "LLM07 System Prompt Leakage" },
+    { "@type": "ListItem", "position": 8, "name": "LLM08 Vector and Embedding Weaknesses" },
+    { "@type": "ListItem", "position": 9, "name": "LLM09 Misinformation" },
+    { "@type": "ListItem", "position": 10, "name": "LLM10 Unbounded Consumption" }
+  ]
+}
+</script>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="../" class="brand">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+    GenAI Crosswalk
+  </a>
+  <span class="crumbs"><a href="../">Home</a> / LLM Top 10</span>
+</nav>
+
+<div class="hero">
+  <img class="logo" src="../owasp-genai-logo-white.png" alt="OWASP GenAI Security Project">
+  <h1>OWASP LLM Top 10 — Risks &amp; Mitigations</h1>
+  <p>The ten critical security risk categories for large language model applications, published by the <a href="https://genai.owasp.org">OWASP GenAI Security Project</a> and mapped to 25 industry frameworks in <a href="../">GenAI Crosswalk</a>.</p>
+</div>
+
+<main>
+  <p class="intro">The OWASP LLM Top 10 (LLM-Top10-2025) is the foundational risk taxonomy for large language model applications — covering everything from prompt injection to unbounded resource consumption. Each category below is rated by severity and mapped to concrete mitigations across foundational, hardening, and advanced tiers.</p>
+
+  <h2>The 10 LLM risk categories</h2>
+
+  <div class="entry-card">
+    <h3><span class="id">LLM01</span> Prompt Injection <span class="badge critical">Critical</span></h3>
+    <p>Untrusted input overrides model instructions — via direct user manipulation or indirect injection through retrieved data, tool outputs, or multi-modal content.</p>
+  </div>
+  <div class="entry-card">
+    <h3><span class="id">LLM02</span> Sensitive Information Disclosure <span class="badge high">High</span></h3>
+    <p>Models surface confidential data — PII, credentials, trade secrets, private training data — in responses through memorisation, over-retrieval, or insufficient output filtering.</p>
+  </div>
+  <div class="entry-card">
+    <h3><span class="id">LLM03</span> Supply Chain Vulnerabilities <span class="badge high">High</span></h3>
+    <p>Third-party components — model providers, fine-tuning services, plugins, tool libraries, RAG frameworks — are compromised or malicious, introducing vulnerabilities into the LLM deployment.</p>
+  </div>
+  <div class="entry-card">
+    <h3><span class="id">LLM04</span> Data and Model Poisoning <span class="badge critical">Critical</span></h3>
+    <p>Training data, fine-tuning datasets, or model weights are corrupted — causing models to learn backdoored, biased, or degraded behaviours.</p>
+  </div>
+  <div class="entry-card">
+    <h3><span class="id">LLM05</span> Insecure Output Handling <span class="badge high">High</span></h3>
+    <p>LLM output is processed by downstream systems (code interpreters, browsers, SQL engines) without sanitisation — enabling XSS, code injection, SSRF, or privilege escalation via crafted model responses.</p>
+  </div>
+  <div class="entry-card">
+    <h3><span class="id">LLM06</span> Excessive Agency <span class="badge high">High</span></h3>
+    <p>LLM-enabled features with access to tools, plugins, or APIs take autonomous actions with real-world consequences — without appropriate scope limitations, human oversight, or reversibility controls.</p>
+  </div>
+  <div class="entry-card">
+    <h3><span class="id">LLM07</span> System Prompt Leakage <span class="badge high">High</span></h3>
+    <p>Confidential system prompt contents — instructions, personas, access tokens, business logic — are extracted through adversarial prompting or model over-disclosure.</p>
+  </div>
+  <div class="entry-card">
+    <h3><span class="id">LLM08</span> Vector and Embedding Weaknesses <span class="badge medium">Medium</span></h3>
+    <p>Embedding stores used in RAG systems are vulnerable to cross-tenant leakage, semantic injection, direct database access, and integrity attacks on stored vector representations.</p>
+  </div>
+  <div class="entry-card">
+    <h3><span class="id">LLM09</span> Misinformation <span class="badge medium">Medium</span></h3>
+    <p>LLMs generate confident, plausible, but factually incorrect information — hallucinations, fabricated citations, outdated facts — that users or downstream systems act upon as if true.</p>
+  </div>
+  <div class="entry-card">
+    <h3><span class="id">LLM10</span> Unbounded Consumption <span class="badge medium">Medium</span></h3>
+    <p>LLM applications have no resource consumption limits — enabling denial-of-service via excessive API calls, token flooding, context window exhaustion, or disproportionate compute consumption.</p>
+  </div>
+
+  <h2>Mapped to 25 industry frameworks</h2>
+  <p>Every LLM risk category above is mapped, control-by-control, to frameworks including <strong>NIST AI RMF</strong>, <strong>ISO/IEC 42001</strong>, <strong>MITRE ATLAS</strong>, <strong>AIUC-1</strong>, <strong>OWASP ASVS</strong>, <strong>EU AI Act</strong>, and 19 more — with severity, mitigation tier, and cross-references to the OWASP Top 10 for Agentic AI and DSGAI. Explore the full <a href="../ai-standards-crosswalk/">AI standards crosswalk</a> or use the interactive tool below.</p>
+
+  <div class="cta-row">
+    <a href="../#/explorer" class="btn btn-primary">Explore Full Mappings →</a>
+    <a href="../#/score" class="btn btn-secondary">Score Your Coverage →</a>
+    <a href="https://github.com/GenAI-Security-Project/crosswalk" class="btn btn-secondary" target="_blank" rel="noopener">View on GitHub</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <a href="https://genai.owasp.org" target="_blank" rel="noopener">OWASP GenAI Security Project</a> &middot; CC BY-SA 4.0 &middot;
+  <a href="https://github.com/GenAI-Security-Project/crosswalk" target="_blank" rel="noopener">GitHub</a>
+</footer>
+
+</body>
+</html>

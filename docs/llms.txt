@@ -1,0 +1,34 @@
+# GenAI Crosswalk
+
+> GenAI Crosswalk is the flagship dataset and tool of the **OWASP GenAI Security Project** (https://genai.owasp.org). It maps 41 Gen AI and Agentic AI security risk entries — spanning the OWASP LLM Top 10, the OWASP Top 10 for Agentic Applications, and DSGAI (Data Security for GenAI) — to 25 industry security, compliance, and AI-governance frameworks (NIST AI RMF, ISO/IEC 42001, EU AI Act, FedRAMP, DORA, MITRE ATLAS, OWASP ASVS/SAMM, PCI DSS, SOC 2, and more), with 1,500+ individual control mappings.
+
+## What this is
+
+GenAI Crosswalk is maintained by the OWASP GenAI Security Project (https://genai.owasp.org), an OWASP flagship project. It is free, open-source (CC BY-SA 4.0), and community-maintained.
+
+Core question it answers: **"Given a Gen AI or Agentic AI security risk, which controls in framework X address it?"** — and the reverse: **"Given a compliance framework we must satisfy, which AI-specific risks does it actually cover?"**
+
+## Key pages
+
+- Home / interactive explorer: https://genai-security-project.github.io/crosswalk/
+- OWASP Top 10 for Agentic AI — risks and mitigations: https://genai-security-project.github.io/crosswalk/agentic-ai-top10/
+- OWASP LLM Top 10 — risks and mitigations: https://genai-security-project.github.io/crosswalk/llm-top10/
+- AI security standards crosswalk (25 frameworks): https://genai-security-project.github.io/crosswalk/ai-standards-crosswalk/
+- Source repository: https://github.com/GenAI-Security-Project/crosswalk
+- OWASP GenAI Security Project (parent org): https://genai.owasp.org
+
+## Top 10 for Agentic AI (risk categories)
+
+ASI01 Agent Goal Hijack · ASI02 Tool Misuse & Exploitation · ASI03 Identity & Privilege Abuse · ASI04 Agentic Supply Chain Vulnerabilities · ASI05 Unexpected Code Execution · ASI06 Memory & Context Poisoning · ASI07 Insecure Inter-Agent Communication · ASI08 Cascading Agent Failures · ASI09 Human-Agent Trust Exploitation · ASI10 Rogue Agents
+
+## LLM Top 10 (risk categories)
+
+LLM01 Prompt Injection · LLM02 Sensitive Information Disclosure · LLM03 Supply Chain Vulnerabilities · LLM04 Data and Model Poisoning · LLM05 Insecure Output Handling · LLM06 Excessive Agency · LLM07 System Prompt Leakage · LLM08 Vector and Embedding Weaknesses · LLM09 Misinformation · LLM10 Unbounded Consumption
+
+## Frameworks crosswalked (25)
+
+AIUC-1, CIS Controls v8.1, CoSAI, CWE/CVE, DORA, ENISA Multilayer Framework, EU AI Act, EU AI Act Code of Practice, FedRAMP, ISA/IEC 62443, ISO/IEC 27001:2022, ISO/IEC 42001:2023, MAESTRO, MITRE ATLAS, NIST AI RMF 1.0, NIST CSF 2.0, NIST SP 800-218A, NIST SP 800-82 Rev 3, OWASP AI Testing Guide, OWASP ASVS 4.0.3, OWASP NHI Top 10, OWASP SAMM v2.0, PCI DSS v4.0, SOC 2, STRIDE
+
+## License
+
+CC BY-SA 4.0. Free to use, cite, and redistribute with attribution to the OWASP GenAI Security Project.

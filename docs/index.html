@@ -1128,7 +1128,19 @@ input, select { font-family: inherit; }
 <div class="cell-popup" id="cell-popup" style="display:none"></div>
 
 <!-- Main app container -->
-<div class="app" id="app"></div>
+<div class="app" id="app"><noscript>
+  <div style="max-width:800px;margin:40px auto;padding:0 24px;line-height:1.6;">
+    <h1>GenAI Crosswalk</h1>
+    <p>GenAI Crosswalk is the flagship dataset and tool of the <a href="https://genai.owasp.org">OWASP GenAI Security Project</a>. It is the most comprehensive mapping of Gen AI and Agentic security risks to industry frameworks: 41 entries across the OWASP LLM Top 10, the OWASP Top 10 for Agentic Applications, and DSGAI (Data Security for GenAI), mapped to 25 industry frameworks with 1,500+ individual control mappings.</p>
+    <h2>OWASP Top 10 for Agentic AI — Risks &amp; Mitigations</h2>
+    <p>See the full <a href="agentic-ai-top10/">OWASP Top 10 for Agentic AI risks and mitigations</a>: Agent Goal Hijack, Tool Misuse &amp; Exploitation, Identity &amp; Privilege Abuse, Agentic Supply Chain Vulnerabilities, Unexpected Code Execution, Memory &amp; Context Poisoning, Insecure Inter-Agent Communication, Cascading Agent Failures, Human-Agent Trust Exploitation, and Rogue Agents.</p>
+    <h2>OWASP LLM Top 10 — Risks &amp; Mitigations</h2>
+    <p>See the full <a href="llm-top10/">OWASP LLM Top 10 risks and mitigations</a>: Prompt Injection, Sensitive Information Disclosure, Supply Chain Vulnerabilities, Data and Model Poisoning, Insecure Output Handling, Excessive Agency, System Prompt Leakage, Vector and Embedding Weaknesses, Misinformation, and Unbounded Consumption.</p>
+    <h2>AI Security Standards Crosswalk</h2>
+    <p>See the full <a href="ai-standards-crosswalk/">crosswalk of 25 industry AI security standards</a>, including NIST AI RMF, ISO/IEC 42001, EU AI Act, FedRAMP, DORA, MITRE ATLAS, OWASP ASVS, OWASP SAMM, PCI DSS, and SOC 2.</p>
+    <p>This project is free and open-source (CC BY-SA 4.0), maintained by the <a href="https://genai.owasp.org">OWASP GenAI Security Project</a>. Enable JavaScript to use the interactive explorer, coverage scorer, and gap analysis tools.</p>
+  </div>
+</noscript></div>
 
 <!-- Footer -->
 <footer class="site-footer">
