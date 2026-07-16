@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Security Standards Crosswalk — 25 Frameworks Mapped | GenAI Crosswalk</title>
+<meta name="description" content="A crosswalk of 25 industry AI security and compliance standards — NIST AI RMF, ISO/IEC 42001, EU AI Act, FedRAMP, DORA, MITRE ATLAS, OWASP ASVS/SAMM, PCI DSS, SOC 2, and more — mapped to Gen AI and Agentic security risks by the OWASP GenAI Security Project.">
+<meta name="author" content="OWASP GenAI Security Project">
+<link rel="canonical" href="https://genai-security-project.github.io/crosswalk/ai-standards-crosswalk/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="OWASP GenAI Security Project">
+<meta property="og:title" content="AI Security Standards Crosswalk — 25 Frameworks Mapped">
+<meta property="og:description" content="NIST AI RMF, ISO/IEC 42001, EU AI Act, FedRAMP, DORA, MITRE ATLAS, and 19 more frameworks — mapped control-by-control to Gen AI and Agentic security risks.">
+<meta property="og:url" content="https://genai-security-project.github.io/crosswalk/ai-standards-crosswalk/">
+<meta property="og:image" content="https://genai-security-project.github.io/crosswalk/og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI Security Standards Crosswalk — 25 Frameworks Mapped">
+<meta name="twitter:description" content="25 industry AI security and compliance frameworks mapped to Gen AI and Agentic risks. Free, open-source, from OWASP.">
+<link rel="stylesheet" href="../assets/seo-static.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "AI Security Standards Crosswalk",
+  "description": "A crosswalk mapping Gen AI and Agentic AI security risks to 25 industry security, compliance, and AI-governance frameworks with 1,500+ control mappings.",
+  "url": "https://genai-security-project.github.io/crosswalk/ai-standards-crosswalk/",
+  "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "creator": { "@type": "Organization", "name": "OWASP GenAI Security Project", "url": "https://genai.owasp.org" },
+  "keywords": ["AI security", "Gen AI security", "Agentic AI security", "NIST AI RMF", "ISO 42001", "EU AI Act", "compliance framework mapping"]
+}
+</script>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="../" class="brand">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+    GenAI Crosswalk
+  </a>
+  <span class="crumbs"><a href="../">Home</a> / AI Standards Crosswalk</span>
+</nav>
+
+<div class="hero">
+  <img class="logo" src="../owasp-genai-logo-white.png" alt="OWASP GenAI Security Project">
+  <h1>AI Security Standards Crosswalk</h1>
+  <p>25 industry security, compliance, and AI-governance frameworks — mapped control-by-control to Gen AI and Agentic security risks by the <a href="https://genai.owasp.org">OWASP GenAI Security Project</a>.</p>
+</div>
+
+<main>
+  <p class="intro">A "crosswalk" maps controls, clauses, or entries in one framework to their equivalents in another. GenAI Crosswalk answers two questions: <strong>given a Gen AI or Agentic AI security risk, which controls in a given framework address it?</strong> — and the reverse, <strong>given a compliance framework you must satisfy, which AI-specific risks does it actually cover?</strong> This page lists all 25 frameworks currently mapped against the <a href="../llm-top10/">OWASP LLM Top 10</a>, the <a href="../agentic-ai-top10/">OWASP Top 10 for Agentic AI</a>, and DSGAI (Data Security for GenAI), with 1,500+ individual control mappings.</p>
+
+  <h2>25 frameworks crosswalked</h2>
+  <table class="frameworks">
+    <thead><tr><th>Framework</th><th>Publisher</th><th>Category</th></tr></thead>
+    <tbody>
+      <tr><td>AIUC-1</td><td>UK AI Safety Institute</td><td>AI governance</td></tr>
+      <tr><td>CIS Controls v8.1</td><td>Center for Internet Security</td><td>Infosec</td></tr>
+      <tr><td>CoSAI</td><td>OASIS / Coalition for Secure AI</td><td>AI governance</td></tr>
+      <tr><td>CWE/CVE</td><td>MITRE</td><td>Application security</td></tr>
+      <tr><td>DORA</td><td>European Parliament and Council</td><td>Financial</td></tr>
+      <tr><td>ENISA Multilayer Framework</td><td>ENISA</td><td>AI governance</td></tr>
+      <tr><td>EU AI Act</td><td>European Parliament and Council</td><td>Regulation</td></tr>
+      <tr><td>EU AI Act Code of Practice</td><td>European Commission / AI Office</td><td>Regulation</td></tr>
+      <tr><td>FedRAMP</td><td>GSA / FedRAMP PMO</td><td>Certification</td></tr>
+      <tr><td>ISA/IEC 62443</td><td>ISA / IEC</td><td>OT/ICS</td></tr>
+      <tr><td>ISO/IEC 27001:2022</td><td>ISO/IEC</td><td>Infosec</td></tr>
+      <tr><td>ISO/IEC 42001:2023</td><td>ISO/IEC</td><td>AI governance</td></tr>
+      <tr><td>MAESTRO</td><td>Cloud Security Alliance (CSA)</td><td>Architecture</td></tr>
+      <tr><td>MITRE ATLAS</td><td>MITRE Corporation</td><td>Threat model</td></tr>
+      <tr><td>NIST AI RMF 1.0</td><td>NIST</td><td>AI governance</td></tr>
+      <tr><td>NIST CSF 2.0</td><td>NIST</td><td>Infosec</td></tr>
+      <tr><td>NIST SP 800-218A</td><td>NIST</td><td>Application security</td></tr>
+      <tr><td>NIST SP 800-82 Rev 3</td><td>NIST</td><td>OT/ICS</td></tr>
+      <tr><td>OWASP AI Testing Guide</td><td>OWASP</td><td>Testing</td></tr>
+      <tr><td>OWASP ASVS 4.0.3</td><td>OWASP</td><td>Application security</td></tr>
+      <tr><td>OWASP NHI Top 10</td><td>OWASP</td><td>Identity</td></tr>
+      <tr><td>OWASP SAMM v2.0</td><td>OWASP</td><td>Application security</td></tr>
+      <tr><td>PCI DSS v4.0</td><td>PCI Security Standards Council</td><td>Infosec</td></tr>
+      <tr><td>SOC 2</td><td>AICPA</td><td>Certification</td></tr>
+      <tr><td>STRIDE</td><td>Microsoft</td><td>Threat model</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Risk taxonomies mapped against these frameworks</h2>
+  <p><a href="../agentic-ai-top10/">OWASP Top 10 for Agentic AI</a> (Agent Goal Hijack, Tool Misuse &amp; Exploitation, Identity &amp; Privilege Abuse, and 7 more) and the <a href="../llm-top10/">OWASP LLM Top 10</a> (Prompt Injection, Sensitive Information Disclosure, Supply Chain Vulnerabilities, and 7 more), plus DSGAI (Data Security for GenAI) — 41 entries in total.</p>
+
+  <div class="cta-row">
+    <a href="../#/explorer" class="btn btn-primary">Explore Full Mappings →</a>
+    <a href="../#/frameworks" class="btn btn-secondary">Browse Frameworks →</a>
+    <a href="../#/gaps" class="btn btn-secondary">Gap Analysis →</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <a href="https://genai.owasp.org" target="_blank" rel="noopener">OWASP GenAI Security Project</a> &middot; CC BY-SA 4.0 &middot;
+  <a href="https://github.com/GenAI-Security-Project/crosswalk" target="_blank" rel="noopener">GitHub</a>
+</footer>
+
+</body>
+</html>

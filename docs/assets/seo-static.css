@@ -1,0 +1,80 @@
+/* Shared styles for static, pre-rendered SEO/GEO landing pages
+   (agentic-ai-top10/, llm-top10/, ai-standards-crosswalk/).
+   Colors mirror docs/index.html's :root palette for brand consistency. */
+:root {
+  --bg: #f8fafc; --surface: #ffffff; --border: #e2e8f0;
+  --text: #0f172a; --text-secondary: #475569; --text-muted: #94a3b8;
+  --accent: #2563eb; --accent-hover: #1d4ed8;
+  --hero-bg: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+  --hero-text: #f8fafc;
+  --cr: #dc2626; --cr-bg: #fef2f2; --cr-border: #fecaca;
+  --hi: #ea580c; --hi-bg: #fff7ed; --hi-border: #fed7aa;
+  --me: #ca8a04; --me-bg: #fefce8; --me-border: #fef08a;
+  --lo: #16a34a; --lo-bg: #f0fdf4; --lo-border: #bbf7d0;
+  --font: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --max-w: 880px;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; font-family: var(--font); color: var(--text); background: var(--bg);
+  line-height: 1.65;
+}
+a { color: var(--accent); }
+a:hover { color: var(--accent-hover); }
+.navbar {
+  background: var(--surface); border-bottom: 1px solid var(--border);
+  padding: 14px 24px; display: flex; align-items: center; gap: 8px;
+}
+.navbar a.brand {
+  font-weight: 700; color: var(--text); text-decoration: none;
+  display: flex; align-items: center; gap: 8px;
+}
+.navbar .crumbs { margin-left: 16px; font-size: .85rem; color: var(--text-muted); }
+.navbar .crumbs a { color: var(--text-secondary); }
+.hero {
+  background: var(--hero-bg); color: var(--hero-text);
+  padding: 56px 24px 48px; text-align: center;
+}
+.hero img.logo { height: 36px; margin: 0 auto 20px; display: block; }
+.hero h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 800; margin: 0 0 12px; letter-spacing: -.02em; }
+.hero p { font-size: clamp(.95rem, 2vw, 1.1rem); color: #cbd5e1; max-width: 700px; margin: 0 auto; }
+.hero p a { color: #93c5fd; }
+main {
+  max-width: var(--max-w); margin: 0 auto; padding: 48px 24px;
+}
+main h2 { font-size: 1.4rem; margin: 40px 0 12px; }
+main h2:first-child { margin-top: 0; }
+main > p.intro { font-size: 1.02rem; color: var(--text-secondary); }
+.entry-card {
+  border: 1px solid var(--border); border-radius: 10px; padding: 20px 24px;
+  margin-bottom: 16px; background: var(--surface);
+}
+.entry-card h3 { margin: 0 0 6px; font-size: 1.1rem; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.entry-card .id { color: var(--text-muted); font-weight: 600; font-size: .9rem; }
+.entry-card p { margin: 8px 0 0; color: var(--text-secondary); }
+.badge {
+  display: inline-block; font-size: .72rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .03em; padding: 2px 9px; border-radius: 999px; border: 1px solid;
+}
+.badge.critical { color: var(--cr); background: var(--cr-bg); border-color: var(--cr-border); }
+.badge.high { color: var(--hi); background: var(--hi-bg); border-color: var(--hi-border); }
+.badge.medium { color: var(--me); background: var(--me-bg); border-color: var(--me-border); }
+.badge.low { color: var(--lo); background: var(--lo-bg); border-color: var(--lo-border); }
+table.frameworks { width: 100%; border-collapse: collapse; margin: 16px 0 32px; }
+table.frameworks th, table.frameworks td {
+  text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); font-size: .92rem;
+}
+table.frameworks th { color: var(--text-muted); font-weight: 600; font-size: .8rem; text-transform: uppercase; letter-spacing: .03em; }
+.cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin: 32px 0; }
+.btn {
+  display: inline-block; padding: 10px 18px; border-radius: 8px; text-decoration: none;
+  font-weight: 600; font-size: .92rem;
+}
+.btn-primary { background: var(--accent); color: #fff; }
+.btn-primary:hover { background: var(--accent-hover); color: #fff; }
+.btn-secondary { background: var(--surface); color: var(--text); border: 1px solid var(--border); }
+footer.site-footer {
+  border-top: 1px solid var(--border); padding: 24px; text-align: center;
+  font-size: .82rem; color: var(--text-muted);
+}
+footer.site-footer a { color: var(--text-secondary); }

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://genai-security-project.github.io/crosswalk/sitemap.xml
