@@ -168,6 +168,9 @@ input, select { font-family: inherit; }
   background: var(--hero-bg); color: var(--hero-text);
   padding: 80px 24px 64px; text-align: center;
 }
+.hero .hero-logo {
+  height: 40px; width: auto; margin: 0 auto 20px; display: block;
+}
 .hero h1 {
   font-size: clamp(1.75rem, 4vw, 2.75rem); font-weight: 800;
   letter-spacing: -.02em; margin-bottom: 12px;
@@ -1713,6 +1716,11 @@ input, select { font-family: inherit; }
 
     // Hero
     var hero = el('div', { className: 'hero' });
+    hero.appendChild(el('img', {
+      className: 'hero-logo',
+      src: 'owasp-genai-logo-white.png',
+      alt: 'OWASP GenAI Security Project'
+    }));
     hero.appendChild(el('h1', {}, 'Crosswalk'));
     hero.appendChild(el('p', { className: 'subtitle' }, 'The most comprehensive mapping of AI security risks to industry frameworks'));
 
