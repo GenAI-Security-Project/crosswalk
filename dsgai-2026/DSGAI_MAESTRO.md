@@ -1353,5 +1353,5 @@ are P2.
 ---
 
 Maintained by the OWASP GenAI Data Security Initiative.  
-Created by Emmanuel Guilherme Junior.  
+Maintained by the OWASP GenAI Data Security Initiative.  
 Part of the OWASP GenAI Crosswalk: <https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk>

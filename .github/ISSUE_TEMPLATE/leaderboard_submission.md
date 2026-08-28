@@ -3,7 +3,7 @@ name: Leaderboard Submission
 about: Submit your GenAI Security Crosswalk score to the public leaderboard
 title: '[Leaderboard] '
 labels: leaderboard
-assignees: emmanuelgjr
+assignees: OWASP GenAI Data Security Initiative
 ---
 
 ## Leaderboard Submission
@@ -12,7 +12,7 @@ assignees: emmanuelgjr
 
 **Industry:** (e.g. Financial Services, Healthcare, Technology, Government, etc.)
 
-**Score:** (from the [scoring tool](https://emmanuelgjr.github.io/GenAI-Security-Crosswalk/#/score))
+**Score:** (from the [scoring tool](https://genai-security-project.github.io/crosswalk/#/score))
 
 **Frameworks selected:** (list the frameworks you implement)
 

@@ -668,7 +668,7 @@ function main() {
           date:    '2026-03-27',
           version: '1.0.0',
           change:  `Initial entry — generated from OWASP GenAI Crosswalk v1.5.1 mapping files`,
-          author:  'emmanuelgjr',
+          author:  'OWASP GenAI Data Security Initiative',
         },
         ...(id.startsWith('LLM') ? [{
           date:    '2026-08-28',

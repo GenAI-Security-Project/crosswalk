@@ -19,7 +19,7 @@
 > GenAIセキュリティリスクを業界フレームワークにマッピングする、最も包括的な公開リソースです。LLMアプリケーション、自律型エージェントAI、GenAIデータセキュリティを**17のフレームワーク**と**3つのOWASPソースリスト**にわたってカバーしています。
 
 [OWASP GenAI Data Security Initiative](https://genai.owasp.org)により維持管理されています。
-**[Emmanuel Guilherme Junior](https://github.com/emmanuelgjr)**により作成されました。
+**[OWASP GenAI Data Security Initiative](https://github.com/GenAI-Security-Project)**により作成されました。
 
 ---
 
@@ -478,7 +478,7 @@ AIVSS重大度ポイント**。人間による監視の除去は10エントリ�
 
 ## 謝辞
 
-**[Emmanuel Guilherme Junior](https://github.com/emmanuelgjr)**と[OWASP GenAI Data Security
+**[OWASP GenAI Data Security Initiative](https://github.com/GenAI-Security-Project)**と[OWASP GenAI Data Security
 Initiative](https://genai.owasp.org)により作成・維持管理されています。
 
 OWASP LLM Top 10、OWASP Agentic Top 10、OWASP GenAI Data Security、OWASP NHI Top 10、およびOWASP SAMMプロジェクトチームの成果の上に構築されています。

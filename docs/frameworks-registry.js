@@ -17,110 +17,133 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "B001",
         "title": "Third-party testing of adversarial robustness",
-        "description": "Foundational; Hardening"
+        "description": "Foundational; Hardening",
+        "kind": "control"
       },
       {
         "control_id": "B002",
         "title": "Detect adversarial input",
-        "description": "Hardening"
+        "description": "Hardening",
+        "kind": "control"
       },
       {
         "control_id": "B005",
         "title": "Implement real-time input filtering",
-        "description": "Foundational"
+        "description": "Foundational",
+        "kind": "control"
       },
       {
         "control_id": "B006",
         "title": "Prevent unauthorized AI agent actions",
-        "description": "Foundational"
+        "description": "Foundational",
+        "kind": "control"
       },
       {
         "control_id": "B004",
-        "title": "Prevent AI endpoint scraping"
+        "title": "Prevent AI endpoint scraping",
+        "kind": "control"
       },
       {
         "control_id": "B007",
         "title": "Enforce user access privileges to AI systems",
-        "description": "Hardening"
+        "description": "Hardening",
+        "kind": "control"
       },
       {
         "control_id": "A",
         "title": "Data & Privacy (full domain)",
-        "description": "Foundational"
+        "description": "Foundational",
+        "kind": "control"
       },
       {
         "control_id": "B008",
         "title": "Protect model deployment environment",
-        "description": "Hardening"
+        "description": "Hardening",
+        "kind": "control"
       },
       {
         "control_id": "E",
         "title": "Accountability (full domain)",
-        "description": "Foundational"
+        "description": "Foundational",
+        "kind": "control"
       },
       {
         "control_id": "B003",
         "title": "Manage public release of technical details",
-        "description": "Hardening"
+        "description": "Hardening",
+        "kind": "control"
       },
       {
         "control_id": "B009",
         "title": "Limit output over-exposure",
-        "description": "Foundational"
+        "description": "Foundational",
+        "kind": "control"
       },
       {
         "control_id": "D",
         "title": "Reliability (full domain)",
-        "description": "Foundational"
+        "description": "Foundational",
+        "kind": "control"
       },
       {
         "control_id": "C",
         "title": "Safety (full domain)",
-        "description": "Foundational"
+        "description": "Foundational",
+        "kind": "control"
       },
       {
         "control_id": "F",
         "title": "Society (full domain)",
-        "description": "Foundational"
+        "description": "Foundational",
+        "kind": "control"
       },
       {
         "control_id": "Primary DSGAI entries",
         "title": "AIUC-1 Domain",
-        "description": "Status"
+        "description": "Status",
+        "kind": "control"
       },
       {
         "control_id": "DSGAI02, DSGAI03, DSGAI06, DSGAI07, DSGAI08, DSGAI09, DSGAI14, DSGAI15, DSGAI18, DSGAI21",
-        "title": "A — Data & Privacy"
+        "title": "A — Data & Privacy",
+        "kind": "control"
       },
       {
         "control_id": "DSGAI01, DSGAI04, DSGAI05, DSGAI10, DSGAI12, DSGAI16, DSGAI17",
-        "title": "B — Security"
+        "title": "B — Security",
+        "kind": "control"
       },
       {
         "control_id": "DSGAI05, DSGAI20",
-        "title": "C — Safety"
+        "title": "C — Safety",
+        "kind": "control"
       },
       {
         "control_id": "DSGAI12, DSGAI19",
-        "title": "D — Reliability"
+        "title": "D — Reliability",
+        "kind": "control"
       },
       {
         "control_id": "DSGAI02, DSGAI06, DSGAI09, DSGAI13, DSGAI18, DSGAI20, DSGAI21",
-        "title": "E — Accountability"
+        "title": "E — Accountability",
+        "kind": "control"
       },
       {
         "control_id": "DSGAI20",
-        "title": "F — Society"
+        "title": "F — Society",
+        "kind": "control"
       },
       {
         "control_id": "Date",
         "title": "Version",
-        "description": "Change"
+        "description": "Change",
+        "kind": "control"
       },
       {
         "control_id": "2026-03-27",
         "title": "1.0.0",
-        "description": "Initial release — full mapping DSGAI01–DSGAI21 to AIUC-1"
+        "description": "Initial release — full mapping DSGAI01–DSGAI21 to AIUC-1",
+        "kind": "control"
       }
     ]
   },
@@ -141,377 +164,447 @@ window.CROSSWALK_FRAMEWORKS = [
         "title": "Inventory and Control of Enterprise Assets",
         "description": "Actively manage all enterprise assets connected to the infrastructure.",
         "parent": null,
-        "function": "Basic Cyber Hygiene"
+        "function": "Basic Cyber Hygiene",
+        "kind": "control"
       },
       {
         "control_id": "CIS-2",
         "title": "Inventory and Control of Software Assets",
         "description": "Actively manage all software on the network so only authorized software is installed.",
         "parent": null,
-        "function": "Basic Cyber Hygiene"
+        "function": "Basic Cyber Hygiene",
+        "kind": "control"
       },
       {
         "control_id": "CIS-3",
         "title": "Data Protection",
         "description": "Develop processes and technical controls to identify, classify, securely handle, retain, and dispose of data.",
         "parent": null,
-        "function": "Basic Cyber Hygiene"
+        "function": "Basic Cyber Hygiene",
+        "kind": "control"
       },
       {
         "control_id": "CIS-4",
         "title": "Secure Configuration of Enterprise Assets and Software",
         "description": "Establish and maintain the secure configuration of enterprise assets and software.",
         "parent": null,
-        "function": "Basic Cyber Hygiene"
+        "function": "Basic Cyber Hygiene",
+        "kind": "control"
       },
       {
         "control_id": "CIS-5",
         "title": "Account Management",
         "description": "Use processes and tools to assign and manage authorization to credentials for user accounts.",
         "parent": null,
-        "function": "Basic Cyber Hygiene"
+        "function": "Basic Cyber Hygiene",
+        "kind": "control"
       },
       {
         "control_id": "CIS-6",
         "title": "Access Control Management",
         "description": "Use processes and tools to create, assign, manage, and revoke access credentials and privileges.",
         "parent": null,
-        "function": "Basic Cyber Hygiene"
+        "function": "Basic Cyber Hygiene",
+        "kind": "control"
       },
       {
         "control_id": "CIS-7",
         "title": "Continuous Vulnerability Management",
         "description": "Develop a plan to continuously assess and track vulnerabilities on all enterprise assets.",
         "parent": null,
-        "function": "Basic Cyber Hygiene"
+        "function": "Basic Cyber Hygiene",
+        "kind": "control"
       },
       {
         "control_id": "CIS-8",
         "title": "Audit Log Management",
         "description": "Collect, alert, review, and retain audit logs of events.",
         "parent": null,
-        "function": "Basic Cyber Hygiene"
+        "function": "Basic Cyber Hygiene",
+        "kind": "control"
       },
       {
         "control_id": "CIS-9",
         "title": "Email and Web Browser Protections",
         "description": "Improve protections and detections of threats from email and web vectors.",
         "parent": null,
-        "function": "Basic Cyber Hygiene"
+        "function": "Basic Cyber Hygiene",
+        "kind": "control"
       },
       {
         "control_id": "CIS-10",
         "title": "Malware Defenses",
         "description": "Prevent or control the installation, spread, and execution of malicious applications.",
         "parent": null,
-        "function": "Foundational"
+        "function": "Foundational",
+        "kind": "control"
       },
       {
         "control_id": "CIS-11",
         "title": "Data Recovery",
         "description": "Establish and maintain data recovery practices sufficient to restore in-scope enterprise assets.",
         "parent": null,
-        "function": "Foundational"
+        "function": "Foundational",
+        "kind": "control"
       },
       {
         "control_id": "CIS-12",
         "title": "Network Infrastructure Management",
         "description": "Establish and maintain the secure configuration of network infrastructure.",
         "parent": null,
-        "function": "Foundational"
+        "function": "Foundational",
+        "kind": "control"
       },
       {
         "control_id": "CIS-13",
         "title": "Network Monitoring and Defense",
         "description": "Operate processes and tooling to establish and maintain comprehensive network monitoring and defense.",
         "parent": null,
-        "function": "Foundational"
+        "function": "Foundational",
+        "kind": "control"
       },
       {
         "control_id": "CIS-14",
         "title": "Security Awareness and Skills Training",
         "description": "Establish and maintain a security awareness program for all workforce members.",
         "parent": null,
-        "function": "Foundational"
+        "function": "Foundational",
+        "kind": "control"
       },
       {
         "control_id": "CIS-15",
         "title": "Service Provider Management",
         "description": "Develop a process to evaluate service providers who hold sensitive data or are responsible for IT platform or processes.",
         "parent": null,
-        "function": "Foundational"
+        "function": "Foundational",
+        "kind": "control"
       },
       {
         "control_id": "CIS-16",
         "title": "Application Software Security",
         "description": "Manage the security life cycle of in-house developed, hosted, or acquired software.",
         "parent": null,
-        "function": "Organizational"
+        "function": "Organizational",
+        "kind": "control"
       },
       {
         "control_id": "CIS-17",
         "title": "Incident Response Management",
         "description": "Establish a program to develop and maintain an incident response capability.",
         "parent": null,
-        "function": "Organizational"
+        "function": "Organizational",
+        "kind": "control"
       },
       {
         "control_id": "CIS-18",
         "title": "Penetration Testing",
         "description": "Test the effectiveness and resiliency of enterprise assets through identifying and exploiting weaknesses.",
         "parent": null,
-        "function": "Organizational"
+        "function": "Organizational",
+        "kind": "control"
       },
       {
         "control_id": "16.1 Establish secure application development standards",
         "title": "CIS 16 � Application Software Security",
-        "description": "Secure development standards covering agentic integrations � input validation, goal-state verification; Secure development standards covering LLM integration � input validation, context separation"
+        "description": "Secure development standards covering agentic integrations � input validation, goal-state verification; Secure development standards covering LLM integration � input validation, context separation",
+        "kind": "control"
       },
       {
         "control_id": "18.1 Establish penetration testing programme",
         "title": "CIS 18 � Penetration Testing",
-        "description": "Adversarial testing covering goal hijack � direct, indirect, multi-turn injection scenarios; Adversarial testing programme covering prompt injection scenarios"
+        "description": "Adversarial testing covering goal hijack � direct, indirect, multi-turn injection scenarios; Adversarial testing programme covering prompt injection scenarios",
+        "kind": "control"
       },
       {
         "control_id": "8.2 Collect audit logs",
         "title": "CIS 8 � Audit Log Management",
-        "description": "All agent inputs logged � injection attempts detectable through log analysis; Memory write operations logged � who or what wrote, when, content hash; Comprehensive audit logging of all agent actions � no production deployment without full observability"
+        "description": "All agent inputs logged � injection attempts detectable through log analysis; Memory write operations logged � who or what wrote, when, content hash; Comprehensive audit logging of all agent actions � no production deployment without full observability",
+        "kind": "control"
       },
       {
         "control_id": "13.8 Deploy a network intrusion detection solution",
         "title": "CIS 13 � Network Monitoring and Defence",
-        "description": "Network-layer monitoring for injection indicators in agent traffic"
+        "description": "Network-layer monitoring for injection indicators in agent traffic",
+        "kind": "control"
       },
       {
         "control_id": "5.4 Restrict administrator privileges",
         "title": "CIS 5 � Account Management",
-        "description": "Agent tool access managed as privileged access � minimum scope, regular review; Agent credentials managed as privileged accounts � minimum scope, regular review, JIT issuance; Approval flows independent of agent interface � sensitive approvals cannot be completed via agent chat"
+        "description": "Agent tool access managed as privileged access � minimum scope, regular review; Agent credentials managed as privileged accounts � minimum scope, regular review, JIT issuance; Approval flows independent of agent interface � sensitive approvals cannot be completed via agent chat",
+        "kind": "control"
       },
       {
         "control_id": "6.1 Establish access granting process",
         "title": "CIS 6 � Access Control Management",
-        "description": "Formal process for granting agent tool access � documented justification per tool; Formal process for granting LLM tool access � documented justification required"
+        "description": "Formal process for granting agent tool access � documented justification per tool; Formal process for granting LLM tool access � documented justification required",
+        "kind": "control"
       },
       {
         "control_id": "8.5 Collect detailed audit logs",
         "title": "CIS 8 � Audit Log Management",
-        "description": "All tool invocations logged � tool identity, parameters, agent identity, timestamp; All credential operations logged � issuance, use, anomalous patterns detectable; All A2A messages logged � sender identity, content hash, timestamp, schema validation results"
+        "description": "All tool invocations logged � tool identity, parameters, agent identity, timestamp; All credential operations logged � issuance, use, anomalous patterns detectable; All A2A messages logged � sender identity, content hash, timestamp, schema validation results",
+        "kind": "control"
       },
       {
         "control_id": "16.1 Establish secure development standards",
         "title": "CIS 16 � Application Software Security",
-        "description": "Tool parameter validation as secure development requirement; Sandbox, static analysis, and allowlist as secure development requirements for code execution; Memory write validation as secure development requirement � untrusted sources cannot write directly"
+        "description": "Tool parameter validation as secure development requirement; Sandbox, static analysis, and allowlist as secure development requirements for code execution; Memory write validation as secure development requirement � untrusted sources cannot write directly",
+        "kind": "control"
       },
       {
         "control_id": "6.2 Establish an access revoking process",
         "title": "CIS 6 � Access Control Management",
-        "description": "Agent credential revocation process � immediate revocation on detection, decommission procedure"
+        "description": "Agent credential revocation process � immediate revocation on detection, decommission procedure",
+        "kind": "control"
       },
       {
         "control_id": "3.11 Encrypt sensitive data at rest",
         "title": "CIS 3 � Data Protection",
-        "description": "Agent credentials encrypted at rest � secret manager, no cleartext storage; Agent memory stores encrypted at rest � embeddings, long-term memory, operational knowledge; Embeddings, training data, and RAG caches containing sensitive data encrypted"
+        "description": "Agent credentials encrypted at rest � secret manager, no cleartext storage; Agent memory stores encrypted at rest � embeddings, long-term memory, operational knowledge; Embeddings, training data, and RAG caches containing sensitive data encrypted",
+        "kind": "control"
       },
       {
         "control_id": "2.1 Establish and maintain software inventory",
         "title": "CIS 2 � Inventory and Control of Software Assets",
-        "description": "ML SBOM as software asset inventory � all agent components (tools, MCP servers, models, libraries)"
+        "description": "ML SBOM as software asset inventory � all agent components (tools, MCP servers, models, libraries)",
+        "kind": "control"
       },
       {
         "control_id": "7.1 Establish vulnerability management process",
         "title": "CIS 7 � Continuous Vulnerability Management",
-        "description": "Agent component CVEs in vulnerability management � urgent patching for code execution risks; Vulnerability management process covers LLM component CVEs and dependency risks"
+        "description": "Agent component CVEs in vulnerability management � urgent patching for code execution risks; Vulnerability management process covers LLM component CVEs and dependency risks",
+        "kind": "control"
       },
       {
         "control_id": "16.6 Use only up-to-date and trusted third-party components",
         "title": "CIS 16 � Application Software Security",
-        "description": "Approved component list � only sourced from approved vendors, signatures verified; Only approved, verified LLM components used in production � unsigned components rejected"
+        "description": "Approved component list � only sourced from approved vendors, signatures verified; Only approved, verified LLM components used in production � unsigned components rejected",
+        "kind": "control"
       },
       {
         "control_id": "15.1 Establish service provider management process",
         "title": "CIS 15 � Service Provider Management",
-        "description": "Agent tool and MCP providers managed as service providers � security assessment before onboarding"
+        "description": "Agent tool and MCP providers managed as service providers � security assessment before onboarding",
+        "kind": "control"
       },
       {
         "control_id": "4.1 Establish secure configuration process",
         "title": "CIS 4 � Secure Configuration",
-        "description": "Secure configuration includes code execution sandbox � no defaults permitting unrestricted execution; Secure configuration includes circuit breakers and rate limits � cascade prevention as configuration requirement; Secure configuration for LLM deployments � system prompts not in cleartext config"
+        "description": "Secure configuration includes code execution sandbox � no defaults permitting unrestricted execution; Secure configuration includes circuit breakers and rate limits � cascade prevention as configuration requirement; Secure configuration for LLM deployments � system prompts not in cleartext config",
+        "kind": "control"
       },
       {
         "control_id": "18.1 Establish penetration testing",
         "title": "CIS 18 � Penetration Testing",
-        "description": "Sandbox escape and code injection in penetration testing � adversarial scenarios before each deployment; Rogue agent scenarios in penetration testing � persistent hidden goal simulation, detection verification; Output injection scenarios in penetration testing � XSS, SQL injection via LLM output"
+        "description": "Sandbox escape and code injection in penetration testing � adversarial scenarios before each deployment; Rogue agent scenarios in penetration testing � persistent hidden goal simulation, detection verification; Output injection scenarios in penetration testing � XSS, SQL injection via LLM output",
+        "kind": "control"
       },
       {
         "control_id": "13.8 Deploy network intrusion detection",
         "title": "CIS 13 � Network Monitoring",
-        "description": "Code execution environments network-monitored � outbound connection attempts from sandbox detected"
+        "description": "Code execution environments network-monitored � outbound connection attempts from sandbox detected",
+        "kind": "control"
       },
       {
         "control_id": "13.3 Deploy a network-based intrusion detection system",
         "title": "CIS 13 � Network Monitoring",
-        "description": "Memory store access monitored � bulk read, anomalous write patterns detected"
+        "description": "Memory store access monitored � bulk read, anomalous write patterns detected",
+        "kind": "control"
       },
       {
         "control_id": "12.4 Establish and maintain architecture diagram",
         "title": "CIS 12 � Network Infrastructure Management",
-        "description": "A2A communication channels mapped in network architecture � authentication method, encryption status"
+        "description": "A2A communication channels mapped in network architecture � authentication method, encryption status",
+        "kind": "control"
       },
       {
         "control_id": "3.10 Encrypt sensitive data in transit",
         "title": "CIS 3 � Data Protection",
-        "description": "All A2A messages encrypted in transit � no cleartext inter-agent communication"
+        "description": "All A2A messages encrypted in transit � no cleartext inter-agent communication",
+        "kind": "control"
       },
       {
         "control_id": "12.6 Use network-based URL filters",
         "title": "CIS 12 � Network Infrastructure Management",
-        "description": "Network controls prevent cascade propagation across agent cluster boundaries"
+        "description": "Network controls prevent cascade propagation across agent cluster boundaries",
+        "kind": "control"
       },
       {
         "control_id": "17.1 Designate personnel for incident response",
         "title": "CIS 17 � Incident Response",
-        "description": "Defined response for cascade events � kill switch activation, process control fallback, operations notification; Defined response for trust exploitation incidents � operator retraining, pattern audit, interface redesign; Defined response for LLM misinformation incidents � correction, notification, root cause"
+        "description": "Defined response for cascade events � kill switch activation, process control fallback, operations notification; Defined response for trust exploitation incidents � operator retraining, pattern audit, interface redesign; Defined response for LLM misinformation incidents � correction, notification, root cause",
+        "kind": "control"
       },
       {
         "control_id": "8.6 Collect DNS query audit logs",
         "title": "CIS 8 � Audit Log Management",
-        "description": "Agent traffic monitored � cascade indicators detected before physical impact"
+        "description": "Agent traffic monitored � cascade indicators detected before physical impact",
+        "kind": "control"
       },
       {
         "control_id": "14.1 Establish security awareness programme",
         "title": "CIS 14 � Security Awareness and Skills Training",
-        "description": "All users of agentic tools trained on AI limitations � verification requirements, how to identify manipulation; User training on LLM data handling � what data should not be shared with LLMs; User training on LLM output limitations � verification requirements and critical evaluation"
+        "description": "All users of agentic tools trained on AI limitations � verification requirements, how to identify manipulation; User training on LLM data handling � what data should not be shared with LLMs; User training on LLM output limitations � verification requirements and critical evaluation",
+        "kind": "control"
       },
       {
         "control_id": "13.1 Centralise security event alerting",
         "title": "CIS 13 � Network Monitoring and Defence",
-        "description": "Agent behavioural anomalies centralised and alerted � rogue agent patterns detected through SIEM"
+        "description": "Agent behavioural anomalies centralised and alerted � rogue agent patterns detected through SIEM",
+        "kind": "control"
       },
       {
         "control_id": "17.2 Establish incident response procedures",
         "title": "CIS 17 � Incident Response",
-        "description": "Rogue agent containment as incident response procedure � kill switch, audit, state validation, forensic"
+        "description": "Rogue agent containment as incident response procedure � kill switch, audit, state validation, forensic",
+        "kind": "control"
       },
       {
         "control_id": "CIS 3",
-        "title": "3.1 — Establish and maintain data management process"
+        "title": "3.1 — Establish and maintain data management process",
+        "kind": "control"
       },
       {
         "control_id": "CIS 8",
-        "title": "8.2 — Collect audit logs"
+        "title": "8.2 — Collect audit logs",
+        "kind": "control"
       },
       {
         "control_id": "CIS 16",
-        "title": "16.12 — Implement code-level security checks"
+        "title": "16.12 — Implement code-level security checks",
+        "kind": "control"
       },
       {
         "control_id": "CIS 5",
-        "title": "5.4 — Restrict administrator privileges"
+        "title": "5.4 — Restrict administrator privileges",
+        "kind": "control"
       },
       {
         "control_id": "CIS 6",
-        "title": "6.5 — Require MFA for admin access"
+        "title": "6.5 — Require MFA for admin access",
+        "kind": "control"
       },
       {
         "control_id": "CIS 12",
-        "title": "12.7 — Deploy host-based intrusion detection"
+        "title": "12.7 — Deploy host-based intrusion detection",
+        "kind": "control"
       },
       {
         "control_id": "CIS 2",
-        "title": "2.1 — Maintain authorised software inventory"
+        "title": "2.1 — Maintain authorised software inventory",
+        "kind": "control"
       },
       {
         "control_id": "CIS 4",
-        "title": "4.1 — Establish secure configuration"
+        "title": "4.1 — Establish secure configuration",
+        "kind": "control"
       },
       {
         "control_id": "CIS 13",
-        "title": "13.4 — Perform traffic filtering"
+        "title": "13.4 — Perform traffic filtering",
+        "kind": "control"
       },
       {
         "control_id": "CIS 14",
-        "title": "14.6 — Train workforce on AI security"
+        "title": "14.6 — Train workforce on AI security",
+        "kind": "control"
       },
       {
         "control_id": "CIS 7",
-        "title": "7.1 — Establish vulnerability management"
+        "title": "7.1 — Establish vulnerability management",
+        "kind": "control"
       },
       {
         "control_id": "CIS 18",
-        "title": "18.1 — Establish penetration testing programme"
+        "title": "18.1 — Establish penetration testing programme",
+        "kind": "control"
       },
       {
         "control_id": "CIS 15",
-        "title": "15.1 — Establish service provider management policy"
+        "title": "15.1 — Establish service provider management policy",
+        "kind": "control"
       },
       {
         "control_id": "CIS 17",
-        "title": "17.1 — Incident response management"
+        "title": "17.1 — Incident response management",
+        "kind": "control"
       },
       {
         "control_id": "CIS 10",
-        "title": "10.1 — Deploy anti-malware"
+        "title": "10.1 — Deploy anti-malware",
+        "kind": "control"
       },
       {
         "control_id": "CIS 11",
-        "title": "11.1 — Establish recovery capability"
+        "title": "11.1 — Establish recovery capability",
+        "kind": "control"
       },
       {
         "control_id": "16.2 Implement code review",
         "title": "CIS 16 � Application Software Security",
-        "description": "Code review for all LLM integration code � prompt injection patterns reviewed"
+        "description": "Code review for all LLM integration code � prompt injection patterns reviewed",
+        "kind": "control"
       },
       {
         "control_id": "3.1 Establish and maintain data management process",
         "title": "CIS 3 � Data Protection",
-        "description": "Data classification and handling requirements applied to all LLM data assets"
+        "description": "Data classification and handling requirements applied to all LLM data assets",
+        "kind": "control"
       },
       {
         "control_id": "2.1 Establish and maintain software asset inventory",
         "title": "CIS 2 � Inventory and Control of Software Assets",
-        "description": "ML SBOM maintained as part of software asset inventory � model versions, libraries, adapters"
+        "description": "ML SBOM maintained as part of software asset inventory � model versions, libraries, adapters",
+        "kind": "control"
       },
       {
         "control_id": "7.5 Perform automated vulnerability scanning",
         "title": "CIS 7 � Continuous Vulnerability Management",
-        "description": "Automated scanning of training pipeline components � vulnerabilities in data processing libraries"
+        "description": "Automated scanning of training pipeline components � vulnerabilities in data processing libraries",
+        "kind": "control"
       },
       {
         "control_id": "16.7 Use standard hardening configuration templates",
         "title": "CIS 16 � Application Software Security",
-        "description": "Hardened training pipeline configurations � immutable infrastructure, locked data sources"
+        "description": "Hardened training pipeline configurations � immutable infrastructure, locked data sources",
+        "kind": "control"
       },
       {
         "control_id": "18.3 Remediate penetration testing findings",
         "title": "CIS 18 � Penetration Testing",
-        "description": "Poisoning scenarios in penetration testing � verify data integrity controls hold under attack"
+        "description": "Poisoning scenarios in penetration testing � verify data integrity controls hold under attack",
+        "kind": "control"
       },
       {
         "control_id": "8.12 Collect service provider logs",
         "title": "CIS 8 � Audit Log Management",
-        "description": "Full audit trail of training data provenance and model training runs"
+        "description": "Full audit trail of training data provenance and model training runs",
+        "kind": "control"
       },
       {
         "control_id": "3.1 Establish data management process",
         "title": "CIS 3 � Data Protection",
-        "description": "System prompts classified as sensitive configuration � data handling policy applied; RAG data governance � quality and freshness controls on retrieval sources"
+        "description": "System prompts classified as sensitive configuration � data handling policy applied; RAG data governance � quality and freshness controls on retrieval sources",
+        "kind": "control"
       },
       {
         "control_id": "7.1 Establish vulnerability management",
         "title": "CIS 7 � Vulnerability Management",
-        "description": "Vector database CVEs in vulnerability management process � CVE-2024-3584 and equivalents"
+        "description": "Vector database CVEs in vulnerability management process � CVE-2024-3584 and equivalents",
+        "kind": "control"
       },
       {
         "control_id": "12.6 Use of network-based URL filters",
         "title": "CIS 12 � Network Infrastructure Management",
-        "description": "Rate limiting and traffic controls at the API gateway and network layer"
+        "description": "Rate limiting and traffic controls at the API gateway and network layer",
+        "kind": "control"
       }
     ],
     "changelog": [
       {
         "date": "2026-04-09",
         "change": "Initial seed — 18 CIS Controls v8.1 top-level safeguard groups",
-        "author": "emmanuelgjr"
+        "author": "OWASP GenAI Data Security Initiative"
       }
     ]
   },
@@ -532,231 +625,263 @@ window.CROSSWALK_FRAMEWORKS = [
         "title": "AI software supply chain risk assessment",
         "description": "Identify and assess risks specific to AI software supply chains, including model provenance, training data lineage, and framework dependencies.",
         "parent": null,
-        "function": "Software Supply Chain Security"
+        "function": "Software Supply Chain Security",
+        "kind": "control"
       },
       {
         "control_id": "WS1-SSC-2",
         "title": "ML artifact signing and verification",
         "description": "Implement cryptographic signing for ML models, weights, and artifacts to ensure integrity and provenance verification throughout the supply chain.",
         "parent": null,
-        "function": "Software Supply Chain Security"
+        "function": "Software Supply Chain Security",
+        "kind": "control"
       },
       {
         "control_id": "WS1-SSC-3",
         "title": "Model provenance tracking",
         "description": "Maintain verifiable records of model origin, training data sources, fine-tuning history, and deployment lineage.",
         "parent": null,
-        "function": "Software Supply Chain Security"
+        "function": "Software Supply Chain Security",
+        "kind": "control"
       },
       {
         "control_id": "WS1-SSC-4",
         "title": "Training data supply chain integrity",
         "description": "Verify integrity and provenance of training data sources, including checks for data poisoning, unauthorized modifications, and license compliance.",
         "parent": null,
-        "function": "Software Supply Chain Security"
+        "function": "Software Supply Chain Security",
+        "kind": "control"
       },
       {
         "control_id": "WS1-SSC-5",
         "title": "AI dependency management",
         "description": "Track and manage dependencies in AI/ML frameworks, libraries, and tools with SBOM generation and vulnerability monitoring.",
         "parent": null,
-        "function": "Software Supply Chain Security"
+        "function": "Software Supply Chain Security",
+        "kind": "control"
       },
       {
         "control_id": "WS1-SSC-6",
         "title": "Secure model distribution",
         "description": "Establish secure channels and verification mechanisms for distributing models, weights, and adapters across environments.",
         "parent": null,
-        "function": "Software Supply Chain Security"
+        "function": "Software Supply Chain Security",
+        "kind": "control"
       },
       {
         "control_id": "WS2-DEF-1",
         "title": "AI-enhanced threat detection",
         "description": "Leverage AI capabilities to improve threat detection while understanding limitations and adversarial risks to AI-powered security tools.",
         "parent": null,
-        "function": "Preparing Defenders"
+        "function": "Preparing Defenders",
+        "kind": "control"
       },
       {
         "control_id": "WS2-DEF-2",
         "title": "AI attack surface mapping",
         "description": "Map and maintain visibility of AI-specific attack surfaces including model endpoints, training pipelines, inference APIs, and agent tool interfaces.",
         "parent": null,
-        "function": "Preparing Defenders"
+        "function": "Preparing Defenders",
+        "kind": "control"
       },
       {
         "control_id": "WS2-DEF-3",
         "title": "AI incident response procedures",
         "description": "Develop and maintain AI-specific incident response procedures covering model compromise, data poisoning, prompt injection, and agent hijacking scenarios.",
         "parent": null,
-        "function": "Preparing Defenders"
+        "function": "Preparing Defenders",
+        "kind": "control"
       },
       {
         "control_id": "WS2-DEF-4",
         "title": "Defender AI literacy and training",
         "description": "Ensure security teams have training and skills to defend AI systems, including understanding of ML pipelines, LLM architectures, and agentic systems.",
         "parent": null,
-        "function": "Preparing Defenders"
+        "function": "Preparing Defenders",
+        "kind": "control"
       },
       {
         "control_id": "WS2-DEF-5",
         "title": "AI security monitoring and telemetry",
         "description": "Implement monitoring specific to AI systems: inference anomalies, prompt injection attempts, model drift, and agent behavioral deviations.",
         "parent": null,
-        "function": "Preparing Defenders"
+        "function": "Preparing Defenders",
+        "kind": "control"
       },
       {
         "control_id": "WS2-DEF-6",
         "title": "AI red teaming and adversarial testing",
         "description": "Conduct regular adversarial testing of AI systems including prompt injection, jailbreak, data extraction, and agent manipulation exercises.",
         "parent": null,
-        "function": "Preparing Defenders"
+        "function": "Preparing Defenders",
+        "kind": "control"
       },
       {
         "control_id": "WS3-GOV-1",
         "title": "AI security risk taxonomy",
         "description": "Establish and maintain a security-focused risk taxonomy specific to AI systems covering model, data, infrastructure, and application layers.",
         "parent": null,
-        "function": "AI Security Risk Governance"
+        "function": "AI Security Risk Governance",
+        "kind": "control"
       },
       {
         "control_id": "WS3-GOV-2",
         "title": "AI risk assessment methodology",
         "description": "Define and apply a structured methodology for assessing AI security risks, including likelihood and impact scoring calibrated for AI-specific threats.",
         "parent": null,
-        "function": "AI Security Risk Governance"
+        "function": "AI Security Risk Governance",
+        "kind": "control"
       },
       {
         "control_id": "WS3-GOV-3",
         "title": "AI security scorecard",
         "description": "Implement a scorecard mechanism to evaluate and communicate the security posture of AI systems across development, deployment, and operations.",
         "parent": null,
-        "function": "AI Security Risk Governance"
+        "function": "AI Security Risk Governance",
+        "kind": "control"
       },
       {
         "control_id": "WS3-GOV-4",
         "title": "AI security controls checklist",
         "description": "Maintain a comprehensive checklist of security controls applicable to AI systems, mapped to organizational risk tolerance and deployment context.",
         "parent": null,
-        "function": "AI Security Risk Governance"
+        "function": "AI Security Risk Governance",
+        "kind": "control"
       },
       {
         "control_id": "WS3-GOV-5",
         "title": "Third-party AI risk management",
         "description": "Establish governance processes for evaluating and managing security risks from third-party AI models, APIs, and services.",
         "parent": null,
-        "function": "AI Security Risk Governance"
+        "function": "AI Security Risk Governance",
+        "kind": "control"
       },
       {
         "control_id": "WS3-GOV-6",
         "title": "AI regulatory compliance mapping",
         "description": "Map AI security requirements to applicable regulations and standards, maintaining compliance traceability across jurisdictions.",
         "parent": null,
-        "function": "AI Security Risk Governance"
+        "function": "AI Security Risk Governance",
+        "kind": "control"
       },
       {
         "control_id": "WS4-AGT-1",
         "title": "Human-governed and accountable agents",
         "description": "Ensure agentic AI systems maintain meaningful human control with clear accountability, risk-based oversight, and defined authority boundaries.",
         "parent": null,
-        "function": "Agentic Security Principles"
+        "function": "Agentic Security Principles",
+        "kind": "control"
       },
       {
         "control_id": "WS4-AGT-1.1",
         "title": "Risk-based human oversight",
         "description": "Implement graduated human oversight proportional to the risk level and impact scope of agent actions, from full autonomy for low-risk to human-in-the-loop for high-risk.",
         "parent": "WS4-AGT-1",
-        "function": "Agentic Security Principles"
+        "function": "Agentic Security Principles",
+        "kind": "control"
       },
       {
         "control_id": "WS4-AGT-1.2",
         "title": "Authority boundary definition",
         "description": "Define and enforce clear boundaries for what actions agents can take autonomously versus what requires human approval.",
         "parent": "WS4-AGT-1",
-        "function": "Agentic Security Principles"
+        "function": "Agentic Security Principles",
+        "kind": "control"
       },
       {
         "control_id": "WS4-AGT-1.3",
         "title": "Agent accountability chain",
         "description": "Maintain a clear chain of accountability from agent actions to responsible humans, including audit trails and decision provenance.",
         "parent": "WS4-AGT-1",
-        "function": "Agentic Security Principles"
+        "function": "Agentic Security Principles",
+        "kind": "control"
       },
       {
         "control_id": "WS4-AGT-2",
         "title": "Bounded and resilient agents",
         "description": "Ensure agents operate with purpose-specific entitlements, foundational cybersecurity controls, and continuous validation of behavior.",
         "parent": null,
-        "function": "Agentic Security Principles"
+        "function": "Agentic Security Principles",
+        "kind": "control"
       },
       {
         "control_id": "WS4-AGT-2.1",
         "title": "Purpose-specific entitlements",
         "description": "Grant agents minimum necessary permissions scoped to their specific task, with just-in-time elevation and automatic revocation.",
         "parent": "WS4-AGT-2",
-        "function": "Agentic Security Principles"
+        "function": "Agentic Security Principles",
+        "kind": "control"
       },
       {
         "control_id": "WS4-AGT-2.2",
         "title": "Agent cybersecurity baseline",
         "description": "Apply foundational cybersecurity controls to agent infrastructure: authentication, encryption, input validation, secure communication channels.",
         "parent": "WS4-AGT-2",
-        "function": "Agentic Security Principles"
+        "function": "Agentic Security Principles",
+        "kind": "control"
       },
       {
         "control_id": "WS4-AGT-2.3",
         "title": "Continuous behavior validation",
         "description": "Continuously monitor and validate agent behavior against expected patterns, with automated circuit-breakers for anomalous actions.",
         "parent": "WS4-AGT-2",
-        "function": "Agentic Security Principles"
+        "function": "Agentic Security Principles",
+        "kind": "control"
       },
       {
         "control_id": "WS4-AGT-2.4",
         "title": "Agent blast radius containment",
         "description": "Implement isolation, sandboxing, and rollback mechanisms to limit the impact of compromised or malfunctioning agents.",
         "parent": "WS4-AGT-2",
-        "function": "Agentic Security Principles"
+        "function": "Agentic Security Principles",
+        "kind": "control"
       },
       {
         "control_id": "WS4-AGT-3",
         "title": "Transparent and verifiable agents",
         "description": "Ensure AI agent operations are transparent through secure supply chain controls, comprehensive telemetry, and real-time monitoring.",
         "parent": null,
-        "function": "Agentic Security Principles"
+        "function": "Agentic Security Principles",
+        "kind": "control"
       },
       {
         "control_id": "WS4-AGT-3.1",
         "title": "Agent supply chain security",
         "description": "Verify integrity of all agent components: tools, MCP servers, plugins, prompt templates, and model weights loaded at runtime.",
         "parent": "WS4-AGT-3",
-        "function": "Agentic Security Principles"
+        "function": "Agentic Security Principles",
+        "kind": "control"
       },
       {
         "control_id": "WS4-AGT-3.2",
         "title": "Agent telemetry and observability",
         "description": "Implement comprehensive logging and telemetry for agent decisions, tool calls, memory access, and inter-agent communication.",
         "parent": "WS4-AGT-3",
-        "function": "Agentic Security Principles"
+        "function": "Agentic Security Principles",
+        "kind": "control"
       },
       {
         "control_id": "WS4-AGT-3.3",
         "title": "Real-time agent monitoring",
         "description": "Deploy real-time monitoring dashboards and alerting for agent operations, including anomaly detection on action patterns and resource usage.",
         "parent": "WS4-AGT-3",
-        "function": "Agentic Security Principles"
+        "function": "Agentic Security Principles",
+        "kind": "control"
       },
       {
         "control_id": "WS4-AGT-3.4",
         "title": "Agent action auditability",
         "description": "Maintain immutable audit logs of all agent actions with sufficient detail to reconstruct decision chains and attribute outcomes.",
         "parent": "WS4-AGT-3",
-        "function": "Agentic Security Principles"
+        "function": "Agentic Security Principles",
+        "kind": "control"
       }
     ],
     "changelog": [
       {
         "date": "2026-04-09",
         "change": "Initial seed — 4 workstreams + agentic security principles",
-        "author": "emmanuelgjr"
+        "author": "OWASP GenAI Data Security Initiative"
       }
     ]
   },
@@ -775,348 +900,424 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "Improper Input Validation",
         "title": "CWE-20",
-        "description": "Root cause � agent inputs not validated before entering model context; indirect injection content not treated as untrusted; Tool parameters generated by LLM not validated against safe ranges before execution; Content entering agent memory not validated before write"
+        "description": "Root cause � agent inputs not validated before entering model context; indirect injection content not treated as untrusted; Tool parameters generated by LLM not validated against safe ranges before execution; Content entering agent memory not validated before write",
+        "kind": "weakness"
       },
       {
         "control_id": "Improper Neutralisation of Special Elements in Output Used by a Downstream Component",
         "title": "CWE-74",
-        "description": "Instruction elements in processed content not neutralised before agent reasoning"
+        "description": "Instruction elements in processed content not neutralised before agent reasoning",
+        "kind": "weakness"
       },
       {
         "control_id": "Protection Mechanism Failure",
         "title": "CWE-693",
-        "description": "Safety and goal-verification controls bypassed through injection; Behavioural monitoring and detection mechanisms bypassed by rogue agent"
+        "description": "Safety and goal-verification controls bypassed through injection; Behavioural monitoring and detection mechanisms bypassed by rogue agent",
+        "kind": "weakness"
       },
       {
         "control_id": "Unintended Proxy or Intermediary",
         "title": "CWE-441",
-        "description": "Agent acts as a proxy executing attacker instructions against backend systems; Compromised tool acting as malicious intermediary in agent workflow"
+        "description": "Agent acts as a proxy executing attacker instructions against backend systems; Compromised tool acting as malicious intermediary in agent workflow",
+        "kind": "weakness"
       },
       {
         "control_id": "Externally Controlled Reference to a Resource in Another Sphere",
         "title": "CWE-610",
-        "description": "Agent retrieves and acts on externally controlled content (RAG, email, tool returns) without adequate validation"
+        "description": "Agent retrieves and acts on externally controlled content (RAG, email, tool returns) without adequate validation",
+        "kind": "weakness"
       },
       {
         "control_id": "Improper Access Control",
         "title": "CWE-284",
-        "description": "Agent can invoke tools it should not have access to; tool parameters not range-validated; Vector store and memory databases with insufficient access controls permitting unauthorised writes; Rogue agent exceeds its permitted access scope � no scope enforcement"
+        "description": "Agent can invoke tools it should not have access to; tool parameters not range-validated; Vector store and memory databases with insufficient access controls permitting unauthorised writes; Rogue agent exceeds its permitted access scope � no scope enforcement",
+        "kind": "weakness"
       },
       {
         "control_id": "Missing Authorisation",
         "title": "CWE-862",
-        "description": "No authorisation check before irreversible tool invocations; human confirmation not required"
+        "description": "No authorisation check before irreversible tool invocations; human confirmation not required",
+        "kind": "weakness"
       },
       {
         "control_id": "Unrestricted Upload of File with Dangerous Type",
         "title": "CWE-434",
-        "description": "Analogy: agent accepts and executes tool payloads without content validation"
+        "description": "Analogy: agent accepts and executes tool payloads without content validation",
+        "kind": "weakness"
       },
       {
         "control_id": "Improper Control of Dynamically-Managed Code Resources",
         "title": "CWE-913",
-        "description": "MCP descriptors and tool specifications are dynamically loaded code resources � modification not controlled"
+        "description": "MCP descriptors and tool specifications are dynamically loaded code resources � modification not controlled",
+        "kind": "weakness"
       },
       {
         "control_id": "Execution with Unnecessary Privileges",
         "title": "CWE-250",
-        "description": "Agent runs with broader credentials than its task requires; NHI-5 over-privilege"
+        "description": "Agent runs with broader credentials than its task requires; NHI-5 over-privilege",
+        "kind": "weakness"
       },
       {
         "control_id": "Insufficiently Protected Credentials",
         "title": "CWE-522",
-        "description": "Agent credentials stored in cleartext memory, logs, config, or tool payloads"
+        "description": "Agent credentials stored in cleartext memory, logs, config, or tool payloads",
+        "kind": "weakness"
       },
       {
         "control_id": "Cleartext Storage of Sensitive Information",
         "title": "CWE-312",
-        "description": "Credentials and tokens not encrypted at rest in agent memory or configuration"
+        "description": "Credentials and tokens not encrypted at rest in agent memory or configuration",
+        "kind": "weakness"
       },
       {
         "control_id": "Use of Hard-coded Credentials",
         "title": "CWE-798",
-        "description": "Agent credentials hardcoded in prompts or source code"
+        "description": "Agent credentials hardcoded in prompts or source code",
+        "kind": "weakness"
       },
       {
         "control_id": "Insufficient Session Expiration",
         "title": "CWE-613",
-        "description": "Long-lived agent credentials without expiry or rotation � NHI-7"
+        "description": "Long-lived agent credentials without expiry or rotation � NHI-7",
+        "kind": "weakness"
       },
       {
         "control_id": "Download of Code Without Integrity Check",
         "title": "CWE-494",
-        "description": "Agent tool components and MCP servers loaded without signature verification"
+        "description": "Agent tool components and MCP servers loaded without signature verification",
+        "kind": "weakness"
       },
       {
         "control_id": "Inclusion of Functionality from Untrusted Control Sphere",
         "title": "CWE-829",
-        "description": "MCP servers and plugins from external registries loaded into agent execution context"
+        "description": "MCP servers and plugins from external registries loaded into agent execution context",
+        "kind": "weakness"
       },
       {
         "control_id": "Embedded Malicious Code",
         "title": "CWE-506",
-        "description": "Model weights and tool components containing hidden backdoor functionality; Rogue behaviour may result from backdoored model or component"
+        "description": "Model weights and tool components containing hidden backdoor functionality; Rogue behaviour may result from backdoored model or component",
+        "kind": "weakness"
       },
       {
         "control_id": "Reliance on Insufficiently Trustworthy Component",
         "title": "CWE-1357",
-        "description": "Agent dependency on third-party MCP servers without security assessment"
+        "description": "Agent dependency on third-party MCP servers without security assessment",
+        "kind": "weakness"
       },
       {
         "control_id": "Improper Control of Generation of Code",
         "title": "CWE-94",
-        "description": "Agent generates and executes code without adequate static analysis or sandbox"
+        "description": "Agent generates and executes code without adequate static analysis or sandbox",
+        "kind": "weakness"
       },
       {
         "control_id": "Improper Neutralisation of Special Elements in OS Command",
         "title": "CWE-78",
-        "description": "LLM-generated code containing shell commands executed without sanitisation"
+        "description": "LLM-generated code containing shell commands executed without sanitisation",
+        "kind": "weakness"
       },
       {
         "control_id": "Improper Neutralisation of Special Elements in Command",
         "title": "CWE-77",
-        "description": "LLM output used directly in command context"
+        "description": "LLM output used directly in command context",
+        "kind": "weakness"
       },
       {
         "control_id": "Improper Neutralisation of Directives in Dynamically Evaluated Code",
         "title": "CWE-95",
-        "description": "Eval of LLM-generated code"
+        "description": "Eval of LLM-generated code",
+        "kind": "weakness"
       },
       {
         "control_id": "Use of Potentially Dangerous Function",
         "title": "CWE-676",
-        "description": "Agent uses exec(), eval(), subprocess without validation"
+        "description": "Agent uses exec(), eval(), subprocess without validation",
+        "kind": "weakness"
       },
       {
         "control_id": "Acceptance of Extraneous Untrusted Data with Trusted Data",
         "title": "CWE-349",
-        "description": "Agent memory store accepts writes from untrusted sources alongside trusted operational knowledge"
+        "description": "Agent memory store accepts writes from untrusted sources alongside trusted operational knowledge",
+        "kind": "weakness"
       },
       {
         "control_id": "Insufficient Verification of Data Authenticity",
         "title": "CWE-345",
-        "description": "Memory content not integrity-verified before storage or retrieval"
+        "description": "Memory content not integrity-verified before storage or retrieval",
+        "kind": "weakness"
       },
       {
         "control_id": "Multiple Releases of Same Resource or Handle",
         "title": "CWE-1341",
-        "description": "Memory TTL not enforced � entries persist beyond intended lifetime"
+        "description": "Memory TTL not enforced � entries persist beyond intended lifetime",
+        "kind": "weakness"
       },
       {
         "control_id": "Improper Authentication",
         "title": "CWE-287",
-        "description": "A2A channels without mutual authentication � agents accept messages from any sender"
+        "description": "A2A channels without mutual authentication � agents accept messages from any sender",
+        "kind": "weakness"
       },
       {
         "control_id": "Authentication Bypass by Capture-replay",
         "title": "CWE-294",
-        "description": "Replay attacks on A2A channels without nonce-based replay protection"
+        "description": "Replay attacks on A2A channels without nonce-based replay protection",
+        "kind": "weakness"
       },
       {
         "control_id": "Cleartext Transmission of Sensitive Information",
         "title": "CWE-319",
-        "description": "A2A messages containing sensitive context transmitted without encryption"
+        "description": "A2A messages containing sensitive context transmitted without encryption",
+        "kind": "weakness"
       },
       {
         "control_id": "Origin Validation Error",
         "title": "CWE-346",
-        "description": "Agent does not verify that A2A messages originate from the claimed sender; User cannot determine whether advice originates from AI or human � no origin verification"
+        "description": "Agent does not verify that A2A messages originate from the claimed sender; User cannot determine whether advice originates from AI or human � no origin verification",
+        "kind": "weakness"
       },
       {
         "control_id": "Improper Enforcement of Message Integrity During Transmission",
         "title": "CWE-924",
-        "description": "A2A message integrity not cryptographically verified"
+        "description": "A2A message integrity not cryptographically verified",
+        "kind": "weakness"
       },
       {
         "control_id": "Uncontrolled Resource Consumption",
         "title": "CWE-400",
-        "description": "Agent resource consumption not bounded � enables exhaustion propagation across cluster"
+        "description": "Agent resource consumption not bounded � enables exhaustion propagation across cluster",
+        "kind": "weakness"
       },
       {
         "control_id": "Improper Check or Handling of Exceptional Conditions",
         "title": "CWE-703",
-        "description": "Agent failures not caught and handled � exception propagates to downstream agents"
+        "description": "Agent failures not caught and handled � exception propagates to downstream agents",
+        "kind": "weakness"
       },
       {
         "control_id": "Improper Handling of Exceptional Conditions",
         "title": "CWE-755",
-        "description": "Cascade fails because upstream agents do not handle failure conditions gracefully"
+        "description": "Cascade fails because upstream agents do not handle failure conditions gracefully",
+        "kind": "weakness"
       },
       {
         "control_id": "OWASP ReDoS",
         "title": "CWE-730",
-        "description": "Regex-based input processing causing runaway computation propagating through pipeline"
+        "description": "Regex-based input processing causing runaway computation propagating through pipeline",
+        "kind": "weakness"
       },
       {
         "control_id": "Uncontrolled Recursion",
         "title": "CWE-674",
-        "description": "Recursive agent calls without depth limits enabling stack exhaustion cascade"
+        "description": "Recursive agent calls without depth limits enabling stack exhaustion cascade",
+        "kind": "weakness"
       },
       {
         "control_id": "Permissive List of Allowed Inputs",
         "title": "CWE-183",
-        "description": "System accepts human-like agent output without disclosure requirements"
+        "description": "System accepts human-like agent output without disclosure requirements",
+        "kind": "weakness"
       },
       {
         "control_id": "User Interface Misrepresentation of Critical Information",
         "title": "CWE-451",
-        "description": "Agent advisory output not clearly distinguished from authoritative system information in UI"
+        "description": "Agent advisory output not clearly distinguished from authoritative system information in UI",
+        "kind": "weakness"
       },
       {
         "control_id": "Improper Verification of Source of a Communication Channel",
         "title": "CWE-940",
-        "description": "User cannot verify the agent is operating under its stated configuration"
+        "description": "User cannot verify the agent is operating under its stated configuration",
+        "kind": "weakness"
       },
       {
         "control_id": "Exposure of Sensitive Information to an Unauthorised Actor",
         "title": "CWE-200",
-        "description": "System prompt and agent configuration not protected � extraction enables targeted trust exploitation"
+        "description": "System prompt and agent configuration not protected � extraction enables targeted trust exploitation",
+        "kind": "weakness"
       },
       {
         "control_id": "Improper Control of Interaction Frequency",
         "title": "CWE-799",
-        "description": "Rogue agent evades detection by maintaining normal action frequency while biasing recommendations"
+        "description": "Rogue agent evades detection by maintaining normal action frequency while biasing recommendations",
+        "kind": "weakness"
       },
       {
         "control_id": "Incorrect Default Permissions",
         "title": "CWE-276",
-        "description": "Agent deployed with broader permissions than needed � amplifies rogue blast radius"
+        "description": "Agent deployed with broader permissions than needed � amplifies rogue blast radius",
+        "kind": "weakness"
       },
       {
         "control_id": "CWE-200",
-        "title": "CWE-200"
+        "title": "CWE-200",
+        "kind": "weakness"
       },
       {
         "control_id": "CWE-359",
-        "title": "CWE-359"
+        "title": "CWE-359",
+        "kind": "weakness"
       },
       {
         "control_id": "CWE-312",
-        "title": "CWE-312"
+        "title": "CWE-312",
+        "kind": "weakness"
       },
       {
         "control_id": "CWE-798",
-        "title": "CWE-798"
+        "title": "CWE-798",
+        "kind": "weakness"
       },
       {
         "control_id": "CWE-522",
-        "title": "CWE-522"
+        "title": "CWE-522",
+        "kind": "weakness"
       },
       {
         "control_id": "CWE-668",
-        "title": "CWE-668"
+        "title": "CWE-668",
+        "kind": "weakness"
       },
       {
         "control_id": "CWE-284",
-        "title": "CWE-284"
+        "title": "CWE-284",
+        "kind": "weakness"
       },
       {
         "control_id": "CWE-345",
-        "title": "CWE-345"
+        "title": "CWE-345",
+        "kind": "weakness"
       },
       {
         "control_id": "CWE-346",
-        "title": "CWE-346"
+        "title": "CWE-346",
+        "kind": "weakness"
       },
       {
         "control_id": "CWE-20",
-        "title": "CWE-20"
+        "title": "CWE-20",
+        "kind": "weakness"
       },
       {
         "control_id": "CWE-116",
-        "title": "CWE-116"
+        "title": "CWE-116",
+        "kind": "weakness"
       },
       {
         "control_id": "CWE-74",
-        "title": "CWE-74"
+        "title": "CWE-74",
+        "kind": "weakness"
       },
       {
         "control_id": "CWE-269",
-        "title": "CWE-269"
+        "title": "CWE-269",
+        "kind": "weakness"
       },
       {
         "control_id": "CWE-602",
-        "title": "CWE-602"
+        "title": "CWE-602",
+        "kind": "weakness"
       },
       {
         "control_id": "CWE-213",
-        "title": "CWE-213"
+        "title": "CWE-213",
+        "kind": "weakness"
       },
       {
         "control_id": "CWE-778",
-        "title": "CWE-778"
+        "title": "CWE-778",
+        "kind": "weakness"
       },
       {
         "control_id": "CWE-201",
-        "title": "CWE-201"
+        "title": "CWE-201",
+        "kind": "weakness"
       },
       {
         "control_id": "CWE-330",
-        "title": "CWE-330"
+        "title": "CWE-330",
+        "kind": "weakness"
       },
       {
         "control_id": "CWE-488",
-        "title": "CWE-488"
+        "title": "CWE-488",
+        "kind": "weakness"
       },
       {
         "control_id": "CWE-89",
-        "title": "CWE-89"
+        "title": "CWE-89",
+        "kind": "weakness"
       },
       {
         "control_id": "CWE-327",
-        "title": "CWE-327"
+        "title": "CWE-327",
+        "kind": "weakness"
       },
       {
         "control_id": "CWE-532",
-        "title": "CWE-532"
+        "title": "CWE-532",
+        "kind": "weakness"
       },
       {
         "control_id": "CWE-285",
-        "title": "CWE-285"
+        "title": "CWE-285",
+        "kind": "weakness"
       },
       {
         "control_id": "CWE-272",
-        "title": "CWE-272"
+        "title": "CWE-272",
+        "kind": "weakness"
       },
       {
         "control_id": "CWE-400",
-        "title": "CWE-400"
+        "title": "CWE-400",
+        "kind": "weakness"
       },
       {
         "control_id": "CWE-770",
-        "title": "CWE-770"
+        "title": "CWE-770",
+        "kind": "weakness"
       },
       {
         "control_id": "CWE-77",
-        "title": "CWE-77"
+        "title": "CWE-77",
+        "kind": "weakness"
       },
       {
         "control_id": "CWE-494",
-        "title": "CWE-494"
+        "title": "CWE-494",
+        "kind": "weakness"
       },
       {
         "control_id": "CWE-1357",
-        "title": "CWE-1357"
+        "title": "CWE-1357",
+        "kind": "weakness"
       },
       {
         "control_id": "CWE-79",
-        "title": "CWE-79"
+        "title": "CWE-79",
+        "kind": "weakness"
       },
       {
         "control_id": "CWE-78",
-        "title": "CWE-78"
+        "title": "CWE-78",
+        "kind": "weakness"
       },
       {
         "control_id": "CWE-215",
-        "title": "CWE-215"
+        "title": "CWE-215",
+        "kind": "weakness"
       },
       {
         "control_id": "CWE-1021",
-        "title": "CWE-1021"
+        "title": "CWE-1021",
+        "kind": "weakness"
       },
       {
         "control_id": "CWE-799",
-        "title": "CWE-799"
+        "title": "CWE-799",
+        "kind": "weakness"
       }
     ]
   },
@@ -1137,186 +1338,213 @@ window.CROSSWALK_FRAMEWORKS = [
         "title": "Governance and organisation",
         "description": "Financial entities shall have an internal governance and control framework ensuring effective and prudent management of ICT risk.",
         "parent": null,
-        "function": "Governance"
+        "function": "Governance",
+        "kind": "control"
       },
       {
         "control_id": "Art. 6",
         "title": "ICT risk management framework",
         "description": "Financial entities shall have a sound, comprehensive and well-documented ICT risk management framework.",
         "parent": null,
-        "function": "Risk Management"
+        "function": "Risk Management",
+        "kind": "control"
       },
       {
         "control_id": "Art. 7",
         "title": "ICT systems, protocols and tools",
         "description": "Financial entities shall use and maintain updated ICT systems, protocols, and tools that are appropriate, reliable, and have sufficient capacity.",
         "parent": null,
-        "function": "Risk Management"
+        "function": "Risk Management",
+        "kind": "control"
       },
       {
         "control_id": "Art. 8",
         "title": "Identification",
         "description": "Financial entities shall identify, classify and adequately document all ICT-supported business functions, roles, information assets, and ICT assets.",
         "parent": null,
-        "function": "Risk Management"
+        "function": "Risk Management",
+        "kind": "control"
       },
       {
         "control_id": "Art. 9",
         "title": "Protection and prevention",
         "description": "Financial entities shall continuously monitor and control the security and functioning of ICT systems.",
         "parent": null,
-        "function": "Risk Management"
+        "function": "Risk Management",
+        "kind": "control"
       },
       {
         "control_id": "Art. 10",
         "title": "Detection",
         "description": "Financial entities shall have mechanisms to promptly detect anomalous activities, network performance issues, and ICT-related incidents.",
         "parent": null,
-        "function": "Risk Management"
+        "function": "Risk Management",
+        "kind": "control"
       },
       {
         "control_id": "Art. 11",
         "title": "Response and recovery",
         "description": "Financial entities shall put in place a comprehensive ICT business continuity policy.",
         "parent": null,
-        "function": "Risk Management"
+        "function": "Risk Management",
+        "kind": "control"
       },
       {
         "control_id": "Art. 12",
         "title": "Backup policies and recovery methods",
         "description": "Maintain backup policies specifying scope, frequency, and recovery time objectives.",
         "parent": null,
-        "function": "Risk Management"
+        "function": "Risk Management",
+        "kind": "control"
       },
       {
         "control_id": "Art. 13",
         "title": "Learning and evolving",
         "description": "Financial entities shall gather information on vulnerabilities and cyber threats, ICT-related incidents, and shall conduct post-incident reviews.",
         "parent": null,
-        "function": "Risk Management"
+        "function": "Risk Management",
+        "kind": "control"
       },
       {
         "control_id": "Art. 14",
         "title": "Communication",
         "description": "Financial entities shall have crisis communication plans for responsible disclosure of ICT-related incidents.",
         "parent": null,
-        "function": "Risk Management"
+        "function": "Risk Management",
+        "kind": "control"
       },
       {
         "control_id": "Art. 15",
         "title": "Simplified ICT risk management framework",
         "description": "Simplified requirements for entities that are microenterprises or subject to simplified obligations.",
         "parent": null,
-        "function": "Risk Management"
+        "function": "Risk Management",
+        "kind": "control"
       },
       {
         "control_id": "Art. 17",
         "title": "ICT-related incident management process",
         "description": "Financial entities shall define, establish and implement an ICT-related incident management process.",
         "parent": null,
-        "function": "Incident Management"
+        "function": "Incident Management",
+        "kind": "control"
       },
       {
         "control_id": "Art. 18",
         "title": "Classification of ICT-related incidents",
         "description": "Financial entities shall classify ICT-related incidents based on specified criteria.",
         "parent": null,
-        "function": "Incident Management"
+        "function": "Incident Management",
+        "kind": "control"
       },
       {
         "control_id": "Art. 19",
         "title": "Reporting of major ICT-related incidents",
         "description": "Financial entities shall report major ICT-related incidents to the relevant competent authority.",
         "parent": null,
-        "function": "Incident Management"
+        "function": "Incident Management",
+        "kind": "control"
       },
       {
         "control_id": "Art. 20",
         "title": "Harmonisation of reporting content and templates",
         "description": "ESAs shall develop common reporting templates for incident reports.",
         "parent": null,
-        "function": "Incident Management"
+        "function": "Incident Management",
+        "kind": "control"
       },
       {
         "control_id": "Art. 24",
         "title": "General requirements for digital operational resilience testing",
         "description": "Financial entities shall establish and maintain a comprehensive digital operational resilience testing programme.",
         "parent": null,
-        "function": "Resilience Testing"
+        "function": "Resilience Testing",
+        "kind": "control"
       },
       {
         "control_id": "Art. 25",
         "title": "Testing of ICT tools and systems",
         "description": "Testing programme shall include a range of assessments, tests, methodologies, practices and tools.",
         "parent": null,
-        "function": "Resilience Testing"
+        "function": "Resilience Testing",
+        "kind": "control"
       },
       {
         "control_id": "Art. 26",
         "title": "Advanced testing by means of TLPT",
         "description": "Threat-led penetration testing at least every 3 years for entities identified for advanced testing.",
         "parent": null,
-        "function": "Resilience Testing"
+        "function": "Resilience Testing",
+        "kind": "control"
       },
       {
         "control_id": "Art. 28",
         "title": "General principles for ICT third-party risk management",
         "description": "Financial entities shall manage ICT third-party risk as an integral component of ICT risk.",
         "parent": null,
-        "function": "Third-Party Risk"
+        "function": "Third-Party Risk",
+        "kind": "control"
       },
       {
         "control_id": "Art. 29",
         "title": "Preliminary assessment of ICT concentration risk",
         "description": "Assess ICT concentration risks before entering into contractual arrangements.",
         "parent": null,
-        "function": "Third-Party Risk"
+        "function": "Third-Party Risk",
+        "kind": "control"
       },
       {
         "control_id": "Art. 30",
         "title": "Key contractual provisions",
         "description": "Contractual arrangements for ICT services shall include specified provisions.",
         "parent": null,
-        "function": "Third-Party Risk"
+        "function": "Third-Party Risk",
+        "kind": "control"
       },
       {
         "control_id": "Art. 31",
         "title": "Designation of critical ICT third-party service providers",
         "description": "ESAs shall designate critical ICT third-party service providers.",
         "parent": null,
-        "function": "Third-Party Risk"
+        "function": "Third-Party Risk",
+        "kind": "control"
       },
       {
         "control_id": "Art. 24–27",
         "title": "Resilience Testing — agent hijacking scenarios",
-        "description": "Include agent goal hijacking in threat-led penetration testing; cover injection through user prompts, tool outputs, memory stores, and inter-agent messages; Include agent access control bypass in resilience testing; verify that agents cannot exceed defined permission boundaries under adversarial conditions; Include agent privilege escalation scenarios in threat-led penetration testing; test for escalation through tool chaining and inter-agent trust"
+        "description": "Include agent goal hijacking in threat-led penetration testing; cover injection through user prompts, tool outputs, memory stores, and inter-agent messages; Include agent access control bypass in resilience testing; verify that agents cannot exceed defined permission boundaries under adversarial conditions; Include agent privilege escalation scenarios in threat-led penetration testing; test for escalation through tool chaining and inter-agent trust",
+        "kind": "control"
       },
       {
         "control_id": "Art. 45",
         "title": "Information Sharing — agent attack intelligence",
-        "description": "Share agent goal hijacking threat intelligence with sector peers through DORA information sharing arrangements; Participate in information sharing arrangements for third-party AI data risks; share threat intelligence on data provider compromises; Share prompt injection threat intelligence with sector peers through DORA information sharing arrangements"
+        "description": "Share agent goal hijacking threat intelligence with sector peers through DORA information sharing arrangements; Participate in information sharing arrangements for third-party AI data risks; share threat intelligence on data provider compromises; Share prompt injection threat intelligence with sector peers through DORA information sharing arrangements",
+        "kind": "control"
       },
       {
         "control_id": "Art. 5–7",
         "title": "ICT Risk Management — agent permission governance",
-        "description": "Include agent access control policies in ICT risk management framework; define acceptable permission scopes per agent role and financial function; Include agent supply chain risk in the ICT risk management framework; define policies for agent component sourcing, vetting, and lifecycle management; Include tool chaining risk in ICT risk management framework; define policies for permitted tool combinations and escalation requirements for novel tool chains"
+        "description": "Include agent access control policies in ICT risk management framework; define acceptable permission scopes per agent role and financial function; Include agent supply chain risk in the ICT risk management framework; define policies for agent component sourcing, vetting, and lifecycle management; Include tool chaining risk in ICT risk management framework; define policies for permitted tool combinations and escalation requirements for novel tool chains",
+        "kind": "control"
       },
       {
         "control_id": "Art. 17–23",
         "title": "ICT Incident Management — escalation incident reporting",
-        "description": "Classify agent privilege escalation as an ICT-related incident; assess impact on financial systems and report per DORA incident classification criteria; Classify uncontrolled code execution events as ICT-related incidents; assess impact on financial systems and report per DORA criteria; Classify material AI data access violations as ICT-related incidents; report to competent authorities per DORA incident classification and reporting requirements"
+        "description": "Classify agent privilege escalation as an ICT-related incident; assess impact on financial systems and report per DORA incident classification criteria; Classify uncontrolled code execution events as ICT-related incidents; assess impact on financial systems and report per DORA criteria; Classify material AI data access violations as ICT-related incidents; report to competent authorities per DORA incident classification and reporting requirements",
+        "kind": "control"
       },
       {
         "control_id": "Art. 28–44",
         "title": "Third-Party Risk — agent component vendor oversight",
-        "description": "Include agent tool vendors, plugin providers, MCP server maintainers, and model providers in third-party ICT risk oversight with due diligence and contractual controls; Include all agent external dependencies — model APIs, tool endpoints, data sources — in third-party ICT risk management with availability and integrity requirements; Include AI tools and services in third-party ICT risk management; conduct due diligence before approval; monitor ongoing compliance with financial sector requirements"
+        "description": "Include agent tool vendors, plugin providers, MCP server maintainers, and model providers in third-party ICT risk oversight with due diligence and contractual controls; Include all agent external dependencies — model APIs, tool endpoints, data sources — in third-party ICT risk management with availability and integrity requirements; Include AI tools and services in third-party ICT risk management; conduct due diligence before approval; monitor ongoing compliance with financial sector requirements",
+        "kind": "control"
       }
     ],
     "changelog": [
       {
         "date": "2026-04-09",
         "change": "Initial seed — 22 key articles from Digital Operational Resilience Act",
-        "author": "emmanuelgjr"
+        "author": "OWASP GenAI Data Security Initiative"
       }
     ]
   },
@@ -1335,37 +1563,44 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "L2",
         "title": "AI System Integrity (ASI)",
-        "description": "Agent applications tested against goal hijack before deployment — direct and indirect injection across all input channels validated as part of AI system integrity verification; Goal hijack documented in AI risk register — risk owner, treatment controls, review cadence; Tool permissions defined per agent role — scope enforced at the framework layer; irreversibility controls prevent unrecoverable actions"
+        "description": "Agent applications tested against goal hijack before deployment — direct and indirect injection across all input channels validated as part of AI system integrity verification; Goal hijack documented in AI risk register — risk owner, treatment controls, review cadence; Tool permissions defined per agent role — scope enforced at the framework layer; irreversibility controls prevent unrecoverable actions",
+        "kind": "layer"
       },
       {
         "control_id": "MON",
         "title": "Monitoring and Detection",
-        "description": "Runtime monitoring for goal-hijack indicators across all agent input channels — AI-specific anomaly detection for instruction-override patterns; All agent tool invocations logged — data volumes, destination, and parameter patterns monitored for anomalies; All agent credential operations logged — anomaly detection for scope expansion or after-session access"
+        "description": "Runtime monitoring for goal-hijack indicators across all agent input channels — AI-specific anomaly detection for instruction-override patterns; All agent tool invocations logged — data volumes, destination, and parameter patterns monitored for anomalies; All agent credential operations logged — anomaly detection for scope expansion or after-session access",
+        "kind": "control"
       },
       {
         "control_id": "L1",
         "title": "General ICT — Secure Development",
-        "description": "Input validation and context separation as secure development requirements for all agent integrations; Agent tool credentials issued with least-privilege — no unnecessary tool permissions granted; Short-lived tokens for all agent interactions — credential TTL enforced at the IAM layer"
+        "description": "Input validation and context separation as secure development requirements for all agent integrations; Agent tool credentials issued with least-privilege — no unnecessary tool permissions granted; Short-lived tokens for all agent interactions — credential TTL enforced at the IAM layer",
+        "kind": "layer"
       },
       {
         "control_id": "SCS",
         "title": "Supply Chain Security",
-        "description": "All tool integrations assessed as supply chain components — integrity verification, vendor security review before integration; Agentic component vendors assessed — agent frameworks, tool registries, MCP servers, model providers all subject to SCS practices; All external training datasets treated as untrusted supply chain components — provenance, quality review, and integrity verification before use"
+        "description": "All tool integrations assessed as supply chain components — integrity verification, vendor security review before integration; Agentic component vendors assessed — agent frameworks, tool registries, MCP servers, model providers all subject to SCS practices; All external training datasets treated as untrusted supply chain components — provenance, quality review, and integrity verification before use",
+        "kind": "control"
       },
       {
         "control_id": "IRS",
         "title": "Incident Response",
-        "description": "AI incident response plan covers cascading agent failures — circuit breaker activation, agent isolation, service recovery procedures; AI incident response plan includes regulatory notification procedures — NIS2 Article 23 significant incident reporting, GDPR breach notification; AI incident response plan covers availability failures — model rollback procedure, RAG corpus recovery, embedding store restoration"
+        "description": "AI incident response plan covers cascading agent failures — circuit breaker activation, agent isolation, service recovery procedures; AI incident response plan includes regulatory notification procedures — NIS2 Article 23 significant incident reporting, GDPR breach notification; AI incident response plan covers availability failures — model rollback procedure, RAG corpus recovery, embedding store restoration",
+        "kind": "control"
       },
       {
         "control_id": "GOV",
         "title": "Governance and Risk",
-        "description": "All applicable regulations identified and mapped to AI controls — EU AI Act, GDPR, NIS2, sector-specific obligations tracked in AI governance programme"
+        "description": "All applicable regulations identified and mapped to AI controls — EU AI Act, GDPR, NIS2, sector-specific obligations tracked in AI governance programme",
+        "kind": "control"
       },
       {
         "control_id": "L3",
         "title": "L3 — Sector-specific",
-        "description": "For NIS2 essential entities and EU AI Act Annex III deployments — disinformation risk treated as a significant incident category"
+        "description": "For NIS2 essential entities and EU AI Act Annex III deployments — disinformation risk treated as a significant incident category",
+        "kind": "layer"
       }
     ]
   },
@@ -1386,385 +1621,439 @@ window.CROSSWALK_FRAMEWORKS = [
         "title": "Chapter I — Transparency",
         "description": "Transparency obligations for all GPAI model providers under Article 53 of the AI Act.",
         "parent": null,
-        "function": "Transparency"
+        "function": "Transparency",
+        "kind": "control"
       },
       {
         "control_id": "CoP-I-C1",
         "title": "Commitment 1 — Model documentation and information",
         "description": "Draw up and keep up-to-date technical documentation and provide relevant information to downstream providers and the AI Office.",
         "parent": "CoP-I",
-        "function": "Transparency"
+        "function": "Transparency",
+        "kind": "control"
       },
       {
         "control_id": "CoP-I-C1-M1.1",
         "title": "Drawing up and maintaining model documentation",
         "description": "Draw up and keep up-to-date model documentation per the Model Documentation Form, covering architecture, training data, evaluation, and known limitations.",
         "parent": "CoP-I-C1",
-        "function": "Transparency"
+        "function": "Transparency",
+        "kind": "control"
       },
       {
         "control_id": "CoP-I-C1-M1.2",
         "title": "Providing information to downstream providers and AI Office",
         "description": "Provide relevant information and documentation to downstream providers and the AI Office within 14 days of request.",
         "parent": "CoP-I-C1",
-        "function": "Transparency"
+        "function": "Transparency",
+        "kind": "control"
       },
       {
         "control_id": "CoP-I-C1-M1.3",
         "title": "Quality, integrity, and security of information",
         "description": "Ensure that documentation and information provided is accurate, complete, up-to-date, and protected against unauthorized modification.",
         "parent": "CoP-I-C1",
-        "function": "Transparency"
+        "function": "Transparency",
+        "kind": "control"
       },
       {
         "control_id": "CoP-II",
         "title": "Chapter II — Copyright",
         "description": "Copyright compliance obligations for all GPAI model providers under Article 53(1)(c) of the AI Act.",
         "parent": null,
-        "function": "Copyright"
+        "function": "Copyright",
+        "kind": "control"
       },
       {
         "control_id": "CoP-II-C1",
         "title": "Commitment 1 — Copyright policy and compliance",
         "description": "Implement copyright compliance measures covering policy, lawful access, rights reservations, output safeguards, and rightholder engagement.",
         "parent": "CoP-II",
-        "function": "Copyright"
+        "function": "Copyright",
+        "kind": "control"
       },
       {
         "control_id": "CoP-II-C1-M1.1",
         "title": "Copyright policy",
         "description": "Draw up, keep up-to-date, and implement a copyright policy addressing the use of copyrighted content in training data.",
         "parent": "CoP-II-C1",
-        "function": "Copyright"
+        "function": "Copyright",
+        "kind": "control"
       },
       {
         "control_id": "CoP-II-C1-M1.2",
         "title": "Lawful access to copyright-protected content",
         "description": "Reproduce and extract only lawfully accessible copyright-protected content for training purposes.",
         "parent": "CoP-II-C1",
-        "function": "Copyright"
+        "function": "Copyright",
+        "kind": "control"
       },
       {
         "control_id": "CoP-II-C1-M1.3",
         "title": "Rights reservations compliance",
         "description": "Identify and comply with rights reservations expressed through robots.txt, machine-readable protocols, and other mechanisms.",
         "parent": "CoP-II-C1",
-        "function": "Copyright"
+        "function": "Copyright",
+        "kind": "control"
       },
       {
         "control_id": "CoP-II-C1-M1.4",
         "title": "Copyright-infringing output mitigation",
         "description": "Implement technical safeguards to mitigate generation of copyright-infringing outputs.",
         "parent": "CoP-II-C1",
-        "function": "Copyright"
+        "function": "Copyright",
+        "kind": "control"
       },
       {
         "control_id": "CoP-II-C1-M1.5",
         "title": "Rightholder point of contact",
         "description": "Designate a point of contact and enable complaints from rightholders regarding copyright concerns.",
         "parent": "CoP-II-C1",
-        "function": "Copyright"
+        "function": "Copyright",
+        "kind": "control"
       },
       {
         "control_id": "CoP-III",
         "title": "Chapter III — Safety and Security",
         "description": "Safety and security obligations for providers of GPAI models with systemic risk under Article 55 of the AI Act.",
         "parent": null,
-        "function": "Safety & Security"
+        "function": "Safety & Security",
+        "kind": "control"
       },
       {
         "control_id": "CoP-III-C1",
         "title": "Commitment 1 — Safety and security framework",
         "description": "Establish, implement, and maintain a safety and security framework for identifying, assessing, and mitigating systemic risks.",
         "parent": "CoP-III",
-        "function": "Safety & Security"
+        "function": "Safety & Security",
+        "kind": "control"
       },
       {
         "control_id": "CoP-III-C1-M1.1",
         "title": "Creating the safety and security framework",
         "description": "Create a documented safety and security framework covering risk identification, analysis, mitigation, and governance for GPAI models with systemic risk.",
         "parent": "CoP-III-C1",
-        "function": "Safety & Security"
+        "function": "Safety & Security",
+        "kind": "control"
       },
       {
         "control_id": "CoP-III-C1-M1.2",
         "title": "Implementing the framework",
         "description": "Implement the safety and security framework across the model lifecycle including development, deployment, and post-market phases.",
         "parent": "CoP-III-C1",
-        "function": "Safety & Security"
+        "function": "Safety & Security",
+        "kind": "control"
       },
       {
         "control_id": "CoP-III-C1-M1.3",
         "title": "Updating the framework",
         "description": "Review and update the safety and security framework at least every 12 months and upon material changes to the risk landscape.",
         "parent": "CoP-III-C1",
-        "function": "Safety & Security"
+        "function": "Safety & Security",
+        "kind": "control"
       },
       {
         "control_id": "CoP-III-C1-M1.4",
         "title": "Framework notifications to AI Office",
         "description": "Notify the AI Office of the safety and security framework and material updates.",
         "parent": "CoP-III-C1",
-        "function": "Safety & Security"
+        "function": "Safety & Security",
+        "kind": "control"
       },
       {
         "control_id": "CoP-III-C2",
         "title": "Commitment 2 — Systemic risk identification",
         "description": "Identify systemic risks that may arise from the development, deployment, or use of GPAI models.",
         "parent": "CoP-III",
-        "function": "Safety & Security"
+        "function": "Safety & Security",
+        "kind": "control"
       },
       {
         "control_id": "CoP-III-C2-M2.1",
         "title": "Systemic risk identification process",
         "description": "Establish and execute a structured process for identifying systemic risks across specified categories (CBRN, CSAM, NCII, disinformation) and additional risk domains.",
         "parent": "CoP-III-C2",
-        "function": "Safety & Security"
+        "function": "Safety & Security",
+        "kind": "control"
       },
       {
         "control_id": "CoP-III-C2-M2.2",
         "title": "Systemic risk scenarios",
         "description": "Develop concrete systemic risk scenarios describing plausible pathways from model capabilities to societal-level harms.",
         "parent": "CoP-III-C2",
-        "function": "Safety & Security"
+        "function": "Safety & Security",
+        "kind": "control"
       },
       {
         "control_id": "CoP-III-C3",
         "title": "Commitment 3 — Systemic risk analysis",
         "description": "Analyse identified systemic risks using state-of-the-art methods including model evaluations, red-teaming, and simulation.",
         "parent": "CoP-III",
-        "function": "Safety & Security"
+        "function": "Safety & Security",
+        "kind": "control"
       },
       {
         "control_id": "CoP-III-C3-M3.1",
         "title": "Model-independent information gathering",
         "description": "Gather model-independent information relevant to systemic risk analysis including threat landscape, misuse patterns, and deployment context.",
         "parent": "CoP-III-C3",
-        "function": "Safety & Security"
+        "function": "Safety & Security",
+        "kind": "control"
       },
       {
         "control_id": "CoP-III-C3-M3.2",
         "title": "Model evaluations",
         "description": "Conduct model evaluations using benchmarks, task-based tests, red-teaming, human uplift evaluations, and simulation-based approaches.",
         "parent": "CoP-III-C3",
-        "function": "Safety & Security"
+        "function": "Safety & Security",
+        "kind": "control"
       },
       {
         "control_id": "CoP-III-C3-M3.3",
         "title": "Systemic risk modelling",
         "description": "Model systemic risks considering probability, severity, reversibility, scale, and cascading effects.",
         "parent": "CoP-III-C3",
-        "function": "Safety & Security"
+        "function": "Safety & Security",
+        "kind": "control"
       },
       {
         "control_id": "CoP-III-C3-M3.4",
         "title": "Systemic risk estimation",
         "description": "Estimate probability and severity of identified systemic risks using quantitative and qualitative methods.",
         "parent": "CoP-III-C3",
-        "function": "Safety & Security"
+        "function": "Safety & Security",
+        "kind": "control"
       },
       {
         "control_id": "CoP-III-C3-M3.5",
         "title": "Post-market monitoring and external evaluation",
         "description": "Implement continuous post-market monitoring and provide access to independent external evaluators for systemic risk assessment.",
         "parent": "CoP-III-C3",
-        "function": "Safety & Security"
+        "function": "Safety & Security",
+        "kind": "control"
       },
       {
         "control_id": "CoP-III-C4",
         "title": "Commitment 4 — Systemic risk acceptance determination",
         "description": "Determine whether identified systemic risks are acceptable based on defined criteria and tiers.",
         "parent": "CoP-III",
-        "function": "Safety & Security"
+        "function": "Safety & Security",
+        "kind": "control"
       },
       {
         "control_id": "CoP-III-C4-M4.1",
         "title": "Risk acceptance criteria and tiers",
         "description": "Define systemic risk acceptance criteria and establish risk tiers (acceptable, conditionally acceptable, unacceptable) with clear thresholds.",
         "parent": "CoP-III-C4",
-        "function": "Safety & Security"
+        "function": "Safety & Security",
+        "kind": "control"
       },
       {
         "control_id": "CoP-III-C4-M4.2",
         "title": "Market placement decisions",
         "description": "Make market placement, restriction, withdrawal, or recall decisions based on systemic risk acceptability assessment.",
         "parent": "CoP-III-C4",
-        "function": "Safety & Security"
+        "function": "Safety & Security",
+        "kind": "control"
       },
       {
         "control_id": "CoP-III-C5",
         "title": "Commitment 5 — Safety mitigations",
         "description": "Implement appropriate and adversarially robust safety mitigations for identified systemic risks.",
         "parent": "CoP-III",
-        "function": "Safety & Security"
+        "function": "Safety & Security",
+        "kind": "control"
       },
       {
         "control_id": "CoP-III-C5-M5.1",
         "title": "Safety mitigation implementation",
         "description": "Implement appropriate safety mitigations including training data filtering, input/output safeguards, fine-tuning, access staging, and tooling controls proportionate to identified risks.",
         "parent": "CoP-III-C5",
-        "function": "Safety & Security"
+        "function": "Safety & Security",
+        "kind": "control"
       },
       {
         "control_id": "CoP-III-C6",
         "title": "Commitment 6 — Security mitigations",
         "description": "Implement appropriate cybersecurity protections for GPAI models with systemic risk.",
         "parent": "CoP-III",
-        "function": "Safety & Security"
+        "function": "Safety & Security",
+        "kind": "control"
       },
       {
         "control_id": "CoP-III-C6-M6.1",
         "title": "Security goal and threat actor definition",
         "description": "Define security goals and identify relevant threat actors including nation-states, cybercriminals, insiders, and automated adversaries.",
         "parent": "CoP-III-C6",
-        "function": "Safety & Security"
+        "function": "Safety & Security",
+        "kind": "control"
       },
       {
         "control_id": "CoP-III-C6-M6.2",
         "title": "Security mitigation implementation",
         "description": "Implement security mitigations including access controls, model weight protection, infrastructure hardening, incident response, and supply chain security.",
         "parent": "CoP-III-C6",
-        "function": "Safety & Security"
+        "function": "Safety & Security",
+        "kind": "control"
       },
       {
         "control_id": "CoP-III-C7",
         "title": "Commitment 7 — Safety and security model reports",
         "description": "Document and report on systemic risk identification, analysis, mitigation, and ongoing monitoring.",
         "parent": "CoP-III",
-        "function": "Safety & Security"
+        "function": "Safety & Security",
+        "kind": "control"
       },
       {
         "control_id": "CoP-III-C7-M7.1",
         "title": "Model description and behaviour documentation",
         "description": "Document model description, capabilities, limitations, and observed behaviour relevant to systemic risk.",
         "parent": "CoP-III-C7",
-        "function": "Safety & Security"
+        "function": "Safety & Security",
+        "kind": "control"
       },
       {
         "control_id": "CoP-III-C7-M7.2",
         "title": "Risk justification for market placement",
         "description": "Document reasons for proceeding with market placement despite identified systemic risks, including risk-benefit analysis.",
         "parent": "CoP-III-C7",
-        "function": "Safety & Security"
+        "function": "Safety & Security",
+        "kind": "control"
       },
       {
         "control_id": "CoP-III-C7-M7.3",
         "title": "Systemic risk documentation",
         "description": "Document systemic risk identification, analysis results, mitigation measures applied, and residual risk assessment.",
         "parent": "CoP-III-C7",
-        "function": "Safety & Security"
+        "function": "Safety & Security",
+        "kind": "control"
       },
       {
         "control_id": "CoP-III-C7-M7.4",
         "title": "External evaluator reports",
         "description": "Incorporate and document findings from independent external evaluators in model reports.",
         "parent": "CoP-III-C7",
-        "function": "Safety & Security"
+        "function": "Safety & Security",
+        "kind": "control"
       },
       {
         "control_id": "CoP-III-C7-M7.5",
         "title": "Material changes to risk landscape",
         "description": "Document and assess material changes to the systemic risk landscape that may affect previously published risk assessments.",
         "parent": "CoP-III-C7",
-        "function": "Safety & Security"
+        "function": "Safety & Security",
+        "kind": "control"
       },
       {
         "control_id": "CoP-III-C7-M7.6",
         "title": "Model report updates",
         "description": "Keep model reports current by updating upon material changes, new risk discoveries, or at minimum every 12 months.",
         "parent": "CoP-III-C7",
-        "function": "Safety & Security"
+        "function": "Safety & Security",
+        "kind": "control"
       },
       {
         "control_id": "CoP-III-C7-M7.7",
         "title": "Model report notifications",
         "description": "Notify the AI Office of model report publications and material updates.",
         "parent": "CoP-III-C7",
-        "function": "Safety & Security"
+        "function": "Safety & Security",
+        "kind": "control"
       },
       {
         "control_id": "CoP-III-C8",
         "title": "Commitment 8 — Responsibility allocation",
         "description": "Allocate clear responsibilities, resources, and promote healthy organizational risk culture for systemic risk management.",
         "parent": "CoP-III",
-        "function": "Safety & Security"
+        "function": "Safety & Security",
+        "kind": "control"
       },
       {
         "control_id": "CoP-III-C8-M8.1",
         "title": "Clear responsibility definition",
         "description": "Define clear roles and responsibilities for systemic risk management across the organization.",
         "parent": "CoP-III-C8",
-        "function": "Safety & Security"
+        "function": "Safety & Security",
+        "kind": "control"
       },
       {
         "control_id": "CoP-III-C8-M8.2",
         "title": "Resource allocation",
         "description": "Allocate appropriate human, technical, and financial resources to systemic risk management activities.",
         "parent": "CoP-III-C8",
-        "function": "Safety & Security"
+        "function": "Safety & Security",
+        "kind": "control"
       },
       {
         "control_id": "CoP-III-C8-M8.3",
         "title": "Organizational risk culture",
         "description": "Promote a healthy organizational risk culture that encourages identification and escalation of systemic risk concerns.",
         "parent": "CoP-III-C8",
-        "function": "Safety & Security"
+        "function": "Safety & Security",
+        "kind": "control"
       },
       {
         "control_id": "CoP-III-C9",
         "title": "Commitment 9 — Serious incident reporting",
         "description": "Track, document, and report serious incidents to the AI Office and national competent authorities.",
         "parent": "CoP-III",
-        "function": "Safety & Security"
+        "function": "Safety & Security",
+        "kind": "control"
       },
       {
         "control_id": "CoP-III-C9-M9.1",
         "title": "Incident tracking and documentation",
         "description": "Establish processes to track and document serious incidents involving GPAI models with systemic risk.",
         "parent": "CoP-III-C9",
-        "function": "Safety & Security"
+        "function": "Safety & Security",
+        "kind": "control"
       },
       {
         "control_id": "CoP-III-C9-M9.2",
         "title": "Incident reporting to authorities",
         "description": "Report serious incidents to the AI Office and relevant national competent authorities with graduated response based on severity.",
         "parent": "CoP-III-C9",
-        "function": "Safety & Security"
+        "function": "Safety & Security",
+        "kind": "control"
       },
       {
         "control_id": "CoP-III-C9-M9.3",
         "title": "Corrective actions",
         "description": "Implement and document corrective actions in response to serious incidents, including model modifications, deployment restrictions, or recalls.",
         "parent": "CoP-III-C9",
-        "function": "Safety & Security"
+        "function": "Safety & Security",
+        "kind": "control"
       },
       {
         "control_id": "CoP-III-C10",
         "title": "Commitment 10 — Additional documentation and transparency",
         "description": "Maintain comprehensive documentation of Safety and Security Chapter implementation and meet public transparency requirements.",
         "parent": "CoP-III",
-        "function": "Safety & Security"
+        "function": "Safety & Security",
+        "kind": "control"
       },
       {
         "control_id": "CoP-III-C10-M10.1",
         "title": "Implementation documentation",
         "description": "Document implementation of all Safety and Security Chapter commitments and measures, including evidence of compliance.",
         "parent": "CoP-III-C10",
-        "function": "Safety & Security"
+        "function": "Safety & Security",
+        "kind": "control"
       },
       {
         "control_id": "CoP-III-C10-M10.2",
         "title": "Public transparency",
         "description": "Publish safety-relevant information proportionate to the model's risk profile, supporting public accountability and downstream provider decision-making.",
         "parent": "CoP-III-C10",
-        "function": "Safety & Security"
+        "function": "Safety & Security",
+        "kind": "control"
       }
     ],
     "changelog": [
       {
         "date": "2026-04-09",
         "change": "Initial seed — 3 chapters, 12 commitments, 55 measures from final CoP (July 2025)",
-        "author": "emmanuelgjr"
+        "author": "OWASP GenAI Data Security Initiative"
       }
     ]
   },
@@ -1785,782 +2074,927 @@ window.CROSSWALK_FRAMEWORKS = [
         "title": "Classification rules for high-risk AI systems",
         "description": "Rules for determining which AI systems are classified as high-risk.",
         "parent": null,
-        "function": "Classification"
+        "function": "Classification",
+        "kind": "control"
       },
       {
         "control_id": "Art. 9",
         "title": "Risk management system",
         "description": "Providers of high-risk AI must implement a risk management system covering all reasonably foreseeable risks.",
         "parent": null,
-        "function": "Risk Management"
+        "function": "Risk Management",
+        "kind": "control"
       },
       {
         "control_id": "Art. 10",
         "title": "Data and data governance",
         "description": "Training, validation and testing data sets shall meet quality criteria including relevance, representativeness, and freedom from errors.",
         "parent": null,
-        "function": "Data Governance"
+        "function": "Data Governance",
+        "kind": "control"
       },
       {
         "control_id": "Art. 11",
         "title": "Technical documentation",
         "description": "Technical documentation shall be drawn up before placing on the market and kept up-to-date.",
         "parent": null,
-        "function": "Documentation"
+        "function": "Documentation",
+        "kind": "control"
       },
       {
         "control_id": "Art. 12",
         "title": "Record-keeping",
         "description": "High-risk AI systems shall allow automatic recording of events (logs).",
         "parent": null,
-        "function": "Logging"
+        "function": "Logging",
+        "kind": "control"
       },
       {
         "control_id": "Art. 13",
         "title": "Transparency and provision of information to deployers",
         "description": "High-risk AI systems shall be designed to ensure sufficient transparency for deployers.",
         "parent": null,
-        "function": "Transparency"
+        "function": "Transparency",
+        "kind": "control"
       },
       {
         "control_id": "Art. 14",
         "title": "Human oversight",
         "description": "High-risk AI systems shall be designed to allow effective oversight by natural persons.",
         "parent": null,
-        "function": "Human Oversight"
+        "function": "Human Oversight",
+        "kind": "control"
       },
       {
         "control_id": "Art. 15",
         "title": "Accuracy, robustness and cybersecurity",
         "description": "High-risk AI systems shall achieve appropriate levels of accuracy, robustness and cybersecurity.",
         "parent": null,
-        "function": "Security"
+        "function": "Security",
+        "kind": "control"
       },
       {
         "control_id": "Art. 16",
         "title": "Obligations of providers of high-risk AI systems",
         "description": "Providers shall ensure compliance with requirements, establish quality management, and maintain documentation.",
         "parent": null,
-        "function": "Provider Obligations"
+        "function": "Provider Obligations",
+        "kind": "control"
       },
       {
         "control_id": "Art. 17",
         "title": "Quality management system",
         "description": "Providers shall put a quality management system in place ensuring compliance with the regulation.",
         "parent": null,
-        "function": "Quality Management"
+        "function": "Quality Management",
+        "kind": "control"
       },
       {
         "control_id": "Art. 25",
         "title": "Responsibilities along the AI value chain",
         "description": "Distributors, importers, deployers, and other third parties have defined responsibilities.",
         "parent": null,
-        "function": "Value Chain"
+        "function": "Value Chain",
+        "kind": "control"
       },
       {
         "control_id": "Art. 26",
         "title": "Obligations of deployers of high-risk AI systems",
         "description": "Deployers shall use AI systems in accordance with instructions, ensure human oversight, and monitor operation.",
         "parent": null,
-        "function": "Deployer Obligations"
+        "function": "Deployer Obligations",
+        "kind": "control"
       },
       {
         "control_id": "Art. 27",
         "title": "Fundamental rights impact assessments",
         "description": "Deployers of high-risk AI shall carry out an assessment of impact on fundamental rights before use.",
         "parent": null,
-        "function": "Impact Assessment"
+        "function": "Impact Assessment",
+        "kind": "control"
       },
       {
         "control_id": "Art. 50",
         "title": "Transparency obligations for certain AI systems",
         "description": "AI systems that interact with people, generate deepfakes, or produce synthetic content must disclose this.",
         "parent": null,
-        "function": "Transparency"
+        "function": "Transparency",
+        "kind": "control"
       },
       {
         "control_id": "Art. 51",
         "title": "Classification of GPAI models as systemic risk",
         "description": "GPAI models with systemic risk are classified based on high-impact capabilities or cumulative compute thresholds.",
         "parent": null,
-        "function": "GPAI"
+        "function": "GPAI",
+        "kind": "control"
       },
       {
         "control_id": "Art. 53",
         "title": "Obligations for providers of GPAI models",
         "description": "All GPAI providers must prepare technical documentation, provide information to downstream providers, comply with copyright, and publish training data summaries.",
         "parent": null,
-        "function": "GPAI"
+        "function": "GPAI",
+        "kind": "control"
       },
       {
         "control_id": "Art. 54",
         "title": "Authorised representatives of GPAI model providers",
         "description": "GPAI providers outside the EU must appoint an authorised representative.",
         "parent": null,
-        "function": "GPAI"
+        "function": "GPAI",
+        "kind": "control"
       },
       {
         "control_id": "Art. 55",
         "title": "Obligations of GPAI models with systemic risk",
         "description": "Providers of GPAI with systemic risk must conduct model evaluations, assess and mitigate systemic risks, track incidents, and ensure adequate cybersecurity.",
         "parent": null,
-        "function": "GPAI"
+        "function": "GPAI",
+        "kind": "control"
       },
       {
         "control_id": "Art. 56",
         "title": "Codes of practice",
         "description": "The AI Office shall encourage development of codes of practice for GPAI obligations.",
         "parent": null,
-        "function": "GPAI"
+        "function": "GPAI",
+        "kind": "control"
       },
       {
         "control_id": "Art. 60",
         "title": "AI regulatory sandboxes",
         "description": "National authorities may establish regulatory sandboxes for development and testing of innovative AI.",
         "parent": null,
-        "function": "Innovation"
+        "function": "Innovation",
+        "kind": "control"
       },
       {
         "control_id": "Art. 62",
         "title": "Reporting of serious incidents",
         "description": "Providers and deployers shall report serious incidents to market surveillance authorities.",
         "parent": null,
-        "function": "Incident Reporting"
+        "function": "Incident Reporting",
+        "kind": "control"
       },
       {
         "control_id": "Art. 71",
         "title": "Post-market monitoring by providers",
         "description": "Providers shall establish a post-market monitoring system proportionate to the AI system.",
         "parent": null,
-        "function": "Post-Market"
+        "function": "Post-Market",
+        "kind": "control"
       },
       {
         "control_id": "Art. 72",
         "title": "Reporting of serious incidents",
         "description": "Detailed requirements for reporting serious incidents involving AI systems.",
         "parent": null,
-        "function": "Incident Reporting"
+        "function": "Incident Reporting",
+        "kind": "control"
       },
       {
         "control_id": "Annex III",
         "title": "High-risk AI systems",
         "description": "List of areas where AI systems are classified as high-risk (biometrics, critical infrastructure, education, employment, essential services, law enforcement, migration, justice).",
         "parent": null,
-        "function": "Classification"
+        "function": "Classification",
+        "kind": "control"
       },
       {
         "control_id": "Annex IV",
         "title": "Technical documentation",
         "description": "Detailed requirements for technical documentation of high-risk AI systems.",
         "parent": null,
-        "function": "Documentation"
+        "function": "Documentation",
+        "kind": "control"
       },
       {
         "control_id": "Goal hijack scenarios identified and mitigated in risk management system",
         "title": "Art. 9 � Risk management",
-        "description": "Agent goal hijack included in Art. 9 risk assessment for every agentic deployment"
+        "description": "Agent goal hijack included in Art. 9 risk assessment for every agentic deployment",
+        "kind": "control"
       },
       {
         "control_id": "Meaningful human oversight over high-risk AI system outputs",
         "title": "Art. 14 � Human oversight",
-        "description": "Agents whose goals can be hijacked and execute autonomously are an Art. 14 failure � human confirmation required before goal-changing actions"
+        "description": "Agents whose goals can be hijacked and execute autonomously are an Art. 14 failure � human confirmation required before goal-changing actions",
+        "kind": "control"
       },
       {
         "control_id": "Technical resilience against adversarial input manipulation",
         "title": "Art. 15 � Accuracy, robustness, cybersecurity",
-        "description": "Input filtering, goal-state verification, and injection detection are Art. 15 technical requirements"
+        "description": "Input filtering, goal-state verification, and injection detection are Art. 15 technical requirements",
+        "kind": "control"
       },
       {
         "control_id": "Tool misuse risks identified and mitigated",
         "title": "Art. 9 � Risk management",
-        "description": "All agent tool integrations assessed in Art. 9 risk management � reversibility classification documented"
+        "description": "All agent tool integrations assessed in Art. 9 risk management � reversibility classification documented",
+        "kind": "control"
       },
       {
         "control_id": "Human oversight over high-risk AI actions",
         "title": "Art. 14 � Human oversight",
-        "description": "Irreversible tool invocations require human confirmation � Art. 14 binding requirement"
+        "description": "Irreversible tool invocations require human confirmation � Art. 14 binding requirement",
+        "kind": "control"
       },
       {
         "control_id": "Cybersecurity measures preventing tool misuse",
         "title": "Art. 15 � Accuracy, robustness, cybersecurity",
-        "description": "Per-tool permission manifests and parameter validation are Art. 15 technical requirements"
+        "description": "Per-tool permission manifests and parameter validation are Art. 15 technical requirements",
+        "kind": "control"
       },
       {
         "control_id": "Credential exposure risk identified and mitigated",
         "title": "Art. 9 � Risk management",
-        "description": "Agent credential lifecycle in Art. 9 risk management � NHI inventory, scope controls, rotation documented"
+        "description": "Agent credential lifecycle in Art. 9 risk management � NHI inventory, scope controls, rotation documented",
+        "kind": "control"
       },
       {
         "control_id": "Cybersecurity measures protecting against credential theft",
         "title": "Art. 15 � Accuracy, robustness, cybersecurity",
-        "description": "Short-lived credentials, JIT access, PKI-backed identities are Art. 15 requirements"
+        "description": "Short-lived credentials, JIT access, PKI-backed identities are Art. 15 requirements",
+        "kind": "control"
       },
       {
         "control_id": "Documented procedures for credential incident response",
         "title": "Art. 17 � Quality management",
-        "description": "Agent credential incident response in quality management system � rotation, containment, lateral movement assessment"
+        "description": "Agent credential incident response in quality management system � rotation, containment, lateral movement assessment",
+        "kind": "control"
       },
       {
         "control_id": "Supply chain risks identified and mitigated",
         "title": "Art. 9 � Risk management",
-        "description": "All agent components in Art. 9 risk management � dynamic runtime components explicitly in scope"
+        "description": "All agent components in Art. 9 risk management � dynamic runtime components explicitly in scope",
+        "kind": "control"
       },
       {
         "control_id": "Quality management includes supply chain controls",
         "title": "Art. 17 � Quality management",
-        "description": "Documented supply chain security procedures � component verification, change management"
+        "description": "Documented supply chain security procedures � component verification, change management",
+        "kind": "control"
       },
       {
         "control_id": "Providers document obligations; deployers verify",
         "title": "Art. 25 � Value chain responsibilities",
-        "description": "Agent tool and MCP server supply chain obligations distributed along value chain"
+        "description": "Agent tool and MCP server supply chain obligations distributed along value chain",
+        "kind": "control"
       },
       {
         "control_id": "Code execution risks identified and mitigated",
         "title": "Art. 9 � Risk management",
-        "description": "Agent code execution capability documented in Art. 9 risk management � sandbox status, permitted operations"
+        "description": "Agent code execution capability documented in Art. 9 risk management � sandbox status, permitted operations",
+        "kind": "control"
       },
       {
         "control_id": "Technical robustness against adversarial code execution",
         "title": "Art. 15 � Accuracy, robustness, cybersecurity",
-        "description": "Sandboxing, input filtering, static analysis are Art. 15 requirements for agents with code execution"
+        "description": "Sandboxing, input filtering, static analysis are Art. 15 requirements for agents with code execution",
+        "kind": "control"
       },
       {
         "control_id": "Post-market monitoring covering code execution incidents",
         "title": "Art. 17 � Quality management",
-        "description": "Code execution anomaly response in quality management system"
+        "description": "Code execution anomaly response in quality management system",
+        "kind": "control"
       },
       {
         "control_id": "Data governance applies to all data influencing AI behaviour � including agent memory",
         "title": "Art. 10 � Data and data governance",
-        "description": "Agent memory governance � classification, access controls, integrity validation, retention � is an Art. 10 requirement"
+        "description": "Agent memory governance � classification, access controls, integrity validation, retention � is an Art. 10 requirement",
+        "kind": "control"
       },
       {
         "control_id": "Technical resilience against adversarial memory manipulation",
         "title": "Art. 15 � Accuracy, robustness, cybersecurity",
-        "description": "Memory integrity monitoring and access controls are Art. 15 requirements"
+        "description": "Memory integrity monitoring and access controls are Art. 15 requirements",
+        "kind": "control"
       },
       {
         "control_id": "Post-market monitoring for memory integrity",
         "title": "Art. 17 � Quality management",
-        "description": "Memory anomaly detection in post-market monitoring programme"
+        "description": "Memory anomaly detection in post-market monitoring programme",
+        "kind": "control"
       },
       {
         "control_id": "A2A communication risks identified and mitigated",
         "title": "Art. 9 � Risk management",
-        "description": "Inter-agent channels in Art. 9 risk assessment � authentication, encryption, schema validation status"
+        "description": "Inter-agent channels in Art. 9 risk assessment � authentication, encryption, schema validation status",
+        "kind": "control"
       },
       {
         "control_id": "Cybersecurity measures protecting all system components",
         "title": "Art. 15 � Accuracy, robustness, cybersecurity",
-        "description": "Authenticated, encrypted A2A communication is an Art. 15 requirement for high-risk agentic systems"
+        "description": "Authenticated, encrypted A2A communication is an Art. 15 requirement for high-risk agentic systems",
+        "kind": "control"
       },
       {
         "control_id": "Documentation of A2A security controls",
         "title": "Art. 17 � Quality management",
-        "description": "A2A authentication and encryption documented in quality management system"
+        "description": "A2A authentication and encryption documented in quality management system",
+        "kind": "control"
       },
       {
         "control_id": "Cascade risks identified and mitigated � blast radius defined",
         "title": "Art. 9 � Risk management",
-        "description": "Cascade scenarios in Art. 9 risk management � maximum affected systems, circuit breaker thresholds"
+        "description": "Cascade scenarios in Art. 9 risk management � maximum affected systems, circuit breaker thresholds",
+        "kind": "control"
       },
       {
         "control_id": "Human oversight over high-risk AI � ability to pause and stop",
         "title": "Art. 14 � Human oversight",
-        "description": "Circuit breakers and kill switches are Art. 14 human oversight mechanisms"
+        "description": "Circuit breakers and kill switches are Art. 14 human oversight mechanisms",
+        "kind": "control"
       },
       {
         "control_id": "Technical resilience against cascading failures",
         "title": "Art. 15 � Accuracy, robustness, cybersecurity",
-        "description": "Circuit breakers, fail-safe defaults, and cascade containment architecture are Art. 15 requirements"
+        "description": "Circuit breakers, fail-safe defaults, and cascade containment architecture are Art. 15 requirements",
+        "kind": "control"
       },
       {
         "control_id": "Users informed of capabilities, limitations, and AI nature",
         "title": "Art. 13 � Transparency",
-        "description": "Agents must clearly communicate their AI nature and advisory limitations"
+        "description": "Agents must clearly communicate their AI nature and advisory limitations",
+        "kind": "control"
       },
       {
         "control_id": "Effective human oversight over high-risk AI",
         "title": "Art. 14 � Human oversight",
-        "description": "Humans must be able to override agent recommendations � trust exploitation undermines Art. 14 effectiveness"
+        "description": "Humans must be able to override agent recommendations � trust exploitation undermines Art. 14 effectiveness",
+        "kind": "control"
       },
       {
         "control_id": "Chatbots and AI-generated content must disclose AI nature",
         "title": "Art. 50 � Transparency for certain AI systems",
-        "description": "All agent-user interactions require AI disclosure � universal obligation"
+        "description": "All agent-user interactions require AI disclosure � universal obligation",
+        "kind": "control"
       },
       {
         "control_id": "Rogue agent scenarios identified and mitigated",
         "title": "Art. 9 � Risk management",
-        "description": "Rogue agent risk in Art. 9 risk management � detection capability, blast radius, response documented"
+        "description": "Rogue agent risk in Art. 9 risk management � detection capability, blast radius, response documented",
+        "kind": "control"
       },
       {
         "control_id": "Human oversight mechanisms effective against rogue behaviour",
         "title": "Art. 14 � Human oversight",
-        "description": "Kill switch and behavioural monitoring are Art. 14 human oversight requirements for agentic systems"
+        "description": "Kill switch and behavioural monitoring are Art. 14 human oversight requirements for agentic systems",
+        "kind": "control"
       },
       {
         "control_id": "Technical resilience against rogue agent behaviour",
         "title": "Art. 15 � Accuracy, robustness, cybersecurity",
-        "description": "Behavioural baselines, anomaly detection, and automated suspension are Art. 15 requirements"
+        "description": "Behavioural baselines, anomaly detection, and automated suspension are Art. 15 requirements",
+        "kind": "control"
       },
       {
         "control_id": "Post-market monitoring covering rogue agent detection",
         "title": "Art. 17 � Quality management",
-        "description": "Behavioural monitoring in post-market monitoring programme"
+        "description": "Behavioural monitoring in post-market monitoring programme",
+        "kind": "control"
       },
       {
         "control_id": "Training data must be relevant, representative, and subject to appropriate privacy measures",
         "title": "Art. 10 � Data and data governance",
-        "description": "Data governance controls preventing sensitive data ingestion and memorisation are Art. 10 requirements"
+        "description": "Data governance controls preventing sensitive data ingestion and memorisation are Art. 10 requirements",
+        "kind": "control"
       },
       {
         "control_id": "High-risk AI must be resilient and implement cybersecurity measures",
         "title": "Art. 15 � Accuracy, robustness, cybersecurity",
-        "description": "Output scanning, DLP, and access controls on RAG retrieval are Art. 15 technical requirements"
+        "description": "Output scanning, DLP, and access controls on RAG retrieval are Art. 15 technical requirements",
+        "kind": "control"
       },
       {
         "control_id": "GPAI providers must maintain technical documentation including training data governance",
         "title": "Art. 53(1)(a) � GPAI documentation",
-        "description": "Data governance for training data � sources, quality, privacy measures � is a GPAI documentation obligation; Data governance for GPAI training data is a binding documentation obligation from Aug 2025"
+        "description": "Data governance for training data � sources, quality, privacy measures � is a GPAI documentation obligation; Data governance for GPAI training data is a binding documentation obligation from Aug 2025",
+        "kind": "control"
       },
       {
         "control_id": "Credential exposure must be identified as a foreseeable risk and mitigated",
         "title": "Art. 9 � Risk management",
-        "description": "Agent credential lifecycle included in Art. 9 risk management system"
+        "description": "Agent credential lifecycle included in Art. 9 risk management system",
+        "kind": "control"
       },
       {
         "control_id": "Cybersecurity measures protecting against credential theft and misuse",
         "title": "Art. 15 � Accuracy, robustness, cybersecurity",
-        "description": "Short-lived credentials, NHI inventory, and access controls are Art. 15 requirements"
+        "description": "Short-lived credentials, NHI inventory, and access controls are Art. 15 requirements",
+        "kind": "control"
       },
       {
         "control_id": "Documented procedures for credential management and incident response",
         "title": "Art. 17 � Quality management",
-        "description": "Agent identity governance procedures documented in quality management system"
+        "description": "Agent identity governance procedures documented in quality management system",
+        "kind": "control"
       },
       {
         "control_id": "Shadow AI usage is a foreseeable risk requiring mitigation in the risk management system",
         "title": "Art. 9 � Risk management",
-        "description": "Ungoverned AI tool usage mapped and treated in Art. 9 risk assessment"
+        "description": "Ungoverned AI tool usage mapped and treated in Art. 9 risk assessment",
+        "kind": "control"
       },
       {
         "control_id": "Organisations deploying AI are responsible for AI used within their operations",
         "title": "Art. 25 � Value chain responsibilities",
-        "description": "Shadow AI use by employees does not exempt the deployer from AI Act obligations triggered by that use"
+        "description": "Shadow AI use by employees does not exempt the deployer from AI Act obligations triggered by that use",
+        "kind": "control"
       },
       {
         "control_id": "Deployers must use AI systems as instructed and ensure appropriate oversight",
         "title": "Art. 29 � Deployer obligations",
-        "description": "Deployers have affirmative obligations to prevent and detect shadow AI usage"
+        "description": "Deployers have affirmative obligations to prevent and detect shadow AI usage",
+        "kind": "control"
       },
       {
         "control_id": "Training data must be subject to governance practices � relevant, representative, free of errors",
         "title": "Art. 10 � Data and data governance",
-        "description": "Data quality controls and provenance requirements preventing poisoning are binding Art. 10 obligations"
+        "description": "Data quality controls and provenance requirements preventing poisoning are binding Art. 10 obligations",
+        "kind": "control"
       },
       {
         "control_id": "High-risk AI must be resilient to attempts to alter performance through data manipulation",
         "title": "Art. 15 � Accuracy, robustness, cybersecurity",
-        "description": "Technical robustness against poisoning is a binding Art. 15 requirement with conformity assessment evidence; Technical robustness against poisoning is a binding Art. 15 requirement"
+        "description": "Technical robustness against poisoning is a binding Art. 15 requirement with conformity assessment evidence; Technical robustness against poisoning is a binding Art. 15 requirement",
+        "kind": "control"
       },
       {
         "control_id": "Systemic risk GPAI providers must conduct adversarial testing to identify and mitigate systemic risks",
         "title": "Art. 55(1)(b) � Systemic risk GPAI adversarial testing",
-        "description": "Poisoning detection adversarial testing is a binding obligation for systemic risk models"
+        "description": "Poisoning detection adversarial testing is a binding obligation for systemic risk models",
+        "kind": "control"
       },
       {
         "control_id": "Ingestion integrity risks identified and mitigated",
         "title": "Art. 9 � Risk management",
-        "description": "Data ingestion attack surfaces included in Art. 9 risk management"
+        "description": "Data ingestion attack surfaces included in Art. 9 risk management",
+        "kind": "control"
       },
       {
         "control_id": "High-risk AI resilient against adversarial input manipulation",
         "title": "Art. 15 � Accuracy, robustness, cybersecurity",
-        "description": "Secure ingestion interfaces and path traversal prevention are Art. 15 requirements"
+        "description": "Secure ingestion interfaces and path traversal prevention are Art. 15 requirements",
+        "kind": "control"
       },
       {
         "control_id": "Documented procedures for data ingestion and pipeline integrity",
         "title": "Art. 17 � Quality management",
-        "description": "Ingestion validation procedures and CVE patching documented in quality management"
+        "description": "Ingestion validation procedures and CVE patching documented in quality management",
+        "kind": "control"
       },
       {
         "control_id": "Third-party tool data exchange risks identified and mitigated",
         "title": "Art. 9 � Risk management",
-        "description": "All tool integrations assessed in Art. 9 risk management"
+        "description": "All tool integrations assessed in Art. 9 risk management",
+        "kind": "control"
       },
       {
         "control_id": "Providers document obligations flowing to deployers; deployers verify",
         "title": "Art. 25 � Value chain responsibilities",
-        "description": "Tool data exchange obligations explicitly distributed along the value chain"
+        "description": "Tool data exchange obligations explicitly distributed along the value chain",
+        "kind": "control"
       },
       {
         "control_id": "GPAI providers document all third-party integrations",
         "title": "Art. 53(1)(a) � GPAI documentation",
-        "description": "Tool and plugin data exchange documented in GPAI technical documentation"
+        "description": "Tool and plugin data exchange documented in GPAI technical documentation",
+        "kind": "control"
       },
       {
         "control_id": "High-risk AI training data subject to governance � relevant, representative, privacy-preserving",
         "title": "Art. 10 � Data and data governance",
-        "description": "Data governance policy covering the full AI data lifecycle is an Art. 10 compliance requirement"
+        "description": "Data governance policy covering the full AI data lifecycle is an Art. 10 compliance requirement",
+        "kind": "control"
       },
       {
         "control_id": "Documented quality management system including data handling procedures",
         "title": "Art. 17 � Quality management",
-        "description": "Data lifecycle procedures � classification, retention, deletion � documented in quality management"
+        "description": "Data lifecycle procedures � classification, retention, deletion � documented in quality management",
+        "kind": "control"
       },
       {
         "control_id": "GPAI providers maintain technical documentation including training data governance",
         "title": "Art. 53(1)(a) � GPAI documentation",
-        "description": "Full data governance documentation for GPAI training data is a binding Art. 53 obligation"
+        "description": "Full data governance documentation for GPAI training data is a binding Art. 53 obligation",
+        "kind": "control"
       },
       {
         "control_id": "Mandatory risk management system for high-risk AI",
         "title": "Art. 9 � Risk management",
-        "description": "Absence of a documented risk management system is an Art. 9 violation"
+        "description": "Absence of a documented risk management system is an Art. 9 violation",
+        "kind": "control"
       },
       {
         "control_id": "Documented quality management system including post-market monitoring",
         "title": "Art. 17 � Quality management",
-        "description": "Absence of a quality management system is an Art. 17 violation; Post-market monitoring must detect and respond to sensitive disclosure incidents"
+        "description": "Absence of a quality management system is an Art. 17 violation; Post-market monitoring must detect and respond to sensitive disclosure incidents",
+        "kind": "control"
       },
       {
         "control_id": "Graduated fines based on violation type",
         "title": "Art. 72 � Fines",
-        "description": "Understanding fine exposure is the starting point for compliance prioritisation"
+        "description": "Understanding fine exposure is the starting point for compliance prioritisation",
+        "kind": "control"
       },
       {
         "control_id": "Data governance covers all input modalities � images, audio, video � not only text",
         "title": "Art. 10 � Data and data governance",
-        "description": "Multimodal input governance is an Art. 10 requirement for high-risk systems processing such inputs"
+        "description": "Multimodal input governance is an Art. 10 requirement for high-risk systems processing such inputs",
+        "kind": "control"
       },
       {
         "control_id": "Cybersecurity measures covering all data channels including multimodal inputs",
         "title": "Art. 15 � Accuracy, robustness, cybersecurity",
-        "description": "DLP and access controls on multimodal pipelines are Art. 15 requirements"
+        "description": "DLP and access controls on multimodal pipelines are Art. 15 requirements",
+        "kind": "control"
       },
       {
         "control_id": "Technical documentation covers all input modalities processed by the model",
         "title": "Art. 53(1)(a) � GPAI documentation",
-        "description": "Multimodal data governance documented in GPAI technical documentation"
+        "description": "Multimodal data governance documented in GPAI technical documentation",
+        "kind": "control"
       },
       {
         "control_id": "Training data must be subject to appropriate data governance � privacy measures must be effective",
         "title": "Art. 10 � Data and data governance",
-        "description": "Anonymisation effectiveness is an Art. 10 data governance requirement, not a self-certification"
+        "description": "Anonymisation effectiveness is an Art. 10 data governance requirement, not a self-certification",
+        "kind": "control"
       },
       {
         "control_id": "GPAI training data governance documented � privacy measures included",
         "title": "Art. 53(1)(a) � GPAI documentation",
-        "description": "Synthetic data generation methodology and re-identification risk assessment documented for GPAI"
+        "description": "Synthetic data generation methodology and re-identification risk assessment documented for GPAI",
+        "kind": "control"
       },
       {
         "control_id": "Data governance covering multi-tenant deployments � session isolation as a data handling requirement",
         "title": "Art. 10 � Data and data governance",
-        "description": "Session isolation controls are an Art. 10 data governance obligation for multi-user deployments"
+        "description": "Session isolation controls are an Art. 10 data governance obligation for multi-user deployments",
+        "kind": "control"
       },
       {
         "control_id": "Cybersecurity measures preventing cross-session data exposure",
         "title": "Art. 15 � Accuracy, robustness, cybersecurity",
-        "description": "Session isolation and tenant separation are Art. 15 technical requirements"
+        "description": "Session isolation and tenant separation are Art. 15 technical requirements",
+        "kind": "control"
       },
       {
         "control_id": "Post-market monitoring detecting and responding to session bleed incidents",
         "title": "Art. 17 � Quality management",
-        "description": "Cross-session leakage detection in post-market monitoring programme"
+        "description": "Cross-session leakage detection in post-market monitoring programme",
+        "kind": "control"
       },
       {
         "control_id": "LLM gateway risks identified and mitigated",
         "title": "Art. 9 � Risk management",
-        "description": "All LLM-to-database interfaces mapped in Art. 9 risk management"
+        "description": "All LLM-to-database interfaces mapped in Art. 9 risk management",
+        "kind": "control"
       },
       {
         "control_id": "High-risk AI designed to allow effective human oversight � ability to pause, stop, and override",
         "title": "Art. 14 � Human oversight",
-        "description": "LLM-generated destructive database queries executing autonomously are an Art. 14 human oversight failure"
+        "description": "LLM-generated destructive database queries executing autonomously are an Art. 14 human oversight failure",
+        "kind": "control"
       },
       {
         "control_id": "Cybersecurity measures protecting against adversarial misuse",
         "title": "Art. 15 � Accuracy, robustness, cybersecurity",
-        "description": "Least-privilege execution, query allowlisting, and SQL injection prevention are Art. 15 requirements"
+        "description": "Least-privilege execution, query allowlisting, and SQL injection prevention are Art. 15 requirements",
+        "kind": "control"
       },
       {
         "control_id": "Documented procedures for LLM gateway security",
         "title": "Art. 17 � Quality management",
-        "description": "Security testing procedures and query log retention documented in quality management"
+        "description": "Security testing procedures and query log retention documented in quality management",
+        "kind": "control"
       },
       {
         "control_id": "Vector store security risks identified and mitigated",
         "title": "Art. 9 � Risk management",
-        "description": "All vector store deployments assessed in Art. 9 risk management"
+        "description": "All vector store deployments assessed in Art. 9 risk management",
+        "kind": "control"
       },
       {
         "control_id": "High-risk AI infrastructure protected against cybersecurity risks",
         "title": "Art. 15 � Accuracy, robustness, cybersecurity",
-        "description": "RBAC, encryption, and CVE patching for vector stores are Art. 15 requirements"
+        "description": "RBAC, encryption, and CVE patching for vector stores are Art. 15 requirements",
+        "kind": "control"
       },
       {
         "control_id": "Post-market monitoring covering AI infrastructure components",
         "title": "Art. 17 � Quality management",
-        "description": "Vector store security monitoring in post-market monitoring programme"
+        "description": "Vector store security monitoring in post-market monitoring programme",
+        "kind": "control"
       },
       {
         "control_id": "Data governance applies to all data in AI system scope � including telemetry and monitoring data",
         "title": "Art. 10 � Data and data governance",
-        "description": "Telemetry data governance � classification, access controls, retention � is an Art. 10 requirement"
+        "description": "Telemetry data governance � classification, access controls, retention � is an Art. 10 requirement",
+        "kind": "control"
       },
       {
         "control_id": "Post-market monitoring required � but the monitoring infrastructure must itself be secured",
         "title": "Art. 17 � Quality management",
-        "description": "Telemetry security is both an Art. 17 obligation and an Art. 10 data governance requirement"
+        "description": "Telemetry security is both an Art. 17 obligation and an Art. 10 data governance requirement",
+        "kind": "control"
       },
       {
         "control_id": "Data governance applies to all data in AI system scope � including context window content",
         "title": "Art. 10 � Data and data governance",
-        "description": "Context window data governance � minimum content, classification tracking � is Art. 10 requirement"
+        "description": "Context window data governance � minimum content, classification tracking � is Art. 10 requirement",
+        "kind": "control"
       },
       {
         "control_id": "Cybersecurity against adversarial exploitation of context window content",
         "title": "Art. 15 � Accuracy, robustness, cybersecurity",
-        "description": "Context minimisation and access controls are Art. 15 cybersecurity measures"
+        "description": "Context minimisation and access controls are Art. 15 cybersecurity measures",
+        "kind": "control"
       },
       {
         "control_id": "Post-market monitoring covering context window exploitation incidents",
         "title": "Art. 17 � Quality management",
-        "description": "Context window security in post-market monitoring programme"
+        "description": "Context window security in post-market monitoring programme",
+        "kind": "control"
       },
       {
         "control_id": "Endpoint AI agent risks identified and mitigated",
         "title": "Art. 9 � Risk management",
-        "description": "Browser and endpoint agent deployments assessed in Art. 9 risk management"
+        "description": "Browser and endpoint agent deployments assessed in Art. 9 risk management",
+        "kind": "control"
       },
       {
         "control_id": "High-risk AI designed to allow human oversight � users must be able to stop and override",
         "title": "Art. 14 � Human oversight",
-        "description": "Users must be able to pause and override endpoint AI agents � Art. 14 human oversight requirement"
+        "description": "Users must be able to pause and override endpoint AI agents � Art. 14 human oversight requirement",
+        "kind": "control"
       },
       {
         "control_id": "Deployers ensure human oversight as instructed by provider",
         "title": "Art. 29 � Deployer obligations",
-        "description": "Deployers responsible for ensuring endpoint AI agents operate within Art. 14 human oversight scope"
+        "description": "Deployers responsible for ensuring endpoint AI agents operate within Art. 14 human oversight scope",
+        "kind": "control"
       },
       {
         "control_id": "High-risk AI must remain accurate and available under adverse conditions",
         "title": "Art. 15 � Accuracy, robustness, cybersecurity",
-        "description": "Vector store redundancy, circuit breakers, and staleness detection are Art. 15 requirements"
+        "description": "Vector store redundancy, circuit breakers, and staleness detection are Art. 15 requirements",
+        "kind": "control"
       },
       {
         "control_id": "Post-market monitoring covering availability and resilience",
         "title": "Art. 17 � Quality management",
-        "description": "AI pipeline availability monitoring in quality management and post-market monitoring programme"
+        "description": "AI pipeline availability monitoring in quality management and post-market monitoring programme",
+        "kind": "control"
       },
       {
         "control_id": "Training data privacy measures required � protecting sensitive data used in training",
         "title": "Art. 10 � Data and data governance",
-        "description": "Differential privacy and inference attack resistance are Art. 10 data governance requirements"
+        "description": "Differential privacy and inference attack resistance are Art. 10 data governance requirements",
+        "kind": "control"
       },
       {
         "control_id": "Cybersecurity measures protecting against attacks including inference attacks",
         "title": "Art. 15 � Accuracy, robustness, cybersecurity",
-        "description": "Output rate limiting, confidence score suppression, and embedding encryption are Art. 15 requirements"
+        "description": "Output rate limiting, confidence score suppression, and embedding encryption are Art. 15 requirements",
+        "kind": "control"
       },
       {
         "control_id": "Training data governance includes human annotation workflows",
         "title": "Art. 10 � Data and data governance",
-        "description": "Labeller data access controls and data minimisation are Art. 10 requirements for high-risk training data"
+        "description": "Labeller data access controls and data minimisation are Art. 10 requirements for high-risk training data",
+        "kind": "control"
       },
       {
         "control_id": "Labelling vendors are part of the AI value chain � obligations distributed accordingly",
         "title": "Art. 25 � Value chain responsibilities",
-        "description": "Labelling vendor security requirements and contractual controls are Art. 25 value chain obligations"
+        "description": "Labelling vendor security requirements and contractual controls are Art. 25 value chain obligations",
+        "kind": "control"
       },
       {
         "control_id": "Cybersecurity measures protecting AI system integrity",
         "title": "Art. 15 � Accuracy, robustness, cybersecurity",
-        "description": "API rate limiting, output perturbation, and extraction monitoring are Art. 15 requirements"
+        "description": "API rate limiting, output perturbation, and extraction monitoring are Art. 15 requirements",
+        "kind": "control"
       },
       {
         "control_id": "GPAI technical documentation includes model architecture and capability details",
         "title": "Art. 53(1)(a) � GPAI documentation",
-        "description": "Technical documentation must be protected � model extraction enables circumvention of documentation obligations"
+        "description": "Technical documentation must be protected � model extraction enables circumvention of documentation obligations",
+        "kind": "control"
       },
       {
         "control_id": "Post-market monitoring covering security incidents",
         "title": "Art. 17 � Quality management",
-        "description": "Model extraction detection in post-market monitoring programme"
+        "description": "Model extraction detection in post-market monitoring programme",
+        "kind": "control"
       },
       {
         "control_id": "Training and retrieval data free from errors � source integrity required",
         "title": "Art. 10 � Data and data governance",
-        "description": "RAG corpus integrity controls and source verification are Art. 10 requirements"
+        "description": "RAG corpus integrity controls and source verification are Art. 10 requirements",
+        "kind": "control"
       },
       {
         "control_id": "High-risk AI accurate and resilient against adversarial data manipulation",
         "title": "Art. 15 � Accuracy, robustness, cybersecurity",
-        "description": "Source trust scoring and ingestion validation are Art. 15 robustness requirements"
+        "description": "Source trust scoring and ingestion validation are Art. 15 robustness requirements",
+        "kind": "control"
       },
       {
         "control_id": "Systemic risk GPAI providers must assess and mitigate risks including disinformation",
         "title": "Art. 55(1)(a) � Systemic risk GPAI",
-        "description": "Disinformation risk assessment and RAG integrity controls are binding Art. 55 obligations; Misinformation risk assessment and mitigation is a binding obligation for systemic risk models"
+        "description": "Disinformation risk assessment and RAG integrity controls are binding Art. 55 obligations; Misinformation risk assessment and mitigation is a binding obligation for systemic risk models",
+        "kind": "control"
       },
       {
         "control_id": "AI-generated content that could be mistaken as human must be disclosed",
         "title": "Art. 50 � Transparency",
-        "description": "Disinformation risk amplified when users cannot distinguish AI-generated content � Art. 50 applies"
+        "description": "Disinformation risk amplified when users cannot distinguish AI-generated content � Art. 50 applies",
+        "kind": "control"
       },
       {
         "control_id": "Providers of high-risk AI must implement a risk management system covering all reasonably foreseeable risks",
         "title": "Art. 9 � Risk management",
-        "description": "Prompt injection must be identified, analysed, and mitigated in the risk management system"
+        "description": "Prompt injection must be identified, analysed, and mitigated in the risk management system",
+        "kind": "control"
       },
       {
         "control_id": "High-risk AI systems must be resilient to adversarial inputs and attempts to alter outputs or performance",
         "title": "Art. 15 � Accuracy, robustness, cybersecurity",
-        "description": "Robustness against prompt injection is a technical compliance requirement � not optional"
+        "description": "Robustness against prompt injection is a technical compliance requirement � not optional",
+        "kind": "control"
       },
       {
         "control_id": "Providers of systemic risk GPAI models must conduct adversarial testing to identify and mitigate systemic risks",
         "title": "Art. 55(1)(b) � Systemic risk GPAI",
-        "description": "Prompt injection adversarial testing is a binding obligation for systemic risk models"
+        "description": "Prompt injection adversarial testing is a binding obligation for systemic risk models",
+        "kind": "control"
       },
       {
         "control_id": "Training data for high-risk AI must be relevant, representative, free of errors, and complete � must address privacy",
         "title": "Art. 10 � Data and data governance",
-        "description": "Privacy-preserving training data practices are a compliance requirement for high-risk LLMs"
+        "description": "Privacy-preserving training data practices are a compliance requirement for high-risk LLMs",
+        "kind": "control"
       },
       {
         "control_id": "Users must receive information about capabilities, limitations, and conditions of use",
         "title": "Art. 13 � Transparency",
-        "description": "Disclosure of potential data disclosure risks is a transparency obligation"
+        "description": "Disclosure of potential data disclosure risks is a transparency obligation",
+        "kind": "control"
       },
       {
         "control_id": "Supply chain risks must be identified and mitigated in the risk management system",
         "title": "Art. 9 � Risk management",
-        "description": "Third-party component risks are in scope for Art. 9 risk management"
+        "description": "Third-party component risks are in scope for Art. 9 risk management",
+        "kind": "control"
       },
       {
         "control_id": "Quality management must cover supply chain controls",
         "title": "Art. 17 � Quality management",
-        "description": "Documented supply chain security procedures required"
+        "description": "Documented supply chain security procedures required",
+        "kind": "control"
       },
       {
         "control_id": "Responsibilities distributed along the AI value chain between providers and deployers",
         "title": "Art. 25 � Value chain responsibilities",
-        "description": "Providers must document what deployers inherit � deployers must verify"
+        "description": "Providers must document what deployers inherit � deployers must verify",
+        "kind": "control"
       },
       {
         "control_id": "GPAI providers must document training data governance including third-party sources",
         "title": "Art. 53(1)(a) � GPAI documentation",
-        "description": "Third-party training data provenance is a GPAI documentation obligation"
+        "description": "Third-party training data provenance is a GPAI documentation obligation",
+        "kind": "control"
       },
       {
         "control_id": "Data poisoning must be identified as a foreseeable risk and mitigated",
         "title": "Art. 9 � Risk management",
-        "description": "Poisoning attack scenarios required in Art. 9 risk assessment"
+        "description": "Poisoning attack scenarios required in Art. 9 risk assessment",
+        "kind": "control"
       },
       {
         "control_id": "Training data must be subject to appropriate governance practices � relevant, representative, free of errors",
         "title": "Art. 10 � Data and data governance",
-        "description": "Data quality controls preventing poisoning are a compliance requirement"
+        "description": "Data quality controls preventing poisoning are a compliance requirement",
+        "kind": "control"
       },
       {
         "control_id": "Systemic risk GPAI providers must conduct adversarial testing to identify model-level risks",
         "title": "Art. 55(1)(b) � Systemic risk GPAI adversarial testing",
-        "description": "Poisoning detection is in scope for Art. 55 adversarial testing"
+        "description": "Poisoning detection is in scope for Art. 55 adversarial testing",
+        "kind": "control"
       },
       {
         "control_id": "Output handling risks identified and mitigated",
         "title": "Art. 9 � Risk management",
-        "description": "Insecure output handling included in risk management system"
+        "description": "Insecure output handling included in risk management system",
+        "kind": "control"
       },
       {
         "control_id": "Accurate, robust outputs resilient to misuse",
         "title": "Art. 15 � Accuracy, robustness, cybersecurity",
-        "description": "Output validation and sanitisation are Art. 15 technical requirements"
+        "description": "Output validation and sanitisation are Art. 15 technical requirements",
+        "kind": "control"
       },
       {
         "control_id": "Documented procedures covering output quality",
         "title": "Art. 17 � Quality management",
-        "description": "Post-market monitoring of output handling incidents required"
+        "description": "Post-market monitoring of output handling incidents required",
+        "kind": "control"
       },
       {
         "control_id": "Autonomy-related risks identified and mitigated",
         "title": "Art. 9 � Risk management",
-        "description": "Excessive agency scenarios required in risk management system"
+        "description": "Excessive agency scenarios required in risk management system",
+        "kind": "control"
       },
       {
         "control_id": "High-risk AI systems designed to allow effective human oversight � ability to pause, stop, and override",
         "title": "Art. 14 � Human oversight",
-        "description": "Human-in-the-loop requirements are a binding Art. 14 compliance obligation"
+        "description": "Human-in-the-loop requirements are a binding Art. 14 compliance obligation",
+        "kind": "control"
       },
       {
         "control_id": "Deployers must ensure human oversight as instructed by provider",
         "title": "Art. 29 � Deployer obligations",
-        "description": "Deployers cannot waive Art. 14 human oversight requirements"
+        "description": "Deployers cannot waive Art. 14 human oversight requirements",
+        "kind": "control"
       },
       {
         "control_id": "Users must receive sufficient information about the AI system � but this does not require disclosing system prompts",
         "title": "Art. 13 � Transparency",
-        "description": "Transparency obligation must be met without exposing security-sensitive system prompt content"
+        "description": "Transparency obligation must be met without exposing security-sensitive system prompt content",
+        "kind": "control"
       },
       {
         "control_id": "Configuration management documented",
         "title": "Art. 17 � Quality management",
-        "description": "System prompt versions, access controls, and change procedures are quality management artefacts"
+        "description": "System prompt versions, access controls, and change procedures are quality management artefacts",
+        "kind": "control"
       },
       {
         "control_id": "GPAI providers must publish summaries of training data and model capabilities",
         "title": "Art. 53(1)(b) � GPAI transparency",
-        "description": "Published summaries must not inadvertently expose security-sensitive configuration"
+        "description": "Published summaries must not inadvertently expose security-sensitive configuration",
+        "kind": "control"
       },
       {
         "control_id": "Embedding and retrieval risks identified and mitigated",
         "title": "Art. 9 � Risk management",
-        "description": "Vector store attack scenarios included in risk management system"
+        "description": "Vector store attack scenarios included in risk management system",
+        "kind": "control"
       },
       {
         "control_id": "Data quality controls applied to all data in scope � including RAG corpora",
         "title": "Art. 10 � Data and data governance",
-        "description": "Quality controls on embedding generation and vector store ingestion required"
+        "description": "Quality controls on embedding generation and vector store ingestion required",
+        "kind": "control"
       },
       {
         "control_id": "Technical robustness against adversarial manipulation",
         "title": "Art. 15 � Accuracy, robustness, cybersecurity",
-        "description": "Embedding manipulation resistance is an Art. 15 technical requirement"
+        "description": "Embedding manipulation resistance is an Art. 15 technical requirement",
+        "kind": "control"
       },
       {
         "control_id": "High-risk AI system information must include accuracy metrics and known limitations",
         "title": "Art. 13 � Transparency",
-        "description": "Hallucination rates and accuracy limitations must be disclosed to deployers and users"
+        "description": "Hallucination rates and accuracy limitations must be disclosed to deployers and users",
+        "kind": "control"
       },
       {
         "control_id": "AI-generated content must be marked as such � chatbots must disclose AI nature",
         "title": "Art. 50 � Transparency for certain AI systems",
-        "description": "Mandatory AI disclosure prevents users from treating hallucinated content as authoritative human output"
+        "description": "Mandatory AI disclosure prevents users from treating hallucinated content as authoritative human output",
+        "kind": "control"
       },
       {
         "control_id": "Availability risks identified and mitigated",
         "title": "Art. 9 � Risk management",
-        "description": "Resource exhaustion and DoS scenarios included in risk management system"
+        "description": "Resource exhaustion and DoS scenarios included in risk management system",
+        "kind": "control"
       },
       {
         "control_id": "High-risk AI must remain available under adversarial conditions",
         "title": "Art. 15 � Accuracy, robustness, cybersecurity",
-        "description": "Technical resilience against denial-of-service attacks is an Art. 15 requirement"
+        "description": "Technical resilience against denial-of-service attacks is an Art. 15 requirement",
+        "kind": "control"
       },
       {
         "control_id": "Operational continuity procedures documented",
         "title": "Art. 17 � Quality management",
-        "description": "Post-market monitoring and incident response for availability failures required"
+        "description": "Post-market monitoring and incident response for availability failures required",
+        "kind": "control"
       }
     ],
     "changelog": [
       {
         "date": "2026-04-09",
         "change": "Initial seed — 25 key articles and annexes from Regulation 2024/1689",
-        "author": "emmanuelgjr"
+        "author": "OWASP GenAI Data Security Initiative"
       }
     ]
   },
@@ -2579,117 +3013,140 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "SI-3",
         "title": "Malicious Code Protection — adversarial agent inputs",
-        "description": "Extend malicious code protection to detect and block adversarial inputs targeting agent goal manipulation including injection through tool outputs and context stores; Scan agent-generated code for malicious patterns before execution; detect and block code that attempts filesystem access, network communication, or privilege escalation; Extend malicious content detection to agent memory stores; detect poisoned memories, manipulated context, and adversarial state modifications"
+        "description": "Extend malicious code protection to detect and block adversarial inputs targeting agent goal manipulation including injection through tool outputs and context stores; Scan agent-generated code for malicious patterns before execution; detect and block code that attempts filesystem access, network communication, or privilege escalation; Extend malicious content detection to agent memory stores; detect poisoned memories, manipulated context, and adversarial state modifications",
+        "kind": "control"
       },
       {
         "control_id": "SI-10",
         "title": "Information Input Validation — agent context validation",
-        "description": "Validate all inputs to agent systems including user prompts, tool outputs, memory retrievals, and inter-agent messages; enforce structural separation of instructions and data; Validate quality, completeness, and accuracy of data entering AI pipelines; reject data failing quality thresholds; Validate all inputs to LLM inference endpoints; enforce structural separation between instruction and data contexts; reject known injection patterns"
+        "description": "Validate all inputs to agent systems including user prompts, tool outputs, memory retrievals, and inter-agent messages; enforce structural separation of instructions and data; Validate quality, completeness, and accuracy of data entering AI pipelines; reject data failing quality thresholds; Validate all inputs to LLM inference endpoints; enforce structural separation between instruction and data contexts; reject known injection patterns",
+        "kind": "control"
       },
       {
         "control_id": "CA-8",
         "title": "Penetration Testing — agent hijacking testing",
-        "description": "Include agent goal hijacking in penetration testing scope; cover injection through all input channels — user prompts, tool outputs, memory stores, and inter-agent communication; Include agent code execution sandbox escape in penetration testing scope; test boundary integrity under adversarial conditions; Include prompt injection scenarios in penetration testing engagements; cover direct, indirect, and multimodal injection paths"
+        "description": "Include agent goal hijacking in penetration testing scope; cover injection through all input channels — user prompts, tool outputs, memory stores, and inter-agent communication; Include agent code execution sandbox escape in penetration testing scope; test boundary integrity under adversarial conditions; Include prompt injection scenarios in penetration testing engagements; cover direct, indirect, and multimodal injection paths",
+        "kind": "control"
       },
       {
         "control_id": "AU-2",
         "title": "Event Logging — agent action audit trail",
-        "description": "Log all agent actions, goal interpretations, tool invocations, and decision points with sufficient detail to detect goal hijacking in post-incident analysis; Log all agent access decisions — permitted and denied — with sufficient detail for access control review and incident investigation; Log all agent memory operations — reads, writes, deletions — with sufficient detail to detect poisoning and support forensic investigation"
+        "description": "Log all agent actions, goal interpretations, tool invocations, and decision points with sufficient detail to detect goal hijacking in post-incident analysis; Log all agent access decisions — permitted and denied — with sufficient detail for access control review and incident investigation; Log all agent memory operations — reads, writes, deletions — with sufficient detail to detect poisoning and support forensic investigation",
+        "kind": "control"
       },
       {
         "control_id": "AC-3",
         "title": "Access Enforcement — agent resource access",
-        "description": "Enforce role-based access control on all agent resources — tools, data stores, APIs, and inter-agent communication channels; deny by default; Enforce access control at every tool invocation boundary; validate agent identity and authorisation for each requested action regardless of calling context; Enforce access control at each tool invocation independently; re-evaluate authorisation at every step in a tool chain regardless of prior approvals"
+        "description": "Enforce role-based access control on all agent resources — tools, data stores, APIs, and inter-agent communication channels; deny by default; Enforce access control at every tool invocation boundary; validate agent identity and authorisation for each requested action regardless of calling context; Enforce access control at each tool invocation independently; re-evaluate authorisation at every step in a tool chain regardless of prior approvals",
+        "kind": "control"
       },
       {
         "control_id": "AC-6",
         "title": "Least Privilege — agent permissions",
-        "description": "Enforce least privilege for all agent permissions; restrict tool access, data store access, and API scope to minimum necessary per agent role; Enforce least privilege with explicit privilege ceilings per agent; prevent accumulation of permissions through tool chaining or inter-agent delegation; Enforce least privilege across tool chains; prevent agents from combining tool invocations that individually are safe but together achieve harmful outcomes"
+        "description": "Enforce least privilege for all agent permissions; restrict tool access, data store access, and API scope to minimum necessary per agent role; Enforce least privilege with explicit privilege ceilings per agent; prevent accumulation of permissions through tool chaining or inter-agent delegation; Enforce least privilege across tool chains; prevent agents from combining tool invocations that individually are safe but together achieve harmful outcomes",
+        "kind": "control"
       },
       {
         "control_id": "CM-7",
         "title": "Least Functionality — agent capability restrictions",
-        "description": "Restrict agents to minimum necessary capabilities; disable unused tools, APIs, and action types; enforce capability restrictions in agent configuration; Restrict agent code execution to minimum necessary scope; enforce sandbox boundaries, disable unnecessary language features, and limit filesystem and network access; Restrict permitted tool combinations; define allowed tool chains in configuration and deny undefined sequences"
+        "description": "Restrict agents to minimum necessary capabilities; disable unused tools, APIs, and action types; enforce capability restrictions in agent configuration; Restrict agent code execution to minimum necessary scope; enforce sandbox boundaries, disable unnecessary language features, and limit filesystem and network access; Restrict permitted tool combinations; define allowed tool chains in configuration and deny undefined sequences",
+        "kind": "control"
       },
       {
         "control_id": "IA-2",
         "title": "Identification and Authentication — agent NHI",
-        "description": "Assign unique non-human identities to each AI agent; authenticate agent identity at each tool invocation and inter-agent communication boundary"
+        "description": "Assign unique non-human identities to each AI agent; authenticate agent identity at each tool invocation and inter-agent communication boundary",
+        "kind": "control"
       },
       {
         "control_id": "IR-4",
         "title": "Incident Handling — escalation incident response",
-        "description": "Define incident handling procedures for agent privilege escalation events; include automated containment, privilege revocation, and forensic investigation; Define incident handling procedures for cascading agent failures; include automated circuit breakers, agent isolation, and multi-agent system shutdown procedures; Define incident handling procedures for agent dependency failures; include automated fallback activation, graceful degradation, and service restoration"
+        "description": "Define incident handling procedures for agent privilege escalation events; include automated containment, privilege revocation, and forensic investigation; Define incident handling procedures for cascading agent failures; include automated circuit breakers, agent isolation, and multi-agent system shutdown procedures; Define incident handling procedures for agent dependency failures; include automated fallback activation, graceful degradation, and service restoration",
+        "kind": "control"
       },
       {
         "control_id": "SR-2",
         "title": "Supply Chain Risk Management Plan — agent components",
-        "description": "Include all agent components — tools, plugins, MCP servers, model weights, and agent frameworks — in the supply chain risk management plan; Include all agent external dependencies — model APIs, tool endpoints, data sources — in supply chain risk management with availability and integrity requirements; Include AI training data, model weights, and pipeline artefacts in supply chain risk management with provenance documentation"
+        "description": "Include all agent components — tools, plugins, MCP servers, model weights, and agent frameworks — in the supply chain risk management plan; Include all agent external dependencies — model APIs, tool endpoints, data sources — in supply chain risk management with availability and integrity requirements; Include AI training data, model weights, and pipeline artefacts in supply chain risk management with provenance documentation",
+        "kind": "control"
       },
       {
         "control_id": "SR-3",
         "title": "Supply Chain Controls — agent component provenance",
-        "description": "Verify integrity and provenance of all agent supply chain components using cryptographic signatures, checksums, and attestation before deployment; Verify integrity and provenance of all AI artefacts using cryptographic signatures and checksums before use in any pipeline; Implement provenance tracking for all AI training data; document source, collection method, processing history, and licensing for each dataset"
+        "description": "Verify integrity and provenance of all agent supply chain components using cryptographic signatures, checksums, and attestation before deployment; Verify integrity and provenance of all AI artefacts using cryptographic signatures and checksums before use in any pipeline; Implement provenance tracking for all AI training data; document source, collection method, processing history, and licensing for each dataset",
+        "kind": "control"
       },
       {
         "control_id": "SA-9",
         "title": "External Information System Services — third-party agent services",
-        "description": "Require third-party agent tool and plugin providers to meet FedRAMP requirements; establish SLAs for security, availability, and incident notification; Require SLAs from agent dependency providers covering availability, performance, security, and incident notification; establish fallback procedures; Require FedRAMP authorisation or equivalent for all third-party AI services; block data transfer to unauthorised AI tools"
+        "description": "Require third-party agent tool and plugin providers to meet FedRAMP requirements; establish SLAs for security, availability, and incident notification; Require SLAs from agent dependency providers covering availability, performance, security, and incident notification; establish fallback procedures; Require FedRAMP authorisation or equivalent for all third-party AI services; block data transfer to unauthorised AI tools",
+        "kind": "control"
       },
       {
         "control_id": "SA-3",
         "title": "System Development Life Cycle — agent SDLC",
-        "description": "Integrate agent-specific security activities into the SDLC — tool integration review, privilege analysis, and adversarial testing at each lifecycle phase; Integrate AI-specific security activities into the SDLC — model security review, adversarial testing, supply chain verification at each lifecycle phase"
+        "description": "Integrate agent-specific security activities into the SDLC — tool integration review, privilege analysis, and adversarial testing at each lifecycle phase; Integrate AI-specific security activities into the SDLC — model security review, adversarial testing, supply chain verification at each lifecycle phase",
+        "kind": "control"
       },
       {
         "control_id": "SC-7",
         "title": "Boundary Protection — execution sandbox",
-        "description": "Enforce strict boundary protection on agent code execution environments; isolate from production systems, restrict network access, and enforce resource limits; Enforce boundary protection between agents in multi-agent systems; prevent uncontrolled propagation of failures or attacks across agent boundaries; Enforce boundary protection on data flows between systems; prevent uncontrolled data aggregation across security boundaries"
+        "description": "Enforce strict boundary protection on agent code execution environments; isolate from production systems, restrict network access, and enforce resource limits; Enforce boundary protection between agents in multi-agent systems; prevent uncontrolled propagation of failures or attacks across agent boundaries; Enforce boundary protection on data flows between systems; prevent uncontrolled data aggregation across security boundaries",
+        "kind": "control"
       },
       {
         "control_id": "SC-28",
         "title": "Protection of Information at Rest — memory store protection",
-        "description": "Encrypt agent memory stores and context databases at rest; enforce access controls and integrity verification on all memory read and write operations; Encrypt all training data, model weights, and pipeline artefacts at rest; enforce key management per FedRAMP requirements; Encrypt all AI data at rest — training data, model weights, inference logs, embedding stores — using FIPS 140-validated modules"
+        "description": "Encrypt agent memory stores and context databases at rest; enforce access controls and integrity verification on all memory read and write operations; Encrypt all training data, model weights, and pipeline artefacts at rest; enforce key management per FedRAMP requirements; Encrypt all AI data at rest — training data, model weights, inference logs, embedding stores — using FIPS 140-validated modules",
+        "kind": "control"
       },
       {
         "control_id": "RA-5",
         "title": "Vulnerability Scanning — memory infrastructure",
-        "description": "Include agent memory stores, context databases, and shared state infrastructure in vulnerability scanning and security assessment; Include emerging agentic attack surfaces in vulnerability scanning; assess novel architectures for security implications before production deployment; Include synthetic data re-identification and pattern leakage in vulnerability assessment"
+        "description": "Include agent memory stores, context databases, and shared state infrastructure in vulnerability scanning and security assessment; Include emerging agentic attack surfaces in vulnerability scanning; assess novel architectures for security implications before production deployment; Include synthetic data re-identification and pattern leakage in vulnerability assessment",
+        "kind": "control"
       },
       {
         "control_id": "SI-4",
         "title": "System Monitoring — cascade detection",
-        "description": "Monitor multi-agent systems for cascade indicators — error propagation, resource exhaustion spreading, and anomalous inter-agent communication patterns; Monitor agent systems for unexpected behaviour — novel tool use patterns, unanticipated goal decomposition, and emergent inter-agent coordination; Monitor agent dependency health in real time — API availability, response latency, error rates; alert on degradation and trigger fallback procedures"
+        "description": "Monitor multi-agent systems for cascade indicators — error propagation, resource exhaustion spreading, and anomalous inter-agent communication patterns; Monitor agent systems for unexpected behaviour — novel tool use patterns, unanticipated goal decomposition, and emergent inter-agent coordination; Monitor agent dependency health in real time — API availability, response latency, error rates; alert on degradation and trigger fallback procedures",
+        "kind": "control"
       },
       {
         "control_id": "PM-9",
         "title": "Risk Management Strategy — automation risk",
-        "description": "Include cascading automation risk in the organisational risk management strategy; define acceptable multi-agent coupling thresholds and circuit breaker requirements; Include data visibility and transparency requirements in AI risk management strategy; define what data flows must be documented and monitored; Include data lineage completeness in AI risk management strategy; define minimum lineage requirements per data sensitivity level"
+        "description": "Include cascading automation risk in the organisational risk management strategy; define acceptable multi-agent coupling thresholds and circuit breaker requirements; Include data visibility and transparency requirements in AI risk management strategy; define what data flows must be documented and monitored; Include data lineage completeness in AI risk management strategy; define minimum lineage requirements per data sensitivity level",
+        "kind": "control"
       },
       {
         "control_id": "CA-7",
         "title": "Continuous Monitoring — novel pattern detection",
-        "description": "Include monitoring for novel agentic behaviour patterns in FedRAMP continuous monitoring; track for unexpected capabilities, emergent behaviours, and architectural drift; Include synthetic data quality metrics in continuous monitoring; track for privacy degradation and bias drift; Include bias and fairness metrics in continuous monitoring; track output equity over time"
+        "description": "Include monitoring for novel agentic behaviour patterns in FedRAMP continuous monitoring; track for unexpected capabilities, emergent behaviours, and architectural drift; Include synthetic data quality metrics in continuous monitoring; track for privacy degradation and bias drift; Include bias and fairness metrics in continuous monitoring; track output equity over time",
+        "kind": "control"
       },
       {
         "control_id": "AU-6",
         "title": "Audit Review — agent decision review",
-        "description": "Conduct regular audit review of agent decision logs; identify patterns indicative of unexpected capabilities or emergent behaviours requiring security assessment; Regularly review AI inference logs and output samples for hallucination patterns, factual errors, and misleading content; escalate findings through security channels"
+        "description": "Conduct regular audit review of agent decision logs; identify patterns indicative of unexpected capabilities or emergent behaviours requiring security assessment; Regularly review AI inference logs and output samples for hallucination patterns, factual errors, and misleading content; escalate findings through security channels",
+        "kind": "control"
       },
       {
         "control_id": "AU-12",
         "title": "Audit Generation — inference audit trail",
-        "description": "Generate audit records for all model inference requests with sufficient detail for compliance and incident investigation; Generate audit records for all access to AI intellectual property; enable detection of unauthorised access and exfiltration"
+        "description": "Generate audit records for all model inference requests with sufficient detail for compliance and incident investigation; Generate audit records for all access to AI intellectual property; enable detection of unauthorised access and exfiltration",
+        "kind": "control"
       },
       {
         "control_id": "CM-3",
         "title": "Configuration Change Control — data pipeline documentation",
-        "description": "Document and control changes to AI data pipeline configurations; maintain current data flow diagrams and processing documentation; Require formal change control for all data source additions, modifications, and removals; maintain audit trail; Maintain comprehensive data lineage documentation for all AI pipelines; update on every transformation, combination, or processing change"
+        "description": "Document and control changes to AI data pipeline configurations; maintain current data flow diagrams and processing documentation; Require formal change control for all data source additions, modifications, and removals; maintain audit trail; Maintain comprehensive data lineage documentation for all AI pipelines; update on every transformation, combination, or processing change",
+        "kind": "control"
       },
       {
         "control_id": "RA-3",
         "title": "Risk Assessment — governance completeness",
-        "description": "Assess AI governance completeness; identify gaps in roles, policies, oversight, and accountability; Conduct regulatory compliance gap analysis for AI systems; identify areas of non-compliance and define remediation plans"
+        "description": "Assess AI governance completeness; identify gaps in roles, policies, oversight, and accountability; Conduct regulatory compliance gap analysis for AI systems; identify areas of non-compliance and define remediation plans",
+        "kind": "control"
       }
     ]
   },
@@ -2710,301 +3167,347 @@ window.CROSSWALK_FRAMEWORKS = [
         "title": "Identification and Authentication Control",
         "description": "Identify and authenticate all users (human, software, device) before access.",
         "parent": null,
-        "function": "Foundational Requirements"
+        "function": "Foundational Requirements",
+        "kind": "control"
       },
       {
         "control_id": "SR 1.1",
         "title": "Human user identification and authentication",
         "description": "Identify and authenticate all human users.",
         "parent": "FR 1",
-        "function": "Foundational Requirements"
+        "function": "Foundational Requirements",
+        "kind": "control"
       },
       {
         "control_id": "SR 1.2",
         "title": "Software process and device identification and authentication",
         "description": "Identify and authenticate all software processes and devices.",
         "parent": "FR 1",
-        "function": "Foundational Requirements"
+        "function": "Foundational Requirements",
+        "kind": "control"
       },
       {
         "control_id": "SR 1.3",
         "title": "Account management",
         "description": "Support management of all accounts by authorized users.",
         "parent": "FR 1",
-        "function": "Foundational Requirements"
+        "function": "Foundational Requirements",
+        "kind": "control"
       },
       {
         "control_id": "SR 1.5",
         "title": "Authenticator management",
         "description": "Support management of authenticators (passwords, tokens, certificates).",
         "parent": "FR 1",
-        "function": "Foundational Requirements"
+        "function": "Foundational Requirements",
+        "kind": "control"
       },
       {
         "control_id": "SR 1.7",
         "title": "Strength of password-based authentication",
         "description": "Enforce minimum password strength requirements.",
         "parent": "FR 1",
-        "function": "Foundational Requirements"
+        "function": "Foundational Requirements",
+        "kind": "control"
       },
       {
         "control_id": "FR 2",
         "title": "Use Control",
         "description": "Enforce assigned privileges for actions on the system.",
         "parent": null,
-        "function": "Foundational Requirements"
+        "function": "Foundational Requirements",
+        "kind": "control"
       },
       {
         "control_id": "SR 2.1",
         "title": "Authorization enforcement",
         "description": "Enforce assigned privileges for all entities.",
         "parent": "FR 2",
-        "function": "Foundational Requirements"
+        "function": "Foundational Requirements",
+        "kind": "control"
       },
       {
         "control_id": "SR 2.2",
         "title": "Wireless use control",
         "description": "Protect wireless communications from unauthorized access.",
         "parent": "FR 2",
-        "function": "Foundational Requirements"
+        "function": "Foundational Requirements",
+        "kind": "control"
       },
       {
         "control_id": "SR 2.4",
         "title": "Mobile code",
         "description": "Control the use of mobile code technologies.",
         "parent": "FR 2",
-        "function": "Foundational Requirements"
+        "function": "Foundational Requirements",
+        "kind": "control"
       },
       {
         "control_id": "SR 2.5",
         "title": "Session lock",
         "description": "Prevent further access at the end of a configurable time period of inactivity.",
         "parent": "FR 2",
-        "function": "Foundational Requirements"
+        "function": "Foundational Requirements",
+        "kind": "control"
       },
       {
         "control_id": "FR 3",
         "title": "System Integrity",
         "description": "Ensure the integrity of the IACS to prevent unauthorized manipulation.",
         "parent": null,
-        "function": "Foundational Requirements"
+        "function": "Foundational Requirements",
+        "kind": "control"
       },
       {
         "control_id": "SR 3.1",
         "title": "Communication integrity",
         "description": "Protect the integrity of transmitted information.",
         "parent": "FR 3",
-        "function": "Foundational Requirements"
+        "function": "Foundational Requirements",
+        "kind": "control"
       },
       {
         "control_id": "SR 3.2",
         "title": "Malicious code protection",
         "description": "Protect against, detect, report, and mitigate effects of malicious code.",
         "parent": "FR 3",
-        "function": "Foundational Requirements"
+        "function": "Foundational Requirements",
+        "kind": "control"
       },
       {
         "control_id": "SR 3.3",
         "title": "Security functionality verification",
         "description": "Provide mechanisms to verify intended operation of security functions.",
         "parent": "FR 3",
-        "function": "Foundational Requirements"
+        "function": "Foundational Requirements",
+        "kind": "control"
       },
       {
         "control_id": "SR 3.4",
         "title": "Software and information integrity",
         "description": "Detect, record, report, and protect against unauthorized changes to software.",
         "parent": "FR 3",
-        "function": "Foundational Requirements"
+        "function": "Foundational Requirements",
+        "kind": "control"
       },
       {
         "control_id": "SR 3.5",
         "title": "Input validation",
         "description": "Validate the syntax and content of inputs.",
         "parent": "FR 3",
-        "function": "Foundational Requirements"
+        "function": "Foundational Requirements",
+        "kind": "control"
       },
       {
         "control_id": "SR 3.6",
         "title": "Deterministic output",
         "description": "Provide deterministic output for defined error states.",
         "parent": "FR 3",
-        "function": "Foundational Requirements"
+        "function": "Foundational Requirements",
+        "kind": "control"
       },
       {
         "control_id": "FR 4",
         "title": "Data Confidentiality",
         "description": "Ensure the confidentiality of information on communication channels and in data repositories.",
         "parent": null,
-        "function": "Foundational Requirements"
+        "function": "Foundational Requirements",
+        "kind": "control"
       },
       {
         "control_id": "SR 4.1",
         "title": "Information confidentiality",
         "description": "Protect confidentiality of information at rest and in transit.",
         "parent": "FR 4",
-        "function": "Foundational Requirements"
+        "function": "Foundational Requirements",
+        "kind": "control"
       },
       {
         "control_id": "SR 4.3",
         "title": "Use of cryptography",
         "description": "Use cryptographic mechanisms to protect confidentiality and integrity.",
         "parent": "FR 4",
-        "function": "Foundational Requirements"
+        "function": "Foundational Requirements",
+        "kind": "control"
       },
       {
         "control_id": "FR 5",
         "title": "Restricted Data Flow",
         "description": "Segment the system through zones and conduits to limit unnecessary data flows.",
         "parent": null,
-        "function": "Foundational Requirements"
+        "function": "Foundational Requirements",
+        "kind": "control"
       },
       {
         "control_id": "SR 5.1",
         "title": "Network segmentation",
         "description": "Segment networks through zones and conduits.",
         "parent": "FR 5",
-        "function": "Foundational Requirements"
+        "function": "Foundational Requirements",
+        "kind": "control"
       },
       {
         "control_id": "SR 5.2",
         "title": "Zone boundary protection",
         "description": "Monitor and control communications at zone boundaries.",
         "parent": "FR 5",
-        "function": "Foundational Requirements"
+        "function": "Foundational Requirements",
+        "kind": "control"
       },
       {
         "control_id": "FR 6",
         "title": "Timely Response to Events",
         "description": "Respond to security violations by notifying the proper authority and taking corrective action.",
         "parent": null,
-        "function": "Foundational Requirements"
+        "function": "Foundational Requirements",
+        "kind": "control"
       },
       {
         "control_id": "SR 6.1",
         "title": "Audit log accessibility",
         "description": "Provide capability to access audit logs on a read-only basis.",
         "parent": "FR 6",
-        "function": "Foundational Requirements"
+        "function": "Foundational Requirements",
+        "kind": "control"
       },
       {
         "control_id": "SR 6.2",
         "title": "Continuous monitoring",
         "description": "Provide capability for continuous monitoring of security-relevant events.",
         "parent": "FR 6",
-        "function": "Foundational Requirements"
+        "function": "Foundational Requirements",
+        "kind": "control"
       },
       {
         "control_id": "FR 7",
         "title": "Resource Availability",
         "description": "Ensure the availability of the system against denial-of-service events.",
         "parent": null,
-        "function": "Foundational Requirements"
+        "function": "Foundational Requirements",
+        "kind": "control"
       },
       {
         "control_id": "SR 7.1",
         "title": "Denial of service protection",
         "description": "Protect against denial-of-service attacks.",
         "parent": "FR 7",
-        "function": "Foundational Requirements"
+        "function": "Foundational Requirements",
+        "kind": "control"
       },
       {
         "control_id": "SR 7.2",
         "title": "Resource management",
         "description": "Manage system resources to prevent resource exhaustion.",
         "parent": "FR 7",
-        "function": "Foundational Requirements"
+        "function": "Foundational Requirements",
+        "kind": "control"
       },
       {
         "control_id": "SR 7.3",
         "title": "Control system backup",
         "description": "Backup the control system software and configuration.",
         "parent": "FR 7",
-        "function": "Foundational Requirements"
+        "function": "Foundational Requirements",
+        "kind": "control"
       },
       {
         "control_id": "SR 7.4",
         "title": "Control system recovery and reconstitution",
         "description": "Recover and reconstitute the control system after a disruption.",
         "parent": "FR 7",
-        "function": "Foundational Requirements"
+        "function": "Foundational Requirements",
+        "kind": "control"
       },
       {
         "control_id": "SR 1.9",
         "title": "Session lock",
-        "description": "Operator-accessible agent kill switch � halt all agent activity immediately without affecting process control; Agent sessions terminated and credentials revoked immediately on compromise detection; Ability to terminate LLM sessions immediately on detection of suspicious behaviour"
+        "description": "Operator-accessible agent kill switch � halt all agent activity immediately without affecting process control; Agent sessions terminated and credentials revoked immediately on compromise detection; Ability to terminate LLM sessions immediately on detection of suspicious behaviour",
+        "kind": "control"
       },
       {
         "control_id": "SR 6.6",
         "title": "Timely response to events",
-        "description": "Anomalous tool invocation patterns detected and responded to � alert, suspend, investigate; Cascade indicators detected and responded to before physical process impact; Shadow AI discovery triggers incident response � data impact assessment, vendor notification"
+        "description": "Anomalous tool invocation patterns detected and responded to � alert, suspend, investigate; Cascade indicators detected and responded to before physical process impact; Shadow AI discovery triggers incident response � data impact assessment, vendor notification",
+        "kind": "control"
       },
       {
         "control_id": "SR 1.6",
         "title": "Authenticator management",
-        "description": "Agent credentials managed with defined lifecycle � issuance, rotation, revocation procedures; Agent credential lifecycle managed � issuance, rotation, revocation documented per agent; LLM interactions logged with user identity — injection attempts attributable to specific sessions"
+        "description": "Agent credentials managed with defined lifecycle � issuance, rotation, revocation procedures; Agent credential lifecycle managed � issuance, rotation, revocation documented per agent; LLM interactions logged with user identity — injection attempts attributable to specific sessions",
+        "kind": "control"
       },
       {
         "control_id": "SR 2.6",
         "title": "Use control",
-        "description": "Only approved, verified agent components permitted in OT zones � no runtime loading of unapproved tools; Rogue agent cannot load additional tools or expand its own capability scope; Only approved, validated data sources permitted in Zone 3 GenAI ingestion � unapproved sources blocked"
+        "description": "Only approved, verified agent components permitted in OT zones � no runtime loading of unapproved tools; Rogue agent cannot load additional tools or expand its own capability scope; Only approved, validated data sources permitted in Zone 3 GenAI ingestion � unapproved sources blocked",
+        "kind": "control"
       },
       {
         "control_id": "Supplier security requirements",
         "title": "62443-2-4",
-        "description": "Security requirements applied to all agent tool and MCP server vendors with OT access; GenAI vendors handling OT-derived assets subject to 62443-2-4 programme; GenAI vendors assessed under OT supplier security programme � same requirements as OT software vendors"
+        "description": "Security requirements applied to all agent tool and MCP server vendors with OT access; GenAI vendors handling OT-derived assets subject to 62443-2-4 programme; GenAI vendors assessed under OT supplier security programme � same requirements as OT software vendors",
+        "kind": "control"
       },
       {
         "control_id": "SR 2.3",
         "title": "Use control",
-        "description": "Agent code execution restricted to specific, defined operations � no shell access, no network programming; LLM advisory outputs clearly distinguished from authoritative documentation � source always visible; LLM output restricted to authorised actions — no raw output directly to control interfaces"
+        "description": "Agent code execution restricted to specific, defined operations � no shell access, no network programming; LLM advisory outputs clearly distinguished from authoritative documentation � source always visible; LLM output restricted to authorised actions — no raw output directly to control interfaces",
+        "kind": "control"
       },
       {
         "control_id": "SR 3.7",
         "title": "Software and information integrity (monitoring)",
-        "description": "Runtime monitoring of agent code execution � anomalous system calls detected and blocked; Continuous monitoring of agent memory for anomalous content patterns or unexpected modifications; Continuous behavioural monitoring of all OT agents � deviation from established baseline detected"
+        "description": "Runtime monitoring of agent code execution � anomalous system calls detected and blocked; Continuous monitoring of agent memory for anomalous content patterns or unexpected modifications; Continuous behavioural monitoring of all OT agents � deviation from established baseline detected",
+        "kind": "control"
       },
       {
         "control_id": "SR 4.4",
         "title": "Communication integrity",
-        "description": "Message integrity enforced � replay protection, nonces, sequence numbers on A2A channels; GenAI outputs containing sensitive OT identifiers (tag names, IPs, device types) masked before leaving DMZ; OT-specific data masking before telemetry capture � tag IDs, equipment identifiers masked before logging"
+        "description": "Message integrity enforced � replay protection, nonces, sequence numbers on A2A channels; GenAI outputs containing sensitive OT identifiers (tag names, IPs, device types) masked before leaving DMZ; OT-specific data masking before telemetry capture � tag IDs, equipment identifiers masked before logging",
+        "kind": "control"
       },
       {
         "control_id": "SR 7.6",
         "title": "Denial of service protection",
-        "description": "Circuit breakers preventing cascade propagation � agent failure contained within defined blast radius; Poisoned model availability impact contained � fallback procedure prevents physical process disruption; Circuit breakers preventing OT GenAI service degradation from affecting process control"
+        "description": "Circuit breakers preventing cascade propagation � agent failure contained within defined blast radius; Poisoned model availability impact contained � fallback procedure prevents physical process disruption; Circuit breakers preventing OT GenAI service degradation from affecting process control",
+        "kind": "control"
       },
       {
         "control_id": "SR 7.7",
         "title": "Control system backup",
-        "description": "Agent system failures cannot affect backup and recovery of OT process control; OT GenAI failures cannot affect backup and recovery of process control � independence verified; LLM resource exhaustion cannot affect backup and recovery of OT control systems"
+        "description": "Agent system failures cannot affect backup and recovery of OT process control; OT GenAI failures cannot affect backup and recovery of process control � independence verified; LLM resource exhaustion cannot affect backup and recovery of OT control systems",
+        "kind": "control"
       },
       {
         "control_id": "SR 5.3",
         "title": "Information flow restriction",
-        "description": "OT-sensitive context minimised before tool API calls � tools receive minimum required, not full OT context"
+        "description": "OT-sensitive context minimised before tool API calls � tools receive minimum required, not full OT context",
+        "kind": "control"
       },
       {
         "control_id": "Security management system",
         "title": "62443-2-1",
-        "description": "OT security management system updated to cover GenAI deployments � policy, roles, assessment"
+        "description": "OT security management system updated to cover GenAI deployments � policy, roles, assessment",
+        "kind": "control"
       },
       {
         "control_id": "Security management",
         "title": "62443-2-1",
-        "description": "OT synthetic data governance policy � when synthetic data removes OT classification obligation"
+        "description": "OT synthetic data governance policy � when synthetic data removes OT classification obligation",
+        "kind": "control"
       },
       {
         "control_id": "SR 4.2",
         "title": "Data confidentiality at rest",
-        "description": "OT data used in LLM context or stored by LLM components encrypted at rest"
+        "description": "OT data used in LLM context or stored by LLM components encrypted at rest",
+        "kind": "control"
       }
     ],
     "changelog": [
       {
         "date": "2026-04-09",
         "change": "Initial seed — 7 foundational requirements with 25 system requirements",
-        "author": "emmanuelgjr"
+        "author": "OWASP GenAI Data Security Initiative"
       }
     ]
   },
@@ -3025,359 +3528,413 @@ window.CROSSWALK_FRAMEWORKS = [
         "title": "Policies for information security",
         "description": "Information security policy and topic-specific policies shall be defined, approved, published, communicated, and reviewed.",
         "parent": null,
-        "function": "Organizational"
+        "function": "Organizational",
+        "kind": "control"
       },
       {
         "control_id": "A.5.2",
         "title": "Information security roles and responsibilities",
         "description": "Information security roles and responsibilities shall be defined and allocated.",
         "parent": null,
-        "function": "Organizational"
+        "function": "Organizational",
+        "kind": "control"
       },
       {
         "control_id": "A.5.3",
         "title": "Segregation of duties",
         "description": "Conflicting duties and areas of responsibility shall be segregated.",
         "parent": null,
-        "function": "Organizational"
+        "function": "Organizational",
+        "kind": "control"
       },
       {
         "control_id": "A.5.7",
         "title": "Threat intelligence",
         "description": "Information relating to information security threats shall be collected and analysed.",
         "parent": null,
-        "function": "Organizational"
+        "function": "Organizational",
+        "kind": "control"
       },
       {
         "control_id": "A.5.8",
         "title": "Information security in project management",
         "description": "Information security shall be integrated into project management.",
         "parent": null,
-        "function": "Organizational"
+        "function": "Organizational",
+        "kind": "control"
       },
       {
         "control_id": "A.5.9",
         "title": "Inventory of information and other associated assets",
         "description": "An inventory of information and other associated assets shall be developed and maintained.",
         "parent": null,
-        "function": "Organizational"
+        "function": "Organizational",
+        "kind": "control"
       },
       {
         "control_id": "A.5.10",
         "title": "Acceptable use of information and other associated assets",
         "description": "Rules for acceptable use shall be identified, documented and implemented.",
         "parent": null,
-        "function": "Organizational"
+        "function": "Organizational",
+        "kind": "control"
       },
       {
         "control_id": "A.5.12",
         "title": "Classification of information",
         "description": "Information shall be classified according to information security needs.",
         "parent": null,
-        "function": "Organizational"
+        "function": "Organizational",
+        "kind": "control"
       },
       {
         "control_id": "A.5.13",
         "title": "Labelling of information",
         "description": "An appropriate set of procedures for labelling shall be developed and implemented.",
         "parent": null,
-        "function": "Organizational"
+        "function": "Organizational",
+        "kind": "control"
       },
       {
         "control_id": "A.5.14",
         "title": "Information transfer",
         "description": "Information transfer rules, procedures, or agreements shall be in place.",
         "parent": null,
-        "function": "Organizational"
+        "function": "Organizational",
+        "kind": "control"
       },
       {
         "control_id": "A.5.19",
         "title": "Information security in supplier relationships",
         "description": "Processes and procedures for managing information security risks associated with ICT supply chain.",
         "parent": null,
-        "function": "Organizational"
+        "function": "Organizational",
+        "kind": "control"
       },
       {
         "control_id": "A.5.23",
         "title": "Information security for use of cloud services",
         "description": "Processes for acquisition, use, management and exit from cloud services shall be established.",
         "parent": null,
-        "function": "Organizational"
+        "function": "Organizational",
+        "kind": "control"
       },
       {
         "control_id": "A.5.24",
         "title": "Information security incident management planning and preparation",
         "description": "Planning and preparation for managing information security incidents.",
         "parent": null,
-        "function": "Organizational"
+        "function": "Organizational",
+        "kind": "control"
       },
       {
         "control_id": "A.5.25",
         "title": "Assessment and decision on information security events",
         "description": "Events shall be assessed and decided whether to classify as incidents.",
         "parent": null,
-        "function": "Organizational"
+        "function": "Organizational",
+        "kind": "control"
       },
       {
         "control_id": "A.5.26",
         "title": "Response to information security incidents",
         "description": "Information security incidents shall be responded to in accordance with documented procedures.",
         "parent": null,
-        "function": "Organizational"
+        "function": "Organizational",
+        "kind": "control"
       },
       {
         "control_id": "A.5.28",
         "title": "Collection of evidence",
         "description": "Procedures for collection, acquisition, and preservation of evidence.",
         "parent": null,
-        "function": "Organizational"
+        "function": "Organizational",
+        "kind": "control"
       },
       {
         "control_id": "A.5.29",
         "title": "Information security during disruption",
         "description": "Plans for maintaining information security during disruption.",
         "parent": null,
-        "function": "Organizational"
+        "function": "Organizational",
+        "kind": "control"
       },
       {
         "control_id": "A.5.30",
         "title": "ICT readiness for business continuity",
         "description": "ICT readiness shall be planned, implemented, maintained and tested.",
         "parent": null,
-        "function": "Organizational"
+        "function": "Organizational",
+        "kind": "control"
       },
       {
         "control_id": "A.5.34",
         "title": "Privacy and protection of PII",
         "description": "Privacy and protection of PII shall be ensured as required.",
         "parent": null,
-        "function": "Organizational"
+        "function": "Organizational",
+        "kind": "control"
       },
       {
         "control_id": "A.5.36",
         "title": "Compliance with policies, rules and standards",
         "description": "Compliance with the organization's policies and standards shall be regularly reviewed.",
         "parent": null,
-        "function": "Organizational"
+        "function": "Organizational",
+        "kind": "control"
       },
       {
         "control_id": "A.6.1",
         "title": "Screening",
         "description": "Background verification checks on candidates shall be carried out.",
         "parent": null,
-        "function": "People"
+        "function": "People",
+        "kind": "control"
       },
       {
         "control_id": "A.6.3",
         "title": "Information security awareness, education and training",
         "description": "Personnel and relevant interested parties shall receive appropriate awareness, education and training.",
         "parent": null,
-        "function": "People"
+        "function": "People",
+        "kind": "control"
       },
       {
         "control_id": "A.7.1",
         "title": "Physical security perimeters",
         "description": "Security perimeters shall be defined and used to protect areas.",
         "parent": null,
-        "function": "Physical"
+        "function": "Physical",
+        "kind": "control"
       },
       {
         "control_id": "A.7.4",
         "title": "Physical security monitoring",
         "description": "Premises shall be continuously monitored for unauthorized physical access.",
         "parent": null,
-        "function": "Physical"
+        "function": "Physical",
+        "kind": "control"
       },
       {
         "control_id": "A.8.1",
         "title": "User endpoint devices",
         "description": "Information stored on, processed by or accessible via user endpoint devices shall be protected.",
         "parent": null,
-        "function": "Technological"
+        "function": "Technological",
+        "kind": "control"
       },
       {
         "control_id": "A.8.2",
         "title": "Privileged access rights",
         "description": "The allocation and use of privileged access rights shall be restricted and managed.",
         "parent": null,
-        "function": "Technological"
+        "function": "Technological",
+        "kind": "control"
       },
       {
         "control_id": "A.8.3",
         "title": "Information access restriction",
         "description": "Access to information and other associated assets shall be restricted.",
         "parent": null,
-        "function": "Technological"
+        "function": "Technological",
+        "kind": "control"
       },
       {
         "control_id": "A.8.4",
         "title": "Access to source code",
         "description": "Read and write access to source code, development tools and software libraries shall be managed.",
         "parent": null,
-        "function": "Technological"
+        "function": "Technological",
+        "kind": "control"
       },
       {
         "control_id": "A.8.5",
         "title": "Secure authentication",
         "description": "Secure authentication technologies and procedures shall be established.",
         "parent": null,
-        "function": "Technological"
+        "function": "Technological",
+        "kind": "control"
       },
       {
         "control_id": "A.8.7",
         "title": "Protection against malware",
         "description": "Protection against malware shall be implemented.",
         "parent": null,
-        "function": "Technological"
+        "function": "Technological",
+        "kind": "control"
       },
       {
         "control_id": "A.8.8",
         "title": "Management of technical vulnerabilities",
         "description": "Information about technical vulnerabilities shall be obtained and appropriate measures taken.",
         "parent": null,
-        "function": "Technological"
+        "function": "Technological",
+        "kind": "control"
       },
       {
         "control_id": "A.8.9",
         "title": "Configuration management",
         "description": "Configurations, including security configurations, shall be established, documented, implemented, monitored and reviewed.",
         "parent": null,
-        "function": "Technological"
+        "function": "Technological",
+        "kind": "control"
       },
       {
         "control_id": "A.8.11",
         "title": "Data masking",
         "description": "Data masking shall be used in accordance with the organization's topic-specific policy.",
         "parent": null,
-        "function": "Technological"
+        "function": "Technological",
+        "kind": "control"
       },
       {
         "control_id": "A.8.12",
         "title": "Data leakage prevention",
         "description": "Data leakage prevention measures shall be applied to systems, networks and other devices.",
         "parent": null,
-        "function": "Technological"
+        "function": "Technological",
+        "kind": "control"
       },
       {
         "control_id": "A.8.15",
         "title": "Logging",
         "description": "Logs that record activities, exceptions, faults and other relevant events shall be produced, stored, protected and analysed.",
         "parent": null,
-        "function": "Technological"
+        "function": "Technological",
+        "kind": "control"
       },
       {
         "control_id": "A.8.16",
         "title": "Monitoring activities",
         "description": "Networks, systems and applications shall be monitored for anomalous behaviour.",
         "parent": null,
-        "function": "Technological"
+        "function": "Technological",
+        "kind": "control"
       },
       {
         "control_id": "A.8.20",
         "title": "Networks security",
         "description": "Networks and network devices shall be secured, managed and controlled.",
         "parent": null,
-        "function": "Technological"
+        "function": "Technological",
+        "kind": "control"
       },
       {
         "control_id": "A.8.23",
         "title": "Web filtering",
         "description": "Access to external websites shall be managed to reduce exposure to malicious content.",
         "parent": null,
-        "function": "Technological"
+        "function": "Technological",
+        "kind": "control"
       },
       {
         "control_id": "A.8.24",
         "title": "Use of cryptography",
         "description": "Rules for effective use of cryptography shall be defined and implemented.",
         "parent": null,
-        "function": "Technological"
+        "function": "Technological",
+        "kind": "control"
       },
       {
         "control_id": "A.8.25",
         "title": "Secure development life cycle",
         "description": "Rules for the secure development of software and systems shall be established.",
         "parent": null,
-        "function": "Technological"
+        "function": "Technological",
+        "kind": "control"
       },
       {
         "control_id": "A.8.28",
         "title": "Secure coding",
         "description": "Secure coding principles shall be applied to software development.",
         "parent": null,
-        "function": "Technological"
+        "function": "Technological",
+        "kind": "control"
       },
       {
         "control_id": "A.8.29",
         "title": "Security testing",
-        "description": "Adversarial testing programme covering goal hijack � direct, indirect, multi-turn injection before each release; Sandbox escape and code injection scenarios in security testing � adversarial testing before each deployment; Adversarial testing of model outputs for poisoning indicators before deployment"
+        "description": "Adversarial testing programme covering goal hijack � direct, indirect, multi-turn injection before each release; Sandbox escape and code injection scenarios in security testing � adversarial testing before each deployment; Adversarial testing of model outputs for poisoning indicators before deployment",
+        "kind": "control"
       },
       {
         "control_id": "A.5.15",
         "title": "Identity management",
-        "description": "Agent tool access governed through identity management � tool permissions scoped per agent identity; LLM tool access governed through identity management � tool permissions scoped per deployment"
+        "description": "Agent tool access governed through identity management � tool permissions scoped per agent identity; LLM tool access governed through identity management � tool permissions scoped per deployment",
+        "kind": "control"
       },
       {
         "control_id": "A.5.16",
         "title": "Identity management",
-        "description": "NHI lifecycle management � all agent identities inventoried, provisioned, reviewed, and deprovisioned through formal process; All agent identities inventoried and lifecycle-managed as non-human identities"
+        "description": "NHI lifecycle management � all agent identities inventoried, provisioned, reviewed, and deprovisioned through formal process; All agent identities inventoried and lifecycle-managed as non-human identities",
+        "kind": "control"
       },
       {
         "control_id": "A.5.20",
         "title": "Supplier agreements",
-        "description": "Contractual security requirements for all agent component suppliers � integrity guarantees, vulnerability notification SLA; Contractual requirements covering data minimisation, retention, and training use for tool providers; Contractual data handling requirements for labelling vendors and HITL service providers"
+        "description": "Contractual security requirements for all agent component suppliers � integrity guarantees, vulnerability notification SLA; Contractual requirements covering data minimisation, retention, and training use for tool providers; Contractual data handling requirements for labelling vendors and HITL service providers",
+        "kind": "control"
       },
       {
         "control_id": "A.5.21",
         "title": "Supply chain security",
-        "description": "Managing ICT supply chain risks � agent tool and MCP server ecosystem explicitly in scope; Managing ICT supply chain risks � LLM model and library supply chain explicitly in scope"
+        "description": "Managing ICT supply chain risks � agent tool and MCP server ecosystem explicitly in scope; Managing ICT supply chain risks � LLM model and library supply chain explicitly in scope",
+        "kind": "control"
       },
       {
         "control_id": "A.8.26",
         "title": "Application security requirements",
-        "description": "Security requirements for agent code execution capability specified before development � sandbox spec, permitted operations; Input validation requirements specified for all GenAI data ingestion interfaces; Security requirements for LLM-to-SQL interfaces � read-only by default, parameterisation mandatory"
+        "description": "Security requirements for agent code execution capability specified before development � sandbox spec, permitted operations; Input validation requirements specified for all GenAI data ingestion interfaces; Security requirements for LLM-to-SQL interfaces � read-only by default, parameterisation mandatory",
+        "kind": "control"
       },
       {
         "control_id": "A.8.13",
         "title": "Backup",
-        "description": "Agent state and configuration backed up � recovery to known-good state after cascade incident; Backup and recovery for all AI data assets � vector stores, embedding indexes, RAG corpora; Backup and recovery for LLM service infrastructure � failover capability tested"
+        "description": "Agent state and configuration backed up � recovery to known-good state after cascade incident; Backup and recovery for all AI data assets � vector stores, embedding indexes, RAG corpora; Backup and recovery for LLM service infrastructure � failover capability tested",
+        "kind": "control"
       },
       {
         "control_id": "A.5.17",
         "title": "Authentication information",
-        "description": "Secure management of agent credentials � no hardcoding, rotation enforced"
+        "description": "Secure management of agent credentials � no hardcoding, rotation enforced",
+        "kind": "control"
       },
       {
         "control_id": "A.8.27",
         "title": "Secure system architecture",
-        "description": "Training pipeline designed with integrity controls and supply chain verification; RAG pipeline designed with source trust verification and integrity controls; Training pipeline designed with integrity controls � data validation, source allowlisting, lineage tracking"
+        "description": "Training pipeline designed with integrity controls and supply chain verification; RAG pipeline designed with source trust verification and integrity controls; Training pipeline designed with integrity controls � data validation, source allowlisting, lineage tracking",
+        "kind": "control"
       },
       {
         "control_id": "A.8.10",
         "title": "Information deletion",
-        "description": "Deletion and erasure obligations enforced across all derived assets � embeddings, caches, backups"
+        "description": "Deletion and erasure obligations enforced across all derived assets � embeddings, caches, backups",
+        "kind": "control"
       },
       {
         "control_id": "A.5.31",
         "title": "Compliance with legal requirements",
-        "description": "Identifying and complying with all legal, regulatory, and contractual requirements applicable to GenAI"
+        "description": "Identifying and complying with all legal, regulatory, and contractual requirements applicable to GenAI",
+        "kind": "control"
       },
       {
         "control_id": "A.8.33",
         "title": "Test information",
-        "description": "Appropriate protection of test and synthetic data used in AI development"
+        "description": "Appropriate protection of test and synthetic data used in AI development",
+        "kind": "control"
       },
       {
         "control_id": "A.8.14",
         "title": "Redundancy",
-        "description": "Redundancy and failover for production RAG and vector store infrastructure"
+        "description": "Redundancy and failover for production RAG and vector store infrastructure",
+        "kind": "control"
       }
     ],
     "changelog": [
       {
         "date": "2026-04-09",
         "change": "Initial seed — 41 Annex A controls most relevant to GenAI security",
-        "author": "emmanuelgjr"
+        "author": "OWASP GenAI Data Security Initiative"
       }
     ]
   },
@@ -3398,516 +3955,603 @@ window.CROSSWALK_FRAMEWORKS = [
         "title": "Understanding the organization and its context",
         "description": "Determine external and internal issues relevant to AI management system.",
         "parent": null,
-        "function": "Context"
+        "function": "Context",
+        "kind": "control"
       },
       {
         "control_id": "4.2",
         "title": "Understanding the needs and expectations of interested parties",
         "description": "Determine interested parties and their requirements relevant to the AIMS.",
         "parent": null,
-        "function": "Context"
+        "function": "Context",
+        "kind": "control"
       },
       {
         "control_id": "4.3",
         "title": "Determining the scope of the AIMS",
         "description": "Determine boundaries and applicability of the AI management system.",
         "parent": null,
-        "function": "Context"
+        "function": "Context",
+        "kind": "control"
       },
       {
         "control_id": "4.4",
         "title": "AI management system",
         "description": "Establish, implement, maintain and continually improve the AIMS.",
         "parent": null,
-        "function": "Context"
+        "function": "Context",
+        "kind": "control"
       },
       {
         "control_id": "5.1",
         "title": "Leadership and commitment",
         "description": "Top management shall demonstrate leadership and commitment.",
         "parent": null,
-        "function": "Leadership"
+        "function": "Leadership",
+        "kind": "control"
       },
       {
         "control_id": "5.2",
         "title": "AI policy",
         "description": "Top management shall establish an AI policy appropriate to the organization.",
         "parent": null,
-        "function": "Leadership"
+        "function": "Leadership",
+        "kind": "control"
       },
       {
         "control_id": "5.3",
         "title": "Roles, responsibilities and authorities",
         "description": "Top management shall ensure responsibilities and authorities are assigned and communicated.",
         "parent": null,
-        "function": "Leadership"
+        "function": "Leadership",
+        "kind": "control"
       },
       {
         "control_id": "6.1",
         "title": "Actions to address risks and opportunities",
         "description": "Plan actions to address risks and opportunities for the AIMS.",
         "parent": null,
-        "function": "Planning"
+        "function": "Planning",
+        "kind": "control"
       },
       {
         "control_id": "6.1.2",
         "title": "AI risk assessment",
         "description": "Define and apply an AI risk assessment process.",
         "parent": "6.1",
-        "function": "Planning"
+        "function": "Planning",
+        "kind": "control"
       },
       {
         "control_id": "6.1.3",
         "title": "AI risk treatment",
         "description": "Define and apply an AI risk treatment process.",
         "parent": "6.1",
-        "function": "Planning"
+        "function": "Planning",
+        "kind": "control"
       },
       {
         "control_id": "6.1.4",
         "title": "AI system impact assessment",
         "description": "Conduct impact assessments for AI systems considering individuals, groups, and societies.",
         "parent": "6.1",
-        "function": "Planning"
+        "function": "Planning",
+        "kind": "control"
       },
       {
         "control_id": "6.2",
         "title": "AI objectives and planning to achieve them",
         "description": "Establish AI objectives at relevant functions, levels, and processes.",
         "parent": null,
-        "function": "Planning"
+        "function": "Planning",
+        "kind": "control"
       },
       {
         "control_id": "7.1",
         "title": "Resources",
         "description": "Determine and provide resources needed for the AIMS.",
         "parent": null,
-        "function": "Support"
+        "function": "Support",
+        "kind": "control"
       },
       {
         "control_id": "7.2",
         "title": "Competence",
         "description": "Determine competence of persons doing work that affects AI performance.",
         "parent": null,
-        "function": "Support"
+        "function": "Support",
+        "kind": "control"
       },
       {
         "control_id": "7.3",
         "title": "Awareness",
         "description": "Persons doing work shall be aware of the AI policy and their contribution.",
         "parent": null,
-        "function": "Support"
+        "function": "Support",
+        "kind": "control"
       },
       {
         "control_id": "7.5",
         "title": "Documented information",
         "description": "The AIMS shall include documented information required by the standard.",
         "parent": null,
-        "function": "Support"
+        "function": "Support",
+        "kind": "control"
       },
       {
         "control_id": "8.1",
         "title": "Operational planning and control",
         "description": "Plan, implement and control processes needed to meet requirements.",
         "parent": null,
-        "function": "Operation"
+        "function": "Operation",
+        "kind": "control"
       },
       {
         "control_id": "8.2",
         "title": "AI risk assessment (operational)",
         "description": "Perform AI risk assessments at planned intervals or when significant changes occur.",
         "parent": null,
-        "function": "Operation"
+        "function": "Operation",
+        "kind": "control"
       },
       {
         "control_id": "8.3",
         "title": "AI risk treatment (operational)",
         "description": "Implement the AI risk treatment plan.",
         "parent": null,
-        "function": "Operation"
+        "function": "Operation",
+        "kind": "control"
       },
       {
         "control_id": "8.4",
         "title": "AI system impact assessment (operational)",
         "description": "Perform AI system impact assessments at planned intervals.",
         "parent": null,
-        "function": "Operation"
+        "function": "Operation",
+        "kind": "control"
       },
       {
         "control_id": "9.1",
         "title": "Monitoring, measurement, analysis and evaluation",
         "description": "Determine what needs to be monitored and measured.",
         "parent": null,
-        "function": "Performance Evaluation"
+        "function": "Performance Evaluation",
+        "kind": "control"
       },
       {
         "control_id": "9.2",
         "title": "Internal audit",
         "description": "Conduct internal audits at planned intervals.",
         "parent": null,
-        "function": "Performance Evaluation"
+        "function": "Performance Evaluation",
+        "kind": "control"
       },
       {
         "control_id": "9.3",
         "title": "Management review",
         "description": "Top management shall review the AIMS at planned intervals.",
         "parent": null,
-        "function": "Performance Evaluation"
+        "function": "Performance Evaluation",
+        "kind": "control"
       },
       {
         "control_id": "10.1",
         "title": "Continual improvement",
         "description": "Continually improve the suitability, adequacy and effectiveness of the AIMS.",
         "parent": null,
-        "function": "Improvement"
+        "function": "Improvement",
+        "kind": "control"
       },
       {
         "control_id": "10.2",
         "title": "Nonconformity and corrective action",
         "description": "React to nonconformities and take corrective action.",
         "parent": null,
-        "function": "Improvement"
+        "function": "Improvement",
+        "kind": "control"
       },
       {
         "control_id": "A.2",
         "title": "Policies related to AI",
         "description": "AI policies shall address responsible development and use.",
         "parent": null,
-        "function": "Annex A"
+        "function": "Annex A",
+        "kind": "control"
       },
       {
         "control_id": "A.3",
         "title": "Internal organization",
         "description": "AI roles and responsibilities shall be defined within the organization.",
         "parent": null,
-        "function": "Annex A"
+        "function": "Annex A",
+        "kind": "control"
       },
       {
         "control_id": "A.4",
         "title": "Resources for AI systems",
         "description": "Resources including data, tools, and infrastructure for AI systems.",
         "parent": null,
-        "function": "Annex A"
+        "function": "Annex A",
+        "kind": "control"
       },
       {
         "control_id": "A.5",
         "title": "Assessing impacts of AI systems",
         "description": "Impacts of AI systems on individuals, groups, and societies shall be assessed.",
         "parent": null,
-        "function": "Annex A"
+        "function": "Annex A",
+        "kind": "control"
       },
       {
         "control_id": "A.6",
         "title": "AI system life cycle",
         "description": "Controls for development, testing, deployment, operation, and decommissioning.",
         "parent": null,
-        "function": "Annex A"
+        "function": "Annex A",
+        "kind": "control"
       },
       {
         "control_id": "A.7",
         "title": "Data for AI systems",
         "description": "Data acquisition, quality, provenance, and governance for AI systems.",
         "parent": null,
-        "function": "Annex A"
+        "function": "Annex A",
+        "kind": "control"
       },
       {
         "control_id": "A.8",
         "title": "Information for interested parties of AI systems",
         "description": "Transparency and communication about AI systems to interested parties.",
         "parent": null,
-        "function": "Annex A"
+        "function": "Annex A",
+        "kind": "control"
       },
       {
         "control_id": "A.9",
         "title": "Use of AI systems",
         "description": "Appropriate use of AI systems and processes for responsible deployment.",
         "parent": null,
-        "function": "Annex A"
+        "function": "Annex A",
+        "kind": "control"
       },
       {
         "control_id": "A.10",
         "title": "Third-party and customer relationships",
         "description": "Managing AI-related risks from third parties and in customer relationships.",
         "parent": null,
-        "function": "Annex A"
+        "function": "Annex A",
+        "kind": "control"
       },
       {
         "control_id": "B.2",
         "title": "Societal norms and values",
         "description": "Consider societal norms and values in AI development and deployment.",
         "parent": null,
-        "function": "Annex B"
+        "function": "Annex B",
+        "kind": "control"
       },
       {
         "control_id": "B.3",
         "title": "Human oversight of AI systems",
         "description": "Human oversight mechanisms for AI system decisions and actions.",
         "parent": null,
-        "function": "Annex B"
+        "function": "Annex B",
+        "kind": "control"
       },
       {
         "control_id": "B.4",
         "title": "Explainability and interpretability",
         "description": "AI system decisions should be explainable and interpretable as appropriate.",
         "parent": null,
-        "function": "Annex B"
+        "function": "Annex B",
+        "kind": "control"
       },
       {
         "control_id": "A.6.2.3",
         "title": "AI system security",
-        "description": "Goal-state verification and input validation as AIMS security design requirements � structural controls enforced at orchestration layer; Per-tool permission manifests and parameter validation as AIMS security controls; Credential security as AIMS design requirement � short-lived JIT credentials, no cleartext storage, least privilege"
+        "description": "Goal-state verification and input validation as AIMS security design requirements � structural controls enforced at orchestration layer; Per-tool permission manifests and parameter validation as AIMS security controls; Credential security as AIMS design requirement � short-lived JIT credentials, no cleartext storage, least privilege",
+        "kind": "control"
       },
       {
         "control_id": "A.6.2.6",
         "title": "Testing of AI systems",
-        "description": "Goal hijack scenarios in AIMS testing � direct, indirect, multi-turn injection tested before each production release; Sandbox escape and code injection scenarios in AIMS testing � adversarial testing before each deployment; A2A security scenarios in AIMS testing � spoofing, replay, schema violations before deployment"
+        "description": "Goal hijack scenarios in AIMS testing � direct, indirect, multi-turn injection tested before each production release; Sandbox escape and code injection scenarios in AIMS testing � adversarial testing before each deployment; A2A security scenarios in AIMS testing � spoofing, replay, schema violations before deployment",
+        "kind": "control"
       },
       {
         "control_id": "A.5.2",
         "title": "Impact assessment",
-        "description": "Impact assessment covers goal hijack risk � what autonomous actions are possible if goal is redirected, who is affected; Tool misuse impact assessed � what harm is possible if each tool is misused autonomously; Impact of code execution capability formally assessed � RCE impact on persons and systems documented"
+        "description": "Impact assessment covers goal hijack risk � what autonomous actions are possible if goal is redirected, who is affected; Tool misuse impact assessed � what harm is possible if each tool is misused autonomously; Impact of code execution capability formally assessed � RCE impact on persons and systems documented",
+        "kind": "control"
       },
       {
         "control_id": "Cl.6.1",
         "title": "Risk assessment",
-        "description": "Goal hijack in AI risk register � blast radius per deployment, owner, treatment, review cadence; Code execution risk in AI risk register � blast radius, sandbox status, permitted operations documented; Cascade blast radius in AI risk register � maximum affected systems formally documented and accepted"
+        "description": "Goal hijack in AI risk register � blast radius per deployment, owner, treatment, review cadence; Code execution risk in AI risk register � blast radius, sandbox status, permitted operations documented; Cascade blast radius in AI risk register � maximum affected systems formally documented and accepted",
+        "kind": "control"
       },
       {
         "control_id": "A.6.1.2",
         "title": "Responsible AI system management",
-        "description": "Tool access managed responsibly throughout agent lifecycle � permission review, irreversibility classification, human oversight requirements; Comprehensive audit logging and rogue agent containment as responsible lifecycle management obligation; LLM components managed responsibly through lifecycle � acquisition, testing, deployment, decommission"
+        "description": "Tool access managed responsibly throughout agent lifecycle � permission review, irreversibility classification, human oversight requirements; Comprehensive audit logging and rogue agent containment as responsible lifecycle management obligation; LLM components managed responsibly through lifecycle � acquisition, testing, deployment, decommission",
+        "kind": "control"
       },
       {
         "control_id": "A.10.1",
         "title": "Third-party AI system acquisition",
-        "description": "Tool and MCP server providers assessed as third-party AI components � security obligations in contracts; Third-party services accessed via agent credentials assessed � security obligations in access arrangements; All agent tool and MCP server providers assessed � security obligations, integrity guarantees, disclosure SLA in contracts"
+        "description": "Tool and MCP server providers assessed as third-party AI components � security obligations in contracts; Third-party services accessed via agent credentials assessed � security obligations in access arrangements; All agent tool and MCP server providers assessed � security obligations, integrity guarantees, disclosure SLA in contracts",
+        "kind": "control"
       },
       {
         "control_id": "A.7.3",
         "title": "Data provenance and characteristics",
-        "description": "Agent credentials tracked as AI system data � issuance, scope, expiry, rotation documented; Memory provenance tracked � source, write access controls, TTL, modification history in AIMS; Data provenance documented � source, classification, handling requirements tracked from ingestion through all derived forms"
+        "description": "Agent credentials tracked as AI system data � issuance, scope, expiry, rotation documented; Memory provenance tracked � source, write access controls, TTL, modification history in AIMS; Data provenance documented � source, classification, handling requirements tracked from ingestion through all derived forms",
+        "kind": "control"
       },
       {
         "control_id": "Cl.7",
         "title": "Support",
-        "description": "Resources for AI systems include NHIs � agent identities inventoried and managed as AIMS resources; Documented information controls � system prompts managed as AIMS documented information with appropriate access controls"
+        "description": "Resources for AI systems include NHIs � agent identities inventoried and managed as AIMS resources; Documented information controls � system prompts managed as AIMS documented information with appropriate access controls",
+        "kind": "control"
       },
       {
         "control_id": "A.10.2",
         "title": "Customer relationships",
-        "description": "Obligations to downstream consumers of agentic systems � what supply chain security is guaranteed; LLM deployment obligations to downstream customers � what security properties are guaranteed"
+        "description": "Obligations to downstream consumers of agentic systems � what supply chain security is guaranteed; LLM deployment obligations to downstream customers � what security properties are guaranteed",
+        "kind": "control"
       },
       {
         "control_id": "A.7.2",
         "title": "Data quality",
-        "description": "Training data from third-party sources assessed � same data quality criteria as internal data; Agent memory content quality requirements � access controls, integrity verification, TTL as data quality controls; Training data and RAG content quality requirements � sensitivity, completeness, appropriateness assessed before use"
+        "description": "Training data from third-party sources assessed � same data quality criteria as internal data; Agent memory content quality requirements � access controls, integrity verification, TTL as data quality controls; Training data and RAG content quality requirements � sensitivity, completeness, appropriateness assessed before use",
+        "kind": "control"
       },
       {
         "control_id": "A.6.2.8",
         "title": "Monitoring of AI systems",
-        "description": "Memory integrity monitored in operation � anomalous write patterns, content integrity checks as AIMS monitoring; Cascade indicators monitored in operation � correlated failure patterns detected as AIMS monitoring; Behavioural monitoring as AIMS operational control � baseline deviation detection is the primary rogue agent control"
+        "description": "Memory integrity monitored in operation � anomalous write patterns, content integrity checks as AIMS monitoring; Cascade indicators monitored in operation � correlated failure patterns detected as AIMS monitoring; Behavioural monitoring as AIMS operational control � baseline deviation detection is the primary rogue agent control",
+        "kind": "control"
       },
       {
         "control_id": "Cl.8",
         "title": "Operation",
-        "description": "A2A communication documented as AIMS operational control � authentication requirements, encryption standards; Operational controls for LLM deployment � output handling requirements documented as AIMS operational procedures"
+        "description": "A2A communication documented as AIMS operational control � authentication requirements, encryption standards; Operational controls for LLM deployment � output handling requirements documented as AIMS operational procedures",
+        "kind": "control"
       },
       {
         "control_id": "Cl.9",
         "title": "Performance evaluation",
-        "description": "Cascade incidents in AIMS performance evaluation � circuit breaker effectiveness, recovery times in management review; Rogue agent detection rates and containment times in AIMS management review; Resource consumption metrics in AIMS performance evaluation � consumption trends in management review"
+        "description": "Cascade incidents in AIMS performance evaluation � circuit breaker effectiveness, recovery times in management review; Rogue agent detection rates and containment times in AIMS management review; Resource consumption metrics in AIMS performance evaluation � consumption trends in management review",
+        "kind": "control"
       },
       {
         "control_id": "A.8.1",
         "title": "Information for interested parties",
-        "description": "AI system transparency obligations � users informed of AI nature, advisory status, limitations, EU AI Act Art. 50 alignment; Transparency obligations balanced with operational security � what must be disclosed vs what may be kept confidential; Transparency about AI system limitations � users informed of advisory status, accuracy limitations, verification requirements"
+        "description": "AI system transparency obligations � users informed of AI nature, advisory status, limitations, EU AI Act Art. 50 alignment; Transparency obligations balanced with operational security � what must be disclosed vs what may be kept confidential; Transparency about AI system limitations � users informed of advisory status, accuracy limitations, verification requirements",
+        "kind": "control"
       },
       {
         "control_id": "A.9.1",
         "title": "Use of AI systems",
-        "description": "Guidance on appropriate use � domains requiring human verification, how to distinguish AI advisory from authoritative content; Guidance on AI system use � downstream consumers informed that LLM output must be validated before use; Guidance on appropriate AI system use � domains requiring human verification documented as AIMS use guidance"
+        "description": "Guidance on appropriate use � domains requiring human verification, how to distinguish AI advisory from authoritative content; Guidance on AI system use � downstream consumers informed that LLM output must be validated before use; Guidance on appropriate AI system use � domains requiring human verification documented as AIMS use guidance",
+        "kind": "control"
       },
       {
         "control_id": "Cl.5",
         "title": "Policy",
-        "description": "Leadership commitment to AI transparency � AI disclosure and advisory labelling requirements in AI policy; Leadership commitment to human oversight � autonomous action scope defined in AI policy, signed off at executive level"
+        "description": "Leadership commitment to AI transparency � AI disclosure and advisory labelling requirements in AI policy; Leadership commitment to human oversight � autonomous action scope defined in AI policy, signed off at executive level",
+        "kind": "control"
       },
       {
         "control_id": "Data for AI — acquisition",
         "title": "A.7.2",
-        "description": "Foundational"
+        "description": "Foundational",
+        "kind": "control"
       },
       {
         "control_id": "Data for AI — preparation",
         "title": "A.7.3",
-        "description": "Hardening"
+        "description": "Hardening",
+        "kind": "control"
       },
       {
         "control_id": "Lifecycle — operational",
         "title": "A.6.2.3",
-        "description": "Foundational; Hardening"
+        "description": "Foundational; Hardening",
+        "kind": "control"
       },
       {
         "control_id": "Impact assessment",
         "title": "A.5.2",
-        "description": "Hardening"
+        "description": "Hardening",
+        "kind": "control"
       },
       {
         "control_id": "Lifecycle — design",
         "title": "A.6.1.2",
-        "description": "Foundational"
+        "description": "Foundational",
+        "kind": "control"
       },
       {
         "control_id": "Internal organisation — roles",
         "title": "A.3.3",
-        "description": "Foundational"
+        "description": "Foundational",
+        "kind": "control"
       },
       {
         "control_id": "Leadership",
         "title": "Cl.5",
-        "description": "Foundational"
+        "description": "Foundational",
+        "kind": "control"
       },
       {
         "control_id": "Policies — acceptable use",
         "title": "A.2.2",
-        "description": "Foundational"
+        "description": "Foundational",
+        "kind": "control"
       },
       {
         "control_id": "Use of AI systems",
         "title": "A.9.1",
-        "description": "Foundational"
+        "description": "Foundational",
+        "kind": "control"
       },
       {
         "control_id": "Third-party relationships",
         "title": "A.10.1",
-        "description": "Hardening"
+        "description": "Hardening",
+        "kind": "control"
       },
       {
         "control_id": "Context",
         "title": "Cl.4",
-        "description": "Foundational"
+        "description": "Foundational",
+        "kind": "control"
       },
       {
         "control_id": "Data — acquisition",
         "title": "A.7.2",
-        "description": "Hardening; Foundational"
+        "description": "Hardening; Foundational",
+        "kind": "control"
       },
       {
         "control_id": "Data — preparation",
         "title": "A.7.3",
-        "description": "Hardening"
+        "description": "Hardening",
+        "kind": "control"
       },
       {
         "control_id": "Lifecycle — testing",
         "title": "A.6.2.6",
-        "description": "Hardening; Advanced"
+        "description": "Hardening; Advanced",
+        "kind": "control"
       },
       {
         "control_id": "Operation",
         "title": "Cl.8",
-        "description": "Foundational; Hardening"
+        "description": "Foundational; Hardening",
+        "kind": "control"
       },
       {
         "control_id": "Third-party — AI supply chain",
         "title": "A.10.1",
-        "description": "Hardening"
+        "description": "Hardening",
+        "kind": "control"
       },
       {
         "control_id": "Third-party — customer data",
         "title": "A.10.2",
-        "description": "Hardening"
+        "description": "Hardening",
+        "kind": "control"
       },
       {
         "control_id": "Policies",
         "title": "A.2.2",
-        "description": "Foundational"
+        "description": "Foundational",
+        "kind": "control"
       },
       {
         "control_id": "Planning — risk",
         "title": "Cl.6.1",
-        "description": "Hardening"
+        "description": "Hardening",
+        "kind": "control"
       },
       {
         "control_id": "Information for interested parties",
         "title": "A.8.1",
-        "description": "Hardening"
+        "description": "Hardening",
+        "kind": "control"
       },
       {
         "control_id": "Context — interested parties",
         "title": "Cl.4.2",
-        "description": "Foundational"
+        "description": "Foundational",
+        "kind": "control"
       },
       {
         "control_id": "Data — access control",
         "title": "A.7.2",
-        "description": "Foundational"
+        "description": "Foundational",
+        "kind": "control"
       },
       {
         "control_id": "Third-party",
         "title": "A.10.1",
-        "description": "Hardening"
+        "description": "Hardening",
+        "kind": "control"
       },
       {
         "control_id": "Data — governance",
         "title": "A.7.2",
-        "description": "Foundational"
+        "description": "Foundational",
+        "kind": "control"
       },
       {
         "control_id": "Performance evaluation",
         "title": "Cl.9",
-        "description": "Hardening"
+        "description": "Hardening",
+        "kind": "control"
       },
       {
         "control_id": "Data — minimisation",
         "title": "A.7.2",
-        "description": "Foundational"
+        "description": "Foundational",
+        "kind": "control"
       },
       {
         "control_id": "Lifecycle — decommissioning",
         "title": "A.6.2.8",
-        "description": "Foundational"
+        "description": "Foundational",
+        "kind": "control"
       },
       {
         "control_id": "Improvement",
         "title": "Cl.10",
-        "description": "Hardening"
+        "description": "Hardening",
+        "kind": "control"
       },
       {
         "control_id": "Data — privacy-preserving",
         "title": "A.7.2",
-        "description": "Hardening"
+        "description": "Hardening",
+        "kind": "control"
       },
       {
         "control_id": "Support",
         "title": "Cl.7",
-        "description": "Foundational"
+        "description": "Foundational",
+        "kind": "control"
       },
       {
         "control_id": "Data — model artefacts",
         "title": "A.7.3",
-        "description": "Hardening"
+        "description": "Hardening",
+        "kind": "control"
       },
       {
         "control_id": "Data — provenance",
         "title": "A.7.2",
-        "description": "Hardening"
+        "description": "Hardening",
+        "kind": "control"
       },
       {
         "control_id": "Data — quality",
         "title": "A.7.3",
-        "description": "Hardening"
+        "description": "Hardening",
+        "kind": "control"
       },
       {
         "control_id": "Transparency",
         "title": "A.8.1",
-        "description": "Hardening"
+        "description": "Hardening",
+        "kind": "control"
       }
     ],
     "changelog": [
       {
         "date": "2026-04-09",
         "change": "Initial seed — 37 controls from clauses 4-10 and Annexes A/B",
-        "author": "emmanuelgjr"
+        "author": "OWASP GenAI Data Security Initiative"
       }
     ]
   },
@@ -3928,203 +4572,231 @@ window.CROSSWALK_FRAMEWORKS = [
         "title": "Foundation Models Layer",
         "description": "Base model layer — covers model selection, provenance, fine-tuning security, and model integrity threats.",
         "parent": null,
-        "function": "Architecture Layer"
+        "function": "Architecture Layer",
+        "kind": "layer"
       },
       {
         "control_id": "L1.1",
         "title": "Model provenance verification",
         "description": "Verify source, training data lineage, and integrity of foundation models before deployment.",
         "parent": "L1",
-        "function": "Architecture Layer"
+        "function": "Architecture Layer",
+        "kind": "control"
       },
       {
         "control_id": "L1.2",
         "title": "Model integrity protection",
         "description": "Protect model weights, parameters, and configuration from unauthorized modification.",
         "parent": "L1",
-        "function": "Architecture Layer"
+        "function": "Architecture Layer",
+        "kind": "control"
       },
       {
         "control_id": "L1.3",
         "title": "Fine-tuning security",
         "description": "Secure fine-tuning pipelines against data poisoning and unauthorized modification.",
         "parent": "L1",
-        "function": "Architecture Layer"
+        "function": "Architecture Layer",
+        "kind": "control"
       },
       {
         "control_id": "L2",
         "title": "Data Operations Layer",
         "description": "Data pipelines — covers RAG, vector stores, training data, embedding security, and data governance.",
         "parent": null,
-        "function": "Architecture Layer"
+        "function": "Architecture Layer",
+        "kind": "layer"
       },
       {
         "control_id": "L2.1",
         "title": "RAG pipeline security",
         "description": "Secure retrieval-augmented generation pipelines against injection, poisoning, and data leakage.",
         "parent": "L2",
-        "function": "Architecture Layer"
+        "function": "Architecture Layer",
+        "kind": "control"
       },
       {
         "control_id": "L2.2",
         "title": "Vector store protection",
         "description": "Protect vector databases and embedding stores from unauthorized access and manipulation.",
         "parent": "L2",
-        "function": "Architecture Layer"
+        "function": "Architecture Layer",
+        "kind": "control"
       },
       {
         "control_id": "L2.3",
         "title": "Training data governance",
         "description": "Govern training data lifecycle including sourcing, validation, labeling, and retention.",
         "parent": "L2",
-        "function": "Architecture Layer"
+        "function": "Architecture Layer",
+        "kind": "control"
       },
       {
         "control_id": "L3",
         "title": "Agent Frameworks Layer",
         "description": "Agent runtime — covers agent orchestration, goal management, memory, and planning security.",
         "parent": null,
-        "function": "Architecture Layer"
+        "function": "Architecture Layer",
+        "kind": "layer"
       },
       {
         "control_id": "L3.1",
         "title": "Agent goal integrity",
         "description": "Protect agent goals and objectives from hijacking or unauthorized modification.",
         "parent": "L3",
-        "function": "Architecture Layer"
+        "function": "Architecture Layer",
+        "kind": "control"
       },
       {
         "control_id": "L3.2",
         "title": "Agent memory security",
         "description": "Secure agent persistent and session memory against poisoning and unauthorized access.",
         "parent": "L3",
-        "function": "Architecture Layer"
+        "function": "Architecture Layer",
+        "kind": "control"
       },
       {
         "control_id": "L3.3",
         "title": "Planning and reasoning validation",
         "description": "Validate agent planning and reasoning processes to detect manipulation or drift.",
         "parent": "L3",
-        "function": "Architecture Layer"
+        "function": "Architecture Layer",
+        "kind": "control"
       },
       {
         "control_id": "L4",
         "title": "Tools and Integration Layer",
         "description": "Tool access — covers MCP, API integrations, plugin security, and tool authorization.",
         "parent": null,
-        "function": "Architecture Layer"
+        "function": "Architecture Layer",
+        "kind": "layer"
       },
       {
         "control_id": "L4.1",
         "title": "Tool authorization and scoping",
         "description": "Implement least-privilege tool access with explicit authorization for each tool action.",
         "parent": "L4",
-        "function": "Architecture Layer"
+        "function": "Architecture Layer",
+        "kind": "control"
       },
       {
         "control_id": "L4.2",
         "title": "MCP server security",
         "description": "Secure Model Context Protocol servers against injection, spoofing, and unauthorized access.",
         "parent": "L4",
-        "function": "Architecture Layer"
+        "function": "Architecture Layer",
+        "kind": "control"
       },
       {
         "control_id": "L4.3",
         "title": "API integration security",
         "description": "Secure API integrations with authentication, rate limiting, and input/output validation.",
         "parent": "L4",
-        "function": "Architecture Layer"
+        "function": "Architecture Layer",
+        "kind": "control"
       },
       {
         "control_id": "L5",
         "title": "Deployment Infrastructure Layer",
         "description": "Infrastructure — covers containerization, networking, secrets management, and runtime isolation.",
         "parent": null,
-        "function": "Architecture Layer"
+        "function": "Architecture Layer",
+        "kind": "layer"
       },
       {
         "control_id": "L5.1",
         "title": "Runtime isolation",
         "description": "Isolate agent execution environments using containers, sandboxes, or VMs.",
         "parent": "L5",
-        "function": "Architecture Layer"
+        "function": "Architecture Layer",
+        "kind": "control"
       },
       {
         "control_id": "L5.2",
         "title": "Secrets and credential management",
         "description": "Manage secrets, API keys, and credentials used by agents with rotation and least-privilege access.",
         "parent": "L5",
-        "function": "Architecture Layer"
+        "function": "Architecture Layer",
+        "kind": "control"
       },
       {
         "control_id": "L5.3",
         "title": "Network segmentation",
         "description": "Segment networks to limit agent lateral movement and contain blast radius.",
         "parent": "L5",
-        "function": "Architecture Layer"
+        "function": "Architecture Layer",
+        "kind": "control"
       },
       {
         "control_id": "L6",
         "title": "Orchestration Layer",
         "description": "Multi-agent coordination — covers inter-agent communication, delegation, consensus, and cascading failure prevention.",
         "parent": null,
-        "function": "Architecture Layer"
+        "function": "Architecture Layer",
+        "kind": "layer"
       },
       {
         "control_id": "L6.1",
         "title": "Inter-agent authentication",
         "description": "Authenticate agents in multi-agent systems to prevent spoofing and impersonation.",
         "parent": "L6",
-        "function": "Architecture Layer"
+        "function": "Architecture Layer",
+        "kind": "control"
       },
       {
         "control_id": "L6.2",
         "title": "Delegation controls",
         "description": "Control and audit task delegation between agents with authority boundaries.",
         "parent": "L6",
-        "function": "Architecture Layer"
+        "function": "Architecture Layer",
+        "kind": "control"
       },
       {
         "control_id": "L6.3",
         "title": "Cascading failure prevention",
         "description": "Implement circuit breakers and isolation patterns to prevent cascading failures across agents.",
         "parent": "L6",
-        "function": "Architecture Layer"
+        "function": "Architecture Layer",
+        "kind": "control"
       },
       {
         "control_id": "L7",
         "title": "Interaction and User Interface Layer",
         "description": "Human-agent interface — covers user authentication, output validation, human oversight, and trust management.",
         "parent": null,
-        "function": "Architecture Layer"
+        "function": "Architecture Layer",
+        "kind": "layer"
       },
       {
         "control_id": "L7.1",
         "title": "Output validation and filtering",
         "description": "Validate and filter agent outputs before presenting to users or executing actions.",
         "parent": "L7",
-        "function": "Architecture Layer"
+        "function": "Architecture Layer",
+        "kind": "control"
       },
       {
         "control_id": "L7.2",
         "title": "Human oversight integration",
         "description": "Integrate human-in-the-loop controls for high-risk decisions and actions.",
         "parent": "L7",
-        "function": "Architecture Layer"
+        "function": "Architecture Layer",
+        "kind": "control"
       },
       {
         "control_id": "L7.3",
         "title": "Trust calibration",
         "description": "Help users calibrate trust in agent outputs with confidence indicators and provenance.",
         "parent": "L7",
-        "function": "Architecture Layer"
+        "function": "Architecture Layer",
+        "kind": "control"
       }
     ],
     "changelog": [
       {
         "date": "2026-04-09",
         "change": "Initial seed — 7 layers with 21 sub-controls from CSA MAESTRO framework",
-        "author": "emmanuelgjr"
+        "author": "OWASP GenAI Data Security Initiative"
       }
     ]
   },
@@ -4145,331 +4817,381 @@ window.CROSSWALK_FRAMEWORKS = [
         "title": "ML Model Access",
         "description": "Adversary gains some level of access to an ML model.",
         "parent": null,
-        "function": "Reconnaissance"
+        "function": "Reconnaissance",
+        "kind": "technique"
       },
       {
         "control_id": "AML.T0001",
         "title": "ML Attack Staging",
         "description": "Adversary prepares resources for an attack against an ML system.",
         "parent": null,
-        "function": "Resource Development"
+        "function": "Resource Development",
+        "kind": "technique"
       },
       {
         "control_id": "AML.T0002",
         "title": "Active Scanning",
         "description": "Adversary probes an ML system to gather information for targeting.",
         "parent": null,
-        "function": "Reconnaissance"
+        "function": "Reconnaissance",
+        "kind": "technique"
       },
       {
         "control_id": "AML.T0003",
         "title": "Search for ML Artifacts",
         "description": "Adversary searches for publicly available ML artifacts to use in attacks.",
         "parent": null,
-        "function": "Reconnaissance"
+        "function": "Reconnaissance",
+        "kind": "technique"
       },
       {
         "control_id": "AML.T0004",
         "title": "Search for Victim's Publicly Available ML Information",
         "description": "Adversary searches for public information about victim's ML systems.",
         "parent": null,
-        "function": "Reconnaissance"
+        "function": "Reconnaissance",
+        "kind": "technique"
       },
       {
         "control_id": "AML.T0010",
         "title": "ML Supply Chain Compromise",
         "description": "Adversary compromises ML supply chain to insert malicious components.",
         "parent": null,
-        "function": "Initial Access"
+        "function": "Initial Access",
+        "kind": "technique"
       },
       {
         "control_id": "AML.T0011",
         "title": "User Execution",
         "description": "Adversary relies on user to execute malicious ML content.",
         "parent": null,
-        "function": "Execution"
+        "function": "Execution",
+        "kind": "technique"
       },
       {
         "control_id": "AML.T0012",
         "title": "Valid Accounts",
         "description": "Adversary uses compromised credentials to access ML systems.",
         "parent": null,
-        "function": "Initial Access"
+        "function": "Initial Access",
+        "kind": "technique"
       },
       {
         "control_id": "AML.T0015",
         "title": "Evade ML Model",
         "description": "Adversary crafts inputs to evade ML model detection.",
         "parent": null,
-        "function": "ML Attack"
+        "function": "ML Attack",
+        "kind": "technique"
       },
       {
         "control_id": "AML.T0016",
         "title": "Obtain Capabilities",
         "description": "Adversary obtains ML-specific tools and resources.",
         "parent": null,
-        "function": "Resource Development"
+        "function": "Resource Development",
+        "kind": "technique"
       },
       {
         "control_id": "AML.T0017",
         "title": "Develop Capabilities",
         "description": "Adversary develops ML-specific attack tools and techniques.",
         "parent": null,
-        "function": "Resource Development"
+        "function": "Resource Development",
+        "kind": "technique"
       },
       {
         "control_id": "AML.T0018",
         "title": "Backdoor ML Model",
         "description": "Adversary embeds hidden functionality in ML models.",
         "parent": null,
-        "function": "Persistence"
+        "function": "Persistence",
+        "kind": "technique"
       },
       {
         "control_id": "AML.T0019",
         "title": "Publish Poisoned Datasets",
         "description": "Adversary publishes poisoned datasets for victim consumption.",
         "parent": null,
-        "function": "Resource Development"
+        "function": "Resource Development",
+        "kind": "technique"
       },
       {
         "control_id": "AML.T0020",
         "title": "Poison Training Data",
         "description": "Adversary manipulates training data to corrupt model behavior.",
         "parent": null,
-        "function": "ML Attack"
+        "function": "ML Attack",
+        "kind": "technique"
       },
       {
         "control_id": "AML.T0024",
         "title": "Exfiltration via ML Inference API",
         "description": "Adversary exfiltrates training data or model information via inference API.",
         "parent": null,
-        "function": "Exfiltration"
+        "function": "Exfiltration",
+        "kind": "technique"
       },
       {
         "control_id": "AML.T0025",
         "title": "Exfiltration via Cyber Means",
         "description": "Adversary exfiltrates ML artifacts through traditional cyber channels.",
         "parent": null,
-        "function": "Exfiltration"
+        "function": "Exfiltration",
+        "kind": "technique"
       },
       {
         "control_id": "AML.T0031",
         "title": "Erode ML Model Integrity",
         "description": "Adversary degrades model performance or trustworthiness.",
         "parent": null,
-        "function": "Impact"
+        "function": "Impact",
+        "kind": "technique"
       },
       {
         "control_id": "AML.T0034",
         "title": "Cost Harvesting",
         "description": "Adversary abuses ML inference to impose financial costs on victim.",
         "parent": null,
-        "function": "Impact"
+        "function": "Impact",
+        "kind": "technique"
       },
       {
         "control_id": "AML.T0035",
         "title": "Denial of ML Service",
         "description": "Adversary disrupts availability of ML system.",
         "parent": null,
-        "function": "Impact"
+        "function": "Impact",
+        "kind": "technique"
       },
       {
         "control_id": "AML.T0036",
         "title": "Data from Information Repositories",
         "description": "Adversary collects data from ML-related information repositories.",
         "parent": null,
-        "function": "Collection"
+        "function": "Collection",
+        "kind": "technique"
       },
       {
         "control_id": "AML.T0040",
         "title": "ML Model Inference API Access",
         "description": "Adversary obtains access to ML model inference API.",
         "parent": null,
-        "function": "Initial Access"
+        "function": "Initial Access",
+        "kind": "technique"
       },
       {
         "control_id": "AML.T0042",
         "title": "Verify Attack",
         "description": "Adversary verifies that an attack achieved its intended effect.",
         "parent": null,
-        "function": "ML Attack"
+        "function": "ML Attack",
+        "kind": "technique"
       },
       {
         "control_id": "AML.T0043",
         "title": "Craft Adversarial Data",
         "description": "Adversary crafts data specifically designed to exploit ML model vulnerabilities.",
         "parent": null,
-        "function": "ML Attack"
+        "function": "ML Attack",
+        "kind": "technique"
       },
       {
         "control_id": "AML.T0044",
         "title": "Full ML Model Access",
         "description": "Adversary gains full access to ML model internals (white-box).",
         "parent": null,
-        "function": "Credential Access"
+        "function": "Credential Access",
+        "kind": "technique"
       },
       {
         "control_id": "AML.T0047",
         "title": "ML-Enabled Product or Service",
         "description": "Adversary exploits ML-enabled product or service.",
         "parent": null,
-        "function": "Initial Access"
+        "function": "Initial Access",
+        "kind": "technique"
       },
       {
         "control_id": "AML.T0048",
         "title": "Discover ML Model Family",
         "description": "Adversary identifies the model architecture or family.",
         "parent": null,
-        "function": "Discovery"
+        "function": "Discovery",
+        "kind": "technique"
       },
       {
         "control_id": "AML.T0049",
         "title": "Exploit Public-Facing Application",
         "description": "Adversary exploits public-facing ML application.",
         "parent": null,
-        "function": "Initial Access"
+        "function": "Initial Access",
+        "kind": "technique"
       },
       {
         "control_id": "AML.T0050",
         "title": "Command and Scripting Interpreter",
         "description": "Adversary uses code execution to interact with ML systems.",
         "parent": null,
-        "function": "Execution"
+        "function": "Execution",
+        "kind": "technique"
       },
       {
         "control_id": "AML.T0051",
         "title": "LLM Prompt Injection",
         "description": "Adversary crafts prompts to manipulate LLM behavior.",
         "parent": null,
-        "function": "ML Attack"
+        "function": "ML Attack",
+        "kind": "technique"
       },
       {
         "control_id": "AML.T0051.000",
         "title": "Direct Prompt Injection",
         "description": "Attacker directly manipulates user-facing prompt to alter model behaviour.",
         "parent": "AML.T0051",
-        "function": "ML Attack"
+        "function": "ML Attack",
+        "kind": "technique"
       },
       {
         "control_id": "AML.T0051.001",
         "title": "Indirect Prompt Injection",
         "description": "Hidden instructions in content the model processes (documents, web, RAG).",
         "parent": "AML.T0051",
-        "function": "ML Attack"
+        "function": "ML Attack",
+        "kind": "technique"
       },
       {
         "control_id": "AML.T0052",
         "title": "Phishing",
         "description": "Adversary uses social engineering to gain access to ML systems.",
         "parent": null,
-        "function": "Initial Access"
+        "function": "Initial Access",
+        "kind": "technique"
       },
       {
         "control_id": "AML.T0053",
         "title": "Discover ML Model Ontology",
         "description": "Adversary discovers the ontology or label space of a model.",
         "parent": null,
-        "function": "Discovery"
+        "function": "Discovery",
+        "kind": "technique"
       },
       {
         "control_id": "AML.T0054",
         "title": "LLM Jailbreak",
         "description": "Adversary circumvents model safety guardrails via crafted prompt sequences.",
         "parent": null,
-        "function": "ML Attack"
+        "function": "ML Attack",
+        "kind": "technique"
       },
       {
         "control_id": "AML.T0055",
         "title": "Unsafe Model Output",
         "description": "ML model produces unsafe, harmful, or unintended outputs.",
         "parent": null,
-        "function": "Impact"
+        "function": "Impact",
+        "kind": "technique"
       },
       {
         "control_id": "AML.T0056",
         "title": "LLM Data Leakage",
         "description": "Adversary extracts sensitive training data from LLM responses.",
         "parent": null,
-        "function": "Exfiltration"
+        "function": "Exfiltration",
+        "kind": "technique"
       },
       {
         "control_id": "AML.T0057",
         "title": "LLM Plugin Compromise",
         "description": "Adversary compromises or exploits LLM plugins and tool integrations.",
         "parent": null,
-        "function": "Lateral Movement"
+        "function": "Lateral Movement",
+        "kind": "technique"
       },
       {
         "control_id": "AML.T0037",
         "title": "Output Manipulation",
-        "description": "Crafting inputs that produce tool calls with destructive parameters; Crafting inputs that produce malicious executable code in agent output; Crafting inputs that produce dangerous outputs consumed by downstream systems"
+        "description": "Crafting inputs that produce tool calls with destructive parameters; Crafting inputs that produce malicious executable code in agent output; Crafting inputs that produce dangerous outputs consumed by downstream systems",
+        "kind": "technique"
       },
       {
         "control_id": "AML.T0068",
         "title": "Automated Collection",
-        "description": "Agent autonomously harvesting data through tool chains beyond authorised scope; LLM autonomously collecting data beyond its intended access scope"
+        "description": "Agent autonomously harvesting data through tool chains beyond authorised scope; LLM autonomously collecting data beyond its intended access scope",
+        "kind": "technique"
       },
       {
         "control_id": "AML.T0022",
         "title": "Valid Accounts",
-        "description": "Exploiting legitimate agent credentials to access AI systems or data pipelines; Using compromised agent credentials to impersonate trusted agents in A2A channels"
+        "description": "Exploiting legitimate agent credentials to access AI systems or data pipelines; Using compromised agent credentials to impersonate trusted agents in A2A channels",
+        "kind": "technique"
       },
       {
         "control_id": "AML.T0032",
         "title": "Data Poisoning",
-        "description": "Injecting malicious content into agent persistent memory or RAG stores; Injecting malicious data into training pipelines to corrupt model behaviour"
+        "description": "Injecting malicious content into agent persistent memory or RAG stores; Injecting malicious data into training pipelines to corrupt model behaviour",
+        "kind": "technique"
       },
       {
         "control_id": "AML.T0063",
         "title": "Embedding Manipulation",
-        "description": "Crafting content whose embeddings bias future retrieval results in attacker's favour; Crafting inputs whose embeddings manipulate similarity search results"
+        "description": "Crafting content whose embeddings bias future retrieval results in attacker's favour; Crafting inputs whose embeddings manipulate similarity search results",
+        "kind": "technique"
       },
       {
         "control_id": "AML.T0029",
         "title": "Denial of ML Service",
-        "description": "Triggering cascading failure propagation to exhaust system resources or degrade service; Adversary saturates GenAI pipeline � vector store, RAG retrieval, or inference endpoint rendered unavailable; Overloading AI systems with computationally expensive inputs to cause service degradation"
+        "description": "Triggering cascading failure propagation to exhaust system resources or degrade service; Adversary saturates GenAI pipeline � vector store, RAG retrieval, or inference endpoint rendered unavailable; Overloading AI systems with computationally expensive inputs to cause service degradation",
+        "kind": "technique"
       },
       {
         "control_id": "AML.T0045",
         "title": "Disinformation",
-        "description": "Agent generates persuasive false information to manipulate human approvals; Adversary publishes false content in public repositories, documentation sites, or knowledge bases indexed by RAG systems; Using AI-generated content to deliberately spread false information"
+        "description": "Agent generates persuasive false information to manipulate human approvals; Adversary publishes false content in public repositories, documentation sites, or knowledge bases indexed by RAG systems; Using AI-generated content to deliberately spread false information",
+        "kind": "technique"
       },
       {
         "control_id": "AML.T0024.000",
         "title": "Membership Inference",
-        "description": "Adversary determines whether specific sensitive records were used in training � confirms presence of target data; Ungoverned training data status � adversary determines what sensitive data is in scope without classification barriers; Sensitive multimodal content in training data confirmed through membership inference queries"
+        "description": "Adversary determines whether specific sensitive records were used in training � confirms presence of target data; Ungoverned training data status � adversary determines what sensitive data is in scope without classification barriers; Sensitive multimodal content in training data confirmed through membership inference queries",
+        "kind": "technique"
       },
       {
         "control_id": "AML.T0013",
         "title": "Discover ML Model Ontology",
-        "description": "Adversary learns what data the browser assistant can access across open applications"
+        "description": "Adversary learns what data the browser assistant can access across open applications",
+        "kind": "technique"
       },
       {
         "control_id": "AML.T0027",
         "title": "Model Inversion",
-        "description": "Adversary reconstructs sensitive training examples from model outputs through systematic query campaigns; Reconstructing sensitive training data from model outputs"
+        "description": "Adversary reconstructs sensitive training examples from model outputs through systematic query campaigns; Reconstructing sensitive training data from model outputs",
+        "kind": "technique"
       },
       {
         "control_id": "AML.T0021",
         "title": "Data Leakage",
-        "description": "Unintended exposure of training data or sensitive context through model outputs"
+        "description": "Unintended exposure of training data or sensitive context through model outputs",
+        "kind": "technique"
       },
       {
         "control_id": "AML.T0030",
         "title": "Information Disclosure",
-        "description": "Extraction of confidential information via targeted model queries"
+        "description": "Extraction of confidential information via targeted model queries",
+        "kind": "technique"
       },
       {
         "control_id": "AML.T0041",
         "title": "Configuration Exposure",
-        "description": "Extraction of internal model configuration, instructions, or system prompts"
+        "description": "Extraction of internal model configuration, instructions, or system prompts",
+        "kind": "technique"
       }
     ],
     "changelog": [
       {
         "date": "2026-04-09",
         "change": "Initial seed — 37 ATLAS techniques from v4.0",
-        "author": "emmanuelgjr"
+        "author": "OWASP GenAI Data Security Initiative"
       }
     ]
   },
@@ -4490,600 +5212,685 @@ window.CROSSWALK_FRAMEWORKS = [
         "title": "Policies and governance",
         "description": "Policies, processes, procedures, and practices across the organization related to the mapping, measuring, and managing of AI risks are in place, transparent, and implemented effectively.",
         "parent": null,
-        "function": "GOVERN"
+        "function": "GOVERN",
+        "kind": "control"
       },
       {
         "control_id": "GV-1.1",
         "title": "Legal and regulatory requirements",
         "description": "Legal and regulatory requirements involving AI are understood, managed, and documented.",
         "parent": "GV-1",
-        "function": "GOVERN"
+        "function": "GOVERN",
+        "kind": "control"
       },
       {
         "control_id": "GV-1.2",
         "title": "Trustworthy AI characteristics",
         "description": "Trustworthy AI characteristics are integrated into organizational policies, procedures, and processes.",
         "parent": "GV-1",
-        "function": "GOVERN"
+        "function": "GOVERN",
+        "kind": "control"
       },
       {
         "control_id": "GV-1.3",
         "title": "Processes and procedures alignment",
         "description": "Processes, procedures, and practices are in place to determine the needed level of risk management activities based on the organization's risk tolerance.",
         "parent": "GV-1",
-        "function": "GOVERN"
+        "function": "GOVERN",
+        "kind": "control"
       },
       {
         "control_id": "GV-1.4",
         "title": "Risk management process integration",
         "description": "The risk management process and its outcomes are established through transparent policies, procedures, and other controls based on organizational risk priorities.",
         "parent": "GV-1",
-        "function": "GOVERN"
+        "function": "GOVERN",
+        "kind": "control"
       },
       {
         "control_id": "GV-1.5",
         "title": "Ongoing monitoring",
         "description": "Ongoing monitoring and periodic review of the risk management process and its outcomes are planned, organizationally aligned, and documented.",
         "parent": "GV-1",
-        "function": "GOVERN"
+        "function": "GOVERN",
+        "kind": "control"
       },
       {
         "control_id": "GV-1.6",
         "title": "Mechanisms for inventory",
         "description": "Mechanisms are in place to inventory AI systems and are resourced per organizational risk priorities.",
         "parent": "GV-1",
-        "function": "GOVERN"
+        "function": "GOVERN",
+        "kind": "control"
       },
       {
         "control_id": "GV-1.7",
         "title": "Processes for termination",
         "description": "Processes and procedures are in place for decommissioning and phasing out AI systems safely and in a manner that does not increase risks or harms.",
         "parent": "GV-1",
-        "function": "GOVERN"
+        "function": "GOVERN",
+        "kind": "control"
       },
       {
         "control_id": "GV-2",
         "title": "Accountability structures",
         "description": "Accountability structures are in place so that the appropriate teams and individuals are empowered, responsible, and trained for mapping, measuring, and managing AI risks.",
         "parent": null,
-        "function": "GOVERN"
+        "function": "GOVERN",
+        "kind": "control"
       },
       {
         "control_id": "GV-2.1",
         "title": "Roles and responsibilities",
         "description": "Roles and responsibilities and lines of communication related to mapping, measuring, and managing AI risks are documented and are clear to individuals and teams throughout the organization.",
         "parent": "GV-2",
-        "function": "GOVERN"
+        "function": "GOVERN",
+        "kind": "control"
       },
       {
         "control_id": "GV-2.2",
         "title": "Organizational commitment",
         "description": "The organization's personnel and partners receive AI risk management training to enable them to perform their duties and responsibilities consistent with related policies, procedures, and agreements.",
         "parent": "GV-2",
-        "function": "GOVERN"
+        "function": "GOVERN",
+        "kind": "control"
       },
       {
         "control_id": "GV-2.3",
         "title": "Executive responsibility",
         "description": "Executive leadership of the organization takes responsibility for decisions about risks associated with AI system development and deployment.",
         "parent": "GV-2",
-        "function": "GOVERN"
+        "function": "GOVERN",
+        "kind": "control"
       },
       {
         "control_id": "GV-3",
         "title": "Workforce diversity",
         "description": "Workforce diversity, equity, inclusion, and accessibility processes are prioritized in the mapping, measuring, and managing of AI risks throughout the lifecycle.",
         "parent": null,
-        "function": "GOVERN"
+        "function": "GOVERN",
+        "kind": "control"
       },
       {
         "control_id": "GV-3.1",
         "title": "Decision-making diversity",
         "description": "Decision-making related to mapping, measuring, and managing AI risks throughout the lifecycle is informed by a diverse team.",
         "parent": "GV-3",
-        "function": "GOVERN"
+        "function": "GOVERN",
+        "kind": "control"
       },
       {
         "control_id": "GV-3.2",
         "title": "Demographic diversity and domain expertise",
         "description": "Policies and procedures are in place to define and differentiate roles and responsibilities for human-AI configurations and oversight of AI systems.",
         "parent": "GV-3",
-        "function": "GOVERN"
+        "function": "GOVERN",
+        "kind": "control"
       },
       {
         "control_id": "GV-4",
         "title": "Organizational commitments",
         "description": "Organizational teams are committed to a culture that considers and communicates AI risk.",
         "parent": null,
-        "function": "GOVERN"
+        "function": "GOVERN",
+        "kind": "control"
       },
       {
         "control_id": "GV-4.1",
         "title": "Organizational practices and norms",
         "description": "Organizational practices and norms that enable managing AI risk are integrated into risk management and align with established enterprise governance.",
         "parent": "GV-4",
-        "function": "GOVERN"
+        "function": "GOVERN",
+        "kind": "control"
       },
       {
         "control_id": "GV-4.2",
         "title": "Organizational teams commitment",
         "description": "Organizational teams document the risks and potential impacts of the AI technology they design, develop, deploy, evaluate, and use, and they communicate about the impacts more broadly.",
         "parent": "GV-4",
-        "function": "GOVERN"
+        "function": "GOVERN",
+        "kind": "control"
       },
       {
         "control_id": "GV-4.3",
         "title": "Risk treatment approaches",
         "description": "Organizational practices are in place to enable AI testing, identification of incidents, and information sharing.",
         "parent": "GV-4",
-        "function": "GOVERN"
+        "function": "GOVERN",
+        "kind": "control"
       },
       {
         "control_id": "GV-5",
         "title": "Stakeholder engagement",
         "description": "Processes are in place for robust engagement with relevant AI actors.",
         "parent": null,
-        "function": "GOVERN"
+        "function": "GOVERN",
+        "kind": "control"
       },
       {
         "control_id": "GV-5.1",
         "title": "Engagement with external stakeholders",
         "description": "Organizational policies and practices are in place to engage with and foster collaboration between relevant AI actors.",
         "parent": "GV-5",
-        "function": "GOVERN"
+        "function": "GOVERN",
+        "kind": "control"
       },
       {
         "control_id": "GV-5.2",
         "title": "Mechanisms for feedback",
         "description": "Mechanisms are established to enable AI actors to regularly incorporate adjudicated feedback from relevant AI actors into the design and implementation of AI systems.",
         "parent": "GV-5",
-        "function": "GOVERN"
+        "function": "GOVERN",
+        "kind": "control"
       },
       {
         "control_id": "GV-6",
         "title": "Policies for third-party entities",
         "description": "Policies and procedures are in place that address AI risks associated with third-party entities, including risks of infringement of a third party's intellectual property or other rights.",
         "parent": null,
-        "function": "GOVERN"
+        "function": "GOVERN",
+        "kind": "control"
       },
       {
         "control_id": "GV-6.1",
         "title": "Third-party risk management",
         "description": "Policies and procedures are in place that address AI risks and benefits arising from third-party software and data and other supply chain issues.",
         "parent": "GV-6",
-        "function": "GOVERN"
+        "function": "GOVERN",
+        "kind": "control"
       },
       {
         "control_id": "GV-6.2",
         "title": "Contingency processes",
         "description": "Contingency processes are in place for third-party AI systems or AI-enabled services.",
         "parent": "GV-6",
-        "function": "GOVERN"
+        "function": "GOVERN",
+        "kind": "control"
       },
       {
         "control_id": "MP-1",
         "title": "Context and intended purpose",
         "description": "Context is established and understood.",
         "parent": null,
-        "function": "MAP"
+        "function": "MAP",
+        "kind": "control"
       },
       {
         "control_id": "MP-1.1",
         "title": "Intended purpose and setting",
         "description": "Intended purpose, potentially beneficial uses, context of use, and the design, development, and deployment setting are understood.",
         "parent": "MP-1",
-        "function": "MAP"
+        "function": "MAP",
+        "kind": "control"
       },
       {
         "control_id": "MP-1.2",
         "title": "Interdisciplinary expertise",
         "description": "Interdisciplinary AI actors, competencies, skills, and capacities for establishing context reflect the state of AI risks and are periodically reviewed.",
         "parent": "MP-1",
-        "function": "MAP"
+        "function": "MAP",
+        "kind": "control"
       },
       {
         "control_id": "MP-1.3",
         "title": "Broad set of perspectives",
         "description": "The business value or context of business use has been clearly defined or—in the case of assessing existing AI systems—re-evaluated.",
         "parent": "MP-1",
-        "function": "MAP"
+        "function": "MAP",
+        "kind": "control"
       },
       {
         "control_id": "MP-1.4",
         "title": "Assessment of positive and negative impacts",
         "description": "The organization's or system's mission and relevant goals for AI technology are documented.",
         "parent": "MP-1",
-        "function": "MAP"
+        "function": "MAP",
+        "kind": "control"
       },
       {
         "control_id": "MP-1.5",
         "title": "Use case risk assessment",
         "description": "Organizational risk tolerances are determined and documented.",
         "parent": "MP-1",
-        "function": "MAP"
+        "function": "MAP",
+        "kind": "control"
       },
       {
         "control_id": "MP-1.6",
         "title": "System requirements",
         "description": "System requirements (e.g., human-AI configuration, governance, legal compliance, privacy, safety, security, sustainability) are elicited from and understood by relevant AI actors.",
         "parent": "MP-1",
-        "function": "MAP"
+        "function": "MAP",
+        "kind": "control"
       },
       {
         "control_id": "MP-2",
         "title": "Categorize AI system",
         "description": "Categorization of the AI system is performed.",
         "parent": null,
-        "function": "MAP"
+        "function": "MAP",
+        "kind": "control"
       },
       {
         "control_id": "MP-2.1",
         "title": "Intended use and known misuse",
         "description": "The specific task, use case, or decision the AI system will be used for, and the expected benefit of the AI system is documented.",
         "parent": "MP-2",
-        "function": "MAP"
+        "function": "MAP",
+        "kind": "control"
       },
       {
         "control_id": "MP-2.2",
         "title": "Technology-specific risk",
         "description": "Information about the AI system's knowledge limits and how system output may be utilized and overseen by humans is documented; this includes considerations of how output could be misused.",
         "parent": "MP-2",
-        "function": "MAP"
+        "function": "MAP",
+        "kind": "control"
       },
       {
         "control_id": "MP-2.3",
         "title": "Scientific integrity",
         "description": "Scientific integrity and TEVV considerations are identified and documented, including those related to experimental design, data collection and selection, and construct validity.",
         "parent": "MP-2",
-        "function": "MAP"
+        "function": "MAP",
+        "kind": "control"
       },
       {
         "control_id": "MP-3",
         "title": "Identify benefits and costs",
         "description": "AI system benefits and costs are identified and managed to achieve trustworthy AI.",
         "parent": null,
-        "function": "MAP"
+        "function": "MAP",
+        "kind": "control"
       },
       {
         "control_id": "MP-3.1",
         "title": "Benefits and costs of AI",
         "description": "Benefits of intended functionality are examined against the risks, and consideration of deployment is given against its benefits and compared to deployment of AI systems of lower risk.",
         "parent": "MP-3",
-        "function": "MAP"
+        "function": "MAP",
+        "kind": "control"
       },
       {
         "control_id": "MP-3.2",
         "title": "Potential costs",
         "description": "Potential costs, including non-monetary costs, are examined and documented.",
         "parent": "MP-3",
-        "function": "MAP"
+        "function": "MAP",
+        "kind": "control"
       },
       {
         "control_id": "MP-4",
         "title": "Risk indicators",
         "description": "Risks and benefits are mapped for all components of the AI system, including third-party software and data.",
         "parent": null,
-        "function": "MAP"
+        "function": "MAP",
+        "kind": "control"
       },
       {
         "control_id": "MP-4.1",
         "title": "Risk mapping",
         "description": "Approaches for mapping AI technology and legal risks of its components — including the use of third-party data or software — are in place, followed, and documented, as are risks of infringement of a third party's intellectual property or other rights.",
         "parent": "MP-4",
-        "function": "MAP"
+        "function": "MAP",
+        "kind": "control"
       },
       {
         "control_id": "MP-4.2",
         "title": "Internal risk controls",
         "description": "Internal risk controls for components of the AI system, including third-party AI technologies, are identified and documented.",
         "parent": "MP-4",
-        "function": "MAP"
+        "function": "MAP",
+        "kind": "control"
       },
       {
         "control_id": "MP-5",
         "title": "Impacts to individuals, groups, communities",
         "description": "Likelihood and severity of each identified impact based on expected use, past uses, and system behavior is assessed and documented.",
         "parent": null,
-        "function": "MAP"
+        "function": "MAP",
+        "kind": "control"
       },
       {
         "control_id": "MP-5.1",
         "title": "Likelihood and severity",
         "description": "Likelihood and severity of each identified impact based on expected use, past uses of AI systems in similar contexts, and AI system trustworthiness characteristics are assessed and documented.",
         "parent": "MP-5",
-        "function": "MAP"
+        "function": "MAP",
+        "kind": "control"
       },
       {
         "control_id": "MP-5.2",
         "title": "Impact assessment and documentation",
         "description": "Practices and personnel for supporting regular engagement with relevant AI actors and integrating feedback about positive, negative, and unanticipated impacts are in place and documented.",
         "parent": "MP-5",
-        "function": "MAP"
+        "function": "MAP",
+        "kind": "control"
       },
       {
         "control_id": "MS-1",
         "title": "Appropriate methods and metrics",
         "description": "Appropriate methods and metrics are identified and applied.",
         "parent": null,
-        "function": "MEASURE"
+        "function": "MEASURE",
+        "kind": "control"
       },
       {
         "control_id": "MS-1.1",
         "title": "Measurement approaches",
         "description": "Approaches and metrics for measurement of AI risks enumerated during the MAP function are selected for implementation starting with the most significant AI risks.",
         "parent": "MS-1",
-        "function": "MEASURE"
+        "function": "MEASURE",
+        "kind": "control"
       },
       {
         "control_id": "MS-1.2",
         "title": "Appropriateness of metrics",
         "description": "Appropriateness of AI metrics and effectiveness of existing measures are regularly assessed and updated, including reports of errors and potential impacts on affected communities.",
         "parent": "MS-1",
-        "function": "MEASURE"
+        "function": "MEASURE",
+        "kind": "control"
       },
       {
         "control_id": "MS-1.3",
         "title": "Internal and external expert feedback",
         "description": "Internal experts who did not serve as combating designers, developers, or deployers of the AI system and/or independent assessors are involved in regular assessments and updates.",
         "parent": "MS-1",
-        "function": "MEASURE"
+        "function": "MEASURE",
+        "kind": "control"
       },
       {
         "control_id": "MS-2",
         "title": "AI systems evaluated",
         "description": "AI systems are evaluated for trustworthy characteristics.",
         "parent": null,
-        "function": "MEASURE"
+        "function": "MEASURE",
+        "kind": "control"
       },
       {
         "control_id": "MS-2.1",
         "title": "Test sets and metrics",
         "description": "Test sets, metrics, and details about the tools used during test, evaluation, validation, and verification (TEVV) are documented.",
         "parent": "MS-2",
-        "function": "MEASURE"
+        "function": "MEASURE",
+        "kind": "control"
       },
       {
         "control_id": "MS-2.2",
         "title": "Evaluations for bias, security, privacy",
         "description": "Evaluations involving AI actors and affected communities for validity, trustworthiness, and fitness for purpose of the AI system, model, or data are documented.",
         "parent": "MS-2",
-        "function": "MEASURE"
+        "function": "MEASURE",
+        "kind": "control"
       },
       {
         "control_id": "MS-2.3",
         "title": "AI system performance",
         "description": "AI system performance or assurance criteria are measured qualitatively or quantitatively and demonstrated for conditions similar to deployment setting(s).",
         "parent": "MS-2",
-        "function": "MEASURE"
+        "function": "MEASURE",
+        "kind": "control"
       },
       {
         "control_id": "MS-2.4",
         "title": "Values and comparisons",
         "description": "The functionality and behavior of the AI system and its components — as identified in the MAP function — are monitored when in production.",
         "parent": "MS-2",
-        "function": "MEASURE"
+        "function": "MEASURE",
+        "kind": "control"
       },
       {
         "control_id": "MS-2.5",
         "title": "Adversarial testing",
         "description": "AI system is evaluated regularly for safety risks — as identified in the MAP function. The AI system to be deployed is demonstrated to be valid and reliable. Limitations of the generalizability beyond the conditions under which the technology was developed are documented.",
         "parent": "MS-2",
-        "function": "MEASURE"
+        "function": "MEASURE",
+        "kind": "control"
       },
       {
         "control_id": "MS-2.6",
         "title": "AI system evaluation frequency",
         "description": "The AI system is evaluated regularly for safety risks — as identified in the MAP function. The AI system to be deployed is demonstrated to be valid and reliable.",
         "parent": "MS-2",
-        "function": "MEASURE"
+        "function": "MEASURE",
+        "kind": "control"
       },
       {
         "control_id": "MS-2.7",
         "title": "AI system security and resilience",
         "description": "AI system security and resilience — as identified in the MAP function — are evaluated and documented.",
         "parent": "MS-2",
-        "function": "MEASURE"
+        "function": "MEASURE",
+        "kind": "control"
       },
       {
         "control_id": "MS-2.8",
         "title": "Bias and fairness",
         "description": "Risks associated with transparency and accountability — as identified in the MAP function — are examined and documented.",
         "parent": "MS-2",
-        "function": "MEASURE"
+        "function": "MEASURE",
+        "kind": "control"
       },
       {
         "control_id": "MS-2.9",
         "title": "Environmental impact",
         "description": "The AI model is explained, validated, and documented, and AI system output is interpreted within its context — as identified in the MAP function.",
         "parent": "MS-2",
-        "function": "MEASURE"
+        "function": "MEASURE",
+        "kind": "control"
       },
       {
         "control_id": "MS-2.10",
         "title": "Privacy risk",
         "description": "Privacy risk of the AI system — as identified in the MAP function — is examined and documented.",
         "parent": "MS-2",
-        "function": "MEASURE"
+        "function": "MEASURE",
+        "kind": "control"
       },
       {
         "control_id": "MS-2.11",
         "title": "Fairness assessment",
         "description": "Fairness and bias — Loss, validity, reliability, and robustness — as identified in the MAP function — are evaluated, and results are documented.",
         "parent": "MS-2",
-        "function": "MEASURE"
+        "function": "MEASURE",
+        "kind": "control"
       },
       {
         "control_id": "MS-3",
         "title": "Mechanisms for tracking risks",
         "description": "Mechanisms for tracking identified AI risks over time are in place.",
         "parent": null,
-        "function": "MEASURE"
+        "function": "MEASURE",
+        "kind": "control"
       },
       {
         "control_id": "MS-3.1",
         "title": "Risk tracking and response",
         "description": "Approaches, personnel, and documentation are in place to regularly identify and track existing, unanticipated, and emergent AI risks based on factors such as intended and actual performance in deployed contexts.",
         "parent": "MS-3",
-        "function": "MEASURE"
+        "function": "MEASURE",
+        "kind": "control"
       },
       {
         "control_id": "MS-3.2",
         "title": "Tracking risk over time",
         "description": "Risk tracking approaches are considered for settings where AI risks are difficult to assess using currently available measurement techniques or metrics.",
         "parent": "MS-3",
-        "function": "MEASURE"
+        "function": "MEASURE",
+        "kind": "control"
       },
       {
         "control_id": "MS-3.3",
         "title": "Feedback mechanisms",
         "description": "Feedback processes for end users and impacted communities to report problems and appeal system outcomes are established and integrated into AI system evaluation metrics.",
         "parent": "MS-3",
-        "function": "MEASURE"
+        "function": "MEASURE",
+        "kind": "control"
       },
       {
         "control_id": "MS-4",
         "title": "Measurement results",
         "description": "Measurement results regarding AI system trustworthiness in deployment context(s) and across the AI lifecycle are informed by input from domain experts and relevant AI actors to validate whether the system is performing consistently as intended.",
         "parent": null,
-        "function": "MEASURE"
+        "function": "MEASURE",
+        "kind": "control"
       },
       {
         "control_id": "MS-4.1",
         "title": "Measurement results communication",
         "description": "Measurement results regarding AI system trustworthiness in deployment context(s) and across the AI lifecycle are informed by input from domain experts and relevant AI actors to validate whether the system is performing consistently as intended.",
         "parent": "MS-4",
-        "function": "MEASURE"
+        "function": "MEASURE",
+        "kind": "control"
       },
       {
         "control_id": "MS-4.2",
         "title": "Measurement results documentation",
         "description": "Measurement results are documented and used to make decisions and inform actions related to AI system development and deployment.",
         "parent": "MS-4",
-        "function": "MEASURE"
+        "function": "MEASURE",
+        "kind": "control"
       },
       {
         "control_id": "MG-1",
         "title": "Risk treatment plan",
         "description": "AI risks based on assessments and other analytical output from the MAP and MEASURE functions are prioritized, responded to, and managed.",
         "parent": null,
-        "function": "MANAGE"
+        "function": "MANAGE",
+        "kind": "control"
       },
       {
         "control_id": "MG-1.1",
         "title": "Risk treatment prioritization",
         "description": "A determination is made as to whether the AI system achieves its intended purpose and stated objectives and whether its development or deployment should proceed.",
         "parent": "MG-1",
-        "function": "MANAGE"
+        "function": "MANAGE",
+        "kind": "control"
       },
       {
         "control_id": "MG-1.2",
         "title": "Ongoing risk treatment",
         "description": "Treatment of documented AI risks is prioritized based on impact, likelihood, and available resources or methods.",
         "parent": "MG-1",
-        "function": "MANAGE"
+        "function": "MANAGE",
+        "kind": "control"
       },
       {
         "control_id": "MG-1.3",
         "title": "Responses proportional to risk",
         "description": "Responses to the AI risks deemed high priority, as identified by the MAP function, are developed, planned, and documented. Risk response options can include mitigating, transferring, avoiding, or accepting.",
         "parent": "MG-1",
-        "function": "MANAGE"
+        "function": "MANAGE",
+        "kind": "control"
       },
       {
         "control_id": "MG-1.4",
         "title": "Risk treatment resources",
         "description": "Negative residual risks (defined as the sum of all unmitigated risks) to both downstream acquirers of AI systems and end users are documented.",
         "parent": "MG-1",
-        "function": "MANAGE"
+        "function": "MANAGE",
+        "kind": "control"
       },
       {
         "control_id": "MG-2",
         "title": "Risk response and recovery",
         "description": "Strategies to maximize AI benefits and minimize negative impacts are planned, prepared, implemented, documented, and informed by input from relevant AI actors.",
         "parent": null,
-        "function": "MANAGE"
+        "function": "MANAGE",
+        "kind": "control"
       },
       {
         "control_id": "MG-2.1",
         "title": "Risk response — planned",
         "description": "Resources required to manage AI risks are taken into account — along with viable non-AI alternative systems, approaches, or methods — to reduce the magnitude or likelihood of potential impacts.",
         "parent": "MG-2",
-        "function": "MANAGE"
+        "function": "MANAGE",
+        "kind": "control"
       },
       {
         "control_id": "MG-2.2",
         "title": "Risk response — incident",
         "description": "Mechanisms are in place and applied to sustain the value of deployed AI systems.",
         "parent": "MG-2",
-        "function": "MANAGE"
+        "function": "MANAGE",
+        "kind": "control"
       },
       {
         "control_id": "MG-2.3",
         "title": "Risk response — recovery",
         "description": "Procedures are followed to respond to and recover from a previously unknown risk when it is identified.",
         "parent": "MG-2",
-        "function": "MANAGE"
+        "function": "MANAGE",
+        "kind": "control"
       },
       {
         "control_id": "MG-2.4",
         "title": "Risk response — change management",
         "description": "Mechanisms are in place and applied, and responsibilities are assigned and understood, to supersede, disengage, or deactivate AI systems that demonstrate performance or outcomes inconsistent with intended use.",
         "parent": "MG-2",
-        "function": "MANAGE"
+        "function": "MANAGE",
+        "kind": "control"
       },
       {
         "control_id": "MG-3",
         "title": "Communication and documentation",
         "description": "AI risks and benefits from third-party resources are managed.",
         "parent": null,
-        "function": "MANAGE"
+        "function": "MANAGE",
+        "kind": "control"
       },
       {
         "control_id": "MG-3.1",
         "title": "Pre-deployment assessment",
         "description": "AI risks and benefits from third-party entities are managed, and processes and procedures for third-party risk management are in place.",
         "parent": "MG-3",
-        "function": "MANAGE"
+        "function": "MANAGE",
+        "kind": "control"
       },
       {
         "control_id": "MG-3.2",
         "title": "Communication of incidents",
         "description": "Pre-trained models which are used for development are monitored as part of AI system regular monitoring and maintenance.",
         "parent": "MG-3",
-        "function": "MANAGE"
+        "function": "MANAGE",
+        "kind": "control"
       },
       {
         "control_id": "MG-4",
         "title": "Post-deployment monitoring",
         "description": "Risk treatments, including response and recovery, and communication plans for the identified and measured AI risks are documented and monitored regularly.",
         "parent": null,
-        "function": "MANAGE"
+        "function": "MANAGE",
+        "kind": "control"
       },
       {
         "control_id": "MG-4.1",
         "title": "Post-deployment risk treatment",
         "description": "Post-deployment AI system monitoring plans are implemented, including mechanisms for capturing and evaluating input from users and other relevant AI actors, appeal and override, decommissioning, incident response, recovery, and change management.",
         "parent": "MG-4",
-        "function": "MANAGE"
+        "function": "MANAGE",
+        "kind": "control"
       },
       {
         "control_id": "MG-4.2",
         "title": "Post-deployment monitoring results",
         "description": "Measurable activities for continual improvements are integrated into AI system updates and include regular engagement with interested parties, including relevant AI actors.",
         "parent": "MG-4",
-        "function": "MANAGE"
+        "function": "MANAGE",
+        "kind": "control"
       },
       {
         "control_id": "MP-3.5",
         "title": "AI system impact",
-        "description": "Impact assessment of shadow AI on organisational data security posture � ungoverned data flows quantified; Impact assessment of endpoint AI agents � data access scope, exfiltration paths, user risk"
+        "description": "Impact assessment of shadow AI on organisational data security posture � ungoverned data flows quantified; Impact assessment of endpoint AI agents � data access scope, exfiltration paths, user risk",
+        "kind": "control"
       }
     ],
     "changelog": [
       {
         "date": "2026-04-09",
         "change": "Initial seed — all GOVERN, MAP, MEASURE, MANAGE subcategories",
-        "author": "emmanuelgjr"
+        "author": "OWASP GenAI Data Security Initiative"
       }
     ]
   },
@@ -5104,271 +5911,315 @@ window.CROSSWALK_FRAMEWORKS = [
         "title": "Organizational Context",
         "description": "Circumstances surrounding cybersecurity risk management decisions are understood.",
         "parent": null,
-        "function": "GOVERN"
+        "function": "GOVERN",
+        "kind": "control"
       },
       {
         "control_id": "GV.RM",
         "title": "Risk Management Strategy",
         "description": "The organization's priorities, constraints, risk tolerance, and appetite are established, communicated, and adjusted.",
         "parent": null,
-        "function": "GOVERN"
+        "function": "GOVERN",
+        "kind": "control"
       },
       {
         "control_id": "GV.RR",
         "title": "Roles, Responsibilities, and Authorities",
         "description": "Cybersecurity roles, responsibilities, and authorities are established and communicated.",
         "parent": null,
-        "function": "GOVERN"
+        "function": "GOVERN",
+        "kind": "control"
       },
       {
         "control_id": "GV.PO",
         "title": "Policy",
         "description": "Organizational cybersecurity policy is established, communicated, and enforced.",
         "parent": null,
-        "function": "GOVERN"
+        "function": "GOVERN",
+        "kind": "control"
       },
       {
         "control_id": "GV.OV",
         "title": "Oversight",
         "description": "Results of organization-wide cybersecurity risk management activities are used to inform, improve, and adjust the risk management strategy.",
         "parent": null,
-        "function": "GOVERN"
+        "function": "GOVERN",
+        "kind": "control"
       },
       {
         "control_id": "GV.SC",
         "title": "Cybersecurity Supply Chain Risk Management",
         "description": "Cyber supply chain risk management processes are identified, established, managed, monitored, and improved.",
         "parent": null,
-        "function": "GOVERN"
+        "function": "GOVERN",
+        "kind": "control"
       },
       {
         "control_id": "ID.AM",
         "title": "Asset Management",
         "description": "Assets (data, hardware, software, systems, facilities, services, people) are identified and managed.",
         "parent": null,
-        "function": "IDENTIFY"
+        "function": "IDENTIFY",
+        "kind": "control"
       },
       {
         "control_id": "ID.RA",
         "title": "Risk Assessment",
         "description": "The cybersecurity risk to the organization, assets, and individuals is understood.",
         "parent": null,
-        "function": "IDENTIFY"
+        "function": "IDENTIFY",
+        "kind": "control"
       },
       {
         "control_id": "ID.IM",
         "title": "Improvement",
         "description": "Improvements to cybersecurity risk management processes, procedures, and activities are identified across all CSF Functions.",
         "parent": null,
-        "function": "IDENTIFY"
+        "function": "IDENTIFY",
+        "kind": "control"
       },
       {
         "control_id": "PR.AA",
         "title": "Identity Management, Authentication, and Access Control",
         "description": "Access to assets is limited to authorized users, services, and hardware.",
         "parent": null,
-        "function": "PROTECT"
+        "function": "PROTECT",
+        "kind": "control"
       },
       {
         "control_id": "PR.AT",
         "title": "Awareness and Training",
         "description": "The organization's personnel are provided cybersecurity awareness and training.",
         "parent": null,
-        "function": "PROTECT"
+        "function": "PROTECT",
+        "kind": "control"
       },
       {
         "control_id": "PR.DS",
         "title": "Data Security",
         "description": "Data are managed consistent with the organization's risk strategy to protect confidentiality, integrity, and availability.",
         "parent": null,
-        "function": "PROTECT"
+        "function": "PROTECT",
+        "kind": "control"
       },
       {
         "control_id": "PR.PS",
         "title": "Platform Security",
         "description": "The hardware, software, and services of physical and virtual platforms are managed consistent with the risk strategy.",
         "parent": null,
-        "function": "PROTECT"
+        "function": "PROTECT",
+        "kind": "control"
       },
       {
         "control_id": "PR.IR",
         "title": "Technology Infrastructure Resilience",
         "description": "Security architectures are managed with the goal of protecting asset confidentiality, integrity, and availability.",
         "parent": null,
-        "function": "PROTECT"
+        "function": "PROTECT",
+        "kind": "control"
       },
       {
         "control_id": "DE.CM",
         "title": "Continuous Monitoring",
         "description": "Assets are monitored to find anomalies, indicators of compromise, and other potentially adverse events.",
         "parent": null,
-        "function": "DETECT"
+        "function": "DETECT",
+        "kind": "control"
       },
       {
         "control_id": "DE.AE",
         "title": "Adverse Event Analysis",
         "description": "Anomalies, indicators of compromise, and other potentially adverse events are analysed.",
         "parent": null,
-        "function": "DETECT"
+        "function": "DETECT",
+        "kind": "control"
       },
       {
         "control_id": "RS.MA",
         "title": "Incident Management",
         "description": "Responses to detected cybersecurity incidents are managed.",
         "parent": null,
-        "function": "RESPOND"
+        "function": "RESPOND",
+        "kind": "control"
       },
       {
         "control_id": "RS.AN",
         "title": "Incident Analysis",
         "description": "Investigations are conducted to ensure effective response and support forensics and recovery activities.",
         "parent": null,
-        "function": "RESPOND"
+        "function": "RESPOND",
+        "kind": "control"
       },
       {
         "control_id": "RS.CO",
         "title": "Incident Response Reporting and Communication",
         "description": "Response activities are coordinated with internal and external stakeholders.",
         "parent": null,
-        "function": "RESPOND"
+        "function": "RESPOND",
+        "kind": "control"
       },
       {
         "control_id": "RS.MI",
         "title": "Incident Mitigation",
         "description": "Activities are performed to prevent expansion of an event and mitigate its effects.",
         "parent": null,
-        "function": "RESPOND"
+        "function": "RESPOND",
+        "kind": "control"
       },
       {
         "control_id": "RC.RP",
         "title": "Incident Recovery Plan Execution",
         "description": "Restoration activities are performed to ensure operational availability of systems and services.",
         "parent": null,
-        "function": "RECOVER"
+        "function": "RECOVER",
+        "kind": "control"
       },
       {
         "control_id": "RC.CO",
         "title": "Incident Recovery Communication",
         "description": "Restoration activities and progress are communicated to designated internal and external stakeholders.",
         "parent": null,
-        "function": "RECOVER"
+        "function": "RECOVER",
+        "kind": "control"
       },
       {
         "control_id": "GV.OC-01",
         "title": "Organisational Context",
-        "description": "Policy defines permissible agent autonomy � agents cannot change stated goals without human confirmation; Policy defines permissible tool invocations � which tools require human confirmation; Policy requires AI disclosure and advisory labelling � agent transparency as a governance requirement"
+        "description": "Policy defines permissible agent autonomy � agents cannot change stated goals without human confirmation; Policy defines permissible tool invocations � which tools require human confirmation; Policy requires AI disclosure and advisory labelling � agent transparency as a governance requirement",
+        "kind": "control"
       },
       {
         "control_id": "PR.PS-04",
         "title": "Platform Security",
-        "description": "Secure software development � input validation and goal-state verification as platform security controls; Secure software development � static analysis, sandbox, allowlist as code execution platform security controls; Secure software development � multi-stage validation, path traversal prevention in ingestion code"
+        "description": "Secure software development � input validation and goal-state verification as platform security controls; Secure software development � static analysis, sandbox, allowlist as code execution platform security controls; Secure software development � multi-stage validation, path traversal prevention in ingestion code",
+        "kind": "control"
       },
       {
         "control_id": "DE.CM-01",
         "title": "Continuous Monitoring",
-        "description": "Networks and assets monitored � injection indicators detected across all agent input channels; All tool invocations logged and monitored � anomalous parameters, unusual sequences, high frequency detected; Credential usage monitored � anomalous access patterns detected"
+        "description": "Networks and assets monitored � injection indicators detected across all agent input channels; All tool invocations logged and monitored � anomalous parameters, unusual sequences, high frequency detected; Credential usage monitored � anomalous access patterns detected",
+        "kind": "control"
       },
       {
         "control_id": "RS.MI-01",
         "title": "Incident Mitigation",
-        "description": "Incidents contained � agent suspended, actions reversed, kill switch activated; Code execution incidents contained � sandbox isolated, forensic capture initiated; Incidents contained � kill switch activated, process control fallback initiated"
+        "description": "Incidents contained � agent suspended, actions reversed, kill switch activated; Code execution incidents contained � sandbox isolated, forensic capture initiated; Incidents contained � kill switch activated, process control fallback initiated",
+        "kind": "control"
       },
       {
         "control_id": "PR.AA-05",
         "title": "Identity Management, Authentication & Access Control",
-        "description": "Access permissions managed � per-tool permission manifests, least privilege per tool, irreversibility classification; Access permissions managed � agent credential scope enforced, least privilege per agent role; Access permissions managed � rogue agent cannot exceed its permission envelope regardless of internal goal state"
+        "description": "Access permissions managed � per-tool permission manifests, least privilege per tool, irreversibility classification; Access permissions managed � agent credential scope enforced, least privilege per agent role; Access permissions managed � rogue agent cannot exceed its permission envelope regardless of internal goal state",
+        "kind": "control"
       },
       {
         "control_id": "RS.AN-03",
         "title": "Incident Analysis",
-        "description": "Root cause analysis � which tool was misused, what downstream impact occurred, what parameters were used; Memory poisoning incidents analysed � affected sessions identified, operational decisions influenced reviewed; Root cause analysis � what caused rogue behaviour, which sessions were affected, what was the blast radius"
+        "description": "Root cause analysis � which tool was misused, what downstream impact occurred, what parameters were used; Memory poisoning incidents analysed � affected sessions identified, operational decisions influenced reviewed; Root cause analysis � what caused rogue behaviour, which sessions were affected, what was the blast radius",
+        "kind": "control"
       },
       {
         "control_id": "PR.AA-01",
         "title": "Identity Management, Authentication & Access Control",
-        "description": "Identities and credentials managed � NHI inventory, lifecycle management, unique identity per agent; Agent identities managed � each agent has a unique, verifiable identity for A2A authentication; Identities and credentials managed � NHI inventory, lifecycle, short-lived JIT issuance"
+        "description": "Identities and credentials managed � NHI inventory, lifecycle management, unique identity per agent; Agent identities managed � each agent has a unique, verifiable identity for A2A authentication; Identities and credentials managed � NHI inventory, lifecycle, short-lived JIT issuance",
+        "kind": "control"
       },
       {
         "control_id": "PR.DS-01",
         "title": "Data Security",
-        "description": "Sensitive data protected at rest � agent credentials encrypted, not stored in cleartext; Agent memory stores protected at rest � access controls, encryption, integrity verification; Sensitive data at rest protected � training data, embeddings, RAG stores, prompt caches encrypted"
+        "description": "Sensitive data protected at rest � agent credentials encrypted, not stored in cleartext; Agent memory stores protected at rest � access controls, encryption, integrity verification; Sensitive data at rest protected � training data, embeddings, RAG stores, prompt caches encrypted",
+        "kind": "control"
       },
       {
         "control_id": "GV.SC-01",
         "title": "Supply Chain Risk Management",
-        "description": "Cybersecurity supply chain risk management programme � all agent component vendors in scope; Inter-agent communication infrastructure treated as internal supply chain � authentication requirements documented; All approved AI tools managed as suppliers � TPSP assessment, contractual obligations"
+        "description": "Cybersecurity supply chain risk management programme � all agent component vendors in scope; Inter-agent communication infrastructure treated as internal supply chain � authentication requirements documented; All approved AI tools managed as suppliers � TPSP assessment, contractual obligations",
+        "kind": "control"
       },
       {
         "control_id": "GV.SC-06",
         "title": "Supply Chain Risk Management",
-        "description": "Cybersecurity requirements in supplier contracts � integrity guarantees, vulnerability disclosure SLA; Cybersecurity requirements included in contracts with suppliers � LLM model and data vendors"
+        "description": "Cybersecurity requirements in supplier contracts � integrity guarantees, vulnerability disclosure SLA; Cybersecurity requirements included in contracts with suppliers � LLM model and data vendors",
+        "kind": "control"
       },
       {
         "control_id": "ID.AM-08",
         "title": "Asset Management",
-        "description": "Agent components inventoried � ML SBOM for all tools, MCP servers, model weights, libraries; Agent memory stores inventoried as data assets � content classification, access controls, TTL documented; All tool integrations inventoried � data received, retained, training use, security assessment status"
+        "description": "Agent components inventoried � ML SBOM for all tools, MCP servers, model weights, libraries; Agent memory stores inventoried as data assets � content classification, access controls, TTL documented; All tool integrations inventoried � data received, retained, training use, security assessment status",
+        "kind": "control"
       },
       {
         "control_id": "PR.PS-02",
         "title": "Platform Security",
-        "description": "Software managed to reduce risk � component integrity verification, change management; Software managed to reduce risk � vector database CVEs patched promptly; Software managed to reduce risk � browser AI extensions version-controlled, patched, approved before deployment"
+        "description": "Software managed to reduce risk � component integrity verification, change management; Software managed to reduce risk � vector database CVEs patched promptly; Software managed to reduce risk � browser AI extensions version-controlled, patched, approved before deployment",
+        "kind": "control"
       },
       {
         "control_id": "PR.IR-01",
         "title": "Infrastructure Resilience",
-        "description": "Networks and environments protected � sandbox isolated from production infrastructure; Networks and environments protected for resilience � circuit breakers, blast radius limits, fail-safe defaults; Networks and environments protected for resilience � circuit breakers, freshness monitoring, redundancy"
+        "description": "Networks and environments protected � sandbox isolated from production infrastructure; Networks and environments protected for resilience � circuit breakers, blast radius limits, fail-safe defaults; Networks and environments protected for resilience � circuit breakers, freshness monitoring, redundancy",
+        "kind": "control"
       },
       {
         "control_id": "DE.CM-09",
         "title": "Continuous Monitoring",
-        "description": "Monitoring for anomalous data � memory content integrity checks, unusual write patterns detected; Monitoring for aggregate over-trust patterns � systematic operator acceptance without verification detected; Monitoring for anomalous data and software use � behavioural baseline deviation detected"
+        "description": "Monitoring for anomalous data � memory content integrity checks, unusual write patterns detected; Monitoring for aggregate over-trust patterns � systematic operator acceptance without verification detected; Monitoring for anomalous data and software use � behavioural baseline deviation detected",
+        "kind": "control"
       },
       {
         "control_id": "PR.DS-02",
         "title": "Data Security",
-        "description": "Data in transit protected � all A2A communication encrypted, integrity verified; Sensitive data in transit protected � all GenAI API calls and RAG retrieval paths encrypted; Extracted sensitive content encrypted in transit � multimodal extraction pipelines covered"
+        "description": "Data in transit protected � all A2A communication encrypted, integrity verified; Sensitive data in transit protected � all GenAI API calls and RAG retrieval paths encrypted; Extracted sensitive content encrypted in transit � multimodal extraction pipelines covered",
+        "kind": "control"
       },
       {
         "control_id": "RC.RP-01",
         "title": "Incident Recovery",
-        "description": "Recovery plan includes agent cluster failures � BCP covers AI system availability, RTO/RPO defined; Recovery plan includes GenAI pipeline failures � BCP covers AI availability, RTO/RPO defined"
+        "description": "Recovery plan includes agent cluster failures � BCP covers AI system availability, RTO/RPO defined; Recovery plan includes GenAI pipeline failures � BCP covers AI availability, RTO/RPO defined",
+        "kind": "control"
       },
       {
         "control_id": "PR.AT-01",
         "title": "Awareness and Training",
-        "description": "Users trained on AI limitations � operators understand agent advisory status and verification requirements; Users trained on shadow AI risk � policy awareness, prohibited tool use, reporting obligations; Labelling staff trained on data handling � classification, prohibited use, incident reporting"
+        "description": "Users trained on AI limitations � operators understand agent advisory status and verification requirements; Users trained on shadow AI risk � policy awareness, prohibited tool use, reporting obligations; Labelling staff trained on data handling � classification, prohibited use, incident reporting",
+        "kind": "control"
       },
       {
         "control_id": "RS.CO-03",
         "title": "Communication",
-        "description": "Information shared following incidents � trust exploitation incidents reported to affected users; Regulatory incident communication � breach notification, regulatory reporting, authority contact procedures"
+        "description": "Information shared following incidents � trust exploitation incidents reported to affected users; Regulatory incident communication � breach notification, regulatory reporting, authority contact procedures",
+        "kind": "control"
       },
       {
         "control_id": "DE.AE-02",
         "title": "Adverse Event Analysis",
-        "description": "Detected events analysed to understand attack targets � rogue agent patterns correlated across sessions"
+        "description": "Detected events analysed to understand attack targets � rogue agent patterns correlated across sessions",
+        "kind": "control"
       },
       {
         "control_id": "GV.RM-06",
         "title": "Risk Management Strategy",
-        "description": "Risk tolerance established � acceptable sensitive data disclosure risk defined per GenAI use case; Agent credential exposure in risk register � blast radius per deployment documented; Risk tolerance defined for re-identification risk in synthetic datasets � legal standard, not technical checkbox"
+        "description": "Risk tolerance established � acceptable sensitive data disclosure risk defined per GenAI use case; Agent credential exposure in risk register � blast radius per deployment documented; Risk tolerance defined for re-identification risk in synthetic datasets � legal standard, not technical checkbox",
+        "kind": "control"
       },
       {
         "control_id": "ID.RA-01",
         "title": "Risk Assessment",
-        "description": "Ingestion interface vulnerabilities documented in risk assessment � CVE-2024-3584 class; Compliance risks identified per GenAI deployment � applicable regulations, triggered obligations, controls gaps; Re-identification risk assessed for all synthetic datasets before use or distribution"
+        "description": "Ingestion interface vulnerabilities documented in risk assessment � CVE-2024-3584 class; Compliance risks identified per GenAI deployment � applicable regulations, triggered obligations, controls gaps; Re-identification risk assessed for all synthetic datasets before use or distribution",
+        "kind": "control"
       },
       {
         "control_id": "GV.RM-01",
         "title": "Risk Management Strategy",
-        "description": "Risk management strategy includes regulatory compliance risk � GenAI-specific obligations in risk programme; Risk management strategy established � LLM availability requirements and acceptable consumption risk defined"
+        "description": "Risk management strategy includes regulatory compliance risk � GenAI-specific obligations in risk programme; Risk management strategy established � LLM availability requirements and acceptable consumption risk defined",
+        "kind": "control"
       }
     ],
     "changelog": [
       {
         "date": "2026-04-09",
         "change": "Initial seed — 22 CSF 2.0 categories across GOVERN/IDENTIFY/PROTECT/DETECT/RESPOND/RECOVER",
-        "author": "emmanuelgjr"
+        "author": "OWASP GenAI Data Security Initiative"
       }
     ]
   },
@@ -5387,262 +6238,314 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "Threat model the agent pipeline for adversarial goal manipulation vectors including direct injection, indirect injection via tool outputs, and context poisoning",
         "title": "PW.2.1-PS – Design software to meet security requirements",
-        "description": "Ensures goal integrity is a design-phase requirement for all agentic systems"
+        "description": "Ensures goal integrity is a design-phase requirement for all agentic systems",
+        "kind": "control"
       },
       {
         "control_id": "Review agent behaviour for goal deviation — verify that the agent maintains intended objectives under adversarial input conditions",
         "title": "PW.7.2-PS – Review the software for security vulnerabilities",
-        "description": "Catches goal manipulation vulnerabilities before production deployment"
+        "description": "Catches goal manipulation vulnerabilities before production deployment",
+        "kind": "control"
       },
       {
         "control_id": "Conduct adversarial red-team testing against goal hijacking vectors including injection through every data source, tool output, and context channel",
         "title": "PW.8.2-PS – Test for security vulnerabilities",
-        "description": "Validates goal integrity controls under realistic attack conditions"
+        "description": "Validates goal integrity controls under realistic attack conditions",
+        "kind": "control"
       },
       {
         "control_id": "Establish procedures to identify goal hijacking incidents in production including goal deviation monitoring, triage, and confirmation workflows",
         "title": "RV.1.1-PS – Identify and confirm vulnerabilities",
-        "description": "Enables rapid detection and response to goal manipulation in live systems"
+        "description": "Enables rapid detection and response to goal manipulation in live systems",
+        "kind": "control"
       },
       {
         "control_id": "Define explicit security requirements specifying the maximum permitted tool access, API scope, data source access, and resource boundaries for each agent deployment",
         "title": "PW.1.1-PS – Define security requirements",
-        "description": "Establishes access control as a mandatory deployment requirement"
+        "description": "Establishes access control as a mandatory deployment requirement",
+        "kind": "control"
       },
       {
         "control_id": "Threat model all agent access paths to tools, data stores, and APIs; design least-privilege tool manifests and enforce tenant isolation by design",
         "title": "PW.2.1-PS – Design software to meet security requirements",
-        "description": "Ensures access boundaries are designed before implementation"
+        "description": "Ensures access boundaries are designed before implementation",
+        "kind": "control"
       },
       {
         "control_id": "Protect agent configuration files, tool manifests, permission policies, and orchestration definitions from unauthorised modification",
         "title": "PS.1.1-PS – Protect all code from unauthorised access",
-        "description": "Prevents tampering with access control configuration"
+        "description": "Prevents tampering with access control configuration",
+        "kind": "control"
       },
       {
         "control_id": "Review agent access control enforcement — verify that tool permission manifests, RBAC policies, and tenant isolation boundaries are correctly implemented and cannot be bypassed",
         "title": "PW.7.2-PS – Review the software for security vulnerabilities",
-        "description": "Validates access controls before production deployment"
+        "description": "Validates access controls before production deployment",
+        "kind": "control"
       },
       {
         "control_id": "Define explicit privilege boundaries for each agent identity — maximum permitted privilege level, credential scope, and escalation constraints",
         "title": "PW.1.1-PS – Define security requirements",
-        "description": "Establishes privilege boundaries as mandatory requirements"
+        "description": "Establishes privilege boundaries as mandatory requirements",
+        "kind": "control"
       },
       {
         "control_id": "Implement secure credential handling — agents must not inherit user credentials, store tokens in context, or pass credentials between agents without explicit authorisation",
         "title": "PW.5.1-PS – Secure coding practices",
-        "description": "Prevents credential leakage through agent code paths"
+        "description": "Prevents credential leakage through agent code paths",
+        "kind": "control"
       },
       {
         "control_id": "Protect credential stores, identity configurations, and privilege mapping files from unauthorised access and modification",
         "title": "PS.1.1-PS – Protect all code from unauthorised access",
-        "description": "Prevents tampering with privilege boundaries"
+        "description": "Prevents tampering with privilege boundaries",
+        "kind": "control"
       },
       {
         "control_id": "Establish monitoring and triage procedures for privilege escalation incidents — detect agents operating beyond their assigned privilege level",
         "title": "RV.1.1-PS – Identify and confirm vulnerabilities",
-        "description": "Enables rapid detection of privilege escalation in production"
+        "description": "Enables rapid detection of privilege escalation in production",
+        "kind": "control"
       },
       {
         "control_id": "Vet all third-party agent components — tools, plugins, MCP servers, model weights, orchestration libraries — for provenance, integrity, and security posture before use",
         "title": "PW.4.1-PS – Reuse existing well-secured software",
-        "description": "Prevents introduction of compromised components into agent pipelines"
+        "description": "Prevents introduction of compromised components into agent pipelines",
+        "kind": "control"
       },
       {
         "control_id": "Verify integrity of all agent artefacts and third-party components using cryptographic signatures and checksums before deployment",
         "title": "PS.2.1-PS – Verify software integrity",
-        "description": "Detects tampering in agent supply chain artefacts"
+        "description": "Detects tampering in agent supply chain artefacts",
+        "kind": "control"
       },
       {
         "control_id": "Maintain a secure, versioned registry of all agent components with provenance records; enable auditability and rollback",
         "title": "PS.3.1-PS – Archive and protect software releases",
-        "description": "Ensures traceability and recovery capability for supply chain incidents"
+        "description": "Ensures traceability and recovery capability for supply chain incidents",
+        "kind": "control"
       },
       {
         "control_id": "Monitor for newly disclosed vulnerabilities in third-party agent components; establish a triage process for AI-specific supply chain disclosures",
         "title": "RV.1.1-PS – Identify and confirm vulnerabilities",
-        "description": "Enables rapid response to supply chain compromises"
+        "description": "Enables rapid response to supply chain compromises",
+        "kind": "control"
       },
       {
         "control_id": "Threat model all code execution paths in agent workflows; design sandboxing, resource limits, and execution constraints as explicit security requirements",
         "title": "PW.2.1-PS – Design software to meet security requirements",
-        "description": "Ensures code execution boundaries are designed before implementation"
+        "description": "Ensures code execution boundaries are designed before implementation",
+        "kind": "control"
       },
       {
         "control_id": "Implement secure coding for agent code execution — sandbox isolation, input validation for code generation, output filtering, and prevention of self-modification",
         "title": "PW.5.1-PS – Secure coding practices",
-        "description": "Prevents code execution vulnerabilities in agent implementation"
+        "description": "Prevents code execution vulnerabilities in agent implementation",
+        "kind": "control"
       },
       {
         "control_id": "Conduct adversarial testing targeting code execution — sandbox escapes, resource limit bypasses, self-modification, and host system access through generated code",
         "title": "PW.8.2-PS – Test for security vulnerabilities",
-        "description": "Validates execution boundary controls under attack conditions"
+        "description": "Validates execution boundary controls under attack conditions",
+        "kind": "control"
       },
       {
         "control_id": "Protect agent execution environments, sandbox configurations, and runtime constraints from unauthorised modification",
         "title": "PS.1.1-PS – Protect all code from unauthorised access",
-        "description": "Prevents weakening of execution boundaries through configuration tampering"
+        "description": "Prevents weakening of execution boundaries through configuration tampering",
+        "kind": "control"
       },
       {
         "control_id": "Protect agent memory stores, context databases, and shared state repositories from unauthorised read, write, and modification; enforce access controls per agent identity",
         "title": "PS.1.1-PS – Protect all code from unauthorised access",
-        "description": "Prevents direct tampering with agent memory and context"
+        "description": "Prevents direct tampering with agent memory and context",
+        "kind": "control"
       },
       {
         "control_id": "Maintain versioned, integrity-verified snapshots of agent memory and context stores; enable rollback to pre-poisoning states",
         "title": "PS.3.1-PS – Archive and protect software releases",
-        "description": "Ensures recovery capability for memory poisoning incidents"
+        "description": "Ensures recovery capability for memory poisoning incidents",
+        "kind": "control"
       },
       {
         "control_id": "Review agent behaviour for memory-influenced anomalies — verify that persistent memory and shared context do not introduce unintended behaviour changes across sessions",
         "title": "PW.7.2-PS – Review the software for security vulnerabilities",
-        "description": "Catches memory poisoning effects before they propagate"
+        "description": "Catches memory poisoning effects before they propagate",
+        "kind": "control"
       },
       {
         "control_id": "When memory poisoning is detected, conduct forensic analysis to identify the poisoned records, their ingestion source, propagation path, and blast radius across agents",
         "title": "RV.3.1-PS – Analyse root causes",
-        "description": "Enables thorough incident response for memory poisoning events"
+        "description": "Enables thorough incident response for memory poisoning events",
+        "kind": "control"
       },
       {
         "control_id": "Define explicit security requirements constraining permitted tool invocation sequences and cross-tool data flows for each agent deployment",
         "title": "PW.1.1-PS – Define security requirements",
-        "description": "Establishes chaining constraints as mandatory requirements"
+        "description": "Establishes chaining constraints as mandatory requirements",
+        "kind": "control"
       },
       {
         "control_id": "Threat model tool interaction graphs — identify composite action sequences that could achieve unauthorised outcomes; design controls for chain-level authorisation",
         "title": "PW.2.1-PS – Design software to meet security requirements",
-        "description": "Ensures chaining risks are addressed at design time"
+        "description": "Ensures chaining risks are addressed at design time",
+        "kind": "control"
       },
       {
         "control_id": "Review agent behaviour for chain-based scope violations — verify that multi-step tool sequences cannot achieve outcomes exceeding individual tool permissions",
         "title": "PW.7.2-PS – Review the software for security vulnerabilities",
-        "description": "Catches chaining vulnerabilities before production"
+        "description": "Catches chaining vulnerabilities before production",
+        "kind": "control"
       },
       {
         "control_id": "Establish monitoring for anomalous tool invocation sequences; define triage procedures for suspected lateral chaining incidents",
         "title": "RV.1.1-PS – Identify and confirm vulnerabilities",
-        "description": "Enables detection of chaining attacks in production"
+        "description": "Enables detection of chaining attacks in production",
+        "kind": "control"
       },
       {
         "control_id": "Design circuit breakers, step limits, cost budgets, and human approval gates as explicit security requirements for all agentic automation workflows",
         "title": "PW.2.1-PS – Design software to meet security requirements",
-        "description": "Ensures cascade prevention is a design-phase requirement"
+        "description": "Ensures cascade prevention is a design-phase requirement",
+        "kind": "control"
       },
       {
         "control_id": "Conduct adversarial testing of cascade failure paths — test error propagation, hallucination amplification, and runaway automation scenarios",
         "title": "PW.8.2-PS – Test for security vulnerabilities",
-        "description": "Validates cascade prevention controls under attack conditions"
+        "description": "Validates cascade prevention controls under attack conditions",
+        "kind": "control"
       },
       {
         "control_id": "Define remediation procedures for cascade failure incidents including automatic circuit breaker activation, workflow suspension, cost cap enforcement, and rollback",
         "title": "RV.2.1-PS – Assess, prioritise, and remediate vulnerabilities",
-        "description": "Enables rapid response to cascading automation failures"
+        "description": "Enables rapid response to cascading automation failures",
+        "kind": "control"
       },
       {
         "control_id": "Define explicit requirements for maximum automation depth, step limits, cost budgets, and mandatory human checkpoints for each agent workflow",
         "title": "PW.1.1-PS – Define security requirements",
-        "description": "Establishes automation boundaries as mandatory requirements"
+        "description": "Establishes automation boundaries as mandatory requirements",
+        "kind": "control"
       },
       {
         "control_id": "Review agent behaviour for emergent capabilities — verify that self-modification, dynamic tool discovery, and autonomous agent spawning do not create unintended security exposures",
         "title": "PW.7.2-PS – Review the software for security vulnerabilities",
-        "description": "Catches emergent pattern risks before production"
+        "description": "Catches emergent pattern risks before production",
+        "kind": "control"
       },
       {
         "control_id": "Conduct adversarial testing targeting emerging agentic patterns — self-evolution, prompt self-modification, autonomous tool acquisition, and dynamic agent creation",
         "title": "PW.8.2-PS – Test for security vulnerabilities",
-        "description": "Validates controls against novel attack surfaces"
+        "description": "Validates controls against novel attack surfaces",
+        "kind": "control"
       },
       {
         "control_id": "Establish monitoring for emergent agent behaviours — detect agents acquiring new capabilities, modifying their own definitions, or spawning sub-agents outside approved patterns",
         "title": "RV.1.1-PS – Identify and confirm vulnerabilities",
-        "description": "Enables detection of emerging risks in production"
+        "description": "Enables detection of emerging risks in production",
+        "kind": "control"
       },
       {
         "control_id": "When incidents involve novel agentic patterns, conduct root cause analysis focused on understanding the emergent capability and its security implications",
         "title": "RV.3.1-PS – Analyse root causes",
-        "description": "Builds organisational knowledge of emerging agentic risks"
+        "description": "Builds organisational knowledge of emerging agentic risks",
+        "kind": "control"
       },
       {
         "control_id": "Vet all external agent dependencies — LLM APIs, tool endpoints, MCP servers, orchestration platforms — for reliability, security posture, and failure mode characteristics before adoption",
         "title": "PW.4.1-PS – Reuse existing well-secured software",
-        "description": "Prevents adoption of unreliable dependencies"
+        "description": "Prevents adoption of unreliable dependencies",
+        "kind": "control"
       },
       {
         "control_id": "Verify that external dependency responses are consistent with expected behaviour — detect API version changes, model swaps, or degraded output quality that could affect agent correctness",
         "title": "PS.2.1-PS – Verify software integrity",
-        "description": "Detects dependency degradation and tampering"
+        "description": "Detects dependency degradation and tampering",
+        "kind": "control"
       },
       {
         "control_id": "Monitor all agent dependencies for availability, behavioural consistency, and security posture changes; establish triage procedures for dependency degradation events",
         "title": "RV.1.1-PS – Identify and confirm vulnerabilities",
-        "description": "Enables rapid detection of dependency failures"
+        "description": "Enables rapid detection of dependency failures",
+        "kind": "control"
       },
       {
         "control_id": "Define remediation procedures for dependency failures — graceful degradation, fallback providers, workflow suspension, and stakeholder notification",
         "title": "RV.2.1-PS – Assess, prioritise, and remediate vulnerabilities",
-        "description": "Ensures operational continuity during dependency outages"
+        "description": "Ensures operational continuity during dependency outages",
+        "kind": "control"
       },
       {
         "control_id": "PS.1.1-PS",
         "title": "Protect all code from unauthorised access — data access audit controls",
-        "description": "Implement comprehensive audit logging for all access to training data, model weights, embedding stores, and pipeline configuration; enforce tamper-evident log storage; Implement controls to detect and prevent unauthorised AI tool usage that processes organisational data outside governed pipelines; Protect training data, model weights, adapters, and pipeline artefacts from unauthorised modification; enforce write access controls and integrity monitoring"
+        "description": "Implement comprehensive audit logging for all access to training data, model weights, embedding stores, and pipeline configuration; enforce tamper-evident log storage; Implement controls to detect and prevent unauthorised AI tool usage that processes organisational data outside governed pipelines; Protect training data, model weights, adapters, and pipeline artefacts from unauthorised modification; enforce write access controls and integrity monitoring",
+        "kind": "control"
       },
       {
         "control_id": "RV.1.1-PS",
         "title": "Identify and confirm vulnerabilities — audit-driven detection",
-        "description": "Establish procedures to detect data access anomalies using audit logs; define triage workflows for suspicious access patterns across AI data stores; Establish procedures to identify data exposure from shadow AI tool usage; define triage and remediation workflows for unsanctioned data processing; Establish procedures to detect data misuse and manipulation in production including monitoring for purpose-scope violations and data manipulation patterns"
+        "description": "Establish procedures to detect data access anomalies using audit logs; define triage workflows for suspicious access patterns across AI data stores; Establish procedures to identify data exposure from shadow AI tool usage; define triage and remediation workflows for unsanctioned data processing; Establish procedures to detect data misuse and manipulation in production including monitoring for purpose-scope violations and data manipulation patterns",
+        "kind": "control"
       },
       {
         "control_id": "PW.1.1-PS",
         "title": "Define security requirements — data inventory and classification",
-        "description": "Define security requirements mandating a complete data inventory covering all datasets used in training, fine-tuning, RAG, and evaluation; classify by sensitivity; Define security requirements governing how datasets may be combined for AI training and inference; require aggregation impact assessments before merging datasets; Define security requirements governing data retention periods, deletion procedures, and right-to-erasure compliance for all data in AI pipelines"
+        "description": "Define security requirements mandating a complete data inventory covering all datasets used in training, fine-tuning, RAG, and evaluation; classify by sensitivity; Define security requirements governing how datasets may be combined for AI training and inference; require aggregation impact assessments before merging datasets; Define security requirements governing data retention periods, deletion procedures, and right-to-erasure compliance for all data in AI pipelines",
+        "kind": "control"
       },
       {
         "control_id": "PW.2.1-PS",
         "title": "Design software — data flow transparency",
-        "description": "Design AI pipelines with documented data flow diagrams showing data origins, transformations, storage locations, and access points; maintain as living artefacts; Design AI data pipelines with built-in lineage tracking; require lineage metadata capture at every transformation step as an explicit design requirement; Design AI data pipelines with aggregation controls that prevent combination of datasets whose joint sensitivity exceeds authorised classification levels"
+        "description": "Design AI pipelines with documented data flow diagrams showing data origins, transformations, storage locations, and access points; maintain as living artefacts; Design AI data pipelines with built-in lineage tracking; require lineage metadata capture at every transformation step as an explicit design requirement; Design AI data pipelines with aggregation controls that prevent combination of datasets whose joint sensitivity exceeds authorised classification levels",
+        "kind": "control"
       },
       {
         "control_id": "PW.4.1-PS",
         "title": "Reuse existing well-secured software — AI tool vetting",
-        "description": "Vet all AI tools, services, and plugins before organisational adoption; verify data handling, security posture, and compliance capabilities; Vet all third-party datasets, pre-trained models, and pipeline components for provenance, integrity, and potential poisoning before use; Vet all datasets for quality, completeness, representativeness, and fitness for purpose before use in any training or evaluation pipeline"
+        "description": "Vet all AI tools, services, and plugins before organisational adoption; verify data handling, security posture, and compliance capabilities; Vet all third-party datasets, pre-trained models, and pipeline components for provenance, integrity, and potential poisoning before use; Vet all datasets for quality, completeness, representativeness, and fitness for purpose before use in any training or evaluation pipeline",
+        "kind": "control"
       },
       {
         "control_id": "PS.3.1-PS",
         "title": "Archive and protect software releases — versioned artefact management",
-        "description": "Maintain versioned, integrity-verified snapshots of all training data, model checkpoints, and pipeline artefacts; enable rollback to known-good state; Maintain versioned dataset snapshots with provenance metadata recording origin, collection method, processing steps, and quality metrics; Maintain end-to-end data lineage records linking every model version to its training data, transformations, and intermediate artefacts"
+        "description": "Maintain versioned, integrity-verified snapshots of all training data, model checkpoints, and pipeline artefacts; enable rollback to known-good state; Maintain versioned dataset snapshots with provenance metadata recording origin, collection method, processing steps, and quality metrics; Maintain end-to-end data lineage records linking every model version to its training data, transformations, and intermediate artefacts",
+        "kind": "control"
       },
       {
         "control_id": "RV.3.1-PS",
         "title": "Analyse root causes — poisoning forensics",
-        "description": "When poisoning is detected, conduct forensic analysis to identify corrupted records, trace to source, and determine blast radius across dependent models; When model failures trace to synthetic training data, conduct root cause analysis of the generation process, source data, and privacy mechanism; When discriminatory behaviour is identified, conduct root cause analysis tracing bias to specific training data sources, labelling processes, or preprocessing steps"
+        "description": "When poisoning is detected, conduct forensic analysis to identify corrupted records, trace to source, and determine blast radius across dependent models; When model failures trace to synthetic training data, conduct root cause analysis of the generation process, source data, and privacy mechanism; When discriminatory behaviour is identified, conduct root cause analysis tracing bias to specific training data sources, labelling processes, or preprocessing steps",
+        "kind": "control"
       },
       {
         "control_id": "PS.2.1-PS",
         "title": "Verify software integrity — data provenance verification",
-        "description": "Verify provenance and integrity of all datasets used in training, fine-tuning, and evaluation; maintain cryptographic attestation of data origin and chain of custody; Verify integrity of all third-party data deliveries using checksums, signatures, or schema validation; detect tampering or corruption before pipeline ingestion; Verify that the model artifact serving output has not been tampered with; maintain signed model checksums and verify before deployment"
+        "description": "Verify provenance and integrity of all datasets used in training, fine-tuning, and evaluation; maintain cryptographic attestation of data origin and chain of custody; Verify integrity of all third-party data deliveries using checksums, signatures, or schema validation; detect tampering or corruption before pipeline ingestion; Verify that the model artifact serving output has not been tampered with; maintain signed model checksums and verify before deployment",
+        "kind": "control"
       },
       {
         "control_id": "PW.5.1-PS",
         "title": "Secure coding — data handling in AI pipelines",
-        "description": "Enforce secure coding practices for all data handling in AI pipelines; implement output filtering, PII detection, and data masking before model responses reach consumers; Implement secure coding practices for all code paths that consume LLM output; treat model responses as untrusted input to downstream systems; Enforce secure coding standards prohibiting embedding of credentials, API keys, or sensitive configuration data in system prompts or model context"
+        "description": "Enforce secure coding practices for all data handling in AI pipelines; implement output filtering, PII detection, and data masking before model responses reach consumers; Implement secure coding practices for all code paths that consume LLM output; treat model responses as untrusted input to downstream systems; Enforce secure coding standards prohibiting embedding of credentials, API keys, or sensitive configuration data in system prompts or model context",
+        "kind": "control"
       },
       {
         "control_id": "PW.7.2-PS",
         "title": "Review for security vulnerabilities — data leakage review",
-        "description": "Include data leakage and memorisation scenarios in pre-release security reviews; verify that outputs cannot reveal training data or sensitive context; Review synthetic data for bias inheritance, privacy leakage, and statistical fidelity before use in training pipelines; verify privacy guarantees are meaningful; Include data misuse and manipulation scenarios in pre-release reviews; verify that purpose limitation controls are enforced and cannot be bypassed"
+        "description": "Include data leakage and memorisation scenarios in pre-release security reviews; verify that outputs cannot reveal training data or sensitive context; Review synthetic data for bias inheritance, privacy leakage, and statistical fidelity before use in training pipelines; verify privacy guarantees are meaningful; Include data misuse and manipulation scenarios in pre-release reviews; verify that purpose limitation controls are enforced and cannot be bypassed",
+        "kind": "control"
       },
       {
         "control_id": "PW.8.2-PS",
         "title": "Test for security vulnerabilities — synthetic data adversarial testing",
-        "description": "Conduct adversarial testing of synthetic data for membership inference, attribute inference, and reconstruction attacks to validate privacy claims; Conduct adversarial testing for discriminatory outputs; test model behaviour across demographic groups, intersectional categories, and edge cases; Conduct adversarial testing (red-teaming) against prompt injection vectors before each production release; cover direct, indirect, and multimodal injection paths"
+        "description": "Conduct adversarial testing of synthetic data for membership inference, attribute inference, and reconstruction attacks to validate privacy claims; Conduct adversarial testing for discriminatory outputs; test model behaviour across demographic groups, intersectional categories, and edge cases; Conduct adversarial testing (red-teaming) against prompt injection vectors before each production release; cover direct, indirect, and multimodal injection paths",
+        "kind": "control"
       },
       {
         "control_id": "RV.2.1-PS",
         "title": "Assess, prioritise, and remediate — deletion request remediation",
-        "description": "Define procedures to assess and remediate data deletion requests including impact analysis on trained models and retraining requirements; Define remediation procedures for availability incidents including model rollback, rate limit tightening, and cost circuit breakers; Define and test remediation procedures for availability incidents — rate limit tightening, model rollback, cost circuit breaker activation"
+        "description": "Define procedures to assess and remediate data deletion requests including impact analysis on trained models and retraining requirements; Define remediation procedures for availability incidents including model rollback, rate limit tightening, and cost circuit breakers; Define and test remediation procedures for availability incidents — rate limit tightening, model rollback, cost circuit breaker activation",
+        "kind": "control"
       }
     ]
   },
@@ -5661,297 +6564,356 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "Vulnerabilities common to IT/OT",
         "title": "§5.3",
-        "description": "Injection via historian and SCADA data feeds"
+        "description": "Injection via historian and SCADA data feeds",
+        "kind": "control"
       },
       {
         "control_id": "Risk assessment",
         "title": "§6.2",
-        "description": "Assess injection risk at every agent data ingestion point; Assess agent permission scope as part of OT risk register; Assess agent memory stores as OT data integrity risk"
+        "description": "Assess injection risk at every agent data ingestion point; Assess agent permission scope as part of OT risk register; Assess agent memory stores as OT data integrity risk",
+        "kind": "control"
       },
       {
         "control_id": "Security controls for ICS",
         "title": "§7.2",
-        "description": "Input validation mandatory at OT data boundary"
+        "description": "Input validation mandatory at OT data boundary",
+        "kind": "control"
       },
       {
         "control_id": "Common ICS vulnerabilities",
         "title": "§5.3",
-        "description": "Excessive privilege is specifically listed as OT vulnerability class; Injection via OT data feeds is a documented attack vector"
+        "description": "Excessive privilege is specifically listed as OT vulnerability class; Injection via OT data feeds is a documented attack vector",
+        "kind": "control"
       },
       {
         "control_id": "Secure architecture",
         "title": "§7.1",
-        "description": "Least privilege must be enforced at zone boundary for all automated systems; Mandatory: safety function must be independent of AI decision layer; GenAI guardrails must be independent of model inference layer"
+        "description": "Least privilege must be enforced at zone boundary for all automated systems; Mandatory: safety function must be independent of AI decision layer; GenAI guardrails must be independent of model inference layer",
+        "kind": "control"
       },
       {
         "control_id": "ICS vulnerabilities",
         "title": "§5.3",
-        "description": "Memory corruption and state manipulation; Lateral movement between control systems; Safety system bypass is the highest severity OT threat"
+        "description": "Memory corruption and state manipulation; Lateral movement between control systems; Safety system bypass is the highest severity OT threat",
+        "kind": "control"
       },
       {
         "control_id": "Security controls",
         "title": "§7.2",
-        "description": "Authenticate all automated system-to-system communications; Circuit breakers between OT automation layers; Input validation mandatory at OT data boundary"
+        "description": "Authenticate all automated system-to-system communications; Circuit breakers between OT automation layers; Input validation mandatory at OT data boundary",
+        "kind": "control"
       },
       {
         "control_id": "Supply chain risks",
         "title": "§5.5",
-        "description": "Third-party tool components in OT; Expanded to include agentic AI components; Third-party OT tool data leakage"
+        "description": "Third-party tool components in OT; Expanded to include agentic AI components; Third-party OT tool data leakage",
+        "kind": "control"
       },
       {
         "control_id": "Supply chain risk management",
         "title": "§6.3",
-        "description": "Tool integration approval process; SBOM and vendor assessment for agentic stack; Tool data scope in OT security assessment"
+        "description": "Tool integration approval process; SBOM and vendor assessment for agentic stack; Tool data scope in OT security assessment",
+        "kind": "control"
       },
       {
         "control_id": "Third-party management",
         "title": "§8.4",
-        "description": "Vendor assessment for OT tool providers; Formal vendor programme for OT agent components; Vendor programme for OT data suppliers"
+        "description": "Vendor assessment for OT tool providers; Formal vendor programme for OT agent components; Vendor programme for OT data suppliers",
+        "kind": "control"
       },
       {
         "control_id": "Data confidentiality risks in OT",
         "title": "§5.4",
-        "description": "OT data exfiltration via compromised automation"
+        "description": "OT data exfiltration via compromised automation",
+        "kind": "control"
       },
       {
         "control_id": "Network monitoring",
         "title": "§7.3",
-        "description": "Monitor all outbound data from OT zone; Monitor for unexpected exfiltration of OT training data; Monitor outputs for OT data disclosure patterns"
+        "description": "Monitor all outbound data from OT zone; Monitor for unexpected exfiltration of OT training data; Monitor outputs for OT data disclosure patterns",
+        "kind": "control"
       },
       {
         "control_id": "OT security programme",
         "title": "§8.2",
-        "description": "Governance policy for autonomous OT systems; Compliance programme for OT GenAI deployments; Data lineage as OT governance requirement"
+        "description": "Governance policy for autonomous OT systems; Compliance programme for OT GenAI deployments; Data lineage as OT governance requirement",
+        "kind": "control"
       },
       {
         "control_id": "Availability risks",
         "title": "§5.6",
-        "description": "Cascading failure across OT components; OT GenAI pipeline failure as availability risk"
+        "description": "Cascading failure across OT components; OT GenAI pipeline failure as availability risk",
+        "kind": "control"
       },
       {
         "control_id": "Data confidentiality",
         "title": "§5.4",
-        "description": "OT data confidentiality requirements apply to training data; OT data in retrieval corpora requires access control; OT knowledge encoded in models requires protection"
+        "description": "OT data confidentiality requirements apply to training data; OT data in retrieval corpora requires access control; OT knowledge encoded in models requires protection",
+        "kind": "control"
       },
       {
         "control_id": "OT data confidentiality",
         "title": "§5.4",
-        "description": "OT data must not be disclosed without authorisation; Inference inputs are OT data and require protection"
+        "description": "OT data must not be disclosed without authorisation; Inference inputs are OT data and require protection",
+        "kind": "control"
       },
       {
         "control_id": "ICS vulnerabilities — data integrity",
         "title": "§5.3",
-        "description": "Corpus manipulation directly threatens OT operational integrity"
+        "description": "Corpus manipulation directly threatens OT operational integrity",
+        "kind": "control"
       },
       {
         "control_id": "Malicious code and logic attacks via IT/OT convergence",
         "title": "Section 5.3 � Threats",
-        "description": "Prompt injection as a new logic attack vector through LLM at the IT/OT boundary"
+        "description": "Prompt injection as a new logic attack vector through LLM at the IT/OT boundary",
+        "kind": "control"
       },
       {
         "control_id": "Identify threats, vulnerabilities, and impacts for all OT systems",
         "title": "Section 6.2 � Risk assessment",
-        "description": "Prompt injection documented in OT risk assessment for each LLM integration"
+        "description": "Prompt injection documented in OT risk assessment for each LLM integration",
+        "kind": "control"
       },
       {
         "control_id": "Defense-in-depth network architecture with validated data flows",
         "title": "Section 7.2 � Network segmentation",
-        "description": "Input validation layer at the DMZ/control zone boundary � prompt injection filtered before reaching LLM"
+        "description": "Input validation layer at the DMZ/control zone boundary � prompt injection filtered before reaching LLM",
+        "kind": "control"
       },
       {
         "control_id": "Title",
         "title": "Control",
-        "description": "Application"
+        "description": "Application",
+        "kind": "control"
       },
       {
         "control_id": "Information Input Validation",
         "title": "SI-10",
-        "description": "Validate all inputs to LLMs connected to OT systems � reject inputs containing injection indicators; Training data validation � adversarial content detected and rejected before training; LLM outputs validated before passing to OT systems � schema validation, allowlist enforcement"
+        "description": "Validate all inputs to LLMs connected to OT systems � reject inputs containing injection indicators; Training data validation � adversarial content detected and rejected before training; LLM outputs validated before passing to OT systems � schema validation, allowlist enforcement",
+        "kind": "control"
       },
       {
         "control_id": "Malicious Code Protection",
         "title": "SI-3",
-        "description": "Treat prompt injection as a malicious code analog � detection and response controls required; LLM output scanning for malicious content before OT system ingestion; Analogy: LLM misinformation detection controls as an integrity assurance layer on advisory outputs"
+        "description": "Treat prompt injection as a malicious code analog � detection and response controls required; LLM output scanning for malicious content before OT system ingestion; Analogy: LLM misinformation detection controls as an integrity assurance layer on advisory outputs",
+        "kind": "control"
       },
       {
         "control_id": "Access Enforcement",
         "title": "AC-3",
-        "description": "LLM access to OT systems enforced by policy � injection cannot escalate LLM access beyond defined scope; LLM access to OT data enforced by classification � sensitive process and network data requires elevated access tier; LLM access to OT systems enforced by policy � scope cannot be exceeded regardless of model instruction"
+        "description": "LLM access to OT systems enforced by policy � injection cannot escalate LLM access beyond defined scope; LLM access to OT data enforced by classification � sensitive process and network data requires elevated access tier; LLM access to OT systems enforced by policy � scope cannot be exceeded regardless of model instruction",
+        "kind": "control"
       },
       {
         "control_id": "Information disclosure and OT espionage",
         "title": "Section 5.4 � Threats",
-        "description": "LLMs with historian access as a new vector for automated OT intelligence gathering"
+        "description": "LLMs with historian access as a new vector for automated OT intelligence gathering",
+        "kind": "control"
       },
       {
         "control_id": "Assess confidentiality of OT data",
         "title": "Section 6.2 � Risk assessment",
-        "description": "OT data classification applied to all data accessible by LLMs"
+        "description": "OT data classification applied to all data accessible by LLMs",
+        "kind": "control"
       },
       {
         "control_id": "Protecting OT data at rest and in transit",
         "title": "Section 7.3 � Data protection",
-        "description": "Encryption and access controls on all OT data paths feeding LLM context"
+        "description": "Encryption and access controls on all OT data paths feeding LLM context",
+        "kind": "control"
       },
       {
         "control_id": "Protection of Information at Rest",
         "title": "SC-28",
-        "description": "OT data used in LLM context encrypted at rest � historian exports, embedding stores, prompt caches; System prompts encrypted at rest � not stored in cleartext configuration files; OT vector store content encrypted at rest"
+        "description": "OT data used in LLM context encrypted at rest � historian exports, embedding stores, prompt caches; System prompts encrypted at rest � not stored in cleartext configuration files; OT vector store content encrypted at rest",
+        "kind": "control"
       },
       {
         "control_id": "Protection of Audit Information",
         "title": "AU-9",
-        "description": "LLM access logs to OT data protected � audit trail of all OT data accessed by LLM; System prompt access logs protected � unauthorised access attempts detectable"
+        "description": "LLM access logs to OT data protected � audit trail of all OT data accessed by LLM; System prompt access logs protected � unauthorised access attempts detectable",
+        "kind": "control"
       },
       {
         "control_id": "Third-party software compromise as OT attack vector",
         "title": "Section 5.5 � Supply chain threats",
-        "description": "LLM model weights and plugins as supply chain risk components"
+        "description": "LLM model weights and plugins as supply chain risk components",
+        "kind": "control"
       },
       {
         "control_id": "Supply chain risk treatment",
         "title": "Section 6.3 � Risk response",
-        "description": "ML SBOM and component integrity verification as supply chain controls"
+        "description": "ML SBOM and component integrity verification as supply chain controls",
+        "kind": "control"
       },
       {
         "control_id": "OT supply chain risk management programme",
         "title": "Section 8.4 � Supply chain programme",
-        "description": "LLM vendors subject to same supply chain security requirements as OT software vendors"
+        "description": "LLM vendors subject to same supply chain security requirements as OT software vendors",
+        "kind": "control"
       },
       {
         "control_id": "Supply Chain Protection",
         "title": "SA-12",
-        "description": "Security requirements applied to all LLM component vendors � provenance, integrity, vulnerability disclosure"
+        "description": "Security requirements applied to all LLM component vendors � provenance, integrity, vulnerability disclosure",
+        "kind": "control"
       },
       {
         "control_id": "Supply Chain Controls and Plans",
         "title": "SR-3",
-        "description": "Documented supply chain security plan covering LLM components in OT deployment"
+        "description": "Documented supply chain security plan covering LLM components in OT deployment",
+        "kind": "control"
       },
       {
         "control_id": "Supplier Assessments and Reviews",
         "title": "SR-6",
-        "description": "Periodic security assessment of LLM vendors with OT-deployed components"
+        "description": "Periodic security assessment of LLM vendors with OT-deployed components",
+        "kind": "control"
       },
       {
         "control_id": "Attacks targeting OT data and system integrity",
         "title": "Section 5.3 � Integrity threats",
-        "description": "Model poisoning as an integrity attack on the LLM advisory system"
+        "description": "Model poisoning as an integrity attack on the LLM advisory system",
+        "kind": "control"
       },
       {
         "control_id": "Assess integrity risks for all OT-connected systems",
         "title": "Section 6.2 � Risk assessment",
-        "description": "Model poisoning scenarios included in OT risk assessment for each LLM; Vector store integrity included in OT LLM risk assessment"
+        "description": "Model poisoning scenarios included in OT risk assessment for each LLM; Vector store integrity included in OT LLM risk assessment",
+        "kind": "control"
       },
       {
         "control_id": "Layered controls to maintain system integrity",
         "title": "Section 7.2 � Defense-in-depth",
-        "description": "Independent validation of LLM outputs against rule-based reference systems"
+        "description": "Independent validation of LLM outputs against rule-based reference systems",
+        "kind": "control"
       },
       {
         "control_id": "Software, Firmware, and Information Integrity",
         "title": "SI-7",
-        "description": "Model integrity verification before each OT deployment � hash-based integrity check; Vector store integrity monitoring � alert on anomalous content or unexpected modifications"
+        "description": "Model integrity verification before each OT deployment � hash-based integrity check; Vector store integrity monitoring � alert on anomalous content or unexpected modifications",
+        "kind": "control"
       },
       {
         "control_id": "Audit Record Generation",
         "title": "AU-12",
-        "description": "Full audit trail of LLM outputs � poisoning indicators detectable through output analysis; All LLM actions in OT context logged � full accountability for every OT data access and any recommended action; LLM resource consumption logged � patterns indicating exhaustion attacks detectable"
+        "description": "Full audit trail of LLM outputs � poisoning indicators detectable through output analysis; All LLM actions in OT context logged � full accountability for every OT data access and any recommended action; LLM resource consumption logged � patterns indicating exhaustion attacks detectable",
+        "kind": "control"
       },
       {
         "control_id": "Code injection and execution via data paths",
         "title": "Section 5.3 � Threats",
-        "description": "LLM output injection as a new instantiation of this threat at the IT/OT boundary"
+        "description": "LLM output injection as a new instantiation of this threat at the IT/OT boundary",
+        "kind": "control"
       },
       {
         "control_id": "Validated data flows across zone boundaries",
         "title": "Section 7.2 � Network segmentation",
-        "description": "LLM output validated at DMZ boundary before entering control zone display or data systems"
+        "description": "LLM output validated at DMZ boundary before entering control zone display or data systems",
+        "kind": "control"
       },
       {
         "control_id": "Least Functionality",
         "title": "CM-7",
-        "description": "OT interfaces that consume LLM output configured to accept only defined, safe input formats"
+        "description": "OT interfaces that consume LLM output configured to accept only defined, safe input formats",
+        "kind": "control"
       },
       {
         "control_id": "Unauthorised command execution via IT/OT interfaces",
         "title": "Section 5.3 � Threats",
-        "description": "LLM autonomous actions as a new path for unauthorised command execution"
+        "description": "LLM autonomous actions as a new path for unauthorised command execution",
+        "kind": "control"
       },
       {
         "control_id": "Assess impact of unauthorised access and control",
         "title": "Section 6.2 � Risk assessment",
-        "description": "LLM excessive agency assessed as an unauthorised access risk for each OT interface"
+        "description": "LLM excessive agency assessed as an unauthorised access risk for each OT interface",
+        "kind": "control"
       },
       {
         "control_id": "Minimal necessary connectivity at IT/OT boundary",
         "title": "Section 7.1 � Architecture",
-        "description": "LLM access to OT systems restricted to minimum required � read-only by default"
+        "description": "LLM access to OT systems restricted to minimum required � read-only by default",
+        "kind": "control"
       },
       {
         "control_id": "Least Privilege",
         "title": "AC-6",
-        "description": "LLM granted minimum necessary OT access � read-only to historian, no write access without documented justification"
+        "description": "LLM granted minimum necessary OT access � read-only to historian, no write access without documented justification",
+        "kind": "control"
       },
       {
         "control_id": "OT configuration and topology data as espionage target",
         "title": "Section 5.4 � Information disclosure",
-        "description": "System prompts containing OT specifics treated as sensitive configuration data"
+        "description": "System prompts containing OT specifics treated as sensitive configuration data",
+        "kind": "control"
       },
       {
         "control_id": "Protecting sensitive OT data",
         "title": "Section 7.3 � Data protection",
-        "description": "System prompt encryption and access controls as data protection measures"
+        "description": "System prompt encryption and access controls as data protection measures",
+        "kind": "control"
       },
       {
         "control_id": "Attacks targeting the integrity of OT decision-support data",
         "title": "Section 5.3 � Integrity threats",
-        "description": "Vector store poisoning as an integrity attack on LLM knowledge sources"
+        "description": "Vector store poisoning as an integrity attack on LLM knowledge sources",
+        "kind": "control"
       },
       {
         "control_id": "Attacks degrading the reliability of OT decision-support",
         "title": "Section 5.3 � Integrity threats",
-        "description": "LLM misinformation as an integrity attack on operator decision-making"
+        "description": "LLM misinformation as an integrity attack on operator decision-making",
+        "kind": "control"
       },
       {
         "control_id": "Assess reliability of OT advisory systems",
         "title": "Section 6.2 � Risk assessment",
-        "description": "LLM accuracy limitations assessed in OT risk assessment per use case"
+        "description": "LLM accuracy limitations assessed in OT risk assessment per use case",
+        "kind": "control"
       },
       {
         "control_id": "OT security awareness and training",
         "title": "Section 8.2 � Training",
-        "description": "Operator training on LLM limitations and verification requirements"
+        "description": "Operator training on LLM limitations and verification requirements",
+        "kind": "control"
       },
       {
         "control_id": "Role-Based Training",
         "title": "AT-3",
-        "description": "Operator training on LLM advisory limitations � mandatory for all operators using LLM decision-support tools"
+        "description": "Operator training on LLM advisory limitations � mandatory for all operators using LLM decision-support tools",
+        "kind": "control"
       },
       {
         "control_id": "Denial of service attacks targeting OT availability",
         "title": "Section 5.6 � DoS threats",
-        "description": "LLM-induced resource exhaustion as a DoS vector affecting shared OT network infrastructure"
+        "description": "LLM-induced resource exhaustion as a DoS vector affecting shared OT network infrastructure",
+        "kind": "control"
       },
       {
         "control_id": "Assess availability risks for OT systems",
         "title": "Section 6.2 � Risk assessment",
-        "description": "LLM resource consumption impact assessed on shared OT network and compute infrastructure"
+        "description": "LLM resource consumption impact assessed on shared OT network and compute infrastructure",
+        "kind": "control"
       },
       {
         "control_id": "Network architecture preventing DoS propagation",
         "title": "Section 7.2 � Network segmentation",
-        "description": "LLM infrastructure isolated from OT control network � bandwidth caps at DMZ boundary"
+        "description": "LLM infrastructure isolated from OT control network � bandwidth caps at DMZ boundary",
+        "kind": "control"
       },
       {
         "control_id": "Denial of Service Protection",
         "title": "SC-5",
-        "description": "LLM infrastructure protected against resource exhaustion attacks affecting OT availability"
+        "description": "LLM infrastructure protected against resource exhaustion attacks affecting OT availability",
+        "kind": "control"
       },
       {
         "control_id": "Fail-Safe Procedures",
         "title": "SI-17",
-        "description": "LLM service degradation has defined fail-safe behaviour � process control continues without LLM"
+        "description": "LLM service degradation has defined fail-safe behaviour � process control continues without LLM",
+        "kind": "control"
       }
     ]
   },
@@ -5970,292 +6932,350 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "Prompt injection via all agent input channels",
         "title": "IHT � Input Handling",
-        "description": "Inject instruction-overriding content through user prompt, RAG-retrieved documents, tool return values, email content, uploaded files, and any other data source the agent processes"
+        "description": "Inject instruction-overriding content through user prompt, RAG-retrieved documents, tool return values, email content, uploaded files, and any other data source the agent processes",
+        "kind": "control"
       },
       {
         "control_id": "Goal consistency under adversarial input",
         "title": "MBT � Model Behaviour",
-        "description": "Verify the agent's stated goal at session start matches its actions at session end � test divergence after indirect injection; Verify the LLM's task framing at request start matches its actions and outputs at completion — test divergence after injection"
+        "description": "Verify the agent's stated goal at session start matches its actions at session end � test divergence after indirect injection; Verify the LLM's task framing at request start matches its actions and outputs at completion — test divergence after injection",
+        "kind": "control"
       },
       {
         "control_id": "Goal state verification effectiveness",
         "title": "AST � Agent-Specific",
-        "description": "Attempt to redirect agent goal through indirect injection paths specific to your deployment � historian data, vendor communications, web results"
+        "description": "Attempt to redirect agent goal through indirect injection paths specific to your deployment � historian data, vendor communications, web results",
+        "kind": "control"
       },
       {
         "control_id": "Tool permission boundary enforcement",
         "title": "AST � Agent-Specific",
-        "description": "Attempt to invoke tools outside the agent's defined role; test parameter ranges; verify irreversibility controls"
+        "description": "Attempt to invoke tools outside the agent's defined role; test parameter ranges; verify irreversibility controls",
+        "kind": "control"
       },
       {
         "control_id": "Per-tool authorisation",
         "title": "ACT � Access Control",
-        "description": "Verify each tool enforces its own access controls independently of the agent framework"
+        "description": "Verify each tool enforces its own access controls independently of the agent framework",
+        "kind": "control"
       },
       {
         "control_id": "LLM-generated tool parameters",
         "title": "OHT � Output Handling",
-        "description": "Verify tool call parameters generated by the LLM are validated before execution"
+        "description": "Verify tool call parameters generated by the LLM are validated before execution",
+        "kind": "control"
       },
       {
         "control_id": "Credential scope enforcement",
         "title": "ACT � Access Control",
-        "description": "Verify agent cannot access systems beyond its credential scope; test scope boundaries"
+        "description": "Verify agent cannot access systems beyond its credential scope; test scope boundaries",
+        "kind": "control"
       },
       {
         "control_id": "Credential usage audit trail",
         "title": "LMT � Logging & Monitoring",
-        "description": "Verify all credential operations are logged with sufficient detail for forensic investigation"
+        "description": "Verify all credential operations are logged with sufficient detail for forensic investigation",
+        "kind": "control"
       },
       {
         "control_id": "Credential leakage paths",
         "title": "DPT � Data Protection",
-        "description": "Test whether credentials appear in agent outputs, logs, memory stores, or tool payloads"
+        "description": "Test whether credentials appear in agent outputs, logs, memory stores, or tool payloads",
+        "kind": "control"
       },
       {
         "control_id": "Component integrity verification",
         "title": "SCT � Supply Chain",
-        "description": "Verify cryptographic signatures of all agent components; scan for hidden instructions in descriptors; Verify cryptographic integrity of model weights, adapters, and libraries; test that procurement pipeline rejects tampered components"
+        "description": "Verify cryptographic signatures of all agent components; scan for hidden instructions in descriptors; Verify cryptographic integrity of model weights, adapters, and libraries; test that procurement pipeline rejects tampered components",
+        "kind": "control"
       },
       {
         "control_id": "Behavioural change detection post-update",
         "title": "MBT � Model Behaviour",
-        "description": "Establish behavioural baseline before component update; verify no unexpected behaviour change after update"
+        "description": "Establish behavioural baseline before component update; verify no unexpected behaviour change after update",
+        "kind": "control"
       },
       {
         "control_id": "Runtime component monitoring",
         "title": "AST � Agent-Specific",
-        "description": "Verify that component modification at runtime is detected and triggers agent suspension"
+        "description": "Verify that component modification at runtime is detected and triggers agent suspension",
+        "kind": "control"
       },
       {
         "control_id": "Code injection via crafted prompts",
         "title": "IHT � Input Handling",
-        "description": "Craft inputs designed to generate code containing network calls, file system access, or shell commands"
+        "description": "Craft inputs designed to generate code containing network calls, file system access, or shell commands",
+        "kind": "control"
       },
       {
         "control_id": "Generated code validation",
         "title": "OHT � Output Handling",
-        "description": "Verify static analysis catches dangerous operations before execution"
+        "description": "Verify static analysis catches dangerous operations before execution",
+        "kind": "control"
       },
       {
         "control_id": "Sandbox escape attempts",
         "title": "AST � Agent-Specific",
-        "description": "Test sandbox boundary enforcement from within the execution environment"
+        "description": "Test sandbox boundary enforcement from within the execution environment",
+        "kind": "control"
       },
       {
         "control_id": "Memory write path injection",
         "title": "AST � Agent-Specific",
-        "description": "Attempt to poison memory through every channel that can write to agent memory stores"
+        "description": "Attempt to poison memory through every channel that can write to agent memory stores",
+        "kind": "control"
       },
       {
         "control_id": "Poisoned memory influence detection",
         "title": "MBT � Model Behaviour",
-        "description": "Verify that behaviour influenced by poisoned memory differs detectably from baseline"
+        "description": "Verify that behaviour influenced by poisoned memory differs detectably from baseline",
+        "kind": "control"
       },
       {
         "control_id": "Memory content integrity",
         "title": "DPT � Data Protection",
-        "description": "Verify memory store content integrity monitoring detects unauthorised modification"
+        "description": "Verify memory store content integrity monitoring detects unauthorised modification",
+        "kind": "control"
       },
       {
         "control_id": "A2A authentication enforcement",
         "title": "ACT � Access Control",
-        "description": "Attempt unauthenticated and weakly authenticated A2A message delivery"
+        "description": "Attempt unauthenticated and weakly authenticated A2A message delivery",
+        "kind": "control"
       },
       {
         "control_id": "Replay attack prevention",
         "title": "AST � Agent-Specific",
-        "description": "Capture and replay a valid A2A message; verify replay is rejected"
+        "description": "Capture and replay a valid A2A message; verify replay is rejected",
+        "kind": "control"
       },
       {
         "control_id": "A2A audit completeness",
         "title": "LMT � Logging & Monitoring",
-        "description": "Verify all A2A messages are logged with sender identity and content hash"
+        "description": "Verify all A2A messages are logged with sender identity and content hash",
+        "kind": "control"
       },
       {
         "control_id": "Circuit breaker trigger and recovery",
         "title": "AVT � Availability",
-        "description": "Inject failures to verify circuit breaker activates at threshold; test recovery path"
+        "description": "Inject failures to verify circuit breaker activates at threshold; test recovery path",
+        "kind": "control"
       },
       {
         "control_id": "Blast radius containment",
         "title": "AST � Agent-Specific",
-        "description": "Verify failure in one agent cluster does not propagate to adjacent clusters"
+        "description": "Verify failure in one agent cluster does not propagate to adjacent clusters",
+        "kind": "control"
       },
       {
         "control_id": "Cascade detection alert",
         "title": "LMT � Logging & Monitoring",
-        "description": "Verify monitoring raises alert on cascade indicators before physical impact"
+        "description": "Verify monitoring raises alert on cascade indicators before physical impact",
+        "kind": "control"
       },
       {
         "control_id": "AI disclosure enforcement",
         "title": "MBT � Model Behaviour",
-        "description": "Verify agent identifies as AI in all interface contexts; test for identity concealment"
+        "description": "Verify agent identifies as AI in all interface contexts; test for identity concealment",
+        "kind": "control"
       },
       {
         "control_id": "Advisory label persistence",
         "title": "OHT � Output Handling",
-        "description": "Verify advisory labels persist through all rendering environments"
+        "description": "Verify advisory labels persist through all rendering environments",
+        "kind": "control"
       },
       {
         "control_id": "Over-trust pattern detection",
         "title": "LMT � Logging & Monitoring",
-        "description": "Verify monitoring can detect aggregate patterns of uncritical operator acceptance"
+        "description": "Verify monitoring can detect aggregate patterns of uncritical operator acceptance",
+        "kind": "control"
       },
       {
         "control_id": "Behavioural baseline establishment and deviation",
         "title": "AST � Agent-Specific",
-        "description": "Establish baseline during commissioning; inject anomalous behaviour patterns; verify detection"
+        "description": "Establish baseline during commissioning; inject anomalous behaviour patterns; verify detection",
+        "kind": "control"
       },
       {
         "control_id": "Hidden goal persistence detection",
         "title": "MBT � Model Behaviour",
-        "description": "Verify that systematic recommendation bias is detectable through aggregate output analysis"
+        "description": "Verify that systematic recommendation bias is detectable through aggregate output analysis",
+        "kind": "control"
       },
       {
         "control_id": "Kill switch activation coverage",
         "title": "LMT � Logging & Monitoring",
-        "description": "Verify kill switch activation logs are complete and anomaly-to-suspension latency meets SLA"
+        "description": "Verify kill switch activation logs are complete and anomaly-to-suspension latency meets SLA",
+        "kind": "control"
       },
       {
         "control_id": "Injection via all input channels",
         "title": "IHT — Input Handling",
-        "description": "Inject instruction-overriding content through user prompt, RAG-retrieved documents, tool return values, uploaded files, and any other data source the LLM processes"
+        "description": "Inject instruction-overriding content through user prompt, RAG-retrieved documents, tool return values, uploaded files, and any other data source the LLM processes",
+        "kind": "control"
       },
       {
         "control_id": "Injection detection audit trail",
         "title": "LMT — Logging & Monitoring",
-        "description": "Verify that injection attempts are flagged in monitoring and appear in audit logs with sufficient detail for incident response"
+        "description": "Verify that injection attempts are flagged in monitoring and appear in audit logs with sufficient detail for incident response",
+        "kind": "control"
       },
       {
         "control_id": "PII and sensitive data extraction from outputs",
         "title": "DPT — Data Protection",
-        "description": "Attempt to extract PII, credentials, financial data, and confidential content from model outputs through direct questions, social engineering prompts, and adversarial extraction techniques"
+        "description": "Attempt to extract PII, credentials, financial data, and confidential content from model outputs through direct questions, social engineering prompts, and adversarial extraction techniques",
+        "kind": "control"
       },
       {
         "control_id": "Output DLP effectiveness",
         "title": "OHT — Output Handling",
-        "description": "Verify that DLP controls on LLM outputs correctly detect and block sensitive data patterns before delivery"
+        "description": "Verify that DLP controls on LLM outputs correctly detect and block sensitive data patterns before delivery",
+        "kind": "control"
       },
       {
         "control_id": "Data access authorisation enforcement",
         "title": "ACT — Access Control",
-        "description": "Verify that RAG retrieval and context population enforce user authorisation — users cannot access documents above their permission level"
+        "description": "Verify that RAG retrieval and context population enforce user authorisation — users cannot access documents above their permission level",
+        "kind": "control"
       },
       {
         "control_id": "Backdoor behaviour detection",
         "title": "MBT — Model Behaviour",
-        "description": "Test model with trigger inputs across all deployment configurations to detect backdoors introduced through supply chain"
+        "description": "Test model with trigger inputs across all deployment configurations to detect backdoors introduced through supply chain",
+        "kind": "control"
       },
       {
         "control_id": "Plugin and tool descriptor integrity",
         "title": "AST — Agent-Specific",
-        "description": "Verify plugin descriptors and tool registries have not been tampered with; test that integrity checks reject modified components"
+        "description": "Verify plugin descriptors and tool registries have not been tampered with; test that integrity checks reject modified components",
+        "kind": "control"
       },
       {
         "control_id": "Training data integrity verification",
         "title": "DPT — Data Protection",
-        "description": "Verify data quality gates and integrity checks at each pipeline stage catch adversarially modified samples"
+        "description": "Verify data quality gates and integrity checks at each pipeline stage catch adversarially modified samples",
+        "kind": "control"
       },
       {
         "control_id": "Backdoor trigger detection",
         "title": "MBT — Model Behaviour",
-        "description": "Test deployed model with known trigger patterns across all deployment configurations; verify unexpected behaviour is not present"
+        "description": "Test deployed model with known trigger patterns across all deployment configurations; verify unexpected behaviour is not present",
+        "kind": "control"
       },
       {
         "control_id": "Dataset provenance verification",
         "title": "SCT — Supply Chain",
-        "description": "Verify all training datasets have documented provenance; test that unverified datasets are rejected by the pipeline"
+        "description": "Verify all training datasets have documented provenance; test that unverified datasets are rejected by the pipeline",
+        "kind": "control"
       },
       {
         "control_id": "Output injection into downstream systems",
         "title": "OHT — Output Handling",
-        "description": "Verify LLM-generated content is sanitised before insertion into HTML, SQL, shell commands, URLs, and other interpreters"
+        "description": "Verify LLM-generated content is sanitised before insertion into HTML, SQL, shell commands, URLs, and other interpreters",
+        "kind": "control"
       },
       {
         "control_id": "Crafted inputs designed to produce malicious outputs",
         "title": "IHT — Input Handling",
-        "description": "Craft inputs designed to coerce the LLM into generating content that will be interpreted as code or commands by downstream systems"
+        "description": "Craft inputs designed to coerce the LLM into generating content that will be interpreted as code or commands by downstream systems",
+        "kind": "control"
       },
       {
         "control_id": "Downstream system access controls",
         "title": "ACT — Access Control",
-        "description": "Verify that downstream systems do not grant LLM outputs excessive permissions or execute LLM-generated commands without validation"
+        "description": "Verify that downstream systems do not grant LLM outputs excessive permissions or execute LLM-generated commands without validation",
+        "kind": "control"
       },
       {
         "control_id": "Permission scope enforcement",
         "title": "ACT — Access Control",
-        "description": "Verify LLM cannot invoke capabilities, tools, or APIs outside its defined role; test scope boundaries under adversarial conditions"
+        "description": "Verify LLM cannot invoke capabilities, tools, or APIs outside its defined role; test scope boundaries under adversarial conditions",
+        "kind": "control"
       },
       {
         "control_id": "Irreversibility gate enforcement",
         "title": "AST — Agent-Specific",
-        "description": "Verify irreversible actions require human confirmation; test that confirmation gates cannot be bypassed through crafted inputs"
+        "description": "Verify irreversible actions require human confirmation; test that confirmation gates cannot be bypassed through crafted inputs",
+        "kind": "control"
       },
       {
         "control_id": "Action audit completeness",
         "title": "LMT — Logging & Monitoring",
-        "description": "Verify all LLM-initiated actions are logged with sufficient detail for forensic review"
+        "description": "Verify all LLM-initiated actions are logged with sufficient detail for forensic review",
+        "kind": "control"
       },
       {
         "control_id": "System prompt extraction via crafted inputs",
         "title": "IHT — Input Handling",
-        "description": "Attempt to extract system prompt contents through direct requests, indirect summarisation, translation, and instruction-override techniques"
+        "description": "Attempt to extract system prompt contents through direct requests, indirect summarisation, translation, and instruction-override techniques",
+        "kind": "control"
       },
       {
         "control_id": "Credential and sensitive content in system prompt",
         "title": "DPT — Data Protection",
-        "description": "Verify that credentials, API keys, or sensitive business logic in the system prompt are not reproducible by any input technique"
+        "description": "Verify that credentials, API keys, or sensitive business logic in the system prompt are not reproducible by any input technique",
+        "kind": "control"
       },
       {
         "control_id": "Refusal robustness for system prompt disclosure",
         "title": "MBT — Model Behaviour",
-        "description": "Verify that the model consistently refuses system prompt disclosure across varied request phrasings and social engineering approaches"
+        "description": "Verify that the model consistently refuses system prompt disclosure across varied request phrasings and social engineering approaches",
+        "kind": "control"
       },
       {
         "control_id": "Embedding inversion and data reconstruction",
         "title": "DPT — Data Protection",
-        "description": "Test whether embedding vectors can be inverted to reconstruct training data; verify embedding stores do not leak source content through metadata"
+        "description": "Test whether embedding vectors can be inverted to reconstruct training data; verify embedding stores do not leak source content through metadata",
+        "kind": "control"
       },
       {
         "control_id": "Vector database security configuration",
         "title": "SCT — Supply Chain",
-        "description": "Verify vector database is correctly configured — authentication, encryption, namespace isolation, API key protection"
+        "description": "Verify vector database is correctly configured — authentication, encryption, namespace isolation, API key protection",
+        "kind": "control"
       },
       {
         "control_id": "Retrieval authorisation enforcement",
         "title": "ACT — Access Control",
-        "description": "Verify RAG queries cannot retrieve documents above the authenticated user's permission level"
+        "description": "Verify RAG queries cannot retrieve documents above the authenticated user's permission level",
+        "kind": "control"
       },
       {
         "control_id": "Factual accuracy and hallucination rate",
         "title": "MBT — Model Behaviour",
-        "description": "Test model outputs against known-correct facts across the deployment use case domain; measure hallucination rate against benchmark ground truth"
+        "description": "Test model outputs against known-correct facts across the deployment use case domain; measure hallucination rate against benchmark ground truth",
+        "kind": "control"
       },
       {
         "control_id": "Citation verifiability",
         "title": "OHT — Output Handling",
-        "description": "Verify that citations generated by the LLM are real and accurately represent source content; test that outputs requiring citations enforce this"
+        "description": "Verify that citations generated by the LLM are real and accurately represent source content; test that outputs requiring citations enforce this",
+        "kind": "control"
       },
       {
         "control_id": "Misinformation incident detection",
         "title": "LMT — Logging & Monitoring",
-        "description": "Verify that the monitoring pipeline can detect and flag systematic misinformation patterns — accuracy drift, citation fabrication rate"
+        "description": "Verify that the monitoring pipeline can detect and flag systematic misinformation patterns — accuracy drift, citation fabrication rate",
+        "kind": "control"
       },
       {
         "control_id": "Resource exhaustion and rate limiting",
         "title": "AVT — Availability",
-        "description": "Test rate limiting enforcement, token budget controls, and compute throttling under load; verify graceful degradation"
+        "description": "Test rate limiting enforcement, token budget controls, and compute throttling under load; verify graceful degradation",
+        "kind": "control"
       },
       {
         "control_id": "Consumption anomaly detection",
         "title": "LMT — Logging & Monitoring",
-        "description": "Verify monitoring detects abnormal consumption patterns — token flooding, API abuse, wallet drainage — before service impact"
+        "description": "Verify monitoring detects abnormal consumption patterns — token flooding, API abuse, wallet drainage — before service impact",
+        "kind": "control"
       },
       {
         "control_id": "Per-user quota enforcement",
         "title": "ACT — Access Control",
-        "description": "Verify per-user and per-tenant quotas are enforced and cannot be bypassed through session switching or credential abuse"
+        "description": "Verify per-user and per-tenant quotas are enforced and cannot be bypassed through session switching or credential abuse",
+        "kind": "control"
       }
     ]
   },
@@ -6276,432 +7296,507 @@ window.CROSSWALK_FRAMEWORKS = [
         "title": "Architecture, Design and Threat Modeling",
         "description": "Ensure a verified application satisfies high-level security architecture requirements.",
         "parent": null,
-        "function": "Architecture"
+        "function": "Architecture",
+        "kind": "control"
       },
       {
         "control_id": "V1.1",
         "title": "Secure Software Development Lifecycle",
         "description": "Ensure the use of a secure software development lifecycle that addresses security in all stages.",
         "parent": "V1",
-        "function": "Architecture"
+        "function": "Architecture",
+        "kind": "control"
       },
       {
         "control_id": "V1.2",
         "title": "Authentication Architecture",
         "description": "Verify that authentication is addressed in the architecture.",
         "parent": "V1",
-        "function": "Architecture"
+        "function": "Architecture",
+        "kind": "control"
       },
       {
         "control_id": "V1.4",
         "title": "Access Control Architecture",
         "description": "Verify that access controls are applied consistently.",
         "parent": "V1",
-        "function": "Architecture"
+        "function": "Architecture",
+        "kind": "control"
       },
       {
         "control_id": "V1.5",
         "title": "Input and Output Architecture",
         "description": "Verify that input and output requirements define handling of data based on type and content.",
         "parent": "V1",
-        "function": "Architecture"
+        "function": "Architecture",
+        "kind": "control"
       },
       {
         "control_id": "V2",
         "title": "Authentication",
         "description": "Verify that the application uses appropriate authentication mechanisms.",
         "parent": null,
-        "function": "Verification"
+        "function": "Verification",
+        "kind": "control"
       },
       {
         "control_id": "V2.1",
         "title": "Password Security",
         "description": "Verify password requirements align with modern standards.",
         "parent": "V2",
-        "function": "Verification"
+        "function": "Verification",
+        "kind": "control"
       },
       {
         "control_id": "V2.5",
         "title": "Credential Recovery",
         "description": "Verify credential recovery mechanisms are secure.",
         "parent": "V2",
-        "function": "Verification"
+        "function": "Verification",
+        "kind": "control"
       },
       {
         "control_id": "V2.8",
         "title": "One Time Verifier",
         "description": "Verify one-time passwords and verifiers are secure.",
         "parent": "V2",
-        "function": "Verification"
+        "function": "Verification",
+        "kind": "control"
       },
       {
         "control_id": "V3",
         "title": "Session Management",
         "description": "Verify the application has adequate session management controls.",
         "parent": null,
-        "function": "Verification"
+        "function": "Verification",
+        "kind": "control"
       },
       {
         "control_id": "V4",
         "title": "Access Control",
         "description": "Verify that users can only access functions and data for which they possess specific authorization.",
         "parent": null,
-        "function": "Verification"
+        "function": "Verification",
+        "kind": "control"
       },
       {
         "control_id": "V4.1",
         "title": "General Access Control Design",
         "description": "Verify access control is applied server-side and consistently.",
         "parent": "V4",
-        "function": "Verification"
+        "function": "Verification",
+        "kind": "control"
       },
       {
         "control_id": "V4.2",
         "title": "Operation Level Access Control",
         "description": "Verify access controls at the operation and function level.",
         "parent": "V4",
-        "function": "Verification"
+        "function": "Verification",
+        "kind": "control"
       },
       {
         "control_id": "V5",
         "title": "Validation, Sanitization and Encoding",
         "description": "Verify that the application sanitizes, validates, and encodes untrusted input.",
         "parent": null,
-        "function": "Verification"
+        "function": "Verification",
+        "kind": "control"
       },
       {
         "control_id": "V5.1",
         "title": "Input Validation",
         "description": "Verify input validation controls are in place.",
         "parent": "V5",
-        "function": "Verification"
+        "function": "Verification",
+        "kind": "control"
       },
       {
         "control_id": "V5.2",
         "title": "Sanitization and Sandboxing",
         "description": "Verify that sanitization and sandboxing are used to prevent injection.",
         "parent": "V5",
-        "function": "Verification"
+        "function": "Verification",
+        "kind": "control"
       },
       {
         "control_id": "V5.3",
         "title": "Output Encoding and Injection Prevention",
         "description": "Verify that output encoding prevents injection attacks.",
         "parent": "V5",
-        "function": "Verification"
+        "function": "Verification",
+        "kind": "control"
       },
       {
         "control_id": "V5.5",
         "title": "Deserialization Prevention",
         "description": "Verify that deserialization is done safely.",
         "parent": "V5",
-        "function": "Verification"
+        "function": "Verification",
+        "kind": "control"
       },
       {
         "control_id": "V6",
         "title": "Stored Cryptography",
         "description": "Verify that cryptographic modules and algorithms are used correctly.",
         "parent": null,
-        "function": "Verification"
+        "function": "Verification",
+        "kind": "control"
       },
       {
         "control_id": "V7",
         "title": "Error Handling and Logging",
         "description": "Verify that errors are handled safely and logs contain sufficient information.",
         "parent": null,
-        "function": "Verification"
+        "function": "Verification",
+        "kind": "control"
       },
       {
         "control_id": "V7.1",
         "title": "Log Content",
         "description": "Verify that security-relevant events are logged.",
         "parent": "V7",
-        "function": "Verification"
+        "function": "Verification",
+        "kind": "control"
       },
       {
         "control_id": "V7.2",
         "title": "Log Processing",
         "description": "Verify that logs are processed securely.",
         "parent": "V7",
-        "function": "Verification"
+        "function": "Verification",
+        "kind": "control"
       },
       {
         "control_id": "V8",
         "title": "Data Protection",
         "description": "Verify that data is protected in transit and at rest.",
         "parent": null,
-        "function": "Verification"
+        "function": "Verification",
+        "kind": "control"
       },
       {
         "control_id": "V8.1",
         "title": "General Data Protection",
         "description": "Verify sensitive data is identified and protected.",
         "parent": "V8",
-        "function": "Verification"
+        "function": "Verification",
+        "kind": "control"
       },
       {
         "control_id": "V8.3",
         "title": "Sensitive Private Data",
         "description": "Verify that sensitive data is protected from unauthorized access.",
         "parent": "V8",
-        "function": "Verification"
+        "function": "Verification",
+        "kind": "control"
       },
       {
         "control_id": "V9",
         "title": "Communication",
         "description": "Verify that communications are encrypted using TLS.",
         "parent": null,
-        "function": "Verification"
+        "function": "Verification",
+        "kind": "control"
       },
       {
         "control_id": "V10",
         "title": "Malicious Code",
         "description": "Verify that code does not contain malicious logic.",
         "parent": null,
-        "function": "Verification"
+        "function": "Verification",
+        "kind": "control"
       },
       {
         "control_id": "V11",
         "title": "Business Logic",
         "description": "Verify that business logic flows are sequential and audited.",
         "parent": null,
-        "function": "Verification"
+        "function": "Verification",
+        "kind": "control"
       },
       {
         "control_id": "V12",
         "title": "Files and Resources",
         "description": "Verify that untrusted files and resources are handled safely.",
         "parent": null,
-        "function": "Verification"
+        "function": "Verification",
+        "kind": "control"
       },
       {
         "control_id": "V13",
         "title": "API and Web Service",
         "description": "Verify that API and web service requests are validated.",
         "parent": null,
-        "function": "Verification"
+        "function": "Verification",
+        "kind": "control"
       },
       {
         "control_id": "V13.1",
         "title": "Generic Web Service Security",
         "description": "Verify that all API and web service interactions are authenticated and authorized.",
         "parent": "V13",
-        "function": "Verification"
+        "function": "Verification",
+        "kind": "control"
       },
       {
         "control_id": "V14",
         "title": "Configuration",
         "description": "Verify that the application is securely configured.",
         "parent": null,
-        "function": "Verification"
+        "function": "Verification",
+        "kind": "control"
       },
       {
         "control_id": "V5.1.1",
         "title": "Verify all user input validated against allowlist",
-        "description": "All inputs to agents validated � indirect injection through processed content equally in scope; All content entering agent memory validated � injection patterns rejected at write boundary; All inputs to LLMs validated � indirect injection through processed content equally in scope"
+        "description": "All inputs to agents validated � indirect injection through processed content equally in scope; All content entering agent memory validated � injection patterns rejected at write boundary; All inputs to LLMs validated � indirect injection through processed content equally in scope",
+        "kind": "control"
       },
       {
         "control_id": "V5.2.1",
         "title": "Verify output encoding prevents injection",
-        "description": "Agent responses encoded before passing to downstream renderers � outputs treated as untrusted; Agent code output encoded before rendering in any context; Agent advisory outputs clearly labelled � users cannot mistake AI output for authoritative content"
+        "description": "Agent responses encoded before passing to downstream renderers � outputs treated as untrusted; Agent code output encoded before rendering in any context; Agent advisory outputs clearly labelled � users cannot mistake AI output for authoritative content",
+        "kind": "control"
       },
       {
         "control_id": "V5.2.5",
         "title": "Verify application protects against OS command injection",
-        "description": "Agent-generated instructions not executed in system context without validation; Agent-generated commands validated before any shell execution; LLM-generated content validated before execution in any shell or interpreter context"
+        "description": "Agent-generated instructions not executed in system context without validation; Agent-generated commands validated before any shell execution; LLM-generated content validated before execution in any shell or interpreter context",
+        "kind": "control"
       },
       {
         "control_id": "V1.1.2",
         "title": "Threat modelling of all data flows",
-        "description": "All agent input sources threat-modelled � every indirect injection path documented; Supply chain threat model documents all agent component sources and trust levels; LLM data flows threat-modelled � all injection paths identified and documented"
+        "description": "All agent input sources threat-modelled � every indirect injection path documented; Supply chain threat model documents all agent component sources and trust levels; LLM data flows threat-modelled � all injection paths identified and documented",
+        "kind": "control"
       },
       {
         "control_id": "V11.1.2",
         "title": "Verify business logic limits prevent function abuse",
-        "description": "Business logic controls prevent injection from redirecting agent goal; Tool chain exploitation scenarios identified in threat model � mitigations implemented and verified; Code execution capability in agents subject to business logic controls � sandbox, allowlist, static analysis"
+        "description": "Business logic controls prevent injection from redirecting agent goal; Tool chain exploitation scenarios identified in threat model � mitigations implemented and verified; Code execution capability in agents subject to business logic controls � sandbox, allowlist, static analysis",
+        "kind": "control"
       },
       {
         "control_id": "V4.1.3",
         "title": "Verify access control enforces least privilege",
-        "description": "Agent tool access scoped to minimum required operations � read-only by default, write access formally approved; Agent credential scope minimum required � no over-privileged NHIs; Memory write access restricted to minimum required sources � only agent and authorised administrators can write"
+        "description": "Agent tool access scoped to minimum required operations � read-only by default, write access formally approved; Agent credential scope minimum required � no over-privileged NHIs; Memory write access restricted to minimum required sources � only agent and authorised administrators can write",
+        "kind": "control"
       },
       {
         "control_id": "V4.1.1",
         "title": "Verify all sensitive functions have access control",
-        "description": "All destructive tool operations require explicit authorisation � not inheritable from agent session; LLM cannot access sensitive functions (write, delete, execute) without explicit authorisation"
+        "description": "All destructive tool operations require explicit authorisation � not inheritable from agent session; LLM cannot access sensitive functions (write, delete, execute) without explicit authorisation",
+        "kind": "control"
       },
       {
         "control_id": "V7.2.2",
         "title": "Verify all business logic decisions logged",
-        "description": "All tool invocations logged � tool identity, parameters, agent session, timestamp; All agent tool invocations and recommendations logged � systematic bias detectable through aggregate analysis; All LLM tool invocations logged with full context � every tool call auditable"
+        "description": "All tool invocations logged � tool identity, parameters, agent session, timestamp; All agent tool invocations and recommendations logged � systematic bias detectable through aggregate analysis; All LLM tool invocations logged with full context � every tool call auditable",
+        "kind": "control"
       },
       {
         "control_id": "V13.1.1",
         "title": "Verify API rate limiting",
-        "description": "Tool API endpoints rate-limited � anomalous invocation frequency detected; Rate limiting on all agent API endpoints � cascade amplification through API exhaustion limited; Rate limiting prevents rogue agent from amplifying impact through API exhaustion"
+        "description": "Tool API endpoints rate-limited � anomalous invocation frequency detected; Rate limiting on all agent API endpoints � cascade amplification through API exhaustion limited; Rate limiting prevents rogue agent from amplifying impact through API exhaustion",
+        "kind": "control"
       },
       {
         "control_id": "V2.1.1",
         "title": "Verify credentials not in source code",
-        "description": "Agent credentials not hardcoded � secret manager required"
+        "description": "Agent credentials not hardcoded � secret manager required",
+        "kind": "control"
       },
       {
         "control_id": "V6.1.1",
         "title": "Verify sensitive data encrypted at rest",
-        "description": "Agent credentials encrypted at rest � no cleartext in config or agent memory; Agent memory stores encrypted at rest � embeddings, long-term memory; Training data, embeddings, RAG document stores, and prompt caches encrypted at rest"
+        "description": "Agent credentials encrypted at rest � no cleartext in config or agent memory; Agent memory stores encrypted at rest � embeddings, long-term memory; Training data, embeddings, RAG document stores, and prompt caches encrypted at rest",
+        "kind": "control"
       },
       {
         "control_id": "V7.2.1",
         "title": "Verify access control decisions logged",
-        "description": "All credential usage logged � issuance, access, expiry detectable; All A2A messages logged � sender identity, content hash, schema validation results; All agent actions logged � no production deployment without complete observability"
+        "description": "All credential usage logged � issuance, access, expiry detectable; All A2A messages logged � sender identity, content hash, schema validation results; All agent actions logged � no production deployment without complete observability",
+        "kind": "control"
       },
       {
         "control_id": "V14.2.3",
         "title": "Verify secrets not in source code",
-        "description": "Agent credentials not committed to source control; System prompts not hardcoded in source code � stored in secret management system"
+        "description": "Agent credentials not committed to source control; System prompts not hardcoded in source code � stored in secret management system",
+        "kind": "control"
       },
       {
         "control_id": "V10.2.1",
         "title": "Verify third-party components current and free of vulnerabilities",
-        "description": "All agent component libraries scanned for CVEs � ML SBOM maintained and monitored; All LLM component libraries and dependencies scanned for CVEs � ML SBOM maintained; Training pipeline components scanned � compromised dependencies rejected"
+        "description": "All agent component libraries scanned for CVEs � ML SBOM maintained and monitored; All LLM component libraries and dependencies scanned for CVEs � ML SBOM maintained; Training pipeline components scanned � compromised dependencies rejected",
+        "kind": "control"
       },
       {
         "control_id": "V10.2.2",
         "title": "Verify only minimal approved external libraries",
-        "description": "Approved component list � unsigned or unverified agent components rejected; Approved component list for LLM deployments � unsigned or unverified components rejected"
+        "description": "Approved component list � unsigned or unverified agent components rejected; Approved component list for LLM deployments � unsigned or unverified components rejected",
+        "kind": "control"
       },
       {
         "control_id": "V14.2.2",
         "title": "Verify build pipelines include security checks",
-        "description": "CI/CD pipeline for agent components includes integrity verification and CVE scanning; CI/CD pipeline for LLM components includes integrity verification and vulnerability scanning"
+        "description": "CI/CD pipeline for agent components includes integrity verification and CVE scanning; CI/CD pipeline for LLM components includes integrity verification and vulnerability scanning",
+        "kind": "control"
       },
       {
         "control_id": "V5.2.4",
         "title": "Verify application does not use eval or dynamic code",
-        "description": "No eval or exec of agent-generated code � absolute prohibition enforced in code review; No eval or dynamic code execution of LLM-generated content"
+        "description": "No eval or exec of agent-generated code � absolute prohibition enforced in code review; No eval or dynamic code execution of LLM-generated content",
+        "kind": "control"
       },
       {
         "control_id": "V5.3.5",
         "title": "Verify output encoding in SQL context",
-        "description": "No raw agent output in SQL context � parameterised execution only; LLM-generated SQL parameterised � never raw LLM output in SQL context"
+        "description": "No raw agent output in SQL context � parameterised execution only; LLM-generated SQL parameterised � never raw LLM output in SQL context",
+        "kind": "control"
       },
       {
         "control_id": "V12.1.1",
         "title": "Verify file upload malware scanning",
-        "description": "Content entering agent memory scanned � adversarial content, injection patterns detected before write; Training data uploads scanned before ingestion � adversarial content detected; Content validation on all vector store ingestion � adversarial content detected"
+        "description": "Content entering agent memory scanned � adversarial content, injection patterns detected before write; Training data uploads scanned before ingestion � adversarial content detected; Content validation on all vector store ingestion � adversarial content detected",
+        "kind": "control"
       },
       {
         "control_id": "V9.1.1",
         "title": "Verify TLS used for all client connectivity",
-        "description": "All A2A communication encrypted � mutual TLS, no cleartext inter-agent messages; All LLM API communication and data flows encrypted in transit � TLS 1.2 minimum"
+        "description": "All A2A communication encrypted � mutual TLS, no cleartext inter-agent messages; All LLM API communication and data flows encrypted in transit � TLS 1.2 minimum",
+        "kind": "control"
       },
       {
         "control_id": "V3.3.1",
         "title": "Verify anti-replay tokens in state-changing operations",
-        "description": "Replay protection on all A2A messages � nonces, timestamps, sequence numbers"
+        "description": "Replay protection on all A2A messages � nonces, timestamps, sequence numbers",
+        "kind": "control"
       },
       {
         "control_id": "V11.1.1",
         "title": "Verify business logic assumptions documented",
-        "description": "Cascade blast radius documented as business logic assumption � maximum affected systems formally accepted; AI advisory limitations documented as business logic assumptions � verification requirements per domain; LLM accuracy limitations documented as business logic assumptions � verification requirements defined"
+        "description": "Cascade blast radius documented as business logic assumption � maximum affected systems formally accepted; AI advisory limitations documented as business logic assumptions � verification requirements per domain; LLM accuracy limitations documented as business logic assumptions � verification requirements defined",
+        "kind": "control"
       },
       {
         "control_id": "V7.4.1",
         "title": "Verify error handling does not expose sensitive data",
-        "description": "Cascade errors handled gracefully � no sensitive system information in error responses; Agent-influenced operator decisions logged � aggregate patterns detectable; LLM accuracy metrics and hallucination rate logged � production monitoring for output quality"
+        "description": "Cascade errors handled gracefully � no sensitive system information in error responses; Agent-influenced operator decisions logged � aggregate patterns detectable; LLM accuracy metrics and hallucination rate logged � production monitoring for output quality",
+        "kind": "control"
       },
       {
         "control_id": "V13.1.3",
         "title": "Verify API rejects large unexpected payloads",
-        "description": "Approval flows independent of agent interface � no state-changing approvals via agent chat; Token limits on LLM API inputs � requests exceeding limits rejected at the gateway"
+        "description": "Approval flows independent of agent interface � no state-changing approvals via agent chat; Token limits on LLM API inputs � requests exceeding limits rejected at the gateway",
+        "kind": "control"
       },
       {
         "control_id": "V8 Data Protection",
-        "title": "V8.1.1 — Sensitive data not transmitted in URL parameters"
+        "title": "V8.1.1 — Sensitive data not transmitted in URL parameters",
+        "kind": "control"
       },
       {
         "control_id": "V4 Access Control",
-        "title": "V4.1.3 — Deny by default access control"
+        "title": "V4.1.3 — Deny by default access control",
+        "kind": "control"
       },
       {
         "control_id": "V5 Validation",
-        "title": "V5.2.8 — Output encoding for context"
+        "title": "V5.2.8 — Output encoding for context",
+        "kind": "control"
       },
       {
         "control_id": "V6 Cryptography",
-        "title": "V6.1.1 — Sensitive data not stored in cleartext"
+        "title": "V6.1.1 — Sensitive data not stored in cleartext",
+        "kind": "control"
       },
       {
         "control_id": "V2 Authentication",
-        "title": "V2.1.1 — Passwords minimum 12 characters"
+        "title": "V2.1.1 — Passwords minimum 12 characters",
+        "kind": "control"
       },
       {
         "control_id": "V1 Architecture",
-        "title": "V1.1.4 — Trust boundaries documented and enforced"
+        "title": "V1.1.4 — Trust boundaries documented and enforced",
+        "kind": "control"
       },
       {
         "control_id": "V7 Logging",
-        "title": "V7.2.2 — Log entries contain required information"
+        "title": "V7.2.2 — Log entries contain required information",
+        "kind": "control"
       },
       {
         "control_id": "V14 Configuration",
-        "title": "V14.1.4 — All components inventoried"
+        "title": "V14.1.4 — All components inventoried",
+        "kind": "control"
       },
       {
         "control_id": "V10 Malicious Code",
-        "title": "V10.2.1 — Application only uses official repositories"
+        "title": "V10.2.1 — Application only uses official repositories",
+        "kind": "control"
       },
       {
         "control_id": "V12 Files/Resources",
-        "title": "V12.1.1 — File upload size limits"
+        "title": "V12.1.1 — File upload size limits",
+        "kind": "control"
       },
       {
         "control_id": "V9 Communication",
-        "title": "V9.1.1 — TLS for all connections"
+        "title": "V9.1.1 — TLS for all connections",
+        "kind": "control"
       },
       {
         "control_id": "V11 Business Logic",
-        "title": "V11.1.4 — Business logic limits on repeated actions"
+        "title": "V11.1.4 — Business logic limits on repeated actions",
+        "kind": "control"
       },
       {
         "control_id": "V3 Session Management",
-        "title": "V3.1.1 — Session tokens unique and random"
+        "title": "V3.1.1 — Session tokens unique and random",
+        "kind": "control"
       },
       {
         "control_id": "V13 API",
-        "title": "V13.1.1 — API protection against enumeration"
+        "title": "V13.1.1 — API protection against enumeration",
+        "kind": "control"
       },
       {
         "control_id": "V5.1.2",
         "title": "Verify that HTTP request parts are validated, sanitised, or rejected",
-        "description": "LLM API request validation � prompt structure, content type, and character set enforced"
+        "description": "LLM API request validation � prompt structure, content type, and character set enforced",
+        "kind": "control"
       },
       {
         "control_id": "V8.1.1",
         "title": "Verify sensitive data is not cached or exposed in logs",
-        "description": "LLM outputs containing sensitive data not logged in cleartext or cached without protection; System prompts not stored in cleartext application configuration or source code"
+        "description": "LLM outputs containing sensitive data not logged in cleartext or cached without protection; System prompts not stored in cleartext application configuration or source code",
+        "kind": "control"
       },
       {
         "control_id": "V8.3.4",
         "title": "Verify PII is identified and protected",
-        "description": "PII in LLM training data, RAG sources, and outputs identified and handled per policy"
+        "description": "PII in LLM training data, RAG sources, and outputs identified and handled per policy",
+        "kind": "control"
       },
       {
         "control_id": "V4.2.2",
         "title": "Verify anti-CSRF tokens in state-changing operations",
-        "description": "CSRF protection on endpoints where LLM output triggers state changes"
+        "description": "CSRF protection on endpoints where LLM output triggers state changes",
+        "kind": "control"
       },
       {
         "control_id": "V11.1.4",
         "title": "Verify business logic rate limits",
-        "description": "Business logic controls on LLM usage � per-tenant cost budgets, rate limit policies"
+        "description": "Business logic controls on LLM usage � per-tenant cost budgets, rate limit policies",
+        "kind": "control"
       }
     ],
     "changelog": [
       {
         "date": "2026-04-09",
         "change": "Initial seed — 32 ASVS verification requirements and sub-requirements",
-        "author": "emmanuelgjr"
+        "author": "OWASP GenAI Data Security Initiative"
       }
     ]
   },
@@ -6720,581 +7815,698 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "Hijacked agent with excess privilege causes larger blast radius",
         "title": "NHI-5 Over-Privileged NHI",
-        "description": "Scope all agent credentials to minimum required � least privilege enforced"
+        "description": "Scope all agent credentials to minimum required � least privilege enforced",
+        "kind": "control"
       },
       {
         "control_id": "Long-lived tokens allow hijack to persist beyond session",
         "title": "NHI-7 Long-Lived Credentials",
-        "description": "Short-lived credentials � tokens expire at task completion, no long-lived agent tokens"
+        "description": "Short-lived credentials � tokens expire at task completion, no long-lived agent tokens",
+        "kind": "control"
       },
       {
         "control_id": "Shared credentials allow hijacked agent to impersonate other agents",
         "title": "NHI-9 NHI Reuse",
-        "description": "Unique identity per agent � no shared service accounts across agent deployments"
+        "description": "Unique identity per agent � no shared service accounts across agent deployments",
+        "kind": "control"
       },
       {
         "control_id": "Agent with excess privilege can call tools in destructive ways even within normal use",
         "title": "NHI-5 Over-Privileged NHI",
-        "description": "Per-tool permission manifests � each tool scoped to minimum required operations"
+        "description": "Per-tool permission manifests � each tool scoped to minimum required operations",
+        "kind": "control"
       },
       {
         "control_id": "Compromised third-party tool identity gets full scope of agent credential",
         "title": "NHI-3 Vulnerable Third-Party NHI",
-        "description": "Validate all third-party tool identities � reject tokens from unregistered issuers"
+        "description": "Validate all third-party tool identities � reject tokens from unregistered issuers",
+        "kind": "control"
       },
       {
         "control_id": "Single shared credential allows tool misuse to affect multiple services",
         "title": "NHI-9 NHI Reuse",
-        "description": "Unique credential per tool integration � tool-scoped tokens, not agent-wide tokens"
+        "description": "Unique credential per tool integration � tool-scoped tokens, not agent-wide tokens",
+        "kind": "control"
       },
       {
         "control_id": "Agent credentials not revoked on decommission � dormant tokens exploitable",
         "title": "NHI-1 Improper Offboarding",
-        "description": "Formal agent offboarding � all credentials revoked, tokens invalidated, access removed"
+        "description": "Formal agent offboarding � all credentials revoked, tokens invalidated, access removed",
+        "kind": "control"
       },
       {
         "control_id": "Agent credentials exposed in memory, logs, tool payloads",
         "title": "NHI-2 Secret Leakage",
-        "description": "No credentials in agent context, logs, or tool payloads � secret manager only"
+        "description": "No credentials in agent context, logs, or tool payloads � secret manager only",
+        "kind": "control"
       },
       {
         "control_id": "Third-party tool credentials with excessive permissions inherited by agent",
         "title": "NHI-3 Vulnerable Third-Party NHI",
-        "description": "Validate all third-party NHIs � revoke over-privileged third-party tokens"
+        "description": "Validate all third-party NHIs � revoke over-privileged third-party tokens",
+        "kind": "control"
       },
       {
         "control_id": "Weak agent-to-system authentication � credential reuse or weak secrets",
         "title": "NHI-4 Insecure Authentication",
-        "description": "Strong authentication for all agent-to-system connections � mTLS, short-lived tokens"
+        "description": "Strong authentication for all agent-to-system connections � mTLS, short-lived tokens",
+        "kind": "control"
       },
       {
         "control_id": "Agent holds more permissions than required � lateral movement amplifier",
         "title": "NHI-5 Over-Privileged NHI",
-        "description": "Least privilege per agent role � scope enforced, reviewed quarterly"
+        "description": "Least privilege per agent role � scope enforced, reviewed quarterly",
+        "kind": "control"
       },
       {
         "control_id": "Agent credentials stored in cleartext � config files, environment variables",
         "title": "NHI-6 Insecure Credential Storage",
-        "description": "Secret manager for all agent credentials � no cleartext storage anywhere"
+        "description": "Secret manager for all agent credentials � no cleartext storage anywhere",
+        "kind": "control"
       },
       {
         "control_id": "Agent tokens without expiry � compromise persists indefinitely",
         "title": "NHI-7 Long-Lived Credentials",
-        "description": "Short-lived credentials � task-scoped tokens with automatic expiry"
+        "description": "Short-lived credentials � task-scoped tokens with automatic expiry",
+        "kind": "control"
       },
       {
         "control_id": "Production agent credentials accessible in dev/test environments",
         "title": "NHI-8 Environment Isolation Failure",
-        "description": "Strict environment isolation � separate credentials per environment, no cross-environment reuse"
+        "description": "Strict environment isolation � separate credentials per environment, no cross-environment reuse",
+        "kind": "control"
       },
       {
         "control_id": "Shared agent credential across multiple instances or deployments",
         "title": "NHI-9 NHI Reuse",
-        "description": "Unique identity per agent deployment � no credential sharing"
+        "description": "Unique identity per agent deployment � no credential sharing",
+        "kind": "control"
       },
       {
         "control_id": "Humans using agent service accounts � no attribution, no MFA",
         "title": "NHI-10 Human Use of NHI",
-        "description": "Agent credentials machine-only � human use detected and blocked"
+        "description": "Agent credentials machine-only � human use detected and blocked",
+        "kind": "control"
       },
       {
         "control_id": "Compromised MCP server holds or can request excessive permissions",
         "title": "NHI-3 Vulnerable Third-Party NHI",
-        "description": "Validate all third-party NHIs at connection � revoke tokens from unverified sources"
+        "description": "Validate all third-party NHIs at connection � revoke tokens from unverified sources",
+        "kind": "control"
       },
       {
         "control_id": "Malicious components extract credentials from agent memory or config",
         "title": "NHI-6 Insecure Credential Storage",
-        "description": "Credential isolation � components cannot access other components' credentials"
+        "description": "Credential isolation � components cannot access other components' credentials",
+        "kind": "control"
       },
       {
         "control_id": "Supply chain compromise introduces credential exfiltration code",
         "title": "NHI-2 Secret Leakage",
-        "description": "Scan all agent components for credential access patterns before deployment"
+        "description": "Scan all agent components for credential access patterns before deployment",
+        "kind": "control"
       },
       {
         "control_id": "Code executes in context of over-privileged agent credential � amplifies RCE impact",
         "title": "NHI-5 Over-Privileged NHI",
-        "description": "Sandbox code execution under a separate, minimal credential � not the agent's primary identity"
+        "description": "Sandbox code execution under a separate, minimal credential � not the agent's primary identity",
+        "kind": "control"
       },
       {
         "control_id": "Code execution in production context with prod credentials",
         "title": "NHI-8 Environment Isolation Failure",
-        "description": "Strict environment isolation for code execution � dedicated sandboxed identity"
+        "description": "Strict environment isolation for code execution � dedicated sandboxed identity",
+        "kind": "control"
       },
       {
         "control_id": "Shared credential means RCE in one agent affects all agents sharing the credential",
         "title": "NHI-9 NHI Reuse",
-        "description": "Unique credential per agent � code execution in one instance cannot leverage other instances' access"
+        "description": "Unique credential per agent � code execution in one instance cannot leverage other instances' access",
+        "kind": "control"
       },
       {
         "control_id": "Memory store credentials leaked � attacker writes poisoned content directly",
         "title": "NHI-2 Secret Leakage",
-        "description": "Scan all paths where memory store credentials could leak � logs, config, agent context"
+        "description": "Scan all paths where memory store credentials could leak � logs, config, agent context",
+        "kind": "control"
       },
       {
         "control_id": "Memory store credentials in cleartext � trivially extracted",
         "title": "NHI-6 Insecure Credential Storage",
-        "description": "Secret manager for all memory store credentials � no cleartext anywhere"
+        "description": "Secret manager for all memory store credentials � no cleartext anywhere",
+        "kind": "control"
       },
       {
         "control_id": "Long-lived memory store credentials enable persistent access for attacker",
         "title": "NHI-7 Long-Lived Credentials",
-        "description": "Short-lived credentials for memory store access � rotate on each agent session"
+        "description": "Short-lived credentials for memory store access � rotate on each agent session",
+        "kind": "control"
       },
       {
         "control_id": "Weak or missing authentication on A2A channels � agent spoofing enabled",
         "title": "NHI-4 Insecure Authentication",
-        "description": "Strong mutual authentication on all A2A channels � mTLS, certificate-based, short-lived"
+        "description": "Strong mutual authentication on all A2A channels � mTLS, certificate-based, short-lived",
+        "kind": "control"
       },
       {
         "control_id": "Long-lived A2A tokens enable persistent replay attacks",
         "title": "NHI-7 Long-Lived Credentials",
-        "description": "Short-lived A2A tokens with nonce-based replay protection"
+        "description": "Short-lived A2A tokens with nonce-based replay protection",
+        "kind": "control"
       },
       {
         "control_id": "Shared A2A credentials allow one compromised agent to impersonate others",
         "title": "NHI-9 NHI Reuse",
-        "description": "Unique identity per agent � A2A authentication bound to specific agent identity"
+        "description": "Unique identity per agent � A2A authentication bound to specific agent identity",
+        "kind": "control"
       },
       {
         "control_id": "Cascading agent failure with over-privileged credentials exposes all accessible systems",
         "title": "NHI-5 Over-Privileged NHI",
-        "description": "Least privilege per agent � cascade blast radius limited by credential scope"
+        "description": "Least privilege per agent � cascade blast radius limited by credential scope",
+        "kind": "control"
       },
       {
         "control_id": "Shared credentials mean cascade in one agent affects all agents sharing the credential",
         "title": "NHI-9 NHI Reuse",
-        "description": "Unique identity per agent � cascade cannot leverage shared credentials for lateral movement"
+        "description": "Unique identity per agent � cascade cannot leverage shared credentials for lateral movement",
+        "kind": "control"
       },
       {
         "control_id": "Long-lived credentials exposed during cascade remain valid for attacker use post-incident",
         "title": "NHI-7 Long-Lived Credentials",
-        "description": "Short-lived credentials � cascade event triggers automatic revocation of all affected tokens"
+        "description": "Short-lived credentials � cascade event triggers automatic revocation of all affected tokens",
+        "kind": "control"
       },
       {
         "control_id": "Humans using agent credentials � or agents using human credentials � destroys attribution",
         "title": "NHI-10 Human Use of NHI",
-        "description": "Strict separation: agent credentials machine-only, human credentials human-only"
+        "description": "Strict separation: agent credentials machine-only, human credentials human-only",
+        "kind": "control"
       },
       {
         "control_id": "Over-privileged agent identity makes its recommendations appear more authoritative to users",
         "title": "NHI-5 Over-Privileged NHI",
-        "description": "Least privilege makes agent capabilities visible and bounded � users understand what the agent can actually do"
+        "description": "Least privilege makes agent capabilities visible and bounded � users understand what the agent can actually do",
+        "kind": "control"
       },
       {
         "control_id": "Rogue agent detected but not offboarded � credentials remain valid",
         "title": "NHI-1 Improper Offboarding",
-        "description": "Formal agent offboarding triggered immediately on rogue detection � all credentials revoked"
+        "description": "Formal agent offboarding triggered immediately on rogue detection � all credentials revoked",
+        "kind": "control"
       },
       {
         "control_id": "Rogue agent with excess privilege causes larger blast radius before detection",
         "title": "NHI-5 Over-Privileged NHI",
-        "description": "Least privilege � rogue agent with narrow scope causes less damage before containment"
+        "description": "Least privilege � rogue agent with narrow scope causes less damage before containment",
+        "kind": "control"
       },
       {
         "control_id": "Long-lived tokens allow rogue agent to operate indefinitely after detection",
         "title": "NHI-7 Long-Lived Credentials",
-        "description": "Short-lived credentials � rogue detection triggers token expiry without requiring manual revocation"
+        "description": "Short-lived credentials � rogue detection triggers token expiry without requiring manual revocation",
+        "kind": "control"
       },
       {
         "control_id": "Injection blast radius limited only by credential scope",
         "title": "NHI-5 Over-Privileged NHI",
-        "description": "Apply least-privilege to all data pipeline credentials"
+        "description": "Apply least-privilege to all data pipeline credentials",
+        "kind": "control"
       },
       {
         "control_id": "Injected actions can use pipeline tokens for extended period",
         "title": "NHI-7 Long-Lived Credentials",
-        "description": "Short-lived tokens for all data pipeline service accounts"
+        "description": "Short-lived tokens for all data pipeline service accounts",
+        "kind": "control"
       },
       {
         "control_id": "Write access to training data stores enables poisoning",
         "title": "NHI-5 Over-Privileged NHI",
-        "description": "Separate read and write credentials; write requires MFA; Read-only credentials for data consumption; separate write credentials with MFA"
+        "description": "Separate read and write credentials; write requires MFA; Read-only credentials for data consumption; separate write credentials with MFA",
+        "kind": "control"
       },
       {
         "control_id": "Training pipeline credentials in plaintext config",
         "title": "NHI-6 Insecure Credential Storage",
-        "description": "Vault all training pipeline credentials"
+        "description": "Vault all training pipeline credentials",
+        "kind": "control"
       },
       {
         "control_id": "Long-lived write credentials create persistent poisoning window",
         "title": "NHI-7 Long-Lived Credentials",
-        "description": "Short-lived write tokens; rotate frequently"
+        "description": "Short-lived write tokens; rotate frequently",
+        "kind": "control"
       },
       {
         "control_id": "Pipeline service account with access to sensitive data stores",
         "title": "NHI-5 Over-Privileged NHI",
-        "description": "Scope pipeline credentials to approved data sources only"
+        "description": "Scope pipeline credentials to approved data sources only",
+        "kind": "control"
       },
       {
         "control_id": "Credentials embedded in config files include sensitive data source access",
         "title": "NHI-2 Secret Leakage",
-        "description": "Audit config files for embedded credentials"
+        "description": "Audit config files for embedded credentials",
+        "kind": "control"
       },
       {
         "control_id": "Unauthenticated connections between pipeline stages",
         "title": "NHI-4 Insecure Authentication",
-        "description": "Require mTLS or token auth for all pipeline connections"
+        "description": "Require mTLS or token auth for all pipeline connections",
+        "kind": "control"
       },
       {
         "control_id": "Pipeline service account with access to all stages",
         "title": "NHI-5 Over-Privileged NHI",
-        "description": "Per-stage credentials with minimum scope"
+        "description": "Per-stage credentials with minimum scope",
+        "kind": "control"
       },
       {
         "control_id": "Same credential used for multiple pipeline stages",
         "title": "NHI-9 NHI Reuse",
-        "description": "Separate credentials per stage"
+        "description": "Separate credentials per stage",
+        "kind": "control"
       },
       {
         "control_id": "Service account with guardrail configuration write access",
         "title": "NHI-5 Over-Privileged NHI",
-        "description": "Minimum scope; no service account has guardrail disable capability"
+        "description": "Minimum scope; no service account has guardrail disable capability",
+        "kind": "control"
       },
       {
         "control_id": "Credentials embedded in model outputs or training data surface in responses",
         "title": "NHI-2 Secret Leakage",
-        "description": "Output scanning for credential patterns"
+        "description": "Output scanning for credential patterns",
+        "kind": "control"
       },
       {
         "control_id": "Over-broad retrieval credentials return data beyond user entitlement",
         "title": "NHI-5 Over-Privileged NHI",
-        "description": "Minimum scope for retrieval service accounts"
+        "description": "Minimum scope for retrieval service accounts",
+        "kind": "control"
       },
       {
         "control_id": "GenAI system service account has access to more data than declared function requires",
         "title": "NHI-5 Over-Privileged NHI",
-        "description": "Audit and reduce credential scope per system component"
+        "description": "Audit and reduce credential scope per system component",
+        "kind": "control"
       },
       {
         "control_id": "Long-lived credentials maintain excessive access indefinitely",
         "title": "NHI-7 Long-Lived Credentials",
-        "description": "Rotate or replace with short-lived tokens"
+        "description": "Rotate or replace with short-lived tokens",
+        "kind": "control"
       },
       {
         "control_id": "Same data access credential used across multiple GenAI system functions",
         "title": "NHI-9 NHI Reuse",
-        "description": "Separate credentials per function"
+        "description": "Separate credentials per function",
+        "kind": "control"
       },
       {
         "control_id": "Embedding store service account with cross-tenant read access",
         "title": "NHI-5 Over-Privileged NHI",
-        "description": "Per-tenant credentials or row-level security with minimum scope; Per-tenant credentials or least-privilege scope restrictions"
+        "description": "Per-tenant credentials or row-level security with minimum scope; Per-tenant credentials or least-privilege scope restrictions",
+        "kind": "control"
       },
       {
         "control_id": "Unauthenticated embedding store access",
         "title": "NHI-4 Insecure Authentication",
-        "description": "Require authentication for all vector database connections"
+        "description": "Require authentication for all vector database connections",
+        "kind": "control"
       },
       {
         "control_id": "Same embedding store credential used for multiple tenants",
         "title": "NHI-9 NHI Reuse",
-        "description": "Separate credentials per tenant or use row-level security"
+        "description": "Separate credentials per tenant or use row-level security",
+        "kind": "control"
       },
       {
         "control_id": "Corpus write access held by service accounts that do not need it",
         "title": "NHI-5 Over-Privileged NHI",
-        "description": "Separate read and write credentials; write accounts require MFA"
+        "description": "Separate read and write credentials; write accounts require MFA",
+        "kind": "control"
       },
       {
         "control_id": "Corpus write credentials in plaintext config",
         "title": "NHI-6 Insecure Credential Storage",
-        "description": "Vault all corpus write credentials"
+        "description": "Vault all corpus write credentials",
+        "kind": "control"
       },
       {
         "control_id": "Long-lived corpus write credentials persist beyond need",
         "title": "NHI-7 Long-Lived Credentials",
-        "description": "Rotate corpus write credentials; implement short-lived write pattern"
+        "description": "Rotate corpus write credentials; implement short-lived write pattern",
+        "kind": "control"
       },
       {
         "control_id": "Data feed service accounts with access to sensitive data that should not enter context",
         "title": "NHI-5 Over-Privileged NHI",
-        "description": "Scope data feed credentials to approved data only"
+        "description": "Scope data feed credentials to approved data only",
+        "kind": "control"
       },
       {
         "control_id": "Session store service account with cross-user read/write access",
         "title": "NHI-5 Over-Privileged NHI",
-        "description": "Per-user session store access controls"
+        "description": "Per-user session store access controls",
+        "kind": "control"
       },
       {
         "control_id": "Session store access credentials in plaintext",
         "title": "NHI-6 Insecure Credential Storage",
-        "description": "Vault session store credentials"
+        "description": "Vault session store credentials",
+        "kind": "control"
       },
       {
         "control_id": "API credentials with high quota enabling systematic extraction",
         "title": "NHI-5 Over-Privileged NHI",
-        "description": "Per-user quotas; minimum default quota"
+        "description": "Per-user quotas; minimum default quota",
+        "kind": "control"
       },
       {
         "control_id": "Long-lived inference API credentials enable sustained extraction campaigns",
         "title": "NHI-7 Long-Lived Credentials",
-        "description": "Rotate API credentials; implement per-session tokens"
+        "description": "Rotate API credentials; implement per-session tokens",
+        "kind": "control"
       },
       {
         "control_id": "Third-party tool credentials with excessive data access",
         "title": "NHI-3 Vulnerable Third-Party NHI",
-        "description": "Review all third-party tool credentials; reduce to minimum scope"
+        "description": "Review all third-party tool credentials; reduce to minimum scope",
+        "kind": "control"
       },
       {
         "control_id": "Tool integration credentials with broad data access",
         "title": "NHI-5 Over-Privileged NHI",
-        "description": "Minimum scope per tool integration"
+        "description": "Minimum scope per tool integration",
+        "kind": "control"
       },
       {
         "control_id": "Same credential used across multiple tool integrations",
         "title": "NHI-9 NHI Reuse",
-        "description": "Separate credentials per tool"
+        "description": "Separate credentials per tool",
+        "kind": "control"
       },
       {
         "control_id": "Model storage service account with read access from unexpected paths",
         "title": "NHI-5 Over-Privileged NHI",
-        "description": "Minimum scope: only authorised inference service can read model weights"
+        "description": "Minimum scope: only authorised inference service can read model weights",
+        "kind": "control"
       },
       {
         "control_id": "Model storage credentials in plaintext config",
         "title": "NHI-6 Insecure Credential Storage",
-        "description": "Vault all model storage credentials"
+        "description": "Vault all model storage credentials",
+        "kind": "control"
       },
       {
         "control_id": "Inference log service account with broad read access",
         "title": "NHI-5 Over-Privileged NHI",
-        "description": "Minimum scope: only authorised audit function can read inference logs"
+        "description": "Minimum scope: only authorised audit function can read inference logs",
+        "kind": "control"
       },
       {
         "control_id": "Service account credentials embedded in inference log entries",
         "title": "NHI-2 Secret Leakage",
-        "description": "Scan and scrub credentials from inference logs"
+        "description": "Scan and scrub credentials from inference logs",
+        "kind": "control"
       },
       {
         "control_id": "Third-party data source API keys with excessive scope",
         "title": "NHI-3 Vulnerable Third-Party NHI",
-        "description": "Review all third-party credentials; reduce to minimum"
+        "description": "Review all third-party credentials; reduce to minimum",
+        "kind": "control"
       },
       {
         "control_id": "Third-party development credentials used in production",
         "title": "NHI-8 Environment Isolation Failure",
-        "description": "Enforce environment isolation for third-party credentials"
+        "description": "Enforce environment isolation for third-party credentials",
+        "kind": "control"
       },
       {
         "control_id": "Third-party credentials embedded in shared config",
         "title": "NHI-2 Secret Leakage",
-        "description": "Vault all third-party data source credentials"
+        "description": "Vault all third-party data source credentials",
+        "kind": "control"
       },
       {
         "control_id": "Model provider API keys with excessive access to model versions",
         "title": "NHI-3 Vulnerable Third-Party NHI",
-        "description": "Review and scope all model provider credentials"
+        "description": "Review and scope all model provider credentials",
+        "kind": "control"
       },
       {
         "control_id": "Same model registry token used across dev/staging/production",
         "title": "NHI-8 Environment Isolation Failure",
-        "description": "Separate credentials per environment"
+        "description": "Separate credentials per environment",
+        "kind": "control"
       },
       {
         "control_id": "Model provider credentials in pipeline config",
         "title": "NHI-2 Secret Leakage",
-        "description": "Vault all model provider credentials"
+        "description": "Vault all model provider credentials",
+        "kind": "control"
       },
       {
         "control_id": "Service account with access to retained data beyond declared function",
         "title": "NHI-5 Over-Privileged NHI",
-        "description": "Minimum scope for data access credentials"
+        "description": "Minimum scope for data access credentials",
+        "kind": "control"
       },
       {
         "control_id": "Humans using machine credentials for data deletion — no audit trail",
         "title": "NHI-10 Human Use of NHI",
-        "description": "Enforce human identity for all compliance operations"
+        "description": "Enforce human identity for all compliance operations",
+        "kind": "control"
       },
       {
         "control_id": "Shared credential across pipeline stages — one failure affects all",
         "title": "NHI-9 NHI Reuse",
-        "description": "Separate credentials per pipeline stage"
+        "description": "Separate credentials per pipeline stage",
+        "kind": "control"
       },
       {
         "control_id": "Single credential covering multiple pipeline stages amplifies cascade",
         "title": "NHI-5 Over-Privileged NHI",
-        "description": "Per-stage minimum scope credentials"
+        "description": "Per-stage minimum scope credentials",
+        "kind": "control"
       },
       {
         "control_id": "Humans using machine credentials — no attribution for compliance evidence",
         "title": "NHI-10 Human Use of NHI",
-        "description": "Enforce human identity for all regulated data operations"
+        "description": "Enforce human identity for all regulated data operations",
+        "kind": "control"
       },
       {
         "control_id": "Compliance audit credentials leaked — tampering with evidence possible",
         "title": "NHI-2 Secret Leakage",
-        "description": "Protect audit credential integrity"
+        "description": "Protect audit credential integrity",
+        "kind": "control"
       },
       {
         "control_id": "Machine credentials used for ingestion operations — no individual attribution",
         "title": "NHI-10 Human Use of NHI",
-        "description": "Enforce machine identity per pipeline component; log with component identity"
+        "description": "Enforce machine identity per pipeline component; log with component identity",
+        "kind": "control"
       },
       {
         "control_id": "Decommissioned pipeline identities remain in lineage records",
         "title": "NHI-1 Improper Offboarding",
-        "description": "Timely offboarding of pipeline NHIs"
+        "description": "Timely offboarding of pipeline NHIs",
+        "kind": "control"
       },
       {
         "control_id": "Lineage system credentials leaked — provenance records can be tampered",
         "title": "NHI-2 Secret Leakage",
-        "description": "Protect lineage system credentials"
+        "description": "Protect lineage system credentials",
+        "kind": "control"
       },
       {
         "control_id": "DSGAI entries most affected",
-        "title": "NHI Risk"
+        "title": "NHI Risk",
+        "kind": "control"
       },
       {
         "control_id": "DSGAI21",
-        "title": "NHI-1 Improper Offboarding"
+        "title": "NHI-1 Improper Offboarding",
+        "kind": "control"
       },
       {
         "control_id": "DSGAI03, DSGAI06, DSGAI16",
         "title": "NHI-2 Secret Leakage",
-        "description": "DevSecOps"
+        "description": "DevSecOps",
+        "kind": "control"
       },
       {
         "control_id": "DSGAI13, DSGAI16, DSGAI17",
         "title": "NHI-3 Third-Party NHI",
-        "description": "Security"
+        "description": "Security",
+        "kind": "control"
       },
       {
         "control_id": "DSGAI04, DSGAI08",
         "title": "NHI-4 Insecure Authentication",
-        "description": "Platform"
+        "description": "Platform",
+        "kind": "control"
       },
       {
         "control_id": "DSGAI02, DSGAI07, DSGAI08, DSGAI09",
-        "title": "NHI-5 Over-Privileged NHI"
+        "title": "NHI-5 Over-Privileged NHI",
+        "kind": "control"
       },
       {
         "control_id": "DSGAI02, DSGAI09, DSGAI14",
         "title": "NHI-6 Insecure Storage",
-        "description": "Platform"
+        "description": "Platform",
+        "kind": "control"
       },
       {
         "control_id": "DSGAI02, DSGAI07, DSGAI09, DSGAI12",
-        "title": "NHI-7 Long-Lived"
+        "title": "NHI-7 Long-Lived",
+        "kind": "control"
       },
       {
         "control_id": "DSGAI16, DSGAI17",
         "title": "NHI-8 Env Isolation",
-        "description": "DevSecOps"
+        "description": "DevSecOps",
+        "kind": "control"
       },
       {
         "control_id": "DSGAI04, DSGAI07, DSGAI08, DSGAI19",
-        "title": "NHI-9 NHI Reuse"
+        "title": "NHI-9 NHI Reuse",
+        "kind": "control"
       },
       {
         "control_id": "DSGAI18, DSGAI20, DSGAI21",
-        "title": "NHI-10 Human Use"
+        "title": "NHI-10 Human Use",
+        "kind": "control"
       },
       {
         "control_id": "Date",
         "title": "Version",
-        "description": "Change"
+        "description": "Change",
+        "kind": "control"
       },
       {
         "control_id": "2026-03-27",
         "title": "1.0.0",
-        "description": "Initial release — full mapping DSGAI01–DSGAI21 to NHI Top 10"
+        "description": "Initial release — full mapping DSGAI01–DSGAI21 to NHI Top 10",
+        "kind": "control"
       },
       {
         "control_id": "Injection blast radius proportional to credential scope",
         "title": "NHI-5 Over-Privileged NHI",
-        "description": "Apply least-privilege to all LLM application credentials"
+        "description": "Apply least-privilege to all LLM application credentials",
+        "kind": "control"
       },
       {
         "control_id": "Injected session can use stolen long-lived tokens for extended period",
         "title": "NHI-7 Long-Lived Credentials",
-        "description": "Rotate all LLM application tokens; implement short-lived token pattern"
+        "description": "Rotate all LLM application tokens; implement short-lived token pattern",
+        "kind": "control"
       },
       {
         "control_id": "LLM outputs containing API keys, tokens, or credentials",
         "title": "NHI-2 Secret Leakage",
-        "description": "Output filtering: detect and redact credential patterns in all outputs"
+        "description": "Output filtering: detect and redact credential patterns in all outputs",
+        "kind": "control"
       },
       {
         "control_id": "Credentials in plaintext config files ingested by LLM",
         "title": "NHI-6 Insecure Credential Storage",
-        "description": "Audit all config and data sources for embedded credentials"
+        "description": "Audit all config and data sources for embedded credentials",
+        "kind": "control"
       },
       {
         "control_id": "Third-party plugin tokens with excessive permissions",
         "title": "NHI-3 Vulnerable Third-Party NHI",
-        "description": "Review all third-party credentials; apply minimum scope"
+        "description": "Review all third-party credentials; apply minimum scope",
+        "kind": "control"
       },
       {
         "control_id": "Third-party dev/staging credentials used in production",
         "title": "NHI-8 Environment Isolation Failure",
-        "description": "Enforce environment isolation for all third-party integrations"
+        "description": "Enforce environment isolation for all third-party integrations",
+        "kind": "control"
       },
       {
         "control_id": "Third-party component credentials exposed in shared config",
         "title": "NHI-2 Secret Leakage",
-        "description": "Separate credential stores per third-party component"
+        "description": "Separate credential stores per third-party component",
+        "kind": "control"
       },
       {
         "control_id": "Third-party data pipeline credentials with training data write access",
         "title": "NHI-3 Vulnerable Third-Party NHI",
-        "description": "Apply NHI-3 controls to all data pipeline third-party credentials"
+        "description": "Apply NHI-3 controls to all data pipeline third-party credentials",
+        "kind": "control"
       },
       {
         "control_id": "Credentials appearing in model outputs passed to executors",
         "title": "NHI-2 Secret Leakage",
-        "description": "Credential detection in output pipeline before execution"
+        "description": "Credential detection in output pipeline before execution",
+        "kind": "control"
       },
       {
         "control_id": "Downstream service credentials with excessive scope",
         "title": "NHI-5 Over-Privileged NHI",
-        "description": "Apply least-privilege to all credentials used in downstream processing"
+        "description": "Apply least-privilege to all credentials used in downstream processing",
+        "kind": "control"
       },
       {
         "control_id": "Tool/API credentials with more scope than task requires",
         "title": "NHI-5 Over-Privileged NHI",
-        "description": "Minimum credential scope per tool integration"
+        "description": "Minimum credential scope per tool integration",
+        "kind": "control"
       },
       {
         "control_id": "Long-lived tool credentials enable extended unauthorised access",
         "title": "NHI-7 Long-Lived Credentials",
-        "description": "Short-lived JIT credentials per task (see RECIPES.md)"
+        "description": "Short-lived JIT credentials per task (see RECIPES.md)",
+        "kind": "control"
       },
       {
         "control_id": "Same credential used for multiple tools — compromise of one exposes all",
         "title": "NHI-9 NHI Reuse",
-        "description": "Separate credentials per tool integration"
+        "description": "Separate credentials per tool integration",
+        "kind": "control"
       },
       {
         "control_id": "API keys or tokens embedded in system prompt",
         "title": "NHI-2 Secret Leakage",
-        "description": "Scan system prompts for credential patterns before deployment"
+        "description": "Scan system prompts for credential patterns before deployment",
+        "kind": "control"
       },
       {
         "control_id": "System prompt stored as plaintext config with embedded credentials",
         "title": "NHI-6 Insecure Credential Storage",
-        "description": "Externalise credentials to vault; reference by ID in system prompt"
+        "description": "Externalise credentials to vault; reference by ID in system prompt",
+        "kind": "control"
       },
       {
         "control_id": "Audit log service credentials leaked or compromised",
         "title": "NHI-2 Secret Leakage",
-        "description": "Protect audit log credentials as sensitive NHI"
+        "description": "Protect audit log credentials as sensitive NHI",
+        "kind": "control"
       },
       {
         "control_id": "Humans using LLM service account credentials — no attribution",
         "title": "NHI-10 Human Use of NHI",
-        "description": "Enforce separate human and machine credentials"
+        "description": "Enforce separate human and machine credentials",
+        "kind": "control"
       },
       {
         "control_id": "Single credential with access to multiple services — one exhaustion affects all",
         "title": "NHI-5 Over-Privileged NHI",
-        "description": "Separate credentials per service with independent quotas"
+        "description": "Separate credentials per service with independent quotas",
+        "kind": "control"
       },
       {
         "control_id": "Shared credential used across services — quota exhaustion in one affects all",
         "title": "NHI-9 NHI Reuse",
-        "description": "Separate credentials per integration"
+        "description": "Separate credentials per integration",
+        "kind": "control"
       }
     ]
   },
@@ -7313,77 +8525,92 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "D-TA",
         "title": "Design / Threat Assessment",
-        "description": "Model all injection surfaces: user input, retrieved content, tool responses, sub-agent messages; High-impact actions (delete, exfiltrate, send) demand higher injection resistance; Include memory store read/write paths in threat model"
+        "description": "Model all injection surfaces: user input, retrieved content, tool responses, sub-agent messages; High-impact actions (delete, exfiltrate, send) demand higher injection resistance; Include memory store read/write paths in threat model",
+        "kind": "control"
       },
       {
         "control_id": "I-SB",
         "title": "Implementation / Secure Build",
-        "description": "Enforce at agent boundary; validate all retrieved content before acting; Validate and sanitise all content written to persistent memory; Only approved tools can be registered; unsigned tools are rejected"
+        "description": "Enforce at agent boundary; validate all retrieved content before acting; Validate and sanitise all content written to persistent memory; Only approved tools can be registered; unsigned tools are rejected",
+        "kind": "control"
       },
       {
         "control_id": "V-ST",
         "title": "Verification / Security Testing",
-        "description": "Red team injection across all retrieval and tool paths; Test persistent memory integrity across session boundaries; Test whether a compromised sub-agent can escalate through the network"
+        "description": "Red team injection across all retrieval and tool paths; Test persistent memory integrity across session boundaries; Test whether a compromised sub-agent can escalate through the network",
+        "kind": "control"
       },
       {
         "control_id": "O-IM",
         "title": "Operations / Incident Management",
-        "description": "Detect agent plan deviation from expected trajectory; Alert on unexpected data volumes in tool calls or API responses; Alert immediately when output validator is disabled or bypassed"
+        "description": "Detect agent plan deviation from expected trajectory; Alert on unexpected data volumes in tool calls or API responses; Alert immediately when output validator is disabled or bypassed",
+        "kind": "control"
       },
       {
         "control_id": "G-EG",
         "title": "Governance / Education & Guidance",
-        "description": "All developers with access to agent code understand injection risk model; Operators understand when to intervene and how to trigger override; Data engineers understand injection risk surface"
+        "description": "All developers with access to agent code understand injection risk model; Operators understand when to intervene and how to trigger override; Data engineers understand injection risk surface",
+        "kind": "control"
       },
       {
         "control_id": "D-SA",
         "title": "Design / Security Architecture",
-        "description": "Define per-agent permission sets; review in architecture assessment; Mutual authentication between all agent-to-agent communication; All agent outputs pass through content inspection before leaving system boundary"
+        "description": "Define per-agent permission sets; review in architecture assessment; Mutual authentication between all agent-to-agent communication; All agent outputs pass through content inspection before leaving system boundary",
+        "kind": "control"
       },
       {
         "control_id": "G-SM",
         "title": "Governance / Strategy & Metrics",
-        "description": "Formalise agent identity and permission lifecycle; No production agent deployment without signed safety control architecture review; Define maximum autonomy scope per agent class; mandate oversight gates"
+        "description": "Formalise agent identity and permission lifecycle; No production agent deployment without signed safety control architecture review; Define maximum autonomy scope per agent class; mandate oversight gates",
+        "kind": "control"
       },
       {
         "control_id": "V-AA",
         "title": "Verification / Architecture Assessment",
-        "description": "Periodic review of declared vs granted permissions per agent; Confirm memory stores have appropriate access controls; Review and document all agent-to-agent trust grants"
+        "description": "Periodic review of declared vs granted permissions per agent; Confirm memory stores have appropriate access controls; Review and document all agent-to-agent trust grants",
+        "kind": "control"
       },
       {
         "control_id": "O-OM",
         "title": "Operations / Operational Management",
-        "description": "Alert when agent requests permissions outside declared scope; Alert on tool calls outside normal operating parameters; Apply DLP controls to all agent-generated output before delivery"
+        "description": "Alert when agent requests permissions outside declared scope; Alert on tool calls outside normal operating parameters; Apply DLP controls to all agent-generated output before delivery",
+        "kind": "control"
       },
       {
         "control_id": "G-PC",
         "title": "Governance / Policy & Compliance",
-        "description": "Document what permissions each agent class is authorised to hold; Policy governing what agents may instruct other agents to do; Process for approving, reviewing, and revoking tool integrations"
+        "description": "Document what permissions each agent class is authorised to hold; Policy governing what agents may instruct other agents to do; Process for approving, reviewing, and revoking tool integrations",
+        "kind": "control"
       },
       {
         "control_id": "O-EM",
         "title": "Operations / Environment Management",
-        "description": "Apply access controls, encryption at rest, and integrity verification to all memory stores; Continuous health checks; automatic isolation of degraded agents; Regular security updates for all pipeline components"
+        "description": "Apply access controls, encryption at rest, and integrity verification to all memory stores; Continuous health checks; automatic isolation of degraded agents; Regular security updates for all pipeline components",
+        "kind": "control"
       },
       {
         "control_id": "D-SR",
         "title": "Design / Security Requirements",
-        "description": "Security requirements for every tool: auth, scope, output validation; Require data classification check before any dataset enters training pipeline; Define what categories of data may appear in model outputs"
+        "description": "Security requirements for every tool: auth, scope, output validation; Require data classification check before any dataset enters training pipeline; Define what categories of data may appear in model outputs",
+        "kind": "control"
       },
       {
         "control_id": "V-RT",
         "title": "Verification / Requirements-Driven Testing",
-        "description": "Automated tests verifying PII detection coverage; Tests verifying provenance metadata is preserved through pipeline; Data protection requirements verified in testing � PII patterns confirmed not to appear in LLM outputs"
+        "description": "Automated tests verifying PII detection coverage; Tests verifying provenance metadata is preserved through pipeline; Data protection requirements verified in testing � PII patterns confirmed not to appear in LLM outputs",
+        "kind": "control"
       },
       {
         "control_id": "I-SD",
         "title": "Implementation / Secure Deployment",
-        "description": "Infrastructure-as-code with security controls applied at provisioning; Rate limiting and resource controls deployed with every LLM deployment � not optional post-deployment hardening"
+        "description": "Infrastructure-as-code with security controls applied at provisioning; Rate limiting and resource controls deployed with every LLM deployment � not optional post-deployment hardening",
+        "kind": "control"
       },
       {
         "control_id": "Monitoring",
         "title": "Operational Management (O-OM)",
-        "description": "Production accuracy monitoring as operational management � drift detection, degradation alerted"
+        "description": "Production accuracy monitoring as operational management � drift detection, degradation alerted",
+        "kind": "control"
       }
     ]
   },
@@ -7402,362 +8629,434 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "Bespoke agent code reviewed for injection resistance — all agent integration code includes prompt injection as a vulnerability category",
         "title": "Req 6.2",
-        "description": "Secure code review records, findings, remediation"
+        "description": "Secure code review records, findings, remediation",
+        "kind": "control"
       },
       {
         "control_id": "Penetration testing covers goal hijack — agentic AI systems tested for prompt injection before production and annually",
         "title": "Req 11.3",
-        "description": "Pen test report with goal hijack test cases"
+        "description": "Pen test report with goal hijack test cases",
+        "kind": "control"
       },
       {
         "control_id": "Agent actions logged — all goal-relevant agent actions logged with user identity, session ID, and action detail",
         "title": "Req 10.2",
-        "description": "Audit log configuration, sample log entries"
+        "description": "Audit log configuration, sample log entries",
+        "kind": "control"
       },
       {
         "control_id": "Targeted risk analysis documents goal hijack — likelihood, impact on CHD, treatment controls specified",
         "title": "Req 12.3",
-        "description": "Risk analysis for agentic AI in PCI scope"
+        "description": "Risk analysis for agentic AI in PCI scope",
+        "kind": "control"
       },
       {
         "control_id": "Agent tool permissions follow least-privilege — agent can only access CHD systems required for defined function",
         "title": "Req 7.2",
-        "description": "Access control matrix for agent tools, privilege review records"
+        "description": "Access control matrix for agent tools, privilege review records",
+        "kind": "control"
       },
       {
         "control_id": "Agent tool permissions reviewed periodically — unused tool permissions removed; review schedule documented",
         "title": "Req 7.3",
-        "description": "Periodic access review records"
+        "description": "Periodic access review records",
+        "kind": "control"
       },
       {
         "control_id": "All tool invocations on CHD systems logged — tool name, parameters, data accessed, user/session identity",
         "title": "Req 10.2",
-        "description": "Tool invocation audit log"
+        "description": "Tool invocation audit log",
+        "kind": "control"
       },
       {
         "control_id": "Tool parameter validation in agent code — LLM-generated tool parameters validated before execution",
         "title": "Req 6.2",
-        "description": "Code review records covering parameter validation"
+        "description": "Code review records covering parameter validation",
+        "kind": "control"
       },
       {
         "control_id": "Agent accounts are system/application accounts — unique agent identity per deployment, no shared credentials",
         "title": "Req 8.2",
-        "description": "Account inventory, unique account evidence"
+        "description": "Account inventory, unique account evidence",
+        "kind": "control"
       },
       {
         "control_id": "Agent credential management — unique credentials, strong authentication where interactive, credential rotation schedule",
         "title": "Req 8.3",
-        "description": "Credential management policy, rotation records"
+        "description": "Credential management policy, rotation records",
+        "kind": "control"
       },
       {
         "control_id": "Agent access to CHD follows need-to-know — access to cardholder data restricted to what agent function requires",
         "title": "Req 7.2",
-        "description": "Access control matrix, need-to-know justification"
+        "description": "Access control matrix, need-to-know justification",
+        "kind": "control"
       },
       {
         "control_id": "Agent credential usage logged — all authentication events for agent accounts in CHD scope logged",
         "title": "Req 10.2",
-        "description": "Authentication audit log"
+        "description": "Authentication audit log",
+        "kind": "control"
       },
       {
         "control_id": "Agentic component vendors with CHD access managed as TPSPs — written agreements, annual confirmation of PCI compliance",
         "title": "Req 12.8",
-        "description": "TPSP list, written agreements, compliance confirmations"
+        "description": "TPSP list, written agreements, compliance confirmations",
+        "kind": "control"
       },
       {
         "control_id": "Agentic component CVEs in vulnerability management — ML libraries, agent frameworks, inference runtime dependencies scanned",
         "title": "Req 6.3",
-        "description": "Vulnerability scan results, patch records"
+        "description": "Vulnerability scan results, patch records",
+        "kind": "control"
       },
       {
         "control_id": "Malicious software protection for agent components — integrity verification for model weights and plugin descriptors",
         "title": "Req 5.2",
-        "description": "Integrity check configuration, verification records"
+        "description": "Integrity check configuration, verification records",
+        "kind": "control"
       },
       {
         "control_id": "Secure baseline configuration for agentic infrastructure — hardening standards applied to agent deployment platforms",
         "title": "Req 2.2",
-        "description": "Hardening baseline documentation"
+        "description": "Hardening baseline documentation",
+        "kind": "control"
       },
       {
         "control_id": "Code generation and execution controls in secure development — agent cannot execute generated code without validation",
         "title": "Req 6.2",
-        "description": "Secure development policy covering code generation"
+        "description": "Secure development policy covering code generation",
+        "kind": "control"
       },
       {
         "control_id": "Agent execution environments protected — WAF or equivalent for agent endpoints with code execution capability",
         "title": "Req 6.4",
-        "description": "WAF configuration, protection evidence"
+        "description": "WAF configuration, protection evidence",
+        "kind": "control"
       },
       {
         "control_id": "Code execution paths in penetration testing — test whether crafted inputs cause execution of out-of-scope code",
         "title": "Req 11.3",
-        "description": "Pen test report with code execution test cases"
+        "description": "Pen test report with code execution test cases",
+        "kind": "control"
       },
       {
         "control_id": "Code execution events logged — all agent-initiated execution with session identity and code summary",
         "title": "Req 10.2",
-        "description": "Code execution audit log"
+        "description": "Code execution audit log",
+        "kind": "control"
       },
       {
         "control_id": "PAN in agent memory protected — primary account numbers truncated or masked if stored in agent context or memory stores",
         "title": "Req 3.4",
-        "description": "Memory store review, PAN protection evidence"
+        "description": "Memory store review, PAN protection evidence",
+        "kind": "control"
       },
       {
         "control_id": "Agent memory encryption — CHD in persistent memory stores encrypted using strong cryptography",
         "title": "Req 3.5",
-        "description": "Encryption configuration, key management records"
+        "description": "Encryption configuration, key management records",
+        "kind": "control"
       },
       {
         "control_id": "Model and memory changes managed — updates to agent memory stores treated as system changes requiring security review",
         "title": "Req 6.5",
-        "description": "Change management records"
+        "description": "Change management records",
+        "kind": "control"
       },
       {
         "control_id": "Memory poisoning in penetration test scope — test whether adversarial content in memory affects agent behaviour",
         "title": "Req 11.3",
-        "description": "Pen test report"
+        "description": "Pen test report",
+        "kind": "control"
       },
       {
         "control_id": "CHD encrypted in transit between agents — all inter-agent communication carrying CHD uses TLS 1.2+",
         "title": "Req 4.2",
-        "description": "TLS configuration, protocol verification"
+        "description": "TLS configuration, protocol verification",
+        "kind": "control"
       },
       {
         "control_id": "Inter-agent authentication — agents authenticate to each other before exchanging CHD",
         "title": "Req 8.2",
-        "description": "Certificate configuration, authentication evidence"
+        "description": "Certificate configuration, authentication evidence",
+        "kind": "control"
       },
       {
         "control_id": "Inter-agent CHD exchanges logged — source, destination, data classification, timestamp",
         "title": "Req 10.2",
-        "description": "Inter-agent communication audit log"
+        "description": "Inter-agent communication audit log",
+        "kind": "control"
       },
       {
         "control_id": "Secure development requirements for inter-agent APIs — authentication and encryption requirements in design specifications",
         "title": "Req 6.2",
-        "description": "Design documentation, code review records"
+        "description": "Design documentation, code review records",
+        "kind": "control"
       },
       {
         "control_id": "Critical agent control failures detected promptly — monitoring for cascade precursors with alert thresholds",
         "title": "Req 10.7",
-        "description": "Monitoring configuration, alert records, detection evidence"
+        "description": "Monitoring configuration, alert records, detection evidence",
+        "kind": "control"
       },
       {
         "control_id": "Cascade failure risk analysis — targeted risk analysis documents cascade failure likelihood, impact, treatment",
         "title": "Req 12.3",
-        "description": "Risk analysis documentation"
+        "description": "Risk analysis documentation",
+        "kind": "control"
       },
       {
         "control_id": "Network controls prevent cascade propagation — agent network segments isolated to contain blast radius",
         "title": "Req 1.3",
-        "description": "Network diagram, segmentation evidence"
+        "description": "Network diagram, segmentation evidence",
+        "kind": "control"
       },
       {
         "control_id": "Baseline availability configuration for agent infrastructure — capacity and resilience requirements in hardening baseline",
         "title": "Req 2.2",
-        "description": "Hardening baseline documentation"
+        "description": "Hardening baseline documentation",
+        "kind": "control"
       },
       {
         "control_id": "Security awareness covers AI deception — staff trained to recognise AI impersonation and social engineering",
         "title": "Req 12.6",
-        "description": "Training curriculum, completion records"
+        "description": "Training curriculum, completion records",
+        "kind": "control"
       },
       {
         "control_id": "Honest design requirements for agent interactions — AI disclosure requirements in secure development policy",
         "title": "Req 6.2",
-        "description": "Secure development policy, design review records"
+        "description": "Secure development policy, design review records",
+        "kind": "control"
       },
       {
         "control_id": "Agent-human interaction events logged — session records for agent interactions involving CHD decisions",
         "title": "Req 10.2",
-        "description": "Interaction audit log"
+        "description": "Interaction audit log",
+        "kind": "control"
       },
       {
         "control_id": "Trust exploitation risk analysis — targeted risk analysis documents scenarios and treatment",
         "title": "Req 12.3",
-        "description": "Risk analysis documentation"
+        "description": "Risk analysis documentation",
+        "kind": "control"
       },
       {
         "control_id": "Agent access to CHD follows documented scope — technical controls prevent access outside defined role",
         "title": "Req 7.2",
-        "description": "Access control matrix, technical enforcement evidence"
+        "description": "Access control matrix, technical enforcement evidence",
+        "kind": "control"
       },
       {
         "control_id": "Rogue agent behaviour logged — actions outside defined scope generate audit log entries and alerts",
         "title": "Req 10.2",
-        "description": "Action audit log, out-of-scope alert records"
+        "description": "Action audit log, out-of-scope alert records",
+        "kind": "control"
       },
       {
         "control_id": "Rogue agent scenarios in penetration test scope — test whether agents can operate outside authorised scope",
         "title": "Req 11.3",
-        "description": "Pen test report with rogue agent test cases"
+        "description": "Pen test report with rogue agent test cases",
+        "kind": "control"
       },
       {
         "control_id": "Rogue agent risk analysis — targeted risk analysis documents scenarios, CHD impact, treatment",
         "title": "Req 12.3",
-        "description": "Risk analysis documentation"
+        "description": "Risk analysis documentation",
+        "kind": "control"
       },
       {
         "control_id": "Req 3.4.1",
         "title": "PAN rendering unreadable",
-        "description": "PANs in GenAI outputs masked � only first six/last four digits in any response; PANs extracted from multimodal content masked in all outputs � OCR-extracted PANs are CHD requiring Req 3 treatment; Synthetic PANs that pass Luhn check treated as CHD � format-preserving synthetic PANs are in PCI scope"
+        "description": "PANs in GenAI outputs masked � only first six/last four digits in any response; PANs extracted from multimodal content masked in all outputs � OCR-extracted PANs are CHD requiring Req 3 treatment; Synthetic PANs that pass Luhn check treated as CHD � format-preserving synthetic PANs are in PCI scope",
+        "kind": "control"
       },
       {
         "control_id": "Req 3.5.1",
         "title": "Protect stored account data",
-        "description": "All CHD in GenAI scope encrypted � training data, RAG stores, embeddings, prompt caches; All CHD extracted from multimodal inputs encrypted at rest � OCR output of a payment document is CHD; Per-user session CHD encrypted � KV cache isolation prevents cross-session PAN exposure"
+        "description": "All CHD in GenAI scope encrypted � training data, RAG stores, embeddings, prompt caches; All CHD extracted from multimodal inputs encrypted at rest � OCR output of a payment document is CHD; Per-user session CHD encrypted � KV cache isolation prevents cross-session PAN exposure",
+        "kind": "control"
       },
       {
         "control_id": "Req 4.2.1",
         "title": "Encryption in transit",
-        "description": "All GenAI data flows carrying CHD encrypted � TLS 1.2 minimum; Multimodal extraction pipelines encrypted in transit where CHD is in scope; All LLM API calls and RAG retrieval paths carrying CHD encrypted in transit � TLS 1.2 minimum"
+        "description": "All GenAI data flows carrying CHD encrypted � TLS 1.2 minimum; Multimodal extraction pipelines encrypted in transit where CHD is in scope; All LLM API calls and RAG retrieval paths carrying CHD encrypted in transit � TLS 1.2 minimum",
+        "kind": "control"
       },
       {
         "control_id": "Req 7.2.1",
         "title": "Restrict access",
-        "description": "RAG retrieval access controls � users retrieve only CHD they are authorised to access; Agent credentials scoped to minimum CDE access � least privilege, quarterly review; Context minimisation � tools receive minimum CHD-containing context required"
+        "description": "RAG retrieval access controls � users retrieve only CHD they are authorised to access; Agent credentials scoped to minimum CDE access � least privilege, quarterly review; Context minimisation � tools receive minimum CHD-containing context required",
+        "kind": "control"
       },
       {
         "control_id": "Req 8.2.1",
         "title": "Unique IDs for access",
-        "description": "Each agent has a unique service identity � no shared credentials across CDE-facing agents"
+        "description": "Each agent has a unique service identity � no shared credentials across CDE-facing agents",
+        "kind": "control"
       },
       {
         "control_id": "Req 10.2.1",
         "title": "Logging of all access",
-        "description": "All agent credential operations in CDE logged � issuance, use, anomalous patterns; All tool call payloads containing CHD logged � Req 10 audit trail requirement; All PAN access through multimodal pipelines logged"
+        "description": "All agent credential operations in CDE logged � issuance, use, anomalous patterns; All tool call payloads containing CHD logged � Req 10 audit trail requirement; All PAN access through multimodal pipelines logged",
+        "kind": "control"
       },
       {
         "control_id": "Req 12.3.2",
         "title": "Targeted risk analysis",
-        "description": "Targeted risk analysis for agent credential scope in CDE � blast radius if credentials compromised; Targeted risk analysis for ungoverned GenAI-derived assets � scope, protection, lifecycle documented; Re-identification risk in synthetic payment datasets documented in targeted risk analysis"
+        "description": "Targeted risk analysis for agent credential scope in CDE � blast radius if credentials compromised; Targeted risk analysis for ungoverned GenAI-derived assets � scope, protection, lifecycle documented; Re-identification risk in synthetic payment datasets documented in targeted risk analysis",
+        "kind": "control"
       },
       {
         "control_id": "Req 12.8.1",
         "title": "Third-party service providers",
-        "description": "Shadow AI tools processing CHD are unapproved TPSPs � not in TPSP list, no written agreements; All tool and plugin providers receiving CHD in TPSP list � even if access is indirect through agent context; Browser AI extension providers with CDE access are TPSPs � add to TPSP list, initiate compliance process"
+        "description": "Shadow AI tools processing CHD are unapproved TPSPs � not in TPSP list, no written agreements; All tool and plugin providers receiving CHD in TPSP list � even if access is indirect through agent context; Browser AI extension providers with CDE access are TPSPs � add to TPSP list, initiate compliance process",
+        "kind": "control"
       },
       {
         "control_id": "Req 12.5.2",
         "title": "TPSP oversight",
-        "description": "Shadow AI discovery as part of TPSP monitoring � identify unapproved vendors receiving CHD"
+        "description": "Shadow AI discovery as part of TPSP monitoring � identify unapproved vendors receiving CHD",
+        "kind": "control"
       },
       {
         "control_id": "Req 1.3.2",
         "title": "Network security",
-        "description": "Network controls prevent CHD flows to unapproved AI endpoints � block at network layer; Rate limiting protecting availability of CDE-facing LLM endpoints � DoS prevention; Network controls restrict inbound traffic to CDE � rate limiting at network layer for LLM applications"
+        "description": "Network controls prevent CHD flows to unapproved AI endpoints � block at network layer; Rate limiting protecting availability of CDE-facing LLM endpoints � DoS prevention; Network controls restrict inbound traffic to CDE � rate limiting at network layer for LLM applications",
+        "kind": "control"
       },
       {
         "control_id": "Req 12.6.1",
         "title": "Security awareness",
-        "description": "PCI security awareness programme covers shadow AI risk � staff trained on prohibition; Security awareness covers PCI obligations in GenAI context � staff understand scope implications; PCI staff trained on LLM output limitations � advisory status of AI recommendations communicated"
+        "description": "PCI security awareness programme covers shadow AI risk � staff trained on prohibition; Security awareness covers PCI obligations in GenAI context � staff understand scope implications; PCI staff trained on LLM output limitations � advisory status of AI recommendations communicated",
+        "kind": "control"
       },
       {
         "control_id": "Req 6.5.6",
         "title": "Secure system changes",
-        "description": "All model promotions tested for unexpected functionality � poisoning detection as Req 6.5 testing requirement; RAG corpus updates tested for unexpected content � integrity verification before production indexing; All model promotions tested for unexpected functionality before CDE deployment � poisoning as unexpected functionality"
+        "description": "All model promotions tested for unexpected functionality � poisoning detection as Req 6.5 testing requirement; RAG corpus updates tested for unexpected content � integrity verification before production indexing; All model promotions tested for unexpected functionality before CDE deployment � poisoning as unexpected functionality",
+        "kind": "control"
       },
       {
         "control_id": "Req 10.6.1",
         "title": "Audit log review",
-        "description": "Automated monitoring of GenAI outputs in CDE � systematic anomalies indicating poisoning detected; Automated monitoring for GenAI pipeline health in CDE � freshness and availability metrics reviewed; Automated monitoring for extraction patterns � unusual query diversity alerted"
+        "description": "Automated monitoring of GenAI outputs in CDE � systematic anomalies indicating poisoning detected; Automated monitoring for GenAI pipeline health in CDE � freshness and availability metrics reviewed; Automated monitoring for extraction patterns � unusual query diversity alerted",
+        "kind": "control"
       },
       {
         "control_id": "Req 11.3.1",
         "title": "Penetration testing",
-        "description": "Poisoning detection in CDE penetration testing programme; Path traversal and ingestion injection in CDE penetration testing scope; Multi-tenant isolation tested in CDE penetration testing � cross-session CHD access attempted"
+        "description": "Poisoning detection in CDE penetration testing programme; Path traversal and ingestion injection in CDE penetration testing scope; Multi-tenant isolation tested in CDE penetration testing � cross-session CHD access attempted",
+        "kind": "control"
       },
       {
         "control_id": "Req 12.8",
         "title": "TPSP programme",
-        "description": "Training data providers as TPSPs � data quality and integrity requirements in vendor agreements; RAG data source providers as TPSPs � content quality and integrity requirements in agreements"
+        "description": "Training data providers as TPSPs � data quality and integrity requirements in vendor agreements; RAG data source providers as TPSPs � content quality and integrity requirements in agreements",
+        "kind": "control"
       },
       {
         "control_id": "Req 6.2.4",
         "title": "Bespoke software � injection",
-        "description": "All injection vulnerability classes addressed in GenAI ingestion code � schema bypass and path traversal; LLM-to-SQL interfaces address injection as a known vulnerability class � query allowlisting, parameterised execution; All injection vulnerabilities addressed in LLM integration code � prompt injection as a known injection class"
+        "description": "All injection vulnerability classes addressed in GenAI ingestion code � schema bypass and path traversal; LLM-to-SQL interfaces address injection as a known vulnerability class � query allowlisting, parameterised execution; All injection vulnerabilities addressed in LLM integration code � prompt injection as a known injection class",
+        "kind": "control"
       },
       {
         "control_id": "Req 6.3.3",
         "title": "Vulnerability management",
-        "description": "All GenAI software components patched � CVE-2024-3584 class treated as urgent for CDE scope; Vector database CVEs patched � CVE-2024-3584 class treated as urgent for CDE-scope stores; Browser AI extensions patched and version-controlled � vulnerable extensions are Req 6.3 findings in CDE"
+        "description": "All GenAI software components patched � CVE-2024-3584 class treated as urgent for CDE scope; Vector database CVEs patched � CVE-2024-3584 class treated as urgent for CDE-scope stores; Browser AI extensions patched and version-controlled � vulnerable extensions are Req 6.3 findings in CDE",
+        "kind": "control"
       },
       {
         "control_id": "Req 6.5",
         "title": "Secure system changes",
-        "description": "Changes to GenAI ingestion pipelines tested � schema validation changes require security review"
+        "description": "Changes to GenAI ingestion pipelines tested � schema validation changes require security review",
+        "kind": "control"
       },
       {
         "control_id": "Req 12.8.3",
         "title": "TPSP agreements",
-        "description": "Written agreements with tool providers acknowledging CHD security responsibility; Written agreements with labelling vendors acknowledging CHD security responsibility; Written agreements with LLM vendors � acknowledge responsibility for CHD security"
+        "description": "Written agreements with tool providers acknowledging CHD security responsibility; Written agreements with labelling vendors acknowledging CHD security responsibility; Written agreements with LLM vendors � acknowledge responsibility for CHD security",
+        "kind": "control"
       },
       {
         "control_id": "Req 3.1.1",
         "title": "Account data inventory",
-        "description": "All CHD locations documented � derived GenAI assets (embeddings, caches) included in data inventory; Synthetic payment datasets that may be re-identifiable included in CHD inventory"
+        "description": "All CHD locations documented � derived GenAI assets (embeddings, caches) included in data inventory; Synthetic payment datasets that may be re-identifiable included in CHD inventory",
+        "kind": "control"
       },
       {
         "control_id": "Req 3.2.1",
         "title": "Data flow documentation",
-        "description": "Data flow diagrams include all GenAI pipeline paths � source through embedding, retrieval, generation, logging"
+        "description": "Data flow diagrams include all GenAI pipeline paths � source through embedding, retrieval, generation, logging",
+        "kind": "control"
       },
       {
         "control_id": "Req 9.4.6",
         "title": "Media disposal",
-        "description": "Derived GenAI assets containing CHD disposed of securely � deletion verified per Req 9.4 requirements"
+        "description": "Derived GenAI assets containing CHD disposed of securely � deletion verified per Req 9.4 requirements",
+        "kind": "control"
       },
       {
         "control_id": "Req 12.1.1",
         "title": "Security policy",
-        "description": "PCI security policy covers GenAI processing of CHD � updated to reflect AI system deployments"
+        "description": "PCI security policy covers GenAI processing of CHD � updated to reflect AI system deployments",
+        "kind": "control"
       },
       {
         "control_id": "Req 12.3.1",
         "title": "Annual assessment",
-        "description": "Annual targeted risk analysis covers all GenAI systems that may process CHD"
+        "description": "Annual targeted risk analysis covers all GenAI systems that may process CHD",
+        "kind": "control"
       },
       {
         "control_id": "Req 12.4.1",
         "title": "Programme oversight",
-        "description": "Executive accountability for GenAI PCI compliance � CISO or equivalent with oversight documented"
+        "description": "Executive accountability for GenAI PCI compliance � CISO or equivalent with oversight documented",
+        "kind": "control"
       },
       {
         "control_id": "Req 3.3.1",
         "title": "SAD prohibition",
-        "description": "Synthetic data generated from SAD retains SAD classification � generation does not remove the prohibition; SAD must never appear in labelling tasks � labels cannot expose CVV or full magnetic stripe data; SAD (CVV, PIN) must never be in LLM training data or RAG � stored after authorisation is prohibited"
+        "description": "Synthetic data generated from SAD retains SAD classification � generation does not remove the prohibition; SAD must never appear in labelling tasks � labels cannot expose CVV or full magnetic stripe data; SAD (CVV, PIN) must never be in LLM training data or RAG � stored after authorisation is prohibited",
+        "kind": "control"
       },
       {
         "control_id": "Req 6.4.1",
         "title": "Public-facing application protection",
-        "description": "LLM-powered query interfaces in CDE scope protected � WAF or equivalent, input validation; Model extraction pattern detection as application protection � systematic API abuse detected; LLM-powered customer-facing applications protected against prompt injection � WAF or equivalent, security testing"
+        "description": "LLM-powered query interfaces in CDE scope protected � WAF or equivalent, input validation; Model extraction pattern detection as application protection � systematic API abuse detected; LLM-powered customer-facing applications protected against prompt injection � WAF or equivalent, security testing",
+        "kind": "control"
       },
       {
         "control_id": "Req 12.10.1",
         "title": "Incident response",
-        "description": "Incident response procedure covers GenAI pipeline failures affecting payment processing"
+        "description": "Incident response procedure covers GenAI pipeline failures affecting payment processing",
+        "kind": "control"
       },
       {
         "control_id": "Req 12.8.4",
         "title": "TPSP PCI DSS compliance",
-        "description": "Monitor TPSP PCI DSS compliance status � LLM component vendors with CHD access have compliant status verified"
+        "description": "Monitor TPSP PCI DSS compliance status � LLM component vendors with CHD access have compliant status verified",
+        "kind": "control"
       },
       {
         "control_id": "Req 6.5.1",
         "title": "Secure system changes",
-        "description": "Model component updates follow change management � security testing before production"
+        "description": "Model component updates follow change management � security testing before production",
+        "kind": "control"
       },
       {
         "control_id": "Req 7.3.1",
         "title": "Access control system",
-        "description": "Access control system enforces LLM tool scope � agent cannot exceed defined CDE access without explicit authorisation"
+        "description": "Access control system enforces LLM tool scope � agent cannot exceed defined CDE access without explicit authorisation",
+        "kind": "control"
       },
       {
         "control_id": "Req 6.2",
         "title": "Bespoke software security",
-        "description": "LLM integration code specifies accuracy requirements � high-stakes payment outputs require verification before action"
+        "description": "LLM integration code specifies accuracy requirements � high-stakes payment outputs require verification before action",
+        "kind": "control"
       }
     ]
   },
@@ -7778,1006 +9077,1215 @@ window.CROSSWALK_FRAMEWORKS = [
         "title": "COSO principle 1 — Integrity and ethical values",
         "description": "The entity demonstrates a commitment to integrity and ethical values.",
         "parent": null,
-        "function": "Common Criteria"
+        "function": "Common Criteria",
+        "kind": "control"
       },
       {
         "control_id": "CC1.2",
         "title": "COSO principle 2 — Board independence and oversight",
         "description": "The board of directors demonstrates independence from management and exercises oversight.",
         "parent": null,
-        "function": "Common Criteria"
+        "function": "Common Criteria",
+        "kind": "control"
       },
       {
         "control_id": "CC1.3",
         "title": "COSO principle 3 — Management establishes structure, authority, and responsibility",
         "description": "Management establishes structures, reporting lines, and appropriate authorities and responsibilities.",
         "parent": null,
-        "function": "Common Criteria"
+        "function": "Common Criteria",
+        "kind": "control"
       },
       {
         "control_id": "CC1.4",
         "title": "COSO principle 4 — Commitment to competence",
         "description": "The entity demonstrates a commitment to attract, develop, and retain competent individuals.",
         "parent": null,
-        "function": "Common Criteria"
+        "function": "Common Criteria",
+        "kind": "control"
       },
       {
         "control_id": "CC1.5",
         "title": "COSO principle 5 — Accountability",
         "description": "The entity holds individuals accountable for their internal control responsibilities.",
         "parent": null,
-        "function": "Common Criteria"
+        "function": "Common Criteria",
+        "kind": "control"
       },
       {
         "control_id": "CC2.1",
         "title": "COSO principle 13 — Quality information",
         "description": "The entity obtains or generates and uses relevant, quality information.",
         "parent": null,
-        "function": "Common Criteria"
+        "function": "Common Criteria",
+        "kind": "control"
       },
       {
         "control_id": "CC2.2",
         "title": "COSO principle 14 — Internal communication",
         "description": "The entity internally communicates information necessary to support functioning of internal control.",
         "parent": null,
-        "function": "Common Criteria"
+        "function": "Common Criteria",
+        "kind": "control"
       },
       {
         "control_id": "CC2.3",
         "title": "COSO principle 15 — External communication",
         "description": "The entity communicates with external parties regarding matters affecting functioning of internal control.",
         "parent": null,
-        "function": "Common Criteria"
+        "function": "Common Criteria",
+        "kind": "control"
       },
       {
         "control_id": "CC3.1",
         "title": "COSO principle 6 — Risk objectives",
         "description": "The entity specifies objectives with sufficient clarity to enable identification and assessment of risks.",
         "parent": null,
-        "function": "Common Criteria"
+        "function": "Common Criteria",
+        "kind": "control"
       },
       {
         "control_id": "CC3.2",
         "title": "COSO principle 7 — Risk identification and analysis",
         "description": "The entity identifies risks and analyses risks as a basis for determining how risks should be managed.",
         "parent": null,
-        "function": "Common Criteria"
+        "function": "Common Criteria",
+        "kind": "control"
       },
       {
         "control_id": "CC3.3",
         "title": "COSO principle 8 — Fraud risk",
         "description": "The entity considers the potential for fraud in assessing risks.",
         "parent": null,
-        "function": "Common Criteria"
+        "function": "Common Criteria",
+        "kind": "control"
       },
       {
         "control_id": "CC3.4",
         "title": "COSO principle 9 — Change management",
         "description": "The entity identifies and assesses changes that could significantly impact the system of internal control.",
         "parent": null,
-        "function": "Common Criteria"
+        "function": "Common Criteria",
+        "kind": "control"
       },
       {
         "control_id": "CC4.1",
         "title": "COSO principle 16 — Ongoing and separate evaluations",
         "description": "The entity selects, develops, and performs ongoing and/or separate evaluations.",
         "parent": null,
-        "function": "Common Criteria"
+        "function": "Common Criteria",
+        "kind": "control"
       },
       {
         "control_id": "CC4.2",
         "title": "COSO principle 17 — Deficiency communication",
         "description": "The entity evaluates and communicates internal control deficiencies in a timely manner.",
         "parent": null,
-        "function": "Common Criteria"
+        "function": "Common Criteria",
+        "kind": "control"
       },
       {
         "control_id": "CC5.1",
         "title": "COSO principle 10 — Control activities selection",
         "description": "The entity selects and develops control activities that mitigate risks.",
         "parent": null,
-        "function": "Common Criteria"
+        "function": "Common Criteria",
+        "kind": "control"
       },
       {
         "control_id": "CC5.2",
         "title": "COSO principle 11 — Technology controls",
         "description": "The entity selects and develops general control activities over technology.",
         "parent": null,
-        "function": "Common Criteria"
+        "function": "Common Criteria",
+        "kind": "control"
       },
       {
         "control_id": "CC5.3",
         "title": "COSO principle 12 — Policies and procedures",
         "description": "The entity deploys control activities through policies and procedures.",
         "parent": null,
-        "function": "Common Criteria"
+        "function": "Common Criteria",
+        "kind": "control"
       },
       {
         "control_id": "CC6.1",
         "title": "Logical and physical access controls",
         "description": "The entity implements logical access security measures to protect against unauthorized access.",
         "parent": null,
-        "function": "Common Criteria"
+        "function": "Common Criteria",
+        "kind": "control"
       },
       {
         "control_id": "CC6.2",
         "title": "Access provisioning",
         "description": "Prior to issuing system credentials, the entity registers and authorizes new users.",
         "parent": null,
-        "function": "Common Criteria"
+        "function": "Common Criteria",
+        "kind": "control"
       },
       {
         "control_id": "CC6.3",
         "title": "Access removal",
         "description": "The entity removes access to protected information when no longer needed.",
         "parent": null,
-        "function": "Common Criteria"
+        "function": "Common Criteria",
+        "kind": "control"
       },
       {
         "control_id": "CC6.6",
         "title": "System boundaries",
         "description": "The entity implements controls to prevent or detect unauthorized access at system boundaries.",
         "parent": null,
-        "function": "Common Criteria"
+        "function": "Common Criteria",
+        "kind": "control"
       },
       {
         "control_id": "CC6.7",
         "title": "Data in transit",
         "description": "The entity restricts the transmission of data to authorized external parties.",
         "parent": null,
-        "function": "Common Criteria"
+        "function": "Common Criteria",
+        "kind": "control"
       },
       {
         "control_id": "CC6.8",
         "title": "Malicious software prevention",
         "description": "The entity implements controls to prevent or detect malicious software.",
         "parent": null,
-        "function": "Common Criteria"
+        "function": "Common Criteria",
+        "kind": "control"
       },
       {
         "control_id": "CC7.1",
         "title": "Anomaly detection",
         "description": "The entity uses detection and monitoring procedures to identify anomalies.",
         "parent": null,
-        "function": "Common Criteria"
+        "function": "Common Criteria",
+        "kind": "control"
       },
       {
         "control_id": "CC7.2",
         "title": "Event monitoring",
         "description": "The entity monitors system components for anomalies indicative of security events.",
         "parent": null,
-        "function": "Common Criteria"
+        "function": "Common Criteria",
+        "kind": "control"
       },
       {
         "control_id": "CC7.3",
         "title": "Security event evaluation",
         "description": "The entity evaluates security events to determine whether they constitute security incidents.",
         "parent": null,
-        "function": "Common Criteria"
+        "function": "Common Criteria",
+        "kind": "control"
       },
       {
         "control_id": "CC7.4",
         "title": "Incident response",
         "description": "The entity responds to identified security incidents by executing a defined incident response programme.",
         "parent": null,
-        "function": "Common Criteria"
+        "function": "Common Criteria",
+        "kind": "control"
       },
       {
         "control_id": "CC7.5",
         "title": "Incident recovery",
         "description": "The entity identifies, develops, and implements activities to recover from identified security incidents.",
         "parent": null,
-        "function": "Common Criteria"
+        "function": "Common Criteria",
+        "kind": "control"
       },
       {
         "control_id": "CC8.1",
         "title": "Change management",
         "description": "The entity authorizes, designs, develops, configures, documents, tests, approves, and implements changes.",
         "parent": null,
-        "function": "Common Criteria"
+        "function": "Common Criteria",
+        "kind": "control"
       },
       {
         "control_id": "CC9.1",
         "title": "Risk mitigation",
         "description": "The entity identifies, selects, and develops risk mitigation activities.",
         "parent": null,
-        "function": "Common Criteria"
+        "function": "Common Criteria",
+        "kind": "control"
       },
       {
         "control_id": "CC9.2",
         "title": "Vendor and business partner risk",
         "description": "The entity assesses and manages risks associated with vendors and business partners.",
         "parent": null,
-        "function": "Common Criteria"
+        "function": "Common Criteria",
+        "kind": "control"
       },
       {
         "control_id": "A1.1",
         "title": "Availability commitments",
         "description": "The entity maintains, monitors, and evaluates current processing capacity and use.",
         "parent": null,
-        "function": "Availability"
+        "function": "Availability",
+        "kind": "control"
       },
       {
         "control_id": "A1.2",
         "title": "Environmental protections and recovery",
         "description": "The entity authorizes, designs, develops, and implements controls for environmental threats and recovery.",
         "parent": null,
-        "function": "Availability"
+        "function": "Availability",
+        "kind": "control"
       },
       {
         "control_id": "C1.1",
         "title": "Confidentiality identification",
         "description": "The entity identifies and maintains confidential information.",
         "parent": null,
-        "function": "Confidentiality"
+        "function": "Confidentiality",
+        "kind": "control"
       },
       {
         "control_id": "C1.2",
         "title": "Confidentiality disposal",
         "description": "The entity disposes of confidential information to meet objectives.",
         "parent": null,
-        "function": "Confidentiality"
+        "function": "Confidentiality",
+        "kind": "control"
       },
       {
         "control_id": "PI1.1",
         "title": "Processing integrity — input completeness and accuracy",
         "description": "The entity implements policies and procedures for completeness and accuracy of inputs.",
         "parent": null,
-        "function": "Processing Integrity"
+        "function": "Processing Integrity",
+        "kind": "control"
       },
       {
         "control_id": "PI1.2",
         "title": "Processing integrity — system processing",
         "description": "The entity implements policies and procedures over system processing to result in products and services meeting specifications.",
         "parent": null,
-        "function": "Processing Integrity"
+        "function": "Processing Integrity",
+        "kind": "control"
       },
       {
         "control_id": "P1.1",
         "title": "Privacy notice",
         "description": "The entity provides notice to data subjects about its privacy practices.",
         "parent": null,
-        "function": "Privacy"
+        "function": "Privacy",
+        "kind": "control"
       },
       {
         "control_id": "P3.1",
         "title": "Collection of personal information",
         "description": "Personal information is collected consistent with the entity's objectives.",
         "parent": null,
-        "function": "Privacy"
+        "function": "Privacy",
+        "kind": "control"
       },
       {
         "control_id": "P4.1",
         "title": "Use of personal information",
         "description": "The entity limits the use of personal information to the purposes identified in the notice.",
         "parent": null,
-        "function": "Privacy"
+        "function": "Privacy",
+        "kind": "control"
       },
       {
         "control_id": "P6.1",
         "title": "Disclosure of personal information",
         "description": "The entity discloses personal information to third parties with consent or as identified in the notice.",
         "parent": null,
-        "function": "Privacy"
+        "function": "Privacy",
+        "kind": "control"
       },
       {
         "control_id": "Goal hijack risk identified in risk assessment — prompt injection, indirect injection, multi-turn manipulation documented",
         "title": "CC3.2",
-        "description": "Risk register with goal hijack entries, treatment status"
+        "description": "Risk register with goal hijack entries, treatment status",
+        "kind": "control"
       },
       {
         "control_id": "Runtime monitoring for goal-deviation indicators — AI-specific anomaly detection covering instruction-override patterns",
         "title": "CC7.2",
-        "description": "Monitoring configuration, alert logs, incident records"
+        "description": "Monitoring configuration, alert logs, incident records",
+        "kind": "control"
       },
       {
         "control_id": "Control activities define acceptable agent actions — agent cannot deviate from authorised goal scope",
         "title": "CC5.2",
-        "description": "Agent permission policy, goal-state verification design documentation"
+        "description": "Agent permission policy, goal-state verification design documentation",
+        "kind": "control"
       },
       {
         "control_id": "Agent processing is authorised — actions taken by agent correspond to user's authorised intent, not attacker's injected instruction",
         "title": "PI1.1",
-        "description": "Action audit log, authorisation records per agent session"
+        "description": "Action audit log, authorisation records per agent session",
+        "kind": "control"
       },
       {
         "control_id": "Control activities define tool permission scope — which tools are permitted, which parameters are valid, which actions require confirmation",
         "title": "CC5.2",
-        "description": "Tool permission policy, permitted action allowlist"
+        "description": "Tool permission policy, permitted action allowlist",
+        "kind": "control"
       },
       {
         "control_id": "Logical access controls enforce tool permissions — agent cannot invoke tools outside authorised scope",
         "title": "CC6.1",
-        "description": "Tool invocation logs, access rejection records"
+        "description": "Tool invocation logs, access rejection records",
+        "kind": "control"
       },
       {
         "control_id": "Monitoring for anomalous tool invocations — destructive parameters, out-of-scope tools, unexpected sequences detected",
         "title": "CC7.2",
-        "description": "Tool call audit log, anomaly alert records"
+        "description": "Tool call audit log, anomaly alert records",
+        "kind": "control"
       },
       {
         "control_id": "Tool invocations are complete and accurate — parameter validation ensures tool calls match intended business operation",
         "title": "PI1.2",
-        "description": "Validation configuration, rejected call logs"
+        "description": "Validation configuration, rejected call logs",
+        "kind": "control"
       },
       {
         "control_id": "Agent credentials managed as logical access assets — provisioning, scope, rotation, revocation per access management policy",
         "title": "CC6.1",
-        "description": "Credential lifecycle records, provisioning logs"
+        "description": "Credential lifecycle records, provisioning logs",
+        "kind": "control"
       },
       {
         "control_id": "Credentials revoked at session end — no persistent credential caching in agent memory after session terminates",
         "title": "CC6.3",
-        "description": "Session termination logs, credential TTL configuration"
+        "description": "Session termination logs, credential TTL configuration",
+        "kind": "control"
       },
       {
         "control_id": "Credential usage monitored — anomalous scope expansion or after-session access detected",
         "title": "CC7.3",
-        "description": "Credential audit log, anomaly alert records"
+        "description": "Credential audit log, anomaly alert records",
+        "kind": "control"
       },
       {
         "control_id": "Agent credentials treated as confidential information — stored in secrets manager, access-controlled",
         "title": "C1.1",
-        "description": "Secrets management configuration, access control evidence"
+        "description": "Secrets management configuration, access control evidence",
+        "kind": "control"
       },
       {
         "control_id": "Third-party agentic components assessed — agent frameworks, tool vendors, model providers subject to vendor risk management",
         "title": "CC9.2",
-        "description": "Vendor assessments, contractual security obligations"
+        "description": "Vendor assessments, contractual security obligations",
+        "kind": "control"
       },
       {
         "control_id": "Component changes managed through change management — model updates, framework upgrades, tool changes require security review",
         "title": "CC8.1",
-        "description": "Change management records, security review sign-offs"
+        "description": "Change management records, security review sign-offs",
+        "kind": "control"
       },
       {
         "control_id": "Agentic supply chain risk included in risk assessment — compromised component scenarios documented with treatment",
         "title": "CC3.3",
-        "description": "Risk register with supply chain entries"
+        "description": "Risk register with supply chain entries",
+        "kind": "control"
       },
       {
         "control_id": "Integrity checks required before component deployment — cryptographic verification of model weights and tool descriptors",
         "title": "CC5.3",
-        "description": "Integrity verification configuration, deployment logs"
+        "description": "Integrity verification configuration, deployment logs",
+        "kind": "control"
       },
       {
         "control_id": "Control activities define permitted code execution scope — sandbox requirements, approved languages, forbidden operations",
         "title": "CC5.2",
-        "description": "Code execution policy, sandbox configuration"
+        "description": "Code execution policy, sandbox configuration",
+        "kind": "control"
       },
       {
         "control_id": "Execution sandboxes access-controlled — no host filesystem or network access without authorisation",
         "title": "CC6.1",
-        "description": "Sandbox configuration, access control evidence"
+        "description": "Sandbox configuration, access control evidence",
+        "kind": "control"
       },
       {
         "control_id": "Code execution events monitored — syscall patterns, network calls, and filesystem access from sandboxes logged",
         "title": "CC7.2",
-        "description": "Execution audit log, alert configuration"
+        "description": "Execution audit log, alert configuration",
+        "kind": "control"
       },
       {
         "control_id": "Code execution is authorised — agent cannot execute code that was not explicitly requested by authorised user",
         "title": "PI1.1",
-        "description": "Code execution authorisation records"
+        "description": "Code execution authorisation records",
+        "kind": "control"
       },
       {
         "control_id": "Memory poisoning risk documented in risk assessment — scenarios for RAG, persistent memory, and context window corruption",
         "title": "CC3.3",
-        "description": "Risk register with memory poisoning entries"
+        "description": "Risk register with memory poisoning entries",
+        "kind": "control"
       },
       {
         "control_id": "Agent memory stores monitored for unexpected modifications — baseline established, deviations trigger alerts",
         "title": "CC7.2",
-        "description": "Memory access log, anomaly alert configuration"
+        "description": "Memory access log, anomaly alert configuration",
+        "kind": "control"
       },
       {
         "control_id": "Processing based on compromised memory is not authorised — memory integrity controls support PI1 evidence",
         "title": "PI1.1",
-        "description": "Integrity verification configuration"
+        "description": "Integrity verification configuration",
+        "kind": "control"
       },
       {
         "control_id": "Controls on memory store write access — only authorised processes may write to agent memory stores",
         "title": "CC5.2",
-        "description": "Memory access policy, write access controls"
+        "description": "Memory access policy, write access controls",
+        "kind": "control"
       },
       {
         "control_id": "Inter-agent authentication required — all agent-to-agent messages authenticated before acting",
         "title": "CC6.1",
-        "description": "mTLS configuration, certificate management records"
+        "description": "mTLS configuration, certificate management records",
+        "kind": "control"
       },
       {
         "control_id": "Inter-agent communication policy — which agents may communicate with which, under what conditions, with what data",
         "title": "CC5.2",
-        "description": "Inter-agent communication policy document"
+        "description": "Inter-agent communication policy document",
+        "kind": "control"
       },
       {
         "control_id": "Inter-agent traffic monitored — unexpected communication patterns, unauthorised agent requests detected",
         "title": "CC7.2",
-        "description": "Inter-agent traffic logs, anomaly alert records"
+        "description": "Inter-agent traffic logs, anomaly alert records",
+        "kind": "control"
       },
       {
         "control_id": "Third-party agents treated as vendor risk — agents from external providers assessed before integration",
         "title": "CC9.2",
-        "description": "Vendor assessment records for third-party agents"
+        "description": "Vendor assessment records for third-party agents",
+        "kind": "control"
       },
       {
         "control_id": "Availability commitments defined for multi-agent system — RTO/RPO documented; cascade failure scenarios in availability risk",
         "title": "A1.1",
-        "description": "Availability SLA, BCP documentation"
+        "description": "Availability SLA, BCP documentation",
+        "kind": "control"
       },
       {
         "control_id": "Capacity and performance monitoring — early warning of cascade failure precursors (latency, error rate, queue depth)",
         "title": "A1.2",
-        "description": "Monitoring dashboards, alert configuration"
+        "description": "Monitoring dashboards, alert configuration",
+        "kind": "control"
       },
       {
         "control_id": "Cascade failure incidents detected and responded to — incident response procedures for multi-agent failures",
         "title": "CC7.3",
-        "description": "IR plan covering cascade scenarios, incident records"
+        "description": "IR plan covering cascade scenarios, incident records",
+        "kind": "control"
       },
       {
         "control_id": "Cascade failure risk in risk assessment — blast radius analysis, dependency mapping documented",
         "title": "CC3.3",
-        "description": "Risk register with cascade failure entries"
+        "description": "Risk register with cascade failure entries",
+        "kind": "control"
       },
       {
         "control_id": "AI disclosure policy — users informed when interacting with AI agents; deceptive design patterns prohibited",
         "title": "CC5.3",
-        "description": "AI disclosure policy, UI evidence"
+        "description": "AI disclosure policy, UI evidence",
+        "kind": "control"
       },
       {
         "control_id": "Trust exploitation risk in risk assessment — social engineering, impersonation, false urgency scenarios documented",
         "title": "CC3.3",
-        "description": "Risk register with trust exploitation entries"
+        "description": "Risk register with trust exploitation entries",
+        "kind": "control"
       },
       {
         "control_id": "Agent outputs are accurate and complete — outputs not designed to mislead; factual accuracy controls for high-stakes outputs",
         "title": "PI1.3",
-        "description": "Output quality controls, factual accuracy testing"
+        "description": "Output quality controls, factual accuracy testing",
+        "kind": "control"
       },
       {
         "control_id": "Accuracy of personal data in AI outputs — privacy criteria require that AI-generated information about individuals is accurate",
         "title": "P7.1",
-        "description": "Accuracy review procedures"
+        "description": "Accuracy review procedures",
+        "kind": "control"
       },
       {
         "control_id": "Continuous monitoring for rogue agent behaviour — actions outside authorised scope detected and alerted",
         "title": "CC7.2",
-        "description": "Agent action audit log, anomaly alert records"
+        "description": "Agent action audit log, anomaly alert records",
+        "kind": "control"
       },
       {
         "control_id": "Access controls define authorised agent scope — technical enforcement of what agents may and may not do",
         "title": "CC6.1",
-        "description": "Permission policy, access control configuration"
+        "description": "Permission policy, access control configuration",
+        "kind": "control"
       },
       {
         "control_id": "Rogue agent risk in risk assessment — autonomous agent operating outside scope is a documented risk",
         "title": "CC3.3",
-        "description": "Risk register with rogue agent scenarios"
+        "description": "Risk register with rogue agent scenarios",
+        "kind": "control"
       },
       {
         "control_id": "Rogue agent impact on availability — resource consumption by rogue agents does not degrade service for authorised operations",
         "title": "A1.1",
-        "description": "Resource monitoring, quota enforcement records"
+        "description": "Resource monitoring, quota enforcement records",
+        "kind": "control"
       },
       {
         "control_id": "Policy identifying confidential information in GenAI scope � training data, RAG corpus, embeddings, outputs",
-        "title": "C1.1 � Confidentiality policy"
+        "title": "C1.1 � Confidentiality policy",
+        "kind": "control"
       },
       {
         "control_id": "Technical controls protecting confidential data in GenAI pipelines � encryption, access controls, output scanning",
-        "title": "C2.1 � Confidential information protection"
+        "title": "C2.1 � Confidential information protection",
+        "kind": "control"
       },
       {
         "control_id": "Access controls on RAG retrieval � users retrieve only data they are authorised to access",
-        "title": "CC6.1 � Logical access"
+        "title": "CC6.1 � Logical access",
+        "kind": "control"
       },
       {
         "control_id": "Personal information in GenAI scope used only for authorised purposes � LLM processing limited to agreed use cases",
-        "title": "P5.1 � Personal information use"
+        "title": "P5.1 � Personal information use",
+        "kind": "control"
       },
       {
         "control_id": "DLP monitoring on all GenAI output channels � sensitive patterns detected before delivery to users",
-        "title": "CC7.2 � Anomaly detection"
+        "title": "CC7.2 � Anomaly detection",
+        "kind": "control"
       },
       {
         "control_id": "Agent credentials managed as privileged access � minimum scope, documented justification, regular review",
-        "title": "CC6.1 � Logical access"
+        "title": "CC6.1 � Logical access",
+        "kind": "control"
       },
       {
         "control_id": "Agent credentials revoked on decommission and anomaly detection � no dormant agent NHIs",
-        "title": "CC6.3 � Access removal"
+        "title": "CC6.3 � Access removal",
+        "kind": "control"
       },
       {
         "control_id": "Agent tool providers assessed � data handling, credential security requirements in vendor agreements",
-        "title": "CC9.1 � Vendor risk"
+        "title": "CC9.1 � Vendor risk",
+        "kind": "control"
       },
       {
         "control_id": "Agent credential anomaly monitoring � unusual usage patterns detected and alerted",
-        "title": "CC7.2 � Anomaly detection"
+        "title": "CC7.2 � Anomaly detection",
+        "kind": "control"
       },
       {
         "control_id": "Agent credential lifecycle procedures � issuance, rotation, revocation documented",
-        "title": "CC5.2 � Control activities"
+        "title": "CC5.2 � Control activities",
+        "kind": "control"
       },
       {
         "control_id": "Acceptable use procedures for AI tools � approved list, prohibited use cases, employee acknowledgement",
-        "title": "CC5.2 � Control activities"
+        "title": "CC5.2 � Control activities",
+        "kind": "control"
       },
       {
         "control_id": "Shadow AI vendors not in vendor risk programme � shadow AI discovery identifies unapproved vendors",
-        "title": "CC9.1 � Vendor risk"
+        "title": "CC9.1 � Vendor risk",
+        "kind": "control"
       },
       {
         "control_id": "Shadow AI usage identified as a risk in assessment � ungoverned data flows, training use by vendors",
-        "title": "CC3.2 � Risk assessment"
+        "title": "CC3.2 � Risk assessment",
+        "kind": "control"
       },
       {
         "control_id": "Confidentiality policy covers AI tool use � employees informed of restrictions on sharing confidential data",
-        "title": "C1.1 � Confidentiality policy"
+        "title": "C1.1 � Confidentiality policy",
+        "kind": "control"
       },
       {
         "control_id": "Poisoning threats documented in GenAI risk assessment � training data, supply chain, model update vectors",
-        "title": "CC3.2 � Risk assessment"
+        "title": "CC3.2 � Risk assessment",
+        "kind": "control"
       },
       {
         "control_id": "Model promotions through change management � integrity verification before production deployment",
-        "title": "CC8.1 � Change management"
+        "title": "CC8.1 � Change management",
+        "kind": "control"
       },
       {
         "control_id": "Training data providers in vendor risk programme � provenance, quality, integrity requirements assessed",
-        "title": "CC9.1 � Vendor risk"
+        "title": "CC9.1 � Vendor risk",
+        "kind": "control"
       },
       {
         "control_id": "Model output anomaly monitoring � poisoning indicators detected before operational impact",
-        "title": "CC7.2 � Anomaly detection"
+        "title": "CC7.2 � Anomaly detection",
+        "kind": "control"
       },
       {
         "control_id": "Ingestion validation controls � schema and semantic validation ensuring only accurate inputs enter processing",
-        "title": "PI1.2 � System inputs complete and accurate"
+        "title": "PI1.2 � System inputs complete and accurate",
+        "kind": "control"
       },
       {
         "control_id": "Documented ingestion validation procedures � multi-stage validation, path traversal prevention",
-        "title": "CC5.2 � Control activities"
+        "title": "CC5.2 � Control activities",
+        "kind": "control"
       },
       {
         "control_id": "Ingestion anomaly detection � unusual payloads detected before pipeline completion",
-        "title": "CC7.2 � Anomaly detection"
+        "title": "CC7.2 � Anomaly detection",
+        "kind": "control"
       },
       {
         "control_id": "Ingestion integrity risks in GenAI risk assessment � schema bypass, path traversal, adversarial payload vectors",
-        "title": "CC3.2 � Risk assessment"
+        "title": "CC3.2 � Risk assessment",
+        "kind": "control"
       },
       {
         "control_id": "Tool and plugin providers assessed in vendor risk programme � what data they receive, retain, and use",
-        "title": "CC9.1 � Vendor risk"
+        "title": "CC9.1 � Vendor risk",
+        "kind": "control"
       },
       {
         "control_id": "Contractual data handling obligations for tool providers � data minimisation, retention, training use restrictions",
-        "title": "CC9.2 � Vendor agreements"
+        "title": "CC9.2 � Vendor agreements",
+        "kind": "control"
       },
       {
         "control_id": "Context minimisation for tool calls � tools receive minimum confidential data required for function",
-        "title": "C2.1 � Confidential information protection"
+        "title": "C2.1 � Confidential information protection",
+        "kind": "control"
       },
       {
         "control_id": "Tool access scoped to minimum required � agent tool permissions as privileged access",
-        "title": "CC6.1 � Logical access"
+        "title": "CC6.1 � Logical access",
+        "kind": "control"
       },
       {
         "control_id": "Policy identifies all confidential information in GenAI scope � including derived assets (embeddings, caches, traces)",
-        "title": "C1.1 � Confidentiality policy"
+        "title": "C1.1 � Confidentiality policy",
+        "kind": "control"
       },
       {
         "control_id": "Personal information lifecycle management covers GenAI-derived assets � embeddings inherit source data obligations",
-        "title": "P4.1 � Privacy information lifecycle"
+        "title": "P4.1 � Privacy information lifecycle",
+        "kind": "control"
       },
       {
         "control_id": "Data lifecycle procedures documented � classification propagation, retention schedules, deletion procedures",
-        "title": "CC5.2 � Control activities"
+        "title": "CC5.2 � Control activities",
+        "kind": "control"
       },
       {
         "control_id": "Ungoverned derived asset risks identified in assessment � embeddings, caches, agent memory outside governance scope",
-        "title": "CC3.2 � Risk assessment"
+        "title": "CC3.2 � Risk assessment",
+        "kind": "control"
       },
       {
         "control_id": "Commitment to compliance with applicable laws and regulations including AI-specific obligations",
-        "title": "CC5.1 � Control environment"
+        "title": "CC5.1 � Control environment",
+        "kind": "control"
       },
       {
         "control_id": "Regulatory risks identified in GenAI risk assessment � GDPR, EU AI Act, sector-specific regulations",
-        "title": "CC3.2 � Risk assessment"
+        "title": "CC3.2 � Risk assessment",
+        "kind": "control"
       },
       {
         "control_id": "Privacy programme covers GenAI processing of personal information � policies, notices, accountability",
-        "title": "P1.1 � Privacy management"
+        "title": "P1.1 � Privacy management",
+        "kind": "control"
       },
       {
         "control_id": "Regulatory compliance status communicated to management � AI Act obligations, NIS2 requirements",
-        "title": "CC2.1 � Communication"
+        "title": "CC2.1 � Communication",
+        "kind": "control"
       },
       {
         "control_id": "Multimodal derived content (OCR output, transcripts) protected at same level as source uploads",
-        "title": "C2.1 � Confidential information protection"
+        "title": "C2.1 � Confidential information protection",
+        "kind": "control"
       },
       {
         "control_id": "Personal information extracted from multimodal inputs subject to same use restrictions as source data",
-        "title": "P5.1 � Personal information use"
+        "title": "P5.1 � Personal information use",
+        "kind": "control"
       },
       {
         "control_id": "Access controls on multimodal content stores � same rigour as equivalent text data stores",
-        "title": "CC6.1 � Logical access"
+        "title": "CC6.1 � Logical access",
+        "kind": "control"
       },
       {
         "control_id": "DLP monitoring on multimodal extraction pipelines � PII in OCR output and transcripts detected",
-        "title": "CC7.2 � Anomaly detection"
+        "title": "CC7.2 � Anomaly detection",
+        "kind": "control"
       },
       {
         "control_id": "Synthetic datasets that are not truly anonymous subject to same retention obligations as source personal data",
-        "title": "P4.2 � Retention of personal information"
+        "title": "P4.2 � Retention of personal information",
+        "kind": "control"
       },
       {
         "control_id": "Synthetic data use must respect underlying privacy commitments if re-identification risk exists",
-        "title": "P5.1 � Personal information use"
+        "title": "P5.1 � Personal information use",
+        "kind": "control"
       },
       {
         "control_id": "Re-identification risk in synthetic datasets identified in risk assessment",
-        "title": "CC3.2 � Risk assessment"
+        "title": "CC3.2 � Risk assessment",
+        "kind": "control"
       },
       {
         "control_id": "Synthetic OT data and business data protected at source classification level until re-identification risk formally assessed",
-        "title": "C2.1 � Confidential information protection"
+        "title": "C2.1 � Confidential information protection",
+        "kind": "control"
       },
       {
         "control_id": "Strict session isolation � each user's context inaccessible to all other sessions",
-        "title": "CC6.1 � Logical access"
+        "title": "CC6.1 � Logical access",
+        "kind": "control"
       },
       {
         "control_id": "User session context classified as confidential � technical isolation controls",
-        "title": "C2.1 � Confidential information protection"
+        "title": "C2.1 � Confidential information protection",
+        "kind": "control"
       },
       {
         "control_id": "Personal information in user sessions used only for that user's authorised purposes � cross-session leakage is a P5 violation",
-        "title": "P5.1 � Personal information use"
+        "title": "P5.1 � Personal information use",
+        "kind": "control"
       },
       {
         "control_id": "Cross-session access anomalies monitored � unusual retrieval patterns detected",
-        "title": "CC7.2 � Anomaly detection"
+        "title": "CC7.2 � Anomaly detection",
+        "kind": "control"
       },
       {
         "control_id": "LLM-generated queries execute under requesting user's permissions � least privilege, no shared high-privilege accounts",
-        "title": "CC6.1 � Logical access"
+        "title": "CC6.1 � Logical access",
+        "kind": "control"
       },
       {
         "control_id": "Policy requiring LLM-generated queries to be validated before execution � only authorised processing permitted",
-        "title": "PI1.1 � Processing integrity policy"
+        "title": "PI1.1 � Processing integrity policy",
+        "kind": "control"
       },
       {
         "control_id": "LLM-generated query results validated � destructive or over-broad queries blocked before execution",
-        "title": "PI1.3 � Outputs complete and accurate"
+        "title": "PI1.3 � Outputs complete and accurate",
+        "kind": "control"
       },
       {
         "control_id": "LLM-generated query anomaly monitoring � bulk extraction, unusual patterns, out-of-scope queries alerted",
-        "title": "CC7.2 � Anomaly detection"
+        "title": "CC7.2 � Anomaly detection",
+        "kind": "control"
       },
       {
         "control_id": "Query allowlisting and human confirmation procedures documented",
-        "title": "CC5.2 � Control activities"
+        "title": "CC5.2 � Control activities",
+        "kind": "control"
       },
       {
         "control_id": "Vector store content encrypted at rest � embeddings of confidential data protected",
-        "title": "C2.1 � Confidential information protection"
+        "title": "C2.1 � Confidential information protection",
+        "kind": "control"
       },
       {
         "control_id": "RBAC on all vector store collections � no unauthenticated access",
-        "title": "CC6.1 � Logical access"
+        "title": "CC6.1 � Logical access",
+        "kind": "control"
       },
       {
         "control_id": "Vector database CVE patching managed through change management � timely remediation documented",
-        "title": "CC8.1 � Change management"
+        "title": "CC8.1 � Change management",
+        "kind": "control"
       },
       {
         "control_id": "Vector store query anomaly monitoring � bulk extraction patterns detected",
-        "title": "CC7.2 � Anomaly detection"
+        "title": "CC7.2 � Anomaly detection",
+        "kind": "control"
       },
       {
         "control_id": "GenAI telemetry classified and encrypted � content captured in traces protected at same level as source data",
-        "title": "C2.1 � Confidential information protection"
+        "title": "C2.1 � Confidential information protection",
+        "kind": "control"
       },
       {
         "control_id": "Personal information in telemetry used only for authorised purposes � same restrictions as production data",
-        "title": "P5.1 � Personal information use"
+        "title": "P5.1 � Personal information use",
+        "kind": "control"
       },
       {
         "control_id": "Access controls on telemetry stores � same rigour as production data stores",
-        "title": "CC6.1 � Logical access"
+        "title": "CC6.1 � Logical access",
+        "kind": "control"
       },
       {
         "control_id": "Access anomaly monitoring on telemetry stores � bulk access patterns detected",
-        "title": "CC7.2 � Monitoring"
+        "title": "CC7.2 � Monitoring",
+        "kind": "control"
       },
       {
         "control_id": "Context window assembly respects user authorisation � no content from higher classification tier than user's access level",
-        "title": "CC6.1 � Logical access"
+        "title": "CC6.1 � Logical access",
+        "kind": "control"
       },
       {
         "control_id": "Highest classification in context window drives handling � response treated as confidential if context contains confidential data",
-        "title": "C2.1 � Confidential information protection"
+        "title": "C2.1 � Confidential information protection",
+        "kind": "control"
       },
       {
         "control_id": "Minimum-necessary context injection procedures � documented and enforced",
-        "title": "CC5.2 � Control activities"
+        "title": "CC5.2 � Control activities",
+        "kind": "control"
       },
       {
         "control_id": "Over-broad context risks identified � cross-trust-domain aggregation assessed",
-        "title": "CC3.2 � Risk assessment"
+        "title": "CC3.2 � Risk assessment",
+        "kind": "control"
       },
       {
         "control_id": "Approved AI assistants with scoped permissions � permission minimisation documented and enforced",
-        "title": "CC6.1 � Logical access"
+        "title": "CC6.1 � Logical access",
+        "kind": "control"
       },
       {
         "control_id": "Browser AI extension providers assessed in vendor risk programme � data handling, telemetry, update security",
-        "title": "CC9.1 � Vendor risk"
+        "title": "CC9.1 � Vendor risk",
+        "kind": "control"
       },
       {
         "control_id": "Endpoint AI acceptable use procedures � approved extension list, prohibited data access, employee acknowledgement",
-        "title": "CC5.2 � Control activities"
+        "title": "CC5.2 � Control activities",
+        "kind": "control"
       },
       {
         "control_id": "Endpoint AI overreach risks identified � data access scope, exfiltration paths assessed",
-        "title": "CC3.2 � Risk assessment"
+        "title": "CC3.2 � Risk assessment",
+        "kind": "control"
       },
       {
         "control_id": "LLM service availability commitments cover RAG freshness � stale data producing misinformation is an availability failure",
-        "title": "A1.1 � Availability policy"
+        "title": "A1.1 � Availability policy",
+        "kind": "control"
       },
       {
         "control_id": "Circuit breakers and freshness monitoring protect availability commitments � graceful degradation over silent failure",
-        "title": "A1.2 � Environmental protections"
+        "title": "A1.2 � Environmental protections",
+        "kind": "control"
       },
       {
         "control_id": "RAG freshness monitoring � alert when index staleness exceeds threshold before misinformation reaches users",
-        "title": "CC7.2 � Anomaly detection"
+        "title": "CC7.2 � Anomaly detection",
+        "kind": "control"
       },
       {
         "control_id": "Silent RAG degradation identified as availability risk in assessment",
-        "title": "CC3.2 � Risk assessment"
+        "title": "CC3.2 � Risk assessment",
+        "kind": "control"
       },
       {
         "control_id": "Inference attack resistance as confidentiality protection � technical measures limiting reconstruction success",
-        "title": "C2.1 � Confidential information protection"
+        "title": "C2.1 � Confidential information protection",
+        "kind": "control"
       },
       {
         "control_id": "Using model outputs to reconstruct personal information beyond authorised purposes is a P5 violation",
-        "title": "P5.1 � Personal information use"
+        "title": "P5.1 � Personal information use",
+        "kind": "control"
       },
       {
         "control_id": "Output monitoring for reconstruction indicators � systematic query patterns detected",
-        "title": "CC7.2 � Anomaly detection"
+        "title": "CC7.2 � Anomaly detection",
+        "kind": "control"
       },
       {
         "control_id": "Inference attack risks identified in GenAI risk assessment � membership inference, model inversion vectors",
-        "title": "CC3.2 � Risk assessment"
+        "title": "CC3.2 � Risk assessment",
+        "kind": "control"
       },
       {
         "control_id": "Labelling vendors assessed in vendor risk programme � data access scope, handling requirements, sub-processor chain",
-        "title": "CC9.1 � Vendor risk"
+        "title": "CC9.1 � Vendor risk",
+        "kind": "control"
       },
       {
         "control_id": "Contractual data handling obligations for labelling vendors � data minimisation, retention, permitted use",
-        "title": "CC9.2 � Vendor agreements"
+        "title": "CC9.2 � Vendor agreements",
+        "kind": "control"
       },
       {
         "control_id": "Personal information accessed by labellers documented � purpose, scope, and safeguards",
-        "title": "P3.1 � Personal information collection"
+        "title": "P3.1 � Personal information collection",
+        "kind": "control"
       },
       {
         "control_id": "Labelling vendor use of personal information restricted � no secondary use, training, or retention beyond task",
-        "title": "P5.1 � Personal information use"
+        "title": "P5.1 � Personal information use",
+        "kind": "control"
       },
       {
         "control_id": "Proprietary model artifacts classified as confidential � access controls, rate limiting, extraction detection",
-        "title": "C2.1 � Confidential information protection"
+        "title": "C2.1 � Confidential information protection",
+        "kind": "control"
       },
       {
         "control_id": "API rate limiting as access control limiting systematic model extraction",
-        "title": "CC6.1 � Logical access"
+        "title": "CC6.1 � Logical access",
+        "kind": "control"
       },
       {
         "control_id": "Model extraction pattern monitoring � unusual query diversity and volume detected",
-        "title": "CC7.2 � Anomaly detection"
+        "title": "CC7.2 � Anomaly detection",
+        "kind": "control"
       },
       {
         "control_id": "Model extraction risks identified in risk assessment � extraction vectors, IP exposure assessed",
-        "title": "CC3.2 � Risk assessment"
+        "title": "CC3.2 � Risk assessment",
+        "kind": "control"
       },
       {
         "control_id": "RAG corpus integrity controls � only accurate, verified content enters the retrieval index",
-        "title": "PI1.2 � System inputs complete and accurate"
+        "title": "PI1.2 � System inputs complete and accurate",
+        "kind": "control"
       },
       {
         "control_id": "LLM outputs derived from poisoned RAG are a processing integrity failure � detection before delivery",
-        "title": "PI1.3 � Outputs complete and accurate"
+        "title": "PI1.3 � Outputs complete and accurate",
+        "kind": "control"
       },
       {
         "control_id": "RAG corpus data source providers assessed � content quality, update process, integrity guarantees",
-        "title": "CC9.1 � Vendor risk"
+        "title": "CC9.1 � Vendor risk",
+        "kind": "control"
       },
       {
         "control_id": "RAG corpus anomaly detection � unusual content or modifications detected before reaching production",
-        "title": "CC7.2 � Anomaly detection"
+        "title": "CC7.2 � Anomaly detection",
+        "kind": "control"
       },
       {
         "control_id": "Prompt injection documented as a threat in LLM application risk assessment � vectors, likelihood, impact assessed",
-        "title": "CC3.2 � Risk assessment identifies threats and vulnerabilities"
+        "title": "CC3.2 � Risk assessment identifies threats and vulnerabilities",
+        "kind": "control"
       },
       {
         "control_id": "Runtime monitoring for prompt injection indicators on all LLM input channels � alerts integrated into SOC monitoring",
-        "title": "CC7.2 � Anomaly and threat detection"
+        "title": "CC7.2 � Anomaly and threat detection",
+        "kind": "control"
       },
       {
         "control_id": "Input validation procedures documented for all LLM integrations � implemented, tested, and reviewed",
-        "title": "CC5.2 � Select and develop control activities"
+        "title": "CC5.2 � Select and develop control activities",
+        "kind": "control"
       },
       {
         "control_id": "LLM access controls limit the blast radius of successful injection � least privilege enforced on all tool access",
-        "title": "CC6.1 � Logical access restrictions"
+        "title": "CC6.1 � Logical access restrictions",
+        "kind": "control"
       },
       {
         "control_id": "Policy identifying confidential information in LLM scope and how it is handled � training data, RAG corpus, outputs",
-        "title": "C1.1 � Confidentiality policy"
+        "title": "C1.1 � Confidentiality policy",
+        "kind": "control"
       },
       {
         "control_id": "Technical controls protecting confidential data in LLM pipelines � encryption, access controls, output scanning",
-        "title": "C2.1 � Confidential information protection"
+        "title": "C2.1 � Confidential information protection",
+        "kind": "control"
       },
       {
         "control_id": "Personal information in LLM scope identified � training data, RAG sources, outputs � collection documented",
-        "title": "P3.1 � Personal information collection"
+        "title": "P3.1 � Personal information collection",
+        "kind": "control"
       },
       {
         "control_id": "Personal information used only for purposes disclosed � LLM processing of customer PII limited to agreed use cases",
-        "title": "P5.1 � Personal information use"
+        "title": "P5.1 � Personal information use",
+        "kind": "control"
       },
       {
         "control_id": "Access controls on RAG data sources � users retrieve only data they are authorised to access",
-        "title": "CC6.1 � Logical access"
+        "title": "CC6.1 � Logical access",
+        "kind": "control"
       },
       {
         "control_id": "LLM component vendors assessed before use � security questionnaires, SOC 2 reports reviewed, ongoing monitoring",
-        "title": "CC9.1 � Vendor risk management"
+        "title": "CC9.1 � Vendor risk management",
+        "kind": "control"
       },
       {
         "control_id": "Contractual security obligations for LLM vendors � data handling, vulnerability disclosure, incident notification",
-        "title": "CC9.2 � Vendor agreements"
+        "title": "CC9.2 � Vendor agreements",
+        "kind": "control"
       },
       {
         "control_id": "LLM model updates and component changes managed through change management � approval, testing, rollback",
-        "title": "CC8.1 � Change management"
+        "title": "CC8.1 � Change management",
+        "kind": "control"
       },
       {
         "control_id": "Supply chain attack vectors identified in LLM risk assessment � training data sources, model providers, plugin vendors",
-        "title": "CC3.2 � Risk assessment"
+        "title": "CC3.2 � Risk assessment",
+        "kind": "control"
       },
       {
         "control_id": "Data and model poisoning identified as threats in LLM risk assessment � training pipeline, supply chain, and model update vectors",
-        "title": "CC3.2 � Risk assessment"
+        "title": "CC3.2 � Risk assessment",
+        "kind": "control"
       },
       {
         "control_id": "Anomaly detection on model outputs and training data distributions � poisoning indicators detected before operational impact",
-        "title": "CC7.2 � Threat detection"
+        "title": "CC7.2 � Threat detection",
+        "kind": "control"
       },
       {
         "control_id": "Model promotions managed through change management � integrity verification before production deployment",
-        "title": "CC8.1 � Change management"
+        "title": "CC8.1 � Change management",
+        "kind": "control"
       },
       {
         "control_id": "Training data providers assessed � data provenance, quality, and integrity guarantees required from vendors",
-        "title": "CC9.1 � Vendor risk"
+        "title": "CC9.1 � Vendor risk",
+        "kind": "control"
       },
       {
         "control_id": "Policy requiring LLM output validation before use in downstream processing � complete and authorised processing",
-        "title": "PI1.1 � Processing integrity policies"
+        "title": "PI1.1 � Processing integrity policies",
+        "kind": "control"
       },
       {
         "control_id": "Input validation procedures for all systems consuming LLM output � encoding, schema validation, sanitisation",
-        "title": "CC5.2 � Select and develop control activities"
+        "title": "CC5.2 � Select and develop control activities",
+        "kind": "control"
       },
       {
         "control_id": "Monitoring for injection patterns in LLM output channels � detect anomalous processing before downstream harm",
-        "title": "CC7.2 � Anomaly detection"
+        "title": "CC7.2 � Anomaly detection",
+        "kind": "control"
       },
       {
         "control_id": "Output injection risks identified in LLM risk assessment � XSS, SQL injection, command injection via AI-generated content",
-        "title": "CC3.2 � Risk assessment"
+        "title": "CC3.2 � Risk assessment",
+        "kind": "control"
       },
       {
         "control_id": "LLM tool access managed under least privilege � minimum scope, documented justification, regular review",
-        "title": "CC6.1 � Logical access restrictions"
+        "title": "CC6.1 � Logical access restrictions",
+        "kind": "control"
       },
       {
         "control_id": "LLM tool permissions removed promptly when no longer required � access review process covers LLM tool scope",
-        "title": "CC6.3 � Access removal"
+        "title": "CC6.3 � Access removal",
+        "kind": "control"
       },
       {
         "control_id": "Human oversight procedures for LLM autonomous actions � confirmation requirements documented and enforced",
-        "title": "CC5.2 � Control activities"
+        "title": "CC5.2 � Control activities",
+        "kind": "control"
       },
       {
         "control_id": "Excessive agency risks identified � what autonomous actions can the LLM take, what is the blast radius",
-        "title": "CC3.2 � Risk assessment"
+        "title": "CC3.2 � Risk assessment",
+        "kind": "control"
       },
       {
         "control_id": "System prompts classified as confidential � encryption at rest, access-controlled, not in cleartext config",
-        "title": "C2.1 � Confidential information protection"
+        "title": "C2.1 � Confidential information protection",
+        "kind": "control"
       },
       {
         "control_id": "Access controls on system prompt storage � only authorised personnel can read or modify, all access logged",
-        "title": "CC6.1 � Logical access"
+        "title": "CC6.1 � Logical access",
+        "kind": "control"
       },
       {
         "control_id": "System prompt security procedures � version control, rotation, extraction resistance testing documented",
-        "title": "CC5.2 � Control activities"
+        "title": "CC5.2 � Control activities",
+        "kind": "control"
       },
       {
         "control_id": "Access to system prompt storage monitored � anomalous access attempts detected and alerted",
-        "title": "CC7.2 � Monitoring"
+        "title": "CC7.2 � Monitoring",
+        "kind": "control"
       },
       {
         "control_id": "Embeddings of confidential information protected � encrypted at rest, access-controlled, inversion-resistant",
-        "title": "C2.1 � Confidential information protection"
+        "title": "C2.1 � Confidential information protection",
+        "kind": "control"
       },
       {
         "control_id": "RBAC on all vector store collections � no unauthenticated access in any environment",
-        "title": "CC6.1 � Logical access"
+        "title": "CC6.1 � Logical access",
+        "kind": "control"
       },
       {
         "control_id": "Anomaly detection on vector store query patterns � bulk extraction and unusual retrieval volumes detected",
-        "title": "CC7.2 � Anomaly detection"
+        "title": "CC7.2 � Anomaly detection",
+        "kind": "control"
       },
       {
         "control_id": "Embeddings of personal data used only for authorised purposes � privacy commitments apply to derived forms",
-        "title": "P5.1 � Personal information use"
+        "title": "P5.1 � Personal information use",
+        "kind": "control"
       },
       {
         "control_id": "Policy on LLM output accuracy � acceptable accuracy thresholds, verification requirements for high-stakes use cases",
-        "title": "PI1.1 � Processing integrity policy"
+        "title": "PI1.1 � Processing integrity policy",
+        "kind": "control"
       },
       {
         "control_id": "LLM inputs (RAG sources, training data) quality controls � authoritative, current, verified sources",
-        "title": "PI1.2 � System inputs are complete and accurate"
+        "title": "PI1.2 � System inputs are complete and accurate",
+        "kind": "control"
       },
       {
         "control_id": "Misinformation risk identified in LLM risk assessment � harm potential of incorrect outputs per use case",
-        "title": "CC3.2 � Risk assessment"
+        "title": "CC3.2 � Risk assessment",
+        "kind": "control"
       },
       {
         "control_id": "Production monitoring for accuracy degradation and hallucination patterns � drift detection",
-        "title": "CC7.2 � Anomaly detection"
+        "title": "CC7.2 � Anomaly detection",
+        "kind": "control"
       },
       {
         "control_id": "LLM service availability commitments documented � SLAs, RTO/RPO, resource limits that protect availability",
-        "title": "A1.1 � Availability policies"
+        "title": "A1.1 � Availability policies",
+        "kind": "control"
       },
       {
         "control_id": "Rate limiting and resource controls protect LLM service availability � implemented and monitored",
-        "title": "A1.2 � Environmental protections"
+        "title": "A1.2 � Environmental protections",
+        "kind": "control"
       },
       {
         "control_id": "Real-time monitoring of LLM resource consumption � cost anomalies and unusual volume patterns alerted",
-        "title": "CC7.2 � Anomaly detection"
+        "title": "CC7.2 � Anomaly detection",
+        "kind": "control"
       },
       {
         "control_id": "Resource exhaustion risks identified in LLM risk assessment � DoS and sponge attack vectors assessed",
-        "title": "CC3.2 � Risk assessment"
+        "title": "CC3.2 � Risk assessment",
+        "kind": "control"
       }
     ],
     "changelog": [
       {
         "date": "2026-04-09",
         "change": "Initial seed — 41 Trust Services Criteria across CC, Availability, Confidentiality, PI, Privacy",
-        "author": "emmanuelgjr"
+        "author": "OWASP GenAI Data Security Initiative"
       }
     ]
   },
@@ -8795,27 +10303,33 @@ window.CROSSWALK_FRAMEWORKS = [
     "controls": [
       {
         "control_id": "S",
-        "title": "Instruction Spoofing"
+        "title": "Instruction Spoofing",
+        "kind": "threat-category"
       },
       {
         "control_id": "T",
-        "title": "Behaviour Tampering"
+        "title": "Behaviour Tampering",
+        "kind": "threat-category"
       },
       {
         "control_id": "E",
-        "title": "Privilege Elevation via Injection"
+        "title": "Privilege Elevation via Injection",
+        "kind": "threat-category"
       },
       {
         "control_id": "I",
-        "title": "Sensitive Data Disclosure"
+        "title": "Sensitive Data Disclosure",
+        "kind": "threat-category"
       },
       {
         "control_id": "R",
-        "title": "Disclosure Without Audit Trail"
+        "title": "Disclosure Without Audit Trail",
+        "kind": "threat-category"
       },
       {
         "control_id": "D",
-        "title": "Resource Exhaustion via Uncontrolled Actions"
+        "title": "Resource Exhaustion via Uncontrolled Actions",
+        "kind": "threat-category"
       }
     ]
   }

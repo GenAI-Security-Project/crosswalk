@@ -20,7 +20,7 @@
 > **17 Rahmenwerke** und **3 OWASP-Quelllisten**.
 
 Gepflegt von der [OWASP GenAI Data Security Initiative](https://genai.owasp.org).
-Erstellt von **[Emmanuel Guilherme Junior](https://github.com/emmanuelgjr)**.
+Erstellt von **[OWASP GenAI Data Security Initiative](https://github.com/GenAI-Security-Project)**.
 
 ---
 
@@ -512,8 +512,7 @@ Namensnennung und Weitergabe unter gleichen Bedingungen.
 
 ## Danksagungen
 
-Erstellt und gepflegt von **[Emmanuel Guilherme Junior](https://github.com/emmanuelgjr)** und der
-[OWASP GenAI Data Security Initiative](https://genai.owasp.org) .
+Erstellt und gepflegt von **[OWASP GenAI Data Security Initiative](https://genai.owasp.org).
 
 Aufgebaut auf der Arbeit der Projektteams von OWASP LLM Top 10, OWASP Agentic Top 10, OWASP GenAI Data
 Security, OWASP NHI Top 10 und OWASP SAMM.

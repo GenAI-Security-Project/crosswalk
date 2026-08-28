@@ -52,7 +52,7 @@ Every mapping entry conforms to `schema.json`. Key fields:
   },
   "audience": ["developer", "security-engineer", "red-teamer"],
   "changelog": [
-    { "date": "2026-03-27", "version": "1.0.0", "change": "Initial entry", "author": "emmanuelgjr" }
+    { "date": "2026-03-27", "version": "1.0.0", "change": "Initial entry", "author": "OWASP GenAI Data Security Initiative" }
   ]
 }
 ```
