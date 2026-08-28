@@ -43,6 +43,9 @@ const SOURCE_LISTS = [
   { id: 'DSGAI-2026', label: 'DSGAI 2026', dir: 'dsgai-2026' },
 ];
 
+/** LF-normalise so comparisons are content-based, not checkout-dependent. */
+const normalizeEol = (s) => s.replace(/\r\n/g, '\n');
+
 const readJson = (p) => JSON.parse(fs.readFileSync(p, 'utf8'));
 const jsonFiles = (dir) =>
   fs.readdirSync(dir).filter((f) => f.endsWith('.json')).map((f) => path.join(dir, f));
@@ -130,7 +133,10 @@ function main() {
 
   if (CHECK) {
     const current = fs.existsSync(OUT) ? fs.readFileSync(OUT, 'utf8') : '';
-    if (current !== text) {
+    // Compare content, not line endings. With core.autocrlf=true the checked-out
+    // file is CRLF while this script emits LF, which would report every Windows
+    // working copy as stale even when nothing changed.
+    if (normalizeEol(current) !== normalizeEol(text)) {
       console.error('✗ data/stats.json is stale — run `npm run stats`');
       process.exit(1);
     }

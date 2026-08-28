@@ -82,7 +82,14 @@ function render(src) {
   return { out, seen, unknown };
 }
 
-const before = fs.readFileSync(README, 'utf8');
+/**
+ * LF-normalise on read. With core.autocrlf=true a Windows checkout is CRLF while
+ * the rendered badge block is emitted with LF — writing that back would leave the
+ * file with mixed line endings, and comparing raw would report every Windows
+ * working copy as stale. The repo is LF-canonical in the index either way, so all
+ * work happens in LF and git converts on checkout.
+ */
+const before = fs.readFileSync(README, 'utf8').replace(/\r\n/g, '\n');
 const { out, seen, unknown } = render(before);
 
 if (unknown.length) {
