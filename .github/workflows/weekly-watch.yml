@@ -50,43 +50,77 @@ jobs:
 
   monthly-regenerate:
     name: Monthly report regeneration
-    if: github.event.schedule == '0 9 * * 1' && (github.event.schedule != '' || github.event_name == 'workflow_dispatch')
+    # Runs on the weekly schedule, but the regeneration itself is gated to the
+    # first Monday of the month by the "Should run" step below — GitHub cron
+    # cannot express "first Monday". Manual dispatch always runs it.
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     permissions:
       contents: write
-      pull-requests: write
+      issues: write
     steps:
+      - name: Should run this week
+        id: gate
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "$(date +%-d)" -le 7 ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "Not the first Monday of the month — skipping regeneration."
+          fi
+
       - uses: actions/checkout@v4
+        if: steps.gate.outputs.run == 'true'
 
       - name: Use Node.js
+        if: steps.gate.outputs.run == 'true'
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
       - name: Regenerate data layer and reports
+        if: steps.gate.outputs.run == 'true'
         run: |
           node scripts/generate.js
           node scripts/compliance-report.js
           node scripts/incidents-report.js
 
+      # The generators stamp a "// Generated: <date>" header, so a plain diff
+      # is non-empty on every run regardless of content. Ignoring that line is
+      # what makes this fire only when the data actually changed — without it,
+      # every run produces a no-op branch.
       - name: Check for changes
         id: diff
+        if: steps.gate.outputs.run == 'true'
         run: |
-          git diff --quiet || echo "changed=true" >> "$GITHUB_OUTPUT"
+          git diff --quiet -I'^// Generated: ' || echo "changed=true" >> "$GITHUB_OUTPUT"
 
-      - name: Create PR with updated reports
-        if: steps.diff.outputs.changed == 'true'
+      # This repository does not permit GitHub Actions to create pull requests,
+      # and that is an org-level policy we should not depend on. Actions can
+      # open issues, so the branch is pushed and an issue carries the compare
+      # link: the regeneration is never lost and the build does not go red.
+      - name: Push regenerated branch and open a tracking issue
+        if: steps.gate.outputs.run == 'true' && steps.diff.outputs.changed == 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          set -euo pipefail
           BRANCH="auto/monthly-regenerate-$(date +%Y%m%d)"
-          git checkout -b "$BRANCH"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -B "$BRANCH"
           git add -A
           git commit -m "chore: monthly regeneration of data layer and compliance reports"
-          git push origin "$BRANCH"
-          gh pr create \
-            --title "chore: monthly report regeneration ($(date +%Y-%m-%d))" \
-            --body "Automated monthly regeneration of data/entries/, reports/, and docs/data.js." \
-            --label automated-watch
+          git push --force-with-lease origin "$BRANCH"
+
+          COMPARE="${{ github.server_url }}/${{ github.repository }}/compare/${{ github.event.repository.default_branch }}...${BRANCH}?expand=1"
+          TITLE="chore: monthly report regeneration ($(date +%Y-%m-%d))"
+          BODY=$(printf '%s\n' \
+            "Automated regeneration of \`data/entries/\` and \`docs/*.js\` is ready on \`${BRANCH}\`." \
+            "" \
+            "**Open the pull request:** ${COMPARE}" \
+            "" \
+            "This workflow cannot open the PR itself — GitHub Actions is not permitted to create pull requests in this repository — so it pushes the branch and files this issue instead. Review the diff, open the PR from the link above, and close this issue once merged." \
+            "" \
+            "Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}")
+
+          gh issue create --title "$TITLE" --body "$BODY" --label automated-watch
