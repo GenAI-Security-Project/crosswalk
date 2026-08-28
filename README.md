@@ -118,7 +118,7 @@ All free. All open-source. Built for practitioners.
 | [NIST SP 800-82 Rev 3 — OT/ICS](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-82r3.pdf) | ✅ | ✅ | ✅ |
 | [AIUC-1](https://www.aiuc-1.com) | ✅ | ✅ | ✅ |
 | [OWASP NHI Top 10](https://owasp.org/www-project-non-human-identities-top-10/) | ✅ | ✅ | ✅ |
-| [NIST SP 800-218A](https://doi.org/10.6028/NIST.SP.800-218A.ipd) | ✅ | ✅ | ✅ |
+| [NIST SP 800-218A](https://doi.org/10.6028/NIST.SP.800-218A) | ✅ | ✅ | ✅ |
 | [FedRAMP](https://www.fedramp.gov/) | ✅ | ✅ | ✅ |
 | [DORA (EU 2022/2554)](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554) | ✅ | ✅ | ✅ |
 

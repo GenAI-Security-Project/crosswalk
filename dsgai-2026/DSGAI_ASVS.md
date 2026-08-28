@@ -23,6 +23,13 @@ directly, augmented by GenAI-specific data handling requirements. This mapping
 enables security engineers and penetration testers to translate DSGAI threats into
 verifiable ASVS requirements for inclusion in security test plans.
 
+> **Mapped against ASVS 4.0.3.** ASVS **5.0.0** is released and renumbered the
+> requirements, so the V-numbers below do not reliably denote the same
+> requirement in 5.0. These mappings are **not** current for 5.0 and have not
+> been re-mapped: doing so is expert work, tracked in
+> [issue #22](https://github.com/GenAI-Security-Project/crosswalk/issues/22).
+> Treat the requirement identifiers here as 4.0.3 identifiers.
+
 ---
 
 ## Why OWASP ASVS for GenAI data security

@@ -34,7 +34,7 @@ and their data pipelines:
   or records that contain cardholder data
 - Agents built on the LLM have tool access to payment systems
 
-PCI DSS v4.0 introduced significant updates relevant to LLM
+PCI DSS v4.0.1 introduced significant updates relevant to LLM
 applications — most importantly the requirement for customised
 approach, which allows organisations to meet the intent of
 requirements using alternative methods. For novel LLM-specific
@@ -51,9 +51,9 @@ deployments.
 
 ---
 
-## PCI DSS v4.0 structure
+## PCI DSS v4.0.1 structure
 
-PCI DSS v4.0 is organised into 12 requirements:
+PCI DSS v4.0.1 is organised into 12 requirements:
 
 | Requirement | Title | LLM relevance |
 |---|---|---|
@@ -72,7 +72,7 @@ PCI DSS v4.0 is organised into 12 requirements:
 
 ---
 
-## PCI DSS v4.0 key new requirements for LLM
+## PCI DSS v4.0.1 key new requirements for LLM
 
 | Requirement | Change in v4.0 | LLM application |
 |---|---|---|
@@ -88,7 +88,7 @@ PCI DSS v4.0 is organised into 12 requirements:
 
 ## Quick-reference summary
 
-| ID | Name | Severity | Primary PCI DSS v4.0 Requirements | Tier |
+| ID | Name | Severity | Primary PCI DSS v4.0.1 Requirements | Tier |
 |---|---|---|---|---|
 | LLM01 | Prompt Injection | Critical | Req 6.2, Req 6.4, Req 10.6, Req 11.3 | Foundational-Advanced |
 | LLM02 | Sensitive Information Disclosure | High | Req 3.3, Req 3.5, Req 4.2, Req 7.2 | Foundational-Advanced |
@@ -105,7 +105,7 @@ PCI DSS v4.0 is organised into 12 requirements:
 
 ## Audience tags
 
-- **CISO / compliance lead** — full file, PCI DSS v4.0 alignment for LLM applications
+- **CISO / compliance lead** — full file, PCI DSS v4.0.1 alignment for LLM applications
 - **QSA / assessor** — requirement-to-control mapping for PCI assessment scope
 - **Payment / fintech product team** — CHD scope, cardholder data handling
 - **Security engineer** — Req 6, Req 10 technical control entries
@@ -140,7 +140,7 @@ requires that public-facing applications are protected against
 known attacks — prompt injection is a known attack class for LLM
 applications and assessors will test for it.
 
-#### PCI DSS v4.0 mapping
+#### PCI DSS v4.0.1 mapping
 
 | Requirement | ID | How it applies |
 |---|---|---|
@@ -215,7 +215,7 @@ outputs in cleartext (Req 4.2). If CHD is in LLM scope, the
 entire LLM infrastructure is in the CDE (Cardholder Data
 Environment) and full PCI DSS scope applies.
 
-#### PCI DSS v4.0 mapping
+#### PCI DSS v4.0.1 mapping
 
 | Requirement | ID | How it applies |
 |---|---|---|
@@ -286,7 +286,7 @@ can initiate refunds, modify transaction records, or query
 cardholder tables autonomously — is a critical access control
 failure under Req 7 and Req 8.
 
-#### PCI DSS v4.0 mapping
+#### PCI DSS v4.0.1 mapping
 
 | Requirement | ID | How it applies |
 |---|---|---|
@@ -359,7 +359,7 @@ unsigned weights, a hijacked conversion or merge service, or namespace reuse
 on a model hub — is a supply-chain compromise even when every package
 dependency is clean.
 
-#### PCI DSS v4.0 mapping
+#### PCI DSS v4.0.1 mapping
 
 | Requirement | ID | How it applies |
 |---|---|---|
@@ -433,7 +433,7 @@ adapter, a customer fine-tune, or a distilled checkpoint can carry a backdoor
 that no pre-training control catches, so poisoning defences must cover every
 stage that writes weights, not just the original training corpus.
 
-#### PCI DSS v4.0 mapping
+#### PCI DSS v4.0.1 mapping
 
 | Requirement | ID | How it applies |
 |---|---|---|
@@ -501,7 +501,7 @@ direct compliance requirement — resource exhaustion attacks
 against LLM applications in CDE are covered under Req 1
 (network security) and Req 6.4 (application protection).
 
-#### PCI DSS v4.0 mapping
+#### PCI DSS v4.0.1 mapping
 
 | Requirement | ID | How it applies |
 |---|---|---|
@@ -568,7 +568,7 @@ or compliance errors. Req 12.3 targeted risk analysis governs
 the acceptable risk tolerance for LLM advisory outputs in
 payment contexts.
 
-#### PCI DSS v4.0 mapping
+#### PCI DSS v4.0.1 mapping
 
 | Requirement | ID | How it applies |
 |---|---|---|
@@ -645,7 +645,7 @@ disclosure that chains to code execution or broad exfiltration is critical.
 Design on the assumption that hidden context is discoverable, and never
 treat it as a security boundary.
 
-#### PCI DSS v4.0 mapping
+#### PCI DSS v4.0.1 mapping
 
 | Requirement | ID | How it applies |
 |---|---|---|
@@ -700,7 +700,7 @@ Vector stores containing embeddings of CHD-adjacent documentation
 represent secondary attack surfaces that may be outside traditional
 PCI scope assessments but within CDE data exposure risk.
 
-#### PCI DSS v4.0 mapping
+#### PCI DSS v4.0.1 mapping
 
 | Requirement | ID | How it applies |
 |---|---|---|
@@ -770,7 +770,7 @@ generate at scale. Output that reaches a compiler, a repository, or a
 production system carries the same downstream-execution risk as output that
 reaches a shell, a browser, or a database.
 
-#### PCI DSS v4.0 mapping
+#### PCI DSS v4.0.1 mapping
 
 | Requirement | ID | How it applies |
 |---|---|---|
@@ -825,7 +825,7 @@ reaches a shell, a browser, or a database.
 
 ---
 
-## PCI DSS v4.0 compliance checklist for LLM applications
+## PCI DSS v4.0.1 compliance checklist for LLM applications
 
 ### Scope determination (before anything else)
 
@@ -899,7 +899,7 @@ reaches a shell, a browser, or a database.
 
 - PCI DSS v4.0: <https://www.pcisecuritystandards.org/document_library/>
 - PCI SSC Information Supplements: <https://www.pcisecuritystandards.org/document_library/#results>
-- PCI DSS v4.0 Summary of Changes: <https://www.pcisecuritystandards.org/document_library/>
+- PCI DSS v4.0.1 Summary of Changes: <https://www.pcisecuritystandards.org/document_library/>
 - OWASP LLM Top 10 2026: <https://genai.owasp.org/llm-top-10/>
 
 ---
@@ -908,7 +908,7 @@ reaches a shell, a browser, or a database.
 
 | Date | Version | Change | Author |
 |---|---|---|---|
-| 2026-03-25 | 2026-Q1 | Initial mapping — LLM01-LLM10 full entries with PCI DSS v4.0 compliance checklist | OWASP GenAI Data Security Initiative |
+| 2026-03-25 | 2026-Q1 | Initial mapping — LLM01-LLM10 full entries with PCI DSS v4.0.1 compliance checklist | OWASP GenAI Data Security Initiative |
 | 2026-08-28 | 2026-Q3 | Migrated to OWASP Top 10 for LLM Applications 2026 — entries renumbered, LLM08 re-scoped from System Prompt Leakage to Hidden Context Exposure, LLM10 renamed to Improper Output Handling | OWASP GenAI Data Security Initiative |
 
 ---

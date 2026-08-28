@@ -62,7 +62,7 @@ customised approach documentation an assessor will expect.
 
 ## Quick-reference summary
 
-| ID | Name | Severity | Primary PCI DSS v4.0 Requirements | Tier |
+| ID | Name | Severity | Primary PCI DSS v4.0.1 Requirements | Tier |
 |---|---|---|---|---|
 | DSGAI01 | Sensitive Data Leakage | Critical | Req 3.4, Req 3.5, Req 4.2, Req 7.2 | Foundational-Advanced |
 | DSGAI02 | Agent Identity and Credential Exposure | Critical | Req 7.2, Req 8.2, Req 10.2, Req 12.3 | Foundational-Advanced |
@@ -90,7 +90,7 @@ customised approach documentation an assessor will expect.
 
 ## Audience tags
 
-- **CISO / compliance lead** — full file, PCI DSS v4.0 alignment for GenAI data programme
+- **CISO / compliance lead** — full file, PCI DSS v4.0.1 alignment for GenAI data programme
 - **QSA / assessor** — requirement-to-control mapping for GenAI in PCI scope
 - **Payment / fintech engineering** — CHD data flow controls throughout
 - **Data governance lead** — DSGAI07, DSGAI08, DSGAI10 entries
@@ -111,7 +111,7 @@ through GenAI outputs, RAG retrieval, embedding exposure, or
 observability pipelines. In PCI scope, PAN exposure through any
 of these channels is a Requirement 3 violation.
 
-#### PCI DSS v4.0 mapping
+#### PCI DSS v4.0.1 mapping
 
 | Requirement | ID | How it applies |
 |---|---|---|
@@ -171,7 +171,7 @@ credentials may include CDE system access tokens, payment API keys,
 or cardholder database credentials. Compromised agent credentials
 in PCI scope are a Req 7 and Req 8 finding.
 
-#### PCI DSS v4.0 mapping
+#### PCI DSS v4.0.1 mapping
 
 | Requirement | ID | How it applies |
 |---|---|---|
@@ -227,7 +227,7 @@ Employees paste CHD into unapproved AI tools — creating ungoverned
 data flows that expand PCI scope to vendors that are not in the
 TPSP programme and have no CHD security obligations.
 
-#### PCI DSS v4.0 mapping
+#### PCI DSS v4.0.1 mapping
 
 | Requirement | ID | How it applies |
 |---|---|---|
@@ -278,7 +278,7 @@ can systematically approve fraudulent transactions or suppress
 legitimate fraud alerts — a potentially catastrophic payment
 security failure.
 
-#### PCI DSS v4.0 mapping
+#### PCI DSS v4.0.1 mapping
 
 | Requirement | ID | How it applies |
 |---|---|---|
@@ -338,7 +338,7 @@ Adversarially crafted payloads corrupt GenAI data pipelines. In PCI
 scope, path traversal in vector database snapshot imports could
 achieve arbitrary file write on CDE hosts — a critical finding.
 
-#### PCI DSS v4.0 mapping
+#### PCI DSS v4.0.1 mapping
 
 | Requirement | ID | How it applies |
 |---|---|---|
@@ -386,7 +386,7 @@ AI tools and MCP servers receive full context payloads that may
 include CHD. In PCI scope, any tool provider receiving CHD through
 agent context is a TPSP requiring PCI DSS Req 12.8 treatment.
 
-#### PCI DSS v4.0 mapping
+#### PCI DSS v4.0.1 mapping
 
 | Requirement | ID | How it applies |
 |---|---|---|
@@ -435,7 +435,7 @@ PCI scope assessments. Embeddings, caches, and agent memory derived
 from CHD-containing data may be CHD in scope that is not visible
 to assessors without explicit data governance documentation.
 
-#### PCI DSS v4.0 mapping
+#### PCI DSS v4.0.1 mapping
 
 | Requirement | ID | How it applies |
 |---|---|---|
@@ -485,7 +485,7 @@ undisclosed GenAI processing of CHD is a material finding that
 can result in fines, card brand penalties, and loss of payment
 processing rights.
 
-#### PCI DSS v4.0 mapping
+#### PCI DSS v4.0.1 mapping
 
 | Requirement | ID | How it applies |
 |---|---|---|
@@ -535,7 +535,7 @@ Multimodal GenAI processes payment documents, cheques, and card
 images — OCR pipelines extract PANs that may not be treated as
 CHD requiring Req 3 protection.
 
-#### PCI DSS v4.0 mapping
+#### PCI DSS v4.0.1 mapping
 
 | Requirement | ID | How it applies |
 |---|---|---|
@@ -580,7 +580,7 @@ retains PCI scope. PCI DSS Req 3 applies to any data that can
 be used to reconstruct PANs regardless of whether it is labelled
 as synthetic.
 
-#### PCI DSS v4.0 mapping
+#### PCI DSS v4.0.1 mapping
 
 | Requirement | ID | How it applies |
 |---|---|---|
@@ -627,7 +627,7 @@ Multi-user GenAI deployments in payment contexts leak one user's
 CHD into another user's session. Cross-session CHD exposure is a
 Req 3 and Req 7 finding.
 
-#### PCI DSS v4.0 mapping
+#### PCI DSS v4.0.1 mapping
 
 | Requirement | ID | How it applies |
 |---|---|---|
@@ -666,7 +666,7 @@ natural language to payment systems. Prompt injection against an
 LLM-to-SQL interface with access to cardholder tables is a Req 6
 and Req 7 critical finding.
 
-#### PCI DSS v4.0 mapping
+#### PCI DSS v4.0.1 mapping
 
 | Requirement | ID | How it applies |
 |---|---|---|
@@ -725,7 +725,7 @@ represent secondary attack surfaces that assessors may not identify
 without explicit documentation. RBAC gaps and CVEs in vector databases
 in CDE scope are Req 6.3 and Req 7 findings.
 
-#### PCI DSS v4.0 mapping
+#### PCI DSS v4.0.1 mapping
 
 | Requirement | ID | How it applies |
 |---|---|---|
@@ -773,7 +773,7 @@ Observability pipelines capture full GenAI inputs and outputs —
 where CHD flows through GenAI, observability data may contain
 PANs in cleartext, making telemetry stores CHD in scope.
 
-#### PCI DSS v4.0 mapping
+#### PCI DSS v4.0.1 mapping
 
 | Requirement | ID | How it applies |
 |---|---|---|
@@ -820,7 +820,7 @@ Excessive context injection in PCI scope may aggregate CHD from
 multiple sources into a single LLM context — amplifying the impact
 of any successful injection against a payment-context LLM.
 
-#### PCI DSS v4.0 mapping
+#### PCI DSS v4.0.1 mapping
 
 | Requirement | ID | How it applies |
 |---|---|---|
@@ -866,7 +866,7 @@ CHD across open applications. In PCI scope, endpoint AI assistants
 with access to CDE applications are TPSPs requiring Req 12.8
 treatment.
 
-#### PCI DSS v4.0 mapping
+#### PCI DSS v4.0.1 mapping
 
 | Requirement | ID | How it applies |
 |---|---|---|
@@ -913,7 +913,7 @@ Silent GenAI pipeline failures affect payment advisory and fraud
 detection availability. In PCI scope, availability of fraud
 detection LLMs is a payment processing continuity requirement.
 
-#### PCI DSS v4.0 mapping
+#### PCI DSS v4.0.1 mapping
 
 | Requirement | ID | How it applies |
 |---|---|---|
@@ -962,7 +962,7 @@ and cardholder data from GenAI model outputs. In PCI scope,
 successful PAN reconstruction from model outputs is a Req 3 data
 protection failure.
 
-#### PCI DSS v4.0 mapping
+#### PCI DSS v4.0.1 mapping
 
 | Requirement | ID | How it applies |
 |---|---|---|
@@ -1008,7 +1008,7 @@ Human annotators access payment data during labelling of fraud
 detection and transaction classification models. Labelling vendors
 with access to CHD are TPSPs under PCI DSS Req 12.8.
 
-#### PCI DSS v4.0 mapping
+#### PCI DSS v4.0.1 mapping
 
 | Requirement | ID | How it applies |
 |---|---|---|
@@ -1056,7 +1056,7 @@ logic represent both IP and potential CHD exposure risk if model
 internals can be reconstructed. Req 7 access controls and Req 6.4
 application protection apply.
 
-#### PCI DSS v4.0 mapping
+#### PCI DSS v4.0.1 mapping
 
 | Requirement | ID | How it applies |
 |---|---|---|
@@ -1103,7 +1103,7 @@ or payment advisory systems to surface incorrect guidance. In
 payment contexts, RAG poisoning can systematically bias fraud
 decisions or provide incorrect compliance guidance to analysts.
 
-#### PCI DSS v4.0 mapping
+#### PCI DSS v4.0.1 mapping
 
 | Requirement | ID | How it applies |
 |---|---|---|
@@ -1142,7 +1142,7 @@ decisions or provide incorrect compliance guidance to analysts.
 
 ---
 
-## PCI DSS v4.0 audit preparation checklist for GenAI data security
+## PCI DSS v4.0.1 audit preparation checklist for GenAI data security
 
 ### Scope determination (mandatory first step)
 
@@ -1219,7 +1219,7 @@ decisions or provide incorrect compliance guidance to analysts.
 
 - PCI DSS v4.0: <https://www.pcisecuritystandards.org/document_library/>
 - PCI SSC Information Supplement — Third-Party Security Assurance: <https://www.pcisecuritystandards.org>
-- PCI DSS v4.0 Summary of Changes: <https://www.pcisecuritystandards.org/document_library/>
+- PCI DSS v4.0.1 Summary of Changes: <https://www.pcisecuritystandards.org/document_library/>
 - OWASP GenAI Data Security Risks 2026: <https://genai.owasp.org/resource/owasp-genai-data-security-risks-mitigations-2026/>
 - LLM Top 10 x PCI DSS mapping: see LLM_PCIDSS.md in this repository
 
@@ -1229,7 +1229,7 @@ decisions or provide incorrect compliance guidance to analysts.
 
 | Date | Version | Change | Author |
 |---|---|---|---|
-| 2026-03-25 | 2026-Q1 | Initial mapping — DSGAI01-DSGAI21 full entries with PCI DSS v4.0 compliance checklist | OWASP GenAI Data Security Initiative |
+| 2026-03-25 | 2026-Q1 | Initial mapping — DSGAI01-DSGAI21 full entries with PCI DSS v4.0.1 compliance checklist | OWASP GenAI Data Security Initiative |
 
 ---
 

@@ -11,7 +11,7 @@
 
 Mapping the [OWASP GenAI Data Security Risks 2026](https://genai.owasp.org/resource/owasp-genai-data-security-risks-mitigations-2026/)
 to
-[NIST SP 800-218A: Secure Software Development Practices for Generative AI and Dual-Use Foundation Models](https://doi.org/10.6028/NIST.SP.800-218A.ipd)
+[NIST SP 800-218A: Secure Software Development Practices for Generative AI and Dual-Use Foundation Models](https://doi.org/10.6028/NIST.SP.800-218A)
 (Initial Public Draft, March 2024).
 
 NIST SP 800-218A extends the Secure Software Development Framework (SSDF)
@@ -1653,7 +1653,7 @@ failures (RV.3).
 
 ## References
 
-- [NIST SP 800-218A (Initial Public Draft, March 2024)](https://doi.org/10.6028/NIST.SP.800-218A.ipd)
+- [NIST SP 800-218A (Initial Public Draft, March 2024)](https://doi.org/10.6028/NIST.SP.800-218A)
 - [NIST SSDF (SP 800-218)](https://csrc.nist.gov/publications/detail/sp/800-218/final)
 - [OWASP GenAI Data Security Risks 2026](https://genai.owasp.org/resource/owasp-genai-data-security-risks-mitigations-2026/)
 - [NIST AI RMF 1.0](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf)

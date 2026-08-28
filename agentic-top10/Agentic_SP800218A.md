@@ -11,7 +11,7 @@
 
 Mapping the [OWASP Top 10 for Agentic AI 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
 to
-[NIST SP 800-218A: Secure Software Development Practices for Generative AI and Dual-Use Foundation Models](https://doi.org/10.6028/NIST.SP.800-218A.ipd)
+[NIST SP 800-218A: Secure Software Development Practices for Generative AI and Dual-Use Foundation Models](https://doi.org/10.6028/NIST.SP.800-218A)
 (Initial Public Draft, March 2024).
 
 NIST SP 800-218A extends the Secure Software Development Framework (SSDF)
@@ -179,7 +179,7 @@ procedures for goal hijacking incidents in production (RV.1).
 | LAAF (LLM Agent Assessment Framework) | Open-source | <https://github.com/qorvexconsulting1/laaf-V2.0> |
 | Garak | Open-source | <https://github.com/leondz/garak> |
 | PyRIT | Open-source | <https://github.com/Azure/PyRIT> |
-| NIST SP 800-218A | Reference | <https://doi.org/10.6028/NIST.SP.800-218A.ipd> |
+| NIST SP 800-218A | Reference | <https://doi.org/10.6028/NIST.SP.800-218A> |
 
 #### Cross-references
 
@@ -933,7 +933,7 @@ failure incidents (RV.2).
 
 ## References
 
-- [NIST SP 800-218A (Initial Public Draft, March 2024)](https://doi.org/10.6028/NIST.SP.800-218A.ipd)
+- [NIST SP 800-218A (Initial Public Draft, March 2024)](https://doi.org/10.6028/NIST.SP.800-218A)
 - [NIST SSDF (SP 800-218)](https://csrc.nist.gov/publications/detail/sp/800-218/final)
 - [OWASP Top 10 for Agentic AI 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
 - [NIST AI RMF 1.0](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf)
