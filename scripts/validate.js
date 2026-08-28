@@ -349,6 +349,66 @@ function checkSharedResources() {
   }
 }
 
+// ─── Density guard ────────────────────────────────────────────────────────────
+
+/**
+ * 14. Controls that map to most of the list.
+ *
+ * A control asserted against the majority of entries discriminates nothing and
+ * inflates every coverage score that counts it. This raises a single summary
+ * warning rather than one per control: the detail belongs in
+ * reports/density-violations.md, and 21 individual warnings would drown the
+ * existing signal.
+ *
+ * It warns rather than fails, because the fix is re-curation — deciding whether
+ * a control is genuinely cross-cutting or over-mapped is security judgment (C4)
+ * and not something this script may do.
+ */
+const DENSITY_THRESHOLD = 0.40;
+
+function checkDensity() {
+  const entryDir = path.join(ROOT, 'data', 'entries');
+  if (!fs.existsSync(entryDir)) return true;
+
+  const layerIds = new Set();
+  const fwDir = path.join(ROOT, 'data', 'frameworks');
+  if (fs.existsSync(fwDir)) {
+    for (const f of fs.readdirSync(fwDir).filter((n) => n.endsWith('.json'))) {
+      const reg = JSON.parse(fs.readFileSync(path.join(fwDir, f), 'utf8'));
+      for (const c of reg.controls || []) {
+        if (c.kind === 'layer') layerIds.add(reg.name + ' ' + c.control_id);
+      }
+    }
+  }
+
+  const files = fs.readdirSync(entryDir).filter((n) => n.endsWith('.json'));
+  const hits = new Map();
+  for (const f of files) {
+    const entry = JSON.parse(fs.readFileSync(path.join(entryDir, f), 'utf8'));
+    for (const m of entry.mappings || []) {
+      const key = m.framework + ' ' + m.control_id;
+      if (!hits.has(key)) hits.set(key, { entries: new Set(), broad: false });
+      hits.get(key).entries.add(entry.id);
+      if (m.broad_applicability === true) hits.get(key).broad = true;
+    }
+  }
+
+  const undeclared = [...hits.entries()].filter(
+    ([key, r]) =>
+      r.entries.size / files.length > DENSITY_THRESHOLD && !r.broad && !layerIds.has(key),
+  );
+
+  if (undeclared.length) {
+    warn('Mapping density',
+      undeclared.length + ' control(s) map to more than ' +
+      Math.round(DENSITY_THRESHOLD * 100) + '% of entries without broad_applicability — ' +
+      'run `npm run density` and see reports/density-violations.md for the list');
+  } else {
+    pass('Mapping density', 'No control maps to a majority of entries undeclared');
+  }
+  return true;
+}
+
 // ─── Schema v2 guard ──────────────────────────────────────────────────────────
 
 /**
@@ -616,6 +676,7 @@ function run() {
   if (!targetFile) {
     console.log('Checking schema v2...\n');
     checkSchemaV2();
+    checkDensity();
   }
 
   // Encoding guard — mapping files plus the shared/root markdown they link to
