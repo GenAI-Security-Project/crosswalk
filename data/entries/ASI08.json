@@ -23,7 +23,9 @@
       "tier": "Foundational",
       "scope": "Both",
       "url": "https://atlas.mitre.org/techniques/AML.T0029",
-      "notes": "Triggering cascading failure propagation to exhaust system resources or degrade service"
+      "notes": "Triggering cascading failure propagation to exhaust system resources or degrade service",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MITRE ATLAS",
@@ -32,7 +34,9 @@
       "tier": "Foundational",
       "scope": "Both",
       "url": "https://atlas.mitre.org/techniques/AML.T0034",
-      "notes": "Crafting inputs that trigger runaway agent loops generating unbounded costs"
+      "notes": "Crafting inputs that trigger runaway agent loops generating unbounded costs",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MITRE ATLAS",
@@ -41,7 +45,9 @@
       "tier": "Foundational",
       "scope": "Both",
       "url": "https://atlas.mitre.org/techniques/AML.T0057",
-      "notes": "Exploiting an exposed agent endpoint to introduce a fault that cascades internally"
+      "notes": "Exploiting an exposed agent endpoint to introduce a fault that cascades internally",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -49,7 +55,9 @@
       "control_name": "Risk tolerance",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Cascade blast radius defined and accepted per deployment — maximum affected systems documented"
+      "notes": "Cascade blast radius defined and accepted per deployment — maximum affected systems documented",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -57,7 +65,9 @@
       "control_name": "Testing — adversarial",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Cascade resilience testing — circuit breaker effectiveness, failover scenarios, chaos engineering"
+      "notes": "Cascade resilience testing — circuit breaker effectiveness, failover scenarios, chaos engineering",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -65,7 +75,9 @@
       "control_name": "Risk response",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Incident response for cascade events — defined suspension procedure, process control fallback"
+      "notes": "Incident response for cascade events — defined suspension procedure, process control fallback",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -73,7 +85,9 @@
       "control_name": "Residual risk",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Residual cascade risk documented — BCP coverage for agent cluster failures"
+      "notes": "Residual cascade risk documented — BCP coverage for agent cluster failures",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -81,7 +95,9 @@
       "control_name": "Art. 9 — Risk management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Cascade scenarios in Art. 9 risk management — maximum affected systems, circuit breaker thresholds"
+      "notes": "Cascade scenarios in Art. 9 risk management — maximum affected systems, circuit breaker thresholds",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -89,7 +105,9 @@
       "control_name": "Art. 14 — Human oversight",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Circuit breakers and kill switches are Art. 14 human oversight mechanisms"
+      "notes": "Circuit breakers and kill switches are Art. 14 human oversight mechanisms",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -97,7 +115,9 @@
       "control_name": "Art. 15 — Accuracy, robustness, cybersecurity",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Circuit breakers, fail-safe defaults, and cascade containment architecture are Art. 15 requirements"
+      "notes": "Circuit breakers, fail-safe defaults, and cascade containment architecture are Art. 15 requirements",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -105,7 +125,9 @@
       "control_name": "Monitoring activities",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Cascade indicators monitored — correlated failure patterns across agent cluster detected before physical impact"
+      "notes": "Cascade indicators monitored — correlated failure patterns across agent cluster detected before physical impact",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -113,7 +135,9 @@
       "control_name": "ICT readiness for business continuity",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent cluster failures covered in BCP — RTO/RPO defined, failover tested, circuit breakers as resilience controls"
+      "notes": "Agent cluster failures covered in BCP — RTO/RPO defined, failover tested, circuit breakers as resilience controls",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -121,7 +145,9 @@
       "control_name": "Information security incident management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Cascade events treated as security incidents — defined response, kill switch activation, operations notification"
+      "notes": "Cascade events treated as security incidents — defined response, kill switch activation, operations notification",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -129,7 +155,9 @@
       "control_name": "Backup",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent state and configuration backed up — recovery to known-good state after cascade incident"
+      "notes": "Agent state and configuration backed up — recovery to known-good state after cascade incident",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -137,7 +165,9 @@
       "control_name": "AI system security",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Circuit breakers and blast radius limits as AIMS security design requirements"
+      "notes": "Circuit breakers and blast radius limits as AIMS security design requirements",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -145,7 +175,9 @@
       "control_name": "Monitoring of AI systems",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Cascade indicators monitored in operation — correlated failure patterns detected as AIMS monitoring"
+      "notes": "Cascade indicators monitored in operation — correlated failure patterns detected as AIMS monitoring",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -153,7 +185,9 @@
       "control_name": "Risk assessment",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Cascade blast radius in AI risk register — maximum affected systems formally documented and accepted"
+      "notes": "Cascade blast radius in AI risk register — maximum affected systems formally documented and accepted",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -161,7 +195,9 @@
       "control_name": "Performance evaluation",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Cascade incidents in AIMS performance evaluation — circuit breaker effectiveness, recovery times in management review"
+      "notes": "Cascade incidents in AIMS performance evaluation — circuit breaker effectiveness, recovery times in management review",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
@@ -169,7 +205,9 @@
       "control_name": "CIS 4 — Secure Configuration",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Secure configuration includes circuit breakers and rate limits — cascade prevention as configuration requirement"
+      "notes": "Secure configuration includes circuit breakers and rate limits — cascade prevention as configuration requirement",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
@@ -177,7 +215,9 @@
       "control_name": "CIS 12 — Network Infrastructure Management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Network controls prevent cascade propagation across agent cluster boundaries"
+      "notes": "Network controls prevent cascade propagation across agent cluster boundaries",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
@@ -185,7 +225,9 @@
       "control_name": "CIS 17 — Incident Response",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Defined response for cascade events — kill switch activation, process control fallback, operations notification"
+      "notes": "Defined response for cascade events — kill switch activation, process control fallback, operations notification",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
@@ -193,7 +235,9 @@
       "control_name": "CIS 8 — Audit Log Management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent traffic monitored — cascade indicators detected before physical impact"
+      "notes": "Agent traffic monitored — cascade indicators detected before physical impact",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
@@ -201,7 +245,9 @@
       "control_name": "Verify business logic assumptions documented",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Cascade blast radius documented as business logic assumption — maximum affected systems formally accepted"
+      "notes": "Cascade blast radius documented as business logic assumption — maximum affected systems formally accepted",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
@@ -209,7 +255,9 @@
       "control_name": "Verify business logic limits prevent abuse",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Circuit breakers as business logic controls — cascade propagation limited by design"
+      "notes": "Circuit breakers as business logic controls — cascade propagation limited by design",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
@@ -217,7 +265,9 @@
       "control_name": "Verify API rate limiting",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Rate limiting on all agent API endpoints — cascade amplification through API exhaustion limited"
+      "notes": "Rate limiting on all agent API endpoints — cascade amplification through API exhaustion limited",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
@@ -225,7 +275,9 @@
       "control_name": "Verify error handling does not expose sensitive data",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Cascade errors handled gracefully — no sensitive system information in error responses"
+      "notes": "Cascade errors handled gracefully — no sensitive system information in error responses",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -233,7 +285,9 @@
       "control_name": "Denial of service protection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Circuit breakers preventing cascade propagation — agent failure contained within defined blast radius"
+      "notes": "Circuit breakers preventing cascade propagation — agent failure contained within defined blast radius",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -241,7 +295,9 @@
       "control_name": "Control system backup",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent system failures cannot affect backup and recovery of OT process control"
+      "notes": "Agent system failures cannot affect backup and recovery of OT process control",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -249,7 +305,9 @@
       "control_name": "Timely response to events",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Cascade indicators detected and responded to before physical process impact"
+      "notes": "Cascade indicators detected and responded to before physical process impact",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -257,7 +315,9 @@
       "control_name": "Information flow restriction",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent-to-agent information flows restricted — cascade paths limited by design"
+      "notes": "Agent-to-agent information flows restricted — cascade paths limited by design",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -265,7 +325,9 @@
       "control_name": "§5.3",
       "tier": "Advanced",
       "scope": "Both",
-      "notes": "Safety system bypass is the highest severity OT threat"
+      "notes": "Safety system bypass is the highest severity OT threat",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -273,7 +335,9 @@
       "control_name": "§6.2",
       "tier": "Advanced",
       "scope": "Both",
-      "notes": "Safety control inversion must be in OT risk register"
+      "notes": "Safety control inversion must be in OT risk register",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -281,7 +345,9 @@
       "control_name": "§7.1",
       "tier": "Advanced",
       "scope": "Both",
-      "notes": "Mandatory: safety function must be independent of AI decision layer"
+      "notes": "Mandatory: safety function must be independent of AI decision layer",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -289,7 +355,9 @@
       "control_name": "Infrastructure Resilience",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Networks and environments protected for resilience — circuit breakers, blast radius limits, fail-safe defaults"
+      "notes": "Networks and environments protected for resilience — circuit breakers, blast radius limits, fail-safe defaults",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -297,7 +365,9 @@
       "control_name": "Continuous Monitoring",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Cascade indicators detected — correlated failure patterns across agent cluster monitored"
+      "notes": "Cascade indicators detected — correlated failure patterns across agent cluster monitored",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -305,7 +375,9 @@
       "control_name": "Incident Mitigation",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Incidents contained — kill switch activated, process control fallback initiated"
+      "notes": "Incidents contained — kill switch activated, process control fallback initiated",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -313,7 +385,9 @@
       "control_name": "Incident Recovery",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Recovery plan includes agent cluster failures — BCP covers AI system availability, RTO/RPO defined"
+      "notes": "Recovery plan includes agent cluster failures — BCP covers AI system availability, RTO/RPO defined",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
@@ -321,7 +395,9 @@
       "control_name": "A1.1",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Availability SLA, BCP documentation"
+      "notes": "Availability SLA, BCP documentation",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
@@ -329,7 +405,9 @@
       "control_name": "A1.2",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Monitoring dashboards, alert configuration"
+      "notes": "Monitoring dashboards, alert configuration",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
@@ -337,7 +415,9 @@
       "control_name": "CC7.3",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "IR plan covering cascade scenarios, incident records"
+      "notes": "IR plan covering cascade scenarios, incident records",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
@@ -345,7 +425,9 @@
       "control_name": "CC3.3",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Risk register with cascade failure entries"
+      "notes": "Risk register with cascade failure entries",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -353,7 +435,9 @@
       "control_name": "Req 10.7",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Monitoring configuration, alert records, detection evidence"
+      "notes": "Monitoring configuration, alert records, detection evidence",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -361,7 +445,9 @@
       "control_name": "Req 12.3",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Risk analysis documentation"
+      "notes": "Risk analysis documentation",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -369,7 +455,9 @@
       "control_name": "Req 1.3",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Network diagram, segmentation evidence"
+      "notes": "Network diagram, segmentation evidence",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -377,7 +465,9 @@
       "control_name": "Req 2.2",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Hardening baseline documentation"
+      "notes": "Hardening baseline documentation",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -385,7 +475,9 @@
       "control_name": "Monitoring and Detection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Early warning detection of failure propagation across agent ecosystem — AI-specific anomaly detection for cascade signatures"
+      "notes": "Early warning detection of failure propagation across agent ecosystem — AI-specific anomaly detection for cascade signatures",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -393,7 +485,9 @@
       "control_name": "Incident Response",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "AI incident response plan covers cascading agent failures — circuit breaker activation, agent isolation, service recovery procedures"
+      "notes": "AI incident response plan covers cascading agent failures — circuit breaker activation, agent isolation, service recovery procedures",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -401,7 +495,9 @@
       "control_name": "Governance and Risk (GOV)",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Cascade failure risk documented in AI risk register — blast radius analysis, circuit breaker design, residual risk"
+      "notes": "Cascade failure risk documented in AI risk register — blast radius analysis, circuit breaker design, residual risk",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -409,7 +505,9 @@
       "control_name": "General ICT — Business Continuity",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Multi-agent deployment covered by BCM — recovery time and recovery point objectives defined per agent tier"
+      "notes": "Multi-agent deployment covered by BCM — recovery time and recovery point objectives defined per agent tier",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -417,7 +515,9 @@
       "control_name": "Design / Security Architecture",
       "tier": "Advanced",
       "scope": "Both",
-      "notes": "Safety controls must be layered — no single-point bypass path"
+      "notes": "Safety controls must be layered — no single-point bypass path",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -425,7 +525,9 @@
       "control_name": "Verification / Architecture Assessment",
       "tier": "Advanced",
       "scope": "Both",
-      "notes": "Independent review of every safety control bypass scenario"
+      "notes": "Independent review of every safety control bypass scenario",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -433,7 +535,9 @@
       "control_name": "Verification / Security Testing",
       "tier": "Advanced",
       "scope": "Both",
-      "notes": "Dedicated red team exercise targeting guardrail bypass"
+      "notes": "Dedicated red team exercise targeting guardrail bypass",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -441,7 +545,9 @@
       "control_name": "Operations / Incident Management",
       "tier": "Advanced",
       "scope": "Both",
-      "notes": "Alert immediately when output validator is disabled or bypassed"
+      "notes": "Alert immediately when output validator is disabled or bypassed",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -449,7 +555,9 @@
       "control_name": "Governance / Strategy & Metrics",
       "tier": "Advanced",
       "scope": "Both",
-      "notes": "No production agent deployment without signed safety control architecture review"
+      "notes": "No production agent deployment without signed safety control architecture review",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -457,7 +565,9 @@
       "control_name": "CWE-400",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent resource consumption not bounded — enables exhaustion propagation across cluster"
+      "notes": "Agent resource consumption not bounded — enables exhaustion propagation across cluster",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -465,7 +575,9 @@
       "control_name": "CWE-703",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent failures not caught and handled — exception propagates to downstream agents"
+      "notes": "Agent failures not caught and handled — exception propagates to downstream agents",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -473,7 +585,9 @@
       "control_name": "CWE-755",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Cascade fails because upstream agents do not handle failure conditions gracefully"
+      "notes": "Cascade fails because upstream agents do not handle failure conditions gracefully",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -481,7 +595,9 @@
       "control_name": "CWE-730",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Regex-based input processing causing runaway computation propagating through pipeline"
+      "notes": "Regex-based input processing causing runaway computation propagating through pipeline",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -489,7 +605,9 @@
       "control_name": "CWE-674",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Recursive agent calls without depth limits enabling stack exhaustion cascade"
+      "notes": "Recursive agent calls without depth limits enabling stack exhaustion cascade",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP AI Testing Guide",
@@ -497,7 +615,9 @@
       "control_name": "AVT — Availability",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Inject failures to verify circuit breaker activates at threshold; test recovery path"
+      "notes": "Inject failures to verify circuit breaker activates at threshold; test recovery path",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP AI Testing Guide",
@@ -505,7 +625,9 @@
       "control_name": "AST — Agent-Specific",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Verify failure in one agent cluster does not propagate to adjacent clusters"
+      "notes": "Verify failure in one agent cluster does not propagate to adjacent clusters",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP AI Testing Guide",
@@ -513,49 +635,63 @@
       "control_name": "LMT — Logging & Monitoring",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Verify monitoring raises alert on cascade indicators before physical impact"
+      "notes": "Verify monitoring raises alert on cascade indicators before physical impact",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L7",
       "control_name": "Agent Ecosystem",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L4",
       "control_name": "Deployment & Infrastructure",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L5",
       "control_name": "Evaluation & Observability",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
       "control_id": "D",
       "control_name": "Reliability (full domain)",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
       "control_id": "B006",
       "control_name": "Prevent unauthorized AI agent actions",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
       "control_id": "E",
       "control_name": "Accountability (full domain)",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -563,7 +699,9 @@
       "control_name": "NHI-5 Over-Privileged NHI",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Least privilege per agent — cascade blast radius limited by credential scope"
+      "notes": "Least privilege per agent — cascade blast radius limited by credential scope",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -571,7 +709,9 @@
       "control_name": "NHI-9 NHI Reuse",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Unique identity per agent — cascade cannot leverage shared credentials for lateral movement"
+      "notes": "Unique identity per agent — cascade cannot leverage shared credentials for lateral movement",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -579,7 +719,9 @@
       "control_name": "NHI-7 Long-Lived Credentials",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Short-lived credentials — cascade event triggers automatic revocation of all affected tokens"
+      "notes": "Short-lived credentials — cascade event triggers automatic revocation of all affected tokens",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -587,7 +729,9 @@
       "control_name": "PW.2.1-PS – Design software to meet security requirements",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Ensures cascade prevention is a design-phase requirement"
+      "notes": "Ensures cascade prevention is a design-phase requirement",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -595,7 +739,9 @@
       "control_name": "PW.8.2-PS – Test for security vulnerabilities",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Validates cascade prevention controls under attack conditions"
+      "notes": "Validates cascade prevention controls under attack conditions",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -603,7 +749,9 @@
       "control_name": "RV.2.1-PS – Assess, prioritise, and remediate vulnerabilities",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Enables rapid response to cascading automation failures"
+      "notes": "Enables rapid response to cascading automation failures",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -611,7 +759,9 @@
       "control_name": "PW.1.1-PS – Define security requirements",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Establishes automation boundaries as mandatory requirements"
+      "notes": "Establishes automation boundaries as mandatory requirements",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -619,7 +769,9 @@
       "control_name": "Boundary Protection — inter-agent boundaries",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Enforce boundary protection between agents in multi-agent systems; prevent uncontrolled propagation of failures or attacks across agent boundaries"
+      "notes": "Enforce boundary protection between agents in multi-agent systems; prevent uncontrolled propagation of failures or attacks across agent boundaries",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -627,7 +779,9 @@
       "control_name": "System Monitoring — cascade detection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Monitor multi-agent systems for cascade indicators — error propagation, resource exhaustion spreading, and anomalous inter-agent communication patterns"
+      "notes": "Monitor multi-agent systems for cascade indicators — error propagation, resource exhaustion spreading, and anomalous inter-agent communication patterns",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -635,7 +789,9 @@
       "control_name": "Incident Handling — cascading failure response",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Define incident handling procedures for cascading agent failures; include automated circuit breakers, agent isolation, and multi-agent system shutdown procedures"
+      "notes": "Define incident handling procedures for cascading agent failures; include automated circuit breakers, agent isolation, and multi-agent system shutdown procedures",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -643,7 +799,9 @@
       "control_name": "Risk Management Strategy — automation risk",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Include cascading automation risk in the organisational risk management strategy; define acceptable multi-agent coupling thresholds and circuit breaker requirements"
+      "notes": "Include cascading automation risk in the organisational risk management strategy; define acceptable multi-agent coupling thresholds and circuit breaker requirements",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -651,7 +809,9 @@
       "control_name": "Response and Recovery — cascading failure response",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Define response and recovery procedures for cascading agent failures; include automated circuit breakers, agent isolation, and multi-agent system safe-state transitions"
+      "notes": "Define response and recovery procedures for cascading agent failures; include automated circuit breakers, agent isolation, and multi-agent system safe-state transitions",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -659,7 +819,9 @@
       "control_name": "Detection — cascade indicator monitoring",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Monitor multi-agent systems for cascade indicators — error propagation, resource exhaustion spreading, and anomalous inter-agent communication patterns"
+      "notes": "Monitor multi-agent systems for cascade indicators — error propagation, resource exhaustion spreading, and anomalous inter-agent communication patterns",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -667,7 +829,9 @@
       "control_name": "Backup Policies — agent system continuity",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Maintain backup configurations, memory snapshots, and fallback agent deployments; enable restoration of agent systems to known-good state"
+      "notes": "Maintain backup configurations, memory snapshots, and fallback agent deployments; enable restoration of agent systems to known-good state",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -675,7 +839,9 @@
       "control_name": "ICT Risk Management — cascading risk governance",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Include cascading automation risk in ICT risk management; define acceptable multi-agent coupling thresholds and circuit breaker requirements"
+      "notes": "Include cascading automation risk in ICT risk management; define acceptable multi-agent coupling thresholds and circuit breaker requirements",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     }
   ],
   "tools": [

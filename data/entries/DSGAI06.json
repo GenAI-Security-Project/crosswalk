@@ -23,7 +23,9 @@
       "control_name": "Exploit Public-Facing Application",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Malicious MCP server exploits trust relationship with agent to capture context payloads"
+      "notes": "Malicious MCP server exploits trust relationship with agent to capture context payloads",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MITRE ATLAS",
@@ -31,7 +33,9 @@
       "control_name": "Data from Information Repositories",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Context data flowing through tool integrations captured and transmitted to adversary"
+      "notes": "Context data flowing through tool integrations captured and transmitted to adversary",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MITRE ATLAS",
@@ -39,7 +43,9 @@
       "control_name": "Exfiltrate via ML Inference API",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Tool API acts as exfiltration channel — sensitive context content captured in tool call payloads"
+      "notes": "Tool API acts as exfiltration channel — sensitive context content captured in tool call payloads",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -47,7 +53,9 @@
       "control_name": "Policies for data privacy",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Third-party data handling policy covering all tool and plugin integrations"
+      "notes": "Third-party data handling policy covering all tool and plugin integrations",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -55,7 +63,9 @@
       "control_name": "Interdependencies",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All tool and plugin integrations mapped — data received, retained, and used for training"
+      "notes": "All tool and plugin integrations mapped — data received, retained, and used for training",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -63,7 +73,9 @@
       "control_name": "Testing — adversarial",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Security testing of tool API integrations — payload inspection, data minimisation validation"
+      "notes": "Security testing of tool API integrations — payload inspection, data minimisation validation",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -71,7 +83,9 @@
       "control_name": "Residual risk — third party",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Residual risk from tool providers documented, monitored, and reviewed"
+      "notes": "Residual risk from tool providers documented, monitored, and reviewed",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -79,7 +93,9 @@
       "control_name": "Art. 9 — Risk management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All tool integrations assessed in Art. 9 risk management"
+      "notes": "All tool integrations assessed in Art. 9 risk management",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -87,7 +103,9 @@
       "control_name": "Art. 25 — Value chain responsibilities",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Tool data exchange obligations explicitly distributed along the value chain"
+      "notes": "Tool data exchange obligations explicitly distributed along the value chain",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -95,7 +113,9 @@
       "control_name": "Art. 53(1)(a) — GPAI documentation",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Tool and plugin data exchange documented in GPAI technical documentation"
+      "notes": "Tool and plugin data exchange documented in GPAI technical documentation",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -103,7 +123,9 @@
       "control_name": "Supplier relationships",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Security due diligence on all tool and plugin providers receiving agent context"
+      "notes": "Security due diligence on all tool and plugin providers receiving agent context",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -111,7 +133,9 @@
       "control_name": "Supplier agreements",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Contractual requirements covering data minimisation, retention, and training use for tool providers"
+      "notes": "Contractual requirements covering data minimisation, retention, and training use for tool providers",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -119,7 +143,9 @@
       "control_name": "Information access restriction",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Tools receive only the minimum context required for their function — not full conversation history"
+      "notes": "Tools receive only the minimum context required for their function — not full conversation history",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -127,7 +153,9 @@
       "control_name": "Security for cloud services",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Cloud-based tool and plugin providers assessed against A.5.23 security requirements"
+      "notes": "Cloud-based tool and plugin providers assessed against A.5.23 security requirements",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -135,7 +163,9 @@
       "control_name": "A.10.1",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Hardening"
+      "notes": "Hardening",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -143,7 +173,9 @@
       "control_name": "A.10.2",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Hardening"
+      "notes": "Hardening",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -151,7 +183,9 @@
       "control_name": "A.6.1.2",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -159,49 +193,63 @@
       "control_name": "A.7.2",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Hardening"
+      "notes": "Hardening",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
       "control_id": "CIS 4",
       "control_name": "4.2 — Maintain secure configuration of cloud assets",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
       "control_id": "CIS 6",
       "control_name": "6.4 — Require password manager",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
       "control_id": "CIS 15",
       "control_name": "15.1 — Establish service provider management policy",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
       "control_id": "V4 Access Control",
       "control_name": "V4.1.1 — Access control on every request",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
       "control_id": "V9 Communication",
       "control_name": "V9.1.1 — TLS for all connections",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
       "control_id": "V11 Business Logic",
       "control_name": "V11.1.4 — Business logic limits on repeated actions",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -209,7 +257,9 @@
       "control_name": "Software and information integrity",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All OT tool integrations assessed — security requirements in vendor contracts per 62443-2-4"
+      "notes": "All OT tool integrations assessed — security requirements in vendor contracts per 62443-2-4",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -217,7 +267,9 @@
       "control_name": "Information flow restriction",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "OT-sensitive context minimised before tool API calls — tools receive minimum required, not full OT context"
+      "notes": "OT-sensitive context minimised before tool API calls — tools receive minimum required, not full OT context",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -225,7 +277,9 @@
       "control_name": "Timely response to events",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Tool data exchange anomalies detected — unusual data volumes in tool calls alerted"
+      "notes": "Tool data exchange anomalies detected — unusual data volumes in tool calls alerted",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -233,7 +287,9 @@
       "control_name": "§5.4",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "OT data must not be disclosed without authorisation"
+      "notes": "OT data must not be disclosed without authorisation",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -241,7 +297,9 @@
       "control_name": "§6.2",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Assess disclosure risk for each OT data type in GenAI outputs"
+      "notes": "Assess disclosure risk for each OT data type in GenAI outputs",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -249,7 +307,9 @@
       "control_name": "§7.3",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Monitor outputs for OT data disclosure patterns"
+      "notes": "Monitor outputs for OT data disclosure patterns",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -257,7 +317,9 @@
       "control_name": "Supply Chain Risk Management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Tool and plugin providers treated as suppliers — data handling requirements in contracts"
+      "notes": "Tool and plugin providers treated as suppliers — data handling requirements in contracts",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -265,7 +327,9 @@
       "control_name": "Identity Management, Authentication & Access Control",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Context minimisation — tools receive minimum required payload, not full context history"
+      "notes": "Context minimisation — tools receive minimum required payload, not full context history",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -273,7 +337,9 @@
       "control_name": "Continuous Monitoring",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All tool API calls monitored — DLP on outbound tool payloads"
+      "notes": "All tool API calls monitored — DLP on outbound tool payloads",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -281,35 +347,45 @@
       "control_name": "Asset Management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All tool integrations inventoried — data received, retained, training use, security assessment status"
+      "notes": "All tool integrations inventoried — data received, retained, training use, security assessment status",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Tool and plugin providers assessed in vendor risk programme — what data they receive, retain, and use",
       "control_name": "CC9.1 — Vendor risk",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Contractual data handling obligations for tool providers — data minimisation, retention, training use restrictions",
       "control_name": "CC9.2 — Vendor agreements",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Context minimisation for tool calls — tools receive minimum confidential data required for function",
       "control_name": "C2.1 — Confidential information protection",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Tool access scoped to minimum required — agent tool permissions as privileged access",
       "control_name": "CC6.1 — Logical access",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -317,7 +393,9 @@
       "control_name": "TPSP list",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All tool and plugin providers receiving CHD in TPSP list — even if access is indirect through agent context"
+      "notes": "All tool and plugin providers receiving CHD in TPSP list — even if access is indirect through agent context",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -325,7 +403,9 @@
       "control_name": "TPSP agreements",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Written agreements with tool providers acknowledging CHD security responsibility"
+      "notes": "Written agreements with tool providers acknowledging CHD security responsibility",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -333,7 +413,9 @@
       "control_name": "Restrict access",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Context minimisation — tools receive minimum CHD-containing context required"
+      "notes": "Context minimisation — tools receive minimum CHD-containing context required",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -341,7 +423,9 @@
       "control_name": "Logging",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All tool call payloads containing CHD logged — Req 10 audit trail requirement"
+      "notes": "All tool call payloads containing CHD logged — Req 10 audit trail requirement",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -349,7 +433,9 @@
       "control_name": "Supply Chain Security",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All tools, plugins, and agent connectors treated as supply chain components — security assessment before integration, ongoing monitoring"
+      "notes": "All tools, plugins, and agent connectors treated as supply chain components — security assessment before integration, ongoing monitoring",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -357,7 +443,9 @@
       "control_name": "AI System Integrity (ASI)",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Tool descriptors and API responses validated before use — content received from external tools treated as untrusted input"
+      "notes": "Tool descriptors and API responses validated before use — content received from external tools treated as untrusted input",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -365,7 +453,9 @@
       "control_name": "Monitoring and Detection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All tool invocations logged — data volumes, destination, and content patterns monitored for anomalies"
+      "notes": "All tool invocations logged — data volumes, destination, and content patterns monitored for anomalies",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -373,7 +463,9 @@
       "control_name": "General ICT — Supply Chain",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Plugin SBOM maintained — all integration components inventoried, vulnerabilities tracked"
+      "notes": "Plugin SBOM maintained — all integration components inventoried, vulnerabilities tracked",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -381,7 +473,9 @@
       "control_name": "Design / Security Requirements",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Define what categories of data may appear in model outputs"
+      "notes": "Define what categories of data may appear in model outputs",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -389,7 +483,9 @@
       "control_name": "Implementation / Secure Build",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Apply DLP scanning to all model outputs before delivery"
+      "notes": "Apply DLP scanning to all model outputs before delivery",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -397,7 +493,9 @@
       "control_name": "Verification / Security Testing",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Automated testing for memorisation and over-retrieval of sensitive content"
+      "notes": "Automated testing for memorisation and over-retrieval of sensitive content",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -405,7 +503,9 @@
       "control_name": "Operations / Operational Management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Continuous monitoring of production outputs for sensitive content patterns"
+      "notes": "Continuous monitoring of production outputs for sensitive content patterns",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -413,7 +513,9 @@
       "control_name": "Governance / Policy & Compliance",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Documented policy on what data may be surfaced in model responses"
+      "notes": "Documented policy on what data may be surfaced in model responses",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -421,7 +523,9 @@
       "control_name": "CWE-284",
       "tier": "Foundational",
       "scope": "Both",
-      "url": "https://cwe.mitre.org/data/definitions/284.html"
+      "url": "https://cwe.mitre.org/data/definitions/284.html",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -429,7 +533,9 @@
       "control_name": "CWE-269",
       "tier": "Foundational",
       "scope": "Both",
-      "url": "https://cwe.mitre.org/data/definitions/269.html"
+      "url": "https://cwe.mitre.org/data/definitions/269.html",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -437,28 +543,36 @@
       "control_name": "CWE-602",
       "tier": "Foundational",
       "scope": "Both",
-      "url": "https://cwe.mitre.org/data/definitions/602.html"
+      "url": "https://cwe.mitre.org/data/definitions/602.html",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L3",
       "control_name": "Agent Frameworks",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L2",
       "control_name": "Data Operations",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L6",
       "control_name": "Security & Compliance",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -466,7 +580,9 @@
       "control_name": "Data & Privacy domain",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -474,7 +590,9 @@
       "control_name": "Prevent unauthorized AI actions",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -482,7 +600,9 @@
       "control_name": "Validate AI-generated content",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -490,7 +610,9 @@
       "control_name": "Audit trails and logging",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -498,7 +620,9 @@
       "control_name": "NHI-2 Secret Leakage",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Output scanning for credential patterns"
+      "notes": "Output scanning for credential patterns",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -506,7 +630,9 @@
       "control_name": "NHI-5 Over-Privileged NHI",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Minimum scope for retrieval service accounts"
+      "notes": "Minimum scope for retrieval service accounts",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -514,7 +640,9 @@
       "control_name": "Archive and protect software releases — lineage-aware artefact management",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Maintain end-to-end data lineage records linking every model version to its training data, transformations, and intermediate artefacts"
+      "notes": "Maintain end-to-end data lineage records linking every model version to its training data, transformations, and intermediate artefacts",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -522,7 +650,9 @@
       "control_name": "Design software — traceable data pipeline architecture",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Design AI data pipelines with built-in lineage tracking; require lineage metadata capture at every transformation step as an explicit design requirement"
+      "notes": "Design AI data pipelines with built-in lineage tracking; require lineage metadata capture at every transformation step as an explicit design requirement",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -530,7 +660,9 @@
       "control_name": "Configuration Change Control — pipeline lineage documentation",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Maintain comprehensive data lineage documentation for all AI pipelines; update on every transformation, combination, or processing change"
+      "notes": "Maintain comprehensive data lineage documentation for all AI pipelines; update on every transformation, combination, or processing change",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -538,7 +670,9 @@
       "control_name": "Event Logging — data transformation logging",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Log all data transformation events in AI pipelines; enable end-to-end lineage reconstruction from source to model"
+      "notes": "Log all data transformation events in AI pipelines; enable end-to-end lineage reconstruction from source to model",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -546,7 +680,9 @@
       "control_name": "Risk Management Strategy — lineage requirements",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Include data lineage completeness in AI risk management strategy; define minimum lineage requirements per data sensitivity level"
+      "notes": "Include data lineage completeness in AI risk management strategy; define minimum lineage requirements per data sensitivity level",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -554,7 +690,9 @@
       "control_name": "Identification — data transformation mapping",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Map all data transformations in AI pipelines; document inputs, outputs, and processing logic for each stage"
+      "notes": "Map all data transformations in AI pipelines; document inputs, outputs, and processing logic for each stage",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -562,7 +700,9 @@
       "control_name": "Backup Policies — lineage metadata preservation",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Include lineage metadata in backup policies; ensure lineage records can be restored alongside data and models"
+      "notes": "Include lineage metadata in backup policies; ensure lineage records can be restored alongside data and models",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -570,7 +710,9 @@
       "control_name": "ICT Risk Management — lineage governance",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Include data lineage requirements in ICT risk management; define minimum lineage completeness per data sensitivity"
+      "notes": "Include data lineage requirements in ICT risk management; define minimum lineage completeness per data sensitivity",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     }
   ],
   "tools": [

@@ -23,7 +23,9 @@
       "control_name": "Exfiltrate via Cyber Means",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Vector store content exfiltrated through unauthenticated access or RBAC bypass"
+      "notes": "Vector store content exfiltrated through unauthenticated access or RBAC bypass",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MITRE ATLAS",
@@ -31,7 +33,9 @@
       "control_name": "Exfiltrate via ML Inference API",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Embeddings and retrieved passages extracted through vector store query API"
+      "notes": "Embeddings and retrieved passages extracted through vector store query API",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MITRE ATLAS",
@@ -39,7 +43,9 @@
       "control_name": "Poison Training Data",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Vector store content poisoned through path traversal or unauthenticated write (CVE-2024-3584)"
+      "notes": "Vector store content poisoned through path traversal or unauthenticated write (CVE-2024-3584)",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -47,7 +53,9 @@
       "control_name": "Risk categorisation",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Vector store risks mapped — each deployment assessed for RBAC, encryption, and network exposure"
+      "notes": "Vector store risks mapped — each deployment assessed for RBAC, encryption, and network exposure",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -55,7 +63,9 @@
       "control_name": "Testing — adversarial",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Vector store security testing — RBAC bypass, path traversal, unauthenticated access scenarios"
+      "notes": "Vector store security testing — RBAC bypass, path traversal, unauthenticated access scenarios",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -63,7 +73,9 @@
       "control_name": "Data quality",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Data integrity controls applied to vector store ingestion and query operations"
+      "notes": "Data integrity controls applied to vector store ingestion and query operations",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -71,7 +83,9 @@
       "control_name": "Risk response",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Incident response for vector store compromise — containment, data exposure scoping, index rebuild"
+      "notes": "Incident response for vector store compromise — containment, data exposure scoping, index rebuild",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -79,7 +93,9 @@
       "control_name": "Art. 9 — Risk management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All vector store deployments assessed in Art. 9 risk management"
+      "notes": "All vector store deployments assessed in Art. 9 risk management",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -87,7 +103,9 @@
       "control_name": "Art. 15 — Accuracy, robustness, cybersecurity",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "RBAC, encryption, and CVE patching for vector stores are Art. 15 requirements"
+      "notes": "RBAC, encryption, and CVE patching for vector stores are Art. 15 requirements",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -95,7 +113,9 @@
       "control_name": "Art. 17 — Quality management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Vector store security monitoring in post-market monitoring programme"
+      "notes": "Vector store security monitoring in post-market monitoring programme",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -103,7 +123,9 @@
       "control_name": "Information access restriction",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "RBAC enforced on all vector store collections — collection-level and namespace-level access control"
+      "notes": "RBAC enforced on all vector store collections — collection-level and namespace-level access control",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -111,7 +133,9 @@
       "control_name": "Use of cryptography",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Encryption of all vector store data at rest and in transit"
+      "notes": "Encryption of all vector store data at rest and in transit",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -119,7 +143,9 @@
       "control_name": "Logging",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Audit logging on all vector store read, write, and admin operations"
+      "notes": "Audit logging on all vector store read, write, and admin operations",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -127,7 +153,9 @@
       "control_name": "Data leakage prevention",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "DLP controls on vector store query results — sensitive content in retrieved passages detected"
+      "notes": "DLP controls on vector store query results — sensitive content in retrieved passages detected",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -135,7 +163,9 @@
       "control_name": "A.7.2",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -143,7 +173,9 @@
       "control_name": "A.7.3",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Hardening"
+      "notes": "Hardening",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -151,7 +183,9 @@
       "control_name": "A.6.1.2",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -159,49 +193,63 @@
       "control_name": "A.10.1",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Hardening"
+      "notes": "Hardening",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
       "control_id": "CIS 3",
       "control_name": "3.11 — Encrypt sensitive data at rest",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
       "control_id": "CIS 6",
       "control_name": "6.1 — Establish access control inventory",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
       "control_id": "CIS 16",
       "control_name": "16.7 — Use standard-security components",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
       "control_id": "V4 Access Control",
       "control_name": "V4.1.3 — Deny by default",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
       "control_id": "V6 Cryptography",
       "control_name": "V6.1.1 — Sensitive data not stored in cleartext",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
       "control_id": "V12 Files/Resources",
       "control_name": "V12.1.1 — File upload validation",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -209,7 +257,9 @@
       "control_name": "Human user authentication",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "RBAC on all Zone 3 vector stores — no unauthenticated access in any OT environment"
+      "notes": "RBAC on all Zone 3 vector stores — no unauthenticated access in any OT environment",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -217,7 +267,9 @@
       "control_name": "Data confidentiality",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Zone 3 vector store content encrypted — equipment documentation and procedure embeddings as sensitive OT data"
+      "notes": "Zone 3 vector store content encrypted — equipment documentation and procedure embeddings as sensitive OT data",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -225,7 +277,9 @@
       "control_name": "Software and information integrity monitoring",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Vector store integrity monitoring — anomalous access patterns indicating bulk extraction detected"
+      "notes": "Vector store integrity monitoring — anomalous access patterns indicating bulk extraction detected",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -233,7 +287,9 @@
       "control_name": "§5.5",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Third-party OT tool data leakage"
+      "notes": "Third-party OT tool data leakage",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -241,7 +297,9 @@
       "control_name": "§6.3",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Tool data scope in OT security assessment"
+      "notes": "Tool data scope in OT security assessment",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -249,7 +307,9 @@
       "control_name": "§7.3",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Monitor OT tool data flows"
+      "notes": "Monitor OT tool data flows",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -257,7 +317,9 @@
       "control_name": "Data Security",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Vector store content encrypted at rest — embeddings treated as sensitive derived data assets"
+      "notes": "Vector store content encrypted at rest — embeddings treated as sensitive derived data assets",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -265,7 +327,9 @@
       "control_name": "Identity Management, Authentication & Access Control",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "RBAC on all vector stores — no unauthenticated access in any environment"
+      "notes": "RBAC on all vector stores — no unauthenticated access in any environment",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -273,7 +337,9 @@
       "control_name": "Platform Security",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Software managed to reduce risk — vector database CVEs patched promptly"
+      "notes": "Software managed to reduce risk — vector database CVEs patched promptly",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -281,35 +347,45 @@
       "control_name": "Continuous Monitoring",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Monitoring for anomalous access — bulk extraction, RBAC bypass attempts detected"
+      "notes": "Monitoring for anomalous access — bulk extraction, RBAC bypass attempts detected",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Vector store content encrypted at rest — embeddings of confidential data protected",
       "control_name": "C2.1 — Confidential information protection",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "RBAC on all vector store collections — no unauthenticated access",
       "control_name": "CC6.1 — Logical access",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Vector database CVE patching managed through change management — timely remediation documented",
       "control_name": "CC8.1 — Change management",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Vector store query anomaly monitoring — bulk extraction patterns detected",
       "control_name": "CC7.2 — Anomaly detection",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -317,7 +393,9 @@
       "control_name": "Protect stored account data",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Vector stores in CDE scope encrypted — embeddings of CHD-adjacent content encrypted at rest"
+      "notes": "Vector stores in CDE scope encrypted — embeddings of CHD-adjacent content encrypted at rest",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -325,7 +403,9 @@
       "control_name": "Restrict access",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "RBAC on all vector stores in PCI scope — no unauthenticated access in any CDE environment"
+      "notes": "RBAC on all vector stores in PCI scope — no unauthenticated access in any CDE environment",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -333,7 +413,9 @@
       "control_name": "Vulnerability management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Vector database CVEs patched — CVE-2024-3584 class treated as urgent for CDE-scope stores"
+      "notes": "Vector database CVEs patched — CVE-2024-3584 class treated as urgent for CDE-scope stores",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -341,7 +423,9 @@
       "control_name": "Penetration testing",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Vector store attacks in CDE penetration testing — RBAC bypass, path traversal, bulk extraction"
+      "notes": "Vector store attacks in CDE penetration testing — RBAC bypass, path traversal, bulk extraction",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -349,7 +433,9 @@
       "control_name": "Data and Model Security (DMS)",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Vector stores governed as sensitive AI data assets — classified, access-controlled, encrypted, and integrity-verified"
+      "notes": "Vector stores governed as sensitive AI data assets — classified, access-controlled, encrypted, and integrity-verified",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -357,7 +443,9 @@
       "control_name": "Supply Chain Security",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Vector database platforms assessed as AI supply chain components — CVEs tracked, security configuration reviewed"
+      "notes": "Vector database platforms assessed as AI supply chain components — CVEs tracked, security configuration reviewed",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -365,7 +453,9 @@
       "control_name": "Monitoring and Detection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All vector store query and mutation operations logged — anomaly detection for unexpected access patterns"
+      "notes": "All vector store query and mutation operations logged — anomaly detection for unexpected access patterns",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -373,7 +463,9 @@
       "control_name": "General ICT — Access Control",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Vector stores require authentication and authorisation — no unauthenticated access, least-privilege query scopes"
+      "notes": "Vector stores require authentication and authorisation — no unauthenticated access, least-privilege query scopes",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -381,7 +473,9 @@
       "control_name": "Design / Security Requirements",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Minimum data returned per tool; response scope limitations"
+      "notes": "Minimum data returned per tool; response scope limitations",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -389,7 +483,9 @@
       "control_name": "Implementation / Secure Build",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Filter tool responses to minimum data required before passing to model"
+      "notes": "Filter tool responses to minimum data required before passing to model",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -397,7 +493,9 @@
       "control_name": "Verification / Security Testing",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Automated tests verifying tool responses are scoped to minimum"
+      "notes": "Automated tests verifying tool responses are scoped to minimum",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -405,7 +503,9 @@
       "control_name": "Governance / Policy & Compliance",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All tools reviewed for data scope before integration"
+      "notes": "All tools reviewed for data scope before integration",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -413,7 +513,9 @@
       "control_name": "Operations / Operational Management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Log all tool responses; alert on anomalous data volumes"
+      "notes": "Log all tool responses; alert on anomalous data volumes",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -421,7 +523,9 @@
       "control_name": "CWE-284",
       "tier": "Foundational",
       "scope": "Both",
-      "url": "https://cwe.mitre.org/data/definitions/284.html"
+      "url": "https://cwe.mitre.org/data/definitions/284.html",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -429,28 +533,36 @@
       "control_name": "CWE-327",
       "tier": "Foundational",
       "scope": "Both",
-      "url": "https://cwe.mitre.org/data/definitions/327.html"
+      "url": "https://cwe.mitre.org/data/definitions/327.html",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L2",
       "control_name": "Data Operations",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L4",
       "control_name": "Deployment & Infrastructure",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L6",
       "control_name": "Security & Compliance",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -458,7 +570,9 @@
       "control_name": "Data & Privacy domain",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -466,7 +580,9 @@
       "control_name": "Third-party security assessment",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Hardening"
+      "notes": "Hardening",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -474,7 +590,9 @@
       "control_name": "Third-party permission controls",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Hardening"
+      "notes": "Hardening",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -482,7 +600,9 @@
       "control_name": "Audit trails and logging",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -490,7 +610,9 @@
       "control_name": "NHI-3 Vulnerable Third-Party NHI",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Review all third-party tool credentials; reduce to minimum scope"
+      "notes": "Review all third-party tool credentials; reduce to minimum scope",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -498,7 +620,9 @@
       "control_name": "NHI-5 Over-Privileged NHI",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Minimum scope per tool integration"
+      "notes": "Minimum scope per tool integration",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -506,7 +630,9 @@
       "control_name": "NHI-9 NHI Reuse",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Separate credentials per tool"
+      "notes": "Separate credentials per tool",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -514,7 +640,9 @@
       "control_name": "Define security requirements — purpose limitation controls",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Define security requirements enforcing data purpose limitation — each dataset must have documented permitted uses and technical controls preventing unauthorised repurposing"
+      "notes": "Define security requirements enforcing data purpose limitation — each dataset must have documented permitted uses and technical controls preventing unauthorised repurposing",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -522,7 +650,9 @@
       "control_name": "Review for security vulnerabilities — misuse and manipulation detection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Include data misuse and manipulation scenarios in pre-release reviews; verify that purpose limitation controls are enforced and cannot be bypassed"
+      "notes": "Include data misuse and manipulation scenarios in pre-release reviews; verify that purpose limitation controls are enforced and cannot be bypassed",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -530,7 +660,9 @@
       "control_name": "Identify and confirm vulnerabilities — production misuse monitoring",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Establish procedures to detect data misuse and manipulation in production including monitoring for purpose-scope violations and data manipulation patterns"
+      "notes": "Establish procedures to detect data misuse and manipulation in production including monitoring for purpose-scope violations and data manipulation patterns",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -538,7 +670,9 @@
       "control_name": "Access Enforcement — purpose-limited data access",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Enforce purpose-limitation on AI data access; restrict usage to approved purposes documented in data processing agreements"
+      "notes": "Enforce purpose-limitation on AI data access; restrict usage to approved purposes documented in data processing agreements",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -546,7 +680,9 @@
       "control_name": "Event Logging — data operation logging",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Log all data operations with purpose context; enable detection of purpose drift and unauthorised usage"
+      "notes": "Log all data operations with purpose context; enable detection of purpose drift and unauthorised usage",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -554,7 +690,9 @@
       "control_name": "System Monitoring — misuse detection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Monitor AI data usage patterns for misuse indicators; alert on data access inconsistent with approved purposes"
+      "notes": "Monitor AI data usage patterns for misuse indicators; alert on data access inconsistent with approved purposes",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -562,7 +700,9 @@
       "control_name": "ICT Risk Management — data usage governance",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Include data usage policies in ICT risk management; define approved purposes for each AI data category; restrict repurposing"
+      "notes": "Include data usage policies in ICT risk management; define approved purposes for each AI data category; restrict repurposing",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -570,7 +710,9 @@
       "control_name": "Protection and Prevention — purpose-limited data controls",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Implement controls enforcing purpose-limitation on AI data usage; restrict processing to approved purposes per data classification"
+      "notes": "Implement controls enforcing purpose-limitation on AI data usage; restrict processing to approved purposes per data classification",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -578,7 +720,9 @@
       "control_name": "ICT Incident Management — misuse incident reporting",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Classify AI data misuse as ICT-related incidents where customer or regulatory impact occurs; report per DORA criteria"
+      "notes": "Classify AI data misuse as ICT-related incidents where customer or regulatory impact occurs; report per DORA criteria",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     }
   ],
   "tools": [

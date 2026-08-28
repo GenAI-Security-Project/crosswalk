@@ -23,7 +23,9 @@
       "control_name": "Obtain Capabilities",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Adversary acquires agent credentials through memory inspection, log analysis, or tool payload capture"
+      "notes": "Adversary acquires agent credentials through memory inspection, log analysis, or tool payload capture",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MITRE ATLAS",
@@ -31,7 +33,9 @@
       "control_name": "Exfiltrate via ML Inference API",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent credentials embedded in inference requests or responses extracted by adversary"
+      "notes": "Agent credentials embedded in inference requests or responses extracted by adversary",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MITRE ATLAS",
@@ -39,7 +43,9 @@
       "control_name": "Exploit Public-Facing Application",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent API endpoints exploited to extract credentials or elevate access"
+      "notes": "Agent API endpoints exploited to extract credentials or elevate access",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -47,7 +53,9 @@
       "control_name": "Policies for data privacy",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent identity and credential governance policy — NHI inventory, lifecycle, and access controls"
+      "notes": "Agent identity and credential governance policy — NHI inventory, lifecycle, and access controls",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -55,7 +63,9 @@
       "control_name": "Risk categorisation",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent credential exposure risks mapped to specific agent deployments in risk register"
+      "notes": "Agent credential exposure risks mapped to specific agent deployments in risk register",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -63,7 +73,9 @@
       "control_name": "Testing — adversarial",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Adversarial testing covering credential leakage paths — memory, logs, tool payloads"
+      "notes": "Adversarial testing covering credential leakage paths — memory, logs, tool payloads",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -71,7 +83,9 @@
       "control_name": "Risk response",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Incident response for detected credential exposure — rotation, containment, lateral movement assessment"
+      "notes": "Incident response for detected credential exposure — rotation, containment, lateral movement assessment",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -79,7 +93,9 @@
       "control_name": "Art. 9 — Risk management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent credential lifecycle included in Art. 9 risk management system"
+      "notes": "Agent credential lifecycle included in Art. 9 risk management system",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -87,7 +103,9 @@
       "control_name": "Art. 15 — Accuracy, robustness, cybersecurity",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Short-lived credentials, NHI inventory, and access controls are Art. 15 requirements"
+      "notes": "Short-lived credentials, NHI inventory, and access controls are Art. 15 requirements",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -95,7 +113,9 @@
       "control_name": "Art. 17 — Quality management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent identity governance procedures documented in quality management system"
+      "notes": "Agent identity governance procedures documented in quality management system",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -103,7 +123,9 @@
       "control_name": "Privileged access rights",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent credentials managed as privileged access — short-lived, scoped, reviewed"
+      "notes": "Agent credentials managed as privileged access — short-lived, scoped, reviewed",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -111,7 +133,9 @@
       "control_name": "Identity management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All agent identities inventoried and lifecycle-managed as non-human identities"
+      "notes": "All agent identities inventoried and lifecycle-managed as non-human identities",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -119,7 +143,9 @@
       "control_name": "Authentication information",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Secure management of agent credentials — no hardcoding, rotation enforced"
+      "notes": "Secure management of agent credentials — no hardcoding, rotation enforced",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -127,7 +153,9 @@
       "control_name": "Logging",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All agent credential use logged with full context — issuance, invocation, expiry"
+      "notes": "All agent credential use logged with full context — issuance, invocation, expiry",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -135,7 +163,9 @@
       "control_name": "Information access restriction",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent access restricted to minimum scope required per task"
+      "notes": "Agent access restricted to minimum scope required per task",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -143,7 +173,9 @@
       "control_name": "A.6.2.3",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -151,7 +183,9 @@
       "control_name": "A.6.1.2",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -159,7 +193,9 @@
       "control_name": "A.3.3",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -167,63 +203,81 @@
       "control_name": "Cl.5",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
       "control_id": "CIS 5",
       "control_name": "5.4 — Restrict administrator privileges",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
       "control_id": "CIS 6",
       "control_name": "6.5 — Require MFA for admin access",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
       "control_id": "CIS 5",
       "control_name": "5.3 — Disable dormant accounts",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
       "control_id": "CIS 12",
       "control_name": "12.7 — Deploy host-based intrusion detection",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
       "control_id": "V2 Authentication",
       "control_name": "V2.1.1 — Passwords minimum 12 characters",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
       "control_id": "V2 Authentication",
       "control_name": "V2.10.1 — Integration secrets not hardcoded",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
       "control_id": "V4 Access Control",
       "control_name": "V4.1.2 — Least privilege for service accounts",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
       "control_id": "V8 Data Protection",
       "control_name": "V8.3.7 — Data transferred using current TLS",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -231,7 +285,9 @@
       "control_name": "Human user authentication",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All agent credentials unique and traceable — no shared service accounts for OT-accessing agents"
+      "notes": "All agent credentials unique and traceable — no shared service accounts for OT-accessing agents",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -239,7 +295,9 @@
       "control_name": "Authenticator management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent credential lifecycle managed — issuance, rotation, revocation documented per agent"
+      "notes": "Agent credential lifecycle managed — issuance, rotation, revocation documented per agent",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -247,7 +305,9 @@
       "control_name": "Data confidentiality",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent credentials never transmitted or stored in cleartext within OT network"
+      "notes": "Agent credentials never transmitted or stored in cleartext within OT network",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -255,7 +315,9 @@
       "control_name": "Timely response to events",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent credential exposure treated as security event — immediate rotation, lateral movement assessment"
+      "notes": "Agent credential exposure treated as security event — immediate rotation, lateral movement assessment",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -263,7 +325,9 @@
       "control_name": "§5.3",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Data integrity in OT — training data is OT data"
+      "notes": "Data integrity in OT — training data is OT data",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -271,7 +335,9 @@
       "control_name": "§6.2",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Assess training data integrity as OT risk"
+      "notes": "Assess training data integrity as OT risk",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -279,7 +345,9 @@
       "control_name": "§7.2",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Integrity verification on all OT data used for training"
+      "notes": "Integrity verification on all OT data used for training",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -287,7 +355,9 @@
       "control_name": "Identity Management, Authentication & Access Control",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Identities and credentials managed — NHI inventory, lifecycle, short-lived JIT issuance"
+      "notes": "Identities and credentials managed — NHI inventory, lifecycle, short-lived JIT issuance",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -295,7 +365,9 @@
       "control_name": "Identity Management, Authentication & Access Control",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Access permissions managed — agent credential scope enforced at minimum required"
+      "notes": "Access permissions managed — agent credential scope enforced at minimum required",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -303,7 +375,9 @@
       "control_name": "Continuous Monitoring",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Credential usage monitored — anomalous access patterns, lateral movement detected"
+      "notes": "Credential usage monitored — anomalous access patterns, lateral movement detected",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -311,42 +385,54 @@
       "control_name": "Risk Management Strategy",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent credential exposure in risk register — blast radius per deployment documented"
+      "notes": "Agent credential exposure in risk register — blast radius per deployment documented",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Agent credentials managed as privileged access — minimum scope, documented justification, regular review",
       "control_name": "CC6.1 — Logical access",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Agent credentials revoked on decommission and anomaly detection — no dormant agent NHIs",
       "control_name": "CC6.3 — Access removal",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Agent tool providers assessed — data handling, credential security requirements in vendor agreements",
       "control_name": "CC9.1 — Vendor risk",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Agent credential anomaly monitoring — unusual usage patterns detected and alerted",
       "control_name": "CC7.2 — Anomaly detection",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Agent credential lifecycle procedures — issuance, rotation, revocation documented",
       "control_name": "CC5.2 — Control activities",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -354,7 +440,9 @@
       "control_name": "Restrict access by need to know",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent credentials scoped to minimum CDE access — least privilege, quarterly review"
+      "notes": "Agent credentials scoped to minimum CDE access — least privilege, quarterly review",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -362,7 +450,9 @@
       "control_name": "Unique IDs for access",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Each agent has a unique service identity — no shared credentials across CDE-facing agents"
+      "notes": "Each agent has a unique service identity — no shared credentials across CDE-facing agents",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -370,7 +460,9 @@
       "control_name": "Logging of all access",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All agent credential operations in CDE logged — issuance, use, anomalous patterns"
+      "notes": "All agent credential operations in CDE logged — issuance, use, anomalous patterns",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -378,7 +470,9 @@
       "control_name": "Targeted risk analysis",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Targeted risk analysis for agent credential scope in CDE — blast radius if credentials compromised"
+      "notes": "Targeted risk analysis for agent credential scope in CDE — blast radius if credentials compromised",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -386,7 +480,9 @@
       "control_name": "AI System Integrity (ASI)",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agents operate under least-privilege credential scope — credential lifetime bounded to agent session, scope documented in AI risk assessment"
+      "notes": "Agents operate under least-privilege credential scope — credential lifetime bounded to agent session, scope documented in AI risk assessment",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -394,7 +490,9 @@
       "control_name": "Governance and Risk (GOV)",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent credential policy documented in AI governance framework — scope, lifetime, rotation, revocation all covered"
+      "notes": "Agent credential policy documented in AI governance framework — scope, lifetime, rotation, revocation all covered",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -402,7 +500,9 @@
       "control_name": "Monitoring and Detection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All agent credential operations logged — anomaly detection covers unexpected scope expansion or access outside session bounds"
+      "notes": "All agent credential operations logged — anomaly detection covers unexpected scope expansion or access outside session bounds",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -410,7 +510,9 @@
       "control_name": "General ICT — Access Control",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Short-lived tokens for all agent interactions — secrets management integrated with IAM platform"
+      "notes": "Short-lived tokens for all agent interactions — secrets management integrated with IAM platform",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -418,7 +520,9 @@
       "control_name": "Design / Threat Assessment",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Enumerate all sources, custodians, and transformation stages of training data"
+      "notes": "Enumerate all sources, custodians, and transformation stages of training data",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -426,7 +530,9 @@
       "control_name": "Implementation / Secure Build",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Hash verification, provenance tracking, and anomaly detection in training data"
+      "notes": "Hash verification, provenance tracking, and anomaly detection in training data",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -434,7 +540,9 @@
       "control_name": "Verification / Security Testing",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Statistical analysis and adversarial probing for poisoned behaviours"
+      "notes": "Statistical analysis and adversarial probing for poisoned behaviours",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -442,7 +550,9 @@
       "control_name": "Operations / Incident Management",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Alert on model output drift that may indicate active poisoning"
+      "notes": "Alert on model output drift that may indicate active poisoning",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -450,7 +560,9 @@
       "control_name": "Governance / Policy & Compliance",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Formal policy for data source approval, verification, and chain of custody"
+      "notes": "Formal policy for data source approval, verification, and chain of custody",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -458,7 +570,9 @@
       "control_name": "CWE-312",
       "tier": "Foundational",
       "scope": "Both",
-      "url": "https://cwe.mitre.org/data/definitions/312.html"
+      "url": "https://cwe.mitre.org/data/definitions/312.html",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -466,7 +580,9 @@
       "control_name": "CWE-798",
       "tier": "Foundational",
       "scope": "Both",
-      "url": "https://cwe.mitre.org/data/definitions/798.html"
+      "url": "https://cwe.mitre.org/data/definitions/798.html",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -474,28 +590,36 @@
       "control_name": "CWE-522",
       "tier": "Foundational",
       "scope": "Both",
-      "url": "https://cwe.mitre.org/data/definitions/522.html"
+      "url": "https://cwe.mitre.org/data/definitions/522.html",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L6",
       "control_name": "Security & Compliance",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L2",
       "control_name": "Data Operations",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L7",
       "control_name": "Agent Ecosystem",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -503,7 +627,9 @@
       "control_name": "Data & Privacy domain (all)",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -511,7 +637,9 @@
       "control_name": "Third-party adversarial robustness testing",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -519,7 +647,9 @@
       "control_name": "Detect adversarial input",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Hardening"
+      "notes": "Hardening",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -527,7 +657,9 @@
       "control_name": "Audit trails and logging",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -535,7 +667,9 @@
       "control_name": "NHI-5 Over-Privileged NHI",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Separate read and write credentials; write requires MFA"
+      "notes": "Separate read and write credentials; write requires MFA",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -543,7 +677,9 @@
       "control_name": "NHI-6 Insecure Credential Storage",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Vault all training pipeline credentials"
+      "notes": "Vault all training pipeline credentials",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -551,7 +687,9 @@
       "control_name": "NHI-7 Long-Lived Credentials",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Short-lived write tokens; rotate frequently"
+      "notes": "Short-lived write tokens; rotate frequently",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -559,7 +697,9 @@
       "control_name": "Define security requirements — data inventory and classification",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Define security requirements mandating a complete data inventory covering all datasets used in training, fine-tuning, RAG, and evaluation; classify by sensitivity"
+      "notes": "Define security requirements mandating a complete data inventory covering all datasets used in training, fine-tuning, RAG, and evaluation; classify by sensitivity",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -567,7 +707,9 @@
       "control_name": "Design software — data flow transparency",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Design AI pipelines with documented data flow diagrams showing data origins, transformations, storage locations, and access points; maintain as living artefacts"
+      "notes": "Design AI pipelines with documented data flow diagrams showing data origins, transformations, storage locations, and access points; maintain as living artefacts",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -575,7 +717,9 @@
       "control_name": "Risk Management Strategy — data visibility requirements",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Include data visibility and transparency requirements in AI risk management strategy; define what data flows must be documented and monitored"
+      "notes": "Include data visibility and transparency requirements in AI risk management strategy; define what data flows must be documented and monitored",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -583,7 +727,9 @@
       "control_name": "Event Logging — data flow tracking",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Log data movement through AI pipelines — ingestion, transformation, training, inference; enable end-to-end data flow traceability"
+      "notes": "Log data movement through AI pipelines — ingestion, transformation, training, inference; enable end-to-end data flow traceability",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -591,7 +737,9 @@
       "control_name": "Configuration Change Control — data pipeline documentation",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Document and control changes to AI data pipeline configurations; maintain current data flow diagrams and processing documentation"
+      "notes": "Document and control changes to AI data pipeline configurations; maintain current data flow diagrams and processing documentation",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -599,7 +747,9 @@
       "control_name": "ICT Risk Management — data visibility governance",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Include data visibility and transparency requirements in ICT risk management; define what AI data flows must be documented and monitored"
+      "notes": "Include data visibility and transparency requirements in ICT risk management; define what AI data flows must be documented and monitored",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -607,7 +757,9 @@
       "control_name": "Identification — data asset mapping",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Map all AI data assets — training data, inference data, embeddings, model artefacts — in the ICT asset inventory with data flow documentation"
+      "notes": "Map all AI data assets — training data, inference data, embeddings, model artefacts — in the ICT asset inventory with data flow documentation",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -615,7 +767,9 @@
       "control_name": "Detection — data flow monitoring",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Monitor AI data flows for undocumented data movement; alert on data transfers outside documented pipelines"
+      "notes": "Monitor AI data flows for undocumented data movement; alert on data transfers outside documented pipelines",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     }
   ],
   "tools": [

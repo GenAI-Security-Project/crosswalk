@@ -23,7 +23,9 @@
       "control_name": "Poison Training Data",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Adversary introduces malicious data into training pipeline — corrupts model behaviour in ways baked into weights"
+      "notes": "Adversary introduces malicious data into training pipeline — corrupts model behaviour in ways baked into weights",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MITRE ATLAS",
@@ -31,7 +33,9 @@
       "control_name": "Backdoor ML Model",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Hidden functionality embedded in model weights — triggered by specific inputs, invisible to standard testing"
+      "notes": "Hidden functionality embedded in model weights — triggered by specific inputs, invisible to standard testing",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MITRE ATLAS",
@@ -39,7 +43,9 @@
       "control_name": "Craft Adversarial Data",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Adversarially crafted training examples designed to produce specific model behaviours without detection"
+      "notes": "Adversarially crafted training examples designed to produce specific model behaviours without detection",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -47,7 +53,9 @@
       "control_name": "Risk categorisation",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Data and model poisoning categorised as Critical — specific attack vectors mapped per training pipeline"
+      "notes": "Data and model poisoning categorised as Critical — specific attack vectors mapped per training pipeline",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -55,7 +63,9 @@
       "control_name": "Testing — adversarial",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Adversarial testing covering poisoning detection in training pipelines before each production promotion"
+      "notes": "Adversarial testing covering poisoning detection in training pipelines before each production promotion",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -63,7 +73,9 @@
       "control_name": "Data quality",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Data quality measurement and validation applied to all training and fine-tuning data"
+      "notes": "Data quality measurement and validation applied to all training and fine-tuning data",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -71,7 +83,9 @@
       "control_name": "Risk response",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Incident response including model rollback for detected poisoning events"
+      "notes": "Incident response including model rollback for detected poisoning events",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -79,7 +93,9 @@
       "control_name": "Art. 10 — Data and data governance",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Data quality controls and provenance requirements preventing poisoning are binding Art. 10 obligations"
+      "notes": "Data quality controls and provenance requirements preventing poisoning are binding Art. 10 obligations",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -87,7 +103,9 @@
       "control_name": "Art. 15 — Accuracy, robustness, cybersecurity",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Technical robustness against poisoning is a binding Art. 15 requirement with conformity assessment evidence"
+      "notes": "Technical robustness against poisoning is a binding Art. 15 requirement with conformity assessment evidence",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -95,7 +113,9 @@
       "control_name": "Art. 55(1)(b) — Systemic risk GPAI adversarial testing",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Poisoning detection adversarial testing is a binding obligation for systemic risk models"
+      "notes": "Poisoning detection adversarial testing is a binding obligation for systemic risk models",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -103,7 +123,9 @@
       "control_name": "Management of technical vulnerabilities",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Scanning and patching model components and training pipeline dependencies"
+      "notes": "Scanning and patching model components and training pipeline dependencies",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -111,7 +133,9 @@
       "control_name": "Supplier relationships",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Security requirements applied to all third-party training data and model sources"
+      "notes": "Security requirements applied to all third-party training data and model sources",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -119,7 +143,9 @@
       "control_name": "Secure system architecture",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Training pipeline designed with integrity controls and supply chain verification"
+      "notes": "Training pipeline designed with integrity controls and supply chain verification",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -127,7 +153,9 @@
       "control_name": "Security testing",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Adversarial testing of model outputs for poisoning indicators before deployment"
+      "notes": "Adversarial testing of model outputs for poisoning indicators before deployment",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -135,7 +163,9 @@
       "control_name": "Configuration management",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Model versions, adapters, and datasets managed with integrity and change controls"
+      "notes": "Model versions, adapters, and datasets managed with integrity and change controls",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -143,7 +173,9 @@
       "control_name": "A.7.2",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Hardening"
+      "notes": "Hardening",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -151,7 +183,9 @@
       "control_name": "A.7.3",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Hardening"
+      "notes": "Hardening",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -159,7 +193,9 @@
       "control_name": "A.6.2.6",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Hardening"
+      "notes": "Hardening",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -167,56 +203,72 @@
       "control_name": "A.6.1.2",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
       "control_id": "CIS 7",
       "control_name": "7.1 — Establish vulnerability management",
       "tier": "Hardening",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
       "control_id": "CIS 16",
       "control_name": "16.11 — Use up-to-date software components",
       "tier": "Hardening",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
       "control_id": "CIS 18",
       "control_name": "18.1 — Establish penetration testing programme",
       "tier": "Hardening",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
       "control_id": "V5 Validation",
       "control_name": "V5.1.3 — Input validation server-side",
       "tier": "Hardening",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
       "control_id": "V10 Malicious Code",
       "control_name": "V10.2.1 — Application only uses official repositories",
       "tier": "Hardening",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
       "control_id": "V10 Malicious Code",
       "control_name": "V10.2.2 — Dependency managers check for vulnerabilities",
       "tier": "Hardening",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
       "control_id": "V12 Files/Resources",
       "control_name": "V12.1.1 — File upload size limits",
       "tier": "Hardening",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -224,7 +276,9 @@
       "control_name": "Software and information integrity",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Training data integrity controls — source allowlisting, anomaly detection, provenance tracking"
+      "notes": "Training data integrity controls — source allowlisting, anomaly detection, provenance tracking",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -232,7 +286,9 @@
       "control_name": "Software and information integrity monitoring",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Continuous monitoring of OT GenAI model outputs — systematic anomalies indicating poisoning detected"
+      "notes": "Continuous monitoring of OT GenAI model outputs — systematic anomalies indicating poisoning detected",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -240,7 +296,9 @@
       "control_name": "Timely response to events",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Poisoning events treated as Critical security incidents — model suspended, process control fallback activated"
+      "notes": "Poisoning events treated as Critical security incidents — model suspended, process control fallback activated",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -248,7 +306,9 @@
       "control_name": "Denial of service protection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Poisoned model availability impact contained — fallback procedure prevents physical process disruption"
+      "notes": "Poisoned model availability impact contained — fallback procedure prevents physical process disruption",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -256,7 +316,9 @@
       "control_name": "§5.3",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Pipeline integrity is a core OT security requirement"
+      "notes": "Pipeline integrity is a core OT security requirement",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -264,7 +326,9 @@
       "control_name": "§6.2",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Data pipeline security in OT risk assessment"
+      "notes": "Data pipeline security in OT risk assessment",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -272,7 +336,9 @@
       "control_name": "§7.2",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Authenticated, integrity-verified data flows across zone boundaries"
+      "notes": "Authenticated, integrity-verified data flows across zone boundaries",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -280,7 +346,9 @@
       "control_name": "Supply Chain Risk Management",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Training data providers treated as suppliers — provenance, quality, integrity requirements in contracts"
+      "notes": "Training data providers treated as suppliers — provenance, quality, integrity requirements in contracts",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -288,7 +356,9 @@
       "control_name": "Data Security",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Training data protected at rest — integrity verification, source allowlisting, provenance tracking"
+      "notes": "Training data protected at rest — integrity verification, source allowlisting, provenance tracking",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -296,7 +366,9 @@
       "control_name": "Continuous Monitoring",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Monitoring for unauthorised software — model integrity verification at deployment, output anomaly detection"
+      "notes": "Monitoring for unauthorised software — model integrity verification at deployment, output anomaly detection",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -304,35 +376,45 @@
       "control_name": "Incident Analysis",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Poisoning incidents analysed — affected training runs, deployed models, downstream impact assessed"
+      "notes": "Poisoning incidents analysed — affected training runs, deployed models, downstream impact assessed",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Poisoning threats documented in GenAI risk assessment — training data, supply chain, model update vectors",
       "control_name": "CC3.2 — Risk assessment",
       "tier": "Hardening",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Model promotions through change management — integrity verification before production deployment",
       "control_name": "CC8.1 — Change management",
       "tier": "Hardening",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Training data providers in vendor risk programme — provenance, quality, integrity requirements assessed",
       "control_name": "CC9.1 — Vendor risk",
       "tier": "Hardening",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Model output anomaly monitoring — poisoning indicators detected before operational impact",
       "control_name": "CC7.2 — Anomaly detection",
       "tier": "Hardening",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -340,7 +422,9 @@
       "control_name": "Secure system changes",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "All model promotions tested for unexpected functionality — poisoning detection as Req 6.5 testing requirement"
+      "notes": "All model promotions tested for unexpected functionality — poisoning detection as Req 6.5 testing requirement",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -348,7 +432,9 @@
       "control_name": "Audit log review",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Automated monitoring of GenAI outputs in CDE — systematic anomalies indicating poisoning detected"
+      "notes": "Automated monitoring of GenAI outputs in CDE — systematic anomalies indicating poisoning detected",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -356,7 +442,9 @@
       "control_name": "Penetration testing",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Poisoning detection in CDE penetration testing programme"
+      "notes": "Poisoning detection in CDE penetration testing programme",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -364,7 +452,9 @@
       "control_name": "TPSP programme",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Training data providers as TPSPs — data quality and integrity requirements in vendor agreements"
+      "notes": "Training data providers as TPSPs — data quality and integrity requirements in vendor agreements",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -372,7 +462,9 @@
       "control_name": "Data and Model Security (DMS)",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "All training data sources verified — provenance documented, anomaly detection on data pipelines, integrity checks before ingestion"
+      "notes": "All training data sources verified — provenance documented, anomaly detection on data pipelines, integrity checks before ingestion",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -380,7 +472,9 @@
       "control_name": "AI System Integrity (ASI)",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Model weights verified before deployment — cryptographic signatures, behavioural baseline testing for unexpected outputs"
+      "notes": "Model weights verified before deployment — cryptographic signatures, behavioural baseline testing for unexpected outputs",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -388,7 +482,9 @@
       "control_name": "Monitoring and Detection (MON)",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Runtime monitoring for unexpected model behaviour — output distribution drift, sudden accuracy changes, anomalous activation patterns"
+      "notes": "Runtime monitoring for unexpected model behaviour — output distribution drift, sudden accuracy changes, anomalous activation patterns",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -396,7 +492,9 @@
       "control_name": "Supply Chain Security",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "All external training datasets treated as untrusted supply chain components — provenance, quality review, and integrity verification before use"
+      "notes": "All external training datasets treated as untrusted supply chain components — provenance, quality review, and integrity verification before use",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -404,7 +502,9 @@
       "control_name": "Design / Security Architecture",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Design authentication and integrity controls for every pipeline stage"
+      "notes": "Design authentication and integrity controls for every pipeline stage",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -412,7 +512,9 @@
       "control_name": "Implementation / Secure Build",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "mTLS, input validation, and access controls enforced across pipeline"
+      "notes": "mTLS, input validation, and access controls enforced across pipeline",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -420,7 +522,9 @@
       "control_name": "Implementation / Secure Deployment",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Infrastructure-as-code with security controls applied at provisioning"
+      "notes": "Infrastructure-as-code with security controls applied at provisioning",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -428,7 +532,9 @@
       "control_name": "Verification / Architecture Assessment",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Review every pipeline component for authentication and integrity gaps"
+      "notes": "Review every pipeline component for authentication and integrity gaps",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -436,7 +542,9 @@
       "control_name": "Operations / Environment Management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Regular security updates for all pipeline components"
+      "notes": "Regular security updates for all pipeline components",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -444,7 +552,9 @@
       "control_name": "CWE-345",
       "tier": "Hardening",
       "scope": "Both",
-      "url": "https://cwe.mitre.org/data/definitions/345.html"
+      "url": "https://cwe.mitre.org/data/definitions/345.html",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -452,7 +562,9 @@
       "control_name": "CWE-346",
       "tier": "Hardening",
       "scope": "Both",
-      "url": "https://cwe.mitre.org/data/definitions/346.html"
+      "url": "https://cwe.mitre.org/data/definitions/346.html",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -460,35 +572,45 @@
       "control_name": "CWE-20",
       "tier": "Hardening",
       "scope": "Both",
-      "url": "https://cwe.mitre.org/data/definitions/20.html"
+      "url": "https://cwe.mitre.org/data/definitions/20.html",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L2",
       "control_name": "Data Operations",
       "tier": "Hardening",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L4",
       "control_name": "Deployment & Infrastructure",
       "tier": "Hardening",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L1",
       "control_name": "Foundation Models",
       "tier": "Hardening",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L5",
       "control_name": "Evaluation & Observability",
       "tier": "Hardening",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -496,7 +618,9 @@
       "control_name": "Data & Privacy domain",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -504,7 +628,9 @@
       "control_name": "Third-party adversarial robustness testing",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -512,7 +638,9 @@
       "control_name": "Third-party security assessment",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Hardening"
+      "notes": "Hardening",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -520,7 +648,9 @@
       "control_name": "Audit trails and logging",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -528,7 +658,9 @@
       "control_name": "NHI-4 Insecure Authentication",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Require mTLS or token auth for all pipeline connections"
+      "notes": "Require mTLS or token auth for all pipeline connections",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -536,7 +668,9 @@
       "control_name": "NHI-5 Over-Privileged NHI",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Per-stage credentials with minimum scope"
+      "notes": "Per-stage credentials with minimum scope",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -544,7 +678,9 @@
       "control_name": "NHI-9 NHI Reuse",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Separate credentials per stage"
+      "notes": "Separate credentials per stage",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -552,7 +688,9 @@
       "control_name": "Protect all code from unauthorised access — data and artefact integrity",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Protect training data, model weights, adapters, and pipeline artefacts from unauthorised modification; enforce write access controls and integrity monitoring"
+      "notes": "Protect training data, model weights, adapters, and pipeline artefacts from unauthorised modification; enforce write access controls and integrity monitoring",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -560,7 +698,9 @@
       "control_name": "Archive and protect software releases — versioned artefact management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Maintain versioned, integrity-verified snapshots of all training data, model checkpoints, and pipeline artefacts; enable rollback to known-good state"
+      "notes": "Maintain versioned, integrity-verified snapshots of all training data, model checkpoints, and pipeline artefacts; enable rollback to known-good state",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -568,7 +708,9 @@
       "control_name": "Reuse existing well-secured software — dataset and artefact vetting",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Vet all third-party datasets, pre-trained models, and pipeline components for provenance, integrity, and potential poisoning before use"
+      "notes": "Vet all third-party datasets, pre-trained models, and pipeline components for provenance, integrity, and potential poisoning before use",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -576,7 +718,9 @@
       "control_name": "Analyse root causes — poisoning forensics",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "When poisoning is detected, conduct forensic analysis to identify corrupted records, trace to source, and determine blast radius across dependent models"
+      "notes": "When poisoning is detected, conduct forensic analysis to identify corrupted records, trace to source, and determine blast radius across dependent models",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -584,7 +728,9 @@
       "control_name": "Supply Chain Risk Management Plan — AI data and artefact sources",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Include AI training data, model weights, and pipeline artefacts in supply chain risk management with provenance documentation"
+      "notes": "Include AI training data, model weights, and pipeline artefacts in supply chain risk management with provenance documentation",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -592,7 +738,9 @@
       "control_name": "Supply Chain Controls — artefact provenance verification",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Verify integrity and provenance of all AI artefacts using cryptographic signatures and checksums before use in any pipeline"
+      "notes": "Verify integrity and provenance of all AI artefacts using cryptographic signatures and checksums before use in any pipeline",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -600,7 +748,9 @@
       "control_name": "Malicious Code Protection — training pipeline integrity",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Extend malicious code protection to training data and model artefacts; detect poisoned data, anomalous patterns, and backdoor indicators"
+      "notes": "Extend malicious code protection to training data and model artefacts; detect poisoned data, anomalous patterns, and backdoor indicators",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -608,7 +758,9 @@
       "control_name": "Protection of Information at Rest — artefact encryption",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Encrypt all training data, model weights, and pipeline artefacts at rest; enforce key management per FedRAMP requirements"
+      "notes": "Encrypt all training data, model weights, and pipeline artefacts at rest; enforce key management per FedRAMP requirements",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -616,7 +768,9 @@
       "control_name": "Protection and Prevention — training pipeline integrity",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Implement security controls protecting training data and model artefacts from poisoning, tampering, and unauthorised modification"
+      "notes": "Implement security controls protecting training data and model artefacts from poisoning, tampering, and unauthorised modification",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -624,7 +778,9 @@
       "control_name": "Resilience Testing — poisoning detection testing",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Include data poisoning scenarios in resilience testing; test detection capabilities and recovery procedures for poisoned data and model artefacts"
+      "notes": "Include data poisoning scenarios in resilience testing; test detection capabilities and recovery procedures for poisoned data and model artefacts",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -632,7 +788,9 @@
       "control_name": "Backup Policies — model and data restoration",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Maintain versioned backups of training data and model weights with integrity verification; enable rollback to pre-poisoning states"
+      "notes": "Maintain versioned backups of training data and model weights with integrity verification; enable rollback to pre-poisoning states",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -640,7 +798,9 @@
       "control_name": "Learning and Evolving — poisoning post-mortem",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Conduct post-incident analysis for data poisoning events; trace poisoned content and update protection controls"
+      "notes": "Conduct post-incident analysis for data poisoning events; trace poisoned content and update protection controls",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     }
   ],
   "tools": [

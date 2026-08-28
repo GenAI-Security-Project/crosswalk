@@ -23,7 +23,9 @@
       "control_name": "Poison Training Data",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Adversarially crafted payloads bypass ingestion validation to corrupt training or RAG data"
+      "notes": "Adversarially crafted payloads bypass ingestion validation to corrupt training or RAG data",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MITRE ATLAS",
@@ -31,7 +33,9 @@
       "control_name": "Backdoor ML Model",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Path traversal in snapshot imports (CVE-2024-3584) enables write to model host — backdoor installation path"
+      "notes": "Path traversal in snapshot imports (CVE-2024-3584) enables write to model host — backdoor installation path",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MITRE ATLAS",
@@ -39,7 +43,9 @@
       "control_name": "Craft Adversarial Data",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Payloads crafted to pass syntactic validation while embedding malicious semantic content"
+      "notes": "Payloads crafted to pass syntactic validation while embedding malicious semantic content",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -47,7 +53,9 @@
       "control_name": "Testing — adversarial",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Security testing of all data ingestion interfaces — schema bypass and path traversal scenarios"
+      "notes": "Security testing of all data ingestion interfaces — schema bypass and path traversal scenarios",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -55,7 +63,9 @@
       "control_name": "Data quality",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Data quality controls applied at ingestion — syntactic and semantic validation"
+      "notes": "Data quality controls applied at ingestion — syntactic and semantic validation",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -63,7 +73,9 @@
       "control_name": "Risk response",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Response procedures for detected ingestion integrity failures"
+      "notes": "Response procedures for detected ingestion integrity failures",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -71,7 +83,9 @@
       "control_name": "Risk categorisation",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Ingestion integrity risks mapped to specific pipeline components in risk register"
+      "notes": "Ingestion integrity risks mapped to specific pipeline components in risk register",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -79,7 +93,9 @@
       "control_name": "Art. 9 — Risk management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Data ingestion attack surfaces included in Art. 9 risk management"
+      "notes": "Data ingestion attack surfaces included in Art. 9 risk management",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -87,7 +103,9 @@
       "control_name": "Art. 15 — Accuracy, robustness, cybersecurity",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Secure ingestion interfaces and path traversal prevention are Art. 15 requirements"
+      "notes": "Secure ingestion interfaces and path traversal prevention are Art. 15 requirements",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -95,7 +113,9 @@
       "control_name": "Art. 17 — Quality management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Ingestion validation procedures and CVE patching documented in quality management"
+      "notes": "Ingestion validation procedures and CVE patching documented in quality management",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -103,7 +123,9 @@
       "control_name": "Application security requirements",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Input validation requirements specified for all GenAI data ingestion interfaces"
+      "notes": "Input validation requirements specified for all GenAI data ingestion interfaces",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -111,7 +133,9 @@
       "control_name": "Secure coding",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Secure coding practices applied to data ingestion, parsing, and snapshot import code"
+      "notes": "Secure coding practices applied to data ingestion, parsing, and snapshot import code",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -119,7 +143,9 @@
       "control_name": "Security testing",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Security testing of all data ingestion interfaces including schema and semantic validation"
+      "notes": "Security testing of all data ingestion interfaces including schema and semantic validation",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -127,7 +153,9 @@
       "control_name": "Configuration management",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Snapshot import and restore functionality hardened and version controlled"
+      "notes": "Snapshot import and restore functionality hardened and version controlled",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -135,7 +163,9 @@
       "control_name": "A.7.2",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -143,7 +173,9 @@
       "control_name": "A.7.3",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Hardening"
+      "notes": "Hardening",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -151,7 +183,9 @@
       "control_name": "A.6.2.3",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -159,42 +193,54 @@
       "control_name": "Cl.8",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
       "control_id": "CIS 16",
       "control_name": "16.1 — Establish secure coding practices",
       "tier": "Foundational",
-      "scope": "Build"
+      "scope": "Build",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
       "control_id": "CIS 8",
       "control_name": "8.5 — Collect detailed audit logs",
       "tier": "Foundational",
-      "scope": "Build"
+      "scope": "Build",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
       "control_id": "V5 Validation",
       "control_name": "V5.1.1 — Input validation using allowlists",
       "tier": "Foundational",
-      "scope": "Build"
+      "scope": "Build",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
       "control_id": "V5 Validation",
       "control_name": "V5.2.1 — HTML/JS output sanitised",
       "tier": "Foundational",
-      "scope": "Build"
+      "scope": "Build",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
       "control_id": "V7 Logging",
       "control_name": "V7.4.1 — Generic error messages",
       "tier": "Foundational",
-      "scope": "Build"
+      "scope": "Build",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -202,7 +248,9 @@
       "control_name": "Software and information integrity",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Multi-stage validation at all GenAI ingestion boundaries — path traversal prevention mandatory in Zone 3"
+      "notes": "Multi-stage validation at all GenAI ingestion boundaries — path traversal prevention mandatory in Zone 3",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -210,7 +258,9 @@
       "control_name": "Software and information integrity monitoring",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Runtime monitoring of ingestion pipelines — anomalous payloads detected and rejected"
+      "notes": "Runtime monitoring of ingestion pipelines — anomalous payloads detected and rejected",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -218,7 +268,9 @@
       "control_name": "Use control",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Only approved, validated data sources permitted in Zone 3 GenAI ingestion — unapproved sources blocked"
+      "notes": "Only approved, validated data sources permitted in Zone 3 GenAI ingestion — unapproved sources blocked",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -226,7 +278,9 @@
       "control_name": "Timely response to events",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Ingestion integrity failure treated as security event — pipeline suspended, forensic capture"
+      "notes": "Ingestion integrity failure treated as security event — pipeline suspended, forensic capture",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -234,7 +288,9 @@
       "control_name": "§5.3",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Safety system bypass in OT"
+      "notes": "Safety system bypass in OT",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -242,7 +298,9 @@
       "control_name": "§6.2",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Guardrail bypass must be in OT risk register"
+      "notes": "Guardrail bypass must be in OT risk register",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -250,7 +308,9 @@
       "control_name": "§7.1",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "GenAI guardrails must be independent of model inference layer"
+      "notes": "GenAI guardrails must be independent of model inference layer",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -258,7 +318,9 @@
       "control_name": "Platform Security",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Secure software development — multi-stage validation, path traversal prevention in ingestion code"
+      "notes": "Secure software development — multi-stage validation, path traversal prevention in ingestion code",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -266,7 +328,9 @@
       "control_name": "Data Security",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Data at rest integrity — snapshot import operations sandboxed, path traversal blocked"
+      "notes": "Data at rest integrity — snapshot import operations sandboxed, path traversal blocked",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -274,7 +338,9 @@
       "control_name": "Continuous Monitoring",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Monitoring for anomalous data — unusual ingestion patterns, schema violations detected"
+      "notes": "Monitoring for anomalous data — unusual ingestion patterns, schema violations detected",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -282,35 +348,45 @@
       "control_name": "Risk Assessment",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Ingestion interface vulnerabilities documented in risk assessment — CVE-2024-3584 class"
+      "notes": "Ingestion interface vulnerabilities documented in risk assessment — CVE-2024-3584 class",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Ingestion validation controls — schema and semantic validation ensuring only accurate inputs enter processing",
       "control_name": "PI1.2 — System inputs complete and accurate",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Documented ingestion validation procedures — multi-stage validation, path traversal prevention",
       "control_name": "CC5.2 — Control activities",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Ingestion anomaly detection — unusual payloads detected before pipeline completion",
       "control_name": "CC7.2 — Anomaly detection",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Ingestion integrity risks in GenAI risk assessment — schema bypass, path traversal, adversarial payload vectors",
       "control_name": "CC3.2 — Risk assessment",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -318,7 +394,9 @@
       "control_name": "Bespoke software — injection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All injection vulnerability classes addressed in GenAI ingestion code — schema bypass and path traversal"
+      "notes": "All injection vulnerability classes addressed in GenAI ingestion code — schema bypass and path traversal",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -326,7 +404,9 @@
       "control_name": "Vulnerability management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All GenAI software components patched — CVE-2024-3584 class treated as urgent for CDE scope"
+      "notes": "All GenAI software components patched — CVE-2024-3584 class treated as urgent for CDE scope",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -334,7 +414,9 @@
       "control_name": "Penetration testing",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Path traversal and ingestion injection in CDE penetration testing scope"
+      "notes": "Path traversal and ingestion injection in CDE penetration testing scope",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -342,7 +424,9 @@
       "control_name": "Secure system changes",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Changes to GenAI ingestion pipelines tested — schema validation changes require security review"
+      "notes": "Changes to GenAI ingestion pipelines tested — schema validation changes require security review",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -350,7 +434,9 @@
       "control_name": "Data and Model Security (DMS)",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All data entering GenAI pipelines validated — schema checks, anomaly detection, and quality gates before model ingestion or RAG indexing"
+      "notes": "All data entering GenAI pipelines validated — schema checks, anomaly detection, and quality gates before model ingestion or RAG indexing",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -358,7 +444,9 @@
       "control_name": "AI System Integrity (ASI)",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM and embedding inputs validated for format, length, and content — AI system integrity requirements extend to data pipeline boundaries"
+      "notes": "LLM and embedding inputs validated for format, length, and content — AI system integrity requirements extend to data pipeline boundaries",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -366,7 +454,9 @@
       "control_name": "Monitoring and Detection (MON)",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Continuous monitoring of data pipeline quality metrics — alerts on schema violations, unexpected distributions, or sudden quality drops"
+      "notes": "Continuous monitoring of data pipeline quality metrics — alerts on schema violations, unexpected distributions, or sudden quality drops",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -374,7 +464,9 @@
       "control_name": "General ICT — Secure Development",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Data validation implemented as a secure development requirement for all GenAI pipeline ingestion points"
+      "notes": "Data validation implemented as a secure development requirement for all GenAI pipeline ingestion points",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -382,7 +474,9 @@
       "control_name": "Design / Security Architecture",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Guardrails at multiple layers: input, generation, output"
+      "notes": "Guardrails at multiple layers: input, generation, output",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -390,7 +484,9 @@
       "control_name": "Verification / Security Testing",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Dedicated adversarial testing programme targeting all guardrail bypass vectors"
+      "notes": "Dedicated adversarial testing programme targeting all guardrail bypass vectors",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -398,7 +494,9 @@
       "control_name": "Operations / Incident Management",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Alert on disabled or bypassed guardrails in production"
+      "notes": "Alert on disabled or bypassed guardrails in production",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -406,7 +504,9 @@
       "control_name": "Governance / Strategy & Metrics",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Guardrail effectiveness metrics reviewed by security leadership"
+      "notes": "Guardrail effectiveness metrics reviewed by security leadership",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -414,7 +514,9 @@
       "control_name": "Verification / Architecture Assessment",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Pre-deployment review of all guardrail bypass scenarios"
+      "notes": "Pre-deployment review of all guardrail bypass scenarios",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -422,7 +524,9 @@
       "control_name": "CWE-20",
       "tier": "Foundational",
       "scope": "Build",
-      "url": "https://cwe.mitre.org/data/definitions/20.html"
+      "url": "https://cwe.mitre.org/data/definitions/20.html",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -430,7 +534,9 @@
       "control_name": "CWE-116",
       "tier": "Foundational",
       "scope": "Build",
-      "url": "https://cwe.mitre.org/data/definitions/116.html"
+      "url": "https://cwe.mitre.org/data/definitions/116.html",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -438,21 +544,27 @@
       "control_name": "CWE-74",
       "tier": "Foundational",
       "scope": "Build",
-      "url": "https://cwe.mitre.org/data/definitions/74.html"
+      "url": "https://cwe.mitre.org/data/definitions/74.html",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L2",
       "control_name": "Data Operations",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L4",
       "control_name": "Deployment & Infrastructure",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -460,7 +572,9 @@
       "control_name": "Third-party adversarial robustness testing",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Hardening"
+      "notes": "Hardening",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -468,7 +582,9 @@
       "control_name": "Detect adversarial input",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Hardening"
+      "notes": "Hardening",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -476,7 +592,9 @@
       "control_name": "Implement real-time input filtering",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -484,7 +602,9 @@
       "control_name": "Safety domain (harm prevention)",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -492,7 +612,9 @@
       "control_name": "NHI-5 Over-Privileged NHI",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Minimum scope; no service account has guardrail disable capability"
+      "notes": "Minimum scope; no service account has guardrail disable capability",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -500,7 +622,9 @@
       "control_name": "Verify software integrity — data provenance verification",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Verify provenance and integrity of all datasets used in training, fine-tuning, and evaluation; maintain cryptographic attestation of data origin and chain of custody"
+      "notes": "Verify provenance and integrity of all datasets used in training, fine-tuning, and evaluation; maintain cryptographic attestation of data origin and chain of custody",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -508,7 +632,9 @@
       "control_name": "Archive and protect software releases — data versioning with provenance",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Maintain versioned dataset snapshots with provenance metadata recording origin, collection method, processing steps, and quality metrics"
+      "notes": "Maintain versioned dataset snapshots with provenance metadata recording origin, collection method, processing steps, and quality metrics",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -516,7 +642,9 @@
       "control_name": "Reuse existing well-secured software — dataset quality vetting",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Vet all datasets for quality, completeness, representativeness, and fitness for purpose before use in any training or evaluation pipeline"
+      "notes": "Vet all datasets for quality, completeness, representativeness, and fitness for purpose before use in any training or evaluation pipeline",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -524,7 +652,9 @@
       "control_name": "Supply Chain Controls — data provenance tracking",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Implement provenance tracking for all AI training data; document source, collection method, processing history, and licensing for each dataset"
+      "notes": "Implement provenance tracking for all AI training data; document source, collection method, processing history, and licensing for each dataset",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -532,7 +662,9 @@
       "control_name": "Information Input Validation — data quality controls",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Validate quality, completeness, and accuracy of data entering AI pipelines; reject data failing quality thresholds"
+      "notes": "Validate quality, completeness, and accuracy of data entering AI pipelines; reject data failing quality thresholds",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -540,7 +672,9 @@
       "control_name": "Configuration Change Control — data source changes",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Require formal change control for all data source additions, modifications, and removals; maintain audit trail"
+      "notes": "Require formal change control for all data source additions, modifications, and removals; maintain audit trail",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -548,7 +682,9 @@
       "control_name": "Identification — data source documentation",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Document provenance, collection method, and quality characteristics for all AI training data in the ICT asset inventory"
+      "notes": "Document provenance, collection method, and quality characteristics for all AI training data in the ICT asset inventory",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -556,7 +692,9 @@
       "control_name": "Protection and Prevention — data quality controls",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Implement data quality validation before AI pipeline ingestion; reject data failing quality or provenance thresholds"
+      "notes": "Implement data quality validation before AI pipeline ingestion; reject data failing quality or provenance thresholds",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -564,7 +702,9 @@
       "control_name": "Third-Party Risk — external data source oversight",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Include external data sources in third-party risk management; assess data quality, provenance practices, and licensing compliance"
+      "notes": "Include external data sources in third-party risk management; assess data quality, provenance practices, and licensing compliance",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     }
   ],
   "tools": [

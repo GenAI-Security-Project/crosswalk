@@ -23,7 +23,9 @@
       "tier": "Foundational",
       "scope": "Build",
       "url": "https://atlas.mitre.org/techniques/AML.T0041",
-      "notes": "Extraction of internal model configuration, instructions, or system prompts"
+      "notes": "Extraction of internal model configuration, instructions, or system prompts",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MITRE ATLAS",
@@ -32,7 +34,9 @@
       "tier": "Foundational",
       "scope": "Build",
       "url": "https://atlas.mitre.org/techniques/AML.T0051.000",
-      "notes": "Crafting inputs specifically designed to reveal or override system prompt content"
+      "notes": "Crafting inputs specifically designed to reveal or override system prompt content",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -40,7 +44,9 @@
       "control_name": "Policies for data privacy",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "System prompts classified as sensitive configuration — subject to data governance policy"
+      "notes": "System prompts classified as sensitive configuration — subject to data governance policy",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -48,7 +54,9 @@
       "control_name": "Testing — data leakage",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Prompt extraction scenarios included in evaluation programme"
+      "notes": "Prompt extraction scenarios included in evaluation programme",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -56,7 +64,9 @@
       "control_name": "Risk response — data",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Defined response for detected hidden context exposure"
+      "notes": "Defined response for detected hidden context exposure",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -64,7 +74,9 @@
       "control_name": "Risk categorisation",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Hidden context exposure risk mapped and rated in AI risk register"
+      "notes": "Hidden context exposure risk mapped and rated in AI risk register",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -72,7 +84,9 @@
       "control_name": "Art. 13 — Transparency",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Transparency obligation must be met without exposing security-sensitive system prompt content"
+      "notes": "Transparency obligation must be met without exposing security-sensitive system prompt content",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -80,7 +94,9 @@
       "control_name": "Art. 17 — Quality management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "System prompt versions, access controls, and change procedures are quality management artefacts"
+      "notes": "System prompt versions, access controls, and change procedures are quality management artefacts",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -88,7 +104,9 @@
       "control_name": "Art. 53(1)(b) — GPAI transparency",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Published summaries must not inadvertently expose security-sensitive configuration"
+      "notes": "Published summaries must not inadvertently expose security-sensitive configuration",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -96,7 +114,10 @@
       "control_name": "Classification of information",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "System prompts classified as sensitive configuration — subject to data governance policy"
+      "notes": "System prompts classified as sensitive configuration — subject to data governance policy",
+      "framework_version": "ISO 27001:2022",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -104,7 +125,10 @@
       "control_name": "Information access restriction",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Access controls on system prompt storage — version controlled, access logged"
+      "notes": "Access controls on system prompt storage — version controlled, access logged",
+      "framework_version": "ISO 27001:2022",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -112,7 +136,10 @@
       "control_name": "Use of cryptography",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "System prompts encrypted at rest — not stored in cleartext configuration files"
+      "notes": "System prompts encrypted at rest — not stored in cleartext configuration files",
+      "framework_version": "ISO 27001:2022",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -120,7 +147,10 @@
       "control_name": "Logging",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Access to system prompts logged — unauthorised access attempts detectable"
+      "notes": "Access to system prompts logged — unauthorised access attempts detectable",
+      "framework_version": "ISO 27001:2022",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -128,7 +158,9 @@
       "control_name": "Data provenance and characteristics",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "System prompts classified as sensitive operational data — provenance, access controls, handling requirements documented"
+      "notes": "System prompts classified as sensitive operational data — provenance, access controls, handling requirements documented",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -136,7 +168,9 @@
       "control_name": "AI system security",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "System prompt encryption and access controls as AIMS security design requirements"
+      "notes": "System prompt encryption and access controls as AIMS security design requirements",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -144,7 +178,9 @@
       "control_name": "Information for interested parties",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Transparency obligations balanced with operational security — what must be disclosed vs what may be kept confidential"
+      "notes": "Transparency obligations balanced with operational security — what must be disclosed vs what may be kept confidential",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -152,7 +188,9 @@
       "control_name": "Support",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Documented information controls — system prompts managed as AIMS documented information with appropriate access controls"
+      "notes": "Documented information controls — system prompts managed as AIMS documented information with appropriate access controls",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
@@ -160,7 +198,9 @@
       "control_name": "CIS 3 — Data Protection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "System prompts classified as sensitive configuration — data handling policy applied"
+      "notes": "System prompts classified as sensitive configuration — data handling policy applied",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
@@ -168,7 +208,9 @@
       "control_name": "CIS 4 — Secure Configuration",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Secure configuration for LLM deployments — system prompts not in cleartext config"
+      "notes": "Secure configuration for LLM deployments — system prompts not in cleartext config",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
@@ -176,7 +218,9 @@
       "control_name": "CIS 8 — Audit Log Management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "System prompt access logged — unauthorised access attempts detectable"
+      "notes": "System prompt access logged — unauthorised access attempts detectable",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
@@ -184,7 +228,9 @@
       "control_name": "Verify sensitive data not cached in cleartext",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "System prompts not stored in cleartext application configuration or source code"
+      "notes": "System prompts not stored in cleartext application configuration or source code",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
@@ -192,7 +238,9 @@
       "control_name": "Verify access control enforces least privilege",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "System prompt access restricted to authorised personnel — read access logged"
+      "notes": "System prompt access restricted to authorised personnel — read access logged",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
@@ -200,7 +248,9 @@
       "control_name": "Verify access control decisions logged",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All access to system prompts logged — unauthorised access attempts detectable"
+      "notes": "All access to system prompts logged — unauthorised access attempts detectable",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
@@ -208,7 +258,9 @@
       "control_name": "Verify secrets not in source code",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "System prompts not hardcoded in source code — stored in secret management system"
+      "notes": "System prompts not hardcoded in source code — stored in secret management system",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -216,7 +268,9 @@
       "control_name": "Data confidentiality in transit",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "System prompt content treated as sensitive OT configuration data — encrypted in transit"
+      "notes": "System prompt content treated as sensitive OT configuration data — encrypted in transit",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -224,7 +278,9 @@
       "control_name": "Software and information integrity",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "System prompt integrity protected — unauthorised modification detected"
+      "notes": "System prompt integrity protected — unauthorised modification detected",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -232,7 +288,9 @@
       "control_name": "Information flow restriction",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "System prompt content cannot flow to unauthorised external destinations"
+      "notes": "System prompt content cannot flow to unauthorised external destinations",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -240,7 +298,9 @@
       "control_name": "Section 5.4 — Information disclosure",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "System prompts containing OT specifics treated as sensitive configuration data"
+      "notes": "System prompts containing OT specifics treated as sensitive configuration data",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -248,7 +308,9 @@
       "control_name": "Section 7.3 — Data protection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "System prompt encryption and access controls as data protection measures"
+      "notes": "System prompt encryption and access controls as data protection measures",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -256,7 +318,9 @@
       "control_name": "Control",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Application"
+      "notes": "Application",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -264,7 +328,9 @@
       "control_name": "SC-28",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "System prompts encrypted at rest — not stored in cleartext configuration files"
+      "notes": "System prompts encrypted at rest — not stored in cleartext configuration files",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -272,7 +338,9 @@
       "control_name": "AC-3",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "System prompt access restricted to authorised personnel — version controlled, access logged"
+      "notes": "System prompt access restricted to authorised personnel — version controlled, access logged",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -280,7 +348,9 @@
       "control_name": "AU-9",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "System prompt access logs protected — unauthorised access attempts detectable"
+      "notes": "System prompt access logs protected — unauthorised access attempts detectable",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -288,7 +358,9 @@
       "control_name": "Data Security",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "System prompts classified as sensitive configuration and protected at rest — encrypted, access-controlled"
+      "notes": "System prompts classified as sensitive configuration and protected at rest — encrypted, access-controlled",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -296,7 +368,9 @@
       "control_name": "Identity Management, Authentication & Access Control",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Access to system prompt storage restricted to authorised personnel — least privilege enforced"
+      "notes": "Access to system prompt storage restricted to authorised personnel — least privilege enforced",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -304,7 +378,9 @@
       "control_name": "Continuous Monitoring",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Access to system prompt storage logged and monitored — anomalous access detected"
+      "notes": "Access to system prompt storage logged and monitored — anomalous access detected",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -312,35 +388,45 @@
       "control_name": "Risk Management Strategy",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Risk tolerance defined for system prompt exposure — operational security value of prompt confidentiality assessed"
+      "notes": "Risk tolerance defined for system prompt exposure — operational security value of prompt confidentiality assessed",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "System prompts classified as confidential — encryption at rest, access-controlled, not in cleartext config",
       "control_name": "C2.1 — Confidential information protection",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Access controls on system prompt storage — only authorised personnel can read or modify, all access logged",
       "control_name": "CC6.1 — Logical access",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "System prompt security procedures — version control, rotation, extraction resistance testing documented",
       "control_name": "CC5.2 — Control activities",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Access to system prompt storage monitored — anomalous access attempts detected and alerted",
       "control_name": "CC7.2 — Monitoring",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -348,7 +434,9 @@
       "control_name": "Protection of sensitive authentication data",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "System prompts containing CDE configuration treated as sensitive — encrypted at rest, access-controlled"
+      "notes": "System prompts containing CDE configuration treated as sensitive — encrypted at rest, access-controlled",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -356,7 +444,9 @@
       "control_name": "Restrict access by need to know",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "System prompt access restricted — only authorised personnel with documented business need"
+      "notes": "System prompt access restricted — only authorised personnel with documented business need",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -364,7 +454,9 @@
       "control_name": "Logging and monitoring",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All access to system prompt storage logged — access to CDE configuration data requires audit trail"
+      "notes": "All access to system prompt storage logged — access to CDE configuration data requires audit trail",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -372,7 +464,9 @@
       "control_name": "Bespoke software security",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "System prompt design prevents leakage — no cleartext CDE identifiers, tokens resolved at runtime"
+      "notes": "System prompt design prevents leakage — no cleartext CDE identifiers, tokens resolved at runtime",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -380,7 +474,9 @@
       "control_name": "Data and Model Security (DMS)",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "System prompts classified as sensitive AI system configuration — encrypted, access-controlled, version-managed"
+      "notes": "System prompts classified as sensitive AI system configuration — encrypted, access-controlled, version-managed",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -388,7 +484,9 @@
       "control_name": "Governance and Risk (GOV)",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "System prompt security as AI governance obligation — operational security value assessed"
+      "notes": "System prompt security as AI governance obligation — operational security value assessed",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -396,7 +494,9 @@
       "control_name": "Monitoring and Detection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "System prompt access logged and monitored — anomalous access detected"
+      "notes": "System prompt access logged and monitored — anomalous access detected",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -404,7 +504,9 @@
       "control_name": "General ICT — Data Protection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "System prompts not stored in cleartext — encryption at rest as L1 data protection practice"
+      "notes": "System prompts not stored in cleartext — encryption at rest as L1 data protection practice",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -412,7 +514,9 @@
       "control_name": "Security Requirements",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "System prompt security as explicit requirement — confidentiality, encryption, access control specified before development"
+      "notes": "System prompt security as explicit requirement — confidentiality, encryption, access control specified before development",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -420,7 +524,9 @@
       "control_name": "Secure Build",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "System prompt protection implemented in code — no cleartext storage, version control access restrictions"
+      "notes": "System prompt protection implemented in code — no cleartext storage, version control access restrictions",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -428,21 +534,27 @@
       "control_name": "Security Testing",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Prompt extraction testing as penetration testing activity — resistance to known extraction techniques verified"
+      "notes": "Prompt extraction testing as penetration testing activity — resistance to known extraction techniques verified",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "STRIDE",
       "control_id": "I",
       "control_name": "Configuration Information Disclosure",
       "tier": "Foundational",
-      "scope": "Build"
+      "scope": "Build",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "STRIDE",
       "control_id": "R",
       "control_name": "Security Control Repudiation",
       "tier": "Foundational",
-      "scope": "Build"
+      "scope": "Build",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -450,7 +562,9 @@
       "control_name": "CWE-200",
       "tier": "Foundational",
       "scope": "Build",
-      "url": "https://cwe.mitre.org/data/definitions/200.html"
+      "url": "https://cwe.mitre.org/data/definitions/200.html",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -458,7 +572,9 @@
       "control_name": "CWE-312",
       "tier": "Foundational",
       "scope": "Build",
-      "url": "https://cwe.mitre.org/data/definitions/312.html"
+      "url": "https://cwe.mitre.org/data/definitions/312.html",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -466,7 +582,9 @@
       "control_name": "CWE-215",
       "tier": "Foundational",
       "scope": "Build",
-      "url": "https://cwe.mitre.org/data/definitions/215.html"
+      "url": "https://cwe.mitre.org/data/definitions/215.html",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP AI Testing Guide",
@@ -474,7 +592,9 @@
       "control_name": "IHT — Input Handling",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Attempt to extract system prompt contents through direct requests, indirect summarisation, translation, and instruction-override techniques"
+      "notes": "Attempt to extract system prompt contents through direct requests, indirect summarisation, translation, and instruction-override techniques",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP AI Testing Guide",
@@ -482,7 +602,9 @@
       "control_name": "DPT — Data Protection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Verify that credentials, API keys, or sensitive business logic in the system prompt are not reproducible by any input technique"
+      "notes": "Verify that credentials, API keys, or sensitive business logic in the system prompt are not reproducible by any input technique",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP AI Testing Guide",
@@ -490,21 +612,27 @@
       "control_name": "MBT — Model Behaviour",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Verify that the model consistently refuses system prompt disclosure across varied request phrasings and social engineering approaches"
+      "notes": "Verify that the model consistently refuses system prompt disclosure across varied request phrasings and social engineering approaches",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L1",
       "control_name": "Foundation Models",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L6",
       "control_name": "Security & Compliance",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -512,7 +640,9 @@
       "control_name": "Data & Privacy domain",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -520,7 +650,9 @@
       "control_name": "Prevent unauthorized AI actions",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -528,7 +660,9 @@
       "control_name": "Accountability domain",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -536,7 +670,9 @@
       "control_name": "NHI-2 Secret Leakage",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Scan system prompts for credential patterns before deployment"
+      "notes": "Scan system prompts for credential patterns before deployment",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -544,7 +680,9 @@
       "control_name": "NHI-6 Insecure Credential Storage",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Externalise credentials to vault; reference by ID in system prompt"
+      "notes": "Externalise credentials to vault; reference by ID in system prompt",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -552,7 +690,9 @@
       "control_name": "Protect all code from unauthorised access — system prompt confidentiality",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Classify system prompts as sensitive configuration artefacts; apply access controls, version control, and audit logging to all prompt stores"
+      "notes": "Classify system prompts as sensitive configuration artefacts; apply access controls, version control, and audit logging to all prompt stores",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -560,7 +700,9 @@
       "control_name": "Secure coding — no credentials in prompts",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Enforce secure coding standards prohibiting embedding of credentials, API keys, or sensitive configuration data in system prompts or model context"
+      "notes": "Enforce secure coding standards prohibiting embedding of credentials, API keys, or sensitive configuration data in system prompts or model context",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -568,7 +710,9 @@
       "control_name": "Review for security vulnerabilities — prompt disclosure",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Include system prompt extraction scenarios in pre-release security reviews; verify that outputs cannot reveal system prompt content"
+      "notes": "Include system prompt extraction scenarios in pre-release security reviews; verify that outputs cannot reveal system prompt content",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -576,7 +720,9 @@
       "control_name": "Test for security vulnerabilities — prompt extraction",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Conduct adversarial prompt extraction testing against all known extraction techniques before deployment and after each system prompt change"
+      "notes": "Conduct adversarial prompt extraction testing against all known extraction techniques before deployment and after each system prompt change",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -584,7 +730,9 @@
       "control_name": "Protection of Information at Rest — system prompt confidentiality",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Classify system prompts as sensitive configuration; encrypt at rest, enforce access controls, and apply version control and audit logging to all prompt stores"
+      "notes": "Classify system prompts as sensitive configuration; encrypt at rest, enforce access controls, and apply version control and audit logging to all prompt stores",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -592,7 +740,9 @@
       "control_name": "Access Enforcement — prompt configuration access",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Restrict access to system prompt configurations to authorised personnel; enforce role-based access control and change management on all prompt modifications"
+      "notes": "Restrict access to system prompt configurations to authorised personnel; enforce role-based access control and change management on all prompt modifications",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -600,7 +750,9 @@
       "control_name": "Event Logging — prompt extraction detection",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Log inference interactions with sufficient detail to detect system prompt extraction attempts; alert on query patterns indicative of extraction techniques"
+      "notes": "Log inference interactions with sufficient detail to detect system prompt extraction attempts; alert on query patterns indicative of extraction techniques",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -608,7 +760,9 @@
       "control_name": "Malicious Code Protection — prompt extraction defence",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Deploy output monitoring to detect and block responses containing system prompt content; treat extraction as a security event"
+      "notes": "Deploy output monitoring to detect and block responses containing system prompt content; treat extraction as a security event",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -616,7 +770,9 @@
       "control_name": "Protection and Prevention — prompt confidentiality",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Classify system prompts as sensitive ICT configuration; implement protection controls including encryption, access control, and output monitoring to prevent extraction"
+      "notes": "Classify system prompts as sensitive ICT configuration; implement protection controls including encryption, access control, and output monitoring to prevent extraction",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -624,7 +780,9 @@
       "control_name": "ICT Incident Management — prompt extraction reporting",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Classify successful system prompt extraction as an ICT-related incident; assess impact and report per DORA incident classification criteria"
+      "notes": "Classify successful system prompt extraction as an ICT-related incident; assess impact and report per DORA incident classification criteria",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -632,7 +790,9 @@
       "control_name": "Learning and Evolving — extraction post-mortem",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Conduct post-incident analysis for prompt extraction events; identify root cause, assess business impact, and update protection controls"
+      "notes": "Conduct post-incident analysis for prompt extraction events; identify root cause, assess business impact, and update protection controls",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -640,7 +800,9 @@
       "control_name": "Detection — extraction attempt detection",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Deploy detection mechanisms for system prompt extraction attempts; monitor inference requests for extraction technique patterns"
+      "notes": "Deploy detection mechanisms for system prompt extraction attempts; monitor inference requests for extraction technique patterns",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     }
   ],
   "tools": [

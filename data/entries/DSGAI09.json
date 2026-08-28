@@ -23,7 +23,9 @@
       "control_name": "Exfiltrate via Cyber Means",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Sensitive content extracted from multimodal inputs (OCR, transcription) transmitted through standard exfiltration paths"
+      "notes": "Sensitive content extracted from multimodal inputs (OCR, transcription) transmitted through standard exfiltration paths",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MITRE ATLAS",
@@ -31,7 +33,9 @@
       "control_name": "Exfiltrate via ML Inference API",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Multimodal content processed by AI system extracted through inference API queries referencing extracted content"
+      "notes": "Multimodal content processed by AI system extracted through inference API queries referencing extracted content",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MITRE ATLAS",
@@ -39,7 +43,9 @@
       "control_name": "Membership Inference",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Sensitive multimodal content in training data confirmed through membership inference queries"
+      "notes": "Sensitive multimodal content in training data confirmed through membership inference queries",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -47,7 +53,9 @@
       "control_name": "Policies for data privacy",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Multimodal data governance policy — classification propagation from source modality to all extracted forms"
+      "notes": "Multimodal data governance policy — classification propagation from source modality to all extracted forms",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -55,7 +63,9 @@
       "control_name": "Risk categorisation",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Multimodal leakage risks mapped per modality — image, audio, video, document — in risk register"
+      "notes": "Multimodal leakage risks mapped per modality — image, audio, video, document — in risk register",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -63,7 +73,9 @@
       "control_name": "Testing — data leakage",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Data leakage testing extended to multimodal pipelines — OCR output, transcripts, derived embeddings"
+      "notes": "Data leakage testing extended to multimodal pipelines — OCR output, transcripts, derived embeddings",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -71,7 +83,9 @@
       "control_name": "Risk response — data",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Incident response for multimodal data leakage — content identification, deletion, regulatory notification"
+      "notes": "Incident response for multimodal data leakage — content identification, deletion, regulatory notification",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -79,7 +93,9 @@
       "control_name": "Art. 10 — Data and data governance",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Multimodal input governance is an Art. 10 requirement for high-risk systems processing such inputs"
+      "notes": "Multimodal input governance is an Art. 10 requirement for high-risk systems processing such inputs",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -87,7 +103,9 @@
       "control_name": "Art. 15 — Accuracy, robustness, cybersecurity",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "DLP and access controls on multimodal pipelines are Art. 15 requirements"
+      "notes": "DLP and access controls on multimodal pipelines are Art. 15 requirements",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -95,7 +113,9 @@
       "control_name": "Art. 53(1)(a) — GPAI documentation",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Multimodal data governance documented in GPAI technical documentation"
+      "notes": "Multimodal data governance documented in GPAI technical documentation",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -103,7 +123,9 @@
       "control_name": "Data masking",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Masking and redaction applied to extracted text from OCR and audio transcription — same as source"
+      "notes": "Masking and redaction applied to extracted text from OCR and audio transcription — same as source",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -111,7 +133,9 @@
       "control_name": "Data leakage prevention",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "DLP applied to all modality-extracted content — text, OCR output, transcripts"
+      "notes": "DLP applied to all modality-extracted content — text, OCR output, transcripts",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -119,7 +143,9 @@
       "control_name": "Classification of information",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Classification of multimodal inputs must propagate to all derived extracted content"
+      "notes": "Classification of multimodal inputs must propagate to all derived extracted content",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -127,7 +153,9 @@
       "control_name": "Use of cryptography",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Encryption of multimodal uploads and all derived content at rest and in transit"
+      "notes": "Encryption of multimodal uploads and all derived content at rest and in transit",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -135,7 +163,9 @@
       "control_name": "A.7.2",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Hardening"
+      "notes": "Hardening",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -143,7 +173,9 @@
       "control_name": "A.6.2.3",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Hardening"
+      "notes": "Hardening",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -151,7 +183,9 @@
       "control_name": "A.5.2",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Hardening"
+      "notes": "Hardening",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -159,49 +193,63 @@
       "control_name": "Cl.8",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Hardening"
+      "notes": "Hardening",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
       "control_id": "CIS 3",
       "control_name": "3.13 — Deploy DLP solutions",
       "tier": "Hardening",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
       "control_id": "CIS 13",
       "control_name": "13.1 — Centralise security event alerting",
       "tier": "Hardening",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
       "control_id": "CIS 16",
       "control_name": "16.12 — Implement code-level security checks",
       "tier": "Hardening",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
       "control_id": "V5 Validation",
       "control_name": "V5.2.5 — Unstructured data sanitised",
       "tier": "Hardening",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
       "control_id": "V8 Data Protection",
       "control_name": "V8.1.4 — Sensitive data minimised",
       "tier": "Hardening",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
       "control_id": "V12 Files/Resources",
       "control_name": "V12.1.3 — Malicious file detection on upload",
       "tier": "Hardening",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -209,7 +257,9 @@
       "control_name": "Data confidentiality",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Extracted OT content from multimodal inputs classified and protected — OCR output of P&ID is as sensitive as the P&ID"
+      "notes": "Extracted OT content from multimodal inputs classified and protected — OCR output of P&ID is as sensitive as the P&ID",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -217,7 +267,9 @@
       "control_name": "Software and information integrity",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Multimodal extraction pipelines validated — no uncontrolled OT data entering unclassified processing"
+      "notes": "Multimodal extraction pipelines validated — no uncontrolled OT data entering unclassified processing",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -225,7 +277,9 @@
       "control_name": "Timely response to events",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Multimodal OT data leakage treated as security event"
+      "notes": "Multimodal OT data leakage treated as security event",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -233,7 +287,9 @@
       "control_name": "§5.3",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Corpus manipulation directly threatens OT operational integrity"
+      "notes": "Corpus manipulation directly threatens OT operational integrity",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -241,7 +297,9 @@
       "control_name": "§6.2",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "OT corpus manipulation must be in risk register as critical scenario"
+      "notes": "OT corpus manipulation must be in risk register as critical scenario",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -249,7 +307,9 @@
       "control_name": "§7.2",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Write authentication on all OT corpus stores"
+      "notes": "Write authentication on all OT corpus stores",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -257,7 +317,9 @@
       "control_name": "Data Security",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Extracted content from multimodal inputs protected — OCR output of sensitive document classified and protected"
+      "notes": "Extracted content from multimodal inputs protected — OCR output of sensitive document classified and protected",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -265,7 +327,9 @@
       "control_name": "Data Security",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Extracted sensitive content encrypted in transit — multimodal extraction pipelines covered"
+      "notes": "Extracted sensitive content encrypted in transit — multimodal extraction pipelines covered",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -273,7 +337,9 @@
       "control_name": "Continuous Monitoring",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Multimodal extraction output monitored — DLP on OCR results, transcription outputs"
+      "notes": "Multimodal extraction output monitored — DLP on OCR results, transcription outputs",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -281,35 +347,45 @@
       "control_name": "Asset Management",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Multimodal processing pipelines inventoried — what modalities are processed, what is extracted and stored"
+      "notes": "Multimodal processing pipelines inventoried — what modalities are processed, what is extracted and stored",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Multimodal derived content (OCR output, transcripts) protected at same level as source uploads",
       "control_name": "C2.1 — Confidential information protection",
       "tier": "Hardening",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Personal information extracted from multimodal inputs subject to same use restrictions as source data",
       "control_name": "P5.1 — Personal information use",
       "tier": "Hardening",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Access controls on multimodal content stores — same rigour as equivalent text data stores",
       "control_name": "CC6.1 — Logical access",
       "tier": "Hardening",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "DLP monitoring on multimodal extraction pipelines — PII in OCR output and transcripts detected",
       "control_name": "CC7.2 — Anomaly detection",
       "tier": "Hardening",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -317,7 +393,9 @@
       "control_name": "PAN rendering",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "PANs extracted from multimodal content masked in all outputs — OCR-extracted PANs are CHD requiring Req 3 treatment"
+      "notes": "PANs extracted from multimodal content masked in all outputs — OCR-extracted PANs are CHD requiring Req 3 treatment",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -325,7 +403,9 @@
       "control_name": "Protect stored CHD",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "All CHD extracted from multimodal inputs encrypted at rest — OCR output of a payment document is CHD"
+      "notes": "All CHD extracted from multimodal inputs encrypted at rest — OCR output of a payment document is CHD",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -333,7 +413,9 @@
       "control_name": "Encryption in transit",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Multimodal extraction pipelines encrypted in transit where CHD is in scope"
+      "notes": "Multimodal extraction pipelines encrypted in transit where CHD is in scope",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -341,7 +423,9 @@
       "control_name": "Logging",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "All PAN access through multimodal pipelines logged"
+      "notes": "All PAN access through multimodal pipelines logged",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -349,7 +433,9 @@
       "control_name": "Data and Model Security (DMS)",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Data classification and handling requirements apply equally across all modalities — images, audio, video, and documents governed as GenAI assets"
+      "notes": "Data classification and handling requirements apply equally across all modalities — images, audio, video, and documents governed as GenAI assets",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -357,7 +443,9 @@
       "control_name": "Monitoring and Detection (MON)",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "DLP and monitoring extended to cover all output modalities — AI-specific monitoring for sensitive content in generated images, audio, or documents"
+      "notes": "DLP and monitoring extended to cover all output modalities — AI-specific monitoring for sensitive content in generated images, audio, or documents",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -365,7 +453,9 @@
       "control_name": "Governance and Risk (GOV)",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "AI risk assessment explicitly covers multimodal data flows — blind spots between modality types documented and controlled"
+      "notes": "AI risk assessment explicitly covers multimodal data flows — blind spots between modality types documented and controlled",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -373,7 +463,9 @@
       "control_name": "General ICT — Data Protection",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Encryption and access control applied uniformly across all modalities stored or processed by GenAI systems"
+      "notes": "Encryption and access control applied uniformly across all modalities stored or processed by GenAI systems",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -381,7 +473,9 @@
       "control_name": "Design / Threat Assessment",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Enumerate all write paths to the corpus and attack scenarios for each"
+      "notes": "Enumerate all write paths to the corpus and attack scenarios for each",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -389,7 +483,9 @@
       "control_name": "Implementation / Secure Build",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Authenticate and verify all corpus writes; hash embeddings at ingest"
+      "notes": "Authenticate and verify all corpus writes; hash embeddings at ingest",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -397,7 +493,9 @@
       "control_name": "Verification / Security Testing",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Attempt to inject manipulated documents; verify detection"
+      "notes": "Attempt to inject manipulated documents; verify detection",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -405,7 +503,9 @@
       "control_name": "Operations / Incident Management",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Alert on unexpected corpus changes or embedding distribution shifts"
+      "notes": "Alert on unexpected corpus changes or embedding distribution shifts",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -413,7 +513,9 @@
       "control_name": "Governance / Policy & Compliance",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "All corpus changes go through a review and approval process"
+      "notes": "All corpus changes go through a review and approval process",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -421,7 +523,9 @@
       "control_name": "CWE-200",
       "tier": "Hardening",
       "scope": "Both",
-      "url": "https://cwe.mitre.org/data/definitions/200.html"
+      "url": "https://cwe.mitre.org/data/definitions/200.html",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -429,21 +533,27 @@
       "control_name": "CWE-201",
       "tier": "Hardening",
       "scope": "Both",
-      "url": "https://cwe.mitre.org/data/definitions/201.html"
+      "url": "https://cwe.mitre.org/data/definitions/201.html",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L2",
       "control_name": "Data Operations",
       "tier": "Hardening",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L1",
       "control_name": "Foundation Models",
       "tier": "Hardening",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -451,7 +561,9 @@
       "control_name": "Data & Privacy domain",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -459,7 +571,9 @@
       "control_name": "Third-party adversarial robustness testing",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Hardening"
+      "notes": "Hardening",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -467,7 +581,9 @@
       "control_name": "Detect adversarial input",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Hardening"
+      "notes": "Hardening",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -475,7 +591,9 @@
       "control_name": "Audit trails and logging",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -483,7 +601,9 @@
       "control_name": "NHI-5 Over-Privileged NHI",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Separate read and write credentials; write accounts require MFA"
+      "notes": "Separate read and write credentials; write accounts require MFA",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -491,7 +611,9 @@
       "control_name": "NHI-6 Insecure Credential Storage",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Vault all corpus write credentials"
+      "notes": "Vault all corpus write credentials",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -499,7 +621,9 @@
       "control_name": "NHI-7 Long-Lived Credentials",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Rotate corpus write credentials; implement short-lived write pattern"
+      "notes": "Rotate corpus write credentials; implement short-lived write pattern",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -507,7 +631,9 @@
       "control_name": "Protect all code from unauthorised access — IP protection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Protect model weights, architecture specifications, training data, and proprietary algorithms from unauthorised access; implement defence against model extraction attacks"
+      "notes": "Protect model weights, architecture specifications, training data, and proprietary algorithms from unauthorised access; implement defence against model extraction attacks",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -515,7 +641,9 @@
       "control_name": "Archive and protect software releases — IP asset management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Maintain access-controlled, versioned registries for all IP-sensitive AI artefacts; enforce need-to-know access and log all access events"
+      "notes": "Maintain access-controlled, versioned registries for all IP-sensitive AI artefacts; enforce need-to-know access and log all access events",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -523,7 +651,9 @@
       "control_name": "Protection of Information at Rest — IP encryption",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Encrypt all intellectual property — model weights, proprietary training data, algorithms — at rest with FIPS 140-validated modules"
+      "notes": "Encrypt all intellectual property — model weights, proprietary training data, algorithms — at rest with FIPS 140-validated modules",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -531,7 +661,9 @@
       "control_name": "Access Enforcement — IP access control",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Enforce strict access control on AI intellectual property; restrict to minimum necessary personnel with audit trail"
+      "notes": "Enforce strict access control on AI intellectual property; restrict to minimum necessary personnel with audit trail",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -539,7 +671,9 @@
       "control_name": "Audit Generation — IP access tracking",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Generate audit records for all access to AI intellectual property; enable detection of unauthorised access and exfiltration"
+      "notes": "Generate audit records for all access to AI intellectual property; enable detection of unauthorised access and exfiltration",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -547,7 +681,9 @@
       "control_name": "Protection and Prevention — IP protection controls",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Implement security controls protecting AI intellectual property — encryption, access controls, and DLP for model weights, training data, and proprietary algorithms"
+      "notes": "Implement security controls protecting AI intellectual property — encryption, access controls, and DLP for model weights, training data, and proprietary algorithms",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -555,7 +691,9 @@
       "control_name": "Third-Party Risk — IP protection in vendor relationships",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Address IP protection in third-party agreements; ensure vendors cannot access, replicate, or misuse proprietary AI assets"
+      "notes": "Address IP protection in third-party agreements; ensure vendors cannot access, replicate, or misuse proprietary AI assets",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -563,7 +701,9 @@
       "control_name": "Detection — IP exfiltration detection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Deploy detection for IP exfiltration attempts; monitor model weight access and download patterns"
+      "notes": "Deploy detection for IP exfiltration attempts; monitor model weight access and download patterns",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     }
   ],
   "tools": [

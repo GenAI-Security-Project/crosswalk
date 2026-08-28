@@ -23,7 +23,9 @@
       "control_name": "Publish Poisoned Datasets",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Adversary publishes false content in public repositories, documentation sites, or knowledge bases indexed by RAG systems"
+      "notes": "Adversary publishes false content in public repositories, documentation sites, or knowledge bases indexed by RAG systems",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MITRE ATLAS",
@@ -31,7 +33,9 @@
       "control_name": "Poison Training Data",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Adversary introduces false content into RAG corpus through ingestion path — no public publication required"
+      "notes": "Adversary introduces false content into RAG corpus through ingestion path — no public publication required",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MITRE ATLAS",
@@ -39,7 +43,9 @@
       "control_name": "Craft Adversarial Data",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "False content crafted to appear authoritative and rank highly in semantic similarity searches"
+      "notes": "False content crafted to appear authoritative and rank highly in semantic similarity searches",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -47,7 +53,9 @@
       "control_name": "Policies for trustworthy AI",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Policy on information integrity for AI outputs — source trust verification, cross-verification requirements"
+      "notes": "Policy on information integrity for AI outputs — source trust verification, cross-verification requirements",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -55,7 +63,9 @@
       "control_name": "Testing — adversarial",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Adversarial testing of RAG pipeline integrity — source poisoning and retrieval manipulation scenarios"
+      "notes": "Adversarial testing of RAG pipeline integrity — source poisoning and retrieval manipulation scenarios",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -63,7 +73,9 @@
       "control_name": "Data quality",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Data quality controls on all RAG ingestion — provenance, source trust scoring, anomaly detection"
+      "notes": "Data quality controls on all RAG ingestion — provenance, source trust scoring, anomaly detection",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -71,7 +83,9 @@
       "control_name": "Risk response",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Response for detected RAG poisoning — source quarantine, index rebuild, output correction"
+      "notes": "Response for detected RAG poisoning — source quarantine, index rebuild, output correction",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -79,7 +93,9 @@
       "control_name": "Art. 10 — Data and data governance",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "RAG corpus integrity controls and source verification are Art. 10 requirements"
+      "notes": "RAG corpus integrity controls and source verification are Art. 10 requirements",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -87,7 +103,9 @@
       "control_name": "Art. 15 — Accuracy, robustness, cybersecurity",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Source trust scoring and ingestion validation are Art. 15 robustness requirements"
+      "notes": "Source trust scoring and ingestion validation are Art. 15 robustness requirements",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -95,7 +113,9 @@
       "control_name": "Art. 55(1)(a) — Systemic risk GPAI",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Disinformation risk assessment and RAG integrity controls are binding Art. 55 obligations"
+      "notes": "Disinformation risk assessment and RAG integrity controls are binding Art. 55 obligations",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -103,7 +123,9 @@
       "control_name": "Art. 50 — Transparency",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Disinformation risk amplified when users cannot distinguish AI-generated content — Art. 50 applies"
+      "notes": "Disinformation risk amplified when users cannot distinguish AI-generated content — Art. 50 applies",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -111,7 +133,9 @@
       "control_name": "Threat intelligence",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Active intelligence on disinformation campaigns and RAG poisoning techniques targeting your sector"
+      "notes": "Active intelligence on disinformation campaigns and RAG poisoning techniques targeting your sector",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -119,7 +143,9 @@
       "control_name": "Management of technical vulnerabilities",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Vulnerability management extended to cover data integrity vulnerabilities in RAG pipelines"
+      "notes": "Vulnerability management extended to cover data integrity vulnerabilities in RAG pipelines",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -127,7 +153,9 @@
       "control_name": "Secure system architecture",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "RAG pipeline designed with source trust verification and integrity controls"
+      "notes": "RAG pipeline designed with source trust verification and integrity controls",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -135,7 +163,9 @@
       "control_name": "Security testing",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Integrity testing of RAG corpora — anomaly detection, source validation, content verification"
+      "notes": "Integrity testing of RAG corpora — anomaly detection, source validation, content verification",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -143,7 +173,9 @@
       "control_name": "A.7.2",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Hardening"
+      "notes": "Hardening",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -151,7 +183,9 @@
       "control_name": "A.7.3",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Hardening"
+      "notes": "Hardening",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -159,7 +193,9 @@
       "control_name": "A.5.2",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Hardening"
+      "notes": "Hardening",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -167,42 +203,54 @@
       "control_name": "A.8.1",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Hardening"
+      "notes": "Hardening",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
       "control_id": "CIS 7",
       "control_name": "7.1 — Vulnerability management",
       "tier": "Hardening",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
       "control_id": "CIS 16",
       "control_name": "16.11 — Use up-to-date components",
       "tier": "Hardening",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
       "control_id": "CIS 18",
       "control_name": "18.1 — Penetration testing",
       "tier": "Hardening",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
       "control_id": "V5 Validation",
       "control_name": "V5.1.3 — Server-side input validation",
       "tier": "Hardening",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
       "control_id": "V11 Business Logic",
       "control_name": "V11.1.4 — Enforce business logic limits",
       "tier": "Hardening",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -210,7 +258,9 @@
       "control_name": "Software and information integrity",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "OT RAG corpus integrity controls — source allowlisting, hash verification, ingestion gates"
+      "notes": "OT RAG corpus integrity controls — source allowlisting, hash verification, ingestion gates",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -218,7 +268,9 @@
       "control_name": "Software and information integrity monitoring",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Continuous OT RAG corpus monitoring — unauthorised modifications detected before reaching operators"
+      "notes": "Continuous OT RAG corpus monitoring — unauthorised modifications detected before reaching operators",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -226,7 +278,9 @@
       "control_name": "Timely response to events",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "OT RAG poisoning treated as Critical security event — source quarantine, index rebuild, process control assessment"
+      "notes": "OT RAG poisoning treated as Critical security event — source quarantine, index rebuild, process control assessment",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -234,7 +288,9 @@
       "control_name": "Denial of service protection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Poisoned advisory output blast radius contained — process control fallback if advisory system compromised"
+      "notes": "Poisoned advisory output blast radius contained — process control fallback if advisory system compromised",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -242,7 +298,9 @@
       "control_name": "§6.2",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Provenance as OT data quality and audit risk"
+      "notes": "Provenance as OT data quality and audit risk",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -250,7 +308,9 @@
       "control_name": "§8.2",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Data lineage as OT governance requirement"
+      "notes": "Data lineage as OT governance requirement",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -258,7 +318,9 @@
       "control_name": "Supply Chain Risk Management",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "RAG data source providers treated as suppliers — content integrity requirements in contracts"
+      "notes": "RAG data source providers treated as suppliers — content integrity requirements in contracts",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -266,7 +328,9 @@
       "control_name": "Continuous Monitoring",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "RAG corpus integrity monitored — anomalous content changes, unusual ingestion patterns detected"
+      "notes": "RAG corpus integrity monitored — anomalous content changes, unusual ingestion patterns detected",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -274,7 +338,9 @@
       "control_name": "Incident Analysis",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "RAG poisoning incidents analysed — affected content identified, operational decisions influenced reviewed"
+      "notes": "RAG poisoning incidents analysed — affected content identified, operational decisions influenced reviewed",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -282,35 +348,45 @@
       "control_name": "Data Security",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "RAG corpus content integrity protected — hash-based verification, source trust tiering"
+      "notes": "RAG corpus content integrity protected — hash-based verification, source trust tiering",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "RAG corpus integrity controls — only accurate, verified content enters the retrieval index",
       "control_name": "PI1.2 — System inputs complete and accurate",
       "tier": "Hardening",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "LLM outputs derived from poisoned RAG are a processing integrity failure — detection before delivery",
       "control_name": "PI1.3 — Outputs complete and accurate",
       "tier": "Hardening",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "RAG corpus data source providers assessed — content quality, update process, integrity guarantees",
       "control_name": "CC9.1 — Vendor risk",
       "tier": "Hardening",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "RAG corpus anomaly detection — unusual content or modifications detected before reaching production",
       "control_name": "CC7.2 — Anomaly detection",
       "tier": "Hardening",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -318,7 +394,9 @@
       "control_name": "Secure system changes",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "RAG corpus updates tested for unexpected content — integrity verification before production indexing"
+      "notes": "RAG corpus updates tested for unexpected content — integrity verification before production indexing",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -326,7 +404,9 @@
       "control_name": "TPSP programme",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "RAG data source providers as TPSPs — content quality and integrity requirements in agreements"
+      "notes": "RAG data source providers as TPSPs — content quality and integrity requirements in agreements",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -334,7 +414,9 @@
       "control_name": "Audit log review",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "RAG corpus monitoring — anomalous content detected and reviewed as part of Req 10 log analysis"
+      "notes": "RAG corpus monitoring — anomalous content detected and reviewed as part of Req 10 log analysis",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -342,7 +424,9 @@
       "control_name": "Penetration testing",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Adversarial RAG integrity testing for payment advisory systems — false content injection attempts documented"
+      "notes": "Adversarial RAG integrity testing for payment advisory systems — false content injection attempts documented",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -350,7 +434,9 @@
       "control_name": "Data and Model Security (DMS)",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Provenance verification for all fine-tuning corpora — source credibility assessed, integrity verified before ingestion"
+      "notes": "Provenance verification for all fine-tuning corpora — source credibility assessed, integrity verified before ingestion",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -358,7 +444,9 @@
       "control_name": "AI System Integrity (ASI)",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "AI system integrity testing includes factual accuracy validation — model outputs tested against ground truth before deployment"
+      "notes": "AI system integrity testing includes factual accuracy validation — model outputs tested against ground truth before deployment",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -366,7 +454,9 @@
       "control_name": "Governance and Risk (GOV)",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Disinformation risk documented in AI risk register — sector-specific severity assessed for healthcare, finance, critical infrastructure"
+      "notes": "Disinformation risk documented in AI risk register — sector-specific severity assessed for healthcare, finance, critical infrastructure",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -374,7 +464,9 @@
       "control_name": "L3 — Sector-specific",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "For NIS2 essential entities and EU AI Act Annex III deployments — disinformation risk treated as a significant incident category"
+      "notes": "For NIS2 essential entities and EU AI Act Annex III deployments — disinformation risk treated as a significant incident category",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -382,7 +474,9 @@
       "control_name": "Governance / Policy & Compliance",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Policy requiring provenance metadata for all GenAI data"
+      "notes": "Policy requiring provenance metadata for all GenAI data",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -390,7 +484,9 @@
       "control_name": "Design / Security Requirements",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Provenance metadata built into data pipeline requirements"
+      "notes": "Provenance metadata built into data pipeline requirements",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -398,7 +494,9 @@
       "control_name": "Operations / Operational Management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Alert on loss of provenance metadata in data flows"
+      "notes": "Alert on loss of provenance metadata in data flows",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -406,7 +504,9 @@
       "control_name": "Verification / Requirements-Driven Testing",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Tests verifying provenance metadata is preserved through pipeline"
+      "notes": "Tests verifying provenance metadata is preserved through pipeline",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -414,7 +514,9 @@
       "control_name": "Governance / Strategy & Metrics",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Provenance programme included in data governance roadmap"
+      "notes": "Provenance programme included in data governance roadmap",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -422,7 +524,9 @@
       "control_name": "CWE-345",
       "tier": "Hardening",
       "scope": "Both",
-      "url": "https://cwe.mitre.org/data/definitions/345.html"
+      "url": "https://cwe.mitre.org/data/definitions/345.html",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -430,28 +534,36 @@
       "control_name": "CWE-20",
       "tier": "Hardening",
       "scope": "Both",
-      "url": "https://cwe.mitre.org/data/definitions/20.html"
+      "url": "https://cwe.mitre.org/data/definitions/20.html",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L2",
       "control_name": "Data Operations",
       "tier": "Hardening",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L1",
       "control_name": "Foundation Models",
       "tier": "Hardening",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L5",
       "control_name": "Evaluation & Observability",
       "tier": "Hardening",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -459,7 +571,9 @@
       "control_name": "Data & Privacy domain",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -467,7 +581,9 @@
       "control_name": "Audit trails and logging",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -475,49 +591,63 @@
       "control_name": "AIUC-1 Domain",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Status"
+      "notes": "Status",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
       "control_id": "DSGAI02, DSGAI03, DSGAI06, DSGAI07, DSGAI08, DSGAI09, DSGAI14, DSGAI15, DSGAI18, DSGAI21",
       "control_name": "A — Data & Privacy",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
       "control_id": "DSGAI01, DSGAI04, DSGAI05, DSGAI10, DSGAI12, DSGAI16, DSGAI17",
       "control_name": "B — Security",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
       "control_id": "DSGAI05, DSGAI20",
       "control_name": "C — Safety",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
       "control_id": "DSGAI12, DSGAI19",
       "control_name": "D — Reliability",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
       "control_id": "DSGAI02, DSGAI06, DSGAI09, DSGAI13, DSGAI18, DSGAI20, DSGAI21",
       "control_name": "E — Accountability",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
       "control_id": "DSGAI20",
       "control_name": "F — Society",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -525,7 +655,9 @@
       "control_name": "Version",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Change"
+      "notes": "Change",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -533,7 +665,9 @@
       "control_name": "1.0.0",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Initial release — full mapping DSGAI01–DSGAI21 to AIUC-1"
+      "notes": "Initial release — full mapping DSGAI01–DSGAI21 to AIUC-1",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -541,7 +675,9 @@
       "control_name": "NHI-10 Human Use of NHI",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Enforce machine identity per pipeline component; log with component identity"
+      "notes": "Enforce machine identity per pipeline component; log with component identity",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -549,7 +685,9 @@
       "control_name": "NHI-1 Improper Offboarding",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Timely offboarding of pipeline NHIs"
+      "notes": "Timely offboarding of pipeline NHIs",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -557,21 +695,27 @@
       "control_name": "NHI-2 Secret Leakage",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Protect lineage system credentials"
+      "notes": "Protect lineage system credentials",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
       "control_id": "DSGAI entries most affected",
       "control_name": "NHI Risk",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
       "control_id": "DSGAI21",
       "control_name": "NHI-1 Improper Offboarding",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -579,7 +723,9 @@
       "control_name": "NHI-2 Secret Leakage",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "DevSecOps"
+      "notes": "DevSecOps",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -587,7 +733,9 @@
       "control_name": "NHI-3 Third-Party NHI",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Security"
+      "notes": "Security",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -595,14 +743,18 @@
       "control_name": "NHI-4 Insecure Authentication",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Platform"
+      "notes": "Platform",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
       "control_id": "DSGAI02, DSGAI07, DSGAI08, DSGAI09",
       "control_name": "NHI-5 Over-Privileged NHI",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -610,14 +762,18 @@
       "control_name": "NHI-6 Insecure Storage",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Platform"
+      "notes": "Platform",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
       "control_id": "DSGAI02, DSGAI07, DSGAI09, DSGAI12",
       "control_name": "NHI-7 Long-Lived",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -625,21 +781,27 @@
       "control_name": "NHI-8 Env Isolation",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "DevSecOps"
+      "notes": "DevSecOps",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
       "control_id": "DSGAI04, DSGAI07, DSGAI08, DSGAI19",
       "control_name": "NHI-9 NHI Reuse",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
       "control_id": "DSGAI18, DSGAI20, DSGAI21",
       "control_name": "NHI-10 Human Use",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -647,7 +809,9 @@
       "control_name": "Version",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Change"
+      "notes": "Change",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -655,7 +819,9 @@
       "control_name": "1.0.0",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Initial release — full mapping DSGAI01–DSGAI21 to NHI Top 10"
+      "notes": "Initial release — full mapping DSGAI01–DSGAI21 to NHI Top 10",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -663,7 +829,9 @@
       "control_name": "Define security requirements — regulatory compliance requirements",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Define security requirements that mandate compliance with all applicable data protection, privacy, and AI-specific regulations for each AI system deployment"
+      "notes": "Define security requirements that mandate compliance with all applicable data protection, privacy, and AI-specific regulations for each AI system deployment",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -671,7 +839,9 @@
       "control_name": "Design software — compliance-by-design",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Design AI systems with regulatory compliance built into architecture; embed compliance controls, audit capabilities, and regulatory reporting into pipeline design"
+      "notes": "Design AI systems with regulatory compliance built into architecture; embed compliance controls, audit capabilities, and regulatory reporting into pipeline design",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -679,7 +849,9 @@
       "control_name": "Analyse root causes — compliance failure analysis",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "When regulatory non-compliance is identified, conduct root cause analysis to determine the gap, affected data subjects, and required remediation"
+      "notes": "When regulatory non-compliance is identified, conduct root cause analysis to determine the gap, affected data subjects, and required remediation",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -687,7 +859,9 @@
       "control_name": "Risk Management Strategy — regulatory compliance",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Include regulatory compliance in AI risk management; map applicable data laws to AI processing activities and define compliance requirements"
+      "notes": "Include regulatory compliance in AI risk management; map applicable data laws to AI processing activities and define compliance requirements",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -695,7 +869,9 @@
       "control_name": "Risk Assessment — compliance gap analysis",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Conduct regulatory compliance gap analysis for AI systems; identify areas of non-compliance and define remediation plans"
+      "notes": "Conduct regulatory compliance gap analysis for AI systems; identify areas of non-compliance and define remediation plans",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -703,7 +879,9 @@
       "control_name": "Event Logging — regulatory evidence",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Maintain comprehensive logs for regulatory compliance evidence; ensure audit trails meet requirements of applicable data laws"
+      "notes": "Maintain comprehensive logs for regulatory compliance evidence; ensure audit trails meet requirements of applicable data laws",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -711,7 +889,9 @@
       "control_name": "Access Enforcement — legally mandated controls",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Implement access controls mandated by applicable data laws; enforce data subject rights, purpose limitation, and processing restrictions"
+      "notes": "Implement access controls mandated by applicable data laws; enforce data subject rights, purpose limitation, and processing restrictions",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -719,7 +899,9 @@
       "control_name": "ICT Risk Management — regulatory compliance governance",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Include regulatory compliance in ICT risk management; map applicable data laws to AI processing activities; define compliance requirements and accountability"
+      "notes": "Include regulatory compliance in ICT risk management; map applicable data laws to AI processing activities; define compliance requirements and accountability",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -727,7 +909,9 @@
       "control_name": "ICT Incident Management — compliance incident reporting",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Classify material regulatory non-compliance events as ICT incidents; report to competent authorities per DORA criteria; coordinate with DPO for GDPR notifications"
+      "notes": "Classify material regulatory non-compliance events as ICT incidents; report to competent authorities per DORA criteria; coordinate with DPO for GDPR notifications",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -735,7 +919,9 @@
       "control_name": "Learning and Evolving — compliance improvement",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Apply lessons learned from compliance failures; update controls and processes based on regulatory changes, enforcement actions, and incident analysis"
+      "notes": "Apply lessons learned from compliance failures; update controls and processes based on regulatory changes, enforcement actions, and incident analysis",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -743,7 +929,9 @@
       "control_name": "Identification — regulated data mapping",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Map all AI data subject to regulatory requirements; ensure complete coverage in compliance programme"
+      "notes": "Map all AI data subject to regulatory requirements; ensure complete coverage in compliance programme",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     }
   ],
   "tools": [

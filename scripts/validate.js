@@ -349,6 +349,68 @@ function checkSharedResources() {
   }
 }
 
+// ─── Schema v2 guard ──────────────────────────────────────────────────────────
+
+/**
+ * 13. Schema-v2 mapping fields must be well-formed where present.
+ *
+ * Migration is file-by-file, so this does not require the fields — it requires
+ * that what exists is valid. Vocabularies follow NIST IR 8278A Rev. 1; see
+ * docs/SCHEMA_V2_MIGRATION.md.
+ *
+ * The one hard rule: a row may not claim review it does not have. `confidence`
+ * above `unreviewed` with an empty `reviewed_by` is exactly the false
+ * confidence schema v2 exists to prevent, so it fails.
+ */
+const V2_RELATIONSHIPS = ['equal', 'subset-of', 'superset-of', 'intersects-with', 'not-related-to'];
+const V2_RATIONALE_TYPES = ['syntactic', 'semantic', 'functional'];
+const V2_CONFIDENCE = ['high', 'medium', 'low', 'unreviewed'];
+
+function checkSchemaV2() {
+  const dir = path.join(ROOT, 'data', 'entries');
+  if (!fs.existsSync(dir)) return true;
+
+  let violations = 0;
+  const seen = { total: 0, typed: 0, reviewed: 0 };
+
+  for (const f of fs.readdirSync(dir).filter((n) => n.endsWith('.json'))) {
+    const entry = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'));
+    (entry.mappings || []).forEach((m, i) => {
+      const where = `${entry.id} mapping[${i}] ${m.framework}:${m.control_id}`;
+      seen.total++;
+
+      const bad = (field, allowed) =>
+        m[field] !== undefined && !allowed.includes(m[field]);
+
+      if (bad('relationship', V2_RELATIONSHIPS)) {
+        fail('data/entries/' + f, `${where} — relationship "${m.relationship}" is not an OLIR value`);
+        violations++;
+      }
+      if (bad('rationale_type', V2_RATIONALE_TYPES)) {
+        fail('data/entries/' + f, `${where} — rationale_type "${m.rationale_type}" is not syntactic|semantic|functional`);
+        violations++;
+      }
+      if (bad('confidence', V2_CONFIDENCE)) {
+        fail('data/entries/' + f, `${where} — confidence "${m.confidence}" is not high|medium|low|unreviewed`);
+        violations++;
+      }
+      if (m.confidence && m.confidence !== 'unreviewed' && !(m.reviewed_by || []).length) {
+        fail('data/entries/' + f,
+          `${where} — confidence "${m.confidence}" but reviewed_by is empty; only a named reviewer may raise confidence`);
+        violations++;
+      }
+      if (m.relationship) seen.typed++;
+      if ((m.reviewed_by || []).length) seen.reviewed++;
+    });
+  }
+
+  if (!violations) {
+    pass('Schema v2',
+      `${seen.total} mappings — ${seen.typed} with a relationship, ${seen.reviewed} human-reviewed`);
+  }
+  return violations === 0;
+}
+
 // ─── Encoding guard ───────────────────────────────────────────────────────────
 
 /**
@@ -548,6 +610,12 @@ function run() {
     console.log('Checking bidirectional cross-references...\n');
     const crossRefMap = buildCrossRefMap(allFiles);
     checkBidirectional(allFiles, crossRefMap);
+  }
+
+  // Schema v2 guard — operates on generated entries, so full runs only
+  if (!targetFile) {
+    console.log('Checking schema v2...\n');
+    checkSchemaV2();
   }
 
   // Encoding guard — mapping files plus the shared/root markdown they link to

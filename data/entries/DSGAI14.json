@@ -23,7 +23,9 @@
       "control_name": "Exfiltrate via ML Inference API",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Sensitive inference inputs and outputs captured in telemetry stores accessed through weaker controls"
+      "notes": "Sensitive inference inputs and outputs captured in telemetry stores accessed through weaker controls",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MITRE ATLAS",
@@ -31,7 +33,9 @@
       "control_name": "Exfiltrate via Cyber Means",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Telemetry stores containing sensitive GenAI interaction data exfiltrated through standard data access paths"
+      "notes": "Telemetry stores containing sensitive GenAI interaction data exfiltrated through standard data access paths",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MITRE ATLAS",
@@ -39,7 +43,9 @@
       "control_name": "Data from Information Repositories",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Observability databases and log stores accessed as information repositories — sensitive content available at scale"
+      "notes": "Observability databases and log stores accessed as information repositories — sensitive content available at scale",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -47,7 +53,9 @@
       "control_name": "Policies for data privacy",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Telemetry governance policy — least-logging defaults, classification of captured data, retention limits"
+      "notes": "Telemetry governance policy — least-logging defaults, classification of captured data, retention limits",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -55,7 +63,9 @@
       "control_name": "Risk categorisation",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Telemetry leakage risks mapped — identify which pipelines capture full payload and at what retention"
+      "notes": "Telemetry leakage risks mapped — identify which pipelines capture full payload and at what retention",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -63,7 +73,9 @@
       "control_name": "Testing — data leakage",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Data leakage testing on telemetry stores — sensitive content in logs and traces"
+      "notes": "Data leakage testing on telemetry stores — sensitive content in logs and traces",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -71,7 +83,9 @@
       "control_name": "Risk response — data",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Response for telemetry data leakage incidents — access log review, data deletion, notification"
+      "notes": "Response for telemetry data leakage incidents — access log review, data deletion, notification",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -79,7 +93,9 @@
       "control_name": "Art. 10 — Data and data governance",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Telemetry data governance — classification, access controls, retention — is an Art. 10 requirement"
+      "notes": "Telemetry data governance — classification, access controls, retention — is an Art. 10 requirement",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -87,7 +103,9 @@
       "control_name": "Art. 17 — Quality management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Telemetry security is both an Art. 17 obligation and an Art. 10 data governance requirement"
+      "notes": "Telemetry security is both an Art. 17 obligation and an Art. 10 data governance requirement",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -95,7 +113,9 @@
       "control_name": "Logging",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Logging controls applied to AI telemetry — least-logging defaults, no full payload capture by default"
+      "notes": "Logging controls applied to AI telemetry — least-logging defaults, no full payload capture by default",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -103,7 +123,9 @@
       "control_name": "Data leakage prevention",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "DLP applied to telemetry streams — sensitive content redacted before storage"
+      "notes": "DLP applied to telemetry streams — sensitive content redacted before storage",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -111,7 +133,9 @@
       "control_name": "Classification of information",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Telemetry data classified — full prompt captures classified at same level as content they contain"
+      "notes": "Telemetry data classified — full prompt captures classified at same level as content they contain",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -119,7 +143,9 @@
       "control_name": "Data masking",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Masking of sensitive content in logs and traces before storage"
+      "notes": "Masking of sensitive content in logs and traces before storage",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -127,7 +153,9 @@
       "control_name": "A.7.2",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -135,7 +163,9 @@
       "control_name": "A.2.2",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -143,7 +173,9 @@
       "control_name": "A.6.2.6",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Hardening"
+      "notes": "Hardening",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -151,63 +183,81 @@
       "control_name": "Cl.9",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Hardening"
+      "notes": "Hardening",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
       "control_id": "CIS 8",
       "control_name": "8.2 — Collect audit logs",
       "tier": "Foundational",
-      "scope": "Build"
+      "scope": "Build",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
       "control_id": "CIS 8",
       "control_name": "8.10 — Retain audit logs",
       "tier": "Foundational",
-      "scope": "Build"
+      "scope": "Build",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
       "control_id": "CIS 3",
       "control_name": "3.13 — Deploy DLP on log pipelines",
       "tier": "Foundational",
-      "scope": "Build"
+      "scope": "Build",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
       "control_id": "CIS 6",
       "control_name": "6.3 — Access control on log infrastructure",
       "tier": "Foundational",
-      "scope": "Build"
+      "scope": "Build",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
       "control_id": "V7 Logging",
       "control_name": "V7.1.1 — No credential logging",
       "tier": "Foundational",
-      "scope": "Build"
+      "scope": "Build",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
       "control_id": "V7 Logging",
       "control_name": "V7.1.2 — No sensitive data in logs",
       "tier": "Foundational",
-      "scope": "Build"
+      "scope": "Build",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
       "control_id": "V8 Data Protection",
       "control_name": "V8.1.1 — Sensitive data not in URLs",
       "tier": "Foundational",
-      "scope": "Build"
+      "scope": "Build",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
       "control_id": "V4 Access Control",
       "control_name": "V4.1.1 — Access control on log stores",
       "tier": "Foundational",
-      "scope": "Build"
+      "scope": "Build",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -215,7 +265,9 @@
       "control_name": "Data confidentiality",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "OT GenAI telemetry stores classified and protected — process data in logs requires same protection as live data"
+      "notes": "OT GenAI telemetry stores classified and protected — process data in logs requires same protection as live data",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -223,7 +275,9 @@
       "control_name": "Use of physical diagnostic and test interfaces",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "OT-specific data masking before telemetry capture — tag IDs, equipment identifiers masked before logging"
+      "notes": "OT-specific data masking before telemetry capture — tag IDs, equipment identifiers masked before logging",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -231,7 +285,9 @@
       "control_name": "Human user authentication",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Access controls on OT GenAI telemetry stores — need-to-know enforced"
+      "notes": "Access controls on OT GenAI telemetry stores — need-to-know enforced",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -239,7 +295,9 @@
       "control_name": "§5.4",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "OT-trained model weights are sensitive OT intellectual property"
+      "notes": "OT-trained model weights are sensitive OT intellectual property",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -247,7 +305,9 @@
       "control_name": "§6.2",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Model theft as OT IP theft scenario"
+      "notes": "Model theft as OT IP theft scenario",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -255,7 +315,9 @@
       "control_name": "§7.3",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Monitor model storage access patterns"
+      "notes": "Monitor model storage access patterns",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -263,7 +325,9 @@
       "control_name": "Organisational Context",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Telemetry governance policy — least-logging defaults, classification of captured data, retention limits"
+      "notes": "Telemetry governance policy — least-logging defaults, classification of captured data, retention limits",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -271,7 +335,9 @@
       "control_name": "Data Security",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Telemetry stores containing sensitive data protected — same requirements as production data stores"
+      "notes": "Telemetry stores containing sensitive data protected — same requirements as production data stores",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -279,7 +345,9 @@
       "control_name": "Identity Management, Authentication & Access Control",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Access controls on telemetry stores — need-to-know enforced, not open access because \"just logs\""
+      "notes": "Access controls on telemetry stores — need-to-know enforced, not open access because \"just logs\"",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -287,35 +355,45 @@
       "control_name": "Continuous Monitoring",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Telemetry store access monitored — anomalous access patterns detected"
+      "notes": "Telemetry store access monitored — anomalous access patterns detected",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "GenAI telemetry classified and encrypted — content captured in traces protected at same level as source data",
       "control_name": "C2.1 — Confidential information protection",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Personal information in telemetry used only for authorised purposes — same restrictions as production data",
       "control_name": "P5.1 — Personal information use",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Access controls on telemetry stores — same rigour as production data stores",
       "control_name": "CC6.1 — Logical access",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Access anomaly monitoring on telemetry stores — bulk access patterns detected",
       "control_name": "CC7.2 — Monitoring",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -323,7 +401,9 @@
       "control_name": "Protect stored account data",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Telemetry stores containing CHD encrypted — observability data is CHD if it contains PANs"
+      "notes": "Telemetry stores containing CHD encrypted — observability data is CHD if it contains PANs",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -331,7 +411,9 @@
       "control_name": "PAN rendering",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "PANs in telemetry masked before logging — cleartext PANs in observability data is a Req 3 finding"
+      "notes": "PANs in telemetry masked before logging — cleartext PANs in observability data is a Req 3 finding",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -339,7 +421,9 @@
       "control_name": "Restrict access",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Access controls on CDE telemetry stores — Req 7 need-to-know applies"
+      "notes": "Access controls on CDE telemetry stores — Req 7 need-to-know applies",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -347,7 +431,9 @@
       "control_name": "Logging",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Access to CDE telemetry stores logged — accessing observability data containing CHD requires Req 10 trail"
+      "notes": "Access to CDE telemetry stores logged — accessing observability data containing CHD requires Req 10 trail",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -355,7 +441,9 @@
       "control_name": "Governance and Risk (GOV)",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Telemetry data classified and governed — observability pipelines subject to the same data governance policy as primary data assets"
+      "notes": "Telemetry data classified and governed — observability pipelines subject to the same data governance policy as primary data assets",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -363,7 +451,9 @@
       "control_name": "Monitoring and Detection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Observability stores protected against unauthorised access — access controls, encryption, and retention limits applied to all telemetry"
+      "notes": "Observability stores protected against unauthorised access — access controls, encryption, and retention limits applied to all telemetry",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -371,7 +461,9 @@
       "control_name": "Data and Model Security (DMS)",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Telemetry pipelines scanned for sensitive data before storage — redaction and masking applied to GenAI inputs and outputs in logs"
+      "notes": "Telemetry pipelines scanned for sensitive data before storage — redaction and masking applied to GenAI inputs and outputs in logs",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -379,7 +471,9 @@
       "control_name": "General ICT — Logging",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Logs protected from tampering and unauthorised access — separation between security logs and operational telemetry"
+      "notes": "Logs protected from tampering and unauthorised access — separation between security logs and operational telemetry",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -387,7 +481,9 @@
       "control_name": "Design / Security Architecture",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Treat model weights as crown-jewel assets with appropriate access controls"
+      "notes": "Treat model weights as crown-jewel assets with appropriate access controls",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -395,7 +491,9 @@
       "control_name": "Governance / Policy & Compliance",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Classify model weights; require formal access control and custodian assignment"
+      "notes": "Classify model weights; require formal access control and custodian assignment",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -403,7 +501,9 @@
       "control_name": "Verification / Architecture Assessment",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Periodic review of model storage access controls"
+      "notes": "Periodic review of model storage access controls",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -411,7 +511,9 @@
       "control_name": "Operations / Operational Management",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Alert on unexpected access to model weight storage"
+      "notes": "Alert on unexpected access to model weight storage",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -419,7 +521,9 @@
       "control_name": "Governance / Strategy & Metrics",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Document model IP protection controls in security programme roadmap"
+      "notes": "Document model IP protection controls in security programme roadmap",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -427,7 +531,9 @@
       "control_name": "CWE-312",
       "tier": "Foundational",
       "scope": "Build",
-      "url": "https://cwe.mitre.org/data/definitions/312.html"
+      "url": "https://cwe.mitre.org/data/definitions/312.html",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -435,7 +541,9 @@
       "control_name": "CWE-532",
       "tier": "Foundational",
       "scope": "Build",
-      "url": "https://cwe.mitre.org/data/definitions/532.html"
+      "url": "https://cwe.mitre.org/data/definitions/532.html",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -443,28 +551,36 @@
       "control_name": "CWE-200",
       "tier": "Foundational",
       "scope": "Build",
-      "url": "https://cwe.mitre.org/data/definitions/200.html"
+      "url": "https://cwe.mitre.org/data/definitions/200.html",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L5",
       "control_name": "Evaluation & Observability",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L2",
       "control_name": "Data Operations",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L6",
       "control_name": "Security & Compliance",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -472,7 +588,9 @@
       "control_name": "Data & Privacy domain",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -480,7 +598,9 @@
       "control_name": "Prevent unauthorized AI actions",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -488,7 +608,9 @@
       "control_name": "Audit trails and logging",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -496,7 +618,9 @@
       "control_name": "NHI-5 Over-Privileged NHI",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Minimum scope: only authorised inference service can read model weights"
+      "notes": "Minimum scope: only authorised inference service can read model weights",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -504,7 +628,9 @@
       "control_name": "NHI-6 Insecure Credential Storage",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Vault all model storage credentials"
+      "notes": "Vault all model storage credentials",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -512,7 +638,9 @@
       "control_name": "Define security requirements — consent management requirements",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Define security requirements mandating consent verification before personal data enters AI training, fine-tuning, or inference pipelines"
+      "notes": "Define security requirements mandating consent verification before personal data enters AI training, fine-tuning, or inference pipelines",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -520,7 +648,9 @@
       "control_name": "Design software — consent enforcement architecture",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Design AI systems with consent enforcement mechanisms that validate consent status before data processing and honour consent withdrawal across all pipeline stages"
+      "notes": "Design AI systems with consent enforcement mechanisms that validate consent status before data processing and honour consent withdrawal across all pipeline stages",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -528,7 +658,9 @@
       "control_name": "Risk Management Strategy — consent governance",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Include consent management in AI risk management strategy; define consent requirements per data type and processing activity"
+      "notes": "Include consent management in AI risk management strategy; define consent requirements per data type and processing activity",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -536,7 +668,9 @@
       "control_name": "Access Enforcement — consent-based access",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Enforce access controls aligned with consent status; block AI processing on data where consent has been withdrawn"
+      "notes": "Enforce access controls aligned with consent status; block AI processing on data where consent has been withdrawn",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -544,7 +678,9 @@
       "control_name": "Event Logging — consent compliance logging",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Log consent status and changes; enable audit of consent compliance for all AI data processing activities"
+      "notes": "Log consent status and changes; enable audit of consent compliance for all AI data processing activities",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -552,7 +688,9 @@
       "control_name": "ICT Risk Management — consent governance",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Include consent management in ICT risk management; define consent requirements per data type and AI processing activity for financial services"
+      "notes": "Include consent management in ICT risk management; define consent requirements per data type and AI processing activity for financial services",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -560,7 +698,9 @@
       "control_name": "Protection and Prevention — consent-aligned controls",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Implement access controls aligned with consent status; block AI processing on data where consent has been withdrawn or is insufficient"
+      "notes": "Implement access controls aligned with consent status; block AI processing on data where consent has been withdrawn or is insufficient",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -568,7 +708,9 @@
       "control_name": "Detection — consent violation monitoring",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Monitor for AI processing inconsistent with consent status; alert on violations"
+      "notes": "Monitor for AI processing inconsistent with consent status; alert on violations",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     }
   ],
   "tools": [
