@@ -27,9 +27,13 @@ exclude = [
   "^https://www\\.iso\\.org/",
   "^https://www\\.iec\\.ch/",
 
-  # Bot protection / WAF returns a challenge or drops the connection.
+  # Bot protection / WAF returns a challenge or drops the connection. These
+  # all answer in well under a second from an ordinary client but time out
+  # from GitHub runner IPs even at a 30s timeout with retries.
   "^https://milvus\\.io/?$",
   "^https://www\\.servicenow\\.com/",
+  "^https://deepchecks\\.com/",
+  "^https://gdpr\\.eu/",
 
   # This repository is private, so its own URL 404s for an anonymous checker.
   "^https://github\\.com/GenAI-Security-Project/crosswalk",
