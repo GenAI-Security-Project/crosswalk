@@ -1,0 +1,91 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/schemas/stix-bundle.subset.json",
+  "title": "STIX 2.1 Bundle — structural subset",
+  "description": "A SUBSET of the OASIS STIX 2.1 specification, written and owned by this project. It encodes the structure incidents-report.js --format stix must emit. Passing proves the export has not lost its shape; it does not prove STIX conformance. See data/schemas/README.md.",
+  "type": "object",
+  "required": ["type", "id", "objects"],
+  "additionalProperties": false,
+  "properties": {
+    "type": { "const": "bundle" },
+    "id": { "$ref": "#/definitions/stixId" },
+    "objects": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/definitions/sdo" }
+    }
+  },
+  "definitions": {
+    "uuid": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "stixId": {
+      "type": "string",
+      "description": "STIX id: <type>--<uuid>. The double hyphen is required by the spec.",
+      "pattern": "^[a-z][a-z0-9-]*--[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "timestamp": { "type": "string", "format": "date-time" },
+    "externalReference": {
+      "type": "object",
+      "required": ["source_name"],
+      "properties": {
+        "source_name": { "type": "string", "minLength": 1 },
+        "external_id": { "type": "string" },
+        "url": { "type": "string", "format": "uri" },
+        "description": { "type": "string" }
+      }
+    },
+    "commonSdo": {
+      "type": "object",
+      "required": ["type", "spec_version", "id", "created", "modified"],
+      "properties": {
+        "type": { "type": "string", "minLength": 1 },
+        "spec_version": { "const": "2.1" },
+        "id": { "$ref": "#/definitions/stixId" },
+        "created": { "$ref": "#/definitions/timestamp" },
+        "modified": { "$ref": "#/definitions/timestamp" },
+        "external_references": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/externalReference" }
+        }
+      }
+    },
+    "sdo": {
+      "allOf": [
+        { "$ref": "#/definitions/commonSdo" },
+        {
+          "if": { "properties": { "type": { "const": "attack-pattern" } } },
+          "then": { "required": ["name"], "properties": { "name": { "type": "string", "minLength": 1 } } }
+        },
+        {
+          "if": { "properties": { "type": { "const": "report" } } },
+          "then": {
+            "required": ["name", "published", "object_refs"],
+            "properties": {
+              "name": { "type": "string", "minLength": 1 },
+              "published": { "$ref": "#/definitions/timestamp" },
+              "report_types": { "type": "array", "items": { "type": "string" } },
+              "object_refs": {
+                "type": "array",
+                "minItems": 1,
+                "items": { "$ref": "#/definitions/stixId" }
+              }
+            }
+          }
+        },
+        {
+          "if": { "properties": { "type": { "const": "relationship" } } },
+          "then": {
+            "required": ["relationship_type", "source_ref", "target_ref"],
+            "properties": {
+              "relationship_type": { "type": "string", "minLength": 1 },
+              "source_ref": { "$ref": "#/definitions/stixId" },
+              "target_ref": { "$ref": "#/definitions/stixId" }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

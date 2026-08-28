@@ -1,0 +1,128 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/schemas/oscal-component-definition.subset.json",
+  "title": "OSCAL 1.1.2 Component Definition — structural subset",
+  "description": "A SUBSET of the NIST OSCAL 1.1.2 component-definition model, written and owned by this project. It encodes the structure compliance-report.js --format oscal must emit. Passing proves the export has not lost its shape; it does not prove OSCAL conformance. See data/schemas/README.md.",
+  "type": "object",
+  "required": ["component-definition"],
+  "additionalProperties": false,
+  "properties": {
+    "component-definition": {
+      "type": "object",
+      "required": ["uuid", "metadata", "components"],
+      "properties": {
+        "uuid": { "$ref": "#/definitions/uuid" },
+        "metadata": { "$ref": "#/definitions/metadata" },
+        "components": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/definitions/component" }
+        },
+        "back-matter": { "type": "object" }
+      }
+    }
+  },
+  "definitions": {
+    "uuid": {
+      "type": "string",
+      "pattern": "^[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12}$"
+    },
+    "metadata": {
+      "type": "object",
+      "required": ["title", "last-modified", "version", "oscal-version"],
+      "properties": {
+        "title": { "type": "string", "minLength": 1 },
+        "last-modified": { "type": "string", "format": "date-time" },
+        "version": { "type": "string", "minLength": 1 },
+        "oscal-version": {
+          "type": "string",
+          "description": "Pinned. A silent bump here changes what downstream tooling will accept.",
+          "const": "1.1.2"
+        },
+        "roles": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "title"],
+            "properties": { "id": { "type": "string" }, "title": { "type": "string" } }
+          }
+        },
+        "parties": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["uuid", "type", "name"],
+            "properties": {
+              "uuid": { "$ref": "#/definitions/uuid" },
+              "type": { "enum": ["person", "organization"] },
+              "name": { "type": "string", "minLength": 1 }
+            }
+          }
+        },
+        "responsible-parties": { "type": "array" }
+      }
+    },
+    "component": {
+      "type": "object",
+      "required": ["uuid", "type", "title", "description"],
+      "properties": {
+        "uuid": { "$ref": "#/definitions/uuid" },
+        "type": { "type": "string", "minLength": 1 },
+        "title": { "type": "string", "minLength": 1 },
+        "description": { "type": "string", "minLength": 1 },
+        "control-implementations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["uuid", "source", "description", "implemented-requirements"],
+            "properties": {
+              "uuid": { "$ref": "#/definitions/uuid" },
+              "source": { "type": "string", "minLength": 1 },
+              "description": { "type": "string" },
+              "implemented-requirements": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "object",
+                  "required": ["uuid", "control-id", "description"],
+                  "properties": {
+                    "uuid": { "$ref": "#/definitions/uuid" },
+                    "control-id": { "type": "string", "minLength": 1 },
+                    "description": { "type": "string" },
+                    "props": { "$ref": "#/definitions/props" },
+                    "links": { "$ref": "#/definitions/links" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "props": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "value"],
+        "properties": {
+          "name": { "type": "string", "minLength": 1 },
+          "value": { "type": "string" },
+          "ns": { "type": "string" },
+          "class": { "type": "string" }
+        }
+      }
+    },
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["href"],
+        "properties": {
+          "href": { "type": "string", "minLength": 1 },
+          "rel": { "type": "string" },
+          "text": { "type": "string" }
+        }
+      }
+    }
+  }
+}
