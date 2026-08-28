@@ -46,8 +46,8 @@ Pick your risk, find your controls.
 **3. Run the tools** (for security engineers and red-teamers)
 
 ```bash
-git clone https://github.com/emmanuelgjr/GenAI-Security-Crosswalk.git
-cd GenAI-Security-Crosswalk
+git clone https://github.com/GenAI-Security-Project/crosswalk.git
+cd crosswalk
 node scripts/compliance-report.js --framework "EU AI Act"   # gap assessment
 node scripts/incidents-report.js --entry LLM01              # incident analysis
 node scripts/compliance-report.js --format oscal            # GRC platform export
@@ -225,7 +225,7 @@ All free. All open-source. Built for practitioners.
 ## Repository structure
 
 ```text
-GenAI-Security-Crosswalk/
+crosswalk/
 │
 ├── README.md
 ├── CROSSREF.md                      ← Master cross-reference: LLM ↔ ASI ↔ DSGAI
