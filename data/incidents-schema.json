@@ -4,19 +4,40 @@
   "title": "GenAI Security Crosswalk — Incident Database Schema",
   "description": "Schema for real-world AI security incidents, mapped to OWASP entries and MAESTRO layers",
   "type": "object",
-  "required": ["version", "generated", "incidents"],
+  "required": [
+    "version",
+    "generated",
+    "incidents"
+  ],
   "properties": {
-    "version":   { "type": "string" },
-    "generated": { "type": "string", "format": "date" },
+    "version": {
+      "type": "string"
+    },
+    "generated": {
+      "type": "string",
+      "format": "date"
+    },
     "incidents": {
       "type": "array",
-      "items": { "$ref": "#/definitions/Incident" }
+      "items": {
+        "$ref": "#/definitions/Incident"
+      }
     }
   },
   "definitions": {
     "Incident": {
       "type": "object",
-      "required": ["id", "title", "date", "description", "owasp_entries", "maestro_layers", "attack_vector", "impact", "severity"],
+      "required": [
+        "id",
+        "title",
+        "date",
+        "description",
+        "owasp_entries",
+        "maestro_layers",
+        "attack_vector",
+        "impact",
+        "severity"
+      ],
       "additionalProperties": false,
       "properties": {
         "id": {
@@ -39,7 +60,11 @@
         },
         "category": {
           "type": "string",
-          "enum": ["real-world", "research-demonstrated", "red-team"],
+          "enum": [
+            "real-world",
+            "research-demonstrated",
+            "red-team"
+          ],
           "description": "Whether this is a confirmed real-world incident, researcher-demonstrated attack, or red-team finding"
         },
         "description": {
@@ -48,7 +73,10 @@
         },
         "owasp_entries": {
           "type": "array",
-          "items": { "type": "string", "pattern": "^(LLM|ASI|DSGAI)\\d{2}$" },
+          "items": {
+            "type": "string",
+            "pattern": "^(LLM|ASI|DSGAI)\\d{2}$"
+          },
           "minItems": 1,
           "description": "OWASP entry IDs this incident exemplifies"
         },
@@ -56,11 +84,22 @@
           "type": "array",
           "items": {
             "type": "object",
-            "required": ["layer", "role"],
+            "required": [
+              "layer",
+              "role"
+            ],
             "properties": {
               "layer": {
                 "type": "string",
-                "enum": ["L1", "L2", "L3", "L4", "L5", "L6", "L7"],
+                "enum": [
+                  "L1",
+                  "L2",
+                  "L3",
+                  "L4",
+                  "L5",
+                  "L6",
+                  "L7"
+                ],
                 "description": "MAESTRO layer ID"
               },
               "label": {
@@ -69,7 +108,12 @@
               },
               "role": {
                 "type": "string",
-                "enum": ["origin", "propagation", "impact", "blind-spot"],
+                "enum": [
+                  "origin",
+                  "propagation",
+                  "impact",
+                  "blind-spot"
+                ],
                 "description": "How this layer is involved: origin=where attack starts, propagation=how it spreads, impact=where harm manifests, blind-spot=where detection failed"
               },
               "notes": {
@@ -92,28 +136,150 @@
         },
         "severity": {
           "type": "string",
-          "enum": ["Critical", "High", "Medium", "Low"]
+          "enum": [
+            "Critical",
+            "High",
+            "Medium",
+            "Low"
+          ]
         },
         "mitigations": {
           "type": "array",
-          "items": { "type": "string" },
+          "items": {
+            "type": "string"
+          },
           "description": "Controls that would prevent or contain this incident"
         },
         "references": {
           "type": "array",
           "items": {
             "type": "object",
-            "required": ["title", "url"],
+            "required": [
+              "title",
+              "url"
+            ],
             "properties": {
-              "title": { "type": "string" },
-              "url":   { "type": "string", "format": "uri" },
-              "type":  { "type": "string", "enum": ["news", "research", "advisory", "disclosure", "legal"] }
+              "title": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string",
+                "format": "uri"
+              },
+              "type": {
+                "type": "string",
+                "enum": [
+                  "news",
+                  "research",
+                  "advisory",
+                  "disclosure",
+                  "legal",
+                  "vendor",
+                  "regulatory"
+                ]
+              }
             }
           }
         },
         "tags": {
           "type": "array",
-          "items": { "type": "string" }
+          "items": {
+            "type": "string"
+          }
+        },
+        "external_refs": {
+          "type": "array",
+          "description": "Stable external identifiers for this incident — a CVE, an AI Incident Database entry, an ATLAS case study, a named campaign. What makes the record checkable by someone who does not trust this repository.",
+          "items": {
+            "type": "object",
+            "required": [
+              "source",
+              "id"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "source": {
+                "type": "string",
+                "enum": [
+                  "CVE",
+                  "AIID",
+                  "AIAAIC",
+                  "MITRE-ATLAS",
+                  "GHSA",
+                  "campaign",
+                  "vendor-advisory",
+                  "research"
+                ],
+                "description": "Which external register this identifier belongs to."
+              },
+              "id": {
+                "type": "string",
+                "description": "The identifier within that register, e.g. CVE-2026-28363."
+              },
+              "url": {
+                "type": "string",
+                "format": "uri"
+              }
+            }
+          }
+        },
+        "control_failures": {
+          "type": "array",
+          "description": "Controls that failed, were absent, or were bypassed in this incident. Powers evidence_count per mapping and the \"controls that failed in the wild\" view. Every entry REQUIRES a `basis` quoting the source — a control failure asserted without one is an opinion wearing an evidence label, which is precisely what this project claims competitors do.",
+          "items": {
+            "type": "object",
+            "required": [
+              "framework",
+              "control_id",
+              "outcome",
+              "basis"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "framework": {
+                "type": "string",
+                "description": "Framework name, matching data/frameworks/*.json."
+              },
+              "control_id": {
+                "type": "string"
+              },
+              "outcome": {
+                "type": "string",
+                "enum": [
+                  "absent",
+                  "present-but-bypassed",
+                  "present-but-misconfigured",
+                  "failed"
+                ],
+                "description": "How the control did not prevent the incident."
+              },
+              "basis": {
+                "type": "string",
+                "minLength": 20,
+                "description": "Quotation or close paraphrase from the cited source supporting this claim. Required."
+              },
+              "source_url": {
+                "type": "string",
+                "format": "uri"
+              },
+              "confirmed_by": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Human who confirmed the claim. Empty means drafted, not confirmed."
+              }
+            }
+          }
+        },
+        "source_url": {
+          "type": "string",
+          "format": "uri",
+          "description": "Primary source for the description."
+        },
+        "raw_description": {
+          "type": "string",
+          "description": "The original pasted text, retained until a human signs off on the cleaned `description`. Never deleted by tooling."
         }
       }
     }
