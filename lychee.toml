@@ -6,9 +6,9 @@
 
 # Be a good citizen: genai.owasp.org rate-limited the previous unthrottled run.
 max_concurrency = 8
-max_retries = 3
-retry_wait_time = 4
-timeout = 30
+max_retries = 5
+retry_wait_time = 5
+timeout = 60
 
 # Some standards bodies reject requests without a browser-shaped user agent.
 user_agent = "Mozilla/5.0 (compatible; lychee link checker; +https://github.com/lycheeverse/lychee)"
@@ -29,11 +29,14 @@ exclude = [
 
   # Bot protection / WAF returns a challenge or drops the connection. These
   # all answer in well under a second from an ordinary client but time out
-  # from GitHub runner IPs even at a 30s timeout with retries.
+  # from GitHub runner IPs even at a 60s timeout with five retries. These are
+  # vendor marketing sites behind CDNs that challenge datacentre traffic; the
+  # links themselves are fine.
   "^https://milvus\\.io/?$",
   "^https://www\\.servicenow\\.com/",
   "^https://deepchecks\\.com/",
   "^https://gdpr\\.eu/",
+  "^https://flower\\.ai/",
 
   # This repository is private, so its own URL 404s for an anonymous checker.
   "^https://github\\.com/GenAI-Security-Project/crosswalk",
