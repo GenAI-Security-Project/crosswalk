@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GenAI Crosswalk — OWASP GenAI Security Project</title>
-<meta name="description" content="The most comprehensive mapping of Gen AI and Agentic security risks to industry frameworks. 41 entries across LLM Top 10, Agentic Top 10, and DSGAI mapped to 23 frameworks with 1,372 controls. Free and open-source from OWASP. Submit your own standard for automated mapping.">
+<meta name="description" content="The most comprehensive mapping of Gen AI and Agentic security risks to industry frameworks. 51 entries across LLM Top 10, Agentic Top 10, DSGAI and Agentic Skills Top 10, mapped to 25 frameworks. Free and open-source from OWASP. Submit your own standard for automated mapping.">
 <meta name="author" content="OWASP GenAI Security Project">
 <link rel="canonical" href="https://genai-security-project.github.io/crosswalk/">
 <meta property="og:type" content="website">
@@ -17,7 +17,7 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="GenAI Crosswalk">
-<meta name="twitter:description" content="23 frameworks × 41 entries × 114 incidents. Score your Gen AI and Agentic security coverage in 60 seconds.">
+<meta name="twitter:description" content="25 frameworks × 51 entries × 131 incidents. Score your Gen AI and Agentic security coverage in 60 seconds.">
 <meta name="twitter:image" content="https://genai-security-project.github.io/crosswalk/og-image.svg">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
 <script type="application/ld+json">
@@ -27,7 +27,7 @@
   "name": "GenAI Crosswalk",
   "alternateName": "Crosswalk",
   "url": "https://genai-security-project.github.io/crosswalk/",
-  "description": "The most comprehensive mapping of Gen AI and Agentic security risks to industry frameworks. Maps 41 entries across the OWASP LLM Top 10, Agentic Top 10, and DSGAI to 23 industry frameworks with 1,372 controls.",
+  "description": "The most comprehensive mapping of Gen AI and Agentic security risks to industry frameworks. Maps 51 entries across the OWASP LLM Top 10, Agentic Top 10, DSGAI and Agentic Skills Top 10 to 25 industry frameworks.",
   "applicationCategory": "SecurityApplication",
   "operatingSystem": "Any (web-based)",
   "isAccessibleForFree": true,
@@ -1134,7 +1134,8 @@ input, select { font-family: inherit; }
 <div class="app" id="app"><noscript>
   <div style="max-width:800px;margin:40px auto;padding:0 24px;line-height:1.6;">
     <h1>GenAI Crosswalk</h1>
-    <p>GenAI Crosswalk is the flagship dataset and tool of the <a href="https://genai.owasp.org">OWASP GenAI Security Project</a>. It is the most comprehensive mapping of Gen AI and Agentic security risks to industry frameworks: 41 entries across the OWASP LLM Top 10, the OWASP Top 10 for Agentic Applications, and DSGAI (Data Security for GenAI), mapped to 23 industry frameworks with 3,211 individual control mappings.</p>
+    <p>GenAI Crosswalk is the flagship dataset and tool of the <a href="https://genai.owasp.org">OWASP GenAI Security Project</a>. It is the most comprehensive mapping of Gen AI and Agentic security risks to industry frameworks: 51 entries across the OWASP LLM Top 10, the OWASP Top 10 for Agentic Applications, DSGAI (Data Security for GenAI) and the OWASP Agentic Skills Top 10, mapped to 25 industry frameworks with 3,497 individual control mappings.</p>
+    <p><strong>Review state.</strong> Every mapping in this project is <code>unreviewed</code> until a named reviewer signs it. 2 of the 25 mapped frameworks — CoSAI and the EU AI Act Code of Practice — currently carry <em>candidate</em> rows only: the control ids are accurate to the published framework, but the pairing to a risk is a proposal awaiting subject-matter review, not an assertion. They are counted as mapped because a mapping file exists; they are not counted as verified, because nothing here is.</p>
     <h2>OWASP Top 10 for Agentic AI — Risks &amp; Mitigations</h2>
     <p>See the full <a href="agentic-ai-top10/">OWASP Top 10 for Agentic AI risks and mitigations</a>: Agent Goal Hijack, Tool Misuse &amp; Exploitation, Identity &amp; Privilege Abuse, Agentic Supply Chain Vulnerabilities, Unexpected Code Execution, Memory &amp; Context Poisoning, Insecure Inter-Agent Communication, Cascading Agent Failures, Human-Agent Trust Exploitation, and Rogue Agents.</p>
     <h2>OWASP LLM Top 10 — Risks &amp; Mitigations</h2>

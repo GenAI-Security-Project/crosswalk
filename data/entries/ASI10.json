@@ -6,16 +6,82 @@
   "severity": "Critical",
   "aivss_score": 9.7,
   "audience": [
-    "red-teamer",
     "security-engineer",
-    "ml-engineer",
-    "ot-engineer",
     "ciso",
     "compliance",
+    "red-teamer",
+    "ml-engineer",
+    "ot-engineer",
     "auditor",
     "developer"
   ],
   "mappings": [
+    {
+      "framework": "CoSAI",
+      "control_id": "WS4-AGT-1.2",
+      "control_name": "Authority boundary definition",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "DRAFT — SME review required",
+      "framework_version": "CoSAI 2025",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "CoSAI",
+      "control_id": "WS4-AGT-3.3",
+      "control_name": "Real-time agent monitoring",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "DRAFT — SME review required",
+      "framework_version": "CoSAI 2025",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "CoSAI",
+      "control_id": "WS2-DEF-3",
+      "control_name": "AI incident response procedures",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "DRAFT — SME review required",
+      "framework_version": "CoSAI 2025",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "EU AI Act Code of Practice",
+      "control_id": "CoP-III-C4-M4.2",
+      "control_name": "Market placement decisions",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "DRAFT — SME review required",
+      "framework_version": "GPAI CoP Final",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "EU AI Act Code of Practice",
+      "control_id": "CoP-III-C9-M9.2",
+      "control_name": "Incident reporting to authorities",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "DRAFT — SME review required",
+      "framework_version": "GPAI CoP Final",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "EU AI Act Code of Practice",
+      "control_id": "CoP-III-C3-M3.4",
+      "control_name": "Systemic risk estimation",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "DRAFT — SME review required",
+      "framework_version": "GPAI CoP Final",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
     {
       "framework": "MITRE ATLAS",
       "control_id": "AML.T0054",

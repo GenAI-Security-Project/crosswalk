@@ -100,12 +100,33 @@ function computeStats() {
   const mappingsByList = {};
   const frameworksMapped = new Set();
 
+  // A row whose `notes` is still the placeholder has a control id and nothing
+  // else: no statement of how the control applies, and no reviewed relationship.
+  // Counting those in with authored rows is how a scaffold turns into a claim,
+  // so they are tracked separately and a framework made up entirely of them is
+  // named in `draft_only`.
+  const DRAFT_NOTE = /^DRAFT\b/;
+  const rowsPerFramework = {};
+  const draftRowsPerFramework = {};
+  let draftRows = 0;
+
   for (const e of entries) {
     entriesByList[e.source_list] = (entriesByList[e.source_list] || 0) + 1;
     const n = (e.mappings || []).length;
     mappingsByList[e.source_list] = (mappingsByList[e.source_list] || 0) + n;
-    for (const m of e.mappings || []) frameworksMapped.add(m.framework);
+    for (const m of e.mappings || []) {
+      frameworksMapped.add(m.framework);
+      rowsPerFramework[m.framework] = (rowsPerFramework[m.framework] || 0) + 1;
+      if (DRAFT_NOTE.test(m.notes || '')) {
+        draftRowsPerFramework[m.framework] = (draftRowsPerFramework[m.framework] || 0) + 1;
+        draftRows++;
+      }
+    }
   }
+
+  const draftOnly = Object.keys(rowsPerFramework)
+    .filter((f) => (draftRowsPerFramework[f] || 0) === rowsPerFramework[f])
+    .sort();
 
   const mappingsTotal = Object.values(mappingsByList).reduce((a, b) => a + b, 0);
 
@@ -162,6 +183,8 @@ function computeStats() {
       registries: registries.length,
       mapped: frameworksMapped.size,
       unmapped_registries: unmapped,
+      draft_only: draftOnly,
+      draft_rows: draftRows,
       by_list: Object.fromEntries(
         SOURCE_LISTS.map((l) => [l.id, mdFiles(path.join(ROOT, l.dir)).length]),
       ),
@@ -210,6 +233,12 @@ function main() {
       `(${stats.frameworks.registries} registries) · ${stats.mapping_files.total} mapping files · ` +
       `${stats.incidents.total} incidents`,
   );
+  if (stats.frameworks.draft_only.length) {
+    console.log(
+      `  note: ${stats.frameworks.draft_only.length} framework(s) carry candidate DRAFT rows only \u2014 ` +
+        `${stats.frameworks.draft_only.join(', ')} (${stats.frameworks.draft_rows} draft row(s) in total)`,
+    );
+  }
   if (stats.frameworks.unmapped_registries.length) {
     console.log(
       `  note: ${stats.frameworks.unmapped_registries.length} registry/registries carry no mappings — ` +

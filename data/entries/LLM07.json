@@ -684,6 +684,72 @@
       "reviewed_by": []
     },
     {
+      "framework": "CoSAI",
+      "control_id": "WS2-DEF-6",
+      "control_name": "AI red teaming and adversarial testing",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "DRAFT — SME review required",
+      "framework_version": "CoSAI 2025",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "CoSAI",
+      "control_id": "WS3-GOV-3",
+      "control_name": "AI security scorecard",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "DRAFT — SME review required",
+      "framework_version": "CoSAI 2025",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "CoSAI",
+      "control_id": "WS4-AGT-3.2",
+      "control_name": "Agent telemetry and observability",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "DRAFT — SME review required",
+      "framework_version": "CoSAI 2025",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "EU AI Act Code of Practice",
+      "control_id": "CoP-III-C3-M3.2",
+      "control_name": "Model evaluations",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "DRAFT — SME review required",
+      "framework_version": "GPAI CoP Final",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "EU AI Act Code of Practice",
+      "control_id": "CoP-III-C7-M7.1",
+      "control_name": "Model description and behaviour documentation",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "DRAFT — SME review required",
+      "framework_version": "GPAI CoP Final",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "EU AI Act Code of Practice",
+      "control_id": "CoP-III-C10-M10.2",
+      "control_name": "Public transparency",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "DRAFT — SME review required",
+      "framework_version": "GPAI CoP Final",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
       "framework": "OWASP NHI Top 10",
       "control_id": "Audit log service credentials leaked or compromised",
       "control_name": "NHI-2 Secret Leakage",

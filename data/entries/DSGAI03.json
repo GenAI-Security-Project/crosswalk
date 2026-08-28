@@ -6,10 +6,10 @@
   "severity": "High",
   "aivss_score": null,
   "audience": [
-    "red-teamer",
     "security-engineer",
     "ciso",
     "compliance",
+    "red-teamer",
     "ml-engineer",
     "ot-engineer",
     "auditor",
@@ -17,6 +17,72 @@
     "data-engineer"
   ],
   "mappings": [
+    {
+      "framework": "CoSAI",
+      "control_id": "WS2-DEF-2",
+      "control_name": "AI attack surface mapping",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "DRAFT — SME review required",
+      "framework_version": "CoSAI 2025",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "CoSAI",
+      "control_id": "WS3-GOV-5",
+      "control_name": "Third-party AI risk management",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "DRAFT — SME review required",
+      "framework_version": "CoSAI 2025",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "CoSAI",
+      "control_id": "WS3-GOV-1",
+      "control_name": "AI security risk taxonomy",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "DRAFT — SME review required",
+      "framework_version": "CoSAI 2025",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "EU AI Act Code of Practice",
+      "control_id": "CoP-I-C1-M1.2",
+      "control_name": "Providing information to downstream providers and AI Office",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "DRAFT — SME review required",
+      "framework_version": "GPAI CoP Final",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "EU AI Act Code of Practice",
+      "control_id": "CoP-III-C1-M1.2",
+      "control_name": "Implementing the framework",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "DRAFT — SME review required",
+      "framework_version": "GPAI CoP Final",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "EU AI Act Code of Practice",
+      "control_id": "CoP-III-C8-M8.1",
+      "control_name": "Clear responsibility definition",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "DRAFT — SME review required",
+      "framework_version": "GPAI CoP Final",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
     {
       "framework": "MITRE ATLAS",
       "control_id": "AML.T0012",

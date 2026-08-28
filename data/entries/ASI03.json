@@ -6,16 +6,82 @@
   "severity": "Critical",
   "aivss_score": 9.3,
   "audience": [
-    "red-teamer",
     "security-engineer",
-    "ml-engineer",
-    "ot-engineer",
     "ciso",
     "compliance",
+    "red-teamer",
+    "ml-engineer",
+    "ot-engineer",
     "auditor",
     "developer"
   ],
   "mappings": [
+    {
+      "framework": "CoSAI",
+      "control_id": "WS4-AGT-2.1",
+      "control_name": "Purpose-specific entitlements",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "DRAFT — SME review required",
+      "framework_version": "CoSAI 2025",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "CoSAI",
+      "control_id": "WS4-AGT-2.2",
+      "control_name": "Agent cybersecurity baseline",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "DRAFT — SME review required",
+      "framework_version": "CoSAI 2025",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "CoSAI",
+      "control_id": "WS4-AGT-1.3",
+      "control_name": "Agent accountability chain",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "DRAFT — SME review required",
+      "framework_version": "CoSAI 2025",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "EU AI Act Code of Practice",
+      "control_id": "CoP-III-C6-M6.1",
+      "control_name": "Security goal and threat actor definition",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "DRAFT — SME review required",
+      "framework_version": "GPAI CoP Final",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "EU AI Act Code of Practice",
+      "control_id": "CoP-III-C6-M6.2",
+      "control_name": "Security mitigation implementation",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "DRAFT — SME review required",
+      "framework_version": "GPAI CoP Final",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "EU AI Act Code of Practice",
+      "control_id": "CoP-III-C8-M8.1",
+      "control_name": "Clear responsibility definition",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "DRAFT — SME review required",
+      "framework_version": "GPAI CoP Final",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
     {
       "framework": "MITRE ATLAS",
       "control_id": "AML.T0022",
