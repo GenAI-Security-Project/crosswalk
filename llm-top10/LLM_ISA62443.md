@@ -120,7 +120,7 @@ Zone 4: Enterprise / IT network
     | [Conduit — DMZ / data diode / unidirectional gateway]
     |
 Zone 3: Operations / SCADA / historian
-    |     ? LLMs most commonly deployed here or at this boundary
+    |     ← LLMs most commonly deployed here or at this boundary
     | [Conduit — strictly controlled]
     |
 Zone 2: Control network / DCS

@@ -59,15 +59,15 @@ For OT environments, these entries carry the highest blast radius:
 
 Jump directly to any framework mapping folder:
 
-### LLM Top 10 mappings ? [`/llm-top10/`](llm-top10/)
+### LLM Top 10 mappings → [`/llm-top10/`](llm-top10/)
 
-### Agentic Top 10 mappings ? [`/agentic-top10/`](agentic-top10/)
+### Agentic Top 10 mappings → [`/agentic-top10/`](agentic-top10/)
 
-### DSGAI 2026 mappings ? [`/dsgai-2026/`](dsgai-2026/)
+### DSGAI 2026 mappings → [`/dsgai-2026/`](dsgai-2026/)
 
-### Shared resources ? [`/shared/`](shared/)
+### Shared resources → [`/shared/`](shared/)
 
-### Machine-readable data ? [`/data/`](data/)
+### Machine-readable data → [`/data/`](data/)
 
 ---
 

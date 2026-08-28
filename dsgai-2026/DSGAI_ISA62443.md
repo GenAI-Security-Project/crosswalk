@@ -62,13 +62,13 @@ GenAI systems handling OT data must be placed within the ISA/IEC
 
 ```text
 Enterprise Zone (Level 4–5)
-    ? [Firewall + proxy — no direct OT protocol access]
+    ↓ [Firewall + proxy — no direct OT protocol access]
 DMZ / Demilitarized Zone (Level 3.5)
-    ? GenAI systems should be deployed HERE when they need OT data
-    ? [Data diode or unidirectional gateway where feasible]
-    ? [Firewall — OT protocol aware, allowlisted flows only]
+    → GenAI systems should be deployed HERE when they need OT data
+    ↓ [Data diode or unidirectional gateway where feasible]
+    ↓ [Firewall — OT protocol aware, allowlisted flows only]
 Control Zone (Level 3) — SCADA, historian, HMI, DCS
-    ? [Firewall — minimal, monitored]
+    ↓ [Firewall — minimal, monitored]
 Field Zone (Level 0–2) — PLCs, RTUs, field devices, safety systems
 ```
 

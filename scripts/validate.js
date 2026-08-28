@@ -349,6 +349,58 @@ function checkSharedResources() {
   }
 }
 
+// ─── Encoding guard ───────────────────────────────────────────────────────────
+
+/**
+ * 12. Catch text mangled by an encoding round-trip.
+ *
+ * This repository has a mojibake history: arrows (→ ↓ ←) and dashes flattened
+ * to a bare '?' or to U+FFFD, and once committed they are invisible in review
+ * and survive for years. Sixty-four such arrows were present in the first
+ * commit and were still there when this guard was written.
+ *
+ * Two signatures are checked:
+ *   U+FFFD          the replacement character — always corruption
+ *   ' ? ' / '? ['   a lone question mark used where an arrow belongs, in a
+ *                   heading, a diagram line, or an "A ? B" flow
+ *
+ * A genuine question inside prose ends the sentence, so it is not preceded by
+ * a space; that shape does not match.
+ */
+const MOJIBAKE_FILES = ['**/*.md'];
+
+function checkEncoding(allFiles) {
+  let violations = 0;
+
+  for (const fp of allFiles) {
+    const rel = relPath(fp);
+    const content = fs.readFileSync(fp, 'utf8');
+    const lines = content.split('\n');
+
+    lines.forEach((line, i) => {
+      const n = i + 1;
+      if (line.includes('�')) {
+        fail(rel, `Replacement character (U+FFFD) at line ${n} — text was decoded with the wrong encoding`);
+        violations++;
+        return;
+      }
+      // An arrow flattened to '?': in a heading, at the start of a diagram
+      // line, or between two terms.
+      const arrowish =
+        /^#{1,6} .*\s\?\s/.test(line) ||
+        /^\s*\?\s+[[\w]/.test(line) ||
+        /\w\s\?\s\w/.test(line);
+      if (arrowish) {
+        fail(rel, `Likely mojibake arrow at line ${n}: "${line.trim().slice(0, 70)}"`);
+        violations++;
+      }
+    });
+  }
+
+  if (!violations) pass('Encoding', 'No mojibake found in markdown content');
+  return violations === 0;
+}
+
 // ─── Attribution guard (C1) ───────────────────────────────────────────────────
 
 /**
@@ -496,6 +548,20 @@ function run() {
     console.log('Checking bidirectional cross-references...\n');
     const crossRefMap = buildCrossRefMap(allFiles);
     checkBidirectional(allFiles, crossRefMap);
+  }
+
+  // Encoding guard — mapping files plus the shared/root markdown they link to
+  if (!targetFile) {
+    console.log('Checking encoding...\n');
+    const encodingFiles = [...allFiles];
+    for (const rel of ['CROSSREF.md', 'README.md', 'CONTRIBUTING.md']) {
+      const fp = path.join(ROOT, rel);
+      if (fs.existsSync(fp)) encodingFiles.push(fp);
+    }
+    for (const f of fs.readdirSync(path.join(ROOT, 'shared')).filter((f) => f.endsWith('.md'))) {
+      encodingFiles.push(path.join(ROOT, 'shared', f));
+    }
+    checkEncoding(encodingFiles);
   }
 
   // Attribution guard (C1) — repo-wide, so only in a full run

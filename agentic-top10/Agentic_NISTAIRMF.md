@@ -803,7 +803,7 @@ covered in the evaluation programme (MS-2.5) and incident response
   agent during commissioning — expected invocation patterns,
   recommendation distributions, access volumes documented
 - Continuous behavioural monitoring — deviation from baseline
-  triggers tiered response: log ? alert ? suspend ? investigate
+  triggers tiered response: log → alert → suspend → investigate
 - MG-2.2: Define rogue agent containment procedure —
   kill switch activation, recent recommendation audit,
   process state validation, forensic capture

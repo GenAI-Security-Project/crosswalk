@@ -253,7 +253,7 @@ verification before any component enters a production environment.
 
 | CVE | System | Description | Agentic relevance |
 |---|---|---|---|
-| CVE-2024-3095 | AutoGPT | Remote code execution via crafted prompt triggering code generation and execution | Direct ASI05 example — prompt injection ? code generation ? RCE |
+| CVE-2024-3095 | AutoGPT | Remote code execution via crafted prompt triggering code generation and execution | Direct ASI05 example — prompt injection → code generation → RCE |
 | CVE-2024-27564 | ChatGPT plugins | SSRF via crafted image causing server-side request from agent execution context | Code execution context used for network-based attack |
 | CVE-2024-6087 | LangChain agents | Arbitrary code execution via tool input manipulation | CWE-94 in production LangChain agent framework |
 
