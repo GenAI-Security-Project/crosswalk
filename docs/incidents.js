@@ -2627,7 +2627,7 @@ window.CROSSWALK_INCIDENTS = [
     "maestro_layers": [
       {
         "layer": "L7",
-        "label": "Multi-Agent Ecosystem",
+        "label": "Agent Ecosystem",
         "role": "origin",
         "notes": "Multi-agent ecosystem with no inter-agent consistency validation"
       },
@@ -3029,7 +3029,7 @@ window.CROSSWALK_INCIDENTS = [
       },
       {
         "layer": "L7",
-        "label": "Ecosystem",
+        "label": "Agent Ecosystem",
         "role": "impact",
         "notes": "Self-replication attempts threaten agent ecosystem integrity"
       }
@@ -6914,22 +6914,22 @@ window.CROSSWALK_INCIDENTS = [
     ],
     "maestro_layers": [
       {
-        "layer": "L4",
-        "label": "Tools and Integration Layer",
+        "layer": "L7",
+        "label": "Agent Ecosystem",
         "role": "origin",
-        "notes": "Skill registry used as the distribution channel"
+        "notes": "Registry-scale campaign across the skill ecosystem"
       },
       {
         "layer": "L3",
-        "label": "Agent Frameworks Layer",
+        "label": "Agent Frameworks",
         "role": "propagation",
         "notes": "Instructions written into MEMORY.md and SOUL.md persist across sessions"
       },
       {
-        "layer": "L5",
-        "label": "Deployment Infrastructure Layer",
+        "layer": "L6",
+        "label": "Security & Compliance",
         "role": "impact",
-        "notes": "Credential, wallet and .env exfiltration to a single C2 IP"
+        "notes": "Exchange keys, wallet keys, SSH credentials and .env files exfiltrated to a single C2 IP"
       }
     ],
     "attack_vector": "Registry publisher accounts used to distribute skills that exfiltrate credentials and write persistent instructions into agent identity files",
@@ -6963,7 +6963,7 @@ window.CROSSWALK_INCIDENTS = [
     "control_failures": [
       {
         "framework": "MAESTRO",
-        "control_id": "L3.2",
+        "control_id": "L3",
         "outcome": "absent",
         "basis": "Skills also write malicious instructions directly into MEMORY.md and SOUL.md for session-persistent backdooring.",
         "source_url": "https://owasp.org/www-project-agentic-skills-top-10/",
@@ -7003,14 +7003,14 @@ window.CROSSWALK_INCIDENTS = [
     ],
     "maestro_layers": [
       {
-        "layer": "L4",
-        "label": "Tools and Integration Layer",
+        "layer": "L3",
+        "label": "Agent Frameworks",
         "role": "origin",
         "notes": "Skill manifest carries the instruction"
       },
       {
-        "layer": "L5",
-        "label": "Deployment Infrastructure Layer",
+        "layer": "L6",
+        "label": "Security & Compliance",
         "role": "impact",
         "notes": "SSH private key exfiltration"
       }
@@ -7063,16 +7063,16 @@ window.CROSSWALK_INCIDENTS = [
     ],
     "maestro_layers": [
       {
-        "layer": "L4",
-        "label": "Tools and Integration Layer",
+        "layer": "L3",
+        "label": "Agent Frameworks",
         "role": "origin",
         "notes": "Published skills cleared by registry checks"
       },
       {
-        "layer": "L7",
-        "label": "Interaction and User Interface Layer",
+        "layer": "L5",
+        "label": "Evaluation & Observability",
         "role": "blind-spot",
-        "notes": "Detection came from behaviour at runtime, not from review at publication"
+        "notes": "Detection came from runtime behaviour, not from review at publication"
       }
     ],
     "attack_vector": "Malicious skills published to a registry and installed by users before any behavioural signal surfaced",
@@ -7122,14 +7122,14 @@ window.CROSSWALK_INCIDENTS = [
     ],
     "maestro_layers": [
       {
-        "layer": "L4",
-        "label": "Tools and Integration Layer",
+        "layer": "L7",
+        "label": "Agent Ecosystem",
         "role": "origin",
         "notes": "Ecosystem-wide flaw density in published skills"
       },
       {
-        "layer": "L7",
-        "label": "Interaction and User Interface Layer",
+        "layer": "L5",
+        "label": "Evaluation & Observability",
         "role": "blind-spot",
         "notes": "8 confirmed-malicious skills still live at publication"
       }
@@ -7181,16 +7181,16 @@ window.CROSSWALK_INCIDENTS = [
     ],
     "maestro_layers": [
       {
-        "layer": "L4",
-        "label": "Tools and Integration Layer",
+        "layer": "L3",
+        "label": "Agent Frameworks",
         "role": "origin",
-        "notes": "Skills request more permission than their function needs"
+        "notes": "Skills declare more permission than their function needs"
       },
       {
-        "layer": "L5",
-        "label": "Deployment Infrastructure Layer",
+        "layer": "L6",
+        "label": "Security & Compliance",
         "role": "impact",
-        "notes": "API key and PII exposure"
+        "notes": "API key and PII exposure through the granted scope"
       }
     ],
     "attack_vector": "Over-broad skill permissions turn ordinary skill execution into credential and PII disclosure",
@@ -7240,14 +7240,14 @@ window.CROSSWALK_INCIDENTS = [
     ],
     "maestro_layers": [
       {
-        "layer": "L4",
-        "label": "Tools and Integration Layer",
+        "layer": "L3",
+        "label": "Agent Frameworks",
         "role": "origin",
         "notes": "Registry listing metadata impersonates a known brand"
       },
       {
         "layer": "L7",
-        "label": "Interaction and User Interface Layer",
+        "label": "Agent Ecosystem",
         "role": "impact",
         "notes": "User trust decision made on false metadata"
       }
@@ -7300,8 +7300,8 @@ window.CROSSWALK_INCIDENTS = [
     ],
     "maestro_layers": [
       {
-        "layer": "L4",
-        "label": "Tools and Integration Layer",
+        "layer": "L5",
+        "label": "Evaluation & Observability",
         "role": "blind-spot",
         "notes": "Signature scanning has no signature to match on instruction payloads"
       }
@@ -7352,14 +7352,20 @@ window.CROSSWALK_INCIDENTS = [
     ],
     "maestro_layers": [
       {
-        "layer": "L5",
-        "label": "Deployment Infrastructure Layer",
+        "layer": "L4",
+        "label": "Deployment & Infrastructure",
         "role": "origin",
-        "notes": "Unauthenticated WebSocket writes reach the log file"
+        "notes": "Unauthenticated WebSocket writes reach the host log file"
+      },
+      {
+        "layer": "L5",
+        "label": "Evaluation & Observability",
+        "role": "propagation",
+        "notes": "The diagnostic log becomes the injection channel"
       },
       {
         "layer": "L3",
-        "label": "Agent Frameworks Layer",
+        "label": "Agent Frameworks",
         "role": "impact",
         "notes": "Agent reads its own logs and acts on injected text"
       }
@@ -7413,22 +7419,22 @@ window.CROSSWALK_INCIDENTS = [
     ],
     "maestro_layers": [
       {
-        "layer": "L4",
-        "label": "Tools and Integration Layer",
+        "layer": "L3",
+        "label": "Agent Frameworks",
         "role": "origin",
-        "notes": "Repository-controlled configuration files"
+        "notes": "Repository-controlled configuration consumed at project open"
       },
       {
-        "layer": "L7",
-        "label": "Interaction and User Interface Layer",
+        "layer": "L6",
+        "label": "Security & Compliance",
         "role": "blind-spot",
         "notes": "Execution precedes the trust dialog meant to gate it"
       },
       {
-        "layer": "L5",
-        "label": "Deployment Infrastructure Layer",
+        "layer": "L4",
+        "label": "Deployment & Infrastructure",
         "role": "impact",
-        "notes": "Arbitrary shell execution and API key exfiltration"
+        "notes": "Arbitrary shell execution and API key exfiltration on the host"
       }
     ],
     "attack_vector": "Repository configuration files executed at project open time, ahead of the user consent prompt",
@@ -7462,7 +7468,7 @@ window.CROSSWALK_INCIDENTS = [
     "control_failures": [
       {
         "framework": "MAESTRO",
-        "control_id": "L7.2",
+        "control_id": "L6",
         "outcome": "present-but-bypassed",
         "basis": "Repository-controlled configuration files can silently execute arbitrary shell commands and exfiltrate API keys at project open time, before any trust dialog.",
         "source_url": "https://owasp.org/www-project-agentic-skills-top-10/",
@@ -7500,20 +7506,20 @@ window.CROSSWALK_INCIDENTS = [
     ],
     "maestro_layers": [
       {
-        "layer": "L5",
-        "label": "Deployment Infrastructure Layer",
+        "layer": "L4",
+        "label": "Deployment & Infrastructure",
         "role": "origin",
         "notes": "Unrate-limited localhost WebSocket reachable from the browser"
       },
       {
         "layer": "L6",
-        "label": "Orchestration Layer",
+        "label": "Security & Compliance",
         "role": "propagation",
         "notes": "Device registration without a user prompt"
       },
       {
-        "layer": "L4",
-        "label": "Tools and Integration Layer",
+        "layer": "L7",
+        "label": "Agent Ecosystem",
         "role": "impact",
         "notes": "Exfiltration through the agent's existing integrations"
       }
@@ -7549,7 +7555,7 @@ window.CROSSWALK_INCIDENTS = [
     "control_failures": [
       {
         "framework": "MAESTRO",
-        "control_id": "L7.2",
+        "control_id": "L6",
         "outcome": "absent",
         "basis": "Malicious websites can brute-force localhost WebSocket connections with no rate limiting to silently hijack local OpenClaw instances, register new devices without user prompts.",
         "source_url": "https://owasp.org/www-project-agentic-skills-top-10/",
@@ -7588,14 +7594,14 @@ window.CROSSWALK_INCIDENTS = [
     ],
     "maestro_layers": [
       {
-        "layer": "L5",
-        "label": "Deployment Infrastructure Layer",
+        "layer": "L4",
+        "label": "Deployment & Infrastructure",
         "role": "origin",
         "notes": "Commodity infostealer on the host"
       },
       {
         "layer": "L3",
-        "label": "Agent Frameworks Layer",
+        "label": "Agent Frameworks",
         "role": "impact",
         "notes": "Agent identity and memory files exfiltrated"
       }
@@ -7649,14 +7655,14 @@ window.CROSSWALK_INCIDENTS = [
     ],
     "maestro_layers": [
       {
-        "layer": "L4",
-        "label": "Tools and Integration Layer",
+        "layer": "L3",
+        "label": "Agent Frameworks",
         "role": "origin",
         "notes": "MCP server request handling"
       },
       {
-        "layer": "L5",
-        "label": "Deployment Infrastructure Layer",
+        "layer": "L4",
+        "label": "Deployment & Infrastructure",
         "role": "impact",
         "notes": "Cloud instance metadata credentials retrieved"
       }
@@ -7710,14 +7716,14 @@ window.CROSSWALK_INCIDENTS = [
     ],
     "maestro_layers": [
       {
-        "layer": "L5",
-        "label": "Deployment Infrastructure Layer",
+        "layer": "L4",
+        "label": "Deployment & Infrastructure",
         "role": "origin",
         "notes": "Insecure defaults on internet-exposed deployments"
       },
       {
-        "layer": "L7",
-        "label": "Interaction and User Interface Layer",
+        "layer": "L5",
+        "label": "Evaluation & Observability",
         "role": "blind-spot",
         "notes": "Shadow deployment on corporate devices with no SOC visibility"
       }
@@ -7774,14 +7780,14 @@ window.CROSSWALK_INCIDENTS = [
     ],
     "maestro_layers": [
       {
-        "layer": "L4",
-        "label": "Tools and Integration Layer",
+        "layer": "L5",
+        "label": "Evaluation & Observability",
         "role": "blind-spot",
         "notes": "Scanning present across the ecosystem and defeated by three distinct techniques"
       },
       {
         "layer": "L1",
-        "label": "Foundation Models Layer",
+        "label": "Foundation Models",
         "role": "propagation",
         "notes": "The scanner's own LLM judge is itself a prompt-injection target"
       }
@@ -7834,22 +7840,22 @@ window.CROSSWALK_INCIDENTS = [
     ],
     "maestro_layers": [
       {
-        "layer": "L4",
-        "label": "Tools and Integration Layer",
+        "layer": "L3",
+        "label": "Agent Frameworks",
         "role": "origin",
         "notes": "Skill instructs the agent to fetch an external documentation URL"
       },
       {
-        "layer": "L4",
-        "label": "Tools and Integration Layer",
+        "layer": "L5",
+        "label": "Evaluation & Observability",
         "role": "blind-spot",
         "notes": "Published artifact contains no payload to scan"
       },
       {
-        "layer": "L3",
-        "label": "Agent Frameworks Layer",
+        "layer": "L2",
+        "label": "Data Operations",
         "role": "impact",
-        "notes": "Attacker-controlled instructions enter the agent at runtime"
+        "notes": "Attacker-controlled content enters the agent through ingestion"
       }
     ],
     "attack_vector": "Payload held off-artifact at an attacker-controlled external URL the skill tells the agent to fetch",
@@ -7900,16 +7906,16 @@ window.CROSSWALK_INCIDENTS = [
     ],
     "maestro_layers": [
       {
-        "layer": "L4",
-        "label": "Tools and Integration Layer",
+        "layer": "L3",
+        "label": "Agent Frameworks",
         "role": "origin",
         "notes": "One in eight live skills depends on an external instruction source"
       },
       {
-        "layer": "L3",
-        "label": "Agent Frameworks Layer",
+        "layer": "L2",
+        "label": "Data Operations",
         "role": "impact",
-        "notes": "6.7M installs exposed to content the publisher does not control"
+        "notes": "6.7M installs ingest content the publisher does not control"
       }
     ],
     "attack_vector": "Skills depending on external instruction sources that a third party can change after publication",
@@ -7960,14 +7966,14 @@ window.CROSSWALK_INCIDENTS = [
     ],
     "maestro_layers": [
       {
-        "layer": "L4",
-        "label": "Tools and Integration Layer",
+        "layer": "L3",
+        "label": "Agent Frameworks",
         "role": "origin",
         "notes": "Skill dependencies resolve to identifiers anyone can claim"
       },
       {
-        "layer": "L4",
-        "label": "Tools and Integration Layer",
+        "layer": "L7",
+        "label": "Agent Ecosystem",
         "role": "propagation",
         "notes": "A single re-registration inherits every installed instance"
       }
