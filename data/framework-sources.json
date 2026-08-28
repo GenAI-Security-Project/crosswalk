@@ -1,0 +1,206 @@
+{
+  "$comment": "Upstream framework versions, for detecting mapping rot. `mapped_version` comes from data/frameworks/*.json; `current_version` is the released version upstream. A null current_version means nobody has confirmed it — agents do not fill these from memory, because a guess here recreates the staleness the file exists to catch. Confirm, set `checked`, and note how.",
+  "schema": 1,
+  "frameworks": {
+    "aiuc-1": {
+      "name": "AIUC-1",
+      "mapped_version": "1.0",
+      "current_version": null,
+      "checked": null,
+      "source_url": "https://www.ai-safety-institute.org/",
+      "notes": ""
+    },
+    "cis-controls": {
+      "name": "CIS Controls v8.1",
+      "mapped_version": "8.1",
+      "current_version": null,
+      "checked": null,
+      "source_url": "https://www.cisecurity.org/controls",
+      "notes": ""
+    },
+    "cosai": {
+      "name": "CoSAI",
+      "mapped_version": "2025",
+      "current_version": null,
+      "checked": null,
+      "source_url": "https://www.coalitionforsecureai.org/",
+      "notes": ""
+    },
+    "cwe-cve": {
+      "name": "CWE/CVE",
+      "mapped_version": "4.14",
+      "current_version": null,
+      "checked": null,
+      "source_url": "https://cwe.mitre.org/",
+      "notes": ""
+    },
+    "dora": {
+      "name": "DORA",
+      "mapped_version": "EU 2022/2554",
+      "current_version": null,
+      "checked": null,
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554",
+      "notes": ""
+    },
+    "enisa-multilayer": {
+      "name": "ENISA Multilayer Framework",
+      "mapped_version": "2023",
+      "current_version": null,
+      "checked": null,
+      "source_url": "https://www.enisa.europa.eu/publications/multilayer-framework-for-good-cybersecurity-practices-for-ai",
+      "notes": ""
+    },
+    "eu-ai-act-cop": {
+      "name": "EU AI Act Code of Practice",
+      "mapped_version": "Final (2025-07-10)",
+      "current_version": null,
+      "checked": null,
+      "source_url": "https://code-of-practice.ai/",
+      "notes": ""
+    },
+    "eu-ai-act": {
+      "name": "EU AI Act",
+      "mapped_version": "2024/1689",
+      "current_version": null,
+      "checked": null,
+      "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689",
+      "notes": ""
+    },
+    "fedramp": {
+      "name": "FedRAMP",
+      "mapped_version": "Rev 5",
+      "current_version": null,
+      "checked": null,
+      "source_url": "https://www.fedramp.gov/",
+      "notes": ""
+    },
+    "isa-62443": {
+      "name": "ISA/IEC 62443",
+      "mapped_version": "2024",
+      "current_version": null,
+      "checked": null,
+      "source_url": "https://www.isa.org/standards-and-publications/isa-standards/isa-iec-62443-series-of-standards",
+      "notes": ""
+    },
+    "iso-27001": {
+      "name": "ISO/IEC 27001:2022",
+      "mapped_version": "2022",
+      "current_version": null,
+      "checked": null,
+      "source_url": "https://www.iso.org/standard/82875.html",
+      "notes": ""
+    },
+    "iso-42001": {
+      "name": "ISO/IEC 42001:2023",
+      "mapped_version": "2023",
+      "current_version": null,
+      "checked": null,
+      "source_url": "https://www.iso.org/standard/81230.html",
+      "notes": ""
+    },
+    "maestro": {
+      "name": "MAESTRO",
+      "mapped_version": "1.0",
+      "current_version": null,
+      "checked": null,
+      "source_url": "https://cloudsecurityalliance.org/blog/2025/02/06/agentic-ai-threat-modeling-framework-maestro",
+      "notes": ""
+    },
+    "mitre-atlas": {
+      "name": "MITRE ATLAS",
+      "mapped_version": "4.0",
+      "current_version": null,
+      "checked": null,
+      "source_url": "https://atlas.mitre.org",
+      "notes": ""
+    },
+    "nist-ai-rmf": {
+      "name": "NIST AI RMF 1.0",
+      "mapped_version": "1.0",
+      "current_version": null,
+      "checked": null,
+      "source_url": "https://www.nist.gov/artificial-intelligence/executive-order-safe-secure-and-trustworthy-artificial-intelligence",
+      "notes": ""
+    },
+    "nist-csf": {
+      "name": "NIST CSF 2.0",
+      "mapped_version": "2.0",
+      "current_version": null,
+      "checked": null,
+      "source_url": "https://www.nist.gov/cyberframework",
+      "notes": ""
+    },
+    "nist-sp-800-218a": {
+      "name": "NIST SP 800-218A",
+      "mapped_version": "Final (2024)",
+      "current_version": "Final (2024)",
+      "checked": "2026-08-28",
+      "source_url": "https://doi.org/10.6028/NIST.SP.800-218A",
+      "notes": "The repo cited the initial public draft (.ipd). The final PDF and DOI both resolve; 13 draft citations updated."
+    },
+    "nist-sp-800-82": {
+      "name": "NIST SP 800-82 Rev 3",
+      "mapped_version": "Rev 3",
+      "current_version": null,
+      "checked": null,
+      "source_url": "https://csrc.nist.gov/pubs/sp/800/82/r3/final",
+      "notes": ""
+    },
+    "owasp-ai-testing": {
+      "name": "OWASP AI Testing Guide",
+      "mapped_version": "1.0",
+      "current_version": null,
+      "checked": null,
+      "source_url": "https://owasp.org/www-project-ai-security-and-privacy-guide/",
+      "notes": ""
+    },
+    "owasp-asvs": {
+      "name": "OWASP ASVS 4.0.3",
+      "mapped_version": "4.0.3",
+      "current_version": "5.0.0",
+      "checked": "2026-08-28",
+      "source_url": "https://owasp.org/www-project-application-security-verification-standard/",
+      "notes": "Verified via the OWASP/ASVS releases API (tag v5.0.0_release). Renumbered — re-map tracked in issue #22, NOT a version bump."
+    },
+    "owasp-nhi": {
+      "name": "OWASP NHI Top 10",
+      "mapped_version": "1.0",
+      "current_version": null,
+      "checked": null,
+      "source_url": "https://owasp.org/www-project-non-human-identities-top-10/",
+      "notes": ""
+    },
+    "owasp-samm": {
+      "name": "OWASP SAMM v2.0",
+      "mapped_version": "2.0",
+      "current_version": null,
+      "checked": null,
+      "source_url": "https://owaspsamm.org/model/",
+      "notes": ""
+    },
+    "pci-dss": {
+      "name": "PCI DSS v4.0",
+      "mapped_version": "4.0.1",
+      "current_version": "4.0.1",
+      "checked": "2026-08-28",
+      "source_url": "https://www.pcisecuritystandards.org/document_library/",
+      "notes": "Verified on the PCI SSC document library. Maintenance release; requirement numbering unchanged, so the pin was safe to update."
+    },
+    "soc2": {
+      "name": "SOC 2",
+      "mapped_version": "2017 (2022 rev)",
+      "current_version": null,
+      "checked": null,
+      "source_url": "https://www.aicpa-cima.com/resources/landing/2017-trust-services-criteria",
+      "notes": ""
+    },
+    "stride": {
+      "name": "STRIDE",
+      "mapped_version": "2024",
+      "current_version": null,
+      "checked": null,
+      "source_url": "https://learn.microsoft.com/en-us/azure/security/develop/threat-modeling-tool-threats",
+      "notes": ""
+    }
+  }
+}

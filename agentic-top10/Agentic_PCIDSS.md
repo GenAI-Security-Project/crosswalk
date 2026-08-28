@@ -39,14 +39,14 @@ management extends to agent framework providers, tool registry
 operators, and model providers when their components process or
 have access to CHD.
 
-**PCI DSS v4.0 customised approach** — for novel agentic controls
+**PCI DSS v4.0.1 customised approach** — for novel agentic controls
 that do not map to traditional PCI requirements, v4.0's customised
 approach provides the mechanism to document AI-specific controls
 as satisfying the intent of requirements through alternative means.
 
 ---
 
-## PCI DSS v4.0 structure
+## PCI DSS v4.0.1 structure
 
 | Requirement | Title | Agentic relevance |
 |---|---|---|
@@ -67,7 +67,7 @@ as satisfying the intent of requirements through alternative means.
 
 ## Quick-reference summary
 
-| ID | Name | Severity | Primary PCI DSS v4.0 Requirements | Tier |
+| ID | Name | Severity | Primary PCI DSS v4.0.1 Requirements | Tier |
 |---|---|---|---|---|
 | ASI01 | Agent Goal Hijack | Critical | Req 6.2, Req 11.3, Req 10.2, Req 12.3 | Foundational–Advanced |
 | ASI02 | Tool Misuse & Exploitation | Critical | Req 7.2, Req 7.3, Req 10.2, Req 6.2 | Foundational–Advanced |
@@ -104,7 +104,7 @@ modify CHD through goal hijack. If the agent has any tool access to
 payment systems, a successful goal hijack is a potential CHD
 compromise event with PCI breach notification consequences.
 
-#### PCI DSS v4.0 mapping
+#### PCI DSS v4.0.1 mapping
 
 | Requirement | How it applies | Evidence |
 |---|---|---|
@@ -152,7 +152,7 @@ parameters or beyond authorised scope. Requirement 7 (least-privilege)
 applies to all tool permissions; Requirement 10 requires logging
 of all tool invocations on CHD systems.
 
-#### PCI DSS v4.0 mapping
+#### PCI DSS v4.0.1 mapping
 
 | Requirement | How it applies | Evidence |
 |---|---|---|
@@ -189,7 +189,7 @@ Agents inherit and cache credentials providing access to CHD.
 PCI DSS Requirement 8 (authentication) and Requirement 7
 (least-privilege) apply directly to agent identity management.
 
-#### PCI DSS v4.0 mapping
+#### PCI DSS v4.0.1 mapping
 
 | Requirement | How it applies | Evidence |
 |---|---|---|
@@ -227,7 +227,7 @@ vendors) are in PCI supply chain scope when they process or access
 CHD. Requirement 12.8 mandates vendor management for all third-party
 service providers with access to CHD.
 
-#### PCI DSS v4.0 mapping
+#### PCI DSS v4.0.1 mapping
 
 | Requirement | How it applies | Evidence |
 |---|---|---|
@@ -267,7 +267,7 @@ network segments. Requirement 6.4 (public-facing application
 protection) and Requirement 6.2 (secure development) apply;
 Requirement 10.2 requires logging of code execution events.
 
-#### PCI DSS v4.0 mapping
+#### PCI DSS v4.0.1 mapping
 
 | Requirement | How it applies | Evidence |
 |---|---|---|
@@ -304,7 +304,7 @@ poisoning attacks. Requirement 3 (protect stored account data)
 applies to CHD in agent memory; Requirement 3.4 requires truncation
 or hashing of PAN data wherever it is stored.
 
-#### PCI DSS v4.0 mapping
+#### PCI DSS v4.0.1 mapping
 
 | Requirement | How it applies | Evidence |
 |---|---|---|
@@ -341,7 +341,7 @@ authentication. Requirement 4.2 requires strong cryptography
 for CHD in transit; Requirement 8.2 requires authenticated
 inter-agent communication.
 
-#### PCI DSS v4.0 mapping
+#### PCI DSS v4.0.1 mapping
 
 | Requirement | How it applies | Evidence |
 |---|---|---|
@@ -372,7 +372,7 @@ PCI DSS Requirement 10.7 requires detection of critical control
 failures; Requirement 12.3 requires targeted risk analysis for
 system availability risks.
 
-#### PCI DSS v4.0 mapping
+#### PCI DSS v4.0.1 mapping
 
 | Requirement | How it applies | Evidence |
 |---|---|---|
@@ -403,7 +403,7 @@ Requirement 12.6 (security awareness) requires training on AI
 deception risks; Requirement 6.2 covers secure development
 requirements for honest agent interaction design.
 
-#### PCI DSS v4.0 mapping
+#### PCI DSS v4.0.1 mapping
 
 | Requirement | How it applies | Evidence |
 |---|---|---|
@@ -423,7 +423,7 @@ not in their defined role. Requirement 7 (least-privilege) and
 Requirement 10 (monitoring) are primary; Requirement 11.3
 (penetration testing) requires testing for rogue agent behaviour.
 
-#### PCI DSS v4.0 mapping
+#### PCI DSS v4.0.1 mapping
 
 | Requirement | How it applies | Evidence |
 |---|---|---|
@@ -450,7 +450,7 @@ Requirement 10 (monitoring) are primary; Requirement 11.3
 
 ---
 
-## PCI DSS v4.0 agentic AI evidence checklist
+## PCI DSS v4.0.1 agentic AI evidence checklist
 
 | Requirement | Evidence required for agentic AI in scope |
 |---|---|
@@ -477,7 +477,7 @@ Requirement 10 (monitoring) are primary; Requirement 11.3
 
 | Version | Date | Change |
 |---|---|---|
-| 1.0 | 2026-03-27 | Initial release — full ASI01–ASI10 mapping to PCI DSS v4.0 |
+| 1.0 | 2026-03-27 | Initial release — full ASI01–ASI10 mapping to PCI DSS v4.0.1 |
 
 ---
 

@@ -349,6 +349,46 @@ function checkSharedResources() {
   }
 }
 
+// ─── Framework version drift ──────────────────────────────────────────────────
+
+/**
+ * 16. A mapped framework version that has fallen behind upstream.
+ *
+ * ASVS 4.0.3 sat in this repo while 5.0.0 shipped, and nothing said so. The
+ * whole point of pinning `framework_version` on a mapping is that the rot
+ * becomes visible rather than silent.
+ *
+ * Warns rather than fails: a divergence is a real state of the world, not a
+ * defect in the commit that surfaced it. Closing it means re-mapping, which is
+ * human work.
+ *
+ * A framework with no confirmed `current_version` is not counted — an unchecked
+ * upstream is a gap in the source file, reported by `npm run watch`.
+ */
+function checkFrameworkVersions() {
+  const p = path.join(ROOT, 'data', 'framework-sources.json');
+  if (!fs.existsSync(p)) return true;
+
+  const doc = JSON.parse(fs.readFileSync(p, 'utf8'));
+  const diverged = [];
+  let unchecked = 0;
+
+  for (const [key, f] of Object.entries(doc.frameworks || {})) {
+    if (!f.current_version) { unchecked++; continue; }
+    if (f.current_version !== f.mapped_version) {
+      diverged.push(`${f.name || key}: mapped ${f.mapped_version}, upstream ${f.current_version}`);
+    }
+  }
+
+  for (const d of diverged) {
+    warn('Framework currency', `${d} — mappings are against the older release`);
+  }
+  if (!diverged.length) {
+    pass('Framework currency', `No confirmed divergence (${unchecked} framework(s) unchecked)`);
+  }
+  return true;
+}
+
 // ─── CROSSREF framework guard ─────────────────────────────────────────────────
 
 /**
@@ -737,6 +777,7 @@ function run() {
     checkSchemaV2();
     checkDensity();
     checkCrossRefFrameworks();
+    checkFrameworkVersions();
   }
 
   // Encoding guard — mapping files plus the shared/root markdown they link to

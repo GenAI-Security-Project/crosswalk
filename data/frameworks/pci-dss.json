@@ -2,7 +2,7 @@
   "id": "pci-dss",
   "name": "PCI DSS v4.0",
   "short_name": "PCI DSS",
-  "version": "4.0",
+  "version": "4.0.1",
   "url": "https://www.pcisecuritystandards.org/document_library/",
   "license": "Proprietary",
   "publisher": "PCI Security Standards Council",

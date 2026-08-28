@@ -978,7 +978,7 @@ window.CROSSWALK_DATA = [
       {
         "name": "NIST SP 800-218A",
         "type": "open-source",
-        "url": "https://doi.org/10.6028/NIST.SP.800-218A.ipd"
+        "url": "https://doi.org/10.6028/NIST.SP.800-218A"
       },
       {
         "name": "NIST SP 800-53A",
@@ -2213,7 +2213,7 @@ window.CROSSWALK_DATA = [
       {
         "name": "NIST SP 800-218A",
         "type": "open-source",
-        "url": "https://doi.org/10.6028/NIST.SP.800-218A.ipd"
+        "url": "https://doi.org/10.6028/NIST.SP.800-218A"
       },
       {
         "name": "OpenTelemetry",
@@ -11105,7 +11105,7 @@ window.CROSSWALK_DATA = [
       {
         "name": "NIST SP 800-218A",
         "type": "open-source",
-        "url": "https://doi.org/10.6028/NIST.SP.800-218A.ipd"
+        "url": "https://doi.org/10.6028/NIST.SP.800-218A"
       },
       {
         "name": "LLM Guard",

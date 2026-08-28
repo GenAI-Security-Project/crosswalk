@@ -145,7 +145,14 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Initial release — full mapping DSGAI01–DSGAI21 to AIUC-1",
         "kind": "control"
       }
-    ]
+    ],
+    "inventory_completeness": {
+      "status": "partial",
+      "included": 23,
+      "total": null,
+      "note": "Every item in this registry is referenced by a mapping, so the registry was derived from the mappings rather than from the framework. It cannot contain controls this crosswalk has not mapped. Authoritative total not yet established.",
+      "source": "https://www.ai-safety-institute.org/"
+    }
   },
   {
     "id": "cis-controls",
@@ -606,7 +613,14 @@ window.CROSSWALK_FRAMEWORKS = [
         "change": "Initial seed — 18 CIS Controls v8.1 top-level safeguard groups",
         "author": "OWASP GenAI Data Security Initiative"
       }
-    ]
+    ],
+    "inventory_completeness": {
+      "status": "unknown",
+      "included": 70,
+      "total": null,
+      "note": "Authoritative control count not established. Needs a count from the published framework.",
+      "source": "https://www.cisecurity.org/controls"
+    }
   },
   {
     "id": "cosai",
@@ -883,7 +897,14 @@ window.CROSSWALK_FRAMEWORKS = [
         "change": "Initial seed — 4 workstreams + agentic security principles",
         "author": "OWASP GenAI Data Security Initiative"
       }
-    ]
+    ],
+    "inventory_completeness": {
+      "status": "unknown",
+      "included": 32,
+      "total": null,
+      "note": "Authoritative control count not established. Needs a count from the published framework.",
+      "source": "https://www.coalitionforsecureai.org/"
+    }
   },
   {
     "id": "cwe-cve",
@@ -1319,7 +1340,14 @@ window.CROSSWALK_FRAMEWORKS = [
         "title": "CWE-799",
         "kind": "weakness"
       }
-    ]
+    ],
+    "inventory_completeness": {
+      "status": "partial",
+      "included": 76,
+      "total": null,
+      "note": "Every item in this registry is referenced by a mapping, so the registry was derived from the mappings rather than from the framework. It cannot contain controls this crosswalk has not mapped. Authoritative total not yet established.",
+      "source": "https://cwe.mitre.org/"
+    }
   },
   {
     "id": "dora",
@@ -1546,7 +1574,14 @@ window.CROSSWALK_FRAMEWORKS = [
         "change": "Initial seed — 22 key articles from Digital Operational Resilience Act",
         "author": "OWASP GenAI Data Security Initiative"
       }
-    ]
+    ],
+    "inventory_completeness": {
+      "status": "unknown",
+      "included": 27,
+      "total": null,
+      "note": "Authoritative control count not established. Needs a count from the published framework.",
+      "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554"
+    }
   },
   {
     "id": "enisa-multilayer",
@@ -1602,7 +1637,14 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "For NIS2 essential entities and EU AI Act Annex III deployments — disinformation risk treated as a significant incident category",
         "kind": "layer"
       }
-    ]
+    ],
+    "inventory_completeness": {
+      "status": "partial",
+      "included": 4,
+      "total": null,
+      "note": "Every item in this registry is referenced by a mapping, so the registry was derived from the mappings rather than from the framework. It cannot contain controls this crosswalk has not mapped. Authoritative total not yet established.",
+      "source": "https://www.enisa.europa.eu/publications/multilayer-framework-for-good-cybersecurity-practices-for-ai"
+    }
   },
   {
     "id": "eu-ai-act-cop",
@@ -2055,7 +2097,14 @@ window.CROSSWALK_FRAMEWORKS = [
         "change": "Initial seed — 3 chapters, 12 commitments, 55 measures from final CoP (July 2025)",
         "author": "OWASP GenAI Data Security Initiative"
       }
-    ]
+    ],
+    "inventory_completeness": {
+      "status": "unknown",
+      "included": 54,
+      "total": null,
+      "note": "Authoritative control count not established. Needs a count from the published framework.",
+      "source": "https://code-of-practice.ai/"
+    }
   },
   {
     "id": "eu-ai-act",
@@ -2996,7 +3045,14 @@ window.CROSSWALK_FRAMEWORKS = [
         "change": "Initial seed — 25 key articles and annexes from Regulation 2024/1689",
         "author": "OWASP GenAI Data Security Initiative"
       }
-    ]
+    ],
+    "inventory_completeness": {
+      "status": "unknown",
+      "included": 145,
+      "total": null,
+      "note": "Authoritative control count not established. Needs a count from the published framework.",
+      "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689"
+    }
   },
   {
     "id": "fedramp",
@@ -3148,7 +3204,14 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Assess AI governance completeness; identify gaps in roles, policies, oversight, and accountability; Conduct regulatory compliance gap analysis for AI systems; identify areas of non-compliance and define remediation plans",
         "kind": "control"
       }
-    ]
+    ],
+    "inventory_completeness": {
+      "status": "partial",
+      "included": 23,
+      "total": null,
+      "note": "Every item in this registry is referenced by a mapping, so the registry was derived from the mappings rather than from the framework. It cannot contain controls this crosswalk has not mapped. Authoritative total not yet established.",
+      "source": "https://www.fedramp.gov/"
+    }
   },
   {
     "id": "isa-62443",
@@ -3509,7 +3572,14 @@ window.CROSSWALK_FRAMEWORKS = [
         "change": "Initial seed — 7 foundational requirements with 25 system requirements",
         "author": "OWASP GenAI Data Security Initiative"
       }
-    ]
+    ],
+    "inventory_completeness": {
+      "status": "unknown",
+      "included": 46,
+      "total": null,
+      "note": "Authoritative control count not established. The standard is paywalled, so the total cannot be verified from a public source here.",
+      "source": "https://www.isa.org/standards-and-publications/isa-standards/isa-iec-62443-series-of-standards"
+    }
   },
   {
     "id": "iso-27001",
@@ -3936,7 +4006,14 @@ window.CROSSWALK_FRAMEWORKS = [
         "change": "Initial seed — 41 Annex A controls most relevant to GenAI security",
         "author": "OWASP GenAI Data Security Initiative"
       }
-    ]
+    ],
+    "inventory_completeness": {
+      "status": "unknown",
+      "included": 54,
+      "total": null,
+      "note": "Authoritative control count not established. The standard is paywalled, so the total cannot be verified from a public source here.",
+      "source": "https://www.iso.org/standard/82875.html"
+    }
   },
   {
     "id": "iso-42001",
@@ -4553,7 +4630,14 @@ window.CROSSWALK_FRAMEWORKS = [
         "change": "Initial seed — 37 controls from clauses 4-10 and Annexes A/B",
         "author": "OWASP GenAI Data Security Initiative"
       }
-    ]
+    ],
+    "inventory_completeness": {
+      "status": "unknown",
+      "included": 87,
+      "total": null,
+      "note": "Authoritative control count not established. The standard is paywalled, so the total cannot be verified from a public source here.",
+      "source": "https://www.iso.org/standard/81230.html"
+    }
   },
   {
     "id": "maestro",
@@ -4798,7 +4882,14 @@ window.CROSSWALK_FRAMEWORKS = [
         "change": "Initial seed — 7 layers with 21 sub-controls from CSA MAESTRO framework",
         "author": "OWASP GenAI Data Security Initiative"
       }
-    ]
+    ],
+    "inventory_completeness": {
+      "status": "unknown",
+      "included": 21,
+      "total": null,
+      "note": "Authoritative control count not established. Needs a count from the published framework.",
+      "source": "https://cloudsecurityalliance.org/blog/2025/02/06/agentic-ai-threat-modeling-framework-maestro"
+    }
   },
   {
     "id": "mitre-atlas",
@@ -5193,7 +5284,14 @@ window.CROSSWALK_FRAMEWORKS = [
         "change": "Initial seed — 37 ATLAS techniques from v4.0",
         "author": "OWASP GenAI Data Security Initiative"
       }
-    ]
+    ],
+    "inventory_completeness": {
+      "status": "unknown",
+      "included": 50,
+      "total": null,
+      "note": "Authoritative control count not established. Needs a count from the published framework.",
+      "source": "https://atlas.mitre.org"
+    }
   },
   {
     "id": "nist-ai-rmf",
@@ -5892,7 +5990,14 @@ window.CROSSWALK_FRAMEWORKS = [
         "change": "Initial seed — all GOVERN, MAP, MEASURE, MANAGE subcategories",
         "author": "OWASP GenAI Data Security Initiative"
       }
-    ]
+    ],
+    "inventory_completeness": {
+      "status": "unknown",
+      "included": 85,
+      "total": null,
+      "note": "Authoritative control count not established. Needs a count from the published framework.",
+      "source": "https://www.nist.gov/artificial-intelligence/executive-order-safe-secure-and-trustworthy-artificial-intelligence"
+    }
   },
   {
     "id": "nist-csf",
@@ -6221,14 +6326,21 @@ window.CROSSWALK_FRAMEWORKS = [
         "change": "Initial seed — 22 CSF 2.0 categories across GOVERN/IDENTIFY/PROTECT/DETECT/RESPOND/RECOVER",
         "author": "OWASP GenAI Data Security Initiative"
       }
-    ]
+    ],
+    "inventory_completeness": {
+      "status": "unknown",
+      "included": 44,
+      "total": null,
+      "note": "Authoritative control count not established. Needs a count from the published framework.",
+      "source": "https://www.nist.gov/cyberframework"
+    }
   },
   {
     "id": "nist-sp-800-218a",
     "name": "NIST SP 800-218A",
     "short_name": "SP 800-218A",
-    "version": "1.0",
-    "url": "https://csrc.nist.gov/pubs/sp/800/218/a/final",
+    "version": "Final (2024)",
+    "url": "https://doi.org/10.6028/NIST.SP.800-218A",
     "license": "Public Domain",
     "publisher": "NIST",
     "category": "appsec",
@@ -6547,7 +6659,14 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Define procedures to assess and remediate data deletion requests including impact analysis on trained models and retraining requirements; Define remediation procedures for availability incidents including model rollback, rate limit tightening, and cost circuit breakers; Define and test remediation procedures for availability incidents — rate limit tightening, model rollback, cost circuit breaker activation",
         "kind": "control"
       }
-    ]
+    ],
+    "inventory_completeness": {
+      "status": "partial",
+      "included": 52,
+      "total": null,
+      "note": "Every item in this registry is referenced by a mapping, so the registry was derived from the mappings rather than from the framework. It cannot contain controls this crosswalk has not mapped. Authoritative total not yet established.",
+      "source": "https://csrc.nist.gov/pubs/sp/800/218/a/final"
+    }
   },
   {
     "id": "nist-sp-800-82",
@@ -6915,7 +7034,14 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "LLM service degradation has defined fail-safe behaviour � process control continues without LLM",
         "kind": "control"
       }
-    ]
+    ],
+    "inventory_completeness": {
+      "status": "partial",
+      "included": 59,
+      "total": null,
+      "note": "Every item in this registry is referenced by a mapping, so the registry was derived from the mappings rather than from the framework. It cannot contain controls this crosswalk has not mapped. Authoritative total not yet established.",
+      "source": "https://csrc.nist.gov/pubs/sp/800/82/r3/final"
+    }
   },
   {
     "id": "owasp-ai-testing",
@@ -7277,7 +7403,14 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Verify per-user and per-tenant quotas are enforced and cannot be bypassed through session switching or credential abuse",
         "kind": "control"
       }
-    ]
+    ],
+    "inventory_completeness": {
+      "status": "partial",
+      "included": 58,
+      "total": null,
+      "note": "Every item in this registry is referenced by a mapping, so the registry was derived from the mappings rather than from the framework. It cannot contain controls this crosswalk has not mapped. Authoritative total not yet established.",
+      "source": "https://owasp.org/www-project-ai-security-and-privacy-guide/"
+    }
   },
   {
     "id": "owasp-asvs",
@@ -7798,7 +7931,14 @@ window.CROSSWALK_FRAMEWORKS = [
         "change": "Initial seed — 32 ASVS verification requirements and sub-requirements",
         "author": "OWASP GenAI Data Security Initiative"
       }
-    ]
+    ],
+    "inventory_completeness": {
+      "status": "unknown",
+      "included": 75,
+      "total": null,
+      "note": "Authoritative control count not established. Needs a count from the published framework.",
+      "source": "https://owasp.org/www-project-application-security-verification-standard/"
+    }
   },
   {
     "id": "owasp-nhi",
@@ -8508,7 +8648,14 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Separate credentials per integration",
         "kind": "control"
       }
-    ]
+    ],
+    "inventory_completeness": {
+      "status": "unknown",
+      "included": 117,
+      "total": null,
+      "note": "Authoritative control count not established. Needs a count from the published framework.",
+      "source": "https://owasp.org/www-project-non-human-identities-top-10/"
+    }
   },
   {
     "id": "owasp-samm",
@@ -8612,13 +8759,20 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Production accuracy monitoring as operational management � drift detection, degradation alerted",
         "kind": "control"
       }
-    ]
+    ],
+    "inventory_completeness": {
+      "status": "partial",
+      "included": 15,
+      "total": null,
+      "note": "Every item in this registry is referenced by a mapping, so the registry was derived from the mappings rather than from the framework. It cannot contain controls this crosswalk has not mapped. Authoritative total not yet established.",
+      "source": "https://owaspsamm.org/model/"
+    }
   },
   {
     "id": "pci-dss",
     "name": "PCI DSS v4.0",
     "short_name": "PCI DSS",
-    "version": "4.0",
+    "version": "4.0.1",
     "url": "https://www.pcisecuritystandards.org/document_library/",
     "license": "Proprietary",
     "publisher": "PCI Security Standards Council",
@@ -9058,7 +9212,14 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "LLM integration code specifies accuracy requirements � high-stakes payment outputs require verification before action",
         "kind": "control"
       }
-    ]
+    ],
+    "inventory_completeness": {
+      "status": "partial",
+      "included": 72,
+      "total": null,
+      "note": "Every item in this registry is referenced by a mapping, so the registry was derived from the mappings rather than from the framework. It cannot contain controls this crosswalk has not mapped. Authoritative total not yet established.",
+      "source": "https://www.pcisecuritystandards.org/document_library/"
+    }
   },
   {
     "id": "soc2",
@@ -10287,7 +10448,14 @@ window.CROSSWALK_FRAMEWORKS = [
         "change": "Initial seed — 41 Trust Services Criteria across CC, Availability, Confidentiality, PI, Privacy",
         "author": "OWASP GenAI Data Security Initiative"
       }
-    ]
+    ],
+    "inventory_completeness": {
+      "status": "unknown",
+      "included": 209,
+      "total": null,
+      "note": "Authoritative control count not established. Needs a count from the published framework.",
+      "source": "https://www.aicpa-cima.com/resources/landing/2017-trust-services-criteria"
+    }
   },
   {
     "id": "stride",
@@ -10331,6 +10499,13 @@ window.CROSSWALK_FRAMEWORKS = [
         "title": "Resource Exhaustion via Uncontrolled Actions",
         "kind": "threat-category"
       }
-    ]
+    ],
+    "inventory_completeness": {
+      "status": "complete",
+      "included": 6,
+      "total": 6,
+      "note": "STRIDE is a closed six-element mnemonic; all six are present.",
+      "source": "https://learn.microsoft.com/en-us/azure/security/develop/threat-modeling-tool-threats"
+    }
   }
 ];
