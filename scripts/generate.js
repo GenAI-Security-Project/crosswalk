@@ -3,11 +3,11 @@
  * generate.js — Parse mapping Markdown files → emit data/entries/<ID>.json
  *
  * Usage:
- *   node scripts/generate.js            # generate all 41 entries
+ *   node scripts/generate.js            # generate all 51 entries
  *   node scripts/generate.js --dry-run  # parse + validate, no writes
  *   node scripts/generate.js --id LLM01 # generate a single entry
  *
- * Output: data/entries/LLM01.json … DSGAI21.json (41 files)
+ * Output: data/entries/LLM01.json … AST10.json (51 files)
  */
 
 'use strict';
@@ -35,34 +35,6 @@ const VULNERABILITIES = {
   LLM08: { name: 'Hidden Context Exposure',                  source_list: 'LLM-Top10-2026',    severity: 'High'     },
   LLM09: { name: 'Vector and Embedding Weaknesses',          source_list: 'LLM-Top10-2026',    severity: 'Medium'   },
   LLM10: { name: 'Improper Output Handling',                 source_list: 'LLM-Top10-2026',    severity: 'High'     },
-
-  // Agentic Skills Top 10 2026 — a sibling OWASP project (lead: Ken Huang et al.),
-  // credited to its own project exactly as the LLM and Agentic Top 10 are.
-  // Names and severities transcribed from owasp.org/www-project-agentic-skills-top-10/.
-  AST01: { name: 'Malicious Skills',                       source_list: 'AST-Top10-2026', severity: 'Critical' },
-  AST02: { name: 'Supply Chain Compromise',                source_list: 'AST-Top10-2026', severity: 'Critical' },
-  AST03: { name: 'Over-Privileged Skills',                 source_list: 'AST-Top10-2026', severity: 'High' },
-  AST04: { name: 'Insecure Metadata',                      source_list: 'AST-Top10-2026', severity: 'High' },
-  AST05: { name: 'Untrusted External Instructions',        source_list: 'AST-Top10-2026', severity: 'High' },
-  AST06: { name: 'Weak Isolation',                         source_list: 'AST-Top10-2026', severity: 'High' },
-  AST07: { name: 'Update Drift',                           source_list: 'AST-Top10-2026', severity: 'Medium' },
-  AST08: { name: 'Poor Scanning',                          source_list: 'AST-Top10-2026', severity: 'Medium' },
-  AST09: { name: 'No Governance',                          source_list: 'AST-Top10-2026', severity: 'Medium' },
-  AST10: { name: 'Cross-Platform Reuse',                   source_list: 'AST-Top10-2026', severity: 'Medium' },
-
-  // Agentic Skills Top 10 2026 — a sibling OWASP project (lead: Ken Huang et al.),
-  // credited to its own project exactly as the LLM and Agentic Top 10 are.
-  // Names and severities transcribed from owasp.org/www-project-agentic-skills-top-10/.
-  AST01: { name: 'Malicious Skills',                       source_list: 'AST-Top10-2026', severity: 'Critical' },
-  AST02: { name: 'Supply Chain Compromise',                source_list: 'AST-Top10-2026', severity: 'Critical' },
-  AST03: { name: 'Over-Privileged Skills',                 source_list: 'AST-Top10-2026', severity: 'High' },
-  AST04: { name: 'Insecure Metadata',                      source_list: 'AST-Top10-2026', severity: 'High' },
-  AST05: { name: 'Untrusted External Instructions',        source_list: 'AST-Top10-2026', severity: 'High' },
-  AST06: { name: 'Weak Isolation',                         source_list: 'AST-Top10-2026', severity: 'High' },
-  AST07: { name: 'Update Drift',                           source_list: 'AST-Top10-2026', severity: 'Medium' },
-  AST08: { name: 'Poor Scanning',                          source_list: 'AST-Top10-2026', severity: 'Medium' },
-  AST09: { name: 'No Governance',                          source_list: 'AST-Top10-2026', severity: 'Medium' },
-  AST10: { name: 'Cross-Platform Reuse',                   source_list: 'AST-Top10-2026', severity: 'Medium' },
 
   // Agentic Skills Top 10 2026 — a sibling OWASP project (lead: Ken Huang et al.),
   // credited to its own project exactly as the LLM and Agentic Top 10 are.
@@ -124,8 +96,6 @@ const AIVSS_SCORES = {
 const LLM_IDS    = Object.keys(VULNERABILITIES).filter(k => k.startsWith('LLM'));
 const ASI_IDS    = Object.keys(VULNERABILITIES).filter(k => k.startsWith('ASI'));
 const DSGAI_IDS  = Object.keys(VULNERABILITIES).filter(k => k.startsWith('DSGAI'));
-const AST_IDS    = Object.keys(VULNERABILITIES).filter(k => k.startsWith('AST'));
-const AST_IDS    = Object.keys(VULNERABILITIES).filter(k => k.startsWith('AST'));
 const AST_IDS    = Object.keys(VULNERABILITIES).filter(k => k.startsWith('AST'));
 
 // ─── Framework file catalog ───────────────────────────────────────────────────
