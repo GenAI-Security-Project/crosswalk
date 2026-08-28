@@ -73,7 +73,26 @@ function computeStats() {
   // ── framework registries ───────────────────────────────────────────────────
   const registries = jsonFiles(path.join(ROOT, 'data', 'frameworks')).map(readJson);
   const registryNames = registries.map((r) => r.name || r.id);
-  const controlsTotal = registries.reduce((a, r) => a + (r.controls || []).length, 0);
+
+  // Registry items are not all controls. STRIDE is a 6-item threat mnemonic,
+  // CWE entries are weaknesses, ATLAS entries are adversary techniques, and
+  // ENISA/MAESTRO L<n> ids are architectural layers. Counting them together
+  // inflated the control total to 1,514; only `kind: control` is a control.
+  const byKind = {};
+  const untyped = [];
+  for (const r of registries) {
+    for (const c of r.controls || []) {
+      if (!c.kind) untyped.push(`${r.name || r.id}:${c.control_id}`);
+      byKind[c.kind || 'UNTYPED'] = (byKind[c.kind || 'UNTYPED'] || 0) + 1;
+    }
+  }
+  if (untyped.length) {
+    throw new Error(
+      `${untyped.length} registry item(s) have no \`kind\` — run the T-DATA02 typing rules. ` +
+        `First: ${untyped.slice(0, 3).join(', ')}`,
+    );
+  }
+  const registryItems = Object.values(byKind).reduce((a, b) => a + b, 0);
 
   // Registries carrying no mapping at all — inventory present, coverage absent.
   const unmapped = registryNames.filter((n) => !frameworksMapped.has(n)).sort();
@@ -111,13 +130,12 @@ function computeStats() {
     mapping_files: { total: mappingFilesTotal, by_list: mappingFilesByList },
     incidents: { total: incidents.length },
     controls: {
-      // Registry line-items. This total counts every item regardless of what it
-      // is — STRIDE threat categories, CWE weaknesses and ENISA/MAESTRO layer
-      // IDs are all in here alongside genuine controls, so it overstates the
-      // control count. T-DATA02 adds `kind` typing and a by-kind breakdown.
-      registry_items: controlsTotal,
-      by_kind: null,
-      TODO: 'T-DATA02: type registry items by kind and count only kind=control',
+      // `total` is the honest control count: only kind=control. `registry_items`
+      // is every line item of any kind, which is what the old "1,514 controls"
+      // claim actually measured.
+      total: byKind.control || 0,
+      registry_items: registryItems,
+      by_kind: Object.fromEntries(Object.entries(byKind).sort()),
     },
   };
 }
