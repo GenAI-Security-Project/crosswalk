@@ -1,0 +1,57 @@
+name: Workflow lint
+
+# Workflows are the one place in this repo where a mistake runs with a token.
+# actionlint catches shell and expression errors; zizmor catches the security
+# patterns specifically — template injection, over-broad permissions, unpinned
+# or dangerous checkout of untrusted refs.
+
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/**']
+  pull_request:
+    paths: ['.github/workflows/**']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  actionlint:
+    name: actionlint
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+
+      - name: Run actionlint
+        uses: docker://rhysd/actionlint:1.7.7
+        with:
+          args: -color
+
+  zizmor:
+    name: zizmor
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.12'
+
+      - name: Install zizmor
+        run: pip install --disable-pip-version-check zizmor
+
+      # --persona regular keeps the signal high: it reports findings that are
+      # actionable rather than every theoretical pattern. Offline avoids
+      # needing a token to resolve action repositories.
+      - name: Audit workflows
+        run: zizmor --persona regular --offline .github/workflows/
