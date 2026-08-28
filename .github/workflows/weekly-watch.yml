@@ -6,46 +6,76 @@ on:
   workflow_dispatch:
     inputs:
       watcher:
-        description: 'Run a specific watcher (owasp|arxiv|nvd|frameworks) or leave blank for all'
+        description: 'Which watcher to run'
         required: false
-        default: ''
+        default: 'all'
+        type: choice
+        options: ['all', 'owasp', 'arxiv', 'nvd', 'frameworks']
       dry_run:
         description: 'Dry run (no issues opened)'
         type: boolean
         default: false
 
+# Declared per job rather than at the top level, so a job added later starts
+# with the default rather than silently inheriting issue-write.
 permissions:
-  issues: write
   contents: read
 
 jobs:
   watch:
     name: Monitor external sources
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write      # scripts/watch.js files findings as issues
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
 
       - name: Use Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: '20'
 
       - name: Restore watch state
-        uses: actions/cache@v4
+        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
         with:
           path: data/.watch-state.json
           key: watch-state-${{ github.run_id }}
           restore-keys: |
             watch-state-
 
+      # Dispatch inputs reach the shell through `env:`, never interpolated into
+      # the `run:` body. Inline `${{ }}` is substituted before the shell sees the
+      # script, so a crafted value becomes shell source rather than data. Dispatch
+      # here is maintainer-only, which limits the exposure but does not remove it —
+      # and the pattern is the thing that gets copied into a less careful workflow.
       - name: Run source watchers
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }}
+          INPUT_WATCHER: ${{ inputs.watcher }}
+          INPUT_DRY_RUN: ${{ inputs.dry_run }}
         run: |
+          set -euo pipefail
           FLAGS=""
-          if [ "${{ inputs.dry_run }}" = "true" ]; then FLAGS="$FLAGS --dry-run"; fi
-          if [ -n "${{ inputs.watcher }}" ]; then FLAGS="$FLAGS --watcher ${{ inputs.watcher }}"; fi
+          if [ "${INPUT_DRY_RUN:-false}" = "true" ]; then FLAGS="$FLAGS --dry-run"; fi
+
+          # Defence in depth: the input is a `choice`, so GitHub already rejects
+          # anything off-list, but a workflow_call or an edited definition could
+          # bypass that. Re-check before the value reaches a command line.
+          WATCHER="${INPUT_WATCHER:-all}"
+          case "$WATCHER" in
+            all|'')      ;;                                   # no flag: run every watcher
+            owasp|arxiv|nvd|frameworks) FLAGS="$FLAGS --watcher $WATCHER" ;;
+            *)
+              echo "::error::Unknown watcher '$WATCHER' — expected one of: all, owasp, arxiv, nvd, frameworks"
+              exit 1
+              ;;
+          esac
+
+          # shellcheck disable=SC2086  # FLAGS is a controlled, space-separated list
           node scripts/watch.js $FLAGS
 
   monthly-regenerate:
@@ -61,19 +91,23 @@ jobs:
     steps:
       - name: Should run this week
         id: gate
+        env:
+          EVENT_NAME: ${{ github.event_name }}
         run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "$(date +%-d)" -le 7 ]; then
+          if [ "${EVENT_NAME}" = "workflow_dispatch" ] || [ "$(date +%-d)" -le 7 ]; then
             echo "run=true" >> "$GITHUB_OUTPUT"
           else
             echo "Not the first Monday of the month — skipping regeneration."
           fi
 
-      - uses: actions/checkout@v4
+      # This job pushes the regenerated branch, so the checkout credential has to
+      # persist. Every other checkout in this repo sets persist-credentials: false.
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4 # zizmor: ignore[artipacked]
         if: steps.gate.outputs.run == 'true'
 
       - name: Use Node.js
         if: steps.gate.outputs.run == 'true'
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: '20'
 
@@ -103,11 +137,17 @@ jobs:
         if: steps.gate.outputs.run == 'true' && steps.diff.outputs.changed == 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Context values reach the shell as environment variables. Interpolating
+          # them into the run body substitutes them before the shell parses it, so
+          # a value containing shell syntax would execute.
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+          SERVER_URL: ${{ github.server_url }}
+          REPOSITORY: ${{ github.repository }}
         run: |
           set -euo pipefail
           BRANCH="auto/monthly-regenerate-$(date +%Y%m%d)"
-          BASE="${{ github.event.repository.default_branch }}"
-          COMPARE="${{ github.server_url }}/${{ github.repository }}/compare/${BASE}...${BRANCH}?expand=1"
+          BASE="${DEFAULT_BRANCH}"
+          COMPARE="${SERVER_URL}/${REPOSITORY}/compare/${BASE}...${BRANCH}?expand=1"
 
           # Capture the summary before committing: the checkout is shallow, so
           # HEAD~1 and origin/<base> are not necessarily available afterwards.
