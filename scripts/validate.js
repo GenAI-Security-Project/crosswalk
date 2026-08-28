@@ -349,6 +349,65 @@ function checkSharedResources() {
   }
 }
 
+// ─── CROSSREF framework guard ─────────────────────────────────────────────────
+
+/**
+ * 15. Every framework named in CROSSREF's navigation column must be mappable.
+ *
+ * CROSSREF is the index: "follow the row to see which framework files cover it."
+ * Naming a framework there that has no registry and no mapping file promises a
+ * destination that does not exist. Five did — MITRE ATT&CK, ISO 27701,
+ * CycloneDX ML-BOM, BSIMM, COBIT — and they are now footnoted under
+ * "Referenced but not yet mapped" instead.
+ *
+ * The footnote table is deliberately exempt: it exists to name the gaps.
+ */
+function checkCrossRefFrameworks() {
+  const crossref = path.join(ROOT, 'CROSSREF.md');
+  if (!fs.existsSync(crossref)) return true;
+
+  const known = new Set();
+  const fwDir = path.join(ROOT, 'data', 'frameworks');
+  if (fs.existsSync(fwDir)) {
+    for (const f of fs.readdirSync(fwDir).filter((n) => n.endsWith('.json'))) {
+      const reg = JSON.parse(fs.readFileSync(path.join(fwDir, f), 'utf8'));
+      for (const v of [reg.name, reg.short_name, reg.id]) if (v) known.add(v.toLowerCase());
+    }
+  }
+
+  const content = fs.readFileSync(crossref, 'utf8');
+  const lines = content.split('\n');
+  const footnoteAt = lines.findIndex((l) => /^###\s+Referenced but not yet mapped/i.test(l));
+
+  const unknown = new Set();
+  lines.forEach((line, i) => {
+    if (footnoteAt !== -1 && i >= footnoteAt) return;      // the gap list itself
+    if (!line.startsWith('|') || line.split('|').length < 6) return;
+    const col = line.split('|')[4];
+    if (/primary frameworks/i.test(col) || /^[\s-]*$/.test(col)) return;
+
+    for (const raw of col.split('·')) {
+      const tok = raw.trim().replace(/\*\*/g, '');
+      if (!tok || tok === '—') continue;
+      // a token matches if any registry name/short name shares its opening word
+      const head = tok.toLowerCase().split(/[\s/]/)[0];
+      const ok = [...known].some((k) => k.startsWith(head) || head.startsWith(k.split(/[\s/]/)[0]));
+      if (!ok) unknown.add(tok);
+    }
+  });
+
+  if (unknown.size) {
+    for (const u of unknown) {
+      fail('CROSSREF.md',
+        `"${u}" is named in the navigation column but has no registry in data/frameworks/. ` +
+        'Map it, or move it to "Referenced but not yet mapped".');
+    }
+    return false;
+  }
+  pass('CROSSREF.md', 'Every framework in the navigation column has a registry');
+  return true;
+}
+
 // ─── Density guard ────────────────────────────────────────────────────────────
 
 /**
@@ -677,6 +736,7 @@ function run() {
     console.log('Checking schema v2...\n');
     checkSchemaV2();
     checkDensity();
+    checkCrossRefFrameworks();
   }
 
   // Encoding guard — mapping files plus the shared/root markdown they link to
