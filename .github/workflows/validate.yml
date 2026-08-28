@@ -55,21 +55,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Check mapping file counts match README badge
-        run: |
-          LLM=$(ls llm-top10/*.md | wc -l)
-          AGT=$(ls agentic-top10/*.md | wc -l)
-          DSG=$(ls dsgai-2026/*.md | wc -l)
-          TOTAL=$((LLM + AGT + DSG))
-          echo "LLM: $LLM  Agentic: $AGT  DSGAI: $DSG  Total: $TOTAL"
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
 
-          # Anchor on the '-<count>-' segment: a bare [0-9]* also matches
-          # the '20' inside the URL-encoded '%20'.
-          BADGE=$(grep -o 'mapping%20files-[0-9]*-brightgreen' README.md | sed 's/.*files-\([0-9]*\)-.*/\1/')
-          echo "README badge: $BADGE"
+      # Replaces a single hand-maintained badge grep. Every headline number is
+      # now derived from data/ by scripts/stats.js and rendered into README
+      # marker regions, so this checks all of them at once: a stale count, a
+      # hand-edited badge, or a data change that was not re-rendered all fail.
+      - name: Check generated counts are current
+        run: npm run stats:check
 
-          if [ "$TOTAL" != "$BADGE" ]; then
-            echo "::error::Count mismatch — $TOTAL files on disk but README badge says $BADGE"
-            exit 1
-          fi
-          echo "Counts consistent: $TOTAL"
+      # stats:check compares regenerated output against what is committed;
+      # git must agree that nothing moved.
+      - name: Assert no uncommitted drift
+        run: git diff --exit-code -- README.md data/stats.json
