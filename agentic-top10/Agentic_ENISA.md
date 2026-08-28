@@ -9,8 +9,11 @@
 
 # Agentic Top 10 2026 — ENISA Multilayer Framework
 
-Mapping the [OWASP Top 10 for Agentic Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
-to the [ENISA Multilayer Framework for Good Cybersecurity Practices for AI](https://www.enisa.europa.eu/publications/multilayer-framework-for-good-cybersecurity-practices-for-ai) —
+Mapping the
+[OWASP Top 10 for Agentic Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
+to the
+[ENISA Multilayer Framework for Good Cybersecurity Practices for AI](https://www.enisa.europa.eu/publications/multilayer-framework-for-good-cybersecurity-practices-for-ai)
+—
 published by the European Union Agency for Cybersecurity (ENISA) to
 support the cybersecurity requirements of the EU AI Act and NIS2 Directive.
 
@@ -91,7 +94,8 @@ compliance deadline for Article 14 (human oversight) and Article 15
 ## Audience tags
 
 - **EU organisation subject to NIS2** — full file, ENISA framework alignment for agentic AI programme
-- **EU AI Act compliance lead** — L2 AI-specific controls, Article 14 (human oversight) and Article 15 (robustness) evidence
+- **EU AI Act compliance lead** — L2 AI-specific controls, Article 14 (human oversight) and Article 15
+  (robustness) evidence
 - **CISO (European enterprise)** — GOV domain entries, agentic risk management alignment
 - **Security architect** — ASI, SCS domain entries for agentic system design
 - **Security engineer** — ASI, DMS, MON technical control entries
@@ -127,6 +131,7 @@ disruption is a candidate significant incident under Article 23.
 #### Mitigations for ENISA alignment
 
 **Foundational (L1)**
+
 - L1 Secure Development: Implement input validation
   as a secure development requirement — all agent
   integrations reviewed for injection resistance before
@@ -135,6 +140,7 @@ disruption is a candidate significant incident under Article 23.
   risk owner, treatment controls, review cadence
 
 **Hardening (L2)**
+
 - ASI: Include adversarial goal-hijack testing in
   AI system integrity verification — direct, indirect,
   and multi-turn injection tested before each production
@@ -144,6 +150,7 @@ disruption is a candidate significant incident under Article 23.
   extended to agent goal-state deviation detection
 
 **Advanced (L2–L3)**
+
 - ASI: Implement goal-state verification at the
   framework layer — compare agent's inferred goal
   at each action step against session's authorised intent
@@ -163,10 +170,11 @@ Article 14 for goal hijack scenarios.
 
 | Tool | Type | Link |
 |---|---|---|
-| Garak | Open-source | https://github.com/leondz/garak |
-| Rebuff | Open-source | https://github.com/protectai/rebuff |
+| Garak | Open-source | <https://github.com/leondz/garak> |
+| Rebuff | Open-source | <https://github.com/protectai/rebuff> |
 
 #### Cross-references
+
 - LLM Top 10: LLM01 Prompt Injection
 - DSGAI 2026: DSGAI12 Unsafe NL Data Gateways
 - Other frameworks: ISO 27001 A.8.28 — NIST CSF 2.0 PR.PS-04 — EU AI Act Art. 14/15
@@ -194,6 +202,7 @@ scope; SCS covers third-party tool and plugin supply chain security.
 #### Mitigations for ENISA alignment
 
 **Foundational (L1)**
+
 - L1 Access Control: Issue least-privilege tool
   credentials — only tools necessary for the defined
   agent role granted; unused tools not accessible
@@ -202,6 +211,7 @@ scope; SCS covers third-party tool and plugin supply chain security.
   component inventoried with version, source, hash
 
 **Hardening (L2)**
+
 - ASI: Enforce tool permission scope at framework
   layer — agent cannot invoke tools outside its
   defined role regardless of model instruction
@@ -213,6 +223,7 @@ scope; SCS covers third-party tool and plugin supply chain security.
   or access to out-of-scope destinations
 
 **Advanced (L2)**
+
 - ASI: Red team tool integration points — test
   whether poisoned tool responses can manipulate
   agent behaviour or extract sensitive data
@@ -231,10 +242,11 @@ Article 15 for tool misuse scenarios.
 
 | Tool | Type | Link |
 |---|---|---|
-| OWASP Dependency-Check | Open-source | https://github.com/jeremylong/DependencyCheck |
-| Semgrep | Open-source | https://github.com/returntocorp/semgrep |
+| OWASP Dependency-Check | Open-source | <https://github.com/jeremylong/DependencyCheck> |
+| Semgrep | Open-source | <https://github.com/returntocorp/semgrep> |
 
 #### Cross-references
+
 - LLM Top 10: LLM10 Improper Output Handling, LLM03 Excessive Agency
 - DSGAI 2026: DSGAI06 Tool, Plugin & Agent Data Exchange
 - Other frameworks: OWASP ASVS V11 — ISA/IEC 62443 SR 2.2 — EU AI Act Art. 15
@@ -262,6 +274,7 @@ identity policy; MON covers credential usage audit trails.
 #### Mitigations for ENISA alignment
 
 **Foundational (L1)**
+
 - L1 Access Control: Issue short-lived tokens for
   all agent interactions — credentials expire at session
   end, no persistent credential caching in agent memory
@@ -270,6 +283,7 @@ identity policy; MON covers credential usage audit trails.
   agent memory, or model context
 
 **Hardening (L2)**
+
 - DMS: Classify agent credentials as sensitive AI
   data assets — access controls, encryption, and audit
   logging documented as DMS evidence
@@ -280,6 +294,7 @@ identity policy; MON covers credential usage audit trails.
   detection for scope expansion or after-session access
 
 **Advanced (L2)**
+
 - DMS: Red team agent credential extraction paths —
   test whether credentials appear in outputs, logs,
   memory stores, or tool payloads
@@ -297,10 +312,11 @@ provide the technical implementation framework.
 
 | Tool | Type | Link |
 |---|---|---|
-| HashiCorp Vault | Open-source | https://github.com/hashicorp/vault |
-| AWS Secrets Manager | Commercial | https://aws.amazon.com/secrets-manager/ |
+| HashiCorp Vault | Open-source | <https://github.com/hashicorp/vault> |
+| AWS Secrets Manager | Commercial | <https://aws.amazon.com/secrets-manager/> |
 
 #### Cross-references
+
 - LLM Top 10: LLM03 Excessive Agency
 - DSGAI 2026: DSGAI02 Agent Identity & Credential Exposure
 - Other frameworks: OWASP NHI Top 10 — NIST AI RMF GV-1.6 — EU AI Act Art. 15
@@ -330,6 +346,7 @@ AI-specific requirements for model and plugin integrity.
 #### Mitigations for ENISA alignment
 
 **Foundational (L1)**
+
 - L1 Supply Chain: Maintain agentic SBOM — every
   component (frameworks, tools, model adapters)
   inventoried with version, source, hash
@@ -338,6 +355,7 @@ AI-specific requirements for model and plugin integrity.
   and agent framework dependencies scanned on schedule
 
 **Hardening (L2)**
+
 - SCS: Apply ENISA AI supply chain security practices
   to all agentic component vendors — security assessment,
   vulnerability disclosure SLA, provenance documentation
@@ -346,6 +364,7 @@ AI-specific requirements for model and plugin integrity.
   as ENISA model integrity practice
 
 **Advanced (L2)**
+
 - SCS: Red team supply chain compromise scenarios —
   test whether tampered components are detected before
   deployment as ENISA supply chain security practice
@@ -356,10 +375,11 @@ AI-specific requirements for model and plugin integrity.
 
 | Tool | Type | Link |
 |---|---|---|
-| OWASP Dependency-Check | Open-source | https://github.com/jeremylong/DependencyCheck |
-| Syft | Open-source | https://github.com/anchore/syft |
+| OWASP Dependency-Check | Open-source | <https://github.com/jeremylong/DependencyCheck> |
+| Syft | Open-source | <https://github.com/anchore/syft> |
 
 #### Cross-references
+
 - LLM Top 10: LLM04 Supply Chain
 - DSGAI 2026: DSGAI06 Tool, Plugin & Agent Data Exchange
 - Other frameworks: ISO 27001 A.5.22 — NIST AI RMF MP-5.1 — EU AI Act Art. 9
@@ -388,6 +408,7 @@ as both an infrastructure hardening and AI system integrity issue.
 #### Mitigations for ENISA alignment
 
 **Hardening (L2)**
+
 - L1 Secure Development: Implement code execution
   sandbox as a mandatory secure development requirement —
   agent-generated code executed only in isolated
@@ -400,6 +421,7 @@ as both an infrastructure hardening and AI system integrity issue.
   syscall patterns indicating sandbox escape attempts
 
 **Advanced (L2)**
+
 - ASI: Red team code execution sandbox — test
   for known container escape techniques as part
   of AI system security testing under ENISA L2
@@ -417,10 +439,11 @@ for agentic systems capable of executing generated code.
 
 | Tool | Type | Link |
 |---|---|---|
-| gVisor | Open-source | https://github.com/google/gvisor |
-| Firecracker | Open-source | https://github.com/firecracker-microvm/firecracker |
+| gVisor | Open-source | <https://github.com/google/gvisor> |
+| Firecracker | Open-source | <https://github.com/firecracker-microvm/firecracker> |
 
 #### Cross-references
+
 - LLM Top 10: LLM10 Improper Output Handling
 - DSGAI 2026: DSGAI12 Unsafe NL Data Gateways
 - Other frameworks: ISA/IEC 62443 SR 3.3 — CWE-78 — EU AI Act Art. 15
@@ -449,6 +472,7 @@ adversarial robustness testing of agent memory systems.
 #### Mitigations for ENISA alignment
 
 **Hardening (L2)**
+
 - DMS: Classify agent memory stores as sensitive AI
   data assets — access controls, encryption, and
   integrity verification documented as DMS evidence
@@ -461,6 +485,7 @@ adversarial robustness testing of agent memory systems.
   deviations trigger investigation
 
 **Advanced (L2)**
+
 - DMS: Implement memory store audit log — immutable
   record of all memory read and write operations
   for forensic investigation of poisoning events
@@ -472,10 +497,11 @@ adversarial robustness testing of agent memory systems.
 
 | Tool | Type | Link |
 |---|---|---|
-| LLM Guard | Open-source | https://github.com/protectai/llm-guard |
-| Azure AI Content Safety | Commercial | https://azure.microsoft.com/en-us/products/ai-services/ai-content-safety |
+| LLM Guard | Open-source | <https://github.com/protectai/llm-guard> |
+| Azure AI Content Safety | Commercial | <https://azure.microsoft.com/en-us/products/ai-services/ai-content-safety> |
 
 #### Cross-references
+
 - LLM Top 10: LLM05 Data and Model Poisoning
 - DSGAI 2026: DSGAI04 Data, Model & Artifact Poisoning, DSGAI13 Vector Store Platform Security
 - Other frameworks: ENISA DMS L2 — NIST AI RMF MS-3.3 — EU AI Act Art. 10
@@ -504,6 +530,7 @@ concern; GOV establishes the trust model and communication policy.
 #### Mitigations for ENISA alignment
 
 **Hardening (L2)**
+
 - ASI: Implement mutual authentication for all
   inter-agent communication — certificates or tokens
   as ENISA AI system integrity requirement
@@ -515,6 +542,7 @@ concern; GOV establishes the trust model and communication policy.
   with approved communication paths and data scope
 
 **Advanced (L2–L3)**
+
 - MON: Log all inter-agent communication with
   full message context — anomaly detection for
   unexpected agents, unexpected data volumes,
@@ -534,10 +562,11 @@ over agent-to-agent interactions.
 
 | Tool | Type | Link |
 |---|---|---|
-| SPIFFE/SPIRE | Open-source | https://github.com/spiffe/spire |
-| mTLS (cert-manager) | Open-source | https://cert-manager.io |
+| SPIFFE/SPIRE | Open-source | <https://github.com/spiffe/spire> |
+| mTLS (cert-manager) | Open-source | <https://cert-manager.io> |
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI02 Agent Identity & Credential Exposure
 - Other frameworks: ISA/IEC 62443 SR 2.10 — NIST AI RMF GV-1.6 — EU AI Act Art. 14
 
@@ -565,6 +594,7 @@ AI-specific failure propagation patterns.
 #### Mitigations for ENISA alignment
 
 **Foundational (L1)**
+
 - L1 Business Continuity: Include multi-agent
   deployments in BCM — RTO/RPO defined for each
   agent tier, recovery procedures documented
@@ -574,6 +604,7 @@ AI-specific failure propagation patterns.
   procedures documented with RACI
 
 **Hardening (L2)**
+
 - MON: Deploy cascade failure early warning
   detection — AI-specific monitoring for propagation
   signatures before full service impact
@@ -582,6 +613,7 @@ AI-specific failure propagation patterns.
   mapping, circuit breaker design documented
 
 **Advanced (L2–L3)**
+
 - IRS: Test cascade failure response annually —
   tabletop exercise and simulation of multi-agent
   failure scenarios documented as IRS evidence
@@ -600,10 +632,11 @@ compliance requirement for multi-agent deployments.
 
 | Tool | Type | Link |
 |---|---|---|
-| Prometheus | Open-source | https://prometheus.io |
-| Netflix Hystrix | Open-source | https://github.com/Netflix/Hystrix |
+| Prometheus | Open-source | <https://prometheus.io> |
+| Netflix Hystrix | Open-source | <https://github.com/Netflix/Hystrix> |
 
 #### Cross-references
+
 - LLM Top 10: LLM06 Unbounded Consumption
 - DSGAI 2026: DSGAI17 Data Availability & Resilience Failures
 - Other frameworks: ISO 27001 A.8.14 — ISA/IEC 62443 SR 7.1 — EU AI Act Art. 15
@@ -632,6 +665,7 @@ requirements; ASI covers adversarial behaviour testing.
 #### Mitigations for ENISA alignment
 
 **Foundational (L1)**
+
 - L1 Governance: Publish acceptable use policy
   prohibiting deceptive agent interaction design —
   AI identity disclosure, impersonation prohibition,
@@ -641,6 +675,7 @@ requirements; ASI covers adversarial behaviour testing.
   at the start of each session
 
 **Hardening (L2)**
+
 - ASI: Include deceptive behaviour testing in AI
   system integrity verification — social engineering
   simulation, impersonation scenarios tested
@@ -649,6 +684,7 @@ requirements; ASI covers adversarial behaviour testing.
   system, output audit trail maintained
 
 **Advanced (L2–L3)**
+
 - MON: Deploy deceptive content detection on
   agent outputs — alert on impersonation patterns,
   false urgency indicators, or synthetic media
@@ -668,10 +704,11 @@ agentic interaction design.
 
 | Tool | Type | Link |
 |---|---|---|
-| Azure AI Content Safety | Commercial | https://azure.microsoft.com/en-us/products/ai-services/ai-content-safety |
-| Garak | Open-source | https://github.com/leondz/garak |
+| Azure AI Content Safety | Commercial | <https://azure.microsoft.com/en-us/products/ai-services/ai-content-safety> |
+| Garak | Open-source | <https://github.com/leondz/garak> |
 
 #### Cross-references
+
 - LLM Top 10: LLM07 Misinformation
 - DSGAI 2026: DSGAI21 Disinformation via Data Poisoning
 - Other frameworks: ISO 27001 A.5.31 — NIST AI RMF GV-1.6 — EU AI Act Art. 52
@@ -701,6 +738,7 @@ the behavioural boundaries that define rogue behaviour.
 #### Mitigations for ENISA alignment
 
 **Hardening (L2)**
+
 - GOV: Document authorised behaviour envelope
   per agent role — specific permitted actions,
   permitted communication endpoints, permitted
@@ -714,6 +752,7 @@ the behavioural boundaries that define rogue behaviour.
   at runtime, not just at design time
 
 **Advanced (L2–L3)**
+
 - IRS: Include rogue agent scenarios in AI incident
   response plan — automated isolation triggers,
   rollback procedures, forensic evidence preservation
@@ -737,10 +776,11 @@ capability requirement.
 
 | Tool | Type | Link |
 |---|---|---|
-| Prometheus | Open-source | https://prometheus.io |
-| Falco | Open-source | https://falco.org |
+| Prometheus | Open-source | <https://prometheus.io> |
+| Falco | Open-source | <https://falco.org> |
 
 #### Cross-references
+
 - LLM Top 10: LLM03 Excessive Agency
 - DSGAI 2026: DSGAI03 Shadow AI & Unsanctioned Data Flows
 - Other frameworks: ISO 27001 A.8.16 — NIST AI RMF MG-2.2 — EU AI Act Art. 14
@@ -790,6 +830,8 @@ capability requirement.
 
 ---
 
-*Part of the [OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk) —
+*Part of the
+[OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk)
+—
 maintained by the OWASP GenAI Data Security Initiative.
 Licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).*

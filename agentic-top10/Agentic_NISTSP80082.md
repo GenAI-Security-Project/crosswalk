@@ -9,7 +9,8 @@
 
 # Agentic Top 10 2026 × NIST SP 800-82 Rev 3
 
-Mapping the [OWASP Top 10 for Agentic AI Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
+Mapping the
+[OWASP Top 10 for Agentic AI Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
 to [NIST SP 800-82 Revision 3](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-82r3.pdf) —
 Guide to Operational Technology (OT) Security, published May 2023.
 
@@ -94,7 +95,7 @@ never be assumed to fit within an existing zone without deliberate design.
 
 **Recommended agent placement per SP 800-82 Rev 3 Appendix G:**
 
-```
+```text
 Enterprise Zone (Level 4-5)
     ↓ [Firewall + proxy — HTTPS only, no direct OT protocol access]
 DMZ / Demilitarized Zone (Level 3.5)
@@ -144,16 +145,19 @@ potentially issuing commands or altering configurations.
 #### Three-tier mitigations
 
 **Tier 1 — Pre-deployment gate:**
+
 - Define trusted OT data sources; reject unverified data before agent processing
 - Implement input validation on all historian, SCADA, and document feeds
 - Log all OT data fed to agent with source and timestamp
 
 **Tier 2 — Short-term:**
+
 - Add instruction sanitisation layer at OT data ingestion boundary
 - Red team: attempt injection via SCADA historian data
 - Verify no injected instruction can reach Level 2/1 control plane
 
 **Tier 3 — Strategic:**
+
 - Continuous monitoring of agent decisions correlated with OT data anomalies
 - SP 800-53 SI-10 automated validation in OT data pipeline CI/CD
 
@@ -184,16 +188,19 @@ SCADA write access, PLC configuration permissions, safety system reads
 #### Three-tier mitigations
 
 **Tier 1 — Pre-deployment gate:**
+
 - Document minimum OT permissions required for each agent function
 - Remove any OT access not exercised in past 30 days
 - Treat agent OT access as privileged account: apply same controls as human OT admin
 
 **Tier 2 — Short-term:**
+
 - Implement per-task JIT OT permission issuance (see RECIPES.md)
 - Architecture review: confirm no agent has direct write access to Level 1-2 devices
 - Quarterly OT permission audit for all agent identities
 
 **Tier 3 — Strategic:**
+
 - SP 800-53 AC-6 enforcement via OT network access control system
 - Formal agent identity programme with OT-specific NHI controls
 
@@ -223,16 +230,19 @@ attacker instructions across sessions into OT decision-making.
 #### Three-tier mitigations
 
 **Tier 1 — Pre-deployment gate:**
+
 - Apply access controls to all agent memory stores
 - Add integrity metadata (HMAC) to all OT-state memory writes
 - Log all memory read/write operations
 
 **Tier 2 — Short-term:**
+
 - Implement memory validation pipeline for all OT state information
 - Periodic memory audit: compare agent's stored OT state with ground truth
 - Red team: attempt memory poisoning via OT data feeds
 
 **Tier 3 — Strategic:**
+
 - Formal provenance tracking for all OT state stored in agent memory
 - Cross-session memory integrity checks before any OT decision
 
@@ -263,16 +273,19 @@ OT zones, and coordinated action against industrial infrastructure.
 #### Three-tier mitigations
 
 **Tier 1 — Pre-deployment gate:**
+
 - Implement mutual authentication between all agents in OT orchestration network
 - No agent may issue commands exceeding its own permission set to peer agents
 - Log all inter-agent instructions with full payload
 
 **Tier 2 — Short-term:**
+
 - Agent identity registry: all OT agents have verifiable identities
 - Red team: simulate compromised sub-agent attempting lateral movement to OT zone
 - Architecture review: trust graph for all agent-to-agent communications
 
 **Tier 3 — Strategic:**
+
 - Cryptographic attestation of agent identity and OT permission set
 - Automated verification that no agent in network exceeds declared OT scope
 
@@ -303,16 +316,19 @@ enable unintended data access or command issuance via the tool interface.
 #### Three-tier mitigations
 
 **Tier 1 — Pre-deployment gate:**
+
 - Enumerate all tools accessible to OT agents
 - Remove any unreviewed tools from OT agent configuration
 - Validate all tool descriptors against declared function
 
 **Tier 2 — Short-term:**
+
 - Implement tool approval board for all OT-connected tool integrations
 - Add tool call logging with full payload for all OT tool invocations
 - Red team: provide malicious tool descriptor to OT agent
 
 **Tier 3 — Strategic:**
+
 - SA-12 formal vendor assessment for all OT tool providers
 - Automated tool supply chain scanning in OT CI/CD pipeline
 
@@ -343,16 +359,19 @@ or intellectual property via tool calls, API requests, or generated outputs.
 #### Three-tier mitigations
 
 **Tier 1 — Pre-deployment gate:**
+
 - Apply content inspection to all agent outputs leaving OT boundary
 - Define maximum data volume per tool call from OT zone
 - Log all outbound data with full payloads
 
 **Tier 2 — Short-term:**
+
 - DLP scanning on all agent output leaving OT boundary
 - Red team: SSRF-style exfiltration via OT tool calls
 - Implement per-session OT data access budgets
 
 **Tier 3 — Strategic:**
+
 - O-IM: automated exfiltration detection using OT data flow baselines
 - Data residency controls: OT data must not leave defined geographic or network boundary
 
@@ -383,16 +402,19 @@ into the OT agent deployment.
 #### Three-tier mitigations
 
 **Tier 1 — Pre-deployment gate:**
+
 - Generate SBOM for agentic OT deployment; flag unverified components
 - Pin all dependency versions; reject floating versions in OT production
 - Verify provenance of all ML components used in OT agent stack
 
 **Tier 2 — Short-term:**
+
 - Implement automated vulnerability scanning for agentic SBOM
 - SA-12: formal vendor assessment for critical agentic stack components
 - Periodic red team exercise targeting agentic supply chain attack vectors
 
 **Tier 3 — Strategic:**
+
 - SR-6: annual supplier review for all agentic component vendors
 - Formal component integrity programme aligned with CISA software security guidance
 
@@ -423,16 +445,19 @@ or disable protective functions in industrial systems.
 #### Three-tier mitigations
 
 **Tier 1 — Pre-deployment gate (absolute requirement):**
+
 - Safety functions must be hardware-enforced and independent of AI layer
 - AI agents must not have write access to any safety interlock parameters
 - Confirm: AI system failure or compromise cannot affect safety system state
 
 **Tier 2 — Short-term:**
+
 - Independent adversarial testing of all safety guardrail bypass scenarios
 - Architecture review: safety control path analysis for all agent-reachable systems
 - Immutable safety action log that cannot be disabled or modified by AI layer
 
 **Tier 3 — Strategic:**
+
 - Formal safety case documentation for all agentic OT deployments
 - Continuous adversarial safety testing in staging environment
 - Periodic safety architecture review by independent safety engineer
@@ -465,16 +490,19 @@ boundary violations before they cause physical consequences.
 #### Three-tier mitigations
 
 **Tier 1 — Pre-deployment gate:**
+
 - Add human confirmation gate for all irreversible OT actions
 - Implement emergency stop: immediately halt all agent OT activity
 - Log every autonomous OT action with decision rationale
 
 **Tier 2 — Short-term:**
+
 - Define autonomy tiers for OT actions: auto / confirm / human-required
 - AT-3: operator training programme for agentic OT oversight
 - Implement autonomous action budget: configurable hard limit per session
 
 **Tier 3 — Strategic:**
+
 - Real-time OT oversight dashboard for operations team
 - AU-12 L3: forensic-quality audit log for all autonomous OT actions
 - Formal autonomy policy reviewed and signed by CISO and safety officer
@@ -507,16 +535,19 @@ in multiple industrial components.
 #### Three-tier mitigations
 
 **Tier 1 — Pre-deployment gate:**
+
 - Define fail-safe state for every agent-controllable OT parameter
 - Implement circuit breaker pattern between OT orchestration layers
 - Document cascade blast radius: if agent X fails, what OT components are affected?
 
 **Tier 2 — Short-term:**
+
 - Chaos engineering exercise: simulate cascading failure in staging
 - Deploy O-IM playbook for cascade incidents in OT environment
 - Add per-agent OT action checkpointing for rollback capability
 
 **Tier 3 — Strategic:**
+
 - Formal OT chaos engineering programme aligned with SP 800-82 §8
 - Automated cascade detection with predictive alerting before full failure
 - Architecture pattern: stateless agents with OT state sourced from authoritative systems
@@ -558,7 +589,8 @@ Complete this checklist before deploying any autonomous AI agent in an OT enviro
 ## References
 
 - [NIST SP 800-82 Rev 3](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-82r3.pdf) — May 2023
-- [NIST SP 800-53 Rev 5](https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final) — Security and Privacy Controls
+- [NIST SP 800-53 Rev 5](https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final) — Security and
+  Privacy Controls
 - [Agentic_ISA62443.md](Agentic_ISA62443.md) — complementary zone model and SL ratings
 - [LLM_NISTSP80082.md](../llm-top10/LLM_NISTSP80082.md) — LLM entry mapping
 - [OWASP Top 10 for Agentic AI Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
@@ -574,6 +606,8 @@ Complete this checklist before deploying any autonomous AI agent in an OT enviro
 
 ---
 
-*Part of the [OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk) —
+*Part of the
+[OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk)
+—
 maintained by the [OWASP GenAI Data Security Initiative](https://genai.owasp.org)*
 *License: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)*

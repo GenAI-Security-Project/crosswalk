@@ -92,6 +92,7 @@ including agent hijacking scenarios (Art. 24–27), and deploy detection for
 goal manipulation indicators (Art. 10).
 
 **Real-world references:**
+
 - EchoLeak (2025) – indirect prompt injection hijacked Microsoft 365
   Copilot agent goals via email content
 - Academic research demonstrating agent goal manipulation through
@@ -109,6 +110,7 @@ goal manipulation indicators (Art. 10).
 #### Mitigations
 
 **Foundational**
+
 - Art. 9: Implement input validation on all channels feeding agent
   context; enforce structural separation between instructions and data
   in agent prompts, tool outputs, and memory retrievals
@@ -118,6 +120,7 @@ goal manipulation indicators (Art. 10).
   as potentially adversarial; document in ICT risk framework
 
 **Hardening**
+
 - Art. 24–27: Include agent hijacking in threat-led penetration testing;
   cover all input channels including multi-step tool output poisoning
 - Art. 9: Apply privilege separation to bound hijacking impact; restrict
@@ -126,6 +129,7 @@ goal manipulation indicators (Art. 10).
   agent behaviour deviates from defined objectives
 
 **Advanced**
+
 - Art. 24–27: Conduct structured red-team exercises targeting goal
   hijacking through multi-agent communication and shared context
 - Art. 13: Document hijacking incidents and update protections based
@@ -137,12 +141,13 @@ goal manipulation indicators (Art. 10).
 
 | Tool | Type | Link |
 |---|---|---|
-| Garak | Open-source | https://github.com/leondz/garak |
-| PyRIT | Open-source | https://github.com/Azure/PyRIT |
-| LLM Guard | Open-source | https://github.com/protectai/llm-guard |
-| LangSmith | Commercial | https://smith.langchain.com |
+| Garak | Open-source | <https://github.com/leondz/garak> |
+| PyRIT | Open-source | <https://github.com/Azure/PyRIT> |
+| LLM Guard | Open-source | <https://github.com/protectai/llm-guard> |
+| LangSmith | Commercial | <https://smith.langchain.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM01 Prompt Injection
 - DSGAI 2026: DSGAI01 Sensitive Data Leakage, DSGAI12 Unsafe NL Data Gateways
 - Other frameworks: MITRE ATLAS AML.T0051 – FedRAMP SI-10 – SP 800-218A PW.2.1-PS
@@ -171,6 +176,7 @@ and deploy detection for unauthorised access patterns (Art. 10).
 #### Mitigations
 
 **Foundational**
+
 - Art. 9: Implement least privilege for all agent tool access; maintain
   a capability manifest per agent deployment; deny access by default
 - Art. 5–7: Define agent access control policies in the ICT risk
@@ -179,6 +185,7 @@ and deploy detection for unauthorised access patterns (Art. 10).
   indicators and scope violations
 
 **Hardening**
+
 - Art. 24–27: Test agent access controls under adversarial conditions;
   verify permission boundaries hold against manipulation
 - Art. 9: Implement just-in-time access for agent tool invocations;
@@ -187,6 +194,7 @@ and deploy detection for unauthorised access patterns (Art. 10).
   reporting; escalate over-privileging findings
 
 **Advanced**
+
 - Deploy policy-as-code for agent access control; automate enforcement
   and audit of access policies
 - Art. 9: Implement dynamic privilege adjustment based on agent context
@@ -198,12 +206,13 @@ and deploy detection for unauthorised access patterns (Art. 10).
 
 | Tool | Type | Link |
 |---|---|---|
-| Open Policy Agent | Open-source | https://www.openpolicyagent.org |
-| Guardrails AI | Open-source | https://github.com/guardrails-ai/guardrails |
-| HashiCorp Vault | Commercial | https://www.vaultproject.io |
-| AWS IAM / Azure RBAC | Commercial | https://aws.amazon.com/iam/ |
+| Open Policy Agent | Open-source | <https://www.openpolicyagent.org> |
+| Guardrails AI | Open-source | <https://github.com/guardrails-ai/guardrails> |
+| HashiCorp Vault | Commercial | <https://www.vaultproject.io> |
+| AWS IAM / Azure RBAC | Commercial | <https://aws.amazon.com/iam/> |
 
 #### Cross-references
+
 - LLM Top 10: LLM03 Excessive Agency
 - DSGAI 2026: DSGAI06 Data Lineage Fragmentation
 - Other frameworks: FedRAMP AC-3 – SP 800-218A PW.1.1-PS – CIS Controls 6
@@ -232,6 +241,7 @@ escalation scenarios in resilience testing (Art. 24–27).
 #### Mitigations
 
 **Foundational**
+
 - Art. 9: Define explicit privilege ceilings per agent; prevent
   privilege accumulation through chained operations; enforce at each
   tool invocation boundary
@@ -241,6 +251,7 @@ escalation scenarios in resilience testing (Art. 24–27).
   unexpected privilege levels
 
 **Hardening**
+
 - Art. 24–27: Include privilege escalation in threat-led penetration
   testing; test for escalation through all available tool chains
 - Art. 9: Implement privilege decay; agent permissions expire after
@@ -249,6 +260,7 @@ escalation scenarios in resilience testing (Art. 24–27).
   define automated containment procedures
 
 **Advanced**
+
 - Art. 9: Deploy formal privilege verification; prove that no sequence
   of tool invocations can exceed the defined privilege ceiling
 - Art. 24–27: Conduct advanced escalation testing in multi-agent
@@ -260,12 +272,13 @@ escalation scenarios in resilience testing (Art. 24–27).
 
 | Tool | Type | Link |
 |---|---|---|
-| Open Policy Agent | Open-source | https://www.openpolicyagent.org |
-| SPIFFE/SPIRE | Open-source | https://spiffe.io |
-| HashiCorp Vault | Commercial | https://www.vaultproject.io |
-| CyberArk | Commercial | https://www.cyberark.com |
+| Open Policy Agent | Open-source | <https://www.openpolicyagent.org> |
+| SPIFFE/SPIRE | Open-source | <https://spiffe.io> |
+| HashiCorp Vault | Commercial | <https://www.vaultproject.io> |
+| CyberArk | Commercial | <https://www.cyberark.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM03 Excessive Agency
 - DSGAI 2026: DSGAI08 Data Leakage & Exposure
 - Other frameworks: FedRAMP AC-6 – SP 800-218A PW.1.1-PS – MITRE ATLAS AML.T0015
@@ -294,6 +307,7 @@ agent components (Art. 28–44), identify all agent supply chain assets
 #### Mitigations
 
 **Foundational**
+
 - Art. 28–44: Include all agent tool and component providers in
   third-party risk assessments; establish contractual provisions for
   security, incident notification, and audit rights
@@ -302,6 +316,7 @@ agent components (Art. 28–44), identify all agent supply chain assets
 - Art. 5–7: Define approved sources policy for agent components
 
 **Hardening**
+
 - Art. 28–44: Require contractual commitments covering security
   practices, vulnerability notification, and audit rights from agent
   component providers; identify critical providers per DORA criteria
@@ -310,6 +325,7 @@ agent components (Art. 28–44), identify all agent supply chain assets
 - Art. 24–27: Include vendor failure scenarios in resilience testing
 
 **Advanced**
+
 - Art. 28–44: Conduct on-site assessments of critical agent tool
   providers; assess security posture and incident management
 - Art. 5–7: Include agent supply chain in board-level risk reporting;
@@ -321,12 +337,13 @@ agent components (Art. 28–44), identify all agent supply chain assets
 
 | Tool | Type | Link |
 |---|---|---|
-| CycloneDX | Open-source | https://cyclonedx.org |
-| ModelScan | Open-source | https://github.com/protectai/modelscan |
-| Sigstore | Open-source | https://www.sigstore.dev |
-| OWASP Dependency-Check | Open-source | https://owasp.org/www-project-dependency-check/ |
+| CycloneDX | Open-source | <https://cyclonedx.org> |
+| ModelScan | Open-source | <https://github.com/protectai/modelscan> |
+| Sigstore | Open-source | <https://www.sigstore.dev> |
+| OWASP Dependency-Check | Open-source | <https://owasp.org/www-project-dependency-check/> |
 
 #### Cross-references
+
 - LLM Top 10: LLM04 Supply Chain
 - DSGAI 2026: DSGAI04 Data, Model & Artifact Poisoning, DSGAI19 Third-Party Data Risk
 - Other frameworks: MITRE ATLAS AML.T0056 – FedRAMP SR-2 – EBA Outsourcing Guidelines
@@ -356,6 +373,7 @@ boundaries (Art. 9), conduct resilience testing of execution sandboxes
 #### Mitigations
 
 **Foundational**
+
 - Art. 9: Restrict agent code execution to sandboxed environments with
   minimum necessary capabilities; disable filesystem, network, and
   system call access not explicitly required
@@ -365,6 +383,7 @@ boundaries (Art. 9), conduct resilience testing of execution sandboxes
   code execution events
 
 **Hardening**
+
 - Art. 24–27: Include sandbox escape testing in resilience testing;
   verify execution boundaries under adversarial conditions
 - Art. 9: Implement multi-layer sandbox isolation; enforce at container,
@@ -373,6 +392,7 @@ boundaries (Art. 9), conduct resilience testing of execution sandboxes
   block malicious patterns
 
 **Advanced**
+
 - Art. 24–27: Conduct advanced red-team exercises targeting code
   execution through multi-step agent manipulation
 - Art. 13: Document code execution incidents; update sandbox controls
@@ -383,12 +403,13 @@ boundaries (Art. 9), conduct resilience testing of execution sandboxes
 
 | Tool | Type | Link |
 |---|---|---|
-| gVisor | Open-source | https://gvisor.dev |
-| Firecracker | Open-source | https://firecracker-microvm.github.io |
-| Semgrep | Open-source | https://semgrep.dev |
-| E2B | Open-source | https://e2b.dev |
+| gVisor | Open-source | <https://gvisor.dev> |
+| Firecracker | Open-source | <https://firecracker-microvm.github.io> |
+| Semgrep | Open-source | <https://semgrep.dev> |
+| E2B | Open-source | <https://e2b.dev> |
 
 #### Cross-references
+
 - LLM Top 10: LLM01 Prompt Injection, LLM03 Excessive Agency
 - DSGAI 2026: DSGAI08 Data Leakage & Exposure
 - Other frameworks: CWE-94 – FedRAMP CM-7 – SP 800-218A PW.5.1-PS
@@ -417,6 +438,7 @@ memory stores as ICT assets (Art. 8).
 #### Mitigations
 
 **Foundational**
+
 - Art. 9: Encrypt agent memory stores at rest; implement access controls
   restricting read/write to authorised agent instances; validate all
   content before writing to memory
@@ -426,6 +448,7 @@ memory stores as ICT assets (Art. 8).
   unexpected bulk writes or content inconsistencies
 
 **Hardening**
+
 - Art. 9: Implement memory integrity verification; detect and alert on
   unauthorised modifications; deploy anomaly detection on writes
 - Art. 10: Deploy cross-session poisoning detection; identify patterns
@@ -434,6 +457,7 @@ memory stores as ICT assets (Art. 8).
   can propagate through multi-agent systems
 
 **Advanced**
+
 - Art. 9: Implement memory provenance tracking; record source and chain
   of custody for all stored context
 - Art. 13: Establish memory poisoning forensics playbook; procedures for
@@ -445,12 +469,13 @@ memory stores as ICT assets (Art. 8).
 
 | Tool | Type | Link |
 |---|---|---|
-| Weaviate | Open-source | https://weaviate.io |
-| LangSmith | Commercial | https://smith.langchain.com |
-| OpenTelemetry | Open-source | https://opentelemetry.io |
-| HashiCorp Vault | Commercial | https://www.vaultproject.io |
+| Weaviate | Open-source | <https://weaviate.io> |
+| LangSmith | Commercial | <https://smith.langchain.com> |
+| OpenTelemetry | Open-source | <https://opentelemetry.io> |
+| HashiCorp Vault | Commercial | <https://www.vaultproject.io> |
 
 #### Cross-references
+
 - LLM Top 10: LLM05 Data and Model Poisoning, LLM09 Vector and Embedding Weaknesses
 - DSGAI 2026: DSGAI04 Data, Model & Artifact Poisoning
 - Other frameworks: MITRE ATLAS AML.T0018 – FedRAMP SC-28 – SP 800-218A PS.1.1-PS
@@ -479,6 +504,7 @@ testing (Art. 24–27).
 #### Mitigations
 
 **Foundational**
+
 - Art. 9: Define permitted tool chains per agent role; enforce access
   control independently at each tool boundary; deny undefined sequences
 - Art. 5–7: Include tool chaining risk in ICT risk management; define
@@ -487,6 +513,7 @@ testing (Art. 24–27).
   anomalous tool combinations
 
 **Hardening**
+
 - Art. 24–27: Include tool chain testing in resilience testing; verify
   that no permitted tool combination achieves harmful outcomes
 - Art. 9: Implement transaction-level authorisation for multi-step
@@ -495,6 +522,7 @@ testing (Art. 24–27).
   alert on novel combinations
 
 **Advanced**
+
 - Art. 9: Deploy formal tool chain analysis; verify that no permitted
   combination can exceed defined privilege boundaries
 - Art. 24–27: Conduct advanced tool chain testing specific to your
@@ -506,12 +534,13 @@ testing (Art. 24–27).
 
 | Tool | Type | Link |
 |---|---|---|
-| Open Policy Agent | Open-source | https://www.openpolicyagent.org |
-| Guardrails AI | Open-source | https://github.com/guardrails-ai/guardrails |
-| LangSmith | Commercial | https://smith.langchain.com |
-| NeMo Guardrails | Open-source | https://github.com/NVIDIA/NeMo-Guardrails |
+| Open Policy Agent | Open-source | <https://www.openpolicyagent.org> |
+| Guardrails AI | Open-source | <https://github.com/guardrails-ai/guardrails> |
+| LangSmith | Commercial | <https://smith.langchain.com> |
+| NeMo Guardrails | Open-source | <https://github.com/NVIDIA/NeMo-Guardrails> |
 
 #### Cross-references
+
 - LLM Top 10: LLM03 Excessive Agency
 - DSGAI 2026: DSGAI06 Data Lineage Fragmentation
 - Other frameworks: FedRAMP AC-6 – SP 800-218A PW.1.1-PS – CWE-269
@@ -540,6 +569,7 @@ restoration capabilities for agent systems (Art. 12).
 #### Mitigations
 
 **Foundational**
+
 - Art. 11: Define automated circuit breaker procedures for cascading
   failures; isolate failing agents before failure spreads; establish
   safe-state transitions for multi-agent systems
@@ -549,6 +579,7 @@ restoration capabilities for agent systems (Art. 12).
   document restoration procedures
 
 **Hardening**
+
 - Art. 5–7: Define maximum acceptable blast radius for agent failures;
   design architectures with failure containment
 - Art. 11: Include cascading failure in business continuity testing;
@@ -557,6 +588,7 @@ restoration capabilities for agent systems (Art. 12).
   trigger preventive isolation
 
 **Advanced**
+
 - Art. 11: Document AI service RTO and RPO per DORA requirements for
   multi-agent systems; test recovery quarterly
 - Art. 12: Include agent system backup in DORA business continuity
@@ -567,12 +599,13 @@ restoration capabilities for agent systems (Art. 12).
 
 | Tool | Type | Link |
 |---|---|---|
-| OpenTelemetry | Open-source | https://opentelemetry.io |
-| Istio | Open-source | https://istio.io |
-| LangSmith | Commercial | https://smith.langchain.com |
-| PagerDuty | Commercial | https://www.pagerduty.com |
+| OpenTelemetry | Open-source | <https://opentelemetry.io> |
+| Istio | Open-source | <https://istio.io> |
+| LangSmith | Commercial | <https://smith.langchain.com> |
+| PagerDuty | Commercial | <https://www.pagerduty.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM06 Unbounded Consumption
 - DSGAI 2026: DSGAI17 Data Availability & Resilience Failures
 - Other frameworks: FedRAMP SC-7 – SP 800-218A PW.2.1-PS – NIST CSF 2.0 RS.RP-1
@@ -601,6 +634,7 @@ security (Art. 13).
 #### Mitigations
 
 **Foundational**
+
 - Art. 5–7: Include emerging agentic risks in ICT risk management;
   require security assessment before deploying novel agent architectures
 - Art. 10: Monitor for unexpected agent behaviours; establish baseline
@@ -609,6 +643,7 @@ security (Art. 13).
   as new patterns are identified
 
 **Hardening**
+
 - Art. 24–27: Include novel agent architecture testing in resilience
   testing programme; assess security implications before production
 - Art. 10: Deploy automated detection for emergent agent capabilities;
@@ -616,6 +651,7 @@ security (Art. 13).
 - Art. 5–7: Include emerging agentic risks in management risk reporting
 
 **Advanced**
+
 - Participate in AI security research communities; contribute to and
   learn from sector knowledge on agentic AI security
 - Art. 13: Establish continuous learning programme for agentic AI
@@ -627,12 +663,13 @@ security (Art. 13).
 
 | Tool | Type | Link |
 |---|---|---|
-| LangSmith | Commercial | https://smith.langchain.com |
-| OpenTelemetry | Open-source | https://opentelemetry.io |
-| Garak | Open-source | https://github.com/leondz/garak |
-| PyRIT | Open-source | https://github.com/Azure/PyRIT |
+| LangSmith | Commercial | <https://smith.langchain.com> |
+| OpenTelemetry | Open-source | <https://opentelemetry.io> |
+| Garak | Open-source | <https://github.com/leondz/garak> |
+| PyRIT | Open-source | <https://github.com/Azure/PyRIT> |
 
 #### Cross-references
+
 - LLM Top 10: LLM07 Misinformation
 - DSGAI 2026: DSGAI18 Governance Gaps
 - Other frameworks: NIST AI RMF MAP 1.5 – FedRAMP CA-7 – SP 800-218A PW.7.2-PS
@@ -661,6 +698,7 @@ financial entities to manage third-party risk for agent dependencies
 #### Mitigations
 
 **Foundational**
+
 - Art. 28–44: Include all agent dependencies in third-party risk
   assessments per DORA requirements; establish contractual SLAs for
   availability, performance, and incident notification
@@ -670,6 +708,7 @@ financial entities to manage third-party risk for agent dependencies
   performance degradation
 
 **Hardening**
+
 - Art. 28–44: Identify critical agent dependencies per DORA criteria;
   require redundant providers for critical services
 - Art. 12: Maintain backup mechanisms for critical dependencies; test
@@ -677,6 +716,7 @@ financial entities to manage third-party risk for agent dependencies
 - Art. 11: Include dependency failure in business continuity testing
 
 **Advanced**
+
 - Art. 28–44: Conduct on-site assessments of critical agent dependency
   providers; assess resilience posture and recovery capabilities
 - Art. 12: Include dependency failover in DORA business continuity
@@ -688,12 +728,13 @@ financial entities to manage third-party risk for agent dependencies
 
 | Tool | Type | Link |
 |---|---|---|
-| OpenTelemetry | Open-source | https://opentelemetry.io |
-| LiteLLM | Open-source | https://github.com/BerriAI/litellm |
-| PagerDuty | Commercial | https://www.pagerduty.com |
-| Istio | Open-source | https://istio.io |
+| OpenTelemetry | Open-source | <https://opentelemetry.io> |
+| LiteLLM | Open-source | <https://github.com/BerriAI/litellm> |
+| PagerDuty | Commercial | <https://www.pagerduty.com> |
+| Istio | Open-source | <https://istio.io> |
 
 #### Cross-references
+
 - LLM Top 10: LLM04 Supply Chain, LLM06 Unbounded Consumption
 - DSGAI 2026: DSGAI19 Third-Party Data Risk
 - Other frameworks: FedRAMP SA-9 – SP 800-218A PW.4.1-PS – EBA Outsourcing Guidelines
@@ -730,5 +771,7 @@ financial entities to manage third-party risk for agent dependencies
 
 ---
 
-*Part of the [OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk) –
+*Part of the
+[OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk)
+–
 maintained by the [OWASP GenAI Data Security Initiative](https://genai.owasp.org)*

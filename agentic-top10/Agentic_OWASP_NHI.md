@@ -9,7 +9,8 @@
 
 # Agentic Top 10 2026 × OWASP NHI Top 10
 
-Mapping the [OWASP Top 10 for Agentic Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
+Mapping the
+[OWASP Top 10 for Agentic Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
 to the [OWASP Non-Human Identities (NHI) Top 10](https://owasp.org/www-project-non-human-identities-top-10/)
 — the framework for securing machine identities including service
 accounts, API keys, OAuth tokens, certificates, and agent identities.
@@ -109,6 +110,7 @@ stolen long-lived tokens for extended periods before revocation.
 #### Mitigations
 
 **Foundational**
+
 - NHI-5: Scope all agent credentials to minimum required
   permissions — a hijacked agent with least privilege has
   a dramatically smaller blast radius than one with broad access
@@ -118,6 +120,7 @@ stolen long-lived tokens for extended periods before revocation.
   credential use requires confirmed intent
 
 **Hardening**
+
 - NHI-7: Implement short-lived credential issuance —
   tokens expire at task completion, require re-issuance
   for each new task, no long-lived tokens in agent memory
@@ -127,6 +130,7 @@ stolen long-lived tokens for extended periods before revocation.
   actively used is removed from agent credential scope
 
 **Advanced**
+
 - Cryptographically bound agent credentials — token valid
   only when agent goal state matches the signed specification
 - NHI-7: Automated revocation on goal deviation detection —
@@ -138,11 +142,12 @@ stolen long-lived tokens for extended periods before revocation.
 
 | Tool | Type | Link |
 |---|---|---|
-| HashiCorp Vault | Open-source | https://www.vaultproject.io |
-| Entro Security | Commercial | https://entro.security |
-| Teleport | Open-source/Commercial | https://goteleport.com |
+| HashiCorp Vault | Open-source | <https://www.vaultproject.io> |
+| Entro Security | Commercial | <https://entro.security> |
+| Teleport | Open-source/Commercial | <https://goteleport.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM01 Prompt Injection, LLM03 Excessive Agency
 - DSGAI 2026: DSGAI02 Agent Identity & Credential Exposure
 - Other frameworks: AIUC-1 A/B006 · EU AI Act Art. 14 · NIST AI RMF GV-1.6
@@ -171,6 +176,7 @@ the agent's credential scope permits.
 #### Mitigations
 
 **Foundational**
+
 - NHI-5: Implement per-tool permission scope — agent does
   not hold a single broad credential but tool-specific
   scoped tokens for each integration
@@ -182,6 +188,7 @@ the agent's credential scope permits.
   human approval, not agent decision
 
 **Hardening**
+
 - NHI-9: Issue unique, tool-scoped credentials per tool
   integration — compromise of one tool's credential does
   not affect access to other tools
@@ -192,6 +199,7 @@ the agent's credential scope permits.
   agent cannot connect to any tool not in the registry
 
 **Advanced**
+
 - Automated tool credential revocation on anomaly detection —
   single compromised tool token revoked without affecting
   other tool access
@@ -204,10 +212,11 @@ the agent's credential scope permits.
 
 | Tool | Type | Link |
 |---|---|---|
-| SPIFFE / SPIRE | Open-source | https://spiffe.io |
-| HashiCorp Vault | Open-source | https://www.vaultproject.io |
+| SPIFFE / SPIRE | Open-source | <https://spiffe.io> |
+| HashiCorp Vault | Open-source | <https://www.vaultproject.io> |
 
 #### Cross-references
+
 - LLM Top 10: LLM10 Improper Output Handling, LLM03 Excessive Agency
 - DSGAI 2026: DSGAI06 Tool Plugin & Agent Data Exchange
 - Other frameworks: AIUC-1 B006/B007 · EU AI Act Art. 15 · ISA/IEC 62443 SR 2.2 (OT)
@@ -242,6 +251,7 @@ it to agent identities addresses ASI03 almost entirely.
 #### Mitigations by tier
 
 **Foundational**
+
 - NHI-5: Enforce least privilege on all agent credentials —
   minimum required permissions, reviewed quarterly
 - NHI-6: Store all agent credentials in secret manager —
@@ -251,6 +261,7 @@ it to agent identities addresses ASI03 almost entirely.
   shared service accounts across agent instances or roles
 
 **Hardening**
+
 - NHI-7: Implement task-scoped short-lived credentials —
   tokens expire at task completion, require re-issuance
 - NHI-2: Scan all agent memory stores, logs, and tool
@@ -260,6 +271,7 @@ it to agent identities addresses ASI03 almost entirely.
   never accessible from development
 
 **Advanced**
+
 - NHI-1: Formal agent offboarding programme — decommission
   checklist covering all credential revocation, token
   invalidation, and access removal
@@ -272,12 +284,13 @@ it to agent identities addresses ASI03 almost entirely.
 
 | Tool | Type | Link |
 |---|---|---|
-| HashiCorp Vault | Open-source | https://www.vaultproject.io |
-| Teleport | Open-source/Commercial | https://goteleport.com |
-| Entro Security | Commercial | https://entro.security |
-| SPIFFE / SPIRE | Open-source | https://spiffe.io |
+| HashiCorp Vault | Open-source | <https://www.vaultproject.io> |
+| Teleport | Open-source/Commercial | <https://goteleport.com> |
+| Entro Security | Commercial | <https://entro.security> |
+| SPIFFE / SPIRE | Open-source | <https://spiffe.io> |
 
 #### Cross-references
+
 - LLM Top 10: LLM03 Excessive Agency
 - DSGAI 2026: DSGAI02 Agent Identity & Credential Exposure
 - Other frameworks: AIUC-1 A/B007/B008 · EU AI Act Art. 15 · ISA/IEC 62443 SR 1.2 (OT)
@@ -304,6 +317,7 @@ is the primary supply chain NHI risk.
 #### Mitigations
 
 **Foundational**
+
 - NHI-3: Validate all third-party tool and MCP server
   identities before agent connection — approved registry,
   token issuer verification, permission scope audit
@@ -312,6 +326,7 @@ is the primary supply chain NHI risk.
   to read credentials outside its scope is a rejection trigger
 
 **Hardening**
+
 - NHI-6: Isolate credentials from supply chain components —
   components receive only the minimum token required for
   their specific function, not the agent's full credential
@@ -320,6 +335,7 @@ is the primary supply chain NHI risk.
   even if dynamically discovered at runtime
 
 **Advanced**
+
 - Automated NHI audit after each supply chain update —
   verify that new components have not altered credential
   scope or access patterns
@@ -327,6 +343,7 @@ is the primary supply chain NHI risk.
   unusual permission requests from supply chain components
 
 #### Cross-references
+
 - LLM Top 10: LLM04 Supply Chain
 - DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning
 - Other frameworks: AIUC-1 B001/B003 · EU AI Act Art. 25 · NIST SP 800-218A
@@ -354,6 +371,7 @@ intended.
 #### Mitigations
 
 **Foundational**
+
 - NHI-5: Run agent code execution under a separate,
   sandboxed identity with minimal permissions — not the
   agent's primary credential
@@ -361,6 +379,7 @@ intended.
   sandbox has no access to production credentials
 
 **Hardening**
+
 - NHI-9: Unique credential per agent deployment — RCE in
   one instance cannot leverage shared credentials to
   access other services
@@ -368,12 +387,14 @@ intended.
   outside the defined sandbox scope triggers immediate alert
 
 **Advanced**
+
 - Ephemeral execution identity — unique credential issued
   per code execution task, immediately revoked on completion
 - NHI-5: Formal risk acceptance for any code execution
   agent — privilege review required before deployment
 
 #### Cross-references
+
 - LLM Top 10: LLM10 Improper Output Handling
 - DSGAI 2026: DSGAI12 Unsafe NL Data Gateways
 - Other frameworks: AIUC-1 B005/B006 · EU AI Act Art. 15
@@ -400,6 +421,7 @@ without going through the agent at all.
 #### Mitigations
 
 **Foundational**
+
 - NHI-6: Store all memory store credentials in secret
   manager — no cleartext access tokens for vector stores,
   RAG indexes, or agent memory systems
@@ -408,6 +430,7 @@ without going through the agent at all.
   injection for lateral movement
 
 **Hardening**
+
 - NHI-7: Rotate memory store credentials per session —
   long-lived tokens for vector stores are unnecessary
   and expand the window for attacker exploitation
@@ -416,6 +439,7 @@ without going through the agent at all.
   patterns to agent memory
 
 **Advanced**
+
 - Separate memory store identity from agent primary
   identity — memory access uses a distinct, scoped
   NHI that cannot be used for any other operation
@@ -424,6 +448,7 @@ without going through the agent at all.
   behaviour analysis
 
 #### Cross-references
+
 - LLM Top 10: LLM05 Data and Model Poisoning
 - DSGAI 2026: DSGAI13 Vector Store Platform Security
 - Other frameworks: AIUC-1 A/B002 · ISO 27001 A.8.24 · NIST AI RMF GV-1.6
@@ -450,6 +475,7 @@ spoofing and man-in-the-middle attacks.
 #### Mitigations
 
 **Foundational**
+
 - NHI-4: Implement authentication on all A2A channels —
   no ambient trust between agents, even on internal networks
 - NHI-9: Unique agent identity for all A2A communication —
@@ -457,12 +483,14 @@ spoofing and man-in-the-middle attacks.
   across the cluster
 
 **Hardening**
+
 - NHI-7: Short-lived A2A tokens with replay protection —
   nonces, timestamps, and sequence numbers on all channels
 - NHI-4: Mutual TLS for all production A2A channels —
   both parties authenticate before message exchange
 
 **Advanced**
+
 - PKI-backed agent identities — certificate-based A2A
   authentication with hardware-backed keys for highest-risk
   agent clusters
@@ -473,11 +501,12 @@ spoofing and man-in-the-middle attacks.
 
 | Tool | Type | Link |
 |---|---|---|
-| SPIFFE / SPIRE | Open-source | https://spiffe.io |
-| cert-manager | Open-source | https://cert-manager.io |
-| Linkerd | Open-source | https://linkerd.io |
+| SPIFFE / SPIRE | Open-source | <https://spiffe.io> |
+| cert-manager | Open-source | <https://cert-manager.io> |
+| Linkerd | Open-source | <https://linkerd.io> |
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI02 Agent Identity & Credential Exposure
 - Other frameworks: AIUC-1 B007/B008 · EU AI Act Art. 15 · ISA/IEC 62443 SR 3.1 (OT)
 
@@ -504,6 +533,7 @@ to — across the entire cascade path.
 #### Mitigations
 
 **Foundational**
+
 - NHI-5: Least privilege per agent — cascade blast radius
   is bounded by the narrowest credential scope
 - NHI-9: Unique identity per agent — cascade failure in
@@ -511,6 +541,7 @@ to — across the entire cascade path.
   the cluster
 
 **Hardening**
+
 - NHI-7: Automated credential revocation on cascade
   detection — all tokens for suspended agents immediately
   invalidated, not just flagged
@@ -519,6 +550,7 @@ to — across the entire cascade path.
   investigation begins
 
 **Advanced**
+
 - NHI-5: Dynamic privilege reduction on anomaly detection —
   agent credential scope automatically reduced before
   cascade propagates
@@ -526,6 +558,7 @@ to — across the entire cascade path.
   during cascade have been rotated before agent reactivation
 
 #### Cross-references
+
 - LLM Top 10: LLM06 Unbounded Consumption
 - DSGAI 2026: DSGAI17 Data Availability & Resilience Failures
 - Other frameworks: AIUC-1 D · EU AI Act Art. 14/15 · ISA/IEC 62443 SR 7.6 (OT)
@@ -551,6 +584,7 @@ trust exploitation. Attribution is the core NHI control here.
 #### Mitigations
 
 **Foundational**
+
 - NHI-10: Enforce strict separation between agent credentials
   and human credentials — agent service accounts cannot
   be used by humans, human accounts cannot be used by agents
@@ -558,6 +592,7 @@ trust exploitation. Attribution is the core NHI control here.
   see a distinct agent identity, not a human-appearing name
 
 **Hardening**
+
 - NHI-5: Make agent privilege scope visible to users —
   users who understand what an agent can access are less
   susceptible to trust exploitation
@@ -565,6 +600,7 @@ trust exploitation. Attribution is the core NHI control here.
   credentials — immediate investigation trigger
 
 **Advanced**
+
 - Cryptographic agent identity attestation — users can
   verify the agent's identity and permission scope
   through a trusted mechanism
@@ -573,6 +609,7 @@ trust exploitation. Attribution is the core NHI control here.
   credential revocation and alert
 
 #### Cross-references
+
 - LLM Top 10: LLM07 Misinformation
 - DSGAI 2026: DSGAI21 Disinformation & Integrity Attacks
 - Other frameworks: AIUC-1 C/F · EU AI Act Art. 50 · NIST AI RMF GV-1.7
@@ -601,6 +638,7 @@ can operate indefinitely post-detection.
 #### Mitigations
 
 **Foundational**
+
 - NHI-1: Formal agent offboarding procedure — kill switch
   activation triggers immediate credential revocation, not
   just session termination
@@ -610,6 +648,7 @@ can operate indefinitely post-detection.
   token expiry, not indefinite validity
 
 **Hardening**
+
 - Behavioural baseline monitoring correlated with NHI
   usage — rogue behaviour often manifests as unusual
   credential use patterns before visible output deviation
@@ -618,6 +657,7 @@ can operate indefinitely post-detection.
   anomaly detection trigger
 
 **Advanced**
+
 - Continuous NHI monitoring as rogue detection layer —
   anomalous credential usage alerts before behavioural
   deviation becomes visible in outputs
@@ -632,11 +672,12 @@ can operate indefinitely post-detection.
 
 | Tool | Type | Link |
 |---|---|---|
-| Entro Security | Commercial | https://entro.security |
-| HashiCorp Vault | Open-source | https://www.vaultproject.io |
-| Teleport | Open-source/Commercial | https://goteleport.com |
+| Entro Security | Commercial | <https://entro.security> |
+| HashiCorp Vault | Open-source | <https://www.vaultproject.io> |
+| Teleport | Open-source/Commercial | <https://goteleport.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM03 Excessive Agency
 - DSGAI 2026: DSGAI02 Agent Identity & Credential Exposure, DSGAI16 Endpoint & Browser Overreach
 - Other frameworks: AIUC-1 B001/B002/C/E · EU AI Act Art. 14 · ISA/IEC 62443 SR 3.7 (OT)
@@ -691,5 +732,7 @@ AI deployments against the Agentic Top 10 risk coverage:
 
 ---
 
-*Part of the [OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk) —
+*Part of the
+[OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk)
+—
 maintained by the [OWASP GenAI Data Security Initiative](https://genai.owasp.org)*

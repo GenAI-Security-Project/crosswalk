@@ -9,7 +9,8 @@
 
 # DSGAI 2026 × OWASP SAMM v2.0
 
-Mapping the [OWASP GenAI Data Security Risks 2026](https://genai.owasp.org/resource/owasp-genai-data-security-risks-mitigations-2026/)
+Mapping the
+[OWASP GenAI Data Security Risks 2026](https://genai.owasp.org/resource/owasp-genai-data-security-risks-mitigations-2026/)
 (DSGAI01–DSGAI21) to the [OWASP Software Assurance Maturity Model (SAMM) v2.0](https://owaspsamm.org/) —
 the framework for measuring and improving software security programme
 maturity across the software development lifecycle.
@@ -57,6 +58,7 @@ response maturity to detect and respond.
 | Operations (O) | Incident Management (O-IM) · Environment Management (O-EM) · Operational Management (O-OM) |
 
 **Maturity levels:**
+
 - Level 1 — Initial/Ad-hoc: Basic security practices, reactive
 - Level 2 — Managed: Defined processes, consistent execution
 - Level 3 — Optimised: Proactive, metrics-driven, continuously improving
@@ -128,16 +130,19 @@ or agent execution at inference time.
 #### Three-tier mitigations
 
 **Tier 1 — Immediate:**
+
 - Audit all external data ingestion points
 - Apply content filtering before any external data enters context window
 - Log all retrieved content for forensic review
 
 **Tier 2 — Short-term:**
+
 - Build injection test cases into CI/CD pipeline
 - Implement trust-level tagging: user input, retrieved content, system prompt — never elevate
 - Red team exercise: attempt injection via each data channel
 
 **Tier 3 — Strategic:**
+
 - D-TA L3: threat model updated after every new data source integration
 - Continuous monitoring for injection-correlated anomalies in production
 
@@ -170,16 +175,19 @@ causing models to learn biased, backdoored, or degraded behaviours.
 #### Three-tier mitigations
 
 **Tier 1 — Immediate:**
+
 - Inventory all training data sources; flag unverified or public sources
 - Implement hash verification for all training datasets
 - Restrict training data write access to authorised personnel only
 
 **Tier 2 — Short-term:**
+
 - Implement data provenance tracking from source to training job
 - Add statistical anomaly detection on training data distributions
 - V-ST: adversarial probing of fine-tuned models for backdoor triggers
 
 **Tier 3 — Strategic:**
+
 - G-PC L3: formal training data supply chain audit programme
 - I-SB L3: automated poisoning detection in ML CI/CD pipeline
 - Periodic model re-evaluation against clean held-out dataset
@@ -212,16 +220,19 @@ information (PCI, PHI) inadvertently included in training datasets
 #### Three-tier mitigations
 
 **Tier 1 — Immediate:**
+
 - Run PII detection scan on all existing training datasets
 - Remove or anonymise detected sensitive records
 - Establish training data ingestion gate: datasets must pass PII scan before use
 
 **Tier 2 — Short-term:**
+
 - Integrate automated PII scanning into ML CI/CD pipeline
 - Implement differential privacy for high-sensitivity training scenarios
 - Add memorisation evaluation to model testing suite
 
 **Tier 3 — Strategic:**
+
 - G-PC L3: data governance committee reviews training dataset composition
 - Privacy-preserving training techniques (federated learning, synthetic data) for regulated data
 - Annual model audit for sensitive data exposure
@@ -254,16 +265,19 @@ enabling injection, tampering, or exfiltration of data in transit.
 #### Three-tier mitigations
 
 **Tier 1 — Immediate:**
+
 - Audit authentication on all pipeline stage-to-stage connections
 - Enable TLS for all pipeline communications
 - Add integrity verification at pipeline output (hash of transformed data)
 
 **Tier 2 — Short-term:**
+
 - Implement per-stage audit logging: who accessed what data, when
 - Add anomaly detection on data volumes and transformation outputs
 - Architecture review: identify and eliminate unauthenticated pipeline endpoints
 
 **Tier 3 — Strategic:**
+
 - I-SB L3: automated security scanning of infrastructure-as-code templates
 - O-EM L3: continuous pipeline health monitoring with automated remediation
 - Chaos engineering: simulate pipeline component failure and verify containment
@@ -297,16 +311,19 @@ content or actions to pass.
 #### Three-tier mitigations
 
 **Tier 1 — Immediate:**
+
 - Audit all existing guardrails: identify single points of failure
 - Confirm guardrails cannot be disabled via input manipulation
 - Add immutable logging: guardrail decisions logged and tamper-proof
 
 **Tier 2 — Short-term:**
+
 - Add secondary, rule-based guardrail outside LLM inference path
 - V-ST: automated bypass attempt battery in CI/CD for every model change
 - Define minimum guardrail effectiveness metric; fail deployment if below threshold
 
 **Tier 3 — Strategic:**
+
 - D-SA L3: independent safety architecture review board for high-risk systems
 - Continuous adversarial probing of production guardrails
 - G-SM L3: quarterly guardrail effectiveness reporting to leadership
@@ -340,16 +357,19 @@ or insufficient output filtering.
 #### Three-tier mitigations
 
 **Tier 1 — Immediate:**
+
 - Add DLP scanning to output pipeline
 - Define blocklist of sensitive content patterns (PII formats, internal identifiers)
 - Audit existing outputs for historical disclosure incidents
 
 **Tier 2 — Short-term:**
+
 - Implement per-user output filtering based on entitlement
 - V-ST: test suite probing for memorised sensitive content
 - Add output redaction for any PII detected at runtime
 
 **Tier 3 — Strategic:**
+
 - O-OM L3: real-time output anomaly detection with automated redaction
 - G-PC L3: formal data disclosure impact assessment for all new data sources
 - Annual model audit for sensitive content memorisation
@@ -383,16 +403,19 @@ creating unnecessary exposure and blast radius on compromise.
 #### Three-tier mitigations
 
 **Tier 1 — Immediate:**
+
 - Enumerate all data sources accessible to each GenAI component
 - Remove access to any data source not exercised in past 30 days
 - Apply least-privilege to RAG retrieval: query-scoped access only
 
 **Tier 2 — Short-term:**
+
 - Implement data access declaration in deployment manifests
 - V-AA: architecture review includes data access scope sign-off
 - Automate drift detection: alert when runtime access exceeds manifest
 
 **Tier 3 — Strategic:**
+
 - G-SM L3: data access review board with quarterly reporting
 - D-SA L3: zero-trust data access architecture for all GenAI components
 - Annual penetration test targeting data access boundary violations
@@ -426,16 +449,19 @@ tenants, higher-sensitivity tiers, or access-controlled corpora.
 #### Three-tier mitigations
 
 **Tier 1 — Immediate:**
+
 - Implement per-query entitlement filter in retrieval pipeline
 - Add metadata-based access control to all corpus documents
 - Log all retrieval operations with user context
 
 **Tier 2 — Short-term:**
+
 - V-ST: automated cross-tenant leakage test battery in CI/CD
 - Red team: attempt retrieval of documents outside declared entitlement
 - Add retrieval anomaly detection: flag unusual document access patterns
 
 **Tier 3 — Strategic:**
+
 - I-SB L3: automated entitlement coverage analysis for all corpus changes
 - D-TA L3: threat model updated for every new corpus or retrieval path
 - See [shared/RECIPES.md](../shared/RECIPES.md) Pattern 1 — Access-Controlled RAG
@@ -470,16 +496,19 @@ steers model outputs.
 #### Three-tier mitigations
 
 **Tier 1 — Immediate:**
+
 - Apply write authentication to embedding store: only authorised pipeline may write
 - Add document hash verification at corpus ingest
 - Log all corpus write operations with submitter identity
 
 **Tier 2 — Short-term:**
+
 - Implement corpus integrity checks: detect unexpected document changes
 - V-ST: document injection test battery
 - G-PC: corpus change approval process with security review for sensitive corpora
 
 **Tier 3 — Strategic:**
+
 - O-IM L3: automated detection of embedding distribution drift (possible poisoning signal)
 - Periodic corpus audit: re-verify document authenticity against source
 - D-TA L3: threat model updated after every new corpus data source
@@ -511,16 +540,19 @@ in-context reasoning without persisting to long-term memory.
 #### Three-tier mitigations
 
 **Tier 1 — Immediate:**
+
 - Apply trust-level tagging to all context window sources
 - Sanitise all external content before context inclusion
 - Log full context window for forensic review on anomalous outputs
 
 **Tier 2 — Short-term:**
+
 - V-ST: inject adversarial content via each context source; verify containment
 - Implement context source prioritisation: system instructions cannot be overridden by retrieved content
 - Add reasoning consistency check on final output
 
 **Tier 3 — Strategic:**
+
 - D-TA L3: threat model updated for every new context source integration
 - Research and deploy formal context integrity verification techniques
 
@@ -552,16 +584,19 @@ boundaries, enabling cross-session attacks and long-term manipulation.
 #### Three-tier mitigations
 
 **Tier 1 — Immediate:**
+
 - Enforce session isolation at storage layer: no cross-user session access
 - Encrypt all persistent session data at rest
 - Log all session read/write operations
 
 **Tier 2 — Short-term:**
+
 - V-ST: cross-session data access test battery
 - Implement session TTL and automatic purge policy
 - Add integrity signatures to session records
 
 **Tier 3 — Strategic:**
+
 - Formal session security architecture review for multi-tenant deployments
 - O-EM L3: automated session integrity monitoring
 
@@ -592,16 +627,19 @@ in model parameters through systematic prompting or gradient attacks.
 #### Three-tier mitigations
 
 **Tier 1 — Immediate:**
+
 - Implement API rate limiting per user/IP
 - Remove or restrict confidence score and logit output from API responses
 - Log all high-volume query sessions
 
 **Tier 2 — Short-term:**
+
 - Add query pattern detection: alert on systematic extraction-pattern queries
 - Implement per-user query budget with soft/hard limits
 - V-ST: model extraction simulation exercise
 
 **Tier 3 — Strategic:**
+
 - Differential privacy techniques for sensitive models
 - O-OM L3: continuous extraction attempt detection using ML-based query analysis
 - Legal and contractual protections: API terms of service with extraction prohibition
@@ -636,16 +674,19 @@ implementations.
 #### Three-tier mitigations
 
 **Tier 1 — Immediate:**
+
 - Audit all tool integrations for data scope
 - Remove any tools returning data beyond declared function
 - Add logging to all tool response streams
 
 **Tier 2 — Short-term:**
+
 - Implement minimum data principle in tool wrappers: filter before passing to model
 - V-ST: automated test suite for data leakage per tool
 - G-PC: tool review board with security sign-off
 
 **Tier 3 — Strategic:**
+
 - I-SB L3: automated data leakage scanning in tool integration CI/CD
 - O-OM L3: real-time tool response anomaly detection
 - Tool governance programme with periodic re-review of approved tools
@@ -680,16 +721,19 @@ that bypass original safety controls.
 #### Three-tier mitigations
 
 **Tier 1 — Immediate:**
+
 - Apply access controls and encryption to all model weight storage
 - Audit who has current access to model weights; remove unnecessary access
 - Enable access logging on all model storage systems
 
 **Tier 2 — Short-term:**
+
 - Classify model weights as high-sensitivity assets in asset inventory
 - V-AA: architecture review of model storage access controls
 - Red team exercise: attempt model weight exfiltration via infrastructure
 
 **Tier 3 — Strategic:**
+
 - Hardware security modules (HSM) for model weight protection in high-value deployments
 - O-OM L3: automated anomaly detection on model weight access patterns
 - Legal protections: trade secret designations and contractual controls with cloud providers
@@ -723,16 +767,19 @@ providers, logging infrastructure, or analytics systems.
 #### Three-tier mitigations
 
 **Tier 1 — Immediate:**
+
 - Audit all inference logging configurations
 - Remove any inference data logging not required for operations
 - Apply encryption to all inference logs at rest
 
 **Tier 2 — Short-term:**
+
 - Implement inference data scrubbing: PII removed from logs before storage
 - Review third-party model provider data retention terms
 - Define and enforce inference log retention periods and deletion
 
 **Tier 3 — Strategic:**
+
 - G-PC L3: privacy impact assessment for all inference data flows
 - O-EM L3: automated inference data lifecycle management
 - Data residency controls for regulated sectors
@@ -766,16 +813,19 @@ supply chain risks.
 #### Three-tier mitigations
 
 **Tier 1 — Immediate:**
+
 - Inventory all third-party data sources in use
 - Flag sources without security contact or recent review
 - Pin data source versions where possible; reject unversioned public data in production
 
 **Tier 2 — Short-term:**
+
 - Implement data source review process: all new sources require security assessment
 - Add integrity verification for all third-party data at ingestion
 - Monitor for security advisories on all data source providers
 
 **Tier 3 — Strategic:**
+
 - G-PC L3: formal vendor security assessment programme for data dependencies
 - I-SB L3: automated data dependency scanning in CI/CD
 - Periodic supply chain red team exercise targeting data source compromise
@@ -810,16 +860,19 @@ adapters, or vulnerable ML library code into production GenAI systems.
 #### Three-tier mitigations
 
 **Tier 1 — Immediate:**
+
 - Verify provenance of all models currently in production
 - Flag any models from unverified sources for review
 - Pin all model versions; reject floating references in production
 
 **Tier 2 — Short-term:**
+
 - Implement model hash verification at deployment
 - G-PC: model review board for all new base model or adapter integrations
 - V-ST: adversarial probing of fine-tuned models for backdoor triggers
 
 **Tier 3 — Strategic:**
+
 - I-SB L3: automated model supply chain scanning in CI/CD
 - Periodic re-evaluation of production models against clean evaluation set
 - Formal model provenance attestation for regulated deployments
@@ -852,16 +905,19 @@ requests — creating regulatory violations and unnecessary exposure.
 #### Three-tier mitigations
 
 **Tier 1 — Immediate:**
+
 - Document all data stores containing GenAI system data
 - Define retention periods for each data store; implement deletion schedule
 - Verify deletion capability: confirm data can actually be deleted from each store
 
 **Tier 2 — Short-term:**
+
 - Implement automated retention policy enforcement
 - Test deletion procedures: verify data is unrecoverable after deletion
 - Add right-to-erasure workflow for user data in inference logs
 
 **Tier 3 — Strategic:**
+
 - G-PC L3: formal data lifecycle governance for all GenAI data
 - Privacy-by-design: new features require retention review before deployment
 - Annual audit of retention compliance across all GenAI data stores
@@ -896,16 +952,19 @@ downstream components.
 #### Three-tier mitigations
 
 **Tier 1 — Immediate:**
+
 - Add health checks to all pipeline stages
 - Implement circuit breaker pattern between pipeline stages
 - Document blast radius: if stage X fails, which downstream components are affected?
 
 **Tier 2 — Short-term:**
+
 - Red team: simulate cascading failure from one corrupted pipeline stage
 - Deploy O-IM playbook for data pipeline cascade incidents
 - Add per-stage data validation checkpoints
 
 **Tier 3 — Strategic:**
+
 - D-SA L3: formal chaos engineering programme for data pipelines
 - O-EM L3: automated cascade detection with predictive alerting
 - Architecture pattern: idempotent pipeline stages with rollback capability
@@ -939,16 +998,19 @@ transfers, prohibited processing, or insufficient documentation.
 #### Three-tier mitigations
 
 **Tier 1 — Immediate:**
+
 - Map all applicable regulations for each GenAI data flow
 - Identify any processing without legal basis
 - Document data processing activities (GDPR Art. 30 records of processing)
 
 **Tier 2 — Short-term:**
+
 - Implement consent management for any user-facing data collection
 - Complete DPIA for high-risk processing activities (EU AI Act + GDPR)
 - G-PC: legal review of cross-border data transfer mechanisms
 
 **Tier 3 — Strategic:**
+
 - G-PC L3: formal compliance monitoring programme with external audit
 - G-SM L3: compliance dashboard with real-time regulatory status
 - Annual regulatory impact assessment for all new GenAI features
@@ -982,16 +1044,19 @@ traceability requirements in regulated sectors.
 #### Three-tier mitigations
 
 **Tier 1 — Immediate:**
+
 - Attach source metadata to all ingested data
 - Log origin, timestamp, and version for all training datasets
 - Add provenance fields to corpus document schema
 
 **Tier 2 — Short-term:**
+
 - Implement end-to-end lineage tracking in data pipelines
 - V-RT: automated provenance coverage test suite
 - G-PC: provenance requirements documented and signed off
 
 **Tier 3 — Strategic:**
+
 - Immutable lineage ledger for regulatory traceability
 - G-PC L3: formal data governance programme with lineage as a core requirement
 - Integration with CROSSREF.md for cross-source-list risk traceability
@@ -1062,6 +1127,8 @@ personal data in GenAI systems operating in jurisdictions covered by GDPR or CCP
 
 ---
 
-*Part of the [OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk) —
+*Part of the
+[OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk)
+—
 maintained by the [OWASP GenAI Data Security Initiative](https://genai.owasp.org)*
 *License: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)*

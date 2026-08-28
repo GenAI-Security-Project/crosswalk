@@ -10,7 +10,9 @@
 # LLM Top 10 2026 × ENISA Multilayer Framework
 
 Mapping the [OWASP Top 10 for LLM Applications 2026](https://genai.owasp.org/llm-top-10/)
-to the [ENISA Multilayer Framework for Good Cybersecurity Practices for AI](https://www.enisa.europa.eu/publications/multilayer-framework-for-good-cybersecurity-practices-for-ai) —
+to the
+[ENISA Multilayer Framework for Good Cybersecurity Practices for AI](https://www.enisa.europa.eu/publications/multilayer-framework-for-good-cybersecurity-practices-for-ai)
+—
 published by the European Union Agency for Cybersecurity (ENISA) to
 support the cybersecurity requirements of the EU AI Act and NIS2 Directive.
 
@@ -127,6 +129,7 @@ invisible-Unicode carriers survive review of the rendered interface.
 #### Mitigations for ENISA alignment
 
 **Foundational (L1)**
+
 - L1 Secure Development: Implement input validation
   as a secure development requirement — all LLM
   integrations reviewed for injection resistance before
@@ -138,6 +141,7 @@ invisible-Unicode carriers survive review of the rendered interface.
   risk owner, treatment controls, review cadence
 
 **Hardening (L2)**
+
 - ASI: Include adversarial injection testing in AI
   system integrity verification — direct, indirect,
   and multi-turn injection scenarios tested before
@@ -149,6 +153,7 @@ invisible-Unicode carriers survive review of the rendered interface.
   prompt and user input as L2 AI system integrity control
 
 **Advanced (L2–L3)**
+
 - ASI: Red team with novel indirect injection techniques
   quarterly — ENISA adversarial testing practice applied
   to RAG, tool return, and document processing pipelines
@@ -167,10 +172,11 @@ are the technical implementation of Article 15 for prompt injection.
 
 | Tool | Type | Link |
 |---|---|---|
-| Garak | Open-source | https://github.com/leondz/garak |
-| LLM Guard | Open-source | https://github.com/protectai/llm-guard |
+| Garak | Open-source | <https://github.com/leondz/garak> |
+| LLM Guard | Open-source | <https://github.com/protectai/llm-guard> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI01 Agent Goal Hijack
 - DSGAI 2026: DSGAI01 Sensitive Data Leakage, DSGAI12 Unsafe NL Data Gateways
 - Other frameworks: ISO 27001 A.8.28 · NIST CSF 2.0 PR.PS-04 · EU AI Act Art. 15
@@ -198,6 +204,7 @@ and privacy-preserving techniques are DMS practices.
 #### Mitigations for ENISA alignment
 
 **Foundational (L1)**
+
 - L1 Data Protection: Encrypt all sensitive data
   in LLM scope at rest and in transit — training
   datasets, embedding stores, RAG document stores,
@@ -207,6 +214,7 @@ and privacy-preserving techniques are DMS practices.
   authorisation scope
 
 **Hardening (L2)**
+
 - DMS: Implement data classification policy covering
   all GenAI data assets — training data, embeddings,
   outputs all classified with handling requirements
@@ -219,6 +227,7 @@ and privacy-preserving techniques are DMS practices.
   processing updated to cover LLM training and inference
 
 **Advanced (L2)**
+
 - DMS: Apply differential privacy in training for
   sensitive corpora — ENISA privacy-preserving
   technique practice
@@ -236,10 +245,11 @@ guidance for Article 10 compliance.
 
 | Tool | Type | Link |
 |---|---|---|
-| Microsoft Presidio | Open-source | https://github.com/microsoft/presidio |
-| Nightfall AI | Commercial | https://nightfall.ai |
+| Microsoft Presidio | Open-source | <https://github.com/microsoft/presidio> |
+| Nightfall AI | Commercial | <https://nightfall.ai> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI03 Identity & Privilege Abuse
 - DSGAI 2026: DSGAI01 Sensitive Data Leakage, DSGAI18 Inference & Data Reconstruction
 - Other frameworks: ISO 27001 A.8.11/A.8.12 · NIST AI RMF GV-1.6 · EU AI Act Art. 10
@@ -268,6 +278,7 @@ alignment.
 #### Mitigations for ENISA alignment
 
 **Foundational (L1)**
+
 - L1 Access Control: Manage LLM tool access as
   privileged access — minimum permissions enforced,
   reviewed on change and quarterly
@@ -276,6 +287,7 @@ alignment.
   documented in AI governance policy
 
 **Hardening (L2)**
+
 - ASI: Implement action guardrails as AI system
   integrity control — tool permission enforcement
   independent of the model instruction
@@ -286,6 +298,7 @@ alignment.
   blast radius per deployment, owner, treatment
 
 **Advanced (L2–L3)**
+
 - ASI: Red team excessive agency via indirect injection —
   ENISA adversarial testing applied to autonomous
   action scenarios
@@ -303,10 +316,11 @@ technical implementation guidance for Article 14 compliance.
 
 | Tool | Type | Link |
 |---|---|---|
-| Guardrails AI | Open-source | https://github.com/guardrails-ai/guardrails |
-| NeMo Guardrails | Open-source | https://github.com/NVIDIA/NeMo-Guardrails |
+| Guardrails AI | Open-source | <https://github.com/guardrails-ai/guardrails> |
+| NeMo Guardrails | Open-source | <https://github.com/NVIDIA/NeMo-Guardrails> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI01 Agent Goal Hijack, ASI02 Tool Misuse
 - DSGAI 2026: DSGAI06 Tool Plugin & Agent Data Exchange
 - Other frameworks: EU AI Act Art. 14 · AIUC-1 B006 · ISO 27001 A.8.2
@@ -341,6 +355,7 @@ dependency is clean.
 #### Mitigations for ENISA alignment
 
 **Foundational (L1)**
+
 - L1 Supply Chain: Maintain ML SBOM as part of ICT
   asset inventory — every LLM component (model, adapters,
   libraries) inventoried with version, source, hash
@@ -349,6 +364,7 @@ dependency is clean.
   runtime dependencies scanned and patched on schedule
 
 **Hardening (L2)**
+
 - SCS: Apply ENISA AI supply chain security practices
   to all LLM component vendors — security obligations,
   provenance documentation, vulnerability disclosure SLA
@@ -360,6 +376,7 @@ dependency is clean.
   third-party AI risk assessment per vendor
 
 **Advanced (L2)**
+
 - SCS: Periodic security assessments of strategic LLM
   component suppliers — ENISA supply chain audit
   practice applied to model and dataset vendors
@@ -377,10 +394,11 @@ SCS practices provide the technical evidence base.
 
 | Tool | Type | Link |
 |---|---|---|
-| CycloneDX | Open-source | https://cyclonedx.org |
-| ModelScan | Open-source | https://github.com/protectai/modelscan |
+| CycloneDX | Open-source | <https://cyclonedx.org> |
+| ModelScan | Open-source | <https://github.com/protectai/modelscan> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI04 Agentic Supply Chain Vulnerabilities
 - DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning
 - Other frameworks: NIST CSF 2.0 GV.SC-01 · ISO 27001 A.5.19/A.5.21 · NIST SP 800-218A
@@ -413,6 +431,7 @@ stage that writes weights, not just the original training corpus.
 #### Mitigations for ENISA alignment
 
 **Foundational (L1–L2)**
+
 - DMS: Implement training data integrity controls —
   source allowlisting, anomaly detection on data
   distributions, provenance tracking from source to
@@ -422,6 +441,7 @@ stage that writes weights, not just the original training corpus.
   as ASI practice before each production promotion
 
 **Hardening (L2)**
+
 - ASI: Post-training backdoor detection as mandatory
   deployment gate — ENISA adversarial testing practice
   applied to poisoning detection
@@ -433,6 +453,7 @@ stage that writes weights, not just the original training corpus.
   deployment scope assessment, disclosure assessment
 
 **Advanced (L2)**
+
 - ASI: Include poisoning scenarios in adversarial
   testing programme — OT-specific trigger conditions
   tested for industrial deployments
@@ -450,10 +471,11 @@ that satisfy Article 9 risk treatment requirements.
 
 | Tool | Type | Link |
 |---|---|---|
-| IBM Adversarial Robustness Toolbox | Open-source | https://github.com/Trusted-AI/adversarial-robustness-toolbox |
-| CleanLab | Open-source | https://github.com/cleanlab/cleanlab |
+| IBM Adversarial Robustness Toolbox | Open-source | <https://github.com/Trusted-AI/adversarial-robustness-toolbox> |
+| CleanLab | Open-source | <https://github.com/cleanlab/cleanlab> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning, DSGAI21 Disinformation via Data Poisoning
 - Other frameworks: NIST AI RMF MS-3.3 · MITRE ATLAS AML.T0020 · ISO 27001 A.8.27
@@ -481,6 +503,7 @@ DoS threat patterns addressed by ENISA L1 availability practices.
 #### Mitigations for ENISA alignment
 
 **Foundational (L1)**
+
 - L1 Availability: Rate limiting and resource controls
   as ENISA DoS protection practice — hard token caps,
   per-user budgets enforced at API gateway
@@ -489,12 +512,14 @@ DoS threat patterns addressed by ENISA L1 availability practices.
   owner notification as ENISA IRS practice
 
 **Hardening (L1–L2)**
+
 - MON: Monitor LLM resource consumption in real time —
   ENISA monitoring practice covering consumption anomalies
 - GOV: Include LLM availability in AI risk register —
   RTO/RPO defined, consumption risk documented
 
 **Advanced (L2)**
+
 - ASI: Adversarial load testing as ENISA adversarial
   testing practice — sponge example attacks tested
   before production deployment
@@ -510,10 +535,11 @@ response procedures support NIS2 incident notification obligations.
 
 | Tool | Type | Link |
 |---|---|---|
-| LiteLLM | Open-source | https://github.com/BerriAI/litellm |
-| Kong Gateway | Open-source | https://github.com/Kong/kong |
+| LiteLLM | Open-source | <https://github.com/BerriAI/litellm> |
+| Kong Gateway | Open-source | <https://github.com/Kong/kong> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI08 Cascading Agent Failures
 - DSGAI 2026: DSGAI17 Data Availability & Resilience Failures
 - Other frameworks: NIST CSF 2.0 PR.IR-01 · ISA/IEC 62443 SR 7.6 (OT) · CWE-400
@@ -541,6 +567,7 @@ technical integrity concern (accuracy monitoring, drift detection).
 #### Mitigations for ENISA alignment
 
 **Foundational (L1)**
+
 - L1 Awareness: Train all users of LLM decision-support
   tools on output limitations — ENISA awareness practice
   mandatory before access granted
@@ -549,6 +576,7 @@ technical integrity concern (accuracy monitoring, drift detection).
   authoritative output distinction
 
 **Hardening (L2)**
+
 - ASI: Production accuracy monitoring as ENISA AI
   system integrity practice — hallucination rates
   per domain tracked, degradation alerted
@@ -565,10 +593,11 @@ compliance by defining and communicating accuracy thresholds.
 
 | Tool | Type | Link |
 |---|---|---|
-| TruLens | Open-source | https://github.com/truera/trulens |
-| RAGAS | Open-source | https://github.com/explodinggradients/ragas |
+| TruLens | Open-source | <https://github.com/truera/trulens> |
+| RAGAS | Open-source | <https://github.com/explodinggradients/ragas> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI09 Human-Agent Trust Exploitation
 - DSGAI 2026: DSGAI21 Disinformation & Integrity Attacks
 - Other frameworks: EU AI Act Art. 13/50 · AIUC-1 F · NIST CSF 2.0 GV.OC-01
@@ -607,6 +636,7 @@ treat it as a security boundary.
 #### Mitigations for ENISA alignment
 
 **Foundational (L1)**
+
 - L1 Data Protection: Encrypt system prompts at rest —
   not stored in cleartext configuration, source code,
   or environment variables
@@ -615,6 +645,7 @@ treat it as a security boundary.
   access logged
 
 **Hardening (L2)**
+
 - DMS: Classify system prompts as sensitive AI system
   configuration — ENISA DMS practice for AI-specific
   sensitive configuration data
@@ -623,6 +654,7 @@ treat it as a security boundary.
   before each deployment
 
 #### Cross-references
+
 - Agentic Top 10: ASI01 Agent Goal Hijack
 - DSGAI 2026: DSGAI15 Over-Broad Context Windows
 - Other frameworks: AIUC-1 B003/B009 · ISO 27001 A.5.12 · CWE-200
@@ -650,6 +682,7 @@ database practices.
 #### Mitigations for ENISA alignment
 
 **Foundational (L1–L2)**
+
 - DMS: Apply ENISA AI data asset protection to
   all vector stores — RBAC enabled, content encrypted,
   provenance documented as DMS practice evidence
@@ -657,6 +690,7 @@ database practices.
   — CVE-2024-3584 class as urgent findings
 
 **Hardening (L2)**
+
 - ASI: Include vector store attacks in ENISA adversarial
   testing — RBAC bypass, path traversal, embedding
   inversion tested before each deployment
@@ -668,10 +702,11 @@ database practices.
 
 | Tool | Type | Link |
 |---|---|---|
-| Weaviate | Open-source | https://weaviate.io |
-| ML Privacy Meter | Open-source | https://github.com/privacytrustlab/ml_privacy_meter |
+| Weaviate | Open-source | <https://weaviate.io> |
+| ML Privacy Meter | Open-source | <https://github.com/privacytrustlab/ml_privacy_meter> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - DSGAI 2026: DSGAI13 Vector Store Platform Security, DSGAI18 Inference & Data Reconstruction
 - Other frameworks: NIST AI RMF MS-2.5 · ISO 27001 A.8.3/A.8.24 · CWE-284
@@ -706,6 +741,7 @@ reaches a shell, a browser, or a database.
 #### Mitigations for ENISA alignment
 
 **Foundational (L1)**
+
 - L1 Secure Development: Output encoding and schema
   validation as secure coding requirements — LLM output
   treated as untrusted input to all downstream systems
@@ -714,6 +750,7 @@ reaches a shell, a browser, or a database.
   injection via model output tested
 
 **Hardening (L2)**
+
 - ASI: Implement output schema validation as AI system
   integrity control — only outputs conforming to defined
   safe structures passed to downstream consumers
@@ -725,10 +762,11 @@ reaches a shell, a browser, or a database.
 
 | Tool | Type | Link |
 |---|---|---|
-| OWASP ZAP | Open-source | https://www.zaproxy.org |
-| Semgrep | Open-source | https://semgrep.dev |
+| OWASP ZAP | Open-source | <https://www.zaproxy.org> |
+| Semgrep | Open-source | <https://semgrep.dev> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI02 Tool Misuse, ASI05 Unexpected Code Execution
 - DSGAI 2026: DSGAI05 Data Integrity & Validation Failures, DSGAI12 Unsafe NL Data Gateways
 - Other frameworks: OWASP ASVS V5 · NIST CSF 2.0 PR.PS-04 · CWE-79
@@ -790,4 +828,5 @@ reaches a shell, a browser, or a database.
 ---
 
 Maintained by the OWASP GenAI Data Security Initiative.
-Part of the OWASP GenAI Crosswalk: https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk
+Part of the OWASP GenAI Crosswalk:
+<https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk>

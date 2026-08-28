@@ -98,6 +98,7 @@ concrete impact on persons that must be assessed and managed.
 #### Mitigations for ISO 42001 alignment
 
 **Foundational**
+
 - A.5.2: Include goal hijack in AI impact assessment —
   what autonomous actions are possible if goal is
   redirected, which stakeholders are affected, documented
@@ -110,6 +111,7 @@ concrete impact on persons that must be assessed and managed.
   document as A.6.2.3 control evidence before deployment
 
 **Hardening**
+
 - A.6.2.6: Include goal hijack scenarios in AIMS testing
   programme — all indirect injection surfaces tested,
   results as AIMS documented information
@@ -120,6 +122,7 @@ concrete impact on persons that must be assessed and managed.
   control — tested as A.6.2.6 testing activity
 
 **Advanced**
+
 - A.5.2: Update impact assessment when agent autonomy
   scope expands — AIMS requirement before each new
   agentic capability is enabled in production
@@ -128,6 +131,7 @@ concrete impact on persons that must be assessed and managed.
   effectiveness in management review
 
 #### Cross-references
+
 - LLM Top 10: LLM01 Prompt Injection, LLM03 Excessive Agency
 - DSGAI 2026: DSGAI12 Unsafe NL Data Gateways, DSGAI15 Over-Broad Context Windows
 - Other frameworks: EU AI Act Art. 14 · AIUC-1 B001/B005 · NIST CSF 2.0 GV.OC-01
@@ -156,6 +160,7 @@ not a one-time configuration.
 #### Mitigations for ISO 42001 alignment
 
 **Foundational**
+
 - A.5.2: Include tool misuse in AI impact assessment —
   for each tool: what is the worst-case harm if misused
   autonomously, which stakeholders are affected,
@@ -167,6 +172,7 @@ not a one-time configuration.
   documented as A.6.1.2 responsible management control
 
 **Hardening**
+
 - A.6.2.3: Implement per-tool permission manifests and
   parameter validation as AIMS security design requirements
 - A.6.2.6: Include tool misuse scenarios in AIMS testing —
@@ -176,6 +182,7 @@ not a one-time configuration.
   MCP server providers — AIMS third-party obligations
 
 **Advanced**
+
 - A.5.2: Formal impact assessment before adding any
   new tool to an agentic deployment — AIMS requirement
   before each new tool capability
@@ -184,6 +191,7 @@ not a one-time configuration.
   incidents in management review
 
 #### Cross-references
+
 - LLM Top 10: LLM10 Improper Output Handling, LLM03 Excessive Agency
 - DSGAI 2026: DSGAI06 Tool Plugin & Agent Data Exchange
 - Other frameworks: EU AI Act Art. 14 · AIUC-1 B006/B007 · ISA/IEC 62443 SR 2.2 (OT)
@@ -211,6 +219,7 @@ obligation — NHI is an AI system resource under ISO 42001.
 #### Mitigations for ISO 42001 alignment
 
 **Foundational**
+
 - Cl.7: Inventory all agent NHIs as AI system resources —
   permissions, TTL, rotation schedule documented in AIMS
 - A.6.2.3: Implement short-lived JIT credentials as AIMS
@@ -219,6 +228,7 @@ obligation — NHI is an AI system resource under ISO 42001.
   scope, expiry, rotation as AIMS documented information
 
 **Hardening**
+
 - A.6.2.3: Encrypt all agent credentials at rest —
   secret manager, no cleartext in config or agent memory,
   documented as AIMS security control
@@ -229,6 +239,7 @@ obligation — NHI is an AI system resource under ISO 42001.
   obligation
 
 **Advanced**
+
 - Cl.9: Include credential exposure incidents in AIMS
   performance evaluation — NHI programme maturity
   metrics in management review
@@ -237,6 +248,7 @@ obligation — NHI is an AI system resource under ISO 42001.
   revocation on decommission documented in AIMS
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI02 Agent Identity & Credential Exposure
 - Other frameworks: OWASP NHI Top 10 · AIUC-1 A/B007 · NIST CSF 2.0 PR.AA-01/05
 
@@ -263,6 +275,7 @@ system components under ISO 42001.
 #### Mitigations for ISO 42001 alignment
 
 **Foundational**
+
 - A.10.1: Establish AIMS third-party requirements for
   all agent component vendors — integrity guarantees,
   vulnerability disclosure, incident notification
@@ -272,6 +285,7 @@ system components under ISO 42001.
   verified before loading any tool, MCP server, or model
 
 **Hardening**
+
 - A.6.2.6: Test all components in AIMS testing programme —
   signature verification, descriptor review for hidden
   instructions, behavioural testing in isolated environment
@@ -280,6 +294,7 @@ system components under ISO 42001.
   procedure documented as AIMS operational control
 
 **Advanced**
+
 - A.10.2: Document supply chain security obligations
   provided to downstream consumers — what component
   integrity they can rely on when consuming your
@@ -289,6 +304,7 @@ system components under ISO 42001.
   performance in management review
 
 #### Cross-references
+
 - LLM Top 10: LLM04 Supply Chain
 - DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning
 - Other frameworks: NIST SP 800-218A · NIST CSF 2.0 GV.SC-01 · ISO 27001 A.5.19/A.5.21
@@ -317,6 +333,7 @@ agentic deployment is severe and must be formally accepted.
 #### Mitigations for ISO 42001 alignment
 
 **Foundational**
+
 - Cl.6.1: Document code execution risk in AI risk register —
   sandbox status, permitted operations, blast radius,
   formal risk acceptance before any agentic code execution
@@ -329,6 +346,7 @@ agentic deployment is severe and must be formally accepted.
   without these controls documented
 
 **Hardening**
+
 - A.6.2.6: Include sandbox escape scenarios in AIMS
   testing — adversarial code injection tested before
   each deployment, results as AIMS test evidence
@@ -337,6 +355,7 @@ agentic deployment is severe and must be formally accepted.
   any code execution deployment
 
 **Advanced**
+
 - Hardware-level sandboxing as advanced A.6.2.3 security
   design control — documented in AIMS for highest-risk
   code execution deployments
@@ -345,6 +364,7 @@ agentic deployment is severe and must be formally accepted.
   effectiveness in management review
 
 #### Cross-references
+
 - LLM Top 10: LLM10 Improper Output Handling
 - DSGAI 2026: DSGAI12 Unsafe NL Data Gateways
 - Other frameworks: AIUC-1 B005/B006 · CWE-94 · ISA/IEC 62443 SR 3.3 (OT)
@@ -372,6 +392,7 @@ training data apply to agent memory that influences behaviour.
 #### Mitigations for ISO 42001 alignment
 
 **Foundational**
+
 - A.7.2: Establish data quality requirements for agent
   memory — access controls, write restrictions, content
   validation, TTL documented as AIMS data quality controls
@@ -383,6 +404,7 @@ training data apply to agent memory that influences behaviour.
   administrators can write, documented before deployment
 
 **Hardening**
+
 - A.6.2.8: Implement memory integrity monitoring as AIMS
   operational control — statistical anomaly detection,
   alerts integrated into AIMS incident management
@@ -391,6 +413,7 @@ training data apply to agent memory that influences behaviour.
   in AIMS
 
 **Advanced**
+
 - Cryptographic integrity verification of memory store
   as advanced A.6.2.3 security control — tamper
   detection documented in AIMS
@@ -399,6 +422,7 @@ training data apply to agent memory that influences behaviour.
   impact in management review
 
 #### Cross-references
+
 - LLM Top 10: LLM05 Data and Model Poisoning, LLM09 Vector and Embedding Weaknesses
 - DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning, DSGAI13 Vector Store Platform Security
 - Other frameworks: AIUC-1 A/B002 · NIST AI RMF MS-2.5 · ISA/IEC 62443 SR 3.7 (OT)
@@ -425,6 +449,7 @@ govern A2A communication security as an operational design control.
 #### Mitigations for ISO 42001 alignment
 
 **Foundational**
+
 - A.6.2.3: Document A2A authentication and encryption
   as AIMS security design requirements — mutual TLS,
   unique agent identities, replay protection specified
@@ -434,6 +459,7 @@ govern A2A communication security as an operational design control.
   management, anomaly response
 
 **Hardening**
+
 - A.6.2.6: Include A2A security scenarios in AIMS testing —
   unauthenticated injection, replay attacks, schema
   violations tested before deployment
@@ -441,6 +467,7 @@ govern A2A communication security as an operational design control.
   control — anomalous patterns, unusual senders alerted
 
 **Advanced**
+
 - Cl.9: Include A2A security incidents in AIMS
   performance evaluation — channel compromise events,
   authentication failures in management review
@@ -448,6 +475,7 @@ govern A2A communication security as an operational design control.
   A.6.2.3 security control — documented in AIMS
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI02 Agent Identity & Credential Exposure
 - Other frameworks: OWASP NHI Top 10 NHI-4/NHI-7 · AIUC-1 B007/B008 · ISA/IEC 62443 SR 3.1 (OT)
 
@@ -474,6 +502,7 @@ In OT environments this is Critical severity.
 #### Mitigations for ISO 42001 alignment
 
 **Foundational**
+
 - Cl.6.1: Document cascade blast radius in AI risk register —
   maximum systems affected by any single failure,
   formally accepted before multi-agent deployment
@@ -484,6 +513,7 @@ In OT environments this is Critical severity.
   under Clause 8 — tested as A.6.2.6 testing activity
 
 **Hardening**
+
 - A.6.2.8: Cascade detection monitoring as AIMS operational
   control — correlated failure patterns alerted before
   physical impact in OT environments
@@ -491,6 +521,7 @@ In OT environments this is Critical severity.
   failure propagation bounded by architecture
 
 **Advanced**
+
 - A.5.2: Impact assessment covers cascade scenarios —
   what physical or operational harm is possible from
   cascade in each deployment, documented in AIMS
@@ -499,6 +530,7 @@ In OT environments this is Critical severity.
   effectiveness, recovery times in management review
 
 #### Cross-references
+
 - LLM Top 10: LLM06 Unbounded Consumption
 - DSGAI 2026: DSGAI17 Data Availability & Resilience Failures
 - Other frameworks: AIUC-1 D · ISA/IEC 62443 SR 7.6/7.7 (OT) · NIST SP 800-82 Rev 3
@@ -526,6 +558,7 @@ obligations that are the primary defence against trust exploitation.
 #### Mitigations for ISO 42001 alignment
 
 **Foundational**
+
 - Cl.5: Establish AI transparency as policy commitment —
   AI disclosure, advisory labelling, and human oversight
   requirements documented at executive level in AIMS
@@ -538,6 +571,7 @@ obligations that are the primary defence against trust exploitation.
   how to identify AI output vs authoritative content
 
 **Hardening**
+
 - A.5.2: Include trust exploitation in AI impact assessment —
   which persons are affected by decisions influenced
   by manipulated agent trust, documented in AIMS
@@ -546,6 +580,7 @@ obligations that are the primary defence against trust exploitation.
   acceptance without verification detected
 
 **Advanced**
+
 - Cl.9: Include trust exploitation incidents in AIMS
   performance evaluation — pattern analysis, operator
   competency assessment results in management review
@@ -554,6 +589,7 @@ obligations that are the primary defence against trust exploitation.
   per Clause 7
 
 #### Cross-references
+
 - LLM Top 10: LLM07 Misinformation
 - DSGAI 2026: DSGAI21 Disinformation & Integrity Attacks
 - Other frameworks: EU AI Act Art. 13/50 · AIUC-1 C/F · ISA/IEC 62443 SR 2.3 (OT)
@@ -582,6 +618,7 @@ A.6.2.8 (monitoring) is the primary detection control.
 #### Mitigations for ISO 42001 alignment
 
 **Foundational**
+
 - A.6.1.2: Document comprehensive audit logging as
   responsible AI system management obligation — no
   agentic production deployment without full observability
@@ -593,6 +630,7 @@ A.6.2.8 (monitoring) is the primary detection control.
   procedure per deployment
 
 **Hardening**
+
 - A.6.2.8: Establish behavioural baseline and continuous
   monitoring as AIMS operational control — baseline
   documented during commissioning, deviation triggers
@@ -602,6 +640,7 @@ A.6.2.8 (monitoring) is the primary detection control.
   recommendation audit, state validation documented
 
 **Advanced**
+
 - Cl.9: Include rogue agent detection and containment
   in AIMS performance evaluation — detection rates,
   dwell time, blast radius, corrective actions in
@@ -611,6 +650,7 @@ A.6.2.8 (monitoring) is the primary detection control.
   through periodic pattern review
 
 #### Cross-references
+
 - LLM Top 10: LLM03 Excessive Agency
 - DSGAI 2026: DSGAI16 Endpoint & Browser Overreach
 - Other frameworks: AIUC-1 B001/B002/C/E · EU AI Act Art. 14/15 · ISA/IEC 62443 SR 3.7 (OT)
@@ -704,4 +744,4 @@ can use AIMS documented information as evidence of EU AI Act compliance
 ---
 
 Maintained by the OWASP GenAI Data Security Initiative.
-Part of the OWASP GenAI Crosswalk: https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk
+Part of the OWASP GenAI Crosswalk: <https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk>

@@ -76,6 +76,7 @@ laaf list-techniques --format table
 ### API keys
 
 Set at least one in your environment:
+
 ```bash
 export OPENAI_API_KEY=sk-...
 export ANTHROPIC_API_KEY=sk-ant-...

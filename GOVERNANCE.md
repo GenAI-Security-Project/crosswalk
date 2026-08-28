@@ -46,6 +46,7 @@ Issue before merging.
 
 **Mapping disputes** — if two contributors propose conflicting mappings
 for the same vulnerability and framework:
+
 1. Both proposals must cite a primary source (framework document, CVE, OWASP page).
 2. The framework lead for that mapping family makes the call.
 3. If no framework lead exists, the lead maintainer decides.
@@ -67,6 +68,7 @@ Releases follow [Semantic Versioning](https://semver.org/):
 | Org transfer or rename | Major (`X.0.0`) |
 
 Steps to cut a release:
+
 1. Update `CHANGELOG.md` with version entry and date.
 2. Update README.md version badge and counts.
 3. Commit: `Add [list of files] — vX.Y.Z`.

@@ -94,6 +94,7 @@ for agent prompts and context (SI-10), penetration testing covering agent
 hijacking (CA-8), and logging of all agent actions (AU-2).
 
 **Real-world references:**
+
 - EchoLeak (2025) – indirect prompt injection hijacked Microsoft 365
   Copilot agent goals via email content
 - Academic research demonstrating agent goal manipulation through
@@ -111,6 +112,7 @@ hijacking (CA-8), and logging of all agent actions (AU-2).
 #### Mitigations
 
 **Foundational**
+
 - SI-10: Implement input validation on all channels feeding agent
   context — user prompts, tool outputs, memory retrievals, inter-agent
   messages; enforce structural separation between instructions and data
@@ -120,6 +122,7 @@ hijacking (CA-8), and logging of all agent actions (AU-2).
   decision rationale; retain per FedRAMP requirements
 
 **Hardening**
+
 - CA-8: Include agent goal hijacking in penetration testing; cover all
   input channels including tool output poisoning and memory injection
 - SI-3: Deploy real-time goal consistency monitoring; alert when agent
@@ -128,6 +131,7 @@ hijacking (CA-8), and logging of all agent actions (AU-2).
   restricting available tools and actions
 
 **Advanced**
+
 - CA-8: Conduct structured red-team exercises targeting goal hijacking
   through multi-step tool chains and inter-agent communication
 - SI-10: Implement formal goal verification at each agent decision
@@ -139,12 +143,13 @@ hijacking (CA-8), and logging of all agent actions (AU-2).
 
 | Tool | Type | Link |
 |---|---|---|
-| Garak | Open-source | https://github.com/leondz/garak |
-| PyRIT | Open-source | https://github.com/Azure/PyRIT |
-| LLM Guard | Open-source | https://github.com/protectai/llm-guard |
-| LangSmith | Commercial | https://smith.langchain.com |
+| Garak | Open-source | <https://github.com/leondz/garak> |
+| PyRIT | Open-source | <https://github.com/Azure/PyRIT> |
+| LLM Guard | Open-source | <https://github.com/protectai/llm-guard> |
+| LangSmith | Commercial | <https://smith.langchain.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM01 Prompt Injection
 - DSGAI 2026: DSGAI01 Sensitive Data Leakage, DSGAI12 Unsafe NL Data Gateways
 - Other frameworks: MITRE ATLAS AML.T0051 – SP 800-218A PW.2.1-PS – NIST CSF 2.0 PR.AC-5
@@ -174,6 +179,7 @@ decisions (AU-2).
 #### Mitigations
 
 **Foundational**
+
 - AC-6: Define explicit least privilege policies for each agent; document
   maximum permitted tool access, data store access, and API scope
 - AC-3: Implement role-based access control on all agent resources;
@@ -182,6 +188,7 @@ decisions (AU-2).
   a capability manifest per agent deployment
 
 **Hardening**
+
 - AU-2: Log all access decisions with full context; review access
   patterns for over-privileging indicators
 - AC-3: Implement just-in-time access for agent tool invocations;
@@ -190,6 +197,7 @@ decisions (AU-2).
   assessment; remove unused permissions
 
 **Advanced**
+
 - AC-6: Implement dynamic privilege adjustment based on agent context
   and risk level; escalate to human approval for high-risk operations
 - AC-3: Deploy policy-as-code for agent access control; automate
@@ -201,12 +209,13 @@ decisions (AU-2).
 
 | Tool | Type | Link |
 |---|---|---|
-| Open Policy Agent | Open-source | https://www.openpolicyagent.org |
-| Guardrails AI | Open-source | https://github.com/guardrails-ai/guardrails |
-| HashiCorp Vault | Commercial | https://www.vaultproject.io |
-| AWS IAM / Azure RBAC | Commercial | https://aws.amazon.com/iam/ |
+| Open Policy Agent | Open-source | <https://www.openpolicyagent.org> |
+| Guardrails AI | Open-source | <https://github.com/guardrails-ai/guardrails> |
+| HashiCorp Vault | Commercial | <https://www.vaultproject.io> |
+| AWS IAM / Azure RBAC | Commercial | <https://aws.amazon.com/iam/> |
 
 #### Cross-references
+
 - LLM Top 10: LLM03 Excessive Agency
 - DSGAI 2026: DSGAI06 Data Lineage Fragmentation
 - Other frameworks: SP 800-218A PW.1.1-PS – NIST CSF 2.0 PR.AC-4 – CIS Controls 6
@@ -236,6 +245,7 @@ at tool boundaries (AC-3), and incident handling for escalation events (IR-4).
 #### Mitigations
 
 **Foundational**
+
 - AC-6: Define explicit privilege ceilings per agent; prevent privilege
   accumulation through chained operations or delegated authority
 - IA-2: Assign unique non-human identities to each agent; authenticate
@@ -244,6 +254,7 @@ at tool boundaries (AC-3), and incident handling for escalation events (IR-4).
   never inherit permissions from calling agent context
 
 **Hardening**
+
 - IR-4: Define automated containment procedures for detected privilege
   escalation; include privilege revocation and session termination
 - AC-6: Implement privilege decay; agent permissions expire after
@@ -252,6 +263,7 @@ at tool boundaries (AC-3), and incident handling for escalation events (IR-4).
   workflows; verify identity at each delegation point
 
 **Advanced**
+
 - AC-3: Deploy formal access control verification; prove that no
   sequence of tool invocations can exceed the defined privilege ceiling
 - IR-4: Conduct tabletop exercises for agent privilege escalation
@@ -263,12 +275,13 @@ at tool boundaries (AC-3), and incident handling for escalation events (IR-4).
 
 | Tool | Type | Link |
 |---|---|---|
-| Open Policy Agent | Open-source | https://www.openpolicyagent.org |
-| SPIFFE/SPIRE | Open-source | https://spiffe.io |
-| HashiCorp Vault | Commercial | https://www.vaultproject.io |
-| CyberArk | Commercial | https://www.cyberark.com |
+| Open Policy Agent | Open-source | <https://www.openpolicyagent.org> |
+| SPIFFE/SPIRE | Open-source | <https://spiffe.io> |
+| HashiCorp Vault | Commercial | <https://www.vaultproject.io> |
+| CyberArk | Commercial | <https://www.cyberark.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM03 Excessive Agency
 - DSGAI 2026: DSGAI08 Data Leakage & Exposure
 - Other frameworks: SP 800-218A PW.1.1-PS – MITRE ATLAS AML.T0015 – CWE-269
@@ -298,6 +311,7 @@ development lifecycle for agent systems (SA-3).
 #### Mitigations
 
 **Foundational**
+
 - SR-2: Establish an approved sources policy for agent components;
   tools, plugins, MCP servers, and frameworks must come from vetted
   sources with documented provenance
@@ -307,6 +321,7 @@ development lifecycle for agent systems (SA-3).
   agent service providers
 
 **Hardening**
+
 - SA-3: Integrate agent security review into the SDLC; gate deployments
   on security sign-off for all new tool integrations
 - SR-3: Implement automated supply chain integrity verification in
@@ -315,6 +330,7 @@ development lifecycle for agent systems (SA-3).
   agent service agreements
 
 **Advanced**
+
 - SR-2: Conduct backdoor detection on agent tools and plugins from
   third-party providers; test for malicious behaviour in sandbox
 - SA-9: Include agent provider security posture in FedRAMP continuous
@@ -326,12 +342,13 @@ development lifecycle for agent systems (SA-3).
 
 | Tool | Type | Link |
 |---|---|---|
-| CycloneDX | Open-source | https://cyclonedx.org |
-| ModelScan | Open-source | https://github.com/protectai/modelscan |
-| Sigstore | Open-source | https://www.sigstore.dev |
-| OWASP Dependency-Check | Open-source | https://owasp.org/www-project-dependency-check/ |
+| CycloneDX | Open-source | <https://cyclonedx.org> |
+| ModelScan | Open-source | <https://github.com/protectai/modelscan> |
+| Sigstore | Open-source | <https://www.sigstore.dev> |
+| OWASP Dependency-Check | Open-source | <https://owasp.org/www-project-dependency-check/> |
 
 #### Cross-references
+
 - LLM Top 10: LLM04 Supply Chain
 - DSGAI 2026: DSGAI04 Data, Model & Artifact Poisoning, DSGAI19 Third-Party Data Risk
 - Other frameworks: MITRE ATLAS AML.T0056 – SP 800-218A PW.4.1-PS – CycloneDX ML SBOM
@@ -362,6 +379,7 @@ sandboxes (SC-7), malicious code protection for agent-generated code
 #### Mitigations
 
 **Foundational**
+
 - CM-7: Restrict agent code execution to sandboxed environments with
   minimum necessary capabilities; disable filesystem access, network
   communication, and system calls not explicitly required
@@ -371,6 +389,7 @@ sandboxes (SC-7), malicious code protection for agent-generated code
   block execution of code matching malicious patterns
 
 **Hardening**
+
 - CA-8: Include sandbox escape testing in penetration testing; verify
   that agents cannot break out of execution boundaries
 - CM-7: Implement allowlisting for permitted code operations; deny
@@ -379,6 +398,7 @@ sandboxes (SC-7), malicious code protection for agent-generated code
   process, and language runtime levels
 
 **Advanced**
+
 - CA-8: Conduct structured red-team exercises targeting code execution
   through multi-step agent manipulation; test full attack chain
 - SI-3: Deploy runtime code analysis during agent execution; detect
@@ -390,12 +410,13 @@ sandboxes (SC-7), malicious code protection for agent-generated code
 
 | Tool | Type | Link |
 |---|---|---|
-| gVisor | Open-source | https://gvisor.dev |
-| Firecracker | Open-source | https://firecracker-microvm.github.io |
-| Semgrep | Open-source | https://semgrep.dev |
-| E2B | Open-source | https://e2b.dev |
+| gVisor | Open-source | <https://gvisor.dev> |
+| Firecracker | Open-source | <https://firecracker-microvm.github.io> |
+| Semgrep | Open-source | <https://semgrep.dev> |
+| E2B | Open-source | <https://e2b.dev> |
 
 #### Cross-references
+
 - LLM Top 10: LLM01 Prompt Injection, LLM03 Excessive Agency
 - DSGAI 2026: DSGAI08 Data Leakage & Exposure
 - Other frameworks: CWE-94 – SP 800-218A PW.5.1-PS – MITRE ATLAS AML.T0015
@@ -425,6 +446,7 @@ scanning covering memory infrastructure (RA-5).
 #### Mitigations
 
 **Foundational**
+
 - SC-28: Encrypt all agent memory stores at rest; implement access
   controls restricting read/write to authorised agent instances
 - AU-2: Log all memory operations with agent identity, operation type,
@@ -433,6 +455,7 @@ scanning covering memory infrastructure (RA-5).
   content failing integrity checks
 
 **Hardening**
+
 - SI-3: Deploy anomaly detection on memory writes; flag content
   inconsistent with expected patterns or agent context
 - RA-5: Include memory store security in vulnerability assessments;
@@ -441,6 +464,7 @@ scanning covering memory infrastructure (RA-5).
   on unauthorised modifications to stored context
 
 **Advanced**
+
 - Implement memory provenance tracking; record the source and
   chain of custody for all stored context
 - SI-3: Deploy continuous memory store monitoring; detect gradual
@@ -452,12 +476,13 @@ scanning covering memory infrastructure (RA-5).
 
 | Tool | Type | Link |
 |---|---|---|
-| Weaviate | Open-source | https://weaviate.io |
-| LangSmith | Commercial | https://smith.langchain.com |
-| OpenTelemetry | Open-source | https://opentelemetry.io |
-| HashiCorp Vault | Commercial | https://www.vaultproject.io |
+| Weaviate | Open-source | <https://weaviate.io> |
+| LangSmith | Commercial | <https://smith.langchain.com> |
+| OpenTelemetry | Open-source | <https://opentelemetry.io> |
+| HashiCorp Vault | Commercial | <https://www.vaultproject.io> |
 
 #### Cross-references
+
 - LLM Top 10: LLM05 Data and Model Poisoning, LLM09 Vector and Embedding Weaknesses
 - DSGAI 2026: DSGAI04 Data, Model & Artifact Poisoning
 - Other frameworks: MITRE ATLAS AML.T0018 – SP 800-218A PS.1.1-PS – CWE-1395
@@ -487,6 +512,7 @@ boundary (AC-3), and comprehensive tool invocation logging (AU-2).
 #### Mitigations
 
 **Foundational**
+
 - AC-6: Define permitted tool chains per agent role; restrict tool
   combinations to pre-approved sequences
 - AC-3: Enforce access control independently at each tool boundary;
@@ -495,6 +521,7 @@ boundary (AC-3), and comprehensive tool invocation logging (AU-2).
   and context at each step
 
 **Hardening**
+
 - CM-7: Implement tool chain allowlisting; deny tool combinations not
   explicitly approved; alert on attempts to invoke undefined sequences
 - AC-6: Implement transaction-level authorisation for multi-step
@@ -504,6 +531,7 @@ boundary (AC-3), and comprehensive tool invocation logging (AU-2).
   alert on novel tool combinations
 
 **Advanced**
+
 - AC-3: Deploy formal tool chain analysis; verify that no permitted
   tool combination can achieve outcomes beyond the defined privilege
   ceiling
@@ -516,12 +544,13 @@ boundary (AC-3), and comprehensive tool invocation logging (AU-2).
 
 | Tool | Type | Link |
 |---|---|---|
-| Open Policy Agent | Open-source | https://www.openpolicyagent.org |
-| Guardrails AI | Open-source | https://github.com/guardrails-ai/guardrails |
-| LangSmith | Commercial | https://smith.langchain.com |
-| NeMo Guardrails | Open-source | https://github.com/NVIDIA/NeMo-Guardrails |
+| Open Policy Agent | Open-source | <https://www.openpolicyagent.org> |
+| Guardrails AI | Open-source | <https://github.com/guardrails-ai/guardrails> |
+| LangSmith | Commercial | <https://smith.langchain.com> |
+| NeMo Guardrails | Open-source | <https://github.com/NVIDIA/NeMo-Guardrails> |
 
 #### Cross-references
+
 - LLM Top 10: LLM03 Excessive Agency
 - DSGAI 2026: DSGAI06 Data Lineage Fragmentation
 - Other frameworks: SP 800-218A PW.1.1-PS – MITRE ATLAS AML.T0015 – CWE-269
@@ -551,6 +580,7 @@ strategy covering automation risk (PM-9).
 #### Mitigations
 
 **Foundational**
+
 - SC-7: Enforce boundaries between agents; prevent direct state sharing
   without validation; implement circuit breakers at agent boundaries
 - SI-4: Monitor inter-agent communication for anomalous patterns;
@@ -559,6 +589,7 @@ strategy covering automation risk (PM-9).
   agents before cascading failure spreads
 
 **Hardening**
+
 - PM-9: Define maximum acceptable blast radius for agent failures;
   design multi-agent architectures with failure containment
 - SC-7: Implement rate limiting on inter-agent communication; prevent
@@ -567,6 +598,7 @@ strategy covering automation risk (PM-9).
   scenarios; test circuit breaker effectiveness
 
 **Advanced**
+
 - SI-4: Deploy cascade prediction models; identify early indicators
   of cascading failure and trigger preventive isolation
 - SC-7: Implement formal failure domain analysis for multi-agent
@@ -579,12 +611,13 @@ strategy covering automation risk (PM-9).
 
 | Tool | Type | Link |
 |---|---|---|
-| OpenTelemetry | Open-source | https://opentelemetry.io |
-| Istio | Open-source | https://istio.io |
-| LangSmith | Commercial | https://smith.langchain.com |
-| PagerDuty | Commercial | https://www.pagerduty.com |
+| OpenTelemetry | Open-source | <https://opentelemetry.io> |
+| Istio | Open-source | <https://istio.io> |
+| LangSmith | Commercial | <https://smith.langchain.com> |
+| PagerDuty | Commercial | <https://www.pagerduty.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM06 Unbounded Consumption
 - DSGAI 2026: DSGAI17 Data Availability & Resilience Failures
 - Other frameworks: SP 800-218A PW.2.1-PS – NIST CSF 2.0 RS.RP-1 – ISA/IEC 62443 SR 7.1
@@ -615,6 +648,7 @@ agent decisions (AU-6).
 #### Mitigations
 
 **Foundational**
+
 - CA-7: Include agentic AI behaviour monitoring in continuous
   monitoring programme; track for capability drift and unexpected
   behaviour patterns
@@ -624,6 +658,7 @@ agent decisions (AU-6).
   behaviour profiles and alert on deviations
 
 **Hardening**
+
 - AU-6: Conduct regular review of agent decision logs; identify
   patterns requiring security assessment; escalate through risk
   governance channels
@@ -633,6 +668,7 @@ agent decisions (AU-6).
   scanning; update scanning rules as new attack techniques are published
 
 **Advanced**
+
 - Participate in AI security research communities; stay current on
   emerging agentic attack techniques and defences
 - CA-7: Include emerging agentic pattern risk in FedRAMP annual
@@ -644,12 +680,13 @@ agent decisions (AU-6).
 
 | Tool | Type | Link |
 |---|---|---|
-| LangSmith | Commercial | https://smith.langchain.com |
-| OpenTelemetry | Open-source | https://opentelemetry.io |
-| Garak | Open-source | https://github.com/leondz/garak |
-| PyRIT | Open-source | https://github.com/Azure/PyRIT |
+| LangSmith | Commercial | <https://smith.langchain.com> |
+| OpenTelemetry | Open-source | <https://opentelemetry.io> |
+| Garak | Open-source | <https://github.com/leondz/garak> |
+| PyRIT | Open-source | <https://github.com/Azure/PyRIT> |
 
 #### Cross-references
+
 - LLM Top 10: LLM07 Misinformation
 - DSGAI 2026: DSGAI18 Governance Gaps
 - Other frameworks: NIST AI RMF MAP 1.5 – SP 800-218A PW.7.2-PS – ISO 42001 A.6.2.6
@@ -680,6 +717,7 @@ failures (IR-4).
 #### Mitigations
 
 **Foundational**
+
 - SR-2: Document all agent external dependencies in the supply chain
   plan; assess availability and single-point-of-failure risk
 - SA-9: Establish SLAs with dependency providers covering availability,
@@ -688,6 +726,7 @@ failures (IR-4).
   performance degradation
 
 **Hardening**
+
 - IR-4: Define and test automated fallback procedures for dependency
   failures; include graceful degradation and safe-state transitions
 - SA-9: Identify critical agent dependencies; require redundant
@@ -696,6 +735,7 @@ failures (IR-4).
   detection and alerting capabilities
 
 **Advanced**
+
 - SR-2: Conduct dependency failure impact analysis; quantify the
   blast radius of each dependency failure on agent system functionality
 - IR-4: Include dependency failure in FedRAMP contingency testing;
@@ -707,12 +747,13 @@ failures (IR-4).
 
 | Tool | Type | Link |
 |---|---|---|
-| OpenTelemetry | Open-source | https://opentelemetry.io |
-| LiteLLM | Open-source | https://github.com/BerriAI/litellm |
-| PagerDuty | Commercial | https://www.pagerduty.com |
-| Istio | Open-source | https://istio.io |
+| OpenTelemetry | Open-source | <https://opentelemetry.io> |
+| LiteLLM | Open-source | <https://github.com/BerriAI/litellm> |
+| PagerDuty | Commercial | <https://www.pagerduty.com> |
+| Istio | Open-source | <https://istio.io> |
 
 #### Cross-references
+
 - LLM Top 10: LLM04 Supply Chain, LLM06 Unbounded Consumption
 - DSGAI 2026: DSGAI19 Third-Party Data Risk
 - Other frameworks: SP 800-218A PW.4.1-PS – NIST CSF 2.0 ID.SC-2 – CWE-754
@@ -749,5 +790,7 @@ failures (IR-4).
 
 ---
 
-*Part of the [OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk) –
+*Part of the
+[OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk)
+–
 maintained by the [OWASP GenAI Data Security Initiative](https://genai.owasp.org)*

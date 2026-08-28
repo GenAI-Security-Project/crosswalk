@@ -107,6 +107,7 @@ invisible-Unicode carriers survive review of the rendered interface.
 #### Mitigations by CSF function
 
 **GOVERN**
+
 - GV.OC-01: Define acceptable use policy for LLM applications —
   specify which input channels are permitted, what content is
   trusted, and what constitutes an injection attempt
@@ -114,6 +115,7 @@ invisible-Unicode carriers survive review of the rendered interface.
   document risk owner, treatment, and review cadence
 
 **IDENTIFY**
+
 - ID.RA-01: Document prompt injection as a vulnerability in every
   LLM asset's risk assessment — include indirect injection via
   RAG, tool returns, and processed documents
@@ -121,6 +123,7 @@ invisible-Unicode carriers survive review of the rendered interface.
   unknown input surfaces cannot be protected
 
 **PROTECT**
+
 - PR.PS-04: Implement input validation as a platform security
   control — treat all external content as untrusted before
   entering LLM context
@@ -128,12 +131,14 @@ invisible-Unicode carriers survive review of the rendered interface.
   user input — structural control, not policy only
 
 **DETECT**
+
 - DE.CM-01: Monitor LLM input channels for injection indicators —
   anomalous inputs detected and alerted in real time
 - DE.AE-02: Analyse detected events to understand attack targets —
   injection attempts correlated across sessions
 
 **RESPOND**
+
 - RS.AN-03: Analyse incidents to determine root cause —
   injection incidents investigated, IOCs documented
 - RS.MI-01: Contain injection incidents — session termination,
@@ -143,10 +148,11 @@ invisible-Unicode carriers survive review of the rendered interface.
 
 | Tool | Type | Link |
 |---|---|---|
-| Garak | Open-source | https://github.com/leondz/garak |
-| LLM Guard | Open-source | https://github.com/protectai/llm-guard |
+| Garak | Open-source | <https://github.com/leondz/garak> |
+| LLM Guard | Open-source | <https://github.com/protectai/llm-guard> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI01 Agent Goal Hijack
 - DSGAI 2026: DSGAI01 Sensitive Data Leakage, DSGAI12 Unsafe NL Data Gateways
 - Other frameworks: NIST AI RMF MS-2.5 · ISO 27001 A.8.28 · CIS Controls CIS 16
@@ -173,17 +179,20 @@ outputs. CSF 2.0 data security (PR.DS) and continuous monitoring
 #### Mitigations by CSF function
 
 **GOVERN**
+
 - GV.RM-06: Establish risk tolerance for sensitive data disclosure
   per LLM use case — what classifications are permitted in LLM
   scope and what controls are required
 
 **IDENTIFY**
+
 - ID.AM-08: Inventory all data assets accessible by LLM systems —
   training data, RAG sources, embedding stores, prompt caches
 - ID.RA-03: Identify threats to sensitive data via LLM exposure —
   memorisation, over-retrieval, output reconstruction
 
 **PROTECT**
+
 - PR.DS-01: Encrypt all sensitive data at rest in LLM scope —
   embedding stores, training datasets, RAG document stores,
   prompt caches
@@ -193,10 +202,12 @@ outputs. CSF 2.0 data security (PR.DS) and continuous monitoring
   least-privilege retrieval aligned with user authorisation
 
 **DETECT**
+
 - DE.CM-01: Deploy DLP on all LLM output channels —
   PII and sensitive patterns detected before delivery
 
 **RESPOND**
+
 - RS.AN-03: Investigate sensitive data disclosure incidents —
   determine scope, affected data subjects, regulatory obligations
 - RS.CO-03: Report incidents as required — data breach notification
@@ -206,10 +217,11 @@ outputs. CSF 2.0 data security (PR.DS) and continuous monitoring
 
 | Tool | Type | Link |
 |---|---|---|
-| Microsoft Presidio | Open-source | https://github.com/microsoft/presidio |
-| Nightfall AI | Commercial | https://nightfall.ai |
+| Microsoft Presidio | Open-source | <https://github.com/microsoft/presidio> |
+| Nightfall AI | Commercial | <https://nightfall.ai> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI03 Identity & Privilege Abuse
 - DSGAI 2026: DSGAI01 Sensitive Data Leakage, DSGAI18 Inference & Data Reconstruction
 - Other frameworks: ISO 27001 A.8.11/A.8.12 · NIST AI RMF GV-1.6 · EU AI Act Art. 10
@@ -236,6 +248,7 @@ context (GV.OC) are the primary categories.
 #### Mitigations by CSF function
 
 **GOVERN**
+
 - GV.OC-01: Define acceptable scope for LLM autonomous
   actions — which tool operations are permitted without
   human confirmation, which are prohibited autonomously
@@ -243,11 +256,13 @@ context (GV.OC) are the primary categories.
   strategy — document blast radius per deployment
 
 **IDENTIFY**
+
 - ID.AM-08: Inventory all LLM tool integrations — what
   each tool can do, what permissions it holds, what
   systems it can affect
 
 **PROTECT**
+
 - PR.AA-05: Implement least-privilege access for all LLM
   tool integrations — minimum permissions enforced,
   reviewed on change and quarterly
@@ -255,11 +270,13 @@ context (GV.OC) are the primary categories.
   per deployment, permissions scoped to defined role
 
 **DETECT**
+
 - DE.CM-01: Log and monitor all LLM tool invocations —
   anomalous scope, unusual parameters, or high frequency
   detected and alerted
 
 **RESPOND**
+
 - RS.MI-01: Contain excessive agency incidents — suspend
   agent, review all actions taken, reverse where possible
 
@@ -267,10 +284,11 @@ context (GV.OC) are the primary categories.
 
 | Tool | Type | Link |
 |---|---|---|
-| Guardrails AI | Open-source | https://github.com/guardrails-ai/guardrails |
-| NeMo Guardrails | Open-source | https://github.com/NVIDIA/NeMo-Guardrails |
+| Guardrails AI | Open-source | <https://github.com/guardrails-ai/guardrails> |
+| NeMo Guardrails | Open-source | <https://github.com/NVIDIA/NeMo-Guardrails> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI01 Agent Goal Hijack, ASI02 Tool Misuse
 - DSGAI 2026: DSGAI06 Tool Plugin & Agent Data Exchange
 - Other frameworks: AIUC-1 B006 · EU AI Act Art. 14 · ISA/IEC 62443 SR 2.1 (OT)
@@ -304,6 +322,7 @@ dependency is clean.
 #### Mitigations by CSF function
 
 **GOVERN**
+
 - GV.SC-01: Establish cybersecurity supply chain risk management
   programme covering LLM components — model providers, dataset
   vendors, inference runtime suppliers
@@ -312,6 +331,7 @@ dependency is clean.
   disclosure obligations, incident notification SLA
 
 **IDENTIFY**
+
 - ID.AM-08: Maintain ML SBOM as part of asset inventory —
   every LLM component (model, adapters, libraries) inventoried
   with version, source, and hash
@@ -320,17 +340,20 @@ dependency is clean.
   and model repository compromise
 
 **PROTECT**
+
 - PR.PS-02: Implement vulnerability management for all LLM
   components — scan SBOM against known CVEs, patch on schedule
 - Pin all LLM component versions — no automatic updates
   without review and approval
 
 **DETECT**
+
 - DE.CM-09: Monitor for use of unauthorised software —
   alert on LLM component changes outside approved change
   management process
 
 **RESPOND**
+
 - RS.AN-03: Investigate supply chain incidents —
   determine which deployments are affected by a compromised
   LLM component
@@ -339,11 +362,12 @@ dependency is clean.
 
 | Tool | Type | Link |
 |---|---|---|
-| CycloneDX | Open-source | https://cyclonedx.org |
-| ModelScan | Open-source | https://github.com/protectai/modelscan |
-| Grype | Open-source | https://github.com/anchore/grype |
+| CycloneDX | Open-source | <https://cyclonedx.org> |
+| ModelScan | Open-source | <https://github.com/protectai/modelscan> |
+| Grype | Open-source | <https://github.com/anchore/grype> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI04 Agentic Supply Chain Vulnerabilities
 - DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning
 - Other frameworks: NIST SP 800-218A · ISO 27001 A.5.19/A.5.21 · CIS Controls CIS 2
@@ -375,11 +399,13 @@ stage that writes weights, not just the original training corpus.
 #### Mitigations by CSF function
 
 **GOVERN**
+
 - GV.SC-01: Apply supply chain controls to training data
   sources — same programme covering model weights extends
   to dataset vendors and data pipeline components
 
 **IDENTIFY**
+
 - ID.RA-01: Document poisoning attack vectors in risk
   assessment per LLM deployment — training data sources,
   fine-tuning pipeline, model weights, supply chain
@@ -387,6 +413,7 @@ stage that writes weights, not just the original training corpus.
   data sources as part of asset management
 
 **PROTECT**
+
 - PR.DS-01: Implement training data integrity controls —
   hash-based provenance, source allowlisting, anomaly
   detection on data distributions before training runs
@@ -394,6 +421,7 @@ stage that writes weights, not just the original training corpus.
   checkpoint always available for revert
 
 **DETECT**
+
 - DE.CM-09: Verify model integrity at deployment —
   hash-based check against approved baseline before any
   production promotion
@@ -402,6 +430,7 @@ stage that writes weights, not just the original training corpus.
   drift indicating poisoning
 
 **RESPOND**
+
 - RS.AN-03: Investigate poisoning incidents — identify
   affected training runs, assess downstream deployments,
   determine physical or operational impact
@@ -412,10 +441,11 @@ stage that writes weights, not just the original training corpus.
 
 | Tool | Type | Link |
 |---|---|---|
-| IBM Adversarial Robustness Toolbox | Open-source | https://github.com/Trusted-AI/adversarial-robustness-toolbox |
-| CleanLab | Open-source | https://github.com/cleanlab/cleanlab |
+| IBM Adversarial Robustness Toolbox | Open-source | <https://github.com/Trusted-AI/adversarial-robustness-toolbox> |
+| CleanLab | Open-source | <https://github.com/cleanlab/cleanlab> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning, DSGAI21 Disinformation via Data Poisoning
 - Other frameworks: NIST AI RMF MS-3.3 · MITRE ATLAS AML.T0032 · ISO 27001 A.8.27
@@ -442,24 +472,29 @@ are the primary categories.
 #### Mitigations by CSF function
 
 **GOVERN**
+
 - GV.RM-01: Include LLM availability in risk management
   strategy — define acceptable consumption thresholds,
   cost budgets, and DoS risk tolerance
 
 **PROTECT**
+
 - PR.IR-01: Implement rate limiting and resource controls
   as resilience measures — hard token caps, per-user
   budgets, circuit breakers enforced at API gateway
 
 **DETECT**
+
 - DE.CM-01: Monitor LLM resource consumption in real time —
   anomalous consumption spikes detected and alerted
 
 **RESPOND**
+
 - RS.MI-01: Contain consumption incidents — automated rate
   tightening, session suspension, cost circuit breakers
 
 **RECOVER**
+
 - RC.RP-01: Recovery plan covers LLM service restoration —
   BCP includes LLM availability requirements, RTO/RPO defined
 
@@ -467,10 +502,11 @@ are the primary categories.
 
 | Tool | Type | Link |
 |---|---|---|
-| LiteLLM | Open-source | https://github.com/BerriAI/litellm |
-| Kong Gateway | Open-source | https://github.com/Kong/kong |
+| LiteLLM | Open-source | <https://github.com/BerriAI/litellm> |
+| Kong Gateway | Open-source | <https://github.com/Kong/kong> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI08 Cascading Agent Failures
 - DSGAI 2026: DSGAI17 Data Availability & Resilience Failures
 - Other frameworks: ISA/IEC 62443 SR 7.6 (OT) · CIS Controls CIS 12 · NIST SP 800-82 (OT)
@@ -497,22 +533,26 @@ governance and people risk, not only a technical risk.
 #### Mitigations by CSF function
 
 **GOVERN**
+
 - GV.OC-01: Define accuracy requirements per LLM use case —
   which domains require human verification, which are
   acceptable for advisory use without verification
 
 **IDENTIFY**
+
 - ID.RA-01: Assess misinformation risk per deployment —
   what decisions are influenced by LLM output, what
   is the consequence of incorrect recommendations
 
 **PROTECT**
+
 - PR.AT-01: Train all users of LLM decision-support tools
   on output limitations — mandatory before access granted
 - Deploy RAG grounded on authoritative, version-controlled
   sources — citations displayed alongside responses
 
 **DETECT**
+
 - DE.CM-09: Monitor production accuracy metrics —
   hallucination rates per domain, alert on degradation
 
@@ -520,10 +560,11 @@ governance and people risk, not only a technical risk.
 
 | Tool | Type | Link |
 |---|---|---|
-| TruLens | Open-source | https://github.com/truera/trulens |
-| RAGAS | Open-source | https://github.com/explodinggradients/ragas |
+| TruLens | Open-source | <https://github.com/truera/trulens> |
+| RAGAS | Open-source | <https://github.com/explodinggradients/ragas> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI09 Human-Agent Trust Exploitation
 - DSGAI 2026: DSGAI21 Disinformation & Integrity Attacks
 - Other frameworks: EU AI Act Art. 13/50 · AIUC-1 F · NIST AI RMF GV-1.7
@@ -561,27 +602,32 @@ treat it as a security boundary.
 #### Mitigations by CSF function
 
 **GOVERN**
+
 - GV.RM-06: Assess the security value of system prompt
   confidentiality per deployment — prompts containing
   operational details require higher protection level
 
 **PROTECT**
+
 - PR.DS-01: Encrypt system prompts at rest — not in cleartext
   configuration files, source code, or environment variables
 - PR.AA-05: Restrict system prompt access to authorised
   personnel — version controlled, access logged
 
 **DETECT**
+
 - DE.CM-01: Monitor access to system prompt storage —
   alert on anomalous access patterns
 - Conduct prompt extraction testing — verify resistance
   to known extraction techniques before deployment
 
 **RESPOND**
+
 - RS.AN-03: Investigate extraction incidents — assess
   what operational intelligence an attacker gained
 
 #### Cross-references
+
 - Agentic Top 10: ASI01 Agent Goal Hijack
 - DSGAI 2026: DSGAI15 Over-Broad Context Windows
 - Other frameworks: AIUC-1 B003/B009 · ISO 27001 A.5.12 · CWE-200
@@ -608,17 +654,20 @@ asset management (ID.AM) are the primary categories.
 #### Mitigations by CSF function
 
 **IDENTIFY**
+
 - ID.AM-08: Inventory all vector stores as AI data assets —
   document RBAC status, encryption status, content
   classification, and known CVE exposure
 
 **PROTECT**
+
 - PR.DS-01: Encrypt all vector store content at rest —
   same protection as source documents
 - PR.AA-05: Enable RBAC on all vector stores —
   no unauthenticated access in any environment
 
 **DETECT**
+
 - DE.CM-09: Monitor vector store query patterns —
   bulk extraction, unusual query diversity detected
 - Patch all vector database CVEs promptly —
@@ -628,10 +677,11 @@ asset management (ID.AM) are the primary categories.
 
 | Tool | Type | Link |
 |---|---|---|
-| Weaviate | Open-source | https://weaviate.io |
-| ML Privacy Meter | Open-source | https://github.com/privacytrustlab/ml_privacy_meter |
+| Weaviate | Open-source | <https://weaviate.io> |
+| ML Privacy Meter | Open-source | <https://github.com/privacytrustlab/ml_privacy_meter> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - DSGAI 2026: DSGAI13 Vector Store Platform Security, DSGAI18 Inference & Data Reconstruction
 - Other frameworks: NIST AI RMF MS-2.5 · ISO 27001 A.8.3/A.8.24 · CIS Controls CIS 3
@@ -664,11 +714,13 @@ reaches a shell, a browser, or a database.
 #### Mitigations by CSF function
 
 **IDENTIFY**
+
 - ID.RA-01: Document output injection as a vulnerability in
   all LLM integration risk assessments — cover XSS, SQL
   injection, command injection via model output
 
 **PROTECT**
+
 - PR.PS-04: Implement output encoding and schema validation
   as secure development requirements — treat LLM output as
   untrusted input to all downstream systems
@@ -676,10 +728,12 @@ reaches a shell, a browser, or a database.
   system boundaries — schema enforcement at API gateway
 
 **DETECT**
+
 - DE.CM-01: Monitor LLM output channels for injection patterns —
   automated detection of dangerous content in model responses
 
 **RESPOND**
+
 - RS.MI-01: Contain output injection incidents — block
   affected session, review downstream state changes
 
@@ -687,10 +741,11 @@ reaches a shell, a browser, or a database.
 
 | Tool | Type | Link |
 |---|---|---|
-| OWASP ZAP | Open-source | https://www.zaproxy.org |
-| Semgrep | Open-source | https://semgrep.dev |
+| OWASP ZAP | Open-source | <https://www.zaproxy.org> |
+| Semgrep | Open-source | <https://semgrep.dev> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI02 Tool Misuse, ASI05 Unexpected Code Execution
 - DSGAI 2026: DSGAI05 Data Integrity & Validation Failures, DSGAI12 Unsafe NL Data Gateways
 - Other frameworks: OWASP ASVS V5 · CIS Controls CIS 16 · CWE-79/CWE-89
@@ -744,4 +799,4 @@ profile provides a starting point for LLM security programme alignment:
 ---
 
 Maintained by the OWASP GenAI Data Security Initiative.
-Part of the OWASP GenAI Crosswalk: https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk
+Part of the OWASP GenAI Crosswalk: <https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk>

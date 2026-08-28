@@ -9,7 +9,8 @@
 
 # Agentic Top 10 2026 × SOC 2
 
-Mapping the [OWASP Top 10 for Agentic Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
+Mapping the
+[OWASP Top 10 for Agentic Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
 to [SOC 2](https://www.aicpa-cima.com/resources/landing/system-and-organization-controls-soc-suite-of-services) —
 the AICPA's System and Organization Controls 2 report framework,
 based on the Trust Services Criteria (TSC).
@@ -139,6 +140,7 @@ CC3/CC7 because the risk must be identified, treated, and monitored.
 #### Mitigations
 
 **Foundational**
+
 - CC3: Document goal hijack in risk register — direct,
   indirect, and multi-turn injection scenarios with
   treatment controls and residual risk
@@ -146,6 +148,7 @@ CC3/CC7 because the risk must be identified, treated, and monitored.
   policy document stating what agents may and may not do
 
 **Hardening**
+
 - CC7: Deploy runtime goal-state monitoring — detect
   deviation between session-start intent and in-progress
   agent actions before irreversible steps execute
@@ -154,6 +157,7 @@ CC3/CC7 because the risk must be identified, treated, and monitored.
   (session intent, user permission level) as PI evidence
 
 **Advanced**
+
 - CC7: Red team goal hijack scenarios — documented
   adversarial testing with results retained as CC7
   evidence of effective monitoring
@@ -161,6 +165,7 @@ CC3/CC7 because the risk must be identified, treated, and monitored.
   technical control corroborating the CC5 policy
 
 #### Crosswalk
+
 - LLM Top 10: LLM01 Prompt Injection
 - DSGAI 2026: DSGAI12 Unsafe NL Data Gateways
 
@@ -188,6 +193,7 @@ invocations are authorised.
 #### Mitigations
 
 **Foundational**
+
 - CC5: Document tool permission policy — permitted
   tools, valid parameter ranges, and irreversible
   action confirmation requirements
@@ -195,6 +201,7 @@ invocations are authorised.
   framework cannot dispatch out-of-scope tool calls
 
 **Hardening**
+
 - CC7: Log all tool invocations with parameters —
   alert on destructive parameter patterns, out-of-scope
   destinations, or unexpectedly high-frequency calls
@@ -203,11 +210,13 @@ invocations are authorised.
   before dispatch; rejections logged
 
 **Advanced**
+
 - CC8: Treat tool registry changes as system changes —
   new tools or modified tool descriptors go through
   change management including security review
 
 #### Crosswalk
+
 - LLM Top 10: LLM10 Improper Output Handling, LLM03 Excessive Agency
 - DSGAI 2026: DSGAI06 Tool, Plugin & Agent Data Exchange
 
@@ -235,6 +244,7 @@ credentials provide access to personal data.
 #### Mitigations
 
 **Foundational**
+
 - CC6: Provision agent credentials with documented
   scope and TTL — provisioning records retained as
   CC6 evidence; access management policy covers agents
@@ -242,6 +252,7 @@ credentials provide access to personal data.
   enforcement of TTL, not relying on agent behaviour
 
 **Hardening**
+
 - CC7: Monitor all agent credential operations —
   access log covering all credential use, anomaly
   detection for unexpected scope or post-session access
@@ -250,6 +261,7 @@ credentials provide access to personal data.
   in environment variables, logs, or agent memory
 
 **Advanced**
+
 - CC6: Implement per-task ephemeral credentials —
   each task receives a fresh, scoped credential;
   credential reuse impossible after task completion
@@ -258,6 +270,7 @@ credentials provide access to personal data.
   tool payloads; retain results as CC7 test evidence
 
 #### Crosswalk
+
 - LLM Top 10: LLM03 Excessive Agency
 - DSGAI 2026: DSGAI02 Agent Identity & Credential Exposure
 
@@ -283,6 +296,7 @@ risk management; CC8 covers change management for component updates.
 #### Mitigations
 
 **Foundational**
+
 - CC9: Maintain agentic component inventory and vendor
   register — every framework, tool vendor, and model
   provider listed with security assessment status
@@ -291,6 +305,7 @@ risk management; CC8 covers change management for component updates.
   model, framework, or tool version change
 
 **Hardening**
+
 - CC9: Require contractual security obligations from
   all agentic component vendors — vulnerability
   disclosure SLA, security incident notification
@@ -298,11 +313,13 @@ risk management; CC8 covers change management for component updates.
   components — cryptographic hashes, signed artefacts
 
 **Advanced**
+
 - CC9: Annual vendor re-assessment for agentic
   components — vendors with material security posture
   changes flagged for immediate review
 
 #### Crosswalk
+
 - LLM Top 10: LLM04 Supply Chain
 
 ---
@@ -328,6 +345,7 @@ execution events; PI1 requires that code execution is authorised.
 #### Mitigations
 
 **Foundational**
+
 - CC5: Define code execution policy — permitted
   languages, sandbox requirements, prohibited
   operations (host filesystem, network egress)
@@ -336,6 +354,7 @@ execution events; PI1 requires that code execution is authorised.
   restricted to approved endpoints
 
 **Hardening**
+
 - CC7: Log all execution events — syscalls, network
   calls, filesystem operations logged with agent
   identity and session context
@@ -344,10 +363,12 @@ execution events; PI1 requires that code execution is authorised.
   code without user confirmation token
 
 **Advanced**
+
 - CC7: Red team sandbox escape — test container
   escape techniques; retain results as CC7 evidence
 
 #### Crosswalk
+
 - LLM Top 10: LLM10 Improper Output Handling
 
 ---
@@ -374,6 +395,7 @@ memory stores.
 #### Mitigations
 
 **Foundational**
+
 - CC5: Restrict write access to agent memory stores —
   only the owning agent process may write; external
   writes require explicit authorisation
@@ -382,6 +404,7 @@ memory stores.
   window; treatment controls documented
 
 **Hardening**
+
 - CC7: Establish memory integrity baseline and monitor
   for deviations — drift detection alerts for unexpected
   changes to persistent agent state
@@ -390,11 +413,13 @@ memory stores.
   changes logged with source identity
 
 **Advanced**
+
 - CC7: Test memory poisoning attack paths — adversarial
   content injection into memory stores; retain results
   as CC7 test evidence
 
 #### Crosswalk
+
 - LLM Top 10: LLM05 Data and Model Poisoning
 - DSGAI 2026: DSGAI04 Data, Model & Artifact Poisoning
 
@@ -422,6 +447,7 @@ traffic.
 #### Mitigations
 
 **Foundational**
+
 - CC5: Define inter-agent communication policy —
   approved agent pairs, permitted message types,
   data classification limits
@@ -429,6 +455,7 @@ traffic.
   messages — certificates or tokens, not IP trust
 
 **Hardening**
+
 - CC7: Log all inter-agent communication — message
   source, destination, content summary, and action
   taken; alert on policy violations
@@ -437,11 +464,13 @@ traffic.
   acting on it
 
 **Advanced**
+
 - CC7: Test inter-agent spoofing scenarios — verify
   agents reject unauthenticated messages; retain
   results as CC7 test evidence
 
 #### Crosswalk
+
 - DSGAI 2026: DSGAI02 Agent Identity & Credential Exposure
 
 ---
@@ -468,6 +497,7 @@ failure detection and incident response.
 #### Mitigations
 
 **Foundational**
+
 - A1: Document availability commitments for multi-agent
   deployments — RTO/RPO per agent tier, cascade
   failure scenarios in BCP
@@ -476,6 +506,7 @@ failure detection and incident response.
   thresholds with alerting
 
 **Hardening**
+
 - A1: Implement circuit breakers — agent-to-agent
   calls circuit-break on failure threshold to prevent
   cascade propagation
@@ -483,11 +514,13 @@ failure detection and incident response.
   procedure, isolation steps, recovery sequence documented
 
 **Advanced**
+
 - A1: Test cascade failure recovery — simulation
   of multi-agent failure scenarios; retain results
   as A1 availability evidence
 
 #### Crosswalk
+
 - LLM Top 10: LLM06 Unbounded Consumption
 - DSGAI 2026: DSGAI17 Data Availability & Resilience Failures
 
@@ -515,6 +548,7 @@ inaccurate AI outputs affect individuals.
 #### Mitigations
 
 **Foundational**
+
 - CC5: Publish AI disclosure policy — users notified
   when interacting with agents; impersonation and
   false urgency prohibited
@@ -523,6 +557,7 @@ inaccurate AI outputs affect individuals.
   register with treatment controls
 
 **Hardening**
+
 - PI1: Implement output accuracy controls for
   high-stakes use cases — citation requirements,
   fact-checking for claims about individuals or entities
@@ -531,6 +566,7 @@ inaccurate AI outputs affect individuals.
   report inaccurate AI claims
 
 #### Crosswalk
+
 - LLM Top 10: LLM07 Misinformation
 - DSGAI 2026: DSGAI21 Disinformation via Data Poisoning
 
@@ -559,6 +595,7 @@ service for legitimate operations.
 #### Mitigations
 
 **Foundational**
+
 - CC6: Define and enforce authorised agent scope —
   technical controls prevent actions outside defined
   role regardless of model instruction
@@ -566,6 +603,7 @@ service for legitimate operations.
   outside scope scenarios with treatment controls
 
 **Hardening**
+
 - CC7: Establish per-agent behavioural baseline —
   monitor for deviations from expected action patterns;
   alert on out-of-scope communications or unexpected
@@ -574,11 +612,13 @@ service for legitimate operations.
   automated isolation triggers and rollback procedures
 
 **Advanced**
+
 - CC7: Test rogue agent detection — simulate
   out-of-scope agent behaviour; verify detection
   triggers; retain results as CC7 test evidence
 
 #### Crosswalk
+
 - LLM Top 10: LLM03 Excessive Agency
 - DSGAI 2026: DSGAI03 Shadow AI & Unsanctioned Data Flows
 
@@ -630,6 +670,8 @@ audit that includes agentic AI system scope:
 
 ---
 
-*Part of the [OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk) —
+*Part of the
+[OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk)
+—
 maintained by the OWASP GenAI Data Security Initiative.
 Licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).*

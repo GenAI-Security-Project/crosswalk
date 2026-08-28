@@ -17,6 +17,7 @@ assignees: emmanuelgjr
 **Frameworks selected:** (list the frameworks you implement)
 
 **Validation tier:**
+
 - [ ] Self-Assessed (checkboxes only)
 - [ ] Tool-Verified (tool outputs attached below)
 - [ ] Independently Attested (assessor details below)
@@ -26,6 +27,7 @@ assignees: emmanuelgjr
 ## Evidence (for Tool-Verified)
 
 Attach JSON outputs from any of:
+
 - `node scripts/compliance-report.js --format json`
 - Garak scan results
 - PyRIT attack results

@@ -54,6 +54,7 @@ SAMM organises security into 5 Business Functions, each containing
 | Operations (O) | Incident Management · Environment Management · Operational Management |
 
 **Maturity levels:**
+
 - Level 1 — Initial/Ad-hoc: Basic security practices, reactive
 - Level 2 — Managed: Defined processes, consistent execution
 - Level 3 — Optimised: Proactive, metrics-driven, continuously improving
@@ -135,6 +136,7 @@ invisible-Unicode carriers survive review of the rendered interface.
 #### Maturity roadmap
 
 **Level 1 — Initial**
+
 - D-TA: Add prompt injection to threat model as an
   explicit threat category for all LLM-integrated
   applications — document injection paths even informally
@@ -145,6 +147,7 @@ invisible-Unicode carriers survive review of the rendered interface.
   all new LLM features before development begins
 
 **Level 2 — Managed**
+
 - D-TA: Formal threat modelling for all LLM applications —
   all indirect injection surfaces documented, mitigations
   mapped to each path, residual risk accepted
@@ -155,6 +158,7 @@ invisible-Unicode carriers survive review of the rendered interface.
   control — alerts generated, incident response defined
 
 **Level 3 — Optimised**
+
 - V-ST: Automated adversarial testing in CI/CD —
   injection test suite runs on every PR to LLM-integrated
   code, blocking merge on new vulnerabilities
@@ -168,11 +172,12 @@ invisible-Unicode carriers survive review of the rendered interface.
 
 | Tool | Type | Link |
 |---|---|---|
-| Garak | Open-source | https://github.com/leondz/garak |
-| Promptfoo | Open-source | https://github.com/promptfoo/promptfoo |
-| LLM Guard | Open-source | https://github.com/protectai/llm-guard |
+| Garak | Open-source | <https://github.com/leondz/garak> |
+| Promptfoo | Open-source | <https://github.com/promptfoo/promptfoo> |
+| LLM Guard | Open-source | <https://github.com/protectai/llm-guard> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI01 Agent Goal Hijack
 - DSGAI 2026: DSGAI01 Sensitive Data Leakage, DSGAI12 Unsafe NL Data Gateways
 - Other frameworks: ISO 27001 A.8.28 · NIST CSF 2.0 PR.PS-04 · OWASP ASVS V5.1
@@ -200,6 +205,7 @@ and testing concern throughout the SDLC.
 #### Maturity roadmap
 
 **Level 1 — Initial**
+
 - D-SR: Define data classification requirements for
   LLM applications — which data enters the model,
   what handling requirements apply, what must not
@@ -209,6 +215,7 @@ and testing concern throughout the SDLC.
   reviewed in code review as security requirement
 
 **Level 2 — Managed**
+
 - V-RT: Verify data protection requirements in testing —
   test cases confirm PII cannot be extracted from
   model outputs, results tracked across releases
@@ -217,6 +224,7 @@ and testing concern throughout the SDLC.
   development-time controls
 
 **Level 3 — Optimised**
+
 - V-RT: Automated data leakage testing in CI/CD —
   PII detection tests run on LLM outputs in pipeline
 - O-OM: Data disclosure incident metrics drive
@@ -230,10 +238,11 @@ and testing concern throughout the SDLC.
 
 | Tool | Type | Link |
 |---|---|---|
-| Microsoft Presidio | Open-source | https://github.com/microsoft/presidio |
-| Nightfall AI | Commercial | https://nightfall.ai |
+| Microsoft Presidio | Open-source | <https://github.com/microsoft/presidio> |
+| Nightfall AI | Commercial | <https://nightfall.ai> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI03 Identity & Privilege Abuse
 - DSGAI 2026: DSGAI01 Sensitive Data Leakage, DSGAI18 Inference & Data Reconstruction
 - Other frameworks: ISO 27001 A.8.11/A.8.12 · NIST AI RMF GV-1.6 · EU AI Act Art. 10
@@ -262,6 +271,7 @@ a configuration choice.
 #### Maturity roadmap
 
 **Level 1 — Initial**
+
 - G-SM: Define acceptable LLM autonomous action scope —
   basic policy identifying which actions require human
   confirmation, communicated to development teams
@@ -270,6 +280,7 @@ a configuration choice.
   enforced at architecture level not just policy
 
 **Level 2 — Managed**
+
 - D-TA: Formal threat model for LLM autonomous actions —
   each tool's worst-case autonomous invocation documented,
   mitigations designed and implemented
@@ -280,6 +291,7 @@ a configuration choice.
   architecture-enforced, not model-instruction-dependent
 
 **Level 3 — Optimised**
+
 - G-SM: Metrics-driven autonomy governance — autonomous
   action incidents, confirmation rates, scope violations
   measured and reported in security programme metrics
@@ -291,10 +303,11 @@ a configuration choice.
 
 | Tool | Type | Link |
 |---|---|---|
-| Guardrails AI | Open-source | https://github.com/guardrails-ai/guardrails |
-| NeMo Guardrails | Open-source | https://github.com/NVIDIA/NeMo-Guardrails |
+| Guardrails AI | Open-source | <https://github.com/guardrails-ai/guardrails> |
+| NeMo Guardrails | Open-source | <https://github.com/NVIDIA/NeMo-Guardrails> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI01 Agent Goal Hijack, ASI02 Tool Misuse
 - DSGAI 2026: DSGAI06 Tool Plugin & Agent Data Exchange
 - Other frameworks: EU AI Act Art. 14 · AIUC-1 B006 · ISO 42001 A.6.1.2
@@ -327,6 +340,7 @@ dependency is clean.
 #### Maturity roadmap
 
 **Level 1 — Initial**
+
 - I-SB: Maintain ML SBOM and pin component versions —
   every LLM component inventoried with version and
   source, no automatic updates without review
@@ -335,6 +349,7 @@ dependency is clean.
   obligations before any component enters production
 
 **Level 2 — Managed**
+
 - I-SB: CVE scanning in CI/CD for all LLM components —
   ML library vulnerabilities block deployment when
   critical, patching process defined
@@ -346,6 +361,7 @@ dependency is clean.
   patterns assessed
 
 **Level 3 — Optimised**
+
 - I-SB: Automated supply chain integrity verification —
   cryptographic signature validation in CI/CD pipeline,
   unsigned components blocked automatically
@@ -357,11 +373,12 @@ dependency is clean.
 
 | Tool | Type | Link |
 |---|---|---|
-| CycloneDX | Open-source | https://cyclonedx.org |
-| ModelScan | Open-source | https://github.com/protectai/modelscan |
-| Grype | Open-source | https://github.com/anchore/grype |
+| CycloneDX | Open-source | <https://cyclonedx.org> |
+| ModelScan | Open-source | <https://github.com/protectai/modelscan> |
+| Grype | Open-source | <https://github.com/anchore/grype> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI04 Agentic Supply Chain Vulnerabilities
 - DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning
 - Other frameworks: NIST CSF 2.0 GV.SC-01 · ISO 27001 A.5.19/A.5.21 · NIST SP 800-218A
@@ -395,6 +412,7 @@ stage that writes weights, not just the original training corpus.
 #### Maturity roadmap
 
 **Level 1 — Initial**
+
 - D-TA: Add poisoning to LLM threat model — document
   which training data sources are potentially adversary-
   influenced, what the consequence is if poisoning succeeds
@@ -405,6 +423,7 @@ stage that writes weights, not just the original training corpus.
   available, procedure documented
 
 **Level 2 — Managed**
+
 - V-ST: Defined poisoning detection testing — backdoor
   trigger scenarios in adversarial test plan, results
   tracked across model versions
@@ -416,6 +435,7 @@ stage that writes weights, not just the original training corpus.
   notification checklist
 
 **Level 3 — Optimised**
+
 - V-ST: Post-training backdoor detection as mandatory
   CI/CD gate — neural cleanse or equivalent blocks
   promotion of poisoned models automatically
@@ -429,10 +449,11 @@ stage that writes weights, not just the original training corpus.
 
 | Tool | Type | Link |
 |---|---|---|
-| IBM Adversarial Robustness Toolbox | Open-source | https://github.com/Trusted-AI/adversarial-robustness-toolbox |
-| CleanLab | Open-source | https://github.com/cleanlab/cleanlab |
+| IBM Adversarial Robustness Toolbox | Open-source | <https://github.com/Trusted-AI/adversarial-robustness-toolbox> |
+| CleanLab | Open-source | <https://github.com/cleanlab/cleanlab> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning, DSGAI21 Disinformation via Data Poisoning
 - Other frameworks: NIST AI RMF MS-3.3 · MITRE ATLAS AML.T0020 · ISO 27001 A.8.27
@@ -460,6 +481,7 @@ resource exhaustion as a requirements, deployment, and operational concern.
 #### Maturity roadmap
 
 **Level 1 — Initial**
+
 - D-SR: Define rate limiting and resource caps as
   security requirements — hard token limits, per-user
   budgets, cost caps documented before deployment
@@ -470,6 +492,7 @@ resource exhaustion as a requirements, deployment, and operational concern.
   alert on unusual resource usage, defined escalation
 
 **Level 2 — Managed**
+
 - O-EM: Resource limits as managed environment
   configuration — documented, version-controlled,
   reviewed on change, same rigour as security configuration
@@ -478,6 +501,7 @@ resource exhaustion as a requirements, deployment, and operational concern.
   breakers, owner notification workflow
 
 **Level 3 — Optimised**
+
 - O-IM: Consumption incident metrics drive programme —
   attack patterns, impact, response times measured
   and reported in security programme metrics
@@ -489,11 +513,12 @@ resource exhaustion as a requirements, deployment, and operational concern.
 
 | Tool | Type | Link |
 |---|---|---|
-| LiteLLM | Open-source | https://github.com/BerriAI/litellm |
-| Kong Gateway | Open-source | https://github.com/Kong/kong |
-| OpenTelemetry | Open-source | https://opentelemetry.io |
+| LiteLLM | Open-source | <https://github.com/BerriAI/litellm> |
+| Kong Gateway | Open-source | <https://github.com/Kong/kong> |
+| OpenTelemetry | Open-source | <https://opentelemetry.io> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI08 Cascading Agent Failures
 - DSGAI 2026: DSGAI17 Data Availability & Resilience Failures
 - Other frameworks: NIST CSF 2.0 PR.IR-01 · CIS Controls CIS 4 · CWE-400
@@ -521,6 +546,7 @@ misinformation as both a training concern and a requirements concern
 #### Maturity roadmap
 
 **Level 1 — Initial**
+
 - G-EG: Train all LLM decision-support users on
   output limitations — mandatory before access
   granted, documented as SAMM awareness practice
@@ -529,6 +555,7 @@ misinformation as both a training concern and a requirements concern
   before action, what constitutes acceptable accuracy
 
 **Level 2 — Managed**
+
 - V-RT: Verify accuracy requirements in testing —
   hallucination rates measured against thresholds
   per domain before each release, results tracked
@@ -536,6 +563,7 @@ misinformation as both a training concern and a requirements concern
   detected, degradation alerted as operational control
 
 **Level 3 — Optimised**
+
 - O-OM: Accuracy incident metrics drive programme —
   hallucination rates per domain, correction response
   times measured and improved quarterly
@@ -546,11 +574,12 @@ misinformation as both a training concern and a requirements concern
 
 | Tool | Type | Link |
 |---|---|---|
-| TruLens | Open-source | https://github.com/truera/trulens |
-| RAGAS | Open-source | https://github.com/explodinggradients/ragas |
-| DeepEval | Open-source | https://github.com/confident-ai/deepeval |
+| TruLens | Open-source | <https://github.com/truera/trulens> |
+| RAGAS | Open-source | <https://github.com/explodinggradients/ragas> |
+| DeepEval | Open-source | <https://github.com/confident-ai/deepeval> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI09 Human-Agent Trust Exploitation
 - DSGAI 2026: DSGAI21 Disinformation & Integrity Attacks
 - Other frameworks: EU AI Act Art. 13/50 · AIUC-1 F · ENISA GOV
@@ -588,6 +617,7 @@ treat it as a security boundary.
 #### Maturity roadmap
 
 **Level 1 — Initial**
+
 - D-SR: Define system prompt security requirements —
   classification, encryption requirements, access
   control documented before any LLM application
@@ -597,11 +627,13 @@ treat it as a security boundary.
   required, enforced in code review
 
 **Level 2 — Managed**
+
 - V-ST: Prompt extraction testing in security testing
   programme — known extraction techniques tested
   before each deployment, results tracked
 
 **Level 3 — Optimised**
+
 - V-ST: Automated prompt confidentiality testing —
   extraction attempts in CI/CD pipeline
 - I-SB: System prompt tokenisation as advanced
@@ -609,6 +641,7 @@ treat it as a security boundary.
   with opaque tokens in build pipeline
 
 #### Cross-references
+
 - Agentic Top 10: ASI01 Agent Goal Hijack
 - DSGAI 2026: DSGAI15 Over-Broad Context Windows
 - Other frameworks: AIUC-1 B003/B009 · ISO 27001 A.5.12 · CWE-200
@@ -635,11 +668,13 @@ verification-time testing concern.
 #### Maturity roadmap
 
 **Level 1 — Initial**
+
 - I-SB: RBAC and encryption as build requirements
   for all vector stores — no unauthenticated access
   in any environment, enforced in code review
 
 **Level 2 — Managed**
+
 - D-TA: Vector store threat model — RBAC bypass,
   path traversal, embedding inversion, bulk extraction
   all documented as threats with mitigations designed
@@ -648,6 +683,7 @@ verification-time testing concern.
   as urgent findings
 
 **Level 3 — Optimised**
+
 - V-ST: Embedding inversion testing in red team
   programme — validate sensitive source content
   cannot be reconstructed under realistic conditions
@@ -656,10 +692,11 @@ verification-time testing concern.
 
 | Tool | Type | Link |
 |---|---|---|
-| Weaviate | Open-source | https://weaviate.io |
-| ML Privacy Meter | Open-source | https://github.com/privacytrustlab/ml_privacy_meter |
+| Weaviate | Open-source | <https://weaviate.io> |
+| ML Privacy Meter | Open-source | <https://github.com/privacytrustlab/ml_privacy_meter> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - DSGAI 2026: DSGAI13 Vector Store Platform Security, DSGAI18 Inference & Data Reconstruction
 - Other frameworks: NIST AI RMF MS-2.5 · ISO 27001 A.8.3/A.8.24 · CWE-284
@@ -693,6 +730,7 @@ reaches a shell, a browser, or a database.
 #### Maturity roadmap
 
 **Level 1 — Initial**
+
 - D-SR: Define output security as an explicit
   requirement — LLM output is untrusted input to
   downstream systems, encoded and validated before
@@ -703,6 +741,7 @@ reaches a shell, a browser, or a database.
   context — enforced through code review
 
 **Level 2 — Managed**
+
 - V-RT: Verify output security requirements in
   testing — XSS, SQL injection, command injection
   via LLM output tested systematically before each
@@ -712,6 +751,7 @@ reaches a shell, a browser, or a database.
   remediated before release
 
 **Level 3 — Optimised**
+
 - V-RT: Automated output injection testing in CI/CD —
   injection scenarios run against LLM output handling
   code on every PR
@@ -723,11 +763,12 @@ reaches a shell, a browser, or a database.
 
 | Tool | Type | Link |
 |---|---|---|
-| OWASP ZAP | Open-source | https://www.zaproxy.org |
-| Semgrep | Open-source | https://semgrep.dev |
-| DOMPurify | Open-source | https://github.com/cure53/DOMPurify |
+| OWASP ZAP | Open-source | <https://www.zaproxy.org> |
+| Semgrep | Open-source | <https://semgrep.dev> |
+| DOMPurify | Open-source | <https://github.com/cure53/DOMPurify> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI02 Tool Misuse, ASI05 Unexpected Code Execution
 - DSGAI 2026: DSGAI05 Data Integrity & Validation Failures, DSGAI12 Unsafe NL Data Gateways
 - Other frameworks: OWASP ASVS V5 · CIS Controls CIS 16 · CWE-79
@@ -800,4 +841,4 @@ and define a target state:
 ---
 
 Maintained by the OWASP GenAI Data Security Initiative.
-Part of the OWASP GenAI Crosswalk: https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk
+Part of the OWASP GenAI Crosswalk: <https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk>

@@ -3,7 +3,8 @@
 This is the single navigation index across all three OWASP GenAI source lists.
 Read left to right: an LLM vulnerability → its agentic amplification → its data security dimension.
 
-> **How to use:** Find the risk you care about in any column, then follow the row to see how it surfaces in the other lists and which framework files cover it.
+> **How to use:** Find the risk you care about in any column, then follow the row to see how it surfaces in
+> the other lists and which framework files cover it.
 
 ---
 
@@ -59,9 +60,13 @@ For OT environments, these entries carry the highest blast radius:
 Jump directly to any framework mapping folder:
 
 ### LLM Top 10 mappings ? [`/llm-top10/`](llm-top10/)
+
 ### Agentic Top 10 mappings ? [`/agentic-top10/`](agentic-top10/)
+
 ### DSGAI 2026 mappings ? [`/dsgai-2026/`](dsgai-2026/)
+
 ### Shared resources ? [`/shared/`](shared/)
+
 ### Machine-readable data ? [`/data/`](data/)
 
 ---

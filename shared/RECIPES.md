@@ -63,6 +63,7 @@ only be visible to executives, security engineers, or legal counsel.
 **Implementation:**
 
 *Step 1 — Tag every document at ingestion with its access tier:*
+
 ```python
 from dataclasses import dataclass
 from typing import Optional
@@ -99,6 +100,7 @@ def ingest_document(content: str, metadata: DocumentMetadata, embedder, vector_s
 ```
 
 *Step 2 — Apply user context as a retrieval filter at query time:*
+
 ```python
 def retrieve_with_access_control(
     query: str,
@@ -148,6 +150,7 @@ def retrieve_with_access_control(
 ```
 
 *Step 3 — Validate classification ceiling before context assembly:*
+
 ```python
 CLASSIFICATION_ORDER = ["PUBLIC", "INTERNAL", "CONFIDENTIAL", "RESTRICTED"]
 
@@ -189,6 +192,7 @@ def assemble_context(retrieved_docs: list[dict], user_max_classification: str) -
 ```
 
 **Validation:**
+
 ```python
 # Test: user with INTERNAL role cannot retrieve CONFIDENTIAL documents
 results = retrieve_with_access_control(
@@ -218,6 +222,7 @@ RAG knowledge base or exploit ingestion pipeline vulnerabilities.
 embedding ? vector store
 
 **Implementation:**
+
 ```python
 import hashlib
 import magic
@@ -324,6 +329,7 @@ def is_approved_source(source: str) -> bool:
 ```
 
 **Path traversal protection for snapshot imports (CVE-2024-3584 class):**
+
 ```python
 import os
 import zipfile
@@ -376,6 +382,7 @@ masked before reaching the user.
 **Architecture:** LLM response ? redaction layer ? user delivery
 
 **Implementation:**
+
 ```python
 import re
 from dataclasses import dataclass, field
@@ -500,6 +507,7 @@ error.
 freshness validation ? context assembly ? fallback if degraded
 
 **Implementation:**
+
 ```python
 import time
 from enum import Enum
@@ -594,6 +602,7 @@ observability pipelines capture sensitive content in cleartext with
 long retention.
 
 **Implementation:**
+
 ```python
 import hashlib
 from enum import IntEnum
@@ -667,6 +676,7 @@ adversarial tool call parameters that cause downstream harm.
 **Architecture:** Agent ? MCP server ? tool execution
 
 **Implementation:**
+
 ```python
 from pydantic import BaseModel, validator, Field
 from typing import Annotated
@@ -782,6 +792,7 @@ agent behaviour.
 **Architecture:** Agent tool loader ? descriptor validation ? tool registry
 
 **Implementation:**
+
 ```python
 import hashlib
 import json
@@ -901,6 +912,7 @@ over-scoped credentials that persist beyond the task they were issued for.
 ? session end ? automatic revocation
 
 **Implementation:**
+
 ```python
 import uuid
 import time
@@ -1053,6 +1065,7 @@ agent tool invocations saturate downstream systems or exhibit
 anomalous patterns indicating compromise.
 
 **Implementation:**
+
 ```python
 import time
 from collections import defaultdict, deque
@@ -1164,6 +1177,7 @@ trusted to honour a kill command sent through its own interface.
 The switch must operate independently of the agent's execution path.
 
 **Implementation:**
+
 ```python
 import threading
 import time
@@ -1321,6 +1335,7 @@ behaviour drifts from established baseline indicating compromise or
 persistent goal modification.
 
 **Implementation:**
+
 ```python
 import json
 import time
@@ -1451,6 +1466,7 @@ def evaluate_agent_session(
 propagates to multiple systems before humans can intervene.
 
 **Implementation:**
+
 ```python
 from dataclasses import dataclass
 from typing import Optional
@@ -1583,6 +1599,7 @@ it can be bypassed by goal hijack. The gate is an independent trust
 boundary — it validates human intent, not agent intent.
 
 **Implementation:**
+
 ```python
 import uuid
 import time
@@ -2615,5 +2632,7 @@ contains complete records of all enforcement actions.
 
 ---
 
-*Part of the [OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk) —
+*Part of the
+[OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk)
+—
 maintained by the [OWASP GenAI Data Security Initiative](https://genai.owasp.org)*

@@ -9,7 +9,8 @@
 
 # DSGAI 2026 × CIS Controls v8.1
 
-Mapping the [OWASP GenAI Data Security Risks & Mitigations 2026](https://genai.owasp.org/resource/owasp-genai-data-security-risks-mitigations-2026/)
+Mapping the
+[OWASP GenAI Data Security Risks & Mitigations 2026](https://genai.owasp.org/resource/owasp-genai-data-security-risks-mitigations-2026/)
 (DSGAI01–DSGAI21) to the [CIS Controls v8.1](https://www.cisecurity.org/controls)
 — the Center for Internet Security's prioritised set of cyber defence safeguards,
 organised into 18 control groups with Implementation Groups (IG1/IG2/IG3) scaling
@@ -33,6 +34,7 @@ from training through inference.
 | Organisational (IG3) | CIS 12–18 | Network monitoring, security awareness, app security, incident response, pen testing |
 
 **Implementation Groups:**
+
 - IG1 — Essential cyber hygiene, all organisations
 - IG2 — IG1 + additional controls for organisations handling sensitive data
 - IG3 — IG2 + advanced controls for enterprise and regulated industries
@@ -101,15 +103,18 @@ outputs, RAG over-retrieval, training data memorisation, or inadequate output fi
 #### Mitigations by tier
 
 **Foundational (IG1)**
+
 - Inventory all GenAI data stores and classify all data by sensitivity
 - Implement output redaction for PII and credentials on all model response channels
 - Enforce deny-by-default access control on RAG data sources
 
 **Hardening (IG2)**
+
 - Deploy DLP on model output pipelines
 - Audit RAG retrieval scope regularly — over-permissive indexes drive most incidents
 
 **Advanced (IG3)**
+
 - Conduct model inversion red team exercises (CIS 18.1)
 - Implement machine unlearning for post-deployment data removal
 
@@ -117,10 +122,11 @@ outputs, RAG over-retrieval, training data memorisation, or inadequate output fi
 
 | Tool | Type | Link |
 |---|---|---|
-| Presidio | Open-source | https://github.com/microsoft/presidio |
-| LLM Guard | Open-source | https://github.com/protectai/llm-guard |
+| Presidio | Open-source | <https://github.com/microsoft/presidio> |
+| LLM Guard | Open-source | <https://github.com/protectai/llm-guard> |
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - Agentic Top 10: ASI03 Identity & Privilege Abuse
 - Other frameworks: ISO 27001 A.8.12 — ASVS V8 — CWE-200
@@ -147,15 +153,18 @@ the agent can access.
 #### Mitigations by tier
 
 **Foundational (IG1)**
+
 - Store all agent credentials in secrets managers — never in prompts, code, or logs
 - Apply least privilege to all agent service accounts
 - Rotate agent credentials on a defined schedule
 
 **Hardening (IG2)**
+
 - Implement JIT credential issuance — scoped per task, auto-expired
 - Monitor credential usage for anomalous access patterns
 
 **Advanced (IG3)**
+
 - Deploy workload identity (SPIFFE/SPIRE) for multi-agent environments
 - Implement per-session ephemeral credentials with automatic revocation
 
@@ -163,10 +172,11 @@ the agent can access.
 
 | Tool | Type | Link |
 |---|---|---|
-| HashiCorp Vault | Open-source | https://github.com/hashicorp/vault |
-| SPIRE | Open-source | https://github.com/spiffe/spire |
+| HashiCorp Vault | Open-source | <https://github.com/hashicorp/vault> |
+| SPIRE | Open-source | <https://github.com/spiffe/spire> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI03 Identity & Privilege Abuse
 - Other frameworks: ISO 27001 A.5.17 — ASVS V2 — CWE-312
 
@@ -191,15 +201,18 @@ bypassing governance controls and creating uncontrolled data copies.
 #### Mitigations by tier
 
 **Foundational (IG1)**
+
 - Publish and enforce an approved AI tools register
 - Include shadow AI in acceptable use policy
 - Conduct security awareness training on shadow AI risks
 
 **Hardening (IG2)**
+
 - Implement egress filtering blocking unapproved AI service domains
 - Deploy CASB to detect shadow AI tool usage
 
 **Advanced (IG3)**
+
 - Monitor network traffic for shadow AI usage patterns (CIS 13.8)
 - Automated discovery of new AI tools before they become entrenched
 
@@ -207,10 +220,11 @@ bypassing governance controls and creating uncontrolled data copies.
 
 | Tool | Type | Link |
 |---|---|---|
-| OpenDLP | Open-source | https://github.com/ezarko/opendlp |
-| Zscaler Internet Access | Commercial | https://www.zscaler.com |
+| OpenDLP | Open-source | <https://github.com/ezarko/opendlp> |
+| Zscaler Internet Access | Commercial | <https://www.zscaler.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM04 Supply Chain
 - Other frameworks: ISO 27001 A.5.23 — ASVS V14 — ENISA L3-GRC
 
@@ -235,14 +249,17 @@ misinformation persisting into production.
 #### Mitigations by tier
 
 **Foundational (IG1)**
+
 - Implement data validation on all training and fine-tuning ingestion pipelines
 - Restrict write access to training data stores
 
 **Hardening (IG2)**
+
 - Generate and version a Dataset Bill of Materials (DBoM) per training run
 - Apply statistical outlier detection before training
 
 **Advanced (IG3)**
+
 - Certified data provenance with cryptographic attestation
 - Red team training and RAG pipelines specifically for poisoning vectors
 
@@ -250,11 +267,12 @@ misinformation persisting into production.
 
 | Tool | Type | Link |
 |---|---|---|
-| Cleanlab | Open-source | https://github.com/cleanlab/cleanlab |
-| ModelScan | Open-source | https://github.com/protectai/modelscan |
-| Great Expectations | Open-source | https://github.com/great-expectations/great_expectations |
+| Cleanlab | Open-source | <https://github.com/cleanlab/cleanlab> |
+| ModelScan | Open-source | <https://github.com/protectai/modelscan> |
+| Great Expectations | Open-source | <https://github.com/great-expectations/great_expectations> |
 
 #### Cross-references
+
 - LLM Top 10: LLM05 Data and Model Poisoning
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - Other frameworks: MITRE ATLAS AML.T0032 — ASVS V10 — CWE-345
@@ -278,15 +296,18 @@ attacks, silent data corruption, and security bypasses in downstream systems.
 #### Mitigations by tier
 
 **Foundational (IG1–IG2)**
+
 - Treat all data entering GenAI pipelines as untrusted — validate against defined schema
 - Implement output validation on all model response channels
 - Log validation failures server-side with context
 
 **Hardening (IG2–IG3)**
+
 - Apply allowlist-based validation on NL gateway inputs
 - Include data integrity checks in CI/CD pipeline gates
 
 **Advanced (IG3)**
+
 - Deploy continuous data quality monitoring across pipeline stages
 - Conduct application security review of all validation logic
 
@@ -294,10 +315,11 @@ attacks, silent data corruption, and security bypasses in downstream systems.
 
 | Tool | Type | Link |
 |---|---|---|
-| Great Expectations | Open-source | https://github.com/great-expectations/great_expectations |
-| Semgrep | Open-source | https://semgrep.dev |
+| Great Expectations | Open-source | <https://github.com/great-expectations/great_expectations> |
+| Semgrep | Open-source | <https://semgrep.dev> |
 
 #### Cross-references
+
 - LLM Top 10: LLM10 Improper Output Handling
 - Other frameworks: ISO 27001 A.8.28 — ASVS V5 — CWE-20
 
@@ -321,15 +343,18 @@ controls — enabling data exposure, injection via tool outputs, or exfiltration
 #### Mitigations by tier
 
 **Foundational (IG1)**
+
 - Apply least privilege to all plugin and tool data access
 - Validate all tool outputs before returning to the model
 - Log all tool invocations with input, output, and caller identity
 
 **Hardening (IG2)**
+
 - Per-session tool scope — agents receive only needed tools per task
 - Schema validation on all plugin input and output channels
 
 **Advanced (IG3)**
+
 - Behaviour anomaly detection on tool invocation patterns (CIS 13.8)
 - Formal security review of all plugin providers (CIS 15.2)
 
@@ -337,10 +362,11 @@ controls — enabling data exposure, injection via tool outputs, or exfiltration
 
 | Tool | Type | Link |
 |---|---|---|
-| Guardrails AI | Open-source | https://github.com/guardrails-ai/guardrails |
-| NeMo Guardrails | Open-source | https://github.com/NVIDIA/NeMo-Guardrails |
+| Guardrails AI | Open-source | <https://github.com/guardrails-ai/guardrails> |
+| NeMo Guardrails | Open-source | <https://github.com/NVIDIA/NeMo-Guardrails> |
 
 #### Cross-references
+
 - LLM Top 10: LLM03 Excessive Agency
 - Agentic Top 10: ASI02 Tool Misuse, ASI07 Insecure Inter-Agent Communication
 - Other frameworks: ISO 27001 A.5.19 — ASVS V4 — AIUC-1 B006
@@ -367,15 +393,18 @@ privacy regulations.
 #### Mitigations by tier
 
 **Foundational (IG1)**
+
 - Classify all training and RAG data before ingestion
 - Assign data owners for all AI datasets
 - Define and enforce data retention schedules
 
 **Hardening (IG2)**
+
 - Implement automated data classification on ingestion pipelines
 - Enforce automated deletion of data past retention period
 
 **Advanced (IG3)**
+
 - Implement machine unlearning to support deletion obligations (CIS 3.10)
 - Regular data lineage audits (CIS 18.2)
 
@@ -383,10 +412,11 @@ privacy regulations.
 
 | Tool | Type | Link |
 |---|---|---|
-| Apache Atlas | Open-source | https://atlas.apache.org |
-| Amundsen | Open-source | https://github.com/amundsen-io/amundsen |
+| Apache Atlas | Open-source | <https://atlas.apache.org> |
+| Amundsen | Open-source | <https://github.com/amundsen-io/amundsen> |
 
 #### Cross-references
+
 - Other frameworks: ISO 27001 A.5.12 — GDPR Art. 5 — ENISA L3-GRC
 
 ---
@@ -409,15 +439,18 @@ or other regulatory obligations through consent failures or cross-border transfe
 #### Mitigations by tier
 
 **Foundational (IG1)**
+
 - Map all personal data flows through GenAI systems — document lawful basis
 - Implement data subject rights (access, deletion, portability) for AI-processed data
 - Conduct DPIA for all high-risk AI deployments
 
 **Hardening (IG2)**
+
 - Automated compliance monitoring — detect processing beyond declared purpose
 - Maintain records of processing activities covering GenAI data uses
 
 **Advanced (IG3)**
+
 - Privacy-by-design implementation — federated learning, differential privacy
 - Annual regulatory compliance audit against AI-specific requirements
 
@@ -425,10 +458,11 @@ or other regulatory obligations through consent failures or cross-border transfe
 
 | Tool | Type | Link |
 |---|---|---|
-| OpenDP | Open-source | https://github.com/opendp/opendp |
-| OneTrust | Commercial | https://www.onetrust.com |
+| OpenDP | Open-source | <https://github.com/opendp/opendp> |
+| OneTrust | Commercial | <https://www.onetrust.com> |
 
 #### Cross-references
+
 - Other frameworks: ISO 27001 A.5.31 — EU AI Act Art. 9-15 — GDPR Art. 35
 
 ---
@@ -451,14 +485,17 @@ disclosed through model outputs — bypassing text-only DLP controls.
 #### Mitigations by tier
 
 **Foundational (IG1–IG2)**
+
 - Extend DLP to all non-text modalities
 - Implement content scanning for images, audio, and documents before ingestion
 
 **Hardening (IG2–IG3)**
+
 - Deploy multimodal-aware PII detection
 - Apply data minimisation — pass only required fields, not full documents
 
 **Advanced (IG3)**
+
 - Multimodal-specific red team exercises (CIS 18.1)
 - Output filtering for responses derived from multimodal inputs
 
@@ -466,10 +503,11 @@ disclosed through model outputs — bypassing text-only DLP controls.
 
 | Tool | Type | Link |
 |---|---|---|
-| Presidio | Open-source | https://github.com/microsoft/presidio |
-| Azure AI Content Safety | Commercial | https://azure.microsoft.com/en-us/products/ai-services/ai-content-safety |
+| Presidio | Open-source | <https://github.com/microsoft/presidio> |
+| Azure AI Content Safety | Commercial | <https://azure.microsoft.com/en-us/products/ai-services/ai-content-safety> |
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - Other frameworks: ISO 27001 A.8.11 — ASVS V5 — ENISA L2-DP
 
@@ -492,14 +530,17 @@ re-identification — enabling reconstruction of original PII through linkage at
 #### Mitigations by tier
 
 **Foundational (IG1)**
+
 - Do not treat synthetic data as inherently safe
 - Apply k-anonymity (k≥5) to all synthetic datasets before training use
 
 **Hardening (IG2)**
+
 - Test anonymised datasets with linkage attacks before production use
 - Document re-identification risk assessment per dataset
 
 **Advanced (IG3)**
+
 - Implement differential privacy (ε ≤ 1.0) for high-sensitivity datasets
 - Quarterly re-identification testing as external datasets evolve
 
@@ -507,11 +548,12 @@ re-identification — enabling reconstruction of original PII through linkage at
 
 | Tool | Type | Link |
 |---|---|---|
-| OpenDP | Open-source | https://github.com/opendp/opendp |
-| ARX Anonymisation Tool | Open-source | https://github.com/arx-deidentifier/arx |
-| SDV (Synthetic Data Vault) | Open-source | https://github.com/sdv-dev/SDV |
+| OpenDP | Open-source | <https://github.com/opendp/opendp> |
+| ARX Anonymisation Tool | Open-source | <https://github.com/arx-deidentifier/arx> |
+| SDV (Synthetic Data Vault) | Open-source | <https://github.com/sdv-dev/SDV> |
 
 #### Cross-references
+
 - Other frameworks: ISO 27001 A.8.11 — GDPR Recital 26 — ENISA L2-DP
 
 ---
@@ -534,15 +576,18 @@ session through inadequate context isolation or cache management.
 #### Mitigations by tier
 
 **Foundational (IG1)**
+
 - Implement strict session isolation — each user's context completely isolated
 - Clear conversation context on session termination
 - Never cache responses in shared layers without per-user namespacing
 
 **Hardening (IG2)**
+
 - Audit session management logic specifically for AI context persistence
 - Session isolation tests in CI/CD
 
 **Advanced (IG3)**
+
 - Adversarial testing targeting cross-session data leakage (CIS 18.1)
 - Context isolation verification as automated test on every deployment
 
@@ -550,10 +595,11 @@ session through inadequate context isolation or cache management.
 
 | Tool | Type | Link |
 |---|---|---|
-| OWASP ZAP | Open-source | https://www.zaproxy.org |
-| Burp Suite Community | Open-source | https://portswigger.net/burp/communitydownload |
+| OWASP ZAP | Open-source | <https://www.zaproxy.org> |
+| Burp Suite Community | Open-source | <https://portswigger.net/burp/communitydownload> |
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - Other frameworks: ISO 27001 A.8.3 — ASVS V3 — CWE-200
 
@@ -577,15 +623,18 @@ injection or poorly validated NL-to-query translation to bypass access controls.
 #### Mitigations by tier
 
 **Foundational (IG1–IG2)**
+
 - Parameterise all LLM-generated queries — never execute raw model output
 - Apply same access control as the underlying data source
 - Log all NL gateway queries with translated query and user identity
 
 **Hardening (IG2–IG3)**
+
 - Query schema allowlisting — limit tables and operations NL gateway can generate
 - Rate limiting and result size limits on all NL gateway endpoints
 
 **Advanced (IG3)**
+
 - Red team specifically for NL-to-SQL injection vectors (CIS 18.1)
 - Query intent verification — flag enumeration patterns
 
@@ -593,10 +642,11 @@ injection or poorly validated NL-to-query translation to bypass access controls.
 
 | Tool | Type | Link |
 |---|---|---|
-| Garak | Open-source | https://github.com/leondz/garak |
-| SQLFluff | Open-source | https://github.com/sqlfluff/sqlfluff |
+| Garak | Open-source | <https://github.com/leondz/garak> |
+| SQLFluff | Open-source | <https://github.com/sqlfluff/sqlfluff> |
 
 #### Cross-references
+
 - LLM Top 10: LLM10 Improper Output Handling, LLM01 Prompt Injection
 - Other frameworks: ASVS V5.3 — CWE-89 — OWASP Top 10 A3
 
@@ -620,15 +670,18 @@ adversarial vector injection, and extraction of sensitive source content.
 #### Mitigations by tier
 
 **Foundational (IG1)**
+
 - Implement RBAC on all vector store namespaces
 - Validate all content before embedding generation
 - Monitor ingestion for anomalous content
 
 **Hardening (IG2)**
+
 - Encrypt vectors at rest and in transit
 - Trust-tiered retrieval weighted by source provenance
 
 **Advanced (IG3)**
+
 - Embedding inversion red team exercises (CIS 18.1)
 - Differential privacy in embedding generation for sensitive corpora
 
@@ -636,10 +689,11 @@ adversarial vector injection, and extraction of sensitive source content.
 
 | Tool | Type | Link |
 |---|---|---|
-| Weaviate (with RBAC) | Open-source | https://weaviate.io |
-| Qdrant | Open-source | https://qdrant.tech |
+| Weaviate (with RBAC) | Open-source | <https://weaviate.io> |
+| Qdrant | Open-source | <https://qdrant.tech> |
 
 #### Cross-references
+
 - LLM Top 10: LLM09 Vector and Embedding Weaknesses
 - Other frameworks: ISO 27001 A.8.3 — ASVS V6 — CWE-327
 
@@ -664,14 +718,17 @@ interactions — creating high-value targets containing conversation content and
 #### Mitigations by tier
 
 **Foundational (IG1)**
+
 - Redact PII, credentials, and sensitive content from logs at collection time
 - Apply access control to logging infrastructure as strictly as production data
 
 **Hardening (IG2)**
+
 - Define log retention policy — logs held only for minimum required period
 - Encrypt logs at rest and in transit
 
 **Advanced (IG3)**
+
 - Log integrity monitoring — detect tampering with audit logs
 - Anomaly detection on log access patterns
 
@@ -679,10 +736,11 @@ interactions — creating high-value targets containing conversation content and
 
 | Tool | Type | Link |
 |---|---|---|
-| Presidio | Open-source | https://github.com/microsoft/presidio |
-| Fluent Bit | Open-source | https://github.com/fluent/fluent-bit |
+| Presidio | Open-source | <https://github.com/microsoft/presidio> |
+| Fluent Bit | Open-source | <https://github.com/fluent/fluent-bit> |
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - Other frameworks: ISO 27001 A.8.15 — ASVS V7 — ENISA L1-LOG
 
@@ -706,15 +764,18 @@ a single namespace — enabling cross-source leakage and context poisoning.
 #### Mitigations by tier
 
 **Foundational (IG1)**
+
 - Enforce data minimisation on context window population
 - Maintain trust-domain separation within context
 - Set explicit context window size limits
 
 **Hardening (IG2)**
+
 - Context window auditing — log what data enters each inference call
 - Context redaction before passing sensitive data classes to model
 
 **Advanced (IG3)**
+
 - Context window policy enforcement as independent control (CIS 16.7)
 - Red team context population logic for cross-source leakage
 
@@ -722,10 +783,11 @@ a single namespace — enabling cross-source leakage and context poisoning.
 
 | Tool | Type | Link |
 |---|---|---|
-| LLM Guard | Open-source | https://github.com/protectai/llm-guard |
-| Garak | Open-source | https://github.com/leondz/garak |
+| LLM Guard | Open-source | <https://github.com/protectai/llm-guard> |
+| Garak | Open-source | <https://github.com/leondz/garak> |
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure, LLM08 Hidden Context Exposure
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - Other frameworks: ISO 27001 A.8.3 — ASVS V4 — ENISA L2-DP
@@ -750,15 +812,18 @@ scope — reading clipboard, files, or browsing history without per-action autho
 #### Mitigations by tier
 
 **Foundational (IG1)**
+
 - Restrict endpoint AI assistant OS permissions to minimum declared functionality
 - Review and restrict browser extension permissions before deployment
 - Include endpoint AI tools in application security review
 
 **Hardening (IG2)**
+
 - Monitor endpoint AI tool network activity
 - Application allowlisting to control which AI assistants run on managed endpoints
 
 **Advanced (IG3)**
+
 - Security assessment of all endpoint AI tools before enterprise deployment
 - Endpoint DLP covering AI assistant exfiltration vectors
 
@@ -766,10 +831,11 @@ scope — reading clipboard, files, or browsing history without per-action autho
 
 | Tool | Type | Link |
 |---|---|---|
-| osquery | Open-source | https://github.com/osquery/osquery |
-| OpenDLP | Open-source | https://github.com/ezarko/opendlp |
+| osquery | Open-source | <https://github.com/osquery/osquery> |
+| OpenDLP | Open-source | <https://github.com/ezarko/opendlp> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI02 Tool Misuse, ASI10 Rogue Agents
 - Other frameworks: ISO 27001 A.8.1 — ASVS V4 — ENISA L1-EP
 
@@ -793,15 +859,18 @@ inference due to inadequate backup, recovery, and resilience controls.
 #### Mitigations by tier
 
 **Foundational (IG1)**
+
 - Implement backup and recovery for all GenAI data stores
 - Define RTO and RPO for GenAI services — test recovery regularly
 - Rate limiting and quota management on inference endpoints
 
 **Hardening (IG2)**
+
 - Multi-region replication for production vector stores
 - Circuit breakers on model inference pipelines
 
 **Advanced (IG3)**
+
 - Chaos engineering targeting GenAI data store availability (CIS 18.1)
 - Automated failover for critical inference endpoints
 
@@ -809,10 +878,11 @@ inference due to inadequate backup, recovery, and resilience controls.
 
 | Tool | Type | Link |
 |---|---|---|
-| Velero | Open-source | https://github.com/vmware-tanzu/velero |
-| Chaos Monkey | Open-source | https://github.com/Netflix/chaosmonkey |
+| Velero | Open-source | <https://github.com/vmware-tanzu/velero> |
+| Chaos Monkey | Open-source | <https://github.com/Netflix/chaosmonkey> |
 
 #### Cross-references
+
 - LLM Top 10: LLM06 Unbounded Consumption
 - Agentic Top 10: ASI08 Cascading Agent Failures
 - Other frameworks: ISO 27001 A.5.30 — ASVS V11 — ENISA L1-RES
@@ -836,14 +906,17 @@ or infer membership of individuals in training sets through model outputs.
 #### Mitigations by tier
 
 **Foundational (IG1–IG2)**
+
 - Apply differential privacy during training to limit memorisation
 - Monitor query patterns for membership inference attack signatures
 
 **Hardening (IG2–IG3)**
+
 - Membership inference red team before production deployment
 - Suppress confidence score outputs where not functionally required
 
 **Advanced (IG3)**
+
 - Machine unlearning to remove memorised sensitive records
 - Query-level anomaly detection for systematic inference patterns
 
@@ -851,10 +924,11 @@ or infer membership of individuals in training sets through model outputs.
 
 | Tool | Type | Link |
 |---|---|---|
-| OpenDP | Open-source | https://github.com/opendp/opendp |
-| ML Privacy Meter | Open-source | https://github.com/privacytrustlab/ml_privacy_meter |
+| OpenDP | Open-source | <https://github.com/opendp/opendp> |
+| ML Privacy Meter | Open-source | <https://github.com/privacytrustlab/ml_privacy_meter> |
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - Other frameworks: ISO 27001 A.8.11 — ASVS V8 — CWE-200
 
@@ -878,15 +952,18 @@ content without adequate controls — creating privacy and welfare risks.
 #### Mitigations by tier
 
 **Foundational (IG1)**
+
 - Apply data minimisation to annotation tasks — redact sensitive fields not needed
 - Restrict labeller access to minimum required dataset scope
 - Audit labeller access to sensitive content
 
 **Hardening (IG2)**
+
 - Harmful content warning systems for labellers
 - Data handling agreements with third-party annotation providers (CIS 15.1)
 
 **Advanced (IG3)**
+
 - Automated pre-filtering to reduce human exposure to most harmful content
 - Privacy impact assessments on annotation workflows (CIS 3.1)
 
@@ -894,10 +971,11 @@ content without adequate controls — creating privacy and welfare risks.
 
 | Tool | Type | Link |
 |---|---|---|
-| Presidio | Open-source | https://github.com/microsoft/presidio |
-| Label Studio | Open-source | https://github.com/HumanSignal/label-studio |
+| Presidio | Open-source | <https://github.com/microsoft/presidio> |
+| Label Studio | Open-source | <https://github.com/HumanSignal/label-studio> |
 
 #### Cross-references
+
 - Other frameworks: ISO 27001 A.5.20 — GDPR Art. 28 — ENISA L3-GRC
 
 ---
@@ -920,14 +998,17 @@ behaviour — to steal proprietary model capabilities without access to model we
 #### Mitigations by tier
 
 **Foundational (IG1–IG2)**
+
 - Rate limiting and query monitoring on all model inference APIs
 - Log unusual query patterns indicating systematic extraction
 
 **Hardening (IG2–IG3)**
+
 - Suppress confidence scores and logits where not functionally required
 - Query diversity detection — flag systematic query patterns
 
 **Advanced (IG3)**
+
 - Model watermarking — embed detectable fingerprints in outputs
 - Extraction attack detection via query pattern analysis
 
@@ -935,10 +1016,11 @@ behaviour — to steal proprietary model capabilities without access to model we
 
 | Tool | Type | Link |
 |---|---|---|
-| Garak | Open-source | https://github.com/leondz/garak |
-| ART (Adversarial Robustness Toolbox) | Open-source | https://github.com/Trusted-AI/adversarial-robustness-toolbox |
+| Garak | Open-source | <https://github.com/leondz/garak> |
+| ART (Adversarial Robustness Toolbox) | Open-source | <https://github.com/Trusted-AI/adversarial-robustness-toolbox> |
 
 #### Cross-references
+
 - Other frameworks: ISO 27001 A.5.12 — ASVS V4 — ENISA L2-ADV
 
 ---
@@ -961,14 +1043,17 @@ systematically generate false outputs targeting specific topics or entities.
 #### Mitigations by tier
 
 **Foundational (IG1)**
+
 - Provenance tracking for all RAG corpus content — source and last-verified date recorded
 - Validate training data for factual consistency
 
 **Hardening (IG2)**
+
 - Monitor production outputs for systematic factual drift from baselines
 - Source diversity requirements for high-stakes RAG corpora
 
 **Advanced (IG3)**
+
 - Automated fact-checking pipelines for high-risk output domains
 - Red team RAG corpus injection detection controls
 
@@ -976,10 +1061,11 @@ systematically generate false outputs targeting specific topics or entities.
 
 | Tool | Type | Link |
 |---|---|---|
-| Cleanlab | Open-source | https://github.com/cleanlab/cleanlab |
-| RAGAS | Open-source | https://github.com/explodinggradients/ragas |
+| Cleanlab | Open-source | <https://github.com/cleanlab/cleanlab> |
+| RAGAS | Open-source | <https://github.com/explodinggradients/ragas> |
 
 #### Cross-references
+
 - LLM Top 10: LLM05 Data and Model Poisoning, LLM07 Misinformation
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - Other frameworks: MITRE ATLAS AML.T0045 — ASVS V5 — EU AI Act Art. 13
@@ -1014,5 +1100,7 @@ systematically generate false outputs targeting specific topics or entities.
 
 ---
 
-*Part of the [OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk) —
+*Part of the
+[OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk)
+—
 maintained by the [OWASP GenAI Data Security Initiative](https://genai.owasp.org)*

@@ -9,8 +9,11 @@
 
 # DSGAI 2026 — ENISA Multilayer Framework
 
-Mapping the [OWASP GenAI Data Security Risks & Mitigations 2026](https://genai.owasp.org/resource/owasp-genai-data-security-risks-mitigations-2026/)
-(DSGAI01–DSGAI21) to the [ENISA Multilayer Framework for Good Cybersecurity Practices for AI](https://www.enisa.europa.eu/publications/multilayer-framework-for-good-cybersecurity-practices-for-ai) —
+Mapping the
+[OWASP GenAI Data Security Risks & Mitigations 2026](https://genai.owasp.org/resource/owasp-genai-data-security-risks-mitigations-2026/)
+(DSGAI01–DSGAI21) to the
+[ENISA Multilayer Framework for Good Cybersecurity Practices for AI](https://www.enisa.europa.eu/publications/multilayer-framework-for-good-cybersecurity-practices-for-ai)
+—
 published by the European Union Agency for Cybersecurity (ENISA) to
 support the cybersecurity requirements of the EU AI Act and NIS2 Directive.
 
@@ -116,6 +119,7 @@ governance, output monitoring, and privacy-preserving techniques
 as core L2 AI-specific controls.
 
 **Real-world references:**
+
 - Samsung source code leak via ChatGPT (2023)
 - Multiple healthcare RAG deployments surfacing PHI through
   over-permissive vector store retrieval (2024)
@@ -132,6 +136,7 @@ as core L2 AI-specific controls.
 #### Mitigations for ENISA alignment
 
 **Foundational (L1)**
+
 - L1 Data Protection: Encrypt all sensitive data in
   GenAI scope at rest and in transit — training datasets,
   embedding stores, RAG document stores, prompt caches
@@ -143,6 +148,7 @@ as core L2 AI-specific controls.
   Article 30 records of processing
 
 **Hardening (L2)**
+
 - DMS: Implement data classification policy covering all
   GenAI assets — training data, embeddings, and outputs
   all classified with handling requirements documented
@@ -152,6 +158,7 @@ as core L2 AI-specific controls.
   patterns before delivery
 
 **Advanced (L2)**
+
 - DMS: Apply differential privacy in training for sensitive
   corpora — ENISA privacy-preserving technique practice
 - ASI: Conduct model inversion red team — ENISA
@@ -167,10 +174,11 @@ implementation guidance for Article 10 compliance.
 
 | Tool | Type | Link |
 |---|---|---|
-| Microsoft Presidio | Open-source | https://github.com/microsoft/presidio |
-| Nightfall AI | Commercial | https://nightfall.ai |
+| Microsoft Presidio | Open-source | <https://github.com/microsoft/presidio> |
+| Nightfall AI | Commercial | <https://nightfall.ai> |
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - Agentic Top 10: ASI03 Identity & Privilege Abuse
 - Other frameworks: ISO 27001 A.8.11/A.8.12 — NIST AI RMF MS-2.6 — EU AI Act Art. 10
@@ -188,6 +196,7 @@ must not accumulate or retain credentials beyond the scope required
 for the current task.
 
 **Real-world references:**
+
 - LangChain agent credential caching vulnerabilities (2024)
 - AutoGPT API key exposure in agent memory (2023)
 
@@ -203,6 +212,7 @@ for the current task.
 #### Mitigations for ENISA alignment
 
 **Foundational (L1)**
+
 - L1 Access Control: Issue short-lived tokens for all
   agent interactions — credentials expire at session end,
   no persistent credential caching in agent memory
@@ -211,6 +221,7 @@ for the current task.
   configuration files, or agent memory stores
 
 **Hardening (L2)**
+
 - ASI: Enforce least-privilege credential scope per agent
   role — scope defined in AI risk assessment, reviewed
   at each deployment
@@ -221,6 +232,7 @@ for the current task.
   detection for scope expansion or after-session access
 
 **Advanced (L2)**
+
 - ASI: Red team agent credential extraction paths —
   test whether credentials appear in outputs, logs,
   memory stores, or tool payloads
@@ -238,10 +250,11 @@ access control practices provide the technical implementation.
 
 | Tool | Type | Link |
 |---|---|---|
-| HashiCorp Vault | Open-source | https://github.com/hashicorp/vault |
-| AWS Secrets Manager | Commercial | https://aws.amazon.com/secrets-manager/ |
+| HashiCorp Vault | Open-source | <https://github.com/hashicorp/vault> |
+| AWS Secrets Manager | Commercial | <https://aws.amazon.com/secrets-manager/> |
 
 #### Cross-references
+
 - LLM Top 10: LLM03 Excessive Agency
 - Agentic Top 10: ASI03 Identity & Privilege Abuse
 - Other frameworks: OWASP NHI Top 10 — NIST AI RMF GV-1.6 — EU AI Act Art. 15
@@ -270,6 +283,7 @@ authorised and all data flows to be documented.
 #### Mitigations for ENISA alignment
 
 **Foundational (L1)**
+
 - L1 Network: Block known unsanctioned AI service
   domains at egress — maintain approved list, log
   all AI API calls through proxy
@@ -278,6 +292,7 @@ authorised and all data flows to be documented.
   consequences for policy violation documented
 
 **Hardening (L2)**
+
 - GOV: Maintain AI asset register — all approved AI
   services inventoried with data classification, business
   owner, and vendor risk assessment documented
@@ -289,6 +304,7 @@ authorised and all data flows to be documented.
   anomalies in AI-related traffic
 
 **Advanced (L2)**
+
 - Implement CASB or AI-aware proxy for all AI service
   access — enforce data classification labels at the
   network boundary
@@ -306,10 +322,11 @@ use policy.
 
 | Tool | Type | Link |
 |---|---|---|
-| Netskope CASB | Commercial | https://www.netskope.com |
-| Microsoft Defender for Cloud Apps | Commercial | https://www.microsoft.com/en-us/security/business/siem-and-xdr/microsoft-defender-cloud-apps |
+| Netskope CASB | Commercial | <https://www.netskope.com> |
+| Microsoft Defender for Cloud Apps | Commercial | <https://www.microsoft.com/en-us/security/business/siem-and-xdr/microsoft-defender-cloud-apps> |
 
 #### Cross-references
+
 - LLM Top 10: LLM04 Supply Chain
 - Agentic Top 10: ASI04 Agentic Supply Chain
 - Other frameworks: ISO 27001 A.5.23 — NIST AI RMF GV-1.7 — EU AI Act Art. 9
@@ -328,6 +345,7 @@ robustness as L2 AI-specific controls directly addressing
 poisoning attacks.
 
 **Real-world references:**
+
 - Nightshade image poisoning tool (2024) — demonstrated
   training data corruption at scale
 - RAG corpus poisoning enabling downstream prompt injection (2024)
@@ -344,6 +362,7 @@ poisoning attacks.
 #### Mitigations for ENISA alignment
 
 **Hardening (L2)**
+
 - DMS: Implement data provenance tracking for all
   training corpora — source, version, integrity hash
   documented before any data enters the pipeline
@@ -357,6 +376,7 @@ poisoning attacks.
   chain components — security review before ingestion
 
 **Advanced (L2)**
+
 - ASI: Red team deployed models for backdoor behaviour
   — test with trigger inputs across all deployment
   configurations before production release
@@ -377,10 +397,11 @@ by ASI red teaming for backdoor detection.
 
 | Tool | Type | Link |
 |---|---|---|
-| CleanLab | Open-source | https://github.com/cleanlab/cleanlab |
-| Armory | Open-source | https://github.com/twosixlabs/armory |
+| CleanLab | Open-source | <https://github.com/cleanlab/cleanlab> |
+| Armory | Open-source | <https://github.com/twosixlabs/armory> |
 
 #### Cross-references
+
 - LLM Top 10: LLM05 Data and Model Poisoning
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - Other frameworks: MITRE ATLAS AML.T0020 — NIST AI RMF MS-3.3 — EU AI Act Art. 10/15
@@ -409,12 +430,14 @@ and system integrity concern.
 #### Mitigations for ENISA alignment
 
 **Foundational (L1)**
+
 - L1 Secure Development: Implement data validation
   at all GenAI pipeline ingestion points — schema
   validation, type checks, and content bounds enforced
   as secure development requirements
 
 **Hardening (L2)**
+
 - DMS: Deploy data quality gates before model ingestion
   and RAG indexing — schema validation, statistical
   profiling, and outlier detection at each pipeline stage
@@ -425,6 +448,7 @@ and system integrity concern.
   — alert on schema violations or distribution anomalies
 
 **Advanced (L2)**
+
 - DMS: Implement data lineage tracking — every data
   record traceable from ingestion source to model output
   with quality check results at each stage
@@ -435,10 +459,11 @@ and system integrity concern.
 
 | Tool | Type | Link |
 |---|---|---|
-| Great Expectations | Open-source | https://github.com/great-expectations/great_expectations |
-| Pandera | Open-source | https://github.com/unionai-oss/pandera |
+| Great Expectations | Open-source | <https://github.com/great-expectations/great_expectations> |
+| Pandera | Open-source | <https://github.com/unionai-oss/pandera> |
 
 #### Cross-references
+
 - LLM Top 10: LLM05 Data and Model Poisoning
 - DSGAI 2026: DSGAI04 Data, Model & Artifact Poisoning
 - Other frameworks: ISO 27001 A.8.28 — NIST AI RMF MS-2.5 — EU AI Act Art. 10
@@ -467,6 +492,7 @@ third-party component security and AI system integrity controls.
 #### Mitigations for ENISA alignment
 
 **Foundational (L1)**
+
 - L1 Supply Chain: Maintain plugin and tool SBOM —
   every integration component inventoried with version,
   source, security review status
@@ -475,6 +501,7 @@ third-party component security and AI system integrity controls.
   connections
 
 **Hardening (L2)**
+
 - SCS: Apply ENISA third-party security practices to
   all tool and plugin vendors — security assessment,
   DPA where personal data is shared, vulnerability
@@ -487,6 +514,7 @@ third-party component security and AI system integrity controls.
   destination addresses
 
 **Advanced (L2)**
+
 - ASI: Red team tool integration points — test whether
   poisoned tool responses can manipulate agent behaviour
   or extract sensitive data
@@ -497,10 +525,11 @@ third-party component security and AI system integrity controls.
 
 | Tool | Type | Link |
 |---|---|---|
-| Semgrep | Open-source | https://github.com/returntocorp/semgrep |
-| OWASP Dependency-Check | Open-source | https://github.com/jeremylong/DependencyCheck |
+| Semgrep | Open-source | <https://github.com/returntocorp/semgrep> |
+| OWASP Dependency-Check | Open-source | <https://github.com/jeremylong/DependencyCheck> |
 
 #### Cross-references
+
 - LLM Top 10: LLM04 Supply Chain, LLM10 Improper Output Handling
 - Agentic Top 10: ASI02 Tool Misuse & Exploitation, ASI04 Agentic Supply Chain
 - Other frameworks: NIST AI RMF MP-5.1 — ISO 27001 A.5.22 — EU AI Act Art. 9
@@ -529,6 +558,7 @@ domain — AI data governance is an explicit ENISA L2 requirement.
 #### Mitigations for ENISA alignment
 
 **Foundational (L1)**
+
 - GOV: Establish AI data classification policy —
   all GenAI data assets classified before use;
   handling requirements per classification level
@@ -538,6 +568,7 @@ domain — AI data governance is an explicit ENISA L2 requirement.
   at storage layer for all GenAI data assets
 
 **Hardening (L2)**
+
 - GOV: Implement data lifecycle management for all
   GenAI assets — retention periods, archival procedures,
   and verified deletion documented per asset
@@ -550,6 +581,7 @@ domain — AI data governance is an explicit ENISA L2 requirement.
   models in response to GDPR Article 17 requests
 
 **Advanced (L2)**
+
 - DMS: Implement automated classification on all
   GenAI data ingestion — classify before storage,
   not after
@@ -567,10 +599,11 @@ provide the technical implementation of these obligations.
 
 | Tool | Type | Link |
 |---|---|---|
-| Apache Atlas | Open-source | https://atlas.apache.org |
-| Collibra | Commercial | https://www.collibra.com |
+| Apache Atlas | Open-source | <https://atlas.apache.org> |
+| Collibra | Commercial | <https://www.collibra.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - Agentic Top 10: ASI03 Identity & Privilege Abuse
 - Other frameworks: ISO 27001 A.5.12/A.5.13 — NIST AI RMF GV-1.6 — EU AI Act Art. 10/12
@@ -600,6 +633,7 @@ designed as outcomes of the GOV domain.
 #### Mitigations for ENISA alignment
 
 **Foundational (L1)**
+
 - GOV: Document all applicable regulatory requirements
   for each GenAI deployment — EU AI Act risk class,
   GDPR lawful basis, NIS2 entity classification,
@@ -609,6 +643,7 @@ designed as outcomes of the GOV domain.
   at least annually or when regulations change
 
 **Hardening (L2)**
+
 - GOV: Map each regulatory requirement to a specific
   technical control in the AI security programme —
   traceability from obligation to implementation evidence
@@ -621,6 +656,7 @@ designed as outcomes of the GOV domain.
   retained per regulatory minimum
 
 **Advanced (L2–L3)**
+
 - GOV: Maintain regulatory watch programme — monitor
   EU AI Act implementing acts, ENISA guidelines, and
   sector-specific AI regulation developments
@@ -638,10 +674,11 @@ GOV domain practices address Articles 9 (risk management system),
 
 | Tool | Type | Link |
 |---|---|---|
-| OneTrust | Commercial | https://www.onetrust.com |
-| IBM OpenPages | Commercial | https://www.ibm.com/products/openpages |
+| OneTrust | Commercial | <https://www.onetrust.com> |
+| IBM OpenPages | Commercial | <https://www.ibm.com/products/openpages> |
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - DSGAI 2026: DSGAI07 Data Governance, Lifecycle & Classification
 - Other frameworks: ISO 27001 A.5.31 — NIST AI RMF GV-4.2 — EU AI Act Art. 9/17/72
@@ -670,6 +707,7 @@ data governance scope.
 #### Mitigations for ENISA alignment
 
 **Hardening (L2)**
+
 - DMS: Extend data classification scope to all GenAI
   modalities — images, audio, video, and documents
   classified with the same rigour as text data
@@ -681,6 +719,7 @@ data governance scope.
   modality type in scope
 
 **Advanced (L2)**
+
 - ASI: Red team multimodal data extraction paths —
   test whether sensitive data embedded in one modality
   can be extracted via a different output modality
@@ -692,10 +731,11 @@ data governance scope.
 
 | Tool | Type | Link |
 |---|---|---|
-| AWS Rekognition | Commercial | https://aws.amazon.com/rekognition/ |
-| Google Cloud DLP | Commercial | https://cloud.google.com/dlp |
+| AWS Rekognition | Commercial | <https://aws.amazon.com/rekognition/> |
+| Google Cloud DLP | Commercial | <https://cloud.google.com/dlp> |
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - Agentic Top 10: ASI03 Identity & Privilege Abuse
 - Other frameworks: ISO 27001 A.8.12 — NIST AI RMF MS-2.6 — EU AI Act Art. 10
@@ -724,6 +764,7 @@ risk assessment.
 #### Mitigations for ENISA alignment
 
 **Hardening (L2)**
+
 - DMS: Conduct formal anonymisation assessment for
   all synthetic datasets used in GenAI — evaluate
   k-anonymity, l-diversity, and differential privacy
@@ -736,6 +777,7 @@ risk assessment.
   model or data distribution changes
 
 **Advanced (L2)**
+
 - DMS: Apply differential privacy with proven epsilon
   budgets to all synthetic data generation for sensitive
   corpora — ENISA privacy-preserving technique practice
@@ -746,10 +788,11 @@ risk assessment.
 
 | Tool | Type | Link |
 |---|---|---|
-| ARX Data Anonymization Tool | Open-source | https://arx.deidentifier.org |
-| Gretel.ai | Commercial | https://gretel.ai |
+| ARX Data Anonymization Tool | Open-source | <https://arx.deidentifier.org> |
+| Gretel.ai | Commercial | <https://gretel.ai> |
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - DSGAI 2026: DSGAI18 Inference & Data Reconstruction
 - Other frameworks: ISO 27001 A.8.11 — NIST AI RMF GV-1.6 — GDPR Recital 26
@@ -777,11 +820,13 @@ as both a data isolation failure and an AI system integrity issue.
 #### Mitigations for ENISA alignment
 
 **Foundational (L1)**
+
 - L1 Data Protection: Implement tenant isolation at
   the infrastructure layer for all multi-tenant GenAI
   deployments — separate context stores per tenant
 
 **Hardening (L2)**
+
 - DMS: Enforce session boundary controls — conversation
   history, cached context, and embeddings isolated per
   user session with cryptographic separation
@@ -793,6 +838,7 @@ as both a data isolation failure and an AI system integrity issue.
   where it was not introduced
 
 **Advanced (L2)**
+
 - ASI: Red team session isolation controls — test
   whether crafted inputs can extract prior session
   context from shared infrastructure
@@ -804,10 +850,11 @@ as both a data isolation failure and an AI system integrity issue.
 
 | Tool | Type | Link |
 |---|---|---|
-| LLM Guard | Open-source | https://github.com/protectai/llm-guard |
-| Azure AI Content Safety | Commercial | https://azure.microsoft.com/en-us/products/ai-services/ai-content-safety |
+| LLM Guard | Open-source | <https://github.com/protectai/llm-guard> |
+| Azure AI Content Safety | Commercial | <https://azure.microsoft.com/en-us/products/ai-services/ai-content-safety> |
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure, LLM08 Hidden Context Exposure
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - Other frameworks: ISO 27001 A.8.3 — NIST AI RMF MP-2.3 — EU AI Act Art. 10
@@ -825,6 +872,7 @@ address this as both an AI system integrity failure and a monitoring
 gap requiring AI-specific controls.
 
 **Real-world references:**
+
 - Text-to-SQL injection attacks against enterprise NL database
   interfaces surfacing unrestricted data access (2024)
 
@@ -840,6 +888,7 @@ gap requiring AI-specific controls.
 #### Mitigations for ENISA alignment
 
 **Foundational (L1)**
+
 - L1 Access Control: Issue least-privilege database
   credentials to all NL gateways — read-only where
   appropriate, table scope restricted to business need
@@ -848,6 +897,7 @@ gap requiring AI-specific controls.
   access data outside authorised scope
 
 **Hardening (L2)**
+
 - ASI: Deploy query validation layer between NL
   model and database — generated queries reviewed
   against authorised query patterns before execution
@@ -859,6 +909,7 @@ gap requiring AI-specific controls.
   authorisation enforced at the data layer
 
 **Advanced (L2)**
+
 - ASI: Red team NL gateway with prompt injection
   payloads — test whether injection can bypass query
   scope restrictions or extract out-of-scope data
@@ -875,10 +926,11 @@ ASI controls provide the implementation framework.
 
 | Tool | Type | Link |
 |---|---|---|
-| Rebuff | Open-source | https://github.com/protectai/rebuff |
-| Garak | Open-source | https://github.com/leondz/garak |
+| Rebuff | Open-source | <https://github.com/protectai/rebuff> |
+| Garak | Open-source | <https://github.com/leondz/garak> |
 
 #### Cross-references
+
 - LLM Top 10: LLM01 Prompt Injection, LLM10 Improper Output Handling
 - Agentic Top 10: ASI01 Agent Goal Hijack, ASI02 Tool Misuse & Exploitation
 - Other frameworks: OWASP ASVS V5 — NIST AI RMF MP-2.3 — EU AI Act Art. 15
@@ -907,6 +959,7 @@ controls beyond standard database protection.
 #### Mitigations for ENISA alignment
 
 **Foundational (L1)**
+
 - L1 Access Control: Enforce authentication and
   authorisation on all vector store access —
   no unauthenticated endpoints, least-privilege
@@ -916,6 +969,7 @@ controls beyond standard database protection.
   data assets equivalent to production databases
 
 **Hardening (L2)**
+
 - DMS: Classify embeddings and implement handling
   requirements — embedding stores registered in
   GenAI data asset inventory with classification
@@ -928,6 +982,7 @@ controls beyond standard database protection.
   from unexpected sources
 
 **Advanced (L2)**
+
 - DMS: Implement embedding isolation per tenant
   and data classification — prevent cross-tenant
   retrieval through namespace and access control
@@ -939,10 +994,11 @@ controls beyond standard database protection.
 
 | Tool | Type | Link |
 |---|---|---|
-| Weaviate | Open-source | https://github.com/weaviate/weaviate |
-| Qdrant | Open-source | https://github.com/qdrant/qdrant |
+| Weaviate | Open-source | <https://github.com/weaviate/weaviate> |
+| Qdrant | Open-source | <https://github.com/qdrant/qdrant> |
 
 #### Cross-references
+
 - LLM Top 10: LLM09 Vector and Embedding Weaknesses
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - Other frameworks: ISO 27001 A.8.3 — NIST AI RMF MP-2.3 — EU AI Act Art. 10
@@ -971,6 +1027,7 @@ governance failure in the observability layer.
 #### Mitigations for ENISA alignment
 
 **Foundational (L1)**
+
 - L1 Logging: Protect all observability stores from
   unauthorised access — access control and encryption
   equivalent to primary data assets
@@ -979,6 +1036,7 @@ governance failure in the observability layer.
   subject to the same classification and handling policy
 
 **Hardening (L2)**
+
 - DMS: Deploy PII scanning on telemetry pipeline —
   redact or mask sensitive data in GenAI logs before
   storage in observability platforms
@@ -989,6 +1047,7 @@ governance failure in the observability layer.
   bulk retrieval or access from non-operational sources
 
 **Advanced (L2)**
+
 - DMS: Implement structured redaction — define what
   fields may appear in telemetry and what must be
   suppressed before storage
@@ -1000,10 +1059,11 @@ governance failure in the observability layer.
 
 | Tool | Type | Link |
 |---|---|---|
-| OpenTelemetry | Open-source | https://opentelemetry.io |
-| Grafana Loki | Open-source | https://github.com/grafana/loki |
+| OpenTelemetry | Open-source | <https://opentelemetry.io> |
+| Grafana Loki | Open-source | <https://github.com/grafana/loki> |
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - DSGAI 2026: DSGAI07 Data Governance, Lifecycle & Classification
 - Other frameworks: ISO 27001 A.8.15/A.8.16 — NIST AI RMF GV-1.6 — EU AI Act Art. 12
@@ -1032,12 +1092,14 @@ integrity concern.
 #### Mitigations for ENISA alignment
 
 **Foundational (L1)**
+
 - L1 Data Protection: Apply data minimisation
   principle to all context window design — only
   data necessary for the task included; excess
   context prevented at design time
 
 **Hardening (L2)**
+
 - DMS: Implement context scope controls — RAG
   retrieval scoped to user authorisation level,
   system prompt reviewed for unnecessary sensitive
@@ -1049,6 +1111,7 @@ integrity concern.
   document treatment controls and residual risk
 
 **Advanced (L2)**
+
 - DMS: Implement dynamic context redaction —
   classify context content at runtime and redact
   above-threshold classifications before model ingestion
@@ -1060,10 +1123,11 @@ integrity concern.
 
 | Tool | Type | Link |
 |---|---|---|
-| LlamaIndex | Open-source | https://github.com/run-llama/llama_index |
-| LLM Guard | Open-source | https://github.com/protectai/llm-guard |
+| LlamaIndex | Open-source | <https://github.com/run-llama/llama_index> |
+| LLM Guard | Open-source | <https://github.com/protectai/llm-guard> |
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure, LLM08 Hidden Context Exposure
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - Other frameworks: GDPR Art. 5(1)(c) — NIST AI RMF MS-2.5 — EU AI Act Art. 10
@@ -1092,6 +1156,7 @@ scope control as an AI system integrity and governance requirement.
 #### Mitigations for ENISA alignment
 
 **Foundational (L1)**
+
 - L1 Access Control: Deploy endpoint AI assistants
   with least-privilege permissions — no broad file
   system or browser data access; explicit permissions
@@ -1101,6 +1166,7 @@ scope control as an AI system integrity and governance requirement.
   sharing disclosed before deployment
 
 **Hardening (L2)**
+
 - ASI: Define and enforce explicit scope boundaries
   for endpoint AI assistants — document permitted
   data access in AI risk assessment, enforce at
@@ -1113,6 +1179,7 @@ scope control as an AI system integrity and governance requirement.
   permitted use and data sharing
 
 **Advanced (L2)**
+
 - ASI: Red team endpoint AI assistant scope controls
   — test whether crafted inputs or application state
   can trigger access to data outside defined scope
@@ -1124,10 +1191,11 @@ scope control as an AI system integrity and governance requirement.
 
 | Tool | Type | Link |
 |---|---|---|
-| Microsoft Intune | Commercial | https://www.microsoft.com/en-us/security/business/endpoint-management/microsoft-intune |
-| Carbon Black | Commercial | https://www.vmware.com/products/carbon-black-cloud.html |
+| Microsoft Intune | Commercial | <https://www.microsoft.com/en-us/security/business/endpoint-management/microsoft-intune> |
+| Carbon Black | Commercial | <https://www.vmware.com/products/carbon-black-cloud.html> |
 
 #### Cross-references
+
 - LLM Top 10: LLM03 Excessive Agency
 - Agentic Top 10: ASI02 Tool Misuse & Exploitation, ASI03 Identity & Privilege Abuse
 - Other frameworks: ISO 27001 A.8.19 — NIST AI RMF GV-1.7 — EU AI Act Art. 9
@@ -1157,6 +1225,7 @@ recovery.
 #### Mitigations for ENISA alignment
 
 **Foundational (L1)**
+
 - L1 Business Continuity: Implement backup and
   recovery for all GenAI critical assets — training
   data, model weights, embeddings, and RAG corpora
@@ -1166,6 +1235,7 @@ recovery.
   store unavailability, or model health degradation
 
 **Hardening (L2)**
+
 - DMS: Protect model artefacts with versioned,
   immutable storage — model weights and training
   checkpoints stored with deletion protection
@@ -1178,6 +1248,7 @@ recovery.
   success rate, embedding store query health
 
 **Advanced (L2)**
+
 - IRS: Test AI disaster recovery annually —
   verify model rollback, data restoration, and
   service recovery within defined RTOs
@@ -1195,10 +1266,11 @@ are a direct Article 15 compliance requirement.
 
 | Tool | Type | Link |
 |---|---|---|
-| DVC (Data Version Control) | Open-source | https://github.com/iterative/dvc |
-| MLflow | Open-source | https://github.com/mlflow/mlflow |
+| DVC (Data Version Control) | Open-source | <https://github.com/iterative/dvc> |
+| MLflow | Open-source | <https://github.com/mlflow/mlflow> |
 
 #### Cross-references
+
 - LLM Top 10: LLM06 Unbounded Consumption
 - Agentic Top 10: ASI08 Cascading Agent Failures
 - Other frameworks: ISO 27001 A.8.14 — NIST AI RMF MG-2.2 — EU AI Act Art. 15
@@ -1217,6 +1289,7 @@ AI-specific attack requiring specialised controls beyond standard
 data protection.
 
 **Real-world references:**
+
 - CVE-2019-20634: Proofpoint model inversion via prediction
   API (CVSS 6.5)
 - Multiple membership inference demonstrations against
@@ -1234,6 +1307,7 @@ data protection.
 #### Mitigations for ENISA alignment
 
 **Hardening (L2)**
+
 - DMS: Implement prediction output restrictions —
   confidence score truncation, output perturbation,
   and query rate limiting as DMS inference attack
@@ -1246,6 +1320,7 @@ data protection.
   patterns
 
 **Advanced (L2)**
+
 - DMS: Apply differential privacy to model training
   for high-sensitivity corpora — formal privacy
   guarantees with documented epsilon budget
@@ -1260,10 +1335,11 @@ data protection.
 
 | Tool | Type | Link |
 |---|---|---|
-| ML Privacy Meter | Open-source | https://github.com/privacytrustlab/ml_privacy_meter |
-| TensorFlow Privacy | Open-source | https://github.com/tensorflow/privacy |
+| ML Privacy Meter | Open-source | <https://github.com/privacytrustlab/ml_privacy_meter> |
+| TensorFlow Privacy | Open-source | <https://github.com/tensorflow/privacy> |
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - DSGAI 2026: DSGAI10 Synthetic Data & Anonymisation Pitfalls
 - Other frameworks: ISO 27001 A.8.11 — NIST AI RMF MS-2.5 — GDPR Art. 17
@@ -1293,6 +1369,7 @@ AI development lifecycle.
 #### Mitigations for ENISA alignment
 
 **Foundational (L1)**
+
 - L1 Access Control: Issue least-privilege, time-limited
   access to human reviewers — access scoped to
   specific labeling task, revoked on completion
@@ -1301,6 +1378,7 @@ AI development lifecycle.
   restrictions, and breach notification documented
 
 **Hardening (L2)**
+
 - DMS: Minimise sensitive data in labeling batches
   — remove unnecessary PII and sensitive content
   before providing data to reviewers
@@ -1311,6 +1389,7 @@ AI development lifecycle.
   scope, duration, and data volume for audit
 
 **Advanced (L2)**
+
 - DMS: Implement privacy-preserving labeling
   techniques — data perturbation or synthetic
   replacement where full fidelity is not required
@@ -1323,10 +1402,11 @@ AI development lifecycle.
 
 | Tool | Type | Link |
 |---|---|---|
-| Scale AI | Commercial | https://scale.com |
-| Label Studio | Open-source | https://github.com/HumanSignal/label-studio |
+| Scale AI | Commercial | <https://scale.com> |
+| Label Studio | Open-source | <https://github.com/HumanSignal/label-studio> |
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - DSGAI 2026: DSGAI07 Data Governance, Lifecycle & Classification
 - Other frameworks: ISO 27001 A.5.22 — NIST AI RMF MP-5.1 — EU AI Act Art. 10
@@ -1344,6 +1424,7 @@ controls and SCS supply chain security together address the
 protection of model artefacts as high-value AI assets.
 
 **Real-world references:**
+
 - Systematic API query attacks demonstrating functional
   model extraction against commercial LLM APIs (2023–2024)
 
@@ -1359,6 +1440,7 @@ protection of model artefacts as high-value AI assets.
 #### Mitigations for ENISA alignment
 
 **Hardening (L2)**
+
 - DMS: Classify model weights as critical IP assets —
   access controls, encryption at rest and in transit,
   and access audit logging equivalent to source code
@@ -1371,6 +1453,7 @@ protection of model artefacts as high-value AI assets.
   model extraction signatures
 
 **Advanced (L2)**
+
 - DMS: Apply model watermarking — embed detectable
   signatures in model weights and outputs to enable
   forensic attribution of extracted models
@@ -1385,10 +1468,11 @@ protection of model artefacts as high-value AI assets.
 
 | Tool | Type | Link |
 |---|---|---|
-| Knockoff Nets detection | Research | https://arxiv.org/abs/1812.02766 |
-| ModelScan | Open-source | https://github.com/protectai/modelscan |
+| Knockoff Nets detection | Research | <https://arxiv.org/abs/1812.02766> |
+| ModelScan | Open-source | <https://github.com/protectai/modelscan> |
 
 #### Cross-references
+
 - LLM Top 10: LLM05 Data and Model Poisoning
 - DSGAI 2026: DSGAI04 Data, Model & Artifact Poisoning
 - Other frameworks: ISO 27001 A.8.24 — NIST AI RMF MS-2.6 — EU AI Act Art. 15
@@ -1407,6 +1491,7 @@ with significant L3 sector-specific implications for critical
 infrastructure, healthcare, and financial services.
 
 **Real-world references:**
+
 - Research demonstrations of targeted disinformation injection
   via fine-tuning corpus poisoning (2023–2024)
 - RAG corpus poisoning to produce factually incorrect citations
@@ -1424,6 +1509,7 @@ infrastructure, healthcare, and financial services.
 #### Mitigations for ENISA alignment
 
 **Hardening (L2)**
+
 - DMS: Verify provenance and credibility of all
   fine-tuning and RAG corpora — source credibility
   scoring, cross-source consistency checking before
@@ -1435,6 +1521,7 @@ infrastructure, healthcare, and financial services.
   — sector-specific impact assessment, treatment controls
 
 **Advanced (L2–L3)**
+
 - ASI: Red team targeted disinformation injection —
   test whether adversarially poisoned content can
   survive data quality controls and affect model outputs
@@ -1458,10 +1545,11 @@ extend to disinformation resilience.
 
 | Tool | Type | Link |
 |---|---|---|
-| CleanLab | Open-source | https://github.com/cleanlab/cleanlab |
-| FactScore | Research | https://github.com/shmsw25/FActScoring |
+| CleanLab | Open-source | <https://github.com/cleanlab/cleanlab> |
+| FactScore | Research | <https://github.com/shmsw25/FActScoring> |
 
 #### Cross-references
+
 - LLM Top 10: LLM05 Data and Model Poisoning, LLM07 Misinformation
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - Other frameworks: MITRE ATLAS AML.T0020 — NIST AI RMF MS-3.3 — EU AI Act Art. 52
@@ -1498,6 +1586,8 @@ extend to disinformation resilience.
 
 ---
 
-*Part of the [OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk) —
+*Part of the
+[OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk)
+—
 maintained by the OWASP GenAI Data Security Initiative.
 Licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).*

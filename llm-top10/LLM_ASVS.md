@@ -10,7 +10,8 @@
 # LLM Top 10 2026 × OWASP ASVS 4.0.3
 
 Mapping the [OWASP Top 10 for LLM Applications 2026](https://genai.owasp.org/llm-top-10/)
-to the [OWASP Application Security Verification Standard (ASVS) 4.0.3](https://owasp.org/www-project-application-security-verification-standard/)
+to the
+[OWASP Application Security Verification Standard (ASVS) 4.0.3](https://owasp.org/www-project-application-security-verification-standard/)
 — the framework for testing and verifying the security of web
 applications and APIs, organised into 14 chapters with three
 verification levels (L1/L2/L3).
@@ -43,6 +44,7 @@ apply, with specific requirements amplified by the LLM context.
 | V14 | Configuration | LLM secure deployment configuration |
 
 **Verification levels:**
+
 - L1 — Opportunistic: passively verifiable, minimal security requirement
 - L2 — Standard: most applications with sensitive data
 - L3 — Advanced: high-value targets, high assurance required
@@ -109,6 +111,7 @@ invisible-Unicode carriers survive review of the rendered interface.
 #### Mitigations by tier
 
 **Foundational (L1)**
+
 - V5.1.1: Implement input validation for all LLM API inputs —
   allowlist of permitted content structures, reject inputs
   containing known injection patterns
@@ -119,6 +122,7 @@ invisible-Unicode carriers survive review of the rendered interface.
   before rendering in browsers or passing to interpreters
 
 **Hardening (L2)**
+
 - V1.1.2: Include all LLM data flows in threat modelling —
   every injection path from user input to model context
   documented and mitigated
@@ -129,6 +133,7 @@ invisible-Unicode carriers survive review of the rendered interface.
   on all input channels
 
 **Advanced (L3)**
+
 - Implement architectural separation between system prompt
   and user input — structural guarantee at the platform level
 - Conduct adversarial testing covering all injection vectors —
@@ -141,11 +146,12 @@ invisible-Unicode carriers survive review of the rendered interface.
 
 | Tool | Type | Link |
 |---|---|---|
-| Garak | Open-source | https://github.com/leondz/garak |
-| LLM Guard | Open-source | https://github.com/protectai/llm-guard |
-| OWASP ZAP (for API testing) | Open-source | https://www.zaproxy.org |
+| Garak | Open-source | <https://github.com/leondz/garak> |
+| LLM Guard | Open-source | <https://github.com/protectai/llm-guard> |
+| OWASP ZAP (for API testing) | Open-source | <https://www.zaproxy.org> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI01 Agent Goal Hijack
 - DSGAI 2026: DSGAI01 Sensitive Data Leakage, DSGAI12 Unsafe NL Data Gateways
 - Other frameworks: CIS Controls CIS 16 · ISO 27001 A.8.28 · MITRE ATLAS AML.T0051
@@ -173,6 +179,7 @@ over-permissive RAG retrieval.
 #### Mitigations by tier
 
 **Foundational (L1)**
+
 - V8.1.1: Ensure LLM outputs containing sensitive data are
   not logged in cleartext — redact before logging, mask
   before caching
@@ -183,6 +190,7 @@ over-permissive RAG retrieval.
   enforce at the retrieval layer, not just application layer
 
 **Hardening (L2)**
+
 - V6.1.1: Encrypt all sensitive data at rest in LLM scope —
   embedding databases, training data stores, prompt caches,
   and observability logs containing sensitive content
@@ -192,6 +200,7 @@ over-permissive RAG retrieval.
   scope matches authorised user access rights
 
 **Advanced (L3)**
+
 - Apply differential privacy in training and embedding
   generation for sensitive corpora
 - Conduct model inversion red team exercises — validate
@@ -203,10 +212,11 @@ over-permissive RAG retrieval.
 
 | Tool | Type | Link |
 |---|---|---|
-| Microsoft Presidio | Open-source | https://github.com/microsoft/presidio |
-| Nightfall AI | Commercial | https://nightfall.ai |
+| Microsoft Presidio | Open-source | <https://github.com/microsoft/presidio> |
+| Nightfall AI | Commercial | <https://nightfall.ai> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI03 Identity & Privilege Abuse
 - DSGAI 2026: DSGAI01 Sensitive Data Leakage, DSGAI18 Inference & Data Reconstruction
 - Other frameworks: ISO 27001 A.8.11/A.8.12 · CIS Controls CIS 3 · GDPR Art. 25
@@ -232,6 +242,7 @@ unintended or harmful actions when manipulated.
 #### Mitigations by tier
 
 **Foundational (L1)**
+
 - V4.1.3: Enforce least privilege on all LLM tool access —
   read-only by default, write access requires explicit
   justification and is scoped to minimum required operations
@@ -242,6 +253,7 @@ unintended or harmful actions when manipulated.
   separate confirmation interface, not the LLM chat
 
 **Hardening (L2)**
+
 - V7.2.2: Log all LLM tool invocations with full context —
   tool identity, parameters, user session, timestamp —
   immutable audit trail for incident investigation
@@ -252,6 +264,7 @@ unintended or harmful actions when manipulated.
   structural enforcement of permitted scope
 
 **Advanced (L3)**
+
 - Formally specify permitted action graphs — only
   pre-approved action sequences can execute in production
 - Conduct red team exercises specifically testing excessive
@@ -263,10 +276,11 @@ unintended or harmful actions when manipulated.
 
 | Tool | Type | Link |
 |---|---|---|
-| Guardrails AI | Open-source | https://github.com/guardrails-ai/guardrails |
-| NeMo Guardrails | Open-source | https://github.com/NVIDIA/NeMo-Guardrails |
+| Guardrails AI | Open-source | <https://github.com/guardrails-ai/guardrails> |
+| NeMo Guardrails | Open-source | <https://github.com/NVIDIA/NeMo-Guardrails> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI01 Agent Goal Hijack, ASI02 Tool Misuse
 - DSGAI 2026: DSGAI06 Tool Plugin & Agent Data Exchange
 - Other frameworks: ISO 27001 A.8.2 · CIS Controls CIS 5/6 · AIUC-1 B006
@@ -297,12 +311,14 @@ dependency is clean.
 #### Mitigations by tier
 
 **Foundational (L1)**
+
 - Maintain ML SBOM as part of software asset inventory —
   every LLM component inventoried with version and source
 - Pin all LLM component versions — no automatic updates
   in production without review
 
 **Hardening (L2)**
+
 - V10.2.1: Include LLM component CVE scanning in CI/CD
   pipeline — model inference libraries and dependencies
   scanned before each deployment
@@ -312,6 +328,7 @@ dependency is clean.
   build pipeline — unsigned or modified components rejected
 
 **Advanced (L3)**
+
 - Operate isolated model evaluation environment — backdoor
   detection before each production promotion
 - Conduct adversarial supply chain testing — attempt to
@@ -323,11 +340,12 @@ dependency is clean.
 
 | Tool | Type | Link |
 |---|---|---|
-| CycloneDX | Open-source | https://cyclonedx.org |
-| ModelScan | Open-source | https://github.com/protectai/modelscan |
-| OWASP Dependency-Check | Open-source | https://owasp.org/www-project-dependency-check/ |
+| CycloneDX | Open-source | <https://cyclonedx.org> |
+| ModelScan | Open-source | <https://github.com/protectai/modelscan> |
+| OWASP Dependency-Check | Open-source | <https://owasp.org/www-project-dependency-check/> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI04 Agentic Supply Chain Vulnerabilities
 - DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning
 - Other frameworks: ISO 27001 A.5.19/A.5.21 · CIS Controls CIS 2 · NIST SP 800-218A
@@ -357,6 +375,7 @@ stage that writes weights, not just the original training corpus.
 #### Mitigations by tier
 
 **Foundational (L1)**
+
 - V5.1.1: Implement input validation on training data
   pipeline — anomaly detection, source validation, and
   schema verification before any training run
@@ -366,6 +385,7 @@ stage that writes weights, not just the original training corpus.
   sources enter production training pipelines
 
 **Hardening (L2)**
+
 - V10.2.1: Scan all training pipeline dependencies for
   vulnerabilities — compromised libraries as a poisoning
   attack vector
@@ -375,6 +395,7 @@ stage that writes weights, not just the original training corpus.
   backdoor trigger testing before each model promotion
 
 **Advanced (L3)**
+
 - Conduct post-training backdoor detection as mandatory
   pre-deployment gate — neural cleanse or equivalent
 - Apply differential privacy during training — limits
@@ -386,10 +407,11 @@ stage that writes weights, not just the original training corpus.
 
 | Tool | Type | Link |
 |---|---|---|
-| IBM Adversarial Robustness Toolbox | Open-source | https://github.com/Trusted-AI/adversarial-robustness-toolbox |
-| CleanLab | Open-source | https://github.com/cleanlab/cleanlab |
+| IBM Adversarial Robustness Toolbox | Open-source | <https://github.com/Trusted-AI/adversarial-robustness-toolbox> |
+| CleanLab | Open-source | <https://github.com/cleanlab/cleanlab> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning
 - Other frameworks: ISO 27001 A.8.27/A.8.29 · CIS Controls CIS 7 · NIST AI RMF MS-3.3
@@ -415,6 +437,7 @@ causing denial of service or runaway API cost.
 #### Mitigations by tier
 
 **Foundational (L1)**
+
 - V13.1.1: Implement rate limiting on all LLM API endpoints —
   hard caps per user, per session, and per API key
   enforced at the gateway before reaching the model
@@ -425,6 +448,7 @@ causing denial of service or runaway API cost.
   no sensitive system information in error responses
 
 **Hardening (L2)**
+
 - V11.1.4: Implement per-tenant cost budgets with automatic
   suspension — business logic control, not just monitoring
 - Implement circuit breakers — LLM service degradation
@@ -433,6 +457,7 @@ causing denial of service or runaway API cost.
   anomalous consumption detected and responded to
 
 **Advanced (L3)**
+
 - Deploy sponge example detection — inputs designed to
   maximise computation identified and rejected
 - Adaptive rate limiting — thresholds adjust dynamically
@@ -445,11 +470,12 @@ causing denial of service or runaway API cost.
 
 | Tool | Type | Link |
 |---|---|---|
-| LiteLLM | Open-source | https://github.com/BerriAI/litellm |
-| Kong Gateway | Open-source | https://github.com/Kong/kong |
-| OpenTelemetry | Open-source | https://opentelemetry.io |
+| LiteLLM | Open-source | <https://github.com/BerriAI/litellm> |
+| Kong Gateway | Open-source | <https://github.com/Kong/kong> |
+| OpenTelemetry | Open-source | <https://opentelemetry.io> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI08 Cascading Agent Failures
 - DSGAI 2026: DSGAI17 Data Availability & Resilience Failures
 - Other frameworks: ISO 27001 A.5.30 · CIS Controls CIS 4/CIS 12 · CWE-400
@@ -474,6 +500,7 @@ systems act upon.
 #### Mitigations by tier
 
 **Foundational (L1)**
+
 - V5.2.1: Label all LLM advisory output — clear visual
   distinction from authoritative content in all interfaces
 - V7.4.1: Log accuracy metrics and user feedback — enable
@@ -482,6 +509,7 @@ systems act upon.
   verify against cited sources before acting
 
 **Hardening (L2)**
+
 - V11.1.1: Document LLM accuracy limitations as business
   logic constraints — define which domains require
   independent verification before action
@@ -491,6 +519,7 @@ systems act upon.
   sources — not uncontrolled web content
 
 **Advanced (L3)**
+
 - Conduct domain-specific accuracy testing before deployment —
   hallucination rate measured per domain against acceptable
   thresholds
@@ -503,11 +532,12 @@ systems act upon.
 
 | Tool | Type | Link |
 |---|---|---|
-| TruLens | Open-source | https://github.com/truera/trulens |
-| RAGAS | Open-source | https://github.com/explodinggradients/ragas |
-| DeepEval | Open-source | https://github.com/confident-ai/deepeval |
+| TruLens | Open-source | <https://github.com/truera/trulens> |
+| RAGAS | Open-source | <https://github.com/explodinggradients/ragas> |
+| DeepEval | Open-source | <https://github.com/confident-ai/deepeval> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI09 Human-Agent Trust Exploitation
 - DSGAI 2026: DSGAI21 Disinformation & Integrity Attacks
 - Other frameworks: ISO 27001 A.8.16 · CIS Controls CIS 14 · EU AI Act Art. 13
@@ -543,6 +573,7 @@ treat it as a security boundary.
 #### Mitigations by tier
 
 **Foundational (L1)**
+
 - V8.1.1: Do not store system prompts in cleartext — not
   in source code, configuration files, or environment
   variables without secret manager encryption
@@ -553,6 +584,7 @@ treat it as a security boundary.
   from system prompts — use runtime token resolution
 
 **Hardening (L2)**
+
 - V7.2.1: Log all access to system prompt storage and
   configuration — audit trail for unauthorised access
   detection and investigation
@@ -563,6 +595,7 @@ treat it as a security boundary.
   verify extraction resistance under known attack techniques
 
 **Advanced (L3)**
+
 - Implement system prompt tokenisation — sensitive phrases
   replaced with opaque tokens resolved at runtime
 - Deploy output classifier to detect and block responses
@@ -571,6 +604,7 @@ treat it as a security boundary.
   document results and verify mitigations hold
 
 #### Cross-references
+
 - Agentic Top 10: ASI01 Agent Goal Hijack
 - DSGAI 2026: DSGAI15 Over-Broad Context Windows
 - Other frameworks: ISO 27001 A.5.12/A.8.24 · CIS Controls CIS 3/CIS 4 · CWE-200
@@ -595,6 +629,7 @@ and inference of sensitive information from embeddings.
 #### Mitigations by tier
 
 **Foundational (L1)**
+
 - V4.1.3: Enable RBAC on all vector store collections —
   enforce least privilege, no unauthenticated access in
   any environment including development
@@ -603,6 +638,7 @@ and inference of sensitive information from embeddings.
 - Patch all known vector database CVEs promptly
 
 **Hardening (L2)**
+
 - V6.1.1: Encrypt all vector store content at rest —
   embeddings are sensitive derived data requiring the
   same protection as source documents
@@ -613,6 +649,7 @@ and inference of sensitive information from embeddings.
   on bulk extraction and unusual retrieval volumes
 
 **Advanced (L3)**
+
 - Conduct embedding inversion testing — validate that
   source content cannot be reconstructed from embeddings
 - Apply differential privacy in embedding generation
@@ -624,10 +661,11 @@ and inference of sensitive information from embeddings.
 
 | Tool | Type | Link |
 |---|---|---|
-| Weaviate (with RBAC) | Open-source | https://weaviate.io |
-| Qdrant | Open-source | https://qdrant.tech |
+| Weaviate (with RBAC) | Open-source | <https://weaviate.io> |
+| Qdrant | Open-source | <https://qdrant.tech> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - DSGAI 2026: DSGAI13 Vector Store Platform Security
 - Other frameworks: ISO 27001 A.8.3/A.8.24 · CIS Controls CIS 3 · CWE-284
@@ -661,6 +699,7 @@ reaches a shell, a browser, or a database.
 #### Mitigations by tier
 
 **Foundational (L1)**
+
 - V5.2.1: Encode all LLM output before rendering in HTML —
   treat model responses as untrusted user input for rendering
 - V5.3.5: Parameterise all database queries — never interpolate
@@ -669,6 +708,7 @@ reaches a shell, a browser, or a database.
   content — absolute prohibition enforced through code review
 
 **Hardening (L2)**
+
 - Implement output schema validation — only outputs conforming
   to defined safe structures passed to downstream consumers
 - V5.2.5: Maintain allowlist of permitted operations for
@@ -678,6 +718,7 @@ reaches a shell, a browser, or a database.
   test XSS, injection, and command execution via model responses
 
 **Advanced (L3)**
+
 - Deploy dedicated output security layer independent of
   the LLM — structural guarantee against output injection
 - Conduct adversarial output testing — attempt to generate
@@ -690,11 +731,12 @@ reaches a shell, a browser, or a database.
 
 | Tool | Type | Link |
 |---|---|---|
-| OWASP ZAP | Open-source | https://www.zaproxy.org |
-| Semgrep | Open-source | https://semgrep.dev |
-| DOMPurify | Open-source | https://github.com/cure53/DOMPurify |
+| OWASP ZAP | Open-source | <https://www.zaproxy.org> |
+| Semgrep | Open-source | <https://semgrep.dev> |
+| DOMPurify | Open-source | <https://github.com/cure53/DOMPurify> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI02 Tool Misuse, ASI05 Unexpected Code Execution
 - DSGAI 2026: DSGAI05 Data Integrity & Validation Failures, DSGAI12 Unsafe NL Data Gateways
 - Other frameworks: CIS Controls CIS 16 · ISO 27001 A.8.28 · CWE-79/CWE-89
@@ -769,5 +811,7 @@ reaches a shell, a browser, or a database.
 
 ---
 
-*Part of the [OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk) —
+*Part of the
+[OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk)
+—
 maintained by the [OWASP GenAI Data Security Initiative](https://genai.owasp.org)*

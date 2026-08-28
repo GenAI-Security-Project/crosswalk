@@ -15,6 +15,7 @@ assignees: emmanuelgjr
 <!-- Must be freely accessible without payment for core content -->
 
 **Source list(s) to map:**
+
 - [ ] LLM Top 10 2026 (LLM01–LLM10)
 - [ ] Agentic Top 10 2026 (ASI01–ASI10)
 - [ ] DSGAI 2026 (DSGAI01–DSGAI21)
@@ -36,6 +37,7 @@ assignees: emmanuelgjr
 <!-- e.g., all 10 LLM entries, ~15 of 21 DSGAI entries -->
 
 **Are you willing to write the mapping file(s)?**
+
 - [ ] Yes — I will submit a PR
 - [ ] Partial — I can draft but need review
 - [ ] No — proposing for community to pick up

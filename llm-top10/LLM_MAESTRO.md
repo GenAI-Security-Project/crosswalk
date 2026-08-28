@@ -18,7 +18,7 @@ for the unique challenges of AI systems.
 **Created by:** Ken Huang, CEO & Chief AI Officer, DistributedApps.ai;
 Co-Chair of AI Safety Working Groups, Cloud Security Alliance.
 
-**Official repository:** https://github.com/CloudSecurityAlliance/MAESTRO
+**Official repository:** <https://github.com/CloudSecurityAlliance/MAESTRO>
 
 ---
 
@@ -70,7 +70,7 @@ control selection.
 
 ## How MAESTRO fits in the LLM security programme
 
-```
+```text
 LLM_MAESTRO.md (threat enumeration by architectural layer)
     ↓
 LLM_AITG.md (test cases per threat)
@@ -168,6 +168,7 @@ no cryptographic or structural separator between trusted
 instructions and untrusted data in the transformer context window.
 
 Mitigations at L1:
+
 - Structural prompt architecture separating trusted system
   instructions from untrusted user and retrieved content
 - Constitutional AI hard constraints preventing goal-overriding
@@ -185,6 +186,7 @@ model receives as retrieved knowledge rather than user input,
 bypassing user-facing input controls entirely.
 
 Mitigations at L2:
+
 - Content integrity scanning on RAG ingestion — injection
   pattern detection before content enters the index
 - Source provenance tagging — each retrieved passage carries
@@ -200,6 +202,7 @@ A framework without goal-state verification executes the hijacked
 goal as if it were legitimate.
 
 Mitigations at L3:
+
 - Framework-level goal-state verification middleware between
   model output and tool dispatch
 - Action allowlisting — the framework enforces permitted
@@ -208,6 +211,7 @@ Mitigations at L3:
   destructive or out-of-scope actions
 
 #### Cross-references
+
 - Agentic Top 10: ASI01 Agent Goal Hijack
 - DSGAI 2026: DSGAI12 Unsafe NL Data Gateways
 - Other files: LLM_STRIDE.md (Spoofing/Tampering), LLM_AITG.md (TC-LLM01), LLM_CWE_CVE.md (CWE-77/20)
@@ -237,6 +241,7 @@ RAG documents, prompt caches. Data governance failures at L2
 missing PII scrubbing) create the conditions for disclosure.
 
 Mitigations at L2:
+
 - Data classification policy for all GenAI data assets —
   PII, credentials, and sensitive data identified before
   entering training or retrieval pipelines
@@ -252,6 +257,7 @@ training reduces memorisation probability; output scanning
 catches reproduction events at generation time.
 
 Mitigations at L1:
+
 - Differential privacy in training for sensitive corpora —
   formal guarantee that individual training records are
   not memorised
@@ -266,12 +272,14 @@ must cover LLM-specific disclosure patterns, not just
 traditional file transfer events.
 
 Mitigations at L5:
+
 - DLP on all LLM output channels — PII, credential, and
   sensitive pattern detection before delivery
 - Output anomaly monitoring — unusual data density or
   unexpected content classification in model responses
 
 #### Cross-references
+
 - Agentic Top 10: ASI03 Identity & Privilege Abuse
 - DSGAI 2026: DSGAI01 Sensitive Data Leakage, DSGAI18 Inference & Data Reconstruction
 - Other files: LLM_STRIDE.md (Information Disclosure), LLM_CWE_CVE.md (CWE-200/359)
@@ -282,7 +290,8 @@ Mitigations at L5:
 
 **Severity:** Critical
 **Originating layer:** L6 — Security & Compliance
-**Propagation path:** L6 (over-broad permission granted) → L3 (framework executes unrestricted) → L7 (action visible to other agents)
+**Propagation path:** L6 (over-broad permission granted) → L3 (framework executes unrestricted) → L7 (action
+visible to other agents)
 
 Excessive agency originates at L6 when the permission model
 grants the LLM capabilities beyond what its defined role
@@ -305,6 +314,7 @@ potential impact vector if the model is injected or
 misbehaves.
 
 Mitigations at L6:
+
 - Minimal permission principle — document required
   capabilities per use case, grant only those capabilities,
   review at each deployment
@@ -321,6 +331,7 @@ current task context. A framework with no task-scope
 verification executes any permitted capability in any context.
 
 Mitigations at L3:
+
 - Task-scope enforcement at the framework level —
   capabilities available to the model vary by task context,
   not just by static role
@@ -337,6 +348,7 @@ Lateral movement through the agent ecosystem is possible when
 individual agents have more capability than their roles require.
 
 Mitigations at L7:
+
 - Per-agent capability inventory in multi-agent design —
   each agent's permissions documented and minimised
   independently of other agents in the ecosystem
@@ -345,6 +357,7 @@ Mitigations at L7:
   requesting agent's and the responding agent's scope
 
 #### Cross-references
+
 - Agentic Top 10: ASI02 Tool Misuse & Exploitation, ASI03 Identity & Privilege Abuse
 - DSGAI 2026: DSGAI02 Agent Identity & Credential Exposure
 - Other files: LLM_STRIDE.md (Elevation of Privilege), LLM_CWE_CVE.md (CWE-250/266)
@@ -382,6 +395,7 @@ no inherent mechanism to verify that a tool does what its
 descriptor claims.
 
 Mitigations at L3:
+
 - Plugin and tool SBOM — every integration component
   inventoried with version, source, and integrity hash
 - Descriptor integrity verification before tool loading —
@@ -398,6 +412,7 @@ entire stack above them — all L1 through L7 security properties
 depend on L4 integrity.
 
 Mitigations at L4:
+
 - Model weight cryptographic verification before deployment —
   hash comparison against vendor-published baseline
 - Dependency vulnerability scanning in CI/CD pipeline —
@@ -413,12 +428,14 @@ public dataset used for fine-tuning can introduce backdoors or
 biases that survive into the deployed model (see also LLM05).
 
 Mitigations at L2:
+
 - Dataset provenance documentation for all training corpora —
   source, version, integrity hash, and quality review recorded
 - Statistical quality gates on ingested datasets — outlier
   detection before training begins
 
 #### Cross-references
+
 - Agentic Top 10: ASI04 Agentic Supply Chain
 - DSGAI 2026: DSGAI06 Tool, Plugin & Agent Data Exchange
 - Other files: LLM_STRIDE.md (Tampering/Repudiation), LLM_CWE_CVE.md (CWE-494/829)
@@ -454,6 +471,7 @@ invisible to most runtime security controls because the
 corruption happens before deployment.
 
 Mitigations at L2:
+
 - Data provenance tracking — every training sample traceable
   to verified source with integrity hash
 - Statistical anomaly detection on ingested datasets —
@@ -470,6 +488,7 @@ outputs. Behavioural testing at L1 must specifically probe
 for known backdoor trigger patterns before production release.
 
 Mitigations at L1:
+
 - Pre-deployment adversarial testing — probing with trigger
   patterns across all use case configurations
 - Behavioural baseline establishment — document expected
@@ -486,12 +505,14 @@ will not detect this. L5 monitoring must include adversarial
 probing, not just passive quality metrics.
 
 Mitigations at L5:
+
 - Scheduled adversarial probing of deployed models —
   trigger pattern testing integrated into continuous monitoring
 - Output distribution drift detection — statistical
   anomalies in response distributions trigger investigation
 
 #### Cross-references
+
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - DSGAI 2026: DSGAI04 Data, Model & Artifact Poisoning, DSGAI21 Disinformation via Data Poisoning
 - Other files: LLM_STRIDE.md (Tampering), LLM_CWE_CVE.md (CWE-20/345)
@@ -523,6 +544,7 @@ accidental and deliberate resource exhaustion regardless
 of application-layer controls.
 
 Mitigations at L4:
+
 - Per-identity rate limits enforced at API gateway —
   request rate, token budget, and concurrent connection
   limits per user and per API key
@@ -541,6 +563,7 @@ Framework-level resource governance prevents run-away
 agent behaviour from exhausting L4 capacity.
 
 Mitigations at L3:
+
 - Maximum iteration and recursion depth limits in
   agent orchestration configuration
 - Parallel tool call limits — maximum concurrent tool
@@ -556,6 +579,7 @@ flooding and wallet drainage attacks require trending
 analysis over time, not just instantaneous rate checks.
 
 Mitigations at L5:
+
 - Per-user consumption trending — alert on deviation
   from historical baseline, not just absolute limits
 - Financial monitoring — spend rate alerts at multiple
@@ -564,6 +588,7 @@ Mitigations at L5:
   queries that match model extraction or flooding signatures
 
 #### Cross-references
+
 - Agentic Top 10: ASI08 Cascading Agent Failures
 - DSGAI 2026: DSGAI17 Data Availability & Resilience Failures
 - Other files: LLM_STRIDE.md (Denial of Service), LLM_CWE_CVE.md (CWE-770/400)
@@ -595,6 +620,7 @@ hallucination rate but does not eliminate it; output confidence
 scores do not reliably predict factual accuracy.
 
 Mitigations at L1:
+
 - System prompt grounding — instruct model to acknowledge
   uncertainty rather than fabricate confident responses
 - Output citation requirements — high-stakes use cases
@@ -612,6 +638,7 @@ domains. RAG retrieval (also L2) can partially compensate
 by grounding responses in verified document content.
 
 Mitigations at L2:
+
 - Training data quality gates — factual accuracy assessment,
   recency review, and source credibility scoring before
   training data ingestion
@@ -627,6 +654,7 @@ requires domain-specific ground truth benchmarks and
 continuous output evaluation, not just generic quality metrics.
 
 Mitigations at L5:
+
 - Factual accuracy benchmarking — domain-specific
   question sets with verified answers run against the
   deployed model on a scheduled basis
@@ -634,6 +662,7 @@ Mitigations at L5:
   that model-generated citations are real and accurate
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI21 Disinformation via Data Poisoning
 - Agentic Top 10: ASI09 Human-Agent Trust Exploitation
 - Other files: LLM_STRIDE.md (Repudiation/Tampering), LLM_AITG.md (TC-LLM07)
@@ -674,6 +703,7 @@ teaches the model to decline system prompt reproduction is the
 primary L1 mitigation.
 
 Mitigations at L1:
+
 - System prompt non-disclosure instruction — explicit
   instruction that system prompt contents are confidential
   and must not be reproduced
@@ -693,6 +723,7 @@ prompt create high-severity leakage targets. These assets
 belong in secure external storage, not in the context window.
 
 Mitigations at L6:
+
 - Credentials management — all credentials accessed via
   secrets manager at runtime, never embedded in system prompt
 - System prompt classification — treat system prompt
@@ -702,6 +733,7 @@ Mitigations at L6:
   schedule to limit the impact of leakage
 
 #### Cross-references
+
 - LLM Top 10: LLM01 Prompt Injection
 - DSGAI 2026: DSGAI15 Over-Broad Context Windows
 - Other files: LLM_STRIDE.md (Information Disclosure/Repudiation), LLM_CWE_CVE.md (CWE-200/922)
@@ -734,6 +766,7 @@ treatment as the primary data store, not the relaxed treatment
 typically applied to search indexes.
 
 Mitigations at L2:
+
 - Embedding classification — vector stores classified as
   sensitive data assets with appropriate handling requirements
 - Retrieval scope enforcement — RAG queries bounded to
@@ -750,6 +783,7 @@ deployments are unauthenticated and network-accessible —
 an L4 configuration gap that bypasses all L2 data governance.
 
 Mitigations at L4:
+
 - Authentication and encryption required for all vector
   store API endpoints — no unauthenticated access
 - Network segmentation — vector store not exposed beyond
@@ -765,12 +799,14 @@ not correctly enforce document-level authorisation on
 semantic similarity retrieval.
 
 Mitigations at L6:
+
 - Document-level authorisation on retrieval — permission
   check per document before including in retrieval results
 - Tenant namespace isolation enforced at the access
   control layer, not just the application layer
 
 #### Cross-references
+
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - DSGAI 2026: DSGAI13 Vector Store Platform Security
 - Other files: LLM_STRIDE.md (Information Disclosure), LLM_CWE_CVE.md (CWE-285/306)
@@ -781,7 +817,8 @@ Mitigations at L6:
 
 **Severity:** High
 **Originating layer:** L3 — Agent Frameworks
-**Propagation path:** L3 (output passed without sanitisation) → L4 (downstream system executes) ← L1 (model generates dangerous content)
+**Propagation path:** L3 (output passed without sanitisation) → L4 (downstream system executes) ← L1 (model
+generates dangerous content)
 
 Insecure output handling originates at L3 when the orchestration
 framework passes LLM-generated content to downstream systems —
@@ -808,6 +845,7 @@ must validate and sanitise every output before it crosses
 a trust boundary.
 
 Mitigations at L3:
+
 - Output validation layer between model and downstream system —
   content type, schema, and injection pattern validation
   before any LLM output is consumed by another component
@@ -825,6 +863,7 @@ engine executing SQL, a container running generated scripts.
 L4 defences provide defence-in-depth when L3 validation fails.
 
 Mitigations at L4:
+
 - WAF rules covering LLM output injection patterns
   at the network layer
 - Database least-privilege — LLM-connected accounts
@@ -841,12 +880,14 @@ generation. Instructing the model to never generate raw HTML,
 SQL, or shell commands reduces the attack surface at the source.
 
 Mitigations at L1:
+
 - System prompt restrictions — model instructed to produce
   only plain text or structured JSON, never raw HTML or SQL
 - Output format constraints — structured output with schema
   validation reduces injection surface
 
 #### Cross-references
+
 - Agentic Top 10: ASI02 Tool Misuse & Exploitation
 - DSGAI 2026: DSGAI12 Unsafe NL Data Gateways
 - Other files: LLM_STRIDE.md (Tampering/Elevation), LLM_CWE_CVE.md (CWE-79/89/78)
@@ -862,6 +903,7 @@ session for a new or changed LLM deployment:
 
 **Minutes 0–15: Layer inventory**
 For each MAESTRO layer, list every component in your deployment:
+
 - L1: Which model? Version? Provider?
 - L2: Which data stores? Training data sources? RAG corpus? Embeddings?
 - L3: Which framework? Which tools/plugins? MCP servers?
@@ -873,6 +915,7 @@ For each MAESTRO layer, list every component in your deployment:
 **Minutes 15–45: Layer-to-LLM threat mapping**
 Using the layer-to-LLM mapping table above, work through each
 relevant LLM entry for your layer inventory. For each threat:
+
 - Which of your layer components is the originating surface?
 - What is the propagation path in your specific architecture?
 - Is the mitigation deployed at the correct layer?
@@ -918,6 +961,8 @@ to fix) × severity × exploitability in your deployment context.
 
 ---
 
-*Part of the [OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk) —
+*Part of the
+[OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk)
+—
 maintained by the OWASP GenAI Data Security Initiative.
 Licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).*

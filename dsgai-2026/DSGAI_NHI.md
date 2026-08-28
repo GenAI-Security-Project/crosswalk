@@ -9,8 +9,10 @@
 
 # DSGAI 2026 × OWASP NHI Top 10
 
-Mapping the [OWASP GenAI Data Security Risks 2026](https://genai.owasp.org/resource/owasp-genai-data-security-risks-mitigations-2026/)
-(DSGAI01–DSGAI21) to the [OWASP Non-Human Identities (NHI) Top 10](https://owasp.org/www-project-non-human-identities-top-10/) —
+Mapping the
+[OWASP GenAI Data Security Risks 2026](https://genai.owasp.org/resource/owasp-genai-data-security-risks-mitigations-2026/)
+(DSGAI01–DSGAI21) to the
+[OWASP Non-Human Identities (NHI) Top 10](https://owasp.org/www-project-non-human-identities-top-10/) —
 the framework for securing machine identities including service
 accounts, API keys, OAuth tokens, certificates, and pipeline credentials.
 
@@ -117,6 +119,7 @@ cause damage proportional to the credential scope of the pipeline.
 | NHI-7 Long-Lived Credentials | Injected actions can use pipeline tokens for extended period | Short-lived tokens for all data pipeline service accounts |
 
 **Mitigations:**
+
 - NHI-5: audit and reduce scope of all data pipeline credentials
 - NHI-7: automate rotation of all pipeline service account credentials
 - Minimum scope per data channel: read-only credentials for data consumption
@@ -138,6 +141,7 @@ is not possible. NHI-5 and NHI-6 are the enabling conditions.
 | NHI-7 Long-Lived Credentials | Long-lived write credentials create persistent poisoning window | Short-lived write tokens; rotate frequently |
 
 **Mitigations:**
+
 - NHI-5: read-only credentials for data consumption; separate write credentials with MFA
 - NHI-6: vault all training pipeline credentials; no plaintext in config
 - NHI-7: automated rotation for all training data write credentials
@@ -158,6 +162,7 @@ sensitive data that would be excluded with properly scoped credentials.
 | NHI-2 Secret Leakage | Credentials embedded in config files include sensitive data source access | Audit config files for embedded credentials |
 
 **Mitigations:**
+
 - NHI-5: pipeline credentials scoped to approved training data sources only
 - NHI-2: automated secret scanning of all pipeline config files
 - Document and justify every data source in training pipeline
@@ -180,6 +185,7 @@ the structural causes of insecure data pipelines.
 | NHI-9 NHI Reuse | Same credential used for multiple pipeline stages | Separate credentials per stage |
 
 **Mitigations:**
+
 - NHI-4: mTLS or token authentication for all pipeline stage connections
 - NHI-9: separate service account per pipeline stage
 - NHI-5: minimum scope per stage — each stage accesses only its declared data
@@ -199,6 +205,7 @@ service accounts — enables disabling or bypassing safety controls.
 | NHI-5 Over-Privileged NHI | Service account with guardrail configuration write access | Minimum scope; no service account has guardrail disable capability |
 
 **Mitigations:**
+
 - NHI-5: no service account holds guardrail configuration write access in production
 - Guardrail configuration changes require human authentication and MFA
 - Log all guardrail configuration access
@@ -218,6 +225,7 @@ account access to sensitive data stores (NHI-5) enable disclosure.
 | NHI-5 Over-Privileged NHI | Over-broad retrieval credentials return data beyond user entitlement | Minimum scope for retrieval service accounts |
 
 **Mitigations:**
+
 - NHI-2: automated credential pattern detection in output pipeline
 - NHI-5: per-user retrieval credentials or query-scoped access only
 - Secret scanning in all data sources that feed the model
@@ -239,6 +247,7 @@ when NHI-5 is not remediated.
 | NHI-9 NHI Reuse | Same data access credential used across multiple GenAI system functions | Separate credentials per function |
 
 **Mitigations:**
+
 - NHI-5: audit all GenAI system data access credentials; reduce to minimum
 - NHI-7: JIT short-lived tokens for data access (see RECIPES.md)
 - NHI-9: separate credential per GenAI system component
@@ -261,6 +270,7 @@ embedding store connections (NHI-4).
 | NHI-9 NHI Reuse | Same embedding store credential used for multiple tenants | Separate credentials per tenant or use row-level security |
 
 **Mitigations:**
+
 - NHI-5: per-tenant embedding store credentials or fine-grained access controls
 - NHI-4: mTLS or token authentication for all embedding store connections
 - NHI-9: tenant isolation via separate credentials or RBAC
@@ -283,6 +293,7 @@ are the enabling conditions.
 | NHI-7 Long-Lived Credentials | Long-lived corpus write credentials persist beyond need | Rotate corpus write credentials; implement short-lived write pattern |
 
 **Mitigations (highest priority):**
+
 - NHI-5: read-only credentials for inference-time corpus access; write credentials separate and MFA-protected
 - NHI-6: vault all corpus write credentials; no plaintext in deployment config
 - NHI-7: automated rotation for all corpus write credentials
@@ -303,6 +314,7 @@ expand the attack surface for context poisoning.
 | NHI-5 Over-Privileged NHI | Data feed service accounts with access to sensitive data that should not enter context | Scope data feed credentials to approved data only |
 
 **Mitigations:**
+
 - NHI-5: credentials for each data feed scoped to the data sources approved for context assembly
 - Audit all data sources contributing to context window
 - Separate credentials per data feed
@@ -324,6 +336,7 @@ cross-session attacks.
 | NHI-6 Insecure Credential Storage | Session store access credentials in plaintext | Vault session store credentials |
 
 **Mitigations:**
+
 - NHI-5: enforce per-user session isolation at credential level
 - NHI-6: vault all session store credentials
 - Session store credentials have minimum scope: one user context, no cross-session access
@@ -345,6 +358,7 @@ extraction attack surface.
 | NHI-7 Long-Lived Credentials | Long-lived inference API credentials enable sustained extraction campaigns | Rotate API credentials; implement per-session tokens |
 
 **Mitigations:**
+
 - NHI-5: per-user quota limits; no credential class has unlimited inference access
 - NHI-7: implement per-session inference tokens; rotate API credentials regularly
 - Monitor for systematic query patterns per credential
@@ -365,6 +379,7 @@ Third-party tool credentials (NHI-3) and shared tool credentials
 | NHI-9 NHI Reuse | Same credential used across multiple tool integrations | Separate credentials per tool |
 
 **Mitigations:**
+
 - NHI-3: assess and reduce scope of all third-party tool credentials
 - NHI-9: separate credentials per tool integration
 - NHI-5: data minimisation enforced at credential level — credentials cannot access data beyond declared function
@@ -385,6 +400,7 @@ conditions for weight theft.
 | NHI-6 Insecure Credential Storage | Model storage credentials in plaintext config | Vault all model storage credentials |
 
 **Mitigations:**
+
 - NHI-5: model weight read access restricted to authorised inference service identity only
 - NHI-6: vault all model storage access credentials
 - Alert on any model weight access from unexpected service identity
@@ -405,6 +421,7 @@ and generated outputs. NHI-5 (over-broad log access) and NHI-2
 | NHI-2 Secret Leakage | Service account credentials embedded in inference log entries | Scan and scrub credentials from inference logs |
 
 **Mitigations:**
+
 - NHI-5: inference log access restricted to authorised audit identity
 - NHI-2: credential scrubbing in inference log pipeline
 - Log access audit: alert on unexpected read of inference logs
@@ -426,6 +443,7 @@ third-party relationship, often with excessive scope.
 | NHI-2 Secret Leakage | Third-party credentials embedded in shared config | Vault all third-party data source credentials |
 
 **Mitigations:**
+
 - NHI-3: review and reduce scope of all third-party data source credentials
 - NHI-8: separate third-party credentials per environment
 - NHI-2: vault all third-party credentials; automated secret scanning in config
@@ -446,6 +464,7 @@ access are third-party NHIs with security implications if compromised.
 | NHI-2 Secret Leakage | Model provider credentials in pipeline config | Vault all model provider credentials |
 
 **Mitigations:**
+
 - NHI-3: assess and reduce scope of all model provider credentials
 - NHI-8: separate credentials per environment and model version
 - NHI-2: vault all model supply chain credentials; automated secret scanning
@@ -466,6 +485,7 @@ needed to prove compliance with deletion obligations.
 | NHI-10 Human Use of NHI | Humans using machine credentials for data deletion — no audit trail | Enforce human identity for all compliance operations |
 
 **Mitigations:**
+
 - NHI-10: all compliance operations (deletion, access review) require human identity, not machine credential
 - NHI-5: data access credentials scoped to minimum required for each retention period
 - Audit trail of all deletion operations with human attribution
@@ -486,6 +506,7 @@ credentials amplify the blast radius of any single-stage failure.
 | NHI-5 Over-Privileged NHI | Single credential covering multiple pipeline stages amplifies cascade | Per-stage minimum scope credentials |
 
 **Mitigations:**
+
 - NHI-9: separate credentials per pipeline stage — stage failure cannot cascade via shared credential
 - NHI-5: minimum scope per stage limits what a compromised stage can affect
 - Circuit breaker: pipeline stage isolation enforced at credential level
@@ -506,6 +527,7 @@ regulatory audit trails.
 | NHI-2 Secret Leakage | Compliance audit credentials leaked — tampering with evidence possible | Protect audit credential integrity |
 
 **Mitigations:**
+
 - NHI-10: all regulated data operations require human identity with MFA
 - NHI-2: protect compliance audit system credentials as high-sensitivity NHI
 - Separate credentials for compliance vs operational data access
@@ -528,6 +550,7 @@ in lineage records.
 | NHI-2 Secret Leakage | Lineage system credentials leaked — provenance records can be tampered | Protect lineage system credentials |
 
 **Mitigations:**
+
 - NHI-10: each pipeline stage has its own machine identity — lineage records include identity
 - NHI-1: automated offboarding triggers when pipeline components are decommissioned
 - NHI-2: protect lineage and audit system credentials as high-sensitivity NHI
@@ -569,6 +592,8 @@ in lineage records.
 
 ---
 
-*Part of the [OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk) —
+*Part of the
+[OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk)
+—
 maintained by the [OWASP GenAI Data Security Initiative](https://genai.owasp.org)*
 *License: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)*

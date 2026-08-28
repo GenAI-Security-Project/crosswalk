@@ -98,17 +98,20 @@ invisible-Unicode carriers survive review of the rendered interface.
 #### Mitigations by tier
 
 **Foundational**
+
 - Treat all external content as untrusted — validate against an expected schema
   before it reaches the model
 - Enforce structural separation between system prompt context and user input
 - Implement input sanitisation specifically targeting prompt injection patterns
 
 **Hardening**
+
 - Deploy runtime prompt injection classifiers on all input channels
 - Require human approval before model executes high-impact actions from
   external content
 
 **Advanced**
+
 - Implement cryptographically signed system prompts
 - Deploy independent input + output + action guardrail layers
 
@@ -116,11 +119,12 @@ invisible-Unicode carriers survive review of the rendered interface.
 
 | Tool | Type | Link |
 |---|---|---|
-| Garak | Open-source | https://github.com/leondz/garak |
-| LLM Guard | Open-source | https://github.com/protectai/llm-guard |
-| Rebuff | Open-source | https://github.com/protectai/rebuff |
+| Garak | Open-source | <https://github.com/leondz/garak> |
+| LLM Guard | Open-source | <https://github.com/protectai/llm-guard> |
+| Rebuff | Open-source | <https://github.com/protectai/rebuff> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI01 Agent Goal Hijack, ASI02 Tool Misuse
 - DSGAI 2026: DSGAI01 Sensitive Data Leakage, DSGAI15 Over-Broad Context Windows
 - Other frameworks: MITRE ATLAS AML.T0051 — STRIDE T/S/E — ASVS V5
@@ -153,17 +157,20 @@ or improperly sanitised responses.
 #### Mitigations by tier
 
 **Foundational**
+
 - Implement output scanning and redaction for PII, credentials, and proprietary
   patterns before responses reach users
 - Enforce access control on RAG data sources — users retrieve only authorised data
 - Apply differential privacy in training to limit memorisation
 
 **Hardening**
+
 - Deploy DLP tooling on model output pipelines
 - Audit RAG retrieval scope — over-permissive indexes are the most common source
   of disclosure incidents
 
 **Advanced**
+
 - Implement machine unlearning for targeted removal of sensitive data from weights
 - Conduct model inversion red team exercises to validate disclosure boundaries
 
@@ -171,11 +178,12 @@ or improperly sanitised responses.
 
 | Tool | Type | Link |
 |---|---|---|
-| Presidio | Open-source | https://github.com/microsoft/presidio |
-| LLM Guard | Open-source | https://github.com/protectai/llm-guard |
-| Garak | Open-source | https://github.com/leondz/garak |
+| Presidio | Open-source | <https://github.com/microsoft/presidio> |
+| LLM Guard | Open-source | <https://github.com/protectai/llm-guard> |
+| Garak | Open-source | <https://github.com/leondz/garak> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI03 Identity & Privilege Abuse, ASI06 Memory & Context Poisoning
 - DSGAI 2026: DSGAI01 Sensitive Data Leakage, DSGAI08 Privacy-Violating Inference
 - Other frameworks: MITRE ATLAS AML.T0021 — STRIDE I — ISO 27001 A.8.2
@@ -200,15 +208,18 @@ when manipulated through prompt injection or misaligned goal-following.
 #### Mitigations by tier
 
 **Foundational**
+
 - Apply least agency — grant minimum tool access required for the defined task
 - Require explicit human confirmation before any irreversible action
 - Define and enforce a tool permission manifest for every LLM deployment
 
 **Hardening**
+
 - Implement action logging with anomaly detection
 - Scope API credentials per LLM task — no shared high-privilege accounts
 
 **Advanced**
+
 - Formally specify permitted action graphs — only pre-approved sequences execute
 - Conduct red team exercises targeting excessive agency via indirect injection
 
@@ -216,10 +227,11 @@ when manipulated through prompt injection or misaligned goal-following.
 
 | Tool | Type | Link |
 |---|---|---|
-| Guardrails AI | Open-source | https://github.com/guardrails-ai/guardrails |
-| NeMo Guardrails | Open-source | https://github.com/NVIDIA/NeMo-Guardrails |
+| Guardrails AI | Open-source | <https://github.com/guardrails-ai/guardrails> |
+| NeMo Guardrails | Open-source | <https://github.com/NVIDIA/NeMo-Guardrails> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI01 Agent Goal Hijack, ASI02 Tool Misuse, ASI10 Rogue Agents
 - DSGAI 2026: DSGAI06 Tool Plugin & Agent Data Exchange
 - Other frameworks: AIUC-1 B006 — STRIDE E — ISA/IEC 62443 SR 2.1
@@ -257,15 +269,18 @@ dependency is clean.
 #### Mitigations by tier
 
 **Foundational**
+
 - Verify cryptographic hashes of all model artefacts and dependencies before use
 - Source models only from verified, curated organisational registries
 - Pin all AI component versions — prohibit unreviewed automatic updates
 
 **Hardening**
+
 - Maintain a Model Bill of Materials (MBOM) for every production model
 - Scan third-party plugins for malicious code before deployment
 
 **Advanced**
+
 - Implement reproducible training pipelines with verified source data
 - Deploy model provenance verification at inference time
 
@@ -273,11 +288,12 @@ dependency is clean.
 
 | Tool | Type | Link |
 |---|---|---|
-| ModelScan | Open-source | https://github.com/protectai/modelscan |
-| Syft | Open-source | https://github.com/anchore/syft |
-| Garak | Open-source | https://github.com/leondz/garak |
+| ModelScan | Open-source | <https://github.com/protectai/modelscan> |
+| Syft | Open-source | <https://github.com/anchore/syft> |
+| Garak | Open-source | <https://github.com/leondz/garak> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI04 Agentic Supply Chain Vulnerabilities
 - DSGAI 2026: DSGAI03 Training & Fine-Tuning Data Risks
 - Other frameworks: MITRE ATLAS AML.T0056 — CIS Controls 2.1 — NIST SP 800-161
@@ -314,15 +330,18 @@ stage that writes weights, not just the original training corpus.
 #### Mitigations by tier
 
 **Foundational**
+
 - Implement data validation and anomaly detection on all training data pipelines
 - Restrict write access to training data stores to authorised personnel only
 - Maintain immutable audit logs for all training data modifications
 
 **Hardening**
+
 - Generate and version a Dataset Bill of Materials (DBoM) for every training run
 - Apply statistical outlier detection on training datasets before use
 
 **Advanced**
+
 - Implement certified data provenance with cryptographic attestation
 - Deploy differential privacy in training to limit influence of poisoned samples
 
@@ -330,11 +349,12 @@ stage that writes weights, not just the original training corpus.
 
 | Tool | Type | Link |
 |---|---|---|
-| Cleanlab | Open-source | https://github.com/cleanlab/cleanlab |
-| Great Expectations | Open-source | https://github.com/great-expectations/great_expectations |
-| Garak | Open-source | https://github.com/leondz/garak |
+| Cleanlab | Open-source | <https://github.com/cleanlab/cleanlab> |
+| Great Expectations | Open-source | <https://github.com/great-expectations/great_expectations> |
+| Garak | Open-source | <https://github.com/leondz/garak> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - DSGAI 2026: DSGAI03 Training & Fine-Tuning Data Risks, DSGAI04 Data Poisoning
 - Other frameworks: MITRE ATLAS AML.T0032 — NIST AI RMF MS-2.6 — ISO 42001 A.6.2
@@ -365,16 +385,19 @@ resulting in denial of service or runaway cost.
 #### Mitigations by tier
 
 **Foundational**
+
 - Implement rate limiting per user, session, and API key before requests reach
   the model
 - Set hard token limits on input and output per request
 - Monitor API cost and token usage in real time with automated alerting
 
 **Hardening**
+
 - Implement request queuing and backpressure
 - Set per-tenant cost budgets with automatic suspension on breach
 
 **Advanced**
+
 - Deploy sponge example detection
 - Conduct load testing with adversarial inputs maximising cost and latency
 
@@ -382,11 +405,12 @@ resulting in denial of service or runaway cost.
 
 | Tool | Type | Link |
 |---|---|---|
-| Kong Gateway | Open-source | https://github.com/Kong/kong |
-| LiteLLM | Open-source | https://github.com/BerriAI/litellm |
-| Nginx (rate limiting) | Open-source | https://nginx.org |
+| Kong Gateway | Open-source | <https://github.com/Kong/kong> |
+| LiteLLM | Open-source | <https://github.com/BerriAI/litellm> |
+| Nginx (rate limiting) | Open-source | <https://nginx.org> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI08 Cascading Agent Failures
 - DSGAI 2026: DSGAI17 Data Availability & Resilience Failures
 - Other frameworks: STRIDE D — ISA/IEC 62443 SR 7.1 — NIST CSF 2.0 DE.AE
@@ -410,15 +434,18 @@ or downstream systems act upon.
 #### Mitigations by tier
 
 **Foundational**
+
 - Implement RAG to ground responses in verified, up-to-date source material
 - Display source citations alongside model responses
 - Set clear user expectations about model limitations in high-stakes domains
 
 **Hardening**
+
 - Deploy confidence scoring — flag low-confidence responses for human review
 - Log model outputs with version and timestamp for post-incident reconstruction
 
 **Advanced**
+
 - Build automated fact-checking pipelines for high-stakes outputs
 - Deploy adversarial probing to identify frequent hallucination topics
 
@@ -426,11 +453,12 @@ or downstream systems act upon.
 
 | Tool | Type | Link |
 |---|---|---|
-| TruLens | Open-source | https://github.com/truera/trulens |
-| RAGAS | Open-source | https://github.com/explodinggradients/ragas |
-| DeepEval | Open-source | https://github.com/confident-ai/deepeval |
+| TruLens | Open-source | <https://github.com/truera/trulens> |
+| RAGAS | Open-source | <https://github.com/explodinggradients/ragas> |
+| DeepEval | Open-source | <https://github.com/confident-ai/deepeval> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI09 Human-Agent Trust Exploitation
 - DSGAI 2026: DSGAI21 Disinformation & Integrity Attacks
 - Other frameworks: EU AI Act Art. 13 — AIUC-1 F — STRIDE T/R
@@ -471,15 +499,18 @@ treat it as a security boundary.
 #### Mitigations by tier
 
 **Foundational**
+
 - Never embed secrets or credentials in system prompts — use environment variables
 - Instruct models to refuse prompt introspection — enforce at guardrail layer
 - Minimise information density in system prompts
 
 **Hardening**
+
 - Monitor for response patterns indicating hidden context exposure
 - Conduct prompt extraction red team exercises before go-live
 
 **Advanced**
+
 - Implement system prompt tokenisation with runtime resolution
 - Deploy output classifiers blocking responses containing system prompt content
 
@@ -487,10 +518,11 @@ treat it as a security boundary.
 
 | Tool | Type | Link |
 |---|---|---|
-| LLM Guard | Open-source | https://github.com/protectai/llm-guard |
-| Garak | Open-source | https://github.com/leondz/garak |
+| LLM Guard | Open-source | <https://github.com/protectai/llm-guard> |
+| Garak | Open-source | <https://github.com/leondz/garak> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI01 Agent Goal Hijack
 - DSGAI 2026: DSGAI15 Over-Broad Context Windows
 - Other frameworks: STRIDE I — ASVS V14 — MITRE ATLAS AML.T0041
@@ -515,14 +547,17 @@ and inference of sensitive information from embeddings.
 #### Mitigations by tier
 
 **Foundational**
+
 - Implement access controls on vector store read and write operations
 - Validate and sanitise all content before generating embeddings
 
 **Hardening**
+
 - Encrypt embedding vectors at rest and in transit
 - Apply trust-tiered retrieval weighted by source provenance
 
 **Advanced**
+
 - Conduct embedding inversion red team exercises
 - Implement differential privacy in embedding generation for sensitive corpora
 
@@ -530,10 +565,11 @@ and inference of sensitive information from embeddings.
 
 | Tool | Type | Link |
 |---|---|---|
-| Weaviate (with RBAC) | Open-source | https://weaviate.io |
-| Qdrant | Open-source | https://qdrant.tech |
+| Weaviate (with RBAC) | Open-source | <https://weaviate.io> |
+| Qdrant | Open-source | <https://qdrant.tech> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - DSGAI 2026: DSGAI13 Vector Store Platform Security, DSGAI18 Inference & Data Reconstruction
 - Other frameworks: NIST AI RMF MS-2.5 — STRIDE T/I — AIUC-1 A
@@ -570,17 +606,20 @@ reaches a shell, a browser, or a database.
 #### Mitigations by tier
 
 **Foundational**
+
 - Treat all LLM output as untrusted input to any downstream consumer
 - Apply context-aware output encoding before passing responses to HTML
   renderers, SQL engines, or shell interpreters
 - Define and validate against an explicit output schema for every LLM integration
 
 **Hardening**
+
 - Implement a dedicated output sanitisation layer independent of the model
 - Apply allowlist-based output validation — reject output outside the permitted
   syntax for the target consumer
 
 **Advanced**
+
 - Conduct DAST on all interfaces consuming LLM output
 - Include output injection scenarios in the adversarial test suite
 
@@ -588,11 +627,12 @@ reaches a shell, a browser, or a database.
 
 | Tool | Type | Link |
 |---|---|---|
-| DOMPurify | Open-source | https://github.com/cure53/DOMPurify |
-| Semgrep | Open-source | https://semgrep.dev |
-| OWASP ZAP | Open-source | https://www.zaproxy.org |
+| DOMPurify | Open-source | <https://github.com/cure53/DOMPurify> |
+| Semgrep | Open-source | <https://semgrep.dev> |
+| OWASP ZAP | Open-source | <https://www.zaproxy.org> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI02 Tool Misuse, ASI05 Unexpected Code Execution
 - DSGAI 2026: DSGAI05 Data Integrity & Validation Failures
 - Other frameworks: ASVS V5 — STRIDE T/E — MITRE ATLAS AML.T0037
@@ -629,5 +669,7 @@ reaches a shell, a browser, or a database.
 
 ---
 
-*Part of the [OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk) —
+*Part of the
+[OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk)
+—
 maintained by the [OWASP GenAI Data Security Initiative](https://genai.owasp.org)*

@@ -9,7 +9,8 @@
 
 # Agentic Top 10 2026 × OWASP SAMM v2.0
 
-Mapping the [OWASP Top 10 for Agentic AI Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
+Mapping the
+[OWASP Top 10 for Agentic AI Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
 to the [OWASP Software Assurance Maturity Model (SAMM) v2.0](https://owaspsamm.org/) —
 the framework for measuring and improving software security programme
 maturity across the SDLC.
@@ -56,6 +57,7 @@ attack surface.
 | Operations (O) | Incident Management (O-IM) · Environment Management (O-EM) · Operational Management (O-OM) |
 
 **Maturity levels:**
+
 - Level 1 — Initial/Ad-hoc: Basic security practices, reactive
 - Level 2 — Managed: Defined processes, consistent execution
 - Level 3 — Optimised: Proactive, metrics-driven, continuously improving
@@ -134,16 +136,20 @@ tool invocation, and action sequences.
 #### Three-tier mitigations
 
 **Tier 1 — Immediate (pre-production gate):**
-- Define trust boundaries: user instructions, system prompt, retrieved content — never treat retrieved content as same trust level as system prompt
+
+- Define trust boundaries: user instructions, system prompt, retrieved content — never treat retrieved
+  content as same trust level as system prompt
 - Implement instruction hierarchy in orchestration layer
 - Add tool invocation allow-listing; deny all unregistered tool calls
 
 **Tier 2 — Short-term (first 30 days):**
+
 - Build adversarial injection test cases into CI/CD
 - Add anomaly detection on agent plan deviations
 - Instrument all tool calls for audit logging
 
 **Tier 3 — Strategic:**
+
 - Continuously update injection test corpus with red team findings
 - Implement formal goal verification before high-impact actions
 - Establish SAMM D-TA L3: threat models reviewed after each new tool integration
@@ -178,16 +184,19 @@ when compromised.
 #### Three-tier mitigations
 
 **Tier 1 — Immediate:**
+
 - Enumerate all permissions currently granted to each agent in production
 - Remove any permissions not exercised in the past 30 days (JIT pattern)
 - Treat agent identities as NHI: apply OWASP NHI Top 10 controls
 
 **Tier 2 — Short-term:**
+
 - Implement permission scope declaration in agent manifest/descriptor
 - Gate deployments: no deployment without signed permission manifest
 - Automate drift detection: alert when runtime permissions exceed manifest
 
 **Tier 3 — Strategic:**
+
 - Achieve D-SA L3: architecture review board includes agent permission review
 - Implement dynamic JIT permission issuance per task (see RECIPES.md)
 - Quarterly access review for all agent identities
@@ -221,16 +230,19 @@ alter future decisions, or persist across agent restarts.
 #### Three-tier mitigations
 
 **Tier 1 — Immediate:**
+
 - Apply access controls to all persistent memory stores (vector DB, relational, episodic)
 - Add integrity metadata (HMAC or signature) to all memory writes
 - Log all memory read/write operations
 
 **Tier 2 — Short-term:**
+
 - Implement memory validation pipeline: content written to persistent memory passes sanitisation
 - Add memory anomaly detection: flag unexpected belief updates
 - Define memory TTL and rotation policy
 
 **Tier 3 — Strategic:**
+
 - Periodic memory audit: replay historical decisions to detect contamination
 - Implement formal provenance tracking for all memory entries
 - Cross-session memory integrity verification
@@ -264,16 +276,19 @@ across the agent network.
 #### Three-tier mitigations
 
 **Tier 1 — Immediate:**
+
 - Implement authentication tokens for all inter-agent messages
 - Establish maximum privilege boundary: no agent may grant permissions it does not hold
 - Log all inter-agent instruction exchanges
 
 **Tier 2 — Short-term:**
+
 - Deploy agent identity registry: all agents have verifiable, revocable identities
 - Implement message signing for orchestrator-to-agent instructions
 - Red team exercise: simulate compromised sub-agent attempting lateral movement
 
 **Tier 3 — Strategic:**
+
 - Formal trust model: cryptographic attestation of agent identity and permission set
 - Automated verification that no agent in a network exceeds declared scope
 - D-TA L3: threat model updated after every new agent added to orchestration network
@@ -306,16 +321,19 @@ escalation, or unintended action execution via the tool interface.
 #### Three-tier mitigations
 
 **Tier 1 — Immediate:**
+
 - Enumerate all tools currently accessible to deployed agents
 - Remove any unreviewed tools from production immediately
 - Validate all tool descriptors (MCP server schemas) for completeness and accuracy
 
 **Tier 2 — Short-term:**
+
 - Implement tool review board: all tools reviewed before integration
 - Add tool call logging and anomaly detection
 - Conduct red team exercise: provide malicious tool descriptor to agent
 
 **Tier 3 — Strategic:**
+
 - I-SB L3: automated tool supply chain analysis in CI/CD
 - Continuous tool permission drift detection
 - Tool descriptor integrity verification (see RECIPES.md)
@@ -350,16 +368,19 @@ output, or inter-agent messages.
 #### Three-tier mitigations
 
 **Tier 1 — Immediate:**
+
 - Apply output content inspection to all agent responses
 - Restrict tool call payloads: define maximum data volume per tool invocation
 - Log all outbound data with full payloads for forensic review
 
 **Tier 2 — Short-term:**
+
 - Deploy DLP scanning on agent output pipeline
 - Implement per-session data access budgets
 - Red team: simulate SSRF-style exfiltration via tool calls
 
 **Tier 3 — Strategic:**
+
 - O-IM L3: automated exfiltration detection using behavioural baselines
 - D-TA L3: threat model updated for every new outbound integration
 - Integrate with SIEM for cross-session pattern detection
@@ -394,16 +415,19 @@ malicious behaviour into the agent deployment.
 #### Three-tier mitigations
 
 **Tier 1 — Immediate:**
+
 - Inventory all third-party components in the agentic stack
 - Generate initial SBOM; flag components without security contact or last-updated date
 - Pin all dependency versions; reject floating versions in production
 
 **Tier 2 — Short-term:**
+
 - Implement automated vulnerability scanning for agentic SBOM
 - Review MCP server descriptors: any server should be treated as third-party software
 - Add integrity verification for all LLM API endpoints (certificate pinning where applicable)
 
 **Tier 3 — Strategic:**
+
 - G-PC L3: formal vendor security assessment for all critical agentic components
 - I-SB L3: automated supply chain analysis in CI/CD with policy enforcement
 - Periodic red team exercise targeting supply chain attack vectors
@@ -433,21 +457,25 @@ misconfiguration, enabling unsafe behaviour to pass through.
 | Operations / Incident Management (O-IM) | A — Incident Detection | Safety control bypass alerting | L2 required | Alert immediately when output validator is disabled or bypassed |
 | Governance / Strategy & Metrics (G-SM) | A — Policy | Safety control governance | L2 required | No production agent deployment without signed safety control architecture review |
 
-**Maturity target:** L3 required for any deployment where safety control bypass creates physical, financial, or reputational harm.
+**Maturity target:** L3 required for any deployment where safety control bypass creates physical, financial,
+or reputational harm.
 
 #### Three-tier mitigations
 
 **Tier 1 — Immediate:**
+
 - Audit all existing safety controls: identify any single points of failure
 - Confirm output validators cannot be disabled via input
 - Implement immutable safety control logs: controls cannot be silently disabled
 
 **Tier 2 — Short-term:**
+
 - Add independent safety check outside the LLM inference path (rule-based classifier)
 - Red team exercise: attempt to disable or invert each safety control independently
 - V-AA review: peer review of all safety control architecture before deployment
 
 **Tier 3 — Strategic:**
+
 - D-SA L3: formal safety architecture review board with external member for high-risk deployments
 - V-ST L3: continuous adversarial red teaming of safety controls in staging
 - Formal safety control test plan maintained and updated quarterly
@@ -477,21 +505,25 @@ mechanisms, or audit trails prevent effective human control.
 | Operations / Operational Management (O-OM) | A — Monitoring | Human-in-the-loop audit trail | L2 required | Immutable audit log of all autonomous actions for post-hoc review |
 | Governance / Education & Guidance (G-EG) | A — Training | Operator training on oversight | L1 minimum | Operators understand when to intervene and how to trigger override |
 
-**Maturity target:** L2 minimum; EU AI Act Article 14 compliance requires documented oversight mechanism for high-risk AI.
+**Maturity target:** L2 minimum; EU AI Act Article 14 compliance requires documented oversight mechanism for
+high-risk AI.
 
 #### Three-tier mitigations
 
 **Tier 1 — Immediate:**
+
 - Enumerate all currently autonomous high-impact actions in production
 - Add confirmation gates for all irreversible actions (delete, send, pay, publish)
 - Implement emergency stop that halts all agent activity immediately
 
 **Tier 2 — Short-term:**
+
 - Define autonomy tiers per action class: auto / confirm / human-required
 - Implement G-SM L2: formal autonomy policy reviewed and signed by CISO
 - Add audit trail: every agent action logged with rationale and outcome
 
 **Tier 3 — Strategic:**
+
 - O-OM L3: real-time oversight dashboard for operations team
 - G-SM L3: autonomy policy updated after every incident or near-miss
 - Formal EU AI Act Article 14 compliance review for all high-risk deployments
@@ -526,16 +558,19 @@ exceeds what any single agent could cause.
 #### Three-tier mitigations
 
 **Tier 1 — Immediate:**
+
 - Add health checks to all agents in production; isolate on failure detection
 - Implement circuit breaker pattern between orchestrator and sub-agents
 - Document current blast radius: if agent X fails, which agents are affected?
 
 **Tier 2 — Short-term:**
+
 - Red team: simulate cascading failure starting from one compromised sub-agent
 - Deploy O-IM playbook for multi-agent cascade incidents
 - Add per-agent state checkpointing to enable rollback
 
 **Tier 3 — Strategic:**
+
 - D-SA L3: formal chaos engineering programme for multi-agent orchestration
 - O-EM L3: automated cascade detection with predictive alerting
 - Architecture pattern: stateless agents wherever possible to limit propagation surface
@@ -610,6 +645,8 @@ Art. 14 (human oversight) and Art. 9 (risk management) compliance.
 
 ---
 
-*Part of the [OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk) —
+*Part of the
+[OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk)
+—
 maintained by the [OWASP GenAI Data Security Initiative](https://genai.owasp.org)*
 *License: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)*

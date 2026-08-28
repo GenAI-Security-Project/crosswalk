@@ -10,7 +10,8 @@
 # Agentic Top 10 2026 – NIST SP 800-218A
 
 Mapping the [OWASP Top 10 for Agentic AI 2026](https://genai.owasp.org/agentic-ai/)
-to [NIST SP 800-218A: Secure Software Development Practices for Generative AI and Dual-Use Foundation Models](https://doi.org/10.6028/NIST.SP.800-218A.ipd)
+to
+[NIST SP 800-218A: Secure Software Development Practices for Generative AI and Dual-Use Foundation Models](https://doi.org/10.6028/NIST.SP.800-218A.ipd)
 (Initial Public Draft, March 2024).
 
 NIST SP 800-218A extends the Secure Software Development Framework (SSDF)
@@ -86,6 +87,7 @@ goal manipulation vectors (PW.8), and vulnerability identification
 procedures for goal hijacking incidents in production (RV.1).
 
 **Real-world references:**
+
 - EchoLeak (2025) – indirect prompt injection turned Microsoft 365 Copilot
   into a silent exfiltration engine via email content, demonstrating agent
   goal redirection through injected instructions
@@ -105,6 +107,7 @@ procedures for goal hijacking incidents in production (RV.1).
 #### Mitigations
 
 **Foundational**
+
 - PW.2.1-PS: During design, explicitly threat model all channels through
   which an adversary can influence agent goals — user inputs, tool outputs,
   retrieved documents, MCP server responses, shared memory stores — and
@@ -117,6 +120,7 @@ procedures for goal hijacking incidents in production (RV.1).
   adversarial edge cases
 
 **Hardening**
+
 - PW.8.2-PS: Implement a structured red-team testing programme covering
   goal hijacking through direct injection, indirect injection via tool
   outputs and RAG sources, context manipulation, and multi-turn goal
@@ -128,6 +132,7 @@ procedures for goal hijacking incidents in production (RV.1).
   during multi-step agent execution to resist gradual goal drift
 
 **Advanced**
+
 - PW.8.2-PS: Extend adversarial testing to cover your specific tool
   descriptors, MCP server schemas, memory stores, and every data source
   that feeds agent context during multi-step execution
@@ -141,12 +146,13 @@ procedures for goal hijacking incidents in production (RV.1).
 
 | Tool | Type | Link |
 |---|---|---|
-| LAAF (LLM Agent Assessment Framework) | Open-source | https://github.com/OWASP/LAAF |
-| Garak | Open-source | https://github.com/leondz/garak |
-| PyRIT | Open-source | https://github.com/Azure/PyRIT |
-| NIST SP 800-218A | Reference | https://doi.org/10.6028/NIST.SP.800-218A.ipd |
+| LAAF (LLM Agent Assessment Framework) | Open-source | <https://github.com/OWASP/LAAF> |
+| Garak | Open-source | <https://github.com/leondz/garak> |
+| PyRIT | Open-source | <https://github.com/Azure/PyRIT> |
+| NIST SP 800-218A | Reference | <https://doi.org/10.6028/NIST.SP.800-218A.ipd> |
 
 #### Cross-references
+
 - LLM Top 10: LLM01 Prompt Injection, LLM03 Excessive Agency
 - DSGAI 2026: DSGAI01 Sensitive Data Leakage, DSGAI12 Unsafe NL Data Gateways
 - Other frameworks: MITRE ATLAS AML.T0051 – SSDF PW.2 – NIST CSF 2.0 PR.AC-5
@@ -179,6 +185,7 @@ enforcement (PW.7).
 #### Mitigations
 
 **Foundational**
+
 - PW.1.1-PS: Document explicit security requirements for each agent
   deployment defining maximum permitted tool access, API scope, and data
   source boundaries — treat as mandatory deployment requirements reviewed
@@ -191,6 +198,7 @@ enforcement (PW.7).
   change logging
 
 **Hardening**
+
 - PW.7.2-PS: Include access control bypass scenarios in pre-release reviews
   — verify that agents cannot exceed their permission manifest through
   prompt manipulation, tool chaining, or context injection
@@ -201,6 +209,7 @@ enforcement (PW.7).
   identity; feed into runtime anomaly detection for access pattern violations
 
 **Advanced**
+
 - PW.2.1-PS: Implement formal access control verification — automatically
   validate that deployed agent configurations match approved permission
   manifests in CI/CD before production promotion
@@ -214,12 +223,13 @@ enforcement (PW.7).
 
 | Tool | Type | Link |
 |---|---|---|
-| LAAF (LLM Agent Assessment Framework) | Open-source | https://github.com/OWASP/LAAF |
-| Open Policy Agent (OPA) | Open-source | https://www.openpolicyagent.org |
-| HashiCorp Vault | Open-source | https://www.vaultproject.io |
-| Guardrails AI | Open-source | https://github.com/guardrails-ai/guardrails |
+| LAAF (LLM Agent Assessment Framework) | Open-source | <https://github.com/OWASP/LAAF> |
+| Open Policy Agent (OPA) | Open-source | <https://www.openpolicyagent.org> |
+| HashiCorp Vault | Open-source | <https://www.vaultproject.io> |
+| Guardrails AI | Open-source | <https://github.com/guardrails-ai/guardrails> |
 
 #### Cross-references
+
 - LLM Top 10: LLM03 Excessive Agency, LLM08 Hidden Context Exposure
 - DSGAI 2026: DSGAI06 Tool, Plugin & Agent Data Exchange, DSGAI08 Non-Compliance & Regulatory Violations
 - Other frameworks: AIUC-1 B006 – NIST CSF 2.0 PR.AC-1 – CWE-285
@@ -242,6 +252,7 @@ credential stores (PS.1), and vulnerability monitoring for escalation
 incidents (RV.1).
 
 **Real-world references:**
+
 - OAuth token inheritance in agent frameworks (2025) – agents inherited
   user OAuth tokens and used them to access resources beyond agent scope
 - Multi-agent delegation exploit (2025) – sub-agents accumulated privileges
@@ -259,6 +270,7 @@ incidents (RV.1).
 #### Mitigations
 
 **Foundational**
+
 - PW.1.1-PS: Define explicit privilege boundaries for every agent identity
   — each agent must have its own credential scope, and privilege levels
   must be documented as mandatory deployment requirements
@@ -269,6 +281,7 @@ incidents (RV.1).
   strict access controls; encrypt at rest and in transit; audit all access
 
 **Hardening**
+
 - PW.1.1-PS: Implement privilege attenuation in multi-agent delegation —
   sub-agents must receive equal or lesser privileges than the delegating
   agent; enforce in the orchestration layer, not relying on model judgment
@@ -280,6 +293,7 @@ incidents (RV.1).
   persisted in agent memory or context
 
 **Advanced**
+
 - Implement formal privilege verification at every tool invocation — the
   tool execution layer must independently verify that the requesting agent
   has sufficient privilege for the specific operation
@@ -293,12 +307,13 @@ incidents (RV.1).
 
 | Tool | Type | Link |
 |---|---|---|
-| LAAF (LLM Agent Assessment Framework) | Open-source | https://github.com/OWASP/LAAF |
-| HashiCorp Vault | Open-source | https://www.vaultproject.io |
-| Open Policy Agent (OPA) | Open-source | https://www.openpolicyagent.org |
-| Falco | Open-source | https://falco.org |
+| LAAF (LLM Agent Assessment Framework) | Open-source | <https://github.com/OWASP/LAAF> |
+| HashiCorp Vault | Open-source | <https://www.vaultproject.io> |
+| Open Policy Agent (OPA) | Open-source | <https://www.openpolicyagent.org> |
+| Falco | Open-source | <https://falco.org> |
 
 #### Cross-references
+
 - LLM Top 10: LLM03 Excessive Agency, LLM01 Prompt Injection
 - DSGAI 2026: DSGAI06 Tool, Plugin & Agent Data Exchange, DSGAI08 Non-Compliance & Regulatory Violations
 - Other frameworks: MITRE ATLAS AML.T0015 – CWE-269 – NIST CSF 2.0 PR.AC-4
@@ -331,6 +346,7 @@ verification of all artefacts (PS.2), secure model and artefact registries
 #### Mitigations
 
 **Foundational**
+
 - PW.4.1-PS: Establish an approved sources policy for all agent components
   — tools, plugins, MCP servers, model weights, and libraries must come
   from vetted sources; require security review sign-off before any new
@@ -343,6 +359,7 @@ verification of all artefacts (PS.2), secure model and artefact registries
   components
 
 **Hardening**
+
 - PS.3.1-PS: Implement a versioned, access-controlled agent component
   registry; all promoted components must have documented provenance and
   integrity attestation
@@ -354,6 +371,7 @@ verification of all artefacts (PS.2), secure model and artefact registries
   dependencies including tool descriptors and plugin manifests
 
 **Advanced**
+
 - PW.4.1-PS: Conduct security assessment of MCP servers and tool providers
   before integration — review their access patterns, data handling, and
   update mechanisms for potential supply chain attack vectors
@@ -367,12 +385,13 @@ verification of all artefacts (PS.2), secure model and artefact registries
 
 | Tool | Type | Link |
 |---|---|---|
-| CycloneDX | Open-source | https://cyclonedx.org |
-| ModelScan | Open-source | https://github.com/protectai/modelscan |
-| OWASP Dependency-Check | Open-source | https://owasp.org/www-project-dependency-check/ |
-| Sigstore | Open-source | https://www.sigstore.dev |
+| CycloneDX | Open-source | <https://cyclonedx.org> |
+| ModelScan | Open-source | <https://github.com/protectai/modelscan> |
+| OWASP Dependency-Check | Open-source | <https://owasp.org/www-project-dependency-check/> |
+| Sigstore | Open-source | <https://www.sigstore.dev> |
 
 #### Cross-references
+
 - LLM Top 10: LLM04 Supply Chain
 - DSGAI 2026: DSGAI04 Data, Model & Artifact Poisoning, DSGAI06 Tool, Plugin & Agent Data Exchange
 - Other frameworks: SSDF PW.4 – MITRE ATLAS AML.T0056 – CycloneDX ML SBOM
@@ -393,6 +412,7 @@ secure coding for execution sandboxing (PW.5), adversarial testing of
 sandbox escapes (PW.8), and protection of execution environments (PS.1).
 
 **Real-world references:**
+
 - Code interpreter sandbox escapes (2024-2025) – multiple demonstrations
   of agents escaping sandboxed code execution environments to access host
   file systems and network resources
@@ -411,6 +431,7 @@ sandbox escapes (PW.8), and protection of execution environments (PS.1).
 #### Mitigations
 
 **Foundational**
+
 - PW.2.1-PS: Threat model all code execution capabilities in agent
   workflows — identify every path through which an agent can generate,
   execute, or influence code execution; design mandatory sandboxing for
@@ -424,6 +445,7 @@ sandbox escapes (PW.8), and protection of execution environments (PS.1).
   execution constraints
 
 **Hardening**
+
 - PW.8.2-PS: Include sandbox escape scenarios in adversarial testing —
   test code generation that attempts to access host resources, modify
   sandbox configuration, or establish network connections
@@ -435,6 +457,7 @@ sandbox escapes (PW.8), and protection of execution environments (PS.1).
   techniques
 
 **Advanced**
+
 - PW.8.2-PS: Conduct formal sandbox escape red team exercises against your
   specific execution environment; document residual risk and required
   compensating controls
@@ -449,12 +472,13 @@ sandbox escapes (PW.8), and protection of execution environments (PS.1).
 
 | Tool | Type | Link |
 |---|---|---|
-| Garak | Open-source | https://github.com/leondz/garak |
-| gVisor | Open-source | https://gvisor.dev |
-| Firecracker | Open-source | https://firecracker-microvm.github.io |
-| Semgrep | Open-source | https://semgrep.dev |
+| Garak | Open-source | <https://github.com/leondz/garak> |
+| gVisor | Open-source | <https://gvisor.dev> |
+| Firecracker | Open-source | <https://firecracker-microvm.github.io> |
+| Semgrep | Open-source | <https://semgrep.dev> |
 
 #### Cross-references
+
 - LLM Top 10: LLM10 Improper Output Handling, LLM01 Prompt Injection
 - DSGAI 2026: DSGAI06 Tool, Plugin & Agent Data Exchange, DSGAI05 Data Integrity & Validation Failures
 - Other frameworks: CWE-94 – MITRE ATLAS AML.T0015 – NIST CSF 2.0 PR.DS-5
@@ -476,6 +500,7 @@ snapshots for rollback (PS.3), behaviour review for memory-influenced
 anomalies (PW.7), and root cause analysis for poisoning incidents (RV.3).
 
 **Real-world references:**
+
 - Persistent memory poisoning (2025) – adversarial inputs stored in agent
   long-term memory influenced all future sessions for the affected user
 - Multi-agent context propagation (2025) – poisoned context from one agent
@@ -494,6 +519,7 @@ anomalies (PW.7), and root cause analysis for poisoning incidents (RV.3).
 #### Mitigations
 
 **Foundational**
+
 - PS.1.1-PS: Implement access controls on all agent memory stores — enforce
   per-agent identity isolation; only the owning agent can write to its
   memory, all access logged with full audit trail
@@ -505,6 +531,7 @@ anomalies (PW.7), and root cause analysis for poisoning incidents (RV.3).
   behaviour outside acceptable bounds
 
 **Hardening**
+
 - PS.1.1-PS: Enforce trust domain separation in agent context — data from
   different trust levels (user input, tool output, system instructions,
   retrieved documents) must be tagged and processed with appropriate trust
@@ -517,6 +544,7 @@ anomalies (PW.7), and root cause analysis for poisoning incidents (RV.3).
   expected content patterns
 
 **Advanced**
+
 - Apply memory decay and expiration policies — bound the influence of any
   single memory entry over time; implement automatic pruning of aged
   memory that has not been validated
@@ -531,12 +559,13 @@ anomalies (PW.7), and root cause analysis for poisoning incidents (RV.3).
 
 | Tool | Type | Link |
 |---|---|---|
-| LAAF (LLM Agent Assessment Framework) | Open-source | https://github.com/OWASP/LAAF |
-| Garak | Open-source | https://github.com/leondz/garak |
-| Weaviate (with RBAC) | Open-source | https://weaviate.io |
-| Great Expectations | Open-source | https://greatexpectations.io |
+| LAAF (LLM Agent Assessment Framework) | Open-source | <https://github.com/OWASP/LAAF> |
+| Garak | Open-source | <https://github.com/leondz/garak> |
+| Weaviate (with RBAC) | Open-source | <https://weaviate.io> |
+| Great Expectations | Open-source | <https://greatexpectations.io> |
 
 #### Cross-references
+
 - LLM Top 10: LLM05 Data and Model Poisoning, LLM09 Vector and Embedding Weaknesses
 - DSGAI 2026: DSGAI04 Data, Model & Artifact Poisoning, DSGAI13 Vector Store Platform Security
 - Other frameworks: MITRE ATLAS AML.T0032 – NIST CSF 2.0 PR.DS-8 – ISO 42001 6.1.2
@@ -570,6 +599,7 @@ chaining incidents (RV.1).
 #### Mitigations
 
 **Foundational**
+
 - PW.1.1-PS: Define permitted tool invocation sequences as part of agent
   security requirements — document allowed tool chains and explicitly
   prohibit chains that cross trust boundaries or combine capabilities
@@ -582,6 +612,7 @@ chaining incidents (RV.1).
   tool permissions
 
 **Hardening**
+
 - Implement chain-aware authorisation — evaluate the cumulative effect of
   tool sequences, not just individual tool calls; enforce at the
   orchestration layer
@@ -592,6 +623,7 @@ chaining incidents (RV.1).
   feed into security analytics for chaining pattern detection
 
 **Advanced**
+
 - PW.2.1-PS: Formally specify permitted action graphs — only pre-approved
   tool sequences can execute in production; block any tool chain not in
   the approved set
@@ -606,12 +638,13 @@ chaining incidents (RV.1).
 
 | Tool | Type | Link |
 |---|---|---|
-| Garak | Open-source | https://github.com/leondz/garak |
-| LangSmith | Commercial | https://smith.langchain.com |
-| OpenTelemetry | Open-source | https://opentelemetry.io |
-| NeMo Guardrails | Open-source | https://github.com/NVIDIA/NeMo-Guardrails |
+| Garak | Open-source | <https://github.com/leondz/garak> |
+| LangSmith | Commercial | <https://smith.langchain.com> |
+| OpenTelemetry | Open-source | <https://opentelemetry.io> |
+| NeMo Guardrails | Open-source | <https://github.com/NVIDIA/NeMo-Guardrails> |
 
 #### Cross-references
+
 - LLM Top 10: LLM03 Excessive Agency, LLM01 Prompt Injection
 - DSGAI 2026: DSGAI06 Tool, Plugin & Agent Data Exchange
 - Other frameworks: MITRE ATLAS AML.T0015 – CWE-285 – AIUC-1 B006
@@ -645,6 +678,7 @@ requirements for automation boundaries (PW.1).
 #### Mitigations
 
 **Foundational**
+
 - PW.2.1-PS: Design mandatory circuit breakers for all agentic automation
   workflows — define maximum step counts, execution time limits, cost
   budgets, and error thresholds that trigger automatic workflow suspension
@@ -657,6 +691,7 @@ requirements for automation boundaries (PW.1).
   systems
 
 **Hardening**
+
 - PW.8.2-PS: Include cascade failure scenarios in adversarial testing —
   test error propagation chains, hallucination amplification through
   multi-agent workflows, and cost runaway under adversarial input
@@ -669,6 +704,7 @@ requirements for automation boundaries (PW.1).
   and escalate on validation failure
 
 **Advanced**
+
 - PW.8.2-PS: Conduct chaos engineering exercises against agentic workflows
   — inject failures, hallucinations, and adversarial tool outputs at
   random points to validate cascade prevention controls
@@ -682,12 +718,13 @@ requirements for automation boundaries (PW.1).
 
 | Tool | Type | Link |
 |---|---|---|
-| LiteLLM | Open-source | https://github.com/BerriAI/litellm |
-| OpenTelemetry | Open-source | https://opentelemetry.io |
-| LangSmith | Commercial | https://smith.langchain.com |
-| Kong Gateway | Open-source | https://github.com/Kong/kong |
+| LiteLLM | Open-source | <https://github.com/BerriAI/litellm> |
+| OpenTelemetry | Open-source | <https://opentelemetry.io> |
+| LangSmith | Commercial | <https://smith.langchain.com> |
+| Kong Gateway | Open-source | <https://github.com/Kong/kong> |
 
 #### Cross-references
+
 - LLM Top 10: LLM06 Unbounded Consumption
 - DSGAI 2026: DSGAI17 Data Availability & Resilience Failures
 - Other frameworks: CWE-400 – ISA/IEC 62443 SR 7.1 – NIST SP 800-82 Rev 3
@@ -720,6 +757,7 @@ analysis for incidents involving novel agent capabilities (RV.3).
 #### Mitigations
 
 **Foundational**
+
 - PW.7.2-PS: Include emergent capability review in pre-release agent
   behaviour assessments — verify that agents cannot self-modify, discover
   new tools, or spawn sub-agents outside explicitly approved patterns
@@ -731,6 +769,7 @@ analysis for incidents involving novel agent capabilities (RV.3).
   spawning, or cross-organisational federation
 
 **Hardening**
+
 - PW.8.2-PS: Include emerging pattern scenarios in adversarial testing —
   attempt self-modification through prompt manipulation, tool discovery
   through output exploitation, and sub-agent spawning through tool chaining
@@ -742,6 +781,7 @@ analysis for incidents involving novel agent capabilities (RV.3).
   create new agent instances without explicit platform-level authorisation
 
 **Advanced**
+
 - PW.8.2-PS: Establish a dedicated research and red-team capability
   focused on emerging agentic patterns — proactively identify security
   implications of novel agent architectures before production deployment
@@ -757,12 +797,13 @@ analysis for incidents involving novel agent capabilities (RV.3).
 
 | Tool | Type | Link |
 |---|---|---|
-| Garak | Open-source | https://github.com/leondz/garak |
-| LangSmith | Commercial | https://smith.langchain.com |
-| OpenTelemetry | Open-source | https://opentelemetry.io |
-| MITRE ATLAS | Reference | https://atlas.mitre.org |
+| Garak | Open-source | <https://github.com/leondz/garak> |
+| LangSmith | Commercial | <https://smith.langchain.com> |
+| OpenTelemetry | Open-source | <https://opentelemetry.io> |
+| MITRE ATLAS | Reference | <https://atlas.mitre.org> |
 
 #### Cross-references
+
 - LLM Top 10: LLM07 Misinformation, LLM03 Excessive Agency
 - DSGAI 2026: DSGAI06 Tool, Plugin & Agent Data Exchange
 - Other frameworks: EU AI Act Art. 13 – MITRE ATLAS – ENISA AI Threat Landscape
@@ -797,6 +838,7 @@ failure incidents (RV.2).
 #### Mitigations
 
 **Foundational**
+
 - PW.4.1-PS: Vet all external agent dependencies before adoption — evaluate
   SLA commitments, security posture, failure mode characteristics, and
   historical reliability; maintain an approved dependency registry
@@ -808,6 +850,7 @@ failure incidents (RV.2).
   identity provider becomes unavailable
 
 **Hardening**
+
 - PS.2.1-PS: Implement dependency output validation — verify that responses
   from external services are consistent with expected schemas, quality
   levels, and behavioural patterns; detect silent degradation
@@ -819,6 +862,7 @@ failure incidents (RV.2).
   stakeholder notification; exercise procedures regularly
 
 **Advanced**
+
 - PS.2.1-PS: Implement continuous dependency behavioural monitoring — detect
   subtle changes in LLM API response patterns, model swaps by providers,
   and tool endpoint behavioural drift that could affect agent correctness
@@ -833,12 +877,13 @@ failure incidents (RV.2).
 
 | Tool | Type | Link |
 |---|---|---|
-| OpenTelemetry | Open-source | https://opentelemetry.io |
-| LiteLLM | Open-source | https://github.com/BerriAI/litellm |
-| Grafana | Open-source | https://grafana.com |
-| PagerDuty | Commercial | https://www.pagerduty.com |
+| OpenTelemetry | Open-source | <https://opentelemetry.io> |
+| LiteLLM | Open-source | <https://github.com/BerriAI/litellm> |
+| Grafana | Open-source | <https://grafana.com> |
+| PagerDuty | Commercial | <https://www.pagerduty.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM04 Supply Chain, LLM06 Unbounded Consumption
 - DSGAI 2026: DSGAI17 Data Availability & Resilience Failures, DSGAI06 Tool, Plugin & Agent Data Exchange
 - Other frameworks: CWE-400 – SSDF PW.4 – NIST CSF 2.0 ID.SC
@@ -875,5 +920,7 @@ failure incidents (RV.2).
 
 ---
 
-*Part of the [OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk) –
+*Part of the
+[OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk)
+–
 maintained by the [OWASP GenAI Data Security Initiative](https://genai.owasp.org)*

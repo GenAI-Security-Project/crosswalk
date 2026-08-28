@@ -34,13 +34,13 @@ outputs. See ASI01.
 
 **AIVSS (AI Vulnerability Scoring System)**
 OWASP's scoring framework for AI vulnerabilities, extending CVSS v4.0
-with ten agentic amplifier factors. Reference: https://aivss.owasp.org
+with ten agentic amplifier factors. Reference: <https://aivss.owasp.org>
 
 **AIUC-1**
 The world's first AI agent security, safety and reliability certification
 standard. Covers six domains: Data & Privacy (A), Security (B), Safety (C),
 Reliability (D), Accountability (E), Society (F).
-Reference: https://www.aiuc-1.com
+Reference: <https://www.aiuc-1.com>
 
 **Agentic supply chain**
 The set of runtime components an agent depends on: tools, MCP servers,
@@ -99,7 +99,7 @@ of a Software Bill of Materials (SBOM).
 **DSGAI**
 OWASP GenAI Data Security Risks and Mitigations 2026. 21 entries
 (DSGAI01–DSGAI21) covering the full GenAI data security lifecycle.
-Reference: https://genai.owasp.org
+Reference: <https://genai.owasp.org>
 
 ---
 
@@ -143,18 +143,27 @@ Here's the build order that maximizes impact — based on search traffic, commun
 Build sequence
 Sprint 1 — Foundation (right now)
 These files are referenced by everything else. Do them first.
-OrderFileWhy first1shared/SEVERITY.mdEvery mapping file references it — severity definitions, AIVSS alignment2shared/GLOSSARY.mdUnified terms across LLM/ASI/DSGAI — stops contributor confusion3CONTRIBUTING.mdNeeded before anyone can fork and add to this4llm-top10/LLM_MITREATLAS.mdMost-used threat framework, highest search traffic
+OrderFileWhy first1shared/SEVERITY.mdEvery mapping file references it — severity definitions, AIVSS
+alignment2shared/GLOSSARY.mdUnified terms across LLM/ASI/DSGAI — stops contributor
+confusion3CONTRIBUTING.mdNeeded before anyone can fork and add to this4llm-top10/LLM_MITREATLAS.mdMost-used
+threat framework, highest search traffic
 Sprint 2 — Highest traffic mappings
-OrderFileWhy5agentic-top10/Agentic_MITREATLAS.mdCompletes the ATLAS pair6llm-top10/LLM_NISTAIRMF.mdMost required by enterprise/government7llm-top10/LLM_EUAIAct.mdAugust 2026 deadline — most urgent regulatory file8agentic-top10/Agentic_EUAIAct.mdAgents are explicitly in scope for EU AI Act
+OrderFileWhy5agentic-top10/Agentic_MITREATLAS.mdCompletes the ATLAS pair6llm-top10/LLM_NISTAIRMF.mdMost
+required by enterprise/government7llm-top10/LLM_EUAIAct.mdAugust 2026 deadline — most urgent regulatory
+file8agentic-top10/Agentic_EUAIAct.mdAgents are explicitly in scope for EU AI Act
 Sprint 3 — Data security core
-OrderFileWhy9dsgai-2026/DSGAI_ISO27001.mdMost-certified standard globally10dsgai-2026/DSGAI_NISTAIRMF.mdUS federal alignment11dsgai-2026/DSGAI_EUAIAct.mdRegulatory trifecta complete
+OrderFileWhy9dsgai-2026/DSGAI_ISO27001.mdMost-certified standard globally10dsgai-2026/DSGAI_NISTAIRMF.mdUS
+federal alignment11dsgai-2026/DSGAI_EUAIAct.mdRegulatory trifecta complete
 Sprint 4 — OT/ICS (your specialty)
-OrderFileWhy12llm-top10/LLM_ISA62443.mdYour differentiator — nobody else has this done right13agentic-top10/Agentic_ISA62443.mdAgentic AI in OT is the frontier14llm-top10/LLM_NISTSP80082.mdPairs with 62443 for complete OT coverage
+OrderFileWhy12llm-top10/LLM_ISA62443.mdYour differentiator — nobody else has this done
+right13agentic-top10/Agentic_ISA62443.mdAgentic AI in OT is the frontier14llm-top10/LLM_NISTSP80082.mdPairs
+with 62443 for complete OT coverage
 Sprint 5 — Fill out remaining frameworks
 Everything else in alphabetical batches using the template.
 
 Practical rhythm
-Each session we do 2–3 files. I generate the full content, you paste into terminal, commit, push. Keeps momentum without burnout.
+Each session we do 2–3 files. I generate the full content, you paste into terminal, commit, push. Keeps
+momentum without burnout.
 Today's session target: Sprint 1 files 1–3, then start file 4.
 Ready — I'll generate shared/SEVERITY.md now:
 powershell@'
@@ -244,4 +253,6 @@ When submitting a new mapping or updating an existing one:
 
 ---
 
-*Part of the [OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk)*
+*Part of the
+[OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk)
+*

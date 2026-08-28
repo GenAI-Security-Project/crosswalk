@@ -9,7 +9,8 @@
 
 # Agentic Top 10 2026 × MITRE ATLAS
 
-Mapping the [OWASP Top 10 for Agentic Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
+Mapping the
+[OWASP Top 10 for Agentic Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
 to [MITRE ATLAS](https://atlas.mitre.org) — the authoritative adversarial
 AI threat knowledge base.
 
@@ -65,6 +66,7 @@ executes multi-step attack chains across tools, APIs, and downstream
 agents before any human can intervene.
 
 **Real-world references:**
+
 - EchoLeak (2025) — indirect injection via email content turned
   Microsoft 365 Copilot into a silent multi-step data exfiltration engine
 - Bing Chat / Sydney (2023) — persistent adversarial prompting achieved
@@ -81,6 +83,7 @@ agents before any human can intervene.
 #### Mitigations by tier
 
 **Foundational**
+
 - Treat all external content processed by the agent as untrusted
   regardless of source — documents, emails, web results, tool outputs
 - Implement architectural separation between system goal definition
@@ -88,6 +91,7 @@ agents before any human can intervene.
 - Deploy input filtering on all channels feeding agent context windows
 
 **Hardening**
+
 - Require human approval before the agent changes its stated goal
   or executes any action triggered by externally sourced content
 - Version-control agent goals and system prompts — alert on any
@@ -96,6 +100,7 @@ agents before any human can intervene.
   every content channel your agent processes
 
 **Advanced**
+
 - Cryptographically sign agent goal specifications — runtime goal
   state must match the signed original or execution halts
 - Implement intent verification layer — agent produces an auditable
@@ -107,11 +112,12 @@ agents before any human can intervene.
 
 | Tool | Type | Link |
 |---|---|---|
-| Garak | Open-source | https://github.com/leondz/garak |
-| Rebuff | Open-source | https://github.com/protectai/rebuff |
-| Invariant Analyzer | Open-source | https://github.com/invariantlabs-ai/invariant |
+| Garak | Open-source | <https://github.com/leondz/garak> |
+| Rebuff | Open-source | <https://github.com/protectai/rebuff> |
+| Invariant Analyzer | Open-source | <https://github.com/invariantlabs-ai/invariant> |
 
 #### Cross-references
+
 - LLM Top 10: LLM01 Prompt Injection, LLM03 Excessive Agency
 - DSGAI 2026: DSGAI01 Sensitive Data Leakage, DSGAI15 Over-Broad Context Windows
 - Other frameworks: AIUC-1 B001/B005/B006 · STRIDE Tampering/Spoofing · CWE-20
@@ -128,6 +134,7 @@ delegation. The danger is not the manipulation itself but what the
 tool does in response: delete, send, execute, publish.
 
 **Real-world references:**
+
 - Amazon Q (2025) — legitimate developer tools bent into destructive
   outputs through manipulated agent inputs
 - Postmark MCP impersonation (2025) — malicious MCP server BCC'd every
@@ -146,6 +153,7 @@ tool does in response: delete, send, execute, publish.
 #### Mitigations by tier
 
 **Foundational**
+
 - Apply least agency per tool — define the narrowest permission set
   each tool requires and enforce it at the orchestration layer
 - Validate all tool descriptors before agent loading — poisoned MCP
@@ -154,6 +162,7 @@ tool does in response: delete, send, execute, publish.
   read + external network write should never coexist in one agent
 
 **Hardening**
+
 - Require explicit user confirmation for high-risk tool invocations:
   delete, send, publish, execute, payment
 - Log all tool invocations with full parameter capture — anomaly
@@ -162,6 +171,7 @@ tool does in response: delete, send, execute, publish.
   by default, explicit allowlist required
 
 **Advanced**
+
 - Automated tool-chain analysis pre-deployment to identify dangerous
   permission combinations before they reach production
 - Maintain signed, versioned inventory of all approved MCP servers
@@ -173,11 +183,12 @@ tool does in response: delete, send, execute, publish.
 
 | Tool | Type | Link |
 |---|---|---|
-| Invariant Analyzer | Open-source | https://github.com/invariantlabs-ai/invariant |
-| NeMo Guardrails | Open-source | https://github.com/NVIDIA/NeMo-Guardrails |
-| MCP Inspector | Open-source | https://github.com/modelcontextprotocol/inspector |
+| Invariant Analyzer | Open-source | <https://github.com/invariantlabs-ai/invariant> |
+| NeMo Guardrails | Open-source | <https://github.com/NVIDIA/NeMo-Guardrails> |
+| MCP Inspector | Open-source | <https://github.com/modelcontextprotocol/inspector> |
 
 #### Cross-references
+
 - LLM Top 10: LLM10 Improper Output Handling, LLM03 Excessive Agency
 - DSGAI 2026: DSGAI06 Tool Plugin & Agent Data Exchange, DSGAI12 Unsafe NL Data Gateways
 - Other frameworks: AIUC-1 B006/B007 · ISA/IEC 62443 SR 2.1 (OT) · CWE-94
@@ -195,6 +206,7 @@ enabling lateral movement and silent escalation that persists after
 the original session ends.
 
 **Real-world references:**
+
 - Multiple production incidents of agents caching high-privilege tokens
   in memory, enabling attacker reuse across sessions and environments
 - Confused deputy attacks in multi-agent orchestration where Agent A
@@ -211,6 +223,7 @@ the original session ends.
 #### Mitigations by tier
 
 **Foundational**
+
 - Issue short-lived, task-scoped credentials per agent invocation —
   never long-lived tokens shared across tasks or sessions
 - Agent maximum privilege equals the authorising user's privilege —
@@ -219,6 +232,7 @@ the original session ends.
   purge on task completion
 
 **Hardening**
+
 - Full audit logging on all agent identity operations — token issuance,
   use, expiry, and any anomalous access pattern
 - Zero-trust re-validation on every agent action — no ambient authority
@@ -227,6 +241,7 @@ the original session ends.
   agents without explicit, scoped, time-limited delegation
 
 **Advanced**
+
 - Ephemeral identity architecture — agent identity dynamically assigned
   per task, cryptographically bound, non-reusable
 - Continuous NHI (Non-Human Identity) monitoring for anomalous token
@@ -238,12 +253,13 @@ the original session ends.
 
 | Tool | Type | Link |
 |---|---|---|
-| HashiCorp Vault | Open-source | https://www.vaultproject.io |
-| SPIFFE / SPIRE | Open-source | https://spiffe.io |
-| Teleport | Open-source/Commercial | https://goteleport.com |
-| Entro Security | Commercial | https://entro.security |
+| HashiCorp Vault | Open-source | <https://www.vaultproject.io> |
+| SPIFFE / SPIRE | Open-source | <https://spiffe.io> |
+| Teleport | Open-source/Commercial | <https://goteleport.com> |
+| Entro Security | Commercial | <https://entro.security> |
 
 #### Cross-references
+
 - LLM Top 10: LLM03 Excessive Agency
 - DSGAI 2026: DSGAI02 Agent Identity & Credential Exposure
 - Other frameworks: OWASP NHI Top 10 · AIUC-1 A/B007/B008 · ISA/IEC 62443 SR 1.1 (OT)
@@ -260,6 +276,7 @@ agent behaviour across every consumer — often fetched dynamically at
 runtime with no static inventory and no signature verification.
 
 **Real-world references:**
+
 - GitHub MCP exploit (2025) — compromised MCP server in the wild
   altered agent behaviour across all connected agents
 - Postmark MCP (2025) — first malicious MCP in the wild, discovered
@@ -278,6 +295,7 @@ runtime with no static inventory and no signature verification.
 #### Mitigations by tier
 
 **Foundational**
+
 - Maintain cryptographically signed inventory of all MCP servers,
   tools, plugins, and model versions used in production
 - Verify signatures of all supply chain components before loading —
@@ -286,6 +304,7 @@ runtime with no static inventory and no signature verification.
   latest-version resolution
 
 **Hardening**
+
 - MCP server provenance verification before any agent connection —
   validate identity and integrity of the server
 - Scan all prompt templates and tool descriptors for hidden
@@ -294,6 +313,7 @@ runtime with no static inventory and no signature verification.
   component behaviour changes post-load
 
 **Advanced**
+
 - Sandboxed evaluation environment for all new tools and MCP servers
   before production promotion — behavioural testing against your threat model
 - Dataset Bill of Materials (DBoM) for all training and retrieval data
@@ -305,11 +325,12 @@ runtime with no static inventory and no signature verification.
 
 | Tool | Type | Link |
 |---|---|---|
-| CycloneDX | Open-source | https://cyclonedx.org |
-| ModelScan | Open-source | https://github.com/protectai/modelscan |
-| OWASP Dependency-Check | Open-source | https://owasp.org/www-project-dependency-check/ |
+| CycloneDX | Open-source | <https://cyclonedx.org> |
+| ModelScan | Open-source | <https://github.com/protectai/modelscan> |
+| OWASP Dependency-Check | Open-source | <https://owasp.org/www-project-dependency-check/> |
 
 #### Cross-references
+
 - LLM Top 10: LLM04 Supply Chain
 - DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning
 - Other frameworks: NIST SP 800-218A · AIUC-1 B001/B003/B008 · BSIMM AM
@@ -326,6 +347,7 @@ prompts or poisoned inputs cause them to run attacker-controlled logic
 with the agent's full system permissions.
 
 **Real-world references:**
+
 - AutoGPT RCE (2024) — crafted prompts triggered arbitrary code
   execution through the agent's code generation pipeline
 - PromptJacking: Claude Desktop RCEs (2025) — unrestricted AppleScript
@@ -342,6 +364,7 @@ with the agent's full system permissions.
 #### Mitigations by tier
 
 **Foundational**
+
 - Sandbox all agent code execution — no host filesystem, network,
   or shell access by default, explicit allowlist required
 - Static analysis of all agent-generated code before execution —
@@ -350,6 +373,7 @@ with the agent's full system permissions.
   patterns on all channels feeding code-generating agents
 
 **Hardening**
+
 - Resource limits on all code execution sandboxes — CPU, memory,
   network, time — prevent escape via resource exhaustion
 - Block dynamic package installation by agents in production
@@ -358,6 +382,7 @@ with the agent's full system permissions.
   system call patterns
 
 **Advanced**
+
 - Hardware-level sandboxing (gVisor, Firecracker) for high-risk
   code execution workloads
 - Formal allowlist of permitted operations — anything outside the
@@ -369,12 +394,13 @@ with the agent's full system permissions.
 
 | Tool | Type | Link |
 |---|---|---|
-| gVisor | Open-source | https://gvisor.dev |
-| Semgrep | Open-source | https://semgrep.dev |
-| Bandit | Open-source | https://github.com/PyCQA/bandit |
-| Firecracker | Open-source | https://firecracker-microvm.github.io |
+| gVisor | Open-source | <https://gvisor.dev> |
+| Semgrep | Open-source | <https://semgrep.dev> |
+| Bandit | Open-source | <https://github.com/PyCQA/bandit> |
+| Firecracker | Open-source | <https://firecracker-microvm.github.io> |
 
 #### Cross-references
+
 - LLM Top 10: LLM10 Improper Output Handling
 - DSGAI 2026: DSGAI12 Unsafe NL Data Gateways
 - Other frameworks: AIUC-1 B005/B006/B009 · CWE-94 · OWASP ASVS V5
@@ -392,6 +418,7 @@ initial attack, potentially leaking secrets or shifting goals over time
 without triggering any single detectable event.
 
 **Real-world references:**
+
 - Gemini Memory Attack (2024) — indirect prompt injection caused
   Copilot to store malicious instructions in persistent memory,
   enabling long-term behavioural manipulation and data leakage
@@ -407,6 +434,7 @@ without triggering any single detectable event.
 #### Mitigations by tier
 
 **Foundational**
+
 - Classify all agent memory stores as sensitive data — apply access
   controls on read and write operations
 - Implement audit logging on all persistent memory modifications —
@@ -415,6 +443,7 @@ without triggering any single detectable event.
   persistent memory or RAG stores
 
 **Hardening**
+
 - Memory TTL (time-to-live) — periodic expiry and re-validation of
   stored context against authoritative sources
 - Memory trust tiers — untrusted external content cannot write to
@@ -423,6 +452,7 @@ without triggering any single detectable event.
   volumes, or content types
 
 **Advanced**
+
 - Cryptographic integrity verification of memory store contents —
   detect tampering between write and read operations
 - Memory segmentation by trust domain enforced at the storage layer,
@@ -434,11 +464,12 @@ without triggering any single detectable event.
 
 | Tool | Type | Link |
 |---|---|---|
-| Weaviate (with RBAC) | Open-source | https://weaviate.io |
-| LlamaIndex | Open-source | https://www.llamaindex.ai |
-| Langfuse | Open-source | https://langfuse.com |
+| Weaviate (with RBAC) | Open-source | <https://weaviate.io> |
+| LlamaIndex | Open-source | <https://www.llamaindex.ai> |
+| Langfuse | Open-source | <https://langfuse.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM05 Data and Model Poisoning, LLM09 Vector and Embedding Weaknesses
 - DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning, DSGAI13 Vector Store Platform Security
 - Other frameworks: AIUC-1 A/B002/B005 · NIST AI RMF MS-2.5 · CWE-693
@@ -466,6 +497,7 @@ cluster.
 #### Mitigations by tier
 
 **Foundational**
+
 - Authenticate all A2A messages — no ambient trust between agents
   regardless of network location
 - Encrypt all inter-agent communication channels — TLS 1.3 minimum
@@ -473,6 +505,7 @@ cluster.
   or unexpected message structures
 
 **Hardening**
+
 - Full audit logging of all inter-agent messages with content capture
   — essential for incident reconstruction
 - Replay attack protection — message nonces, timestamps, and sequence
@@ -481,6 +514,7 @@ cluster.
   tokens that persist beyond a single task
 
 **Advanced**
+
 - Mutual TLS (mTLS) for all A2A channels in production — both
   parties authenticate before any message is exchanged
 - Zero-trust mesh for multi-agent orchestration — every message
@@ -492,11 +526,12 @@ cluster.
 
 | Tool | Type | Link |
 |---|---|---|
-| SPIFFE / SPIRE | Open-source | https://spiffe.io |
-| Linkerd | Open-source | https://linkerd.io |
-| cert-manager | Open-source | https://cert-manager.io |
+| SPIFFE / SPIRE | Open-source | <https://spiffe.io> |
+| Linkerd | Open-source | <https://linkerd.io> |
+| cert-manager | Open-source | <https://cert-manager.io> |
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI02 Agent Identity & Credential Exposure
 - Other frameworks: OWASP NHI Top 10 · AIUC-1 B007/B008/E · ISA/IEC 62443 SR 3.1 (OT)
 
@@ -518,6 +553,7 @@ severity in any OT/ICS deployment. See ISA/IEC 62443 and NIST SP 800-82
 crosswalks for OT-specific controls.
 
 **Real-world references:**
+
 - Multiple documented production multi-agent loops causing runaway
   API cost, data corruption, and service outages before circuit
   breakers engaged
@@ -533,6 +569,7 @@ crosswalks for OT-specific controls.
 #### Mitigations by tier
 
 **Foundational**
+
 - Implement circuit breakers — halt propagation automatically when
   failure rate, error count, or latency exceeds threshold
 - Define explicit fail-safe modes for every agent — fail closed,
@@ -541,6 +578,7 @@ crosswalks for OT-specific controls.
   escalate its own permissions or access
 
 **Hardening**
+
 - Full audit trail of all agent actions enabling cascade path
   reconstruction post-incident
 - Segment sensitive agents from general-purpose agents — blast
@@ -549,6 +587,7 @@ crosswalks for OT-specific controls.
   loops between agents
 
 **Advanced**
+
 - Automated HITL triggers on cascade indicators — route to human
   review before failure propagates beyond defined blast radius
 - Chaos engineering — intentional fault injection into multi-agent
@@ -560,11 +599,12 @@ crosswalks for OT-specific controls.
 
 | Tool | Type | Link |
 |---|---|---|
-| OpenTelemetry | Open-source | https://opentelemetry.io |
-| Resilience4j | Open-source | https://resilience4j.readme.io |
-| LangSmith | Commercial | https://smith.langchain.com |
+| OpenTelemetry | Open-source | <https://opentelemetry.io> |
+| Resilience4j | Open-source | <https://resilience4j.readme.io> |
+| LangSmith | Commercial | <https://smith.langchain.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM06 Unbounded Consumption
 - DSGAI 2026: DSGAI17 Data Availability & Resilience Failures
 - Other frameworks: AIUC-1 D · ISA/IEC 62443 SR 7.1 (OT) · NIST SP 800-82 (OT)
@@ -592,6 +632,7 @@ forensics shows a legitimate user decision, not an agent manipulation.
 #### Mitigations by tier
 
 **Foundational**
+
 - Agents must clearly identify themselves as AI in all user-facing
   interactions — enforced at the guardrail layer
 - Separate agent conversation interface from security approval flows —
@@ -600,6 +641,7 @@ forensics shows a legitimate user decision, not an agent manipulation.
   patterns in agent responses
 
 **Hardening**
+
 - Audit logging that distinguishes agent-influenced actions from
   genuinely human-initiated actions — essential for forensics
 - User education on agent trust boundaries integrated into onboarding —
@@ -608,6 +650,7 @@ forensics shows a legitimate user decision, not an agent manipulation.
   — second human, not second agent
 
 **Advanced**
+
 - Behavioural analysis detecting when agents are nudging users toward
   specific approvals — alert on persuasion pattern detection
 - Structural separation between agent reasoning and user consent
@@ -616,6 +659,7 @@ forensics shows a legitimate user decision, not an agent manipulation.
   your specific user population and agent deployment
 
 #### Cross-references
+
 - LLM Top 10: LLM07 Misinformation
 - DSGAI 2026: DSGAI21 Disinformation & Integrity Attacks
 - Other frameworks: EU AI Act Art. 52 · AIUC-1 C/F · ENISA AI Threat Landscape
@@ -642,6 +686,7 @@ ASI06 attack that has gone undetected across multiple sessions.
 #### Mitigations by tier
 
 **Foundational**
+
 - Comprehensive audit logging of all agent actions from day one —
   no deployment without full observability
 - Strict scope constraints enforced at the orchestration layer, not
@@ -650,6 +695,7 @@ ASI06 attack that has gone undetected across multiple sessions.
   overridable by model output
 
 **Hardening**
+
 - Continuous behavioural monitoring — flag deviation from historical
   baseline for every deployed agent
 - Agent health checks on a defined schedule — periodic re-verification
@@ -658,6 +704,7 @@ ASI06 attack that has gone undetected across multiple sessions.
   rogue agent pending human review before it can take further action
 
 **Advanced**
+
 - Multi-agent consensus for high-stakes decisions — no single agent
   can act unilaterally on irreversible actions
 - Formal behavioural specification for each agent — machine-verifiable
@@ -669,11 +716,12 @@ ASI06 attack that has gone undetected across multiple sessions.
 
 | Tool | Type | Link |
 |---|---|---|
-| Langfuse | Open-source | https://langfuse.com |
-| Helicone | Open-source | https://www.helicone.ai |
-| Weights & Biases | Commercial | https://wandb.ai |
+| Langfuse | Open-source | <https://langfuse.com> |
+| Helicone | Open-source | <https://www.helicone.ai> |
+| Weights & Biases | Commercial | <https://wandb.ai> |
 
 #### Cross-references
+
 - LLM Top 10: LLM03 Excessive Agency
 - DSGAI 2026: DSGAI16 Endpoint & Browser Overreach
 - Other frameworks: MITRE ATT&CK T1078 · EU AI Act Art. 9 · AIUC-1 B001/B002/C/E
@@ -720,5 +768,7 @@ to visualise agentic attack coverage across your threat model.
 
 ---
 
-*Part of the [OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk) —
+*Part of the
+[OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk)
+—
 maintained by the [OWASP GenAI Data Security Initiative](https://genai.owasp.org)*

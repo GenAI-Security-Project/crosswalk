@@ -10,7 +10,8 @@
 # DSGAI 2026 – NIST SP 800-218A
 
 Mapping the [OWASP GenAI Data Security Risks 2026](https://genai.owasp.org/dsgai-2026/)
-to [NIST SP 800-218A: Secure Software Development Practices for Generative AI and Dual-Use Foundation Models](https://doi.org/10.6028/NIST.SP.800-218A.ipd)
+to
+[NIST SP 800-218A: Secure Software Development Practices for Generative AI and Dual-Use Foundation Models](https://doi.org/10.6028/NIST.SP.800-218A.ipd)
 (Initial Public Draft, March 2024).
 
 NIST SP 800-218A extends the Secure Software Development Framework (SSDF)
@@ -104,6 +105,7 @@ trails (RV.1).
 #### Mitigations
 
 **Foundational**
+
 - PS.1.1-PS: Enable audit logging on all training data repositories, model
   registries, and embedding stores — log identity, timestamp, data object,
   and operation type for every access event
@@ -114,6 +116,7 @@ trails (RV.1).
   access, and access from unexpected identities
 
 **Hardening**
+
 - PS.1.1-PS: Implement tamper-evident log storage — write-once storage or
   cryptographic chaining to prevent log deletion or modification by
   compromised accounts
@@ -124,6 +127,7 @@ trails (RV.1).
   anomalies that may indicate exfiltration attempts
 
 **Advanced**
+
 - PS.1.1-PS: Deploy data-level access logging that captures field-level
   access within structured training datasets — not just file-level access
 - RV.1.1-PS: Build automated anomaly detection models over access logs
@@ -135,12 +139,13 @@ trails (RV.1).
 
 | Tool | Type | Link |
 |---|---|---|
-| OpenTelemetry | Open-source | https://opentelemetry.io |
-| Elastic SIEM | Open-source | https://www.elastic.co/security |
-| AWS CloudTrail | Commercial | https://aws.amazon.com/cloudtrail/ |
-| Azure Monitor | Commercial | https://azure.microsoft.com/en-us/products/monitor |
+| OpenTelemetry | Open-source | <https://opentelemetry.io> |
+| Elastic SIEM | Open-source | <https://www.elastic.co/security> |
+| AWS CloudTrail | Commercial | <https://aws.amazon.com/cloudtrail/> |
+| Azure Monitor | Commercial | <https://azure.microsoft.com/en-us/products/monitor> |
 
 #### Cross-references
+
 - LLM Top 10: LLM05 Data and Model Poisoning, LLM08 Hidden Context Exposure
 - Agentic Top 10: ASI02 Tool Misuse, ASI06 Memory & Context Poisoning
 - Other frameworks: NIST CSF 2.0 DE.CM – ISO 42001 6.1.2 – SSDF PS.1
@@ -167,6 +172,7 @@ documentation (PW.2).
 #### Mitigations
 
 **Foundational**
+
 - PW.1.1-PS: Establish a comprehensive data inventory for all AI systems
   covering training datasets, fine-tuning corpora, RAG sources, evaluation
   benchmarks, and prompt templates — classify each by sensitivity level
@@ -177,6 +183,7 @@ documentation (PW.2).
   requirements reviewed at architecture gates
 
 **Hardening**
+
 - PW.1.1-PS: Implement automated data discovery and classification tools
   to detect undocumented datasets entering AI pipelines; alert on
   unclassified data usage
@@ -186,6 +193,7 @@ documentation (PW.2).
   what data each AI system consumes and how it is processed
 
 **Advanced**
+
 - PW.1.1-PS: Implement continuous data inventory reconciliation — compare
   declared data usage against actual pipeline execution logs to detect
   undeclared data sources
@@ -198,12 +206,13 @@ documentation (PW.2).
 
 | Tool | Type | Link |
 |---|---|---|
-| Apache Atlas | Open-source | https://atlas.apache.org |
-| Amundsen | Open-source | https://www.amundsen.io |
-| Google Data Catalog | Commercial | https://cloud.google.com/data-catalog |
-| Collibra | Commercial | https://www.collibra.com |
+| Apache Atlas | Open-source | <https://atlas.apache.org> |
+| Amundsen | Open-source | <https://www.amundsen.io> |
+| Google Data Catalog | Commercial | <https://cloud.google.com/data-catalog> |
+| Collibra | Commercial | <https://www.collibra.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM05 Data and Model Poisoning, LLM04 Supply Chain
 - Agentic Top 10: ASI04 Agentic Supply Chain Vulnerabilities
 - Other frameworks: EU AI Act Art. 13 – ISO 42001 A.7 – NIST AI RMF Map 1.1
@@ -231,6 +240,7 @@ vulnerability identification for shadow AI exposure (RV.1).
 #### Mitigations
 
 **Foundational**
+
 - PW.4.1-PS: Establish an approved AI tools registry — all AI tools and
   services must pass security and data handling review before organisational
   use; publish the approved list and enforce through policy
@@ -241,6 +251,7 @@ vulnerability identification for shadow AI exposure (RV.1).
   restrictions for AI tool usage; enforce through training and monitoring
 
 **Hardening**
+
 - RV.1.1-PS: Deploy CASB or equivalent controls to monitor and alert on
   organisational data sent to unsanctioned AI services; establish triage
   procedures for detected shadow AI usage
@@ -250,6 +261,7 @@ vulnerability identification for shadow AI exposure (RV.1).
   sensitive data into browser-based AI tools
 
 **Advanced**
+
 - PW.4.1-PS: Conduct periodic shadow AI audits — scan network logs, SaaS
   usage data, and expense reports for evidence of unsanctioned AI tool
   procurement or usage
@@ -262,12 +274,13 @@ vulnerability identification for shadow AI exposure (RV.1).
 
 | Tool | Type | Link |
 |---|---|---|
-| Netskope | Commercial | https://www.netskope.com |
-| Microsoft Defender for Cloud Apps | Commercial | https://www.microsoft.com/en-us/security/business/siem-and-xdr/microsoft-defender-cloud-apps |
-| Zscaler | Commercial | https://www.zscaler.com |
-| OpenDLP | Open-source | https://github.com/ezarko/opendlp |
+| Netskope | Commercial | <https://www.netskope.com> |
+| Microsoft Defender for Cloud Apps | Commercial | <https://www.microsoft.com/en-us/security/business/siem-and-xdr/microsoft-defender-cloud-apps> |
+| Zscaler | Commercial | <https://www.zscaler.com> |
+| OpenDLP | Open-source | <https://github.com/ezarko/opendlp> |
 
 #### Cross-references
+
 - LLM Top 10: LLM04 Supply Chain, LLM03 Excessive Agency
 - Agentic Top 10: ASI04 Agentic Supply Chain Vulnerabilities, ASI10 AI Agent Dependency Failures
 - Other frameworks: NIST CSF 2.0 ID.AM – ISO 27001 A.8.1 – CIS Control 2
@@ -287,6 +300,7 @@ artefact management (PS.3), supply chain vetting (PW.4), and root cause
 analysis (RV.3).
 
 **Real-world references:**
+
 - Nightshade (2023) – poison pixels corrupted image generation model
   behaviour at scale through training data manipulation
 - Hugging Face model repository incidents (2024) – malicious model
@@ -304,6 +318,7 @@ analysis (RV.3).
 #### Mitigations
 
 **Foundational**
+
 - PS.1.1-PS: Implement strict write access controls on all training data
   repositories, model registries, and pipeline artefact stores — enforce
   least privilege with MFA for write operations; log all modifications
@@ -315,6 +330,7 @@ analysis (RV.3).
   integrity-verified version
 
 **Hardening**
+
 - PW.4.1-PS: Apply anomaly detection to training data before each run —
   flag statistical outliers, unexpected distributions, and content
   inconsistent with the declared source domain
@@ -326,6 +342,7 @@ analysis (RV.3).
   on model weights and downstream consumers
 
 **Advanced**
+
 - PW.4.1-PS: Conduct backdoor detection (neural cleanse or equivalent)
   on all new model versions trained on external data before production
   promotion
@@ -338,12 +355,13 @@ analysis (RV.3).
 
 | Tool | Type | Link |
 |---|---|---|
-| IBM Adversarial Robustness Toolbox | Open-source | https://github.com/Trusted-AI/adversarial-robustness-toolbox |
-| CleanLab | Open-source | https://github.com/cleanlab/cleanlab |
-| ModelScan | Open-source | https://github.com/protectai/modelscan |
-| Great Expectations | Open-source | https://greatexpectations.io |
+| IBM Adversarial Robustness Toolbox | Open-source | <https://github.com/Trusted-AI/adversarial-robustness-toolbox> |
+| CleanLab | Open-source | <https://github.com/cleanlab/cleanlab> |
+| ModelScan | Open-source | <https://github.com/protectai/modelscan> |
+| Great Expectations | Open-source | <https://greatexpectations.io> |
 
 #### Cross-references
+
 - LLM Top 10: LLM05 Data and Model Poisoning, LLM04 Supply Chain
 - Agentic Top 10: ASI04 Agentic Supply Chain Vulnerabilities, ASI06 Memory & Context Poisoning
 - Other frameworks: MITRE ATLAS AML.T0032 – NIST CSF 2.0 PR.DS-8 – ISO 42001 6.1.2
@@ -371,6 +389,7 @@ vetting (PW.4).
 #### Mitigations
 
 **Foundational**
+
 - PS.2.1-PS: Establish provenance requirements for all training data —
   every dataset must have documented origin, collection methodology,
   licensing terms, and chain of custody before entering any pipeline
@@ -382,6 +401,7 @@ vetting (PW.4).
   complete provenance record
 
 **Hardening**
+
 - PS.2.1-PS: Implement cryptographic data provenance — hash chains or
   digital signatures on dataset snapshots that provide tamper-evident
   chain of custody from source to training pipeline
@@ -393,6 +413,7 @@ vetting (PW.4).
   data lineage
 
 **Advanced**
+
 - PS.2.1-PS: Implement W3C PROV or equivalent provenance standard for
   all AI data assets — enable machine-readable provenance queries across
   the full data supply chain
@@ -406,12 +427,13 @@ vetting (PW.4).
 
 | Tool | Type | Link |
 |---|---|---|
-| Great Expectations | Open-source | https://greatexpectations.io |
-| DVC (Data Version Control) | Open-source | https://dvc.org |
-| Apache Atlas | Open-source | https://atlas.apache.org |
-| Pachyderm | Open-source | https://www.pachyderm.com |
+| Great Expectations | Open-source | <https://greatexpectations.io> |
+| DVC (Data Version Control) | Open-source | <https://dvc.org> |
+| Apache Atlas | Open-source | <https://atlas.apache.org> |
+| Pachyderm | Open-source | <https://www.pachyderm.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM05 Data and Model Poisoning, LLM04 Supply Chain
 - Agentic Top 10: ASI04 Agentic Supply Chain Vulnerabilities
 - Other frameworks: NIST AI RMF Map 2.3 – ISO 42001 A.7.3 – EU AI Act Art. 10
@@ -438,6 +460,7 @@ addresses this through versioned artefact management with lineage metadata
 #### Mitigations
 
 **Foundational**
+
 - PS.3.1-PS: Implement data lineage tracking that records the full
   transformation chain from raw data sources through preprocessing,
   augmentation, and training to model artefact — link every model
@@ -449,6 +472,7 @@ addresses this through versioned artefact management with lineage metadata
   output hash
 
 **Hardening**
+
 - PS.3.1-PS: Deploy automated lineage capture integrated with ML pipeline
   orchestration tools (MLflow, Kubeflow, etc.) — eliminate manual lineage
   documentation that becomes stale
@@ -459,6 +483,7 @@ addresses this through versioned artefact management with lineage metadata
   records are incomplete or inconsistent
 
 **Advanced**
+
 - PS.3.1-PS: Build queryable lineage graphs that enable forward and
   backward tracing — from any data source to all affected models and
   from any model to all contributing data sources
@@ -472,12 +497,13 @@ addresses this through versioned artefact management with lineage metadata
 
 | Tool | Type | Link |
 |---|---|---|
-| OpenLineage | Open-source | https://openlineage.io |
-| Marquez | Open-source | https://marquezproject.ai |
-| MLflow | Open-source | https://mlflow.org |
-| DataHub | Open-source | https://datahubproject.io |
+| OpenLineage | Open-source | <https://openlineage.io> |
+| Marquez | Open-source | <https://marquezproject.ai> |
+| MLflow | Open-source | <https://mlflow.org> |
+| DataHub | Open-source | <https://datahubproject.io> |
 
 #### Cross-references
+
 - LLM Top 10: LLM05 Data and Model Poisoning, LLM04 Supply Chain
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - Other frameworks: NIST AI RMF Measure 2.6 – ISO 42001 A.7.3 – EU AI Act Art. 12
@@ -505,6 +531,7 @@ analysis (PW.2).
 #### Mitigations
 
 **Foundational**
+
 - PW.1.1-PS: Establish a data aggregation policy for AI systems — require
   a privacy and sensitivity impact assessment before any dataset merge
   operation that combines data from different sources or classifications
@@ -516,6 +543,7 @@ analysis (PW.2).
   risk increases
 
 **Hardening**
+
 - PW.1.1-PS: Implement technical controls that enforce aggregation
   policies — automated checks that verify dataset combination compliance
   before pipeline execution
@@ -526,6 +554,7 @@ analysis (PW.2).
   aggregation into training datasets
 
 **Advanced**
+
 - PW.1.1-PS: Build automated aggregation risk scoring that evaluates
   re-identification probability as datasets are combined; block
   high-risk aggregations without explicit approval
@@ -539,12 +568,13 @@ analysis (PW.2).
 
 | Tool | Type | Link |
 |---|---|---|
-| ARX Data Anonymization | Open-source | https://arx.deidentifier.org |
-| OpenDP | Open-source | https://opendp.org |
-| Google Differential Privacy | Open-source | https://github.com/google/differential-privacy |
-| Presidio | Open-source | https://github.com/microsoft/presidio |
+| ARX Data Anonymization | Open-source | <https://arx.deidentifier.org> |
+| OpenDP | Open-source | <https://opendp.org> |
+| Google Differential Privacy | Open-source | <https://github.com/google/differential-privacy> |
+| Presidio | Open-source | <https://github.com/microsoft/presidio> |
 
 #### Cross-references
+
 - LLM Top 10: LLM05 Data and Model Poisoning, LLM09 Vector and Embedding Weaknesses
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - Other frameworks: GDPR Art. 5(1)(c) – NIST Privacy Framework CT.DM-P – ISO 27701 A.7.4
@@ -562,6 +592,7 @@ through access protection (PS.1), secure coding for data handling (PW.5),
 and output review for unintended disclosure (PW.7).
 
 **Real-world references:**
+
 - Samsung source code leak (2023) — proprietary code exposed through
   employee prompts to ChatGPT
 - Training data extraction attacks (Carlini et al., 2023) — verbatim
@@ -578,6 +609,7 @@ and output review for unintended disclosure (PW.7).
 #### Mitigations
 
 **Foundational**
+
 - PS.1.1-PS: Classify all data entering AI pipelines by sensitivity;
   implement DLP controls on model output channels that detect and block
   responses containing PII, credentials, or data above the authorised
@@ -590,6 +622,7 @@ and output review for unintended disclosure (PW.7).
   sensitive training content
 
 **Hardening**
+
 - PS.1.1-PS: Deploy output-side DLP that scans model responses in
   real-time for PII, credentials, and sensitive patterns; block or
   redact before delivery to the consumer
@@ -600,6 +633,7 @@ and output review for unintended disclosure (PW.7).
   replace or tokenise PII before data enters training pipelines
 
 **Advanced**
+
 - Apply differential privacy during training to bound memorisation risk;
   measure and report the privacy guarantee (epsilon) for each model
 - PS.1.1-PS: Deploy canary data detection — embed known canary records
@@ -612,12 +646,13 @@ and output review for unintended disclosure (PW.7).
 
 | Tool | Type | Link |
 |---|---|---|
-| Presidio | Open-source | https://github.com/microsoft/presidio |
-| LLM Guard | Open-source | https://github.com/protectai/llm-guard |
-| Nightfall | Commercial | https://www.nightfall.ai |
-| OpenDP | Open-source | https://opendp.org |
+| Presidio | Open-source | <https://github.com/microsoft/presidio> |
+| LLM Guard | Open-source | <https://github.com/protectai/llm-guard> |
+| Nightfall | Commercial | <https://www.nightfall.ai> |
+| OpenDP | Open-source | <https://opendp.org> |
 
 #### Cross-references
+
 - LLM Top 10: LLM08 Hidden Context Exposure, LLM01 Prompt Injection
 - Agentic Top 10: ASI01 Agent Goal Hijack, ASI02 Tool Misuse
 - Other frameworks: MITRE ATLAS AML.T0024 – GDPR Art. 32 – NIST CSF 2.0 PR.DS-5
@@ -644,6 +679,7 @@ versioned, access-controlled artefact management (PS.3).
 #### Mitigations
 
 **Foundational**
+
 - PS.1.1-PS: Classify model weights, architecture specifications, and
   proprietary training data as trade secrets or restricted IP; apply
   access controls commensurate with classification — need-to-know basis,
@@ -656,6 +692,7 @@ versioned, access-controlled artefact management (PS.3).
   agreements
 
 **Hardening**
+
 - PS.1.1-PS: Deploy rate limiting and query monitoring on model
   inference APIs to detect and throttle model extraction attacks —
   alert on query patterns consistent with model stealing
@@ -665,6 +702,7 @@ versioned, access-controlled artefact management (PS.3).
   enclaves for model serving where classification warrants it
 
 **Advanced**
+
 - PS.1.1-PS: Conduct model extraction red team exercises — test
   whether your deployed models can be functionally replicated through
   API access and quantify extraction resistance
@@ -678,12 +716,13 @@ versioned, access-controlled artefact management (PS.3).
 
 | Tool | Type | Link |
 |---|---|---|
-| ModelScan | Open-source | https://github.com/protectai/modelscan |
-| Sigstore | Open-source | https://www.sigstore.dev |
-| AWS Nitro Enclaves | Commercial | https://aws.amazon.com/ec2/nitro/nitro-enclaves/ |
-| Azure Confidential Computing | Commercial | https://azure.microsoft.com/en-us/solutions/confidential-compute/ |
+| ModelScan | Open-source | <https://github.com/protectai/modelscan> |
+| Sigstore | Open-source | <https://www.sigstore.dev> |
+| AWS Nitro Enclaves | Commercial | <https://aws.amazon.com/ec2/nitro/nitro-enclaves/> |
+| Azure Confidential Computing | Commercial | <https://azure.microsoft.com/en-us/solutions/confidential-compute/> |
 
 #### Cross-references
+
 - LLM Top 10: LLM05 Data and Model Poisoning, LLM04 Supply Chain
 - Agentic Top 10: ASI04 Agentic Supply Chain Vulnerabilities
 - Other frameworks: MITRE ATLAS AML.T0024 – TRIPS Agreement Art. 39 – EU Trade Secrets Directive
@@ -712,6 +751,7 @@ quality review (PW.7), adversarial testing of synthetic data fidelity
 #### Mitigations
 
 **Foundational**
+
 - PW.7.2-PS: Establish quality gates for synthetic data — statistical
   fidelity metrics, bias assessments, and privacy guarantee validation
   must pass before synthetic data enters any training pipeline
@@ -722,6 +762,7 @@ quality review (PW.7), adversarial testing of synthetic data fidelity
   to validate that individual source records cannot be identified
 
 **Hardening**
+
 - PW.8.2-PS: Test synthetic data for attribute inference and
   reconstruction attacks — verify that sensitive attributes of source
   individuals cannot be inferred from the synthetic output
@@ -732,6 +773,7 @@ quality review (PW.7), adversarial testing of synthetic data fidelity
   data, generation model, and privacy parameters
 
 **Advanced**
+
 - RV.3.1-PS: Build automated quality monitoring for synthetic data
   pipelines — continuous assessment of fidelity, utility, and privacy
   metrics with alerting on degradation
@@ -746,12 +788,13 @@ quality review (PW.7), adversarial testing of synthetic data fidelity
 
 | Tool | Type | Link |
 |---|---|---|
-| SDV (Synthetic Data Vault) | Open-source | https://sdv.dev |
-| Gretel.ai | Commercial | https://gretel.ai |
-| OpenDP | Open-source | https://opendp.org |
-| Anonymeter | Open-source | https://github.com/statice/anonymeter |
+| SDV (Synthetic Data Vault) | Open-source | <https://sdv.dev> |
+| Gretel.ai | Commercial | <https://gretel.ai> |
+| OpenDP | Open-source | <https://opendp.org> |
+| Anonymeter | Open-source | <https://github.com/statice/anonymeter> |
 
 #### Cross-references
+
 - LLM Top 10: LLM07 Misinformation, LLM05 Data and Model Poisoning
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - Other frameworks: NIST AI RMF Measure 2.11 – Article 29 WP Opinion on Anonymisation – ISO 27559
@@ -780,6 +823,7 @@ remediation procedures for deletion requests (RV.2).
 #### Mitigations
 
 **Foundational**
+
 - PW.1.1-PS: Define data retention policies for every AI data asset class
   — training data, fine-tuning data, inference logs, embeddings, and model
   checkpoints; align with regulatory requirements (GDPR Art. 17, CCPA)
@@ -790,6 +834,7 @@ remediation procedures for deletion requests (RV.2).
   impact analysis when deletion requests are received
 
 **Hardening**
+
 - RV.2.1-PS: Establish a deletion request processing workflow that
   includes: data identification, model impact assessment, data removal
   from all pipeline stages, and model retraining scheduling
@@ -801,6 +846,7 @@ remediation procedures for deletion requests (RV.2).
   influence of deleted data
 
 **Advanced**
+
 - PW.1.1-PS: Implement data lifecycle management that tracks every
   data record from ingestion through model training to model retirement;
   enable complete audit trail for regulatory response
@@ -814,12 +860,13 @@ remediation procedures for deletion requests (RV.2).
 
 | Tool | Type | Link |
 |---|---|---|
-| Apache Atlas | Open-source | https://atlas.apache.org |
-| Immuta | Commercial | https://www.immuta.com |
-| OneTrust | Commercial | https://www.onetrust.com |
-| DVC (Data Version Control) | Open-source | https://dvc.org |
+| Apache Atlas | Open-source | <https://atlas.apache.org> |
+| Immuta | Commercial | <https://www.immuta.com> |
+| OneTrust | Commercial | <https://www.onetrust.com> |
+| DVC (Data Version Control) | Open-source | <https://dvc.org> |
 
 #### Cross-references
+
 - LLM Top 10: LLM05 Data and Model Poisoning, LLM09 Vector and Embedding Weaknesses
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - Other frameworks: GDPR Art. 17 – CCPA Sec. 1798.105 – NIST Privacy Framework CT.DP-P
@@ -847,6 +894,7 @@ data rights (PW.1) and access controls that enforce ownership boundaries
 #### Mitigations
 
 **Foundational**
+
 - PW.1.1-PS: Establish a data ownership registry for all AI datasets —
   document the owner, licensing terms, permitted use cases, and
   restrictions for every dataset entering an AI pipeline
@@ -857,6 +905,7 @@ data rights (PW.1) and access controls that enforce ownership boundaries
   the data ingestion approval process
 
 **Hardening**
+
 - PW.1.1-PS: Implement automated licence compliance checking — validate
   that dataset usage in training, fine-tuning, and evaluation complies
   with licence terms before pipeline execution
@@ -867,6 +916,7 @@ data rights (PW.1) and access controls that enforce ownership boundaries
   to enable licence compliance auditing
 
 **Advanced**
+
 - PW.1.1-PS: Implement data contribution tracking for AI outputs —
   attribute model capabilities to contributing datasets to support
   fair revenue sharing and licence compliance
@@ -881,12 +931,13 @@ data rights (PW.1) and access controls that enforce ownership boundaries
 
 | Tool | Type | Link |
 |---|---|---|
-| Collibra | Commercial | https://www.collibra.com |
-| Alation | Commercial | https://www.alation.com |
-| Apache Atlas | Open-source | https://atlas.apache.org |
-| CycloneDX | Open-source | https://cyclonedx.org |
+| Collibra | Commercial | <https://www.collibra.com> |
+| Alation | Commercial | <https://www.alation.com> |
+| Apache Atlas | Open-source | <https://atlas.apache.org> |
+| CycloneDX | Open-source | <https://cyclonedx.org> |
 
 #### Cross-references
+
 - LLM Top 10: LLM04 Supply Chain, LLM05 Data and Model Poisoning
 - Agentic Top 10: ASI04 Agentic Supply Chain Vulnerabilities
 - Other frameworks: EU AI Act Art. 10 – Copyright Directive Art. 4 – WIPO AI & IP Policy
@@ -916,6 +967,7 @@ for misuse indicators (PW.7), and monitoring for data misuse in production
 #### Mitigations
 
 **Foundational**
+
 - PW.1.1-PS: Document permitted use cases for every dataset in AI
   pipelines; implement technical controls that enforce purpose limitation
   — prevent datasets from being used in pipelines they were not
@@ -928,6 +980,7 @@ for misuse indicators (PW.7), and monitoring for data misuse in production
   monitoring
 
 **Hardening**
+
 - RV.1.1-PS: Deploy monitoring for data purpose-scope violations —
   detect when datasets are accessed by pipelines or users outside their
   approved scope; alert and escalate
@@ -938,6 +991,7 @@ for misuse indicators (PW.7), and monitoring for data misuse in production
   approved purpose — identify and remediate scope creep
 
 **Advanced**
+
 - RV.1.1-PS: Build automated purpose compliance monitoring that
   continuously validates data usage against declared purposes across
   all AI pipelines
@@ -951,12 +1005,13 @@ for misuse indicators (PW.7), and monitoring for data misuse in production
 
 | Tool | Type | Link |
 |---|---|---|
-| Immuta | Commercial | https://www.immuta.com |
-| Privacera | Commercial | https://privacera.com |
-| Apache Ranger | Open-source | https://ranger.apache.org |
-| Collibra | Commercial | https://www.collibra.com |
+| Immuta | Commercial | <https://www.immuta.com> |
+| Privacera | Commercial | <https://privacera.com> |
+| Apache Ranger | Open-source | <https://ranger.apache.org> |
+| Collibra | Commercial | <https://www.collibra.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM03 Excessive Agency, LLM05 Data and Model Poisoning
 - Agentic Top 10: ASI01 Agent Goal Hijack, ASI02 Tool Misuse
 - Other frameworks: GDPR Art. 5(1)(b) – NIST Privacy Framework CT.PO-P – ISO 27701 A.7.2.2
@@ -983,6 +1038,7 @@ consent enforcement mechanisms (PW.2).
 #### Mitigations
 
 **Foundational**
+
 - PW.1.1-PS: Establish consent management requirements for all AI
   systems that process personal data — document the legal basis for
   processing, consent scope, and withdrawal procedures for each data
@@ -995,6 +1051,7 @@ consent enforcement mechanisms (PW.2).
   status and scope across all AI systems
 
 **Hardening**
+
 - PW.1.1-PS: Implement automated consent verification at pipeline
   ingestion points — reject data from subjects who have not consented
   or have withdrawn consent
@@ -1005,6 +1062,7 @@ consent enforcement mechanisms (PW.2).
   personal data in AI pipelines has valid, current consent
 
 **Advanced**
+
 - PW.2.1-PS: Implement granular consent management supporting
   per-purpose consent — data subjects can consent to inference but
   not training, or to specific model types
@@ -1018,12 +1076,13 @@ consent enforcement mechanisms (PW.2).
 
 | Tool | Type | Link |
 |---|---|---|
-| OneTrust | Commercial | https://www.onetrust.com |
-| Transcend | Commercial | https://transcend.io |
-| CookieYes | Open-source | https://www.cookieyes.com |
-| Osano | Commercial | https://www.osano.com |
+| OneTrust | Commercial | <https://www.onetrust.com> |
+| Transcend | Commercial | <https://transcend.io> |
+| CookieYes | Open-source | <https://www.cookieyes.com> |
+| Osano | Commercial | <https://www.osano.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM05 Data and Model Poisoning, LLM03 Excessive Agency
 - Agentic Top 10: ASI09 Human-Agent Trust Exploitation
 - Other frameworks: GDPR Art. 6–7 – CCPA Sec. 1798.120 – NIST Privacy Framework CT.PO-P
@@ -1050,6 +1109,7 @@ principles into pipeline architecture (PW.2).
 #### Mitigations
 
 **Foundational**
+
 - PW.1.1-PS: Establish data minimisation requirements for all AI systems
   — document the minimum data needed for each pipeline stage; prohibit
   collection or retention of data not justified by a documented purpose
@@ -1061,6 +1121,7 @@ principles into pipeline architecture (PW.2).
   process — challenge every data field for necessity
 
 **Hardening**
+
 - PW.1.1-PS: Implement automated data minimisation enforcement —
   pipeline validation that rejects datasets containing fields not
   listed in the approved data schema for that pipeline
@@ -1071,6 +1132,7 @@ principles into pipeline architecture (PW.2).
   AI pipelines are not processing data beyond their documented scope
 
 **Advanced**
+
 - PW.2.1-PS: Implement dynamic data minimisation — adapt the data
   collected based on the specific task, providing only the minimum
   context needed for each inference request
@@ -1085,12 +1147,13 @@ principles into pipeline architecture (PW.2).
 
 | Tool | Type | Link |
 |---|---|---|
-| Presidio | Open-source | https://github.com/microsoft/presidio |
-| ARX Data Anonymization | Open-source | https://arx.deidentifier.org |
-| Amnesia | Open-source | https://amnesia.openaire.eu |
-| Google Differential Privacy | Open-source | https://github.com/google/differential-privacy |
+| Presidio | Open-source | <https://github.com/microsoft/presidio> |
+| ARX Data Anonymization | Open-source | <https://arx.deidentifier.org> |
+| Amnesia | Open-source | <https://amnesia.openaire.eu> |
+| Google Differential Privacy | Open-source | <https://github.com/google/differential-privacy> |
 
 #### Cross-references
+
 - LLM Top 10: LLM09 Vector and Embedding Weaknesses, LLM03 Excessive Agency
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - Other frameworks: GDPR Art. 5(1)(c) – NIST Privacy Framework CT.DM-P – ISO 27701 A.7.4.1
@@ -1119,6 +1182,7 @@ that prevent privacy-eroding data combinations (PS.1).
 #### Mitigations
 
 **Foundational**
+
 - PW.1.1-PS: Require privacy impact assessments (PIAs) for all AI systems
   before deployment — assess risks of attribute inference, profiling, and
   memorisation; document mitigations
@@ -1130,6 +1194,7 @@ that prevent privacy-eroding data combinations (PS.1).
   or profiling
 
 **Hardening**
+
 - PW.1.1-PS: Implement ongoing privacy risk monitoring — measure and
   track privacy degradation metrics across model versions and deployment
   contexts
@@ -1141,6 +1206,7 @@ that prevent privacy-eroding data combinations (PS.1).
   purpose-bound encryption keys
 
 **Advanced**
+
 - PW.2.1-PS: Implement federated learning or secure multi-party
   computation for scenarios where centralised data processing poses
   unacceptable privacy risk
@@ -1154,12 +1220,13 @@ that prevent privacy-eroding data combinations (PS.1).
 
 | Tool | Type | Link |
 |---|---|---|
-| OpenDP | Open-source | https://opendp.org |
-| PySyft | Open-source | https://github.com/OpenMined/PySyft |
-| TensorFlow Privacy | Open-source | https://github.com/tensorflow/privacy |
-| Flower (Federated Learning) | Open-source | https://flower.ai |
+| OpenDP | Open-source | <https://opendp.org> |
+| PySyft | Open-source | <https://github.com/OpenMined/PySyft> |
+| TensorFlow Privacy | Open-source | <https://github.com/tensorflow/privacy> |
+| Flower (Federated Learning) | Open-source | <https://flower.ai> |
 
 #### Cross-references
+
 - LLM Top 10: LLM09 Vector and Embedding Weaknesses, LLM01 Prompt Injection
 - Agentic Top 10: ASI09 Human-Agent Trust Exploitation
 - Other frameworks: GDPR Art. 25 – NIST Privacy Framework – EU AI Act Art. 10 – ISO 27701
@@ -1188,6 +1255,7 @@ and root cause analysis tracing bias to data sources (RV.3).
 #### Mitigations
 
 **Foundational**
+
 - PW.7.2-PS: Establish fairness metrics and thresholds for all AI systems
   — demographic parity, equalised odds, or calibration metrics appropriate
   to the deployment context; evaluate before each release
@@ -1198,6 +1266,7 @@ and root cause analysis tracing bias to data sources (RV.3).
   training data for every model version; assess for known gaps
 
 **Hardening**
+
 - RV.3.1-PS: Establish bias root cause analysis procedures — when
   discriminatory behaviour is detected, trace to specific data sources,
   labelling processes, or preprocessing decisions and remediate
@@ -1209,6 +1278,7 @@ and root cause analysis tracing bias to data sources (RV.3).
   bias pattern
 
 **Advanced**
+
 - PW.8.2-PS: Conduct intersectional fairness testing covering
   combinations of protected attributes — bias may be invisible at the
   single-attribute level but significant at intersections
@@ -1223,12 +1293,13 @@ and root cause analysis tracing bias to data sources (RV.3).
 
 | Tool | Type | Link |
 |---|---|---|
-| Fairlearn | Open-source | https://fairlearn.org |
-| AI Fairness 360 | Open-source | https://aif360.mybluemix.net |
-| What-If Tool | Open-source | https://pair-code.github.io/what-if-tool |
-| Aequitas | Open-source | https://github.com/dssg/aequitas |
+| Fairlearn | Open-source | <https://fairlearn.org> |
+| AI Fairness 360 | Open-source | <https://aif360.mybluemix.net> |
+| What-If Tool | Open-source | <https://pair-code.github.io/what-if-tool> |
+| Aequitas | Open-source | <https://github.com/dssg/aequitas> |
 
 #### Cross-references
+
 - LLM Top 10: LLM07 Misinformation, LLM05 Data and Model Poisoning
 - Agentic Top 10: ASI09 Human-Agent Trust Exploitation
 - Other frameworks: NIST AI RMF Measure 2.11 – EU AI Act Art. 10 – ISO 42001 A.7.4 – EEOC AI Guidance
@@ -1257,6 +1328,7 @@ that identifies governance failures (RV.3).
 #### Mitigations
 
 **Foundational**
+
 - PW.1.1-PS: Establish an AI data governance framework defining roles
   (data stewards, data owners, AI system owners), responsibilities,
   and accountability for all data in AI pipelines
@@ -1267,6 +1339,7 @@ that identifies governance failures (RV.3).
   retention, quality, and compliance for all AI data assets
 
 **Hardening**
+
 - PW.1.1-PS: Implement policy-as-code governance — encode data governance
   policies in machine-executable form; enforce automatically at pipeline
   execution time
@@ -1278,6 +1351,7 @@ that identifies governance failures (RV.3).
   strengthen accordingly
 
 **Advanced**
+
 - PW.1.1-PS: Implement continuous governance compliance monitoring —
   automated assessment of all AI pipelines against governance policies
   with alerting on non-compliance
@@ -1292,12 +1366,13 @@ that identifies governance failures (RV.3).
 
 | Tool | Type | Link |
 |---|---|---|
-| Collibra | Commercial | https://www.collibra.com |
-| Atlan | Commercial | https://atlan.com |
-| Apache Atlas | Open-source | https://atlas.apache.org |
-| Open Policy Agent | Open-source | https://www.openpolicyagent.org |
+| Collibra | Commercial | <https://www.collibra.com> |
+| Atlan | Commercial | <https://atlan.com> |
+| Apache Atlas | Open-source | <https://atlas.apache.org> |
+| Open Policy Agent | Open-source | <https://www.openpolicyagent.org> |
 
 #### Cross-references
+
 - LLM Top 10: LLM03 Excessive Agency, LLM04 Supply Chain
 - Agentic Top 10: ASI04 Agentic Supply Chain Vulnerabilities, ASI09 Human-Agent Trust Exploitation
 - Other frameworks: NIST AI RMF Govern – ISO 42001 5.1 – EU AI Act Art. 9 – OECD AI Principles
@@ -1327,6 +1402,7 @@ third-party vulnerability disclosures (RV.1).
 #### Mitigations
 
 **Foundational**
+
 - PW.4.1-PS: Establish a third-party data approval process — all external
   data sources must pass security review, quality assessment, compliance
   verification, and provenance documentation before entering any pipeline
@@ -1337,6 +1413,7 @@ third-party vulnerability disclosures (RV.1).
   dependencies, their providers, and the AI systems that consume them
 
 **Hardening**
+
 - RV.1.1-PS: Subscribe to third-party provider security advisories
   and data quality notifications; define triage SLAs for third-party
   data incidents
@@ -1348,6 +1425,7 @@ third-party vulnerability disclosures (RV.1).
   quality degradation or unexpected changes
 
 **Advanced**
+
 - PW.4.1-PS: Implement data sandboxing for new third-party data sources
   — isolate and evaluate in a non-production environment before
   integration into production pipelines
@@ -1361,12 +1439,13 @@ third-party vulnerability disclosures (RV.1).
 
 | Tool | Type | Link |
 |---|---|---|
-| Great Expectations | Open-source | https://greatexpectations.io |
-| CycloneDX | Open-source | https://cyclonedx.org |
-| Sigstore | Open-source | https://www.sigstore.dev |
-| OWASP Dependency-Check | Open-source | https://owasp.org/www-project-dependency-check/ |
+| Great Expectations | Open-source | <https://greatexpectations.io> |
+| CycloneDX | Open-source | <https://cyclonedx.org> |
+| Sigstore | Open-source | <https://www.sigstore.dev> |
+| OWASP Dependency-Check | Open-source | <https://owasp.org/www-project-dependency-check/> |
 
 #### Cross-references
+
 - LLM Top 10: LLM04 Supply Chain, LLM05 Data and Model Poisoning
 - Agentic Top 10: ASI04 Agentic Supply Chain Vulnerabilities, ASI10 AI Agent Dependency Failures
 - Other frameworks: SSDF PW.4 – NIST CSF 2.0 ID.SC – ISO 27036 – MITRE ATLAS AML.T0056
@@ -1396,6 +1475,7 @@ versioned artefact management with jurisdiction metadata (PS.3).
 #### Mitigations
 
 **Foundational**
+
 - PW.1.1-PS: Establish data localization requirements for every AI dataset
   — document the jurisdictional restrictions, applicable regulations
   (GDPR, China PIPL, India DPDP, etc.), and compliant processing locations
@@ -1407,6 +1487,7 @@ versioned artefact management with jurisdiction metadata (PS.3).
   where data is stored, processed, and transferred for every pipeline
 
 **Hardening**
+
 - PS.3.1-PS: Maintain jurisdiction metadata on all data and model
   artefacts; verify localization compliance at every pipeline stage
   transition before execution
@@ -1418,6 +1499,7 @@ versioned artefact management with jurisdiction metadata (PS.3).
   processing locations before execution
 
 **Advanced**
+
 - PW.1.1-PS: Build localization-aware AI pipeline orchestration —
   automatically route data processing to compliant regions based on
   jurisdiction metadata attached to each dataset
@@ -1432,12 +1514,13 @@ versioned artefact management with jurisdiction metadata (PS.3).
 
 | Tool | Type | Link |
 |---|---|---|
-| Azure Policy | Commercial | https://azure.microsoft.com/en-us/products/azure-policy |
-| AWS Config | Commercial | https://aws.amazon.com/config/ |
-| Open Policy Agent | Open-source | https://www.openpolicyagent.org |
-| Privacera | Commercial | https://privacera.com |
+| Azure Policy | Commercial | <https://azure.microsoft.com/en-us/products/azure-policy> |
+| AWS Config | Commercial | <https://aws.amazon.com/config/> |
+| Open Policy Agent | Open-source | <https://www.openpolicyagent.org> |
+| Privacera | Commercial | <https://privacera.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM08 Hidden Context Exposure, LLM04 Supply Chain
 - Agentic Top 10: ASI04 Agentic Supply Chain Vulnerabilities
 - Other frameworks: GDPR Ch. V – China PIPL Art. 38 – India DPDP Sec. 16 – NIST Privacy Framework
@@ -1458,6 +1541,7 @@ regulatory compliance (PW.2), and root cause analysis for compliance
 failures (RV.3).
 
 **Real-world references:**
+
 - Italian Garante ChatGPT ban (2023) — temporary ban for GDPR
   non-compliance regarding training data processing
 - EU AI Act (2024) — comprehensive AI regulation with obligations for
@@ -1474,6 +1558,7 @@ failures (RV.3).
 #### Mitigations
 
 **Foundational**
+
 - PW.1.1-PS: Establish a regulatory compliance registry for all AI systems
   — document applicable regulations (GDPR, CCPA, EU AI Act, sector
   rules), compliance obligations, and responsible officers for each
@@ -1486,6 +1571,7 @@ failures (RV.3).
   regulation
 
 **Hardening**
+
 - PW.1.1-PS: Implement automated regulatory compliance monitoring —
   continuous assessment of AI systems against applicable regulations
   with alerting on compliance gaps
@@ -1497,6 +1583,7 @@ failures (RV.3).
   initiate mandatory notification procedures
 
 **Advanced**
+
 - PW.2.1-PS: Build regulatory change monitoring — track evolving
   regulations across all relevant jurisdictions; automatically assess
   impact on existing AI systems and flag required updates
@@ -1512,12 +1599,13 @@ failures (RV.3).
 
 | Tool | Type | Link |
 |---|---|---|
-| OneTrust | Commercial | https://www.onetrust.com |
-| TrustArc | Commercial | https://trustarc.com |
-| Open Policy Agent | Open-source | https://www.openpolicyagent.org |
-| Transcend | Commercial | https://transcend.io |
+| OneTrust | Commercial | <https://www.onetrust.com> |
+| TrustArc | Commercial | <https://trustarc.com> |
+| Open Policy Agent | Open-source | <https://www.openpolicyagent.org> |
+| Transcend | Commercial | <https://transcend.io> |
 
 #### Cross-references
+
 - LLM Top 10: LLM03 Excessive Agency, LLM08 Hidden Context Exposure
 - Agentic Top 10: ASI09 Human-Agent Trust Exploitation
 - Other frameworks: GDPR – CCPA – EU AI Act – NIST AI RMF Govern 1.1 – ISO 42001 4.1
@@ -1555,5 +1643,7 @@ failures (RV.3).
 
 ---
 
-*Part of the [OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk) –
+*Part of the
+[OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk)
+–
 maintained by the [OWASP GenAI Data Security Initiative](https://genai.owasp.org)*

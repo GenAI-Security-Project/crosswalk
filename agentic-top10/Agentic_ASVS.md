@@ -9,8 +9,11 @@
 
 # Agentic Top 10 2026 × OWASP ASVS 4.0.3
 
-Mapping the [OWASP Top 10 for Agentic Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
-to the [OWASP Application Security Verification Standard (ASVS) 4.0.3](https://owasp.org/www-project-application-security-verification-standard/) —
+Mapping the
+[OWASP Top 10 for Agentic Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
+to the
+[OWASP Application Security Verification Standard (ASVS) 4.0.3](https://owasp.org/www-project-application-security-verification-standard/)
+—
 the framework for testing and verifying web application and API
 security, organised into 14 chapters with three verification levels.
 
@@ -41,6 +44,7 @@ agent orchestration APIs — rate limiting, authentication, output
 validation, and replay protection.
 
 **Verification levels:**
+
 - L1 — Opportunistic: passively verifiable, minimal security requirement
 - L2 — Standard: most applications with sensitive data
 - L3 — Advanced: high-value targets, high assurance required
@@ -101,6 +105,7 @@ vulnerability class fully covered by V5.
 #### Mitigations by tier
 
 **Foundational (L1)**
+
 - V5.1.1: Input validation on all agent input channels —
   user prompt, RAG content, tool returns, email, uploaded
   documents all validated as untrusted content
@@ -110,6 +115,7 @@ vulnerability class fully covered by V5.
   control enabling immediate halt of agent activity
 
 **Hardening (L2)**
+
 - V1.1.2: Threat model all agent data flows — every
   indirect injection surface identified and documented,
   mitigations verified in security testing
@@ -118,6 +124,7 @@ vulnerability class fully covered by V5.
   triggers suspension rather than continuation
 
 **Advanced (L3)**
+
 - V5.1.1: Validate all content sources for each specific
   deployment — historian data (OT), email content,
   web results each treated as injection vectors
@@ -126,6 +133,7 @@ vulnerability class fully covered by V5.
   verified against your specific agentic deployment
 
 #### Cross-references
+
 - LLM Top 10: LLM01 Prompt Injection, LLM03 Excessive Agency
 - DSGAI 2026: DSGAI12 Unsafe NL Data Gateways
 - Other frameworks: ISO 27001 A.8.28 · AIUC-1 B001/B005 · CWE-74
@@ -153,6 +161,7 @@ least privilege (V4.1.3) applies to every agent tool integration.
 #### Mitigations by tier
 
 **Foundational (L1)**
+
 - V4.1.3: Least privilege on all agent tool integrations —
   per-tool permission manifests enforced at orchestration
   layer, not just policy
@@ -163,6 +172,7 @@ least privilege (V4.1.3) applies to every agent tool integration.
   anomalous frequency detected and alerted
 
 **Hardening (L2)**
+
 - V7.2.2: Log all tool invocations — tool identity,
   parameters, agent identity, timestamp — immutable
   audit trail for forensic investigation
@@ -171,6 +181,7 @@ least privilege (V4.1.3) applies to every agent tool integration.
   producing harmful outcomes verified in testing
 
 **Advanced (L3)**
+
 - V4.1.3: Include agent tool permissions in privileged
   access reviews — quarterly, unused permissions removed
 - V11.1.2: Adversarial tool chain testing at L3 —
@@ -178,6 +189,7 @@ least privilege (V4.1.3) applies to every agent tool integration.
   your specific deployment
 
 #### Cross-references
+
 - LLM Top 10: LLM10 Improper Output Handling, LLM03 Excessive Agency
 - DSGAI 2026: DSGAI06 Tool Plugin & Agent Data Exchange
 - Other frameworks: ISO 27001 A.8.2 · AIUC-1 B006/B007 · CWE-284
@@ -205,6 +217,7 @@ agent credential management.
 #### Mitigations by tier
 
 **Foundational (L1)**
+
 - V2.1.1: No hardcoded agent credentials — secret
   manager required for all agent credential storage
 - V4.1.3: Least privilege on all agent credentials —
@@ -213,6 +226,7 @@ agent credential management.
   NHIs across agent instances
 
 **Hardening (L2)**
+
 - V6.1.1: Encrypt all agent credentials at rest —
   same cryptographic standards as production data
 - V7.2.1: Log all credential operations — issuance,
@@ -221,6 +235,7 @@ agent credential management.
   enforce as CI/CD gate
 
 **Advanced (L3)**
+
 - PKI-backed agent identities as L3 credential control —
   certificate-based authentication for all agent-to-system
   connections
@@ -228,6 +243,7 @@ agent credential management.
   all agent NHIs — documented as L3 assurance evidence
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI02 Agent Identity & Credential Exposure
 - Other frameworks: OWASP NHI Top 10 (all entries) · ISO 27001 A.8.2/A.5.16 · CWE-522
 
@@ -253,12 +269,14 @@ govern agent components as software supply chain elements.
 #### Mitigations by tier
 
 **Foundational (L1)**
+
 - Maintain ML SBOM for all agentic deployments —
   every component inventoried with version, source, hash
 - Pin all component versions — no automatic updates
   without review
 
 **Hardening (L2)**
+
 - V10.2.1: CVE scanning in CI/CD for all agent components —
   ML libraries, MCP server dependencies, inference
   runtime all scanned before deployment
@@ -269,6 +287,7 @@ govern agent components as software supply chain elements.
   integrity checks — unsigned components blocked
 
 **Advanced (L3)**
+
 - Operate isolated evaluation environment — behavioural
   testing of each component before production promotion
 - V10.2.1: Runtime integrity monitoring — hash
@@ -276,6 +295,7 @@ govern agent components as software supply chain elements.
   suspension
 
 #### Cross-references
+
 - LLM Top 10: LLM04 Supply Chain
 - DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning
 - Other frameworks: ISO 27001 A.5.19/A.5.21 · NIST CSF 2.0 GV.SC-01 · CWE-494
@@ -304,6 +324,7 @@ without validation.
 #### Mitigations by tier
 
 **Foundational (L1)**
+
 - V5.2.4: Never use eval, exec, or equivalent on
   agent-generated code — absolute L1 requirement,
   enforced through automated code review
@@ -313,6 +334,7 @@ without validation.
   parameterised execution only, no string interpolation
 
 **Hardening (L2)**
+
 - V11.1.2: Business logic controls for code execution —
   sandbox, network isolation, and allowlist as L2
   verification requirements for agentic code execution
@@ -321,6 +343,7 @@ without validation.
   to code as output
 
 **Advanced (L3)**
+
 - Hardware-level sandboxing as L3 assurance control —
   kernel-level isolation preventing escape to host
 - V5.2.4: Adversarial code injection testing at L3 —
@@ -328,6 +351,7 @@ without validation.
   deployment, verify sandbox containment
 
 #### Cross-references
+
 - LLM Top 10: LLM10 Improper Output Handling
 - DSGAI 2026: DSGAI12 Unsafe NL Data Gateways
 - Other frameworks: AIUC-1 B005/B006 · CWE-94 · ISO 27001 A.8.28
@@ -355,6 +379,7 @@ access control.
 #### Mitigations by tier
 
 **Foundational (L1)**
+
 - V5.1.1: Validate all content before writing to agent
   memory — injection patterns rejected at write boundary,
   untrusted sources cannot bypass validation
@@ -363,6 +388,7 @@ access control.
   no unauthenticated memory writes
 
 **Hardening (L2)**
+
 - V6.1.1: Encrypt all agent memory stores at rest —
   embeddings, long-term memory, operational knowledge
 - V12.1.1: Scan content before memory write — adversarial
@@ -371,6 +397,7 @@ access control.
   management principle applied to memory store content
 
 **Advanced (L3)**
+
 - Cryptographic integrity verification on memory store —
   tamper detection as L3 assurance control
 - V5.1.1: Adversarial memory poisoning testing at L3 —
@@ -378,6 +405,7 @@ access control.
   detection capability verified
 
 #### Cross-references
+
 - LLM Top 10: LLM05 Data and Model Poisoning, LLM09 Vector and Embedding Weaknesses
 - DSGAI 2026: DSGAI13 Vector Store Platform Security
 - Other frameworks: ISO 27001 A.8.3/A.8.24 · NIST AI RMF MS-2.5 · CWE-349
@@ -405,6 +433,7 @@ session integrity.
 #### Mitigations by tier
 
 **Foundational (L1)**
+
 - V9.1.1: Enforce mutual TLS on all A2A channels —
   both parties authenticate, messages encrypted, L1
   requirement for all production A2A communication
@@ -414,18 +443,21 @@ session integrity.
   unauthenticated messages rejected at the channel layer
 
 **Hardening (L2)**
+
 - V7.2.1: Log all A2A messages — sender identity,
   content hash, timestamp — immutable audit trail
 - Schema validation on all A2A message payloads —
   reject malformed or unexpected structures
 
 **Advanced (L3)**
+
 - PKI-backed agent identities for A2A — short-lived
   certificates, hardware-backed keys as L3 assurance
 - V9.1.1: A2A channel security in penetration testing
   at L3 — spoofing, replay, schema violations tested
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI02 Agent Identity & Credential Exposure
 - Other frameworks: OWASP NHI Top 10 NHI-4/NHI-7 · ISO 27001 A.8.20/A.8.24 · CWE-287
 
@@ -451,6 +483,7 @@ cascade prevention as business logic abuse and API resilience.
 #### Mitigations by tier
 
 **Foundational (L1)**
+
 - V13.1.1: Rate limiting on all agent API endpoints —
   cascade amplification through API saturation limited
 - V7.4.1: Cascade errors handled gracefully — explicit
@@ -459,6 +492,7 @@ cascade prevention as business logic abuse and API resilience.
   control enabling immediate halt of agent cluster
 
 **Hardening (L2)**
+
 - V11.1.1: Document cascade blast radius as business
   logic assumption — maximum affected systems formally
   defined and accepted before multi-agent deployment
@@ -467,6 +501,7 @@ cascade prevention as business logic abuse and API resilience.
   boundary
 
 **Advanced (L3)**
+
 - V11.1.2: Chaos engineering as L3 business logic
   verification — intentional failure injection verifies
   circuit breaker effectiveness
@@ -474,6 +509,7 @@ cascade prevention as business logic abuse and API resilience.
   rate limiting holds under cascade amplification
 
 #### Cross-references
+
 - LLM Top 10: LLM06 Unbounded Consumption
 - DSGAI 2026: DSGAI17 Data Availability & Resilience Failures
 - Other frameworks: ISO 27001 A.5.30 · ISA/IEC 62443 SR 7.6/7.7 (OT) · CWE-400
@@ -501,6 +537,7 @@ decision-making process.
 #### Mitigations by tier
 
 **Foundational (L1)**
+
 - V5.2.1: Label all agent advisory output — clear visual
   distinction from authoritative content in all rendering
   contexts, enforced at rendering layer not in response
@@ -511,6 +548,7 @@ decision-making process.
   chat, separate confirmation system required
 
 **Hardening (L2)**
+
 - V11.1.1: Document AI advisory limitations as business
   logic assumptions — which domains require verification,
   what constitutes an authoritative source vs AI advisory
@@ -519,6 +557,7 @@ decision-making process.
   logic control (OT)
 
 **Advanced (L3)**
+
 - V11.1.2: Trust exploitation in penetration testing
   at L3 — test operator susceptibility to manipulated
   recommendations in your specific deployment
@@ -527,6 +566,7 @@ decision-making process.
   vs authoritative content
 
 #### Cross-references
+
 - LLM Top 10: LLM07 Misinformation
 - DSGAI 2026: DSGAI21 Disinformation & Integrity Attacks
 - Other frameworks: EU AI Act Art. 13/50 · ISO 27001 A.6.3 · AIUC-1 C/F
@@ -554,6 +594,7 @@ Without complete audit trails, rogue behaviour cannot be detected.
 #### Mitigations by tier
 
 **Foundational (L1)**
+
 - V13.1.1: Rate limiting on all agent API endpoints —
   rogue agent cannot amplify impact through excessive
   tool invocations
@@ -562,6 +603,7 @@ Without complete audit trails, rogue behaviour cannot be detected.
   its permission envelope
 
 **Hardening (L2)**
+
 - V7.2.1: Complete audit logging of all agent actions —
   no production deployment without full observability,
   L2 verification requirement
@@ -573,6 +615,7 @@ Without complete audit trails, rogue behaviour cannot be detected.
   response as documented business logic behaviour
 
 **Advanced (L3)**
+
 - V7.2.2: Rogue agent red team at L3 — simulate
   persistent hidden goal pursuit, verify detection
   capability via aggregate log analysis, document
@@ -582,6 +625,7 @@ Without complete audit trails, rogue behaviour cannot be detected.
   critical outcomes without cross-validation
 
 #### Cross-references
+
 - LLM Top 10: LLM03 Excessive Agency
 - DSGAI 2026: DSGAI16 Endpoint & Browser Overreach
 - Other frameworks: ISO 27001 A.8.16/A.8.15 · AIUC-1 B001/B002/C/E · CWE-284
@@ -659,4 +703,5 @@ Without complete audit trails, rogue behaviour cannot be detected.
 ---
 
 Maintained by the OWASP GenAI Data Security Initiative.
-Part of the OWASP GenAI Crosswalk: https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk
+Part of the OWASP GenAI Crosswalk:
+<https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk>

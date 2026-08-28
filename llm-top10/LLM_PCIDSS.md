@@ -152,6 +152,7 @@ applications and assessors will test for it.
 #### Mitigations for PCI DSS compliance
 
 **Foundational**
+
 - Req 6.2.4: Implement input validation for all LLM
   integrations in PCI scope — prompt injection addressed
   as a known injection vulnerability class in secure
@@ -163,6 +164,7 @@ applications and assessors will test for it.
   Req 12.3.2 for all LLM systems in CDE scope
 
 **Hardening**
+
 - Req 11.3.1: Include prompt injection in penetration
   testing scope — direct, indirect via RAG, and jailbreak
   vectors for all LLM applications in PCI scope
@@ -172,6 +174,7 @@ applications and assessors will test for it.
   prompt and user input — Req 6.2 secure design control
 
 **Advanced**
+
 - Req 11.3.1: Conduct adversarial testing quarterly —
   novel injection techniques tested against LLM
   applications in CDE before reaching production
@@ -185,10 +188,11 @@ applications and assessors will test for it.
 
 | Tool | Type | Link |
 |---|---|---|
-| Garak | Open-source | https://github.com/leondz/garak |
-| LLM Guard | Open-source | https://github.com/protectai/llm-guard |
+| Garak | Open-source | <https://github.com/leondz/garak> |
+| LLM Guard | Open-source | <https://github.com/protectai/llm-guard> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI01 Agent Goal Hijack
 - DSGAI 2026: DSGAI01 Sensitive Data Leakage, DSGAI12 Unsafe NL Data Gateways
 - Other frameworks: ISO 27001 A.8.28 · NIST AI RMF MS-2.5 · OWASP ASVS V5.1
@@ -224,6 +228,7 @@ Environment) and full PCI DSS scope applies.
 #### Mitigations for PCI DSS compliance
 
 **Foundational**
+
 - Req 3.3.1: Audit all LLM training data and RAG corpora
   for SAD before any LLM in CDE scope is trained or
   deployed — SAD prohibition is absolute, no exceptions
@@ -235,6 +240,7 @@ Environment) and full PCI DSS scope applies.
   stores, prompt caches containing CHD
 
 **Hardening**
+
 - Req 4.2.1: Enforce TLS 1.2 minimum on all LLM data
   flows carrying CHD — API calls, RAG retrieval,
   observability pipelines
@@ -246,6 +252,7 @@ Environment) and full PCI DSS scope applies.
   before data reaches the LLM removes PCI scope
 
 **Advanced**
+
 - Apply differential privacy for any LLM trained on
   CHD corpora — reduces risk of PAN reproduction from
   training data memorisation
@@ -258,10 +265,11 @@ Environment) and full PCI DSS scope applies.
 
 | Tool | Type | Link |
 |---|---|---|
-| Microsoft Presidio | Open-source | https://github.com/microsoft/presidio |
-| Nightfall AI | Commercial | https://nightfall.ai |
+| Microsoft Presidio | Open-source | <https://github.com/microsoft/presidio> |
+| Nightfall AI | Commercial | <https://nightfall.ai> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI03 Identity and Privilege Abuse
 - DSGAI 2026: DSGAI01 Sensitive Data Leakage, DSGAI18 Inference and Data Reconstruction
 - Other frameworks: ISO 27001 A.8.11 · NIST AI RMF GV-1.6 · SOC 2 C2.1
@@ -290,6 +298,7 @@ failure under Req 7 and Req 8.
 #### Mitigations for PCI DSS compliance
 
 **Foundational**
+
 - Req 7.2.1: Restrict LLM tool access to minimum required
   CDE access — read-only for analytics and advisory
   functions, write access requires formal approval and
@@ -301,6 +310,7 @@ failure under Req 7 and Req 8.
   financial operations — Req 7 need-to-know requirement
 
 **Hardening**
+
 - Req 10.2.1: Log all LLM tool invocations in CDE —
   tool identity, parameters, user identity, timestamp —
   immutable, meets Req 10 logging requirements
@@ -311,6 +321,7 @@ failure under Req 7 and Req 8.
   permissions — Req 7 periodic review requirement
 
 **Advanced**
+
 - Formally specify permitted LLM action scope for each
   CDE deployment — Req 7 documented least privilege
 - Req 11.3.1: Test excessive agency via injection in
@@ -321,10 +332,11 @@ failure under Req 7 and Req 8.
 
 | Tool | Type | Link |
 |---|---|---|
-| Guardrails AI | Open-source | https://github.com/guardrails-ai/guardrails |
-| NeMo Guardrails | Open-source | https://github.com/NVIDIA/NeMo-Guardrails |
+| Guardrails AI | Open-source | <https://github.com/guardrails-ai/guardrails> |
+| NeMo Guardrails | Open-source | <https://github.com/NVIDIA/NeMo-Guardrails> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI01 Agent Goal Hijack, ASI02 Tool Misuse
 - DSGAI 2026: DSGAI06 Tool Plugin and Agent Data Exchange
 - Other frameworks: EU AI Act Art. 14 · ISO 42001 A.6.1.2 · AIUC-1 B006
@@ -360,6 +372,7 @@ dependency is clean.
 #### Mitigations for PCI DSS compliance
 
 **Foundational**
+
 - Req 12.8.1: Maintain TPSP list including all LLM
   component vendors with CDE access or processing CHD —
   model providers, dataset vendors, inference platform
@@ -370,6 +383,7 @@ dependency is clean.
   components to latest security patches on schedule
 
 **Hardening**
+
 - Req 12.8.4: Monitor LLM vendor PCI DSS compliance —
   obtain AOC (Attestation of Compliance) from vendors
   with CHD access, track compliance status annually
@@ -380,6 +394,7 @@ dependency is clean.
   unsigned components rejected before CDE deployment
 
 **Advanced**
+
 - Operate isolated model evaluation before CDE deployment —
   Req 6.5 testing before change to production
 - Req 12.8.2: Document roles and responsibilities for
@@ -392,10 +407,11 @@ dependency is clean.
 
 | Tool | Type | Link |
 |---|---|---|
-| CycloneDX | Open-source | https://cyclonedx.org |
-| ModelScan | Open-source | https://github.com/protectai/modelscan |
+| CycloneDX | Open-source | <https://cyclonedx.org> |
+| ModelScan | Open-source | <https://github.com/protectai/modelscan> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI04 Agentic Supply Chain Vulnerabilities
 - DSGAI 2026: DSGAI04 Data Model and Artifact Poisoning
 - Other frameworks: ISO 27001 A.5.19/A.5.21 · NIST AI RMF MP-5.1 · NIST SP 800-218A
@@ -429,6 +445,7 @@ stage that writes weights, not just the original training corpus.
 #### Mitigations for PCI DSS compliance
 
 **Foundational**
+
 - Req 6.5.6: Test all model promotions for unexpected
   functionality — model integrity verification and output
   distribution analysis before CDE deployment
@@ -439,6 +456,7 @@ stage that writes weights, not just the original training corpus.
   reversal requirement met by clean checkpoint procedure
 
 **Hardening**
+
 - Req 10.6.1: Deploy automated monitoring of LLM outputs
   in CDE — poisoning indicators (systematic anomalous
   fraud scores, recommendation patterns) detected
@@ -449,6 +467,7 @@ stage that writes weights, not just the original training corpus.
   review frequency
 
 **Advanced**
+
 - Post-training backdoor detection as mandatory CDE
   deployment gate — Req 6.5 testing before production
 - Req 10.6.1: Integrate model output anomaly detection
@@ -461,10 +480,11 @@ stage that writes weights, not just the original training corpus.
 
 | Tool | Type | Link |
 |---|---|---|
-| IBM Adversarial Robustness Toolbox | Open-source | https://github.com/Trusted-AI/adversarial-robustness-toolbox |
-| CleanLab | Open-source | https://github.com/cleanlab/cleanlab |
+| IBM Adversarial Robustness Toolbox | Open-source | <https://github.com/Trusted-AI/adversarial-robustness-toolbox> |
+| CleanLab | Open-source | <https://github.com/cleanlab/cleanlab> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI06 Memory and Context Poisoning
 - DSGAI 2026: DSGAI04 Data Model and Artifact Poisoning, DSGAI21 Disinformation via Data Poisoning
 - Other frameworks: NIST AI RMF MS-3.3 · MITRE ATLAS AML.T0032 · ISO 27001 A.8.27
@@ -493,6 +513,7 @@ against LLM applications in CDE are covered under Req 1
 #### Mitigations for PCI DSS compliance
 
 **Foundational**
+
 - Req 1.3.2: Implement network-layer rate limiting for
   CDE-facing LLM applications — traffic controls at the
   network boundary as Req 1 network security control
@@ -504,6 +525,7 @@ against LLM applications in CDE are covered under Req 1
   RTO/RPO, controls documented and accepted
 
 **Hardening**
+
 - Req 10.6.1: Implement consumption anomaly monitoring —
   automated detection of unusual resource utilisation
   patterns in CDE LLM applications
@@ -513,6 +535,7 @@ against LLM applications in CDE are covered under Req 1
   application protection control
 
 **Advanced**
+
 - Deploy sponge example detection — Req 6.4 advanced
   application protection for CDE
 - Req 11.3.1: Conduct adversarial load testing against
@@ -523,10 +546,11 @@ against LLM applications in CDE are covered under Req 1
 
 | Tool | Type | Link |
 |---|---|---|
-| LiteLLM | Open-source | https://github.com/BerriAI/litellm |
-| Kong Gateway | Open-source | https://github.com/Kong/kong |
+| LiteLLM | Open-source | <https://github.com/BerriAI/litellm> |
+| Kong Gateway | Open-source | <https://github.com/Kong/kong> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI08 Cascading Agent Failures
 - DSGAI 2026: DSGAI17 Data Availability and Resilience Failures
 - Other frameworks: ISA/IEC 62443 SR 7.6 (OT) · CIS Controls CIS 12 · NIST CSF 2.0 PR.IR-01
@@ -556,6 +580,7 @@ payment contexts.
 #### Mitigations for PCI DSS compliance
 
 **Foundational**
+
 - Req 12.3.2: Document targeted risk analysis for LLM
   advisory outputs in payment context — what payment
   decisions are influenced by LLM, acceptable accuracy
@@ -567,6 +592,7 @@ payment contexts.
   decisions — Req 12.3 risk acceptance control
 
 **Hardening**
+
 - Req 10.6.1: Implement production accuracy monitoring —
   LLM output quality reviewed as part of CDE log
   analysis programme
@@ -577,6 +603,7 @@ payment contexts.
   may change post fine-tuning
 
 **Advanced**
+
 - Conduct domain-specific accuracy testing before CDE
   deployment — Req 6.5 testing before production change
 - Req 11.3.1: Include misinformation scenarios in
@@ -587,10 +614,11 @@ payment contexts.
 
 | Tool | Type | Link |
 |---|---|---|
-| TruLens | Open-source | https://github.com/truera/trulens |
-| RAGAS | Open-source | https://github.com/explodinggradients/ragas |
+| TruLens | Open-source | <https://github.com/truera/trulens> |
+| RAGAS | Open-source | <https://github.com/explodinggradients/ragas> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI09 Human-Agent Trust Exploitation
 - DSGAI 2026: DSGAI21 Disinformation and Integrity Attacks
 - Other frameworks: EU AI Act Art. 13/50 · AIUC-1 F · NIST CSF 2.0 GV.OC-01
@@ -629,6 +657,7 @@ treat it as a security boundary.
 #### Mitigations for PCI DSS compliance
 
 **Foundational**
+
 - Req 3.5.1: Classify system prompts containing CDE
   references as sensitive configuration — encrypted at
   rest, access-controlled, version-controlled
@@ -640,6 +669,7 @@ treat it as a security boundary.
   resolution per Req 6.2
 
 **Hardening**
+
 - Req 10.2.1: Log all access to system prompt storage —
   access to CDE configuration data auditable per Req 10
 - Conduct prompt extraction testing — Req 11.3
@@ -648,12 +678,14 @@ treat it as a security boundary.
   CDE identifiers replaced with opaque tokens
 
 **Advanced**
+
 - Req 11.3.1: Include prompt extraction in penetration
   testing scope — CDE system prompt recovery tested
 - Deploy output classifier to block system prompt
   content in responses — Req 6.4 application protection
 
 #### Cross-references
+
 - Agentic Top 10: ASI01 Agent Goal Hijack
 - DSGAI 2026: DSGAI15 Over-Broad Context Windows
 - Other frameworks: AIUC-1 B003/B009 · CWE-200 · ISO 27001 A.5.12
@@ -680,6 +712,7 @@ PCI scope assessments but within CDE data exposure risk.
 #### Mitigations for PCI DSS compliance
 
 **Foundational**
+
 - Req 3.4.1: Ensure embeddings derived from CHD-containing
   documents cannot reproduce PANs — PAN masking before
   embedding generation prevents scope contamination
@@ -689,6 +722,7 @@ PCI scope assessments but within CDE data exposure risk.
   encryption at rest required
 
 **Hardening**
+
 - Scope design: Apply PAN tokenisation before embedding
   generation — removes CHD from embedding scope, reducing
   PCI scope of vector infrastructure
@@ -699,6 +733,7 @@ PCI scope assessments but within CDE data exposure risk.
   management requirement
 
 **Advanced**
+
 - Apply differential privacy to embeddings of CHD-adjacent
   content — Req 3 advanced data protection measure
 - Req 11.3.1: Conduct RBAC bypass testing for all vector
@@ -708,10 +743,11 @@ PCI scope assessments but within CDE data exposure risk.
 
 | Tool | Type | Link |
 |---|---|---|
-| Weaviate | Open-source | https://weaviate.io |
-| ML Privacy Meter | Open-source | https://github.com/privacytrustlab/ml_privacy_meter |
+| Weaviate | Open-source | <https://weaviate.io> |
+| ML Privacy Meter | Open-source | <https://github.com/privacytrustlab/ml_privacy_meter> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI06 Memory and Context Poisoning
 - DSGAI 2026: DSGAI13 Vector Store Platform Security, DSGAI18 Inference and Data Reconstruction
 - Other frameworks: NIST AI RMF MS-2.5 · ISO 27001 A.8.3/A.8.24 · SOC 2 C2.1
@@ -746,6 +782,7 @@ reaches a shell, a browser, or a database.
 #### Mitigations for PCI DSS compliance
 
 **Foundational**
+
 - Req 6.2.4: Implement output validation as a secure
   development requirement — LLM output treated as
   untrusted input to all downstream CDE systems
@@ -756,6 +793,7 @@ reaches a shell, a browser, or a database.
   logic — Req 6.2 secure design requirement
 
 **Hardening**
+
 - Req 11.3.1: Include output injection in penetration
   testing scope — SQL injection, command injection
   via LLM output, results documented
@@ -765,6 +803,7 @@ reaches a shell, a browser, or a database.
 - Conduct DAST on all CDE interfaces consuming LLM output
 
 **Advanced**
+
 - Deploy dedicated output security layer — Req 6.2
   defence-in-depth evidence
 - Req 11.3.1: Adversarial output testing against
@@ -775,10 +814,11 @@ reaches a shell, a browser, or a database.
 
 | Tool | Type | Link |
 |---|---|---|
-| OWASP ZAP | Open-source | https://www.zaproxy.org |
-| Semgrep | Open-source | https://semgrep.dev |
+| OWASP ZAP | Open-source | <https://www.zaproxy.org> |
+| Semgrep | Open-source | <https://semgrep.dev> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI02 Tool Misuse, ASI05 Unexpected Code Execution
 - DSGAI 2026: DSGAI05 Data Integrity and Validation Failures
 - Other frameworks: OWASP ASVS V5 · CIS Controls CIS 16 · CWE-79
@@ -857,10 +897,10 @@ reaches a shell, a browser, or a database.
 
 ## References
 
-- PCI DSS v4.0: https://www.pcisecuritystandards.org/document_library/
-- PCI SSC Information Supplements: https://www.pcisecuritystandards.org/document_library/#results
-- PCI DSS v4.0 Summary of Changes: https://www.pcisecuritystandards.org/documents/PCI-DSS-v4-0-Summary-of-Changes-r2.pdf
-- OWASP LLM Top 10 2026: https://genai.owasp.org/llm-top-10/
+- PCI DSS v4.0: <https://www.pcisecuritystandards.org/document_library/>
+- PCI SSC Information Supplements: <https://www.pcisecuritystandards.org/document_library/#results>
+- PCI DSS v4.0 Summary of Changes: <https://www.pcisecuritystandards.org/documents/PCI-DSS-v4-0-Summary-of-Changes-r2.pdf>
+- OWASP LLM Top 10 2026: <https://genai.owasp.org/llm-top-10/>
 
 ---
 
@@ -874,4 +914,4 @@ reaches a shell, a browser, or a database.
 ---
 
 Maintained by the OWASP GenAI Data Security Initiative.
-Part of the OWASP GenAI Crosswalk: https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk
+Part of the OWASP GenAI Crosswalk: <https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk>

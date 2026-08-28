@@ -9,7 +9,8 @@
 
 # Agentic Top 10 2026 × EU AI Act
 
-Mapping the [OWASP Top 10 for Agentic Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
+Mapping the
+[OWASP Top 10 for Agentic Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
 to the [EU Artificial Intelligence Act](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)
 (Regulation EU 2024/1689).
 
@@ -92,6 +93,7 @@ adversarial input manipulation.
 #### Compliance obligations by tier
 
 **Foundational — all deployments**
+
 - Art. 14: Implement ability for operators to pause and override
   agents — mandatory for high-risk systems, cannot be waived
   by deployers under Art. 29
@@ -99,6 +101,7 @@ adversarial input manipulation.
   as foreseeable risk vectors in Art. 9 risk management
 
 **Hardening — high-risk AI systems (from Aug 2026)**
+
 - Art. 14: Implement and document goal-state verification —
   any agent action that diverges from stated goal requires
   human confirmation — auditable evidence for conformity
@@ -110,17 +113,20 @@ adversarial input manipulation.
   checklist documented
 
 **Advanced — systemic risk GPAI models**
+
 - Art. 55(1)(b): Conduct adversarial testing covering goal
   hijack scenarios — document results available to AI Office
 - Art. 55: Report serious goal hijack incidents to AI Office
   without undue delay
 
 #### Fines exposure
+
 Art. 14 human oversight violations: up to **€15M or 3%**.
 Art. 15 robustness violations: up to **€15M or 3%**.
 Art. 55 systemic risk violations: up to **€35M or 7%**.
 
 #### Cross-references
+
 - LLM Top 10: LLM01 Prompt Injection, LLM03 Excessive Agency
 - DSGAI 2026: DSGAI01 Sensitive Data Leakage, DSGAI12 Unsafe NL Data Gateways
 - Other frameworks: AIUC-1 B001/B005/B006 · NIST AI RMF GV-1.7 · ISA/IEC 62443 SR 3.3 (OT)
@@ -150,11 +156,13 @@ cybersecurity measures preventing tool misuse.
 #### Compliance obligations by tier
 
 **Foundational — all deployments**
+
 - Art. 14: For any high-risk agentic deployment, irreversible
   tool invocations — delete, send, publish, execute, pay —
   require human confirmation, cannot be bypassed
 
 **Hardening — high-risk AI systems**
+
 - Art. 14: Document human oversight mechanisms for all
   tool invocations — what requires approval, who approves,
   how overrides are logged — required for conformity assessment
@@ -166,15 +174,18 @@ cybersecurity measures preventing tool misuse.
   downstream impact assessment procedure
 
 **Advanced — GPAI systemic risk**
+
 - Art. 55(1)(b): Conduct adversarial testing covering tool
   chain exploitation — document for AI Office
 - Art. 55: Incident reporting for serious tool misuse events
 
 #### Fines exposure
+
 Art. 14 violations: up to **€15M or 3%**.
 Art. 15 violations: up to **€15M or 3%**.
 
 #### Cross-references
+
 - LLM Top 10: LLM10 Improper Output Handling, LLM03 Excessive Agency
 - DSGAI 2026: DSGAI06 Tool Plugin & Agent Data Exchange
 - Other frameworks: AIUC-1 B006 · ISA/IEC 62443 SR 2.1/2.2 (OT) · NIST AI RMF MP-5.1
@@ -207,6 +218,7 @@ processing) applies in addition to EU AI Act obligations.
 #### Compliance obligations by tier
 
 **Foundational — all deployments**
+
 - Art. 9: Document agent credential exposure as a foreseeable
   risk — assign treatment controls and review cadence
 - GDPR Art. 32: Implement appropriate technical measures for
@@ -214,6 +226,7 @@ processing) applies in addition to EU AI Act obligations.
   and access logging as security of processing requirements
 
 **Hardening — high-risk AI systems**
+
 - Art. 15: Implement and document NHI governance as Art. 15
   cybersecurity measure — credential lifecycle management,
   JIT access, anomaly detection evidence for conformity
@@ -223,6 +236,7 @@ processing) applies in addition to EU AI Act obligations.
   lateral movement scope assessment
 
 **Advanced — GPAI models**
+
 - Art. 53(1)(a): Include agent identity architecture in GPAI
   technical documentation — how agents acquire, use, and
   expire credentials
@@ -230,10 +244,12 @@ processing) applies in addition to EU AI Act obligations.
   cybersecurity measure
 
 #### Fines exposure
+
 Art. 15 violations: up to **€15M or 3%**.
 GDPR Art. 32 violations: up to **€20M or 4%**.
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI02 Agent Identity & Credential Exposure
 - Other frameworks: OWASP NHI Top 10 · AIUC-1 A/B007 · ISO 27001 A.8.2
 
@@ -261,11 +277,13 @@ deployers must verify.
 #### Compliance obligations by tier
 
 **Foundational — all deployments**
+
 - Art. 25: Understand your position in the AI value chain
   for all agent component integrations — provider vs deployer
   obligations explicitly identified
 
 **Hardening — high-risk AI systems**
+
 - Art. 9: Include all agent supply chain components in risk
   management — dynamic runtime components explicitly assessed
 - Art. 17: Establish documented supply chain procedures —
@@ -275,15 +293,18 @@ deployers must verify.
   arrangements with tool and MCP server vendors
 
 **Advanced — GPAI models**
+
 - Art. 53(1)(a): Include agent component supply chain in
   GPAI technical documentation — available to AI Office
 - Implement continuous component integrity monitoring —
   document as Art. 15 cybersecurity measure
 
 #### Fines exposure
+
 Art. 25 value chain violations: up to **€15M or 3%**.
 
 #### Cross-references
+
 - LLM Top 10: LLM04 Supply Chain
 - DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning
 - Other frameworks: NIST SP 800-218A · AIUC-1 B001/B003/B008 · ISA/IEC 62443 62443-2-4 (OT)
@@ -311,11 +332,13 @@ technical requirements, not optional hardening.
 #### Compliance obligations by tier
 
 **Foundational — all deployments**
+
 - Art. 9: Document agent code execution capability as a
   foreseeable risk — sandbox status and permitted operations
   documented before any deployment
 
 **Hardening — high-risk AI systems**
+
 - Art. 15: Implement and document sandboxing, input
   filtering, and static analysis as Art. 15 cybersecurity
   evidence — required for conformity assessment
@@ -324,6 +347,7 @@ technical requirements, not optional hardening.
   forensic capture procedure
 
 **Advanced — GPAI systemic risk**
+
 - Art. 55(1)(b): Include code execution attack scenarios
   in adversarial testing programme — sandbox escape attempts
   documented for AI Office
@@ -331,9 +355,11 @@ technical requirements, not optional hardening.
   cybersecurity measure
 
 #### Fines exposure
+
 Art. 15 violations: up to **€15M or 3%**.
 
 #### Cross-references
+
 - LLM Top 10: LLM10 Improper Output Handling
 - DSGAI 2026: DSGAI12 Unsafe NL Data Gateways
 - Other frameworks: AIUC-1 B005/B006 · CWE-94 · ISA/IEC 62443 SR 3.3 (OT)
@@ -367,6 +393,7 @@ are privacy-by-design requirements.
 #### Compliance obligations by tier
 
 **Foundational — all deployments**
+
 - Art. 10: Apply data governance to agent memory stores —
   classification, access controls, and retention limits
   documented before deployment
@@ -375,6 +402,7 @@ are privacy-by-design requirements.
   and TTL as privacy-by-design requirements
 
 **Hardening — high-risk AI systems**
+
 - Art. 10: Document memory governance as Art. 10 compliance
   evidence — classification propagation, access logs,
   retention enforcement — required for conformity assessment
@@ -384,6 +412,7 @@ are privacy-by-design requirements.
   in quality management system
 
 **Advanced — GPAI models**
+
 - Art. 53(1)(a): Document agent memory architecture in
   GPAI technical documentation — memory types, trust levels,
   access controls, retention policies
@@ -391,10 +420,12 @@ are privacy-by-design requirements.
   Art. 15 cybersecurity measure
 
 #### Fines exposure
+
 Art. 10/15 violations: up to **€15M or 3%**.
 GDPR Art. 25/32 violations: up to **€20M or 4%**.
 
 #### Cross-references
+
 - LLM Top 10: LLM05 Data and Model Poisoning, LLM09 Vector and Embedding Weaknesses
 - DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning, DSGAI13 Vector Store Platform Security
 - Other frameworks: AIUC-1 A/B002 · ISO 27001 A.8.15 · NIST AI RMF GV-1.6
@@ -423,11 +454,13 @@ peripheral infrastructure.
 #### Compliance obligations by tier
 
 **Foundational — all deployments**
+
 - Art. 9: Map all A2A communication channels in risk
   management system — authentication and encryption
   status documented before deployment
 
 **Hardening — high-risk AI systems**
+
 - Art. 15: Implement and document A2A authentication and
   encryption as Art. 15 cybersecurity evidence — required
   for conformity assessment
@@ -436,15 +469,18 @@ peripheral infrastructure.
   protection documented
 
 **Advanced — GPAI models**
+
 - Art. 53(1)(a): Document A2A communication architecture
   in GPAI technical documentation
 - Mutual TLS on all A2A channels documented as advanced
   Art. 15 cybersecurity measure
 
 #### Fines exposure
+
 Art. 15 violations: up to **€15M or 3%**.
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI02 Agent Identity & Credential Exposure
 - Other frameworks: OWASP NHI Top 10 · AIUC-1 B007/B008 · ISA/IEC 62443 SR 3.1 (OT)
 
@@ -477,12 +513,14 @@ process consequences face heightened compliance scrutiny.
 #### Compliance obligations by tier
 
 **Foundational — all deployments**
+
 - Art. 14: Implement operator-accessible kill switch for
   all agent clusters — mandatory for high-risk systems
 - Art. 9: Define cascade blast radius before each multi-agent
   deployment — document and accept in risk management system
 
 **Hardening — high-risk AI systems**
+
 - Art. 15: Implement and document circuit breakers, fail-safe
   defaults, and cascade containment as Art. 15 robustness
   evidence — required for conformity assessment
@@ -493,16 +531,19 @@ process consequences face heightened compliance scrutiny.
   management system
 
 **Advanced — critical infrastructure deployments**
+
 - Art. 15: Conduct chaos engineering testing — document
   cascade resilience evidence for conformity assessment
 - Art. 14: Automated process control fallback on cascade
   detection documented as Art. 14 human oversight measure
 
 #### Fines exposure
+
 Art. 14 violations: up to **€15M or 3%**.
 Art. 15 violations: up to **€15M or 3%**.
 
 #### Cross-references
+
 - LLM Top 10: LLM06 Unbounded Consumption
 - DSGAI 2026: DSGAI17 Data Availability & Resilience Failures
 - Other frameworks: AIUC-1 D · ISA/IEC 62443 SR 7.6 (OT) · NIST SP 800-82 (OT)
@@ -531,6 +572,7 @@ defence against trust exploitation.
 #### Compliance obligations by tier
 
 **Foundational — all deployments (already required)**
+
 - Art. 50: All agent deployments must disclose AI nature in
   user-facing interactions — universal obligation in force
   from August 2025
@@ -538,6 +580,7 @@ defence against trust exploitation.
   advisory limitations to deployers and users
 
 **Hardening — high-risk AI systems**
+
 - Art. 14: Implement and document human oversight measures
   that are robust against trust exploitation — approval
   flows must be independent of the agent interface
@@ -546,6 +589,7 @@ defence against trust exploitation.
   operator retraining procedures
 
 **Advanced — all deployments**
+
 - Art. 50: AI-generated content that could be mistaken for
   authoritative human guidance must be clearly marked —
   applies to all agent recommendations
@@ -553,10 +597,12 @@ defence against trust exploitation.
   documented as Art. 14 human oversight enhancement
 
 #### Fines exposure
+
 Art. 50 transparency violations: up to **€7.5M or 1.5%**.
 Art. 14 violations: up to **€15M or 3%**.
 
 #### Cross-references
+
 - LLM Top 10: LLM07 Misinformation
 - DSGAI 2026: DSGAI21 Disinformation & Integrity Attacks
 - Other frameworks: AIUC-1 C/F · NIST AI RMF GV-1.7 · EU AI Act Art. 52
@@ -586,6 +632,7 @@ mandate behavioural monitoring and kill switch capability.
 #### Compliance obligations by tier
 
 **Foundational — all deployments**
+
 - Art. 9: Document rogue agent risk in risk management —
   detection capability status, blast radius, and defined
   response procedures before deployment
@@ -593,6 +640,7 @@ mandate behavioural monitoring and kill switch capability.
   mandatory for high-risk systems, cannot be waived
 
 **Hardening — high-risk AI systems**
+
 - Art. 15: Implement behavioural baselines and anomaly
   detection as Art. 15 technical measures — evidence
   required for conformity assessment
@@ -604,17 +652,20 @@ mandate behavioural monitoring and kill switch capability.
   operational impact assessment
 
 **Advanced — systemic risk GPAI models**
+
 - Art. 55(1)(b): Include rogue agent scenarios in adversarial
   testing programme — persistent hidden goal detection
   tested, results available to AI Office
 - Art. 55: Incident reporting for serious rogue agent events
 
 #### Fines exposure
+
 Art. 14 violations: up to **€15M or 3%**.
 Art. 15 violations: up to **€15M or 3%**.
 Art. 55 systemic risk violations: up to **€35M or 7%**.
 
 #### Cross-references
+
 - LLM Top 10: LLM03 Excessive Agency
 - DSGAI 2026: DSGAI16 Endpoint & Browser Overreach
 - Other frameworks: AIUC-1 B001/B002/C/E · NIST AI RMF MS-2.5 · ISA/IEC 62443 SR 3.7 (OT)
@@ -677,5 +728,7 @@ Art. 55 systemic risk violations: up to **€35M or 7%**.
 
 ---
 
-*Part of the [OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk) —
+*Part of the
+[OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk)
+—
 maintained by the [OWASP GenAI Data Security Initiative](https://genai.owasp.org)*

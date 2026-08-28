@@ -9,7 +9,8 @@
 
 # DSGAI 2026 × AIUC-1
 
-Mapping the [OWASP GenAI Data Security Risks 2026](https://genai.owasp.org/resource/owasp-genai-data-security-risks-mitigations-2026/)
+Mapping the
+[OWASP GenAI Data Security Risks 2026](https://genai.owasp.org/resource/owasp-genai-data-security-risks-mitigations-2026/)
 (DSGAI01–DSGAI21) to [AIUC-1](https://www.aiuc-1.com/) — the world's
 first AI agent security, safety and reliability certification framework,
 developed with 100+ Fortune 500 CISOs.
@@ -92,6 +93,7 @@ or tool outputs manipulate model behaviour at inference time.
 | Prevent unauthorized AI actions | B006 | Prevent execution of injected instructions | Foundational |
 
 **Mitigations:**
+
 - B005: content filtering at all data ingestion boundaries
 - B006: trust-level tagging — retrieved data cannot override system instructions
 - B001: adversarial injection testing in CI/CD for all data channels
@@ -114,6 +116,7 @@ causing models to learn backdoored, biased, or degraded behaviours.
 | Audit trails and logging | E | Chain of custody for training data | Foundational |
 
 **Mitigations:**
+
 - Domain A: hash verification for all training data; restrict write access
 - B001: adversarial probing of trained models for backdoor triggers
 - B002: statistical anomaly detection on training data distributions
@@ -135,6 +138,7 @@ sets lead to model memorisation and potential disclosure at inference.
 | Audit trails and logging | E | Evidence of PII scanning and removal procedures | Foundational |
 
 **Mitigations:**
+
 - Domain A: automated PII scanning of all training datasets before use
 - Domain A data minimisation: remove or anonymise detected sensitive records
 - B006: output filtering blocking memorised sensitive data patterns
@@ -157,6 +161,7 @@ integrity controls, or logging — enabling tampering or exfiltration.
 | Audit trails and logging | E | Per-stage pipeline audit logging | Foundational |
 
 **Mitigations:**
+
 - Domain A: authentication and encryption for all pipeline connections
 - B001: pipeline security testing in CI/CD
 - B003: assess all third-party pipeline components
@@ -179,6 +184,7 @@ adversarial prompting, model manipulation, or architectural weaknesses.
 | Safety domain (harm prevention) | C | Guardrail architecture and effectiveness requirements | Foundational |
 
 **Mitigations:**
+
 - Domain C: defence-in-depth guardrail design — multiple independent layers
 - B001: dedicated adversarial testing programme targeting guardrail bypass
 - B005: secondary rule-based guardrail outside LLM inference path
@@ -201,6 +207,7 @@ memorisation, over-retrieval, or insufficient output filtering.
 | Audit trails and logging | E | Output logging for disclosure incident investigation | Foundational |
 
 **Mitigations:**
+
 - Domain A + B006: DLP scanning and output filtering for all sensitive data patterns
 - B009: output validation before delivery to user
 - Domain E: audit logging of all outputs with forensic retention
@@ -223,6 +230,7 @@ creating unnecessary exposure and blast radius on compromise.
 | Audit trails and logging | E | Data access audit logging | Foundational |
 
 **Mitigations:**
+
 - Domain A: least-privilege data access per GenAI system component
 - B006: query-scoped data access — minimum data returned per request
 - B007: third-party tool data access restricted to declared scope
@@ -244,6 +252,7 @@ data from other tenants, higher-sensitivity tiers, or access-controlled corpora.
 | Prevent unauthorized AI actions | B006 | Enforce retrieval scope restrictions | Foundational |
 
 **Mitigations:**
+
 - Domain A: access-controlled retrieval with per-query entitlement filtering
 - B005: post-retrieval content filtering before context inclusion
 - B006: enforce that retrieved documents match user entitlement
@@ -267,6 +276,7 @@ content that steers model outputs.
 | Audit trails and logging | E | Immutable corpus write audit log | Foundational |
 
 **Mitigations:**
+
 - Domain A: write authentication for corpus stores; hash verification at ingest
 - B001: document injection simulation in CI/CD
 - B002: corpus distribution drift detection in production
@@ -288,6 +298,7 @@ output or retrieved documents manipulates in-context reasoning.
 | Implement real-time input filtering | B005 | Content filtering at context assembly | Foundational |
 
 **Mitigations:**
+
 - B005: sanitise all external content before context window assembly
 - B001: adversarial context injection testing across all content sources
 - B002: anomaly detection on model decisions correlated with context anomalies
@@ -309,6 +320,7 @@ extracted information across session boundaries.
 | Audit trails and logging | E | Session access audit logging | Foundational |
 
 **Mitigations:**
+
 - Domain A: session isolation, encryption, and access controls
 - B006: no cross-session data access without explicit authorisation
 - Domain E: audit logging of all session read/write operations
@@ -331,6 +343,7 @@ or replicate model weights through systematic prompting.
 | Audit trails and logging | E | Query pattern logging for extraction detection | Foundational |
 
 **Mitigations:**
+
 - Domain D + B006: API rate limiting and per-user query budget
 - Domain A: restrict confidence score and logit exposure in API responses
 - Domain E: query pattern logging with extraction detection alerting
@@ -353,6 +366,7 @@ misconfigured permissions or over-broad API responses.
 | Audit trails and logging | E | Tool response audit logging | Foundational |
 
 **Mitigations:**
+
 - Domain A + B007: minimum data principle for all tool responses
 - B003: security assessment for all third-party tool integrations
 - Domain E: log all tool API responses with full payload
@@ -374,6 +388,7 @@ insider threat, or API extraction.
 | Audit trails and logging | E | Model weight access audit logging | Foundational |
 
 **Mitigations:**
+
 - Domain A: classify model weights as sensitive IP; apply encryption and access controls
 - B006: strict access scope on model storage systems
 - Domain E: alert on unexpected model weight access patterns
@@ -395,6 +410,7 @@ that expose it to unauthorised parties.
 | Audit trails and logging | E | Inference data access audit logging | Foundational |
 
 **Mitigations:**
+
 - Domain A: data minimisation — log only what is operationally necessary
 - Domain A: apply encryption to all inference logs at rest
 - B006: restrict inference log access to authorised roles
@@ -416,6 +432,7 @@ be guaranteed, introducing supply chain risks.
 | Third-party NHI controls | B008 | Controls for third-party credentials and API keys | Hardening |
 
 **Mitigations:**
+
 - B003: security assessment for all critical external data source providers
 - B001: integrity testing for all third-party data at ingestion
 - B008: NHI controls for all third-party data API credentials
@@ -438,6 +455,7 @@ introducing backdoored models or vulnerable code into production.
 | Data & Privacy domain | A | Model provenance tracking | Foundational |
 
 **Mitigations:**
+
 - B001: adversarial probing of all third-party models for backdoor triggers
 - B003: formal vendor assessment for model providers
 - Domain A: model provenance tracking; hash verification at deployment
@@ -458,6 +476,7 @@ retention periods or fail to honour deletion requests.
 | Audit trails and logging | E | Retention compliance evidence | Foundational |
 
 **Mitigations:**
+
 - Domain A: documented retention periods for all GenAI data
 - Domain A: deletion capability verification for each data store
 - Domain E: audit evidence of retention policy compliance
@@ -479,6 +498,7 @@ causing compounding degradation in downstream dependent systems.
 | Audit trails and logging | E | Cascade indicator logging for forensics | Foundational |
 
 **Mitigations:**
+
 - Domain D: circuit breaker pattern between pipeline stages
 - Domain D: fail-safe state definition for all pipeline failures
 - Domain E: cascade indicator logging for incident investigation
@@ -502,6 +522,7 @@ transfers, or prohibited processing.
 | Society domain | F | Transparency disclosures required by law | Foundational |
 
 **Mitigations:**
+
 - Domain A: map all applicable regulations; document legal basis for all processing
 - Domain E: records of processing activities (GDPR Art. 30)
 - Domain F: AI content disclosures (EU AI Act Art. 52)
@@ -523,6 +544,7 @@ traceability.
 | Audit trails and logging | E | End-to-end lineage records | Foundational |
 
 **Mitigations:**
+
 - Domain A: provenance metadata attached to all ingested data
 - Domain E: end-to-end lineage tracking from source to inference
 - Automated provenance coverage tests in CI/CD
@@ -564,6 +586,8 @@ focus of AIUC-1 makes it exceptionally well-matched for the DSGAI taxonomy.
 
 ---
 
-*Part of the [OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk) —
+*Part of the
+[OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk)
+—
 maintained by the [OWASP GenAI Data Security Initiative](https://genai.owasp.org)*
 *License: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)*

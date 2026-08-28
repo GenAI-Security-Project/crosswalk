@@ -9,8 +9,10 @@
 
 # DSGAI 2026 × EU AI Act
 
-Mapping the [OWASP GenAI Data Security Risks & Mitigations 2026](https://genai.owasp.org/resource/owasp-genai-data-security-risks-mitigations-2026/)
-(DSGAI01–DSGAI21) to the [EU Artificial Intelligence Act](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)
+Mapping the
+[OWASP GenAI Data Security Risks & Mitigations 2026](https://genai.owasp.org/resource/owasp-genai-data-security-risks-mitigations-2026/)
+(DSGAI01–DSGAI21) to the
+[EU Artificial Intelligence Act](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)
 (Regulation EU 2024/1689).
 
 The DSGAI risks describe the data security attack surface specific to
@@ -133,6 +135,7 @@ be violated by a single incident.
 #### Compliance obligations by tier
 
 **Foundational — all deployments**
+
 - Art. 13 (all tiers): Disclose to deployers and users what data
   the system processes and what may appear in outputs — baseline
   transparency obligation regardless of risk tier
@@ -141,6 +144,7 @@ be violated by a single incident.
   minimisation are privacy-by-design requirements
 
 **Hardening — high-risk AI systems (from Aug 2026)**
+
 - Art. 10: Implement and document data governance for all training
   data — sources, quality controls, privacy measures, and bias
   mitigation — auditable evidence required for conformity assessment
@@ -151,6 +155,7 @@ be violated by a single incident.
   incidents — detection, logging, and response procedures documented
 
 **Advanced — GPAI models (from Aug 2025)**
+
 - Art. 53(1)(a): Maintain technical documentation on training
   data governance — available to the AI Office on request
 - Implement machine unlearning readiness as Art. 10 data governance
@@ -159,6 +164,7 @@ be violated by a single incident.
   as privacy-by-design technical measure
 
 #### Fines exposure
+
 Art. 10/15 violations for high-risk systems: up to **€15M or 3% global
 turnover**. GDPR Art. 25 violations: up to **€20M or 4% global turnover**.
 Both can apply to the same incident.
@@ -167,11 +173,12 @@ Both can apply to the same incident.
 
 | Tool | Type | Link |
 |---|---|---|
-| Microsoft Presidio | Open-source | https://github.com/microsoft/presidio |
-| Nightfall AI | Commercial | https://nightfall.ai |
-| Private AI | Commercial | https://private-ai.com |
+| Microsoft Presidio | Open-source | <https://github.com/microsoft/presidio> |
+| Nightfall AI | Commercial | <https://nightfall.ai> |
+| Private AI | Commercial | <https://private-ai.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - Agentic Top 10: ASI03 Identity & Privilege Abuse
 - Other frameworks: ISO 27001 A.8.11/A.8.12 · ISO 27701 · NIST AI RMF GV-1.6
@@ -199,11 +206,13 @@ directly applicable to identity and access controls in agentic systems.
 #### Compliance obligations by tier
 
 **Foundational**
+
 - Art. 9: Document agent credential exposure as a foreseeable
   risk in the risk management system — assign treatment controls
   and review cadence for each agentic deployment
 
 **Hardening — high-risk AI systems**
+
 - Art. 15: Implement and document technical credential
   security measures — short-lived tokens, NHI inventory,
   JIT access — as Art. 15 cybersecurity evidence
@@ -212,6 +221,7 @@ directly applicable to identity and access controls in agentic systems.
   assessment — documented in quality management system
 
 **Advanced — GPAI models**
+
 - Art. 53: Include agent identity architecture in GPAI
   technical documentation — how agents acquire, use, and
   expire credentials
@@ -220,17 +230,19 @@ directly applicable to identity and access controls in agentic systems.
   assessment evidence
 
 #### Fines exposure
+
 Art. 15 cybersecurity violations: up to **€15M or 3% global turnover**.
 
 #### Tools
 
 | Tool | Type | Link |
 |---|---|---|
-| HashiCorp Vault | Open-source | https://www.vaultproject.io |
-| Teleport | Open-source/Commercial | https://goteleport.com |
-| SPIFFE / SPIRE | Open-source | https://spiffe.io |
+| HashiCorp Vault | Open-source | <https://www.vaultproject.io> |
+| Teleport | Open-source/Commercial | <https://goteleport.com> |
+| SPIFFE / SPIRE | Open-source | <https://spiffe.io> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI03 Identity & Privilege Abuse
 - DSGAI 2026: DSGAI01 Sensitive Data Leakage
 - Other frameworks: ISO 27001 A.8.2/A.5.16 · OWASP NHI Top 10 · NIST AI RMF GV-1.6
@@ -259,6 +271,7 @@ their organisation.
 #### Compliance obligations by tier
 
 **Foundational — all deployments**
+
 - Art. 29: Deployers have affirmative obligations — cannot claim
   shadow AI is outside scope if employees use it in the course
   of their work on behalf of the organisation
@@ -267,6 +280,7 @@ their organisation.
   and shadow alike
 
 **Hardening — all deployers**
+
 - Art. 9: Include shadow AI usage in your risk management
   system — assess what data flows exist, what obligations are
   triggered, and what controls are in place
@@ -275,6 +289,7 @@ their organisation.
   endpoint controls — documented as Art. 29 deployer obligations
 
 **Advanced**
+
 - Art. 25: Integrate AI tool approval into procurement — all
   AI-capable tools assessed before adoption, not after
 - Art. 29: Establish continuous shadow AI discovery and
@@ -282,16 +297,18 @@ their organisation.
   data impact assessment and vendor data deletion request
 
 #### Fines exposure
+
 Art. 29 deployer obligation violations: up to **€15M or 3% global turnover**.
 
 #### Tools
 
 | Tool | Type | Link |
 |---|---|---|
-| Zscaler (CASB) | Commercial | https://www.zscaler.com |
-| Microsoft Defender for Cloud Apps | Commercial | https://www.microsoft.com/en-us/security |
+| Zscaler (CASB) | Commercial | <https://www.zscaler.com> |
+| Microsoft Defender for Cloud Apps | Commercial | <https://www.microsoft.com/en-us/security> |
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI07 Data Governance, DSGAI08 Non-Compliance
 - Other frameworks: ISO 27001 A.5.10/A.5.23 · NIST AI RMF GV-1.7
 
@@ -318,6 +335,7 @@ prevention, detection, and response.
 #### Compliance obligations by tier
 
 **Foundational**
+
 - Art. 10: Establish data governance policy for all training
   data — source validation, quality assessment, and lineage
   documentation are baseline Art. 10 requirements for high-risk
@@ -325,6 +343,7 @@ prevention, detection, and response.
   risk management system with treatment controls assigned
 
 **Hardening — high-risk AI systems**
+
 - Art. 10: Implement technical data quality controls —
   anomaly detection, source allowlisting, lineage tracking —
   documented as Art. 10 compliance evidence for conformity
@@ -336,6 +355,7 @@ prevention, detection, and response.
   management system — tested and documented
 
 **Advanced — systemic risk GPAI models**
+
 - Art. 55(1)(b): Conduct and document adversarial testing
   covering poisoning attack scenarios — results available
   to AI Office on request
@@ -345,6 +365,7 @@ prevention, detection, and response.
   documented data governance measure
 
 #### Fines exposure
+
 Art. 10 data governance violations: up to **€15M or 3% global turnover**.
 Art. 55 systemic risk violations: up to **€35M or 7% global turnover**.
 
@@ -352,11 +373,12 @@ Art. 55 systemic risk violations: up to **€35M or 7% global turnover**.
 
 | Tool | Type | Link |
 |---|---|---|
-| IBM Adversarial Robustness Toolbox | Open-source | https://github.com/Trusted-AI/adversarial-robustness-toolbox |
-| CleanLab | Open-source | https://github.com/cleanlab/cleanlab |
-| ModelScan | Open-source | https://github.com/protectai/modelscan |
+| IBM Adversarial Robustness Toolbox | Open-source | <https://github.com/Trusted-AI/adversarial-robustness-toolbox> |
+| CleanLab | Open-source | <https://github.com/cleanlab/cleanlab> |
+| ModelScan | Open-source | <https://github.com/protectai/modelscan> |
 
 #### Cross-references
+
 - LLM Top 10: LLM04 Supply Chain, LLM05 Data and Model Poisoning
 - Agentic Top 10: ASI04 Supply Chain, ASI06 Memory & Context Poisoning
 - Other frameworks: ISO 27001 A.8.27/A.8.29 · NIST AI RMF MS-3.3 · MITRE ATLAS AML.T0032
@@ -374,6 +396,7 @@ requires robustness and quality management covering all data ingestion
 interfaces.
 
 **Real-world references:**
+
 - CVE-2024-3584 (Qdrant) — path traversal via poisoned snapshot
   import achieved arbitrary file write on vector DB host
 
@@ -388,6 +411,7 @@ interfaces.
 #### Compliance obligations by tier
 
 **Foundational**
+
 - Art. 9: Document ingestion integrity risks in risk management
   system — identify which endpoints accept external data,
   rate by exposure and impact
@@ -395,6 +419,7 @@ interfaces.
   vulnerabilities — treat as Art. 15 cybersecurity requirement
 
 **Hardening — high-risk AI systems**
+
 - Art. 15: Implement and document technical ingestion security —
   schema and semantic validation, path traversal prevention,
   snapshot import hardening — as Art. 15 conformity evidence
@@ -403,23 +428,26 @@ interfaces.
   anomaly detection coverage documented
 
 **Advanced**
+
 - Art. 15: Conduct adversarial ingestion testing as standard
   pre-deployment gate — results documented as Art. 15 evidence
 - Sandbox all snapshot import operations — document as
   Art. 15 cybersecurity measure in conformity assessment
 
 #### Fines exposure
+
 Art. 15 violations: up to **€15M or 3% global turnover**.
 
 #### Tools
 
 | Tool | Type | Link |
 |---|---|---|
-| Great Expectations | Open-source | https://greatexpectations.io |
-| Pandera | Open-source | https://pandera.readthedocs.io |
-| OWASP ZAP | Open-source | https://www.zaproxy.org |
+| Great Expectations | Open-source | <https://greatexpectations.io> |
+| Pandera | Open-source | <https://pandera.readthedocs.io> |
+| OWASP ZAP | Open-source | <https://www.zaproxy.org> |
 
 #### Cross-references
+
 - LLM Top 10: LLM10 Improper Output Handling
 - DSGAI 2026: DSGAI13 Vector Store Platform Security
 - Other frameworks: ISO 27001 A.8.26/A.8.28 · NIST AI RMF MS-3.3 · CWE-20
@@ -447,6 +475,7 @@ inherit, and deployers must verify.
 #### Compliance obligations by tier
 
 **Foundational**
+
 - Art. 25: Understand and document your position in the AI
   value chain for all tool integrations — what obligations
   you hold as provider vs deployer
@@ -454,6 +483,7 @@ inherit, and deployers must verify.
   receive only minimum context required for their function
 
 **Hardening — high-risk AI systems**
+
 - Art. 9: Include all tool integrations in risk management
   system — data exchanged, retention, training use, and
   sub-processor chain per integration
@@ -463,22 +493,25 @@ inherit, and deployers must verify.
   in quality management — annual review cadence
 
 **Advanced — GPAI models**
+
 - Art. 53(1)(a): Document all tool integrations in GPAI
   technical documentation — available to AI Office on request
 - Implement contractual right-to-audit for all strategic
   tool providers as Art. 25 value chain control
 
 #### Fines exposure
+
 Art. 25 value chain violations: up to **€15M or 3% global turnover**.
 
 #### Tools
 
 | Tool | Type | Link |
 |---|---|---|
-| MCP Inspector | Open-source | https://github.com/modelcontextprotocol/inspector |
-| Nightfall AI | Commercial | https://nightfall.ai |
+| MCP Inspector | Open-source | <https://github.com/modelcontextprotocol/inspector> |
+| Nightfall AI | Commercial | <https://nightfall.ai> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI02 Tool Misuse, ASI04 Supply Chain
 - Other frameworks: ISO 27001 A.5.19/A.5.20 · NIST AI RMF MP-5.1
 
@@ -506,11 +539,13 @@ high-risk systems and GPAI models, not a best practice.
 #### Compliance obligations by tier
 
 **Foundational**
+
 - Art. 10: Extend data governance to all GenAI data assets —
   training corpora, embedding stores, RAG indexes, agent memory,
   observability logs — classification and retention for all
 
 **Hardening — high-risk AI systems**
+
 - Art. 10: Document and implement data governance procedures
   covering the full GenAI lifecycle — classification propagation,
   retention schedules, deletion workflows — as Art. 10 conformity
@@ -520,6 +555,7 @@ high-risk systems and GPAI models, not a best practice.
   retention compliance, and deletion completion
 
 **Advanced — GPAI models**
+
 - Art. 53(1)(a): Maintain comprehensive training data governance
   documentation — all sources, quality assessments, privacy
   measures, and provenance documented and available to AI Office
@@ -528,6 +564,7 @@ high-risk systems and GPAI models, not a best practice.
   the full derived asset chain
 
 #### Fines exposure
+
 Art. 10 violations: up to **€15M or 3% global turnover**.
 Art. 53 GPAI documentation violations: up to **€15M or 3% global turnover**.
 
@@ -535,11 +572,12 @@ Art. 53 GPAI documentation violations: up to **€15M or 3% global turnover**.
 
 | Tool | Type | Link |
 |---|---|---|
-| Apache Atlas | Open-source | https://atlas.apache.org |
-| OpenMetadata | Open-source | https://open-metadata.org |
-| Collibra | Commercial | https://www.collibra.com |
+| Apache Atlas | Open-source | <https://atlas.apache.org> |
+| OpenMetadata | Open-source | <https://open-metadata.org> |
+| Collibra | Commercial | <https://www.collibra.com> |
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI08 Non-Compliance, DSGAI01 Sensitive Data Leakage
 - Other frameworks: ISO 27001 A.5.9/A.8.10 · NIST AI RMF GV-1.6 · ISO 27701
 
@@ -568,12 +606,14 @@ specific articles and fine exposure.
 #### Compliance obligations by tier — fine exposure map
 
 **Prohibited AI (Art. 5)** — maximum fines:
+
 - Violation of prohibited practice ban (Art. 5): up to
   **€35M or 7% global turnover** — highest tier
 - Examples: social scoring systems, real-time biometric
   surveillance in public, subliminal manipulation
 
 **High-risk AI violations (Art. 9–17)** — second tier:
+
 - Art. 10 data governance violations: **€15M or 3%**
 - Art. 13 transparency violations: **€15M or 3%**
 - Art. 14 human oversight violations: **€15M or 3%**
@@ -581,15 +621,18 @@ specific articles and fine exposure.
 - Art. 17 quality management violations: **€15M or 3%**
 
 **GPAI model violations (Art. 53–55)** — second tier:
+
 - Art. 53 documentation violations: **€15M or 3%**
 - Art. 55 systemic risk obligation violations: **€35M or 7%**
 
 **Incorrect information to authorities** — third tier:
+
 - Art. 72(3): up to **€7.5M or 1.5% global turnover**
 
 #### Compliance readiness by tier
 
 **Immediate — already required**
+
 - Determine if any of your AI systems qualify as GPAI models
   under Art. 51 — GPAI obligations apply from Aug 2025
 - If GPAI: publish technical documentation, copyright policy,
@@ -597,6 +640,7 @@ specific articles and fine exposure.
 - All chatbot deployments: implement AI disclosure (Art. 50)
 
 **Urgent — August 2026**
+
 - Classify all AI systems against Annex III high-risk categories
 - Complete conformity assessment for any high-risk system
 - Implement Art. 9 risk management, Art. 10 data governance,
@@ -605,6 +649,7 @@ specific articles and fine exposure.
 - Sign EU Declaration of Conformity and apply CE marking
 
 **Ongoing**
+
 - Post-market monitoring under Art. 17
 - Incident reporting to national authorities
 - Annual review of risk classification as system evolves
@@ -613,10 +658,11 @@ specific articles and fine exposure.
 
 | Tool | Type | Link |
 |---|---|---|
-| OneTrust | Commercial | https://www.onetrust.com |
-| EU AI Office guidance | Reference | https://digital-strategy.ec.europa.eu/en/policies/ai-office |
+| OneTrust | Commercial | <https://www.onetrust.com> |
+| EU AI Office guidance | Reference | <https://digital-strategy.ec.europa.eu/en/policies/ai-office> |
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI07 Data Governance
 - Other frameworks: ISO 27001 A.5.31 · ISO 42001 · NIST AI RMF GV-4.2
 
@@ -649,6 +695,7 @@ general lawful basis for standard personal data.
 #### Compliance obligations by tier
 
 **Foundational**
+
 - Art. 10: Extend data governance to all input modalities —
   classification and handling requirements for images, audio,
   and video equal to text inputs
@@ -657,6 +704,7 @@ general lawful basis for standard personal data.
   category before deployment
 
 **Hardening — high-risk AI systems**
+
 - Art. 10: Implement and document multimodal data governance —
   classification propagation from source modality to all
   derived forms (OCR output, transcripts, embeddings) — as
@@ -665,6 +713,7 @@ general lawful basis for standard personal data.
   pipelines — documented as Art. 15 cybersecurity measure
 
 **Advanced — GPAI models**
+
 - Art. 53(1)(a): Document multimodal data governance in GPAI
   technical documentation — available to AI Office on request
 - GDPR Art. 25: Implement data protection by design for
@@ -672,10 +721,12 @@ general lawful basis for standard personal data.
   automated deletion after purpose served
 
 #### Fines exposure
+
 Art. 10 violations: up to **€15M or 3% global turnover**.
 GDPR Art. 9 violations: up to **€20M or 4% global turnover**.
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI01 Sensitive Data Leakage, DSGAI14 Telemetry Leakage
 - Other frameworks: ISO 27001 A.8.11/A.8.12 · ISO 27701 · GDPR Art. 9
 
@@ -706,6 +757,7 @@ obligations continue to apply.
 #### Compliance obligations by tier
 
 **Foundational**
+
 - Art. 10: Treat anonymisation as an Art. 10 data governance
   requirement — effectiveness must be demonstrated, not assumed
 - GDPR Recital 26: Verify that anonymisation meets the legal
@@ -713,6 +765,7 @@ obligations continue to apply.
   not satisfy the GDPR standard
 
 **Hardening — high-risk AI systems**
+
 - Art. 10: Document anonymisation methodology and quality
   controls — re-identification risk assessment included in
   Art. 10 conformity evidence
@@ -720,6 +773,7 @@ obligations continue to apply.
   using synthetic datasets in production training
 
 **Advanced — GPAI models**
+
 - Art. 53(1)(a): Include synthetic data governance in GPAI
   technical documentation — generation methodology, quality
   thresholds, re-identification risk assessment
@@ -727,10 +781,12 @@ obligations continue to apply.
   demonstrate Art. 10 compliance against a measurable standard
 
 #### Fines exposure
+
 Art. 10 violations: up to **€15M or 3% global turnover**.
 GDPR violations from failed anonymisation: up to **€20M or 4%**.
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI08 Non-Compliance, DSGAI18 Inference & Reconstruction
 - Other frameworks: ISO 27001 A.5.34/A.8.11 · ISO 27701 · GDPR Recital 26
 
@@ -757,6 +813,7 @@ data is involved.
 #### Compliance obligations by tier
 
 **Foundational**
+
 - Art. 10: Implement strict session isolation as an Art. 10
   data handling requirement — one user's context cannot
   be retrieved by any other user in the same deployment
@@ -766,6 +823,7 @@ data is involved.
   personal data in multi-user deployments
 
 **Hardening — high-risk AI systems**
+
 - Art. 15: Implement and document session isolation controls —
   per-user RAG namespaces, KV cache isolation, conversation
   history access controls — as Art. 15 cybersecurity evidence
@@ -774,6 +832,7 @@ data is involved.
   significant deployment change
 
 **Advanced**
+
 - Art. 15: Conduct adversarial cross-tenant testing as standard
   security evaluation — document results as Art. 15 conformity
   evidence
@@ -782,10 +841,12 @@ data is involved.
   additional security of processing measure
 
 #### Fines exposure
+
 Art. 15 violations: up to **€15M or 3% global turnover**.
 GDPR Art. 32 violations: up to **€20M or 4% global turnover**.
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - DSGAI 2026: DSGAI13 Vector Store Platform Security
 - Other frameworks: ISO 27001 A.8.3 · NIST AI RMF MS-2.5 · GDPR Art. 32
@@ -815,6 +876,7 @@ human oversight failure and an Art. 15 cybersecurity failure simultaneously.
 #### Compliance obligations by tier
 
 **Foundational**
+
 - Art. 9: Map all LLM-to-database interfaces in risk management
   system — privilege level, query scope, and data exposure
   per interface documented
@@ -823,6 +885,7 @@ human oversight failure and an Art. 15 cybersecurity failure simultaneously.
   human approval before execution
 
 **Hardening — high-risk AI systems**
+
 - Art. 15: Implement and document technical LLM gateway
   security — least-privilege execution, read-only defaults,
   query allowlisting — as Art. 15 cybersecurity evidence
@@ -834,6 +897,7 @@ human oversight failure and an Art. 15 cybersecurity failure simultaneously.
   extraction scenarios on schedule
 
 **Advanced**
+
 - Art. 15: Deploy query analysis layer as advanced Art. 15
   cybersecurity measure — document as conformity evidence
 - Art. 14: Implement automated human-in-the-loop triggers
@@ -841,6 +905,7 @@ human oversight failure and an Art. 15 cybersecurity failure simultaneously.
   human oversight mechanism
 
 #### Fines exposure
+
 Art. 14 human oversight violations: up to **€15M or 3% global turnover**.
 Art. 15 cybersecurity violations: up to **€15M or 3% global turnover**.
 
@@ -848,11 +913,12 @@ Art. 15 cybersecurity violations: up to **€15M or 3% global turnover**.
 
 | Tool | Type | Link |
 |---|---|---|
-| Semgrep | Open-source | https://semgrep.dev |
-| OWASP ZAP | Open-source | https://www.zaproxy.org |
-| Immuta | Commercial | https://www.immuta.com |
+| Semgrep | Open-source | <https://semgrep.dev> |
+| OWASP ZAP | Open-source | <https://www.zaproxy.org> |
+| Immuta | Commercial | <https://www.immuta.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM10 Improper Output Handling
 - Agentic Top 10: ASI02 Tool Misuse, ASI05 Unexpected Code Execution
 - Other frameworks: ISO 27001 A.8.26/A.8.28 · NIST AI RMF MS-2.5 · CWE-89
@@ -880,11 +946,13 @@ as components of the AI system.
 #### Compliance obligations by tier
 
 **Foundational**
+
 - Art. 9: Map all vector store deployments in Art. 9 risk
   management — RBAC status, encryption, CVE exposure,
   and network access controls per deployment
 
 **Hardening — high-risk AI systems**
+
 - Art. 15: Implement and document vector store security
   measures — RBAC, encryption, CVE patching, network
   isolation — as Art. 15 cybersecurity conformity evidence
@@ -893,6 +961,7 @@ as components of the AI system.
   detection coverage documented
 
 **Advanced**
+
 - Art. 15: Conduct adversarial vector store testing — document
   results as Art. 15 robustness evidence for conformity
   assessment
@@ -900,16 +969,18 @@ as components of the AI system.
   as part of post-market monitoring programme
 
 #### Fines exposure
+
 Art. 15 violations: up to **€15M or 3% global turnover**.
 
 #### Tools
 
 | Tool | Type | Link |
 |---|---|---|
-| Weaviate (with RBAC) | Open-source | https://weaviate.io |
-| Qdrant (with API key auth) | Open-source | https://qdrant.tech |
+| Weaviate (with RBAC) | Open-source | <https://weaviate.io> |
+| Qdrant (with API key auth) | Open-source | <https://qdrant.tech> |
 
 #### Cross-references
+
 - LLM Top 10: LLM09 Vector and Embedding Weaknesses
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - Other frameworks: ISO 27001 A.8.3/A.8.24 · NIST AI RMF MS-2.5 · CWE-284
@@ -937,6 +1008,7 @@ governance requirements under Art. 10 and GDPR.
 #### Compliance obligations by tier
 
 **Foundational**
+
 - Art. 10: Apply data governance to telemetry — classify
   captured data at the same level as the content it contains,
   implement access controls and retention limits
@@ -945,6 +1017,7 @@ governance requirements under Art. 10 and GDPR.
   inadequately protected observability stores
 
 **Hardening — high-risk AI systems**
+
 - Art. 10: Implement least-logging defaults and document
   as Art. 10 data minimisation measure — full payload
   capture only with explicit business justification
@@ -953,6 +1026,7 @@ governance requirements under Art. 10 and GDPR.
   documented as post-market monitoring infrastructure controls
 
 **Advanced**
+
 - Art. 10: Implement telemetry data lifecycle management —
   short TTL for debug traces, automated deletion, documented
   as Art. 10 data governance measure
@@ -961,10 +1035,12 @@ governance requirements under Art. 10 and GDPR.
   security of processing measure
 
 #### Fines exposure
+
 Art. 10 violations: up to **€15M or 3% global turnover**.
 GDPR Art. 32 violations: up to **€20M or 4% global turnover**.
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI01 Sensitive Data Leakage, DSGAI07 Data Governance
 - Other frameworks: ISO 27001 A.8.15/A.8.12 · ISO 27701 · GDPR Art. 32
 
@@ -991,11 +1067,13 @@ for the data processed within AI system context windows.
 #### Compliance obligations by tier
 
 **Foundational**
+
 - Art. 10: Track classification of all content entering context
   windows — highest classification drives handling requirement
   for the entire response — Art. 10 data governance requirement
 
 **Hardening — high-risk AI systems**
+
 - Art. 15: Implement context minimisation as Art. 15
   cybersecurity measure — minimum-necessary content injection,
   documented as conformity evidence
@@ -1004,6 +1082,7 @@ for the data processed within AI system context windows.
   aggregation patterns
 
 **Advanced**
+
 - Art. 15: Implement trust-domain-aware context assembly as
   advanced Art. 15 cybersecurity measure — document as
   conformity evidence
@@ -1012,9 +1091,11 @@ for the data processed within AI system context windows.
   evidence
 
 #### Fines exposure
+
 Art. 10/15 violations: up to **€15M or 3% global turnover**.
 
 #### Cross-references
+
 - LLM Top 10: LLM08 Hidden Context Exposure
 - Agentic Top 10: ASI01 Agent Goal Hijack
 - Other frameworks: ISO 27001 A.8.3 · NIST AI RMF MS-2.5 · AIUC-1 A/B005
@@ -1043,6 +1124,7 @@ environments.
 #### Compliance obligations by tier
 
 **Foundational**
+
 - Art. 14: Implement ability for users to pause and override
   endpoint AI agents — mandatory for high-risk systems,
   cannot be waived by deployers under Art. 29
@@ -1051,6 +1133,7 @@ environments.
   lists and permission scoping
 
 **Hardening — high-risk AI systems**
+
 - Art. 14: Document human oversight mechanisms for endpoint
   AI — pause/stop controls, override capability, user
   notification — required for conformity assessment
@@ -1059,6 +1142,7 @@ environments.
   update vectors documented
 
 **Advanced**
+
 - Art. 15: Conduct adversarial testing of approved endpoint
   AI agents before organisation-wide deployment — document
   as Art. 15 robustness evidence
@@ -1067,10 +1151,12 @@ environments.
   contractual framework
 
 #### Fines exposure
+
 Art. 14 violations: up to **€15M or 3% global turnover**.
 Art. 29 deployer violations: up to **€15M or 3% global turnover**.
 
 #### Cross-references
+
 - Agentic Top 10: ASI10 Rogue Agents
 - DSGAI 2026: DSGAI03 Shadow AI
 - Other frameworks: ISO 27001 A.8.1/A.8.7 · NIST AI RMF GV-1.7
@@ -1104,11 +1190,13 @@ potential Art. 5 implications if safety systems are affected.
 #### Compliance obligations by tier
 
 **Foundational**
+
 - Art. 15: Implement health checks on vector store freshness —
   alert when index staleness exceeds threshold before silent
   misinformation reaches users — basic Art. 15 requirement
 
 **Hardening — high-risk AI systems**
+
 - Art. 15: Implement and document technical resilience measures —
   vector store redundancy, circuit breakers, graceful degradation —
   as Art. 15 conformity evidence
@@ -1117,6 +1205,7 @@ potential Art. 5 implications if safety systems are affected.
   procedures documented in quality management system
 
 **Advanced**
+
 - Art. 15: Conduct adversarial availability testing — vector
   store saturation and failover scenarios — document as
   Art. 15 robustness evidence
@@ -1125,11 +1214,13 @@ potential Art. 5 implications if safety systems are affected.
   include in conformity assessment scope
 
 #### Fines exposure
+
 Art. 15 violations: up to **€15M or 3% global turnover**.
 Annex III critical infrastructure failures: potential Art. 5
 review if safety systems affected.
 
 #### Cross-references
+
 - LLM Top 10: LLM06 Unbounded Consumption
 - Agentic Top 10: ASI08 Cascading Agent Failures
 - Other frameworks: AIUC-1 D · ISA/IEC 62443 SR 7.6 (OT) · NIST SP 800-82 (OT)
@@ -1157,6 +1248,7 @@ requires privacy by design including resistance to inference attacks.
 #### Compliance obligations by tier
 
 **Foundational**
+
 - Art. 10: Assess inference attack risk as part of data
   governance — membership inference and model inversion
   in scope alongside direct disclosure risks
@@ -1165,6 +1257,7 @@ requires privacy by design including resistance to inference attacks.
   in training
 
 **Hardening — high-risk AI systems**
+
 - Art. 10: Implement differential privacy in training as
   Art. 10 privacy measure — document privacy budget
   as conformity evidence
@@ -1174,6 +1267,7 @@ requires privacy by design including resistance to inference attacks.
   document results as Art. 15 robustness evidence
 
 **Advanced — GPAI models**
+
 - Art. 53(1)(a): Document inference attack resistance
   measures in GPAI technical documentation — available
   to AI Office on request
@@ -1182,10 +1276,12 @@ requires privacy by design including resistance to inference attacks.
   even after training
 
 #### Fines exposure
+
 Art. 10/15 violations: up to **€15M or 3% global turnover**.
 GDPR Art. 25 violations: up to **€20M or 4% global turnover**.
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure, LLM09 Vector and Embedding Weaknesses
 - DSGAI 2026: DSGAI10 Synthetic Data Pitfalls
 - Other frameworks: ISO 27001 A.8.11 · ISO 27701 · NIST AI RMF GV-1.6 · MITRE ATLAS AML.T0024
@@ -1212,6 +1308,7 @@ all labelling vendors who process personal data.
 #### Compliance obligations by tier
 
 **Foundational**
+
 - Art. 10: Apply data minimisation to labelling tasks —
   annotators access only minimum content for their annotation,
   documented as Art. 10 data governance measure
@@ -1219,6 +1316,7 @@ all labelling vendors who process personal data.
   must be covered by a GDPR-compliant data processing agreement
 
 **Hardening — high-risk AI systems**
+
 - Art. 10: Document labelling data governance in Art. 10
   compliance evidence — anonymisation procedures, access
   controls, retention limits, and contractor obligations
@@ -1227,6 +1325,7 @@ all labelling vendors who process personal data.
   compliance is verified
 
 **Advanced — GPAI models**
+
 - Art. 53(1)(a): Include HITL data governance in GPAI
   technical documentation — labelling workflow privacy
   measures documented and available to AI Office
@@ -1234,10 +1333,12 @@ all labelling vendors who process personal data.
   document as Art. 10 data minimisation measure
 
 #### Fines exposure
+
 Art. 10 violations: up to **€15M or 3% global turnover**.
 GDPR Art. 28 violations: up to **€20M or 4% global turnover**.
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI07 Data Governance, DSGAI08 Non-Compliance
 - Other frameworks: ISO 27001 A.5.34/A.6.3 · NIST AI RMF GV-1.6 · GDPR Art. 28
 
@@ -1264,12 +1365,14 @@ to model extraction defence.
 #### Compliance obligations by tier
 
 **Foundational**
+
 - Art. 15: Implement rate limiting as basic Art. 15 cybersecurity
   measure — systematic extraction requires high query volumes
 - Monitor for extraction patterns — anomalous query diversity
   and high-volume confidence score harvesting
 
 **Hardening — high-risk AI systems**
+
 - Art. 15: Implement and document output perturbation and
   extraction monitoring as Art. 15 cybersecurity measures —
   conformity assessment evidence
@@ -1277,6 +1380,7 @@ to model extraction defence.
   monitoring — response procedures defined and tested
 
 **Advanced — GPAI models**
+
 - Art. 53(1)(a): Implement model watermarking — enables
   detection of replicated model usage in the wild,
   protects technical documentation integrity
@@ -1284,10 +1388,12 @@ to model extraction defence.
   document results as robustness evidence for AI Office
 
 #### Fines exposure
+
 Art. 15 violations: up to **€15M or 3% global turnover**.
 Art. 53 GPAI documentation violations: up to **€15M or 3%**.
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - DSGAI 2026: DSGAI18 Inference & Reconstruction
 - Other frameworks: ISO 27001 A.5.12/A.8.3 · MITRE ATLAS AML.T0016 · NIST AI RMF MS-2.5
@@ -1306,6 +1412,7 @@ mandates disinformation risk assessment for systemic risk GPAI models
 (Art. 10/15).
 
 **Real-world references:**
+
 - Grok RAG incident (2025) — production RAG system surfaced
   externally introduced false information as authoritative output
 
@@ -1321,6 +1428,7 @@ mandates disinformation risk assessment for systemic risk GPAI models
 #### Compliance obligations by tier
 
 **Foundational — all deployments**
+
 - Art. 50: If your system generates content that could be
   mistaken for human-authored output, disclose the AI nature —
   universal obligation regardless of risk tier
@@ -1328,6 +1436,7 @@ mandates disinformation risk assessment for systemic risk GPAI models
   corpora — document as Art. 10 data governance measure
 
 **Hardening — high-risk AI systems**
+
 - Art. 10: Implement and document source trust tiering and
   ingestion anomaly detection as Art. 10 data governance
   and Art. 15 robustness evidence for conformity assessment
@@ -1337,6 +1446,7 @@ mandates disinformation risk assessment for systemic risk GPAI models
   management — source quarantine, index rebuild, user notification
 
 **Advanced — systemic risk GPAI models**
+
 - Art. 55(1)(a): Conduct and document disinformation risk
   assessment — implement mitigations, available to AI Office
 - Art. 55: Report serious disinformation incidents to the
@@ -1345,11 +1455,13 @@ mandates disinformation risk assessment for systemic risk GPAI models
   pre-deployment gate — document as Art. 55 compliance measure
 
 #### Fines exposure
+
 Art. 10/15 violations: up to **€15M or 3% global turnover**.
 Art. 55 systemic risk violations: up to **€35M or 7% global turnover**.
 Art. 50 transparency violations: up to **€7.5M or 1.5% global turnover**.
 
 #### Cross-references
+
 - LLM Top 10: LLM05 Data and Model Poisoning, LLM07 Misinformation
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - Other frameworks: ISO 27001 A.5.7/A.8.27 · NIST AI RMF MS-3.3 · MITRE ATLAS AML.T0045
@@ -1422,5 +1534,7 @@ Art. 50 transparency violations: up to **€7.5M or 1.5% global turnover**.
 
 ---
 
-*Part of the [OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk) —
+*Part of the
+[OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk)
+—
 maintained by the [OWASP GenAI Data Security Initiative](https://genai.owasp.org)*

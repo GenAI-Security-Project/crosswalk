@@ -96,6 +96,7 @@ customer inquiry or audit finding for AI-powered SaaS providers.
 #### Mitigations for SOC 2 evidence
 
 **Control implementation**
+
 - C1.1: Document confidentiality policy covering all GenAI
   data assets — training data, RAG sources, embeddings,
   outputs, observability data — classification and handling
@@ -108,6 +109,7 @@ customer inquiry or audit finding for AI-powered SaaS providers.
   procedures for auditor review
 
 **Audit evidence preparation**
+
 - Confidentiality policy covering GenAI data assets (C1.1)
 - Encryption configuration for GenAI data stores (C2.1)
 - Access control configuration for RAG retrieval (CC6.1)
@@ -115,6 +117,7 @@ customer inquiry or audit finding for AI-powered SaaS providers.
 - Privacy documentation for personal data in GenAI scope (P5.1)
 
 **Hardening**
+
 - Apply output redaction — C2.1 technical control evidence
 - Audit RAG access controls quarterly — CC4.1 monitoring
   of access control effectiveness evidence
@@ -122,12 +125,14 @@ customer inquiry or audit finding for AI-powered SaaS providers.
   evidence of confidentiality control effectiveness
 
 **Advanced**
+
 - Apply differential privacy in training — C2.1 advanced
   technical control evidence
 - Machine unlearning readiness — P7.1 personal information
   disposal capability evidence
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - Agentic Top 10: ASI03 Identity and Privilege Abuse
 - Other frameworks: ISO 27001 A.8.11/A.8.12 · EU AI Act Art. 10 · GDPR Art. 25
@@ -157,6 +162,7 @@ and CC7 (monitoring — credential anomaly detection) also apply.
 #### Mitigations for SOC 2 evidence
 
 **Control implementation**
+
 - CC6.1: Manage agent credentials under privileged access
   programme — access control configuration, scope
   documentation, review records for auditors
@@ -167,6 +173,7 @@ and CC7 (monitoring — credential anomaly detection) also apply.
   configuration and sample alerts for auditor review
 
 **Audit evidence preparation**
+
 - Agent credential access control configuration (CC6.1)
 - Privileged access review records for agent NHIs (CC6.1)
 - Agent credential lifecycle procedure documentation (CC5.2)
@@ -174,6 +181,7 @@ and CC7 (monitoring — credential anomaly detection) also apply.
 - Vendor agreements with credential security obligations (CC9.2)
 
 **Hardening**
+
 - CC6.3: Formal agent offboarding procedure — credential
   revocation records as access removal evidence
 - Implement JIT credential issuance — CC6.1 advanced
@@ -182,6 +190,7 @@ and CC7 (monitoring — credential anomaly detection) also apply.
   pattern detection evidence
 
 #### Cross-references
+
 - Agentic Top 10: ASI03 Identity and Privilege Abuse
 - Other frameworks: OWASP NHI Top 10 · ISO 27001 A.8.2/A.5.16 · EU AI Act Art. 15
 
@@ -210,6 +219,7 @@ cover shadow AI.
 #### Mitigations for SOC 2 evidence
 
 **Control implementation**
+
 - CC5.2: Document AI acceptable use procedures — approved
   tool list, prohibited use cases, employee acknowledgement
   records as control activity evidence
@@ -220,6 +230,7 @@ cover shadow AI.
   data flows to AI vendors as documented risk
 
 **Audit evidence preparation**
+
 - AI acceptable use policy and employee acknowledgement records (CC5.2)
 - Approved AI tool list and assessment records (CC9.1)
 - Shadow AI discovery programme configuration (CC9.1, CC7.2)
@@ -227,12 +238,14 @@ cover shadow AI.
 - Confidentiality policy covering AI tool use (C1.1)
 
 **Hardening**
+
 - Implement shadow AI discovery — CC9.1 ongoing vendor
   monitoring evidence, CC7.2 anomaly detection evidence
 - Deploy DLP on AI SaaS endpoints — CC5.2 technical
   enforcement evidence, C2.1 confidentiality protection
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI07 Data Governance, DSGAI08 Non-Compliance
 - Other frameworks: ISO 27001 A.5.10/A.5.23 · NIST CSF 2.0 GV.RM-06
 
@@ -259,6 +272,7 @@ changes), CC9 (vendor risk — training data providers), and CC7
 #### Mitigations for SOC 2 evidence
 
 **Control implementation**
+
 - CC3.2: Document poisoning risks in GenAI risk assessment —
   training data sources, fine-tuning pipeline, and supply
   chain attack vectors
@@ -270,6 +284,7 @@ changes), CC9 (vendor risk — training data providers), and CC7
   vendor agreements
 
 **Audit evidence preparation**
+
 - Risk assessment entries for poisoning (CC3.2)
 - Change management records for model promotions (CC8.1)
 - Vendor assessment records for training data providers (CC9.1)
@@ -277,6 +292,7 @@ changes), CC9 (vendor risk — training data providers), and CC7
 - Incident response procedure for poisoning events (CC7.3)
 
 **Hardening**
+
 - CC8.1: Automated integrity verification in deployment
   pipeline — change management control evidence
 - CC7.4: Include poisoning detection in security testing —
@@ -285,6 +301,7 @@ changes), CC9 (vendor risk — training data providers), and CC7
   in change management
 
 #### Cross-references
+
 - LLM Top 10: LLM04 Supply Chain, LLM05 Data and Model Poisoning
 - Agentic Top 10: ASI06 Memory and Context Poisoning
 - Other frameworks: NIST AI RMF MS-3.3 · ISO 27001 A.8.27 · MITRE ATLAS AML.T0032
@@ -314,6 +331,7 @@ detection) also apply.
 #### Mitigations for SOC 2 evidence
 
 **Control implementation**
+
 - PI1.2: Document ingestion validation procedures —
   multi-stage validation, schema enforcement, path
   traversal prevention as processing integrity controls
@@ -323,6 +341,7 @@ detection) also apply.
   configuration and sample findings for auditors
 
 **Audit evidence preparation**
+
 - Ingestion validation procedure documentation (PI1.2, CC5.2)
 - CVE patching records for vector databases (CC8.1)
 - Ingestion anomaly monitoring configuration (CC7.2)
@@ -330,12 +349,14 @@ detection) also apply.
 - Security testing results for ingestion interfaces (CC7.4)
 
 **Hardening**
+
 - CC7.4: Include schema bypass and path traversal in
   security testing — results documented as audit evidence
 - Patch CVE-2024-3584 class vulnerabilities — CC8.1
   change management evidence showing timely remediation
 
 #### Cross-references
+
 - LLM Top 10: LLM10 Improper Output Handling
 - DSGAI 2026: DSGAI13 Vector Store Platform Security
 - Other frameworks: ISO 27001 A.8.26/A.8.28 · CWE-20 · OWASP ASVS V5
@@ -364,6 +385,7 @@ permissions) also apply.
 #### Mitigations for SOC 2 evidence
 
 **Control implementation**
+
 - CC9.1: Include tool and plugin providers in vendor risk
   assessment programme — security questionnaires, data
   handling review, assessment records
@@ -374,6 +396,7 @@ permissions) also apply.
   tools receive minimum required data, not full context
 
 **Audit evidence preparation**
+
 - Tool provider vendor assessment records (CC9.1)
 - Vendor agreements with data handling obligations (CC9.2)
 - Context minimisation procedure documentation (C2.1)
@@ -381,12 +404,14 @@ permissions) also apply.
 - Payload inspection configuration for tool calls (CC7.2)
 
 **Hardening**
+
 - Deploy outbound DLP on tool API calls — C2.1 technical
   confidentiality protection evidence
 - CC9.2: Right-to-audit provision in tool vendor agreements —
   contractual control evidence
 
 #### Cross-references
+
 - Agentic Top 10: ASI02 Tool Misuse, ASI04 Supply Chain
 - Other frameworks: ISO 27001 A.5.19/A.5.20 · NIST AI RMF MP-5.1
 
@@ -413,6 +438,7 @@ retention management for derived assets are SOC 2 audit requirements.
 #### Mitigations for SOC 2 evidence
 
 **Control implementation**
+
 - C1.1: Extend confidentiality policy to all GenAI-derived
   assets — embeddings, summaries, caches, agent memory,
   observability logs — classification and handling
@@ -424,6 +450,7 @@ retention management for derived assets are SOC 2 audit requirements.
   procedures — policy-driven expiry, deletion verification
 
 **Audit evidence preparation**
+
 - Confidentiality policy covering GenAI-derived assets (C1.1)
 - Personal information lifecycle documentation for AI assets (P4.1)
 - Retention schedule and deletion procedure documentation (CC5.2)
@@ -431,12 +458,14 @@ retention management for derived assets are SOC 2 audit requirements.
 - Data flow maps showing classification propagation
 
 **Hardening**
+
 - Implement automated classification propagation — C1.1
   and P4.1 technical enforcement evidence
 - Document machine unlearning readiness — P7.1 personal
   information disposal capability evidence
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI08 Non-Compliance, DSGAI01 Sensitive Data Leakage
 - Other frameworks: ISO 27001 A.5.9/A.8.10 · EU AI Act Art. 10 · ISO 27701
 
@@ -464,6 +493,7 @@ personal data regulatory obligations are implicated.
 #### Mitigations for SOC 2 evidence
 
 **Control implementation**
+
 - CC3.2: Include regulatory risks in GenAI risk assessment —
   GDPR, EU AI Act, NIS2, HIPAA, sector-specific obligations
   — documented, owned, treated
@@ -474,6 +504,7 @@ personal data regulatory obligations are implicated.
   board or senior management statement, ownership assigned
 
 **Audit evidence preparation**
+
 - Regulatory risk assessment entries for GenAI (CC3.2)
 - Privacy programme documentation covering GenAI (P1.1)
 - Compliance monitoring records (CC4.1, CC5.1)
@@ -481,12 +512,14 @@ personal data regulatory obligations are implicated.
 - Regulatory incident response procedures (CC7.3)
 
 **Hardening**
+
 - Implement automated compliance monitoring — CC4.1
   ongoing monitoring of compliance controls evidence
 - EU AI Act August 2026 gap assessment — CC3.2 forward-
   looking risk assessment evidence
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI07 Data Governance
 - Other frameworks: EU AI Act Art. 10/17 · ISO 27001 A.5.31 · GDPR Art. 5/25/30
 
@@ -515,6 +548,7 @@ privacy obligations) are the primary criteria.
 #### Mitigations for SOC 2 evidence
 
 **Control implementation**
+
 - C2.1: Document that derived content from multimodal
   inputs inherits source classification — OCR output
   of a confidential document is equally confidential
@@ -524,12 +558,14 @@ privacy obligations) are the primary criteria.
   apply to extracted content, not only source uploads
 
 **Audit evidence preparation**
+
 - Multimodal data classification policy documentation (C2.1)
 - Access controls on multimodal content stores (CC6.1)
 - DLP monitoring configuration for multimodal pipelines (CC7.2)
 - Retention procedures for multimodal derived content (P4.1)
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI01 Sensitive Data Leakage, DSGAI14 Telemetry Leakage
 - Other frameworks: ISO 27001 A.8.11/A.8.12 · GDPR Art. 9
 
@@ -557,6 +593,7 @@ continue to apply.
 #### Mitigations for SOC 2 evidence
 
 **Control implementation**
+
 - CC3.2: Include re-identification risk in GenAI risk
   assessment — synthetic datasets assessed before use
   or release, risk acceptance documented
@@ -567,12 +604,14 @@ continue to apply.
   results documented as CC3.2 and P4.2 evidence
 
 **Audit evidence preparation**
+
 - Re-identification risk assessment records (CC3.2)
 - Synthetic data governance policy (CC5.2)
 - Privacy documentation for synthetic datasets (P4.2, P5.1)
 - Differential privacy configuration and budget records (C2.1)
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI08 Non-Compliance, DSGAI18 Inference and Data Reconstruction
 - Other frameworks: ISO 27001 A.5.34 · GDPR Recital 26 · EU AI Act Art. 10
 
@@ -601,6 +640,7 @@ applies where personal data is involved.
 #### Mitigations for SOC 2 evidence
 
 **Control implementation**
+
 - CC6.1: Document and implement session isolation controls —
   per-user RAG namespaces, KV cache isolation, configuration
   evidence for auditors
@@ -610,18 +650,21 @@ applies where personal data is involved.
   alert configuration and samples as monitoring evidence
 
 **Audit evidence preparation**
+
 - Session isolation configuration documentation (CC6.1)
 - User context classification and protection evidence (C2.1)
 - Cross-session monitoring configuration (CC7.2)
 - Security testing results for multi-tenant isolation (CC7.4)
 
 **Hardening**
+
 - CC7.4: Conduct adversarial cross-tenant testing — results
   documented as security testing evidence
 - Cryptographic session isolation — CC6.1 advanced
   technical access control evidence
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - DSGAI 2026: DSGAI13 Vector Store Platform Security
 - Other frameworks: ISO 27001 A.8.3 · GDPR Art. 32 · NIST AI RMF MS-2.5
@@ -651,6 +694,7 @@ be authorised) are the primary criteria.
 #### Mitigations for SOC 2 evidence
 
 **Control implementation**
+
 - CC6.1: Document and implement per-user query execution —
   LLM queries execute under requesting user's permissions,
   access control configuration for auditors
@@ -661,6 +705,7 @@ be authorised) are the primary criteria.
   procedures — implemented, tested, and reviewed
 
 **Audit evidence preparation**
+
 - Query execution access control configuration (CC6.1)
 - Processing integrity policy for NL gateways (PI1.1)
 - Query allowlisting procedure documentation (CC5.2)
@@ -668,12 +713,14 @@ be authorised) are the primary criteria.
 - Security testing results for NL gateway injection (CC7.4)
 
 **Hardening**
+
 - CC7.4: Include SQL injection and bulk extraction in
   security testing — documented results as audit evidence
 - CC7.2: Implement query anomaly detection — alert
   configuration and samples for auditors
 
 #### Cross-references
+
 - LLM Top 10: LLM10 Improper Output Handling
 - Agentic Top 10: ASI02 Tool Misuse, ASI05 Unexpected Code Execution
 - Other frameworks: ISO 27001 A.8.26/A.8.28 · OWASP ASVS V4.1 · CWE-89
@@ -701,6 +748,7 @@ protection — embeddings of confidential data protected) and CC6
 #### Mitigations for SOC 2 evidence
 
 **Control implementation**
+
 - C2.1: Document vector store encryption and classification —
   embeddings protected at same level as source content
 - CC6.1: Implement and document RBAC on all vector stores —
@@ -709,6 +757,7 @@ protection — embeddings of confidential data protected) and CC6
   management — timely remediation records
 
 **Audit evidence preparation**
+
 - Vector store encryption configuration (C2.1)
 - RBAC configuration and access records (CC6.1)
 - CVE patching records for vector databases (CC8.1)
@@ -716,10 +765,12 @@ protection — embeddings of confidential data protected) and CC6
 - Penetration testing results for vector stores (CC7.4)
 
 **Hardening**
+
 - CC7.4: Conduct vector store penetration testing — RBAC
   bypass and bulk extraction scenarios documented as evidence
 
 #### Cross-references
+
 - LLM Top 10: LLM09 Vector and Embedding Weaknesses
 - Agentic Top 10: ASI06 Memory and Context Poisoning
 - Other frameworks: ISO 27001 A.8.3/A.8.24 · NIST AI RMF MS-2.5
@@ -748,6 +799,7 @@ obligations) are the primary criteria.
 #### Mitigations for SOC 2 evidence
 
 **Control implementation**
+
 - C2.1: Classify telemetry data at same level as most
   sensitive content it contains — encryption at rest,
   access controls documented
@@ -757,17 +809,20 @@ obligations) are the primary criteria.
   stores as production data — access records for auditors
 
 **Audit evidence preparation**
+
 - Telemetry classification and protection documentation (C2.1)
 - Access controls on telemetry stores (CC6.1)
 - Retention and deletion procedures for telemetry (P4.2)
 - Least-logging configuration evidence (CC5.2)
 
 **Hardening**
+
 - Implement PII redaction in telemetry pipelines — C2.1
   and P5.1 technical protection evidence
 - Short TTL for debug traces — P4.2 retention control evidence
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI01 Sensitive Data Leakage, DSGAI07 Data Governance
 - Other frameworks: ISO 27001 A.8.15 · GDPR Art. 32 · ISO 27701
 
@@ -794,6 +849,7 @@ protection — context classification ceiling) are the primary criteria.
 #### Mitigations for SOC 2 evidence
 
 **Control implementation**
+
 - CC6.1: Document context assembly access controls —
   users cannot receive context from sources above their
   authorisation level, verified in access control records
@@ -804,12 +860,14 @@ protection — context classification ceiling) are the primary criteria.
   procedure — implemented and tested
 
 **Audit evidence preparation**
+
 - Context assembly access control documentation (CC6.1)
 - Context classification ceiling policy (C2.1)
 - Context injection procedure documentation (CC5.2)
 - Risk assessment entries for over-broad context (CC3.2)
 
 #### Cross-references
+
 - LLM Top 10: LLM08 Hidden Context Exposure
 - Agentic Top 10: ASI01 Agent Goal Hijack
 - Other frameworks: AIUC-1 A/B005 · NIST AI RMF MS-2.5
@@ -837,6 +895,7 @@ primary criteria.
 #### Mitigations for SOC 2 evidence
 
 **Control implementation**
+
 - CC9.1: Include browser AI extension vendors in vendor
   risk programme — security assessments, data handling
   review, assessment records
@@ -846,12 +905,14 @@ primary criteria.
   employee acknowledgement records
 
 **Audit evidence preparation**
+
 - Approved extension list with vendor assessments (CC9.1)
 - Extension permission configuration (CC6.1)
 - Acceptable use procedure and acknowledgement records (CC5.2)
 - DLP configuration for endpoint AI traffic (CC7.2)
 
 #### Cross-references
+
 - Agentic Top 10: ASI10 Rogue Agents
 - DSGAI 2026: DSGAI03 Shadow AI
 - Other frameworks: ISO 27001 A.8.1/A.8.7 · EU AI Act Art. 9
@@ -879,6 +940,7 @@ responses, not just uptime.
 #### Mitigations for SOC 2 evidence
 
 **Control implementation**
+
 - A1.1: Document availability commitments covering RAG
   freshness — stale index producing misinformation is an
   availability commitment breach, policy documented
@@ -889,6 +951,7 @@ responses, not just uptime.
   and sample alerts for auditors
 
 **Audit evidence preparation**
+
 - Availability policy covering RAG freshness (A1.1)
 - Circuit breaker and freshness monitoring configuration (A1.2)
 - BCP coverage for GenAI pipeline failures (A1.2)
@@ -896,12 +959,14 @@ responses, not just uptime.
 - RTO/RPO documentation for GenAI services (A1.1)
 
 **Hardening**
+
 - A1.2: Test BCP for GenAI pipeline failures — drill
   records demonstrating availability control effectiveness
 - A1.2: Deploy redundancy for production RAG — configuration
   evidence of environmental availability protection
 
 #### Cross-references
+
 - LLM Top 10: LLM06 Unbounded Consumption
 - Agentic Top 10: ASI08 Cascading Agent Failures
 - Other frameworks: ISA/IEC 62443 SR 7.6 (OT) · NIST SP 800-82 (OT) · AIUC-1 D
@@ -930,6 +995,7 @@ criteria.
 #### Mitigations for SOC 2 evidence
 
 **Control implementation**
+
 - CC3.2: Include inference attack risks in GenAI risk
   assessment — membership inference and model inversion
   as documented threat vectors
@@ -940,6 +1006,7 @@ criteria.
   extraction and inference attack patterns detected
 
 **Audit evidence preparation**
+
 - Risk assessment entries for inference attacks (CC3.2)
 - Differential privacy configuration and privacy budget (C2.1)
 - Output rate limiting configuration (A1.2)
@@ -947,12 +1014,14 @@ criteria.
 - Security testing results for inference attacks (CC7.4)
 
 **Hardening**
+
 - CC7.4: Conduct membership inference red team — results
   documented as security testing evidence
 - C2.1: Apply differential privacy in training — technical
   confidentiality protection evidence
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - DSGAI 2026: DSGAI10 Synthetic Data Pitfalls
 - Other frameworks: ISO 27001 A.8.11 · GDPR Art. 25 · EU AI Act Art. 10
@@ -981,6 +1050,7 @@ are the primary criteria.
 #### Mitigations for SOC 2 evidence
 
 **Control implementation**
+
 - CC9.1: Include labelling vendors in vendor risk programme —
   security assessment, data access scope review, records
 - CC9.2: Establish vendor agreements with data handling
@@ -991,18 +1061,21 @@ are the primary criteria.
   safeguards applied
 
 **Audit evidence preparation**
+
 - Labelling vendor assessment records (CC9.1)
 - Vendor agreements with data handling obligations (CC9.2)
 - Personal information handling documentation for labelling (P3.1)
 - Data minimisation procedure for labelling tasks (CC5.2)
 
 **Hardening**
+
 - Anonymise labelling tasks — C2.1 and P3.1 minimisation
   evidence showing technical data protection in labelling
 - CC9.2: Right-to-audit provision for labelling vendors —
   contractual control evidence
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI07 Data Governance, DSGAI08 Non-Compliance
 - Other frameworks: ISO 27001 A.5.34/A.6.3 · EU AI Act Art. 10 · GDPR Art. 28
 
@@ -1029,6 +1102,7 @@ limiting as access control) are the primary criteria.
 #### Mitigations for SOC 2 evidence
 
 **Control implementation**
+
 - C2.1: Document proprietary model artifact classification —
   model IP protection policy, access controls, rate
   limiting as technical protection evidence
@@ -1039,6 +1113,7 @@ limiting as access control) are the primary criteria.
   configuration and samples for auditors
 
 **Audit evidence preparation**
+
 - Model IP classification and protection policy (C2.1)
 - API rate limiting configuration (CC6.1)
 - Extraction pattern monitoring configuration (CC7.2)
@@ -1046,12 +1121,14 @@ limiting as access control) are the primary criteria.
 - Security testing results for extraction resistance (CC7.4)
 
 **Hardening**
+
 - Implement model watermarking — C2.1 advanced technical
   protection evidence enabling replicated model detection
 - CC7.4: Conduct model extraction red team — attempt
   replication and document query budget required
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - DSGAI 2026: DSGAI18 Inference and Data Reconstruction
 - Other frameworks: ISO 27001 A.5.12/A.8.3 · MITRE ATLAS AML.T0016
@@ -1080,6 +1157,7 @@ RAG data source providers as vendors) also applies.
 #### Mitigations for SOC 2 evidence
 
 **Control implementation**
+
 - PI1.2: Document RAG corpus integrity controls —
   source trust tiering, content hashing, ingestion
   validation as processing integrity evidence
@@ -1090,6 +1168,7 @@ RAG data source providers as vendors) also applies.
   and sample findings for auditors
 
 **Audit evidence preparation**
+
 - RAG corpus integrity procedure documentation (PI1.2)
 - Source trust tiering configuration (PI1.2)
 - Vendor assessment records for data source providers (CC9.1)
@@ -1097,6 +1176,7 @@ RAG data source providers as vendors) also applies.
 - Incident response procedure for RAG poisoning (CC7.3)
 
 **Hardening**
+
 - Implement cryptographic provenance for RAG corpus —
   PI1.2 advanced processing integrity evidence
 - CC7.4: Conduct adversarial RAG integrity testing —
@@ -1104,6 +1184,7 @@ RAG data source providers as vendors) also applies.
   documented as security testing evidence
 
 #### Cross-references
+
 - LLM Top 10: LLM05 Data and Model Poisoning, LLM07 Misinformation
 - Agentic Top 10: ASI06 Memory and Context Poisoning
 - Other frameworks: MITRE ATLAS AML.T0045 · ISO 27001 A.5.7 · EU AI Act Art. 55(1)(a)
@@ -1188,9 +1269,9 @@ RAG data source providers as vendors) also applies.
 
 ## References
 
-- AICPA SOC 2 Trust Services Criteria: https://www.aicpa-cima.com/resources/landing/system-and-organization-controls-soc-suite-of-services
-- AICPA Trust Services Criteria 2017 (updated 2022): https://us.aicpa.org/content/dam/aicpa/interestareas/frc/assuranceadvisoryservices/downloadabledocuments/trust-services-criteria.pdf
-- OWASP GenAI Data Security Risks 2026: https://genai.owasp.org/resource/owasp-genai-data-security-risks-mitigations-2026/
+- AICPA SOC 2 Trust Services Criteria: <https://www.aicpa-cima.com/resources/landing/system-and-organization-controls-soc-suite-of-services>
+- AICPA Trust Services Criteria 2017 (updated 2022): <https://us.aicpa.org/content/dam/aicpa/interestareas/frc/assuranceadvisoryservices/downloadabledocuments/trust-services-criteria.pdf>
+- OWASP GenAI Data Security Risks 2026: <https://genai.owasp.org/resource/owasp-genai-data-security-risks-mitigations-2026/>
 - LLM Top 10 x SOC 2 mapping: see LLM_SOC2.md in this repository
 
 ---
@@ -1204,4 +1285,4 @@ RAG data source providers as vendors) also applies.
 ---
 
 Maintained by the OWASP GenAI Data Security Initiative.
-Part of the OWASP GenAI Crosswalk: https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk
+Part of the OWASP GenAI Crosswalk: <https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk>

@@ -25,4 +25,4 @@ Under the following terms:
   technological measures that legally restrict others from doing
   anything the license permits.
 
-Full license text: https://creativecommons.org/licenses/by-sa/4.0/legalcode
+Full license text: <https://creativecommons.org/licenses/by-sa/4.0/legalcode>

@@ -9,7 +9,8 @@
 
 # Agentic Top 10 2026 × PCI DSS v4.0
 
-Mapping the [OWASP Top 10 for Agentic Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
+Mapping the
+[OWASP Top 10 for Agentic Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
 to [PCI DSS v4.0](https://www.pcisecuritystandards.org/document_library/) —
 the Payment Card Industry Data Security Standard, version 4.0,
 mandatory from March 2025.
@@ -115,6 +116,7 @@ compromise event with PCI breach notification consequences.
 #### Mitigations
 
 **Foundational**
+
 - Req 6.2: Include prompt injection in secure code
   review requirements for all agent integrations
 - Req 12.3: Conduct targeted risk analysis for
@@ -122,6 +124,7 @@ compromise event with PCI breach notification consequences.
   impact, and treatment controls
 
 **Hardening**
+
 - Req 11.3: Include goal hijack test cases in
   penetration testing — direct, indirect, and
   multi-turn injection against all agent input channels
@@ -129,11 +132,13 @@ compromise event with PCI breach notification consequences.
   user identity, session ID, action taken, data accessed
 
 **Advanced**
+
 - Req 6.2: Implement goal-state verification as
   a documented secure development control — technical
   control corroborating secure code review evidence
 
 #### Crosswalk
+
 - LLM Top 10: LLM01 Prompt Injection
 
 ---
@@ -159,6 +164,7 @@ of all tool invocations on CHD systems.
 #### Mitigations
 
 **Foundational**
+
 - Req 7.2: Apply least-privilege to all agent tool
   permissions — document required tools per agent role,
   grant only those tools
@@ -166,6 +172,7 @@ of all tool invocations on CHD systems.
   required for PCI audit regardless of agent involvement
 
 **Hardening**
+
 - Req 7.3: Schedule periodic agent tool permission
   review — at minimum annually per PCI requirements
 - Req 6.2: Include tool parameter validation in
@@ -194,6 +201,7 @@ PCI DSS Requirement 8 (authentication) and Requirement 7
 #### Mitigations
 
 **Foundational**
+
 - Req 8.2: Assign unique identity to each agent
   deployment in PCI scope — no shared accounts,
   no human credentials used by agents
@@ -202,6 +210,7 @@ PCI DSS Requirement 8 (authentication) and Requirement 7
   documented for each access grant
 
 **Hardening**
+
 - Req 8.3: Implement credential rotation for agent
   accounts — rotation schedule documented and enforced
 - Req 10.2: Log all agent authentication events —
@@ -230,6 +239,7 @@ service providers with access to CHD.
 #### Mitigations
 
 **Foundational**
+
 - Req 12.8: List all agentic component vendors with
   potential CHD access — obtain written agreements
   and annual PCI compliance confirmation
@@ -238,6 +248,7 @@ service providers with access to CHD.
   patch within PCI-required timelines
 
 **Hardening**
+
 - Req 5.2: Verify integrity of model weights and
   plugin descriptors — cryptographic verification
   before deployment
@@ -268,6 +279,7 @@ Requirement 10.2 requires logging of code execution events.
 #### Mitigations
 
 **Foundational**
+
 - Req 6.2: Require explicit authorisation for all
   code execution — agent cannot execute generated
   code without user confirmation
@@ -275,6 +287,7 @@ Requirement 10.2 requires logging of code execution events.
   for PCI audit trail in cardholder data environment
 
 **Hardening**
+
 - Req 6.4: Protect agent execution endpoints —
   WAF rules covering common code injection patterns
 - Req 11.3: Include code execution test cases in
@@ -303,6 +316,7 @@ or hashing of PAN data wherever it is stored.
 #### Mitigations
 
 **Foundational**
+
 - Req 3.4: Prevent storage of full PAN in agent
   memory or context — truncate or mask PAN before
   storage in any agent data store
@@ -311,6 +325,7 @@ or hashing of PAN data wherever it is stored.
   key management
 
 **Hardening**
+
 - Req 6.5: Include agent memory store updates
   in change management — security review required
   before any change to stores potentially containing CHD
@@ -338,6 +353,7 @@ inter-agent communication.
 #### Mitigations
 
 **Foundational**
+
 - Req 4.2: Enforce TLS 1.2+ on all inter-agent
   communication in PCI scope — no plaintext CHD
   transmission between agents
@@ -368,6 +384,7 @@ system availability risks.
 #### Mitigations
 
 **Foundational**
+
 - Req 10.7: Configure monitoring for cascade failure
   early warning indicators — latency, error rate, and
   queue depth alerts before full service impact
@@ -418,6 +435,7 @@ Requirement 10 (monitoring) are primary; Requirement 11.3
 #### Mitigations
 
 **Foundational**
+
 - Req 7.2: Enforce agent scope technically —
   access controls prevent CHD access outside
   defined agent role
@@ -425,6 +443,7 @@ Requirement 10 (monitoring) are primary; Requirement 11.3
   required PCI monitoring for CHD systems
 
 **Hardening**
+
 - Req 11.3: Include rogue agent test cases in
   annual penetration test — verify scope enforcement
   cannot be bypassed
@@ -462,6 +481,8 @@ Requirement 10 (monitoring) are primary; Requirement 11.3
 
 ---
 
-*Part of the [OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk) —
+*Part of the
+[OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk)
+—
 maintained by the OWASP GenAI Data Security Initiative.
 Licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).*

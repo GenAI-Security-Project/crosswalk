@@ -10,7 +10,8 @@
 # LLM Top 10 2026 × NIST AI RMF
 
 Mapping the [OWASP Top 10 for LLM Applications 2026](https://genai.owasp.org/llm-top-10/)
-to the [NIST AI Risk Management Framework (AI RMF 1.0)](https://www.nist.gov/system/files/documents/2023/01/26/AI%20RMF%201.0.pdf)
+to the
+[NIST AI Risk Management Framework (AI RMF 1.0)](https://www.nist.gov/system/files/documents/2023/01/26/AI%20RMF%201.0.pdf)
 and its companion [NIST AI RMF Playbook](https://airc.nist.gov/Docs/2).
 
 The NIST AI RMF is the primary governance framework for trustworthy AI
@@ -85,6 +86,7 @@ model without ever being human-readable, and steganographic or
 invisible-Unicode carriers survive review of the rendered interface.
 
 **Real-world references:**
+
 - EchoLeak (2025) — Microsoft 365 Copilot turned into silent
   exfiltration engine via indirect prompt injection
 - Samsung source code leak (2023) — proprietary code surfaced
@@ -102,6 +104,7 @@ invisible-Unicode carriers survive review of the rendered interface.
 #### Mitigations by tier
 
 **Foundational**
+
 - GV-1.7: Establish and document organisational policy requiring
   input validation and prompt structure enforcement for all LLM
   deployments — include in AI system governance charter
@@ -111,6 +114,7 @@ invisible-Unicode carriers survive review of the rendered interface.
   policy enforced, not just best effort
 
 **Hardening**
+
 - MS-2.5: Include prompt injection scenarios in your adversarial
   evaluation programme — test direct, indirect, and jailbreak vectors
   before each production release
@@ -121,6 +125,7 @@ invisible-Unicode carriers survive review of the rendered interface.
   feed alerts into your AI incident management workflow
 
 **Advanced**
+
 - MS-2.5: Extend adversarial testing to cover your specific RAG
   sources, tool descriptors, and email/document processing pipelines
 - MG-2.2: Establish automated response — quarantine affected
@@ -133,11 +138,12 @@ invisible-Unicode carriers survive review of the rendered interface.
 
 | Tool | Type | Link |
 |---|---|---|
-| Garak | Open-source | https://github.com/leondz/garak |
-| LLM Guard | Open-source | https://github.com/protectai/llm-guard |
-| NIST AI RMF Playbook | Reference | https://airc.nist.gov/Docs/2 |
+| Garak | Open-source | <https://github.com/leondz/garak> |
+| LLM Guard | Open-source | <https://github.com/protectai/llm-guard> |
+| NIST AI RMF Playbook | Reference | <https://airc.nist.gov/Docs/2> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI01 Agent Goal Hijack, ASI02 Tool Misuse
 - DSGAI 2026: DSGAI01 Sensitive Data Leakage
 - Other frameworks: MITRE ATLAS AML.T0051 · NIST CSF 2.0 PR.AC-5 · ISO 42001 6.1.2
@@ -155,6 +161,7 @@ The AI RMF addresses this through data governance policies, privacy
 risk measurement, and managed data protection controls.
 
 **Real-world references:**
+
 - Samsung source code leak (2023)
 - Multiple healthcare LLM deployments surfacing PHI through
   over-permissive RAG retrieval (2024)
@@ -171,6 +178,7 @@ risk measurement, and managed data protection controls.
 #### Mitigations by tier
 
 **Foundational**
+
 - GV-1.6: Establish data classification policy covering all data
   used in LLM training, fine-tuning, and RAG — define handling
   requirements per classification level
@@ -180,6 +188,7 @@ risk measurement, and managed data protection controls.
   responses reach users — enforce as a policy requirement, not optional
 
 **Hardening**
+
 - MS-2.6: Include data leakage scenarios in your AI evaluation
   programme — test training data memorisation, RAG over-retrieval,
   and output redaction effectiveness
@@ -189,6 +198,7 @@ risk measurement, and managed data protection controls.
   matches the authorised user's data access rights
 
 **Advanced**
+
 - MS-2.6: Conduct model inversion and membership inference red team
   exercises to validate that sensitive training data cannot be
   reconstructed from model outputs
@@ -201,11 +211,12 @@ risk measurement, and managed data protection controls.
 
 | Tool | Type | Link |
 |---|---|---|
-| Microsoft Presidio | Open-source | https://github.com/microsoft/presidio |
-| Private AI | Commercial | https://private-ai.com |
-| Nightfall AI | Commercial | https://nightfall.ai |
+| Microsoft Presidio | Open-source | <https://github.com/microsoft/presidio> |
+| Private AI | Commercial | <https://private-ai.com> |
+| Nightfall AI | Commercial | <https://nightfall.ai> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI03 Identity & Privilege Abuse
 - DSGAI 2026: DSGAI01 Sensitive Data Leakage, DSGAI18 Inference & Data Reconstruction
 - Other frameworks: ISO 27001 A.8.2 · ISO 27701 · EU AI Act Art. 10 · PCIDSS Req 3
@@ -233,6 +244,7 @@ requirements, and managed response to autonomous action incidents.
 #### Mitigations by tier
 
 **Foundational**
+
 - GV-1.7: Establish AI autonomy policy — define the maximum
   decision authority permitted for each LLM deployment, requiring
   human approval for irreversible or high-impact actions
@@ -242,6 +254,7 @@ requirements, and managed response to autonomous action incidents.
   deployment — reviewed and signed off before each release
 
 **Hardening**
+
 - MS-2.5: Test autonomy boundaries as part of each release
   evaluation — verify that the model cannot exceed its defined
   permission scope even under adversarial input
@@ -252,6 +265,7 @@ requirements, and managed response to autonomous action incidents.
   AI risk monitoring programme
 
 **Advanced**
+
 - GV-1.7: Include AI autonomy limits in board-level AI governance
   reporting — autonomous action scope changes require executive
   sign-off
@@ -264,11 +278,12 @@ requirements, and managed response to autonomous action incidents.
 
 | Tool | Type | Link |
 |---|---|---|
-| Guardrails AI | Open-source | https://github.com/guardrails-ai/guardrails |
-| NeMo Guardrails | Open-source | https://github.com/NVIDIA/NeMo-Guardrails |
-| LangSmith | Commercial | https://smith.langchain.com |
+| Guardrails AI | Open-source | <https://github.com/guardrails-ai/guardrails> |
+| NeMo Guardrails | Open-source | <https://github.com/NVIDIA/NeMo-Guardrails> |
+| LangSmith | Commercial | <https://smith.langchain.com> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI01 Agent Goal Hijack, ASI02 Tool Misuse
 - DSGAI 2026: DSGAI06 Tool Plugin & Agent Data Exchange
 - Other frameworks: AIUC-1 B006 · MITRE ATLAS AML.T0015 · ISA/IEC 62443 SR 2.1 (OT)
@@ -303,6 +318,7 @@ dependency is clean.
 #### Mitigations by tier
 
 **Foundational**
+
 - GV-1.6: Establish AI supply chain policy — approved sources for
   model weights, datasets, and libraries, with sign-off requirements
   before production use
@@ -312,6 +328,7 @@ dependency is clean.
   without review and sign-off
 
 **Hardening**
+
 - MS-2.5: Include supply chain integrity testing in your evaluation
   programme — verify signatures, scan for backdoors, validate
   provenance before each deployment
@@ -321,6 +338,7 @@ dependency is clean.
   on any unplanned component change
 
 **Advanced**
+
 - MP-5.1: Extend dependency mapping to cover runtime dynamic
   components — MCP servers, plugins, and tools fetched at inference
 - MS-2.5: Conduct backdoor detection using neural cleanse or
@@ -333,11 +351,12 @@ dependency is clean.
 
 | Tool | Type | Link |
 |---|---|---|
-| CycloneDX | Open-source | https://cyclonedx.org |
-| ModelScan | Open-source | https://github.com/protectai/modelscan |
-| OWASP Dependency-Check | Open-source | https://owasp.org/www-project-dependency-check/ |
+| CycloneDX | Open-source | <https://cyclonedx.org> |
+| ModelScan | Open-source | <https://github.com/protectai/modelscan> |
+| OWASP Dependency-Check | Open-source | <https://owasp.org/www-project-dependency-check/> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI04 Agentic Supply Chain Vulnerabilities
 - DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning
 - Other frameworks: NIST SP 800-218A · MITRE ATLAS AML.T0056 · CycloneDX ML SBOM
@@ -359,6 +378,7 @@ that no pre-training control catches, so poisoning defences must cover every
 stage that writes weights, not just the original training corpus.
 
 **Real-world references:**
+
 - Nightshade (2023) — poison pixels successfully corrupted image
   generation model behaviour
 - Adversarial examples achieving 35% influence on model outputs
@@ -376,6 +396,7 @@ stage that writes weights, not just the original training corpus.
 #### Mitigations by tier
 
 **Foundational**
+
 - MS-3.3: Implement data quality measurement on all training data —
   anomaly detection, source validation, and lineage tracking before
   any training run
@@ -385,6 +406,7 @@ stage that writes weights, not just the original training corpus.
   validated sources enter training pipelines
 
 **Hardening**
+
 - MS-2.5: Include poisoning detection in your adversarial evaluation
   programme — test for backdoor triggers and biased outputs on each
   model version before promotion
@@ -395,6 +417,7 @@ stage that writes weights, not just the original training corpus.
   of any single training example
 
 **Advanced**
+
 - MS-2.5: Conduct post-training backdoor detection using neural
   cleanse or equivalent as a standard pre-deployment gate
 - MS-3.3: Implement continuous training data monitoring — alert on
@@ -406,11 +429,12 @@ stage that writes weights, not just the original training corpus.
 
 | Tool | Type | Link |
 |---|---|---|
-| IBM Adversarial Robustness Toolbox | Open-source | https://github.com/Trusted-AI/adversarial-robustness-toolbox |
-| CleanLab | Open-source | https://github.com/cleanlab/cleanlab |
-| Great Expectations | Open-source | https://greatexpectations.io |
+| IBM Adversarial Robustness Toolbox | Open-source | <https://github.com/Trusted-AI/adversarial-robustness-toolbox> |
+| CleanLab | Open-source | <https://github.com/cleanlab/cleanlab> |
+| Great Expectations | Open-source | <https://greatexpectations.io> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning, DSGAI21 Disinformation via Data Poisoning
 - Other frameworks: MITRE ATLAS AML.T0032 · ISO 42001 6.1.2 · NIST CSF 2.0 PR.DS-8
@@ -439,6 +463,7 @@ response to availability incidents.
 #### Mitigations by tier
 
 **Foundational**
+
 - GV-1.7: Establish resource governance policy — define token
   limits, rate limits, and cost budgets for every LLM deployment
   as a mandatory deployment requirement
@@ -448,6 +473,7 @@ response to availability incidents.
   testing — sponge example attacks and token amplification
 
 **Hardening**
+
 - MG-2.2: Define automated response to consumption anomalies —
   rate limit tightening, session suspension, owner notification,
   cost circuit breakers
@@ -458,6 +484,7 @@ response to availability incidents.
   on breach — not just alerting
 
 **Advanced**
+
 - MS-2.5: Conduct adversarial cost-maximisation testing against
   your specific deployment — identify the inputs that generate
   maximum token consumption for your model and guard those paths
@@ -470,11 +497,12 @@ response to availability incidents.
 
 | Tool | Type | Link |
 |---|---|---|
-| LiteLLM | Open-source | https://github.com/BerriAI/litellm |
-| Kong Gateway | Open-source | https://github.com/Kong/kong |
-| OpenTelemetry | Open-source | https://opentelemetry.io |
+| LiteLLM | Open-source | <https://github.com/BerriAI/litellm> |
+| Kong Gateway | Open-source | <https://github.com/Kong/kong> |
+| OpenTelemetry | Open-source | <https://opentelemetry.io> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI08 Cascading Agent Failures
 - DSGAI 2026: DSGAI17 Data Availability & Resilience Failures
 - Other frameworks: AIUC-1 D · ISA/IEC 62443 SR 7.1 (OT) · NIST SP 800-82 (OT) · CWE-400
@@ -502,6 +530,7 @@ governance of AI-generated content quality.
 #### Mitigations by tier
 
 **Foundational**
+
 - GV-1.7: Establish policy on AI content accuracy — define domains
   where AI output requires human verification before action,
   especially medical, legal, financial, and safety-critical contexts
@@ -512,6 +541,7 @@ governance of AI-generated content quality.
   requirement for all public-facing LLM deployments
 
 **Hardening**
+
 - MS-4.1: Implement feedback mechanisms for production misinformation
   detection — user reporting, automated fact-checking, output quality
   metrics fed back into risk monitoring
@@ -521,6 +551,7 @@ governance of AI-generated content quality.
   where accuracy is critical
 
 **Advanced**
+
 - MS-2.6: Build automated fact-checking pipelines for high-stakes
   output domains — measure and track hallucination rates per domain
 - MS-4.1: Implement continuous accuracy monitoring in production
@@ -533,11 +564,12 @@ governance of AI-generated content quality.
 
 | Tool | Type | Link |
 |---|---|---|
-| TruLens | Open-source | https://github.com/truera/trulens |
-| RAGAS | Open-source | https://github.com/explodinggradients/ragas |
-| DeepEval | Open-source | https://github.com/confident-ai/deepeval |
+| TruLens | Open-source | <https://github.com/truera/trulens> |
+| RAGAS | Open-source | <https://github.com/explodinggradients/ragas> |
+| DeepEval | Open-source | <https://github.com/confident-ai/deepeval> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI09 Human-Agent Trust Exploitation
 - DSGAI 2026: DSGAI21 Disinformation & Integrity Attacks
 - Other frameworks: EU AI Act Art. 13 · AIUC-1 F · ENISA AI Threat Landscape
@@ -576,6 +608,7 @@ treat it as a security boundary.
 #### Mitigations by tier
 
 **Foundational**
+
 - GV-1.6: Classify system prompts as sensitive configuration
   artefacts — version controlled, access controlled, and reviewed
   on every change
@@ -586,6 +619,7 @@ treat it as a security boundary.
   specific extraction scenario testing assigned
 
 **Hardening**
+
 - MS-2.6: Include prompt extraction scenarios in your evaluation
   programme — test against your specific deployment before go-live
   and after each system prompt change
@@ -595,6 +629,7 @@ treat it as a security boundary.
   of system prompt disclosure
 
 **Advanced**
+
 - MS-2.6: Conduct adversarial prompt extraction red team exercises
   covering all known techniques against your specific deployment
 - Deploy output classifiers trained to detect and block responses
@@ -606,10 +641,11 @@ treat it as a security boundary.
 
 | Tool | Type | Link |
 |---|---|---|
-| LLM Guard | Open-source | https://github.com/protectai/llm-guard |
-| Garak | Open-source | https://github.com/leondz/garak |
+| LLM Guard | Open-source | <https://github.com/protectai/llm-guard> |
+| Garak | Open-source | <https://github.com/leondz/garak> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI01 Agent Goal Hijack
 - DSGAI 2026: DSGAI15 Over-Broad Context Windows
 - Other frameworks: AIUC-1 B003/B009 · MITRE ATLAS AML.T0041 · CWE-200
@@ -638,6 +674,7 @@ systems.
 #### Mitigations by tier
 
 **Foundational**
+
 - MS-3.3: Apply data quality validation to all content before
   embedding generation — garbage-in to vector stores is a security
   risk, not just a quality issue
@@ -647,6 +684,7 @@ systems.
   AI risk register
 
 **Hardening**
+
 - MS-2.5: Include embedding manipulation scenarios in your
   adversarial evaluation programme — test retrieval poisoning
   and adversarial query scenarios
@@ -656,6 +694,7 @@ systems.
   query patterns
 
 **Advanced**
+
 - MS-2.5: Conduct embedding inversion red team exercises to
   validate that your embeddings do not reconstruct source content
 - Apply differential privacy in embedding generation for sensitive
@@ -667,11 +706,12 @@ systems.
 
 | Tool | Type | Link |
 |---|---|---|
-| Weaviate (with RBAC) | Open-source | https://weaviate.io |
-| Qdrant | Open-source | https://qdrant.tech |
-| RAGAS | Open-source | https://github.com/explodinggradients/ragas |
+| Weaviate (with RBAC) | Open-source | <https://weaviate.io> |
+| Qdrant | Open-source | <https://qdrant.tech> |
+| RAGAS | Open-source | <https://github.com/explodinggradients/ragas> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - DSGAI 2026: DSGAI13 Vector Store Platform Security, DSGAI18 Inference & Data Reconstruction
 - Other frameworks: AIUC-1 A · MITRE ATLAS AML.T0063 · NIST CSF 2.0 PR.DS-7
@@ -705,6 +745,7 @@ reaches a shell, a browser, or a database.
 #### Mitigations by tier
 
 **Foundational**
+
 - GV-1.7: Establish policy requiring all LLM outputs to be treated
   as untrusted input by downstream systems — encoding, validation,
   and sanitisation mandatory before rendering or execution
@@ -714,6 +755,7 @@ reaches a shell, a browser, or a database.
   commands, or eval functions — policy enforced at code review
 
 **Hardening**
+
 - MS-2.6: Test output sanitisation effectiveness as part of
   every release evaluation — not just at initial deployment
 - MG-2.2: Define incident response for output injection events —
@@ -722,6 +764,7 @@ reaches a shell, a browser, or a database.
   structure of acceptable model responses per integration point
 
 **Advanced**
+
 - MS-2.5: Conduct DAST (Dynamic Application Security Testing) on
   all interfaces that consume LLM output — include in CI/CD pipeline
 - Deploy dedicated output security layer between LLM and all
@@ -733,11 +776,12 @@ reaches a shell, a browser, or a database.
 
 | Tool | Type | Link |
 |---|---|---|
-| OWASP ZAP | Open-source | https://www.zaproxy.org |
-| Semgrep | Open-source | https://semgrep.dev |
-| DOMPurify | Open-source | https://github.com/cure53/DOMPurify |
+| OWASP ZAP | Open-source | <https://www.zaproxy.org> |
+| Semgrep | Open-source | <https://semgrep.dev> |
+| DOMPurify | Open-source | <https://github.com/cure53/DOMPurify> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI02 Tool Misuse, ASI05 Unexpected Code Execution
 - DSGAI 2026: DSGAI05 Data Integrity & Validation Failures, DSGAI12 Unsafe NL Data Gateways
 - Other frameworks: OWASP ASVS V5 · NIST CSF 2.0 PR.DS-5 · CWE-79
@@ -788,5 +832,7 @@ and compliance assessments.
 
 ---
 
-*Part of the [OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk) —
+*Part of the
+[OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk)
+—
 maintained by the [OWASP GenAI Data Security Initiative](https://genai.owasp.org)*

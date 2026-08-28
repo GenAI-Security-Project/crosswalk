@@ -15,7 +15,8 @@
 [![Mapping Files](https://img.shields.io/badge/mapping%20files-58-brightgreen)](README.md)
 [![Frameworks](https://img.shields.io/badge/frameworks-17-orange)](README.md)
 
-> OWASP GenAIセキュリティリスクを業界フレームワークにマッピングする、最も包括的な公開リソースです。LLMアプリケーション、自律型エージェントAI、GenAIデータセキュリティを**17のフレームワーク**と**3つのOWASPソースリスト**にわたってカバーしています。
+> OWASP
+> GenAIセキュリティリスクを業界フレームワークにマッピングする、最も包括的な公開リソースです。LLMアプリケーション、自律型エージェントAI、GenAIデータセキュリティを**17のフレームワーク**と**3つのOWASPソースリスト**にわたってカバーしています。
 
 [OWASP GenAI Data Security Initiative](https://genai.owasp.org)により維持管理されています。
 **[Emmanuel Guilherme Junior](https://github.com/emmanuelgjr)**により作成されました。
@@ -292,7 +293,8 @@ node scripts/compliance-report.js --list-frameworks        # 全オプション�
 
 ## LAAF v2.0 — LPCIレッドチーミング
 
-[LAAF v2.0](https://github.com/qorvexconsulting1/laaf-V2.0)は、GarakおよびPyRITと並ぶ3番目の評価フレームワークとして統合されています。表面レベルのインジェクションテストでは見逃される攻撃サーフェスをカバーします：メモリ永続化、レイヤードエンコーディング、セマンティックリフレーミング、および6ステージライフサイクル攻撃。
+[LAAF v2.0](https://github.com/qorvexconsulting1/laaf-V2.0)
+は、GarakおよびPyRITと並ぶ3番目の評価フレームワークとして統合されています。表面レベルのインジェクションテストでは見逃される攻撃サーフェスをカバーします：メモリ永続化、レイヤードエンコーディング、セマンティックリフレーミング、および6ステージライフサイクル攻撃。
 
 ```bash
 pip install git+https://github.com/qorvexconsulting1/laaf-V2.0.git
@@ -365,13 +367,15 @@ node scripts/incidents-report.js --format csv         # Excelエクスポート
 ## クイックナビゲーション
 
 **2026年8月までのEU AI Actコンプライアンス**
-→ [LLM_EUAIAct.md](llm-top10/LLM_EUAIAct.md) · [Agentic_EUAIAct.md](agentic-top10/Agentic_EUAIAct.md) · [DSGAI_EUAIAct.md](dsgai-2026/DSGAI_EUAIAct.md)
+→ [LLM_EUAIAct.md](llm-top10/LLM_EUAIAct.md) · [Agentic_EUAIAct.md](agentic-top10/Agentic_EUAIAct.md) ·
+[DSGAI_EUAIAct.md](dsgai-2026/DSGAI_EUAIAct.md)
 
 **NIS2の対象となる欧州の組織**
 → [LLM_ENISA.md](llm-top10/LLM_ENISA.md) — NIS2 Article 23インシデント評価ガイダンス付きENISAフレームワーク
 
 **OT/ICS環境におけるAI**
-→ [LLM_ISA62443.md](llm-top10/LLM_ISA62443.md) · [Agentic_ISA62443.md](agentic-top10/Agentic_ISA62443.md) · [DSGAI_ISA62443.md](dsgai-2026/DSGAI_ISA62443.md) · [LLM_NISTSP80082.md](llm-top10/LLM_NISTSP80082.md)
+→ [LLM_ISA62443.md](llm-top10/LLM_ISA62443.md) · [Agentic_ISA62443.md](agentic-top10/Agentic_ISA62443.md) ·
+[DSGAI_ISA62443.md](dsgai-2026/DSGAI_ISA62443.md) · [LLM_NISTSP80082.md](llm-top10/LLM_NISTSP80082.md)
 
 **自律エージェントのデプロイ**
 → [Agentic_OWASP_NHI.md](agentic-top10/Agentic_OWASP_NHI.md) — アイデンティティガバナンス
@@ -383,10 +387,12 @@ node scripts/incidents-report.js --format csv         # Excelエクスポート
 → [DSGAI_MAESTRO.md](dsgai-2026/DSGAI_MAESTRO.md) — 全21 DSGAIエントリのMAESTROデータオペレーション視点
 
 **GenAI向けISO 27001 ISMS拡張**
-→ [LLM_ISO27001.md](llm-top10/LLM_ISO27001.md) · [Agentic_ISO27001.md](agentic-top10/Agentic_ISO27001.md) · [DSGAI_ISO27001.md](dsgai-2026/DSGAI_ISO27001.md)
+→ [LLM_ISO27001.md](llm-top10/LLM_ISO27001.md) · [Agentic_ISO27001.md](agentic-top10/Agentic_ISO27001.md) ·
+[DSGAI_ISO27001.md](dsgai-2026/DSGAI_ISO27001.md)
 
 **AIガバナンス向けISO 42001 AIMS**
-→ [LLM_ISO42001.md](llm-top10/LLM_ISO42001.md) · [Agentic_ISO42001.md](agentic-top10/Agentic_ISO42001.md) — EU AI Actコンプライアンスエビデンステーブル付き
+→ [LLM_ISO42001.md](llm-top10/LLM_ISO42001.md) · [Agentic_ISO42001.md](agentic-top10/Agentic_ISO42001.md) —
+EU AI Actコンプライアンスエビデンステーブル付き
 
 **セキュリティプログラム成熟度**
 → [LLM_SAMM.md](llm-top10/LLM_SAMM.md) — 記入可能なスコアカード付きSAMM L1–L3ロードマップ
@@ -416,31 +422,41 @@ node scripts/incidents-report.js --format csv         # Excelエクスポート
 
 ### 完全なOT/ICSトリロジー
 
-3つのOWASP GenAIソースリストすべてをISA/IEC 62443およびNIST SP 800-82 Rev 3にマッピングした、唯一の公開リソースです。ゾーンモデル配置、セキュリティレベルレーティング、基本要件およびセキュリティ要件の参照、OT固有の脅威シナリオ、および各ソースリストのデプロイメント前チェックリストが含まれています。
+3つのOWASP GenAIソースリストすべてをISA/IEC 62443およびNIST SP 800-82 Rev
+3にマッピングした、唯一の公開リソースです。ゾーンモデル配置、セキュリティレベルレーティング、基本要件およびセキュリティ要件の参照、OT固有の脅威シナリオ、および各ソースリストのデプロイメント前チェックリストが含まれています。
 
-[DSGAI_ISA62443.md](dsgai-2026/DSGAI_ISA62443.md)のRAGコーパスポイズニングシナリオ — OTネットワークへのアクセスなしにメンテナンス間隔を変更する安全手順操作攻撃 — は、公開ドキュメントの他のどこにも存在しません。
+[DSGAI_ISA62443.md](dsgai-2026/DSGAI_ISA62443.md) のRAGコーパスポイズニングシナリオ —
+OTネットワークへのアクセスなしにメンテナンス間隔を変更する安全手順操作攻撃 — は、公開ドキュメントの他のどこにも存在しません。
 
 ### MAESTRO 7層脅威モデリング
 
-[Agentic_MAESTRO.md](agentic-top10/Agentic_MAESTRO.md)と[DSGAI_MAESTRO.md](dsgai-2026/DSGAI_MAESTRO.md)は、OWASP GenAIリスクをCloud Security AllianceのMAESTROフレームワークにマッピングした唯一の公開ドキュメントです。このリポジトリの他のすべてのファイル — リスクをコントロールにマッピングするもの — とは異なり、MAESTROは各リスクを**それが発生するアーキテクチャレイヤー**にマッピングし、どのチームが問題を所有し、システムのどこに修正をデプロイすべきかを示します。
+[Agentic_MAESTRO.md](agentic-top10/Agentic_MAESTRO.md)
+と[DSGAI_MAESTRO.md](dsgai-2026/DSGAI_MAESTRO.md)は、OWASP GenAIリスクをCloud Security
+AllianceのMAESTROフレームワークにマッピングした唯一の公開ドキュメントです。このリポジトリの他のすべてのファイル — リスクをコントロールにマッピングするもの —
+とは異なり、MAESTROは各リスクを**それが発生するアーキテクチャレイヤー**にマッピングし、どのチームが問題を所有し、システムのどこに修正をデプロイすべきかを示します。
 
 DSGAIマッピングからの主要な発見：**L2データオペレーションは全DSGAIエントリの52%の発生元レイヤーです**。RAGコーパス、エンベディングストア、トレーニングパイプライン、メモリシステムをセキュリティクリティカルなインフラストラクチャとして扱わない組織は、GenAIデータセキュリティ脅威ランドスケープの大部分に対して防御が不十分です。
 
 ### エージェント自律性プレミアム
 
-[Agentic_AIVSS.md](agentic-top10/Agentic_AIVSS.md)は、人間による監視を除去することのリスクコストを定量化しています：全10のエージェントエントリで平均**+1.79 AIVSS重大度ポイント**。人間による監視の除去は10エントリ中7つを「高」から「クリティカル」に変換します — EU AI Act Article 14に基づく義務的人間監視の定量的根拠です。
+[Agentic_AIVSS.md](agentic-top10/Agentic_AIVSS.md) は、人間による監視を除去することのリスクコストを定量化しています：全10のエージェントエントリで平均**+1.79
+AIVSS重大度ポイント**。人間による監視の除去は10エントリ中7つを「高」から「クリティカル」に変換します — EU AI Act Article 14に基づく義務的人間監視の定量的根拠です。
 
 ### 完全なエージェントアイデンティティカバレッジ
 
-[Agentic_OWASP_NHI.md](agentic-top10/Agentic_OWASP_NHI.md)は、すべてのNHI Top 10エントリをすべてのASIエントリにマッピングしています — エージェントセキュリティリスクをIAMチームが既に運用しているNHIコントロールに変換した唯一の公開ドキュメントです。
+[Agentic_OWASP_NHI.md](agentic-top10/Agentic_OWASP_NHI.md) は、すべてのNHI Top 10エントリをすべてのASIエントリにマッピングしています —
+エージェントセキュリティリスクをIAMチームが既に運用しているNHIコントロールに変換した唯一の公開ドキュメントです。
 
 ### SAMM成熟度スコアカード
 
-[LLM_SAMM.md](llm-top10/LLM_SAMM.md)には、すべてのLLM本番デプロイメントに対するSAMMプラクティスごとの最小限の実行可能レベルを持つ記入可能な成熟度スコアカードが含まれています — セキュリティプログラムリーダーがエンジニアリングリーダーシップに対してプログラムの現在地と次に改善すべき事項を報告するために使用する成果物です。
+[LLM_SAMM.md](llm-top10/LLM_SAMM.md)
+には、すべてのLLM本番デプロイメントに対するSAMMプラクティスごとの最小限の実行可能レベルを持つ記入可能な成熟度スコアカードが含まれています —
+セキュリティプログラムリーダーがエンジニアリングリーダーシップに対してプログラムの現在地と次に改善すべき事項を報告するために使用する成果物です。
 
 ### 本番環境実装レシピ
 
-[shared/RECIPES.md](shared/RECIPES.md)には、動作するPythonによる13の本番環境対応セキュリティパターンが含まれています：アクセス制御付きRAG取得、MCPディスクリプター整合性検証、JIT資格情報発行、OTキルスイッチ、行動ベースライン監視、カスケード封じ込め、人間確認ゲート。
+[shared/RECIPES.md](shared/RECIPES.md)
+には、動作するPythonによる13の本番環境対応セキュリティパターンが含まれています：アクセス制御付きRAG取得、MCPディスクリプター整合性検証、JIT資格情報発行、OTキルスイッチ、行動ベースライン監視、カスケード封じ込め、人間確認ゲート。
 
 ---
 
@@ -462,11 +478,13 @@ DSGAIマッピングからの主要な発見：**L2データオペレーショ�
 
 ## 謝辞
 
-**[Emmanuel Guilherme Junior](https://github.com/emmanuelgjr)**と[OWASP GenAI Data Security Initiative](https://genai.owasp.org)により作成・維持管理されています。
+**[Emmanuel Guilherme Junior](https://github.com/emmanuelgjr)**と[OWASP GenAI Data Security
+Initiative](https://genai.owasp.org)により作成・維持管理されています。
 
 OWASP LLM Top 10、OWASP Agentic Top 10、OWASP GenAI Data Security、OWASP NHI Top 10、およびOWASP SAMMプロジェクトチームの成果の上に構築されています。
 
-MAESTROフレームワークとOWASP LLM Top 10への貢献について、[Ken Huang](https://github.com/kenhuangus)氏（Cloud Security Alliance）に特別な感謝を申し上げます。
+MAESTROフレームワークとOWASP LLM Top 10への貢献について、[Ken Huang](https://github.com/kenhuangus)氏（Cloud Security
+Alliance）に特別な感謝を申し上げます。
 
 ---
 

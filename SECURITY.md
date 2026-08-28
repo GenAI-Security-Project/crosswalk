@@ -113,9 +113,11 @@ We do not offer monetary rewards (bug bounties) for this repository.
 ## OWASP vulnerability disclosure policy
 
 This project follows the OWASP vulnerability disclosure policy:
-https://owasp.org/www-policy/operational/bug-bounty
+<https://owasp.org/www-policy/operational/bug-bounty>
 
 ---
 
-*Part of the [OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk) —
+*Part of the
+[OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk)
+—
 maintained by the [OWASP GenAI Data Security Initiative](https://genai.owasp.org)*

@@ -30,7 +30,7 @@ starting work.
 Translated files mirror the English filename with a language-code suffix
 inserted before the extension:
 
-```
+```text
 English:    llm-top10/LLM_NISTAI.md
 Spanish:    i18n/es/LLM_NISTAI.md
 French:     i18n/fr/LLM_NISTAI.md
@@ -175,6 +175,8 @@ reviewer approves the content.
 
 ---
 
-*Part of the [OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk) —
+*Part of the
+[OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk)
+—
 maintained by the [OWASP GenAI Data Security Initiative](https://genai.owasp.org)*
 *License: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)*

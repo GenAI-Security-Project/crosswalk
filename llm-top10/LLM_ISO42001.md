@@ -137,6 +137,7 @@ invisible-Unicode carriers survive review of the rendered interface.
 #### Mitigations for ISO 42001 alignment
 
 **Foundational**
+
 - Cl.6.1: Include prompt injection in AI risk assessment —
   document specific injection paths per deployment, risk
   owner, treatment controls, and review cadence in AIMS
@@ -149,6 +150,7 @@ invisible-Unicode carriers survive review of the rendered interface.
   policy level — document in A.2 AI policy
 
 **Hardening**
+
 - A.6.2.6: Include prompt injection scenarios in AIMS
   testing programme — direct, indirect via RAG, and
   jailbreak vectors tested before each production release,
@@ -160,6 +162,7 @@ invisible-Unicode carriers survive review of the rendered interface.
   information per Clause 7.5
 
 **Advanced**
+
 - A.6.2.6: Extend adversarial testing to cover your
   specific indirect injection surfaces — RAG sources,
   tool descriptors, processed documents tested before
@@ -172,10 +175,11 @@ invisible-Unicode carriers survive review of the rendered interface.
 
 | Tool | Type | Link |
 |---|---|---|
-| Garak | Open-source | https://github.com/leondz/garak |
-| LLM Guard | Open-source | https://github.com/protectai/llm-guard |
+| Garak | Open-source | <https://github.com/leondz/garak> |
+| LLM Guard | Open-source | <https://github.com/protectai/llm-guard> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI01 Agent Goal Hijack
 - DSGAI 2026: DSGAI01 Sensitive Data Leakage, DSGAI12 Unsafe NL Data Gateways
 - Other frameworks: ISO 27001 A.8.28 · NIST CSF 2.0 PR.PS-04 · NIST AI RMF MS-2.5
@@ -202,6 +206,7 @@ control section — data governance is a first-class AIMS concern.
 #### Mitigations for ISO 42001 alignment
 
 **Foundational**
+
 - A.7.2: Establish data quality criteria for all data
   entering LLM scope — sensitivity classification,
   appropriateness for AI use, handling requirements
@@ -214,6 +219,7 @@ control section — data governance is a first-class AIMS concern.
   disclosure impact severity
 
 **Hardening**
+
 - A.6.2.3: Implement output redaction as AIMS security
   control — PII and sensitive patterns masked before
   responses leave the LLM service boundary, documented
@@ -226,6 +232,7 @@ control section — data governance is a first-class AIMS concern.
   management review
 
 **Advanced**
+
 - Apply differential privacy for LLM trained on sensitive
   data — document privacy budget as A.7.2 data quality
   control in AIMS
@@ -237,10 +244,11 @@ control section — data governance is a first-class AIMS concern.
 
 | Tool | Type | Link |
 |---|---|---|
-| Microsoft Presidio | Open-source | https://github.com/microsoft/presidio |
-| Nightfall AI | Commercial | https://nightfall.ai |
+| Microsoft Presidio | Open-source | <https://github.com/microsoft/presidio> |
+| Nightfall AI | Commercial | <https://nightfall.ai> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI03 Identity & Privilege Abuse
 - DSGAI 2026: DSGAI01 Sensitive Data Leakage, DSGAI18 Inference & Data Reconstruction
 - Other frameworks: ISO 27001 A.8.11/A.8.12 · NIST AI RMF GV-1.6 · EU AI Act Art. 10
@@ -267,6 +275,7 @@ ISO 42001 A.6.1.2 (responsible AI system management) and Clause 5
 #### Mitigations for ISO 42001 alignment
 
 **Foundational**
+
 - Cl.5: Establish AI policy defining acceptable
   autonomous action scope — which actions require human
   confirmation documented at executive level as AIMS
@@ -279,6 +288,7 @@ ISO 42001 A.6.1.2 (responsible AI system management) and Clause 5
   consequence if each goes wrong
 
 **Hardening**
+
 - A.6.2.3: Implement tool permission enforcement as
   AIMS security control — scope enforced at orchestration
   layer independent of model instruction
@@ -290,6 +300,7 @@ ISO 42001 A.6.1.2 (responsible AI system management) and Clause 5
   covers autonomous action incidents
 
 **Advanced**
+
 - A.5.2: Formal impact assessment before each
   autonomous capability expansion — AIMS documented
   information requirement before increasing agent scope
@@ -300,10 +311,11 @@ ISO 42001 A.6.1.2 (responsible AI system management) and Clause 5
 
 | Tool | Type | Link |
 |---|---|---|
-| Guardrails AI | Open-source | https://github.com/guardrails-ai/guardrails |
-| NeMo Guardrails | Open-source | https://github.com/NVIDIA/NeMo-Guardrails |
+| Guardrails AI | Open-source | <https://github.com/guardrails-ai/guardrails> |
+| NeMo Guardrails | Open-source | <https://github.com/NVIDIA/NeMo-Guardrails> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI01 Agent Goal Hijack, ASI02 Tool Misuse
 - DSGAI 2026: DSGAI06 Tool Plugin & Agent Data Exchange
 - Other frameworks: EU AI Act Art. 14 · AIUC-1 B006 · NIST CSF 2.0 GV.OC-01
@@ -336,6 +348,7 @@ dependency is clean.
 #### Mitigations for ISO 42001 alignment
 
 **Foundational**
+
 - A.10.1: Establish AIMS third-party requirements for
   all LLM component vendors — security obligations,
   provenance documentation, vulnerability disclosure
@@ -349,6 +362,7 @@ dependency is clean.
   version, source, hash
 
 **Hardening**
+
 - A.10.1: Include security requirements in contracts
   with all LLM component vendors — provenance,
   integrity guarantees, incident notification SLA
@@ -361,6 +375,7 @@ dependency is clean.
   trends in management review
 
 **Advanced**
+
 - A.10.1: Conduct periodic security assessments of
   strategic LLM component suppliers — include in
   AIMS third-party review programme with defined cadence
@@ -371,10 +386,11 @@ dependency is clean.
 
 | Tool | Type | Link |
 |---|---|---|
-| CycloneDX | Open-source | https://cyclonedx.org |
-| ModelScan | Open-source | https://github.com/protectai/modelscan |
+| CycloneDX | Open-source | <https://cyclonedx.org> |
+| ModelScan | Open-source | <https://github.com/protectai/modelscan> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI04 Agentic Supply Chain Vulnerabilities
 - DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning
 - Other frameworks: NIST CSF 2.0 GV.SC-01 · ISO 27001 A.5.19/A.5.21 · NIST SP 800-218A
@@ -406,6 +422,7 @@ stage that writes weights, not just the original training corpus.
 #### Mitigations for ISO 42001 alignment
 
 **Foundational**
+
 - A.7.2: Establish data quality requirements covering
   integrity for all training data — source allowlisting,
   anomaly detection, statistical validation documented
@@ -418,6 +435,7 @@ stage that writes weights, not just the original training corpus.
   always available
 
 **Hardening**
+
 - A.6.2.6: Include poisoning detection in AIMS testing
   programme — backdoor trigger testing and output
   distribution analysis before every production model
@@ -430,6 +448,7 @@ stage that writes weights, not just the original training corpus.
   vendor contracts as A.10 third-party control
 
 **Advanced**
+
 - Post-training backdoor detection as mandatory AIMS
   deployment gate per A.6.2.6 — neural cleanse or
   equivalent, results in AIMS documented information
@@ -441,10 +460,11 @@ stage that writes weights, not just the original training corpus.
 
 | Tool | Type | Link |
 |---|---|---|
-| IBM Adversarial Robustness Toolbox | Open-source | https://github.com/Trusted-AI/adversarial-robustness-toolbox |
-| CleanLab | Open-source | https://github.com/cleanlab/cleanlab |
+| IBM Adversarial Robustness Toolbox | Open-source | <https://github.com/Trusted-AI/adversarial-robustness-toolbox> |
+| CleanLab | Open-source | <https://github.com/cleanlab/cleanlab> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning, DSGAI21 Disinformation via Data Poisoning
 - Other frameworks: NIST AI RMF MS-3.3 · MITRE ATLAS AML.T0032 · ISO 27001 A.8.27
@@ -471,6 +491,7 @@ evaluation) address resource risk as an operational AI management concern.
 #### Mitigations for ISO 42001 alignment
 
 **Foundational**
+
 - Cl.6.1: Include unbounded consumption in AI risk
   assessment — availability impact, cost exposure, DoS
   risk documented with owner and treatment
@@ -481,6 +502,7 @@ evaluation) address resource risk as an operational AI management concern.
   operational control — cost anomaly alerts
 
 **Hardening**
+
 - Cl.9: Include resource consumption in AIMS performance
   evaluation — trends, incidents, budget adherence
   reported in management review
@@ -489,6 +511,7 @@ evaluation) address resource risk as an operational AI management concern.
   under Clause 8
 
 **Advanced**
+
 - A.6.2.6: Include adversarial load testing in AIMS
   testing programme — sponge example attacks tested
   before production deployment
@@ -499,10 +522,11 @@ evaluation) address resource risk as an operational AI management concern.
 
 | Tool | Type | Link |
 |---|---|---|
-| LiteLLM | Open-source | https://github.com/BerriAI/litellm |
-| Kong Gateway | Open-source | https://github.com/Kong/kong |
+| LiteLLM | Open-source | <https://github.com/BerriAI/litellm> |
+| Kong Gateway | Open-source | <https://github.com/Kong/kong> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI08 Cascading Agent Failures
 - DSGAI 2026: DSGAI17 Data Availability & Resilience Failures
 - Other frameworks: NIST CSF 2.0 PR.IR-01 · ISA/IEC 62443 SR 7.6 (OT) · CWE-400
@@ -529,6 +553,7 @@ address misinformation as both an impact and a transparency concern.
 #### Mitigations for ISO 42001 alignment
 
 **Foundational**
+
 - A.5.2: Include misinformation in AI impact assessment —
   which decisions are influenced by LLM output, what is
   the consequence of incorrect recommendations per
@@ -540,6 +565,7 @@ address misinformation as both an impact and a transparency concern.
   requiring human verification before action
 
 **Hardening**
+
 - A.6.2.8: Implement production accuracy monitoring as
   AIMS operational control — hallucination rates per
   domain tracked, degradation alerted
@@ -548,6 +574,7 @@ address misinformation as both an impact and a transparency concern.
   domain-specific failure rates
 
 **Advanced**
+
 - A.6.2.6: Domain-specific accuracy testing before
   deployment — AIMS testing programme covers accuracy
   against defined thresholds per use case
@@ -559,10 +586,11 @@ address misinformation as both an impact and a transparency concern.
 
 | Tool | Type | Link |
 |---|---|---|
-| TruLens | Open-source | https://github.com/truera/trulens |
-| RAGAS | Open-source | https://github.com/explodinggradients/ragas |
+| TruLens | Open-source | <https://github.com/truera/trulens> |
+| RAGAS | Open-source | <https://github.com/explodinggradients/ragas> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI09 Human-Agent Trust Exploitation
 - DSGAI 2026: DSGAI21 Disinformation & Integrity Attacks
 - Other frameworks: EU AI Act Art. 13/50 · AIUC-1 F · NIST CSF 2.0 GV.OC-01
@@ -600,6 +628,7 @@ treat it as a security boundary.
 #### Mitigations for ISO 42001 alignment
 
 **Foundational**
+
 - A.7.3: Classify system prompts as sensitive operational
   data in AIMS — document handling requirements, access
   controls, and storage standards
@@ -610,6 +639,7 @@ treat it as a security boundary.
   security design requirement, not stored in cleartext
 
 **Hardening**
+
 - A.6.2.6: Include prompt extraction testing in AIMS
   testing programme — verify resistance to known
   extraction techniques before deployment
@@ -619,6 +649,7 @@ treat it as a security boundary.
   legitimately confidential operational configuration
 
 **Advanced**
+
 - Implement system prompt tokenisation — sensitive
   identifiers replaced with opaque tokens as A.6.2.3
   security design control
@@ -626,6 +657,7 @@ treat it as a security boundary.
   performance monitoring — trend data in management review
 
 #### Cross-references
+
 - Agentic Top 10: ASI01 Agent Goal Hijack
 - DSGAI 2026: DSGAI15 Over-Broad Context Windows
 - Other frameworks: AIUC-1 B003/B009 · ISO 27001 A.5.12 · CWE-200
@@ -652,6 +684,7 @@ stores as AI data assets.
 #### Mitigations for ISO 42001 alignment
 
 **Foundational**
+
 - A.7.2: Establish data quality requirements for vector
   stores — RBAC enabled, encryption at rest, content
   validation before ingestion documented as AIMS controls
@@ -662,6 +695,7 @@ stores as AI data assets.
   management obligation under A.6.2.3
 
 **Hardening**
+
 - A.6.2.6: Include vector store attacks in AIMS testing —
   RBAC bypass, path traversal, embedding inversion
   results as AIMS test evidence
@@ -670,6 +704,7 @@ stores as AI data assets.
   contracts
 
 **Advanced**
+
 - Apply differential privacy in embedding generation —
   document privacy budget as A.7.2 data quality control
 - Conduct embedding inversion red team as A.6.2.6
@@ -680,10 +715,11 @@ stores as AI data assets.
 
 | Tool | Type | Link |
 |---|---|---|
-| Weaviate | Open-source | https://weaviate.io |
-| ML Privacy Meter | Open-source | https://github.com/privacytrustlab/ml_privacy_meter |
+| Weaviate | Open-source | <https://weaviate.io> |
+| ML Privacy Meter | Open-source | <https://github.com/privacytrustlab/ml_privacy_meter> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - DSGAI 2026: DSGAI13 Vector Store Platform Security, DSGAI18 Inference & Data Reconstruction
 - Other frameworks: NIST AI RMF MS-2.5 · NIST CSF 2.0 PR.DS-01 · CWE-284
@@ -716,6 +752,7 @@ reaches a shell, a browser, or a database.
 #### Mitigations for ISO 42001 alignment
 
 **Foundational**
+
 - A.6.2.3: Document output encoding and schema validation
   as AIMS security design requirements — LLM output
   treated as untrusted input at all downstream interfaces
@@ -726,6 +763,7 @@ reaches a shell, a browser, or a database.
   commands, or eval functions — AIMS policy control
 
 **Hardening**
+
 - A.6.2.6: Include output injection in AIMS testing —
   XSS, SQL injection, command injection via model output
   tested against all interfaces consuming LLM responses
@@ -734,6 +772,7 @@ reaches a shell, a browser, or a database.
   cadence in AIMS documented information
 
 **Advanced**
+
 - Cl.9: Monitor output injection incidents in AIMS
   performance evaluation — incident trends reported
   in management review, controls improved based on data
@@ -742,10 +781,11 @@ reaches a shell, a browser, or a database.
 
 | Tool | Type | Link |
 |---|---|---|
-| OWASP ZAP | Open-source | https://www.zaproxy.org |
-| Semgrep | Open-source | https://semgrep.dev |
+| OWASP ZAP | Open-source | <https://www.zaproxy.org> |
+| Semgrep | Open-source | <https://semgrep.dev> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI02 Tool Misuse, ASI05 Unexpected Code Execution
 - DSGAI 2026: DSGAI05 Data Integrity & Validation Failures, DSGAI12 Unsafe NL Data Gateways
 - Other frameworks: OWASP ASVS V5 · NIST CSF 2.0 PR.PS-04 · CWE-79
@@ -841,4 +881,4 @@ information security foundation, ISO 42001 adds the AI-specific layer.
 ---
 
 Maintained by the OWASP GenAI Data Security Initiative.
-Part of the OWASP GenAI Crosswalk: https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk
+Part of the OWASP GenAI Crosswalk: <https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk>

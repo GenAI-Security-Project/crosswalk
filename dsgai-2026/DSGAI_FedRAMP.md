@@ -113,6 +113,7 @@ authenticated, logged access to AI data stores (AC-3).
 #### Mitigations
 
 **Foundational**
+
 - AU-2: Implement comprehensive logging for all AI data access events;
   cover training data, model weights, inference inputs/outputs, and
   prompt configurations
@@ -121,6 +122,7 @@ authenticated, logged access to AI data stores (AC-3).
 - AU-12: Generate inference audit records per FedRAMP requirements
 
 **Hardening**
+
 - AU-2: Feed AI data access logs into FedRAMP continuous monitoring;
   establish alerting for anomalous access patterns
 - AU-12: Implement tamper-evident logging for inference audit trails;
@@ -129,6 +131,7 @@ authenticated, logged access to AI data stores (AC-3).
   over-permissioned access
 
 **Advanced**
+
 - AU-2: Implement real-time analytics on data access logs; detect
   anomalous access patterns indicative of data exfiltration
 - AU-12: Include AI data access logging in FedRAMP annual assessment;
@@ -140,12 +143,13 @@ authenticated, logged access to AI data stores (AC-3).
 
 | Tool | Type | Link |
 |---|---|---|
-| OpenTelemetry | Open-source | https://opentelemetry.io |
-| AWS CloudTrail / Azure Monitor | Commercial | https://aws.amazon.com/cloudtrail/ |
-| Elasticsearch | Open-source | https://www.elastic.co |
-| Splunk | Commercial | https://www.splunk.com |
+| OpenTelemetry | Open-source | <https://opentelemetry.io> |
+| AWS CloudTrail / Azure Monitor | Commercial | <https://aws.amazon.com/cloudtrail/> |
+| Elasticsearch | Open-source | <https://www.elastic.co> |
+| Splunk | Commercial | <https://www.splunk.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - Agentic Top 10: ASI02 Misconfigured Access Controls
 - Other frameworks: SP 800-218A PS.1.1-PS – NIST CSF 2.0 DE.AE-3 – ISO 27001 A.12.4
@@ -173,6 +177,7 @@ change control for data pipelines (CM-3).
 #### Mitigations
 
 **Foundational**
+
 - PM-9: Define data visibility requirements for all AI systems within
   the FedRAMP boundary; specify what data flows must be documented
 - AU-2: Log data movement through AI pipelines with sufficient detail
@@ -181,6 +186,7 @@ change control for data pipelines (CM-3).
   pipeline change
 
 **Hardening**
+
 - PM-9: Include data visibility metrics in management reporting;
   track coverage across AI systems
 - AU-2: Implement automated data flow tracing; visualise end-to-end
@@ -189,6 +195,7 @@ change control for data pipelines (CM-3).
   ensure documentation stays current
 
 **Advanced**
+
 - PM-9: Include data visibility in FedRAMP SSP; demonstrate
   comprehensive understanding of AI data flows
 - AU-2: Deploy real-time data flow monitoring dashboards; enable
@@ -200,12 +207,13 @@ change control for data pipelines (CM-3).
 
 | Tool | Type | Link |
 |---|---|---|
-| Apache Atlas | Open-source | https://atlas.apache.org |
-| OpenLineage | Open-source | https://openlineage.io |
-| OpenTelemetry | Open-source | https://opentelemetry.io |
-| Collibra | Commercial | https://www.collibra.com |
+| Apache Atlas | Open-source | <https://atlas.apache.org> |
+| OpenLineage | Open-source | <https://openlineage.io> |
+| OpenTelemetry | Open-source | <https://opentelemetry.io> |
+| Collibra | Commercial | <https://www.collibra.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM07 Misinformation
 - Agentic Top 10: ASI09 Emerging Agentic Patterns
 - Other frameworks: SP 800-218A PW.1.1-PS – NIST AI RMF MAP 2.3 – ISO 42001 A.7.2
@@ -233,6 +241,7 @@ preventing unauthorised AI tool usage (AC-3).
 #### Mitigations
 
 **Foundational**
+
 - CM-7: Define and enforce an approved AI tools list; block access to
   unauthorised AI services from the FedRAMP environment
 - SA-9: Require FedRAMP authorisation for all third-party AI services
@@ -241,6 +250,7 @@ preventing unauthorised AI tool usage (AC-3).
   unauthorised AI tools
 
 **Hardening**
+
 - CM-7: Implement automated discovery of AI tool usage; detect and
   alert on shadow AI activity
 - SA-9: Conduct security assessment of all AI tools before approval;
@@ -249,6 +259,7 @@ preventing unauthorised AI tool usage (AC-3).
   unapproved AI services
 
 **Advanced**
+
 - CM-7: Include shadow AI detection in FedRAMP continuous monitoring;
   track and report on unauthorised AI tool usage
 - SA-9: Implement automated compliance verification for third-party
@@ -260,12 +271,13 @@ preventing unauthorised AI tool usage (AC-3).
 
 | Tool | Type | Link |
 |---|---|---|
-| Nightfall DLP | Commercial | https://www.nightfall.ai |
-| Netskope | Commercial | https://www.netskope.com |
-| Microsoft Defender for Cloud Apps | Commercial | https://www.microsoft.com/en-us/security/business/cloud-apps-defender |
-| Open Policy Agent | Open-source | https://www.openpolicyagent.org |
+| Nightfall DLP | Commercial | <https://www.nightfall.ai> |
+| Netskope | Commercial | <https://www.netskope.com> |
+| Microsoft Defender for Cloud Apps | Commercial | <https://www.microsoft.com/en-us/security/business/cloud-apps-defender> |
+| Open Policy Agent | Open-source | <https://www.openpolicyagent.org> |
 
 #### Cross-references
+
 - LLM Top 10: LLM04 Supply Chain
 - Agentic Top 10: ASI04 Supply Chain Compromise
 - Other frameworks: SP 800-218A PW.4.1-PS – CIS Controls 2 – NIST CSF 2.0 ID.AM-2
@@ -295,6 +307,7 @@ at rest (SC-28).
 #### Mitigations
 
 **Foundational**
+
 - SR-2: Include all AI data sources and artefacts in supply chain plan;
   document provenance and risk assessment for each
 - SR-3: Verify cryptographic integrity of all artefacts before use;
@@ -303,6 +316,7 @@ at rest (SC-28).
   modules
 
 **Hardening**
+
 - SI-3: Apply anomaly detection to training data; flag statistical
   outliers and content inconsistent with source domain
 - SR-3: Implement automated integrity verification in CI/CD; block
@@ -311,6 +325,7 @@ at rest (SC-28).
   continuous monitoring
 
 **Advanced**
+
 - SI-3: Conduct backdoor detection on all new model versions; use
   neural cleanse or equivalent before production
 - SR-3: Implement continuous supply chain integrity monitoring; alert
@@ -321,12 +336,13 @@ at rest (SC-28).
 
 | Tool | Type | Link |
 |---|---|---|
-| IBM Adversarial Robustness Toolbox | Open-source | https://github.com/Trusted-AI/adversarial-robustness-toolbox |
-| CleanLab | Open-source | https://github.com/cleanlab/cleanlab |
-| ModelScan | Open-source | https://github.com/protectai/modelscan |
-| Sigstore | Open-source | https://www.sigstore.dev |
+| IBM Adversarial Robustness Toolbox | Open-source | <https://github.com/Trusted-AI/adversarial-robustness-toolbox> |
+| CleanLab | Open-source | <https://github.com/cleanlab/cleanlab> |
+| ModelScan | Open-source | <https://github.com/protectai/modelscan> |
+| Sigstore | Open-source | <https://www.sigstore.dev> |
 
 #### Cross-references
+
 - LLM Top 10: LLM05 Data and Model Poisoning
 - Agentic Top 10: ASI06 Memory Poisoning & Context Confusion
 - Other frameworks: MITRE ATLAS AML.T0032 – SP 800-218A PS.1.1-PS – NIST CSF 2.0 PR.DS-8
@@ -354,6 +370,7 @@ configuration change control for data pipeline changes (CM-3).
 #### Mitigations
 
 **Foundational**
+
 - SR-3: Implement provenance tracking for all training data; document
   source, collection method, and licensing
 - SI-10: Define and enforce data quality thresholds; reject data failing
@@ -361,6 +378,7 @@ configuration change control for data pipeline changes (CM-3).
 - CM-3: Require change control for data source modifications
 
 **Hardening**
+
 - SR-3: Implement automated provenance verification; validate data
   source integrity at each pipeline stage
 - SI-10: Deploy continuous data quality monitoring; alert on quality
@@ -368,6 +386,7 @@ configuration change control for data pipeline changes (CM-3).
 - CM-3: Include data source changes in FedRAMP change management
 
 **Advanced**
+
 - SR-3: Include data provenance in FedRAMP annual assessment;
   demonstrate comprehensive provenance tracking
 - SI-10: Implement advanced data quality analytics; detect subtle
@@ -379,12 +398,13 @@ configuration change control for data pipeline changes (CM-3).
 
 | Tool | Type | Link |
 |---|---|---|
-| Great Expectations | Open-source | https://greatexpectations.io |
-| OpenLineage | Open-source | https://openlineage.io |
-| Apache Atlas | Open-source | https://atlas.apache.org |
-| Collibra | Commercial | https://www.collibra.com |
+| Great Expectations | Open-source | <https://greatexpectations.io> |
+| OpenLineage | Open-source | <https://openlineage.io> |
+| Apache Atlas | Open-source | <https://atlas.apache.org> |
+| Collibra | Commercial | <https://www.collibra.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM05 Data and Model Poisoning
 - Agentic Top 10: ASI06 Memory Poisoning & Context Confusion
 - Other frameworks: SP 800-218A PS.3.1-PS – NIST CSF 2.0 PR.DS-8 – ISO 42001 A.7.4
@@ -413,6 +433,7 @@ visibility (PM-9).
 #### Mitigations
 
 **Foundational**
+
 - CM-3: Maintain data lineage documentation for all AI pipelines;
   update on every change
 - AU-2: Log data transformation events with input/output references;
@@ -420,6 +441,7 @@ visibility (PM-9).
 - PM-9: Define lineage requirements per data sensitivity level
 
 **Hardening**
+
 - CM-3: Implement automated lineage capture; reduce manual documentation
   burden and ensure completeness
 - AU-2: Deploy end-to-end lineage tracing; visualise data flow from
@@ -427,6 +449,7 @@ visibility (PM-9).
 - PM-9: Include lineage completeness in management reporting
 
 **Advanced**
+
 - CM-3: Include data lineage in FedRAMP SSP; demonstrate comprehensive
   lineage tracking
 - AU-2: Implement lineage-based impact analysis; assess how data source
@@ -438,12 +461,13 @@ visibility (PM-9).
 
 | Tool | Type | Link |
 |---|---|---|
-| OpenLineage | Open-source | https://openlineage.io |
-| Apache Atlas | Open-source | https://atlas.apache.org |
-| dbt | Open-source | https://www.getdbt.com |
-| Collibra | Commercial | https://www.collibra.com |
+| OpenLineage | Open-source | <https://openlineage.io> |
+| Apache Atlas | Open-source | <https://atlas.apache.org> |
+| dbt | Open-source | <https://www.getdbt.com> |
+| Collibra | Commercial | <https://www.collibra.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM05 Data and Model Poisoning
 - Agentic Top 10: ASI07 Lateral Tool Chaining
 - Other frameworks: SP 800-218A PS.3.1-PS – NIST AI RMF MAP 2.3 – ISO 42001 A.7.4
@@ -472,6 +496,7 @@ aggregation risk (PM-9).
 #### Mitigations
 
 **Foundational**
+
 - AC-6: Restrict data aggregation to minimum necessary per use case;
   require justification for cross-source data combination
 - SC-7: Enforce boundary controls on data flows; prevent data from
@@ -479,6 +504,7 @@ aggregation risk (PM-9).
 - PM-9: Assess aggregation risk for each AI data pipeline
 
 **Hardening**
+
 - AC-6: Implement automated aggregation controls; alert when combined
   datasets exceed defined sensitivity thresholds
 - SC-7: Deploy data flow enforcement; block unauthorised data
@@ -486,6 +512,7 @@ aggregation risk (PM-9).
 - PM-9: Include aggregation risk in management risk reporting
 
 **Advanced**
+
 - Apply privacy-enhancing technologies — differential privacy,
   k-anonymity — to aggregated datasets
 - SC-7: Include data aggregation controls in FedRAMP annual assessment
@@ -496,12 +523,13 @@ aggregation risk (PM-9).
 
 | Tool | Type | Link |
 |---|---|---|
-| Microsoft Presidio | Open-source | https://github.com/microsoft/presidio |
-| ARX Data Anonymization | Open-source | https://arx.deidentifier.org |
-| Open Policy Agent | Open-source | https://www.openpolicyagent.org |
-| Collibra | Commercial | https://www.collibra.com |
+| Microsoft Presidio | Open-source | <https://github.com/microsoft/presidio> |
+| ARX Data Anonymization | Open-source | <https://arx.deidentifier.org> |
+| Open Policy Agent | Open-source | <https://www.openpolicyagent.org> |
+| Collibra | Commercial | <https://www.collibra.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - Agentic Top 10: ASI03 Privilege Escalation
 - Other frameworks: SP 800-218A PW.1.1-PS – NIST Privacy Framework – ISO 27701
@@ -530,6 +558,7 @@ comprehensive logging (AU-2), and system monitoring for leakage indicators
 #### Mitigations
 
 **Foundational**
+
 - SC-28: Encrypt all AI data at rest; enforce key management per
   FedRAMP requirements
 - AC-3: Implement role-based access on all AI data stores; deny by
@@ -537,6 +566,7 @@ comprehensive logging (AU-2), and system monitoring for leakage indicators
 - AU-2: Log all data access and model outputs
 
 **Hardening**
+
 - SI-4: Deploy output monitoring for sensitive data patterns; alert
   and block on detection
 - SC-28: Conduct data extraction testing; verify training data cannot
@@ -544,6 +574,7 @@ comprehensive logging (AU-2), and system monitoring for leakage indicators
 - AU-2: Feed data access logs into continuous monitoring
 
 **Advanced**
+
 - Apply differential privacy to training; bound memorisation risk
 - SI-4: Include data leakage testing in FedRAMP annual assessment
 - Deploy output classifiers detecting and redacting sensitive content
@@ -552,12 +583,13 @@ comprehensive logging (AU-2), and system monitoring for leakage indicators
 
 | Tool | Type | Link |
 |---|---|---|
-| Microsoft Presidio | Open-source | https://github.com/microsoft/presidio |
-| LLM Guard | Open-source | https://github.com/protectai/llm-guard |
-| Nightfall DLP | Commercial | https://www.nightfall.ai |
-| AWS Macie / Azure Purview | Commercial | https://aws.amazon.com/macie/ |
+| Microsoft Presidio | Open-source | <https://github.com/microsoft/presidio> |
+| LLM Guard | Open-source | <https://github.com/protectai/llm-guard> |
+| Nightfall DLP | Commercial | <https://www.nightfall.ai> |
+| AWS Macie / Azure Purview | Commercial | <https://aws.amazon.com/macie/> |
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure, LLM08 Hidden Context Exposure
 - Agentic Top 10: ASI03 Privilege Escalation
 - Other frameworks: SP 800-218A PS.1.1-PS – CWE-200 – NIST CSF 2.0 PR.DS-5
@@ -584,6 +616,7 @@ for IP access tracking (AU-12).
 #### Mitigations
 
 **Foundational**
+
 - SC-28: Encrypt all AI IP at rest; implement key management per
   FedRAMP requirements
 - AC-3: Restrict access to AI IP to minimum necessary personnel;
@@ -591,6 +624,7 @@ for IP access tracking (AU-12).
 - AU-12: Log all access to AI IP with full identity and action detail
 
 **Hardening**
+
 - SC-28: Implement DLP controls for AI IP; monitor and block
   exfiltration attempts
 - AC-3: Implement time-bounded access for model weight downloads;
@@ -599,6 +633,7 @@ for IP access tracking (AU-12).
   anomalous access patterns
 
 **Advanced**
+
 - Deploy model watermarking to detect stolen model weights
 - SC-28: Include IP protection in FedRAMP annual assessment
 - AC-3: Implement hardware-backed key management for model weight
@@ -608,12 +643,13 @@ for IP access tracking (AU-12).
 
 | Tool | Type | Link |
 |---|---|---|
-| HashiCorp Vault | Commercial | https://www.vaultproject.io |
-| Nightfall DLP | Commercial | https://www.nightfall.ai |
-| AWS KMS / Azure Key Vault | Commercial | https://aws.amazon.com/kms/ |
-| ModelScan | Open-source | https://github.com/protectai/modelscan |
+| HashiCorp Vault | Commercial | <https://www.vaultproject.io> |
+| Nightfall DLP | Commercial | <https://www.nightfall.ai> |
+| AWS KMS / Azure Key Vault | Commercial | <https://aws.amazon.com/kms/> |
+| ModelScan | Open-source | <https://github.com/protectai/modelscan> |
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - Agentic Top 10: ASI04 Supply Chain Compromise
 - Other frameworks: SP 800-218A PS.1.1-PS – MITRE ATLAS AML.T0024 – NIST CSF 2.0 PR.DS-5
@@ -641,18 +677,21 @@ covering synthetic data risks (RA-5).
 #### Mitigations
 
 **Foundational**
+
 - SI-4: Monitor synthetic data for sensitive pattern leakage; validate
   privacy preservation before use
 - CA-7: Track synthetic data quality metrics over time
 - RA-5: Assess re-identification risk for synthetic datasets
 
 **Hardening**
+
 - SI-4: Deploy automated privacy validation for synthetic data;
   verify differential privacy guarantees
 - CA-7: Include synthetic data monitoring in continuous monitoring
 - RA-5: Conduct re-identification testing on synthetic datasets
 
 **Advanced**
+
 - Deploy formal privacy guarantees for synthetic data generation
 - Include synthetic data risk in FedRAMP assessment
 - Implement continuous privacy monitoring for synthetic data pipelines
@@ -661,12 +700,13 @@ covering synthetic data risks (RA-5).
 
 | Tool | Type | Link |
 |---|---|---|
-| Gretel AI | Commercial | https://gretel.ai |
-| SDV | Open-source | https://sdv.dev |
-| ARX Data Anonymization | Open-source | https://arx.deidentifier.org |
-| Microsoft Presidio | Open-source | https://github.com/microsoft/presidio |
+| Gretel AI | Commercial | <https://gretel.ai> |
+| SDV | Open-source | <https://sdv.dev> |
+| ARX Data Anonymization | Open-source | <https://arx.deidentifier.org> |
+| Microsoft Presidio | Open-source | <https://github.com/microsoft/presidio> |
 
 #### Cross-references
+
 - LLM Top 10: LLM07 Misinformation
 - Agentic Top 10: ASI09 Emerging Agentic Patterns
 - Other frameworks: SP 800-218A PW.7.2-PS – NIST Privacy Framework – ISO 27701
@@ -694,6 +734,7 @@ retention governance (PM-9).
 #### Mitigations
 
 **Foundational**
+
 - CM-3: Define retention policies for all AI data types; implement
   automated deletion schedules
 - SC-28: Encrypt retained data with per-dataset keys enabling
@@ -701,12 +742,14 @@ retention governance (PM-9).
 - PM-9: Define retention periods per FedRAMP and applicable regulations
 
 **Hardening**
+
 - CM-3: Implement automated retention enforcement; verify deletion
   completeness
 - SC-28: Implement crypto-shredding for model weight disposal
 - PM-9: Include retention compliance in management reporting
 
 **Advanced**
+
 - CM-3: Include retention compliance in FedRAMP annual assessment
 - Deploy automated retention compliance verification across all AI
   data stores
@@ -716,12 +759,13 @@ retention governance (PM-9).
 
 | Tool | Type | Link |
 |---|---|---|
-| AWS S3 Lifecycle / Azure Lifecycle Management | Commercial | https://aws.amazon.com/s3/ |
-| HashiCorp Vault | Commercial | https://www.vaultproject.io |
-| Open Policy Agent | Open-source | https://www.openpolicyagent.org |
-| Apache Atlas | Open-source | https://atlas.apache.org |
+| AWS S3 Lifecycle / Azure Lifecycle Management | Commercial | <https://aws.amazon.com/s3/> |
+| HashiCorp Vault | Commercial | <https://www.vaultproject.io> |
+| Open Policy Agent | Open-source | <https://www.openpolicyagent.org> |
+| Apache Atlas | Open-source | <https://atlas.apache.org> |
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - Agentic Top 10: ASI06 Memory Poisoning & Context Confusion
 - Other frameworks: SP 800-218A PS.3.1-PS – NIST CSF 2.0 PR.DS-3 – GDPR Art. 17
@@ -749,16 +793,19 @@ access enforcement based on ownership (AC-3), and logging of data usage
 #### Mitigations
 
 **Foundational**
+
 - PM-9: Define ownership policies for all AI data categories
 - AC-3: Align access controls with ownership rights
 - AU-2: Log data usage for ownership compliance tracking
 
 **Hardening**
+
 - PM-9: Include ownership governance in management reporting
 - AC-3: Implement automated licence compliance enforcement
 - AU-2: Deploy usage analytics for ownership tracking
 
 **Advanced**
+
 - PM-9: Include ownership in FedRAMP SSP
 - Deploy automated rights management for AI data
 - AU-2: Implement comprehensive usage auditing
@@ -767,12 +814,13 @@ access enforcement based on ownership (AC-3), and logging of data usage
 
 | Tool | Type | Link |
 |---|---|---|
-| Collibra | Commercial | https://www.collibra.com |
-| Apache Atlas | Open-source | https://atlas.apache.org |
-| Open Policy Agent | Open-source | https://www.openpolicyagent.org |
-| Alation | Commercial | https://www.alation.com |
+| Collibra | Commercial | <https://www.collibra.com> |
+| Apache Atlas | Open-source | <https://atlas.apache.org> |
+| Open Policy Agent | Open-source | <https://www.openpolicyagent.org> |
+| Alation | Commercial | <https://www.alation.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM07 Misinformation
 - Agentic Top 10: ASI09 Emerging Agentic Patterns
 - Other frameworks: SP 800-218A PW.1.1-PS – ISO 42001 A.7.2 – NIST Privacy Framework
@@ -799,18 +847,21 @@ enforcement restricting data usage (AC-3), logging of all data operations
 #### Mitigations
 
 **Foundational**
+
 - AC-3: Enforce purpose-limitation controls on data access; restrict
   to approved uses
 - AU-2: Log all data operations with usage context
 - SI-4: Monitor for data usage inconsistent with approved purposes
 
 **Hardening**
+
 - AC-3: Implement automated purpose enforcement; block operations
   outside approved scope
 - AU-2: Deploy usage pattern analytics; detect purpose drift
 - SI-4: Include misuse detection in continuous monitoring
 
 **Advanced**
+
 - AC-3: Include purpose-limitation compliance in FedRAMP assessment
 - Deploy automated purpose compliance verification
 - SI-4: Implement advanced misuse detection analytics
@@ -819,12 +870,13 @@ enforcement restricting data usage (AC-3), logging of all data operations
 
 | Tool | Type | Link |
 |---|---|---|
-| Open Policy Agent | Open-source | https://www.openpolicyagent.org |
-| OpenTelemetry | Open-source | https://opentelemetry.io |
-| Collibra | Commercial | https://www.collibra.com |
-| Splunk | Commercial | https://www.splunk.com |
+| Open Policy Agent | Open-source | <https://www.openpolicyagent.org> |
+| OpenTelemetry | Open-source | <https://opentelemetry.io> |
+| Collibra | Commercial | <https://www.collibra.com> |
+| Splunk | Commercial | <https://www.splunk.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM03 Excessive Agency
 - Agentic Top 10: ASI02 Misconfigured Access Controls
 - Other frameworks: SP 800-218A PW.1.1-PS – NIST Privacy Framework – GDPR Art. 5
@@ -851,17 +903,20 @@ covering consent governance (PM-9), access enforcement aligned with consent
 #### Mitigations
 
 **Foundational**
+
 - PM-9: Define consent requirements for all AI data processing
 - AC-3: Align data access with consent status; block processing on
   withdrawn consent
 - AU-2: Log consent decisions and status changes
 
 **Hardening**
+
 - PM-9: Include consent compliance in management reporting
 - AC-3: Implement automated consent enforcement across AI pipelines
 - AU-2: Deploy consent audit capabilities; verify compliance
 
 **Advanced**
+
 - PM-9: Include consent management in FedRAMP SSP
 - Deploy automated consent lifecycle management
 - AC-3: Implement real-time consent verification at data access
@@ -870,12 +925,13 @@ covering consent governance (PM-9), access enforcement aligned with consent
 
 | Tool | Type | Link |
 |---|---|---|
-| OneTrust | Commercial | https://www.onetrust.com |
-| Collibra | Commercial | https://www.collibra.com |
-| Open Policy Agent | Open-source | https://www.openpolicyagent.org |
-| TrustArc | Commercial | https://trustarc.com |
+| OneTrust | Commercial | <https://www.onetrust.com> |
+| Collibra | Commercial | <https://www.collibra.com> |
+| Open Policy Agent | Open-source | <https://www.openpolicyagent.org> |
+| TrustArc | Commercial | <https://trustarc.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - Agentic Top 10: ASI02 Misconfigured Access Controls
 - Other frameworks: SP 800-218A PW.1.1-PS – GDPR Art. 7 – NIST Privacy Framework
@@ -902,18 +958,21 @@ processing scope (CM-7), and risk management covering minimisation (PM-9).
 #### Mitigations
 
 **Foundational**
+
 - AC-6: Restrict data collection to minimum necessary; enforce at
   ingestion points
 - CM-7: Disable collection of non-essential data fields
 - PM-9: Define minimum necessary data per AI use case
 
 **Hardening**
+
 - AC-6: Implement automated minimisation enforcement; alert on
   collection exceeding defined scope
 - CM-7: Deploy data field filtering at pipeline ingestion
 - PM-9: Include minimisation compliance in management reporting
 
 **Advanced**
+
 - Deploy privacy-enhancing technologies to reduce data requirements
 - Include minimisation in FedRAMP annual assessment
 - Implement continuous minimisation compliance monitoring
@@ -922,12 +981,13 @@ processing scope (CM-7), and risk management covering minimisation (PM-9).
 
 | Tool | Type | Link |
 |---|---|---|
-| Microsoft Presidio | Open-source | https://github.com/microsoft/presidio |
-| ARX Data Anonymization | Open-source | https://arx.deidentifier.org |
-| Open Policy Agent | Open-source | https://www.openpolicyagent.org |
-| OneTrust | Commercial | https://www.onetrust.com |
+| Microsoft Presidio | Open-source | <https://github.com/microsoft/presidio> |
+| ARX Data Anonymization | Open-source | <https://arx.deidentifier.org> |
+| Open Policy Agent | Open-source | <https://www.openpolicyagent.org> |
+| OneTrust | Commercial | <https://www.onetrust.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - Agentic Top 10: ASI02 Misconfigured Access Controls
 - Other frameworks: SP 800-218A PW.1.1-PS – GDPR Art. 5(1)(c) – NIST Privacy Framework
@@ -956,17 +1016,20 @@ and system monitoring for privacy erosion indicators (SI-4).
 #### Mitigations
 
 **Foundational**
+
 - SC-28: Encrypt AI data at rest; implement privacy-preserving controls
 - AC-3: Enforce access controls accounting for aggregation risk
 - PM-9: Assess privacy erosion risk for each AI system
 
 **Hardening**
+
 - SI-4: Deploy privacy erosion monitoring; detect inference and
   re-identification capabilities
 - SC-28: Conduct memorisation testing; verify training data privacy
 - PM-9: Include privacy erosion in management risk reporting
 
 **Advanced**
+
 - Apply differential privacy to training; bound memorisation
 - Deploy privacy-preserving computation techniques
 - Include privacy erosion assessment in FedRAMP annual assessment
@@ -975,12 +1038,13 @@ and system monitoring for privacy erosion indicators (SI-4).
 
 | Tool | Type | Link |
 |---|---|---|
-| Microsoft Presidio | Open-source | https://github.com/microsoft/presidio |
-| ARX Data Anonymization | Open-source | https://arx.deidentifier.org |
-| Opacus | Open-source | https://opacus.ai |
-| OneTrust | Commercial | https://www.onetrust.com |
+| Microsoft Presidio | Open-source | <https://github.com/microsoft/presidio> |
+| ARX Data Anonymization | Open-source | <https://arx.deidentifier.org> |
+| Opacus | Open-source | <https://opacus.ai> |
+| OneTrust | Commercial | <https://www.onetrust.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - Agentic Top 10: ASI03 Privilege Escalation
 - Other frameworks: SP 800-218A PW.1.1-PS – NIST Privacy Framework – GDPR Art. 25
@@ -1007,17 +1071,20 @@ scanning covering bias detection (RA-5).
 #### Mitigations
 
 **Foundational**
+
 - SI-4: Monitor AI outputs for bias indicators; establish baseline
   fairness metrics
 - CA-7: Include fairness metrics in continuous monitoring
 - RA-5: Conduct bias assessment before deployment
 
 **Hardening**
+
 - SI-4: Deploy automated bias detection; alert on fairness degradation
 - CA-7: Track fairness trends over time; escalate degradation
 - RA-5: Include bias testing in regular vulnerability assessments
 
 **Advanced**
+
 - Deploy formal fairness constraints in training pipelines
 - Include bias assessment in FedRAMP annual assessment
 - Implement continuous fairness monitoring with automated remediation
@@ -1026,12 +1093,13 @@ scanning covering bias detection (RA-5).
 
 | Tool | Type | Link |
 |---|---|---|
-| IBM AI Fairness 360 | Open-source | https://aif360.mybluemix.net |
-| Fairlearn | Open-source | https://fairlearn.org |
-| What-If Tool | Open-source | https://pair-code.github.io/what-if-tool/ |
-| Fiddler AI | Commercial | https://www.fiddler.ai |
+| IBM AI Fairness 360 | Open-source | <https://aif360.mybluemix.net> |
+| Fairlearn | Open-source | <https://fairlearn.org> |
+| What-If Tool | Open-source | <https://pair-code.github.io/what-if-tool/> |
+| Fiddler AI | Commercial | <https://www.fiddler.ai> |
 
 #### Cross-references
+
 - LLM Top 10: LLM07 Misinformation
 - Agentic Top 10: ASI09 Emerging Agentic Patterns
 - Other frameworks: SP 800-218A PW.7.2-PS – NIST AI RMF MAP 2.3 – ISO 42001 A.6.2.6
@@ -1059,17 +1127,20 @@ assessment for governance completeness (RA-3).
 #### Mitigations
 
 **Foundational**
+
 - PM-9: Establish AI data governance framework; define roles and
   policies
 - CM-3: Maintain governance policies under change control
 - RA-3: Assess governance completeness; identify gaps
 
 **Hardening**
+
 - PM-9: Include governance in management reporting; track maturity
 - CM-3: Implement automated policy compliance checking
 - RA-3: Conduct regular governance gap analysis
 
 **Advanced**
+
 - PM-9: Include governance in FedRAMP SSP; demonstrate maturity
 - Deploy automated governance monitoring
 - RA-3: Include governance in FedRAMP annual assessment
@@ -1078,12 +1149,13 @@ assessment for governance completeness (RA-3).
 
 | Tool | Type | Link |
 |---|---|---|
-| Collibra | Commercial | https://www.collibra.com |
-| Open Policy Agent | Open-source | https://www.openpolicyagent.org |
-| Alation | Commercial | https://www.alation.com |
-| ServiceNow GRC | Commercial | https://www.servicenow.com |
+| Collibra | Commercial | <https://www.collibra.com> |
+| Open Policy Agent | Open-source | <https://www.openpolicyagent.org> |
+| Alation | Commercial | <https://www.alation.com> |
+| ServiceNow GRC | Commercial | <https://www.servicenow.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM07 Misinformation
 - Agentic Top 10: ASI09 Emerging Agentic Patterns
 - Other frameworks: SP 800-218A PW.1.1-PS – NIST AI RMF GOV – ISO 42001 5.1
@@ -1110,16 +1182,19 @@ external service controls (SA-9), supply chain planning for data providers
 #### Mitigations
 
 **Foundational**
+
 - SA-9: Require FedRAMP authorisation for third-party data providers
 - SR-2: Include data providers in supply chain risk plan
 - SR-3: Verify third-party data provenance and integrity
 
 **Hardening**
+
 - SA-9: Include data provider security in continuous monitoring
 - SR-2: Conduct regular third-party risk reassessment
 - SR-3: Implement automated data validation from third-party sources
 
 **Advanced**
+
 - SA-9: Conduct on-site assessments of critical data providers
 - SR-2: Include third-party data risk in board-level reporting
 - SR-3: Deploy continuous third-party data integrity monitoring
@@ -1128,12 +1203,13 @@ external service controls (SA-9), supply chain planning for data providers
 
 | Tool | Type | Link |
 |---|---|---|
-| Great Expectations | Open-source | https://greatexpectations.io |
-| CycloneDX | Open-source | https://cyclonedx.org |
-| OneTrust Vendorpedia | Commercial | https://www.onetrust.com |
-| ServiceNow VRM | Commercial | https://www.servicenow.com |
+| Great Expectations | Open-source | <https://greatexpectations.io> |
+| CycloneDX | Open-source | <https://cyclonedx.org> |
+| OneTrust Vendorpedia | Commercial | <https://www.onetrust.com> |
+| ServiceNow VRM | Commercial | <https://www.servicenow.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM04 Supply Chain
 - Agentic Top 10: ASI04 Supply Chain Compromise
 - Other frameworks: SP 800-218A PW.4.1-PS – NIST CSF 2.0 ID.SC-2 – EBA Outsourcing Guidelines
@@ -1161,18 +1237,21 @@ control for data location (CM-3).
 #### Mitigations
 
 **Foundational**
+
 - SC-7: Enforce data flow controls at network boundary; prevent AI
   data from leaving approved jurisdictions
 - PM-9: Define data residency requirements per applicable laws
 - CM-3: Document all AI data storage locations; update on change
 
 **Hardening**
+
 - SC-7: Implement automated data flow enforcement; alert on
   unauthorised cross-border transfers
 - PM-9: Include localisation compliance in management reporting
 - CM-3: Deploy automated data location tracking
 
 **Advanced**
+
 - SC-7: Include data localisation in FedRAMP annual assessment
 - Deploy automated cross-border transfer detection and blocking
 - PM-9: Implement continuous localisation compliance monitoring
@@ -1181,12 +1260,13 @@ control for data location (CM-3).
 
 | Tool | Type | Link |
 |---|---|---|
-| AWS Region Controls / Azure Policy | Commercial | https://aws.amazon.com/compliance/data-residency/ |
-| Netskope | Commercial | https://www.netskope.com |
-| Open Policy Agent | Open-source | https://www.openpolicyagent.org |
-| OneTrust | Commercial | https://www.onetrust.com |
+| AWS Region Controls / Azure Policy | Commercial | <https://aws.amazon.com/compliance/data-residency/> |
+| Netskope | Commercial | <https://www.netskope.com> |
+| Open Policy Agent | Open-source | <https://www.openpolicyagent.org> |
+| OneTrust | Commercial | <https://www.onetrust.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - Agentic Top 10: ASI04 Supply Chain Compromise
 - Other frameworks: SP 800-218A PW.1.1-PS – GDPR Art. 44–49 – FedRAMP High Baseline
@@ -1216,6 +1296,7 @@ with legal requirements (AC-3).
 #### Mitigations
 
 **Foundational**
+
 - PM-9: Map applicable data laws to AI processing activities; define
   compliance requirements for each
 - RA-3: Conduct compliance gap analysis; identify non-compliance areas
@@ -1223,6 +1304,7 @@ with legal requirements (AC-3).
 - AC-3: Implement legally mandated access controls
 
 **Hardening**
+
 - PM-9: Include regulatory compliance in management reporting; track
   compliance status across AI systems
 - RA-3: Conduct regular compliance reassessment aligned with
@@ -1230,6 +1312,7 @@ with legal requirements (AC-3).
 - AU-2: Implement automated compliance evidence collection
 
 **Advanced**
+
 - PM-9: Include AI regulatory compliance in FedRAMP SSP
 - Deploy automated compliance monitoring across all AI systems
 - RA-3: Include regulatory compliance in FedRAMP annual assessment
@@ -1238,12 +1321,13 @@ with legal requirements (AC-3).
 
 | Tool | Type | Link |
 |---|---|---|
-| OneTrust | Commercial | https://www.onetrust.com |
-| TrustArc | Commercial | https://trustarc.com |
-| ServiceNow GRC | Commercial | https://www.servicenow.com |
-| Open Policy Agent | Open-source | https://www.openpolicyagent.org |
+| OneTrust | Commercial | <https://www.onetrust.com> |
+| TrustArc | Commercial | <https://trustarc.com> |
+| ServiceNow GRC | Commercial | <https://www.servicenow.com> |
+| Open Policy Agent | Open-source | <https://www.openpolicyagent.org> |
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - Agentic Top 10: ASI02 Misconfigured Access Controls
 - Other frameworks: SP 800-218A PW.1.1-PS – GDPR – CCPA – HIPAA – FedRAMP High Baseline
@@ -1280,5 +1364,7 @@ with legal requirements (AC-3).
 
 ---
 
-*Part of the [OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk) –
+*Part of the
+[OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk)
+–
 maintained by the [OWASP GenAI Data Security Initiative](https://genai.owasp.org)*

@@ -136,6 +136,7 @@ invisible-Unicode carriers survive review of the rendered interface.
 #### Compliance obligations by tier
 
 **Foundational — applies to all LLM deployments**
+
 - Art. 50 (limited risk): If your LLM is a chatbot, disclose to
   users they are interacting with AI — this baseline applies even
   before prompt injection mitigations
@@ -145,6 +146,7 @@ invisible-Unicode carriers survive review of the rendered interface.
   as part of Art. 15 cybersecurity measures
 
 **Hardening — required for high-risk AI systems (from Aug 2026)**
+
 - Art. 9: Maintain documented risk treatment for prompt injection —
   controls, residual risk acceptance, review cadence
 - Art. 15: Implement and document technical robustness measures
@@ -153,6 +155,7 @@ invisible-Unicode carriers survive review of the rendered interface.
   system documentation — auditable evidence required
 
 **Advanced — required for systemic risk GPAI models (from Aug 2025)**
+
 - Art. 55(1)(b): Conduct and document adversarial testing covering
   prompt injection — results must be available to the AI Office on
   request
@@ -163,6 +166,7 @@ invisible-Unicode carriers survive review of the rendered interface.
   documented as part of Art. 55 cybersecurity measures
 
 #### Fines exposure
+
 Violation of Art. 15 technical requirements for high-risk systems:
 up to **€15 million or 3% of global turnover**. Violation of Art. 55
 systemic risk obligations: up to **€35 million or 7% of global turnover**.
@@ -171,11 +175,12 @@ systemic risk obligations: up to **€35 million or 7% of global turnover**.
 
 | Tool | Type | Link |
 |---|---|---|
-| Garak | Open-source | https://github.com/leondz/garak |
-| LLM Guard | Open-source | https://github.com/protectai/llm-guard |
-| Rebuff | Open-source | https://github.com/protectai/rebuff |
+| Garak | Open-source | <https://github.com/leondz/garak> |
+| LLM Guard | Open-source | <https://github.com/protectai/llm-guard> |
+| Rebuff | Open-source | <https://github.com/protectai/rebuff> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI01 Agent Goal Hijack
 - DSGAI 2026: DSGAI01 Sensitive Data Leakage
 - Other frameworks: NIST AI RMF MS-2.5 · MITRE ATLAS AML.T0051 · ISO 42001 6.1.2
@@ -210,6 +215,7 @@ incident.
 #### Compliance obligations by tier
 
 **Foundational — applies to all LLM deployments**
+
 - Art. 13 (all risk tiers): Document and communicate to users what
   data the LLM has access to and what data may appear in outputs —
   this is a baseline transparency obligation
@@ -217,6 +223,7 @@ incident.
   users understand the system may produce outputs based on their data
 
 **Hardening — required for high-risk AI systems**
+
 - Art. 10: Implement and document data governance for training data —
   data sources, quality controls, privacy measures, and bias mitigation
 - Art. 17: Establish post-market monitoring for sensitive disclosure
@@ -225,6 +232,7 @@ incident.
   technical Art. 15 cybersecurity measure
 
 **Advanced — required for GPAI models (from Aug 2025)**
+
 - Art. 53(1)(a): Maintain technical documentation covering training
   data governance — available to the AI Office on request
 - GDPR Art. 25: Implement data protection by design — differential
@@ -234,6 +242,7 @@ incident.
   with model training data
 
 #### Fines exposure
+
 GDPR violations: up to **€20 million or 4% of global turnover**.
 EU AI Act Art. 17 quality management failures: up to
 **€15 million or 3% of global turnover**.
@@ -242,13 +251,15 @@ EU AI Act Art. 17 quality management failures: up to
 
 | Tool | Type | Link |
 |---|---|---|
-| Microsoft Presidio | Open-source | https://github.com/microsoft/presidio |
-| Private AI | Commercial | https://private-ai.com |
-| Nightfall AI | Commercial | https://nightfall.ai |
+| Microsoft Presidio | Open-source | <https://github.com/microsoft/presidio> |
+| Private AI | Commercial | <https://private-ai.com> |
+| Nightfall AI | Commercial | <https://nightfall.ai> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI03 Identity & Privilege Abuse
-- DSGAI 2026: DSGAI01 Sensitive Data Leakage, DSGAI07 Data Governance & Lifecycle, DSGAI08 Non-Compliance & Regulatory Violations
+- DSGAI 2026: DSGAI01 Sensitive Data Leakage, DSGAI07 Data Governance & Lifecycle, DSGAI08 Non-Compliance &
+  Regulatory Violations
 - Other frameworks: ISO 27701 · NIST AI RMF GV-1.6 · GDPR Art. 5/25/32
 
 ---
@@ -274,6 +285,7 @@ article in the entire regulation to this vulnerability.
 #### Compliance obligations by tier
 
 **Foundational**
+
 - Art. 14: Implement ability for human operators to pause, stop, or
   override LLM actions — this is mandatory for high-risk systems
   and cannot be waived by deployers under Art. 29
@@ -281,6 +293,7 @@ article in the entire regulation to this vulnerability.
   users must understand what the system can and cannot do autonomously
 
 **Hardening — required for high-risk AI systems**
+
 - Art. 14: Implement and document effective human oversight measures —
   what actions require approval, who can override, how overrides
   are logged — auditable evidence required for conformity assessment
@@ -290,6 +303,7 @@ article in the entire regulation to this vulnerability.
   instructions — deployers are legally obligated to follow them
 
 **Advanced**
+
 - Art. 17: Include human oversight effectiveness in post-market
   monitoring — measure override rates, intervention effectiveness
 - Formally specify permitted action boundaries as part of Art. 9
@@ -301,11 +315,12 @@ article in the entire regulation to this vulnerability.
 
 | Tool | Type | Link |
 |---|---|---|
-| Guardrails AI | Open-source | https://github.com/guardrails-ai/guardrails |
-| NeMo Guardrails | Open-source | https://github.com/NVIDIA/NeMo-Guardrails |
-| LangSmith | Commercial | https://smith.langchain.com |
+| Guardrails AI | Open-source | <https://github.com/guardrails-ai/guardrails> |
+| NeMo Guardrails | Open-source | <https://github.com/NVIDIA/NeMo-Guardrails> |
+| LangSmith | Commercial | <https://smith.langchain.com> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI01 Agent Goal Hijack, ASI02 Tool Misuse, ASI09 Human-Agent Trust Exploitation
 - DSGAI 2026: DSGAI06 Tool Plugin & Agent Data Exchange
 - Other frameworks: NIST AI RMF GV-1.7 · AIUC-1 B006/C · ISO 42001 6.1.2
@@ -340,6 +355,7 @@ dependency is clean.
 #### Compliance obligations by tier
 
 **Foundational — applies to all LLM deployments**
+
 - Art. 25: Understand and document your position in the AI value
   chain — are you a provider, deployer, or both? Each carries
   distinct obligations
@@ -347,6 +363,7 @@ dependency is clean.
   in your LLM deployment
 
 **Hardening — required for high-risk AI systems**
+
 - Art. 9: Include supply chain risks in your formal risk management
   system — third-party components assessed before production use
 - Art. 17: Establish documented supply chain security procedures —
@@ -355,6 +372,7 @@ dependency is clean.
   include in contractual arrangements
 
 **Advanced — required for GPAI models**
+
 - Art. 53(1)(a): Document all training data sources including
   third-party datasets — provenance, quality assessment, copyright
   status, and privacy compliance
@@ -367,11 +385,12 @@ dependency is clean.
 
 | Tool | Type | Link |
 |---|---|---|
-| CycloneDX | Open-source | https://cyclonedx.org |
-| ModelScan | Open-source | https://github.com/protectai/modelscan |
-| OWASP Dependency-Check | Open-source | https://owasp.org/www-project-dependency-check/ |
+| CycloneDX | Open-source | <https://cyclonedx.org> |
+| ModelScan | Open-source | <https://github.com/protectai/modelscan> |
+| OWASP Dependency-Check | Open-source | <https://owasp.org/www-project-dependency-check/> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI04 Agentic Supply Chain Vulnerabilities
 - DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning
 - Other frameworks: NIST AI RMF MP-5.1 · NIST SP 800-218A · ISO 42001 8.4
@@ -404,6 +423,7 @@ stage that writes weights, not just the original training corpus.
 #### Compliance obligations by tier
 
 **Foundational**
+
 - Art. 10: Establish data governance policy for all training data —
   source validation, quality assessment, and lineage documentation
   are baseline requirements for high-risk systems
@@ -411,6 +431,7 @@ stage that writes weights, not just the original training corpus.
   management system
 
 **Hardening — required for high-risk AI systems**
+
 - Art. 10: Implement technical data quality controls — anomaly
   detection on training datasets, source allowlisting, lineage
   tracking — documented as Art. 17 quality management evidence
@@ -420,6 +441,7 @@ stage that writes weights, not just the original training corpus.
   monitoring response procedures
 
 **Advanced — required for systemic risk GPAI models**
+
 - Art. 55(1)(b): Conduct adversarial testing covering poisoning
   attack scenarios — document results, available to AI Office
 - Art. 55: Implement incident reporting for serious poisoning
@@ -431,11 +453,12 @@ stage that writes weights, not just the original training corpus.
 
 | Tool | Type | Link |
 |---|---|---|
-| IBM Adversarial Robustness Toolbox | Open-source | https://github.com/Trusted-AI/adversarial-robustness-toolbox |
-| CleanLab | Open-source | https://github.com/cleanlab/cleanlab |
-| Great Expectations | Open-source | https://greatexpectations.io |
+| IBM Adversarial Robustness Toolbox | Open-source | <https://github.com/Trusted-AI/adversarial-robustness-toolbox> |
+| CleanLab | Open-source | <https://github.com/cleanlab/cleanlab> |
+| Great Expectations | Open-source | <https://greatexpectations.io> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning, DSGAI21 Disinformation via Data Poisoning
 - Other frameworks: NIST AI RMF MS-3.3 · ISO 42001 8.4 · MITRE ATLAS AML.T0032
@@ -463,12 +486,14 @@ continuity.
 #### Compliance obligations by tier
 
 **Foundational**
+
 - Art. 9: Document resource exhaustion as a foreseeable risk —
   include in risk management system with treatment controls assigned
 - Implement rate limiting per user, session, and API key —
   basic Art. 15 cybersecurity measure
 
 **Hardening — required for high-risk AI systems**
+
 - Art. 15: Implement and document technical resilience measures —
   rate limiting, token limits, cost budgets — as Art. 15 cybersecurity
   evidence for conformity assessment
@@ -479,6 +504,7 @@ continuity.
   Art. 17 quality management requirements
 
 **Advanced**
+
 - Art. 15: Conduct adversarial cost-maximisation testing — document
   results as robustness evidence
 - Implement adaptive rate limiting with real-time load awareness —
@@ -490,11 +516,12 @@ continuity.
 
 | Tool | Type | Link |
 |---|---|---|
-| LiteLLM | Open-source | https://github.com/BerriAI/litellm |
-| Kong Gateway | Open-source | https://github.com/Kong/kong |
-| OpenTelemetry | Open-source | https://opentelemetry.io |
+| LiteLLM | Open-source | <https://github.com/BerriAI/litellm> |
+| Kong Gateway | Open-source | <https://github.com/Kong/kong> |
+| OpenTelemetry | Open-source | <https://opentelemetry.io> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI08 Cascading Agent Failures
 - DSGAI 2026: DSGAI17 Data Availability & Resilience Failures
 - Other frameworks: NIST AI RMF MG-3.2 · ISA/IEC 62443 SR 7.1 (OT) · CWE-400
@@ -522,6 +549,7 @@ and Article 13 requires high-risk systems to be sufficiently accurate.
 #### Compliance obligations by tier
 
 **Foundational — applies to all LLM deployments**
+
 - Art. 50: All chatbot deployments must disclose to users that they
   are interacting with an AI system — this is a universal obligation
   regardless of risk tier, in force from August 2025
@@ -530,6 +558,7 @@ and Article 13 requires high-risk systems to be sufficiently accurate.
   included
 
 **Hardening — required for high-risk AI systems**
+
 - Art. 13: Include accuracy metrics and known limitations in
   technical documentation provided to deployers — deployers must
   understand hallucination rates before deployment
@@ -539,6 +568,7 @@ and Article 13 requires high-risk systems to be sufficiently accurate.
   incidents — detection and correction procedures documented
 
 **Advanced — required for systemic risk GPAI models**
+
 - Art. 55(1)(a): Conduct and document risk assessment for
   disinformation and misinformation — implement mitigations,
   available to AI Office on request
@@ -551,11 +581,12 @@ and Article 13 requires high-risk systems to be sufficiently accurate.
 
 | Tool | Type | Link |
 |---|---|---|
-| TruLens | Open-source | https://github.com/truera/trulens |
-| RAGAS | Open-source | https://github.com/explodinggradients/ragas |
-| DeepEval | Open-source | https://github.com/confident-ai/deepeval |
+| TruLens | Open-source | <https://github.com/truera/trulens> |
+| RAGAS | Open-source | <https://github.com/explodinggradients/ragas> |
+| DeepEval | Open-source | <https://github.com/confident-ai/deepeval> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI09 Human-Agent Trust Exploitation
 - DSGAI 2026: DSGAI21 Disinformation & Integrity Attacks
 - Other frameworks: NIST AI RMF GV-1.7/MS-4.1 · AIUC-1 F · ENISA
@@ -595,6 +626,7 @@ treat it as a security boundary.
 #### Compliance obligations by tier
 
 **Foundational**
+
 - Art. 13: Comply with transparency obligations without disclosing
   security-sensitive system prompt content — the obligation is to
   explain system capabilities and limitations, not expose internals
@@ -602,6 +634,7 @@ treat it as a security boundary.
   subject to access controls — document in Art. 17 quality management
 
 **Hardening — required for high-risk AI systems**
+
 - Art. 17: Implement system prompt version control and change
   management procedures — auditable evidence of who changed what
   and when required for conformity assessment
@@ -612,6 +645,7 @@ treat it as a security boundary.
   for transparency and what is protected as security configuration
 
 **Advanced**
+
 - Art. 53(1)(b): For GPAI models, ensure capability summaries and
   technical documentation published under Art. 53 do not reveal
   security-sensitive configuration
@@ -624,10 +658,11 @@ treat it as a security boundary.
 
 | Tool | Type | Link |
 |---|---|---|
-| LLM Guard | Open-source | https://github.com/protectai/llm-guard |
-| Garak | Open-source | https://github.com/leondz/garak |
+| LLM Guard | Open-source | <https://github.com/protectai/llm-guard> |
+| Garak | Open-source | <https://github.com/leondz/garak> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI01 Agent Goal Hijack
 - DSGAI 2026: DSGAI15 Over-Broad Context Windows
 - Other frameworks: NIST AI RMF GV-1.6 · AIUC-1 B003/B009 · CWE-200
@@ -655,12 +690,14 @@ whose outputs rely on retrieval-augmented generation.
 #### Compliance obligations by tier
 
 **Foundational**
+
 - Art. 10: Apply data quality controls to all content entering
   vector stores — classification, validation, and access controls
   are Art. 10 requirements for high-risk RAG systems
 - Document vector store risks in Art. 9 risk management system
 
 **Hardening — required for high-risk AI systems**
+
 - Art. 15: Implement technical controls for embedding integrity —
   access controls, anomaly detection, encryption — documented as
   Art. 15 cybersecurity measures
@@ -670,6 +707,7 @@ whose outputs rely on retrieval-augmented generation.
   testing evidence
 
 **Advanced**
+
 - Conduct embedding inversion red team exercises — document results
   as Art. 17 quality management evidence
 - Implement differential privacy in embedding generation for
@@ -681,11 +719,12 @@ whose outputs rely on retrieval-augmented generation.
 
 | Tool | Type | Link |
 |---|---|---|
-| Weaviate (with RBAC) | Open-source | https://weaviate.io |
-| Qdrant | Open-source | https://qdrant.tech |
-| RAGAS | Open-source | https://github.com/explodinggradients/ragas |
+| Weaviate (with RBAC) | Open-source | <https://weaviate.io> |
+| Qdrant | Open-source | <https://qdrant.tech> |
+| RAGAS | Open-source | <https://github.com/explodinggradients/ragas> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - DSGAI 2026: DSGAI13 Vector Store Platform Security, DSGAI18 Inference & Data Reconstruction
 - Other frameworks: NIST AI RMF MS-3.3 · AIUC-1 A · ISO 27701
@@ -719,12 +758,14 @@ reaches a shell, a browser, or a database.
 #### Compliance obligations by tier
 
 **Foundational**
+
 - Art. 9: Document insecure output handling as a foreseeable risk
   in your risk management system — assign treatment controls
 - Treat all LLM output as untrusted input to downstream systems —
   encoding, validation, and sanitisation mandatory
 
 **Hardening — required for high-risk AI systems**
+
 - Art. 15: Implement and document technical output security measures —
   schema validation, sanitisation, encoding — as auditable evidence
 - Art. 17: Establish post-market monitoring for output handling
@@ -733,6 +774,7 @@ reaches a shell, a browser, or a database.
   testing evidence
 
 **Advanced**
+
 - Conduct DAST on all interfaces consuming LLM output — include
   results in Art. 17 quality management documentation
 - Deploy dedicated output security layer documented as Art. 15
@@ -744,11 +786,12 @@ reaches a shell, a browser, or a database.
 
 | Tool | Type | Link |
 |---|---|---|
-| OWASP ZAP | Open-source | https://www.zaproxy.org |
-| Semgrep | Open-source | https://semgrep.dev |
-| DOMPurify | Open-source | https://github.com/cure53/DOMPurify |
+| OWASP ZAP | Open-source | <https://www.zaproxy.org> |
+| Semgrep | Open-source | <https://semgrep.dev> |
+| DOMPurify | Open-source | <https://github.com/cure53/DOMPurify> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI02 Tool Misuse, ASI05 Unexpected Code Execution
 - DSGAI 2026: DSGAI05 Data Integrity & Validation Failures
 - Other frameworks: NIST AI RMF MS-2.6 · OWASP ASVS V5 · CWE-79
@@ -818,5 +861,7 @@ against the OWASP LLM Top 10:
 
 ---
 
-*Part of the [OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk) —
+*Part of the
+[OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk)
+—
 maintained by the [OWASP GenAI Data Security Initiative](https://genai.owasp.org)*

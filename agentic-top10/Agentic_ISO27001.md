@@ -115,6 +115,7 @@ threat intelligence (A.5.7).
 #### Mitigations by tier
 
 **Foundational**
+
 - A.8.28: Implement goal-state verification and input
   validation as secure coding requirements — all agentic
   integration code reviewed for injection resistance
@@ -125,6 +126,7 @@ threat intelligence (A.5.7).
   control applied to all agent data sources
 
 **Hardening**
+
 - A.8.29: Include goal hijack scenarios in security
   testing programme — all indirect injection surfaces
   tested before each production release
@@ -135,6 +137,7 @@ threat intelligence (A.5.7).
   requirement — tested as A.8.29 security testing activity
 
 **Advanced**
+
 - A.8.29: Red team with novel indirect injection
   techniques quarterly — results documented as ISMS
   security testing evidence
@@ -146,11 +149,12 @@ threat intelligence (A.5.7).
 
 | Tool | Type | Link |
 |---|---|---|
-| Garak | Open-source | https://github.com/leondz/garak |
-| Rebuff | Open-source | https://github.com/protectai/rebuff |
-| Invariant Analyzer | Open-source | https://github.com/invariantlabs-ai/invariant |
+| Garak | Open-source | <https://github.com/leondz/garak> |
+| Rebuff | Open-source | <https://github.com/protectai/rebuff> |
+| Invariant Analyzer | Open-source | <https://github.com/invariantlabs-ai/invariant> |
 
 #### Cross-references
+
 - LLM Top 10: LLM01 Prompt Injection, LLM03 Excessive Agency
 - DSGAI 2026: DSGAI12 Unsafe NL Data Gateways, DSGAI15 Over-Broad Context Windows
 - Other frameworks: AIUC-1 B001/B005 · NIST AI RMF GV-1.7 · EU AI Act Art. 14/15
@@ -178,6 +182,7 @@ humans from misusing privileged access apply to agent tool scope.
 #### Mitigations by tier
 
 **Foundational**
+
 - A.8.2: Manage agent tool access as privileged access —
   per-tool permission manifests enforced, minimum scope,
   reviewed on change and quarterly
@@ -188,6 +193,7 @@ humans from misusing privileged access apply to agent tool scope.
   ISMS policy control documented under A.5.15
 
 **Hardening**
+
 - A.8.15: Log all tool invocations — tool identity,
   parameters, agent identity, user session, timestamp —
   immutable audit trail for forensic investigation
@@ -199,6 +205,7 @@ humans from misusing privileged access apply to agent tool scope.
   MCP descriptor poisoning tested before each release
 
 **Advanced**
+
 - A.8.2: Include agent tool access in privileged access
   reviews — quarterly, any permission not actively used
   is removed, documented as ISMS evidence
@@ -210,11 +217,12 @@ humans from misusing privileged access apply to agent tool scope.
 
 | Tool | Type | Link |
 |---|---|---|
-| NeMo Guardrails | Open-source | https://github.com/NVIDIA/NeMo-Guardrails |
-| MCP Inspector | Open-source | https://github.com/modelcontextprotocol/inspector |
-| Invariant Analyzer | Open-source | https://github.com/invariantlabs-ai/invariant |
+| NeMo Guardrails | Open-source | <https://github.com/NVIDIA/NeMo-Guardrails> |
+| MCP Inspector | Open-source | <https://github.com/modelcontextprotocol/inspector> |
+| Invariant Analyzer | Open-source | <https://github.com/invariantlabs-ai/invariant> |
 
 #### Cross-references
+
 - LLM Top 10: LLM10 Improper Output Handling, LLM03 Excessive Agency
 - DSGAI 2026: DSGAI06 Tool Plugin & Agent Data Exchange
 - Other frameworks: AIUC-1 B006/B007 · OWASP NHI Top 10 NHI-5 · ISA/IEC 62443 SR 2.2 (OT)
@@ -242,6 +250,7 @@ controls that govern human privileged access apply to agent identities.
 #### Mitigations by tier
 
 **Foundational**
+
 - A.8.2: Manage agent credentials as privileged access —
   JIT issuance, short TTL, automatic expiry, minimum
   scope enforced, no shared credentials across agents
@@ -253,6 +262,7 @@ controls that govern human privileged access apply to agent identities.
   code, or agent memory
 
 **Hardening**
+
 - A.8.15: Log all agent credential operations —
   issuance, use, expiry, revocation — full ISMS audit
   trail enabling forensic investigation
@@ -263,6 +273,7 @@ controls that govern human privileged access apply to agent identities.
   response to anomalous NHI usage
 
 **Advanced**
+
 - PKI-backed agent identities as A.8.24 advanced
   cryptographic control — certificate-based
   authentication for all agent-to-system connections
@@ -276,11 +287,12 @@ controls that govern human privileged access apply to agent identities.
 
 | Tool | Type | Link |
 |---|---|---|
-| HashiCorp Vault | Open-source | https://www.vaultproject.io |
-| SPIFFE / SPIRE | Open-source | https://spiffe.io |
-| Teleport | Open-source/Commercial | https://goteleport.com |
+| HashiCorp Vault | Open-source | <https://www.vaultproject.io> |
+| SPIFFE / SPIRE | Open-source | <https://spiffe.io> |
+| Teleport | Open-source/Commercial | <https://goteleport.com> |
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI02 Agent Identity & Credential Exposure
 - Other frameworks: OWASP NHI Top 10 (all entries) · AIUC-1 A/B007 · EU AI Act Art. 15
 
@@ -306,6 +318,7 @@ all agent component providers as information security suppliers.
 #### Mitigations by tier
 
 **Foundational**
+
 - A.5.19: Apply supplier security requirements to all
   agent component vendors — source documentation,
   integrity guarantees, vulnerability disclosure
@@ -317,6 +330,7 @@ all agent component providers as information security suppliers.
   without review through ISMS change management
 
 **Hardening**
+
 - A.5.20: Include security requirements in all agent
   component vendor contracts — integrity attestation,
   backdoor scanning coverage, incident notification SLA
@@ -327,6 +341,7 @@ all agent component providers as information security suppliers.
   agent component — unsigned components rejected
 
 **Advanced**
+
 - A.5.19: Periodic security assessments of strategic
   agent component suppliers — include in ISMS supplier
   management programme with defined cadence
@@ -338,11 +353,12 @@ all agent component providers as information security suppliers.
 
 | Tool | Type | Link |
 |---|---|---|
-| CycloneDX | Open-source | https://cyclonedx.org |
-| ModelScan | Open-source | https://github.com/protectai/modelscan |
-| Syft | Open-source | https://github.com/anchore/syft |
+| CycloneDX | Open-source | <https://cyclonedx.org> |
+| ModelScan | Open-source | <https://github.com/protectai/modelscan> |
+| Syft | Open-source | <https://github.com/anchore/syft> |
 
 #### Cross-references
+
 - LLM Top 10: LLM04 Supply Chain
 - DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning
 - Other frameworks: NIST CSF 2.0 GV.SC-01 · NIST SP 800-218A · ISA/IEC 62443 62443-2-4 (OT)
@@ -369,6 +385,7 @@ govern code execution security as a development and operational control.
 #### Mitigations by tier
 
 **Foundational**
+
 - A.8.26: Define security requirements for code execution
   capability before any development — sandbox spec,
   network isolation, allowlist documented as ISMS
@@ -379,6 +396,7 @@ govern code execution security as a development and operational control.
   through code review and CI/CD
 
 **Hardening**
+
 - A.8.29: Include sandbox escape and code injection
   scenarios in security testing — adversarial testing
   before each agentic code execution deployment,
@@ -388,6 +406,7 @@ govern code execution security as a development and operational control.
   outside scratch directory detected and alerted
 
 **Advanced**
+
 - Hardware-level sandboxing as A.8.28 advanced secure
   coding control — documented as ISMS evidence for
   highest-risk code execution deployments
@@ -399,11 +418,12 @@ govern code execution security as a development and operational control.
 
 | Tool | Type | Link |
 |---|---|---|
-| gVisor | Open-source | https://gvisor.dev |
-| Semgrep | Open-source | https://semgrep.dev |
-| Bandit | Open-source | https://github.com/PyCQA/bandit |
+| gVisor | Open-source | <https://gvisor.dev> |
+| Semgrep | Open-source | <https://semgrep.dev> |
+| Bandit | Open-source | <https://github.com/PyCQA/bandit> |
 
 #### Cross-references
+
 - LLM Top 10: LLM10 Improper Output Handling
 - DSGAI 2026: DSGAI12 Unsafe NL Data Gateways
 - Other frameworks: AIUC-1 B005/B006 · CWE-94 · EU AI Act Art. 15
@@ -431,6 +451,7 @@ subject to ISMS access and protection controls.
 #### Mitigations by tier
 
 **Foundational**
+
 - A.8.3: Implement access controls on all agent memory
   stores — only agent and designated administrators
   can write, access logged as ISMS evidence
@@ -441,6 +462,7 @@ subject to ISMS access and protection controls.
   asset control
 
 **Hardening**
+
 - A.8.16: Monitor memory stores for anomalous content
   and access patterns — statistical integrity checks,
   unusual write volumes alerted through ISMS monitoring
@@ -449,6 +471,7 @@ subject to ISMS access and protection controls.
   memory write, ISMS DLP programme extended to agents
 
 **Advanced**
+
 - Cryptographic memory integrity verification —
   tamper detection between write and read as A.8.24
   advanced cryptographic control
@@ -460,10 +483,11 @@ subject to ISMS access and protection controls.
 
 | Tool | Type | Link |
 |---|---|---|
-| Weaviate (with RBAC) | Open-source | https://weaviate.io |
-| Langfuse | Open-source | https://langfuse.com |
+| Weaviate (with RBAC) | Open-source | <https://weaviate.io> |
+| Langfuse | Open-source | <https://langfuse.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM05 Data and Model Poisoning, LLM09 Vector and Embedding Weaknesses
 - DSGAI 2026: DSGAI13 Vector Store Platform Security
 - Other frameworks: AIUC-1 A/B002 · NIST AI RMF MS-2.5 · ISA/IEC 62443 SR 3.7 (OT)
@@ -491,6 +515,7 @@ cryptographic controls.
 #### Mitigations by tier
 
 **Foundational**
+
 - A.8.24: Enforce mutual TLS on all A2A channels —
   both parties authenticate, messages encrypted,
   replay protection enforced as ISMS cryptographic control
@@ -499,6 +524,7 @@ cryptographic controls.
   filtered as ISMS network security control
 
 **Hardening**
+
 - A.8.15: Log all A2A messages — sender identity, content
   hash, timestamp — immutable ISMS audit trail
 - A.5.14: Define A2A information transfer policy —
@@ -506,6 +532,7 @@ cryptographic controls.
   schema validation documented as ISMS policy
 
 **Advanced**
+
 - PKI-backed agent identities for A2A — short-lived
   certificates, hardware-backed keys for highest-risk
   agent clusters as A.8.24 advanced cryptographic control
@@ -516,11 +543,12 @@ cryptographic controls.
 
 | Tool | Type | Link |
 |---|---|---|
-| SPIFFE / SPIRE | Open-source | https://spiffe.io |
-| Linkerd | Open-source | https://linkerd.io |
-| cert-manager | Open-source | https://cert-manager.io |
+| SPIFFE / SPIRE | Open-source | <https://spiffe.io> |
+| Linkerd | Open-source | <https://linkerd.io> |
+| cert-manager | Open-source | <https://cert-manager.io> |
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI02 Agent Identity & Credential Exposure
 - Other frameworks: OWASP NHI Top 10 NHI-4/NHI-7 · AIUC-1 B007/B008 · ISA/IEC 62443 SR 3.1 (OT)
 
@@ -547,6 +575,7 @@ obligations. In OT environments this is Critical severity.
 #### Mitigations by tier
 
 **Foundational**
+
 - A.5.30: Include agent cluster failures in BCP —
   RTO/RPO defined, circuit breakers as resilience
   controls, operator kill switch documented and tested
@@ -557,6 +586,7 @@ obligations. In OT environments this is Critical severity.
   actions halt and process control reverts to manual
 
 **Hardening**
+
 - A.8.16: Monitor for cascade indicators — correlated
   anomalous agent actions detected through ISMS
   monitoring programme before physical impact
@@ -566,6 +596,7 @@ obligations. In OT environments this is Critical severity.
   recovery to known-good state after cascade
 
 **Advanced**
+
 - Conduct chaos engineering as A.8.29 security testing
   activity — intentional failure injection, circuit
   breaker effectiveness verified, results in ISMS
@@ -576,10 +607,11 @@ obligations. In OT environments this is Critical severity.
 
 | Tool | Type | Link |
 |---|---|---|
-| OpenTelemetry | Open-source | https://opentelemetry.io |
-| Resilience4j | Open-source | https://resilience4j.readme.io |
+| OpenTelemetry | Open-source | <https://opentelemetry.io> |
+| Resilience4j | Open-source | <https://resilience4j.readme.io> |
 
 #### Cross-references
+
 - LLM Top 10: LLM06 Unbounded Consumption
 - DSGAI 2026: DSGAI17 Data Availability & Resilience Failures
 - Other frameworks: AIUC-1 D · ISA/IEC 62443 SR 7.6/7.7 (OT) · NIST SP 800-82 Rev 3
@@ -607,6 +639,7 @@ a people and policy risk, not only a technical risk.
 #### Mitigations by tier
 
 **Foundational**
+
 - A.6.3: Provide security awareness training to all
   users of agentic decision-support tools — cover AI
   limitations, verification requirements, how to identify
@@ -620,6 +653,7 @@ a people and policy risk, not only a technical risk.
   interface contexts as ISMS policy requirement
 
 **Hardening**
+
 - A.8.16: Monitor for aggregate over-trust patterns —
   systematic operator acceptance without verification
   detected as ISMS monitoring control
@@ -630,6 +664,7 @@ a people and policy risk, not only a technical risk.
   procedural control
 
 **Advanced**
+
 - A.6.3: Include trust exploitation scenarios in operator
   competency assessments — verify operators can identify
   manipulated agent recommendations, results in ISMS
@@ -638,6 +673,7 @@ a people and policy risk, not only a technical risk.
   in your specific deployment
 
 #### Cross-references
+
 - LLM Top 10: LLM07 Misinformation
 - DSGAI 2026: DSGAI21 Disinformation & Integrity Attacks
 - Other frameworks: EU AI Act Art. 13/50 · AIUC-1 C/F · ISA/IEC 62443 SR 2.3 (OT)
@@ -666,6 +702,7 @@ management) governs the containment response.
 #### Mitigations by tier
 
 **Foundational**
+
 - A.8.15: Comprehensive audit logging of all agent
   actions — no production deployment without full
   observability, ISMS non-negotiable requirement
@@ -677,6 +714,7 @@ management) governs the containment response.
   validation, forensic capture documented
 
 **Hardening**
+
 - A.8.16: Establish behavioural baseline and continuous
   monitoring — baseline documented during commissioning,
   deviation triggers tiered ISMS response
@@ -687,6 +725,7 @@ management) governs the containment response.
   procedure documented as evidence
 
 **Advanced**
+
 - A.8.29: Rogue agent red team exercises — simulate
   persistent hidden goal pursuit across extended
   sessions, verify detection capability holds, results
@@ -699,11 +738,12 @@ management) governs the containment response.
 
 | Tool | Type | Link |
 |---|---|---|
-| Langfuse | Open-source | https://langfuse.com |
-| Helicone | Open-source | https://www.helicone.ai |
-| Wazuh | Open-source | https://wazuh.com |
+| Langfuse | Open-source | <https://langfuse.com> |
+| Helicone | Open-source | <https://www.helicone.ai> |
+| Wazuh | Open-source | <https://wazuh.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM03 Excessive Agency
 - DSGAI 2026: DSGAI16 Endpoint & Browser Overreach
 - Other frameworks: AIUC-1 B001/B002/C/E · EU AI Act Art. 14/15 · ISA/IEC 62443 SR 3.7 (OT)
@@ -793,4 +833,4 @@ management) governs the containment response.
 ---
 
 Maintained by the OWASP GenAI Data Security Initiative.
-Part of the OWASP GenAI Crosswalk: https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk
+Part of the OWASP GenAI Crosswalk: <https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk>

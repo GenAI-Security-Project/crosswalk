@@ -34,13 +34,13 @@ outputs. See ASI01.
 
 **AIVSS (AI Vulnerability Scoring System)**
 OWASP's scoring framework for AI vulnerabilities, extending CVSS v4.0
-with ten agentic amplifier factors. Reference: https://aivss.owasp.org
+with ten agentic amplifier factors. Reference: <https://aivss.owasp.org>
 
 **AIUC-1**
 The world's first AI agent security, safety and reliability certification
 standard. Covers six domains: Data & Privacy (A), Security (B), Safety (C),
 Reliability (D), Accountability (E), Society (F).
-Reference: https://www.aiuc-1.com
+Reference: <https://www.aiuc-1.com>
 
 **Agentic supply chain**
 The set of runtime components an agent depends on: tools, MCP servers,
@@ -99,7 +99,7 @@ of a Software Bill of Materials (SBOM).
 **DSGAI**
 OWASP GenAI Data Security Risks and Mitigations 2026. 21 entries
 (DSGAI01–DSGAI21) covering the full GenAI data security lifecycle.
-Reference: https://genai.owasp.org
+Reference: <https://genai.owasp.org>
 
 ---
 

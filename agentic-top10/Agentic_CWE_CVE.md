@@ -29,6 +29,7 @@ and components used by agentic AI deployments. They demonstrate that
 these risks are not theoretical.
 
 **Use this file to:**
+
 - Link agentic risks to SAST/DAST tool rule sets (most tools use CWE IDs)
 - Provide evidence in risk assessments that vulnerabilities are real
 - Satisfy penetration test scope requirements referencing specific CWEs
@@ -455,6 +456,7 @@ The agentic AI CVE landscape is evolving rapidly. Contributors are
 encouraged to submit new CVEs via pull request as they are published.
 
 **To add a CVE:**
+
 1. Confirm the CVE is published in the NVD
 2. Verify the affected system is used in or relevant to agentic AI deployments
 3. Write a one-sentence description of the agentic relevance
@@ -462,10 +464,11 @@ encouraged to submit new CVEs via pull request as they are published.
 5. Update the CHANGELOG.md entry for the next patch release
 
 **CVE research resources:**
-- NVD: https://nvd.nist.gov
-- MITRE CVE: https://cve.mitre.org
-- OSV (open source vulnerabilities): https://osv.dev
-- MITRE ATLAS incidents: https://atlas.mitre.org/studies
+
+- NVD: <https://nvd.nist.gov>
+- MITRE CVE: <https://cve.mitre.org>
+- OSV (open source vulnerabilities): <https://osv.dev>
+- MITRE ATLAS incidents: <https://atlas.mitre.org/studies>
 
 ---
 
@@ -489,4 +492,4 @@ encouraged to submit new CVEs via pull request as they are published.
 ---
 
 Maintained by the OWASP GenAI Data Security Initiative.
-Part of the OWASP GenAI Crosswalk: https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk
+Part of the OWASP GenAI Crosswalk: <https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk>

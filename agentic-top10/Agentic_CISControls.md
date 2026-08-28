@@ -25,6 +25,7 @@ organised into 18 control groups with Implementation Groups (IG1/IG2/IG3).
 | Organisational (IG3) | CIS 12–18 | Network monitoring, security awareness, app security, incident response, pen testing |
 
 **Implementation Groups:**
+
 - IG1 — Essential cyber hygiene, small to medium organisations
 - IG2 — IG1 + additional controls for organisations with sensitive data
 - IG3 — IG2 + advanced controls for enterprise and regulated industries
@@ -81,6 +82,7 @@ An attacker redirects agent objectives through instruction injection.
 #### Mitigations by tier
 
 **Foundational (IG1)**
+
 - CIS 8.2: Enable audit logging for all agent input
   channels — every prompt logged with agent identity,
   session ID, and source channel
@@ -89,6 +91,7 @@ An attacker redirects agent objectives through instruction injection.
 - Implement kill switch accessible from operator console
 
 **Hardening (IG2)**
+
 - CIS 16.1: Establish secure coding standards covering
   agentic integration — goal-state verification and
   input validation as mandatory requirements reviewed
@@ -100,6 +103,7 @@ An attacker redirects agent objectives through instruction injection.
   goal at session start, deviation triggers suspension
 
 **Advanced (IG3)**
+
 - CIS 18.1: Include goal hijack in penetration testing —
   direct, indirect via RAG, indirect via tool returns,
   multi-turn attacks tested against your specific
@@ -109,6 +113,7 @@ An attacker redirects agent objectives through instruction injection.
   documents
 
 #### Cross-references
+
 - LLM Top 10: LLM01 Prompt Injection, LLM03 Excessive Agency
 - DSGAI 2026: DSGAI12 Unsafe NL Data Gateways
 - Other frameworks: ISO 27001 A.8.28 · NIST CSF 2.0 PR.PS-04 · AIUC-1 B001/B005
@@ -135,6 +140,7 @@ govern agent tool permissions as privileged access.
 #### Mitigations by tier
 
 **Foundational (IG1)**
+
 - CIS 5.4: Manage agent tool access as privileged access —
   per-tool permission manifests, minimum scope, quarterly
   review, irreversibility classification documented
@@ -145,6 +151,7 @@ govern agent tool permissions as privileged access.
   separate confirmation interface, not through agent chat
 
 **Hardening (IG2)**
+
 - CIS 8.5: Detailed audit logs for all tool invocations —
   tool identity, parameters, agent identity, session,
   timestamp — immutable trail for forensic investigation
@@ -155,6 +162,7 @@ govern agent tool permissions as privileged access.
   check before loading any tool descriptor
 
 **Advanced (IG3)**
+
 - CIS 18.1: Include tool misuse in penetration testing —
   destructive parameters, tool chain exploitation,
   MCP descriptor poisoning tested against your deployment
@@ -162,6 +170,7 @@ govern agent tool permissions as privileged access.
   legitimate tool invocations within defined scope
 
 #### Cross-references
+
 - LLM Top 10: LLM10 Improper Output Handling, LLM03 Excessive Agency
 - DSGAI 2026: DSGAI06 Tool Plugin & Agent Data Exchange
 - Other frameworks: ISO 27001 A.8.2 · OWASP NHI Top 10 NHI-5 · AIUC-1 B006/B007
@@ -188,6 +197,7 @@ NHIs are accounts requiring the same management rigour as human accounts.
 #### Mitigations by tier
 
 **Foundational (IG1)**
+
 - CIS 5.4: Manage agent credentials as privileged accounts —
   unique NHI per agent deployment, minimum scope, no
   shared credentials, short TTL with automatic expiry
@@ -199,6 +209,7 @@ NHIs are accounts requiring the same management rigour as human accounts.
   source code, or agent memory
 
 **Hardening (IG2)**
+
 - CIS 8.5: Detailed logging of all credential operations —
   issuance, use, expiry — full trail enabling forensic
   investigation of lateral movement
@@ -208,6 +219,7 @@ NHIs are accounts requiring the same management rigour as human accounts.
   all agent NHIs — unused permissions removed
 
 **Advanced (IG3)**
+
 - CIS 18.1: Include credential abuse in penetration
   testing — attempt lateral movement using agent
   credentials, document access scope achievable
@@ -215,6 +227,7 @@ NHIs are accounts requiring the same management rigour as human accounts.
   based authentication as advanced NHI control
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI02 Agent Identity & Credential Exposure
 - Other frameworks: OWASP NHI Top 10 (all entries) · ISO 27001 A.8.2/A.5.16 · EU AI Act Art. 15
 
@@ -240,6 +253,7 @@ management) govern agent components as software assets.
 #### Mitigations by tier
 
 **Foundational (IG1)**
+
 - CIS 2.1: Maintain ML SBOM as software asset inventory —
   every agent component (tools, MCP servers, model weights,
   libraries) inventoried with version, source, hash
@@ -250,6 +264,7 @@ management) govern agent components as software assets.
   without review and approval
 
 **Hardening (IG2)**
+
 - CIS 16.6: Approved component list for all agentic
   deployments — only sourced from approved vendors,
   cryptographic signatures verified before loading
@@ -260,6 +275,7 @@ management) govern agent components as software assets.
   rejection before loading if suspicious patterns found
 
 **Advanced (IG3)**
+
 - CIS 18.1: Include supply chain attacks in penetration
   testing — attempt to introduce compromised component,
   verify detection capability
@@ -267,6 +283,7 @@ management) govern agent components as software assets.
   behavioural testing before each production promotion
 
 #### Cross-references
+
 - LLM Top 10: LLM04 Supply Chain
 - DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning
 - Other frameworks: ISO 27001 A.5.19/A.5.21 · NIST CSF 2.0 GV.SC-01 · ISA/IEC 62443 62443-2-4 (OT)
@@ -293,6 +310,7 @@ execution security as application and configuration controls.
 #### Mitigations by tier
 
 **Foundational (IG1)**
+
 - CIS 4.1: Secure configuration baseline includes code
   execution sandbox — no unrestricted shell access from
   agent context, enforced at deployment
@@ -300,6 +318,7 @@ execution security as application and configuration controls.
   strongest control, should be the default position
 
 **Hardening (IG2)**
+
 - CIS 16.1: Implement sandbox, static analysis, and
   allowlist as secure development requirements — all
   code execution capability in agents requires these
@@ -309,6 +328,7 @@ execution security as application and configuration controls.
   detected and blocked, alerted
 
 **Advanced (IG3)**
+
 - CIS 18.1: Include sandbox escape in penetration testing —
   attempt escape from within specific runtime, document
   results, retest after any sandbox configuration change
@@ -316,6 +336,7 @@ execution security as application and configuration controls.
   gVisor or Firecracker as advanced configuration control
 
 #### Cross-references
+
 - LLM Top 10: LLM10 Improper Output Handling
 - DSGAI 2026: DSGAI12 Unsafe NL Data Gateways
 - Other frameworks: AIUC-1 B005/B006 · CWE-94 · ISO 27001 A.8.28
@@ -342,6 +363,7 @@ stores as data assets with access control and logging requirements.
 #### Mitigations by tier
 
 **Foundational (IG1)**
+
 - CIS 3.11: Encrypt all agent memory stores at rest —
   embedding databases, long-term memory, operational
   knowledge base all encrypted
@@ -352,6 +374,7 @@ stores as data assets with access control and logging requirements.
   re-validation, no indefinite persistence
 
 **Hardening (IG2)**
+
 - CIS 16.1: Memory write validation as secure development
   requirement — untrusted sources cannot write to memory
   without explicit validation and approval
@@ -360,6 +383,7 @@ stores as data assets with access control and logging requirements.
   anomalies in content detected
 
 **Advanced (IG3)**
+
 - CIS 18.1: Include memory poisoning in penetration
   testing — injection paths via each content source
   tested, detection capability verified
@@ -367,6 +391,7 @@ stores as data assets with access control and logging requirements.
   tamper detection between write and read
 
 #### Cross-references
+
 - LLM Top 10: LLM05 Data and Model Poisoning, LLM09 Vector and Embedding Weaknesses
 - DSGAI 2026: DSGAI13 Vector Store Platform Security
 - Other frameworks: ISO 27001 A.8.3/A.8.24 · NIST AI RMF MS-2.5 · AIUC-1 A/B002
@@ -394,11 +419,13 @@ integrity controls.
 #### Mitigations by tier
 
 **Foundational (IG1)**
+
 - CIS 3.10: Encrypt all A2A communication in transit —
   mutual TLS, no cleartext inter-agent messages on any
   network segment
 
 **Hardening (IG2)**
+
 - CIS 12.4: Map all A2A communication channels in network
   architecture — authentication method, encryption
   status, replay protection documented
@@ -410,6 +437,7 @@ integrity controls.
   environment including development
 
 **Advanced (IG3)**
+
 - CIS 18.1: A2A security in penetration testing —
   spoofing, replay attacks, schema violations tested
   against your specific deployment
@@ -417,6 +445,7 @@ integrity controls.
   hardware-backed keys for highest-risk clusters
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI02 Agent Identity & Credential Exposure
 - Other frameworks: OWASP NHI Top 10 NHI-4/NHI-7 · ISO 27001 A.8.20/A.8.24 · AIUC-1 B007/B008
 
@@ -443,6 +472,7 @@ and network controls. In OT environments this is Critical severity.
 #### Mitigations by tier
 
 **Foundational (IG1)**
+
 - CIS 4.1: Secure configuration baseline includes
   circuit breakers and fail-safe defaults — cascade
   prevention enforced at deployment, not optional
@@ -451,6 +481,7 @@ and network controls. In OT environments this is Critical severity.
   operations notification documented and drilled
 
 **Hardening (IG2)**
+
 - CIS 12.6: Network controls prevent cross-cluster
   cascade propagation — agent clusters isolated at
   network layer, inter-cluster communication rate-limited
@@ -459,6 +490,7 @@ and network controls. In OT environments this is Critical severity.
   radius reaches critical systems
 
 **Advanced (IG3)**
+
 - CIS 18.1: Cascade scenarios in penetration testing —
   circuit breaker effectiveness tested under adversarial
   load, results documented
@@ -467,6 +499,7 @@ and network controls. In OT environments this is Critical severity.
   path validated
 
 #### Cross-references
+
 - LLM Top 10: LLM06 Unbounded Consumption
 - DSGAI 2026: DSGAI17 Data Availability & Resilience Failures
 - Other frameworks: ISO 27001 A.5.30 · ISA/IEC 62443 SR 7.6/7.7 (OT) · AIUC-1 D
@@ -493,6 +526,7 @@ exploitation is fundamentally a people risk addressed by training.
 #### Mitigations by tier
 
 **Foundational (IG1)**
+
 - CIS 14.1: Provide security awareness training to all
   users of agentic tools — AI limitations, verification
   requirements, how to identify AI advisory vs
@@ -504,6 +538,7 @@ exploitation is fundamentally a people risk addressed by training.
   operator retraining, pattern audit, interface review
 
 **Hardening (IG2)**
+
 - CIS 8.5: Log all agent-influenced operator decisions —
   aggregate over-trust patterns detectable through
   audit log analysis
@@ -514,6 +549,7 @@ exploitation is fundamentally a people risk addressed by training.
   acknowledging or suppressing safety alarms (OT)
 
 **Advanced (IG3)**
+
 - CIS 18.1: Include trust exploitation in penetration
   testing — test operator susceptibility to manipulated
   agent recommendations in your specific deployment
@@ -521,6 +557,7 @@ exploitation is fundamentally a people risk addressed by training.
   verify operators can identify manipulated recommendations
 
 #### Cross-references
+
 - LLM Top 10: LLM07 Misinformation
 - DSGAI 2026: DSGAI21 Disinformation & Integrity Attacks
 - Other frameworks: EU AI Act Art. 13/50 · ISO 27001 A.6.3 · AIUC-1 C/F
@@ -548,6 +585,7 @@ behavioural monitoring are the foundational rogue agent defences.
 #### Mitigations by tier
 
 **Foundational (IG1)**
+
 - CIS 8.2: Comprehensive audit logging of all agent
   actions — no production agentic deployment without
   full observability, non-negotiable IG1 requirement
@@ -559,6 +597,7 @@ behavioural monitoring are the foundational rogue agent defences.
   exceed permission envelope regardless of internal goal
 
 **Hardening (IG2)**
+
 - CIS 13.1: Centralise agent behavioural anomaly alerts —
   behavioural baseline deviation events fed into SIEM,
   tiered response automated
@@ -569,6 +608,7 @@ behavioural monitoring are the foundational rogue agent defences.
   detects systematic bias before operational harm
 
 **Advanced (IG3)**
+
 - CIS 18.1: Rogue agent scenarios in penetration testing —
   simulate persistent hidden goal pursuit across extended
   sessions, verify detection capability holds, document
@@ -578,6 +618,7 @@ behavioural monitoring are the foundational rogue agent defences.
   next deployment
 
 #### Cross-references
+
 - LLM Top 10: LLM03 Excessive Agency
 - DSGAI 2026: DSGAI16 Endpoint & Browser Overreach
 - Other frameworks: ISO 27001 A.8.16/A.8.15 · AIUC-1 B001/B002/C/E · EU AI Act Art. 14/15
@@ -634,4 +675,4 @@ behavioural monitoring are the foundational rogue agent defences.
 ---
 
 Maintained by the OWASP GenAI Data Security Initiative.
-Part of the OWASP GenAI Crosswalk: https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk
+Part of the OWASP GenAI Crosswalk: <https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk>

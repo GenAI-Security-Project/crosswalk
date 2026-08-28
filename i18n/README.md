@@ -24,7 +24,8 @@ To add your language, see **Contributing a translation** below.
 
 Each language gets its own subdirectory using the ISO 639-1 two-letter
 language code. The directory structure mirrors the root repository:
-```
+
+```text
 i18n/
 +-- README.md               ? this file
 +-- es/                     ? Spanish
@@ -80,7 +81,8 @@ Before starting, check open pull requests and issues for your language
 to avoid duplicating effort.
 
 ### Step 2 — Create the directory structure
-```
+
+```text
 i18n/<lang-code>/
 +-- README.md
 +-- llm-top10/
@@ -96,13 +98,16 @@ i18n/<lang-code>/
 - Preserve the original file's structure — heading levels, table format,
   section order
 - In the translated file header comment, add:
-```
+
+```text
   Translation: <Language> (<ISO 639-1 code>)
   Translated by: <Your name or handle>
   Source version: <date of original file you translated from>
 ```
+
 - Add a note at the top of each translated file linking to the English
   original:
+
 ```markdown
   > **Note:** This is a community translation.
   > The authoritative English version is at
@@ -154,5 +159,7 @@ translations or this directory.
 
 ---
 
-*Part of the [OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk) —
+*Part of the
+[OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk)
+—
 maintained by the [OWASP GenAI Data Security Initiative](https://genai.owasp.org)*

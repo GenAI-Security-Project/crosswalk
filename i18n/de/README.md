@@ -15,7 +15,9 @@
 [![Mapping Files](https://img.shields.io/badge/mapping%20files-58-brightgreen)](README.md)
 [![Frameworks](https://img.shields.io/badge/frameworks-17-orange)](README.md)
 
-> Die umfassendste oeffentlich verfuegbare Zuordnung von OWASP GenAI-Sicherheitsrisiken zu Branchenrahmenwerken — abdeckend LLM-Anwendungen, autonome agentische KI und GenAI-Datensicherheit ueber **17 Rahmenwerke** und **3 OWASP-Quelllisten**.
+> Die umfassendste oeffentlich verfuegbare Zuordnung von OWASP GenAI-Sicherheitsrisiken zu
+> Branchenrahmenwerken — abdeckend LLM-Anwendungen, autonome agentische KI und GenAI-Datensicherheit ueber
+> **17 Rahmenwerke** und **3 OWASP-Quelllisten**.
 
 Gepflegt von der [OWASP GenAI Data Security Initiative](https://genai.owasp.org).
 Erstellt von **[Emmanuel Guilherme Junior](https://github.com/emmanuelgjr)**.
@@ -127,7 +129,8 @@ Alles kostenlos. Alles Open Source. Entwickelt fuer Praktiker.
 | [Agentic_SAMM.md](agentic-top10/Agentic_SAMM.md) | OWASP SAMM v2.0 | L1–L3-Reifegradbewertungskarte fuer agentische KI — Vor-Bereitstellungstore und Programmreifegrad-Fahrplan |
 | [Agentic_NISTSP80082.md](agentic-top10/Agentic_NISTSP80082.md) | NIST SP 800-82 Rev 3 | OT-Agentenplatzierung, SP 800-53-Kontrollen, regulatorischer US-Crosswalk (NERC CIP, AWIA, CMMC) |
 
-> **Ebenfalls in diesem Ordner:** [Agentic_CWE_CVE.md](agentic-top10/Agentic_CWE_CVE.md) — CWE-Ursachentaxonomie, bestaetigte CVEs, vollstaendiger CWE-Kreuzreferenzindex.
+> **Ebenfalls in diesem Ordner:** [Agentic_CWE_CVE.md](agentic-top10/Agentic_CWE_CVE.md) —
+> CWE-Ursachentaxonomie, bestaetigte CVEs, vollstaendiger CWE-Kreuzreferenzindex.
 
 ### DSGAI 2026 — 18 Rahmenwerk-Zuordnungen
 
@@ -288,11 +291,15 @@ node scripts/compliance-report.js --format json            # maschinenlesbar
 node scripts/compliance-report.js --list-frameworks        # alle Optionen anzeigen
 ```
 
-Jeder Bericht umfasst: Zusammenfassung fuer die Geschaeftsfuehrung, Abdeckungsmatrix (OWASP-Eintraege × Kontrollen), Kontrolldetails mit Anmerkungen und einen priorisierten Massnahmenplan.
+Jeder Bericht umfasst: Zusammenfassung fuer die Geschaeftsfuehrung, Abdeckungsmatrix (OWASP-Eintraege ×
+Kontrollen), Kontrolldetails mit Anmerkungen und einen priorisierten Massnahmenplan.
 
 ## LAAF v2.0 — LPCI-Red-Teaming
 
-[LAAF v2.0](https://github.com/qorvexconsulting1/laaf-V2.0) ist als drittes Evaluierungsrahmenwerk neben Garak und PyRIT integriert. Es deckt die Angriffsflaeche ab, die oberflaechliche Injektionstests nicht erkennen: Speicherpersistenz, geschichtete Kodierung, semantische Umformulierung und 6-Stufen-Lebenszyklusangriffe.
+[LAAF v2.0](https://github.com/qorvexconsulting1/laaf-V2.0) ist als drittes Evaluierungsrahmenwerk neben
+Garak und PyRIT integriert. Es deckt die Angriffsflaeche ab, die oberflaechliche Injektionstests nicht
+erkennen: Speicherpersistenz, geschichtete Kodierung, semantische Umformulierung und
+6-Stufen-Lebenszyklusangriffe.
 
 ```bash
 pip install git+https://github.com/qorvexconsulting1/laaf-V2.0.git
@@ -326,7 +333,8 @@ node scripts/incidents-report.js --category real-world
 node scripts/incidents-report.js --format csv         # Excel-Export
 ```
 
-Pro Vorfall verfolgte MAESTRO-Schichtrollen: **Ursprung** (wo der Angriff beginnt) · **Ausbreitung** (wie er sich verbreitet) · **Auswirkung** (wo der Schaden eintritt) · **Blinder Fleck** (wo die Erkennung versagte).
+Pro Vorfall verfolgte MAESTRO-Schichtrollen: **Ursprung** (wo der Angriff beginnt) · **Ausbreitung** (wie er
+sich verbreitet) · **Auswirkung** (wo der Schaden eintritt) · **Blinder Fleck** (wo die Erkennung versagte).
 
 ---
 
@@ -335,43 +343,55 @@ Pro Vorfall verfolgte MAESTRO-Schichtrollen: **Ursprung** (wo der Angriff beginn
 Finden Sie Ihren Einstiegspunkt in unter 60 Sekunden.
 
 **Ich muss den EU AI Act vor August 2026 einhalten**
-→ Start: [LLM_EUAIAct.md](llm-top10/LLM_EUAIAct.md) — Verpflichtungen auf Artikelebene, Bussgeldrisiko, Compliance-Checkliste
-→ Dann: [Agentic_EUAIAct.md](agentic-top10/Agentic_EUAIAct.md) wenn Sie autonome Agenten bereitstellen (Art. 14 menschliche Aufsicht)
+→ Start: [LLM_EUAIAct.md](llm-top10/LLM_EUAIAct.md) — Verpflichtungen auf Artikelebene, Bussgeldrisiko,
+Compliance-Checkliste
+→ Dann: [Agentic_EUAIAct.md](agentic-top10/Agentic_EUAIAct.md) wenn Sie autonome Agenten bereitstellen (Art.
+14 menschliche Aufsicht)
 → Dann: [DSGAI_EUAIAct.md](dsgai-2026/DSGAI_EUAIAct.md) fuer den GPAI-Modellumfang und Datengovernance-Verpflichtungen
 
 **Ich stelle einen autonomen KI-Agenten bereit und muss wissen, was schiefgehen kann**
 → Start: [CROSSREF.md](CROSSREF.md) — Master-Kreuzreferenz ueber alle 41 Schwachstellen-IDs
-→ Dann: [Agentic_MAESTRO.md](agentic-top10/Agentic_MAESTRO.md) — Architektur-Bedrohungsmodell (wo entsteht jedes Risiko?)
-→ Dann: [Agentic_AIVSS.md](agentic-top10/Agentic_AIVSS.md) — jedes Risiko bewerten; Autonomie fuegt durchschnittlich +1.79 Schweregrad hinzu
+→ Dann: [Agentic_MAESTRO.md](agentic-top10/Agentic_MAESTRO.md) — Architektur-Bedrohungsmodell (wo entsteht
+jedes Risiko?)
+→ Dann: [Agentic_AIVSS.md](agentic-top10/Agentic_AIVSS.md) — jedes Risiko bewerten; Autonomie fuegt
+durchschnittlich +1.79 Schweregrad hinzu
 → Dann: [Agentic_OWASP_NHI.md](agentic-top10/Agentic_OWASP_NHI.md) — Identitaets- und Anmeldedatenkontrollen
 
 **Ich bin SOC 2-Pruefer oder GRC-Fachperson und bereite eine GenAI-Kontrollbewertung vor**
 → Start: [LLM_SOC2.md](llm-top10/LLM_SOC2.md) — TSC-Zuordnung fuer SaaS-/Cloud-LLM-Bereitstellungen
 → Dann: [Agentic_SOC2.md](agentic-top10/Agentic_SOC2.md) — Umfang autonomer Aktionen, Verarbeitungsintegritaetskriterien
-→ Dann: [LLM_SAMM.md](llm-top10/LLM_SAMM.md) — ausfuellbare SAMM-Reifegradbewertungskarte als Nachweis der Programmvollstaendigkeit
+→ Dann: [LLM_SAMM.md](llm-top10/LLM_SAMM.md) — ausfuellbare SAMM-Reifegradbewertungskarte als Nachweis der
+Programmvollstaendigkeit
 
 **Ich bin AppSec-Ingenieur oder Red-Teamer und erstelle einen Testplan**
-→ Start: [Agentic_AITG.md](agentic-top10/Agentic_AITG.md) — 50 strukturierte Testfaelle mit Bestehungskriterien und CI/CD-Toren
-→ Dann: [DSGAI_MITREATLAS.md](dsgai-2026/DSGAI_MITREATLAS.md) — Angreifer-TTP-Zuordnung mit vier vollstaendigen Angriffsketten
-→ Dann: [shared/RECIPES.md](shared/RECIPES.md) — 13 funktionierende Python-Muster zur Implementierung der zu testenden Kontrollen
+→ Start: [Agentic_AITG.md](agentic-top10/Agentic_AITG.md) — 50 strukturierte Testfaelle mit
+Bestehungskriterien und CI/CD-Toren
+→ Dann: [DSGAI_MITREATLAS.md](dsgai-2026/DSGAI_MITREATLAS.md) — Angreifer-TTP-Zuordnung mit vier
+vollstaendigen Angriffsketten
+→ Dann: [shared/RECIPES.md](shared/RECIPES.md) — 13 funktionierende Python-Muster zur Implementierung der zu
+testenden Kontrollen
 
 **Ich sichere KI in OT/ICS-Umgebungen (Energie, Versorgung, Fertigung)**
-→ Start: [Agentic_NISTSP80082.md](agentic-top10/Agentic_NISTSP80082.md) — OT-Zonenmodell, SP 800-53-Kontrollen, NERC CIP/AWIA/CMMC-Crosswalk
+→ Start: [Agentic_NISTSP80082.md](agentic-top10/Agentic_NISTSP80082.md) — OT-Zonenmodell, SP
+800-53-Kontrollen, NERC CIP/AWIA/CMMC-Crosswalk
 → Dann: [Agentic_ISA62443.md](agentic-top10/Agentic_ISA62443.md) — SL-Bewertungen, Zonenmodell, Notausschalter-Design
-→ Dann: [DSGAI_ISA62443.md](dsgai-2026/DSGAI_ISA62443.md) — RAG-Corpus-Poisoning in OT (Sicherheitsverfahren-Manipulationsszenario)
+→ Dann: [DSGAI_ISA62443.md](dsgai-2026/DSGAI_ISA62443.md) — RAG-Corpus-Poisoning in OT
+(Sicherheitsverfahren-Manipulationsszenario)
 
 ---
 
 ## Schnellnavigation
 
 **EU AI Act-Compliance bis August 2026**
-→ [LLM_EUAIAct.md](llm-top10/LLM_EUAIAct.md) · [Agentic_EUAIAct.md](agentic-top10/Agentic_EUAIAct.md) · [DSGAI_EUAIAct.md](dsgai-2026/DSGAI_EUAIAct.md)
+→ [LLM_EUAIAct.md](llm-top10/LLM_EUAIAct.md) · [Agentic_EUAIAct.md](agentic-top10/Agentic_EUAIAct.md) ·
+[DSGAI_EUAIAct.md](dsgai-2026/DSGAI_EUAIAct.md)
 
 **Europaeische Organisation unter NIS2**
 → [LLM_ENISA.md](llm-top10/LLM_ENISA.md) — ENISA-Rahmenwerk mit NIS2 Artikel 23 Vorfallbewertungsleitfaden
 
 **KI in OT/ICS-Umgebungen**
-→ [LLM_ISA62443.md](llm-top10/LLM_ISA62443.md) · [Agentic_ISA62443.md](agentic-top10/Agentic_ISA62443.md) · [DSGAI_ISA62443.md](dsgai-2026/DSGAI_ISA62443.md) · [LLM_NISTSP80082.md](llm-top10/LLM_NISTSP80082.md)
+→ [LLM_ISA62443.md](llm-top10/LLM_ISA62443.md) · [Agentic_ISA62443.md](agentic-top10/Agentic_ISA62443.md) ·
+[DSGAI_ISA62443.md](dsgai-2026/DSGAI_ISA62443.md) · [LLM_NISTSP80082.md](llm-top10/LLM_NISTSP80082.md)
 
 **Bereitstellung autonomer Agenten**
 → [Agentic_OWASP_NHI.md](agentic-top10/Agentic_OWASP_NHI.md) — Identitaetsgovernance
@@ -379,14 +399,17 @@ Finden Sie Ihren Einstiegspunkt in unter 60 Sekunden.
 → [Agentic_AIVSS.md](agentic-top10/Agentic_AIVSS.md) — Risikobewertung mit Autonomiepraemie
 
 **Bedrohungsmodellierung eines agentischen KI-Systems vor der Kontrollauswahl**
-→ [Agentic_MAESTRO.md](agentic-top10/Agentic_MAESTRO.md) — MAESTRO Sieben-Schichten-Bedrohungsaufzaehlung mit Sitzungsleitfaden
+→ [Agentic_MAESTRO.md](agentic-top10/Agentic_MAESTRO.md) — MAESTRO Sieben-Schichten-Bedrohungsaufzaehlung
+mit Sitzungsleitfaden
 → [DSGAI_MAESTRO.md](dsgai-2026/DSGAI_MAESTRO.md) — MAESTRO-Datenoperations-Perspektive fuer alle 21 DSGAI-Eintraege
 
 **ISO 27001 ISMS-Erweiterung fuer GenAI**
-→ [LLM_ISO27001.md](llm-top10/LLM_ISO27001.md) · [Agentic_ISO27001.md](agentic-top10/Agentic_ISO27001.md) · [DSGAI_ISO27001.md](dsgai-2026/DSGAI_ISO27001.md)
+→ [LLM_ISO27001.md](llm-top10/LLM_ISO27001.md) · [Agentic_ISO27001.md](agentic-top10/Agentic_ISO27001.md) ·
+[DSGAI_ISO27001.md](dsgai-2026/DSGAI_ISO27001.md)
 
 **ISO 42001 AIMS fuer KI-Governance**
-→ [LLM_ISO42001.md](llm-top10/LLM_ISO42001.md) · [Agentic_ISO42001.md](agentic-top10/Agentic_ISO42001.md) — mit EU AI Act-Compliance-Nachweistabelle
+→ [LLM_ISO42001.md](llm-top10/LLM_ISO42001.md) · [Agentic_ISO42001.md](agentic-top10/Agentic_ISO42001.md) —
+mit EU AI Act-Compliance-Nachweistabelle
 
 **Sicherheitsprogramm-Reifegrad**
 → [LLM_SAMM.md](llm-top10/LLM_SAMM.md) — SAMM L1–L3-Fahrplan mit ausfuellbarer Bewertungskarte
@@ -395,7 +418,8 @@ Finden Sie Ihren Einstiegspunkt in unter 60 Sekunden.
 → [Agentic_AITG.md](agentic-top10/Agentic_AITG.md) — 50 strukturierte Testfaelle, Vor-Bereitstellungstore, OT-Anhang
 
 **Risikoregister-Bewertung fuer agentische KI**
-→ [Agentic_AIVSS.md](agentic-top10/Agentic_AIVSS.md) — Dual-Szenario-Bewertung ueberwacht vs. autonom, durchschnittliche Autonomiepraemie +1.79
+→ [Agentic_AIVSS.md](agentic-top10/Agentic_AIVSS.md) — Dual-Szenario-Bewertung ueberwacht vs. autonom,
+durchschnittliche Autonomiepraemie +1.79
 
 **Angreiferperspektive auf GenAI-Risiken**
 → [DSGAI_MITREATLAS.md](dsgai-2026/DSGAI_MITREATLAS.md) — ATLAS-Technikzuordnung, vier Angriffspfadketten
@@ -416,39 +440,64 @@ Finden Sie Ihren Einstiegspunkt in unter 60 Sekunden.
 
 ### Vollstaendige OT/ICS-Trilogie
 
-Die einzige oeffentlich verfuegbare Zuordnung aller drei OWASP GenAI-Quelllisten zu ISA/IEC 62443 und NIST SP 800-82 Rev 3. Enthaelt Zonenmodell-Platzierung, Sicherheitsstufenbewertungen, Referenzen fuer grundlegende Anforderungen und Sicherheitsanforderungen, OT-spezifische Bedrohungsszenarien und Vor-Bereitstellungschecklisten fuer jede Quellliste.
+Die einzige oeffentlich verfuegbare Zuordnung aller drei OWASP GenAI-Quelllisten zu ISA/IEC 62443 und NIST
+SP 800-82 Rev 3. Enthaelt Zonenmodell-Platzierung, Sicherheitsstufenbewertungen, Referenzen fuer
+grundlegende Anforderungen und Sicherheitsanforderungen, OT-spezifische Bedrohungsszenarien und
+Vor-Bereitstellungschecklisten fuer jede Quellliste.
 
-Das RAG-Corpus-Poisoning-Szenario in [DSGAI_ISA62443.md](dsgai-2026/DSGAI_ISA62443.md) — ein Sicherheitsverfahren-Manipulationsangriff, der Wartungsintervalle ohne jeglichen OT-Netzwerkzugang aendert — existiert nirgendwo sonst in oeffentlicher Dokumentation.
+Das RAG-Corpus-Poisoning-Szenario in [DSGAI_ISA62443.md](dsgai-2026/DSGAI_ISA62443.md) — ein
+Sicherheitsverfahren-Manipulationsangriff, der Wartungsintervalle ohne jeglichen OT-Netzwerkzugang aendert —
+existiert nirgendwo sonst in oeffentlicher Dokumentation.
 
 ### MAESTRO Sieben-Schichten-Bedrohungsmodellierung
 
-[Agentic_MAESTRO.md](agentic-top10/Agentic_MAESTRO.md) und [DSGAI_MAESTRO.md](dsgai-2026/DSGAI_MAESTRO.md) sind die einzigen oeffentlichen Zuordnungen von OWASP GenAI-Risiken zum MAESTRO-Rahmenwerk der Cloud Security Alliance. Im Gegensatz zu allen anderen Dateien in diesem Repository — die Risiken Kontrollen zuordnen — ordnet MAESTRO jedes Risiko der **Architekturschicht zu, in der es entsteht**, und zeigt Ihnen, welches Team das Problem besitzt und wo im System die Behebung bereitgestellt werden muss.
+[Agentic_MAESTRO.md](agentic-top10/Agentic_MAESTRO.md) und [DSGAI_MAESTRO.md](dsgai-2026/DSGAI_MAESTRO.md)
+sind die einzigen oeffentlichen Zuordnungen von OWASP GenAI-Risiken zum MAESTRO-Rahmenwerk der Cloud
+Security Alliance. Im Gegensatz zu allen anderen Dateien in diesem Repository — die Risiken Kontrollen
+zuordnen — ordnet MAESTRO jedes Risiko der **Architekturschicht zu, in der es entsteht**, und zeigt Ihnen,
+welches Team das Problem besitzt und wo im System die Behebung bereitgestellt werden muss.
 
-Zentrale Erkenntnis aus der DSGAI-Zuordnung: **L2 Datenoperationen ist die Ursprungsschicht fuer 52% aller DSGAI-Eintraege**. Eine Organisation, die RAG-Corpora, Embedding-Speicher, Trainingspipelines und Speichersysteme nicht als sicherheitskritische Infrastruktur behandelt, ist gegen die Mehrheit der GenAI-Datensicherheits-Bedrohungslandschaft unzureichend verteidigt.
+Zentrale Erkenntnis aus der DSGAI-Zuordnung: **L2 Datenoperationen ist die Ursprungsschicht fuer 52% aller
+DSGAI-Eintraege**. Eine Organisation, die RAG-Corpora, Embedding-Speicher, Trainingspipelines und
+Speichersysteme nicht als sicherheitskritische Infrastruktur behandelt, ist gegen die Mehrheit der
+GenAI-Datensicherheits-Bedrohungslandschaft unzureichend verteidigt.
 
 ### Agentische Autonomiepraemie
 
-[Agentic_AIVSS.md](agentic-top10/Agentic_AIVSS.md) quantifiziert, was das Entfernen menschlicher Aufsicht an Risiko kostet: durchschnittlich **+1.79 AIVSS-Schweregradpunkte** ueber alle 10 agentischen Eintraege. Das Entfernen menschlicher Aufsicht wandelt 7 von 10 Eintraegen von Hoch in Kritisch um — das quantitative Argument fuer die obligatorische menschliche Aufsicht gemaess EU AI Act Artikel 14.
+[Agentic_AIVSS.md](agentic-top10/Agentic_AIVSS.md) quantifiziert, was das Entfernen menschlicher Aufsicht an
+Risiko kostet: durchschnittlich **+1.79 AIVSS-Schweregradpunkte** ueber alle 10 agentischen Eintraege. Das
+Entfernen menschlicher Aufsicht wandelt 7 von 10 Eintraegen von Hoch in Kritisch um — das quantitative
+Argument fuer die obligatorische menschliche Aufsicht gemaess EU AI Act Artikel 14.
 
 ### Vollstaendige agentische Identitaetsabdeckung
 
-[Agentic_OWASP_NHI.md](agentic-top10/Agentic_OWASP_NHI.md) ordnet jeden NHI Top 10-Eintrag jedem ASI-Eintrag zu — das einzige oeffentliche Dokument, das agentische Sicherheitsrisiken in die NHI-Kontrollen uebersetzt, die IAM-Teams bereits betreiben.
+[Agentic_OWASP_NHI.md](agentic-top10/Agentic_OWASP_NHI.md) ordnet jeden NHI Top 10-Eintrag jedem ASI-Eintrag
+zu — das einzige oeffentliche Dokument, das agentische Sicherheitsrisiken in die NHI-Kontrollen uebersetzt,
+die IAM-Teams bereits betreiben.
 
 ### SAMM-Reifegradbewertungskarte
 
-[LLM_SAMM.md](llm-top10/LLM_SAMM.md) enthaelt eine ausfuellbare Reifegradbewertungskarte mit minimal tragfaehigen Stufen pro SAMM-Praxis fuer jede LLM-Produktionsbereitstellung — das Artefakt, das Sicherheitsprogramm-Verantwortliche verwenden, um die Ingenieursfuehrung ueber den Stand des Programms und die naechsten Verbesserungen zu informieren.
+[LLM_SAMM.md](llm-top10/LLM_SAMM.md) enthaelt eine ausfuellbare Reifegradbewertungskarte mit minimal
+tragfaehigen Stufen pro SAMM-Praxis fuer jede LLM-Produktionsbereitstellung — das Artefakt, das
+Sicherheitsprogramm-Verantwortliche verwenden, um die Ingenieursfuehrung ueber den Stand des Programms und
+die naechsten Verbesserungen zu informieren.
 
 ### Produktions-Implementierungsrezepte
 
-[shared/RECIPES.md](shared/RECIPES.md) enthaelt 13 produktionsreife Sicherheitsmuster mit funktionierendem Python: zugriffskontrollierter RAG-Abruf, MCP-Deskriptor-Integritaetspruefung, JIT-Anmeldedatenausstellung, OT-Notausschalter, verhaltensbasierte Basislinienueberwachung, Kaskadeneingrenzung und menschliche Bestaetigungstore.
+[shared/RECIPES.md](shared/RECIPES.md) enthaelt 13 produktionsreife Sicherheitsmuster mit funktionierendem
+Python: zugriffskontrollierter RAG-Abruf, MCP-Deskriptor-Integritaetspruefung, JIT-Anmeldedatenausstellung,
+OT-Notausschalter, verhaltensbasierte Basislinienueberwachung, Kaskadeneingrenzung und menschliche
+Bestaetigungstore.
 
 ---
 
 ## Mitwirken
 
-Beitraege sind willkommen — neue Rahmenwerk-Zuordnungen, aktualisierte Kontrollen, neue Implementierungsrezepte, Uebersetzungen und zusaetzliche Werkzeugeintraege.
+Beitraege sind willkommen — neue Rahmenwerk-Zuordnungen, aktualisierte Kontrollen, neue
+Implementierungsrezepte, Uebersetzungen und zusaetzliche Werkzeugeintraege.
 
-Informationen zur Dateivorlage, zum PR-Prozess und zu den Beitragsrichtlinien finden Sie unter [CONTRIBUTING.md](CONTRIBUTING.md). Alle Mitwirkenden werden im CHANGELOG aufgefuehrt.
+Informationen zur Dateivorlage, zum PR-Prozess und zu den Beitragsrichtlinien finden Sie unter
+[CONTRIBUTING.md](CONTRIBUTING.md) . Alle Mitwirkenden werden im CHANGELOG aufgefuehrt.
 
 ---
 
@@ -456,17 +505,21 @@ Informationen zur Dateivorlage, zum PR-Prozess und zu den Beitragsrichtlinien fi
 
 [Creative Commons Attribution-ShareAlike 4.0 International](LICENSE)
 
-Frei zum Teilen und Anpassen fuer jeden Zweck, einschliesslich kommerzieller Nutzung, mit angemessener Namensnennung und Weitergabe unter gleichen Bedingungen.
+Frei zum Teilen und Anpassen fuer jeden Zweck, einschliesslich kommerzieller Nutzung, mit angemessener
+Namensnennung und Weitergabe unter gleichen Bedingungen.
 
 ---
 
 ## Danksagungen
 
-Erstellt und gepflegt von **[Emmanuel Guilherme Junior](https://github.com/emmanuelgjr)** und der [OWASP GenAI Data Security Initiative](https://genai.owasp.org).
+Erstellt und gepflegt von **[Emmanuel Guilherme Junior](https://github.com/emmanuelgjr)** und der
+[OWASP GenAI Data Security Initiative](https://genai.owasp.org) .
 
-Aufgebaut auf der Arbeit der Projektteams von OWASP LLM Top 10, OWASP Agentic Top 10, OWASP GenAI Data Security, OWASP NHI Top 10 und OWASP SAMM.
+Aufgebaut auf der Arbeit der Projektteams von OWASP LLM Top 10, OWASP Agentic Top 10, OWASP GenAI Data
+Security, OWASP NHI Top 10 und OWASP SAMM.
 
-Besonderer Dank an [Ken Huang](https://github.com/kenhuangus) (Cloud Security Alliance) fuer das MAESTRO-Rahmenwerk und seine Beitraege zum OWASP LLM Top 10.
+Besonderer Dank an [Ken Huang](https://github.com/kenhuangus) (Cloud Security Alliance) fuer das
+MAESTRO-Rahmenwerk und seine Beitraege zum OWASP LLM Top 10.
 
 ---
 

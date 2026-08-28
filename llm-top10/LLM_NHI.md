@@ -32,6 +32,7 @@ service account (NHI-5) can cause far more damage than a model
 that generates offensive content.
 
 Key structural overlaps:
+
 - **LLM04 (Supply Chain)** — third-party component credentials (NHI-3, NHI-8)
 - **LLM03 (Excessive Agency)** — over-privileged tool credentials (NHI-5, NHI-7)
 - **LLM02 (Sensitive Information Disclosure)** — credential leakage in outputs (NHI-2)
@@ -108,10 +109,12 @@ invisible-Unicode carriers survive review of the rendered interface.
 #### Mitigations
 
 **Immediate:**
+
 - Audit scope of all credentials held by LLM application
 - Replace long-lived API keys with short-lived tokens where possible
 
 **Short-term:**
+
 - NHI-5: minimum credential scope for all LLM application integrations
 - NHI-7: automated credential rotation for all LLM application credentials
 - Scope restrictions: separate read vs read-write credentials per integration
@@ -134,10 +137,12 @@ reproduced; service account tokens logged alongside outputs are exposed.
 #### Mitigations
 
 **Immediate:**
+
 - Scan all LLM system prompts for embedded credentials; remove any found
 - Add credential pattern detection to output filtering pipeline
 
 **Short-term:**
+
 - NHI-2: automated secret scanning in all inputs to LLM (code, documents, configs)
 - NHI-6: vault all LLM application credentials; no plaintext in config files
 - Output scanning: detect API key and token patterns before delivery to user
@@ -161,15 +166,18 @@ Top 10 directly controls the blast radius of agency violations.
 #### Mitigations
 
 **Immediate:**
+
 - Audit scope of all tool integration credentials held by LLM application
 - Identify any credentials shared across multiple tool integrations
 
 **Short-term:**
+
 - NHI-5: minimum scope for all tool credentials
 - NHI-7: implement short-lived JIT tokens for high-impact tool calls
 - NHI-9: separate credentials per tool integration
 
 **Strategic:**
+
 - Per-task JIT credential issuance pattern (see RECIPES.md Pattern 3)
 - Quarterly NHI audit for all LLM application credentials
 
@@ -199,10 +207,12 @@ dependency is clean.
 #### Mitigations
 
 **Immediate:**
+
 - Inventory all third-party credentials in LLM deployment
 - Verify no development credentials are used in production integrations
 
 **Short-term:**
+
 - NHI-3: review permissions of all third-party credentials; reduce to minimum
 - NHI-8: separate credential stores for each environment
 - NHI-2: automated secret scanning in all pipeline and deployment configs
@@ -231,10 +241,12 @@ stage that writes weights, not just the original training corpus.
 #### Mitigations
 
 **Immediate:**
+
 - Audit write access to all training data stores
 - Separate read and write credentials for training data pipelines
 
 **Short-term:**
+
 - NHI-5: least-privilege for all training pipeline service accounts
 - NHI-3: assess all third-party data pipeline credentials for excessive scope
 - MFA or hardware token for any credential with training data write access
@@ -258,10 +270,12 @@ blast radius.
 #### Mitigations
 
 **Immediate:**
+
 - Identify any credentials shared across multiple API integrations
 - Verify rate limiting is applied per-credential, not per-IP only
 
 **Short-term:**
+
 - NHI-9: separate credentials per service integration
 - NHI-5: minimum scope per credential — consumption in one service cannot affect another
 - Per-credential quota monitoring with alerting
@@ -285,10 +299,12 @@ makes investigation impossible.
 #### Mitigations
 
 **Immediate:**
+
 - Ensure all LLM application actions are attributed to machine identity, not human identity
 - Protect audit log service credentials as high-sensitivity NHI
 
 **Short-term:**
+
 - NHI-10: enforce separation of human and machine credentials across the LLM deployment
 - Immutable audit logging with tamper-evident storage
 
@@ -322,10 +338,12 @@ treat it as a security boundary.
 #### Mitigations
 
 **Immediate:**
+
 - Automated secret scanning of all system prompt content
 - Remove any credentials found in system prompts immediately
 
 **Short-term:**
+
 - NHI-6: vault all credentials; system prompt references vault path, not credential value
 - NHI-2: CI/CD gate that fails if system prompt contains credential patterns
 - Periodic system prompt audit for inadvertent credential inclusion
@@ -348,10 +366,12 @@ read access that enables the leakage scenarios in LLM09.
 #### Mitigations
 
 **Immediate:**
+
 - Audit authentication on all vector database connections
 - Verify no embedding store service account has cross-tenant read access
 
 **Short-term:**
+
 - NHI-5: per-tenant credentials or fine-grained access controls for embedding stores
 - NHI-4: mTLS or equivalent for all embedding store connections
 
@@ -380,10 +400,12 @@ reaches a shell, a browser, or a database.
 #### Mitigations
 
 **Immediate:**
+
 - Add credential pattern detection before passing model output to any executor
 - Audit scope of credentials used by downstream processing systems
 
 **Short-term:**
+
 - NHI-2: automated output scanning for credential patterns
 - NHI-5: minimum scope for all service accounts in output processing pipeline
 
@@ -425,6 +447,8 @@ reaches a shell, a browser, or a database.
 
 ---
 
-*Part of the [OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk) —
+*Part of the
+[OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk)
+—
 maintained by the [OWASP GenAI Data Security Initiative](https://genai.owasp.org)*
 *License: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)*

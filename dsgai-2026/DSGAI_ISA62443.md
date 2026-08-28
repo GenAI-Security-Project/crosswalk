@@ -9,8 +9,11 @@
 
 # DSGAI 2026 × ISA/IEC 62443
 
-Mapping the [OWASP GenAI Data Security Risks and Mitigations 2026](https://genai.owasp.org/resource/owasp-genai-data-security-risks-mitigations-2026/)
-(DSGAI01–DSGAI21) to [ISA/IEC 62443](https://www.isa.org/standards-and-publications/isa-standards/isa-iec-62443-series-of-standards) —
+Mapping the
+[OWASP GenAI Data Security Risks and Mitigations 2026](https://genai.owasp.org/resource/owasp-genai-data-security-risks-mitigations-2026/)
+(DSGAI01–DSGAI21) to
+[ISA/IEC 62443](https://www.isa.org/standards-and-publications/isa-standards/isa-iec-62443-series-of-standards)
+—
 the international standard for Industrial Automation and Control
 Systems (IACS) security.
 
@@ -56,7 +59,8 @@ complete OT coverage of all three OWASP source lists.
 
 GenAI systems handling OT data must be placed within the ISA/IEC
 62443 zone and conduit model:
-```
+
+```text
 Enterprise Zone (Level 4–5)
     ? [Firewall + proxy — no direct OT protocol access]
 DMZ / Demilitarized Zone (Level 3.5)
@@ -173,6 +177,7 @@ targeted physical attacks.
 #### Mitigations by tier
 
 **Foundational (SL 1–2)**
+
 - SR 4.1: Encrypt all OT data in GenAI scope —
   historian exports, embedding stores, RAG corpora
   containing equipment documentation, prompt caches
@@ -183,6 +188,7 @@ targeted physical attacks.
   device names, network addresses masked by default
 
 **Hardening (SL 2–3)**
+
 - SR 4.4: Implement OT-specific data masking at
   DMZ boundary — no cleartext OT topology or
   equipment configuration data in GenAI outputs
@@ -191,12 +197,14 @@ targeted physical attacks.
   what operational intelligence was exposed
 
 **Advanced (SL 3–4)**
+
 - Conduct OT data disclosure red team — attempt
   to extract operational intelligence enabling
   targeted attack through GenAI inference queries
   against your specific historian and SCADA topology
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - Agentic Top 10: ASI03 Identity & Privilege Abuse
 - Other frameworks: NIST SP 800-82 Rev 3 Section 5.4 · ISO 27001 A.8.11 · NIST CSF 2.0 PR.DS-01
@@ -235,6 +243,7 @@ or tool payloads — enabling lateral movement into OT systems.
 #### Mitigations by tier
 
 **Foundational (SL 1–2)**
+
 - SR 1.2: Unique service identity per OT-accessing
   agent — all agent actions in OT traceable to
   specific agent identity in audit log
@@ -244,6 +253,7 @@ or tool payloads — enabling lateral movement into OT systems.
 - Short-lived JIT credentials — expire at session end
 
 **Hardening (SL 2–3)**
+
 - SR 1.6: Agent credential lifecycle documented —
   issuance, rotation, revocation all logged in OT
   identity management system
@@ -252,6 +262,7 @@ or tool payloads — enabling lateral movement into OT systems.
   immediate alert
 
 **Advanced (SL 3–4)**
+
 - PKI-backed agent identities for Zone 3 access —
   signed requests, certificate-bound credentials,
   revocation infrastructure
@@ -260,6 +271,7 @@ or tool payloads — enabling lateral movement into OT systems.
   other OT systems, document access scope achievable
 
 #### Cross-references
+
 - Agentic Top 10: ASI03 Identity & Privilege Abuse
 - Other frameworks: OWASP NHI Top 10 · NIST SP 800-82 Rev 3 Section 6 · NIST CSF 2.0 PR.AA-01
 
@@ -297,17 +309,20 @@ to external services.
 #### Mitigations by tier
 
 **Foundational (SL 1–2)**
+
 - SR 5.1: Network controls blocking OT data flows to
   unapproved AI endpoints — enforced at DMZ conduit
 - OT-specific acceptable use policy — explicitly covers
   what OT data must not be used with external AI tools
 
 **Hardening (SL 2–3)**
+
 - SR 6.6: Shadow AI discovery in OT — automated
   detection of OT data flows to unapproved AI services
   triggers incident response
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI07 Data Governance, DSGAI08 Non-Compliance
 - Other frameworks: NIST SP 800-82 Rev 3 Section 8 · ISO 27001 A.5.10 · NIST CSF 2.0 GV.OC-01
 
@@ -361,6 +376,7 @@ detection.
 #### Mitigations by tier
 
 **Foundational (SL 1–2)**
+
 - SR 3.3: Training data integrity controls for all
   OT GenAI — historian data source allowlisting,
   anomaly detection on data distributions, provenance
@@ -370,6 +386,7 @@ detection.
   part of OT incident response exercise
 
 **Hardening (SL 2–3)**
+
 - SR 3.7: Production monitoring of OT GenAI model
   outputs — systematic anomalies in recommendations
   or health scores detected as poisoning indicators
@@ -378,6 +395,7 @@ detection.
   review of all affected recommendations
 
 **Advanced (SL 3–4)**
+
 - Post-training backdoor detection as mandatory
   OT deployment gate — test with OT-specific trigger
   conditions before any Zone 3 advisory system deployment
@@ -386,6 +404,7 @@ detection.
   possible poisoned recommendation for each process area
 
 #### Cross-references
+
 - LLM Top 10: LLM04 Supply Chain, LLM05 Data and Model Poisoning
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - Other frameworks: NIST SP 800-82 Rev 3 Section 5.3 · ISO 27001 A.8.27 · MITRE ATLAS AML.T0020
@@ -422,6 +441,7 @@ hosts within Zone 3 — a direct path to Zone 3 host compromise.
 #### Mitigations by tier
 
 **Foundational (SL 1–2)**
+
 - SR 3.3: Multi-stage validation at all OT GenAI
   ingestion boundaries — schema, semantic, path
   traversal prevention before any data enters pipeline
@@ -429,11 +449,13 @@ hosts within Zone 3 — a direct path to Zone 3 host compromise.
   all Zone 3 environments
 
 **Hardening (SL 2–3)**
+
 - SR 3.7: Monitor OT ingestion pipelines for anomalous
   payloads — unusual encoding, schema violations alerted
   as potential integrity attack
 
 #### Cross-references
+
 - LLM Top 10: LLM10 Improper Output Handling
 - DSGAI 2026: DSGAI13 Vector Store Platform Security
 - Other frameworks: NIST SP 800-82 Rev 3 Section 7.2 · CWE-20 · ISO 27001 A.8.26/A.8.28
@@ -469,17 +491,20 @@ records, and process parameters — all sensitive operational intelligence.
 #### Mitigations by tier
 
 **Foundational (SL 1–2)**
+
 - SR 3.2: Apply 62443-2-4 to all OT tool vendors —
   provenance, integrity, incident notification
 - SR 5.3: OT context minimisation — tools receive
   only minimum data required, not full process context
 
 **Hardening (SL 2–3)**
+
 - DLP on tool payloads from OT context — sensitive
   OT data patterns detected before leaving Zone 3
   boundary through tool integration channels
 
 #### Cross-references
+
 - Agentic Top 10: ASI02 Tool Misuse, ASI04 Supply Chain
 - Other frameworks: NIST SP 800-82 Rev 3 Section 8.4 · ISO 27001 A.5.19/A.5.20
 
@@ -514,6 +539,7 @@ governed with the same rigour as source documents.
 #### Mitigations by tier
 
 **Foundational (SL 1–2)**
+
 - SR 4.1: All OT-derived GenAI assets classified
   and protected — embeddings, summaries, caches
   from OT data inherit source classification
@@ -521,10 +547,12 @@ governed with the same rigour as source documents.
   ungoverned stores represent untracked attack surface
 
 **Hardening (SL 2–3)**
+
 - 62443-2-4: Apply supplier requirements to all
   GenAI vendors handling OT-derived assets
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI08 Non-Compliance, DSGAI01 Sensitive Data Leakage
 - Other frameworks: NIST SP 800-82 Rev 3 Section 6 · ISO 27001 A.5.9/A.8.10
 
@@ -560,6 +588,7 @@ legal exposure beyond the security risk.
 #### Mitigations by tier
 
 **Foundational (SL 1–2)**
+
 - 62443-2-1: Update OT security management system to
   cover GenAI — scope definition, policy, roles,
   risk assessment for each GenAI deployment in OT scope
@@ -568,6 +597,7 @@ legal exposure beyond the security risk.
   are triggered, who is accountable
 
 **Hardening (SL 2–3)**
+
 - 62443-2-4: Apply supplier requirements to all GenAI
   vendors with OT data access — same programme as
   OT software vendors
@@ -576,6 +606,7 @@ legal exposure beyond the security risk.
   reporting obligations documented and tested
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI07 Data Governance
 - Other frameworks: NERC CIP series · EU AI Act Art. 10/17 · NIST SP 800-82 Rev 3 Section 8
 
@@ -609,6 +640,7 @@ with appropriate controls.
 #### Mitigations by tier
 
 **Foundational (SL 1–2)**
+
 - SR 4.1: OT-specific content classification for
   multimodal extraction — OCR of P&ID image requires
   same controls as the original P&ID document
@@ -616,6 +648,7 @@ with appropriate controls.
   in multimodal outputs as to direct historian queries
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI01 Sensitive Data Leakage, DSGAI14 Telemetry Leakage
 - Other frameworks: NIST SP 800-82 Rev 3 Section 5.4 · ISO 27001 A.8.11
 
@@ -640,6 +673,7 @@ or equipment characteristics through statistical inference.
 #### Mitigations by tier
 
 **Foundational (SL 1–2)**
+
 - SR 4.1: Treat synthetic OT data as sensitive until
   formal re-identification risk assessment — process
   simulation data may reveal real equipment characteristics
@@ -647,6 +681,7 @@ or equipment characteristics through statistical inference.
   OT data in 62443-2-1 security management programme
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI08 Non-Compliance, DSGAI18 Inference & Data Reconstruction
 - Other frameworks: ISO 27001 A.5.34 · NIST SP 800-82 Rev 3 Section 6
 
@@ -681,6 +716,7 @@ shifts or roles.
 #### Mitigations by tier
 
 **Foundational (SL 1–2)**
+
 - SR 1.2: Per-operator session isolation — each
   operator's OT context, retrieved procedures, and
   process history inaccessible to all other sessions
@@ -688,11 +724,13 @@ shifts or roles.
   session isolation technical control documented
 
 **Hardening (SL 2–3)**
+
 - Multi-tenant isolation testing before Zone 3
   deployment — verify operator A cannot retrieve
   operator B's process context through any query
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - DSGAI 2026: DSGAI13 Vector Store Platform Security
 - Other frameworks: NIST SP 800-82 Rev 3 · ISO 27001 A.8.3
@@ -745,6 +783,7 @@ Repositories) realised in Zone 3.
 #### Mitigations by tier
 
 **Foundational (SL 1–2)**
+
 - SR 2.2: Per-operator execution — NL gateway queries
   execute under requesting operator's historian
   permissions, never shared high-privilege account
@@ -755,6 +794,7 @@ Repositories) realised in Zone 3.
   through NL gateway without documented justification
 
 **Hardening (SL 2–3)**
+
 - SR 2.1: Allowlist enforced at conduit — bulk
   extraction patterns rejected before reaching historian
 - SR 6.1: Log all NL-generated queries with operator
@@ -762,6 +802,7 @@ Repositories) realised in Zone 3.
 - Include NL gateway injection in OT penetration testing
 
 **Advanced (SL 3–4)**
+
 - Adversarial NL-to-SQL testing against OT historian —
   attempt destructive or bulk extraction queries,
   verify allowlist holds
@@ -770,6 +811,7 @@ Repositories) realised in Zone 3.
   work order creation or setpoint access
 
 #### Cross-references
+
 - LLM Top 10: LLM10 Improper Output Handling
 - Agentic Top 10: ASI02 Tool Misuse, ASI05 Unexpected Code Execution
 - Other frameworks: NIST SP 800-82 Rev 3 Section 7.2 · CWE-89 · MITRE ATLAS AML.T0057
@@ -804,6 +846,7 @@ OT data historians.
 #### Mitigations by tier
 
 **Foundational (SL 1–2)**
+
 - SR 1.2: RBAC on all Zone 3 vector stores —
   no unauthenticated access in any OT environment
 - SR 4.1: Encrypt Zone 3 vector store content —
@@ -811,11 +854,13 @@ OT data historians.
 - Patch CVE-2024-3584 — urgent in Zone 3
 
 **Hardening (SL 2–3)**
+
 - SR 3.7: Monitor Zone 3 vector store access —
   bulk extraction and unusual query patterns alerted
   through OT SIEM integration
 
 #### Cross-references
+
 - LLM Top 10: LLM09 Vector and Embedding Weaknesses
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - Other frameworks: NIST SP 800-82 Rev 3 · ISO 27001 A.8.3/A.8.24
@@ -850,12 +895,14 @@ the production systems they observe.
 #### Mitigations by tier
 
 **Foundational (SL 1–2)**
+
 - SR 4.4: OT-specific masking before telemetry —
   process data identifiers masked before logging
 - SR 4.1: Protect OT GenAI telemetry stores —
   same access controls as production OT data
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI01 Sensitive Data Leakage, DSGAI07 Data Governance
 - Other frameworks: NIST SP 800-82 Rev 3 Section 5.4 · ISO 27001 A.8.15
 
@@ -890,6 +937,7 @@ of any injection that reaches this context in Zone 3.
 #### Mitigations by tier
 
 **Foundational (SL 1–2)**
+
 - SR 2.2: Minimum-necessary OT context injection —
   relevant tags only, not broad Zone 3 datasets
 - SR 4.1: Classification ceiling tracking in context —
@@ -897,6 +945,7 @@ of any injection that reaches this context in Zone 3.
   drives response handling requirements
 
 #### Cross-references
+
 - LLM Top 10: LLM08 Hidden Context Exposure
 - Agentic Top 10: ASI01 Agent Goal Hijack
 - Other frameworks: NIST SP 800-82 Rev 3 · ISO 27001 A.8.3
@@ -930,12 +979,14 @@ CMMS browser tabs.
 #### Mitigations by tier
 
 **Foundational (SL 1–2)**
+
 - SR 3.2: Apply 62443-2-4 to all browser AI extension
   providers before Zone 3 deployment
 - SR 1.2: Block unapproved AI extensions on Zone 3
   workstations — device management enforcement
 
 #### Cross-references
+
 - Agentic Top 10: ASI10 Rogue Agents
 - DSGAI 2026: DSGAI03 Shadow AI
 - Other frameworks: NIST SP 800-82 Rev 3 Section 8 · ISO 27001 A.8.1/A.8.7
@@ -989,6 +1040,7 @@ availability failures because the consequence is physical.
 #### Mitigations by tier
 
 **Foundational (SL 1–2)**
+
 - SR 7.6: Circuit breakers at OT GenAI service
   boundary — graceful degradation to manual mode
   rather than silent misinformation
@@ -998,6 +1050,7 @@ availability failures because the consequence is physical.
   operates correctly when GenAI advisory is unavailable
 
 **Hardening (SL 2–3)**
+
 - SR 6.6: OT GenAI pipeline health in OT SIEM —
   freshness, availability metrics reviewed as security
   monitoring, not just operational monitoring
@@ -1006,6 +1059,7 @@ availability failures because the consequence is physical.
   confirmed through testing
 
 **Advanced (SL 3–4)**
+
 - Adversarial availability testing — attempt to
   saturate OT GenAI endpoints, verify circuit breakers
   and process control fallback hold under load
@@ -1014,6 +1068,7 @@ availability failures because the consequence is physical.
   possible if advisory system provides incorrect data
 
 #### Cross-references
+
 - LLM Top 10: LLM06 Unbounded Consumption
 - Agentic Top 10: ASI08 Cascading Agent Failures
 - Other frameworks: NIST SP 800-82 Rev 3 Section 5.6 · IEC 61511 (functional safety) · AIUC-1 D
@@ -1039,6 +1094,7 @@ or safety system configurations embedded in training data.
 #### Mitigations by tier
 
 **Foundational (SL 1–2)**
+
 - SR 4.1: Apply differential privacy in OT GenAI
   training — limits reconstruction of sensitive process
   parameters from model outputs
@@ -1046,16 +1102,19 @@ or safety system configurations embedded in training data.
   enabling inference attacks against OT-trained models
 
 **Hardening (SL 2–3)**
+
 - SR 6.6: Monitor for inference attack patterns —
   systematic output space probing against OT GenAI
   models detected and rate-limited
 
 **Advanced (SL 3–4)**
+
 - Membership inference red team against OT-trained
   models before deployment — verify process parameters
   and equipment characteristics cannot be reconstructed
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure, LLM09 Vector and Embedding Weaknesses
 - DSGAI 2026: DSGAI10 Synthetic Data Pitfalls
 - Other frameworks: NIST SP 800-82 Rev 3 Section 5.4 · MITRE ATLAS AML.T0024.000
@@ -1081,6 +1140,7 @@ are a supply chain access path to sensitive operational data.
 #### Mitigations by tier
 
 **Foundational (SL 1–2)**
+
 - SR 3.2: Apply 62443-2-4 to labelling vendors with
   OT data access — same programme as OT software vendors
 - SR 4.1: OT data minimisation in labelling — annotators
@@ -1088,6 +1148,7 @@ are a supply chain access path to sensitive operational data.
   process records
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI07 Data Governance, DSGAI08 Non-Compliance
 - Other frameworks: NIST SP 800-82 Rev 3 Section 8.4 · ISO 27001 A.5.34
 
@@ -1114,6 +1175,7 @@ insights without direct OT system access.
 #### Mitigations by tier
 
 **Foundational (SL 1–2)**
+
 - SR 1.2: Authentication on all OT GenAI model APIs —
   no unauthenticated systematic querying possible
 - SR 4.1: Rate limiting as OT data protection control —
@@ -1121,11 +1183,13 @@ insights without direct OT system access.
   volumes, rate limiting raises cost significantly
 
 **Hardening (SL 2–3)**
+
 - SR 6.6: Monitor for extraction patterns —
   unusual query diversity and volume alerted
   as potential AML.T0016 in OT SIEM
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - DSGAI 2026: DSGAI18 Inference & Data Reconstruction
 - Other frameworks: NIST SP 800-82 Rev 3 · MITRE ATLAS AML.T0016 · ISO 27001 A.5.12
@@ -1180,6 +1244,7 @@ documentation system that feeds the RAG corpus.
 #### Mitigations by tier
 
 **Foundational (SL 1–2)**
+
 - SR 3.3: OT RAG corpus integrity controls —
   hash-based verification of all indexed content,
   source allowlisting to engineering-approved sources
@@ -1188,6 +1253,7 @@ documentation system that feeds the RAG corpus.
   that influences Zone 3 advisory outputs
 
 **Hardening (SL 2–3)**
+
 - SR 3.7: Continuous OT RAG corpus monitoring —
   integrity hashing on all indexed documents, changes
   trigger immediate alert and engineering review
@@ -1196,6 +1262,7 @@ documentation system that feeds the RAG corpus.
   all recommendations issued since poison ingestion
 
 **Advanced (SL 3–4)**
+
 - Include RAG poisoning in Process Hazard Analysis —
   assess physical consequences of each possible
   incorrect recommendation per process area
@@ -1204,6 +1271,7 @@ documentation system that feeds the RAG corpus.
   documentation source, verify detection holds
 
 #### Cross-references
+
 - LLM Top 10: LLM05 Data and Model Poisoning, LLM07 Misinformation
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - Other frameworks: NIST SP 800-82 Rev 3 Section 5.3 · IEC 61511 · MITRE ATLAS AML.T0045
@@ -1298,4 +1366,5 @@ documentation system that feeds the RAG corpus.
 ---
 
 Maintained by the OWASP GenAI Data Security Initiative.
-Part of the OWASP GenAI Crosswalk: https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk
+Part of the OWASP GenAI Crosswalk:
+<https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk>

@@ -9,7 +9,8 @@
 
 # DSGAI 2026 × ISO/IEC 27001:2022
 
-Mapping the [OWASP GenAI Data Security Risks & Mitigations 2026](https://genai.owasp.org/resource/owasp-genai-data-security-risks-mitigations-2026/)
+Mapping the
+[OWASP GenAI Data Security Risks & Mitigations 2026](https://genai.owasp.org/resource/owasp-genai-data-security-risks-mitigations-2026/)
 (DSGAI01–DSGAI21) to [ISO/IEC 27001:2022](https://www.iso.org/standard/82875.html) —
 the world's most widely adopted information security management system
 standard, certified by over 70,000 organisations globally.
@@ -103,6 +104,7 @@ model memorisation of training data, over-permissive RAG retrieval,
 and improperly redacted outputs.
 
 **Real-world references:**
+
 - Samsung source code leak (2023) — employees fed proprietary code
   to LLM, surfaced in outputs
 - Multiple healthcare RAG deployments surfacing PHI through
@@ -121,6 +123,7 @@ and improperly redacted outputs.
 #### Mitigations by tier
 
 **Foundational**
+
 - A.5.12: Classify all data entering GenAI scope — training corpora,
   RAG sources, prompt templates, and outputs — before ingestion
 - A.8.3: Implement access controls on RAG retrieval — users should
@@ -129,6 +132,7 @@ and improperly redacted outputs.
   chat interfaces, log pipelines — scanning for PII and secrets
 
 **Hardening**
+
 - A.8.11: Implement output redaction for sensitive patterns before
   responses reach users — PII, API keys, internal system names
 - A.5.13: Propagate classification labels to all derived assets —
@@ -137,6 +141,7 @@ and improperly redacted outputs.
   matches authorised user access rights
 
 **Advanced**
+
 - Apply differential privacy in training and embedding generation
   for sensitive corpora — document as A.8.11 technical control
 - Conduct model inversion red team exercises — validate that
@@ -148,11 +153,12 @@ and improperly redacted outputs.
 
 | Tool | Type | Link |
 |---|---|---|
-| Microsoft Presidio | Open-source | https://github.com/microsoft/presidio |
-| Nightfall AI | Commercial | https://nightfall.ai |
-| Private AI | Commercial | https://private-ai.com |
+| Microsoft Presidio | Open-source | <https://github.com/microsoft/presidio> |
+| Nightfall AI | Commercial | <https://nightfall.ai> |
+| Private AI | Commercial | <https://private-ai.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - Agentic Top 10: ASI03 Identity & Privilege Abuse
 - Other frameworks: ISO 27701 · EU AI Act Art. 10 · NIST AI RMF GV-1.6 · GDPR Art. 25
@@ -169,6 +175,7 @@ logs, or tool payloads. Compromised agent credentials enable lateral
 movement across all systems the agent has access to.
 
 **Real-world references:**
+
 - Hugging Face Spaces incident — token exposure paths into AI
   data infrastructure
 - CVE-2025-54795 — Claude Code confirmation bypass enabling
@@ -187,6 +194,7 @@ movement across all systems the agent has access to.
 #### Mitigations by tier
 
 **Foundational**
+
 - A.5.16: Inventory all agent identities — include in NHI
   (Non-Human Identity) register alongside service accounts
 - A.5.17: Enforce no hardcoded credentials in agent code or
@@ -195,6 +203,7 @@ movement across all systems the agent has access to.
   invocation — never long-lived shared tokens
 
 **Hardening**
+
 - A.8.15: Log all agent credential operations — issuance, use,
   expiry, and anomalous access patterns — feed into SIEM
 - A.8.3: Implement just-in-time (JIT) credential issuance —
@@ -204,6 +213,7 @@ movement across all systems the agent has access to.
   payloads using automated scanning
 
 **Advanced**
+
 - Implement PKI-backed agent identities with signed requests
   for all agents in multi-agent ecosystems
 - A.8.2: Apply continuous NHI monitoring — alert on anomalous
@@ -215,11 +225,12 @@ movement across all systems the agent has access to.
 
 | Tool | Type | Link |
 |---|---|---|
-| HashiCorp Vault | Open-source | https://www.vaultproject.io |
-| Teleport | Open-source/Commercial | https://goteleport.com |
-| Entro Security | Commercial | https://entro.security |
+| HashiCorp Vault | Open-source | <https://www.vaultproject.io> |
+| Teleport | Open-source/Commercial | <https://goteleport.com> |
+| Entro Security | Commercial | <https://entro.security> |
 
 #### Cross-references
+
 - LLM Top 10: LLM03 Excessive Agency
 - Agentic Top 10: ASI03 Identity & Privilege Abuse, ASI07 Insecure Inter-Agent Comms
 - Other frameworks: OWASP NHI Top 10 · AIUC-1 A/B007 · NIST AI RMF MS-2.5
@@ -236,6 +247,7 @@ models outside any formal governance. Vendors may retain, train on, or
 mishandle this data with no contractual protections in place.
 
 **Real-world references:**
+
 - Multiple documented incidents of employees pasting customer
   records, internal designs, and source code into public AI tools
 - AI-enabled browser extensions retaining sensitive context beyond
@@ -253,6 +265,7 @@ mishandle this data with no contractual protections in place.
 #### Mitigations by tier
 
 **Foundational**
+
 - A.5.1: Establish and publish an AI acceptable use policy —
   approved tools list, prohibited use cases, data handling
   requirements, and consequences for violation
@@ -263,6 +276,7 @@ mishandle this data with no contractual protections in place.
   transfer to known AI SaaS endpoints
 
 **Hardening**
+
 - A.5.23: Conduct security assessment of all AI SaaS tools before
   approval — data retention, training use, sub-processors,
   cross-border transfers, incident notification terms
@@ -272,6 +286,7 @@ mishandle this data with no contractual protections in place.
   egress, and SaaS access logs
 
 **Advanced**
+
 - Integrate AI security review into formal procurement process —
   AI capabilities embedded in broader SaaS products captured
   at vendor onboarding
@@ -285,11 +300,12 @@ mishandle this data with no contractual protections in place.
 
 | Tool | Type | Link |
 |---|---|---|
-| Zscaler (CASB) | Commercial | https://www.zscaler.com |
-| Microsoft Defender for Cloud Apps | Commercial | https://www.microsoft.com/en-us/security |
-| Nightfall AI | Commercial | https://nightfall.ai |
+| Zscaler (CASB) | Commercial | <https://www.zscaler.com> |
+| Microsoft Defender for Cloud Apps | Commercial | <https://www.microsoft.com/en-us/security> |
+| Nightfall AI | Commercial | <https://nightfall.ai> |
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI07 Data Governance, DSGAI08 Non-Compliance
 - Other frameworks: EU AI Act Art. 25 · ISO 42001 · NIST AI RMF GV-1.6
 
@@ -305,6 +321,7 @@ behaviour — effects are baked into the model and persist across all
 downstream deployments until detected and remediated.
 
 **Real-world references:**
+
 - Nightshade (2023) — poison pixels in training images corrupted
   image generation model behaviour
 - Multiple malicious models on Hugging Face with embedded backdoors
@@ -322,6 +339,7 @@ downstream deployments until detected and remediated.
 #### Mitigations by tier
 
 **Foundational**
+
 - A.5.19: Apply supplier security requirements to all training
   data sources — provenance, quality, and integrity guarantees
   required in contractual arrangements
@@ -331,6 +349,7 @@ downstream deployments until detected and remediated.
   model, adapters, datasets, training libraries
 
 **Hardening**
+
 - A.8.29: Include poisoning detection in your security testing
   programme — test for backdoor triggers and biased outputs
   before every production promotion
@@ -341,6 +360,7 @@ downstream deployments until detected and remediated.
   with clean checkpoint restore on poisoning detection
 
 **Advanced**
+
 - Conduct post-training backdoor detection as a standard
   pre-deployment gate — neural cleanse or equivalent
 - A.8.8: Apply continuous vulnerability monitoring to training
@@ -352,11 +372,12 @@ downstream deployments until detected and remediated.
 
 | Tool | Type | Link |
 |---|---|---|
-| IBM Adversarial Robustness Toolbox | Open-source | https://github.com/Trusted-AI/adversarial-robustness-toolbox |
-| ModelScan | Open-source | https://github.com/protectai/modelscan |
-| CleanLab | Open-source | https://github.com/cleanlab/cleanlab |
+| IBM Adversarial Robustness Toolbox | Open-source | <https://github.com/Trusted-AI/adversarial-robustness-toolbox> |
+| ModelScan | Open-source | <https://github.com/protectai/modelscan> |
+| CleanLab | Open-source | <https://github.com/cleanlab/cleanlab> |
 
 #### Cross-references
+
 - LLM Top 10: LLM04 Supply Chain, LLM05 Data and Model Poisoning
 - Agentic Top 10: ASI04 Supply Chain, ASI06 Memory & Context Poisoning
 - Other frameworks: NIST AI RMF MS-3.3 · CycloneDX ML SBOM · MITRE ATLAS AML.T0032
@@ -374,6 +395,7 @@ shift feature distributions, or exploit snapshot import path traversal
 to achieve arbitrary file write on the vector DB host.
 
 **Real-world references:**
+
 - CVE-2024-3584 (Qdrant) — poisoned snapshot import achieved
   arbitrary file write via path traversal on the vector DB host
   with no authentication bypass required
@@ -390,6 +412,7 @@ to achieve arbitrary file write on the vector DB host.
 #### Mitigations by tier
 
 **Foundational**
+
 - A.8.26: Define and enforce input validation requirements for
   all data ingestion interfaces — schema validation is necessary
   but not sufficient, semantic validation required
@@ -400,6 +423,7 @@ to achieve arbitrary file write on the vector DB host.
   disable or restrict by default, explicit allowlist required
 
 **Hardening**
+
 - A.8.29: Include schema bypass and path traversal scenarios
   in security testing — fuzz all data ingestion interfaces
   before deployment
@@ -410,6 +434,7 @@ to achieve arbitrary file write on the vector DB host.
   vector database deployments — treat as urgent A.8.8
 
 **Advanced**
+
 - Implement multi-stage validation — syntax, schema, semantic,
   and statistical validation in pipeline stages with rejection
   logging at each stage
@@ -422,11 +447,12 @@ to achieve arbitrary file write on the vector DB host.
 
 | Tool | Type | Link |
 |---|---|---|
-| Great Expectations | Open-source | https://greatexpectations.io |
-| Pandera | Open-source | https://pandera.readthedocs.io |
-| OWASP ZAP (API fuzzing) | Open-source | https://www.zaproxy.org |
+| Great Expectations | Open-source | <https://greatexpectations.io> |
+| Pandera | Open-source | <https://pandera.readthedocs.io> |
+| OWASP ZAP (API fuzzing) | Open-source | <https://www.zaproxy.org> |
 
 #### Cross-references
+
 - LLM Top 10: LLM10 Improper Output Handling
 - DSGAI 2026: DSGAI13 Vector Store Platform Security
 - Other frameworks: OWASP ASVS V5 · CWE-20 · NIST AI RMF MS-3.3
@@ -454,6 +480,7 @@ APIs receive full context payloads with no data minimisation.
 #### Mitigations by tier
 
 **Foundational**
+
 - A.5.19: Conduct security assessment of all tool and plugin
   providers before integration — what data do they receive,
   retain, and use for training?
@@ -465,6 +492,7 @@ APIs receive full context payloads with no data minimisation.
   incident notification
 
 **Hardening**
+
 - Inventory all tool integrations with data flow mapping —
   what data category each tool receives, processes, and stores
 - Implement payload inspection on all tool call outputs —
@@ -473,6 +501,7 @@ APIs receive full context payloads with no data minimisation.
   tool providers — include in supplier management programme
 
 **Advanced**
+
 - Implement just-enough context delivery — dynamically scope
   tool payloads per invocation based on minimum requirement
 - Deploy outbound DLP on all tool API calls — block sensitive
@@ -484,10 +513,11 @@ APIs receive full context payloads with no data minimisation.
 
 | Tool | Type | Link |
 |---|---|---|
-| MCP Inspector | Open-source | https://github.com/modelcontextprotocol/inspector |
-| Nightfall AI | Commercial | https://nightfall.ai |
+| MCP Inspector | Open-source | <https://github.com/modelcontextprotocol/inspector> |
+| Nightfall AI | Commercial | <https://nightfall.ai> |
 
 #### Cross-references
+
 - LLM Top 10: LLM03 Excessive Agency
 - Agentic Top 10: ASI02 Tool Misuse, ASI04 Supply Chain
 - Other frameworks: AIUC-1 A/B006 · EU AI Act Art. 25
@@ -516,6 +546,7 @@ derived AI representations.
 #### Mitigations by tier
 
 **Foundational**
+
 - A.5.9: Extend asset inventory to cover all GenAI data assets —
   training datasets, evaluation sets, embedding stores, RAG
   corpora, agent memory, prompt templates, observability logs
@@ -527,6 +558,7 @@ derived AI representations.
   cached retrievals, and any agent memory containing its content
 
 **Hardening**
+
 - A.5.13: Implement automated label propagation — classification
   tags flow from source data through the full derivation chain
 - Establish data retention schedules for all GenAI asset types —
@@ -536,6 +568,7 @@ derived AI representations.
   preprocessing, embedding, retrieval, generation, and logging
 
 **Advanced**
+
 - Implement machine unlearning readiness — versioned
   data-to-model linkage enabling scoped targeted retraining
   in response to erasure obligations
@@ -548,11 +581,12 @@ derived AI representations.
 
 | Tool | Type | Link |
 |---|---|---|
-| Apache Atlas | Open-source | https://atlas.apache.org |
-| OpenMetadata | Open-source | https://open-metadata.org |
-| Collibra | Commercial | https://www.collibra.com |
+| Apache Atlas | Open-source | <https://atlas.apache.org> |
+| OpenMetadata | Open-source | <https://open-metadata.org> |
+| Collibra | Commercial | <https://www.collibra.com> |
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI08 Non-Compliance, DSGAI01 Sensitive Data Leakage
 - Other frameworks: EU AI Act Art. 10 · ISO 27701 · NIST AI RMF GV-1.6
 
@@ -581,6 +615,7 @@ common violation patterns.
 #### Mitigations by tier
 
 **Foundational**
+
 - A.5.31: Conduct regulatory scoping assessment for all GenAI
   deployments — identify which regulations apply, what
   obligations are triggered, and who is accountable
@@ -592,6 +627,7 @@ common violation patterns.
   management, and data subject rights
 
 **Hardening**
+
 - Extend RoPA to cover all AI training and inference activities —
   including sub-processor relationships with model providers
   and vector store vendors
@@ -602,6 +638,7 @@ common violation patterns.
   applicable regulation — document findings and remediation
 
 **Advanced**
+
 - Implement automated compliance posture monitoring —
   continuous assessment against regulatory obligations,
   flagging gaps in lawful basis, expired consent, and
@@ -616,11 +653,12 @@ common violation patterns.
 
 | Tool | Type | Link |
 |---|---|---|
-| OneTrust | Commercial | https://www.onetrust.com |
-| Osano | Commercial | https://www.osano.com |
-| GDPR.eu compliance guides | Reference | https://gdpr.eu |
+| OneTrust | Commercial | <https://www.onetrust.com> |
+| Osano | Commercial | <https://www.osano.com> |
+| GDPR.eu compliance guides | Reference | <https://gdpr.eu> |
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI07 Data Governance
 - Other frameworks: EU AI Act Art. 10/17 · ISO 27701 · GDPR Art. 5/25/30 · HIPAA
 
@@ -649,6 +687,7 @@ long after the stated retention period.
 #### Mitigations by tier
 
 **Foundational**
+
 - A.5.12: Classify multimodal uploads at ingestion — an image
   of a passport is Restricted; its OCR output is equally Restricted
 - A.8.24: Encrypt all multimodal uploads and extracted content
@@ -657,6 +696,7 @@ long after the stated retention period.
   transcription output as to equivalent text inputs
 
 **Hardening**
+
 - A.8.12: Deploy DLP on all multimodal extraction pipelines —
   OCR output, audio transcripts, and image analysis results
   scanned for PII before storage
@@ -666,6 +706,7 @@ long after the stated retention period.
   include in A.5.9 asset inventory and apply classification
 
 **Advanced**
+
 - Implement content-aware retention — multimodal uploads
   containing sensitive content automatically scheduled for
   deletion on classification trigger
@@ -679,11 +720,12 @@ long after the stated retention period.
 
 | Tool | Type | Link |
 |---|---|---|
-| Microsoft Presidio | Open-source | https://github.com/microsoft/presidio |
-| AWS Macie | Commercial | https://aws.amazon.com/macie/ |
-| Google Cloud DLP | Commercial | https://cloud.google.com/dlp |
+| Microsoft Presidio | Open-source | <https://github.com/microsoft/presidio> |
+| AWS Macie | Commercial | <https://aws.amazon.com/macie/> |
+| Google Cloud DLP | Commercial | <https://cloud.google.com/dlp> |
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI01 Sensitive Data Leakage, DSGAI14 Telemetry Leakage
 - Other frameworks: ISO 27701 · GDPR Art. 9 (special category data) · NIST AI RMF MS-2.6
 
@@ -711,6 +753,7 @@ of sensitive source data.
 #### Mitigations by tier
 
 **Foundational**
+
 - A.5.34: Treat anonymisation as a legal standard, not a
   technical checkbox — verify compliance with applicable
   privacy law definition of anonymisation before relying on it
@@ -721,6 +764,7 @@ of sensitive source data.
   formally assessed and accepted
 
 **Hardening**
+
 - Implement formal re-identification risk assessment before
   releasing or using synthetic datasets — document as A.5.34
   privacy control evidence
@@ -730,6 +774,7 @@ of sensitive source data.
   datasets before use in external or public contexts
 
 **Advanced**
+
 - Implement k-anonymity, l-diversity, and t-closeness
   measurements on all synthetic datasets — formal minimum
   standards before classification downgrade
@@ -743,11 +788,12 @@ of sensitive source data.
 
 | Tool | Type | Link |
 |---|---|---|
-| Gretel AI | Commercial | https://gretel.ai |
-| Synthetic Data Vault | Open-source | https://sdv.dev |
-| ARX Anonymisation Tool | Open-source | https://arx.deidentifier.org |
+| Gretel AI | Commercial | <https://gretel.ai> |
+| Synthetic Data Vault | Open-source | <https://sdv.dev> |
+| ARX Anonymisation Tool | Open-source | <https://arx.deidentifier.org> |
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI08 Non-Compliance, DSGAI18 Inference & Reconstruction
 - Other frameworks: ISO 27701 · GDPR Recital 26 · EU AI Act Art. 10
 
@@ -774,6 +820,7 @@ system prompt contamination between sessions.
 #### Mitigations by tier
 
 **Foundational**
+
 - A.8.3: Implement strict session isolation — each user's
   context window, retrieved documents, and conversation
   history inaccessible to all other sessions
@@ -783,6 +830,7 @@ system prompt contamination between sessions.
   cross-session access patterns detectable from logs
 
 **Hardening**
+
 - Test multi-tenant isolation explicitly in security testing —
   verify that user A cannot retrieve user B's documents
   through any query formulation
@@ -792,6 +840,7 @@ system prompt contamination between sessions.
   define what data survives session end and what is purged
 
 **Advanced**
+
 - Conduct adversarial cross-tenant testing — attempt to
   extract other users' context through crafted queries
   on every new retrieval system deployment
@@ -805,10 +854,11 @@ system prompt contamination between sessions.
 
 | Tool | Type | Link |
 |---|---|---|
-| Weaviate (with RBAC) | Open-source | https://weaviate.io |
-| Pinecone Canopy | Open-source | https://github.com/pinecone-io/canopy |
+| Weaviate (with RBAC) | Open-source | <https://weaviate.io> |
+| Pinecone Canopy | Open-source | <https://github.com/pinecone-io/canopy> |
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - DSGAI 2026: DSGAI13 Vector Store Platform Security
 - Other frameworks: NIST AI RMF MS-2.5 · AIUC-1 A · GDPR Art. 32
@@ -826,6 +876,7 @@ destructive queries — DELETE, DROP, bulk SELECT — which execute under
 a high-privilege service account with no row-level enforcement.
 
 **Real-world references:**
+
 - Finance Copilot scenario — malicious document injected via RAG
   caused LLM-generated SQL to dump customer PII from multiple tables
 - Multiple production LLM-to-SQL deployments executing attacker-
@@ -843,6 +894,7 @@ a high-privilege service account with no row-level enforcement.
 #### Mitigations by tier
 
 **Foundational**
+
 - A.8.3: LLM-generated queries must execute under the requesting
   user's database permissions — never a shared high-privilege
   service account
@@ -853,6 +905,7 @@ a high-privilege service account with no row-level enforcement.
   patterns permitted, parameterised execution only
 
 **Hardening**
+
 - A.8.29: Include SQL injection, privilege escalation, and bulk
   extraction scenarios in security testing for all LLM-gateway
   interfaces before deployment
@@ -863,6 +916,7 @@ a high-privilege service account with no row-level enforcement.
   identity — forensic traceability mandatory
 
 **Advanced**
+
 - Deploy query analysis layer between LLM and database —
   validates generated SQL against permitted patterns before
   execution, rejects destructive or over-broad queries
@@ -877,11 +931,12 @@ a high-privilege service account with no row-level enforcement.
 
 | Tool | Type | Link |
 |---|---|---|
-| Semgrep | Open-source | https://semgrep.dev |
-| OWASP ZAP | Open-source | https://www.zaproxy.org |
-| Immuta | Commercial | https://www.immuta.com |
+| Semgrep | Open-source | <https://semgrep.dev> |
+| OWASP ZAP | Open-source | <https://www.zaproxy.org> |
+| Immuta | Commercial | <https://www.immuta.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM10 Improper Output Handling
 - Agentic Top 10: ASI02 Tool Misuse, ASI05 Unexpected Code Execution
 - Other frameworks: OWASP ASVS V5 · CWE-89 · NIST AI RMF MS-2.5
@@ -898,6 +953,7 @@ than traditional databases. Missing RBAC, unencrypted storage, exposed
 snapshot endpoints, and unauthenticated collection access are common.
 
 **Real-world references:**
+
 - CVE-2024-3584 (Qdrant) — snapshot import path traversal achieving
   arbitrary file write on the vector DB host
 - Multiple publicly exposed Chroma instances with no authentication
@@ -915,6 +971,7 @@ snapshot endpoints, and unauthenticated collection access are common.
 #### Mitigations by tier
 
 **Foundational**
+
 - A.8.3: Enable RBAC on all vector store collections from day
   one — no unauthenticated access to any collection in any
   environment including development
@@ -924,6 +981,7 @@ snapshot endpoints, and unauthenticated collection access are common.
   feed into SIEM for anomaly detection
 
 **Hardening**
+
 - Patch all known vector database CVEs — treat CVE-2024-3584
   and equivalents as urgent A.8.8 vulnerability management
 - Implement namespace isolation for multi-tenant deployments —
@@ -932,6 +990,7 @@ snapshot endpoints, and unauthenticated collection access are common.
   only from authorised services, never public internet
 
 **Advanced**
+
 - A.8.12: Implement DLP on vector store query results — scan
   retrieved passages for sensitive content before returning
   to RAG pipeline
@@ -944,11 +1003,12 @@ snapshot endpoints, and unauthenticated collection access are common.
 
 | Tool | Type | Link |
 |---|---|---|
-| Weaviate (with RBAC) | Open-source | https://weaviate.io |
-| Qdrant (with API key auth) | Open-source | https://qdrant.tech |
-| OWASP ZAP | Open-source | https://www.zaproxy.org |
+| Weaviate (with RBAC) | Open-source | <https://weaviate.io> |
+| Qdrant (with API key auth) | Open-source | <https://qdrant.tech> |
+| OWASP ZAP | Open-source | <https://www.zaproxy.org> |
 
 #### Cross-references
+
 - LLM Top 10: LLM09 Vector and Embedding Weaknesses
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - Other frameworks: NIST AI RMF MS-2.5 · AIUC-1 A · CWE-284
@@ -977,6 +1037,7 @@ exfiltration path for sensitive information.
 #### Mitigations by tier
 
 **Foundational**
+
 - A.8.15: Apply least-logging defaults — do not capture full
   prompt and response bodies in production telemetry by default
 - A.5.12: Classify all telemetry data at the same level as the
@@ -986,6 +1047,7 @@ exfiltration path for sensitive information.
   as production data, not relaxed because it is "just logs"
 
 **Hardening**
+
 - A.8.11: Redact PII and sensitive patterns from telemetry
   streams before storage — tokenisation or masking applied
   at the telemetry ingestion pipeline
@@ -995,6 +1057,7 @@ exfiltration path for sensitive information.
   after defined window, not indefinite retention
 
 **Advanced**
+
 - Implement approval workflow for enabling full debug capture —
   temporary, scoped, logged, automatically reverted
 - Deploy telemetry access monitoring — alert on bulk access
@@ -1007,11 +1070,12 @@ exfiltration path for sensitive information.
 
 | Tool | Type | Link |
 |---|---|---|
-| OpenTelemetry | Open-source | https://opentelemetry.io |
-| Langfuse | Open-source | https://langfuse.com |
-| Helicone | Open-source | https://www.helicone.ai |
+| OpenTelemetry | Open-source | <https://opentelemetry.io> |
+| Langfuse | Open-source | <https://langfuse.com> |
+| Helicone | Open-source | <https://www.helicone.ai> |
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI01 Sensitive Data Leakage, DSGAI07 Data Governance
 - Other frameworks: ISO 27701 · GDPR Art. 32 · NIST AI RMF GV-1.6
 
@@ -1040,6 +1104,7 @@ injected content.
 #### Mitigations by tier
 
 **Foundational**
+
 - A.8.3: Implement minimum-necessary context injection —
   retrieve only the passages directly relevant to the query,
   not entire documents or broad topic matches
@@ -1050,6 +1115,7 @@ injected content.
   than the requesting user is authorised to access
 
 **Hardening**
+
 - A.8.11: Redact sensitive content from retrieved passages
   before injection — PII and secrets masked even from
   authorised users unless the specific task requires it
@@ -1060,6 +1126,7 @@ injected content.
   with classification-aware pruning, not unbounded history
 
 **Advanced**
+
 - Implement trust-domain-aware context assembly — content
   from different trust domains isolated within the context
   window with explicit labelling
@@ -1073,10 +1140,11 @@ injected content.
 
 | Tool | Type | Link |
 |---|---|---|
-| LlamaIndex | Open-source | https://www.llamaindex.ai |
-| Guardrails AI | Open-source | https://github.com/guardrails-ai/guardrails |
+| LlamaIndex | Open-source | <https://www.llamaindex.ai> |
+| Guardrails AI | Open-source | <https://github.com/guardrails-ai/guardrails> |
 
 #### Cross-references
+
 - LLM Top 10: LLM08 Hidden Context Exposure
 - Agentic Top 10: ASI01 Agent Goal Hijack
 - Other frameworks: AIUC-1 A/B005 · NIST AI RMF MS-2.5
@@ -1094,6 +1162,7 @@ hidden prompt instructions in web content can weaponise these agents
 for data exfiltration.
 
 **Real-world references:**
+
 - HashJack (2025) — AI browsers hijacked via hidden prompt
   instructions in web content enabling data exfiltration
 - Multiple AI browser extensions discovered logging sensitive
@@ -1111,6 +1180,7 @@ for data exfiltration.
 #### Mitigations by tier
 
 **Foundational**
+
 - A.5.10: Establish approved list of endpoint AI agents and
   browser extensions — unapproved extensions blocked at
   the device management layer
@@ -1120,6 +1190,7 @@ for data exfiltration.
   detect sensitive data leaving via AI assistant channels
 
 **Hardening**
+
 - A.8.7: Conduct extension integrity verification before
   approval — verify cryptographic signatures, review permissions,
   assess data access scope
@@ -1130,6 +1201,7 @@ for data exfiltration.
   the permissions required for their stated function
 
 **Advanced**
+
 - A.8.12: Real-time DLP monitoring on endpoint AI agent
   data access — alert on access patterns inconsistent with
   stated extension function
@@ -1143,10 +1215,11 @@ for data exfiltration.
 
 | Tool | Type | Link |
 |---|---|---|
-| LayerX Security | Commercial | https://layerxsecurity.com |
-| Microsoft Intune | Commercial | https://www.microsoft.com/en-us/security/business/endpoint-management |
+| LayerX Security | Commercial | <https://layerxsecurity.com> |
+| Microsoft Intune | Commercial | <https://www.microsoft.com/en-us/security/business/endpoint-management> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI10 Rogue Agents
 - DSGAI 2026: DSGAI03 Shadow AI
 - Other frameworks: AIUC-1 B006 · EU AI Act Art. 9 · NIST AI RMF GV-1.7
@@ -1164,6 +1237,7 @@ DB saturation, stale replica failover, and index corruption all produce
 silent misinformation at inference time.
 
 **Real-world references:**
+
 - Multiple production RAG outages where stale replica failover
   caused AI systems to surface outdated information with full
   confidence for hours before detection (2024–2025)
@@ -1180,6 +1254,7 @@ silent misinformation at inference time.
 #### Mitigations by tier
 
 **Foundational**
+
 - A.8.13: Implement backup and recovery for all vector stores
   and RAG data assets — encrypted backups, tested restores,
   documented RTO and RPO
@@ -1189,6 +1264,7 @@ silent misinformation at inference time.
   when index age exceeds defined threshold
 
 **Hardening**
+
 - A.8.14: Deploy redundancy for production RAG infrastructure —
   replica synchronisation lag monitored and bounded
 - A.5.30: Include AI pipeline components in BCP testing —
@@ -1198,6 +1274,7 @@ silent misinformation at inference time.
   serving stale or empty retrieval results
 
 **Advanced**
+
 - Implement embedding freshness monitoring — track index
   staleness per collection with automated alerting
 - Rate limiting on vector similarity search endpoints —
@@ -1210,10 +1287,11 @@ silent misinformation at inference time.
 
 | Tool | Type | Link |
 |---|---|---|
-| OpenTelemetry | Open-source | https://opentelemetry.io |
-| Resilience4j | Open-source | https://resilience4j.readme.io |
+| OpenTelemetry | Open-source | <https://opentelemetry.io> |
+| Resilience4j | Open-source | <https://resilience4j.readme.io> |
 
 #### Cross-references
+
 - LLM Top 10: LLM06 Unbounded Consumption
 - Agentic Top 10: ASI08 Cascading Agent Failures
 - Other frameworks: AIUC-1 D · ISA/IEC 62443 SR 7.6 (OT) · NIST SP 800-82 (OT)
@@ -1241,6 +1319,7 @@ records that were present in training or retrieval corpora.
 #### Mitigations by tier
 
 **Foundational**
+
 - A.5.34: Assess inference attack risk as part of privacy
   impact assessment — membership inference and model inversion
   explicitly in scope alongside direct disclosure risks
@@ -1251,6 +1330,7 @@ records that were present in training or retrieval corpora.
   offline inversion attacks on stolen embedding stores
 
 **Hardening**
+
 - Apply differential privacy during training — limits
   the information any single training example contributes,
   reducing membership inference success rate
@@ -1262,6 +1342,7 @@ records that were present in training or retrieval corpora.
   membership inference
 
 **Advanced**
+
 - Conduct membership inference and model inversion red team
   exercises as standard pre-deployment validation — document
   results as privacy control evidence
@@ -1275,10 +1356,11 @@ records that were present in training or retrieval corpora.
 
 | Tool | Type | Link |
 |---|---|---|
-| IBM Adversarial Robustness Toolbox | Open-source | https://github.com/Trusted-AI/adversarial-robustness-toolbox |
-| ML Privacy Meter | Open-source | https://github.com/privacytrustlab/ml_privacy_meter |
+| IBM Adversarial Robustness Toolbox | Open-source | <https://github.com/Trusted-AI/adversarial-robustness-toolbox> |
+| ML Privacy Meter | Open-source | <https://github.com/privacytrustlab/ml_privacy_meter> |
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure, LLM09 Vector and Embedding Weaknesses
 - DSGAI 2026: DSGAI10 Synthetic Data Pitfalls
 - Other frameworks: ISO 27701 · GDPR Art. 25 · MITRE ATLAS AML.T0024
@@ -1306,6 +1388,7 @@ to third-party contractors with limited data handling controls.
 #### Mitigations by tier
 
 **Foundational**
+
 - A.5.34: Apply data minimisation to labelling tasks — annotators
   see only the minimum content required for their annotation,
   not full source records
@@ -1316,6 +1399,7 @@ to third-party contractors with limited data handling controls.
   covering data handling, non-disclosure, and incident reporting
 
 **Hardening**
+
 - A.8.11: Anonymise or pseudonymise sensitive content in
   labelling tasks before exposure — annotators work on
   de-identified versions where possible
@@ -1325,6 +1409,7 @@ to third-party contractors with limited data handling controls.
   include in A.5.19 supplier security programme
 
 **Advanced**
+
 - Implement differential privacy in labelling pipeline —
   aggregate annotations without exposing individual annotator
   access to full sensitive corpora
@@ -1338,10 +1423,11 @@ to third-party contractors with limited data handling controls.
 
 | Tool | Type | Link |
 |---|---|---|
-| Label Studio | Open-source | https://labelstud.io |
-| Scale AI | Commercial | https://scale.com |
+| Label Studio | Open-source | <https://labelstud.io> |
+| Scale AI | Commercial | <https://scale.com> |
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI07 Data Governance, DSGAI08 Non-Compliance
 - Other frameworks: EU AI Act Art. 10 · ISO 27701 · GDPR Art. 28
 
@@ -1369,6 +1455,7 @@ original weights.
 #### Mitigations by tier
 
 **Foundational**
+
 - A.5.12: Classify all proprietary model artifacts as
   Confidential or higher — model weights, fine-tuning datasets,
   training configurations, and evaluation sets
@@ -1380,6 +1467,7 @@ original weights.
   high-volume confidence score harvesting
 
 **Hardening**
+
 - Implement output perturbation — add calibrated noise to
   confidence scores and logits without degrading utility,
   increasing extraction noise
@@ -1389,6 +1477,7 @@ original weights.
   enables detection of replicated model usage in the wild
 
 **Advanced**
+
 - Conduct model extraction red team exercises — attempt to
   replicate your model using your own API and document the
   query budget required
@@ -1402,10 +1491,11 @@ original weights.
 
 | Tool | Type | Link |
 |---|---|---|
-| Watermarking via Watermark-Anything | Open-source | https://github.com/facebookresearch/watermark-anything |
-| Fiddler AI | Commercial | https://www.fiddler.ai |
+| Watermarking via Watermark-Anything | Open-source | <https://github.com/facebookresearch/watermark-anything> |
+| Fiddler AI | Commercial | <https://www.fiddler.ai> |
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - DSGAI 2026: DSGAI18 Inference & Reconstruction
 - Other frameworks: MITRE ATLAS AML.T0016 · NIST AI RMF MS-2.5 · CWE-200
@@ -1423,6 +1513,7 @@ output. Unlike direct model poisoning, this targets the data plane
 rather than the model, requiring no training access.
 
 **Real-world references:**
+
 - Grok RAG incident (2025) — production RAG system ingested and
   surfaced externally introduced false information as authoritative
   output
@@ -1441,6 +1532,7 @@ rather than the model, requiring no training access.
 #### Mitigations by tier
 
 **Foundational**
+
 - A.8.27: Implement source trust tiering in RAG retrieval —
   weight results by source provenance and trust score, not
   solely semantic similarity
@@ -1450,6 +1542,7 @@ rather than the model, requiring no training access.
   campaigns targeting your specific domain and RAG sources
 
 **Hardening**
+
 - A.8.29: Implement ingestion anomaly detection — statistical
   and semantic scanning for unusual content before it enters
   production retrieval indexes
@@ -1461,6 +1554,7 @@ rather than the model, requiring no training access.
   authoritative sources before publication
 
 **Advanced**
+
 - Automated human-in-the-loop triggers for AI decisions
   derived from low-provenance or recently indexed sources
   in irreversible decision contexts
@@ -1475,11 +1569,12 @@ rather than the model, requiring no training access.
 
 | Tool | Type | Link |
 |---|---|---|
-| Great Expectations | Open-source | https://greatexpectations.io |
-| Deepchecks | Open-source | https://deepchecks.com |
-| TruLens | Open-source | https://github.com/truera/trulens |
+| Great Expectations | Open-source | <https://greatexpectations.io> |
+| Deepchecks | Open-source | <https://deepchecks.com> |
+| TruLens | Open-source | <https://github.com/truera/trulens> |
 
 #### Cross-references
+
 - LLM Top 10: LLM05 Data and Model Poisoning, LLM07 Misinformation
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - Other frameworks: MITRE ATLAS AML.T0045 · EU AI Act Art. 55(1)(a) · ENISA
@@ -1492,17 +1587,20 @@ Use this checklist to extend your existing ISO 27001 ISMS to cover
 GenAI data security obligations:
 
 ### Scope extension
+
 - [ ] GenAI data assets added to A.5.9 asset inventory
 - [ ] Classification policy extended to cover embeddings, caches, agent memory, telemetry
 - [ ] Data flow maps updated to include all GenAI pipelines
 
 ### Policy updates
+
 - [ ] Acceptable use policy updated to cover AI tools (A.5.10)
 - [ ] Cloud services policy extended to AI SaaS (A.5.23)
 - [ ] Supplier agreements updated for AI vendors (A.5.20)
 - [ ] AI data governance policy published (A.5.1)
 
 ### Technical controls
+
 - [ ] DLP deployed on all model output channels (A.8.12)
 - [ ] Output masking/redaction implemented (A.8.11)
 - [ ] RAG access controls audited (A.8.3)
@@ -1511,6 +1609,7 @@ GenAI data security obligations:
 - [ ] NHI inventory and credential lifecycle controls live (A.8.2, A.5.16)
 
 ### Testing and monitoring
+
 - [ ] GenAI scenarios added to internal audit programme (A.8.29)
 - [ ] Penetration test scope extended to include LLM and RAG interfaces
 - [ ] Vulnerability management covers AI pipeline components (A.8.8)
@@ -1548,5 +1647,7 @@ GenAI data security obligations:
 
 ---
 
-*Part of the [OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk) —
+*Part of the
+[OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk)
+—
 maintained by the [OWASP GenAI Data Security Initiative](https://genai.owasp.org)*

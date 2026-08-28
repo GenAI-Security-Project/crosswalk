@@ -1,5 +1,5 @@
 # GenAI Security Crosswalk
- 
+
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 [![OWASP Lab](https://img.shields.io/badge/OWASP-GenAI%20Data%20Security-blue)](https://genai.owasp.org)
 [![Version](https://img.shields.io/badge/version-2.0.0-green)](CHANGELOG.md)
@@ -7,30 +7,39 @@
 [![Mapping Files](https://img.shields.io/badge/mapping%20files-67-brightgreen)](README.md)
 [![Frameworks](https://img.shields.io/badge/frameworks-20-orange)](README.md)
 [![npm](https://img.shields.io/npm/v/genai-security-crosswalk?color=red&label=npm)](https://www.npmjs.com/package/genai-security-crosswalk)
- 
-> The most comprehensive publicly available mapping of OWASP GenAI security risks to industry frameworks — covering LLM applications, autonomous agentic AI, and GenAI data security across **20 frameworks** and **3 OWASP source lists**.
 
-### [Live Web App](https://emmanuelgjr.github.io/GenAI-Security-Crosswalk/) | [Score Your Coverage](https://emmanuelgjr.github.io/GenAI-Security-Crosswalk/#/score) | [Explore Entries](https://emmanuelgjr.github.io/GenAI-Security-Crosswalk/#/explorer) | [View Incidents](https://emmanuelgjr.github.io/GenAI-Security-Crosswalk/#/incidents)
+> The most comprehensive publicly available mapping of OWASP GenAI security risks to industry frameworks —
+> covering LLM applications, autonomous agentic AI, and GenAI data security across **20 frameworks** and **3
+> OWASP source lists**.
 
-Created and led by **[Emmanuel Guilherme Junior](https://github.com/emmanuelgjr)**, who leads the [OWASP GenAI Data Security Initiative](https://genai.owasp.org).
+## [Live Web App](https://emmanuelgjr.github.io/GenAI-Security-Crosswalk/) | [Score Your Coverage](https://emmanuelgjr.github.io/GenAI-Security-Crosswalk/#/score) | [Explore Entries](https://emmanuelgjr.github.io/GenAI-Security-Crosswalk/#/explorer) | [View Incidents](https://emmanuelgjr.github.io/GenAI-Security-Crosswalk/#/incidents)
+
+Created and led by **[Emmanuel Guilherme Junior](https://github.com/emmanuelgjr)**, who leads the
+[OWASP GenAI Data Security Initiative](https://genai.owasp.org) .
 
 ---
 
 ## TL;DR — What is this and what do I do?
 
-**The problem:** You're deploying AI (LLMs, agents, RAG pipelines) and need to know which security controls apply — across EU AI Act, NIST, ISO, SOC 2, FedRAMP, DORA, and 14 more frameworks. No single document maps AI risks to all of them.
+**The problem:** You're deploying AI (LLMs, agents, RAG pipelines) and need to know which security controls
+apply — across EU AI Act, NIST, ISO, SOC 2, FedRAMP, DORA, and 14 more frameworks. No single document maps
+AI risks to all of them.
 
-**This repo solves that.** Every OWASP GenAI vulnerability (41 total) is mapped to specific controls in 20 industry frameworks. Pick your risk, find your controls.
+**This repo solves that.** Every OWASP GenAI vulnerability (41 total) is mapped to specific controls in 20
+industry frameworks. Pick your risk, find your controls.
 
 ### 3 ways to use it (pick one)
 
 **1. Score your coverage in 60 seconds** (no install needed)
-> Go to the **[web app](https://emmanuelgjr.github.io/GenAI-Security-Crosswalk/#/score)**, select the frameworks you implement, see your gaps instantly. Upload tool results to validate.
+> Go to the **[web app](https://emmanuelgjr.github.io/GenAI-Security-Crosswalk/#/score)**, select the
+> frameworks you implement, see your gaps instantly. Upload tool results to validate.
 
 **2. Read the mapping file you need** (browse the repo)
-> Find your framework below, click the file, read the controls. Example: deploying AI in the EU? Start with [LLM_EUAIAct.md](llm-top10/LLM_EUAIAct.md).
+> Find your framework below, click the file, read the controls. Example: deploying AI in the EU? Start with
+> [LLM_EUAIAct.md](llm-top10/LLM_EUAIAct.md) .
 
 **3. Run the tools** (for security engineers and red-teamers)
+
 ```bash
 git clone https://github.com/emmanuelgjr/GenAI-Security-Crosswalk.git
 cd GenAI-Security-Crosswalk
@@ -70,21 +79,21 @@ Every file answers one question: **which controls from framework X address vulne
 | **LAAF v2.0** | First agentic LPCI red-teaming framework — fully integrated with 6-stage × OWASP crosswalk |
 
 All free. All open-source. Built for practitioners.
- 
+
 ---
- 
+
 ## Source lists
- 
+
 | List | Entries | Version | Frameworks mapped |
 |---|---|---|---|
 | [OWASP LLM Top 10](https://genai.owasp.org/llm-top-10/) | LLM01–LLM10 | 2026 | 23 |
 | [OWASP Agentic Top 10](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/) | ASI01–ASI10 | 2026 | 23 |
 | [OWASP GenAI Data Security Risks](https://genai.owasp.org/resource/owasp-genai-data-security-risks-mitigations-2026/) | DSGAI01–DSGAI21 | 2026 | 21 |
- 
+
 ---
- 
+
 ## Framework coverage matrix
- 
+
 | Framework | LLM Top 10 | Agentic Top 10 | DSGAI 2026 |
 |---|:---:|:---:|:---:|
 | [MITRE ATLAS](https://atlas.mitre.org) | ✅ | ✅ | ✅ |
@@ -113,7 +122,7 @@ All free. All open-source. Built for practitioners.
 ## All mapping files
 
 ### LLM Top 10 2026 — 23 framework mappings
- 
+
 | File | Framework | Standout content |
 |---|---|---|
 | [LLM_MITREATLAS.md](llm-top10/LLM_MITREATLAS.md) | MITRE ATLAS | Adversarial technique mapping with real-world incident references |
@@ -141,7 +150,7 @@ All free. All open-source. Built for practitioners.
 | [LLM_DORA.md](llm-top10/LLM_DORA.md) | DORA | EU financial sector resilience — Art. 5–45 per LLM entry |
 
 ### Agentic Top 10 2026 — 23 framework mappings
- 
+
 | File | Framework | Standout content |
 |---|---|---|
 | [Agentic_AIUC1.md](agentic-top10/Agentic_AIUC1.md) | AIUC-1 | Agentic AI governance certification control mapping |
@@ -167,10 +176,11 @@ All free. All open-source. Built for practitioners.
 | [Agentic_FedRAMP.md](agentic-top10/Agentic_FedRAMP.md) | FedRAMP | Federal agentic AI authorization — agent identity, tool access, cascade controls |
 | [Agentic_DORA.md](agentic-top10/Agentic_DORA.md) | DORA | Financial sector agentic resilience — incident reporting, third-party agent risk |
 
-> **Also in this folder:** [Agentic_CWE_CVE.md](agentic-top10/Agentic_CWE_CVE.md) — CWE root cause taxonomy, confirmed CVEs, full CWE cross-reference index.
+> **Also in this folder:** [Agentic_CWE_CVE.md](agentic-top10/Agentic_CWE_CVE.md) — CWE root cause taxonomy,
+> confirmed CVEs, full CWE cross-reference index.
 
 ### DSGAI 2026 — 21 framework mappings
- 
+
 | File | Framework | Standout content |
 |---|---|---|
 | [DSGAI_ISO27001.md](dsgai-2026/DSGAI_ISO27001.md) | ISO/IEC 27001:2022 | ISMS extension covering all 21 DSGAI entries |
@@ -196,7 +206,7 @@ All free. All open-source. Built for practitioners.
 | [DSGAI_DORA.md](dsgai-2026/DSGAI_DORA.md) | DORA | Financial data resilience — Art. 8 asset inventory, Art. 12 backup, Art. 28-44 vendor risk |
 
 ### Shared resources
- 
+
 | File | Contents |
 |---|---|
 | [shared/RECIPES.md](shared/RECIPES.md) | 21 security implementation patterns with working Python — RAG, MCP, OT, Agentic, Data Pipeline |
@@ -204,11 +214,11 @@ All free. All open-source. Built for practitioners.
 | [shared/GLOSSARY.md](shared/GLOSSARY.md) | Unified terminology across LLM, ASI, and DSGAI source lists |
 | [shared/SEVERITY.md](shared/SEVERITY.md) | Severity definitions and AIVSS alignment |
 | [shared/TEMPLATE.md](shared/TEMPLATE.md) | Canonical template for new mapping file contributors |
- 
+
 ---
- 
+
 ## Repository structure
- 
+
 ```text
 GenAI-Security-Crosswalk/
 │
@@ -345,7 +355,7 @@ GenAI-Security-Crosswalk/
     ├── fr/                          ← French (accepting PRs)
     └── pt/                          ← Portuguese (accepting PRs)
 ```
- 
+
 ---
 
 ## Compliance gap reports
@@ -360,11 +370,14 @@ node scripts/compliance-report.js --format json            # machine-readable
 node scripts/compliance-report.js --list-frameworks        # see all options
 ```
 
-Each report includes: executive summary, coverage matrix (OWASP entries × controls), per-control detail with notes, and a prioritised action plan.
+Each report includes: executive summary, coverage matrix (OWASP entries × controls), per-control detail with
+notes, and a prioritised action plan.
 
 ## LAAF v2.0 — LPCI red-teaming
 
-[LAAF v2.0](https://github.com/qorvexconsulting1/laaf-V2.0) is integrated as the third evaluation framework alongside Garak and PyRIT. It covers the attack surface that surface-level injection tests miss: memory persistence, layered encoding, semantic reframing, and 6-stage lifecycle attacks.
+[LAAF v2.0](https://github.com/qorvexconsulting1/laaf-V2.0) is integrated as the third evaluation framework
+alongside Garak and PyRIT. It covers the attack surface that surface-level injection tests miss: memory
+persistence, layered encoding, semantic reframing, and 6-stage lifecycle attacks.
 
 ```bash
 pip install git+https://github.com/qorvexconsulting1/laaf-V2.0.git
@@ -399,11 +412,12 @@ node scripts/incidents-report.js --format csv         # Excel export
 node scripts/incidents-report.js --format stix        # STIX 2.1 bundle for Sentinel/Splunk
 ```
 
-MAESTRO layer roles tracked per incident: **Origin** (where attack starts) · **Propagation** (how it spreads) · **Impact** (where harm manifests) · **Blind-spot** (where detection failed).
+MAESTRO layer roles tracked per incident: **Origin** (where attack starts) · **Propagation** (how it
+spreads) · **Impact** (where harm manifests) · **Blind-spot** (where detection failed).
 
 ### Web app — interactive dashboard
 
-**https://emmanuelgjr.github.io/GenAI-Security-Crosswalk/**
+**<https://emmanuelgjr.github.io/GenAI-Security-Crosswalk/>**
 
 No install required. Works on desktop and mobile.
 
@@ -415,6 +429,7 @@ No install required. Works on desktop and mobile.
 | [**Incidents**](https://emmanuelgjr.github.io/GenAI-Security-Crosswalk/#/incidents) | Browse 50 AI security incidents. Filter by severity, year, MAESTRO layer. Full attribution details. |
 
 **Evidence-based scoring** — three validation tiers:
+
 - **Self-Assessed** — checkbox only (unvalidated)
 - **Partially Validated** — some tool outputs uploaded
 - **Tool-Validated** — 20+ entries backed by Garak/PyRIT/LAAF/compliance report evidence
@@ -437,7 +452,8 @@ node scripts/watch.js --dry-run    # preview findings without opening issues
 node scripts/watch.js --watcher arxiv  # run single watcher
 ```
 
-Weekly GitHub Actions cron (`.github/workflows/weekly-watch.yml`) runs all 4 watchers and opens labeled issues automatically.
+Weekly GitHub Actions cron (`.github/workflows/weekly-watch.yml`) runs all 4 watchers and opens labeled
+issues automatically.
 
 ### npm package
 
@@ -469,7 +485,8 @@ Find your entry point in under 60 seconds.
 
 **I am deploying an autonomous AI agent and need to know what can go wrong**
 → Start: [CROSSREF.md](CROSSREF.md) — master cross-reference across all 41 vulnerability IDs
-→ Then: [Agentic_MAESTRO.md](agentic-top10/Agentic_MAESTRO.md) — architectural threat model (where does each risk originate?)
+→ Then: [Agentic_MAESTRO.md](agentic-top10/Agentic_MAESTRO.md) — architectural threat model (where does each
+risk originate?)
 → Then: [Agentic_AIVSS.md](agentic-top10/Agentic_AIVSS.md) — score each risk; autonomy adds +1.79 avg severity
 → Then: [Agentic_OWASP_NHI.md](agentic-top10/Agentic_OWASP_NHI.md) — identity and credential controls
 
@@ -494,125 +511,164 @@ Find your entry point in under 60 seconds.
 → Then: [DSGAI_DORA.md](dsgai-2026/DSGAI_DORA.md) for data resilience and backup (Art. 8, Art. 12)
 
 **I am securing AI deployed in OT/ICS environments (energy, utilities, manufacturing)**
-→ Start: [Agentic_NISTSP80082.md](agentic-top10/Agentic_NISTSP80082.md) — OT zone model, SP 800-53 controls, NERC CIP/AWIA/CMMC crosswalk
+→ Start: [Agentic_NISTSP80082.md](agentic-top10/Agentic_NISTSP80082.md) — OT zone model, SP 800-53 controls,
+NERC CIP/AWIA/CMMC crosswalk
 → Then: [Agentic_ISA62443.md](agentic-top10/Agentic_ISA62443.md) — SL ratings, zone model, kill switch design
-→ Then: [DSGAI_ISA62443.md](dsgai-2026/DSGAI_ISA62443.md) — RAG corpus poisoning in OT (safety procedure manipulation scenario)
+→ Then: [DSGAI_ISA62443.md](dsgai-2026/DSGAI_ISA62443.md) — RAG corpus poisoning in OT (safety procedure
+manipulation scenario)
 
 ---
 
 ## Quick navigation
- 
+
 **EU AI Act compliance by August 2026**
-→ [LLM_EUAIAct.md](llm-top10/LLM_EUAIAct.md) · [Agentic_EUAIAct.md](agentic-top10/Agentic_EUAIAct.md) · [DSGAI_EUAIAct.md](dsgai-2026/DSGAI_EUAIAct.md)
- 
+→ [LLM_EUAIAct.md](llm-top10/LLM_EUAIAct.md) · [Agentic_EUAIAct.md](agentic-top10/Agentic_EUAIAct.md) ·
+[DSGAI_EUAIAct.md](dsgai-2026/DSGAI_EUAIAct.md)
+
 **European organisation subject to NIS2**
 → [LLM_ENISA.md](llm-top10/LLM_ENISA.md) — ENISA framework with NIS2 Article 23 incident assessment guidance
- 
+
 **AI in OT/ICS environments**
-→ [LLM_ISA62443.md](llm-top10/LLM_ISA62443.md) · [Agentic_ISA62443.md](agentic-top10/Agentic_ISA62443.md) · [DSGAI_ISA62443.md](dsgai-2026/DSGAI_ISA62443.md) · [LLM_NISTSP80082.md](llm-top10/LLM_NISTSP80082.md)
- 
+→ [LLM_ISA62443.md](llm-top10/LLM_ISA62443.md) · [Agentic_ISA62443.md](agentic-top10/Agentic_ISA62443.md) ·
+[DSGAI_ISA62443.md](dsgai-2026/DSGAI_ISA62443.md) · [LLM_NISTSP80082.md](llm-top10/LLM_NISTSP80082.md)
+
 **Deploying autonomous agents**
 → [Agentic_OWASP_NHI.md](agentic-top10/Agentic_OWASP_NHI.md) — identity governance
 → [Agentic_AIUC1.md](agentic-top10/Agentic_AIUC1.md) — agentic governance certification
 → [Agentic_AIVSS.md](agentic-top10/Agentic_AIVSS.md) — risk scoring with autonomy premium
- 
+
 **Threat modeling an agentic AI system before selecting controls**
 → [Agentic_MAESTRO.md](agentic-top10/Agentic_MAESTRO.md) — MAESTRO seven-layer threat enumeration with session guide
 → [DSGAI_MAESTRO.md](dsgai-2026/DSGAI_MAESTRO.md) — MAESTRO data operations lens for all 21 DSGAI entries
- 
+
 **ISO 27001 ISMS extension for GenAI**
-→ [LLM_ISO27001.md](llm-top10/LLM_ISO27001.md) · [Agentic_ISO27001.md](agentic-top10/Agentic_ISO27001.md) · [DSGAI_ISO27001.md](dsgai-2026/DSGAI_ISO27001.md)
- 
+→ [LLM_ISO27001.md](llm-top10/LLM_ISO27001.md) · [Agentic_ISO27001.md](agentic-top10/Agentic_ISO27001.md) ·
+[DSGAI_ISO27001.md](dsgai-2026/DSGAI_ISO27001.md)
+
 **ISO 42001 AIMS for AI governance**
-→ [LLM_ISO42001.md](llm-top10/LLM_ISO42001.md) · [Agentic_ISO42001.md](agentic-top10/Agentic_ISO42001.md) — includes EU AI Act compliance evidence table
- 
+→ [LLM_ISO42001.md](llm-top10/LLM_ISO42001.md) · [Agentic_ISO42001.md](agentic-top10/Agentic_ISO42001.md) —
+includes EU AI Act compliance evidence table
+
 **Security programme maturity**
 → [LLM_SAMM.md](llm-top10/LLM_SAMM.md) — SAMM L1–L3 roadmap with fillable scorecard
- 
+
 **Security test plan for agentic AI**
 → [Agentic_AITG.md](agentic-top10/Agentic_AITG.md) — 50 structured test cases, pre-deployment gates, OT addendum
- 
+
 **Risk register scoring for agentic AI**
-→ [Agentic_AIVSS.md](agentic-top10/Agentic_AIVSS.md) — supervised vs autonomous dual-scenario scoring, avg +1.79 autonomy premium
- 
+→ [Agentic_AIVSS.md](agentic-top10/Agentic_AIVSS.md) — supervised vs autonomous dual-scenario scoring, avg
++1.79 autonomy premium
+
 **Attacker perspective on GenAI risks**
 → [DSGAI_MITREATLAS.md](dsgai-2026/DSGAI_MITREATLAS.md) — ATLAS technique mapping, four attack path chains
 → [Agentic_MITREATLAS.md](agentic-top10/Agentic_MITREATLAS.md) — agentic technique chaining
- 
+
 **CWE root causes and confirmed CVEs**
 → [Agentic_CWE_CVE.md](agentic-top10/Agentic_CWE_CVE.md) — root cause taxonomy, CVE evidence, cross-reference index
- 
+
 **Implementation code, not framework theory**
 → [shared/RECIPES.md](shared/RECIPES.md) — 21 production patterns with working Python
- 
+
 **US federal / FedRAMP authorization for AI services**
-→ [LLM_FedRAMP.md](llm-top10/LLM_FedRAMP.md) · [Agentic_FedRAMP.md](agentic-top10/Agentic_FedRAMP.md) · [DSGAI_FedRAMP.md](dsgai-2026/DSGAI_FedRAMP.md)
+→ [LLM_FedRAMP.md](llm-top10/LLM_FedRAMP.md) · [Agentic_FedRAMP.md](agentic-top10/Agentic_FedRAMP.md) ·
+[DSGAI_FedRAMP.md](dsgai-2026/DSGAI_FedRAMP.md)
 
 **EU financial sector (DORA compliance)**
-——— [LLM_DORA.md](llm-top10/LLM_DORA.md) · [Agentic_DORA.md](agentic-top10/Agentic_DORA.md) · [DSGAI_DORA.md](dsgai-2026/DSGAI_DORA.md)
+——— [LLM_DORA.md](llm-top10/LLM_DORA.md) · [Agentic_DORA.md](agentic-top10/Agentic_DORA.md) ·
+[DSGAI_DORA.md](dsgai-2026/DSGAI_DORA.md)
 
 **Secure AI development lifecycle (SSDF extension)**
-→ [LLM_SP800218A.md](llm-top10/LLM_SP800218A.md) —— [Agentic_SP800218A.md](agentic-top10/Agentic_SP800218A.md) · [DSGAI_SP800218A.md](dsgai-2026/DSGAI_SP800218A.md)
+→ [LLM_SP800218A.md](llm-top10/LLM_SP800218A.md) ——
+[Agentic_SP800218A.md](agentic-top10/Agentic_SP800218A.md) ·
+[DSGAI_SP800218A.md](dsgai-2026/DSGAI_SP800218A.md)
 
 **All risks across all three source lists**
 → [CROSSREF.md](CROSSREF.md) — master cross-reference
- 
----
- 
-## Standout coverage
- 
-### Complete OT/ICS trilogy
- 
-The only publicly available mapping of all three OWASP GenAI source lists to ISA/IEC 62443 and NIST SP 800-82 Rev 3. Includes zone model placement, security level ratings, Fundamental Requirement and Security Requirement references, OT-specific threat scenarios, and pre-deployment checklists for each source list.
- 
-The RAG corpus poisoning scenario in [DSGAI_ISA62443.md](dsgai-2026/DSGAI_ISA62443.md) — a safety procedure manipulation attack that modifies maintenance intervals without any OT network access — exists nowhere else in public documentation.
- 
-### MAESTRO seven-layer threat modeling
- 
-[Agentic_MAESTRO.md](agentic-top10/Agentic_MAESTRO.md) and [DSGAI_MAESTRO.md](dsgai-2026/DSGAI_MAESTRO.md) are the only public mappings of OWASP GenAI risks to the MAESTRO framework from the Cloud Security Alliance. Unlike every other file in this repo — which maps risks to controls — MAESTRO maps each risk to the **architectural layer where it originates**, telling you which team owns the problem and where in the system the fix must be deployed.
- 
-Key finding from the DSGAI mapping: **L2 Data Operations is the originating layer for 52% of all DSGAI entries**. An organisation that does not treat RAG corpora, embedding stores, training pipelines, and memory systems as security-critical infrastructure is under-defended against the majority of the GenAI data security threat landscape.
- 
-### Agentic autonomy premium
- 
-[Agentic_AIVSS.md](agentic-top10/Agentic_AIVSS.md) quantifies what removing human oversight costs in risk: average **+1.79 AIVSS severity points** across all 10 agentic entries. Removing human oversight converts 7 of 10 entries from High to Critical — the quantitative case for mandatory human oversight under EU AI Act Article 14.
- 
-### Complete agentic identity coverage
- 
-[Agentic_OWASP_NHI.md](agentic-top10/Agentic_OWASP_NHI.md) maps every NHI Top 10 entry to every ASI entry — the only public document translating agentic security risks into the NHI controls that IAM teams already operate.
- 
-### SAMM maturity scorecard
- 
-[LLM_SAMM.md](llm-top10/LLM_SAMM.md) includes a fillable maturity scorecard with minimum viable levels per SAMM practice for any LLM production deployment — the artefact security programme leads use to brief engineering leadership on where the programme stands and what to improve next.
- 
-### Production implementation recipes
- 
-[shared/RECIPES.md](shared/RECIPES.md) contains 21 production-ready security patterns with working Python across 5 deployment architectures: RAG pipeline security (access control, ingestion integrity, circuit breakers), MCP server hardening (input validation, credential scoping), OT/ICS agent safety (kill switches, behavioural baselines, cascade containment), agentic AI security (memory sanitization, inter-agent message validation, credential rotation, output guardrails), and data pipeline security (provenance tracking, PII redaction, differential privacy, retention enforcement).
- 
----
- 
-## Contributing
- 
-Contributions are welcome — new framework mappings, updated controls, new implementation recipes, translations, and additional tool entries.
- 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for the file template, PR process, and contribution guidelines. All contributors are listed in the CHANGELOG.
- 
----
- 
-## License
- 
-[Creative Commons Attribution-ShareAlike 4.0 International](LICENSE)
- 
-Free to share and adapt for any purpose, including commercial use, with appropriate credit and distribution under the same license.
- 
----
- 
-## Acknowledgements
- 
-Created and led by **[Emmanuel Guilherme Junior](https://github.com/emmanuelgjr)**, who leads the [OWASP GenAI Data Security Initiative](https://genai.owasp.org).
 
-Built on the work of the OWASP LLM Top 10, OWASP Agentic Top 10, OWASP GenAI Data Security, OWASP NHI Top 10, and OWASP SAMM project teams.
- 
 ---
- 
+
+## Standout coverage
+
+### Complete OT/ICS trilogy
+
+The only publicly available mapping of all three OWASP GenAI source lists to ISA/IEC 62443 and NIST SP
+800-82 Rev 3. Includes zone model placement, security level ratings, Fundamental Requirement and Security
+Requirement references, OT-specific threat scenarios, and pre-deployment checklists for each source list.
+
+The RAG corpus poisoning scenario in [DSGAI_ISA62443.md](dsgai-2026/DSGAI_ISA62443.md) — a safety procedure
+manipulation attack that modifies maintenance intervals without any OT network access — exists nowhere else
+in public documentation.
+
+### MAESTRO seven-layer threat modeling
+
+[Agentic_MAESTRO.md](agentic-top10/Agentic_MAESTRO.md) and [DSGAI_MAESTRO.md](dsgai-2026/DSGAI_MAESTRO.md)
+are the only public mappings of OWASP GenAI risks to the MAESTRO framework from the Cloud Security Alliance.
+Unlike every other file in this repo — which maps risks to controls — MAESTRO maps each risk to the
+**architectural layer where it originates**, telling you which team owns the problem and where in the system
+the fix must be deployed.
+
+Key finding from the DSGAI mapping: **L2 Data Operations is the originating layer for 52% of all DSGAI
+entries**. An organisation that does not treat RAG corpora, embedding stores, training pipelines, and memory
+systems as security-critical infrastructure is under-defended against the majority of the GenAI data
+security threat landscape.
+
+### Agentic autonomy premium
+
+[Agentic_AIVSS.md](agentic-top10/Agentic_AIVSS.md) quantifies what removing human oversight costs in risk:
+average **+1.79 AIVSS severity points** across all 10 agentic entries. Removing human oversight converts 7
+of 10 entries from High to Critical — the quantitative case for mandatory human oversight under EU AI Act
+Article 14.
+
+### Complete agentic identity coverage
+
+[Agentic_OWASP_NHI.md](agentic-top10/Agentic_OWASP_NHI.md) maps every NHI Top 10 entry to every ASI entry —
+the only public document translating agentic security risks into the NHI controls that IAM teams already
+operate.
+
+### SAMM maturity scorecard
+
+[LLM_SAMM.md](llm-top10/LLM_SAMM.md) includes a fillable maturity scorecard with minimum viable levels per
+SAMM practice for any LLM production deployment — the artefact security programme leads use to brief
+engineering leadership on where the programme stands and what to improve next.
+
+### Production implementation recipes
+
+[shared/RECIPES.md](shared/RECIPES.md) contains 21 production-ready security patterns with working Python
+across 5 deployment architectures: RAG pipeline security (access control, ingestion integrity, circuit
+breakers), MCP server hardening (input validation, credential scoping), OT/ICS agent safety (kill switches,
+behavioural baselines, cascade containment), agentic AI security (memory sanitization, inter-agent message
+validation, credential rotation, output guardrails), and data pipeline security (provenance tracking, PII
+redaction, differential privacy, retention enforcement).
+
+---
+
+## Contributing
+
+Contributions are welcome — new framework mappings, updated controls, new implementation recipes,
+translations, and additional tool entries.
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the file template, PR process, and contribution guidelines. All
+contributors are listed in the CHANGELOG.
+
+---
+
+## License
+
+[Creative Commons Attribution-ShareAlike 4.0 International](LICENSE)
+
+Free to share and adapt for any purpose, including commercial use, with appropriate credit and distribution
+under the same license.
+
+---
+
+## Acknowledgements
+
+Created and led by **[Emmanuel Guilherme Junior](https://github.com/emmanuelgjr)**, who leads the
+[OWASP GenAI Data Security Initiative](https://genai.owasp.org) .
+
+Built on the work of the OWASP LLM Top 10, OWASP Agentic Top 10, OWASP GenAI Data Security, OWASP NHI Top
+10, and OWASP SAMM project teams.
+
+---
+
 *[genai.owasp.org](https://genai.owasp.org) · [CC BY-SA 4.0](LICENSE)*

@@ -24,7 +24,9 @@ researchers, and practitioners at any experience level.
 - **OT/ICS specifics** � industrial context for any mapping entry
 - **Translations** � see `/i18n/` for language stubs
 - **Bug fixes** — broken links, incorrect control IDs, typos
-- **Framework submissions** — use the [Submit-a-Standard](https://genai-security-project.github.io/GenAI-Data-Security-Initiative/#/submit) page to submit a new framework for automated mapping
+- **Framework submissions** — use the
+  [Submit-a-Standard](https://genai-security-project.github.io/GenAI-Data-Security-Initiative/#/submit) page
+  to submit a new framework for automated mapping
 
 ---
 
@@ -32,12 +34,18 @@ researchers, and practitioners at any experience level.
 
 The fastest way to add a new framework:
 
-1. Go to [Submit-a-Standard](https://genai-security-project.github.io/GenAI-Data-Security-Initiative/#/submit) in the web app
+1. Go to
+   [Submit-a-Standard](https://genai-security-project.github.io/GenAI-Data-Security-Initiative/#/submit) in
+   the web app
 2. Paste your framework controls as JSON (see `data/framework-schema.json` for the schema)
 3. The classifier pipeline automatically proposes mappings to all 41 OWASP entries
-4. A PR is opened for review — use the [Review page](https://genai-security-project.github.io/GenAI-Data-Security-Initiative/#/review) to accept/reject
+4. A PR is opened for review — use the
+   [Review page](https://genai-security-project.github.io/GenAI-Data-Security-Initiative/#/review) to
+   accept/reject
 
-You can also submit via the [GitHub Issue template](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/issues/new?template=submit-framework.yml).
+You can also submit via the
+[GitHub Issue template](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/issues/new?template=submit-framework.yml)
+.
 
 ---
 
@@ -54,7 +62,8 @@ You can also submit via the [GitHub Issue template](https://github.com/GenAI-Sec
 ## File template
 
 Every mapping file must follow this structure:
-```
+
+```text
 1. Header comment block (source list, framework, version, license)
 2. H1 title: "[Source list] � [Framework]"
 3. One-paragraph description of the framework
@@ -97,6 +106,7 @@ PRs without a source/evidence link will be held for review until one is provided
 ## Severity ratings
 
 Do not change severity ratings without citing one of:
+
 - An AIVSS score from [aivss.owasp.org](https://aivss.owasp.org)
 - A CVSS score from an associated CVE
 - The OWASP source list definition with a direct link
@@ -133,7 +143,8 @@ the OWASP GenAI Data Security Initiative acknowledgements.
 
 ## Questions
 
-Open a [GitHub Discussion](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk/discussions)
+Open a
+[GitHub Discussion](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk/discussions)
 or reach out via the
 [OWASP GenAI Security Project](https://genai.owasp.org/contact/).
 

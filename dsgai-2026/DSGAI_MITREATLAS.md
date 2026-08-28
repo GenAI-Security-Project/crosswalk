@@ -158,6 +158,7 @@ authorised to access.
 #### Mitigations mapped to ATLAS
 
 **Foundational**
+
 - Counter AML.T0035: Output redaction and DLP before
   responses leave service boundary — adversary cannot
   extract sensitive data through inference if outputs
@@ -167,6 +168,7 @@ authorised to access.
   by making individual training examples indistinguishable
 
 **Hardening**
+
 - Counter AML.T0025: Access controls on all GenAI
   observability pipelines — telemetry stores require
   same security as production data
@@ -175,11 +177,13 @@ authorised to access.
   beyond authorised scope through crafted queries
 
 **Advanced**
+
 - Red team AML.T0035: Attempt to extract sensitive
   training data and RAG content through systematic
   inference queries against your specific deployment
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - Agentic Top 10: ASI03 Identity & Privilege Abuse
 - Other frameworks: ISO 27001 A.8.11/A.8.12 · NIST AI RMF GV-1.6 · EU AI Act Art. 10
@@ -206,6 +210,7 @@ access to AI systems and downstream services.
 #### Mitigations mapped to ATLAS
 
 **Foundational**
+
 - Counter AML.T0012: JIT short-lived credentials —
   credentials acquired by adversary expire before
   lateral movement completes
@@ -214,6 +219,7 @@ access to AI systems and downstream services.
   inference outputs, logs, or tool payloads
 
 **Hardening**
+
 - Counter AML.T0051: Least-privilege credential scope —
   stolen agent credential provides minimum viable
   access, limiting lateral movement blast radius
@@ -222,6 +228,7 @@ access to AI systems and downstream services.
   succeeds
 
 #### Cross-references
+
 - Agentic Top 10: ASI03 Identity & Privilege Abuse
 - Other frameworks: OWASP NHI Top 10 · ISO 27001 A.8.2/A.5.16 · NIST CSF 2.0 PR.AA-01
 
@@ -248,6 +255,7 @@ external AI services voluntarily.
 #### Mitigations mapped to ATLAS
 
 **Foundational**
+
 - Counter AML.T0051: Approved AI tool programme —
   employees use vetted services, not adversary-controlled
   or compromised external AI endpoints
@@ -256,11 +264,13 @@ external AI services voluntarily.
   blocked before leaving the corporate perimeter
 
 **Hardening**
+
 - Counter AML.T0057: Continuous shadow AI discovery —
   detect data flows to unapproved AI services across
   endpoints, network egress, and SaaS access logs
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI07 Data Governance, DSGAI08 Non-Compliance
 - Other frameworks: ISO 27001 A.5.10/A.5.23 · NIST CSF 2.0 GV.OC-01 · EU AI Act Art. 25
 
@@ -293,6 +303,7 @@ canonical ATLAS descriptions of this attack class.
 #### Mitigations mapped to ATLAS
 
 **Foundational**
+
 - Counter AML.T0020: Training data integrity controls —
   source allowlisting, anomaly detection, provenance
   tracking before any training run
@@ -301,6 +312,7 @@ canonical ATLAS descriptions of this attack class.
   gate before any production promotion
 
 **Hardening**
+
 - Counter AML.T0031: Adversarial data detection in
   training pipeline — statistical anomaly detection
   flags adversarially crafted training examples
@@ -309,11 +321,13 @@ canonical ATLAS descriptions of this attack class.
   deployment of backdoored weights
 
 **Advanced**
+
 - Red team AML.T0018: Backdoor trigger testing before
   each production deployment — attempt to activate
   embedded backdoors through adversarial inputs
 
 #### Cross-references
+
 - LLM Top 10: LLM04 Supply Chain, LLM05 Data and Model Poisoning
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - Other frameworks: NIST AI RMF MS-3.3 · ISO 27001 A.8.27 · NIST CSF 2.0 DE.CM-09
@@ -340,6 +354,7 @@ data that enters the AI system.
 #### Mitigations mapped to ATLAS
 
 **Foundational**
+
 - Counter AML.T0020: Multi-stage validation at all
   ingestion boundaries — syntactic, schema, semantic
   validation in sequence before any data enters pipeline
@@ -348,11 +363,13 @@ data that enters the AI system.
   is an AML.T0018 enabler in vector database environments
 
 **Hardening**
+
 - Counter AML.T0031: Semantic injection detection on
   ingestion payloads — adversarially crafted content
   detected before entering RAG corpus or training data
 
 #### Cross-references
+
 - LLM Top 10: LLM10 Improper Output Handling
 - DSGAI 2026: DSGAI13 Vector Store Platform Security
 - Other frameworks: ISO 27001 A.8.26/A.8.28 · CWE-20 · NIST CSF 2.0 PR.PS-04
@@ -385,6 +402,7 @@ capture context data that flows through the agent.
 #### Mitigations mapped to ATLAS
 
 **Foundational**
+
 - Counter AML.T0051: Tool and MCP server security
   assessment before deployment — adversary-controlled
   or compromised tools rejected before agent access
@@ -393,11 +411,13 @@ capture context data that flows through the agent.
   that would maximise exfiltration value
 
 **Hardening**
+
 - Counter AML.T0035: DLP on all tool API calls —
   sensitive content patterns detected before leaving
   the controlled environment via tool payloads
 
 #### Cross-references
+
 - Agentic Top 10: ASI02 Tool Misuse, ASI04 Supply Chain
 - Other frameworks: ISO 27001 A.5.19/A.5.20 · NIST CSF 2.0 GV.SC-01 · EU AI Act Art. 25
 
@@ -423,6 +443,7 @@ exploit data stores that lack access controls.
 #### Mitigations mapped to ATLAS
 
 **Foundational**
+
 - Counter AML.T0057: Extend asset inventory to all
   GenAI-derived assets — ungoverned stores cannot be
   protected if they are not known to exist
@@ -431,12 +452,14 @@ exploit data stores that lack access controls.
   classification, blocking unauthenticated inference access
 
 **Hardening**
+
 - Counter AML.T0024.000: Data governance extending to
   training data provenance — what data was used in
   training documented and classified before adversary
   can probe membership
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI08 Non-Compliance, DSGAI01 Sensitive Data Leakage
 - Other frameworks: ISO 27001 A.5.9/A.8.10 · EU AI Act Art. 10 · NIST CSF 2.0 ID.AM-08
 
@@ -462,6 +485,7 @@ gaps to maximise harm from incidents they cause.
 #### Mitigations mapped to ATLAS
 
 **Foundational**
+
 - Counter AML.T0051: Regulatory scoping assessment
   for all GenAI deployments — compliance requirements
   drive security controls that limit adversary access
@@ -470,6 +494,7 @@ gaps to maximise harm from incidents they cause.
   extends access controls to previously ungoverned stores
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI07 Data Governance
 - Other frameworks: EU AI Act Art. 10/17 · ISO 27001 A.5.31 · NIST CSF 2.0 GV.OC-01
 
@@ -494,6 +519,7 @@ perspective, multimodal inputs are a data exfiltration staging area.
 #### Mitigations mapped to ATLAS
 
 **Foundational**
+
 - Counter AML.T0025: DLP on multimodal extraction
   outputs — OCR and transcription results scanned
   before storage or downstream use
@@ -502,11 +528,13 @@ perspective, multimodal inputs are a data exfiltration staging area.
   OCR output of passport image treated as Restricted
 
 **Hardening**
+
 - Counter AML.T0024.000: Multimodal training data
   governance — sensitive images and audio tracked in
   training data inventory, membership inference tested
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI01 Sensitive Data Leakage, DSGAI14 Telemetry Leakage
 - Other frameworks: ISO 27001 A.8.11 · GDPR Art. 9 · NIST CSF 2.0 PR.DS-01
 
@@ -532,6 +560,7 @@ confirm re-identification is possible.
 #### Mitigations mapped to ATLAS
 
 **Foundational**
+
 - Counter AML.T0024.000: Formal re-identification risk
   assessment before releasing synthetic data — membership
   inference testing as standard gate before release
@@ -539,11 +568,13 @@ confirm re-identification is possible.
   limits AML.T0024.000 success rate by design
 
 **Advanced**
+
 - Red team AML.T0024.000: Membership inference testing
   against synthetic datasets before production use —
   verify re-identification risk meets acceptable threshold
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI08 Non-Compliance, DSGAI18 Inference & Data Reconstruction
 - Other frameworks: ISO 27001 A.5.34 · GDPR Recital 26 · NIST CSF 2.0 GV.RM-06
 
@@ -568,6 +599,7 @@ where session isolation failure becomes a data access path.
 #### Mitigations mapped to ATLAS
 
 **Foundational**
+
 - Counter AML.T0051: Strict session isolation —
   adversary crafting cross-session queries encounters
   access controls that reject retrieval from other sessions
@@ -576,12 +608,14 @@ where session isolation failure becomes a data access path.
   users' namespaces regardless of query formulation
 
 **Hardening**
+
 - Counter AML.T0035: Multi-tenant isolation testing —
   adversarial cross-session queries tested before each
   deployment, ATLAS AML.T0035 technique specifically
   tested against your retrieval system
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - DSGAI 2026: DSGAI13 Vector Store Platform Security
 - Other frameworks: ISO 27001 A.8.3 · GDPR Art. 32 · NIST CSF 2.0 PR.AA-05
@@ -615,6 +649,7 @@ exploits the AI interface to access data stores.
 #### Mitigations mapped to ATLAS
 
 **Foundational**
+
 - Counter AML.T0051: Per-user query execution —
   adversary cannot escalate query privileges through
   natural language input when queries execute under
@@ -625,17 +660,20 @@ exploits the AI interface to access data stores.
   the approved pattern set
 
 **Hardening**
+
 - Counter AML.T0035: Log and monitor all LLM-generated
   queries — bulk extraction patterns detected before
   adversary completes data retrieval
 
 **Advanced**
+
 - Red team AML.T0051/AML.T0057: Adversarial NL-to-SQL
   testing — attempt bulk extraction and destructive
   queries through natural language against your specific
   deployment
 
 #### Cross-references
+
 - LLM Top 10: LLM10 Improper Output Handling
 - Agentic Top 10: ASI02 Tool Misuse, ASI05 Unexpected Code Execution
 - Other frameworks: ISO 27001 A.8.26/A.8.28 · CWE-89 · ISA/IEC 62443 SR 2.2 (OT)
@@ -669,6 +707,7 @@ Repositories).
 #### Mitigations mapped to ATLAS
 
 **Foundational**
+
 - Counter AML.T0025: RBAC on all vector store
   collections — unauthenticated access path that enables
   AML.T0025 exfiltration is eliminated
@@ -676,11 +715,13 @@ Repositories).
   path traversal enabling AML.T0020 staging is closed
 
 **Hardening**
+
 - Counter AML.T0035: Monitor vector store query patterns —
   bulk extraction volume and unusual query diversity
   indicative of AML.T0035 detected
 
 #### Cross-references
+
 - LLM Top 10: LLM09 Vector and Embedding Weaknesses
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - Other frameworks: ISO 27001 A.8.3/A.8.24 · CWE-284 · NIST CSF 2.0 PR.AA-05
@@ -707,6 +748,7 @@ production data may access the same data through poorly secured logs.
 #### Mitigations mapped to ATLAS
 
 **Foundational**
+
 - Counter AML.T0057: Same access controls on telemetry
   stores as production data — telemetry is not a lower-risk
   alternative exfiltration path for adversaries
@@ -715,11 +757,13 @@ production data may access the same data through poorly secured logs.
   telemetry stores in cleartext
 
 **Hardening**
+
 - Counter AML.T0035: Short TTL for debug traces —
   sensitive content in telemetry stores is only accessible
   for defined window, reducing AML.T0057 value
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI01 Sensitive Data Leakage, DSGAI07 Data Governance
 - Other frameworks: ISO 27001 A.8.15 · GDPR Art. 32 · NIST CSF 2.0 GV.OC-01
 
@@ -745,6 +789,7 @@ Application) by maximising the data accessible to an injection attack.
 #### Mitigations mapped to ATLAS
 
 **Foundational**
+
 - Counter AML.T0035: Minimum-necessary context
   injection — adversary gains access only to minimum
   relevant content, not aggregated cross-trust-domain data
@@ -754,6 +799,7 @@ Application) by maximising the data accessible to an injection attack.
   exfiltration value
 
 #### Cross-references
+
 - LLM Top 10: LLM08 Hidden Context Exposure
 - Agentic Top 10: ASI01 Agent Goal Hijack
 - Other frameworks: AIUC-1 A/B005 · ISO 27001 A.8.3 · NIST CSF 2.0 PR.AA-05
@@ -786,6 +832,7 @@ compromises or controls the assistant.
 #### Mitigations mapped to ATLAS
 
 **Foundational**
+
 - Counter AML.T0057: Approved extensions only, permission
   minimisation — adversary controlling compromised
   extension can only access the minimum permitted data
@@ -794,11 +841,13 @@ compromises or controls the assistant.
   limited attack surface
 
 **Hardening**
+
 - Counter AML.T0035: Monitor browser AI traffic —
   unusual data access patterns from browser assistant
   detected as potential AML.T0035 exfiltration
 
 #### Cross-references
+
 - Agentic Top 10: ASI10 Rogue Agents
 - DSGAI 2026: DSGAI03 Shadow AI
 - Other frameworks: ISO 27001 A.8.1/A.8.7 · NIST CSF 2.0 GV.SC-01 · EU AI Act Art. 9
@@ -825,6 +874,7 @@ may deliberately trigger availability failures.
 #### Mitigations mapped to ATLAS
 
 **Foundational**
+
 - Counter AML.T0029: Circuit breakers and graceful
   degradation — AML.T0029 attack causes graceful
   degradation rather than service disruption
@@ -832,11 +882,13 @@ may deliberately trigger availability failures.
   cost harvesting attacks bounded by hard caps
 
 **Hardening**
+
 - Counter AML.T0029: Freshness monitoring on RAG pipeline —
   stale index detected before silent misinformation
   reaches users, limiting AML.T0029 impact
 
 #### Cross-references
+
 - LLM Top 10: LLM06 Unbounded Consumption
 - Agentic Top 10: ASI08 Cascading Agent Failures
 - Other frameworks: ISA/IEC 62443 SR 7.6 (OT) · NIST CSF 2.0 PR.IR-01 · AIUC-1 D
@@ -863,6 +915,7 @@ are the primary techniques.
 #### Mitigations mapped to ATLAS
 
 **Foundational**
+
 - Counter AML.T0024.000: Differential privacy in
   training — limits membership inference success rate
   by making individual training examples statistically
@@ -872,11 +925,13 @@ are the primary techniques.
   adversary cannot extract gradient information
 
 **Hardening**
+
 - Counter AML.T0024.000: Output rate limiting —
   systematic membership inference query campaigns
   detected and rate-limited before reconstruction succeeds
 
 **Advanced**
+
 - Red team AML.T0024.000 and AML.T0027: Membership
   inference and model inversion testing before
   each production deployment — verify sensitive
@@ -884,6 +939,7 @@ are the primary techniques.
   realistic attacker conditions
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure, LLM09 Vector and Embedding Weaknesses
 - DSGAI 2026: DSGAI10 Synthetic Data Pitfalls
 - Other frameworks: ISO 27001 A.8.11 · GDPR Art. 25 · NIST CSF 2.0 GV.RM-06
@@ -910,6 +966,7 @@ gain access to sensitive training data.
 #### Mitigations mapped to ATLAS
 
 **Foundational**
+
 - Counter AML.T0057: Treat labelling vendors as
   third-party suppliers — security assessment before
   engagement limits adversary-controlled vendor risk
@@ -918,12 +975,14 @@ gain access to sensitive training data.
   both exfiltration value and poisoning opportunity
 
 **Hardening**
+
 - Counter AML.T0035: Anonymise sensitive content
   before labelling — adversary accessing labelling
   vendor systems finds anonymised data rather than
   raw sensitive records
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI07 Data Governance, DSGAI08 Non-Compliance
 - Other frameworks: ISO 27001 A.5.34 · GDPR Art. 28 · NIST CSF 2.0 GV.SC-01
 
@@ -954,6 +1013,7 @@ technique for this threat.
 #### Mitigations mapped to ATLAS
 
 **Foundational**
+
 - Counter AML.T0016: API rate limiting — systematic
   extraction requires high query volumes, hard caps
   raise cost and trigger detection before AML.T0016
@@ -962,18 +1022,21 @@ technique for this threat.
   extraction campaigns bounded by cost limits
 
 **Hardening**
+
 - Counter AML.T0016: Query diversity monitoring —
   AML.T0016 produces characteristic query patterns
   (systematic output space coverage) detected through
   anomaly analysis
 
 **Advanced**
+
 - Red team AML.T0016: Model extraction attempt using
   your own API — quantify query budget required for
   meaningful replication, verify rate limiting
   prevents success at that budget
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - DSGAI 2026: DSGAI18 Inference & Data Reconstruction
 - Other frameworks: ISO 27001 A.5.12 · MITRE ATT&CK (IT) · NIST CSF 2.0 DE.CM-09
@@ -1008,6 +1071,7 @@ into retrieval sources without needing training access.
 #### Mitigations mapped to ATLAS
 
 **Foundational**
+
 - Counter AML.T0045: Source trust tiering in RAG
   retrieval — adversary-published content in low-trust
   sources weighted down, authoritative sources prioritised
@@ -1016,18 +1080,21 @@ into retrieval sources without needing training access.
   prevent AML.T0020 through known ingestion paths
 
 **Hardening**
+
 - Counter AML.T0031: Cryptographic provenance for
   authoritative sources in RAG — adversary cannot
   craft content that passes provenance verification
   for trusted source tier
 
 **Advanced**
+
 - Red team AML.T0045: Adversarial RAG integrity
   testing — attempt to surface false content through
   public sources indexed by your RAG system, verify
   trust tiering effectiveness
 
 #### Cross-references
+
 - LLM Top 10: LLM05 Data and Model Poisoning, LLM07 Misinformation
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - Other frameworks: ISO 27001 A.5.7 · NIST CSF 2.0 GV.SC-01 · SOC 2 PI1.2
@@ -1095,4 +1162,4 @@ Functional model replica constructed without training access
 ---
 
 Maintained by the OWASP GenAI Data Security Initiative.
-Part of the OWASP GenAI Crosswalk: https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk
+Part of the OWASP GenAI Crosswalk: <https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk>

@@ -8,15 +8,20 @@
 
 # Mapping Rationale
 
-This document explains the reasoning behind the OWASP GenAI Crosswalk: why each framework was selected, how the mappings were constructed, and the methodology that ties it all together.
+This document explains the reasoning behind the OWASP GenAI Crosswalk: why each framework was selected, how
+the mappings were constructed, and the methodology that ties it all together.
 
 ---
 
 ## 1. The Problem This Solves
 
-Organisations deploying GenAI (LLMs, agents, RAG pipelines) face a fragmented control landscape. No single document answered: **"Which controls from framework X address GenAI vulnerability Y?"** Security teams were left cross-referencing dozens of PDFs manually, often missing coverage gaps or duplicating effort across compliance programmes.
+Organisations deploying GenAI (LLMs, agents, RAG pipelines) face a fragmented control landscape. No single
+document answered: **"Which controls from framework X address GenAI vulnerability Y?"** Security teams were
+left cross-referencing dozens of PDFs manually, often missing coverage gaps or duplicating effort across
+compliance programmes.
 
-The Crosswalk provides a single, structured, machine-readable answer to that question — across 41 OWASP vulnerabilities and 20 industry frameworks.
+The Crosswalk provides a single, structured, machine-readable answer to that question — across 41 OWASP
+vulnerabilities and 20 industry frameworks.
 
 ---
 
@@ -30,7 +35,9 @@ The Crosswalk maps **from** three OWASP source lists that together cover the ful
 | **OWASP Agentic Top 10 2026** | ASI01–ASI10 | Autonomous agent risks (goal hijack, tool misuse, privilege escalation, cascading failures, etc.) | Agents introduce qualitatively different risks — autonomy, tool access, multi-agent orchestration, persistent memory — that the LLM Top 10 was not designed to cover. |
 | **OWASP GenAI Data Security 2026** | DSGAI01–DSGAI21 | Data lifecycle risks (training data poisoning, embedding leakage, model theft, PII in context, etc.) | Data is the through-line of every GenAI system. DSGAI covers the full data lifecycle from ingestion through training, inference, storage, and deletion — filling the gap between the application-level LLM/Agentic lists and data governance requirements. |
 
-**Cross-references** link related entries across all three lists (e.g., LLM01 Prompt Injection ↔ ASI01 Agent Goal Hijack ↔ DSGAI01 Sensitive Data Leakage), so practitioners can trace a single risk across application, agent, and data dimensions.
+**Cross-references** link related entries across all three lists (e.g., LLM01 Prompt Injection ↔ ASI01 Agent
+Goal Hijack ↔ DSGAI01 Sensitive Data Leakage), so practitioners can trace a single risk across application,
+agent, and data dimensions.
 
 ---
 
@@ -44,7 +51,8 @@ Every framework was selected based on at least two of the following:
 2. **Certification/audit requirement** — Used in formal audits or certifications (ISO 27001, ISO 42001, SOC 2, AIUC-1)
 3. **Industry adoption** — Widely adopted as a voluntary best practice (NIST CSF, CIS Controls, OWASP ASVS)
 4. **AI-specific coverage** — Purpose-built for AI or ML security (NIST AI RMF, MITRE ATLAS, MAESTRO, NIST SP 800-218A)
-5. **Domain-specific necessity** — Required for specific deployment contexts (ISA/IEC 62443 and NIST SP 800-82 for OT/ICS; DORA for financial sector; NHI Top 10 for non-human identities)
+5. **Domain-specific necessity** — Required for specific deployment contexts (ISA/IEC 62443 and NIST SP
+   800-82 for OT/ICS; DORA for financial sector; NHI Top 10 for non-human identities)
 6. **Practitioner demand** — Frequently requested by the OWASP GenAI community
 
 ### 3.2 Framework-by-Framework Rationale
@@ -125,7 +133,7 @@ Every framework was selected based on at least two of the following:
 
 Each mapping links **one OWASP vulnerability entry** to **one or more framework controls**. The grain is:
 
-```
+```text
 [Vulnerability ID] → [Framework] → [Control ID] + [Control Name] + [Tier] + [Scope] + [Notes]
 ```
 
@@ -133,11 +141,16 @@ Example: `LLM01 → NIST AI RMF 1.0 → GV-1.7 (Policies for trustworthy AI) / F
 
 ### 4.2 How Mappings Were Constructed
 
-1. **Vulnerability analysis** — Each OWASP entry was decomposed into its attack vectors, impacts, and required mitigations based on the official OWASP source list definitions.
+1. **Vulnerability analysis** — Each OWASP entry was decomposed into its attack vectors, impacts, and
+   required mitigations based on the official OWASP source list definitions.
 
-2. **Control identification** — For each framework, controls were identified that directly address one or more of: the attack vector, the impact, or the required mitigation. The authoritative framework text (standard, regulation, specification) was the source — not secondary summaries.
+2. **Control identification** — For each framework, controls were identified that directly address one or
+   more of: the attack vector, the impact, or the required mitigation. The authoritative framework text
+   (standard, regulation, specification) was the source — not secondary summaries.
 
-3. **Relevance filtering** — Only controls with a clear, defensible connection to the vulnerability were included. "Tangentially related" controls were excluded to keep mappings actionable rather than exhaustive.
+3. **Relevance filtering** — Only controls with a clear, defensible connection to the vulnerability were
+   included. "Tangentially related" controls were excluded to keep mappings actionable rather than
+   exhaustive.
 
 4. **Tier assignment** — Each control mapping was assigned an implementation tier:
 
@@ -147,7 +160,8 @@ Example: `LLM01 → NIST AI RMF 1.0 → GV-1.7 (Policies for trustworthy AI) / F
    | **Hardening** | Defence-in-depth for mature security programmes | Quarter 1–2 |
    | **Advanced** | Cutting-edge, high-risk, or high-maturity environments only | Quarter 3+ |
 
-   Tier assignment is based on: implementation complexity, dependency on other controls, cost, and how commonly the control is already present in production environments.
+   Tier assignment is based on: implementation complexity, dependency on other controls, cost, and how
+   commonly the control is already present in production environments.
 
 5. **Scope assignment** — Each mapping was tagged with deployment scope:
 
@@ -157,25 +171,33 @@ Example: `LLM01 → NIST AI RMF 1.0 → GV-1.7 (Policies for trustworthy AI) / F
    | **Build** | Requires internal engineering effort |
    | **Both** | Needs vendor capability AND internal implementation |
 
-6. **Cross-referencing** — Each entry was linked to related entries in the other two source lists, enabling practitioners to trace risks across LLM application, agentic, and data security dimensions.
+6. **Cross-referencing** — Each entry was linked to related entries in the other two source lists, enabling
+   practitioners to trace risks across LLM application, agentic, and data security dimensions.
 
-7. **Incident grounding** — Where available, real-world incidents (50 documented in the crosswalk) were linked to entries to validate that the vulnerability and mapped controls are not theoretical.
+7. **Incident grounding** — Where available, real-world incidents (50 documented in the crosswalk) were
+   linked to entries to validate that the vulnerability and mapped controls are not theoretical.
 
-8. **Tool mapping** — Open-source and commercial tools (70+) were mapped to entries, providing practitioners with immediate actionable testing and mitigation options.
+8. **Tool mapping** — Open-source and commercial tools (70+) were mapped to entries, providing practitioners
+   with immediate actionable testing and mitigation options.
 
 ### 4.3 Severity Rating Methodology
 
 Severity ratings follow the unified scale defined in `shared/SEVERITY.md`:
 
 - **Base severity** — drawn directly from the OWASP source list definition or assessed using OWASP AIVSS methodology
-- **Agentic amplifiers** — AIVSS adds ten agentic factors (autonomy level, tool access breadth, multi-agent orchestration, memory persistence, human oversight absence, OT/physical access) that can raise effective severity by 1–4 levels
-- **No severity change without evidence** — ratings cannot be changed without citing an AIVSS score, a CVSS score from an associated CVE, or the OWASP source list definition
+- **Agentic amplifiers** — AIVSS adds ten agentic factors (autonomy level, tool access breadth, multi-agent
+  orchestration, memory persistence, human oversight absence, OT/physical access) that can raise effective
+  severity by 1–4 levels
+- **No severity change without evidence** — ratings cannot be changed without citing an AIVSS score, a CVSS
+  score from an associated CVE, or the OWASP source list definition
 
 ### 4.4 Quality Controls
 
 - **Authoritative sources only** — mappings cite the actual framework text, not secondary interpretations
-- **Schema validation** — all machine-readable entries (JSON) are validated against `data/schema.json` using `scripts/validate.js`
-- **Source-of-truth model** — Markdown files are authoritative; JSON is derived via `scripts/generate.js`; both must stay in sync
+- **Schema validation** — all machine-readable entries (JSON) are validated against `data/schema.json` using
+  `scripts/validate.js`
+- **Source-of-truth model** — Markdown files are authoritative; JSON is derived via `scripts/generate.js` ;
+  both must stay in sync
 - **Contribution review** — PRs require source/evidence links; severity changes require AIVSS/CVSS/OWASP citation
 - **Consistent terminology** — all entries use the unified glossary (`shared/GLOSSARY.md`)
 
@@ -238,23 +260,35 @@ Each mapping file follows the structure defined in `shared/TEMPLATE.md`:
 
 ### Why 20 frameworks and not fewer?
 
-GenAI deployments span multiple compliance domains simultaneously. An AI chatbot processing payments in the EU must satisfy EU AI Act, PCI DSS, ISO 27001, and potentially DORA — all at once. Mapping to only "the top 5" frameworks would leave most practitioners with gaps. The 20-framework set covers the realistic compliance landscape.
+GenAI deployments span multiple compliance domains simultaneously. An AI chatbot processing payments in the
+EU must satisfy EU AI Act, PCI DSS, ISO 27001, and potentially DORA — all at once. Mapping to only "the top
+5" frameworks would leave most practitioners with gaps. The 20-framework set covers the realistic compliance
+landscape.
 
 ### Why three source lists instead of one combined list?
 
-LLM application risks, agentic risks, and data security risks are distinct problem domains with different audiences, threat models, and mitigations. A prompt injection attack on a chatbot (LLM01) is a fundamentally different problem from an agent's tool misuse (ASI05) or training data poisoning (DSGAI04). Keeping them separate preserves clarity; cross-references provide the linkage.
+LLM application risks, agentic risks, and data security risks are distinct problem domains with different
+audiences, threat models, and mitigations. A prompt injection attack on a chatbot (LLM01) is a fundamentally
+different problem from an agent's tool misuse (ASI05) or training data poisoning (DSGAI04). Keeping them
+separate preserves clarity; cross-references provide the linkage.
 
 ### Why the Foundational/Hardening/Advanced tier model?
 
-Not every organisation can implement every control on day one. The tier model provides a **crawl → walk → run** implementation path that matches how security programmes mature in practice. It answers: "If I can only do three things this sprint, which three?"
+Not every organisation can implement every control on day one. The tier model provides a **crawl → walk →
+run** implementation path that matches how security programmes mature in practice. It answers: "If I can
+only do three things this sprint, which three?"
 
 ### Why Buy/Build/Both scope tags?
 
-Security teams need to know whether a control is something they configure in their vendor platform, something they build internally, or something that requires both. This distinction drives procurement decisions, staffing plans, and implementation timelines.
+Security teams need to know whether a control is something they configure in their vendor platform,
+something they build internally, or something that requires both. This distinction drives procurement
+decisions, staffing plans, and implementation timelines.
 
 ### Why machine-readable JSON alongside Markdown?
 
-Markdown serves human readers. JSON serves automation — compliance report generation, GRC platform import (OSCAL), SIEM/SOAR integration (STIX 2.1), and programmatic querying. Both are necessary for the crosswalk to be useful across the full range of practitioner workflows.
+Markdown serves human readers. JSON serves automation — compliance report generation, GRC platform import
+(OSCAL), SIEM/SOAR integration (STIX 2.1), and programmatic querying. Both are necessary for the crosswalk
+to be useful across the full range of practitioner workflows.
 
 ---
 
@@ -268,4 +302,6 @@ Markdown serves human readers. JSON serves automation — compliance report gene
 
 ---
 
-*Part of the [OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk) — maintained by the [OWASP GenAI Data Security Initiative](https://genai.owasp.org)*
+*Part of the
+[OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk)
+— maintained by the [OWASP GenAI Data Security Initiative](https://genai.owasp.org)*

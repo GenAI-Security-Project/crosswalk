@@ -151,6 +151,7 @@ is a SOC 2 gap finding.
 #### Mitigations for SOC 2 evidence
 
 **Control implementation**
+
 - Document prompt injection as a risk in your LLM risk
   register (CC3.2 evidence) — vectors, likelihood, impact,
   treatment decision, owner, and review cadence
@@ -162,6 +163,7 @@ is a SOC 2 gap finding.
   alert and response capability to auditors
 
 **Audit evidence preparation**
+
 - Risk register entries showing prompt injection identified
   and treated (CC3.2)
 - Input validation procedure documentation (CC5.2)
@@ -170,6 +172,7 @@ is a SOC 2 gap finding.
   (CC5.2, CC7.4)
 
 **Hardening**
+
 - Establish structured adversarial testing programme
   covering injection scenarios — results documented as
   CC7.4 security testing evidence
@@ -179,6 +182,7 @@ is a SOC 2 gap finding.
   auditors as evidence of continuous improvement (CC4.1)
 
 **Advanced**
+
 - Implement injection detection with automated response —
   demonstrates CC7.3 evaluation of security events
 - Include injection detection rate in security metrics
@@ -190,10 +194,11 @@ is a SOC 2 gap finding.
 
 | Tool | Type | Link |
 |---|---|---|
-| Garak | Open-source | https://github.com/leondz/garak |
-| LLM Guard | Open-source | https://github.com/protectai/llm-guard |
+| Garak | Open-source | <https://github.com/leondz/garak> |
+| LLM Guard | Open-source | <https://github.com/protectai/llm-guard> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI01 Agent Goal Hijack
 - DSGAI 2026: DSGAI01 Sensitive Data Leakage, DSGAI12 Unsafe NL Data Gateways
 - Other frameworks: ISO 27001 A.8.28 · NIST AI RMF MS-2.5 · NIST CSF 2.0 PR.PS-04
@@ -230,6 +235,7 @@ included in the audit scope explicitly.
 #### Mitigations for SOC 2 evidence
 
 **Control implementation**
+
 - Document confidentiality policy covering LLM scope
   (C1.1 evidence) — identify what confidential information
   enters LLM pipelines, how it is classified, handled, protected
@@ -241,6 +247,7 @@ included in the audit scope explicitly.
   LLM pipelines, lawful basis, retention, deletion
 
 **Audit evidence preparation**
+
 - Confidentiality and privacy policies covering LLM (C1.1, P3.1)
 - Encryption configuration and access control documentation (C2.1)
 - Data inventory showing PII in LLM scope (P3.1)
@@ -248,6 +255,7 @@ included in the audit scope explicitly.
 - RAG access control configuration and testing results (CC6.1)
 
 **Hardening**
+
 - Deploy DLP monitoring on all LLM output channels —
   demonstrates C2.1 ongoing protection and CC7.2 monitoring
 - Implement output redaction — document as C2.1 technical
@@ -256,6 +264,7 @@ included in the audit scope explicitly.
   CC4.1 monitoring of access control effectiveness
 
 **Advanced**
+
 - Apply differential privacy in training — documented as
   C2.1 advanced technical control
 - Conduct model inversion red team — demonstrates
@@ -267,10 +276,11 @@ included in the audit scope explicitly.
 
 | Tool | Type | Link |
 |---|---|---|
-| Microsoft Presidio | Open-source | https://github.com/microsoft/presidio |
-| Nightfall AI | Commercial | https://nightfall.ai |
+| Microsoft Presidio | Open-source | <https://github.com/microsoft/presidio> |
+| Nightfall AI | Commercial | <https://nightfall.ai> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI03 Identity and Privilege Abuse
 - DSGAI 2026: DSGAI01 Sensitive Data Leakage, DSGAI18 Inference and Data Reconstruction
 - Other frameworks: EU AI Act Art. 10 · GDPR Art. 25 · ISO 27001 A.8.11/A.8.12
@@ -298,6 +308,7 @@ assessment — autonomous action risks identified) also apply.
 #### Mitigations for SOC 2 evidence
 
 **Control implementation**
+
 - Manage LLM tool access under CC6.1 least privilege —
   document minimum scope justification, regular review
   schedule, access control configuration as audit evidence
@@ -309,6 +320,7 @@ assessment — autonomous action risks identified) also apply.
   blast radius documented
 
 **Audit evidence preparation**
+
 - LLM tool access control configuration showing least privilege (CC6.1)
 - Access review records for LLM tool permissions (CC6.1, CC6.3)
 - Human oversight procedure documentation (CC5.2)
@@ -316,6 +328,7 @@ assessment — autonomous action risks identified) also apply.
 - Audit logs of LLM tool invocations (CC7.2)
 
 **Hardening**
+
 - Implement formal quarterly access reviews for LLM tool
   permissions — CC6.3 access removal evidence
 - Deploy action guardrails as independent layer —
@@ -323,6 +336,7 @@ assessment — autonomous action risks identified) also apply.
 - Log all LLM tool invocations — CC7.2 monitoring evidence
 
 **Advanced**
+
 - Red team testing of excessive agency via injection —
   CC7.4 security testing evidence
 - Formally specify permitted action graphs — CC5.2
@@ -332,10 +346,11 @@ assessment — autonomous action risks identified) also apply.
 
 | Tool | Type | Link |
 |---|---|---|
-| Guardrails AI | Open-source | https://github.com/guardrails-ai/guardrails |
-| NeMo Guardrails | Open-source | https://github.com/NVIDIA/NeMo-Guardrails |
+| Guardrails AI | Open-source | <https://github.com/guardrails-ai/guardrails> |
+| NeMo Guardrails | Open-source | <https://github.com/NVIDIA/NeMo-Guardrails> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI01 Agent Goal Hijack, ASI02 Tool Misuse
 - DSGAI 2026: DSGAI06 Tool Plugin and Agent Data Exchange
 - Other frameworks: EU AI Act Art. 14 · AIUC-1 B006 · ISO 27001 A.8.2
@@ -377,6 +392,7 @@ CC9.2), model and component updates managed through change management
 #### Mitigations for SOC 2 evidence
 
 **Control implementation**
+
 - Include LLM component vendors in vendor risk management
   programme (CC9.1 evidence) — security assessments,
   review of SOC 2 reports, ongoing monitoring
@@ -388,6 +404,7 @@ CC9.2), model and component updates managed through change management
   capability documented
 
 **Audit evidence preparation**
+
 - Vendor risk assessment records for LLM component vendors (CC9.1)
 - Vendor agreements with LLM security obligations (CC9.2)
 - Change management records for model updates (CC8.1)
@@ -395,6 +412,7 @@ CC9.2), model and component updates managed through change management
 - Risk register showing supply chain risks assessed (CC3.2)
 
 **Hardening**
+
 - Generate ML SBOM automatically — demonstrates CC9.1
   vendor monitoring capability to auditors
 - Conduct vendor security assessments before any new
@@ -403,6 +421,7 @@ CC9.2), model and component updates managed through change management
   CC8.1 change management control evidence
 
 **Advanced**
+
 - Operate isolated model evaluation environment —
   demonstrates CC8.1 testing before production change
 - Establish responsible disclosure with LLM vendors —
@@ -412,10 +431,11 @@ CC9.2), model and component updates managed through change management
 
 | Tool | Type | Link |
 |---|---|---|
-| CycloneDX | Open-source | https://cyclonedx.org |
-| ModelScan | Open-source | https://github.com/protectai/modelscan |
+| CycloneDX | Open-source | <https://cyclonedx.org> |
+| ModelScan | Open-source | <https://github.com/protectai/modelscan> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI04 Agentic Supply Chain Vulnerabilities
 - DSGAI 2026: DSGAI04 Data Model and Artifact Poisoning
 - Other frameworks: ISO 27001 A.5.19/A.5.21 · NIST AI RMF MP-5.1 · NIST SP 800-218A
@@ -449,6 +469,7 @@ stage that writes weights, not just the original training corpus.
 #### Mitigations for SOC 2 evidence
 
 **Control implementation**
+
 - Document data and model poisoning in LLM risk assessment
   (CC3.2 evidence) — training data sources, fine-tuning
   pipeline, and supply chain attack vectors assessed
@@ -460,6 +481,7 @@ stage that writes weights, not just the original training corpus.
   in vendor agreements
 
 **Audit evidence preparation**
+
 - Risk register entries for data and model poisoning (CC3.2)
 - Change management records showing integrity verification (CC8.1)
 - Vendor assessment records for training data providers (CC9.1)
@@ -467,6 +489,7 @@ stage that writes weights, not just the original training corpus.
 - Incident response procedure for poisoning events (CC7.3)
 
 **Hardening**
+
 - Include poisoning detection in security testing programme —
   CC7.4 security testing evidence
 - Implement training data anomaly detection — CC7.2
@@ -475,6 +498,7 @@ stage that writes weights, not just the original training corpus.
   in change management records
 
 **Advanced**
+
 - Post-training backdoor detection as deployment gate —
   CC8.1 testing before production change evidence
 - Continuous model output monitoring — CC7.2 ongoing
@@ -484,10 +508,11 @@ stage that writes weights, not just the original training corpus.
 
 | Tool | Type | Link |
 |---|---|---|
-| IBM Adversarial Robustness Toolbox | Open-source | https://github.com/Trusted-AI/adversarial-robustness-toolbox |
-| CleanLab | Open-source | https://github.com/cleanlab/cleanlab |
+| IBM Adversarial Robustness Toolbox | Open-source | <https://github.com/Trusted-AI/adversarial-robustness-toolbox> |
+| CleanLab | Open-source | <https://github.com/cleanlab/cleanlab> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI06 Memory and Context Poisoning
 - DSGAI 2026: DSGAI04 Data Model and Artifact Poisoning, DSGAI21 Disinformation via Data Poisoning
 - Other frameworks: NIST AI RMF MS-3.3 · MITRE ATLAS AML.T0032 · ISO 27001 A.8.27
@@ -517,6 +542,7 @@ DoS risks identified) also apply.
 #### Mitigations for SOC 2 evidence
 
 **Control implementation**
+
 - Document LLM service availability commitments (A1.1
   evidence) — SLAs, RTO/RPO, resource protection measures
 - Implement and document rate limiting and resource controls
@@ -526,6 +552,7 @@ DoS risks identified) also apply.
   (CC3.2 evidence) — DoS and cost amplification vectors
 
 **Audit evidence preparation**
+
 - LLM service availability policy and commitments (A1.1)
 - Rate limiting and resource control configuration (A1.2)
 - Risk assessment entries for resource exhaustion (CC3.2)
@@ -533,6 +560,7 @@ DoS risks identified) also apply.
 - Incident response procedure for availability events (CC7.3)
 
 **Hardening**
+
 - Define and test BCP for LLM service failures — A1.2
   environmental protection and CC9.1 resilience evidence
 - Implement per-tenant cost budgets — A1.2 availability
@@ -540,6 +568,7 @@ DoS risks identified) also apply.
 - Conduct adversarial load testing — CC7.4 testing evidence
 
 **Advanced**
+
 - Deploy sponge example detection — A1.2 advanced
   protection evidence
 - Conduct availability incident drills — CC7.3 incident
@@ -549,11 +578,12 @@ DoS risks identified) also apply.
 
 | Tool | Type | Link |
 |---|---|---|
-| LiteLLM | Open-source | https://github.com/BerriAI/litellm |
-| Kong Gateway | Open-source | https://github.com/Kong/kong |
-| OpenTelemetry | Open-source | https://opentelemetry.io |
+| LiteLLM | Open-source | <https://github.com/BerriAI/litellm> |
+| Kong Gateway | Open-source | <https://github.com/Kong/kong> |
+| OpenTelemetry | Open-source | <https://opentelemetry.io> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI08 Cascading Agent Failures
 - DSGAI 2026: DSGAI17 Data Availability and Resilience Failures
 - Other frameworks: ISA/IEC 62443 SR 7.6 (OT) · CIS Controls CIS 12 · NIST CSF 2.0 PR.IR-01
@@ -582,6 +612,7 @@ CC7 (monitoring — accuracy degradation detected) also apply.
 #### Mitigations for SOC 2 evidence
 
 **Control implementation**
+
 - Document processing integrity policy for LLM outputs
   (PI1.1 evidence) — accuracy thresholds, verification
   requirements for high-stakes use cases
@@ -591,6 +622,7 @@ CC7 (monitoring — accuracy degradation detected) also apply.
   (CC3.2 evidence) — harm potential per use case
 
 **Audit evidence preparation**
+
 - Processing integrity policy for LLM (PI1.1)
 - RAG source governance documentation (PI1.2)
 - Risk assessment entries for misinformation (CC3.2)
@@ -598,6 +630,7 @@ CC7 (monitoring — accuracy degradation detected) also apply.
 - User communication on LLM output limitations (CC2.1)
 
 **Hardening**
+
 - Implement production accuracy monitoring — CC7.2
   ongoing monitoring evidence
 - Deploy confidence scoring — PI1.1 processing integrity
@@ -609,10 +642,11 @@ CC7 (monitoring — accuracy degradation detected) also apply.
 
 | Tool | Type | Link |
 |---|---|---|
-| TruLens | Open-source | https://github.com/truera/trulens |
-| RAGAS | Open-source | https://github.com/explodinggradients/ragas |
+| TruLens | Open-source | <https://github.com/truera/trulens> |
+| RAGAS | Open-source | <https://github.com/explodinggradients/ragas> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI09 Human-Agent Trust Exploitation
 - DSGAI 2026: DSGAI21 Disinformation and Integrity Attacks
 - Other frameworks: EU AI Act Art. 13/50 · AIUC-1 F · NIST CSF 2.0 GV.OC-01
@@ -653,6 +687,7 @@ treat it as a security boundary.
 #### Mitigations for SOC 2 evidence
 
 **Control implementation**
+
 - Classify and document system prompts as confidential
   information (C2.1 evidence) — encryption at rest,
   access-controlled, policy documented
@@ -663,6 +698,7 @@ treat it as a security boundary.
   version control, rotation schedule, extraction testing
 
 **Audit evidence preparation**
+
 - System prompt classification and protection documentation (C2.1)
 - Access control configuration and accessor records (CC6.1)
 - Version control and rotation records (CC5.2)
@@ -670,6 +706,7 @@ treat it as a security boundary.
 - Access monitoring configuration and alerts (CC7.2)
 
 **Hardening**
+
 - Conduct prompt extraction testing — CC7.4 security
   testing evidence demonstrating extraction resistance
 - Implement system prompt rotation — CC5.2 procedure
@@ -678,6 +715,7 @@ treat it as a security boundary.
   and CC6.1 access traceability evidence
 
 #### Cross-references
+
 - Agentic Top 10: ASI01 Agent Goal Hijack
 - DSGAI 2026: DSGAI15 Over-Broad Context Windows
 - Other frameworks: AIUC-1 B003/B009 · CWE-200 · ISO 27001 A.5.12
@@ -707,6 +745,7 @@ data is increasingly reflected in SOC 2 audit expectations.
 #### Mitigations for SOC 2 evidence
 
 **Control implementation**
+
 - Document embeddings as confidential/personal information
   where applicable (C2.1, P5.1 evidence) — classification,
   protection requirements, authorised use cases
@@ -716,6 +755,7 @@ data is increasingly reflected in SOC 2 audit expectations.
   configuration, sample alerts for auditors
 
 **Audit evidence preparation**
+
 - Embedding classification and protection documentation (C2.1)
 - Vector store access control configuration (CC6.1)
 - Query monitoring configuration and alerts (CC7.2)
@@ -723,6 +763,7 @@ data is increasingly reflected in SOC 2 audit expectations.
 - Privacy documentation for embeddings of personal data (P5.1)
 
 **Hardening**
+
 - Conduct embedding inversion testing — CC7.4 security
   testing evidence showing protection effectiveness
 - Apply differential privacy in embedding generation —
@@ -734,10 +775,11 @@ data is increasingly reflected in SOC 2 audit expectations.
 
 | Tool | Type | Link |
 |---|---|---|
-| Weaviate | Open-source | https://weaviate.io |
-| ML Privacy Meter | Open-source | https://github.com/privacytrustlab/ml_privacy_meter |
+| Weaviate | Open-source | <https://weaviate.io> |
+| ML Privacy Meter | Open-source | <https://github.com/privacytrustlab/ml_privacy_meter> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI06 Memory and Context Poisoning
 - DSGAI 2026: DSGAI13 Vector Store Platform Security, DSGAI18 Inference and Data Reconstruction
 - Other frameworks: NIST AI RMF MS-2.5 · ISO 27001 A.8.3/A.8.24 · GDPR Recital 26
@@ -773,6 +815,7 @@ reaches a shell, a browser, or a database.
 #### Mitigations for SOC 2 evidence
 
 **Control implementation**
+
 - Document output validation procedures (CC5.2 evidence) —
   encoding, schema validation, and sanitisation requirements
   for all interfaces consuming LLM output
@@ -783,12 +826,14 @@ reaches a shell, a browser, or a database.
   valid LLM output processing
 
 **Audit evidence preparation**
+
 - Output validation procedure documentation (CC5.2, PI1.1)
 - Risk assessment entries for output injection (CC3.2)
 - Security testing results for output injection (CC7.4)
 - Monitoring configuration for output channels (CC7.2)
 
 **Hardening**
+
 - Conduct DAST on all interfaces consuming LLM output —
   CC7.4 security testing evidence
 - Implement output schema validation — CC5.2 documented
@@ -800,10 +845,11 @@ reaches a shell, a browser, or a database.
 
 | Tool | Type | Link |
 |---|---|---|
-| OWASP ZAP | Open-source | https://www.zaproxy.org |
-| Semgrep | Open-source | https://semgrep.dev |
+| OWASP ZAP | Open-source | <https://www.zaproxy.org> |
+| Semgrep | Open-source | <https://semgrep.dev> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI02 Tool Misuse, ASI05 Unexpected Code Execution
 - DSGAI 2026: DSGAI05 Data Integrity and Validation Failures
 - Other frameworks: OWASP ASVS V5 · CIS Controls CIS 16 · CWE-79
@@ -881,10 +927,10 @@ reaches a shell, a browser, or a database.
 
 ## References
 
-- AICPA SOC 2 Trust Services Criteria: https://www.aicpa-cima.com/resources/landing/system-and-organization-controls-soc-suite-of-services
-- AICPA Trust Services Criteria 2017 (updated 2022): https://us.aicpa.org/content/dam/aicpa/interestareas/frc/assuranceadvisoryservices/downloadabledocuments/trust-services-criteria.pdf
-- OWASP LLM Top 10 2026: https://genai.owasp.org/llm-top-10/
-- ENISA AI Cybersecurity recommendations: https://www.enisa.europa.eu/publications/multilayer-framework-for-good-cybersecurity-practices-for-ai
+- AICPA SOC 2 Trust Services Criteria: <https://www.aicpa-cima.com/resources/landing/system-and-organization-controls-soc-suite-of-services>
+- AICPA Trust Services Criteria 2017 (updated 2022): <https://us.aicpa.org/content/dam/aicpa/interestareas/frc/assuranceadvisoryservices/downloadabledocuments/trust-services-criteria.pdf>
+- OWASP LLM Top 10 2026: <https://genai.owasp.org/llm-top-10/>
+- ENISA AI Cybersecurity recommendations: <https://www.enisa.europa.eu/publications/multilayer-framework-for-good-cybersecurity-practices-for-ai>
 
 ---
 
@@ -898,4 +944,4 @@ reaches a shell, a browser, or a database.
 ---
 
 Maintained by the OWASP GenAI Data Security Initiative.
-Part of the OWASP GenAI Crosswalk: https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk
+Part of the OWASP GenAI Crosswalk: <https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk>

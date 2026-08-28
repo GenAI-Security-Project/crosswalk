@@ -9,7 +9,8 @@
 
 # Agentic Top 10 2026 × MAESTRO
 
-Mapping the [OWASP Top 10 for Agentic Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
+Mapping the
+[OWASP Top 10 for Agentic Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
 to [MAESTRO](https://cloudsecurityalliance.org/blog/2025/02/06/agentic-ai-threat-modeling-framework-maestro)
 (Multi-Agent Environment, Security, Threat, Risk, and Outcome) —
 the Cloud Security Alliance's threat modeling framework designed
@@ -18,7 +19,7 @@ specifically for the unique challenges of agentic AI systems.
 **Created by:** Ken Huang, CEO & Chief AI Officer, DistributedApps.ai;
 Co-Chair of AI Safety Working Groups, Cloud Security Alliance.
 
-**Official repository:** https://github.com/CloudSecurityAlliance/MAESTRO
+**Official repository:** <https://github.com/CloudSecurityAlliance/MAESTRO>
 
 ---
 
@@ -79,7 +80,7 @@ paths explicit.
 
 ## How MAESTRO fits in the security programme
 
-```
+```text
 MAESTRO (threat enumeration by layer)
     ↓
 Agentic_AITG.md (test cases per threat)
@@ -177,6 +178,7 @@ capability, insiders with RAG corpus write access, supply chain
 attackers who control tool return values.
 
 Mitigations at L1:
+
 - Goal-state verification at the model orchestration layer —
   the agent's stated goal at session start is compared against
   its inferred goal at each action step
@@ -195,6 +197,7 @@ corpus can inject instructions that the model receives as retrieved
 knowledge rather than user input.
 
 Mitigations at L2:
+
 - Source provenance tracking — each retrieved passage carries
   its trust level into the context window, preventing
   adversary-controlled content from being treated as trusted
@@ -212,6 +215,7 @@ A framework without goal-state verification cannot detect that the
 actions it is executing diverge from the session's authorised scope.
 
 Mitigations at L3:
+
 - Framework-level goal-state verification as a middleware layer
   between model output and tool dispatch
 - Action scope allowlisting at the framework level — the
@@ -231,6 +235,7 @@ Mitigations at L3:
 | Goal-verification bypass via injection | L1 → L3 | Low | Critical | P2 |
 
 #### Cross-references
+
 - LLM Top 10: LLM01 Prompt Injection, LLM03 Excessive Agency
 - DSGAI 2026: DSGAI12 Unsafe NL Data Gateways, DSGAI15 Over-Broad Context Windows
 - Other frameworks: MITRE ATLAS AML.T0051 · ISO 27001 A.8.28 · AIUC-1 B001/B005
@@ -265,6 +270,7 @@ instructions that redirect framework behaviour. The descriptor is
 processed at L3 before the model evaluates the tool.
 
 Mitigations at L3:
+
 - Per-tool permission manifests enforced at the framework dispatch
   layer — each tool's permitted operations enumerated, all
   others rejected at dispatch regardless of model instruction
@@ -282,6 +288,7 @@ can access systems beyond the tool's intended scope. L6 controls
 limit the blast radius of L3 failures.
 
 Mitigations at L6:
+
 - Least-privilege credentials per tool — each tool integration
   uses a scoped credential granting only the minimum required
   access, not a shared high-privilege service account
@@ -295,6 +302,7 @@ APIs cross into L4. Infrastructure-level controls at L4 provide a
 final containment layer if L3 tool dispatch controls are bypassed.
 
 Mitigations at L4:
+
 - Network egress filtering — tools that should not make external
   calls are blocked at the network layer
 - Execution environment isolation — tools run in sandboxed
@@ -311,6 +319,7 @@ Mitigations at L4:
 | Tool chain exploitation (combined harm) | L3 → L6 → L4 | Low | Critical | P2 |
 
 #### Cross-references
+
 - LLM Top 10: LLM10 Improper Output Handling, LLM03 Excessive Agency
 - DSGAI 2026: DSGAI06 Tool, Plugin & Agent Data Exchange
 - Other frameworks: ISO 27001 A.8.2 · CIS Controls CIS 5 · AIUC-1 B006/B007
@@ -347,6 +356,7 @@ and shared credentials across multiple agent instances that make
 attribution impossible.
 
 Mitigations at L6:
+
 - Short-lived JIT credentials scoped to session duration —
   credential expires at session end, no standing access
 - Unique NHI per agent deployment — shared credentials
@@ -365,6 +375,7 @@ direct sub-agents, access shared memory stores, or invoke tools
 across the entire cluster's scope.
 
 Mitigations at L7:
+
 - Inter-agent trust boundaries — even authenticated agents
   cannot invoke actions outside their defined role in the
   multi-agent hierarchy
@@ -380,6 +391,7 @@ cloud provider APIs. L4 controls provide a final access boundary
 after L6 credential controls have failed.
 
 Mitigations at L4:
+
 - Network-level enforcement of credential scope —
   infrastructure access controlled at network layer
   independent of credential validity
@@ -395,6 +407,7 @@ Mitigations at L4:
 | Cross-cluster lateral movement via stolen credential | L7 → L6 | Low | Critical | P2 |
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI02 Agent Identity & Credential Exposure
 - Other frameworks: OWASP NHI Top 10 · ISO 27001 A.8.2/A.5.16 · NIST CSF 2.0 PR.AA-01
 
@@ -429,6 +442,7 @@ that tool descriptor poisoning at L3 is an active, not theoretical,
 attack class.
 
 Mitigations at L3:
+
 - Cryptographic signature verification for all L3 components —
   tool packages, MCP servers, framework dependencies verified
   before loading
@@ -451,6 +465,7 @@ CVE-2024-34359 (llama_cpp_python) — RCE via malicious model file —
 is a documented L4 supply chain attack against agentic AI infrastructure.
 
 Mitigations at L4:
+
 - ML SBOM as L4 asset inventory — every model weight, adapter,
   and library inventoried with source, version, and hash
 - Build pipeline integrity — CI/CD pipeline itself subject to
@@ -466,6 +481,7 @@ response to specific trigger inputs. This is an L1 symptom of an
 L3/L4 origin attack.
 
 Mitigations at L1:
+
 - Post-training backdoor detection as mandatory deployment gate —
   testing for trigger-activated behaviour before any L1 model
   enters production
@@ -481,6 +497,7 @@ Mitigations at L1:
 | CI/CD pipeline compromise | L4 | Low | Critical | P2 |
 
 #### Cross-references
+
 - LLM Top 10: LLM04 Supply Chain
 - DSGAI 2026: DSGAI04 Data, Model & Artifact Poisoning
 - Other frameworks: NIST CSF 2.0 GV.SC-01 · ISO 27001 A.5.19/A.5.21 · CWE-494
@@ -515,6 +532,7 @@ filesystem path (generated code reads or writes outside the scratch
 directory).
 
 Mitigations at L4:
+
 - Hardware-level sandboxing — kernel-level isolation (gVisor,
   Firecracker) prevents sandbox escape regardless of what code
   the L1 model generates
@@ -530,6 +548,7 @@ the execution request. L3 can apply static analysis and allowlist
 enforcement before any code leaves the orchestration layer.
 
 Mitigations at L3:
+
 - Static analysis at L3 dispatch — generated code scanned for
   dangerous operations before dispatch to L4 execution
 - Operation allowlist at L3 — only operations in the approved
@@ -557,6 +576,7 @@ L1 is the weakest layer for this risk; L3 and L4 controls are primary.
 | Sandbox escape to host | L4 | Low | Critical | P1 |
 
 #### Cross-references
+
 - LLM Top 10: LLM10 Improper Output Handling
 - DSGAI 2026: DSGAI12 Unsafe NL Data Gateways
 - Other frameworks: AIUC-1 B005/B006 · CWE-94 · ISA/IEC 62443 SR 3.3 (OT)
@@ -593,6 +613,7 @@ and indirect write through tool return values (tool responses
 containing crafted content are stored as memory entries).
 
 Mitigations at L2:
+
 - Access controls on all memory write paths — only the agent
   and designated administrators can write, no unauthenticated
   writes in any environment
@@ -612,6 +633,7 @@ to detect that retrieved content is adversarially crafted unless
 source provenance information accompanies the retrieval.
 
 Mitigations at L1:
+
 - Source provenance carried through retrieval into context —
   model receives not just the memory content but its source
   trust level, allowing reasoning about reliability
@@ -624,6 +646,7 @@ making detection through output analysis alone difficult. L5 must
 monitor not just outputs but the memory content that influences them.
 
 Mitigations at L5:
+
 - Memory integrity monitoring as L5 observability control —
   anomalous content changes in memory stores detected as
   security events, not just data quality events
@@ -642,6 +665,7 @@ Mitigations at L5:
 | Monitoring evasion through plausible-but-wrong output | L5 | High | High | P2 |
 
 #### Cross-references
+
 - LLM Top 10: LLM05 Data and Model Poisoning, LLM09 Vector and Embedding Weaknesses
 - DSGAI 2026: DSGAI04 Data, Model & Artifact Poisoning, DSGAI13 Vector Store Platform Security
 - Other frameworks: NIST AI RMF MS-2.5 · AIUC-1 A/B002 · ISA/IEC 62443 SR 3.7 (OT)
@@ -652,7 +676,8 @@ Mitigations at L5:
 
 **Severity:** High
 **Originating layer:** L7 — Agent Ecosystem
-**Propagation path:** L7 (A2A channel compromised) → L6 (authentication bypassed) → L3 (commands injected into target agent's framework)
+**Propagation path:** L7 (A2A channel compromised) → L6 (authentication bypassed) → L3 (commands injected
+into target agent's framework)
 
 Inter-agent communication risks originate at L7 because the
 multi-agent communication topology, trust relationships, and
@@ -679,6 +704,7 @@ a valid authenticated message to produce the same action without
 the sending agent's knowledge.
 
 Mitigations at L7:
+
 - Explicit trust model for all A2A communication — no implicit
   trust based on shared infrastructure context, each message
   must carry verifiable sender identity
@@ -696,6 +722,7 @@ cryptographic proof, is the L6 control that makes L7 explicit trust
 possible.
 
 Mitigations at L6:
+
 - Mutual TLS on all A2A channels — both sender and receiver
   authenticated, messages encrypted in transit
 - Short-lived A2A certificates — bound to session, automatically
@@ -709,6 +736,7 @@ the received message is within the authorised command scope for the
 claimed sender, the injected message will be executed.
 
 Mitigations at L3:
+
 - Command scope validation at L3 — receiving framework checks
   that the message content is within the sending agent's
   authorised command scope for this interaction
@@ -724,6 +752,7 @@ Mitigations at L3:
 | A2A message in cleartext | L7 | High | High | P1 |
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI02 Agent Identity & Credential Exposure
 - Other frameworks: OWASP NHI Top 10 NHI-4/NHI-7 · ISO 27001 A.8.20/A.8.24 · AIUC-1 B007/B008
 
@@ -733,7 +762,8 @@ Mitigations at L3:
 
 **Severity:** High
 **Originating layer:** L7 — Agent Ecosystem
-**Propagation path:** L7 (cascade propagates) → L4 (infrastructure overloaded) → L5 (monitoring overwhelmed before detection)
+**Propagation path:** L7 (cascade propagates) → L4 (infrastructure overloaded) → L5 (monitoring overwhelmed
+before detection)
 
 Cascading failures originate at L7 because cascade propagation is
 an emergent property of multi-agent topology — it requires the agent
@@ -759,6 +789,7 @@ guidance before the cascade is detected. This elevates OT cascade
 severity to Critical.
 
 Mitigations at L7:
+
 - Circuit breakers at every L7 agent-to-agent boundary —
   cascade propagation halted at the boundary, not allowed
   to reach the next agent in the topology
@@ -777,6 +808,7 @@ by failing agents' retry behaviour. L4 controls limit how much
 resource any agent instance can consume.
 
 Mitigations at L4:
+
 - Per-agent resource limits enforced at L4 — no agent instance
   can consume more than its allocated resource quota regardless
   of retry behaviour
@@ -792,6 +824,7 @@ detection. MAESTRO flags this as a specific L5 design requirement:
 cascade monitoring must be correlation-based, not instance-based.
 
 Mitigations at L5:
+
 - Correlated anomaly detection — L5 monitoring designed to
   detect patterns across multiple agents simultaneously, not
   just individual agent anomalies
@@ -810,6 +843,7 @@ Mitigations at L5:
 | OT cascade reaching process control interface | L7 → L4 | Low | Critical | P1 |
 
 #### Cross-references
+
 - LLM Top 10: LLM06 Unbounded Consumption
 - DSGAI 2026: DSGAI17 Data Availability & Resilience Failures
 - Other frameworks: AIUC-1 D · ISA/IEC 62443 SR 7.6/7.7 (OT) · NIST SP 800-82 Rev 3
@@ -820,7 +854,8 @@ Mitigations at L5:
 
 **Severity:** Medium
 **Originating layer:** L1 — Foundation Models
-**Propagation path:** L1 (plausible output generation) → L7 (sustained interaction builds trust) → external (human makes harmful decision)
+**Propagation path:** L1 (plausible output generation) → L7 (sustained interaction builds trust) → external
+(human makes harmful decision)
 
 Trust exploitation originates at L1 because the plausibility of
 agent outputs — the property that makes them convincing enough to
@@ -846,6 +881,7 @@ systematically builds trust with a specific operator over multiple
 sessions before attempting to influence a high-stakes decision).
 
 Mitigations at L1:
+
 - AI disclosure enforcement — the model identifies itself as
   AI in all interface contexts, enforced at the rendering layer
   so that injected content cannot override the disclosure
@@ -861,6 +897,7 @@ history and interaction patterns — the substrate on which long-term
 trust exploitation is built.
 
 Mitigations at L7:
+
 - Aggregate trust pattern monitoring at L7 — the ecosystem
   layer tracks whether operators are systematically accepting
   agent recommendations without independent verification,
@@ -874,6 +911,7 @@ that can be completed through the agent's conversational interface
 is an approval that a compromised or exploited model can influence.
 
 Mitigations at L6:
+
 - Approval flows independent of agent interface — sensitive
   state changes require confirmation through an L6 access
   control system, not through the agent conversation
@@ -889,6 +927,7 @@ Mitigations at L6:
 | Identity concealment — AI claims to be human | L1 | Low | High | P2 |
 
 #### Cross-references
+
 - LLM Top 10: LLM07 Misinformation
 - DSGAI 2026: DSGAI21 Disinformation via Data Poisoning
 - Other frameworks: EU AI Act Art. 13/50 · ISO 27001 A.6.3 · AIUC-1 C/F
@@ -930,6 +969,7 @@ because individual recommendations may be defensible; only the
 aggregate pattern reveals the hidden goal.
 
 Mitigations at L5:
+
 - Behavioural baseline established at commissioning — expected
   action patterns documented before production deployment,
   baseline serves as the comparison point for all subsequent
@@ -953,6 +993,7 @@ agent defences at L1 focus on provenance and integrity, not runtime
 behaviour detection.
 
 Mitigations at L1:
+
 - Model provenance documentation — the training data, fine-tuning
   pipeline, and weight provenance chain documented before
   deployment, enabling investigation if rogue behaviour is detected
@@ -968,6 +1009,7 @@ it has. A rogue agent operating at minimum privilege causes less
 damage before detection than one operating at elevated privilege.
 
 Mitigations at L6:
+
 - Scope constraints enforced at L6 infrastructure layer —
   rogue agent cannot exceed its permission envelope regardless
   of internal goal state
@@ -985,6 +1027,7 @@ Mitigations at L6:
 | Rogue agent coordinating across agent ecosystem | L7 | Low | Critical | P2 |
 
 #### Cross-references
+
 - LLM Top 10: LLM03 Excessive Agency
 - DSGAI 2026: DSGAI16 Endpoint & Browser Assistant Overreach
 - Other frameworks: AIUC-1 B001/B002/C/E · EU AI Act Art. 14/15 · ISA/IEC 62443 SR 3.7 (OT)
@@ -999,6 +1042,7 @@ a new agentic AI deployment before selecting controls.
 ### Step 1 — Map your system to the seven layers
 
 For each MAESTRO layer, document:
+
 - What components in your deployment live at this layer?
 - What trust boundaries exist at this layer?
 - What are the data flows in and out of this layer?
@@ -1028,6 +1072,7 @@ to a single layer.
 ### Step 5 — Select controls from companion files
 
 Map each P1 threat to controls from:
+
 - `Agentic_AITG.md` — test cases to verify the control works
 - `Agentic_AIVSS.md` — severity score for the risk register
 - `Agentic_ISO27001.md` / `Agentic_CISControls.md` — specific control selection
@@ -1080,4 +1125,5 @@ The integration across OWASP artefacts is:
 
 Maintained by the OWASP GenAI Data Security Initiative.  
 Created by Emmanuel Guilherme Junior.  
-Part of the OWASP GenAI Crosswalk: https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk
+Part of the OWASP GenAI Crosswalk:
+<https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk>

@@ -93,7 +93,8 @@ networks. LLMs must be placed within this architecture explicitly —
 not assumed to fit in an existing tier.
 
 **Recommended LLM placement per SP 800-82 Rev 3 Appendix G:**
-```
+
+```text
 Enterprise Zone (Level 4–5)
     ? [Firewall + proxy — HTTPS only, no direct OT protocol access]
 DMZ / Demilitarized Zone (Level 3.5)
@@ -106,6 +107,7 @@ Field Zone (Level 0–2) — PLCs, RTUs, field devices
 ```
 
 **Key SP 800-82 Rev 3 architecture principles for LLM deployment:**
+
 - LLMs are DMZ or enterprise-tier components — never control zone
 - Data flows from historian to LLM must be read-only and logged
 - LLM outputs destined for operator display must pass through
@@ -159,6 +161,7 @@ instantiation of this documented threat pattern.
 #### Mitigations by tier
 
 **Foundational**
+
 - SI-10: Implement input validation at the DMZ boundary for
   all content entering LLM context from OT sources — historian
   data, alarm logs, work orders, and operator inputs
@@ -170,6 +173,7 @@ instantiation of this documented threat pattern.
   feeds are not trusted inputs regardless of source
 
 **Hardening**
+
 - SI-3: Deploy prompt injection detection at the IT/OT
   boundary — active monitoring, not just filtering
 - Section 7.2: Validate network segmentation — confirm that
@@ -180,6 +184,7 @@ instantiation of this documented threat pattern.
   data and maintenance record content
 
 **Advanced**
+
 - Implement architectural separation between LLM advisory
   function and any control action path — Section 7.2
   defense-in-depth principle applied to LLM outputs
@@ -194,11 +199,12 @@ instantiation of this documented threat pattern.
 
 | Tool | Type | Link |
 |---|---|---|
-| Garak | Open-source | https://github.com/leondz/garak |
-| LLM Guard | Open-source | https://github.com/protectai/llm-guard |
-| Claroty | Commercial | https://claroty.com |
+| Garak | Open-source | <https://github.com/leondz/garak> |
+| LLM Guard | Open-source | <https://github.com/protectai/llm-guard> |
+| Claroty | Commercial | <https://claroty.com> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI01 Agent Goal Hijack
 - DSGAI 2026: DSGAI12 Unsafe NL Data Gateways
 - Other frameworks: ISA/IEC 62443 SR 3.3 · MITRE ATT&CK ICS T0855 · NERC CIP-007
@@ -239,6 +245,7 @@ represent a new path for automated operational intelligence gathering.
 #### Mitigations by tier
 
 **Foundational**
+
 - AC-3: Classify all OT data before granting LLM access —
   apply the same classification framework used for OT network
   documentation to historian data, process parameters, and
@@ -250,6 +257,7 @@ represent a new path for automated operational intelligence gathering.
   do not grant broad SELECT access to full historian namespace
 
 **Hardening**
+
 - AU-9: Protect and retain all LLM access logs to OT data —
   every historian query, every data element accessed, every
   output generated — immutable audit trail
@@ -261,6 +269,7 @@ represent a new path for automated operational intelligence gathering.
   not in the reverse direction
 
 **Advanced**
+
 - Conduct OT data disclosure red team exercise — attempt to
   extract operational intelligence through crafted LLM
   queries against your specific historian and SCADA configuration
@@ -275,10 +284,11 @@ represent a new path for automated operational intelligence gathering.
 
 | Tool | Type | Link |
 |---|---|---|
-| Microsoft Presidio | Open-source | https://github.com/microsoft/presidio |
-| Nozomi Networks | Commercial | https://www.nozominetworks.com |
+| Microsoft Presidio | Open-source | <https://github.com/microsoft/presidio> |
+| Nozomi Networks | Commercial | <https://www.nozominetworks.com> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI03 Identity & Privilege Abuse
 - DSGAI 2026: DSGAI01 Sensitive Data Leakage
 - Other frameworks: ISA/IEC 62443 SR 4.1/4.2 · NERC CIP-011 · IEC 62351
@@ -319,6 +329,7 @@ must meet this same standard of necessity.
 #### Mitigations by tier
 
 **Foundational**
+
 - AC-6: Apply least privilege to all LLM OT access — read-only
   to historian by default, no autonomous write access without
   documented business justification and human confirmation gate
@@ -330,6 +341,7 @@ must meet this same standard of necessity.
   confirmation or rejection
 
 **Hardening**
+
 - AC-3: Implement and enforce access controls at the OT
   interface layer — LLM access scope cannot be exceeded
   regardless of what the model requests
@@ -340,6 +352,7 @@ must meet this same standard of necessity.
   actively used in the past 30 days is removed
 
 **Advanced**
+
 - Section 7.1: Implement architectural separation between
   LLM advisory output and control action execution — physical
   or logical separation guaranteeing LLM output cannot
@@ -355,11 +368,12 @@ must meet this same standard of necessity.
 
 | Tool | Type | Link |
 |---|---|---|
-| NeMo Guardrails | Open-source | https://github.com/NVIDIA/NeMo-Guardrails |
-| Guardrails AI | Open-source | https://github.com/guardrails-ai/guardrails |
-| Claroty | Commercial | https://claroty.com |
+| NeMo Guardrails | Open-source | <https://github.com/NVIDIA/NeMo-Guardrails> |
+| Guardrails AI | Open-source | <https://github.com/guardrails-ai/guardrails> |
+| Claroty | Commercial | <https://claroty.com> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI01 Agent Goal Hijack, ASI02 Tool Misuse
 - DSGAI 2026: DSGAI06 Tool Plugin & Agent Data Exchange, DSGAI12 Unsafe NL Data Gateways
 - Other frameworks: ISA/IEC 62443 SR 2.1/2.2 · IEC 61511 · NERC CIP-005
@@ -406,6 +420,7 @@ in scope as OT software components.
 #### Mitigations by tier
 
 **Foundational**
+
 - SA-12: Apply OT supply chain security requirements to all
   LLM component vendors — provenance documentation, integrity
   guarantees, and vulnerability disclosure obligations
@@ -416,6 +431,7 @@ in scope as OT software components.
   in OT environments, ever
 
 **Hardening**
+
 - SR-3: Develop a supply chain security plan for LLM
   components in OT — covers procurement, testing, deployment,
   update, and decommission lifecycle
@@ -426,6 +442,7 @@ in scope as OT software components.
   before OT deployment — unsigned components rejected
 
 **Advanced**
+
 - SR-6: Conduct periodic security assessments of LLM vendors
   with OT-deployed components — include in the site OT
   supply chain risk management programme (Section 8.4)
@@ -439,11 +456,12 @@ in scope as OT software components.
 
 | Tool | Type | Link |
 |---|---|---|
-| ModelScan | Open-source | https://github.com/protectai/modelscan |
-| CycloneDX | Open-source | https://cyclonedx.org |
-| OWASP Dependency-Check | Open-source | https://owasp.org/www-project-dependency-check/ |
+| ModelScan | Open-source | <https://github.com/protectai/modelscan> |
+| CycloneDX | Open-source | <https://cyclonedx.org> |
+| OWASP Dependency-Check | Open-source | <https://owasp.org/www-project-dependency-check/> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI04 Agentic Supply Chain Vulnerabilities
 - DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning
 - Other frameworks: ISA/IEC 62443 62443-2-4 · NERC CIP-013 · NIST SP 800-218A
@@ -491,6 +509,7 @@ model's training data or weights have been compromised.
 #### Mitigations by tier
 
 **Foundational**
+
 - SI-7: Implement model integrity verification before each OT
   deployment — hash-based check against approved baseline,
   deviation triggers rejection
@@ -501,6 +520,7 @@ model's training data or weights have been compromised.
   always available for immediate revert on poisoning detection
 
 **Hardening**
+
 - AU-12: Implement comprehensive LLM output audit trail —
   all recommendations logged, enabling retrospective analysis
   for poisoning indicators
@@ -512,6 +532,7 @@ model's training data or weights have been compromised.
   incorrect setpoint recommendation, false health assessment
 
 **Advanced**
+
 - Conduct post-training backdoor detection as a mandatory
   OT deployment gate — neural cleanse or equivalent,
   results documented in site security records
@@ -526,11 +547,12 @@ model's training data or weights have been compromised.
 
 | Tool | Type | Link |
 |---|---|---|
-| IBM Adversarial Robustness Toolbox | Open-source | https://github.com/Trusted-AI/adversarial-robustness-toolbox |
-| CleanLab | Open-source | https://github.com/cleanlab/cleanlab |
-| Dragos | Commercial | https://www.dragos.com |
+| IBM Adversarial Robustness Toolbox | Open-source | <https://github.com/Trusted-AI/adversarial-robustness-toolbox> |
+| CleanLab | Open-source | <https://github.com/cleanlab/cleanlab> |
+| Dragos | Commercial | <https://www.dragos.com> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning, DSGAI21 Disinformation via Poisoning
 - Other frameworks: ISA/IEC 62443 SR 3.3/3.7 · MITRE ATT&CK ICS T0831 · NERC CIP-010
@@ -573,6 +595,7 @@ to prevent this threat from manifesting through the IT/OT boundary.
 #### Mitigations by tier
 
 **Foundational**
+
 - SC-5: Implement rate limiting on all LLM interfaces —
   hard caps on queries per time window preventing saturation
   of shared OT network resources
@@ -584,6 +607,7 @@ to prevent this threat from manifesting through the IT/OT boundary.
   operators not dependent on LLM for safety-critical functions
 
 **Hardening**
+
 - AU-12: Integrate LLM resource consumption monitoring with
   OT network monitoring — alert when LLM traffic approaches
   thresholds that could affect OT communications
@@ -594,6 +618,7 @@ to prevent this threat from manifesting through the IT/OT boundary.
   isolated from OT system availability
 
 **Advanced**
+
 - Conduct OT-specific load testing — simulate adversarial
   LLM resource exhaustion and verify zero impact on
   Zone 3 system availability and response times
@@ -608,11 +633,12 @@ to prevent this threat from manifesting through the IT/OT boundary.
 
 | Tool | Type | Link |
 |---|---|---|
-| LiteLLM | Open-source | https://github.com/BerriAI/litellm |
-| Nozomi Networks | Commercial | https://www.nozominetworks.com |
-| Kong Gateway | Open-source | https://github.com/Kong/kong |
+| LiteLLM | Open-source | <https://github.com/BerriAI/litellm> |
+| Nozomi Networks | Commercial | <https://www.nozominetworks.com> |
+| Kong Gateway | Open-source | <https://github.com/Kong/kong> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI08 Cascading Agent Failures
 - DSGAI 2026: DSGAI17 Data Availability & Resilience Failures
 - Other frameworks: ISA/IEC 62443 SR 7.6 · NERC CIP-007 · IEC 62351
@@ -654,6 +680,7 @@ optional guidance.
 #### Mitigations by tier
 
 **Foundational**
+
 - AT-3: Implement role-based training for all operators
   using LLM decision-support tools — training must cover
   LLM hallucination risk, verification requirements, and
@@ -666,6 +693,7 @@ optional guidance.
   on any safety-relevant recommendation
 
 **Hardening**
+
 - Section 6.2: Assess LLM accuracy limitations in OT risk
   assessment — specific to each process area and equipment
   type the LLM advises on
@@ -676,6 +704,7 @@ optional guidance.
   OT documentation — not on uncontrolled web content
 
 **Advanced**
+
 - Conduct OT-specific hallucination testing — validate LLM
   accuracy on equipment-specific procedures for all equipment
   types in your plant before deployment
@@ -690,10 +719,11 @@ optional guidance.
 
 | Tool | Type | Link |
 |---|---|---|
-| TruLens | Open-source | https://github.com/truera/trulens |
-| RAGAS | Open-source | https://github.com/explodinggradients/ragas |
+| TruLens | Open-source | <https://github.com/truera/trulens> |
+| RAGAS | Open-source | <https://github.com/explodinggradients/ragas> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI09 Human-Agent Trust Exploitation
 - DSGAI 2026: DSGAI21 Disinformation via Data Poisoning
 - Other frameworks: ISA/IEC 62443 SR 3.1 · IEC 61511 (human factors) · AIUC-1 C/F
@@ -739,6 +769,7 @@ system prompts containing this information are in scope.
 #### Mitigations by tier
 
 **Foundational**
+
 - SC-28: Encrypt all OT LLM system prompts at rest — not
   stored in cleartext application configuration or source code
 - Remove all OT-specific identifiers from system prompts
@@ -748,6 +779,7 @@ system prompts containing this information are in scope.
   classification as OT configuration files
 
 **Hardening**
+
 - Conduct prompt extraction testing before each OT LLM
   deployment — assess what OT reconnaissance value an
   adversary could derive from extracted prompt content
@@ -758,6 +790,7 @@ system prompts containing this information are in scope.
   life of any extracted OT configuration intelligence
 
 **Advanced**
+
 - Implement system prompt tokenisation for all OT-specific
   identifiers — equipment tags, IP addresses, safety
   parameters replaced with opaque tokens
@@ -769,6 +802,7 @@ system prompts containing this information are in scope.
   sensitive OT context in the prompt
 
 #### Cross-references
+
 - Agentic Top 10: ASI01 Agent Goal Hijack
 - DSGAI 2026: DSGAI15 Over-Broad Context Windows
 - Other frameworks: ISA/IEC 62443 SR 4.1 · NERC CIP-011 · CWE-200
@@ -803,6 +837,7 @@ technical guidance to operators.
 #### Mitigations by tier
 
 **Foundational**
+
 - AC-3: Implement access controls on all OT vector stores —
   RBAC enforced at collection level, no unauthenticated access
 - SC-28: Encrypt all OT vector store content at rest —
@@ -813,6 +848,7 @@ technical guidance to operators.
   general operational documentation
 
 **Hardening**
+
 - SI-7: Implement vector store integrity monitoring —
   alert on anomalous query patterns or unexpected content
   modifications in OT knowledge stores
@@ -824,6 +860,7 @@ technical guidance to operators.
   to OT knowledge base
 
 **Advanced**
+
 - Conduct embedding inversion testing against OT vector
   stores — validate that safety procedure details and
   equipment specifications cannot be reconstructed from
@@ -836,6 +873,7 @@ technical guidance to operators.
   reconnaissance activity
 
 #### Cross-references
+
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - DSGAI 2026: DSGAI13 Vector Store Platform Security
 - Other frameworks: ISA/IEC 62443 SR 3.7 · NIST AI RMF MS-2.5
@@ -876,6 +914,7 @@ reaches a shell, a browser, or a database.
 #### Mitigations by tier
 
 **Foundational**
+
 - SI-10: Treat all LLM output as untrusted input to OT
   systems — encode, validate, and sanitise before rendering
   in HMI or passing to historian or work order systems
@@ -886,6 +925,7 @@ reaches a shell, a browser, or a database.
   alarm management systems, or control interfaces
 
 **Hardening**
+
 - SI-3: Deploy output scanning at the DMZ boundary — scan
   LLM outputs for malicious content before crossing into
   control zone display infrastructure
@@ -896,6 +936,7 @@ reaches a shell, a browser, or a database.
   vulnerabilities — include in OT penetration testing scope
 
 **Advanced**
+
 - Implement dedicated LLM output validation gateway at the
   DMZ boundary — independent validation layer not controlled
   by the LLM or its hosting infrastructure
@@ -906,6 +947,7 @@ reaches a shell, a browser, or a database.
   exercises and tabletop exercises
 
 #### Cross-references
+
 - Agentic Top 10: ASI02 Tool Misuse, ASI05 Unexpected Code Execution
 - DSGAI 2026: DSGAI05 Data Integrity & Validation Failures, DSGAI12 Unsafe NL Data Gateways
 - Other frameworks: ISA/IEC 62443 SR 3.3 · NIST SP 800-53 SI-10 · MITRE ATT&CK ICS T0855
@@ -1019,5 +1061,7 @@ directly referenced or applicable:
 
 ---
 
-*Part of the [OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk) —
+*Part of the
+[OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk)
+—
 maintained by the [OWASP GenAI Data Security Initiative](https://genai.owasp.org)*

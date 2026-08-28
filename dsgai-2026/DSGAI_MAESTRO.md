@@ -168,6 +168,7 @@ downstream consequence.
 | DLP bypass via multimodal output (image, audio) | L2 → L1 | P2 |
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - Agentic Top 10: ASI03 Identity & Privilege Abuse
 - Other frameworks: ISO 27001 A.8.11/A.8.12 · NIST CSF 2.0 PR.DS-01 · EU AI Act Art. 10
@@ -220,6 +221,7 @@ or invoking cross-cluster tools.
 | Lateral movement via stolen agent credential | L7 ← L6 | P2 |
 
 #### Cross-references
+
 - Agentic Top 10: ASI03 Identity & Privilege Abuse
 - Other frameworks: OWASP NHI Top 10 · NIST CSF 2.0 PR.AA-01 · ISO 27001 A.8.2
 
@@ -270,6 +272,7 @@ unknown controls.
 | Shadow AI use evading DLP controls | L7 → L2 | P2 |
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI07 Data Governance, DSGAI08 Non-Compliance
 - Other frameworks: NIST CSF 2.0 GV.OC-01 · ISO 27001 A.5.10/A.5.23 · EU AI Act Art. 25
 
@@ -329,6 +332,7 @@ rather than passively monitoring output distributions.
 | Poisoning evading L5 through plausible output | L5 | P1 |
 
 #### Cross-references
+
 - LLM Top 10: LLM04 Supply Chain, LLM05 Data and Model Poisoning
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - Other frameworks: MITRE ATLAS AML.T0020 · NIST AI RMF MS-3.3 · ISO 27001 A.8.27
@@ -375,6 +379,7 @@ compromise to L4 infrastructure control.
 | Semantic injection passing schema validation | L2 → L1 | P2 |
 
 #### Cross-references
+
 - LLM Top 10: LLM10 Improper Output Handling
 - DSGAI 2026: DSGAI13 Vector Store Platform Security
 - Other frameworks: ISO 27001 A.8.26/A.8.28 · CWE-20 · NIST CSF 2.0 PR.PS-04
@@ -428,6 +433,7 @@ tools are subject to the organisation's security requirements.
 | Tool vendor using call data for model training without consent | L6 | P2 |
 
 #### Cross-references
+
 - Agentic Top 10: ASI02 Tool Misuse, ASI04 Supply Chain
 - Other frameworks: ISO 27001 A.5.19/A.5.20 · NIST CSF 2.0 GV.SC-01 · EU AI Act Art. 25
 
@@ -478,6 +484,7 @@ governance programme did not know existed.
 | Ungoverned L2 store discovered by adversary | L2 → L6 | P2 |
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI08 Non-Compliance, DSGAI01 Sensitive Data Leakage
 - Other frameworks: ISO 27001 A.5.9/A.8.10 · EU AI Act Art. 10 · NIST CSF 2.0 ID.AM-08
 
@@ -527,6 +534,7 @@ jurisdictional interactions at L7.
 | Multi-agent data flow creating cross-border transfer obligation | L7 → L6 | P2 |
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI07 Data Governance
 - Other frameworks: EU AI Act Art. 10/17 · ISO 27001 A.5.31 · NIST CSF 2.0 GV.OC-01
 
@@ -572,6 +580,7 @@ through the multimodal inference path.
 | Multimodal extraction output in cleartext telemetry | L5 → L2 | P2 |
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI01 Sensitive Data Leakage, DSGAI14 Telemetry Leakage
 - Other frameworks: ISO 27001 A.8.11 · GDPR Art. 9 · NIST CSF 2.0 PR.DS-01
 
@@ -619,6 +628,7 @@ training corpus even when the training data was described as synthetic.
 | Synthetic data released without re-identification assessment | L6 | P1 |
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI08 Non-Compliance, DSGAI18 Inference & Data Reconstruction
 - Other frameworks: ISO 27001 A.5.34 · GDPR Recital 26 · NIST CSF 2.0 GV.RM-06
 
@@ -668,6 +678,7 @@ session does not include content from another user's session.
 | Framework assembling cross-user context | L3 → L2 | P2 |
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - DSGAI 2026: DSGAI13 Vector Store Platform Security
 - Other frameworks: ISO 27001 A.8.3 · GDPR Art. 32 · NIST CSF 2.0 PR.AA-05
@@ -722,6 +733,7 @@ is an L6 control that limits the blast radius of any L3 injection.
 | NL gateway executing under shared high-privilege account | L6 → L3 | P1 |
 
 #### Cross-references
+
 - LLM Top 10: LLM10 Improper Output Handling
 - Agentic Top 10: ASI02 Tool Misuse, ASI05 Unexpected Code Execution
 - Other frameworks: ISO 27001 A.8.26/A.8.28 · CWE-89 · ISA/IEC 62443 SR 2.2 (OT)
@@ -773,6 +785,7 @@ without authentication in any environment.
 | Embedding inversion reconstructing source documents | L2 → L1 | P2 |
 
 #### Cross-references
+
 - LLM Top 10: LLM09 Vector and Embedding Weaknesses
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - Other frameworks: ISO 27001 A.8.3/A.8.24 · CWE-284 · NIST CSF 2.0 PR.AA-05
@@ -824,6 +837,7 @@ when those logs contain sensitive inference content.
 | Extended telemetry retention creating persistent data exposure | L5 | P2 |
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI01 Sensitive Data Leakage, DSGAI07 Data Governance
 - Other frameworks: ISO 27001 A.8.15 · GDPR Art. 32 · NIST CSF 2.0 GV.OC-01
 
@@ -875,6 +889,7 @@ independently of retrieval system behaviour.
 | Context window containing data from incompatible trust domains | L2 → L1 | P2 |
 
 #### Cross-references
+
 - LLM Top 10: LLM08 Hidden Context Exposure
 - Agentic Top 10: ASI01 Agent Goal Hijack
 - Other frameworks: ISO 27001 A.8.3 · NIST CSF 2.0 PR.AA-05 · AIUC-1 A/B005
@@ -927,6 +942,7 @@ obligations are L6 controls.
 | Unapproved extension with data exfiltration capability | L4 → L6 | P2 |
 
 #### Cross-references
+
 - Agentic Top 10: ASI10 Rogue Agents
 - DSGAI 2026: DSGAI03 Shadow AI
 - Other frameworks: ISO 27001 A.8.1/A.8.7 · NIST CSF 2.0 GV.SC-01 · EU AI Act Art. 9
@@ -980,6 +996,7 @@ the service is responding.
 | Availability failure cascading through multi-agent pipeline | L7 ← L4 | P2 |
 
 #### Cross-references
+
 - LLM Top 10: LLM06 Unbounded Consumption
 - Agentic Top 10: ASI08 Cascading Agent Failures
 - Other frameworks: ISA/IEC 62443 SR 7.6 (OT) · NIST CSF 2.0 PR.IR-01 · AIUC-1 D
@@ -1033,6 +1050,7 @@ output space coverage, unusual input diversity.
 | Systematic query campaign for model extraction | L1 → L5 | P1 |
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure, LLM09 Vector and Embedding Weaknesses
 - DSGAI 2026: DSGAI10 Synthetic Data Pitfalls
 - Other frameworks: ISO 27001 A.8.11 · GDPR Art. 25 · MITRE ATLAS AML.T0024.000
@@ -1083,6 +1101,7 @@ poisoning attack that reaches L1 through the training pipeline.
 | Labeling vendor retaining sensitive data beyond contract term | L6 | P2 |
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI07 Data Governance, DSGAI08 Non-Compliance
 - Other frameworks: ISO 27001 A.5.34 · GDPR Art. 28 · NIST CSF 2.0 GV.SC-01
 
@@ -1135,6 +1154,7 @@ at L6 before the L1 model is ever reached.
 | Extracted model deployed as competing service | L1 | P2 |
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - DSGAI 2026: DSGAI18 Inference & Data Reconstruction
 - Other frameworks: MITRE ATLAS AML.T0016 · ISO 27001 A.5.12 · NIST CSF 2.0 DE.CM-09
@@ -1192,6 +1212,7 @@ modifications before they reach L1 inference.
 | Corpus modification evading L5 monitoring | L5 | P2 |
 
 #### Cross-references
+
 - LLM Top 10: LLM05 Data and Model Poisoning, LLM07 Misinformation
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - Other frameworks: MITRE ATLAS AML.T0045 · ISO 27001 A.5.7 · ISA/IEC 62443 SR 3.3 (OT)
@@ -1256,6 +1277,7 @@ team, L3 with the integration engineering team.
 
 **Control selection:** After identifying threats by layer, select
 controls from the companion DSGAI files:
+
 - `DSGAI_ISO27001.md` — ISMS controls per entry
 - `DSGAI_NISTCSF2.md` — CSF 2.0 functions per entry
 - `DSGAI_MITREATLAS.md` — adversarial techniques per entry
@@ -1288,4 +1310,4 @@ are P2.
 
 Maintained by the OWASP GenAI Data Security Initiative.  
 Created by Emmanuel Guilherme Junior.  
-Part of the OWASP GenAI Crosswalk: https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk
+Part of the OWASP GenAI Crosswalk: <https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk>

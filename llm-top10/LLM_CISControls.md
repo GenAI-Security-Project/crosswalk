@@ -33,6 +33,7 @@ response (CIS 17), and penetration testing (CIS 18).
 | Organisational (IG3) | CIS 12–18 | Network monitoring, security awareness, app security, incident response, pen testing |
 
 **Implementation Groups:**
+
 - IG1 — Essential cyber hygiene, small to medium organisations
 - IG2 — IG1 + additional controls for organisations with sensitive data
 - IG3 — IG2 + advanced controls for enterprise and regulated industries
@@ -95,6 +96,7 @@ invisible-Unicode carriers survive review of the rendered interface.
 #### Mitigations by tier
 
 **Foundational (IG1)**
+
 - CIS 8.2: Enable audit logging for all LLM input channels —
   every prompt logged with user identity and timestamp
 - Treat all external content processed by the LLM as untrusted —
@@ -103,6 +105,7 @@ invisible-Unicode carriers survive review of the rendered interface.
   application layer before content reaches the model
 
 **Hardening (IG2)**
+
 - CIS 16.1/16.2: Establish secure coding standards covering
   LLM integration — input validation requirements reviewed in
   code review for all LLM-related pull requests
@@ -112,6 +115,7 @@ invisible-Unicode carriers survive review of the rendered interface.
   and jailbreak injection vectors
 
 **Advanced (IG3)**
+
 - CIS 18.1: Include prompt injection scenarios in penetration
   testing programme — cover your specific RAG sources, tool
   descriptor paths, and document processing pipelines
@@ -124,11 +128,12 @@ invisible-Unicode carriers survive review of the rendered interface.
 
 | Tool | Type | Link |
 |---|---|---|
-| Garak | Open-source | https://github.com/leondz/garak |
-| LLM Guard | Open-source | https://github.com/protectai/llm-guard |
-| Rebuff | Open-source | https://github.com/protectai/rebuff |
+| Garak | Open-source | <https://github.com/leondz/garak> |
+| LLM Guard | Open-source | <https://github.com/protectai/llm-guard> |
+| Rebuff | Open-source | <https://github.com/protectai/rebuff> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI01 Agent Goal Hijack
 - DSGAI 2026: DSGAI01 Sensitive Data Leakage
 - Other frameworks: ISO 27001 A.8.28 · NIST AI RMF MS-2.5 · MITRE ATLAS AML.T0051
@@ -155,6 +160,7 @@ over-permissive RAG retrieval.
 #### Mitigations by tier
 
 **Foundational (IG1)**
+
 - CIS 3.1: Establish data management process covering all LLM
   data assets — training data, RAG sources, outputs, embeddings
   classified and handled per policy
@@ -164,6 +170,7 @@ over-permissive RAG retrieval.
   before responses are delivered to users
 
 **Hardening (IG2)**
+
 - CIS 8.5: Collect detailed audit logs for all LLM data access —
   every RAG query, every data element retrieved, every output
   containing sensitive content
@@ -173,6 +180,7 @@ over-permissive RAG retrieval.
   PII and sensitive patterns detected and blocked
 
 **Advanced (IG3)**
+
 - Conduct model inversion red team exercises — validate that
   sensitive training data cannot be reconstructed from outputs
 - Apply differential privacy in training and embedding
@@ -185,11 +193,12 @@ over-permissive RAG retrieval.
 
 | Tool | Type | Link |
 |---|---|---|
-| Microsoft Presidio | Open-source | https://github.com/microsoft/presidio |
-| Nightfall AI | Commercial | https://nightfall.ai |
-| Private AI | Commercial | https://private-ai.com |
+| Microsoft Presidio | Open-source | <https://github.com/microsoft/presidio> |
+| Nightfall AI | Commercial | <https://nightfall.ai> |
+| Private AI | Commercial | <https://private-ai.com> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI03 Identity & Privilege Abuse
 - DSGAI 2026: DSGAI01 Sensitive Data Leakage, DSGAI18 Inference & Data Reconstruction
 - Other frameworks: ISO 27001 A.8.11/A.8.12 · EU AI Act Art. 10 · GDPR Art. 25
@@ -214,6 +223,7 @@ unintended or harmful actions when manipulated.
 #### Mitigations by tier
 
 **Foundational (IG1)**
+
 - CIS 5.4: Manage LLM tool access as privileged access —
   minimum scope enforced, regular reviews, no standing
   broad permissions across all tools
@@ -224,6 +234,7 @@ unintended or harmful actions when manipulated.
   triggered by LLM output — separate confirmation interface
 
 **Hardening (IG2)**
+
 - CIS 8.5: Collect detailed audit logs for all LLM tool
   invocations — tool identity, parameters, user session,
   timestamp — immutable trail
@@ -233,6 +244,7 @@ unintended or harmful actions when manipulated.
   actively used in 30 days is removed
 
 **Advanced (IG3)**
+
 - CIS 18.1: Include excessive agency scenarios in
   penetration testing — indirect injection leading to
   autonomous tool invocation beyond intended scope
@@ -246,11 +258,12 @@ unintended or harmful actions when manipulated.
 
 | Tool | Type | Link |
 |---|---|---|
-| Guardrails AI | Open-source | https://github.com/guardrails-ai/guardrails |
-| NeMo Guardrails | Open-source | https://github.com/NVIDIA/NeMo-Guardrails |
-| LangSmith | Commercial | https://smith.langchain.com |
+| Guardrails AI | Open-source | <https://github.com/guardrails-ai/guardrails> |
+| NeMo Guardrails | Open-source | <https://github.com/NVIDIA/NeMo-Guardrails> |
+| LangSmith | Commercial | <https://smith.langchain.com> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI01 Agent Goal Hijack, ASI02 Tool Misuse
 - DSGAI 2026: DSGAI06 Tool Plugin & Agent Data Exchange
 - Other frameworks: ISO 27001 A.8.2 · AIUC-1 B006 · ISA/IEC 62443 SR 2.1 (OT)
@@ -282,6 +295,7 @@ dependency is clean.
 #### Mitigations by tier
 
 **Foundational (IG1)**
+
 - CIS 2.1: Maintain ML SBOM as part of software asset
   inventory — every LLM component (model, adapters, inference
   runtime, libraries) inventoried with version and source
@@ -292,6 +306,7 @@ dependency is clean.
   in production without review and approval
 
 **Hardening (IG2)**
+
 - CIS 16.6: Establish approved component list for LLM
   deployments — only sourced from approved vendors,
   cryptographic signatures verified before deployment
@@ -302,6 +317,7 @@ dependency is clean.
   alert on any unplanned component change
 
 **Advanced (IG3)**
+
 - CIS 18.1: Include supply chain integrity in penetration
   testing programme — attempt to introduce compromised
   components through supply chain attack vectors
@@ -314,11 +330,12 @@ dependency is clean.
 
 | Tool | Type | Link |
 |---|---|---|
-| CycloneDX | Open-source | https://cyclonedx.org |
-| ModelScan | Open-source | https://github.com/protectai/modelscan |
-| OWASP Dependency-Check | Open-source | https://owasp.org/www-project-dependency-check/ |
+| CycloneDX | Open-source | <https://cyclonedx.org> |
+| ModelScan | Open-source | <https://github.com/protectai/modelscan> |
+| OWASP Dependency-Check | Open-source | <https://owasp.org/www-project-dependency-check/> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI04 Agentic Supply Chain Vulnerabilities
 - DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning
 - Other frameworks: ISO 27001 A.5.19/A.5.21 · NIST AI RMF MP-5.1 · NIST SP 800-218A
@@ -349,6 +366,7 @@ stage that writes weights, not just the original training corpus.
 #### Mitigations by tier
 
 **Foundational (IG1)**
+
 - CIS 7: Apply vulnerability management to training pipeline
   components — anomaly detection on training data, source
   validation, and lineage tracking before any training run
@@ -358,6 +376,7 @@ stage that writes weights, not just the original training corpus.
   validated sources enter production training pipelines
 
 **Hardening (IG2)**
+
 - CIS 16.7: Apply hardened configurations to training
   infrastructure — immutable data pipelines, locked source
   repositories, integrity verification on all data inputs
@@ -368,6 +387,7 @@ stage that writes weights, not just the original training corpus.
   every training run logged and auditable
 
 **Advanced (IG3)**
+
 - CIS 18.3: Include data poisoning in penetration testing
   programme — verify data integrity controls hold under
   realistic adversarial scenarios
@@ -380,11 +400,12 @@ stage that writes weights, not just the original training corpus.
 
 | Tool | Type | Link |
 |---|---|---|
-| IBM Adversarial Robustness Toolbox | Open-source | https://github.com/Trusted-AI/adversarial-robustness-toolbox |
-| CleanLab | Open-source | https://github.com/cleanlab/cleanlab |
-| Great Expectations | Open-source | https://greatexpectations.io |
+| IBM Adversarial Robustness Toolbox | Open-source | <https://github.com/Trusted-AI/adversarial-robustness-toolbox> |
+| CleanLab | Open-source | <https://github.com/cleanlab/cleanlab> |
+| Great Expectations | Open-source | <https://greatexpectations.io> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning, DSGAI21 Disinformation via Data Poisoning
 - Other frameworks: ISO 27001 A.8.27/A.8.29 · NIST AI RMF MS-3.3 · MITRE ATLAS AML.T0032
@@ -409,6 +430,7 @@ causing denial of service or runaway cost.
 #### Mitigations by tier
 
 **Foundational (IG1)**
+
 - CIS 4.1: Include resource limits in secure configuration —
   token limits per request, rate limits per user and session,
   cost budgets per tenant — enforced at deployment
@@ -419,6 +441,7 @@ causing denial of service or runaway cost.
   reject requests exceeding thresholds at the API gateway
 
 **Hardening (IG2)**
+
 - CIS 12.6: Implement rate limiting and traffic controls at
   the network layer — not just at the application layer —
   preventing saturation of shared infrastructure
@@ -428,6 +451,7 @@ causing denial of service or runaway cost.
   isolated from other system availability
 
 **Advanced (IG3)**
+
 - CIS 18.1: Include resource exhaustion in penetration
   testing — sponge example attacks and token amplification
   scenarios against your specific deployment
@@ -440,11 +464,12 @@ causing denial of service or runaway cost.
 
 | Tool | Type | Link |
 |---|---|---|
-| LiteLLM | Open-source | https://github.com/BerriAI/litellm |
-| Kong Gateway | Open-source | https://github.com/Kong/kong |
-| OpenTelemetry | Open-source | https://opentelemetry.io |
+| LiteLLM | Open-source | <https://github.com/BerriAI/litellm> |
+| Kong Gateway | Open-source | <https://github.com/Kong/kong> |
+| OpenTelemetry | Open-source | <https://opentelemetry.io> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI08 Cascading Agent Failures
 - DSGAI 2026: DSGAI17 Data Availability & Resilience Failures
 - Other frameworks: AIUC-1 D · ISA/IEC 62443 SR 7.6 (OT) · CWE-400
@@ -469,6 +494,7 @@ systems act upon.
 #### Mitigations by tier
 
 **Foundational (IG1)**
+
 - CIS 14.1: Provide awareness training on LLM output
   limitations — all users of LLM decision-support tools
   trained before access is granted, refreshed annually
@@ -479,6 +505,7 @@ systems act upon.
   users verify claims against cited sources before acting
 
 **Hardening (IG2)**
+
 - CIS 3.1: Implement data management for RAG sources —
   freshness controls, authoritative source validation,
   version control on knowledge base content
@@ -488,6 +515,7 @@ systems act upon.
   domains — independent source check before delivery
 
 **Advanced (IG3)**
+
 - Build automated fact-checking pipelines for high-stakes
   output domains — accuracy gates before responses reach
   safety-critical or regulated workflows
@@ -500,11 +528,12 @@ systems act upon.
 
 | Tool | Type | Link |
 |---|---|---|
-| TruLens | Open-source | https://github.com/truera/trulens |
-| RAGAS | Open-source | https://github.com/explodinggradients/ragas |
-| DeepEval | Open-source | https://github.com/confident-ai/deepeval |
+| TruLens | Open-source | <https://github.com/truera/trulens> |
+| RAGAS | Open-source | <https://github.com/explodinggradients/ragas> |
+| DeepEval | Open-source | <https://github.com/confident-ai/deepeval> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI09 Human-Agent Trust Exploitation
 - DSGAI 2026: DSGAI21 Disinformation & Integrity Attacks
 - Other frameworks: ISO 27001 A.8.16 · EU AI Act Art. 13/50 · AIUC-1 F
@@ -539,6 +568,7 @@ treat it as a security boundary.
 #### Mitigations by tier
 
 **Foundational (IG1)**
+
 - CIS 3.1: Classify system prompts as sensitive configuration —
   subject to the same data management policy as application
   secrets and operational configuration
@@ -549,6 +579,7 @@ treat it as a security boundary.
   and alert on anomalous access patterns
 
 **Hardening (IG2)**
+
 - CIS 3: Remove all secrets and sensitive identifiers from
   system prompts — use environment variables and secret
   managers, not inline cleartext
@@ -559,6 +590,7 @@ treat it as a security boundary.
   shelf life of any extracted content
 
 **Advanced (IG3)**
+
 - CIS 18.1: Include prompt extraction in penetration testing —
   attempt to recover system prompt content through all known
   techniques against your specific deployment
@@ -568,6 +600,7 @@ treat it as a security boundary.
   containing system prompt content
 
 #### Cross-references
+
 - Agentic Top 10: ASI01 Agent Goal Hijack
 - DSGAI 2026: DSGAI15 Over-Broad Context Windows
 - Other frameworks: ISO 27001 A.5.12/A.8.24 · AIUC-1 B003 · CWE-200
@@ -592,6 +625,7 @@ and inference of sensitive information from embeddings.
 #### Mitigations by tier
 
 **Foundational (IG1)**
+
 - CIS 3.11: Encrypt all vector store content at rest —
   embeddings can leak source content through inversion
   attacks if unencrypted
@@ -601,6 +635,7 @@ and inference of sensitive information from embeddings.
   components — CVE-2024-3584 and equivalents patched promptly
 
 **Hardening (IG2)**
+
 - CIS 16.1: Include vector store security in secure
   development standards — RBAC, encryption, input
   validation all specified as requirements
@@ -610,6 +645,7 @@ and inference of sensitive information from embeddings.
   only hash-verified authorised documents admitted
 
 **Advanced (IG3)**
+
 - CIS 18.1: Include vector store attacks in penetration
   testing — RBAC bypass, path traversal, bulk extraction,
   and embedding inversion scenarios
@@ -622,10 +658,11 @@ and inference of sensitive information from embeddings.
 
 | Tool | Type | Link |
 |---|---|---|
-| Weaviate (with RBAC) | Open-source | https://weaviate.io |
-| Qdrant | Open-source | https://qdrant.tech |
+| Weaviate (with RBAC) | Open-source | <https://weaviate.io> |
+| Qdrant | Open-source | <https://qdrant.tech> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - DSGAI 2026: DSGAI13 Vector Store Platform Security
 - Other frameworks: ISO 27001 A.8.3/A.8.24 · NIST AI RMF MS-2.5 · CWE-284
@@ -656,12 +693,14 @@ reaches a shell, a browser, or a database.
 #### Mitigations by tier
 
 **Foundational (IG1)**
+
 - CIS 8.2: Log all LLM outputs — enable detection of
   injection patterns in model responses
 - Treat all LLM output as untrusted input to downstream
   systems — encode, validate, and sanitise before rendering
 
 **Hardening (IG2)**
+
 - CIS 16.1: Include output security in secure development
   standards — mandatory output encoding and schema
   validation for all LLM integration code
@@ -669,6 +708,7 @@ reaches a shell, a browser, or a database.
   conforming to defined safe structures passed to downstream
 
 **Advanced (IG3)**
+
 - CIS 18.1: Include output injection in penetration testing —
   XSS, SQL injection, command injection via LLM output
   tested against all interfaces consuming model responses
@@ -679,11 +719,12 @@ reaches a shell, a browser, or a database.
 
 | Tool | Type | Link |
 |---|---|---|
-| OWASP ZAP | Open-source | https://www.zaproxy.org |
-| Semgrep | Open-source | https://semgrep.dev |
-| DOMPurify | Open-source | https://github.com/cure53/DOMPurify |
+| OWASP ZAP | Open-source | <https://www.zaproxy.org> |
+| Semgrep | Open-source | <https://semgrep.dev> |
+| DOMPurify | Open-source | <https://github.com/cure53/DOMPurify> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI02 Tool Misuse, ASI05 Unexpected Code Execution
 - DSGAI 2026: DSGAI05 Data Integrity & Validation Failures, DSGAI12 Unsafe NL Data Gateways
 - Other frameworks: ISO 27001 A.8.28 · OWASP ASVS V5 · CWE-79
@@ -739,5 +780,7 @@ reaches a shell, a browser, or a database.
 
 ---
 
-*Part of the [OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk) —
+*Part of the
+[OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk)
+—
 maintained by the [OWASP GenAI Data Security Initiative](https://genai.owasp.org)*

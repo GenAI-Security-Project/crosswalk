@@ -92,16 +92,19 @@ invisible-Unicode carriers survive review of the rendered interface.
 #### Three-tier mitigations
 
 **Foundational:**
+
 - Treat all external content (documents, tool outputs, RAG chunks) as untrusted
 - Implement B005 input filtering on all channels feeding model context
 - Deploy B006 action guardrails: model cannot execute actions outside defined scope
 
 **Hardening:**
+
 - Enable B002 runtime anomaly detection on model outputs
 - Require human approval for any high-impact action triggered by external content
 - Version-control and audit all system prompts
 
 **Advanced:**
+
 - Multi-layer intent verification before irreversible actions
 - Quarterly red team exercises with indirect injection scenarios
 - B001 adversarial testing in CI/CD for every model or prompt update
@@ -131,16 +134,19 @@ or insufficient output filtering.
 #### Three-tier mitigations
 
 **Foundational:**
+
 - Apply Domain A data classification to all training and retrieval data
 - Add DLP scanning to all model outputs before delivery
 - Define and enforce output blocklist for sensitive data patterns
 
 **Hardening:**
+
 - Per-user output filtering based on entitlement
 - Domain E: audit logging of all outputs with retention for incident investigation
 - V-ST: test suite probing for memorised sensitive content
 
 **Advanced:**
+
 - Differential privacy for sensitive training data
 - Real-time output anomaly detection with automated redaction
 - Annual model audit for sensitive data memorisation
@@ -170,16 +176,19 @@ scope limitations, human oversight, or reversibility controls.
 #### Three-tier mitigations
 
 **Foundational:**
+
 - B006: define and enforce scope limits for all tool/API access
 - Domain C: human confirmation gates for irreversible actions
 - Domain E: immutable audit log of all LLM-triggered actions
 
 **Hardening:**
+
 - B007: least-privilege access for all tool integrations
 - Autonomy tiers per action class: auto / confirm / human-required
 - Formal autonomy policy reviewed and signed by CISO
 
 **Advanced:**
+
 - JIT permission issuance per task (see RECIPES.md)
 - Real-time oversight dashboard for operations team
 - Quarterly autonomy policy review incorporating incident findings
@@ -216,16 +225,19 @@ dependency is clean.
 #### Three-tier mitigations
 
 **Foundational:**
+
 - Inventory all third-party components (models, tools, frameworks)
 - Generate SBOM for LLM deployment
 - Pin all dependency versions; reject floating versions in production
 
 **Hardening:**
+
 - B003: formal third-party security assessment for critical components
 - B008: apply NHI controls to all third-party credentials and tokens
 - Automated vulnerability scanning for LLM SBOM
 
 **Advanced:**
+
 - B001 supply chain adversarial testing: can a compromised plugin affect model behaviour?
 - Annual third-party security review programme
 - Formal model provenance attestation for regulated deployments
@@ -260,16 +272,19 @@ stage that writes weights, not just the original training corpus.
 #### Three-tier mitigations
 
 **Foundational:**
+
 - Apply Domain A controls to all training datasets
 - Hash verification for all training data at ingestion
 - B001 adversarial probing of trained models for backdoor triggers
 
 **Hardening:**
+
 - B002 anomaly detection on training data distributions
 - Domain E: immutable chain of custody log from data source to training job
 - Restrict training data write access to authorised pipeline only
 
 **Advanced:**
+
 - B001 automated poisoning detection in ML CI/CD
 - Differential privacy for high-sensitivity training scenarios
 - Periodic model re-evaluation against clean held-out dataset
@@ -298,16 +313,19 @@ window exhaustion, or disproportionate compute consumption.
 #### Three-tier mitigations
 
 **Foundational:**
+
 - Domain D: implement rate limiting per user/tenant at API gateway
 - B006: maximum token budget per request enforced at application layer
 - Domain E: alert on consumption anomalies
 
 **Hardening:**
+
 - Domain D: circuit breakers and graceful degradation under load
 - Per-user and per-tenant consumption quotas with soft/hard limits
 - Domain E: forensic logging of high-volume sessions
 
 **Advanced:**
+
 - Domain D: predictive capacity management based on usage patterns
 - Red team: DoS simulation targeting token consumption and context flooding
 - Cost attribution per user for enterprise deployments
@@ -337,16 +355,19 @@ downstream systems act upon as if true.
 #### Three-tier mitigations
 
 **Foundational:**
+
 - Domain C: content guardrails flagging low-confidence outputs in high-stakes domains
 - Domain F: user-facing disclosure that content is AI-generated
 - B009: validation layer for outputs in regulated or safety-critical domains
 
 **Hardening:**
+
 - RAG with authoritative sources to ground model outputs
 - Human review gates for high-stakes decisions based on model output
 - Domain E: audit logs of all outputs for misinformation incident investigation
 
 **Advanced:**
+
 - Automated fact-checking pipeline for high-stakes domains
 - Domain F: feedback mechanism for users to report hallucinations
 - Red team: identify high-hallucination domains for this specific model
@@ -383,16 +404,19 @@ treat it as a security boundary.
 #### Three-tier mitigations
 
 **Foundational:**
+
 - Classify system prompt contents as confidential
 - B006: instruction to model must not disclose system prompt
 - Domain E: log all queries that attempt to extract system prompt
 
 **Hardening:**
+
 - Red team: systematic system prompt extraction attempts
 - V-ST: automated test battery for prompt leakage
 - Remove unnecessary sensitive information from system prompts
 
 **Advanced:**
+
 - Architecture review: does the system require secrets in system prompts? Can these be externalised?
 - Periodic system prompt audit for unnecessary sensitive content
 
@@ -420,16 +444,19 @@ attacks on stored vector representations.
 #### Three-tier mitigations
 
 **Foundational:**
+
 - Domain A: access controls on embedding stores (per-tenant, per-user)
 - B005: filter retrieved content before context window inclusion
 - Integrity verification on stored embeddings
 
 **Hardening:**
+
 - B001: adversarial testing of retrieval pipeline — cross-tenant leakage, semantic injection
 - B002: anomaly detection on retrieval patterns
 - Red team: attempt cross-tenant retrieval leakage
 
 **Advanced:**
+
 - Differential privacy for embeddings of sensitive content
 - Continuous monitoring of embedding distribution drift
 - Architecture review: embedding store access control design
@@ -465,16 +492,19 @@ reaches a shell, a browser, or a database.
 #### Three-tier mitigations
 
 **Foundational:**
+
 - B009: validate all model output before passing to code interpreters or databases
 - B005: output filtering before downstream processing
 - Never pass raw model output to shell, SQL, or browser without sanitisation
 
 **Hardening:**
+
 - B006: scope restrictions on code execution environments
 - Output content type enforcement: model cannot output JavaScript in contexts that will render it
 - Red team: attempt code injection via crafted model output
 
 **Advanced:**
+
 - Automated output validation test suite in CI/CD
 - Sandboxed execution environment for all model-generated code
 - B009 output schema validation for structured output pipelines
@@ -521,6 +551,8 @@ reaches a shell, a browser, or a database.
 
 ---
 
-*Part of the [OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk) —
+*Part of the
+[OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk)
+—
 maintained by the [OWASP GenAI Data Security Initiative](https://genai.owasp.org)*
 *License: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)*

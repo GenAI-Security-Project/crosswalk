@@ -9,7 +9,8 @@
 
 # DSGAI 2026 — ISO/IEC 42001:2023
 
-Mapping the [OWASP GenAI Data Security Risks & Mitigations 2026](https://genai.owasp.org/resource/owasp-genai-data-security-risks-mitigations-2026/)
+Mapping the
+[OWASP GenAI Data Security Risks & Mitigations 2026](https://genai.owasp.org/resource/owasp-genai-data-security-risks-mitigations-2026/)
 (DSGAI01–DSGAI21) to [ISO/IEC 42001:2023](https://www.iso.org/standard/81230.html) —
 the international standard for Artificial Intelligence Management Systems (AIMS).
 
@@ -143,6 +144,7 @@ use through disposal for data in the AI system scope.
 #### Mitigations by tier
 
 **Foundational**
+
 - A.7.2: Establish data acquisition policy for all
   GenAI data assets — classification, purpose limitation,
   provenance documentation required before data enters
@@ -152,6 +154,7 @@ use through disposal for data in the AI system scope.
   level as an AIMS operational control
 
 **Hardening**
+
 - A.7.3: Apply PII scrubbing to training data
   preparation pipeline — sensitive data identified,
   masked, or removed before model training
@@ -160,6 +163,7 @@ use through disposal for data in the AI system scope.
   DPIA where processing is high risk under GDPR
 
 **Advanced**
+
 - A.7.3: Apply differential privacy for sensitive
   training corpora — formal privacy-preserving technique
   documented as A.7.3 evidence
@@ -176,10 +180,11 @@ A A.5.2 supports Article 9 risk management obligations.
 
 | Tool | Type | Link |
 |---|---|---|
-| Microsoft Presidio | Open-source | https://github.com/microsoft/presidio |
-| Nightfall AI | Commercial | https://nightfall.ai |
+| Microsoft Presidio | Open-source | <https://github.com/microsoft/presidio> |
+| Nightfall AI | Commercial | <https://nightfall.ai> |
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - DSGAI frameworks: DSGAI_NISTAIRMF.md (MS-2.6), DSGAI_ENISA.md (DMS L2)
 
@@ -206,6 +211,7 @@ responsibilities for credential ownership and policy.
 #### Mitigations by tier
 
 **Foundational**
+
 - A.6.1.2: Apply minimal privilege at AI system
   design stage — document required credential scope
   per agent role before development begins
@@ -214,6 +220,7 @@ responsibilities for credential ownership and policy.
   and audit trail ownership documented
 
 **Hardening**
+
 - A.6.2.3: Implement session-scoped credentials —
   agent credentials expire at session end, scope
   limited to current task, documented as operational control
@@ -223,6 +230,7 @@ responsibilities for credential ownership and policy.
   agent credentials
 
 **Advanced**
+
 - A.6.2.3: Implement per-task ephemeral credentials —
   each agent task receives a fresh, scoped credential
   as an advanced AIMS operational control
@@ -233,10 +241,11 @@ responsibilities for credential ownership and policy.
 
 | Tool | Type | Link |
 |---|---|---|
-| HashiCorp Vault | Open-source | https://github.com/hashicorp/vault |
-| AWS Secrets Manager | Commercial | https://aws.amazon.com/secrets-manager/ |
+| HashiCorp Vault | Open-source | <https://github.com/hashicorp/vault> |
+| AWS Secrets Manager | Commercial | <https://aws.amazon.com/secrets-manager/> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI03 Identity & Privilege Abuse
 - DSGAI frameworks: DSGAI_NISTAIRMF.md (GV-1.6), DSGAI_CISControls.md (CIS 5)
 
@@ -264,6 +273,7 @@ that covers all AI system use within the organisation.
 #### Mitigations by tier
 
 **Foundational**
+
 - Cl.4: Define AIMS scope to cover all AI systems
   in use — inventory all approved AI services as part
   of context-setting activities
@@ -275,6 +285,7 @@ that covers all AI system use within the organisation.
   reporting obligations for suspected policy violations
 
 **Hardening**
+
 - A.10.1: Implement third-party AI service approval
   process — security assessment, DPA, sub-processor
   review before any AI service is approved
@@ -283,6 +294,7 @@ that covers all AI system use within the organisation.
   classification, and vendor risk status
 
 **Advanced**
+
 - A.10.1: Conduct periodic approved AI service audits —
   verify controls are operating as assessed; remove
   services that no longer meet approval criteria
@@ -293,10 +305,11 @@ that covers all AI system use within the organisation.
 
 | Tool | Type | Link |
 |---|---|---|
-| Netskope CASB | Commercial | https://www.netskope.com |
-| Microsoft Defender for Cloud Apps | Commercial | https://www.microsoft.com/en-us/security/business/siem-and-xdr/microsoft-defender-cloud-apps |
+| Netskope CASB | Commercial | <https://www.netskope.com> |
+| Microsoft Defender for Cloud Apps | Commercial | <https://www.microsoft.com/en-us/security/business/siem-and-xdr/microsoft-defender-cloud-apps> |
 
 #### Cross-references
+
 - LLM Top 10: LLM04 Supply Chain
 - DSGAI frameworks: DSGAI_NISTAIRMF.md (GV-1.7), DSGAI_EUAIAct.md (Art. 9)
 
@@ -323,12 +336,14 @@ integrity throughout the AI data lifecycle.
 #### Mitigations by tier
 
 **Foundational**
+
 - A.6.1.2: Design data pipeline integrity controls
   at system design stage — do not add data validation
   as an afterthought; integrity requirements documented
   in AI system design specification
 
 **Hardening**
+
 - A.7.2: Require provenance documentation for all
   training corpora — source, version, integrity hash,
   and quality review documented before ingestion
@@ -340,6 +355,7 @@ integrity throughout the AI data lifecycle.
   with trigger patterns before production deployment
 
 **Advanced**
+
 - A.7.3: Apply data sanitisation techniques —
   uncertainty training, activation clustering as
   advanced A.7.3 data preparation controls
@@ -351,10 +367,11 @@ integrity throughout the AI data lifecycle.
 
 | Tool | Type | Link |
 |---|---|---|
-| CleanLab | Open-source | https://github.com/cleanlab/cleanlab |
-| Armory | Open-source | https://github.com/twosixlabs/armory |
+| CleanLab | Open-source | <https://github.com/cleanlab/cleanlab> |
+| Armory | Open-source | <https://github.com/twosixlabs/armory> |
 
 #### Cross-references
+
 - LLM Top 10: LLM05 Data and Model Poisoning
 - DSGAI frameworks: DSGAI_NISTAIRMF.md (MS-3.3), DSGAI_ENISA.md (DMS L2)
 
@@ -381,6 +398,7 @@ concern throughout the AI system development and operation phases.
 #### Mitigations by tier
 
 **Foundational**
+
 - A.7.2: Define data quality requirements at
   acquisition stage — schema, format, value ranges,
   and content constraints documented before data
@@ -390,6 +408,7 @@ concern throughout the AI system development and operation phases.
   what happens on failure
 
 **Hardening**
+
 - A.7.3: Implement data quality gates at each
   preparation stage — automated validation before
   model training or RAG indexing
@@ -398,6 +417,7 @@ concern throughout the AI system development and operation phases.
   control documented in AIMS operational procedures
 
 **Advanced**
+
 - A.7.3: Implement data lineage tracking — every
   data record traceable from source to model output,
   quality check results at each stage retained as
@@ -410,10 +430,11 @@ concern throughout the AI system development and operation phases.
 
 | Tool | Type | Link |
 |---|---|---|
-| Great Expectations | Open-source | https://github.com/great-expectations/great_expectations |
-| Pandera | Open-source | https://github.com/unionai-oss/pandera |
+| Great Expectations | Open-source | <https://github.com/great-expectations/great_expectations> |
+| Pandera | Open-source | <https://github.com/unionai-oss/pandera> |
 
 #### Cross-references
+
 - LLM Top 10: LLM05 Data and Model Poisoning
 - DSGAI frameworks: DSGAI_NISTAIRMF.md (MS-2.5), DSGAI_EUAIAct.md (Art. 10)
 
@@ -440,12 +461,14 @@ AI system components subject to vendor management requirements.
 #### Mitigations by tier
 
 **Foundational**
+
 - A.6.1.2: Specify tool and plugin security
   requirements at design stage — integration points
   documented with data classification and trust level
   for each external component
 
 **Hardening**
+
 - A.10.1: Apply AIMS third-party assessment to
   all tool vendors — security assessment, contractual
   security obligations, vulnerability disclosure SLA
@@ -457,6 +480,7 @@ AI system components subject to vendor management requirements.
   requirements as other external data ingestion
 
 **Advanced**
+
 - A.10.1: Periodic tool vendor re-assessment —
   security posture reviewed at defined intervals;
   vendors with material changes re-assessed
@@ -468,10 +492,11 @@ AI system components subject to vendor management requirements.
 
 | Tool | Type | Link |
 |---|---|---|
-| OWASP Dependency-Check | Open-source | https://github.com/jeremylong/DependencyCheck |
-| Semgrep | Open-source | https://github.com/returntocorp/semgrep |
+| OWASP Dependency-Check | Open-source | <https://github.com/jeremylong/DependencyCheck> |
+| Semgrep | Open-source | <https://github.com/returntocorp/semgrep> |
 
 #### Cross-references
+
 - Agentic Top 10: ASI02 Tool Misuse & Exploitation, ASI04 Agentic Supply Chain
 - DSGAI frameworks: DSGAI_NISTAIRMF.md (MP-5.1), DSGAI_EUAIAct.md (Art. 9)
 
@@ -498,6 +523,7 @@ and retention policies are core A.7 controls.
 #### Mitigations by tier
 
 **Foundational**
+
 - A.7.2: Establish data classification policy for
   all AI data assets — training data, embeddings,
   RAG corpora, and model outputs all classified with
@@ -507,6 +533,7 @@ and retention policies are core A.7 controls.
   ownership, lifecycle requirements, and controls
 
 **Hardening**
+
 - A.7.3: Implement data lifecycle management for
   all AI assets — retention periods, archival procedures,
   and verified deletion documented per asset type
@@ -515,6 +542,7 @@ and retention policies are core A.7 controls.
   review cadence documented
 
 **Advanced**
+
 - A.7.3: Implement AI unlearning capability as
   an A.7.3 data disposal control — mechanism to
   remove specific records from trained model behaviour
@@ -526,10 +554,11 @@ and retention policies are core A.7 controls.
 
 | Tool | Type | Link |
 |---|---|---|
-| Apache Atlas | Open-source | https://atlas.apache.org |
-| Collibra | Commercial | https://www.collibra.com |
+| Apache Atlas | Open-source | <https://atlas.apache.org> |
+| Collibra | Commercial | <https://www.collibra.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - DSGAI frameworks: DSGAI_NISTAIRMF.md (GV-1.6), DSGAI_EUAIAct.md (Art. 10/12)
 
@@ -557,6 +586,7 @@ programme.
 #### Mitigations by tier
 
 **Foundational**
+
 - Cl.4.2: Identify all applicable regulatory
   requirements for each GenAI deployment — EU AI Act
   risk class, GDPR lawful basis, NIS2, sector-specific
@@ -566,6 +596,7 @@ programme.
   applicable regulations change
 
 **Hardening**
+
 - Cl.6.1: Map regulatory requirements to AIMS
   controls — traceability from obligation to
   implementation evidence maintained in documented
@@ -575,6 +606,7 @@ programme.
   model card, user disclosure requirements
 
 **Advanced**
+
 - Cl.4.2: Maintain regulatory watch programme
   as a context monitoring activity — EU AI Act
   implementing acts, ENISA guidelines, sector-specific
@@ -587,10 +619,11 @@ programme.
 
 | Tool | Type | Link |
 |---|---|---|
-| OneTrust | Commercial | https://www.onetrust.com |
-| IBM OpenPages | Commercial | https://www.ibm.com/products/openpages |
+| OneTrust | Commercial | <https://www.onetrust.com> |
+| IBM OpenPages | Commercial | <https://www.ibm.com/products/openpages> |
 
 #### Cross-references
+
 - DSGAI frameworks: DSGAI_EUAIAct.md (Art. 9/17), DSGAI_NISTAIRMF.md (GV-4.2)
 
 ---
@@ -617,6 +650,7 @@ from data governance scope.
 #### Mitigations by tier
 
 **Hardening**
+
 - A.7.2: Extend data classification to all GenAI
   modalities — images, audio, video, and documents
   classified with same requirements as text data
@@ -627,6 +661,7 @@ from data governance scope.
   explicitly cover multimodal data flows
 
 **Advanced**
+
 - A.6.2.6: Red team multimodal extraction paths —
   test whether sensitive data in one modality can be
   recovered via a different output modality
@@ -638,10 +673,11 @@ from data governance scope.
 
 | Tool | Type | Link |
 |---|---|---|
-| AWS Rekognition | Commercial | https://aws.amazon.com/rekognition/ |
-| Google Cloud DLP | Commercial | https://cloud.google.com/dlp |
+| AWS Rekognition | Commercial | <https://aws.amazon.com/rekognition/> |
+| Google Cloud DLP | Commercial | <https://cloud.google.com/dlp> |
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - DSGAI frameworks: DSGAI_NISTAIRMF.md (MS-2.6), DSGAI_EUAIAct.md (Art. 10)
 
@@ -669,6 +705,7 @@ impact concern.
 #### Mitigations by tier
 
 **Hardening**
+
 - A.7.2: Conduct formal re-identification risk
   assessment for all synthetic datasets — k-anonymity,
   l-diversity, differential privacy metrics evaluated
@@ -681,6 +718,7 @@ impact concern.
   data distribution changes
 
 **Advanced**
+
 - A.7.2: Apply differential privacy with formal
   epsilon budgets as an advanced A.7.2 data
   acquisition control for sensitive corpora
@@ -692,10 +730,11 @@ impact concern.
 
 | Tool | Type | Link |
 |---|---|---|
-| ARX Data Anonymization Tool | Open-source | https://arx.deidentifier.org |
-| TensorFlow Privacy | Open-source | https://github.com/tensorflow/privacy |
+| ARX Data Anonymization Tool | Open-source | <https://arx.deidentifier.org> |
+| TensorFlow Privacy | Open-source | <https://github.com/tensorflow/privacy> |
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI18 Inference & Data Reconstruction
 - DSGAI frameworks: DSGAI_NISTAIRMF.md (GV-1.6), DSGAI_EUAIAct.md (Art. 10)
 
@@ -722,6 +761,7 @@ governance and operational concern.
 #### Mitigations by tier
 
 **Foundational**
+
 - A.7.2: Document session isolation requirements
   for all GenAI deployments — conversation history,
   context stores, and embeddings isolated per session
@@ -730,6 +770,7 @@ governance and operational concern.
   of session context stores
 
 **Hardening**
+
 - A.6.2.6: Include cross-session isolation testing
   in AI system testing activities — test data leakage
   across session boundaries before each deployment
@@ -738,6 +779,7 @@ governance and operational concern.
   subject to data lifecycle policy
 
 **Advanced**
+
 - A.6.2.6: Red team session isolation — test whether
   crafted inputs can extract prior session context
   from shared infrastructure
@@ -746,10 +788,11 @@ governance and operational concern.
 
 | Tool | Type | Link |
 |---|---|---|
-| LLM Guard | Open-source | https://github.com/protectai/llm-guard |
-| Azure AI Content Safety | Commercial | https://azure.microsoft.com/en-us/products/ai-services/ai-content-safety |
+| LLM Guard | Open-source | <https://github.com/protectai/llm-guard> |
+| Azure AI Content Safety | Commercial | <https://azure.microsoft.com/en-us/products/ai-services/ai-content-safety> |
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure, LLM08 Hidden Context Exposure
 - DSGAI frameworks: DSGAI_NISTAIRMF.md (MP-2.3), DSGAI_EUAIAct.md (Art. 10)
 
@@ -776,6 +819,7 @@ and adversarial testing are core lifecycle requirements.
 #### Mitigations by tier
 
 **Foundational**
+
 - A.6.2.3: Implement query validation layer as
   an AIMS operational control — generated queries
   reviewed against authorised patterns before execution
@@ -783,6 +827,7 @@ and adversarial testing are core lifecycle requirements.
   gateway access — authorisation enforced at data layer
 
 **Hardening**
+
 - A.6.2.6: Include prompt injection testing in
   AI system testing activities — test NL gateway
   with injection payloads before each deployment
@@ -791,6 +836,7 @@ and adversarial testing are core lifecycle requirements.
   appropriate, table scope restricted to business need
 
 **Advanced**
+
 - A.6.2.6: Red team NL gateway with known
   text-to-SQL injection patterns — as part of
   AI system security testing under Clause 8
@@ -801,10 +847,11 @@ and adversarial testing are core lifecycle requirements.
 
 | Tool | Type | Link |
 |---|---|---|
-| Rebuff | Open-source | https://github.com/protectai/rebuff |
-| Garak | Open-source | https://github.com/leondz/garak |
+| Rebuff | Open-source | <https://github.com/protectai/rebuff> |
+| Garak | Open-source | <https://github.com/leondz/garak> |
 
 #### Cross-references
+
 - LLM Top 10: LLM01 Prompt Injection, LLM10 Improper Output Handling
 - DSGAI frameworks: DSGAI_NISTAIRMF.md (MP-2.3), DSGAI_EUAIAct.md (Art. 15)
 
@@ -831,6 +878,7 @@ vector database vendors as third-party AI components.
 #### Mitigations by tier
 
 **Foundational**
+
 - A.7.2: Classify embedding stores as sensitive
   AI data assets — access controls and encryption
   equivalent to primary data stores
@@ -839,6 +887,7 @@ vector database vendors as third-party AI components.
   isolation documented in AI system design
 
 **Hardening**
+
 - A.10.1: Apply AIMS third-party assessment to
   vector database vendors — security configuration
   review, CVE monitoring, patch management SLA
@@ -847,6 +896,7 @@ vector database vendors as third-party AI components.
   as a data preparation governance control
 
 **Advanced**
+
 - A.6.2.6: Red team vector store for injection
   attacks and metadata extraction as part of AI
   system security testing under Clause 8
@@ -855,10 +905,11 @@ vector database vendors as third-party AI components.
 
 | Tool | Type | Link |
 |---|---|---|
-| Weaviate | Open-source | https://github.com/weaviate/weaviate |
-| Qdrant | Open-source | https://github.com/qdrant/qdrant |
+| Weaviate | Open-source | <https://github.com/weaviate/weaviate> |
+| Qdrant | Open-source | <https://github.com/qdrant/qdrant> |
 
 #### Cross-references
+
 - LLM Top 10: LLM09 Vector and Embedding Weaknesses
 - DSGAI frameworks: DSGAI_NISTAIRMF.md (MP-2.3), DSGAI_ENISA.md (DMS L2)
 
@@ -886,6 +937,7 @@ monitoring systems.
 #### Mitigations by tier
 
 **Foundational**
+
 - A.7.2: Classify telemetry data — prompts,
   completions in logs are sensitive AI data assets
   subject to data classification policy
@@ -894,6 +946,7 @@ monitoring systems.
   requirements documented for observability stores
 
 **Hardening**
+
 - A.6.2.6: Test telemetry data leakage as part
   of AI system testing — verify sensitive data
   is redacted before storage
@@ -903,6 +956,7 @@ monitoring systems.
   all telemetry stores
 
 **Advanced**
+
 - A.7.2: Implement structured telemetry redaction —
   define permitted and prohibited fields in telemetry
   as a formal data governance control
@@ -911,10 +965,11 @@ monitoring systems.
 
 | Tool | Type | Link |
 |---|---|---|
-| OpenTelemetry | Open-source | https://opentelemetry.io |
-| Grafana Loki | Open-source | https://github.com/grafana/loki |
+| OpenTelemetry | Open-source | <https://opentelemetry.io> |
+| Grafana Loki | Open-source | <https://github.com/grafana/loki> |
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI07 Data Governance, Lifecycle & Classification
 - DSGAI frameworks: DSGAI_NISTAIRMF.md (GV-1.6), DSGAI_EUAIAct.md (Art. 12)
 
@@ -941,6 +996,7 @@ a data governance and AI impact concern.
 #### Mitigations by tier
 
 **Foundational**
+
 - A.7.2: Apply data minimisation to context window
   design — only task-necessary data included;
   data minimisation principle documented as A.7.2
@@ -950,6 +1006,7 @@ a data governance and AI impact concern.
   to user permission level
 
 **Hardening**
+
 - A.5.2: Include over-broad context in AI impact
   assessment — disclosure risk documented with
   treatment controls
@@ -958,6 +1015,7 @@ a data governance and AI impact concern.
   context scope per use case
 
 **Advanced**
+
 - A.6.2.6: Red team context window extraction
   as part of AI system security testing under Clause 8
 
@@ -965,10 +1023,11 @@ a data governance and AI impact concern.
 
 | Tool | Type | Link |
 |---|---|---|
-| LlamaIndex | Open-source | https://github.com/run-llama/llama_index |
-| LLM Guard | Open-source | https://github.com/protectai/llm-guard |
+| LlamaIndex | Open-source | <https://github.com/run-llama/llama_index> |
+| LLM Guard | Open-source | <https://github.com/protectai/llm-guard> |
 
 #### Cross-references
+
 - LLM Top 10: LLM08 Hidden Context Exposure
 - DSGAI frameworks: DSGAI_NISTAIRMF.md (MS-2.5), DSGAI_EUAIAct.md (Art. 10)
 
@@ -995,6 +1054,7 @@ AIMS use policy and operational controls.
 #### Mitigations by tier
 
 **Foundational**
+
 - A.6.1.2: Apply minimal permission design to
   endpoint AI assistants — data access scope specified
   at design stage, no broad file system access by default
@@ -1006,6 +1066,7 @@ AIMS use policy and operational controls.
   permitted use and data sharing
 
 **Hardening**
+
 - A.6.2.3: Implement scope enforcement as an AIMS
   operational control — platform-level permission
   enforcement, not relying on user compliance
@@ -1013,6 +1074,7 @@ AIMS use policy and operational controls.
   system testing activities
 
 **Advanced**
+
 - A.6.2.6: Red team endpoint AI assistant scope
   controls — test whether crafted inputs trigger
   access to data outside defined scope
@@ -1021,10 +1083,11 @@ AIMS use policy and operational controls.
 
 | Tool | Type | Link |
 |---|---|---|
-| Microsoft Intune | Commercial | https://www.microsoft.com/en-us/security/business/endpoint-management/microsoft-intune |
-| Carbon Black | Commercial | https://www.vmware.com/products/carbon-black-cloud.html |
+| Microsoft Intune | Commercial | <https://www.microsoft.com/en-us/security/business/endpoint-management/microsoft-intune> |
+| Carbon Black | Commercial | <https://www.vmware.com/products/carbon-black-cloud.html> |
 
 #### Cross-references
+
 - LLM Top 10: LLM03 Excessive Agency
 - DSGAI frameworks: DSGAI_NISTAIRMF.md (GV-1.7), DSGAI_EUAIAct.md (Art. 9)
 
@@ -1052,6 +1115,7 @@ as lifecycle management responsibilities.
 #### Mitigations by tier
 
 **Foundational**
+
 - Cl.8: Document backup and recovery procedures
   for all AI system critical assets — training data,
   model weights, embeddings, RAG corpora
@@ -1060,6 +1124,7 @@ as lifecycle management responsibilities.
   artefacts preserved or securely deleted per policy
 
 **Hardening**
+
 - A.6.2.6: Include recovery testing in AI system
   testing activities — verify model rollback, data
   restoration, and service recovery within RTOs
@@ -1068,6 +1133,7 @@ as lifecycle management responsibilities.
   tests documented and remediated
 
 **Advanced**
+
 - A.6.2.6: Annual AI disaster recovery test —
   full validation of all recovery procedures
   documented as AIMS performance evaluation evidence
@@ -1076,10 +1142,11 @@ as lifecycle management responsibilities.
 
 | Tool | Type | Link |
 |---|---|---|
-| DVC (Data Version Control) | Open-source | https://github.com/iterative/dvc |
-| MLflow | Open-source | https://github.com/mlflow/mlflow |
+| DVC (Data Version Control) | Open-source | <https://github.com/iterative/dvc> |
+| MLflow | Open-source | <https://github.com/mlflow/mlflow> |
 
 #### Cross-references
+
 - LLM Top 10: LLM06 Unbounded Consumption
 - DSGAI frameworks: DSGAI_NISTAIRMF.md (MG-2.2), DSGAI_EUAIAct.md (Art. 15)
 
@@ -1106,6 +1173,7 @@ are the primary AIMS controls for inference attack risk.
 #### Mitigations by tier
 
 **Hardening**
+
 - A.7.2: Implement prediction output restrictions
   as A.7.2 inference attack mitigations —
   confidence truncation, output perturbation, rate limiting
@@ -1116,6 +1184,7 @@ are the primary AIMS controls for inference attack risk.
   risk register — treatment controls and residual risk
 
 **Advanced**
+
 - A.7.2: Apply differential privacy to model
   training for high-sensitivity corpora — formal
   epsilon budget documented as A.7.2 evidence
@@ -1127,10 +1196,11 @@ are the primary AIMS controls for inference attack risk.
 
 | Tool | Type | Link |
 |---|---|---|
-| ML Privacy Meter | Open-source | https://github.com/privacytrustlab/ml_privacy_meter |
-| TensorFlow Privacy | Open-source | https://github.com/tensorflow/privacy |
+| ML Privacy Meter | Open-source | <https://github.com/privacytrustlab/ml_privacy_meter> |
+| TensorFlow Privacy | Open-source | <https://github.com/tensorflow/privacy> |
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI10 Synthetic Data & Anonymisation Pitfalls
 - DSGAI frameworks: DSGAI_NISTAIRMF.md (MS-2.5), DSGAI_EUAIAct.md (Art. 10)
 
@@ -1157,6 +1227,7 @@ services are third-party components of the AI development lifecycle.
 #### Mitigations by tier
 
 **Foundational**
+
 - A.7.2: Apply data minimisation to labeling batches —
   remove unnecessary PII and sensitive content before
   providing data to reviewers
@@ -1165,6 +1236,7 @@ services are third-party components of the AI development lifecycle.
   data access, DPA, and audit
 
 **Hardening**
+
 - A.10.1: Apply AIMS third-party assessment to
   labeling service vendors — jurisdiction, security
   controls, sub-contractor chain reviewed
@@ -1173,6 +1245,7 @@ services are third-party components of the AI development lifecycle.
   restrictions, breach notification documented
 
 **Advanced**
+
 - A.7.2: Implement privacy-preserving labeling
   techniques where full fidelity is not required —
   data perturbation or synthetic replacement
@@ -1183,10 +1256,11 @@ services are third-party components of the AI development lifecycle.
 
 | Tool | Type | Link |
 |---|---|---|
-| Label Studio | Open-source | https://github.com/HumanSignal/label-studio |
-| Scale AI | Commercial | https://scale.com |
+| Label Studio | Open-source | <https://github.com/HumanSignal/label-studio> |
+| Scale AI | Commercial | <https://scale.com> |
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI07 Data Governance, Lifecycle & Classification
 - DSGAI frameworks: DSGAI_NISTAIRMF.md (MP-5.1), DSGAI_EUAIAct.md (Art. 10)
 
@@ -1213,11 +1287,13 @@ exfiltration as both a data security and AI system integrity risk.
 #### Mitigations by tier
 
 **Foundational**
+
 - A.6.1.2: Specify model artefact access controls
   at design stage — model weights distribution
   channels documented, access controls designed in
 
 **Hardening**
+
 - A.7.3: Classify model weights as critical IP assets —
   access controls, encryption, and access audit logging
   as A.7.3 data controls for AI artefacts
@@ -1225,6 +1301,7 @@ exfiltration as both a data security and AI system integrity risk.
   risk register — treatment controls and residual risk
 
 **Advanced**
+
 - A.6.2.6: Red team model extraction attacks —
   test whether API defences prevent functional model
   replication as part of AI system security testing
@@ -1236,10 +1313,11 @@ exfiltration as both a data security and AI system integrity risk.
 
 | Tool | Type | Link |
 |---|---|---|
-| ModelScan | Open-source | https://github.com/protectai/modelscan |
-| Knockoff Nets detection | Research | https://arxiv.org/abs/1812.02766 |
+| ModelScan | Open-source | <https://github.com/protectai/modelscan> |
+| Knockoff Nets detection | Research | <https://arxiv.org/abs/1812.02766> |
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI04 Data, Model & Artifact Poisoning
 - DSGAI frameworks: DSGAI_NISTAIRMF.md (MS-2.6), DSGAI_EUAIAct.md (Art. 15)
 
@@ -1267,6 +1345,7 @@ governance and AI impact concern.
 #### Mitigations by tier
 
 **Hardening**
+
 - A.7.2: Verify provenance and credibility of all
   fine-tuning and RAG corpora as A.7.2 data
   acquisition controls — source credibility scoring,
@@ -1279,6 +1358,7 @@ governance and AI impact concern.
   verification by consumers
 
 **Advanced**
+
 - A.7.3: Red team targeted disinformation injection —
   test whether adversarially poisoned content survives
   data quality controls as AI system security testing
@@ -1290,10 +1370,11 @@ governance and AI impact concern.
 
 | Tool | Type | Link |
 |---|---|---|
-| CleanLab | Open-source | https://github.com/cleanlab/cleanlab |
-| FactScore | Research | https://github.com/shmsw25/FActScoring |
+| CleanLab | Open-source | <https://github.com/cleanlab/cleanlab> |
+| FactScore | Research | <https://github.com/shmsw25/FActScoring> |
 
 #### Cross-references
+
 - LLM Top 10: LLM05 Data and Model Poisoning, LLM07 Misinformation
 - DSGAI frameworks: DSGAI_NISTAIRMF.md (MS-3.3), DSGAI_EUAIAct.md (Art. 52)
 
@@ -1348,6 +1429,8 @@ where ISO 42001 AIMS controls are needed.
 
 ---
 
-*Part of the [OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk) —
+*Part of the
+[OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk)
+—
 maintained by the OWASP GenAI Data Security Initiative.
 Licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).*

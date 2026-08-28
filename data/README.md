@@ -178,6 +178,7 @@ regenerate, and open a PR.
 ## Contributing data entries
 
 When adding a new mapping file:
+
 1. Create the Markdown file following `shared/TEMPLATE.md`.
 2. Run `node scripts/generate.js` to regenerate JSON entries.
 3. Run `node scripts/validate.js` to confirm consistency.

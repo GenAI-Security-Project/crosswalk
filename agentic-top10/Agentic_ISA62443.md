@@ -9,7 +9,8 @@
 
 # Agentic Top 10 2026 × ISA/IEC 62443
 
-Mapping the [OWASP Top 10 for Agentic Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
+Mapping the
+[OWASP Top 10 for Agentic Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
 to [ISA/IEC 62443](https://www.isa.org/standards-and-publications/isa-standards/isa-iec-62443-series-of-standards)
 — the international standard for Industrial Automation and Control
 Systems (IACS) security.
@@ -172,6 +173,7 @@ execute. Divergence triggers suspension.
 **Tool invocation gate:**
 All agent tool invocations in Zone 3 pass through a validated tool
 gateway at the conduit. The gateway enforces:
+
 - Allowlisted tool operations per agent role
 - Parameter validation against safe ranges for OT-relevant parameters
 - Human confirmation for any tool invocation with irreversible
@@ -180,6 +182,7 @@ gateway at the conduit. The gateway enforces:
 #### Mitigations by tier
 
 **Foundational (SL 1–2)**
+
 - SR 3.3: Treat all external content processed by OT agents
   as untrusted — historian data, vendor communications,
   external reports, and web content all require input
@@ -191,6 +194,7 @@ gateway at the conduit. The gateway enforces:
   accessible from Zone 3 operator consoles
 
 **Hardening (SL 2–3)**
+
 - SR 2.1: Implement goal-state verification at the agent-OT
   interface — agent must declare its goal at session start,
   deviations trigger suspension and human review
@@ -202,6 +206,7 @@ gateway at the conduit. The gateway enforces:
   OT impact assessment, root cause process
 
 **Advanced (SL 3–4)**
+
 - Implement cryptographically signed agent goal specifications —
   runtime goal state must match the signed original or agent
   execution halts and human review is triggered
@@ -216,11 +221,12 @@ gateway at the conduit. The gateway enforces:
 
 | Tool | Type | Link |
 |---|---|---|
-| Claroty | Commercial | https://claroty.com |
-| Dragos | Commercial | https://www.dragos.com |
-| Garak (adversarial testing) | Open-source | https://github.com/leondz/garak |
+| Claroty | Commercial | <https://claroty.com> |
+| Dragos | Commercial | <https://www.dragos.com> |
+| Garak (adversarial testing) | Open-source | <https://github.com/leondz/garak> |
 
 #### Cross-references
+
 - LLM Top 10: LLM01 Prompt Injection, LLM03 Excessive Agency
 - DSGAI 2026: DSGAI12 Unsafe NL Data Gateways, DSGAI15 Over-Broad Context Windows
 - Other frameworks: NIST SP 800-82 Rev 3 · MITRE ATT&CK ICS T0855 · IEC 61511
@@ -266,6 +272,7 @@ requirement, not a security best practice.
 **Per-tool permission manifests:**
 Every agent tool in an OT deployment must have a formally defined
 permission manifest specifying:
+
 - Which historian tags the tool can read / write
 - Which SCADA interfaces the tool can query / command
 - Which parameter ranges are permitted for setpoint tools
@@ -287,6 +294,7 @@ All OT agent tools classified by reversibility:
 #### Mitigations by tier
 
 **Foundational (SL 1–2)**
+
 - SR 2.2: Implement and enforce per-tool permission manifests
   for all OT agent tools — define and enforce at the conduit,
   not in the model or agent framework
@@ -296,6 +304,7 @@ All OT agent tools classified by reversibility:
   safety functions are human-only operations
 
 **Hardening (SL 2–3)**
+
 - SR 2.1: Implement tool allowlisting at the OT conduit —
   agents cannot invoke tools outside their defined role
   regardless of what their goal state requests
@@ -306,6 +315,7 @@ All OT agent tools classified by reversibility:
   OT environment — reject modified or unrecognised descriptors
 
 **Advanced (SL 3–4)**
+
 - Implement per-invocation parameter validation at the
   conduit — all tool parameters validated against safe
   ranges before execution, not just tool identity
@@ -320,11 +330,12 @@ All OT agent tools classified by reversibility:
 
 | Tool | Type | Link |
 |---|---|---|
-| Claroty | Commercial | https://claroty.com |
-| NeMo Guardrails | Open-source | https://github.com/NVIDIA/NeMo-Guardrails |
-| MCP Inspector | Open-source | https://github.com/modelcontextprotocol/inspector |
+| Claroty | Commercial | <https://claroty.com> |
+| NeMo Guardrails | Open-source | <https://github.com/NVIDIA/NeMo-Guardrails> |
+| MCP Inspector | Open-source | <https://github.com/modelcontextprotocol/inspector> |
 
 #### Cross-references
+
 - LLM Top 10: LLM10 Improper Output Handling, LLM03 Excessive Agency
 - DSGAI 2026: DSGAI06 Tool Plugin & Agent Data Exchange, DSGAI12 Unsafe NL Data Gateways
 - Other frameworks: NIST SP 800-82 Rev 3 · IEC 61511 (SIL) · MITRE ATT&CK ICS T0831
@@ -368,6 +379,7 @@ simultaneously.
 #### Zone and conduit controls
 
 **OT credential architecture for agents:**
+
 - Each agent role receives a unique service identity — no
   shared service accounts across agent deployments
 - Agent credentials are scoped to specific historian tags,
@@ -388,6 +400,7 @@ a Zone 3 historian proxy — never directly.
 #### Mitigations by tier
 
 **Foundational (SL 1–2)**
+
 - SR 1.2: Issue distinct agent identities for each OT agent
   deployment — no shared service accounts, all agent actions
   attributable to a specific agent identity in OT audit log
@@ -399,6 +412,7 @@ a Zone 3 historian proxy — never directly.
   a rotation schedule
 
 **Hardening (SL 2–3)**
+
 - SR 1.6: Implement agent credential lifecycle management —
   issuance, rotation, revocation all logged in OT identity
   management system
@@ -410,6 +424,7 @@ a Zone 3 historian proxy — never directly.
   immediate alert and session suspension
 
 **Advanced (SL 3–4)**
+
 - Implement PKI-backed agent identities for all agents in
   Zone 3 — signed requests, certificate-bound credentials,
   revocation on compromise
@@ -424,11 +439,12 @@ a Zone 3 historian proxy — never directly.
 
 | Tool | Type | Link |
 |---|---|---|
-| HashiCorp Vault | Open-source | https://www.vaultproject.io |
-| SPIFFE / SPIRE | Open-source | https://spiffe.io |
-| Claroty (OT identity) | Commercial | https://claroty.com |
+| HashiCorp Vault | Open-source | <https://www.vaultproject.io> |
+| SPIFFE / SPIRE | Open-source | <https://spiffe.io> |
+| Claroty (OT identity) | Commercial | <https://claroty.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM03 Excessive Agency
 - DSGAI 2026: DSGAI02 Agent Identity & Credential Exposure
 - Other frameworks: NIST SP 800-82 Rev 3 Section 6 · NERC CIP-007 · OWASP NHI Top 10
@@ -485,6 +501,7 @@ only. The conduit blocks agent connections to external tool registries.
 #### Mitigations by tier
 
 **Foundational (SL 1–2)**
+
 - Apply 62443-2-4 supplier security requirements to all agent
   tool and MCP server vendors — provenance, integrity guarantees,
   and vulnerability disclosure obligations in contracts
@@ -495,6 +512,7 @@ only. The conduit blocks agent connections to external tool registries.
   in production OT environments, ever
 
 **Hardening (SL 2–3)**
+
 - Apply OT change management to all agent component updates —
   test in representative non-production environment,
   human approval, documented rollback procedure
@@ -506,6 +524,7 @@ only. The conduit blocks agent connections to external tool registries.
   immediate alert and investigation
 
 **Advanced (SL 3–4)**
+
 - Operate isolated agent component evaluation environment —
   air-gapped or strictly controlled, test behavioural
   characteristics before any Zone 3 promotion
@@ -520,11 +539,12 @@ only. The conduit blocks agent connections to external tool registries.
 
 | Tool | Type | Link |
 |---|---|---|
-| ModelScan | Open-source | https://github.com/protectai/modelscan |
-| CycloneDX | Open-source | https://cyclonedx.org |
-| MCP Inspector | Open-source | https://github.com/modelcontextprotocol/inspector |
+| ModelScan | Open-source | <https://github.com/protectai/modelscan> |
+| CycloneDX | Open-source | <https://cyclonedx.org> |
+| MCP Inspector | Open-source | <https://github.com/modelcontextprotocol/inspector> |
 
 #### Cross-references
+
 - LLM Top 10: LLM04 Supply Chain
 - DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning
 - Other frameworks: NIST SP 800-82 Rev 3 · NERC CIP-013 · NIST SP 800-218A
@@ -567,6 +587,7 @@ disruption and lateral movement risk.
 #### Zone and conduit controls
 
 **Code execution prohibition zones:**
+
 - No agent may execute generated code in Zone 2 or below —
   absolute prohibition
 - Code execution in Zone 3 requires SL 3 minimum target and
@@ -578,6 +599,7 @@ disruption and lateral movement risk.
 **Sandbox requirements for Zone 3 code execution:**
 If code execution capability is determined to be necessary in Zone 3,
 the following sandbox requirements apply as a minimum:
+
 - No access to Zone 3 network interfaces (write or connect)
 - No access to OT system APIs outside explicitly allowlisted calls
 - No file system access outside a designated scratch directory
@@ -588,6 +610,7 @@ the following sandbox requirements apply as a minimum:
 #### Mitigations by tier
 
 **Foundational (SL 1–2)**
+
 - Avoid deploying agents with code execution capability in
   Zone 3 — this is the strongest control and should be the
   default position
@@ -598,6 +621,7 @@ the following sandbox requirements apply as a minimum:
   limited to a defined set of safe data analysis operations
 
 **Hardening (SL 2–3)**
+
 - SR 3.3: Implement static analysis of all agent-generated
   code before execution — reject scripts containing network,
   file system, or OT API calls outside the allowlist
@@ -608,6 +632,7 @@ the following sandbox requirements apply as a minimum:
   attempt to escape the sandbox from within Zone 3 agent context
 
 **Advanced (SL 3–4)**
+
 - Hardware-level sandboxing (gVisor, Firecracker) for any
   Zone 3 code execution — kernel-level isolation preventing
   escape to Zone 3 host systems
@@ -621,11 +646,12 @@ the following sandbox requirements apply as a minimum:
 
 | Tool | Type | Link |
 |---|---|---|
-| gVisor | Open-source | https://gvisor.dev |
-| Semgrep | Open-source | https://semgrep.dev |
-| Dragos | Commercial | https://www.dragos.com |
+| gVisor | Open-source | <https://gvisor.dev> |
+| Semgrep | Open-source | <https://semgrep.dev> |
+| Dragos | Commercial | <https://www.dragos.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM10 Improper Output Handling
 - DSGAI 2026: DSGAI12 Unsafe NL Data Gateways
 - Other frameworks: NIST SP 800-82 Rev 3 · MITRE ATT&CK ICS T0807 · CWE-94
@@ -669,6 +695,7 @@ to the original poisoning event.
 #### Zone and conduit controls
 
 **Memory architecture for OT agents:**
+
 - Agent persistent memory must reside in an access-controlled
   storage system within Zone 3 — not on the agent's host
   filesystem or accessible from Zone 4 directly
@@ -691,6 +718,7 @@ engineering review.
 #### Mitigations by tier
 
 **Foundational (SL 1–2)**
+
 - SR 3.1: Establish baseline for agent OT knowledge base —
   approved content, hash-verified, deviation from baseline
   triggers alert and review
@@ -701,6 +729,7 @@ engineering review.
   require re-validation, no indefinite persistence
 
 **Hardening (SL 2–3)**
+
 - SR 3.7: Implement continuous memory integrity monitoring —
   statistical anomaly detection on memory content, alert on
   unusual patterns, unexpected entries, or statistical drift
@@ -712,6 +741,7 @@ engineering review.
   isolated memory namespaces
 
 **Advanced (SL 3–4)**
+
 - SR 6.1: Integrate memory anomaly detection into OT SIEM —
   memory poisoning indicators treated as security events
   with defined OT incident response
@@ -725,11 +755,12 @@ engineering review.
 
 | Tool | Type | Link |
 |---|---|---|
-| Weaviate (with RBAC) | Open-source | https://weaviate.io |
-| Langfuse (audit logging) | Open-source | https://langfuse.com |
-| Claroty | Commercial | https://claroty.com |
+| Weaviate (with RBAC) | Open-source | <https://weaviate.io> |
+| Langfuse (audit logging) | Open-source | <https://langfuse.com> |
+| Claroty | Commercial | <https://claroty.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM05 Data and Model Poisoning, LLM09 Vector and Embedding Weaknesses
 - DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning, DSGAI13 Vector Store Platform Security
 - Other frameworks: NIST SP 800-82 Rev 3 · MITRE ATT&CK ICS T0831 · NIST AI RMF MS-2.5
@@ -769,6 +800,7 @@ Inter-agent communication must not share network bandwidth or
 switching infrastructure with Zone 3 OT control traffic. A2A
 communication in Zone 3 multi-agent deployments must traverse
 a dedicated VLAN or network segment with:
+
 - Traffic volume caps — A2A traffic cannot saturate
   shared OT network infrastructure
 - Protocol filtering — only approved A2A message formats
@@ -787,6 +819,7 @@ a dedicated VLAN or network segment with:
 #### Mitigations by tier
 
 **Foundational (SL 1–2)**
+
 - SR 1.3: Implement authentication on all A2A channels in
   OT multi-agent deployments — no unauthenticated agent
   communication in Zone 3 context
@@ -796,6 +829,7 @@ a dedicated VLAN or network segment with:
   payloads — reject unexpected or malformed structures
 
 **Hardening (SL 2–3)**
+
 - SR 4.4: Implement replay attack protection on A2A channels —
   message nonces, timestamps, and sequence numbers
 - Isolate A2A communication on dedicated network segment —
@@ -804,6 +838,7 @@ a dedicated VLAN or network segment with:
   identity, timestamp — integrated into OT SIEM
 
 **Advanced (SL 3–4)**
+
 - Implement mTLS for all A2A channels with Zone 3 agent
   access — both sides authenticate before any message exchange
 - Short-lived agent identity certificates — no long-lived
@@ -816,11 +851,12 @@ a dedicated VLAN or network segment with:
 
 | Tool | Type | Link |
 |---|---|---|
-| SPIFFE / SPIRE | Open-source | https://spiffe.io |
-| Linkerd | Open-source | https://linkerd.io |
-| cert-manager | Open-source | https://cert-manager.io |
+| SPIFFE / SPIRE | Open-source | <https://spiffe.io> |
+| Linkerd | Open-source | <https://linkerd.io> |
+| cert-manager | Open-source | <https://cert-manager.io> |
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI02 Agent Identity & Credential Exposure
 - Other frameworks: OWASP NHI Top 10 · NIST SP 800-82 Rev 3 · IEC 62351
 
@@ -871,6 +907,7 @@ validating the physical state of every affected process.
 **Cascade containment architecture:**
 Every Zone 3 multi-agent deployment must have a formally defined
 cascade containment architecture specifying:
+
 - Maximum blast radius — which process systems can be
   affected by a failure in any single agent
 - Circuit breaker thresholds — what failure indicators
@@ -881,6 +918,7 @@ cascade containment architecture specifying:
   does when the agent cluster is suspended
 
 **Zone 3 agent cluster isolation:**
+
 - Separate agent clusters for separate process areas — no
   single agent cluster spans multiple safety-critical process
   units
@@ -893,6 +931,7 @@ cascade containment architecture specifying:
 #### Mitigations by tier
 
 **Foundational (SL 1–2)**
+
 - SR 7.6: Implement circuit breakers at the agent-OT interface —
   automatic suspension when failure rate, error count, or
   anomalous action rate exceeds defined threshold
@@ -903,6 +942,7 @@ cascade containment architecture specifying:
   limited to defined communication channels with rate limits
 
 **Hardening (SL 2–3)**
+
 - SR 6.6: Integrate cascade detection into OT monitoring —
   alert on correlated anomalous agent actions across the
   cluster before physical process impact
@@ -914,6 +954,7 @@ cascade containment architecture specifying:
   functions operate independently of agent cluster state
 
 **Advanced (SL 3–4)**
+
 - Conduct OT-specific chaos engineering — intentional failure
   injection into multi-agent workflows to validate circuit
   breaker effectiveness and human escalation paths
@@ -928,11 +969,12 @@ cascade containment architecture specifying:
 
 | Tool | Type | Link |
 |---|---|---|
-| OpenTelemetry | Open-source | https://opentelemetry.io |
-| Resilience4j | Open-source | https://resilience4j.readme.io |
-| Claroty | Commercial | https://claroty.com |
+| OpenTelemetry | Open-source | <https://opentelemetry.io> |
+| Resilience4j | Open-source | <https://resilience4j.readme.io> |
+| Claroty | Commercial | <https://claroty.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM06 Unbounded Consumption
 - DSGAI 2026: DSGAI17 Data Availability & Resilience Failures
 - Other frameworks: IEC 61511 (functional safety) · NIST SP 800-82 Rev 3 · ISA/IEC 62443 SR 7.6
@@ -991,6 +1033,7 @@ verify before any alarm action.
 #### Mitigations by tier
 
 **Foundational (SL 1–2)**
+
 - SR 2.3: All agent advisory output clearly labelled in HMI
   and operator consoles — visual distinction from engineered
   procedures mandatory, no exceptions
@@ -1003,6 +1046,7 @@ verify before any alarm action.
   engineering procedure
 
 **Hardening (SL 2–3)**
+
 - SR 6.2: Implement aggregate analysis of agent-influenced
   operator decisions — detect patterns of operator over-trust
   (e.g., systematic acceptance of agent recommendations without
@@ -1015,6 +1059,7 @@ verify before any alarm action.
   and how to recognise manipulation patterns
 
 **Advanced (SL 3–4)**
+
 - Deploy operator decision pattern monitoring — alert on
   shift-level or site-level patterns suggesting systematic
   agent-influenced decision-making without independent
@@ -1030,10 +1075,11 @@ verify before any alarm action.
 
 | Tool | Type | Link |
 |---|---|---|
-| Guardrails AI | Open-source | https://github.com/guardrails-ai/guardrails |
-| Nozomi Networks | Commercial | https://www.nozominetworks.com |
+| Guardrails AI | Open-source | <https://github.com/guardrails-ai/guardrails> |
+| Nozomi Networks | Commercial | <https://www.nozominetworks.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM07 Misinformation
 - DSGAI 2026: DSGAI21 Disinformation via Data Poisoning
 - Other frameworks: IEC 61511 (human factors) · NIST SP 800-82 Rev 3 · AIUC-1 C/F
@@ -1084,12 +1130,14 @@ not just review of individual outputs.
 **Behavioural baseline and deviation detection:**
 Every Zone 3 agent must have a defined behavioural baseline
 established during a supervised commissioning period:
+
 - Typical tool invocation patterns per time period
 - Expected recommendation distribution for each process area
 - Normal query volume and data access patterns
 - Acceptable response latency range
 
 Deviation from baseline triggers a tiered response:
+
 1. Minor deviation: log and flag for next operator review
 2. Moderate deviation: alert to shift supervisor, agent continues
 3. Significant deviation: suspend agent, escalate to security team
@@ -1097,6 +1145,7 @@ Deviation from baseline triggers a tiered response:
 
 **Rogue agent containment:**
 When a rogue agent is detected in Zone 3:
+
 1. Immediate kill switch activation — all agent actions halted
 2. All recent agent recommendations reviewed by engineering
 3. Any process changes attributable to the rogue agent reversed
@@ -1107,6 +1156,7 @@ When a rogue agent is detected in Zone 3:
 #### Mitigations by tier
 
 **Foundational (SL 1–2)**
+
 - SR 3.7: Establish behavioural baseline for every Zone 3
   agent during commissioning — document expected invocation
   patterns, recommendation distributions, and access volumes
@@ -1117,6 +1167,7 @@ When a rogue agent is detected in Zone 3:
   tested, accessible from Zone 3 operator consoles
 
 **Hardening (SL 2–3)**
+
 - SR 6.1: Continuous behavioural monitoring integrated with
   OT SIEM — deviation alerts with tiered response procedures
 - Aggregate recommendation analysis — periodic engineering
@@ -1126,6 +1177,7 @@ When a rogue agent is detected in Zone 3:
   load additional tools or modify its own configuration
 
 **Advanced (SL 3–4)**
+
 - Multi-agent consensus for high-stakes Zone 3 decisions —
   rogue single agent cannot influence critical recommendations
   without cross-validation from independent agent
@@ -1139,11 +1191,12 @@ When a rogue agent is detected in Zone 3:
 
 | Tool | Type | Link |
 |---|---|---|
-| Langfuse | Open-source | https://langfuse.com |
-| Helicone | Open-source | https://www.helicone.ai |
-| Dragos | Commercial | https://www.dragos.com |
+| Langfuse | Open-source | <https://langfuse.com> |
+| Helicone | Open-source | <https://www.helicone.ai> |
+| Dragos | Commercial | <https://www.dragos.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM03 Excessive Agency
 - DSGAI 2026: DSGAI16 Endpoint & Browser Overreach
 - Other frameworks: MITRE ATT&CK ICS · IEC 61511 (safety case) · NIST SP 800-82 Rev 3
@@ -1264,5 +1317,7 @@ deployment checklist in `LLM_ISA62443.md`.
 
 ---
 
-*Part of the [OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk) —
+*Part of the
+[OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk)
+—
 maintained by the [OWASP GenAI Data Security Initiative](https://genai.owasp.org)*

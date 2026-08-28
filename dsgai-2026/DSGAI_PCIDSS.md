@@ -92,6 +92,7 @@ of these channels is a Requirement 3 violation.
 #### Mitigations for PCI DSS compliance
 
 **Foundational**
+
 - Req 3.4.1: Implement PAN masking in all GenAI outputs —
   automated output redaction before responses leave the
   service boundary, no cleartext PANs in any output
@@ -103,6 +104,7 @@ of these channels is a Requirement 3 violation.
   the majority of Req 3 obligations
 
 **Hardening**
+
 - Req 4.2.1: Enforce TLS 1.2 minimum on all GenAI data
   flows carrying CHD — API calls, RAG retrieval pipelines,
   observability streams
@@ -113,6 +115,7 @@ of these channels is a Requirement 3 violation.
   PAN detection before responses reach users
 
 **Advanced**
+
 - Apply differential privacy for GenAI trained on CHD —
   Req 3 advanced data protection measure
 - Conduct PAN reconstruction red team — verify PANs cannot
@@ -121,6 +124,7 @@ of these channels is a Requirement 3 violation.
   trail of every PAN access through GenAI pipeline
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - Agentic Top 10: ASI03 Identity and Privilege Abuse
 - Other frameworks: ISO 27001 A.8.11 · SOC 2 C2.1 · EU AI Act Art. 10
@@ -148,6 +152,7 @@ in PCI scope are a Req 7 and Req 8 finding.
 #### Mitigations for PCI DSS compliance
 
 **Foundational**
+
 - Req 7.2.1: Scope all agent CDE credentials to minimum
   required access — read-only for analytics, write access
   requires formal approval and documented business need
@@ -159,6 +164,7 @@ in PCI scope are a Req 7 and Req 8 finding.
   requirements
 
 **Hardening**
+
 - Req 10.2.1: Log all agent credential operations in CDE —
   issuance, use, expiry — full Req 10 audit trail
 - Req 12.3.2: Document targeted risk analysis for agent
@@ -168,6 +174,7 @@ in PCI scope are a Req 7 and Req 8 finding.
   least-privilege access control evidence
 
 **Advanced**
+
 - PKI-backed agent identities for CDE access —
   Req 8 strong authentication evidence
 - Req 10.6.1: Credential anomaly detection integrated
@@ -175,6 +182,7 @@ in PCI scope are a Req 7 and Req 8 finding.
   usage triggers Req 12.10 incident response
 
 #### Cross-references
+
 - Agentic Top 10: ASI03 Identity and Privilege Abuse
 - Other frameworks: OWASP NHI Top 10 · ISO 27001 A.8.2/A.5.16 · SOC 2 CC6.1
 
@@ -200,6 +208,7 @@ TPSP programme and have no CHD security obligations.
 #### Mitigations for PCI DSS compliance
 
 **Foundational**
+
 - Req 12.6.1: Include shadow AI in PCI security awareness
   programme — staff explicitly trained that CHD must
   never be pasted into unapproved AI tools, consequences
@@ -212,6 +221,7 @@ TPSP programme and have no CHD security obligations.
   compliance review
 
 **Hardening**
+
 - Req 12.5.2: Include shadow AI in TPSP monitoring —
   discovery of CHD flows to unapproved AI services
   triggers Req 12.10 incident response
@@ -221,6 +231,7 @@ TPSP programme and have no CHD security obligations.
   approved AI tools confirming CHD security obligations
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI07 Data Governance, DSGAI08 Non-Compliance
 - Other frameworks: ISO 27001 A.5.10 · NIST CSF 2.0 GV.RM-06 · SOC 2 CC9.1
 
@@ -248,6 +259,7 @@ security failure.
 #### Mitigations for PCI DSS compliance
 
 **Foundational**
+
 - Req 6.5.6: Test all model promotions for unexpected
   functionality before CDE deployment — integrity
   verification and output distribution analysis required
@@ -258,6 +270,7 @@ security failure.
   requirement, clean checkpoint always available
 
 **Hardening**
+
 - Req 10.6.1: Automated monitoring of GenAI outputs in
   fraud detection pipelines — systematic anomalous scores
   or approval patterns alerted as potential poisoning
@@ -269,6 +282,7 @@ security failure.
   integrity obligations
 
 **Advanced**
+
 - Post-training backdoor detection as mandatory CDE
   deployment gate — Req 6.5 testing before production
 - Req 10.6.1: Integrate model anomaly detection into
@@ -278,6 +292,7 @@ security failure.
   programme as customised Req 11.3 testing control
 
 #### Cross-references
+
 - LLM Top 10: LLM04 Supply Chain, LLM05 Data and Model Poisoning
 - Agentic Top 10: ASI06 Memory and Context Poisoning
 - Other frameworks: NIST AI RMF MS-3.3 · MITRE ATLAS AML.T0032 · ISO 27001 A.8.27
@@ -304,6 +319,7 @@ achieve arbitrary file write on CDE hosts — a critical finding.
 #### Mitigations for PCI DSS compliance
 
 **Foundational**
+
 - Req 6.3.3: Patch CVE-2024-3584 and equivalent vector
   database vulnerabilities immediately — arbitrary file
   write on CDE hosts is a critical Req 6.3 finding
@@ -314,6 +330,7 @@ achieve arbitrary file write on CDE hosts — a critical finding.
   by default in CDE environments
 
 **Hardening**
+
 - Req 11.3.1: Include path traversal and schema bypass
   in CDE penetration testing — ingestion interfaces
   in PCI scope tested before each deployment
@@ -323,6 +340,7 @@ achieve arbitrary file write on CDE hosts — a critical finding.
   change management — security testing before production
 
 #### Cross-references
+
 - LLM Top 10: LLM10 Improper Output Handling
 - DSGAI 2026: DSGAI13 Vector Store Platform Security
 - Other frameworks: ISO 27001 A.8.26/A.8.28 · CWE-20 · OWASP ASVS V5
@@ -349,6 +367,7 @@ agent context is a TPSP requiring PCI DSS Req 12.8 treatment.
 #### Mitigations for PCI DSS compliance
 
 **Foundational**
+
 - Req 12.8.1: Identify all tool and plugin providers
   that may receive CHD through agent context — add to
   TPSP list, initiate Req 12.8 compliance process
@@ -360,6 +379,7 @@ agent context is a TPSP requiring PCI DSS Req 12.8 treatment.
   for most tool providers
 
 **Hardening**
+
 - Req 12.8.3: Establish written agreements with tool
   providers acknowledging CHD security responsibility —
   required for any tool provider that may receive CHD
@@ -369,6 +389,7 @@ agent context is a TPSP requiring PCI DSS Req 12.8 treatment.
   detected before leaving CDE boundary
 
 #### Cross-references
+
 - Agentic Top 10: ASI02 Tool Misuse, ASI04 Supply Chain
 - Other frameworks: ISO 27001 A.5.19/A.5.20 · SOC 2 CC9.1
 
@@ -395,6 +416,7 @@ to assessors without explicit data governance documentation.
 #### Mitigations for PCI DSS compliance
 
 **Foundational**
+
 - Req 3.1.1: Extend CHD data inventory to all GenAI-derived
   assets — embeddings, RAG caches, agent memory, prompt
   caches, and observability logs that may contain CHD
@@ -405,6 +427,7 @@ to assessors without explicit data governance documentation.
   prevents derived assets from inheriting PCI scope
 
 **Hardening**
+
 - Req 9.4.6: Implement verified deletion for all GenAI-
   derived assets containing CHD — deletion logs as
   Req 9.4 media disposal evidence
@@ -415,6 +438,7 @@ to assessors without explicit data governance documentation.
   from source through all derived assets automatically
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI08 Non-Compliance, DSGAI01 Sensitive Data Leakage
 - Other frameworks: ISO 27001 A.5.9/A.8.10 · EU AI Act Art. 10 · SOC 2 C1.1
 
@@ -442,6 +466,7 @@ processing rights.
 #### Mitigations for PCI DSS compliance
 
 **Foundational**
+
 - Req 12.1.1: Update PCI security policy to explicitly
   cover GenAI systems — address CHD in LLM scope,
   acceptable use of AI tools with CHD, TPSP requirements
@@ -454,6 +479,7 @@ processing rights.
   documentation from day one
 
 **Hardening**
+
 - Req 12.4.1: Assign executive accountability for GenAI
   PCI compliance — CISO or equivalent with programme
   oversight, documented and evidenced for assessors
@@ -464,6 +490,7 @@ processing rights.
   customised approach documentation where needed
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI07 Data Governance
 - Other frameworks: EU AI Act Art. 10/17 · ISO 27001 A.5.31 · SOC 2 P1.1
 
@@ -489,6 +516,7 @@ CHD requiring Req 3 protection.
 #### Mitigations for PCI DSS compliance
 
 **Foundational**
+
 - Req 3.4.1: Implement PAN masking for all PANs extracted
   from multimodal inputs — OCR output of payment documents
   treated as CHD, masked before any downstream use
@@ -499,12 +527,14 @@ CHD requiring Req 3 protection.
   OCR extraction — removes CHD from downstream scope
 
 **Hardening**
+
 - Req 4.2.1: Enforce TLS on multimodal extraction pipelines
   where CHD is in scope — OCR results encrypted in transit
 - Req 10.2.1: Log all PAN access through multimodal pipelines —
   Req 10 audit trail requirement applies to derived CHD
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI01 Sensitive Data Leakage, DSGAI14 Telemetry Leakage
 - Other frameworks: ISO 27001 A.8.11 · GDPR Art. 9 · SOC 2 C2.1
 
@@ -531,6 +561,7 @@ as synthetic.
 #### Mitigations for PCI DSS compliance
 
 **Foundational**
+
 - Req 3.1.1: Include synthetic payment datasets in CHD
   inventory until re-identification risk is formally
   assessed and accepted — do not assume synthetic data
@@ -542,6 +573,7 @@ as synthetic.
   payment data before use or distribution
 
 **Hardening**
+
 - Apply tokenisation rather than synthesis for CHD in
   test environments — format-preserving tokenisation
   removes PCI scope more reliably than synthesis
@@ -550,6 +582,7 @@ as synthetic.
   format-preservation properties, protection controls
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI08 Non-Compliance, DSGAI18 Inference and Data Reconstruction
 - Other frameworks: ISO 27001 A.5.34 · GDPR Recital 26 · SOC 2 P4.2
 
@@ -575,6 +608,7 @@ Req 3 and Req 7 finding.
 #### Mitigations for PCI DSS compliance
 
 **Foundational**
+
 - Req 7.2.1: Implement strict session isolation for all
   GenAI deployments in PCI scope — per-user context,
   RAG namespaces, and KV cache isolation required
@@ -585,6 +619,7 @@ Req 3 and Req 7 finding.
   documented as testing evidence
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - DSGAI 2026: DSGAI13 Vector Store Platform Security
 - Other frameworks: ISO 27001 A.8.3 · GDPR Art. 32 · SOC 2 CC6.1
@@ -612,6 +647,7 @@ and Req 7 critical finding.
 #### Mitigations for PCI DSS compliance
 
 **Foundational**
+
 - Req 7.2.1: Enforce per-user query execution — LLM
   queries to CDE systems execute under requesting user's
   permissions, never a shared high-privilege service account
@@ -622,6 +658,7 @@ and Req 7 critical finding.
   interfaces without formal approval and change management
 
 **Hardening**
+
 - Req 6.4.1: Apply web application protection to all
   LLM query interfaces in PCI scope — WAF or equivalent,
   input validation at application layer
@@ -633,6 +670,7 @@ and Req 7 critical finding.
   tested and documented
 
 **Advanced**
+
 - Deploy independent query validation layer — Req 6.2
   defence-in-depth for CDE query interfaces
 - Req 11.3.1: Conduct adversarial NL-to-SQL testing —
@@ -640,6 +678,7 @@ and Req 7 critical finding.
   natural language, document as CDE penetration testing
 
 #### Cross-references
+
 - LLM Top 10: LLM10 Improper Output Handling
 - Agentic Top 10: ASI02 Tool Misuse, ASI05 Unexpected Code Execution
 - Other frameworks: ISO 27001 A.8.26/A.8.28 · CWE-89 · ISA/IEC 62443 SR 2.2 (OT)
@@ -667,6 +706,7 @@ in CDE scope are Req 6.3 and Req 7 findings.
 #### Mitigations for PCI DSS compliance
 
 **Foundational**
+
 - Req 7.2.1: Enable RBAC on all vector stores in PCI
   scope — no unauthenticated access in any CDE environment
 - Req 3.5.1: Encrypt all vector store content in CDE
@@ -676,6 +716,7 @@ in CDE scope are Req 6.3 and Req 7 findings.
   CDE scope
 
 **Hardening**
+
 - Scope design: Apply PAN tokenisation before embedding
   generation — removes CHD from vector store scope,
   eliminates Req 3 obligations for most embedding stores
@@ -686,6 +727,7 @@ in CDE scope are Req 6.3 and Req 7 findings.
   accessible only from authorised CDE services
 
 #### Cross-references
+
 - LLM Top 10: LLM09 Vector and Embedding Weaknesses
 - Agentic Top 10: ASI06 Memory and Context Poisoning
 - Other frameworks: ISO 27001 A.8.3/A.8.24 · SOC 2 CC6.1
@@ -712,6 +754,7 @@ PANs in cleartext, making telemetry stores CHD in scope.
 #### Mitigations for PCI DSS compliance
 
 **Foundational**
+
 - Req 3.4.1: Implement PAN masking before logging to
   telemetry systems — no cleartext PANs in observability
   data, mask at the pipeline ingestion point
@@ -722,6 +765,7 @@ PANs in cleartext, making telemetry stores CHD in scope.
   content for GenAI in CDE scope without explicit need
 
 **Hardening**
+
 - Req 7.2.1: Apply need-to-know access controls to CDE
   telemetry stores — restrict to authorised personnel
   with documented business need
@@ -731,6 +775,7 @@ PANs in cleartext, making telemetry stores CHD in scope.
   prevents CHD from appearing in any telemetry
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI01 Sensitive Data Leakage, DSGAI07 Data Governance
 - Other frameworks: ISO 27001 A.8.15 · GDPR Art. 32 · SOC 2 C2.1
 
@@ -756,6 +801,7 @@ of any successful injection against a payment-context LLM.
 #### Mitigations for PCI DSS compliance
 
 **Foundational**
+
 - Req 7.2.1: Implement minimum-necessary context injection
   for all GenAI in PCI scope — retrieve only CHD directly
   relevant to the current query, not broad datasets
@@ -765,6 +811,7 @@ of any successful injection against a payment-context LLM.
   eliminates Req 3 obligations for context window content
 
 **Hardening**
+
 - Track classification of all CHD in context window —
   highest classification drives response handling
 - Req 12.3.2: Document targeted risk analysis for
@@ -772,6 +819,7 @@ of any successful injection against a payment-context LLM.
   per deployment context
 
 #### Cross-references
+
 - LLM Top 10: LLM08 Hidden Context Exposure
 - Agentic Top 10: ASI01 Agent Goal Hijack
 - Other frameworks: AIUC-1 A/B005 · SOC 2 CC6.1
@@ -799,6 +847,7 @@ treatment.
 #### Mitigations for PCI DSS compliance
 
 **Foundational**
+
 - Req 12.8.1: Assess browser AI extension providers
   with CDE access as TPSPs — written agreements,
   compliance monitoring for all approved extensions
@@ -810,6 +859,7 @@ treatment.
   from CDE workstations
 
 **Hardening**
+
 - Req 10.2.1: Log all AI assistant access to CDE data
   from endpoints — Req 10 audit trail requirement
 - Req 12.3.2: Document targeted risk analysis for
@@ -817,6 +867,7 @@ treatment.
   potential, controls implemented
 
 #### Cross-references
+
 - Agentic Top 10: ASI10 Rogue Agents
 - DSGAI 2026: DSGAI03 Shadow AI
 - Other frameworks: ISO 27001 A.8.1/A.8.7 · SOC 2 CC9.1
@@ -843,6 +894,7 @@ detection LLMs is a payment processing continuity requirement.
 #### Mitigations for PCI DSS compliance
 
 **Foundational**
+
 - Req 12.10.1: Include GenAI pipeline failures in PCI
   incident response procedures — silent RAG degradation
   affecting fraud detection treated as a security incident
@@ -854,6 +906,7 @@ detection LLMs is a payment processing continuity requirement.
   part of Req 10 log review programme
 
 **Hardening**
+
 - Req 12.3.2: Document targeted risk analysis for GenAI
   availability — fraud detection impact, RTO/RPO,
   fallback controls
@@ -862,6 +915,7 @@ detection LLMs is a payment processing continuity requirement.
   in fraud detection context
 
 #### Cross-references
+
 - LLM Top 10: LLM06 Unbounded Consumption
 - Agentic Top 10: ASI08 Cascading Agent Failures
 - Other frameworks: ISA/IEC 62443 SR 7.6 (OT) · SOC 2 A1.1
@@ -889,6 +943,7 @@ protection failure.
 #### Mitigations for PCI DSS compliance
 
 **Foundational**
+
 - Apply differential privacy during training on CHD —
   Req 3 advanced protection reducing PAN reconstruction
   risk from model outputs
@@ -899,6 +954,7 @@ protection failure.
   controls, residual risk accepted
 
 **Hardening**
+
 - Req 11.3.1: Include membership inference and model
   inversion in CDE penetration testing — validate CHD
   cannot be reconstructed, results documented
@@ -906,6 +962,7 @@ protection failure.
   volume, Req 6.4 application protection control
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - DSGAI 2026: DSGAI10 Synthetic Data Pitfalls
 - Other frameworks: ISO 27001 A.8.11 · GDPR Art. 25 · SOC 2 C2.1
@@ -932,6 +989,7 @@ with access to CHD are TPSPs under PCI DSS Req 12.8.
 #### Mitigations for PCI DSS compliance
 
 **Foundational**
+
 - Req 12.8.1: Include labelling vendors with CHD access
   in TPSP list — initiate Req 12.8 compliance process
   before sharing any CHD with labellers
@@ -943,6 +1001,7 @@ with access to CHD are TPSPs under PCI DSS Req 12.8.
   annotation-relevant data patterns
 
 **Hardening**
+
 - Req 3.3.1: Verify SAD never appears in labelling tasks —
   audit annotation interfaces for SAD exposure before
   any labelling begins
@@ -951,6 +1010,7 @@ with access to CHD are TPSPs under PCI DSS Req 12.8.
   function, not full transaction records
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI07 Data Governance, DSGAI08 Non-Compliance
 - Other frameworks: ISO 27001 A.5.34 · GDPR Art. 28 · SOC 2 CC9.2
 
@@ -977,6 +1037,7 @@ application protection apply.
 #### Mitigations for PCI DSS compliance
 
 **Foundational**
+
 - Req 7.2.1: Implement API rate limiting as access
   control — systematic extraction requires high query
   volumes, rate limiting raises cost and triggers detection
@@ -988,12 +1049,14 @@ application protection apply.
   controls implemented
 
 **Hardening**
+
 - Req 6.4.1: Deploy query anomaly detection as application
   protection — systematic extraction behaviour blocked
 - Implement model watermarking — enables detection of
   replicated payment fraud models in the wild
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - DSGAI 2026: DSGAI18 Inference and Data Reconstruction
 - Other frameworks: ISO 27001 A.5.12 · MITRE ATLAS AML.T0016 · SOC 2 C2.1
@@ -1021,6 +1084,7 @@ decisions or provide incorrect compliance guidance to analysts.
 #### Mitigations for PCI DSS compliance
 
 **Foundational**
+
 - Req 6.5.6: Test RAG corpus updates for unexpected content
   before production indexing — Req 6.5 change management
   applies to RAG corpus changes in CDE scope
@@ -1030,6 +1094,7 @@ decisions or provide incorrect compliance guidance to analysts.
   sources weighted higher than general web content
 
 **Hardening**
+
 - Req 10.6.1: Include RAG corpus integrity monitoring
   in CDE log analysis — anomalous content changes alerted
 - Req 11.3.1: Include adversarial RAG integrity testing
@@ -1039,6 +1104,7 @@ decisions or provide incorrect compliance guidance to analysts.
   in RAG — verify integrity of regulatory guidance sources
 
 #### Cross-references
+
 - LLM Top 10: LLM05 Data and Model Poisoning, LLM07 Misinformation
 - Agentic Top 10: ASI06 Memory and Context Poisoning
 - Other frameworks: MITRE ATLAS AML.T0045 · ISO 27001 A.5.7 · SOC 2 PI1.2
@@ -1120,10 +1186,10 @@ decisions or provide incorrect compliance guidance to analysts.
 
 ## References
 
-- PCI DSS v4.0: https://www.pcisecuritystandards.org/document_library/
-- PCI SSC Information Supplement — Third-Party Security Assurance: https://www.pcisecuritystandards.org
-- PCI DSS v4.0 Summary of Changes: https://www.pcisecuritystandards.org/documents/PCI-DSS-v4-0-Summary-of-Changes-r2.pdf
-- OWASP GenAI Data Security Risks 2026: https://genai.owasp.org/resource/owasp-genai-data-security-risks-mitigations-2026/
+- PCI DSS v4.0: <https://www.pcisecuritystandards.org/document_library/>
+- PCI SSC Information Supplement — Third-Party Security Assurance: <https://www.pcisecuritystandards.org>
+- PCI DSS v4.0 Summary of Changes: <https://www.pcisecuritystandards.org/documents/PCI-DSS-v4-0-Summary-of-Changes-r2.pdf>
+- OWASP GenAI Data Security Risks 2026: <https://genai.owasp.org/resource/owasp-genai-data-security-risks-mitigations-2026/>
 - LLM Top 10 x PCI DSS mapping: see LLM_PCIDSS.md in this repository
 
 ---
@@ -1137,4 +1203,4 @@ decisions or provide incorrect compliance guidance to analysts.
 ---
 
 Maintained by the OWASP GenAI Data Security Initiative.
-Part of the OWASP GenAI Crosswalk: https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk
+Part of the OWASP GenAI Crosswalk: <https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk>

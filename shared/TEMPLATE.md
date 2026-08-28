@@ -77,14 +77,17 @@ this framework — what does the framework "see" when it looks at this risk?]
 #### Three-tier mitigations
 
 **Tier 1 — Immediate (pre-production gate):**
+
 - [Actionable control — specific and implementable today]
 - [Actionable control]
 
 **Tier 2 — Short-term (first 30 days):**
+
 - [Control requiring configuration or process change]
 - [Control]
 
 **Tier 3 — Strategic:**
+
 - [Programme-level or architectural control]
 - [Control]
 
@@ -129,6 +132,8 @@ this framework — what does the framework "see" when it looks at this risk?]
 
 ---
 
-*Part of the [OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk) —
+*Part of the
+[OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk)
+—
 maintained by the [OWASP GenAI Data Security Initiative](https://genai.owasp.org)*
 *License: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)*

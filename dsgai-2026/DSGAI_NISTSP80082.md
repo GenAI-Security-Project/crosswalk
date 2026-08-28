@@ -9,8 +9,10 @@
 
 # DSGAI 2026 × NIST SP 800-82 Rev 3
 
-Mapping the [OWASP GenAI Data Security Risks 2026](https://genai.owasp.org/resource/owasp-genai-data-security-risks-mitigations-2026/)
-(DSGAI01–DSGAI21) to [NIST SP 800-82 Revision 3](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-82r3.pdf) —
+Mapping the
+[OWASP GenAI Data Security Risks 2026](https://genai.owasp.org/resource/owasp-genai-data-security-risks-mitigations-2026/)
+(DSGAI01–DSGAI21) to
+[NIST SP 800-82 Revision 3](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-82r3.pdf) —
 Guide to Operational Technology (OT) Security, published May 2023.
 
 **Use this file alongside [DSGAI_ISA62443.md](DSGAI_ISA62443.md).**
@@ -103,7 +105,7 @@ subject to NERC CIP or AWIA, SP 800-82 is the authoritative reference
 
 ## GenAI data placement in SP 800-82 network architecture
 
-```
+```text
 Enterprise Zone (Level 4-5)
     ↓ [Firewall — HTTPS only, no direct OT protocol access]
 DMZ / Demilitarized Zone (Level 3.5)
@@ -156,16 +158,19 @@ model outputs to reflect attacker intent rather than actual OT state.
 #### Three-tier mitigations
 
 **Tier 1 — Pre-deployment gate:**
+
 - Define trusted OT data sources; reject unverified data before GenAI processing
 - Apply content filtering at OT data boundary before context assembly
 - Log all OT data consumed by GenAI with source and timestamp
 
 **Tier 2 — Short-term:**
+
 - Red team: injection attempt via historian and SCADA data exports
 - Add instruction sanitisation layer at OT data ingestion boundary
 - Verify GenAI outputs can never directly affect OT control without human confirmation
 
 **Tier 3 — Strategic:**
+
 - Continuous monitoring of GenAI decisions correlated with OT data anomalies
 - Automated injection test battery in GenAI data pipeline CI/CD
 
@@ -206,16 +211,19 @@ decision logic for industrial operations.
 #### Three-tier mitigations
 
 **Tier 1 — Pre-deployment gate:**
+
 - Verify integrity of all OT data used for training (hash verification)
 - Restrict write access to OT training data stores to authorised personnel
 - Log all OT data movements into training pipeline
 
 **Tier 2 — Short-term:**
+
 - Statistical anomaly detection on OT training data distributions
 - Adversarial probing of OT-trained models for backdoor triggers
 - Separate OT training data pipeline from general enterprise data pipelines
 
 **Tier 3 — Strategic:**
+
 - Formal OT data chain of custody from historian to training job
 - Periodic re-evaluation of OT-trained models against clean held-out dataset
 - SI-7 automated integrity verification in OT ML CI/CD pipeline
@@ -248,16 +256,19 @@ intelligence or safety-critical design details.
 #### Three-tier mitigations
 
 **Tier 1 — Pre-deployment gate:**
+
 - Classify all OT data proposed for training use
 - Remove safety parameters, design documents, and personnel data
 - Apply data minimisation: use only what is strictly necessary for the training objective
 
 **Tier 2 — Short-term:**
+
 - Automated data classification scanning before training pipeline ingestion
 - Memorisation probing of OT-trained models
 - Legal and contractual review: what OT data may be shared with third-party model providers?
 
 **Tier 3 — Strategic:**
+
 - Differential privacy for OT safety-critical training data
 - Federated learning patterns for organisations unable to extract OT data
 
@@ -289,16 +300,19 @@ in transit.
 #### Three-tier mitigations
 
 **Tier 1 — Pre-deployment gate:**
+
 - Enable TLS/mTLS for all OT data pipeline connections
 - Add integrity verification at pipeline output (hash of exported OT data)
 - Audit authentication on all pipeline stage-to-stage connections
 
 **Tier 2 — Short-term:**
+
 - Architecture review: every OT data pipeline connection reviewed for authentication gap
 - Add anomaly detection on OT data volumes and transformation outputs
 - Per-stage audit logging with forensic retention
 
 **Tier 3 — Strategic:**
+
 - Unidirectional gateway for highest-sensitivity OT data flows (SP 800-82 §7.2 recommended)
 - Formal OT data pipeline security architecture review before any new GenAI integration
 
@@ -329,16 +343,19 @@ or provide incorrect maintenance guidance to OT operators.
 #### Three-tier mitigations
 
 **Tier 1 — Pre-deployment gate:**
+
 - Guardrails on OT-facing GenAI systems must be hardware-enforced where safety-critical
 - No GenAI system input can disable or modify its own guardrails
 - Log all guardrail trigger events with full context
 
 **Tier 2 — Short-term:**
+
 - Add secondary rule-based safety check outside GenAI inference path for OT outputs
 - Red team: attempt guardrail bypass via OT data channels
 - Define minimum acceptable guardrail effectiveness metrics
 
 **Tier 3 — Strategic:**
+
 - Independent safety architecture review for OT-facing GenAI guardrails
 - Continuous adversarial testing of OT GenAI guardrails in staging
 
@@ -369,16 +386,19 @@ entitlement — exposing operational intelligence to unauthorised parties.
 #### Three-tier mitigations
 
 **Tier 1 — Pre-deployment gate:**
+
 - Apply content inspection to all GenAI outputs containing OT data
 - Define blocklist of sensitive OT data patterns (equipment IDs, setpoints, P&ID references)
 - Implement per-user OT data entitlement in output pipeline
 
 **Tier 2 — Short-term:**
+
 - DLP scanning for OT data patterns in all GenAI outputs
 - V-ST: test suite for OT data disclosure across user entitlement boundaries
 - Log all OT data disclosure events
 
 **Tier 3 — Strategic:**
+
 - Real-time OT output anomaly detection
 - Annual audit of OT data exposure in GenAI system outputs
 
@@ -410,16 +430,19 @@ equipment configurations.
 #### Three-tier mitigations
 
 **Tier 1 — Pre-deployment gate:**
+
 - Enumerate all OT data sources accessible to each GenAI system
 - Remove access to any OT data source not required for declared function
 - Apply query-scoped access: return minimum OT data per request
 
 **Tier 2 — Short-term:**
+
 - OT data access declaration in deployment manifest; architecture review sign-off
 - Automated drift detection: alert when runtime OT access exceeds manifest
 - Quarterly OT data access audit for all GenAI systems
 
 **Tier 3 — Strategic:**
+
 - Zero-trust OT data access architecture: no persistent access; JIT per task
 - Annual penetration test targeting OT data access boundary violations
 
@@ -450,16 +473,19 @@ exposing safety-critical or commercially sensitive OT information.
 #### Three-tier mitigations
 
 **Tier 1 — Pre-deployment gate:**
+
 - Apply OT data classification to all corpus documents
 - Enforce per-query entitlement filter in OT RAG pipeline
 - Log all retrieval operations with user identity and document IDs
 
 **Tier 2 — Short-term:**
+
 - Cross-tenant leakage test battery for OT RAG system
 - Red team: retrieve OT documents outside declared entitlement
 - Add retrieval anomaly detection for unusual OT document access patterns
 
 **Tier 3 — Strategic:**
+
 - Access-controlled RAG with OT data entitlement enforcement (see RECIPES.md Pattern 1)
 - Unidirectional data export for highest-sensitivity OT documents
 
@@ -493,16 +519,19 @@ This is the highest-severity DSGAI entry for OT environments.
 #### Three-tier mitigations
 
 **Tier 1 — Pre-deployment gate (highest priority):**
+
 - Authenticate all writes to OT corpus stores
 - Add document hash verification at corpus ingest
 - Implement change management for all OT corpus documents — same process as engineering drawing control
 
 **Tier 2 — Short-term:**
+
 - Corpus integrity monitoring: detect unexpected document changes
 - Document injection test: attempt to replace an OT safety procedure with malicious version
 - G-PC: OT corpus change approval process with engineering sign-off
 
 **Tier 3 — Strategic:**
+
 - Immutable corpus audit ledger: all changes traceable to authorised source
 - Periodic corpus audit: re-verify document authenticity against authoritative source
 - For safety-critical procedures: dual-control changes (engineer + safety officer)
@@ -542,16 +571,19 @@ reasoning about OT state without persisting to long-term memory.
 #### Three-tier mitigations
 
 **Tier 1 — Pre-deployment gate:**
+
 - Apply content filtering at context assembly boundary for all OT data
 - Trust-level tagging: OT system instructions cannot be overridden by retrieved data
 - Log full context window for forensic review on anomalous outputs
 
 **Tier 2 — Short-term:**
+
 - Red team: inject adversarial content via OT historian and data feeds
 - Implement context source prioritisation in OT GenAI systems
 - Add reasoning consistency check on final outputs before operator delivery
 
 **Tier 3 — Strategic:**
+
 - Continuous monitoring of OT GenAI outputs correlated with data anomalies
 - Formal context integrity verification for safety-critical OT decision support
 
@@ -581,16 +613,19 @@ of operator decision support tools without re-injection.
 #### Three-tier mitigations
 
 **Tier 1 — Pre-deployment gate:**
+
 - Enforce session isolation: no cross-user or cross-shift OT session data leakage
 - Encrypt all persistent OT GenAI session data
 - Define session TTL for all OT GenAI sessions (e.g., shift-based expiry)
 
 **Tier 2 — Short-term:**
+
 - Cross-session data access test battery
 - Add integrity signatures to all OT GenAI session records
 - Verify session deletion is complete and unrecoverable
 
 **Tier 3 — Strategic:**
+
 - Formal OT session security architecture review for multi-operator deployments
 - Automated session integrity monitoring
 
@@ -622,16 +657,19 @@ without direct OT system access.
 #### Three-tier mitigations
 
 **Tier 1 — Pre-deployment gate:**
+
 - Classify OT-trained models as sensitive OT assets
 - Apply API rate limiting to all OT GenAI inference endpoints
 - Remove or restrict confidence score and logit exposure
 
 **Tier 2 — Short-term:**
+
 - Query pattern detection: alert on systematic extraction patterns
 - Model extraction simulation exercise
 - Per-user query budget with hard limits for OT GenAI APIs
 
 **Tier 3 — Strategic:**
+
 - Differential privacy for models trained on safety-critical OT data
 - Continuous extraction attempt detection using ML-based query analysis
 
@@ -663,16 +701,19 @@ or over-broad API responses.
 #### Three-tier mitigations
 
 **Tier 1 — Pre-deployment gate:**
+
 - Audit all OT tool integrations for data scope
 - Apply minimum data principle: filter tool responses to declared function scope
 - Log all OT tool API responses with full payload
 
 **Tier 2 — Short-term:**
+
 - Tool approval board for all OT-connected integrations
 - Automated data leakage tests for each OT tool integration
 - Review third-party OT tool data retention terms
 
 **Tier 3 — Strategic:**
+
 - SA-12 formal vendor assessment for all OT tool providers
 - Continuous OT tool data flow monitoring
 
@@ -703,16 +744,19 @@ model weights for operational intelligence about industrial systems.
 #### Three-tier mitigations
 
 **Tier 1 — Pre-deployment gate:**
+
 - Apply encryption to all OT-trained model weight storage
 - Restrict access to OT model weights to minimum required personnel
 - Enable access logging on model storage systems
 
 **Tier 2 — Short-term:**
+
 - Classify OT-trained models as sensitive OT assets in asset inventory
 - Architecture review of model storage access controls
 - Red team: attempt model weight exfiltration via infrastructure
 
 **Tier 3 — Strategic:**
+
 - HSM protection for highest-value OT-trained models
 - Legal protections: trade secret designation for proprietary OT models
 
@@ -744,16 +788,19 @@ parties, including third-party cloud model providers.
 #### Three-tier mitigations
 
 **Tier 1 — Pre-deployment gate:**
+
 - Audit all inference logging for OT data content
 - Remove OT process data from inference logs where not operationally required
 - Review third-party model provider data retention terms before any OT data is submitted
 
 **Tier 2 — Short-term:**
+
 - Apply OT data classification to inference log contents
 - Define retention periods and deletion schedule for OT inference logs
 - Data residency review: OT data must not leave approved geographic boundary
 
 **Tier 3 — Strategic:**
+
 - On-premises or private cloud deployment for OT-sensitive inference
 - Automated OT inference data lifecycle management
 
@@ -785,16 +832,19 @@ supply chain risks into OT operations.
 #### Three-tier mitigations
 
 **Tier 1 — Pre-deployment gate:**
+
 - Inventory all third-party data sources in OT GenAI stack
 - Verify provenance of all external data before use in OT context
 - Pin data source versions; reject floating versions in OT production
 
 **Tier 2 — Short-term:**
+
 - SA-12 assessment for all critical OT data source providers
 - Integrity verification at all external data ingestion points
 - Monitor for security advisories on all OT data source providers
 
 **Tier 3 — Strategic:**
+
 - SR-6: annual supplier review for OT data source vendors
 - Formal OT data source approval programme
 
@@ -825,16 +875,19 @@ adapters, or vulnerable ML library code into OT decision support systems.
 #### Three-tier mitigations
 
 **Tier 1 — Pre-deployment gate:**
+
 - Verify provenance of all models used in OT GenAI deployments
 - Generate model SBOM including base models, adapters, and ML frameworks
 - Pin all model versions; reject floating references in OT production
 
 **Tier 2 — Short-term:**
+
 - Model hash verification at OT deployment
 - Adversarial probing of OT-deployed models for backdoor triggers
 - SA-12: formal vendor assessment for all model providers
 
 **Tier 3 — Strategic:**
+
 - SR-6: annual supplier review for model providers
 - Formal model provenance attestation for regulated OT deployments
 
@@ -864,16 +917,19 @@ under NERC CIP, FISMA, or sector-specific requirements.
 #### Three-tier mitigations
 
 **Tier 1 — Pre-deployment gate:**
+
 - Document retention requirements for all OT data stored in GenAI systems
 - Verify deletion capability for each OT data store
 - Align with applicable sector requirements (NERC CIP-007, FISMA)
 
 **Tier 2 — Short-term:**
+
 - Automated retention policy enforcement for OT inference logs
 - Test deletion procedures: verify OT data is unrecoverable after deletion
 - Data lifecycle review for all OT data in GenAI systems
 
 **Tier 3 — Strategic:**
+
 - Formal OT data lifecycle programme
 - Annual compliance audit of OT data retention
 
@@ -905,16 +961,19 @@ outages affecting operational decision support during incidents.
 #### Three-tier mitigations
 
 **Tier 1 — Pre-deployment gate:**
+
 - Define fail-safe state for GenAI system failure: operators revert to manual procedures
 - Implement circuit breaker pattern between OT data pipeline stages
 - Document cascade blast radius for all OT GenAI pipeline failure scenarios
 
 **Tier 2 — Short-term:**
+
 - O-IM playbook for OT GenAI pipeline cascade incidents
 - Chaos exercise: simulate pipeline failure during normal OT operations
 - Add per-stage checkpointing for OT data pipeline rollback
 
 **Tier 3 — Strategic:**
+
 - Formal OT chaos engineering programme for GenAI data pipelines
 - Automated cascade detection with early warning for OT operators
 - Architecture pattern: GenAI data pipelines cannot degrade OT primary control systems
@@ -946,16 +1005,19 @@ cross-border transfer, or prohibited processing.
 #### Three-tier mitigations
 
 **Tier 1 — Pre-deployment gate:**
+
 - Map all applicable regulations for OT GenAI data flows
 - Identify any processing without appropriate authority
 - Document OT data processing activities for regulatory evidence
 
 **Tier 2 — Short-term:**
+
 - Legal review of OT data sharing with third-party model providers
 - AT-3: training on OT data regulatory requirements for relevant staff
 - Compliance gap assessment against applicable sector requirements
 
 **Tier 3 — Strategic:**
+
 - Formal OT compliance monitoring programme
 - Annual regulatory impact assessment for OT GenAI deployments
 
@@ -985,16 +1047,19 @@ incidents, or demonstrate traceability required by sector regulators.
 #### Three-tier mitigations
 
 **Tier 1 — Pre-deployment gate:**
+
 - Attach source metadata to all OT data ingested into GenAI systems
 - Log origin, timestamp, and version for all OT data sources
 - Add provenance fields to OT corpus document schema
 
 **Tier 2 — Short-term:**
+
 - Implement end-to-end lineage tracking for OT data pipelines
 - Define provenance requirements in OT GenAI deployment standards
 - V-RT: automated provenance coverage tests
 
 **Tier 3 — Strategic:**
+
 - Immutable lineage ledger for regulatory traceability (NERC CIP, FISMA audit support)
 - Formal OT data governance programme with lineage as core requirement
 - Integration with OT historian change management for complete provenance chain
@@ -1051,6 +1116,8 @@ incidents, or demonstrate traceability required by sector regulators.
 
 ---
 
-*Part of the [OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk) —
+*Part of the
+[OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk)
+—
 maintained by the [OWASP GenAI Data Security Initiative](https://genai.owasp.org)*
 *License: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)*

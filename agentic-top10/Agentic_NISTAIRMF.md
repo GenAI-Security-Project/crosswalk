@@ -9,8 +9,10 @@
 
 # Agentic Top 10 2026 × NIST AI RMF
 
-Mapping the [OWASP Top 10 for Agentic Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
-to the [NIST AI Risk Management Framework (AI RMF 1.0)](https://www.nist.gov/system/files/documents/2023/01/26/AI%20RMF%201.0.pdf)
+Mapping the
+[OWASP Top 10 for Agentic Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
+to the
+[NIST AI Risk Management Framework (AI RMF 1.0)](https://www.nist.gov/system/files/documents/2023/01/26/AI%20RMF%201.0.pdf)
 and its companion [NIST AI RMF Playbook](https://airc.nist.gov/Docs/2).
 
 Agentic AI systems — autonomous, tool-using, multi-agent — introduce
@@ -84,6 +86,7 @@ without a documented policy on permissible agent autonomy, every other
 control lacks an anchor.
 
 **Real-world references:**
+
 - EchoLeak (2025) — indirect injection turned Microsoft 365 Copilot
   into a silent exfiltration engine via email content
 
@@ -99,6 +102,7 @@ control lacks an anchor.
 #### Mitigations by tier
 
 **Foundational**
+
 - GV-1.7: Establish and document organisational policy on
   agent autonomy — define what goal changes require human
   confirmation and what actions agents cannot take autonomously
@@ -109,6 +113,7 @@ control lacks an anchor.
   regardless of source — policy enforced, not best effort
 
 **Hardening**
+
 - MS-2.5: Include goal hijack scenarios in adversarial
   evaluation programme — direct, indirect via RAG, indirect
   via email/documents/tool outputs — before each production
@@ -121,6 +126,7 @@ control lacks an anchor.
   suspension and human review
 
 **Advanced**
+
 - MS-2.5: Extend adversarial testing to cover every content
   channel your agent processes — not just user inputs but
   all indirect injection surfaces specific to your deployment
@@ -134,11 +140,12 @@ control lacks an anchor.
 
 | Tool | Type | Link |
 |---|---|---|
-| Garak | Open-source | https://github.com/leondz/garak |
-| Rebuff | Open-source | https://github.com/protectai/rebuff |
-| Invariant Analyzer | Open-source | https://github.com/invariantlabs-ai/invariant |
+| Garak | Open-source | <https://github.com/leondz/garak> |
+| Rebuff | Open-source | <https://github.com/protectai/rebuff> |
+| Invariant Analyzer | Open-source | <https://github.com/invariantlabs-ai/invariant> |
 
 #### Cross-references
+
 - LLM Top 10: LLM01 Prompt Injection, LLM03 Excessive Agency
 - DSGAI 2026: DSGAI01 Sensitive Data Leakage, DSGAI15 Over-Broad Context Windows
 - Other frameworks: AIUC-1 B001/B005/B006 · MITRE ATLAS AML.T0051 · ISA/IEC 62443 SR 3.3 (OT)
@@ -157,6 +164,7 @@ access must be inventoried with its data exposure, permission scope,
 and irreversibility classification before the agent deploys.
 
 **Real-world references:**
+
 - Amazon Q (2025) — legitimate developer tools bent into destructive
   outputs through manipulated agent inputs
 - Postmark MCP (2025) — malicious MCP server BCC'd every agent-sent
@@ -174,6 +182,7 @@ and irreversibility classification before the agent deploys.
 #### Mitigations by tier
 
 **Foundational**
+
 - GV-1.7: Establish policy requiring human confirmation for
   all irreversible tool invocations — define what constitutes
   irreversible per tool type and deployment context
@@ -185,6 +194,7 @@ and irreversibility classification before the agent deploys.
   orchestration layer
 
 **Hardening**
+
 - MS-2.5: Include tool misuse scenarios in adversarial
   evaluation — destructive parameter injection, unusual tool
   combinations, MCP descriptor poisoning — before each release
@@ -195,6 +205,7 @@ and irreversibility classification before the agent deploys.
   hidden instruction in a descriptor is a rejection trigger
 
 **Advanced**
+
 - MP-5.1: Extend tool inventory to cover runtime dynamic
   tool loading — MCP servers and plugins fetched at inference
   must be inventoried and approved before agent use
@@ -208,11 +219,12 @@ and irreversibility classification before the agent deploys.
 
 | Tool | Type | Link |
 |---|---|---|
-| Invariant Analyzer | Open-source | https://github.com/invariantlabs-ai/invariant |
-| NeMo Guardrails | Open-source | https://github.com/NVIDIA/NeMo-Guardrails |
-| MCP Inspector | Open-source | https://github.com/modelcontextprotocol/inspector |
+| Invariant Analyzer | Open-source | <https://github.com/invariantlabs-ai/invariant> |
+| NeMo Guardrails | Open-source | <https://github.com/NVIDIA/NeMo-Guardrails> |
+| MCP Inspector | Open-source | <https://github.com/modelcontextprotocol/inspector> |
 
 #### Cross-references
+
 - LLM Top 10: LLM10 Improper Output Handling, LLM03 Excessive Agency
 - DSGAI 2026: DSGAI06 Tool Plugin & Agent Data Exchange, DSGAI12 Unsafe NL Data Gateways
 - Other frameworks: AIUC-1 B006/B007 · ISA/IEC 62443 SR 2.2 (OT) · MITRE ATLAS AML.T0015
@@ -230,6 +242,7 @@ agent credential lifecycle — NHI (Non-Human Identity) governance is
 not optional for agentic deployments.
 
 **Real-world references:**
+
 - CVE-2025-54795 — Claude Code confirmation bypass enabling execution
   of untrusted commands via agent credential access
 
@@ -245,6 +258,7 @@ not optional for agentic deployments.
 #### Mitigations by tier
 
 **Foundational**
+
 - GV-1.6: Establish NHI governance policy — all agent
   identities inventoried, credentials lifecycle-managed,
   no hardcoded secrets in agent code or prompts
@@ -255,6 +269,7 @@ not optional for agentic deployments.
   never long-lived tokens shared across tasks or sessions
 
 **Hardening**
+
 - MS-2.5: Include credential leakage in adversarial evaluation —
   test memory store persistence, log capture, tool payload
   exposure for all credential types used by your agents
@@ -265,6 +280,7 @@ not optional for agentic deployments.
   automatic revocation on task completion
 
 **Advanced**
+
 - GV-1.6: Implement continuous NHI monitoring — anomalous
   token usage patterns across all agent sessions feed into
   AI risk monitoring programme
@@ -278,11 +294,12 @@ not optional for agentic deployments.
 
 | Tool | Type | Link |
 |---|---|---|
-| HashiCorp Vault | Open-source | https://www.vaultproject.io |
-| Teleport | Open-source/Commercial | https://goteleport.com |
-| Entro Security | Commercial | https://entro.security |
+| HashiCorp Vault | Open-source | <https://www.vaultproject.io> |
+| Teleport | Open-source/Commercial | <https://goteleport.com> |
+| Entro Security | Commercial | <https://entro.security> |
 
 #### Cross-references
+
 - LLM Top 10: LLM03 Excessive Agency
 - DSGAI 2026: DSGAI02 Agent Identity & Credential Exposure
 - Other frameworks: OWASP NHI Top 10 · AIUC-1 A/B007 · ISA/IEC 62443 SR 1.2 (OT)
@@ -300,6 +317,7 @@ extend to runtime dynamic components — not just pre-deployment
 component inventory.
 
 **Real-world references:**
+
 - GitHub MCP exploit (2025) — compromised MCP server altered agent
   behaviour across all connected agents
 - Postmark MCP (2025) — first malicious MCP in the wild on npm
@@ -316,6 +334,7 @@ component inventory.
 #### Mitigations by tier
 
 **Foundational**
+
 - GV-1.6: Establish supply chain governance policy for all
   agent components — approved sources, integrity requirements,
   change management procedures documented before deployment
@@ -326,6 +345,7 @@ component inventory.
   loading — unsigned components rejected
 
 **Hardening**
+
 - MS-2.5: Include supply chain integrity in adversarial
   evaluation — signature verification, descriptor review for
   hidden instructions, behavioural testing in isolated environment
@@ -335,6 +355,7 @@ component inventory.
   in production without review and approval process
 
 **Advanced**
+
 - MP-5.1: Implement runtime component integrity monitoring —
   continuous hash verification of loaded components, deviation
   triggers agent suspension
@@ -348,11 +369,12 @@ component inventory.
 
 | Tool | Type | Link |
 |---|---|---|
-| CycloneDX | Open-source | https://cyclonedx.org |
-| ModelScan | Open-source | https://github.com/protectai/modelscan |
-| MCP Inspector | Open-source | https://github.com/modelcontextprotocol/inspector |
+| CycloneDX | Open-source | <https://cyclonedx.org> |
+| ModelScan | Open-source | <https://github.com/protectai/modelscan> |
+| MCP Inspector | Open-source | <https://github.com/modelcontextprotocol/inspector> |
 
 #### Cross-references
+
 - LLM Top 10: LLM04 Supply Chain
 - DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning
 - Other frameworks: NIST SP 800-218A · AIUC-1 B001/B003 · ISA/IEC 62443 62443-2-4 (OT)
@@ -370,6 +392,7 @@ tested adversarially (MS-2.5) — code execution capability in any agent
 is a separate, elevated risk category that requires its own treatment.
 
 **Real-world references:**
+
 - AutoGPT RCE (2024) — crafted prompts triggered arbitrary code
   execution through the agent's code generation pipeline
 
@@ -385,6 +408,7 @@ is a separate, elevated risk category that requires its own treatment.
 #### Mitigations by tier
 
 **Foundational**
+
 - GV-1.7: Establish policy that agents with code execution
   capability require explicit approval — higher risk category,
   additional controls mandatory before deployment
@@ -395,6 +419,7 @@ is a separate, elevated risk category that requires its own treatment.
   network, or shell access by default, explicit allowlist required
 
 **Hardening**
+
 - MS-2.5: Include sandbox escape and code injection scenarios
   in adversarial evaluation — test against your specific
   agent runtime and sandbox configuration
@@ -405,6 +430,7 @@ is a separate, elevated risk category that requires its own treatment.
   reject code containing operations outside the allowlist
 
 **Advanced**
+
 - MS-2.5: Conduct red team exercises targeting code execution
   paths — attempt sandbox escape from within your specific
   agent runtime, document results
@@ -417,11 +443,12 @@ is a separate, elevated risk category that requires its own treatment.
 
 | Tool | Type | Link |
 |---|---|---|
-| gVisor | Open-source | https://gvisor.dev |
-| Semgrep | Open-source | https://semgrep.dev |
-| Bandit | Open-source | https://github.com/PyCQA/bandit |
+| gVisor | Open-source | <https://gvisor.dev> |
+| Semgrep | Open-source | <https://semgrep.dev> |
+| Bandit | Open-source | <https://github.com/PyCQA/bandit> |
 
 #### Cross-references
+
 - LLM Top 10: LLM10 Improper Output Handling
 - DSGAI 2026: DSGAI12 Unsafe NL Data Gateways
 - Other frameworks: AIUC-1 B005/B006 · CWE-94 · ISA/IEC 62443 SR 3.3 (OT)
@@ -438,6 +465,7 @@ interactions — unlike prompt injection, the effect persists across
 sessions without any visible triggering event.
 
 **Real-world references:**
+
 - Gemini Memory Attack (2024) — indirect injection caused persistent
   memory poisoning enabling long-term behavioural manipulation
 
@@ -453,6 +481,7 @@ sessions without any visible triggering event.
 #### Mitigations by tier
 
 **Foundational**
+
 - GV-1.6: Classify all agent memory stores as sensitive data —
   access controls, retention limits, and audit logging
   mandatory from day one, policy enforced
@@ -463,6 +492,7 @@ sessions without any visible triggering event.
   only the agent and designated administrators can write
 
 **Hardening**
+
 - MS-2.5: Include memory poisoning scenarios in adversarial
   evaluation — test injection paths via each content source
   that can write to agent memory
@@ -473,6 +503,7 @@ sessions without any visible triggering event.
   influenced by poisoned memory are reviewed and corrected
 
 **Advanced**
+
 - MS-2.5: Implement continuous memory integrity monitoring —
   statistical anomaly detection on memory content and access
   patterns, alerts integrated into AI incident management
@@ -485,11 +516,12 @@ sessions without any visible triggering event.
 
 | Tool | Type | Link |
 |---|---|---|
-| Weaviate (with RBAC) | Open-source | https://weaviate.io |
-| LlamaIndex | Open-source | https://www.llamaindex.ai |
-| Langfuse | Open-source | https://langfuse.com |
+| Weaviate (with RBAC) | Open-source | <https://weaviate.io> |
+| LlamaIndex | Open-source | <https://www.llamaindex.ai> |
+| Langfuse | Open-source | <https://langfuse.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM05 Data and Model Poisoning, LLM09 Vector and Embedding Weaknesses
 - DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning, DSGAI13 Vector Store Platform Security
 - Other frameworks: AIUC-1 A/B002 · ISO 27001 A.8.15 · ISA/IEC 62443 SR 3.7 (OT)
@@ -518,6 +550,7 @@ requires its own risk assessment.
 #### Mitigations by tier
 
 **Foundational**
+
 - GV-1.6: Establish A2A communication security policy —
   authentication, encryption, and schema validation
   requirements for all inter-agent channels
@@ -528,6 +561,7 @@ requires its own risk assessment.
   agents regardless of network location
 
 **Hardening**
+
 - MS-2.5: Include A2A security scenarios in adversarial
   evaluation — spoofing, replay, and man-in-the-middle
   attempts against your specific A2A channels
@@ -538,6 +572,7 @@ requires its own risk assessment.
   message log forensics procedure
 
 **Advanced**
+
 - MS-2.5: Implement mutual TLS on all production A2A
   channels with Zone 3 agent access — both sides
   authenticate before any message exchange
@@ -551,11 +586,12 @@ requires its own risk assessment.
 
 | Tool | Type | Link |
 |---|---|---|
-| SPIFFE / SPIRE | Open-source | https://spiffe.io |
-| Linkerd | Open-source | https://linkerd.io |
-| cert-manager | Open-source | https://cert-manager.io |
+| SPIFFE / SPIRE | Open-source | <https://spiffe.io> |
+| Linkerd | Open-source | <https://linkerd.io> |
+| cert-manager | Open-source | <https://cert-manager.io> |
 
 #### Cross-references
+
 - DSGAI 2026: DSGAI02 Agent Identity & Credential Exposure
 - Other frameworks: OWASP NHI Top 10 · AIUC-1 B007/B008 · ISA/IEC 62443 SR 3.1 (OT)
 
@@ -587,6 +623,7 @@ Critical severity — see `Agentic_ISA62443.md` for OT-specific controls.
 #### Mitigations by tier
 
 **Foundational**
+
 - MP-4.1: Define cascade blast radius before each multi-agent
   deployment — maximum systems affected by any single agent
   failure, formally accepted in risk register
@@ -597,6 +634,7 @@ Critical severity — see `Agentic_ISA62443.md` for OT-specific controls.
   continues without agent involvement, operators notified
 
 **Hardening**
+
 - MS-2.5: Include cascade scenarios in adversarial evaluation —
   intentional fault injection into multi-agent workflows,
   circuit breaker effectiveness verified
@@ -607,6 +645,7 @@ Critical severity — see `Agentic_ISA62443.md` for OT-specific controls.
   process control fallback is activated
 
 **Advanced**
+
 - MS-2.5: Conduct OT-specific chaos engineering —
   intentional failure injection with physical process
   impact assessment for OT-connected agent clusters
@@ -620,11 +659,12 @@ Critical severity — see `Agentic_ISA62443.md` for OT-specific controls.
 
 | Tool | Type | Link |
 |---|---|---|
-| OpenTelemetry | Open-source | https://opentelemetry.io |
-| Resilience4j | Open-source | https://resilience4j.readme.io |
-| LangSmith | Commercial | https://smith.langchain.com |
+| OpenTelemetry | Open-source | <https://opentelemetry.io> |
+| Resilience4j | Open-source | <https://resilience4j.readme.io> |
+| LangSmith | Commercial | <https://smith.langchain.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM06 Unbounded Consumption
 - DSGAI 2026: DSGAI17 Data Availability & Resilience Failures
 - Other frameworks: AIUC-1 D · ISA/IEC 62443 SR 7.6 (OT) · NIST SP 800-82 (OT)
@@ -653,6 +693,7 @@ aggregate over-trust patterns before they cause harm.
 #### Mitigations by tier
 
 **Foundational**
+
 - GV-1.7: Establish policy requiring all agents to identify
   as AI in user-facing interactions — transparency obligation
   enforced at the guardrail layer, not just system prompt
@@ -664,6 +705,7 @@ aggregate over-trust patterns before they cause harm.
   source in any rendering environment
 
 **Hardening**
+
 - MS-4.1: Implement feedback channels for detecting over-trust —
   user reporting, aggregate analysis of agent-influenced
   decisions, shift-level pattern review for OT operators
@@ -674,6 +716,7 @@ aggregate over-trust patterns before they cause harm.
   language patterns in agent responses
 
 **Advanced**
+
 - MS-4.1: Deploy behavioural analysis detecting when agents
   are nudging users toward specific approvals — alert on
   persuasion pattern detection across sessions
@@ -684,6 +727,7 @@ aggregate over-trust patterns before they cause harm.
   governance — reviewed annually with input from user research
 
 #### Cross-references
+
 - LLM Top 10: LLM07 Misinformation
 - DSGAI 2026: DSGAI21 Disinformation & Integrity Attacks
 - Other frameworks: EU AI Act Art. 52 · AIUC-1 C/F · NIST AI RMF GV-1.7
@@ -713,6 +757,7 @@ covered in the evaluation programme (MS-2.5) and incident response
 #### Mitigations by tier
 
 **Foundational**
+
 - GV-1.7: Establish policy requiring comprehensive audit
   logging of all agent actions from day one — no production
   deployment without full observability
@@ -723,6 +768,7 @@ covered in the evaluation programme (MS-2.5) and incident response
   layer — rogue agent cannot exceed its permission envelope
 
 **Hardening**
+
 - MS-2.5: Establish behavioural baseline for every deployed
   agent during commissioning — expected invocation patterns,
   recommendation distributions, access volumes documented
@@ -733,6 +779,7 @@ covered in the evaluation programme (MS-2.5) and incident response
   process state validation, forensic capture
 
 **Advanced**
+
 - MS-2.5: Conduct rogue agent red team exercises — simulate
   persistent hidden goal pursuit across extended sessions,
   verify detection capability holds
@@ -747,11 +794,12 @@ covered in the evaluation programme (MS-2.5) and incident response
 
 | Tool | Type | Link |
 |---|---|---|
-| Langfuse | Open-source | https://langfuse.com |
-| Helicone | Open-source | https://www.helicone.ai |
-| Weights & Biases | Commercial | https://wandb.ai |
+| Langfuse | Open-source | <https://langfuse.com> |
+| Helicone | Open-source | <https://www.helicone.ai> |
+| Weights & Biases | Commercial | <https://wandb.ai> |
 
 #### Cross-references
+
 - LLM Top 10: LLM03 Excessive Agency
 - DSGAI 2026: DSGAI16 Endpoint & Browser Overreach
 - Other frameworks: AIUC-1 B001/B002/C/E · EU AI Act Art. 9 · ISA/IEC 62443 SR 3.7 (OT)
@@ -798,5 +846,7 @@ covered in the evaluation programme (MS-2.5) and incident response
 
 ---
 
-*Part of the [OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk) —
+*Part of the
+[OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk)
+—
 maintained by the [OWASP GenAI Data Security Initiative](https://genai.owasp.org)*

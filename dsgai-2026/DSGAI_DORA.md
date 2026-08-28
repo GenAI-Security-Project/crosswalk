@@ -109,6 +109,7 @@ data access (Art. 9), deploy detection mechanisms for data access anomalies
 demonstrate compliance with DORA operational resilience requirements.
 
 **Real-world references:**
+
 - Capital One breach (2019) – misconfigured access controls and inadequate
   logging allowed mass data exfiltration to go undetected
 - SolarWinds (2020) – insufficient access logging delayed identification
@@ -126,6 +127,7 @@ demonstrate compliance with DORA operational resilience requirements.
 #### Mitigations
 
 **Foundational**
+
 - Art. 8: Register all AI data stores in the ICT asset inventory;
   document data sensitivity classification and logging requirements
 - Art. 9: Implement authentication and authorisation on all AI data
@@ -134,6 +136,7 @@ demonstrate compliance with DORA operational resilience requirements.
   training data, model weight, and inference data access events
 
 **Hardening**
+
 - Art. 10: Deploy automated access anomaly detection; alert on unusual
   patterns indicative of data exfiltration or credential misuse
 - Art. 17–23: Define incident classification criteria for AI data access
@@ -142,6 +145,7 @@ demonstrate compliance with DORA operational resilience requirements.
   full context including user, action, resource, and timestamp
 
 **Advanced**
+
 - Art. 10: Integrate AI data access monitoring into continuous DORA
   resilience assessment; deploy real-time analytics on access patterns
 - Art. 17–23: Conduct tabletop exercises for AI data access breach
@@ -153,12 +157,13 @@ demonstrate compliance with DORA operational resilience requirements.
 
 | Tool | Type | Link |
 |---|---|---|
-| OpenTelemetry | Open-source | https://opentelemetry.io |
-| Elasticsearch | Open-source | https://www.elastic.co |
-| Splunk | Commercial | https://www.splunk.com |
-| AWS CloudTrail / Azure Monitor | Commercial | https://aws.amazon.com/cloudtrail/ |
+| OpenTelemetry | Open-source | <https://opentelemetry.io> |
+| Elasticsearch | Open-source | <https://www.elastic.co> |
+| Splunk | Commercial | <https://www.splunk.com> |
+| AWS CloudTrail / Azure Monitor | Commercial | <https://aws.amazon.com/cloudtrail/> |
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - Agentic Top 10: ASI02 Misconfigured Access Controls
 - Other frameworks: FedRAMP AU-2 – SP 800-218A PS.1.1-PS – ISO 27001 A.12.4
@@ -177,6 +182,7 @@ entities cannot assess data-related risks, enforce data policies, or
 demonstrate regulatory compliance.
 
 **Real-world references:**
+
 - Multiple financial institutions reported inability to trace data flows
   through AI systems during regulatory examinations (2024–2025)
 - EU supervisory authorities cited data flow opacity as a top concern
@@ -193,6 +199,7 @@ demonstrate regulatory compliance.
 #### Mitigations
 
 **Foundational**
+
 - Art. 5–7: Define data visibility requirements for all financial AI
   systems; specify documentation and monitoring scope for each data
   category
@@ -201,6 +208,7 @@ demonstrate regulatory compliance.
 - Establish data classification scheme covering AI-specific data types
 
 **Hardening**
+
 - Art. 5–7: Include data visibility completeness in management risk
   reporting; track coverage metrics
 - Art. 8: Implement automated data flow discovery; maintain current
@@ -209,6 +217,7 @@ demonstrate regulatory compliance.
   undocumented data movement
 
 **Advanced**
+
 - Art. 5–7: Include data visibility in board-level risk reporting
 - Deploy real-time data flow visualisation for all AI pipelines
 - Art. 8: Implement continuous data asset discovery and reconciliation
@@ -217,12 +226,13 @@ demonstrate regulatory compliance.
 
 | Tool | Type | Link |
 |---|---|---|
-| Apache Atlas | Open-source | https://atlas.apache.org |
-| OpenLineage | Open-source | https://openlineage.io |
-| Collibra | Commercial | https://www.collibra.com |
-| Alation | Commercial | https://www.alation.com |
+| Apache Atlas | Open-source | <https://atlas.apache.org> |
+| OpenLineage | Open-source | <https://openlineage.io> |
+| Collibra | Commercial | <https://www.collibra.com> |
+| Alation | Commercial | <https://www.alation.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM07 Misinformation
 - Agentic Top 10: ASI09 Emerging Agentic Patterns
 - Other frameworks: FedRAMP PM-9 – SP 800-218A PW.1.1-PS – ISO 42001 A.7.2
@@ -242,6 +252,7 @@ the financial sector creates uncontrolled data processing that evades
 both DORA and GDPR oversight.
 
 **Real-world references:**
+
 - Samsung semiconductor division employees leaked proprietary data through
   unauthorised ChatGPT usage (2023)
 - Multiple banks reported shadow AI tool proliferation across trading
@@ -258,6 +269,7 @@ both DORA and GDPR oversight.
 #### Mitigations
 
 **Foundational**
+
 - Art. 28–44: Include AI tools in third-party risk assessment; conduct
   due diligence before approval; verify data handling practices
 - Art. 8: Implement shadow AI discovery; register all AI tools in
@@ -265,6 +277,7 @@ both DORA and GDPR oversight.
 - Art. 5–7: Define approved AI tools policy; communicate to all staff
 
 **Hardening**
+
 - Art. 28–44: Require contractual provisions for data handling,
   security, and incident notification from AI tool providers
 - Art. 8: Deploy automated shadow AI detection through network
@@ -272,6 +285,7 @@ both DORA and GDPR oversight.
 - Art. 5–7: Include shadow AI monitoring metrics in management reporting
 
 **Advanced**
+
 - Art. 28–44: Conduct on-site assessment of critical AI tool providers;
   verify compliance with financial sector requirements
 - Art. 8: Implement continuous shadow AI discovery with automated
@@ -282,12 +296,13 @@ both DORA and GDPR oversight.
 
 | Tool | Type | Link |
 |---|---|---|
-| Nightfall DLP | Commercial | https://www.nightfall.ai |
-| Netskope | Commercial | https://www.netskope.com |
-| Microsoft Defender for Cloud Apps | Commercial | https://www.microsoft.com/en-us/security/business/cloud-apps-defender |
-| Open Policy Agent | Open-source | https://www.openpolicyagent.org |
+| Nightfall DLP | Commercial | <https://www.nightfall.ai> |
+| Netskope | Commercial | <https://www.netskope.com> |
+| Microsoft Defender for Cloud Apps | Commercial | <https://www.microsoft.com/en-us/security/business/cloud-apps-defender> |
+| Open Policy Agent | Open-source | <https://www.openpolicyagent.org> |
 
 #### Cross-references
+
 - LLM Top 10: LLM04 Supply Chain
 - Agentic Top 10: ASI04 Supply Chain Compromise
 - Other frameworks: FedRAMP CM-7 – SP 800-218A PW.4.1-PS – EBA Outsourcing Guidelines
@@ -308,6 +323,7 @@ could produce fraudulent risk assessments, manipulated trading signals,
 or biased credit decisions.
 
 **Real-world references:**
+
 - Nightshade (2023) – poison pixels successfully corrupted image generation
   model behaviour at scale
 - BadNets (academic) – backdoor triggers embedded through poisoned training
@@ -325,6 +341,7 @@ or biased credit decisions.
 #### Mitigations
 
 **Foundational**
+
 - Art. 9: Implement access controls on all training data repositories;
   enforce least privilege; log all training data modifications; verify
   artefact integrity before use
@@ -334,6 +351,7 @@ or biased credit decisions.
   testing scope
 
 **Hardening**
+
 - Art. 9: Deploy anomaly detection on training data before each training
   run; flag statistical outliers and content inconsistent with the
   source domain
@@ -343,6 +361,7 @@ or biased credit decisions.
   restoration; test rollback procedures quarterly
 
 **Advanced**
+
 - Apply differential privacy during training to bound the influence of
   any single training example
 - Art. 24–27: Include training data poisoning in threat-led penetration
@@ -354,12 +373,13 @@ or biased credit decisions.
 
 | Tool | Type | Link |
 |---|---|---|
-| IBM Adversarial Robustness Toolbox | Open-source | https://github.com/Trusted-AI/adversarial-robustness-toolbox |
-| CleanLab | Open-source | https://github.com/cleanlab/cleanlab |
-| ModelScan | Open-source | https://github.com/protectai/modelscan |
-| Sigstore | Open-source | https://www.sigstore.dev |
+| IBM Adversarial Robustness Toolbox | Open-source | <https://github.com/Trusted-AI/adversarial-robustness-toolbox> |
+| CleanLab | Open-source | <https://github.com/cleanlab/cleanlab> |
+| ModelScan | Open-source | <https://github.com/protectai/modelscan> |
+| Sigstore | Open-source | <https://www.sigstore.dev> |
 
 #### Cross-references
+
 - LLM Top 10: LLM05 Data and Model Poisoning
 - Agentic Top 10: ASI06 Memory Poisoning & Context Confusion
 - Other frameworks: MITRE ATLAS AML.T0032 – FedRAMP SR-2 – SP 800-218A PS.1.1-PS
@@ -379,6 +399,7 @@ data provenance can lead to models trained on inappropriate, inaccurate,
 or legally restricted data.
 
 **Real-world references:**
+
 - EU AI Act Article 10 requirements for training data documentation
   prompted financial institutions to audit AI data provenance (2025)
 - Several financial AI vendors found to have used scraped data without
@@ -395,6 +416,7 @@ or legally restricted data.
 #### Mitigations
 
 **Foundational**
+
 - Art. 8: Document provenance for all training data sources; record
   collection method, date, licensing, and quality characteristics
 - Art. 9: Implement data quality validation at pipeline ingestion
@@ -403,6 +425,7 @@ or legally restricted data.
   as part of third-party risk assessment
 
 **Hardening**
+
 - Art. 8: Implement automated provenance tracking across all AI
   data pipelines; maintain provenance chain from source to model
 - Art. 9: Deploy continuous data quality monitoring; alert on quality
@@ -411,6 +434,7 @@ or legally restricted data.
   from data providers
 
 **Advanced**
+
 - Art. 8: Include provenance completeness in regulatory reporting;
   maintain audit-ready provenance records
 - Art. 9: Implement advanced data quality analytics with automated
@@ -422,12 +446,13 @@ or legally restricted data.
 
 | Tool | Type | Link |
 |---|---|---|
-| Great Expectations | Open-source | https://greatexpectations.io |
-| OpenLineage | Open-source | https://openlineage.io |
-| Apache Atlas | Open-source | https://atlas.apache.org |
-| Collibra | Commercial | https://www.collibra.com |
+| Great Expectations | Open-source | <https://greatexpectations.io> |
+| OpenLineage | Open-source | <https://openlineage.io> |
+| Apache Atlas | Open-source | <https://atlas.apache.org> |
+| Collibra | Commercial | <https://www.collibra.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM05 Data and Model Poisoning
 - Agentic Top 10: ASI06 Memory Poisoning & Context Confusion
 - Other frameworks: FedRAMP SR-3 – SP 800-218A PS.3.1-PS – ISO 42001 A.7.4
@@ -456,6 +481,7 @@ impact analysis when data quality issues or poisoning events are detected.
 #### Mitigations
 
 **Foundational**
+
 - Art. 8: Map data transformations across all AI pipelines; document
   lineage for training, fine-tuning, and inference data
 - Art. 12: Include lineage metadata in backup scope; ensure lineage
@@ -463,6 +489,7 @@ impact analysis when data quality issues or poisoning events are detected.
 - Art. 5–7: Define lineage requirements per data sensitivity level
 
 **Hardening**
+
 - Art. 8: Implement automated lineage capture using pipeline
   instrumentation; maintain current lineage documentation
 - Art. 12: Test lineage metadata restoration; verify lineage
@@ -470,6 +497,7 @@ impact analysis when data quality issues or poisoning events are detected.
 - Art. 5–7: Include lineage completeness in management reporting
 
 **Advanced**
+
 - Art. 8: Implement lineage-based impact analysis; trace downstream
   effects of data quality issues
 - Art. 12: Include lineage in DORA business continuity testing
@@ -479,12 +507,13 @@ impact analysis when data quality issues or poisoning events are detected.
 
 | Tool | Type | Link |
 |---|---|---|
-| OpenLineage | Open-source | https://openlineage.io |
-| Apache Atlas | Open-source | https://atlas.apache.org |
-| dbt | Open-source | https://www.getdbt.com |
-| Collibra | Commercial | https://www.collibra.com |
+| OpenLineage | Open-source | <https://openlineage.io> |
+| Apache Atlas | Open-source | <https://atlas.apache.org> |
+| dbt | Open-source | <https://www.getdbt.com> |
+| Collibra | Commercial | <https://www.collibra.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM05 Data and Model Poisoning
 - Agentic Top 10: ASI07 Lateral Tool Chaining
 - Other frameworks: FedRAMP CM-3 – SP 800-218A PS.3.1-PS – ISO 42001 A.7.4
@@ -514,6 +543,7 @@ of the originals.
 #### Mitigations
 
 **Foundational**
+
 - Art. 5–7: Define aggregation risk policies; assess combined sensitivity
   of datasets before merging for AI use
 - Art. 9: Implement aggregation controls; restrict dataset combination
@@ -521,6 +551,7 @@ of the originals.
 - Classify aggregated datasets at the combined sensitivity level
 
 **Hardening**
+
 - Art. 5–7: Include aggregation risk in management reporting; track
   aggregation events and sensitivity levels
 - Art. 9: Deploy automated aggregation enforcement; block unauthorised
@@ -529,6 +560,7 @@ of the originals.
   dataset combinations
 
 **Advanced**
+
 - Apply privacy-enhancing technologies — differential privacy,
   k-anonymity — to aggregated datasets before AI consumption
 - Art. 5–7: Include aggregation risk in board-level risk reporting
@@ -539,12 +571,13 @@ of the originals.
 
 | Tool | Type | Link |
 |---|---|---|
-| Microsoft Presidio | Open-source | https://github.com/microsoft/presidio |
-| ARX Data Anonymization | Open-source | https://arx.deidentifier.org |
-| Open Policy Agent | Open-source | https://www.openpolicyagent.org |
-| Collibra | Commercial | https://www.collibra.com |
+| Microsoft Presidio | Open-source | <https://github.com/microsoft/presidio> |
+| ARX Data Anonymization | Open-source | <https://arx.deidentifier.org> |
+| Open Policy Agent | Open-source | <https://www.openpolicyagent.org> |
+| Collibra | Commercial | <https://www.collibra.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - Agentic Top 10: ASI03 Privilege Escalation
 - Other frameworks: FedRAMP AC-6 – SP 800-218A PW.1.1-PS – GDPR Art. 25
@@ -563,6 +596,7 @@ indicators (Art. 10). Data leakage from financial AI systems may expose
 PII, credit data, trading strategies, or regulatory-protected information.
 
 **Real-world references:**
+
 - EchoLeak (2025) – indirect prompt injection turned Microsoft 365 Copilot
   into a silent exfiltration engine via email content
 - Samsung source code leak (2023) – proprietary data surfaced through
@@ -580,6 +614,7 @@ PII, credit data, trading strategies, or regulatory-protected information.
 #### Mitigations
 
 **Foundational**
+
 - Art. 9: Implement output monitoring and DLP for financial AI systems;
   encrypt all AI data at rest and in transit; enforce access controls
 - Art. 17–23: Define incident classification for AI data leakage;
@@ -588,6 +623,7 @@ PII, credit data, trading strategies, or regulatory-protected information.
   PII, financial data, and credential patterns
 
 **Hardening**
+
 - Art. 9: Conduct data extraction testing before deployment; verify
   training data cannot be recovered through targeted queries
 - Art. 17–23: Include AI data leakage in incident response playbooks;
@@ -596,6 +632,7 @@ PII, credit data, trading strategies, or regulatory-protected information.
   in real time; integrate with security operations
 
 **Advanced**
+
 - Apply differential privacy to training pipelines; bound memorisation
   risk for sensitive financial data
 - Art. 17–23: Conduct tabletop exercises for AI data breach scenarios
@@ -607,12 +644,13 @@ PII, credit data, trading strategies, or regulatory-protected information.
 
 | Tool | Type | Link |
 |---|---|---|
-| Microsoft Presidio | Open-source | https://github.com/microsoft/presidio |
-| LLM Guard | Open-source | https://github.com/protectai/llm-guard |
-| Nightfall DLP | Commercial | https://www.nightfall.ai |
-| AWS Macie / Azure Purview | Commercial | https://aws.amazon.com/macie/ |
+| Microsoft Presidio | Open-source | <https://github.com/microsoft/presidio> |
+| LLM Guard | Open-source | <https://github.com/protectai/llm-guard> |
+| Nightfall DLP | Commercial | <https://www.nightfall.ai> |
+| AWS Macie / Azure Purview | Commercial | <https://aws.amazon.com/macie/> |
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure, LLM08 Hidden Context Exposure
 - Agentic Top 10: ASI03 Privilege Escalation
 - Other frameworks: FedRAMP SC-28 – GDPR Art. 33–34 – SP 800-218A PS.1.1-PS
@@ -642,6 +680,7 @@ advantages.
 #### Mitigations
 
 **Foundational**
+
 - Art. 9: Encrypt AI IP at rest and in transit; implement access
   controls; deploy DLP covering model weights and proprietary data
 - Art. 28–44: Address IP ownership and protection in all AI vendor
@@ -649,6 +688,7 @@ advantages.
 - Monitor IP access patterns; log all model weight and algorithm access
 
 **Hardening**
+
 - Art. 9: Implement time-bounded access for model weight access;
   enforce multi-factor authentication for IP asset download
 - Art. 28–44: Require contractual commitments against model
@@ -657,6 +697,7 @@ advantages.
   and training data access
 
 **Advanced**
+
 - Deploy model watermarking for theft detection and attribution
 - Art. 9: Implement hardware-backed key management for model
   encryption; use trusted execution environments for inference
@@ -667,12 +708,13 @@ advantages.
 
 | Tool | Type | Link |
 |---|---|---|
-| HashiCorp Vault | Commercial | https://www.vaultproject.io |
-| Nightfall DLP | Commercial | https://www.nightfall.ai |
-| ModelScan | Open-source | https://github.com/protectai/modelscan |
-| AWS KMS / Azure Key Vault | Commercial | https://aws.amazon.com/kms/ |
+| HashiCorp Vault | Commercial | <https://www.vaultproject.io> |
+| Nightfall DLP | Commercial | <https://www.nightfall.ai> |
+| ModelScan | Open-source | <https://github.com/protectai/modelscan> |
+| AWS KMS / Azure Key Vault | Commercial | <https://aws.amazon.com/kms/> |
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - Agentic Top 10: ASI04 Supply Chain Compromise
 - Other frameworks: FedRAMP SC-28 – MITRE ATLAS AML.T0024 – SP 800-218A PS.1.1-PS
@@ -702,6 +744,7 @@ data for model training and testing, making privacy validation critical.
 #### Mitigations
 
 **Foundational**
+
 - Art. 9: Validate synthetic data privacy before use; implement
   quality controls; verify absence of direct identifiers
 - Art. 24–27: Include re-identification testing for synthetic data
@@ -709,6 +752,7 @@ data for model training and testing, making privacy validation critical.
 - Art. 13: Document synthetic data quality and privacy metrics
 
 **Hardening**
+
 - Art. 9: Deploy automated privacy validation for synthetic data
   generation; test for quasi-identifier combinations
 - Art. 24–27: Conduct advanced re-identification testing using
@@ -717,6 +761,7 @@ data for model training and testing, making privacy validation critical.
   generation parameter tuning
 
 **Advanced**
+
 - Deploy formal privacy guarantees — differential privacy — for
   synthetic data generation pipelines
 - Art. 24–27: Include synthetic data risk in TLPT scope; test for
@@ -728,12 +773,13 @@ data for model training and testing, making privacy validation critical.
 
 | Tool | Type | Link |
 |---|---|---|
-| Gretel AI | Commercial | https://gretel.ai |
-| SDV | Open-source | https://sdv.dev |
-| ARX Data Anonymization | Open-source | https://arx.deidentifier.org |
-| Microsoft Presidio | Open-source | https://github.com/microsoft/presidio |
+| Gretel AI | Commercial | <https://gretel.ai> |
+| SDV | Open-source | <https://sdv.dev> |
+| ARX Data Anonymization | Open-source | <https://arx.deidentifier.org> |
+| Microsoft Presidio | Open-source | <https://github.com/microsoft/presidio> |
 
 #### Cross-references
+
 - LLM Top 10: LLM07 Misinformation
 - Agentic Top 10: ASI09 Emerging Agentic Patterns
 - Other frameworks: FedRAMP SI-4 – SP 800-218A PW.7.2-PS – NIST Privacy Framework
@@ -763,6 +809,7 @@ particularly challenging.
 #### Mitigations
 
 **Foundational**
+
 - Art. 5–7: Define retention policies for all AI data types —
   training data, model weights, inference logs, embeddings, and
   intermediate pipeline outputs
@@ -771,6 +818,7 @@ particularly challenging.
 - Classify AI data per applicable retention requirements
 
 **Hardening**
+
 - Art. 5–7: Include retention compliance metrics in management
   reporting; track retention policy adherence
 - Art. 12: Implement crypto-shredding for secure deletion of
@@ -779,6 +827,7 @@ particularly challenging.
   alert on retention violations
 
 **Advanced**
+
 - Art. 5–7: Include retention in board-level risk reporting;
   address conflicting retention requirements
 - Deploy automated retention compliance verification across
@@ -790,12 +839,13 @@ particularly challenging.
 
 | Tool | Type | Link |
 |---|---|---|
-| AWS S3 Lifecycle / Azure Lifecycle Management | Commercial | https://aws.amazon.com/s3/ |
-| HashiCorp Vault | Commercial | https://www.vaultproject.io |
-| Open Policy Agent | Open-source | https://www.openpolicyagent.org |
-| Apache Atlas | Open-source | https://atlas.apache.org |
+| AWS S3 Lifecycle / Azure Lifecycle Management | Commercial | <https://aws.amazon.com/s3/> |
+| HashiCorp Vault | Commercial | <https://www.vaultproject.io> |
+| Open Policy Agent | Open-source | <https://www.openpolicyagent.org> |
+| Apache Atlas | Open-source | <https://atlas.apache.org> |
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - Agentic Top 10: ASI06 Memory Poisoning & Context Confusion
 - Other frameworks: FedRAMP CM-3 – GDPR Art. 17 – SP 800-218A PS.3.1-PS
@@ -824,6 +874,7 @@ derived data to avoid disputes and ensure regulatory compliance.
 #### Mitigations
 
 **Foundational**
+
 - Art. 5–7: Define ownership policies for all AI data categories —
   training data, model weights, outputs, and derived insights
 - Art. 28–44: Address ownership in all third-party agreements;
@@ -831,6 +882,7 @@ derived data to avoid disputes and ensure regulatory compliance.
 - Document ownership for all AI data assets in the ICT inventory
 
 **Hardening**
+
 - Art. 5–7: Include ownership clarity in management reporting;
   track unresolved ownership issues
 - Art. 28–44: Implement usage rights tracking for third-party data;
@@ -838,6 +890,7 @@ derived data to avoid disputes and ensure regulatory compliance.
 - Deploy automated rights management workflows for AI data
 
 **Advanced**
+
 - Art. 5–7: Include ownership in board-level reporting; address
   emerging ownership questions for AI-generated content
 - Deploy automated rights management and licensing compliance
@@ -849,12 +902,13 @@ derived data to avoid disputes and ensure regulatory compliance.
 
 | Tool | Type | Link |
 |---|---|---|
-| Collibra | Commercial | https://www.collibra.com |
-| Apache Atlas | Open-source | https://atlas.apache.org |
-| OneTrust | Commercial | https://www.onetrust.com |
-| Alation | Commercial | https://www.alation.com |
+| Collibra | Commercial | <https://www.collibra.com> |
+| Apache Atlas | Open-source | <https://atlas.apache.org> |
+| OneTrust | Commercial | <https://www.onetrust.com> |
+| Alation | Commercial | <https://www.alation.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM07 Misinformation
 - Agentic Top 10: ASI09 Emerging Agentic Patterns
 - Other frameworks: FedRAMP PM-9 – SP 800-218A PW.1.1-PS – ISO 42001 A.7.2
@@ -883,6 +937,7 @@ respects both DORA requirements and data subject rights.
 #### Mitigations
 
 **Foundational**
+
 - Art. 5–7: Define approved purposes for each AI data category;
   document purpose restrictions in ICT risk framework
 - Art. 9: Enforce purpose-limitation on AI data access; implement
@@ -890,6 +945,7 @@ respects both DORA requirements and data subject rights.
 - Art. 17–23: Define incident criteria for data misuse events
 
 **Hardening**
+
 - Art. 5–7: Include purpose compliance in management reporting;
   track data usage against approved purposes
 - Art. 9: Implement automated purpose enforcement; deploy usage
@@ -898,6 +954,7 @@ respects both DORA requirements and data subject rights.
   define severity classification
 
 **Advanced**
+
 - Art. 5–7: Include data misuse risk in board-level reporting
 - Art. 9: Deploy advanced purpose compliance verification using
   behavioural analytics and data flow analysis
@@ -908,12 +965,13 @@ respects both DORA requirements and data subject rights.
 
 | Tool | Type | Link |
 |---|---|---|
-| Open Policy Agent | Open-source | https://www.openpolicyagent.org |
-| OpenTelemetry | Open-source | https://opentelemetry.io |
-| Collibra | Commercial | https://www.collibra.com |
-| Splunk | Commercial | https://www.splunk.com |
+| Open Policy Agent | Open-source | <https://www.openpolicyagent.org> |
+| OpenTelemetry | Open-source | <https://opentelemetry.io> |
+| Collibra | Commercial | <https://www.collibra.com> |
+| Splunk | Commercial | <https://www.splunk.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM03 Excessive Agency
 - Agentic Top 10: ASI02 Misconfigured Access Controls
 - Other frameworks: FedRAMP AC-3 – GDPR Art. 5 – SP 800-218A PW.1.1-PS
@@ -943,6 +1001,7 @@ governance.
 #### Mitigations
 
 **Foundational**
+
 - Art. 5–7: Define consent requirements for all AI data processing
   activities; map consent basis per data category
 - Art. 9: Align access controls with consent status; implement
@@ -950,6 +1009,7 @@ governance.
 - Document consent basis for all AI training data
 
 **Hardening**
+
 - Art. 5–7: Include consent compliance metrics in management
   reporting; track consent coverage and withdrawal handling
 - Art. 9: Implement automated consent enforcement; block processing
@@ -957,6 +1017,7 @@ governance.
 - Deploy consent status propagation across all AI data pipelines
 
 **Advanced**
+
 - Art. 5–7: Include consent management in board-level reporting
 - Art. 9: Deploy real-time consent verification at data access
   points; implement consent-aware data pipelines
@@ -967,12 +1028,13 @@ governance.
 
 | Tool | Type | Link |
 |---|---|---|
-| OneTrust | Commercial | https://www.onetrust.com |
-| TrustArc | Commercial | https://trustarc.com |
-| Collibra | Commercial | https://www.collibra.com |
-| Open Policy Agent | Open-source | https://www.openpolicyagent.org |
+| OneTrust | Commercial | <https://www.onetrust.com> |
+| TrustArc | Commercial | <https://trustarc.com> |
+| Collibra | Commercial | <https://www.collibra.com> |
+| Open Policy Agent | Open-source | <https://www.openpolicyagent.org> |
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - Agentic Top 10: ASI02 Misconfigured Access Controls
 - Other frameworks: FedRAMP PM-9 – GDPR Art. 7 – NIST Privacy Framework
@@ -1001,6 +1063,7 @@ particularly for customer financial data.
 #### Mitigations
 
 **Foundational**
+
 - Art. 5–7: Define minimisation requirements per AI use case;
   document justification for each data element collected
 - Art. 9: Restrict collection to minimum necessary data; implement
@@ -1008,6 +1071,7 @@ particularly for customer financial data.
 - Conduct data necessity assessments for all AI systems
 
 **Hardening**
+
 - Art. 5–7: Include minimisation metrics in management reporting;
   track data collection volumes against justified minimums
 - Art. 9: Deploy automated minimisation enforcement; block collection
@@ -1015,6 +1079,7 @@ particularly for customer financial data.
 - Implement data stripping and anonymisation at collection time
 
 **Advanced**
+
 - Deploy privacy-enhancing technologies — federated learning,
   secure aggregation — to reduce data requirements
 - Art. 5–7: Include minimisation in board-level risk reporting
@@ -1024,12 +1089,13 @@ particularly for customer financial data.
 
 | Tool | Type | Link |
 |---|---|---|
-| Microsoft Presidio | Open-source | https://github.com/microsoft/presidio |
-| ARX Data Anonymization | Open-source | https://arx.deidentifier.org |
-| Open Policy Agent | Open-source | https://www.openpolicyagent.org |
-| OneTrust | Commercial | https://www.onetrust.com |
+| Microsoft Presidio | Open-source | <https://github.com/microsoft/presidio> |
+| ARX Data Anonymization | Open-source | <https://arx.deidentifier.org> |
+| Open Policy Agent | Open-source | <https://www.openpolicyagent.org> |
+| OneTrust | Commercial | <https://www.onetrust.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - Agentic Top 10: ASI02 Misconfigured Access Controls
 - Other frameworks: FedRAMP AC-6 – GDPR Art. 5(1)(c) – NIST Privacy Framework
@@ -1050,6 +1116,7 @@ health conditions, or life events from seemingly innocuous transaction
 data.
 
 **Real-world references:**
+
 - Target pregnancy prediction (2012) — retail analytics inferred
   customer pregnancy from purchase patterns before the customer
   disclosed it
@@ -1067,6 +1134,7 @@ data.
 #### Mitigations
 
 **Foundational**
+
 - Art. 5–7: Assess privacy erosion risk for each financial AI system;
   document inference, aggregation, and memorisation risk profiles
 - Art. 9: Implement privacy-preserving controls; restrict AI inference
@@ -1074,6 +1142,7 @@ data.
 - Art. 10: Monitor for privacy degradation indicators in AI outputs
 
 **Hardening**
+
 - Art. 9: Deploy memorisation testing on trained models; verify
   training data privacy before production deployment
 - Art. 5–7: Include privacy erosion risk in management reporting;
@@ -1082,6 +1151,7 @@ data.
   to extract private information through model queries
 
 **Advanced**
+
 - Apply differential privacy to training pipelines handling
   financial customer data; track privacy budget
 - Art. 5–7: Include privacy erosion in board-level risk reporting
@@ -1092,12 +1162,13 @@ data.
 
 | Tool | Type | Link |
 |---|---|---|
-| Opacus | Open-source | https://opacus.ai |
-| ARX Data Anonymization | Open-source | https://arx.deidentifier.org |
-| Microsoft Presidio | Open-source | https://github.com/microsoft/presidio |
-| OneTrust | Commercial | https://www.onetrust.com |
+| Opacus | Open-source | <https://opacus.ai> |
+| ARX Data Anonymization | Open-source | <https://arx.deidentifier.org> |
+| Microsoft Presidio | Open-source | <https://github.com/microsoft/presidio> |
+| OneTrust | Commercial | <https://www.onetrust.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - Agentic Top 10: ASI03 Privilege Escalation
 - Other frameworks: FedRAMP SC-28 – GDPR Art. 25 – SP 800-218A PW.1.1-PS
@@ -1117,6 +1188,7 @@ regulators increasingly scrutinise AI-driven decision fairness,
 making bias detection a regulatory compliance requirement.
 
 **Real-world references:**
+
 - Apple Card gender discrimination allegations (2019) — AI credit
   scoring produced disparate outcomes by gender
 - UK FCA review of AI in financial services (2024) — highlighted
@@ -1133,6 +1205,7 @@ making bias detection a regulatory compliance requirement.
 #### Mitigations
 
 **Foundational**
+
 - Art. 5–7: Define fairness requirements for all financial AI use
   cases; specify acceptable disparity thresholds per regulation
 - Art. 24–27: Include bias testing in baseline resilience testing;
@@ -1140,6 +1213,7 @@ making bias detection a regulatory compliance requirement.
 - Art. 13: Document bias assessment results; track fairness trends
 
 **Hardening**
+
 - Art. 5–7: Include fairness metrics in management reporting;
   escalate bias findings through risk governance channels
 - Art. 24–27: Conduct disparate impact testing using representative
@@ -1148,6 +1222,7 @@ making bias detection a regulatory compliance requirement.
   data curation and model parameter tuning
 
 **Advanced**
+
 - Deploy formal fairness constraints in model training pipelines
 - Art. 5–7: Include bias risk in board-level risk reporting;
   address regulatory fairness expectations
@@ -1158,12 +1233,13 @@ making bias detection a regulatory compliance requirement.
 
 | Tool | Type | Link |
 |---|---|---|
-| IBM AI Fairness 360 | Open-source | https://aif360.mybluemix.net |
-| Fairlearn | Open-source | https://fairlearn.org |
-| What-If Tool | Open-source | https://pair-code.github.io/what-if-tool/ |
-| Fiddler AI | Commercial | https://www.fiddler.ai |
+| IBM AI Fairness 360 | Open-source | <https://aif360.mybluemix.net> |
+| Fairlearn | Open-source | <https://fairlearn.org> |
+| What-If Tool | Open-source | <https://pair-code.github.io/what-if-tool/> |
+| Fiddler AI | Commercial | <https://www.fiddler.ai> |
 
 #### Cross-references
+
 - LLM Top 10: LLM07 Misinformation
 - Agentic Top 10: ASI09 Emerging Agentic Patterns
 - Other frameworks: FedRAMP SI-4 – NIST AI RMF MAP 2.3 – ISO 42001 A.6.2.6
@@ -1193,6 +1269,7 @@ across AI deployments.
 #### Mitigations
 
 **Foundational**
+
 - Art. 5–7: Establish AI data governance framework; define roles,
   responsibilities, and escalation procedures; appoint data owners
   for all AI systems
@@ -1201,6 +1278,7 @@ across AI deployments.
 - Map all AI systems subject to governance requirements
 
 **Hardening**
+
 - Art. 5–7: Include governance maturity metrics in management
   reporting; track policy coverage and compliance rates
 - Art. 13: Conduct regular governance gap analysis; compare
@@ -1209,6 +1287,7 @@ across AI deployments.
   AI deployments
 
 **Advanced**
+
 - Art. 5–7: Include governance maturity in board-level reporting;
   benchmark against financial sector peers
 - Deploy automated governance monitoring and compliance dashboards
@@ -1219,12 +1298,13 @@ across AI deployments.
 
 | Tool | Type | Link |
 |---|---|---|
-| Collibra | Commercial | https://www.collibra.com |
-| Open Policy Agent | Open-source | https://www.openpolicyagent.org |
-| ServiceNow GRC | Commercial | https://www.servicenow.com |
-| Alation | Commercial | https://www.alation.com |
+| Collibra | Commercial | <https://www.collibra.com> |
+| Open Policy Agent | Open-source | <https://www.openpolicyagent.org> |
+| ServiceNow GRC | Commercial | <https://www.servicenow.com> |
+| Alation | Commercial | <https://www.alation.com> |
 
 #### Cross-references
+
 - LLM Top 10: LLM07 Misinformation
 - Agentic Top 10: ASI09 Emerging Agentic Patterns
 - Other frameworks: FedRAMP PM-9 – NIST AI RMF GOV – ISO 42001 5.1
@@ -1245,6 +1325,7 @@ ICT risk management for the financial sector, including designation
 of critical third-party providers by European Supervisory Authorities.
 
 **Real-world references:**
+
 - Multiple financial institutions experienced data quality degradation
   when third-party data vendors changed collection methodologies without
   notification (2024)
@@ -1262,6 +1343,7 @@ of critical third-party providers by European Supervisory Authorities.
 #### Mitigations
 
 **Foundational**
+
 - Art. 28–44: Include all data providers in third-party risk
   assessment; establish contractual controls covering security,
   data quality, and incident notification
@@ -1271,6 +1353,7 @@ of critical third-party providers by European Supervisory Authorities.
   data security threats
 
 **Hardening**
+
 - Art. 28–44: Identify critical data providers per DORA criteria;
   require enhanced oversight and contractual commitments;
   assess concentration risk
@@ -1280,6 +1363,7 @@ of critical third-party providers by European Supervisory Authorities.
   AI data threats
 
 **Advanced**
+
 - Art. 28–44: Conduct on-site assessments of critical data providers;
   verify their security posture and data handling practices
 - Art. 8: Deploy continuous third-party data monitoring with
@@ -1291,12 +1375,13 @@ of critical third-party providers by European Supervisory Authorities.
 
 | Tool | Type | Link |
 |---|---|---|
-| OneTrust Vendorpedia | Commercial | https://www.onetrust.com |
-| ServiceNow VRM | Commercial | https://www.servicenow.com |
-| CycloneDX | Open-source | https://cyclonedx.org |
-| Great Expectations | Open-source | https://greatexpectations.io |
+| OneTrust Vendorpedia | Commercial | <https://www.onetrust.com> |
+| ServiceNow VRM | Commercial | <https://www.servicenow.com> |
+| CycloneDX | Open-source | <https://cyclonedx.org> |
+| Great Expectations | Open-source | <https://greatexpectations.io> |
 
 #### Cross-references
+
 - LLM Top 10: LLM04 Supply Chain
 - Agentic Top 10: ASI04 Supply Chain Compromise
 - Other frameworks: FedRAMP SA-9 – EBA Outsourcing Guidelines – SP 800-218A PW.4.1-PS
@@ -1316,6 +1401,7 @@ strict data residency requirements, and AI workloads processed by
 cloud-based providers may inadvertently cross jurisdictional boundaries.
 
 **Real-world references:**
+
 - Schrems II (2020) invalidated EU-US Privacy Shield, forcing
   financial institutions to reassess cross-border AI data transfers
 - EU Data Act (2024) introduced additional data localisation
@@ -1332,6 +1418,7 @@ cloud-based providers may inadvertently cross jurisdictional boundaries.
 #### Mitigations
 
 **Foundational**
+
 - Art. 5–7: Define localisation requirements per applicable laws
   and regulations; map requirements to AI data categories
 - Art. 28–44: Verify provider data processing locations; include
@@ -1339,6 +1426,7 @@ cloud-based providers may inadvertently cross jurisdictional boundaries.
 - Document data processing locations for all AI workloads
 
 **Hardening**
+
 - Art. 5–7: Include localisation compliance in management reporting;
   track data residency status across all AI systems
 - Art. 28–44: Require contractual localisation commitments; implement
@@ -1346,6 +1434,7 @@ cloud-based providers may inadvertently cross jurisdictional boundaries.
 - Deploy automated cross-border transfer detection and blocking
 
 **Advanced**
+
 - Art. 5–7: Include localisation in board-level risk reporting;
   address evolving jurisdictional requirements
 - Art. 28–44: Conduct provider location verification audits;
@@ -1357,12 +1446,13 @@ cloud-based providers may inadvertently cross jurisdictional boundaries.
 
 | Tool | Type | Link |
 |---|---|---|
-| AWS Region Controls / Azure Policy | Commercial | https://aws.amazon.com/compliance/data-residency/ |
-| Netskope | Commercial | https://www.netskope.com |
-| OneTrust | Commercial | https://www.onetrust.com |
-| Open Policy Agent | Open-source | https://www.openpolicyagent.org |
+| AWS Region Controls / Azure Policy | Commercial | <https://aws.amazon.com/compliance/data-residency/> |
+| Netskope | Commercial | <https://www.netskope.com> |
+| OneTrust | Commercial | <https://www.onetrust.com> |
+| Open Policy Agent | Open-source | <https://www.openpolicyagent.org> |
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - Agentic Top 10: ASI04 Supply Chain Compromise
 - Other frameworks: FedRAMP SC-7 – GDPR Art. 44–49 – DORA Art. 28–44
@@ -1383,6 +1473,7 @@ can result in significant fines, licence revocation, and reputational
 damage.
 
 **Real-world references:**
+
 - Meta GDPR fine of EUR 1.2 billion (2023) for unlawful cross-border
   data transfers — directly applicable to AI training data
 - Italian DPA temporarily banned ChatGPT (2023) over GDPR compliance
@@ -1400,6 +1491,7 @@ damage.
 #### Mitigations
 
 **Foundational**
+
 - Art. 5–7: Map all applicable data laws to AI processing activities;
   define compliance requirements per data type and jurisdiction
 - Art. 17–23: Define incident classification criteria for compliance
@@ -1409,6 +1501,7 @@ damage.
   changes affecting AI data processing
 
 **Hardening**
+
 - Art. 5–7: Include compliance status in management reporting; track
   compliance metrics across all AI systems and jurisdictions
 - Art. 17–23: Include compliance failures in incident response
@@ -1417,6 +1510,7 @@ damage.
   for new regulations and enforcement guidance
 
 **Advanced**
+
 - Art. 5–7: Include compliance in board-level risk reporting;
   maintain regulatory change monitoring programme
 - Deploy automated compliance monitoring across all AI systems;
@@ -1428,12 +1522,13 @@ damage.
 
 | Tool | Type | Link |
 |---|---|---|
-| OneTrust | Commercial | https://www.onetrust.com |
-| TrustArc | Commercial | https://trustarc.com |
-| ServiceNow GRC | Commercial | https://www.servicenow.com |
-| Open Policy Agent | Open-source | https://www.openpolicyagent.org |
+| OneTrust | Commercial | <https://www.onetrust.com> |
+| TrustArc | Commercial | <https://trustarc.com> |
+| ServiceNow GRC | Commercial | <https://www.servicenow.com> |
+| Open Policy Agent | Open-source | <https://www.openpolicyagent.org> |
 
 #### Cross-references
+
 - LLM Top 10: LLM02 Sensitive Information Disclosure
 - Agentic Top 10: ASI02 Misconfigured Access Controls
 - Other frameworks: FedRAMP PM-9 – GDPR – CCPA – DORA Art. 5–7
@@ -1470,5 +1565,7 @@ damage.
 
 ---
 
-*Part of the [OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk) –
+*Part of the
+[OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk)
+–
 maintained by the [OWASP GenAI Data Security Initiative](https://genai.owasp.org)*
