@@ -15,7 +15,7 @@
 > **<!-- stats:frameworks-mapped -->23<!-- /stats --> frameworks** and
 > **<!-- stats:source-lists -->3<!-- /stats --> OWASP source lists**.
 
-## [Live Web App](https://emmanuelgjr.github.io/GenAI-Security-Crosswalk/) | [Score Your Coverage](https://emmanuelgjr.github.io/GenAI-Security-Crosswalk/#/score) | [Explore Entries](https://emmanuelgjr.github.io/GenAI-Security-Crosswalk/#/explorer) | [View Incidents](https://emmanuelgjr.github.io/GenAI-Security-Crosswalk/#/incidents)
+## [Live Web App](https://genai-security-project.github.io/crosswalk/) | [Score Your Coverage](https://genai-security-project.github.io/crosswalk/#/score) | [Explore Entries](https://genai-security-project.github.io/crosswalk/#/explorer) | [View Incidents](https://genai-security-project.github.io/crosswalk/#/incidents)
 
 Created and led by **[Emmanuel Guilherme Junior](https://github.com/emmanuelgjr)**, who leads the
 [OWASP GenAI Data Security Initiative](https://genai.owasp.org) .
@@ -36,7 +36,7 @@ Pick your risk, find your controls.
 ### 3 ways to use it (pick one)
 
 **1. Score your coverage in 60 seconds** (no install needed)
-> Go to the **[web app](https://emmanuelgjr.github.io/GenAI-Security-Crosswalk/#/score)**, select the
+> Go to the **[web app](https://genai-security-project.github.io/crosswalk/#/score)**, select the
 > frameworks you implement, see your gaps instantly. Upload tool results to validate.
 
 **2. Read the mapping file you need** (browse the repo)
@@ -58,8 +58,8 @@ node scripts/incidents-report.js --format stix              # SIEM/SOAR export
 
 | You are... | Start here |
 |---|---|
-| **CISO / compliance officer** | [Score your coverage](https://emmanuelgjr.github.io/GenAI-Security-Crosswalk/#/score) → export the gap report |
-| **Security engineer** | [Explorer](https://emmanuelgjr.github.io/GenAI-Security-Crosswalk/#/explorer) → search by risk, see all controls |
+| **CISO / compliance officer** | [Score your coverage](https://genai-security-project.github.io/crosswalk/#/score) → export the gap report |
+| **Security engineer** | [Explorer](https://genai-security-project.github.io/crosswalk/#/explorer) → search by risk, see all controls |
 | **Red teamer** | [LAAF guide](evals/laaf/README.md) → run S1–S6 attack stages, map results to OWASP |
 | **GRC / auditor** | `compliance-report.js --format oscal` → import into ServiceNow/Archer |
 | **Developer** | `npm install genai-security-crosswalk` → query risks + controls programmatically |
@@ -422,16 +422,16 @@ spreads) · **Impact** (where harm manifests) · **Blind-spot** (where detection
 
 ### Web app — interactive dashboard
 
-**<https://emmanuelgjr.github.io/GenAI-Security-Crosswalk/>**
+**<https://genai-security-project.github.io/crosswalk/>**
 
 No install required. Works on desktop and mobile.
 
 | Page | What it does |
 |------|-------------|
-| [**Score**](https://emmanuelgjr.github.io/GenAI-Security-Crosswalk/#/score) | Select your frameworks, see coverage gaps. Upload Garak/PyRIT/LAAF results to validate. Share your score card on LinkedIn. |
-| [**Explorer**](https://emmanuelgjr.github.io/GenAI-Security-Crosswalk/#/explorer) | Search and filter all <!-- stats:entries -->41<!-- /stats --> entries. Click any entry to see controls across all <!-- stats:frameworks-mapped -->23<!-- /stats --> frameworks. |
-| [**Frameworks**](https://emmanuelgjr.github.io/GenAI-Security-Crosswalk/#/frameworks) | Interactive <!-- stats:entries -->41<!-- /stats -->×<!-- stats:frameworks-mapped -->23<!-- /stats --> coverage matrix. Click any cell to see the specific controls mapped. |
-| [**Incidents**](https://emmanuelgjr.github.io/GenAI-Security-Crosswalk/#/incidents) | Browse 50 AI security incidents. Filter by severity, year, MAESTRO layer. Full attribution details. |
+| [**Score**](https://genai-security-project.github.io/crosswalk/#/score) | Select your frameworks, see coverage gaps. Upload Garak/PyRIT/LAAF results to validate. Share your score card on LinkedIn. |
+| [**Explorer**](https://genai-security-project.github.io/crosswalk/#/explorer) | Search and filter all <!-- stats:entries -->41<!-- /stats --> entries. Click any entry to see controls across all <!-- stats:frameworks-mapped -->23<!-- /stats --> frameworks. |
+| [**Frameworks**](https://genai-security-project.github.io/crosswalk/#/frameworks) | Interactive <!-- stats:entries -->41<!-- /stats -->×<!-- stats:frameworks-mapped -->23<!-- /stats --> coverage matrix. Click any cell to see the specific controls mapped. |
+| [**Incidents**](https://genai-security-project.github.io/crosswalk/#/incidents) | Browse 50 AI security incidents. Filter by severity, year, MAESTRO layer. Full attribution details. |
 
 **Evidence-based scoring** — three validation tiers:
 

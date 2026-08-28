@@ -1,6 +1,6 @@
 # GenAI Crosswalk
 
-> GenAI Crosswalk is the flagship dataset and tool of the **OWASP GenAI Security Project** (https://genai.owasp.org). It maps 41 Gen AI and Agentic AI security risk entries — spanning the OWASP LLM Top 10, the OWASP Top 10 for Agentic Applications, and DSGAI (Data Security for GenAI) — to 25 industry security, compliance, and AI-governance frameworks (NIST AI RMF, ISO/IEC 42001, EU AI Act, FedRAMP, DORA, MITRE ATLAS, OWASP ASVS/SAMM, PCI DSS, SOC 2, and more), with 1,500+ individual control mappings.
+> GenAI Crosswalk is the flagship dataset and tool of the **OWASP GenAI Security Project** (https://genai.owasp.org). It maps 41 Gen AI and Agentic AI security risk entries — spanning the OWASP LLM Top 10, the OWASP Top 10 for Agentic Applications, and DSGAI (Data Security for GenAI) — to 25 industry security, compliance, and AI-governance frameworks (NIST AI RMF, ISO/IEC 42001, EU AI Act, FedRAMP, DORA, MITRE ATLAS, OWASP ASVS/SAMM, PCI DSS, SOC 2, and more), with 3,211 individual control mappings.
 
 ## What this is
 
@@ -13,7 +13,7 @@ Core question it answers: **"Given a Gen AI or Agentic AI security risk, which c
 - Home / interactive explorer: https://genai-security-project.github.io/crosswalk/
 - OWASP Top 10 for Agentic AI — risks and mitigations: https://genai-security-project.github.io/crosswalk/agentic-ai-top10/
 - OWASP LLM Top 10 — risks and mitigations: https://genai-security-project.github.io/crosswalk/llm-top10/
-- AI security standards crosswalk (25 frameworks): https://genai-security-project.github.io/crosswalk/ai-standards-crosswalk/
+- AI security standards crosswalk (23 frameworks): https://genai-security-project.github.io/crosswalk/ai-standards-crosswalk/
 - Source repository: https://github.com/GenAI-Security-Project/crosswalk
 - OWASP GenAI Security Project (parent org): https://genai.owasp.org
 
