@@ -14,6 +14,18 @@ to the [OWASP AI Vulnerability Scoring System (AIVSS)](https://aivss.owasp.org) 
 the scoring framework designed to quantify the severity of vulnerabilities
 in AI and ML systems in a way that standard CVSS cannot adequately capture.
 
+> **Vectors are on the CVSS v3.1 baseline; AIVSS requires v4.0.** The AIVSS
+> specification states that v3.1 scores must not be used as inputs because the
+> metric structures are not directly comparable — v4.0 splits Scope into
+> Vulnerable System Impact (VC/VI/VA) and Subsequent System Impact (SC/SI/SA),
+> and it is the subsequent-system impact that carries agentic propagation.
+> All 20 vectors below therefore cannot be reproduced by a reader following the
+> spec. They have **not** been converted: there is no v3.1 field to carry
+> subsequent-system impact across, so the values must be re-assessed rather than
+> mapped. Empty worksheets are in
+> [`shared/AIVSS_WORKSHEETS.md`](../shared/AIVSS_WORKSHEETS.md); run
+> `node scripts/validate-aivss.mjs` for the current report.
+
 ---
 
 ## Why AIVSS for agentic AI
@@ -601,7 +613,10 @@ Use AIVSS scores to drive prioritisation in your AI risk register:
 
 - [OWASP AIVSS](https://aivss.owasp.org)
 - [OWASP Agentic Top 10 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
-- [CVSS v3.1 Specification](https://www.first.org/cvss/specification-document)
+- [CVSS v4.0 Specification](https://www.first.org/cvss/v4-0/specification-document)
+  — the baseline AIVSS requires
+- [CVSS v3.1 Specification](https://www.first.org/cvss/v3-1/specification-document)
+  — the structure the vectors here currently use, which the AIVSS spec excludes
 - [AIUC-1 Standard](https://www.aiuc-1.com)
 
 ---
