@@ -3108,6 +3108,1338 @@
     ]
   },
   {
+    "framework": "CoSAI",
+    "control_id": "WS1-SSC-1",
+    "control_name": "AI software supply chain risk assessment",
+    "entries": [
+      {
+        "id": "LLM04",
+        "name": "Supply Chain",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "CoSAI",
+    "control_id": "WS1-SSC-2",
+    "control_name": "ML artifact signing and verification",
+    "entries": [
+      {
+        "id": "LLM04",
+        "name": "Supply Chain",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "LLM05",
+        "name": "Data and Model Poisoning",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "ASI04",
+        "name": "Agentic Supply Chain",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI04",
+        "name": "Data Model and Artifact Poisoning",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI20",
+        "name": "Model Exfiltration and IP Replication",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "CoSAI",
+    "control_id": "WS1-SSC-3",
+    "control_name": "Model provenance tracking",
+    "entries": [
+      {
+        "id": "LLM04",
+        "name": "Supply Chain",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "LLM05",
+        "name": "Data and Model Poisoning",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI04",
+        "name": "Data Model and Artifact Poisoning",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI18",
+        "name": "Inference and Data Reconstruction",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "CoSAI",
+    "control_id": "WS1-SSC-4",
+    "control_name": "Training data supply chain integrity",
+    "entries": [
+      {
+        "id": "LLM05",
+        "name": "Data and Model Poisoning",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "LLM09",
+        "name": "Vector and Embedding Weaknesses",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Medium",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "ASI06",
+        "name": "Memory and Context Poisoning",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI04",
+        "name": "Data Model and Artifact Poisoning",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI05",
+        "name": "Data Integrity and Validation Failures",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI10",
+        "name": "Synthetic Data and Anonymization Pitfalls",
+        "source_list": "DSGAI-2026",
+        "severity": "Medium",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI19",
+        "name": "Human-in-Loop and Labeler Overexposure",
+        "source_list": "DSGAI-2026",
+        "severity": "Medium",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI21",
+        "name": "Disinformation via Data Poisoning",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "CoSAI",
+    "control_id": "WS1-SSC-5",
+    "control_name": "AI dependency management",
+    "entries": [
+      {
+        "id": "LLM04",
+        "name": "Supply Chain",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "ASI04",
+        "name": "Agentic Supply Chain",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI06",
+        "name": "Tool Plugin and Agent Data Exchange",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI13",
+        "name": "Vector Store Platform Security",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "CoSAI",
+    "control_id": "WS1-SSC-6",
+    "control_name": "Secure model distribution",
+    "entries": [
+      {
+        "id": "LLM04",
+        "name": "Supply Chain",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI20",
+        "name": "Model Exfiltration and IP Replication",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "CoSAI",
+    "control_id": "WS2-DEF-2",
+    "control_name": "AI attack surface mapping",
+    "entries": [
+      {
+        "id": "LLM01",
+        "name": "Prompt Injection",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "LLM08",
+        "name": "Hidden Context Exposure",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "LLM09",
+        "name": "Vector and Embedding Weaknesses",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Medium",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI03",
+        "name": "Shadow AI and Unsanctioned Data Flows",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI09",
+        "name": "Multimodal Cross-Channel Leakage",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI16",
+        "name": "Endpoint and Browser Overreach",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "CoSAI",
+    "control_id": "WS2-DEF-3",
+    "control_name": "AI incident response procedures",
+    "entries": [
+      {
+        "id": "ASI10",
+        "name": "Rogue Agents",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI17",
+        "name": "Data Availability and Resilience Failures",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "CoSAI",
+    "control_id": "WS2-DEF-5",
+    "control_name": "AI security monitoring and telemetry",
+    "entries": [
+      {
+        "id": "LLM01",
+        "name": "Prompt Injection",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "LLM02",
+        "name": "Sensitive Information Disclosure",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "LLM06",
+        "name": "Unbounded Consumption",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "ASI05",
+        "name": "Unexpected Code Execution",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "ASI06",
+        "name": "Memory and Context Poisoning",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI01",
+        "name": "Sensitive Data Leakage",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI05",
+        "name": "Data Integrity and Validation Failures",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI09",
+        "name": "Multimodal Cross-Channel Leakage",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI11",
+        "name": "Cross-Context Conversation Bleed",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI12",
+        "name": "Unsafe Natural Language Data Gateways",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI14",
+        "name": "Excessive Telemetry and Monitoring Leakage",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI20",
+        "name": "Model Exfiltration and IP Replication",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "CoSAI",
+    "control_id": "WS2-DEF-6",
+    "control_name": "AI red teaming and adversarial testing",
+    "entries": [
+      {
+        "id": "LLM01",
+        "name": "Prompt Injection",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "LLM07",
+        "name": "Misinformation",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "LLM10",
+        "name": "Improper Output Handling",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI09",
+        "name": "Multimodal Cross-Channel Leakage",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI10",
+        "name": "Synthetic Data and Anonymization Pitfalls",
+        "source_list": "DSGAI-2026",
+        "severity": "Medium",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI12",
+        "name": "Unsafe Natural Language Data Gateways",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI18",
+        "name": "Inference and Data Reconstruction",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI21",
+        "name": "Disinformation via Data Poisoning",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "CoSAI",
+    "control_id": "WS3-GOV-1",
+    "control_name": "AI security risk taxonomy",
+    "entries": [
+      {
+        "id": "LLM08",
+        "name": "Hidden Context Exposure",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI03",
+        "name": "Shadow AI and Unsanctioned Data Flows",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI07",
+        "name": "Data Governance and Lifecycle",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "CoSAI",
+    "control_id": "WS3-GOV-2",
+    "control_name": "AI risk assessment methodology",
+    "entries": [
+      {
+        "id": "LLM02",
+        "name": "Sensitive Information Disclosure",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI01",
+        "name": "Sensitive Data Leakage",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI07",
+        "name": "Data Governance and Lifecycle",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI08",
+        "name": "Non-Compliance and Regulatory Violations",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI10",
+        "name": "Synthetic Data and Anonymization Pitfalls",
+        "source_list": "DSGAI-2026",
+        "severity": "Medium",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI17",
+        "name": "Data Availability and Resilience Failures",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI18",
+        "name": "Inference and Data Reconstruction",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "CoSAI",
+    "control_id": "WS3-GOV-3",
+    "control_name": "AI security scorecard",
+    "entries": [
+      {
+        "id": "LLM07",
+        "name": "Misinformation",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI08",
+        "name": "Non-Compliance and Regulatory Violations",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI21",
+        "name": "Disinformation via Data Poisoning",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "CoSAI",
+    "control_id": "WS3-GOV-4",
+    "control_name": "AI security controls checklist",
+    "entries": [
+      {
+        "id": "LLM09",
+        "name": "Vector and Embedding Weaknesses",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Medium",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "LLM10",
+        "name": "Improper Output Handling",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI05",
+        "name": "Data Integrity and Validation Failures",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI11",
+        "name": "Cross-Context Conversation Bleed",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI13",
+        "name": "Vector Store Platform Security",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI14",
+        "name": "Excessive Telemetry and Monitoring Leakage",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI15",
+        "name": "Over-Broad Context Windows",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "CoSAI",
+    "control_id": "WS3-GOV-5",
+    "control_name": "Third-party AI risk management",
+    "entries": [
+      {
+        "id": "ASI04",
+        "name": "Agentic Supply Chain",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI03",
+        "name": "Shadow AI and Unsanctioned Data Flows",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI19",
+        "name": "Human-in-Loop and Labeler Overexposure",
+        "source_list": "DSGAI-2026",
+        "severity": "Medium",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "CoSAI",
+    "control_id": "WS3-GOV-6",
+    "control_name": "AI regulatory compliance mapping",
+    "entries": [
+      {
+        "id": "DSGAI07",
+        "name": "Data Governance and Lifecycle",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI08",
+        "name": "Non-Compliance and Regulatory Violations",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "CoSAI",
+    "control_id": "WS4-AGT-1.1",
+    "control_name": "Risk-based human oversight",
+    "entries": [
+      {
+        "id": "LLM03",
+        "name": "Excessive Agency",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "ASI01",
+        "name": "Agent Goal Hijack",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "ASI09",
+        "name": "Human-Agent Trust Exploitation",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI19",
+        "name": "Human-in-Loop and Labeler Overexposure",
+        "source_list": "DSGAI-2026",
+        "severity": "Medium",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "CoSAI",
+    "control_id": "WS4-AGT-1.2",
+    "control_name": "Authority boundary definition",
+    "entries": [
+      {
+        "id": "LLM03",
+        "name": "Excessive Agency",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "ASI01",
+        "name": "Agent Goal Hijack",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "ASI10",
+        "name": "Rogue Agents",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "CoSAI",
+    "control_id": "WS4-AGT-1.3",
+    "control_name": "Agent accountability chain",
+    "entries": [
+      {
+        "id": "ASI03",
+        "name": "Identity and Privilege Abuse",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "ASI08",
+        "name": "Cascading Agent Failures",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "ASI09",
+        "name": "Human-Agent Trust Exploitation",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI02",
+        "name": "Agent Identity and Credential Exposure",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "CoSAI",
+    "control_id": "WS4-AGT-2.1",
+    "control_name": "Purpose-specific entitlements",
+    "entries": [
+      {
+        "id": "LLM02",
+        "name": "Sensitive Information Disclosure",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "LLM03",
+        "name": "Excessive Agency",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "ASI02",
+        "name": "Tool Misuse and Exploitation",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "ASI03",
+        "name": "Identity and Privilege Abuse",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI01",
+        "name": "Sensitive Data Leakage",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI02",
+        "name": "Agent Identity and Credential Exposure",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI06",
+        "name": "Tool Plugin and Agent Data Exchange",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI12",
+        "name": "Unsafe Natural Language Data Gateways",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI15",
+        "name": "Over-Broad Context Windows",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "CoSAI",
+    "control_id": "WS4-AGT-2.2",
+    "control_name": "Agent cybersecurity baseline",
+    "entries": [
+      {
+        "id": "LLM06",
+        "name": "Unbounded Consumption",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "ASI03",
+        "name": "Identity and Privilege Abuse",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "ASI05",
+        "name": "Unexpected Code Execution",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "ASI07",
+        "name": "Insecure Inter-Agent Communications",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI02",
+        "name": "Agent Identity and Credential Exposure",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI13",
+        "name": "Vector Store Platform Security",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI16",
+        "name": "Endpoint and Browser Overreach",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI17",
+        "name": "Data Availability and Resilience Failures",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "CoSAI",
+    "control_id": "WS4-AGT-2.3",
+    "control_name": "Continuous behavior validation",
+    "entries": [
+      {
+        "id": "ASI01",
+        "name": "Agent Goal Hijack",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "ASI06",
+        "name": "Memory and Context Poisoning",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "CoSAI",
+    "control_id": "WS4-AGT-2.4",
+    "control_name": "Agent blast radius containment",
+    "entries": [
+      {
+        "id": "LLM03",
+        "name": "Excessive Agency",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "LLM06",
+        "name": "Unbounded Consumption",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "LLM10",
+        "name": "Improper Output Handling",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "ASI02",
+        "name": "Tool Misuse and Exploitation",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "ASI05",
+        "name": "Unexpected Code Execution",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "ASI08",
+        "name": "Cascading Agent Failures",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI11",
+        "name": "Cross-Context Conversation Bleed",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI15",
+        "name": "Over-Broad Context Windows",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI16",
+        "name": "Endpoint and Browser Overreach",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "CoSAI",
+    "control_id": "WS4-AGT-3.1",
+    "control_name": "Agent supply chain security",
+    "entries": [
+      {
+        "id": "ASI02",
+        "name": "Tool Misuse and Exploitation",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "ASI04",
+        "name": "Agentic Supply Chain",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI06",
+        "name": "Tool Plugin and Agent Data Exchange",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "CoSAI",
+    "control_id": "WS4-AGT-3.2",
+    "control_name": "Agent telemetry and observability",
+    "entries": [
+      {
+        "id": "LLM07",
+        "name": "Misinformation",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "LLM08",
+        "name": "Hidden Context Exposure",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "ASI07",
+        "name": "Insecure Inter-Agent Communications",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI14",
+        "name": "Excessive Telemetry and Monitoring Leakage",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "CoSAI",
+    "control_id": "WS4-AGT-3.3",
+    "control_name": "Real-time agent monitoring",
+    "entries": [
+      {
+        "id": "ASI08",
+        "name": "Cascading Agent Failures",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "ASI10",
+        "name": "Rogue Agents",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "CoSAI",
+    "control_id": "WS4-AGT-3.4",
+    "control_name": "Agent action auditability",
+    "entries": [
+      {
+        "id": "ASI07",
+        "name": "Insecure Inter-Agent Communications",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "ASI09",
+        "name": "Human-Agent Trust Exploitation",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
     "framework": "CWE/CVE",
     "control_id": "Acceptance of Extraneous Untrusted Data with Trusted Data",
     "control_name": "CWE-349",
@@ -9192,6 +10524,1351 @@
         "tier": "Foundational",
         "scope": "Both",
         "notes": "All vector store deployments assessed in Art. 9 risk management"
+      }
+    ]
+  },
+  {
+    "framework": "EU AI Act Code of Practice",
+    "control_id": "CoP-I-C1-M1.1",
+    "control_name": "Drawing up and maintaining model documentation",
+    "entries": [
+      {
+        "id": "LLM08",
+        "name": "Hidden Context Exposure",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "EU AI Act Code of Practice",
+    "control_id": "CoP-I-C1-M1.2",
+    "control_name": "Providing information to downstream providers and AI Office",
+    "entries": [
+      {
+        "id": "LLM04",
+        "name": "Supply Chain",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "ASI04",
+        "name": "Agentic Supply Chain",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI03",
+        "name": "Shadow AI and Unsanctioned Data Flows",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI06",
+        "name": "Tool Plugin and Agent Data Exchange",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "EU AI Act Code of Practice",
+    "control_id": "CoP-I-C1-M1.3",
+    "control_name": "Quality, integrity, and security of information",
+    "entries": [
+      {
+        "id": "LLM02",
+        "name": "Sensitive Information Disclosure",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "LLM09",
+        "name": "Vector and Embedding Weaknesses",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Medium",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI05",
+        "name": "Data Integrity and Validation Failures",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "EU AI Act Code of Practice",
+    "control_id": "CoP-II-C1-M1.1",
+    "control_name": "Copyright policy",
+    "entries": [
+      {
+        "id": "DSGAI07",
+        "name": "Data Governance and Lifecycle",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI20",
+        "name": "Model Exfiltration and IP Replication",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "EU AI Act Code of Practice",
+    "control_id": "CoP-II-C1-M1.2",
+    "control_name": "Lawful access to copyright-protected content",
+    "entries": [
+      {
+        "id": "LLM05",
+        "name": "Data and Model Poisoning",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI10",
+        "name": "Synthetic Data and Anonymization Pitfalls",
+        "source_list": "DSGAI-2026",
+        "severity": "Medium",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "EU AI Act Code of Practice",
+    "control_id": "CoP-II-C1-M1.4",
+    "control_name": "Copyright-infringing output mitigation",
+    "entries": [
+      {
+        "id": "LLM10",
+        "name": "Improper Output Handling",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "EU AI Act Code of Practice",
+    "control_id": "CoP-III-C1-M1.1",
+    "control_name": "Creating the safety and security framework",
+    "entries": [
+      {
+        "id": "DSGAI07",
+        "name": "Data Governance and Lifecycle",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "EU AI Act Code of Practice",
+    "control_id": "CoP-III-C1-M1.2",
+    "control_name": "Implementing the framework",
+    "entries": [
+      {
+        "id": "LLM04",
+        "name": "Supply Chain",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "ASI04",
+        "name": "Agentic Supply Chain",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "ASI05",
+        "name": "Unexpected Code Execution",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI03",
+        "name": "Shadow AI and Unsanctioned Data Flows",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI13",
+        "name": "Vector Store Platform Security",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI16",
+        "name": "Endpoint and Browser Overreach",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI17",
+        "name": "Data Availability and Resilience Failures",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "EU AI Act Code of Practice",
+    "control_id": "CoP-III-C1-M1.3",
+    "control_name": "Updating the framework",
+    "entries": [
+      {
+        "id": "DSGAI07",
+        "name": "Data Governance and Lifecycle",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "EU AI Act Code of Practice",
+    "control_id": "CoP-III-C1-M1.4",
+    "control_name": "Framework notifications to AI Office",
+    "entries": [
+      {
+        "id": "DSGAI08",
+        "name": "Non-Compliance and Regulatory Violations",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "EU AI Act Code of Practice",
+    "control_id": "CoP-III-C10-M10.1",
+    "control_name": "Implementation documentation",
+    "entries": [
+      {
+        "id": "DSGAI08",
+        "name": "Non-Compliance and Regulatory Violations",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI14",
+        "name": "Excessive Telemetry and Monitoring Leakage",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "EU AI Act Code of Practice",
+    "control_id": "CoP-III-C10-M10.2",
+    "control_name": "Public transparency",
+    "entries": [
+      {
+        "id": "LLM07",
+        "name": "Misinformation",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "ASI09",
+        "name": "Human-Agent Trust Exploitation",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI21",
+        "name": "Disinformation via Data Poisoning",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "EU AI Act Code of Practice",
+    "control_id": "CoP-III-C2-M2.1",
+    "control_name": "Systemic risk identification process",
+    "entries": [
+      {
+        "id": "LLM01",
+        "name": "Prompt Injection",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "LLM08",
+        "name": "Hidden Context Exposure",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "ASI02",
+        "name": "Tool Misuse and Exploitation",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "ASI06",
+        "name": "Memory and Context Poisoning",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI06",
+        "name": "Tool Plugin and Agent Data Exchange",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI12",
+        "name": "Unsafe Natural Language Data Gateways",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI16",
+        "name": "Endpoint and Browser Overreach",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "EU AI Act Code of Practice",
+    "control_id": "CoP-III-C2-M2.2",
+    "control_name": "Systemic risk scenarios",
+    "entries": [
+      {
+        "id": "LLM03",
+        "name": "Excessive Agency",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "ASI01",
+        "name": "Agent Goal Hijack",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI09",
+        "name": "Multimodal Cross-Channel Leakage",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI15",
+        "name": "Over-Broad Context Windows",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI21",
+        "name": "Disinformation via Data Poisoning",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "EU AI Act Code of Practice",
+    "control_id": "CoP-III-C3-M3.1",
+    "control_name": "Model-independent information gathering",
+    "entries": [
+      {
+        "id": "LLM04",
+        "name": "Supply Chain",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "LLM09",
+        "name": "Vector and Embedding Weaknesses",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Medium",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "ASI04",
+        "name": "Agentic Supply Chain",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI04",
+        "name": "Data Model and Artifact Poisoning",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI05",
+        "name": "Data Integrity and Validation Failures",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI10",
+        "name": "Synthetic Data and Anonymization Pitfalls",
+        "source_list": "DSGAI-2026",
+        "severity": "Medium",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "EU AI Act Code of Practice",
+    "control_id": "CoP-III-C3-M3.2",
+    "control_name": "Model evaluations",
+    "entries": [
+      {
+        "id": "LLM01",
+        "name": "Prompt Injection",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "LLM07",
+        "name": "Misinformation",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "LLM10",
+        "name": "Improper Output Handling",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "ASI02",
+        "name": "Tool Misuse and Exploitation",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI09",
+        "name": "Multimodal Cross-Channel Leakage",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI12",
+        "name": "Unsafe Natural Language Data Gateways",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI18",
+        "name": "Inference and Data Reconstruction",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "EU AI Act Code of Practice",
+    "control_id": "CoP-III-C3-M3.3",
+    "control_name": "Systemic risk modelling",
+    "entries": [
+      {
+        "id": "ASI01",
+        "name": "Agent Goal Hijack",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "ASI08",
+        "name": "Cascading Agent Failures",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI15",
+        "name": "Over-Broad Context Windows",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "EU AI Act Code of Practice",
+    "control_id": "CoP-III-C3-M3.4",
+    "control_name": "Systemic risk estimation",
+    "entries": [
+      {
+        "id": "ASI10",
+        "name": "Rogue Agents",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI18",
+        "name": "Inference and Data Reconstruction",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "EU AI Act Code of Practice",
+    "control_id": "CoP-III-C3-M3.5",
+    "control_name": "Post-market monitoring and external evaluation",
+    "entries": [
+      {
+        "id": "LLM06",
+        "name": "Unbounded Consumption",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "ASI06",
+        "name": "Memory and Context Poisoning",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI11",
+        "name": "Cross-Context Conversation Bleed",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI19",
+        "name": "Human-in-Loop and Labeler Overexposure",
+        "source_list": "DSGAI-2026",
+        "severity": "Medium",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "EU AI Act Code of Practice",
+    "control_id": "CoP-III-C4-M4.1",
+    "control_name": "Risk acceptance criteria and tiers",
+    "entries": [
+      {
+        "id": "LLM03",
+        "name": "Excessive Agency",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "ASI08",
+        "name": "Cascading Agent Failures",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "EU AI Act Code of Practice",
+    "control_id": "CoP-III-C4-M4.2",
+    "control_name": "Market placement decisions",
+    "entries": [
+      {
+        "id": "ASI10",
+        "name": "Rogue Agents",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "EU AI Act Code of Practice",
+    "control_id": "CoP-III-C5-M5.1",
+    "control_name": "Safety mitigation implementation",
+    "entries": [
+      {
+        "id": "LLM01",
+        "name": "Prompt Injection",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "LLM05",
+        "name": "Data and Model Poisoning",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "LLM10",
+        "name": "Improper Output Handling",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "ASI01",
+        "name": "Agent Goal Hijack",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "ASI05",
+        "name": "Unexpected Code Execution",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI04",
+        "name": "Data Model and Artifact Poisoning",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI09",
+        "name": "Multimodal Cross-Channel Leakage",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI10",
+        "name": "Synthetic Data and Anonymization Pitfalls",
+        "source_list": "DSGAI-2026",
+        "severity": "Medium",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI12",
+        "name": "Unsafe Natural Language Data Gateways",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI18",
+        "name": "Inference and Data Reconstruction",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI21",
+        "name": "Disinformation via Data Poisoning",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "EU AI Act Code of Practice",
+    "control_id": "CoP-III-C6-M6.1",
+    "control_name": "Security goal and threat actor definition",
+    "entries": [
+      {
+        "id": "ASI03",
+        "name": "Identity and Privilege Abuse",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "ASI07",
+        "name": "Insecure Inter-Agent Communications",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI02",
+        "name": "Agent Identity and Credential Exposure",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI13",
+        "name": "Vector Store Platform Security",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI20",
+        "name": "Model Exfiltration and IP Replication",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "EU AI Act Code of Practice",
+    "control_id": "CoP-III-C6-M6.2",
+    "control_name": "Security mitigation implementation",
+    "entries": [
+      {
+        "id": "LLM02",
+        "name": "Sensitive Information Disclosure",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "LLM09",
+        "name": "Vector and Embedding Weaknesses",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Medium",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "ASI02",
+        "name": "Tool Misuse and Exploitation",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "ASI03",
+        "name": "Identity and Privilege Abuse",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "ASI07",
+        "name": "Insecure Inter-Agent Communications",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI01",
+        "name": "Sensitive Data Leakage",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI02",
+        "name": "Agent Identity and Credential Exposure",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI06",
+        "name": "Tool Plugin and Agent Data Exchange",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI11",
+        "name": "Cross-Context Conversation Bleed",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI13",
+        "name": "Vector Store Platform Security",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI20",
+        "name": "Model Exfiltration and IP Replication",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "EU AI Act Code of Practice",
+    "control_id": "CoP-III-C7-M7.1",
+    "control_name": "Model description and behaviour documentation",
+    "entries": [
+      {
+        "id": "LLM07",
+        "name": "Misinformation",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "LLM08",
+        "name": "Hidden Context Exposure",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "ASI09",
+        "name": "Human-Agent Trust Exploitation",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI05",
+        "name": "Data Integrity and Validation Failures",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI11",
+        "name": "Cross-Context Conversation Bleed",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI15",
+        "name": "Over-Broad Context Windows",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "EU AI Act Code of Practice",
+    "control_id": "CoP-III-C7-M7.2",
+    "control_name": "Risk justification for market placement",
+    "entries": [
+      {
+        "id": "LLM03",
+        "name": "Excessive Agency",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "EU AI Act Code of Practice",
+    "control_id": "CoP-III-C7-M7.3",
+    "control_name": "Systemic risk documentation",
+    "entries": [
+      {
+        "id": "ASI07",
+        "name": "Insecure Inter-Agent Communications",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI01",
+        "name": "Sensitive Data Leakage",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI14",
+        "name": "Excessive Telemetry and Monitoring Leakage",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "EU AI Act Code of Practice",
+    "control_id": "CoP-III-C7-M7.5",
+    "control_name": "Material changes to risk landscape",
+    "entries": [
+      {
+        "id": "LLM05",
+        "name": "Data and Model Poisoning",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "ASI06",
+        "name": "Memory and Context Poisoning",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI04",
+        "name": "Data Model and Artifact Poisoning",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "EU AI Act Code of Practice",
+    "control_id": "CoP-III-C8-M8.1",
+    "control_name": "Clear responsibility definition",
+    "entries": [
+      {
+        "id": "ASI03",
+        "name": "Identity and Privilege Abuse",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI02",
+        "name": "Agent Identity and Credential Exposure",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI03",
+        "name": "Shadow AI and Unsanctioned Data Flows",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI19",
+        "name": "Human-in-Loop and Labeler Overexposure",
+        "source_list": "DSGAI-2026",
+        "severity": "Medium",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "EU AI Act Code of Practice",
+    "control_id": "CoP-III-C8-M8.2",
+    "control_name": "Resource allocation",
+    "entries": [
+      {
+        "id": "LLM06",
+        "name": "Unbounded Consumption",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI19",
+        "name": "Human-in-Loop and Labeler Overexposure",
+        "source_list": "DSGAI-2026",
+        "severity": "Medium",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "EU AI Act Code of Practice",
+    "control_id": "CoP-III-C8-M8.3",
+    "control_name": "Organizational risk culture",
+    "entries": [
+      {
+        "id": "ASI09",
+        "name": "Human-Agent Trust Exploitation",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "EU AI Act Code of Practice",
+    "control_id": "CoP-III-C9-M9.1",
+    "control_name": "Incident tracking and documentation",
+    "entries": [
+      {
+        "id": "LLM02",
+        "name": "Sensitive Information Disclosure",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "LLM06",
+        "name": "Unbounded Consumption",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "ASI08",
+        "name": "Cascading Agent Failures",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI01",
+        "name": "Sensitive Data Leakage",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI14",
+        "name": "Excessive Telemetry and Monitoring Leakage",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI16",
+        "name": "Endpoint and Browser Overreach",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI17",
+        "name": "Data Availability and Resilience Failures",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "EU AI Act Code of Practice",
+    "control_id": "CoP-III-C9-M9.2",
+    "control_name": "Incident reporting to authorities",
+    "entries": [
+      {
+        "id": "ASI10",
+        "name": "Rogue Agents",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI08",
+        "name": "Non-Compliance and Regulatory Violations",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      }
+    ]
+  },
+  {
+    "framework": "EU AI Act Code of Practice",
+    "control_id": "CoP-III-C9-M9.3",
+    "control_name": "Corrective actions",
+    "entries": [
+      {
+        "id": "ASI05",
+        "name": "Unexpected Code Execution",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "DSGAI17",
+        "name": "Data Availability and Resilience Failures",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
       }
     ]
   },

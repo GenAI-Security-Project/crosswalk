@@ -779,6 +779,72 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
+        "framework": "CoSAI",
+        "control_id": "WS2-DEF-6",
+        "control_name": "AI red teaming and adversarial testing",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS2-DEF-5",
+        "control_name": "AI security monitoring and telemetry",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS2-DEF-2",
+        "control_name": "AI attack surface mapping",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C5-M5.1",
+        "control_name": "Safety mitigation implementation",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C3-M3.2",
+        "control_name": "Model evaluations",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C2-M2.1",
+        "control_name": "Systemic risk identification process",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
         "framework": "OWASP NHI Top 10",
         "control_id": "Injection blast radius proportional to credential scope",
         "control_name": "NHI-5 Over-Privileged NHI",
@@ -2024,6 +2090,72 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
+        "framework": "CoSAI",
+        "control_id": "WS2-DEF-5",
+        "control_name": "AI security monitoring and telemetry",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS3-GOV-2",
+        "control_name": "AI risk assessment methodology",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS4-AGT-2.1",
+        "control_name": "Purpose-specific entitlements",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C6-M6.2",
+        "control_name": "Security mitigation implementation",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-I-C1-M1.3",
+        "control_name": "Quality, integrity, and security of information",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C9-M9.1",
+        "control_name": "Incident tracking and documentation",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
         "framework": "OWASP NHI Top 10",
         "control_id": "LLM outputs containing API keys, tokens, or credentials",
         "control_name": "NHI-2 Secret Leakage",
@@ -3027,6 +3159,83 @@ window.CROSSWALK_DATA = [
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Foundational",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS4-AGT-1.2",
+        "control_name": "Authority boundary definition",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS4-AGT-2.1",
+        "control_name": "Purpose-specific entitlements",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS4-AGT-1.1",
+        "control_name": "Risk-based human oversight",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS4-AGT-2.4",
+        "control_name": "Agent blast radius containment",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C2-M2.2",
+        "control_name": "Systemic risk scenarios",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C4-M4.1",
+        "control_name": "Risk acceptance criteria and tiers",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C7-M7.2",
+        "control_name": "Risk justification for market placement",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -4116,6 +4325,94 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
+        "framework": "CoSAI",
+        "control_id": "WS1-SSC-1",
+        "control_name": "AI software supply chain risk assessment",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS1-SSC-2",
+        "control_name": "ML artifact signing and verification",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS1-SSC-3",
+        "control_name": "Model provenance tracking",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS1-SSC-5",
+        "control_name": "AI dependency management",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS1-SSC-6",
+        "control_name": "Secure model distribution",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-I-C1-M1.2",
+        "control_name": "Providing information to downstream providers and AI Office",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C1-M1.2",
+        "control_name": "Implementing the framework",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C3-M3.1",
+        "control_name": "Model-independent information gathering",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
         "framework": "OWASP NHI Top 10",
         "control_id": "Third-party plugin tokens with excessive permissions",
         "control_name": "NHI-3 Vulnerable Third-Party NHI",
@@ -5113,6 +5410,72 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
+        "framework": "CoSAI",
+        "control_id": "WS1-SSC-4",
+        "control_name": "Training data supply chain integrity",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS1-SSC-3",
+        "control_name": "Model provenance tracking",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS1-SSC-2",
+        "control_name": "ML artifact signing and verification",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C5-M5.1",
+        "control_name": "Safety mitigation implementation",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-II-C1-M1.2",
+        "control_name": "Lawful access to copyright-protected content",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C7-M7.5",
+        "control_name": "Material changes to risk landscape",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
         "framework": "OWASP NHI Top 10",
         "control_id": "Write access to training data stores enables poisoning",
         "control_name": "NHI-5 Over-Privileged NHI",
@@ -6070,6 +6433,72 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
+        "framework": "CoSAI",
+        "control_id": "WS2-DEF-5",
+        "control_name": "AI security monitoring and telemetry",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS4-AGT-2.2",
+        "control_name": "Agent cybersecurity baseline",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS4-AGT-2.4",
+        "control_name": "Agent blast radius containment",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C3-M3.5",
+        "control_name": "Post-market monitoring and external evaluation",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C9-M9.1",
+        "control_name": "Incident tracking and documentation",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C8-M8.2",
+        "control_name": "Resource allocation",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
         "framework": "OWASP NHI Top 10",
         "control_id": "Single credential with access to multiple services — one exhaustion affects all",
         "control_name": "NHI-5 Over-Privileged NHI",
@@ -6989,6 +7418,72 @@ window.CROSSWALK_DATA = [
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Foundational",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS2-DEF-6",
+        "control_name": "AI red teaming and adversarial testing",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS3-GOV-3",
+        "control_name": "AI security scorecard",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS4-AGT-3.2",
+        "control_name": "Agent telemetry and observability",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C3-M3.2",
+        "control_name": "Model evaluations",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C7-M7.1",
+        "control_name": "Model description and behaviour documentation",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C10-M10.2",
+        "control_name": "Public transparency",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -7990,6 +8485,72 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
+        "framework": "CoSAI",
+        "control_id": "WS2-DEF-2",
+        "control_name": "AI attack surface mapping",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS4-AGT-3.2",
+        "control_name": "Agent telemetry and observability",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS3-GOV-1",
+        "control_name": "AI security risk taxonomy",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-I-C1-M1.1",
+        "control_name": "Drawing up and maintaining model documentation",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C7-M7.1",
+        "control_name": "Model description and behaviour documentation",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C2-M2.1",
+        "control_name": "Systemic risk identification process",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
         "framework": "OWASP NHI Top 10",
         "control_id": "API keys or tokens embedded in system prompt",
         "control_name": "NHI-2 Secret Leakage",
@@ -8924,6 +9485,72 @@ window.CROSSWALK_DATA = [
         "tier": "Hardening",
         "scope": "Both",
         "notes": "Foundational",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS1-SSC-4",
+        "control_name": "Training data supply chain integrity",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS2-DEF-2",
+        "control_name": "AI attack surface mapping",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS3-GOV-4",
+        "control_name": "AI security controls checklist",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C6-M6.2",
+        "control_name": "Security mitigation implementation",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C3-M3.1",
+        "control_name": "Model-independent information gathering",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-I-C1-M1.3",
+        "control_name": "Quality, integrity, and security of information",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -9886,6 +10513,72 @@ window.CROSSWALK_DATA = [
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Foundational",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS2-DEF-6",
+        "control_name": "AI red teaming and adversarial testing",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS4-AGT-2.4",
+        "control_name": "Agent blast radius containment",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS3-GOV-4",
+        "control_name": "AI security controls checklist",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C5-M5.1",
+        "control_name": "Safety mitigation implementation",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-II-C1-M1.4",
+        "control_name": "Copyright-infringing output mitigation",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C3-M3.2",
+        "control_name": "Model evaluations",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -11075,16 +11768,82 @@ window.CROSSWALK_DATA = [
     "severity": "Critical",
     "aivss_score": 9.8,
     "audience": [
-      "red-teamer",
       "security-engineer",
-      "ml-engineer",
-      "ot-engineer",
       "ciso",
       "compliance",
+      "red-teamer",
+      "ml-engineer",
+      "ot-engineer",
       "auditor",
       "developer"
     ],
     "mappings": [
+      {
+        "framework": "CoSAI",
+        "control_id": "WS4-AGT-1.2",
+        "control_name": "Authority boundary definition",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS4-AGT-2.3",
+        "control_name": "Continuous behavior validation",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS4-AGT-1.1",
+        "control_name": "Risk-based human oversight",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C2-M2.2",
+        "control_name": "Systemic risk scenarios",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C5-M5.1",
+        "control_name": "Safety mitigation implementation",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C3-M3.3",
+        "control_name": "Systemic risk modelling",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0051.000",
@@ -12268,16 +13027,82 @@ window.CROSSWALK_DATA = [
     "severity": "Critical",
     "aivss_score": 9.6,
     "audience": [
-      "red-teamer",
       "security-engineer",
-      "ml-engineer",
-      "ot-engineer",
       "ciso",
       "compliance",
+      "red-teamer",
+      "ml-engineer",
+      "ot-engineer",
       "auditor",
       "developer"
     ],
     "mappings": [
+      {
+        "framework": "CoSAI",
+        "control_id": "WS4-AGT-2.1",
+        "control_name": "Purpose-specific entitlements",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS4-AGT-3.1",
+        "control_name": "Agent supply chain security",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS4-AGT-2.4",
+        "control_name": "Agent blast radius containment",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C2-M2.1",
+        "control_name": "Systemic risk identification process",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C6-M6.2",
+        "control_name": "Security mitigation implementation",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C3-M3.2",
+        "control_name": "Model evaluations",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0037",
@@ -13384,16 +14209,82 @@ window.CROSSWALK_DATA = [
     "severity": "Critical",
     "aivss_score": 9.3,
     "audience": [
-      "red-teamer",
       "security-engineer",
-      "ml-engineer",
-      "ot-engineer",
       "ciso",
       "compliance",
+      "red-teamer",
+      "ml-engineer",
+      "ot-engineer",
       "auditor",
       "developer"
     ],
     "mappings": [
+      {
+        "framework": "CoSAI",
+        "control_id": "WS4-AGT-2.1",
+        "control_name": "Purpose-specific entitlements",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS4-AGT-2.2",
+        "control_name": "Agent cybersecurity baseline",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS4-AGT-1.3",
+        "control_name": "Agent accountability chain",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C6-M6.1",
+        "control_name": "Security goal and threat actor definition",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C6-M6.2",
+        "control_name": "Security mitigation implementation",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C8-M8.1",
+        "control_name": "Clear responsibility definition",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0022",
@@ -14524,16 +15415,93 @@ window.CROSSWALK_DATA = [
     "severity": "High",
     "aivss_score": 8.4,
     "audience": [
-      "red-teamer",
       "security-engineer",
-      "ml-engineer",
-      "ot-engineer",
       "ciso",
       "compliance",
+      "red-teamer",
+      "ml-engineer",
+      "ot-engineer",
       "auditor",
       "developer"
     ],
     "mappings": [
+      {
+        "framework": "CoSAI",
+        "control_id": "WS4-AGT-3.1",
+        "control_name": "Agent supply chain security",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS1-SSC-5",
+        "control_name": "AI dependency management",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS1-SSC-2",
+        "control_name": "ML artifact signing and verification",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS3-GOV-5",
+        "control_name": "Third-party AI risk management",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-I-C1-M1.2",
+        "control_name": "Providing information to downstream providers and AI Office",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C1-M1.2",
+        "control_name": "Implementing the framework",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C3-M3.1",
+        "control_name": "Model-independent information gathering",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0056",
@@ -15552,16 +16520,82 @@ window.CROSSWALK_DATA = [
     "severity": "Critical",
     "aivss_score": 9.9,
     "audience": [
-      "red-teamer",
       "security-engineer",
-      "ml-engineer",
-      "ot-engineer",
       "ciso",
       "compliance",
+      "red-teamer",
+      "ml-engineer",
+      "ot-engineer",
       "auditor",
       "developer"
     ],
     "mappings": [
+      {
+        "framework": "CoSAI",
+        "control_id": "WS4-AGT-2.4",
+        "control_name": "Agent blast radius containment",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS4-AGT-2.2",
+        "control_name": "Agent cybersecurity baseline",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS2-DEF-5",
+        "control_name": "AI security monitoring and telemetry",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C5-M5.1",
+        "control_name": "Safety mitigation implementation",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C9-M9.3",
+        "control_name": "Corrective actions",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C1-M1.2",
+        "control_name": "Implementing the framework",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0040",
@@ -16585,16 +17619,82 @@ window.CROSSWALK_DATA = [
     "severity": "High",
     "aivss_score": 8.7,
     "audience": [
-      "red-teamer",
       "security-engineer",
-      "ml-engineer",
-      "ot-engineer",
       "ciso",
       "compliance",
+      "red-teamer",
+      "ml-engineer",
+      "ot-engineer",
       "auditor",
       "developer"
     ],
     "mappings": [
+      {
+        "framework": "CoSAI",
+        "control_id": "WS4-AGT-2.3",
+        "control_name": "Continuous behavior validation",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS1-SSC-4",
+        "control_name": "Training data supply chain integrity",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS2-DEF-5",
+        "control_name": "AI security monitoring and telemetry",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C2-M2.1",
+        "control_name": "Systemic risk identification process",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C3-M3.5",
+        "control_name": "Post-market monitoring and external evaluation",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C7-M7.5",
+        "control_name": "Material changes to risk landscape",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0032",
@@ -17597,16 +18697,82 @@ window.CROSSWALK_DATA = [
     "severity": "High",
     "aivss_score": 8.2,
     "audience": [
-      "red-teamer",
       "security-engineer",
-      "ml-engineer",
-      "ot-engineer",
       "ciso",
       "compliance",
+      "red-teamer",
+      "ml-engineer",
+      "ot-engineer",
       "auditor",
       "developer"
     ],
     "mappings": [
+      {
+        "framework": "CoSAI",
+        "control_id": "WS4-AGT-2.2",
+        "control_name": "Agent cybersecurity baseline",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS4-AGT-3.2",
+        "control_name": "Agent telemetry and observability",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS4-AGT-3.4",
+        "control_name": "Agent action auditability",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C6-M6.2",
+        "control_name": "Security mitigation implementation",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C6-M6.1",
+        "control_name": "Security goal and threat actor definition",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C7-M7.3",
+        "control_name": "Systemic risk documentation",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0043",
@@ -18570,16 +19736,82 @@ window.CROSSWALK_DATA = [
     "severity": "Critical",
     "aivss_score": 9.1,
     "audience": [
-      "red-teamer",
       "security-engineer",
-      "ml-engineer",
-      "ot-engineer",
       "ciso",
       "compliance",
+      "red-teamer",
+      "ml-engineer",
+      "ot-engineer",
       "auditor",
       "developer"
     ],
     "mappings": [
+      {
+        "framework": "CoSAI",
+        "control_id": "WS4-AGT-2.4",
+        "control_name": "Agent blast radius containment",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS4-AGT-3.3",
+        "control_name": "Real-time agent monitoring",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS4-AGT-1.3",
+        "control_name": "Agent accountability chain",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C3-M3.3",
+        "control_name": "Systemic risk modelling",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C4-M4.1",
+        "control_name": "Risk acceptance criteria and tiers",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C9-M9.1",
+        "control_name": "Incident tracking and documentation",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0029",
@@ -19541,16 +20773,82 @@ window.CROSSWALK_DATA = [
     "severity": "High",
     "aivss_score": 7.3,
     "audience": [
-      "red-teamer",
       "security-engineer",
-      "ml-engineer",
-      "ot-engineer",
       "ciso",
       "compliance",
+      "red-teamer",
+      "ml-engineer",
+      "ot-engineer",
       "auditor",
       "developer"
     ],
     "mappings": [
+      {
+        "framework": "CoSAI",
+        "control_id": "WS4-AGT-1.1",
+        "control_name": "Risk-based human oversight",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS4-AGT-1.3",
+        "control_name": "Agent accountability chain",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS4-AGT-3.4",
+        "control_name": "Agent action auditability",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C10-M10.2",
+        "control_name": "Public transparency",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C7-M7.1",
+        "control_name": "Model description and behaviour documentation",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C8-M8.3",
+        "control_name": "Organizational risk culture",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0045",
@@ -20543,16 +21841,82 @@ window.CROSSWALK_DATA = [
     "severity": "Critical",
     "aivss_score": 9.7,
     "audience": [
-      "red-teamer",
       "security-engineer",
-      "ml-engineer",
-      "ot-engineer",
       "ciso",
       "compliance",
+      "red-teamer",
+      "ml-engineer",
+      "ot-engineer",
       "auditor",
       "developer"
     ],
     "mappings": [
+      {
+        "framework": "CoSAI",
+        "control_id": "WS4-AGT-1.2",
+        "control_name": "Authority boundary definition",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS4-AGT-3.3",
+        "control_name": "Real-time agent monitoring",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS2-DEF-3",
+        "control_name": "AI incident response procedures",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C4-M4.2",
+        "control_name": "Market placement decisions",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C9-M9.2",
+        "control_name": "Incident reporting to authorities",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C3-M3.4",
+        "control_name": "Systemic risk estimation",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0054",
@@ -21608,10 +22972,10 @@ window.CROSSWALK_DATA = [
     "severity": "Critical",
     "aivss_score": null,
     "audience": [
-      "red-teamer",
       "security-engineer",
       "ciso",
       "compliance",
+      "red-teamer",
       "ml-engineer",
       "ot-engineer",
       "auditor",
@@ -21619,6 +22983,72 @@ window.CROSSWALK_DATA = [
       "data-engineer"
     ],
     "mappings": [
+      {
+        "framework": "CoSAI",
+        "control_id": "WS2-DEF-5",
+        "control_name": "AI security monitoring and telemetry",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS3-GOV-2",
+        "control_name": "AI risk assessment methodology",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS4-AGT-2.1",
+        "control_name": "Purpose-specific entitlements",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C6-M6.2",
+        "control_name": "Security mitigation implementation",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C9-M9.1",
+        "control_name": "Incident tracking and documentation",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C7-M7.3",
+        "control_name": "Systemic risk documentation",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0035",
@@ -22657,10 +24087,10 @@ window.CROSSWALK_DATA = [
     "severity": "Critical",
     "aivss_score": null,
     "audience": [
-      "red-teamer",
       "security-engineer",
       "ciso",
       "compliance",
+      "red-teamer",
       "ml-engineer",
       "ot-engineer",
       "auditor",
@@ -22668,6 +24098,72 @@ window.CROSSWALK_DATA = [
       "data-engineer"
     ],
     "mappings": [
+      {
+        "framework": "CoSAI",
+        "control_id": "WS4-AGT-2.2",
+        "control_name": "Agent cybersecurity baseline",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS4-AGT-2.1",
+        "control_name": "Purpose-specific entitlements",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS4-AGT-1.3",
+        "control_name": "Agent accountability chain",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C6-M6.2",
+        "control_name": "Security mitigation implementation",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C6-M6.1",
+        "control_name": "Security goal and threat actor definition",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C8-M8.1",
+        "control_name": "Clear responsibility definition",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0012",
@@ -23574,10 +25070,10 @@ window.CROSSWALK_DATA = [
     "severity": "High",
     "aivss_score": null,
     "audience": [
-      "red-teamer",
       "security-engineer",
       "ciso",
       "compliance",
+      "red-teamer",
       "ml-engineer",
       "ot-engineer",
       "auditor",
@@ -23585,6 +25081,72 @@ window.CROSSWALK_DATA = [
       "data-engineer"
     ],
     "mappings": [
+      {
+        "framework": "CoSAI",
+        "control_id": "WS2-DEF-2",
+        "control_name": "AI attack surface mapping",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS3-GOV-5",
+        "control_name": "Third-party AI risk management",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS3-GOV-1",
+        "control_name": "AI security risk taxonomy",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-I-C1-M1.2",
+        "control_name": "Providing information to downstream providers and AI Office",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C1-M1.2",
+        "control_name": "Implementing the framework",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C8-M8.1",
+        "control_name": "Clear responsibility definition",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0012",
@@ -24412,10 +25974,10 @@ window.CROSSWALK_DATA = [
     "severity": "Critical",
     "aivss_score": null,
     "audience": [
-      "red-teamer",
       "security-engineer",
       "ciso",
       "compliance",
+      "red-teamer",
       "ml-engineer",
       "ot-engineer",
       "auditor",
@@ -24423,6 +25985,72 @@ window.CROSSWALK_DATA = [
       "data-engineer"
     ],
     "mappings": [
+      {
+        "framework": "CoSAI",
+        "control_id": "WS1-SSC-4",
+        "control_name": "Training data supply chain integrity",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS1-SSC-2",
+        "control_name": "ML artifact signing and verification",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS1-SSC-3",
+        "control_name": "Model provenance tracking",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C5-M5.1",
+        "control_name": "Safety mitigation implementation",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C3-M3.1",
+        "control_name": "Model-independent information gathering",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C7-M7.5",
+        "control_name": "Material changes to risk landscape",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0020",
@@ -25353,10 +26981,10 @@ window.CROSSWALK_DATA = [
     "severity": "High",
     "aivss_score": null,
     "audience": [
-      "red-teamer",
       "security-engineer",
       "ciso",
       "compliance",
+      "red-teamer",
       "ml-engineer",
       "ot-engineer",
       "auditor",
@@ -25364,6 +26992,72 @@ window.CROSSWALK_DATA = [
       "data-engineer"
     ],
     "mappings": [
+      {
+        "framework": "CoSAI",
+        "control_id": "WS1-SSC-4",
+        "control_name": "Training data supply chain integrity",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS3-GOV-4",
+        "control_name": "AI security controls checklist",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS2-DEF-5",
+        "control_name": "AI security monitoring and telemetry",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-I-C1-M1.3",
+        "control_name": "Quality, integrity, and security of information",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C7-M7.1",
+        "control_name": "Model description and behaviour documentation",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C3-M3.1",
+        "control_name": "Model-independent information gathering",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0020",
@@ -26224,10 +27918,10 @@ window.CROSSWALK_DATA = [
     "severity": "High",
     "aivss_score": null,
     "audience": [
-      "red-teamer",
       "security-engineer",
       "ciso",
       "compliance",
+      "red-teamer",
       "ml-engineer",
       "ot-engineer",
       "auditor",
@@ -26235,6 +27929,72 @@ window.CROSSWALK_DATA = [
       "data-engineer"
     ],
     "mappings": [
+      {
+        "framework": "CoSAI",
+        "control_id": "WS4-AGT-3.1",
+        "control_name": "Agent supply chain security",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS4-AGT-2.1",
+        "control_name": "Purpose-specific entitlements",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS1-SSC-5",
+        "control_name": "AI dependency management",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-I-C1-M1.2",
+        "control_name": "Providing information to downstream providers and AI Office",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C6-M6.2",
+        "control_name": "Security mitigation implementation",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C2-M2.1",
+        "control_name": "Systemic risk identification process",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0051",
@@ -27052,10 +28812,10 @@ window.CROSSWALK_DATA = [
     "severity": "High",
     "aivss_score": null,
     "audience": [
-      "red-teamer",
       "security-engineer",
       "ciso",
       "compliance",
+      "red-teamer",
       "ml-engineer",
       "ot-engineer",
       "auditor",
@@ -27063,6 +28823,72 @@ window.CROSSWALK_DATA = [
       "data-engineer"
     ],
     "mappings": [
+      {
+        "framework": "CoSAI",
+        "control_id": "WS3-GOV-1",
+        "control_name": "AI security risk taxonomy",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS3-GOV-2",
+        "control_name": "AI risk assessment methodology",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS3-GOV-6",
+        "control_name": "AI regulatory compliance mapping",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C1-M1.1",
+        "control_name": "Creating the safety and security framework",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C1-M1.3",
+        "control_name": "Updating the framework",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-II-C1-M1.1",
+        "control_name": "Copyright policy",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0035",
@@ -27882,10 +29708,10 @@ window.CROSSWALK_DATA = [
     "severity": "High",
     "aivss_score": null,
     "audience": [
-      "red-teamer",
       "security-engineer",
       "ciso",
       "compliance",
+      "red-teamer",
       "ml-engineer",
       "ot-engineer",
       "auditor",
@@ -27893,6 +29719,72 @@ window.CROSSWALK_DATA = [
       "data-engineer"
     ],
     "mappings": [
+      {
+        "framework": "CoSAI",
+        "control_id": "WS3-GOV-6",
+        "control_name": "AI regulatory compliance mapping",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS3-GOV-3",
+        "control_name": "AI security scorecard",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS3-GOV-2",
+        "control_name": "AI risk assessment methodology",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C1-M1.4",
+        "control_name": "Framework notifications to AI Office",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C9-M9.2",
+        "control_name": "Incident reporting to authorities",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C10-M10.1",
+        "control_name": "Implementation documentation",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0057",
@@ -28822,10 +30714,10 @@ window.CROSSWALK_DATA = [
     "severity": "High",
     "aivss_score": null,
     "audience": [
-      "red-teamer",
       "security-engineer",
       "ciso",
       "compliance",
+      "red-teamer",
       "ml-engineer",
       "ot-engineer",
       "auditor",
@@ -28833,6 +30725,72 @@ window.CROSSWALK_DATA = [
       "data-engineer"
     ],
     "mappings": [
+      {
+        "framework": "CoSAI",
+        "control_id": "WS2-DEF-2",
+        "control_name": "AI attack surface mapping",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS2-DEF-5",
+        "control_name": "AI security monitoring and telemetry",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS2-DEF-6",
+        "control_name": "AI red teaming and adversarial testing",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C3-M3.2",
+        "control_name": "Model evaluations",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C5-M5.1",
+        "control_name": "Safety mitigation implementation",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C2-M2.2",
+        "control_name": "Systemic risk scenarios",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0025",
@@ -29678,10 +31636,10 @@ window.CROSSWALK_DATA = [
     "severity": "Medium",
     "aivss_score": null,
     "audience": [
-      "red-teamer",
       "security-engineer",
       "ciso",
       "compliance",
+      "red-teamer",
       "ml-engineer",
       "ot-engineer",
       "auditor",
@@ -29689,6 +31647,72 @@ window.CROSSWALK_DATA = [
       "data-engineer"
     ],
     "mappings": [
+      {
+        "framework": "CoSAI",
+        "control_id": "WS1-SSC-4",
+        "control_name": "Training data supply chain integrity",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS3-GOV-2",
+        "control_name": "AI risk assessment methodology",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS2-DEF-6",
+        "control_name": "AI red teaming and adversarial testing",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-II-C1-M1.2",
+        "control_name": "Lawful access to copyright-protected content",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C3-M3.1",
+        "control_name": "Model-independent information gathering",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C5-M5.1",
+        "control_name": "Safety mitigation implementation",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0024.000",
@@ -30449,10 +32473,10 @@ window.CROSSWALK_DATA = [
     "severity": "High",
     "aivss_score": null,
     "audience": [
-      "red-teamer",
       "security-engineer",
       "ciso",
       "compliance",
+      "red-teamer",
       "ml-engineer",
       "ot-engineer",
       "auditor",
@@ -30460,6 +32484,72 @@ window.CROSSWALK_DATA = [
       "data-engineer"
     ],
     "mappings": [
+      {
+        "framework": "CoSAI",
+        "control_id": "WS4-AGT-2.4",
+        "control_name": "Agent blast radius containment",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS2-DEF-5",
+        "control_name": "AI security monitoring and telemetry",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS3-GOV-4",
+        "control_name": "AI security controls checklist",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C6-M6.2",
+        "control_name": "Security mitigation implementation",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C3-M3.5",
+        "control_name": "Post-market monitoring and external evaluation",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C7-M7.1",
+        "control_name": "Model description and behaviour documentation",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0035",
@@ -31274,10 +33364,10 @@ window.CROSSWALK_DATA = [
     "severity": "Critical",
     "aivss_score": null,
     "audience": [
-      "red-teamer",
       "security-engineer",
       "ciso",
       "compliance",
+      "red-teamer",
       "ml-engineer",
       "ot-engineer",
       "auditor",
@@ -31285,6 +33375,72 @@ window.CROSSWALK_DATA = [
       "data-engineer"
     ],
     "mappings": [
+      {
+        "framework": "CoSAI",
+        "control_id": "WS2-DEF-6",
+        "control_name": "AI red teaming and adversarial testing",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS4-AGT-2.1",
+        "control_name": "Purpose-specific entitlements",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS2-DEF-5",
+        "control_name": "AI security monitoring and telemetry",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C5-M5.1",
+        "control_name": "Safety mitigation implementation",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C3-M3.2",
+        "control_name": "Model evaluations",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C2-M2.1",
+        "control_name": "Systemic risk identification process",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0051",
@@ -32130,10 +34286,10 @@ window.CROSSWALK_DATA = [
     "severity": "High",
     "aivss_score": null,
     "audience": [
-      "red-teamer",
       "security-engineer",
       "ciso",
       "compliance",
+      "red-teamer",
       "ml-engineer",
       "ot-engineer",
       "auditor",
@@ -32141,6 +34297,72 @@ window.CROSSWALK_DATA = [
       "data-engineer"
     ],
     "mappings": [
+      {
+        "framework": "CoSAI",
+        "control_id": "WS4-AGT-2.2",
+        "control_name": "Agent cybersecurity baseline",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS1-SSC-5",
+        "control_name": "AI dependency management",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS3-GOV-4",
+        "control_name": "AI security controls checklist",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C6-M6.2",
+        "control_name": "Security mitigation implementation",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C6-M6.1",
+        "control_name": "Security goal and threat actor definition",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C1-M1.2",
+        "control_name": "Implementing the framework",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0025",
@@ -32992,10 +35214,10 @@ window.CROSSWALK_DATA = [
     "severity": "High",
     "aivss_score": null,
     "audience": [
-      "red-teamer",
       "security-engineer",
       "ciso",
       "compliance",
+      "red-teamer",
       "ml-engineer",
       "ot-engineer",
       "auditor",
@@ -33003,6 +35225,72 @@ window.CROSSWALK_DATA = [
       "data-engineer"
     ],
     "mappings": [
+      {
+        "framework": "CoSAI",
+        "control_id": "WS4-AGT-3.2",
+        "control_name": "Agent telemetry and observability",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS2-DEF-5",
+        "control_name": "AI security monitoring and telemetry",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS3-GOV-4",
+        "control_name": "AI security controls checklist",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C7-M7.3",
+        "control_name": "Systemic risk documentation",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C10-M10.1",
+        "control_name": "Implementation documentation",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C9-M9.1",
+        "control_name": "Incident tracking and documentation",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0035",
@@ -33868,10 +36156,10 @@ window.CROSSWALK_DATA = [
     "severity": "High",
     "aivss_score": null,
     "audience": [
-      "red-teamer",
       "security-engineer",
       "ciso",
       "compliance",
+      "red-teamer",
       "ml-engineer",
       "ot-engineer",
       "auditor",
@@ -33879,6 +36167,72 @@ window.CROSSWALK_DATA = [
       "data-engineer"
     ],
     "mappings": [
+      {
+        "framework": "CoSAI",
+        "control_id": "WS4-AGT-2.1",
+        "control_name": "Purpose-specific entitlements",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS4-AGT-2.4",
+        "control_name": "Agent blast radius containment",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS3-GOV-4",
+        "control_name": "AI security controls checklist",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C2-M2.2",
+        "control_name": "Systemic risk scenarios",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C3-M3.3",
+        "control_name": "Systemic risk modelling",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C7-M7.1",
+        "control_name": "Model description and behaviour documentation",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0051",
@@ -34691,10 +37045,10 @@ window.CROSSWALK_DATA = [
     "severity": "High",
     "aivss_score": null,
     "audience": [
-      "red-teamer",
       "security-engineer",
       "ciso",
       "compliance",
+      "red-teamer",
       "ml-engineer",
       "ot-engineer",
       "auditor",
@@ -34702,6 +37056,72 @@ window.CROSSWALK_DATA = [
       "data-engineer"
     ],
     "mappings": [
+      {
+        "framework": "CoSAI",
+        "control_id": "WS4-AGT-2.2",
+        "control_name": "Agent cybersecurity baseline",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS4-AGT-2.4",
+        "control_name": "Agent blast radius containment",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS2-DEF-2",
+        "control_name": "AI attack surface mapping",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C2-M2.1",
+        "control_name": "Systemic risk identification process",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C9-M9.1",
+        "control_name": "Incident tracking and documentation",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C1-M1.2",
+        "control_name": "Implementing the framework",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0013",
@@ -35557,10 +37977,10 @@ window.CROSSWALK_DATA = [
     "severity": "High",
     "aivss_score": null,
     "audience": [
-      "red-teamer",
       "security-engineer",
       "ciso",
       "compliance",
+      "red-teamer",
       "ml-engineer",
       "ot-engineer",
       "auditor",
@@ -35568,6 +37988,72 @@ window.CROSSWALK_DATA = [
       "data-engineer"
     ],
     "mappings": [
+      {
+        "framework": "CoSAI",
+        "control_id": "WS2-DEF-3",
+        "control_name": "AI incident response procedures",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS4-AGT-2.2",
+        "control_name": "Agent cybersecurity baseline",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS3-GOV-2",
+        "control_name": "AI risk assessment methodology",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C9-M9.1",
+        "control_name": "Incident tracking and documentation",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C9-M9.3",
+        "control_name": "Corrective actions",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C1-M1.2",
+        "control_name": "Implementing the framework",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0029",
@@ -36443,10 +38929,10 @@ window.CROSSWALK_DATA = [
     "severity": "High",
     "aivss_score": null,
     "audience": [
-      "red-teamer",
       "security-engineer",
       "ciso",
       "compliance",
+      "red-teamer",
       "ml-engineer",
       "ot-engineer",
       "auditor",
@@ -36454,6 +38940,72 @@ window.CROSSWALK_DATA = [
       "data-engineer"
     ],
     "mappings": [
+      {
+        "framework": "CoSAI",
+        "control_id": "WS2-DEF-6",
+        "control_name": "AI red teaming and adversarial testing",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS3-GOV-2",
+        "control_name": "AI risk assessment methodology",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS1-SSC-3",
+        "control_name": "Model provenance tracking",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C3-M3.2",
+        "control_name": "Model evaluations",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C3-M3.4",
+        "control_name": "Systemic risk estimation",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C5-M5.1",
+        "control_name": "Safety mitigation implementation",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0024.000",
@@ -37184,10 +39736,10 @@ window.CROSSWALK_DATA = [
     "severity": "Medium",
     "aivss_score": null,
     "audience": [
-      "red-teamer",
       "security-engineer",
       "ciso",
       "compliance",
+      "red-teamer",
       "ml-engineer",
       "ot-engineer",
       "auditor",
@@ -37195,6 +39747,72 @@ window.CROSSWALK_DATA = [
       "data-engineer"
     ],
     "mappings": [
+      {
+        "framework": "CoSAI",
+        "control_id": "WS4-AGT-1.1",
+        "control_name": "Risk-based human oversight",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS3-GOV-5",
+        "control_name": "Third-party AI risk management",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS1-SSC-4",
+        "control_name": "Training data supply chain integrity",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C8-M8.1",
+        "control_name": "Clear responsibility definition",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C8-M8.2",
+        "control_name": "Resource allocation",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C3-M3.5",
+        "control_name": "Post-market monitoring and external evaluation",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0035",
@@ -38002,10 +40620,10 @@ window.CROSSWALK_DATA = [
     "severity": "High",
     "aivss_score": null,
     "audience": [
-      "red-teamer",
       "security-engineer",
       "ciso",
       "compliance",
+      "red-teamer",
       "ml-engineer",
       "ot-engineer",
       "auditor",
@@ -38013,6 +40631,72 @@ window.CROSSWALK_DATA = [
       "data-engineer"
     ],
     "mappings": [
+      {
+        "framework": "CoSAI",
+        "control_id": "WS1-SSC-6",
+        "control_name": "Secure model distribution",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS1-SSC-2",
+        "control_name": "ML artifact signing and verification",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS2-DEF-5",
+        "control_name": "AI security monitoring and telemetry",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C6-M6.2",
+        "control_name": "Security mitigation implementation",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C6-M6.1",
+        "control_name": "Security goal and threat actor definition",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-II-C1-M1.1",
+        "control_name": "Copyright policy",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0016",
@@ -38831,10 +41515,10 @@ window.CROSSWALK_DATA = [
     "severity": "High",
     "aivss_score": null,
     "audience": [
-      "red-teamer",
       "security-engineer",
       "ciso",
       "compliance",
+      "red-teamer",
       "ml-engineer",
       "ot-engineer",
       "auditor",
@@ -38842,6 +41526,72 @@ window.CROSSWALK_DATA = [
       "data-engineer"
     ],
     "mappings": [
+      {
+        "framework": "CoSAI",
+        "control_id": "WS1-SSC-4",
+        "control_name": "Training data supply chain integrity",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS2-DEF-6",
+        "control_name": "AI red teaming and adversarial testing",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "CoSAI",
+        "control_id": "WS3-GOV-3",
+        "control_name": "AI security scorecard",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "CoSAI 2025",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C5-M5.1",
+        "control_name": "Safety mitigation implementation",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C2-M2.2",
+        "control_name": "Systemic risk scenarios",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "EU AI Act Code of Practice",
+        "control_id": "CoP-III-C10-M10.2",
+        "control_name": "Public transparency",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0045",

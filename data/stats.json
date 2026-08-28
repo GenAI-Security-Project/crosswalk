@@ -27,34 +27,36 @@
     }
   },
   "mappings": {
-    "total": 3247,
+    "total": 3497,
     "by_list": {
-      "Agentic-Top10-2026": 849,
+      "Agentic-Top10-2026": 910,
       "AST-Top10-2026": 36,
-      "DSGAI-2026": 1521,
-      "LLM-Top10-2026": 841
+      "DSGAI-2026": 1647,
+      "LLM-Top10-2026": 904
     }
   },
   "frameworks": {
     "registries": 25,
-    "mapped": 23,
-    "unmapped_registries": [
+    "mapped": 25,
+    "unmapped_registries": [],
+    "draft_only": [
       "CoSAI",
       "EU AI Act Code of Practice"
     ],
+    "draft_rows": 286,
     "by_list": {
-      "LLM-Top10-2026": 23,
-      "Agentic-Top10-2026": 23,
-      "DSGAI-2026": 21,
+      "LLM-Top10-2026": 25,
+      "Agentic-Top10-2026": 25,
+      "DSGAI-2026": 23,
       "AST-Top10-2026": 1
     }
   },
   "mapping_files": {
-    "total": 68,
+    "total": 74,
     "by_list": {
-      "LLM-Top10-2026": 23,
-      "Agentic-Top10-2026": 23,
-      "DSGAI-2026": 21,
+      "LLM-Top10-2026": 25,
+      "Agentic-Top10-2026": 25,
+      "DSGAI-2026": 23,
       "AST-Top10-2026": 1
     }
   },

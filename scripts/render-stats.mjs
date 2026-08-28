@@ -58,6 +58,14 @@ const KEYS = {
   'mapping-files': () => stats.mapping_files.total,
   'frameworks-mapped': () => stats.frameworks.mapped,
   'frameworks-registries': () => stats.frameworks.registries,
+  // Frameworks whose every row is still a candidate placeholder. Rendering this
+  // next to the headline count is the difference between "25 frameworks mapped"
+  // and "25 frameworks mapped, two of them not yet reviewed by anyone".
+  'frameworks-draft': () => {
+    const d = stats.frameworks.draft_only || [];
+    if (!d.length) return 'none \u2014 every mapped framework has authored rows';
+    return `${d.length} of ${stats.frameworks.mapped} carry candidate DRAFT rows only \u2014 ${d.join(' \u00b7 ')}`;
+  },
   'incidents': () => stats.incidents.total,
   // Reports the measurement's own coverage alongside the result: a bare
   // "current" count would imply the rest were checked and fine.
