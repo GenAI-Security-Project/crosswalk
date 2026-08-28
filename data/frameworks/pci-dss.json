@@ -442,5 +442,12 @@
       "description": "LLM integration code specifies accuracy requirements � high-stakes payment outputs require verification before action",
       "kind": "control"
     }
-  ]
+  ],
+  "inventory_completeness": {
+    "status": "partial",
+    "included": 72,
+    "total": null,
+    "note": "Every item in this registry is referenced by a mapping, so the registry was derived from the mappings rather than from the framework. It cannot contain controls this crosswalk has not mapped. Authoritative total not yet established.",
+    "source": "https://www.pcisecuritystandards.org/document_library/"
+  }
 }

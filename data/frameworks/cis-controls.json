@@ -457,5 +457,12 @@
       "change": "Initial seed — 18 CIS Controls v8.1 top-level safeguard groups",
       "author": "OWASP GenAI Data Security Initiative"
     }
-  ]
+  ],
+  "inventory_completeness": {
+    "status": "unknown",
+    "included": 70,
+    "total": null,
+    "note": "Authoritative control count not established. Needs a count from the published framework.",
+    "source": "https://www.cisecurity.org/controls"
+  }
 }

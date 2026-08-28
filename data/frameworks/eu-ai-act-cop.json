@@ -449,5 +449,12 @@
       "change": "Initial seed — 3 chapters, 12 commitments, 55 measures from final CoP (July 2025)",
       "author": "OWASP GenAI Data Security Initiative"
     }
-  ]
+  ],
+  "inventory_completeness": {
+    "status": "unknown",
+    "included": 54,
+    "total": null,
+    "note": "Authoritative control count not established. Needs a count from the published framework.",
+    "source": "https://code-of-practice.ai/"
+  }
 }

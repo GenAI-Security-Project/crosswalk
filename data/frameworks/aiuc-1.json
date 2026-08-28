@@ -141,5 +141,12 @@
       "description": "Initial release — full mapping DSGAI01–DSGAI21 to AIUC-1",
       "kind": "control"
     }
-  ]
+  ],
+  "inventory_completeness": {
+    "status": "partial",
+    "included": 23,
+    "total": null,
+    "note": "Every item in this registry is referenced by a mapping, so the registry was derived from the mappings rather than from the framework. It cannot contain controls this crosswalk has not mapped. Authoritative total not yet established.",
+    "source": "https://www.ai-safety-institute.org/"
+  }
 }

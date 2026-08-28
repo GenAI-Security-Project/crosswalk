@@ -347,6 +347,28 @@ function buildFrameworkReport(framework, entries) {
 
 // ── Markdown renderer ─────────────────────────────────────────────────────────
 
+/**
+ * Describe how complete the registry behind a framework is.
+ *
+ * A coverage rate means nothing without its denominator. These registries are
+ * partial, so every report states it beside the number rather than leaving the
+ * reader to assume the inventory is the whole framework.
+ */
+function inventoryLabel(frameworkName) {
+  const dir = path.join(REPO_ROOT, 'data', 'frameworks');
+  if (!fs.existsSync(dir)) return 'unknown';
+  for (const f of fs.readdirSync(dir).filter((n) => n.endsWith('.json'))) {
+    const reg = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'));
+    if ((reg.name || reg.id) !== frameworkName) continue;
+    const ic = reg.inventory_completeness;
+    if (!ic) return 'not declared';
+    if (ic.status === 'complete') return `complete (${ic.included}/${ic.total})`;
+    if (ic.total) return `partial (${ic.included}/${ic.total})`;
+    return `${ic.status} — ${ic.included} in registry, framework total not established`;
+  }
+  return 'unknown';
+}
+
 function renderMarkdown(fw, allEntries, opts) {
   const r    = buildFrameworkReport(fw, allEntries);
   const date = new Date().toISOString().slice(0, 10);
@@ -386,6 +408,7 @@ function renderMarkdown(fw, allEntries, opts) {
   lines.push(`| Entries with no ${fw} mappings | ${r.uncovered.length} |`);
   lines.push(`| Coverage rate | ${(r.coverageRate * 100).toFixed(0)}% |`);
   lines.push(`| Unique controls referenced | ${r.controls.size} |`);
+  lines.push(`| Registry inventory | ${inventoryLabel(fw)} |`);
   lines.push(`| Critical-severity gaps | ${criticalUncovered.length} |`);
   lines.push(`| High-severity gaps | ${highUncovered.length} |`);
   lines.push('');

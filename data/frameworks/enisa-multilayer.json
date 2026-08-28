@@ -52,5 +52,12 @@
       "description": "For NIS2 essential entities and EU AI Act Annex III deployments — disinformation risk treated as a significant incident category",
       "kind": "layer"
     }
-  ]
+  ],
+  "inventory_completeness": {
+    "status": "partial",
+    "included": 4,
+    "total": null,
+    "note": "Every item in this registry is referenced by a mapping, so the registry was derived from the mappings rather than from the framework. It cannot contain controls this crosswalk has not mapped. Authoritative total not yet established.",
+    "source": "https://www.enisa.europa.eu/publications/multilayer-framework-for-good-cybersecurity-practices-for-ai"
+  }
 }

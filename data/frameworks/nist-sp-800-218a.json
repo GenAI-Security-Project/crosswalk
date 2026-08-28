@@ -322,5 +322,12 @@
       "description": "Define procedures to assess and remediate data deletion requests including impact analysis on trained models and retraining requirements; Define remediation procedures for availability incidents including model rollback, rate limit tightening, and cost circuit breakers; Define and test remediation procedures for availability incidents — rate limit tightening, model rollback, cost circuit breaker activation",
       "kind": "control"
     }
-  ]
+  ],
+  "inventory_completeness": {
+    "status": "partial",
+    "included": 52,
+    "total": null,
+    "note": "Every item in this registry is referenced by a mapping, so the registry was derived from the mappings rather than from the framework. It cannot contain controls this crosswalk has not mapped. Authoritative total not yet established.",
+    "source": "https://csrc.nist.gov/pubs/sp/800/218/a/final"
+  }
 }

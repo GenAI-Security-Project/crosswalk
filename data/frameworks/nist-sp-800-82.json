@@ -364,5 +364,12 @@
       "description": "LLM service degradation has defined fail-safe behaviour � process control continues without LLM",
       "kind": "control"
     }
-  ]
+  ],
+  "inventory_completeness": {
+    "status": "partial",
+    "included": 59,
+    "total": null,
+    "note": "Every item in this registry is referenced by a mapping, so the registry was derived from the mappings rather than from the framework. It cannot contain controls this crosswalk has not mapped. Authoritative total not yet established.",
+    "source": "https://csrc.nist.gov/pubs/sp/800/82/r3/final"
+  }
 }

@@ -223,5 +223,12 @@
       "change": "Initial seed — 22 key articles from Digital Operational Resilience Act",
       "author": "OWASP GenAI Data Security Initiative"
     }
-  ]
+  ],
+  "inventory_completeness": {
+    "status": "unknown",
+    "included": 27,
+    "total": null,
+    "note": "Authoritative control count not established. Needs a count from the published framework.",
+    "source": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554"
+  }
 }

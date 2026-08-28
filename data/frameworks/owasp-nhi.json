@@ -706,5 +706,12 @@
       "description": "Separate credentials per integration",
       "kind": "control"
     }
-  ]
+  ],
+  "inventory_completeness": {
+    "status": "unknown",
+    "included": 117,
+    "total": null,
+    "note": "Authoritative control count not established. Needs a count from the published framework.",
+    "source": "https://owasp.org/www-project-non-human-identities-top-10/"
+  }
 }

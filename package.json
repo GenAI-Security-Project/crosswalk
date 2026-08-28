@@ -24,6 +24,7 @@
     "stats:check": "node scripts/stats.js --check && node scripts/render-stats.mjs --check",
     "registry-coverage": "node scripts/coverage-of-registry.js",
     "density": "node scripts/density-report.js",
+    "inventory": "node scripts/inventory-completeness.js",
     "compliance": "node scripts/compliance-report.js",
     "incidents": "node scripts/incidents-report.js",
     "query": "node scripts/query.js",
@@ -33,7 +34,7 @@
     "framework-diff": "node scripts/framework-diff.js",
     "state-report": "node scripts/state-report.js",
     "build": "npm run generate && npm run validate && npm run stats:check",
-    "build:reports": "npm run compliance && npm run incidents && npm run registry-coverage && npm run density",
+    "build:reports": "npm run compliance && npm run incidents && npm run registry-coverage && npm run density && npm run inventory",
     "ci": "npm run build && npm run build:reports",
     "compile": "tsc",
     "prepublishOnly": "npm run compile"
