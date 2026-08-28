@@ -1,0 +1,90 @@
+{
+  "$comment": "AIVSS metric definitions, transcribed from the official specification. Used by scripts/validate-aivss.mjs to check the vectors in agentic-top10/Agentic_AIVSS.md. No score value is derived here — scoring is SME work (C4).",
+  "schema": 1,
+  "source": {
+    "title": "AIVSS Scoring System For OWASP Agentic AI Core Security Risks",
+    "version": "v0.8",
+    "url": "https://aivss.owasp.org/assets/publications/AIVSS%20Scoring%20System%20For%20OWASP%20Agentic%20AI%20Core%20Security%20Risks%20v0.8.pdf",
+    "accessed": "2026-08-28"
+  },
+  "baseline": {
+    "requires": "CVSS v4.0",
+    "quote": "AIVSS requires CVSS v4.0 as its baseline scoring input. Practitioners should not use CVSS v3.1 scores as inputs to the AIVSS formula, as the metric structures are not directly comparable.",
+    "note": "v4.0 restructures the v3.1 Scope metric into Vulnerable System Impact (VC/VI/VA) and Subsequent System Impact (SC/SI/SA). The subsequent-system metrics matter most in agentic scenarios, where a compromise in one agent propagates."
+  },
+  "cvss4_base_metrics": {
+    "AV": [
+      "N",
+      "A",
+      "L",
+      "P"
+    ],
+    "AC": [
+      "L",
+      "H"
+    ],
+    "AT": [
+      "N",
+      "P"
+    ],
+    "PR": [
+      "N",
+      "L",
+      "H"
+    ],
+    "UI": [
+      "N",
+      "P",
+      "A"
+    ],
+    "VC": [
+      "H",
+      "L",
+      "N"
+    ],
+    "VI": [
+      "H",
+      "L",
+      "N"
+    ],
+    "VA": [
+      "H",
+      "L",
+      "N"
+    ],
+    "SC": [
+      "H",
+      "L",
+      "N"
+    ],
+    "SI": [
+      "H",
+      "L",
+      "N"
+    ],
+    "SA": [
+      "H",
+      "L",
+      "N"
+    ]
+  },
+  "cvss4_required_metrics": [
+    "AV",
+    "AC",
+    "AT",
+    "PR",
+    "UI",
+    "VC",
+    "VI",
+    "VA",
+    "SC",
+    "SI",
+    "SA"
+  ],
+  "cvss31_only_metrics": {
+    "S": "Scope — replaced in v4.0 by the Vulnerable/Subsequent impact split",
+    "C": "Confidentiality — becomes VC (and SC) in v4.0",
+    "I": "Integrity — becomes VI (and SI) in v4.0",
+    "A": "Availability — becomes VA (and SA) in v4.0"
+  }
+}
