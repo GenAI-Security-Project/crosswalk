@@ -96,13 +96,13 @@ not assumed to fit in an existing tier.
 
 ```text
 Enterprise Zone (Level 4–5)
-    ? [Firewall + proxy — HTTPS only, no direct OT protocol access]
+    ↓ [Firewall + proxy — HTTPS only, no direct OT protocol access]
 DMZ / Demilitarized Zone (Level 3.5)
-    ? LLMs should be deployed HERE when they need OT data access
-    ? [Data diode or unidirectional gateway where feasible]
-    ? [Firewall — OT protocol aware, allowlisted flows only]
+    → LLMs should be deployed HERE when they need OT data access
+    ↓ [Data diode or unidirectional gateway where feasible]
+    ↓ [Firewall — OT protocol aware, allowlisted flows only]
 Control Zone (Level 3) — SCADA, historian, HMI
-    ? [Firewall — minimal, monitored]
+    ↓ [Firewall — minimal, monitored]
 Field Zone (Level 0–2) — PLCs, RTUs, field devices
 ```
 

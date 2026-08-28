@@ -17,12 +17,12 @@ researchers, and practitioners at any experience level.
 
 ## What you can contribute
 
-- **New framework mappings** � a framework not yet covered
-- **Control updates** � a framework has released a new version
-- **Incident references** � a real-world incident that illustrates a vulnerability
-- **Tool additions** � an open-source tool relevant to a mapping entry
-- **OT/ICS specifics** � industrial context for any mapping entry
-- **Translations** � see `/i18n/` for language stubs
+- **New framework mappings** — a framework not yet covered
+- **Control updates** — a framework has released a new version
+- **Incident references** — a real-world incident that illustrates a vulnerability
+- **Tool additions** — an open-source tool relevant to a mapping entry
+- **OT/ICS specifics** — industrial context for any mapping entry
+- **Translations** — see `/i18n/` for language stubs
 - **Bug fixes** — broken links, incorrect control IDs, typos
 - **Framework submissions** — use the
   [Submit-a-Standard](https://genai-security-project.github.io/GenAI-Data-Security-Initiative/#/submit) page
@@ -52,7 +52,7 @@ You can also submit via the
 ## Before you start
 
 1. Check [open issues](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/issues)
-   � your contribution may already be in progress
+   — your contribution may already be in progress
 2. For new framework files, open an issue first to confirm scope
 3. Read [`shared/SEVERITY.md`](shared/SEVERITY.md) before assigning severity ratings
 4. Read [`shared/GLOSSARY.md`](shared/GLOSSARY.md) for consistent terminology
@@ -65,12 +65,12 @@ Every mapping file must follow this structure:
 
 ```text
 1. Header comment block (source list, framework, version, license)
-2. H1 title: "[Source list] � [Framework]"
+2. H1 title: "[Source list] × [Framework]"
 3. One-paragraph description of the framework
 4. Framework domain/control summary table
 5. Quick-reference summary table (ID, Name, Severity, Controls, Tier, Scope)
 6. Audience tags
-7. Detailed mappings � one H3 section per vulnerability:
+7. Detailed mappings — one H3 section per vulnerability:
    - Severity
    - Description (2 sentences max)
    - Real-world reference (if known)
@@ -85,7 +85,7 @@ Every mapping file must follow this structure:
 ```
 
 Copy [`agentic-top10/Agentic_AIUC1.md`](agentic-top10/Agentic_AIUC1.md)
-as your starting template � it is the reference implementation.
+as your starting template — it is the reference implementation.
 
 ---
 
@@ -97,7 +97,7 @@ as your starting template � it is the reference implementation.
 4. Verify all links work
 5. Add a changelog entry at the bottom of any file you modify
 6. Update `data/` JSON if you are modifying a mapping entry
-7. Open a PR using the PR template � fill in every checklist item
+7. Open a PR using the PR template — fill in every checklist item
 
 PRs without a source/evidence link will be held for review until one is provided.
 

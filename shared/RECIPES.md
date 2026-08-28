@@ -51,7 +51,7 @@ Pipelines if you need training data governance and privacy controls.
 **Threat:** LLM02 Sensitive Information Disclosure — users retrieve
 documents they are not authorised to access through the RAG interface.
 
-**Architecture:** Vector store ? retrieval layer ? LLM context assembly
+**Architecture:** Vector store → retrieval layer → LLM context assembly
 
 **Problem pattern:**
 Most RAG deployments query the vector store with a single service
@@ -218,8 +218,8 @@ for r in results:
 & Validation Failures — adversarially crafted documents corrupt the
 RAG knowledge base or exploit ingestion pipeline vulnerabilities.
 
-**Architecture:** Document upload ? validation layer ? chunking ?
-embedding ? vector store
+**Architecture:** Document upload → validation layer → chunking ?
+embedding → vector store
 
 **Implementation:**
 
@@ -379,7 +379,7 @@ def safe_snapshot_import(archive_path: str, destination: Path) -> list[str]:
 contain PII, credentials, or sensitive identifiers that should be
 masked before reaching the user.
 
-**Architecture:** LLM response ? redaction layer ? user delivery
+**Architecture:** LLM response → redaction layer → user delivery
 
 **Implementation:**
 
@@ -503,8 +503,8 @@ def deliver_response(raw_response: str, user_id: str, session_id: str) -> str:
 store degradation causes silent misinformation rather than a visible
 error.
 
-**Architecture:** Query ? vector store health check ? retrieval ?
-freshness validation ? context assembly ? fallback if degraded
+**Architecture:** Query → vector store health check → retrieval ?
+freshness validation → context assembly → fallback if degraded
 
 **Implementation:**
 
@@ -673,7 +673,7 @@ def log_rag_interaction(
 **Threat:** ASI02 Tool Misuse — MCP servers accept malformed or
 adversarial tool call parameters that cause downstream harm.
 
-**Architecture:** Agent ? MCP server ? tool execution
+**Architecture:** Agent → MCP server → tool execution
 
 **Implementation:**
 
@@ -789,7 +789,7 @@ def handle_tool_call(tool_name: str, params: dict, user_context: dict) -> dict:
 injects hidden instructions into tool descriptors that redirect
 agent behaviour.
 
-**Architecture:** Agent tool loader ? descriptor validation ? tool registry
+**Architecture:** Agent tool loader → descriptor validation → tool registry
 
 **Implementation:**
 
@@ -801,7 +801,7 @@ from typing import Optional
 
 # Tool descriptor integrity registry
 # In production: store in a tamper-evident system, not a dict
-APPROVED_TOOL_DESCRIPTORS: dict[str, str] = {}  # tool_id ? expected_hash
+APPROVED_TOOL_DESCRIPTORS: dict[str, str] = {}  # tool_id → expected_hash
 
 def register_tool_descriptor(tool_id: str, descriptor: dict, approver: str):
     """
@@ -908,8 +908,8 @@ def load_tool_for_agent(tool_id: str, descriptor: dict) -> Optional[dict]:
 **Threat:** ASI03 Identity & Privilege Abuse — agents hold long-lived,
 over-scoped credentials that persist beyond the task they were issued for.
 
-**Architecture:** Session start ? JIT credential issuance ? tool calls
-? session end ? automatic revocation
+**Architecture:** Session start → JIT credential issuance → tool calls
+→ session end → automatic revocation
 
 **Implementation:**
 
@@ -924,7 +924,7 @@ class AgentCredential:
     credential_id: str
     agent_id: str
     session_id: str
-    tool_scopes: dict[str, list[str]]  # tool_name ? permitted_operations
+    tool_scopes: dict[str, list[str]]  # tool_name → permitted_operations
     issued_at: float = field(default_factory=time.time)
     expires_at: float = 0.0
     revoked: bool = False
@@ -1168,7 +1168,7 @@ class ToolInvocationTracker:
 **Threat:** ASI01 Goal Hijack / ASI10 Rogue Agents — operator needs
 to immediately halt all agent activity without affecting process control.
 
-**Architecture:** Operator console ? kill switch ? all Zone 3 agents
+**Architecture:** Operator console → kill switch → all Zone 3 agents
 
 **Design principle:**
 The kill switch must be implemented at the infrastructure layer —
@@ -1783,7 +1783,7 @@ class HumanConfirmationGate:
 agent memory executes on future sessions, enabling cross-session
 instruction injection and persistent goal hijack.
 
-**Architecture:** Agent memory store ? sanitization layer ? execution context
+**Architecture:** Agent memory store → sanitization layer → execution context
 
 **Implementation:**
 
@@ -1870,7 +1870,7 @@ inter-agent messages enable injection propagation across agent
 boundaries, turning a single compromised agent into a cluster-wide
 breach vector.
 
-**Architecture:** Agent A ? message bus ? validation layer ? Agent B
+**Architecture:** Agent A → message bus → validation layer → Agent B
 
 **Implementation:**
 
@@ -1958,7 +1958,7 @@ that schema violations are caught before content inspection.
 agent credentials persist beyond need, enabling privilege escalation
 and lateral movement through long-lived tokens.
 
-**Architecture:** Agent ? credential broker ? short-lived token ? external service
+**Architecture:** Agent → credential broker → short-lived token → external service
 
 **Implementation:**
 
@@ -2060,7 +2060,7 @@ the audit trail contains all lifecycle events.
 agent executes tool calls based on hijacked instructions, bypassing
 intended operational boundaries.
 
-**Architecture:** Agent reasoning ? guardrail validator ? tool execution
+**Architecture:** Agent reasoning → guardrail validator → tool execution
 
 **Implementation:**
 
@@ -2157,7 +2157,7 @@ Data Lineage & Traceability Failures — untraceable training data
 makes audit and compliance impossible, blocking incident
 investigation and regulatory response.
 
-**Architecture:** Data source ? ingestion ? hash chain ? training pipeline
+**Architecture:** Data source → ingestion → hash chain → training pipeline
 
 **Implementation:**
 
@@ -2281,7 +2281,7 @@ DSGAI15 Inadequate PII Protection / DSGAI16 Non-compliant Data
 Handling — personal data in training or inference pipelines flows
 without detection, creating regulatory exposure.
 
-**Architecture:** Raw data ? PII scanner ? redaction ? clean data
+**Architecture:** Raw data → PII scanner → redaction → clean data
 
 **Implementation:**
 
@@ -2371,7 +2371,7 @@ Non-compliant Data Handling in AI Training Pipelines — model outputs
 or synthetic data reveal training data membership, enabling
 reconstruction of individual records.
 
-**Architecture:** Training data ? DP-SGD ? model ? privacy-guaranteed outputs
+**Architecture:** Training data → DP-SGD → model → privacy-guaranteed outputs
 
 **Implementation:**
 
@@ -2460,7 +2460,7 @@ Inadequate Consent & Data Rights Management — AI data persists
 beyond legal retention period, violating GDPR, DORA, and SOC 2
 requirements.
 
-**Architecture:** Data store ? retention policy engine ? automated deletion + audit log
+**Architecture:** Data store → retention policy engine → automated deletion + audit log
 
 **Implementation:**
 
