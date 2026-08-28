@@ -1300,7 +1300,7 @@ deployment checklist in `LLM_ISA62443.md`.
 ## References
 
 - [ISA/IEC 62443 series](https://www.isa.org/standards-and-publications/isa-standards/isa-iec-62443-series-of-standards)
-- [ISA/IEC 62443-3-3 System Security Requirements](https://www.isa.org/products/isa-iec-62443-3-3-system-security-requirements)
+- [ISA/IEC 62443-3-3 System Security Requirements](https://www.isa.org/standards-and-publications/isa-standards/isa-iec-62443-series-of-standards)
 - [NIST SP 800-82 Rev 3 — Guide to OT Security](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-82r3.pdf)
 - [OWASP Agentic Top 10 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
 - [MITRE ATT&CK for ICS](https://attack.mitre.org/matrices/ics/)

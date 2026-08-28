@@ -7,7 +7,7 @@
   License     : CC BY-SA 4.0
 -->
 
-# LLM Top 10 2026 – DORA
+# LLM Top 10 2026 × DORA
 
 Mapping the [OWASP Top 10 for LLM Applications 2026](https://genai.owasp.org/llm-top-10/)
 to the [Digital Operational Resilience Act (DORA)](https://eur-lex.europa.eu/eli/reg/2022/2554/oj)
@@ -24,6 +24,36 @@ testing programmes, and third-party oversight arrangements. This mapping
 enables financial institutions to trace each OWASP LLM Top 10 risk to
 specific DORA articles and implement controls that satisfy regulatory
 obligations.
+
+---
+
+## Why DORA for LLM security
+
+DORA is binding EU regulation for financial entities, and it is
+deliberately technology-neutral — which means it already applies to LLM
+systems without naming them. Banks, insurers, investment firms, payment
+institutions, and their critical ICT providers are in scope, and so is any
+LLM application supporting a critical or important function.
+
+Its structure maps onto LLM risk more directly than most financial
+regulation. **Articles 5–7** require an ICT risk management framework, which
+AI risk has to sit inside rather than beside. **Article 8** requires
+identifying and classifying ICT assets — models, datasets, adapters, and
+retrieval corpora are assets and belong in the inventory. **Article 9**
+requires protection and prevention measures. **Article 10** requires
+detection. **Articles 17–23** govern incident classification and regulatory
+reporting, with defined timelines that a prompt injection incident causing
+customer data disclosure will trigger. **Articles 24–27** require
+threat-led penetration testing, which is where adversarial testing of the
+model belongs. **Articles 28–44** govern third-party ICT risk, which is
+where model providers and inference vendors sit.
+
+The concentration risk provisions deserve particular attention: a financial
+sector converging on a small number of frontier model providers is exactly
+the dependency pattern DORA was written to surface.
+
+Use this file to bring AI systems into an existing DORA programme, to scope
+TLPT, and to classify AI incidents against the reporting thresholds.
 
 ---
 
@@ -150,7 +180,7 @@ invisible-Unicode carriers survive review of the rendered interface.
 | Garak | Open-source | <https://github.com/leondz/garak> |
 | LLM Guard | Open-source | <https://github.com/protectai/llm-guard> |
 | PyRIT | Open-source | <https://github.com/Azure/PyRIT> |
-| DORA RTS/ITS | Reference | <https://www.eba.europa.eu/regulation-and-policy/digital-operational-resilience-act-dora> |
+| DORA RTS/ITS | Reference | <https://www.eba.europa.eu/activities/direct-supervision-and-oversight/digital-operational-resilience-act> |
 
 #### Cross-references
 
@@ -801,7 +831,7 @@ reaches a shell, a browser, or a database.
 | OWASP ZAP | Open-source | <https://www.zaproxy.org> |
 | LLM Guard | Open-source | <https://github.com/protectai/llm-guard> |
 | Semgrep | Open-source | <https://semgrep.dev> |
-| DORA RTS/ITS | Reference | <https://www.eba.europa.eu/regulation-and-policy/digital-operational-resilience-act-dora> |
+| DORA RTS/ITS | Reference | <https://www.eba.europa.eu/activities/direct-supervision-and-oversight/digital-operational-resilience-act> |
 
 #### Cross-references
 
@@ -825,7 +855,7 @@ reaches a shell, a browser, or a database.
 ## References
 
 - [DORA – EU Regulation 2022/2554](https://eur-lex.europa.eu/eli/reg/2022/2554/oj)
-- [EBA DORA Regulatory Technical Standards](https://www.eba.europa.eu/regulation-and-policy/digital-operational-resilience-act-dora)
+- [EBA DORA Regulatory Technical Standards](https://www.eba.europa.eu/activities/direct-supervision-and-oversight/digital-operational-resilience-act)
 - [OWASP LLM Top 10 2026](https://genai.owasp.org/llm-top-10/)
 - [ECB Guide on Outsourcing and ICT Risk](https://www.bankingsupervision.europa.eu/)
 - [MITRE ATLAS](https://atlas.mitre.org)

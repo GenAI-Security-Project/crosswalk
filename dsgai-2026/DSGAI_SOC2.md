@@ -7,7 +7,7 @@
   License     : CC BY-SA 4.0
 -->
 
-# DSGAI 2026 x SOC 2
+# DSGAI 2026 × SOC 2
 
 Mapping the [OWASP GenAI Data Security Risks and Mitigations 2026](https://genai.owasp.org/resource/owasp-genai-data-security-risks-mitigations-2026/)
 (DSGAI01-DSGAI21) to [SOC 2](https://www.aicpa-cima.com/resources/landing/system-and-organization-controls-soc-suite-of-services)
@@ -27,6 +27,34 @@ data security — all of which have direct SOC 2 criteria parallels.
 Confidentiality (C), Privacy (P), and Processing Integrity (PI) criteria
 are implicated throughout the DSGAI taxonomy, not only in the
 obviously data-focused entries.
+
+---
+
+## Why SOC 2 for GenAI data security
+
+SOC 2 is the attestation enterprise buyers ask a service organisation for
+most often, and GenAI features are landing inside services that already
+carry a report. The practical question is whether the model changed anything
+the report asserts — and for the DSGAI risk set it usually did.
+
+Two Trust Services Criteria carry most of the weight. **Confidentiality**
+(C1) covers the identification, protection, and disposal of confidential
+information, which now has to account for data entering prompts, retrieval
+indexes, vector stores, telemetry, and any content a vendor may retain.
+**Privacy** (P1–P8) covers notice, choice, collection, use, retention,
+disclosure, and quality for personal information — where GenAI raises the
+hardest question in this whole file, because P4 retention and disposal
+assumes disposal is achievable, and data absorbed into model weights
+resists it. **Processing Integrity** (PI1) bears on data poisoning and
+output accuracy where the service commits to a processing outcome.
+
+The common criteria still do the structural work: **CC6** logical access
+governs what a retrieval query can reach, **CC7** covers monitoring, and
+**CC3** covers risk assessment.
+
+Use this file to scope a Type II audit that includes GenAI features, to
+brief an auditor on AI data flows, and to answer the customer diligence that
+follows the first AI feature launch.
 
 ---
 

@@ -25,6 +25,35 @@ from training through inference.
 
 ---
 
+## Why CIS Controls for GenAI data security
+
+The CIS Controls are the most prescriptive framework in this repo, and for
+GenAI data security that is exactly what most teams need: safeguards
+specific enough to implement immediately, tiered by an honest maturity
+ladder, without waiting for a data governance programme to mature first.
+
+**CIS 3** data protection carries the most weight here and is the right
+place to start — inventory sensitive data, classify it, encrypt it, control
+access to it, and dispose of it. Applied to GenAI, that means treating
+retrieval indexes, vector stores, prompt logs, and fine-tuning corpora as
+data stores subject to the same regime as a database, which is the step most
+programmes skip. **CIS 5** and **CIS 6** cover the account and access
+management that determines what a retrieval query can reach. **CIS 8** audit
+log management covers the trail, and raises the question of what the logs
+themselves hold. **CIS 13** network monitoring and defence covers
+exfiltration paths. **CIS 14** security awareness covers the shadow-AI
+behaviour behind a large share of real leakage incidents. **CIS 15** service
+provider management covers the terms under which a model vendor may retain
+or train on submitted data.
+
+The Implementation Groups let a small team implement the IG1 subset honestly
+rather than claiming a maturity it does not have.
+
+Use this file for implementation sequencing and for reporting progress
+against a recognised ladder.
+
+---
+
 ## CIS Controls structure
 
 | Group | Controls | Scope |

@@ -754,7 +754,7 @@
     {
       "name": "NIST AI RMF Playbook",
       "type": "open-source",
-      "url": "https://airc.nist.gov/Docs/2"
+      "url": "https://airc.nist.gov/AI_RMF_Knowledge_Base/Playbook"
     },
     {
       "name": "OWASP ZAP (for API testing)",
@@ -799,7 +799,7 @@
     {
       "name": "DORA RTS/ITS",
       "type": "open-source",
-      "url": "https://www.eba.europa.eu/regulation-and-policy/digital-operational-resilience-act-dora"
+      "url": "https://www.eba.europa.eu/activities/direct-supervision-and-oversight/digital-operational-resilience-act"
     },
     {
       "name": "LAAF v2.0",

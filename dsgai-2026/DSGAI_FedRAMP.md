@@ -7,9 +7,9 @@
   License     : CC BY-SA 4.0
 -->
 
-# DSGAI 2026 – FedRAMP AI Overlay
+# DSGAI 2026 × FedRAMP AI Overlay
 
-Mapping the [OWASP GenAI Data Security Risks 2026](https://genai.owasp.org/dsgai-2026/)
+Mapping the [OWASP GenAI Data Security Risks 2026](https://genai.owasp.org/resource/owasp-genai-data-security-risks-mitigations-2026/)
 to the [FedRAMP AI Overlay](https://www.fedramp.gov/) extending
 [NIST SP 800-53 Rev 5](https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final)
 with AI-specific control enhancements.
@@ -25,6 +25,35 @@ can leverage FedRAMP AI overlay controls to secure the data that flows
 into, through, and out of AI pipelines: from provenance and lineage of
 training corpora, through access control and integrity of model artefacts,
 to data retention, consent management, and cross-jurisdictional compliance.
+
+---
+
+## Why FedRAMP for GenAI data security
+
+FedRAMP authorisation turns on how a system handles government data, which
+makes the DSGAI risk set the part of AI security most likely to affect an
+authorisation decision. Adding retrieval over agency content, or routing
+prompts to a third-party inference provider, changes the data flow diagram
+in ways an assessor will examine closely.
+
+The relevant 800-53 families are conventional, which is the useful part.
+**SC-28** protection of information at rest covers vector stores, retrieval
+indexes, and prompt logs. **SC-8** covers transmission, relevant the moment
+inference leaves the boundary. **AC-3**, **AC-4**, and **AC-6** cover access
+enforcement, information flow enforcement, and least privilege — with AC-4
+deserving particular attention, since GenAI systems move data across
+internal boundaries in ways conventional flow controls do not anticipate.
+**AU** family controls cover the audit record, including the question of what
+the record itself contains. **MP-6** covers media sanitisation, where model
+weights are a genuinely hard case. **SI-12** covers information handling and
+retention. **SA-9** and the **SR** family cover external services and supply
+chain, which is where a third-party model provider sits.
+
+Expressing these in 800-53 identifiers lets an existing System Security Plan
+absorb GenAI data flows as control narratives rather than as an appendix.
+
+Use this file to scope a significant change request, to draft SSP narratives
+for AI data handling, and to brief a 3PAO on boundary implications.
 
 ---
 
@@ -1093,7 +1122,7 @@ scanning covering bias detection (RA-5).
 
 | Tool | Type | Link |
 |---|---|---|
-| IBM AI Fairness 360 | Open-source | <https://aif360.mybluemix.net> |
+| IBM AI Fairness 360 | Open-source | <https://github.com/Trusted-AI/AIF360> |
 | Fairlearn | Open-source | <https://fairlearn.org> |
 | What-If Tool | Open-source | <https://pair-code.github.io/what-if-tool/> |
 | Fiddler AI | Commercial | <https://www.fiddler.ai> |
@@ -1260,7 +1289,7 @@ control for data location (CM-3).
 
 | Tool | Type | Link |
 |---|---|---|
-| AWS Region Controls / Azure Policy | Commercial | <https://aws.amazon.com/compliance/data-residency/> |
+| AWS Region Controls / Azure Policy | Commercial | <https://aws.amazon.com/compliance/data-privacy/> |
 | Netskope | Commercial | <https://www.netskope.com> |
 | Open Policy Agent | Open-source | <https://www.openpolicyagent.org> |
 | OneTrust | Commercial | <https://www.onetrust.com> |
@@ -1349,8 +1378,8 @@ with legal requirements (AC-3).
 
 - [NIST SP 800-53 Rev 5](https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final)
 - [FedRAMP](https://www.fedramp.gov/)
-- [OWASP GenAI Data Security Risks 2026](https://genai.owasp.org/dsgai-2026/)
-- [NIST AI RMF 1.0](https://www.nist.gov/system/files/documents/2023/01/26/AI%20RMF%201.0.pdf)
+- [OWASP GenAI Data Security Risks 2026](https://genai.owasp.org/resource/owasp-genai-data-security-risks-mitigations-2026/)
+- [NIST AI RMF 1.0](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf)
 - [NIST Privacy Framework](https://www.nist.gov/privacy-framework)
 - [GDPR](https://eur-lex.europa.eu/eli/reg/2016/679/oj)
 

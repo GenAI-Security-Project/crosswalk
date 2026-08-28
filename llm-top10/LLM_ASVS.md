@@ -24,6 +24,35 @@ apply, with specific requirements amplified by the LLM context.
 
 ---
 
+## Why OWASP ASVS for LLM security
+
+An LLM application is still a web application. It has authentication,
+session handling, input validation, output encoding, access control, and
+logging, and the majority of exploitable findings in real deployments come
+from those layers rather than from the model. ASVS is the standard that
+covers them, and it is the natural bridge for an AppSec team asked to
+secure an LLM feature for the first time.
+
+Two entries in the 2026 list are almost entirely ASVS territory.
+**LLM10 Improper Output Handling** is output encoding and injection defence
+applied to a new source of untrusted data — model output reaching a browser,
+a shell, a database, or a compiler is the same class of defect as any
+unvalidated input, and V5 covers it directly. **LLM02 Sensitive Information
+Disclosure** rests on access control (V4) and data protection (V8) applied
+to retrieval.
+
+The L1/L2/L3 verification levels map cleanly onto the crosswalk's own
+Foundational, Hardening, and Advanced tiers, so the two can be run together
+without reconciling two maturity models.
+
+Use this file to write test cases, to brief a penetration tester with
+requirements rather than a scope document, and to fold LLM features into an
+existing secure development lifecycle instead of standing up a parallel one.
+Pair it with `LLM_CWE_CVE.md` for the weakness taxonomy behind each
+requirement.
+
+---
+
 ## ASVS structure
 
 | Chapter | Title | LLM relevance |

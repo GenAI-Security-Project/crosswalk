@@ -12,8 +12,8 @@
 Mapping the
 [OWASP Top 10 for Agentic Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
 to the
-[NIST AI Risk Management Framework (AI RMF 1.0)](https://www.nist.gov/system/files/documents/2023/01/26/AI%20RMF%201.0.pdf)
-and its companion [NIST AI RMF Playbook](https://airc.nist.gov/Docs/2).
+[NIST AI Risk Management Framework (AI RMF 1.0)](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf)
+and its companion [NIST AI RMF Playbook](https://airc.nist.gov/AI_RMF_Knowledge_Base/Playbook).
 
 Agentic AI systems — autonomous, tool-using, multi-agent — introduce
 a qualitatively different risk profile from static LLMs. The AI RMF
@@ -28,6 +28,36 @@ This file is the primary AI RMF governance reference for teams
 deploying autonomous AI agents. Use alongside `LLM_NISTAIRMF.md`
 for LLM-specific risks and `Agentic_AIUC1.md` for agent-specific
 technical controls.
+
+---
+
+## Why NIST AI RMF for agentic security
+
+The AI RMF was written before agentic deployments were common, and it holds
+up better than that history suggests — because its four functions are about
+risk process rather than model architecture. What changes for agents is the
+weight each function carries.
+
+**GOVERN** becomes the binding constraint rather than the paperwork layer.
+An agent that can call tools and take consequential action needs a
+documented risk tolerance, an accountable owner, and an explicit statement
+of what it is permitted to do without a human. **MAP** has to extend past
+the model to the tool inventory, the memory stores, the peer agents, and
+every downstream system inside the blast radius — most agentic incidents
+trace back to a context boundary nobody mapped. **MEASURE** has to cover
+behaviour over multi-step trajectories, not single-response evaluation; an
+agent that passes every individual response check can still deviate across a
+session. **MANAGE** has to include containment: kill switches, circuit
+breakers, and rollback, because prevention alone is not a credible posture
+for autonomous systems.
+
+The Generative AI Profile (NIST AI 600-1) supplies GenAI-specific risk
+framing that this file references where an ASI entry has a direct
+counterpart.
+
+Use this file to build an agentic AI risk register, to define autonomy
+tolerances that survive review, and to evidence AI risk management to a
+federal customer deploying agents.
 
 ---
 
@@ -830,11 +860,11 @@ covered in the evaluation programme (MS-2.5) and incident response
 
 ## References
 
-- [NIST AI RMF 1.0](https://www.nist.gov/system/files/documents/2023/01/26/AI%20RMF%201.0.pdf)
-- [NIST AI RMF Playbook](https://airc.nist.gov/Docs/2)
+- [NIST AI RMF 1.0](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf)
+- [NIST AI RMF Playbook](https://airc.nist.gov/AI_RMF_Knowledge_Base/Playbook)
 - [OWASP Agentic Top 10 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
 - [OWASP AIVSS](https://aivss.owasp.org)
-- [Executive Order 14110](https://www.whitehouse.gov/briefing-room/presidential-actions/2023/10/30/executive-order-on-the-safe-secure-and-trustworthy-development-and-use-of-artificial-intelligence/)
+- [Executive Order 14110](https://www.govinfo.gov/content/pkg/FR-2023-11-01/pdf/2023-24283.pdf)
 
 ---
 

@@ -783,7 +783,7 @@
     {
       "name": "LAAF (LLM Agent Assessment Framework)",
       "type": "open-source",
-      "url": "https://github.com/OWASP/LAAF"
+      "url": "https://github.com/qorvexconsulting1/laaf-V2.0"
     },
     {
       "name": "Open Policy Agent (OPA)",

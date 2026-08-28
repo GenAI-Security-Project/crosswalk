@@ -30,6 +30,36 @@ foundational evidence of security controls.
 
 ---
 
+## Why ISO 27001 for GenAI data security
+
+ISO 27001 is a data protection standard that happens to be framed as an
+information security management system, which makes it the closest
+conventional fit for the DSGAI risk set. Most organisations deploying GenAI
+already hold the certification; the gap is almost never the absence of
+controls but the absence of AI systems from the scope those controls were
+assessed against.
+
+The 2022 Annex A revision helps considerably here. **A.8.11** data masking,
+**A.8.12** data leakage prevention, **A.8.10** information deletion,
+**A.5.34** privacy and PII protection, **A.8.16** monitoring activities, and
+**A.5.7** threat intelligence were added or restructured in that revision,
+and they map onto GenAI data failure modes that had no clean home before.
+**A.5.12** classification and **A.5.13** labelling govern the upstream
+decision that determines almost everything downstream: what may enter a
+prompt, a retrieval index, or a fine-tuning corpus at all.
+
+The hard case this file cannot fully resolve is worth naming. **A.8.10**
+information deletion assumes data can be deleted. Once a record has
+influenced model weights, deletion is approximated by unlearning or
+retraining, and the ISMS needs an honest position on that rather than a
+control statement that quietly does not hold.
+
+Use this file to extend a statement of applicability to GenAI data flows, to
+brief an auditor on AI scope, and alongside `DSGAI_ISO42001.md` for the AI
+management system layer.
+
+---
+
 ## ISO 27001:2022 Annex A control domains
 
 | Domain | Controls | Scope |
@@ -1216,7 +1246,7 @@ for data exfiltration.
 | Tool | Type | Link |
 |---|---|---|
 | LayerX Security | Commercial | <https://layerxsecurity.com> |
-| Microsoft Intune | Commercial | <https://www.microsoft.com/en-us/security/business/endpoint-management> |
+| Microsoft Intune | Commercial | <https://learn.microsoft.com/en-us/mem/intune/> |
 
 #### Cross-references
 
@@ -1635,7 +1665,7 @@ GenAI data security obligations:
 - [OWASP GenAI Data Security Risks & Mitigations 2026](https://genai.owasp.org/resource/owasp-genai-data-security-risks-mitigations-2026/)
 - [ISO/IEC 27701 — Privacy extension](https://www.iso.org/standard/71670.html)
 - [ISO/IEC 42001 — AI management systems](https://www.iso.org/standard/81230.html)
-- [NIST AI RMF](https://www.nist.gov/system/files/documents/2023/01/26/AI%20RMF%201.0.pdf)
+- [NIST AI RMF](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf)
 
 ---
 

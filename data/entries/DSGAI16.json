@@ -590,12 +590,12 @@
     {
       "name": "Microsoft Intune",
       "type": "commercial",
-      "url": "https://www.microsoft.com/en-us/security/business/endpoint-management"
+      "url": "https://learn.microsoft.com/en-us/mem/intune/"
     },
     {
       "name": "Carbon Black",
       "type": "commercial",
-      "url": "https://www.vmware.com/products/carbon-black-cloud.html"
+      "url": "https://www.broadcom.com/products/carbon-black"
     },
     {
       "name": "osquery",

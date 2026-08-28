@@ -21,6 +21,36 @@ carries fines up to €35 million or 7% of global annual turnover.
 
 ---
 
+## Why the EU AI Act for LLM security
+
+The EU AI Act is the first binding, horizontal AI regulation with
+extraterritorial reach and revenue-based penalties. Unlike every voluntary
+framework in this repo, non-compliance is a legal exposure, not a maturity
+gap. If your LLM application is placed on the EU market or its output is
+used in the EU, it applies regardless of where you build it.
+
+Three obligations carry most of the technical weight for LLM applications.
+**Article 9** requires a risk management system covering reasonably
+foreseeable risks across the lifecycle — prompt injection and data
+poisoning have to be identified, analysed, and mitigated in it. **Article
+10** governs training, validation, and test data quality and governance.
+**Article 15** requires high-risk systems to be accurate, robust, and
+resilient against attempts to alter their use, output, or performance,
+which makes adversarial robustness a compliance requirement rather than an
+engineering preference. Providers of general-purpose AI models with
+systemic risk carry additional obligations under **Article 55**, including
+adversarial testing and incident reporting.
+
+This file maps each LLM entry to the Articles it bears on, marks whether an
+obligation attaches to high-risk systems, GPAI models, or both, and flags
+the transparency duties that apply even to limited-risk systems.
+
+Use it to scope conformity assessment, to build the technical documentation
+an audit will ask for, and to decide which controls are legally required
+rather than merely advisable.
+
+---
+
 ## Compliance timeline — act now
 
 | Date | Obligation |

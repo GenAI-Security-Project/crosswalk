@@ -25,6 +25,35 @@ verifiable ASVS requirements for inclusion in security test plans.
 
 ---
 
+## Why OWASP ASVS for GenAI data security
+
+A large share of GenAI data incidents are ordinary application security
+failures at a new boundary. The retrieval layer that returns documents the
+requester is not entitled to is a broken access control finding. The chat UI
+that renders an attacker-controlled image URL and exfiltrates conversation
+content is an output encoding finding. The multi-tenant vector store that
+applies its tenant filter after similarity search is an authorisation
+finding. ASVS is the standard that specifies how to verify all three.
+
+The mapping concentrates on the sections that govern data handling. **V4**
+access control covers per-user authorisation on retrieval, which is the
+single most load-bearing control for GenAI data security and the one most
+often implemented at the wrong layer. **V8** data protection covers
+classification, minimisation, caching, and client-side storage. **V9**
+communications and **V6** cryptography cover data in transit and at rest.
+**V7** error handling and logging covers what telemetry captures — GenAI
+observability platforms log full prompts and completions by default. **V5**
+validation and encoding covers rendering paths. **V13** API security covers
+the connector surface.
+
+The L1/L2/L3 levels align with the crosswalk's Foundational, Hardening, and
+Advanced tiers.
+
+Use this file to write verification requirements for a RAG or connector
+platform, and to brief a penetration test on data-layer scope.
+
+---
+
 ## ASVS structure
 
 | Chapter | Title | DSGAI relevance |

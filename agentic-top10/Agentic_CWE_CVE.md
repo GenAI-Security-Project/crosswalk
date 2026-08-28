@@ -16,6 +16,35 @@ and Exposures) relevant to agentic AI systems.
 
 ---
 
+## Why CWE and CVE for agentic security
+
+Agentic risk categories are useful for prioritisation and useless for
+ticketing. "Tool Misuse and Exploitation" does not tell an engineer what to
+change. CWE does, and it names the weakness in vocabulary the rest of the
+security industry already shares.
+
+The mapping is clarifying in a specific way: it shows how much of agentic
+risk is classical weakness reached through a new path. Unexpected code
+execution resolves to **CWE-78** OS command injection and **CWE-94** code
+injection. Identity and privilege abuse resolves to **CWE-269** improper
+privilege management and **CWE-862**/**CWE-863** missing and incorrect
+authorisation. Insecure inter-agent communication resolves to **CWE-306**
+missing authentication and **CWE-345** insufficient verification of data
+authenticity. These are weaknesses with decades of established mitigation
+practice, and recognising them as such is more useful than treating every
+agentic failure as unprecedented.
+
+CVE references anchor the categories in published, documented instances
+against real agent frameworks and tool integrations — evidence for severity
+arguments, and a way to check whether a component already in your stack has
+a known instance.
+
+Use this file to route agentic findings into an existing vulnerability
+management workflow, to write detection rules, and to ground severity
+ratings in precedent.
+
+---
+
 ## How to use this file
 
 **CWE mapping** provides the software weakness taxonomy that security

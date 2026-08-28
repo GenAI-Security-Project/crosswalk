@@ -135,7 +135,7 @@ All contributors are expected to engage respectfully and constructively.
 ## Recognition
 
 All contributors are credited in the repo
-[contributors graph](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk/graphs/contributors)
+[contributors graph](https://github.com/GenAI-Security-Project/crosswalk/graphs/contributors)
 and in release notes. Significant contributions will be highlighted in
 the OWASP GenAI Data Security Initiative acknowledgements.
 
@@ -144,7 +144,7 @@ the OWASP GenAI Data Security Initiative acknowledgements.
 ## Questions
 
 Open a
-[GitHub Discussion](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk/discussions)
+[GitHub Discussion](https://github.com/GenAI-Security-Project/crosswalk/discussions)
 or reach out via the
 [OWASP GenAI Security Project](https://genai.owasp.org/contact/).
 

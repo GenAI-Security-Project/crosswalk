@@ -29,6 +29,37 @@ entry involving personal data — both apply simultaneously.
 
 ---
 
+## Why the EU AI Act for GenAI data security
+
+The AI Act is where GenAI data practice becomes a legal obligation rather
+than a governance preference, and it does not operate alone — GDPR applies
+in parallel, and for personal data the two have to be satisfied together.
+
+**Article 10** is the centre of gravity for this list. It requires training,
+validation, and test data to be relevant, sufficiently representative, and
+to the best extent possible free of errors and complete, with documented
+data governance and provenance practices. That is a direct obligation on the
+data pipeline, not on the model. **Article 9** requires foreseeable risks to
+be identified and mitigated, which covers leakage and reconstruction.
+**Article 15** requires resilience against attempts to alter behaviour,
+which covers data poisoning. **Article 12** requires logging sufficient for
+traceability, which raises the question of what those logs themselves
+contain. **Article 13** transparency duties bear on what data subjects are
+told. Providers of general-purpose AI models carry additional documentation
+and copyright-policy obligations under **Article 53**, including a
+sufficiently detailed summary of training content.
+
+The interaction with GDPR is where most programmes underestimate the work:
+lawful basis, purpose limitation, data minimisation, and the right to
+erasure all apply, and erasure is genuinely hard once data has influenced
+model weights.
+
+Use this file to scope data governance for conformity assessment, to build
+the provenance documentation an audit will request, and to align AI Act and
+GDPR obligations on one control set.
+
+---
+
 ## Compliance timeline reminder
 
 | Date | Obligation relevant to DSGAI |

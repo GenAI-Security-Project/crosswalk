@@ -7,9 +7,9 @@
   License     : CC BY-SA 4.0
 -->
 
-# Agentic Top 10 2026 – NIST SP 800-218A
+# Agentic Top 10 2026 × NIST SP 800-218A
 
-Mapping the [OWASP Top 10 for Agentic AI 2026](https://genai.owasp.org/agentic-ai/)
+Mapping the [OWASP Top 10 for Agentic AI 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
 to
 [NIST SP 800-218A: Secure Software Development Practices for Generative AI and Dual-Use Foundation Models](https://doi.org/10.6028/NIST.SP.800-218A.ipd)
 (Initial Public Draft, March 2024).
@@ -27,6 +27,36 @@ Organisations following SSDF for their conventional software estate can
 extend that programme to their agentic AI systems using this mapping. US
 federal agencies are directed to align with SP 800-218A under OMB memoranda
 referencing the SSDF.
+
+---
+
+## Why NIST SP 800-218A for agentic security
+
+SP 800-218A augments the Secure Software Development Framework for
+generative AI, and the reason it matters for agents is placement. Agentic
+security controls that live in a governance document get reviewed
+periodically; controls expressed as SSDF practices live in the build
+pipeline and get enforced on every release.
+
+The practices map onto agentic work with little strain. Threat modelling the
+agent's tool inventory, permission envelope, and trust boundaries is a
+design-phase activity (**PW.2**). Reviewing agent behaviour for unintended
+action, unsafe tool sequences, and disclosure is a review activity
+(**PW.7**). Adversarial testing of goal hijack, tool misuse, and memory
+poisoning is a pre-release test gate (**PW.8**). Verifying the integrity and
+provenance of third-party agent components, tool descriptors, and MCP
+servers is a supply-chain practice (**PW.4**, **PS.3**). Protecting agent
+credentials, memory stores, and configuration from unauthorised access is a
+source-protection practice (**PS.1**). Production incident identification
+and response is **RV.1**.
+
+Tool descriptors deserve specific mention: they are executable
+configuration that shapes model behaviour, they frequently come from third
+parties, and they are rarely subject to the review any other dependency
+would get.
+
+Use this file to place agentic security activities in an existing SDLC, and
+to extend an SSDF attestation to cover agent components.
 
 ---
 
@@ -146,7 +176,7 @@ procedures for goal hijacking incidents in production (RV.1).
 
 | Tool | Type | Link |
 |---|---|---|
-| LAAF (LLM Agent Assessment Framework) | Open-source | <https://github.com/OWASP/LAAF> |
+| LAAF (LLM Agent Assessment Framework) | Open-source | <https://github.com/qorvexconsulting1/laaf-V2.0> |
 | Garak | Open-source | <https://github.com/leondz/garak> |
 | PyRIT | Open-source | <https://github.com/Azure/PyRIT> |
 | NIST SP 800-218A | Reference | <https://doi.org/10.6028/NIST.SP.800-218A.ipd> |
@@ -223,7 +253,7 @@ enforcement (PW.7).
 
 | Tool | Type | Link |
 |---|---|---|
-| LAAF (LLM Agent Assessment Framework) | Open-source | <https://github.com/OWASP/LAAF> |
+| LAAF (LLM Agent Assessment Framework) | Open-source | <https://github.com/qorvexconsulting1/laaf-V2.0> |
 | Open Policy Agent (OPA) | Open-source | <https://www.openpolicyagent.org> |
 | HashiCorp Vault | Open-source | <https://www.vaultproject.io> |
 | Guardrails AI | Open-source | <https://github.com/guardrails-ai/guardrails> |
@@ -307,7 +337,7 @@ incidents (RV.1).
 
 | Tool | Type | Link |
 |---|---|---|
-| LAAF (LLM Agent Assessment Framework) | Open-source | <https://github.com/OWASP/LAAF> |
+| LAAF (LLM Agent Assessment Framework) | Open-source | <https://github.com/qorvexconsulting1/laaf-V2.0> |
 | HashiCorp Vault | Open-source | <https://www.vaultproject.io> |
 | Open Policy Agent (OPA) | Open-source | <https://www.openpolicyagent.org> |
 | Falco | Open-source | <https://falco.org> |
@@ -559,7 +589,7 @@ anomalies (PW.7), and root cause analysis for poisoning incidents (RV.3).
 
 | Tool | Type | Link |
 |---|---|---|
-| LAAF (LLM Agent Assessment Framework) | Open-source | <https://github.com/OWASP/LAAF> |
+| LAAF (LLM Agent Assessment Framework) | Open-source | <https://github.com/qorvexconsulting1/laaf-V2.0> |
 | Garak | Open-source | <https://github.com/leondz/garak> |
 | Weaviate (with RBAC) | Open-source | <https://weaviate.io> |
 | Great Expectations | Open-source | <https://greatexpectations.io> |
@@ -905,8 +935,8 @@ failure incidents (RV.2).
 
 - [NIST SP 800-218A (Initial Public Draft, March 2024)](https://doi.org/10.6028/NIST.SP.800-218A.ipd)
 - [NIST SSDF (SP 800-218)](https://csrc.nist.gov/publications/detail/sp/800-218/final)
-- [OWASP Top 10 for Agentic AI 2026](https://genai.owasp.org/agentic-ai/)
-- [NIST AI RMF 1.0](https://www.nist.gov/system/files/documents/2023/01/26/AI%20RMF%201.0.pdf)
+- [OWASP Top 10 for Agentic AI 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
+- [NIST AI RMF 1.0](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf)
 - [MITRE ATLAS](https://atlas.mitre.org)
 - [CycloneDX ML SBOM](https://cyclonedx.org/capabilities/mlbom/)
 

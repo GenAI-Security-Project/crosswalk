@@ -759,7 +759,7 @@ window.CROSSWALK_DATA = [
       {
         "name": "NIST AI RMF Playbook",
         "type": "open-source",
-        "url": "https://airc.nist.gov/Docs/2"
+        "url": "https://airc.nist.gov/AI_RMF_Knowledge_Base/Playbook"
       },
       {
         "name": "OWASP ZAP (for API testing)",
@@ -804,7 +804,7 @@ window.CROSSWALK_DATA = [
       {
         "name": "DORA RTS/ITS",
         "type": "open-source",
-        "url": "https://www.eba.europa.eu/regulation-and-policy/digital-operational-resilience-act-dora"
+        "url": "https://www.eba.europa.eu/activities/direct-supervision-and-oversight/digital-operational-resilience-act"
       },
       {
         "name": "LAAF v2.0",
@@ -8352,7 +8352,7 @@ window.CROSSWALK_DATA = [
       {
         "name": "DORA RTS/ITS",
         "type": "open-source",
-        "url": "https://www.eba.europa.eu/regulation-and-policy/digital-operational-resilience-act-dora"
+        "url": "https://www.eba.europa.eu/activities/direct-supervision-and-oversight/digital-operational-resilience-act"
       },
       {
         "name": "Vigil",
@@ -9199,7 +9199,7 @@ window.CROSSWALK_DATA = [
       {
         "name": "LAAF (LLM Agent Assessment Framework)",
         "type": "open-source",
-        "url": "https://github.com/OWASP/LAAF"
+        "url": "https://github.com/qorvexconsulting1/laaf-V2.0"
       },
       {
         "name": "PyRIT",
@@ -10192,7 +10192,7 @@ window.CROSSWALK_DATA = [
       {
         "name": "LAAF (LLM Agent Assessment Framework)",
         "type": "open-source",
-        "url": "https://github.com/OWASP/LAAF"
+        "url": "https://github.com/qorvexconsulting1/laaf-V2.0"
       },
       {
         "name": "Open Policy Agent (OPA)",
@@ -11179,7 +11179,7 @@ window.CROSSWALK_DATA = [
       {
         "name": "LAAF (LLM Agent Assessment Framework)",
         "type": "open-source",
-        "url": "https://github.com/OWASP/LAAF"
+        "url": "https://github.com/qorvexconsulting1/laaf-V2.0"
       },
       {
         "name": "Open Policy Agent (OPA)",
@@ -13799,7 +13799,7 @@ window.CROSSWALK_DATA = [
       {
         "name": "LAAF (LLM Agent Assessment Framework)",
         "type": "open-source",
-        "url": "https://github.com/OWASP/LAAF"
+        "url": "https://github.com/qorvexconsulting1/laaf-V2.0"
       },
       {
         "name": "Garak",
@@ -21008,7 +21008,7 @@ window.CROSSWALK_DATA = [
       {
         "name": "Pachyderm",
         "type": "open-source",
-        "url": "https://www.pachyderm.com"
+        "url": "https://github.com/pachyderm/pachyderm"
       },
       {
         "name": "OpenLineage",
@@ -28777,12 +28777,12 @@ window.CROSSWALK_DATA = [
       {
         "name": "Microsoft Intune",
         "type": "commercial",
-        "url": "https://www.microsoft.com/en-us/security/business/endpoint-management"
+        "url": "https://learn.microsoft.com/en-us/mem/intune/"
       },
       {
         "name": "Carbon Black",
         "type": "commercial",
-        "url": "https://www.vmware.com/products/carbon-black-cloud.html"
+        "url": "https://www.broadcom.com/products/carbon-black"
       },
       {
         "name": "osquery",
@@ -29522,7 +29522,7 @@ window.CROSSWALK_DATA = [
       {
         "name": "AI Fairness 360",
         "type": "open-source",
-        "url": "https://aif360.mybluemix.net"
+        "url": "https://github.com/Trusted-AI/AIF360"
       },
       {
         "name": "What-If Tool",
@@ -29537,7 +29537,7 @@ window.CROSSWALK_DATA = [
       {
         "name": "IBM AI Fairness 360",
         "type": "open-source",
-        "url": "https://aif360.mybluemix.net"
+        "url": "https://github.com/Trusted-AI/AIF360"
       },
       {
         "name": "Fiddler AI",
@@ -31570,7 +31570,7 @@ window.CROSSWALK_DATA = [
       {
         "name": "AWS Region Controls / Azure Policy",
         "type": "commercial",
-        "url": "https://aws.amazon.com/compliance/data-residency/"
+        "url": "https://aws.amazon.com/compliance/data-privacy/"
       },
       {
         "name": "Netskope",
@@ -32405,7 +32405,7 @@ window.CROSSWALK_DATA = [
       {
         "name": "FactScore",
         "type": "open-source",
-        "url": "https://github.com/shmsw25/FActScoring"
+        "url": "https://github.com/shmsw25/FActScore"
       },
       {
         "name": "Cleanlab",

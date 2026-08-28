@@ -21,6 +21,35 @@ complete single-framework match for the Agentic Top 10.
 
 ---
 
+## Why AIUC-1 for agentic security
+
+AIUC-1 is written for procurement and insurance underwriting rather than
+internal governance, which makes it the standard most likely to be pointed
+at you by a buyer rather than chosen by you. For agentic products that
+matters sooner than for conventional LLM features: enterprise buyers are
+markedly more cautious about software that takes autonomous action, and the
+diligence reflects it.
+
+Several of its requirements were drafted against exactly the agentic threat
+picture. Prevention of unauthorised AI agent actions is the scope-constraint
+requirement that bounds a hijacked agent. Adversarial input detection covers
+goal hijack and memory poisoning. Output over-exposure limits cover what an
+agent may disclose or emit. The accountability domain covers the audit trail
+that distinguishes agent-driven action from human-initiated action — the
+evidence question that decides liability arguments after an incident. The
+safety domain covers guardrails that hold independently of agent logic.
+
+Because its requirements are written to be verified by a third party rather
+than self-attested, the controls in this file double as the evidence
+package: implement them for the Agentic Top 10 and you have most of what an
+AIUC-1 assessment asks for.
+
+Use this file to prepare for enterprise vendor review, to scope independent
+testing of an agent platform, and to answer agentic procurement
+questionnaires with mapped evidence.
+
+---
+
 ## AIUC-1 domains at a glance
 
 | Domain | ID | Focus |

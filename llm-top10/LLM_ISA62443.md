@@ -1079,7 +1079,7 @@ mapping directly relevant:
 ## References
 
 - [ISA/IEC 62443 series](https://www.isa.org/standards-and-publications/isa-standards/isa-iec-62443-series-of-standards)
-- [ISA/IEC 62443-3-3 System Security Requirements](https://www.isa.org/products/isa-iec-62443-3-3-system-security-requirements)
+- [ISA/IEC 62443-3-3 System Security Requirements](https://www.isa.org/standards-and-publications/isa-standards/isa-iec-62443-series-of-standards)
 - [NIST SP 800-82 Rev 3 — Guide to OT Security](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-82r3.pdf)
 - [OWASP LLM Top 10 2026](https://genai.owasp.org/llm-top-10/)
 - [CISA ICS-CERT Advisories](https://www.cisa.gov/ics)

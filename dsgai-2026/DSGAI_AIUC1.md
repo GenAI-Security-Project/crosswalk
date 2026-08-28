@@ -22,6 +22,34 @@ Domain A (Data & Privacy) alone covers a majority of the 21 DSGAI entries.
 
 ---
 
+## Why AIUC-1 for GenAI data security
+
+AIUC-1 is built for AI procurement and insurance underwriting, which makes
+it the standard most likely to arrive as a buyer's questionnaire rather than
+an internal choice. Its data and privacy domain is the most directly
+relevant part of any external standard to the DSGAI risk set, because it was
+drafted around the questions enterprise buyers actually ask before letting a
+vendor's model touch their data.
+
+Those questions are the substance of this list: what happens to data
+submitted to the service, whether it is retained, whether it is used for
+training, how it is segregated between customers, what the deletion path is,
+where processing happens, and what the sub-processor chain looks like. The
+accountability domain covers the audit trail and evidence retention that
+makes any of those claims verifiable rather than asserted. The security
+domain covers the access control and leakage prevention underneath them.
+
+Because requirements are written for independent third-party verification
+rather than self-attestation, the controls in this file double as the
+evidence package — which is the practical reason to read it early rather
+than when a deal is already blocked on diligence.
+
+Use this file to prepare for enterprise vendor review, to scope a data
+protection assessment of an AI service, and to answer AI procurement
+questionnaires with mapped evidence instead of prose.
+
+---
+
 ## AIUC-1 domains at a glance
 
 | Domain | ID | Focus |

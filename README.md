@@ -97,7 +97,7 @@ All free. All open-source. Built for practitioners.
 | Framework | LLM Top 10 | Agentic Top 10 | DSGAI 2026 |
 |---|:---:|:---:|:---:|
 | [MITRE ATLAS](https://atlas.mitre.org) | ✅ | ✅ | ✅ |
-| [NIST AI RMF 1.0](https://www.nist.gov/system/files/documents/2023/01/26/AI%20RMF%201.0.pdf) | ✅ | ✅ | ✅ |
+| [NIST AI RMF 1.0](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf) | ✅ | ✅ | ✅ |
 | [EU AI Act](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689) | ✅ | ✅ | ✅ |
 | [ISO/IEC 27001:2022](https://www.iso.org/standard/82875.html) | ✅ | ✅ | ✅ |
 | [NIST CSF 2.0](https://www.nist.gov/cyberframework) | ✅ | ✅ | ✅ |
@@ -654,7 +654,7 @@ contributors are listed in the CHANGELOG.
 
 ## License
 
-[Creative Commons Attribution-ShareAlike 4.0 International](LICENSE)
+[Creative Commons Attribution-ShareAlike 4.0 International](LICENSE.md)
 
 Free to share and adapt for any purpose, including commercial use, with appropriate credit and distribution
 under the same license.
@@ -671,4 +671,4 @@ Built on the work of the OWASP LLM Top 10, OWASP Agentic Top 10, OWASP GenAI Dat
 
 ---
 
-*[genai.owasp.org](https://genai.owasp.org) · [CC BY-SA 4.0](LICENSE)*
+*[genai.owasp.org](https://genai.owasp.org) · [CC BY-SA 4.0](LICENSE.md)*

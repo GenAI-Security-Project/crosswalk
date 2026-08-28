@@ -21,6 +21,34 @@ compliance reporting. CVE entries provide confirmed real-world evidence of explo
 
 ---
 
+## Why CWE and CVE for LLM security
+
+CWE gives each LLM risk a root-cause name that the rest of the security
+industry already recognises, and CVE ties it to vulnerabilities that have
+actually been published against real products. Together they turn a risk
+category into something a scanner, a bug tracker, and a vulnerability
+management programme can process.
+
+This matters because the OWASP LLM Top 10 is a category list, not a
+weakness taxonomy. "Prompt Injection" is a useful heading and a poor
+ticket. **CWE-77**, **CWE-1427**, or **CWE-20** on a specific input path is
+a ticket an engineer can close and a triage process can prioritise. The
+mapping also exposes where an LLM risk is genuinely novel and where it is a
+long-known weakness arriving through a new channel — most of
+**LLM10 Improper Output Handling** resolves to **CWE-79**, **CWE-89**, and
+**CWE-78**, which is a useful thing to know before designing a defence.
+
+CVE references give each entry documented precedent. They show the risk is
+not hypothetical, they support severity arguments in risk acceptance
+discussions, and they let you check whether a component you already run has
+a published instance.
+
+Use this file to route findings into an existing vulnerability management
+workflow, to write SAST and DAST rules, and to justify severity ratings
+with evidence rather than assertion.
+
+---
+
 ## CWE taxonomy structure relevant to LLM risks
 
 | CWE Pillar | What it covers | LLM relevance |

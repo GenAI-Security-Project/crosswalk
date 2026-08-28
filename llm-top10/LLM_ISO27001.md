@@ -27,6 +27,36 @@ security surface, see `dsgai-2026/DSGAI_ISO27001.md`.
 
 ---
 
+## Why ISO 27001 for LLM security
+
+ISO/IEC 27001 is the certification an enterprise customer, a regulator, or a
+public sector procurement process is most likely to ask for by name. Most
+organisations deploying LLMs already hold it. The practical question is
+rarely "should we get certified" but "does our existing ISMS actually cover
+the LLM application we just shipped" — and usually it does not, because the
+statement of applicability was written before the system existed.
+
+This file answers that question control by control. The 2022 revision helps
+more than it is usually given credit for: **A.5.7** threat intelligence,
+**A.8.11** data masking, **A.8.12** data leakage prevention, **A.8.16**
+monitoring activities, and **A.8.28** secure coding were added in that
+revision and map directly onto LLM failure modes that had no clean home in
+the 2013 control set.
+
+The value is in scope extension rather than new machinery. An LLM
+application is an information asset processing data of a known
+classification; the ISMS already has processes for risk assessment,
+supplier management, access control, logging, and incident response. What it
+lacks is the AI-specific interpretation of each — what "secure coding" means
+when the code assembles a prompt, or what "monitoring" means when the
+subject is inference traffic.
+
+Use this file to extend an existing statement of applicability, to brief an
+auditor on AI scope, and alongside `LLM_ISO42001.md`, which adds the AI
+management system layer on top.
+
+---
+
 ## ISO 27001:2022 Annex A domains
 
 | Domain | Controls | Scope |

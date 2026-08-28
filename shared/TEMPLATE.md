@@ -11,8 +11,8 @@
 
 # [Source List] × [Framework Name]
 
-Mapping the [[Source List]]([source-list-url])
-to the [[Framework Name]]([framework-url]) —
+Mapping the **[Source List]** (`[source-list-url]`)
+to the **[Framework Name]** (`[framework-url]`) —
 [one-sentence description of what the framework is and who uses it].
 
 ---
@@ -117,8 +117,8 @@ this framework — what does the framework "see" when it looks at this risk?]
 
 ## References
 
-- [[Framework Name] official documentation]([url])
-- [[Source list] — OWASP]([url])
+- **[Framework Name] official documentation** (`[url]`)
+- **[Source list] — OWASP** (`[url]`)
 - [Related mapping file(s) in this repo]
 - [shared/RECIPES.md](../shared/RECIPES.md) — [relevant pattern name if applicable]
 

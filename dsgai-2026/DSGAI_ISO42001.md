@@ -1083,8 +1083,8 @@ AIMS use policy and operational controls.
 
 | Tool | Type | Link |
 |---|---|---|
-| Microsoft Intune | Commercial | <https://www.microsoft.com/en-us/security/business/endpoint-management/microsoft-intune> |
-| Carbon Black | Commercial | <https://www.vmware.com/products/carbon-black-cloud.html> |
+| Microsoft Intune | Commercial | <https://learn.microsoft.com/en-us/mem/intune/> |
+| Carbon Black | Commercial | <https://www.broadcom.com/products/carbon-black> |
 
 #### Cross-references
 
@@ -1371,7 +1371,7 @@ governance and AI impact concern.
 | Tool | Type | Link |
 |---|---|---|
 | CleanLab | Open-source | <https://github.com/cleanlab/cleanlab> |
-| FactScore | Research | <https://github.com/shmsw25/FActScoring> |
+| FactScore | Research | <https://github.com/shmsw25/FActScore> |
 
 #### Cross-references
 

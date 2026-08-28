@@ -10,7 +10,7 @@
 
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 [![OWASP Lab](https://img.shields.io/badge/OWASP-GenAI%20Data%20Security-blue)](https://genai.owasp.org)
-[![Version](https://img.shields.io/badge/version-1.5.7-green)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.5.7-green)](../../CHANGELOG.md)
 [![Source Lists](https://img.shields.io/badge/source%20lists-3-blueviolet)](README.md)
 [![Mapping Files](https://img.shields.io/badge/mapping%20files-58-brightgreen)](README.md)
 [![Frameworks](https://img.shields.io/badge/frameworks-17-orange)](README.md)
@@ -59,7 +59,7 @@ Todo gratuito. Todo de código abierto. Construido para profesionales.
 | Marco de referencia | LLM Top 10 | Agentic Top 10 | DSGAI 2026 |
 |---|:---:|:---:|:---:|
 | [MITRE ATLAS](https://atlas.mitre.org) | ✅ | ✅ | ✅ |
-| [NIST AI RMF 1.0](https://www.nist.gov/system/files/documents/2023/01/26/AI%20RMF%201.0.pdf) | ✅ | ✅ | ✅ |
+| [NIST AI RMF 1.0](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf) | ✅ | ✅ | ✅ |
 | [EU AI Act](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689) | ✅ | ✅ | ✅ |
 | [ISO/IEC 27001:2022](https://www.iso.org/standard/82875.html) | ✅ | ✅ | ✅ |
 | [NIST CSF 2.0](https://www.nist.gov/cyberframework) | ✅ | ✅ | ✅ |
@@ -84,86 +84,86 @@ Todo gratuito. Todo de código abierto. Construido para profesionales.
 
 | Archivo | Marco de referencia | Contenido destacado |
 |---|---|---|
-| [LLM_MITREATLAS.md](llm-top10/LLM_MITREATLAS.md) | MITRE ATLAS | Mapeo de técnicas adversarias con referencias a incidentes reales |
-| [LLM_NISTAIRMF.md](llm-top10/LLM_NISTAIRMF.md) | NIST AI RMF 1.0 | GOVERN/MAP/MEASURE/MANAGE por vulnerabilidad con perfil AI RMF |
-| [LLM_EUAIAct.md](llm-top10/LLM_EUAIAct.md) | EU AI Act | Obligaciones a nivel de artículo, exposición a multas, lista de verificación de cumplimiento para agosto 2026 |
-| [LLM_ISO27001.md](llm-top10/LLM_ISO27001.md) | ISO/IEC 27001:2022 | Lista de verificación de extensión ISMS, controles nuevos de 2022 mapeados a riesgos LLM |
-| [LLM_ISO42001.md](llm-top10/LLM_ISO42001.md) | ISO/IEC 42001:2023 | Lista de verificación de implementación AIMS, guía de integración con ISO 27001 |
-| [LLM_CISControls.md](llm-top10/LLM_CISControls.md) | CIS Controls v8.1 | Salvaguardas escalonadas IG1/IG2/IG3 por vulnerabilidad |
-| [LLM_ASVS.md](llm-top10/LLM_ASVS.md) | OWASP ASVS 4.0.3 | Requisitos de verificación L1/L2/L3 con lista de verificación ASVS |
-| [LLM_ISA62443.md](llm-top10/LLM_ISA62443.md) | ISA/IEC 62443 — OT/ICS | Modelo de zonas, calificaciones SL, referencias FR/SR, lista de verificación de despliegue OT |
-| [LLM_NISTSP80082.md](llm-top10/LLM_NISTSP80082.md) | NIST SP 800-82 Rev 3 | Controles SP 800-53, mapeo cruzado regulatorio de EE.UU. (NERC CIP, AWIA, CMMC) |
-| [LLM_NISTCSF2.md](llm-top10/LLM_NISTCSF2.md) | NIST CSF 2.0 | Mapeo de seis funciones incluyendo la nueva función GOVERN, perfil CSF 2.0 |
-| [LLM_SOC2.md](llm-top10/LLM_SOC2.md) | SOC 2 Trust Services Criteria | Mapeo TSC para despliegues LLM en SaaS y nube |
-| [LLM_PCIDSS.md](llm-top10/LLM_PCIDSS.md) | PCI DSS v4.0 | Guía de alcance CHD, Req 3/6/7/10/11/12 por vulnerabilidad |
-| [LLM_ENISA.md](llm-top10/LLM_ENISA.md) | ENISA Multilayer Framework | Mapeo de capas L1/L2/L3, tabla de alineación con EU AI Act y NIS2 |
-| [LLM_SAMM.md](llm-top10/LLM_SAMM.md) | OWASP SAMM v2.0 | Hoja de ruta de madurez L1–L3 por vulnerabilidad con tarjeta de puntuación rellenable |
-| [LLM_STRIDE.md](llm-top10/LLM_STRIDE.md) | STRIDE | Modelo de amenazas de seis categorías por entrada LLM con guía de integración DFD |
-| [LLM_CWE_CVE.md](llm-top10/LLM_CWE_CVE.md) | CWE / CVE | Taxonomía de causa raíz CWE y tabla de evidencia CVE confirmada por entrada |
-| [LLM_AITG.md](llm-top10/LLM_AITG.md) | OWASP AI Testing Guide | Casos de prueba estructurados por entrada LLM con criterios de aprobación y guía de integración CI/CD |
-| [LLM_MAESTRO.md](llm-top10/LLM_MAESTRO.md) | MAESTRO | Modelo de amenazas arquitectónico de siete capas, mapeo capa-a-LLM, guía de sesión de modelado de amenazas de 90 minutos |
-| [LLM_AIUC1.md](llm-top10/LLM_AIUC1.md) | AIUC-1 | Mapeo de controles de seis dominios para despliegues LLM — lista de verificación de preparación para certificación |
-| [LLM_NHI.md](llm-top10/LLM_NHI.md) | OWASP NHI Top 10 | Controles de credenciales e identidad por entrada LLM — tabla de madurez del programa NHI |
+| [LLM_MITREATLAS.md](../../llm-top10/LLM_MITREATLAS.md) | MITRE ATLAS | Mapeo de técnicas adversarias con referencias a incidentes reales |
+| [LLM_NISTAIRMF.md](../../llm-top10/LLM_NISTAIRMF.md) | NIST AI RMF 1.0 | GOVERN/MAP/MEASURE/MANAGE por vulnerabilidad con perfil AI RMF |
+| [LLM_EUAIAct.md](../../llm-top10/LLM_EUAIAct.md) | EU AI Act | Obligaciones a nivel de artículo, exposición a multas, lista de verificación de cumplimiento para agosto 2026 |
+| [LLM_ISO27001.md](../../llm-top10/LLM_ISO27001.md) | ISO/IEC 27001:2022 | Lista de verificación de extensión ISMS, controles nuevos de 2022 mapeados a riesgos LLM |
+| [LLM_ISO42001.md](../../llm-top10/LLM_ISO42001.md) | ISO/IEC 42001:2023 | Lista de verificación de implementación AIMS, guía de integración con ISO 27001 |
+| [LLM_CISControls.md](../../llm-top10/LLM_CISControls.md) | CIS Controls v8.1 | Salvaguardas escalonadas IG1/IG2/IG3 por vulnerabilidad |
+| [LLM_ASVS.md](../../llm-top10/LLM_ASVS.md) | OWASP ASVS 4.0.3 | Requisitos de verificación L1/L2/L3 con lista de verificación ASVS |
+| [LLM_ISA62443.md](../../llm-top10/LLM_ISA62443.md) | ISA/IEC 62443 — OT/ICS | Modelo de zonas, calificaciones SL, referencias FR/SR, lista de verificación de despliegue OT |
+| [LLM_NISTSP80082.md](../../llm-top10/LLM_NISTSP80082.md) | NIST SP 800-82 Rev 3 | Controles SP 800-53, mapeo cruzado regulatorio de EE.UU. (NERC CIP, AWIA, CMMC) |
+| [LLM_NISTCSF2.md](../../llm-top10/LLM_NISTCSF2.md) | NIST CSF 2.0 | Mapeo de seis funciones incluyendo la nueva función GOVERN, perfil CSF 2.0 |
+| [LLM_SOC2.md](../../llm-top10/LLM_SOC2.md) | SOC 2 Trust Services Criteria | Mapeo TSC para despliegues LLM en SaaS y nube |
+| [LLM_PCIDSS.md](../../llm-top10/LLM_PCIDSS.md) | PCI DSS v4.0 | Guía de alcance CHD, Req 3/6/7/10/11/12 por vulnerabilidad |
+| [LLM_ENISA.md](../../llm-top10/LLM_ENISA.md) | ENISA Multilayer Framework | Mapeo de capas L1/L2/L3, tabla de alineación con EU AI Act y NIS2 |
+| [LLM_SAMM.md](../../llm-top10/LLM_SAMM.md) | OWASP SAMM v2.0 | Hoja de ruta de madurez L1–L3 por vulnerabilidad con tarjeta de puntuación rellenable |
+| [LLM_STRIDE.md](../../llm-top10/LLM_STRIDE.md) | STRIDE | Modelo de amenazas de seis categorías por entrada LLM con guía de integración DFD |
+| [LLM_CWE_CVE.md](../../llm-top10/LLM_CWE_CVE.md) | CWE / CVE | Taxonomía de causa raíz CWE y tabla de evidencia CVE confirmada por entrada |
+| [LLM_AITG.md](../../llm-top10/LLM_AITG.md) | OWASP AI Testing Guide | Casos de prueba estructurados por entrada LLM con criterios de aprobación y guía de integración CI/CD |
+| [LLM_MAESTRO.md](../../llm-top10/LLM_MAESTRO.md) | MAESTRO | Modelo de amenazas arquitectónico de siete capas, mapeo capa-a-LLM, guía de sesión de modelado de amenazas de 90 minutos |
+| [LLM_AIUC1.md](../../llm-top10/LLM_AIUC1.md) | AIUC-1 | Mapeo de controles de seis dominios para despliegues LLM — lista de verificación de preparación para certificación |
+| [LLM_NHI.md](../../llm-top10/LLM_NHI.md) | OWASP NHI Top 10 | Controles de credenciales e identidad por entrada LLM — tabla de madurez del programa NHI |
 
 ### Agentic Top 10 2026 — 20 mapeos de marcos de referencia
 
 | Archivo | Marco de referencia | Contenido destacado |
 |---|---|---|
-| [Agentic_AIUC1.md](agentic-top10/Agentic_AIUC1.md) | AIUC-1 | Mapeo de controles de certificación de gobernanza de IA agéntica |
-| [Agentic_MITREATLAS.md](agentic-top10/Agentic_MITREATLAS.md) | MITRE ATLAS | Encadenamiento de técnicas agénticas, amplificadores OT por entrada |
-| [Agentic_NISTAIRMF.md](agentic-top10/Agentic_NISTAIRMF.md) | NIST AI RMF 1.0 | Anclaje de política de autonomía en GV-1.7, perfil agéntico AI RMF |
-| [Agentic_EUAIAct.md](agentic-top10/Agentic_EUAIAct.md) | EU AI Act | Art. 14 supervisión humana por entrada, análisis de multas por prima de autonomía |
-| [Agentic_ISO27001.md](agentic-top10/Agentic_ISO27001.md) | ISO/IEC 27001:2022 | Lista de verificación de extensión ISMS para despliegues agénticos, NHI como A.8.2 |
-| [Agentic_ISO42001.md](agentic-top10/Agentic_ISO42001.md) | ISO/IEC 42001:2023 | Evaluación de impacto A.5.2 por entrada, tabla de alineación con EU AI Act |
-| [Agentic_NISTCSF2.md](agentic-top10/Agentic_NISTCSF2.md) | NIST CSF 2.0 | Mapeo de política de autonomía GOVERN-first, perfil agéntico CSF 2.0 |
-| [Agentic_ISA62443.md](agentic-top10/Agentic_ISA62443.md) | ISA/IEC 62443 — OT/ICS | Modelo de zonas OT agéntico, diseño de interruptor de emergencia, tabla de elevación SL |
-| [Agentic_MAESTRO.md](agentic-top10/Agentic_MAESTRO.md) | MAESTRO — CSA | Modelo de amenazas arquitectónico de siete capas, mapeo capa-a-ASI, guía de sesión |
-| [Agentic_OWASP_NHI.md](agentic-top10/Agentic_OWASP_NHI.md) | OWASP NHI Top 10 | Mapeo cruzado completo NHI-a-ASI, tabla de madurez del programa NHI |
-| [Agentic_CISControls.md](agentic-top10/Agentic_CISControls.md) | CIS Controls v8.1 | Salvaguardas IG1/IG2/IG3, NHI agéntico tratado como acceso privilegiado CIS 5 |
-| [Agentic_ASVS.md](agentic-top10/Agentic_ASVS.md) | OWASP ASVS 4.0.3 | Lista de verificación L1/L2/L3 para despliegues agénticos |
-| [Agentic_AITG.md](agentic-top10/Agentic_AITG.md) | OWASP AI Testing Guide | 50 casos de prueba estructurados para ASI01–ASI10 con puertas de pre-despliegue |
-| [Agentic_AIVSS.md](agentic-top10/Agentic_AIVSS.md) | OWASP AIVSS | Puntuación de doble escenario (supervisado vs autónomo), prima de autonomía +1.79 |
-| [Agentic_ENISA.md](agentic-top10/Agentic_ENISA.md) | ENISA Multilayer Framework | Mapeo de capas L1/L2/L3, alineación con EU AI Act Art. 14/15/52, guía de evaluación de incidentes NIS2 Artículo 23 |
-| [Agentic_SOC2.md](agentic-top10/Agentic_SOC2.md) | SOC 2 Trust Services Criteria | Mapeo TSC para IA agéntica — alcance de acción autónoma, integridad de procesamiento, criterios de cadena de suministro |
-| [Agentic_PCIDSS.md](agentic-top10/Agentic_PCIDSS.md) | PCI DSS v4.0 | Guía de auditoría PCI para agentes con acceso a herramientas de sistemas de pago, Req 6/7/8/10/11/12 por entrada |
-| [Agentic_SAMM.md](agentic-top10/Agentic_SAMM.md) | OWASP SAMM v2.0 | Tarjeta de puntuación de madurez L1–L3 para IA agéntica — puertas de pre-despliegue y hoja de ruta de madurez del programa |
-| [Agentic_NISTSP80082.md](agentic-top10/Agentic_NISTSP80082.md) | NIST SP 800-82 Rev 3 | Ubicación de agentes OT, controles SP 800-53, mapeo cruzado regulatorio de EE.UU. (NERC CIP, AWIA, CMMC) |
+| [Agentic_AIUC1.md](../../agentic-top10/Agentic_AIUC1.md) | AIUC-1 | Mapeo de controles de certificación de gobernanza de IA agéntica |
+| [Agentic_MITREATLAS.md](../../agentic-top10/Agentic_MITREATLAS.md) | MITRE ATLAS | Encadenamiento de técnicas agénticas, amplificadores OT por entrada |
+| [Agentic_NISTAIRMF.md](../../agentic-top10/Agentic_NISTAIRMF.md) | NIST AI RMF 1.0 | Anclaje de política de autonomía en GV-1.7, perfil agéntico AI RMF |
+| [Agentic_EUAIAct.md](../../agentic-top10/Agentic_EUAIAct.md) | EU AI Act | Art. 14 supervisión humana por entrada, análisis de multas por prima de autonomía |
+| [Agentic_ISO27001.md](../../agentic-top10/Agentic_ISO27001.md) | ISO/IEC 27001:2022 | Lista de verificación de extensión ISMS para despliegues agénticos, NHI como A.8.2 |
+| [Agentic_ISO42001.md](../../agentic-top10/Agentic_ISO42001.md) | ISO/IEC 42001:2023 | Evaluación de impacto A.5.2 por entrada, tabla de alineación con EU AI Act |
+| [Agentic_NISTCSF2.md](../../agentic-top10/Agentic_NISTCSF2.md) | NIST CSF 2.0 | Mapeo de política de autonomía GOVERN-first, perfil agéntico CSF 2.0 |
+| [Agentic_ISA62443.md](../../agentic-top10/Agentic_ISA62443.md) | ISA/IEC 62443 — OT/ICS | Modelo de zonas OT agéntico, diseño de interruptor de emergencia, tabla de elevación SL |
+| [Agentic_MAESTRO.md](../../agentic-top10/Agentic_MAESTRO.md) | MAESTRO — CSA | Modelo de amenazas arquitectónico de siete capas, mapeo capa-a-ASI, guía de sesión |
+| [Agentic_OWASP_NHI.md](../../agentic-top10/Agentic_OWASP_NHI.md) | OWASP NHI Top 10 | Mapeo cruzado completo NHI-a-ASI, tabla de madurez del programa NHI |
+| [Agentic_CISControls.md](../../agentic-top10/Agentic_CISControls.md) | CIS Controls v8.1 | Salvaguardas IG1/IG2/IG3, NHI agéntico tratado como acceso privilegiado CIS 5 |
+| [Agentic_ASVS.md](../../agentic-top10/Agentic_ASVS.md) | OWASP ASVS 4.0.3 | Lista de verificación L1/L2/L3 para despliegues agénticos |
+| [Agentic_AITG.md](../../agentic-top10/Agentic_AITG.md) | OWASP AI Testing Guide | 50 casos de prueba estructurados para ASI01–ASI10 con puertas de pre-despliegue |
+| [Agentic_AIVSS.md](../../agentic-top10/Agentic_AIVSS.md) | OWASP AIVSS | Puntuación de doble escenario (supervisado vs autónomo), prima de autonomía +1.79 |
+| [Agentic_ENISA.md](../../agentic-top10/Agentic_ENISA.md) | ENISA Multilayer Framework | Mapeo de capas L1/L2/L3, alineación con EU AI Act Art. 14/15/52, guía de evaluación de incidentes NIS2 Artículo 23 |
+| [Agentic_SOC2.md](../../agentic-top10/Agentic_SOC2.md) | SOC 2 Trust Services Criteria | Mapeo TSC para IA agéntica — alcance de acción autónoma, integridad de procesamiento, criterios de cadena de suministro |
+| [Agentic_PCIDSS.md](../../agentic-top10/Agentic_PCIDSS.md) | PCI DSS v4.0 | Guía de auditoría PCI para agentes con acceso a herramientas de sistemas de pago, Req 6/7/8/10/11/12 por entrada |
+| [Agentic_SAMM.md](../../agentic-top10/Agentic_SAMM.md) | OWASP SAMM v2.0 | Tarjeta de puntuación de madurez L1–L3 para IA agéntica — puertas de pre-despliegue y hoja de ruta de madurez del programa |
+| [Agentic_NISTSP80082.md](../../agentic-top10/Agentic_NISTSP80082.md) | NIST SP 800-82 Rev 3 | Ubicación de agentes OT, controles SP 800-53, mapeo cruzado regulatorio de EE.UU. (NERC CIP, AWIA, CMMC) |
 
-> **También en esta carpeta:** [Agentic_CWE_CVE.md](agentic-top10/Agentic_CWE_CVE.md) — Taxonomía de causa
+> **También en esta carpeta:** [Agentic_CWE_CVE.md](../../agentic-top10/Agentic_CWE_CVE.md) — Taxonomía de causa
 > raíz CWE, CVEs confirmados, índice de referencia cruzada CWE completo.
 
 ### DSGAI 2026 — 18 mapeos de marcos de referencia
 
 | Archivo | Marco de referencia | Contenido destacado |
 |---|---|---|
-| [DSGAI_ISO27001.md](dsgai-2026/DSGAI_ISO27001.md) | ISO/IEC 27001:2022 | Extensión ISMS cubriendo las 21 entradas DSGAI |
-| [DSGAI_NISTAIRMF.md](dsgai-2026/DSGAI_NISTAIRMF.md) | NIST AI RMF 1.0 | GOVERN/MAP/MEASURE/MANAGE por entrada DSGAI con perfil de seguridad de datos |
-| [DSGAI_EUAIAct.md](dsgai-2026/DSGAI_EUAIAct.md) | EU AI Act | Obligaciones a nivel de artículo por entrada, alcance GPAI vs IA de alto riesgo |
-| [DSGAI_NISTCSF2.md](dsgai-2026/DSGAI_NISTCSF2.md) | NIST CSF 2.0 | Mapeo de seis funciones para las 21 entradas, perfil de seguridad de datos GenAI |
-| [DSGAI_MITREATLAS.md](dsgai-2026/DSGAI_MITREATLAS.md) | MITRE ATLAS | Mapeo de técnicas adversarias, cuatro cadenas de ruta de ataque completas |
-| [DSGAI_ISA62443.md](dsgai-2026/DSGAI_ISA62443.md) | ISA/IEC 62443 — OT/ICS | Escenarios de amenazas OT por entrada, calificaciones SL, lista de verificación OT completa |
-| [DSGAI_MAESTRO.md](dsgai-2026/DSGAI_MAESTRO.md) | MAESTRO — CSA | Análisis de capa de origen para las 21 entradas, L2 operaciones de datos como 52% de la superficie de amenazas DSGAI |
-| [DSGAI_SOC2.md](dsgai-2026/DSGAI_SOC2.md) | SOC 2 Trust Services Criteria | Mapeo TSC para despliegues GenAI en SaaS y nube |
-| [DSGAI_PCIDSS.md](dsgai-2026/DSGAI_PCIDSS.md) | PCI DSS v4.0 | Guía de alcance CHD, lista de verificación de auditoría PCI para datos GenAI |
-| [DSGAI_ASVS.md](dsgai-2026/DSGAI_ASVS.md) | OWASP ASVS 4.0.3 | Requisitos de verificación L1/L2/L3 para las 21 entradas DSGAI, prioridad de implementación en 4 fases |
-| [DSGAI_CISControls.md](dsgai-2026/DSGAI_CISControls.md) | CIS Controls v8.1 | Salvaguardas IG1/IG2/IG3 para las 21 entradas, grupos de implementación de seguridad de datos GenAI |
-| [DSGAI_CWE_CVE.md](dsgai-2026/DSGAI_CWE_CVE.md) | CWE / CVE | Taxonomía de causa raíz CWE y evidencia CVE confirmada para las 21 entradas DSGAI |
-| [DSGAI_ENISA.md](dsgai-2026/DSGAI_ENISA.md) | ENISA Multilayer Framework | Mapeo de capas L1/L2/L3, alineación con EU AI Act y NIS2 para las 21 entradas DSGAI |
-| [DSGAI_ISO42001.md](dsgai-2026/DSGAI_ISO42001.md) | ISO/IEC 42001:2023 | Controles AIMS por entrada DSGAI, guía de integración con ISO 27001, referencia de gobernanza de datos A.7 |
-| [DSGAI_SAMM.md](dsgai-2026/DSGAI_SAMM.md) | OWASP SAMM v2.0 | Tarjeta de puntuación de madurez L1–L3 para seguridad de datos GenAI — línea base de cumplimiento regulatorio y GDPR |
-| [DSGAI_NISTSP80082.md](dsgai-2026/DSGAI_NISTSP80082.md) | NIST SP 800-82 Rev 3 | Ubicación de datos OT, controles SP 800-53 por entrada DSGAI, mapeo cruzado NERC CIP/FISMA/CMMC |
-| [DSGAI_AIUC1.md](dsgai-2026/DSGAI_AIUC1.md) | AIUC-1 | Dominio A (Datos y Privacidad) cubre 50%+ de entradas DSGAI — tabla de preparación para certificación |
-| [DSGAI_NHI.md](dsgai-2026/DSGAI_NHI.md) | OWASP NHI Top 10 | NHI como condición habilitante para riesgos DSGAI — tabla de madurez del programa NHI para datos GenAI |
+| [DSGAI_ISO27001.md](../../dsgai-2026/DSGAI_ISO27001.md) | ISO/IEC 27001:2022 | Extensión ISMS cubriendo las 21 entradas DSGAI |
+| [DSGAI_NISTAIRMF.md](../../dsgai-2026/DSGAI_NISTAIRMF.md) | NIST AI RMF 1.0 | GOVERN/MAP/MEASURE/MANAGE por entrada DSGAI con perfil de seguridad de datos |
+| [DSGAI_EUAIAct.md](../../dsgai-2026/DSGAI_EUAIAct.md) | EU AI Act | Obligaciones a nivel de artículo por entrada, alcance GPAI vs IA de alto riesgo |
+| [DSGAI_NISTCSF2.md](../../dsgai-2026/DSGAI_NISTCSF2.md) | NIST CSF 2.0 | Mapeo de seis funciones para las 21 entradas, perfil de seguridad de datos GenAI |
+| [DSGAI_MITREATLAS.md](../../dsgai-2026/DSGAI_MITREATLAS.md) | MITRE ATLAS | Mapeo de técnicas adversarias, cuatro cadenas de ruta de ataque completas |
+| [DSGAI_ISA62443.md](../../dsgai-2026/DSGAI_ISA62443.md) | ISA/IEC 62443 — OT/ICS | Escenarios de amenazas OT por entrada, calificaciones SL, lista de verificación OT completa |
+| [DSGAI_MAESTRO.md](../../dsgai-2026/DSGAI_MAESTRO.md) | MAESTRO — CSA | Análisis de capa de origen para las 21 entradas, L2 operaciones de datos como 52% de la superficie de amenazas DSGAI |
+| [DSGAI_SOC2.md](../../dsgai-2026/DSGAI_SOC2.md) | SOC 2 Trust Services Criteria | Mapeo TSC para despliegues GenAI en SaaS y nube |
+| [DSGAI_PCIDSS.md](../../dsgai-2026/DSGAI_PCIDSS.md) | PCI DSS v4.0 | Guía de alcance CHD, lista de verificación de auditoría PCI para datos GenAI |
+| [DSGAI_ASVS.md](../../dsgai-2026/DSGAI_ASVS.md) | OWASP ASVS 4.0.3 | Requisitos de verificación L1/L2/L3 para las 21 entradas DSGAI, prioridad de implementación en 4 fases |
+| [DSGAI_CISControls.md](../../dsgai-2026/DSGAI_CISControls.md) | CIS Controls v8.1 | Salvaguardas IG1/IG2/IG3 para las 21 entradas, grupos de implementación de seguridad de datos GenAI |
+| [DSGAI_CWE_CVE.md](../../dsgai-2026/DSGAI_CWE_CVE.md) | CWE / CVE | Taxonomía de causa raíz CWE y evidencia CVE confirmada para las 21 entradas DSGAI |
+| [DSGAI_ENISA.md](../../dsgai-2026/DSGAI_ENISA.md) | ENISA Multilayer Framework | Mapeo de capas L1/L2/L3, alineación con EU AI Act y NIS2 para las 21 entradas DSGAI |
+| [DSGAI_ISO42001.md](../../dsgai-2026/DSGAI_ISO42001.md) | ISO/IEC 42001:2023 | Controles AIMS por entrada DSGAI, guía de integración con ISO 27001, referencia de gobernanza de datos A.7 |
+| [DSGAI_SAMM.md](../../dsgai-2026/DSGAI_SAMM.md) | OWASP SAMM v2.0 | Tarjeta de puntuación de madurez L1–L3 para seguridad de datos GenAI — línea base de cumplimiento regulatorio y GDPR |
+| [DSGAI_NISTSP80082.md](../../dsgai-2026/DSGAI_NISTSP80082.md) | NIST SP 800-82 Rev 3 | Ubicación de datos OT, controles SP 800-53 por entrada DSGAI, mapeo cruzado NERC CIP/FISMA/CMMC |
+| [DSGAI_AIUC1.md](../../dsgai-2026/DSGAI_AIUC1.md) | AIUC-1 | Dominio A (Datos y Privacidad) cubre 50%+ de entradas DSGAI — tabla de preparación para certificación |
+| [DSGAI_NHI.md](../../dsgai-2026/DSGAI_NHI.md) | OWASP NHI Top 10 | NHI como condición habilitante para riesgos DSGAI — tabla de madurez del programa NHI para datos GenAI |
 
 ### Recursos compartidos
 
 | Archivo | Contenido |
 |---|---|
-| [shared/RECIPES.md](shared/RECIPES.md) | 13 patrones de implementación de seguridad con Python funcional — RAG, MCP, OT, agéntico |
-| [shared/TOOLS.md](shared/TOOLS.md) | 40+ herramientas de seguridad de código abierto organizadas por función |
-| [shared/GLOSSARY.md](shared/GLOSSARY.md) | Terminología unificada entre las listas fuente LLM, ASI y DSGAI |
-| [shared/SEVERITY.md](shared/SEVERITY.md) | Definiciones de severidad y alineación con AIVSS |
-| [shared/TEMPLATE.md](shared/TEMPLATE.md) | Plantilla canónica para nuevos contribuyentes de archivos de mapeo |
+| [shared/RECIPES.md](../../shared/RECIPES.md) | 13 patrones de implementación de seguridad con Python funcional — RAG, MCP, OT, agéntico |
+| [shared/TOOLS.md](../../shared/TOOLS.md) | 40+ herramientas de seguridad de código abierto organizadas por función |
+| [shared/GLOSSARY.md](../../shared/GLOSSARY.md) | Terminología unificada entre las listas fuente LLM, ASI y DSGAI |
+| [shared/SEVERITY.md](../../shared/SEVERITY.md) | Definiciones de severidad y alineación con AIVSS |
+| [shared/TEMPLATE.md](../../shared/TEMPLATE.md) | Plantilla canónica para nuevos contribuyentes de archivos de mapeo |
 
 ---
 
@@ -343,42 +343,42 @@ Roles de capa MAESTRO rastreados por incidente: **Origen** (donde comienza el at
 Encuentre su punto de entrada en menos de 60 segundos.
 
 **Necesito cumplir con EU AI Act antes de agosto 2026**
-→ Comience: [LLM_EUAIAct.md](llm-top10/LLM_EUAIAct.md) — obligaciones a nivel de artículo, exposición a
+→ Comience: [LLM_EUAIAct.md](../../llm-top10/LLM_EUAIAct.md) — obligaciones a nivel de artículo, exposición a
 multas, lista de verificación de cumplimiento
-→ Luego: [Agentic_EUAIAct.md](agentic-top10/Agentic_EUAIAct.md) si despliega agentes autónomos (Art. 14
+→ Luego: [Agentic_EUAIAct.md](../../agentic-top10/Agentic_EUAIAct.md) si despliega agentes autónomos (Art. 14
 supervisión humana)
-→ Luego: [DSGAI_EUAIAct.md](dsgai-2026/DSGAI_EUAIAct.md) para el alcance del modelo GPAI y obligaciones de
+→ Luego: [DSGAI_EUAIAct.md](../../dsgai-2026/DSGAI_EUAIAct.md) para el alcance del modelo GPAI y obligaciones de
 gobernanza de datos
 
 **Estoy desplegando un agente de IA autónomo y necesito saber qué puede salir mal**
-→ Comience: [CROSSREF.md](CROSSREF.md) — referencia cruzada maestra de los 41 IDs de vulnerabilidad
-→ Luego: [Agentic_MAESTRO.md](agentic-top10/Agentic_MAESTRO.md) — modelo de amenazas arquitectónico (¿dónde
+→ Comience: [CROSSREF.md](../../CROSSREF.md) — referencia cruzada maestra de los 41 IDs de vulnerabilidad
+→ Luego: [Agentic_MAESTRO.md](../../agentic-top10/Agentic_MAESTRO.md) — modelo de amenazas arquitectónico (¿dónde
 se origina cada riesgo?)
-→ Luego: [Agentic_AIVSS.md](agentic-top10/Agentic_AIVSS.md) — puntúe cada riesgo; la autonomía añade +1.79
+→ Luego: [Agentic_AIVSS.md](../../agentic-top10/Agentic_AIVSS.md) — puntúe cada riesgo; la autonomía añade +1.79
 de severidad promedio
-→ Luego: [Agentic_OWASP_NHI.md](agentic-top10/Agentic_OWASP_NHI.md) — controles de identidad y credenciales
+→ Luego: [Agentic_OWASP_NHI.md](../../agentic-top10/Agentic_OWASP_NHI.md) — controles de identidad y credenciales
 
 **Soy un auditor SOC 2 o profesional GRC preparando una evaluación de controles GenAI**
-→ Comience: [LLM_SOC2.md](llm-top10/LLM_SOC2.md) — mapeo TSC para despliegues LLM en SaaS/nube
-→ Luego: [Agentic_SOC2.md](agentic-top10/Agentic_SOC2.md) — alcance de acción autónoma, criterios de
+→ Comience: [LLM_SOC2.md](../../llm-top10/LLM_SOC2.md) — mapeo TSC para despliegues LLM en SaaS/nube
+→ Luego: [Agentic_SOC2.md](../../agentic-top10/Agentic_SOC2.md) — alcance de acción autónoma, criterios de
 integridad de procesamiento
-→ Luego: [LLM_SAMM.md](llm-top10/LLM_SAMM.md) — tarjeta de puntuación SAMM rellenable para evidenciar la
+→ Luego: [LLM_SAMM.md](../../llm-top10/LLM_SAMM.md) — tarjeta de puntuación SAMM rellenable para evidenciar la
 completitud del programa
 
 **Soy un ingeniero AppSec o red-teamer construyendo un plan de pruebas**
-→ Comience: [Agentic_AITG.md](agentic-top10/Agentic_AITG.md) — 50 casos de prueba estructurados con
+→ Comience: [Agentic_AITG.md](../../agentic-top10/Agentic_AITG.md) — 50 casos de prueba estructurados con
 criterios de aprobación y puertas CI/CD
-→ Luego: [DSGAI_MITREATLAS.md](dsgai-2026/DSGAI_MITREATLAS.md) — mapeo de TTPs del atacante con cuatro
+→ Luego: [DSGAI_MITREATLAS.md](../../dsgai-2026/DSGAI_MITREATLAS.md) — mapeo de TTPs del atacante con cuatro
 cadenas de ataque completas
-→ Luego: [shared/RECIPES.md](shared/RECIPES.md) — 13 patrones Python funcionales para implementar los
+→ Luego: [shared/RECIPES.md](../../shared/RECIPES.md) — 13 patrones Python funcionales para implementar los
 controles contra los que realiza pruebas
 
 **Estoy asegurando IA desplegada en entornos OT/ICS (energía, servicios públicos, manufactura)**
-→ Comience: [Agentic_NISTSP80082.md](agentic-top10/Agentic_NISTSP80082.md) — modelo de zonas OT, controles
+→ Comience: [Agentic_NISTSP80082.md](../../agentic-top10/Agentic_NISTSP80082.md) — modelo de zonas OT, controles
 SP 800-53, mapeo cruzado NERC CIP/AWIA/CMMC
-→ Luego: [Agentic_ISA62443.md](agentic-top10/Agentic_ISA62443.md) — calificaciones SL, modelo de zonas,
+→ Luego: [Agentic_ISA62443.md](../../agentic-top10/Agentic_ISA62443.md) — calificaciones SL, modelo de zonas,
 diseño de interruptor de emergencia
-→ Luego: [DSGAI_ISA62443.md](dsgai-2026/DSGAI_ISA62443.md) — envenenamiento de corpus RAG en OT (escenario
+→ Luego: [DSGAI_ISA62443.md](../../dsgai-2026/DSGAI_ISA62443.md) — envenenamiento de corpus RAG en OT (escenario
 de manipulación de procedimientos de seguridad)
 
 ---
@@ -386,60 +386,60 @@ de manipulación de procedimientos de seguridad)
 ## Navegación rápida
 
 **Cumplimiento con EU AI Act para agosto 2026**
-→ [LLM_EUAIAct.md](llm-top10/LLM_EUAIAct.md) · [Agentic_EUAIAct.md](agentic-top10/Agentic_EUAIAct.md) ·
-[DSGAI_EUAIAct.md](dsgai-2026/DSGAI_EUAIAct.md)
+→ [LLM_EUAIAct.md](../../llm-top10/LLM_EUAIAct.md) · [Agentic_EUAIAct.md](../../agentic-top10/Agentic_EUAIAct.md) ·
+[DSGAI_EUAIAct.md](../../dsgai-2026/DSGAI_EUAIAct.md)
 
 **Organización europea sujeta a NIS2**
-→ [LLM_ENISA.md](llm-top10/LLM_ENISA.md) — Marco de referencia ENISA con guía de evaluación de incidentes
+→ [LLM_ENISA.md](../../llm-top10/LLM_ENISA.md) — Marco de referencia ENISA con guía de evaluación de incidentes
 NIS2 Artículo 23
 
 **IA en entornos OT/ICS**
-→ [LLM_ISA62443.md](llm-top10/LLM_ISA62443.md) · [Agentic_ISA62443.md](agentic-top10/Agentic_ISA62443.md) ·
-[DSGAI_ISA62443.md](dsgai-2026/DSGAI_ISA62443.md) · [LLM_NISTSP80082.md](llm-top10/LLM_NISTSP80082.md)
+→ [LLM_ISA62443.md](../../llm-top10/LLM_ISA62443.md) · [Agentic_ISA62443.md](../../agentic-top10/Agentic_ISA62443.md) ·
+[DSGAI_ISA62443.md](../../dsgai-2026/DSGAI_ISA62443.md) · [LLM_NISTSP80082.md](../../llm-top10/LLM_NISTSP80082.md)
 
 **Desplegando agentes autónomos**
-→ [Agentic_OWASP_NHI.md](agentic-top10/Agentic_OWASP_NHI.md) — gobernanza de identidad
-→ [Agentic_AIUC1.md](agentic-top10/Agentic_AIUC1.md) — certificación de gobernanza agéntica
-→ [Agentic_AIVSS.md](agentic-top10/Agentic_AIVSS.md) — puntuación de riesgos con prima de autonomía
+→ [Agentic_OWASP_NHI.md](../../agentic-top10/Agentic_OWASP_NHI.md) — gobernanza de identidad
+→ [Agentic_AIUC1.md](../../agentic-top10/Agentic_AIUC1.md) — certificación de gobernanza agéntica
+→ [Agentic_AIVSS.md](../../agentic-top10/Agentic_AIVSS.md) — puntuación de riesgos con prima de autonomía
 
 **Modelado de amenazas de un sistema de IA agéntico antes de seleccionar controles**
-→ [Agentic_MAESTRO.md](agentic-top10/Agentic_MAESTRO.md) — Enumeración de amenazas MAESTRO de siete capas
+→ [Agentic_MAESTRO.md](../../agentic-top10/Agentic_MAESTRO.md) — Enumeración de amenazas MAESTRO de siete capas
 con guía de sesión
-→ [DSGAI_MAESTRO.md](dsgai-2026/DSGAI_MAESTRO.md) — Perspectiva de operaciones de datos MAESTRO para las 21
+→ [DSGAI_MAESTRO.md](../../dsgai-2026/DSGAI_MAESTRO.md) — Perspectiva de operaciones de datos MAESTRO para las 21
 entradas DSGAI
 
 **Extensión ISMS ISO 27001 para GenAI**
-→ [LLM_ISO27001.md](llm-top10/LLM_ISO27001.md) · [Agentic_ISO27001.md](agentic-top10/Agentic_ISO27001.md) ·
-[DSGAI_ISO27001.md](dsgai-2026/DSGAI_ISO27001.md)
+→ [LLM_ISO27001.md](../../llm-top10/LLM_ISO27001.md) · [Agentic_ISO27001.md](../../agentic-top10/Agentic_ISO27001.md) ·
+[DSGAI_ISO27001.md](../../dsgai-2026/DSGAI_ISO27001.md)
 
 **AIMS ISO 42001 para gobernanza de IA**
-→ [LLM_ISO42001.md](llm-top10/LLM_ISO42001.md) · [Agentic_ISO42001.md](agentic-top10/Agentic_ISO42001.md) —
+→ [LLM_ISO42001.md](../../llm-top10/LLM_ISO42001.md) · [Agentic_ISO42001.md](../../agentic-top10/Agentic_ISO42001.md) —
 incluye tabla de evidencia de cumplimiento con EU AI Act
 
 **Madurez del programa de seguridad**
-→ [LLM_SAMM.md](llm-top10/LLM_SAMM.md) — Hoja de ruta SAMM L1–L3 con tarjeta de puntuación rellenable
+→ [LLM_SAMM.md](../../llm-top10/LLM_SAMM.md) — Hoja de ruta SAMM L1–L3 con tarjeta de puntuación rellenable
 
 **Plan de pruebas de seguridad para IA agéntica**
-→ [Agentic_AITG.md](agentic-top10/Agentic_AITG.md) — 50 casos de prueba estructurados, puertas de
+→ [Agentic_AITG.md](../../agentic-top10/Agentic_AITG.md) — 50 casos de prueba estructurados, puertas de
 pre-despliegue, addendum OT
 
 **Puntuación de registro de riesgos para IA agéntica**
-→ [Agentic_AIVSS.md](agentic-top10/Agentic_AIVSS.md) — puntuación de doble escenario supervisado vs
+→ [Agentic_AIVSS.md](../../agentic-top10/Agentic_AIVSS.md) — puntuación de doble escenario supervisado vs
 autónomo, prima de autonomía promedio +1.79
 
 **Perspectiva del atacante sobre riesgos GenAI**
-→ [DSGAI_MITREATLAS.md](dsgai-2026/DSGAI_MITREATLAS.md) — mapeo de técnicas ATLAS, cuatro cadenas de ruta de ataque
-→ [Agentic_MITREATLAS.md](agentic-top10/Agentic_MITREATLAS.md) — encadenamiento de técnicas agénticas
+→ [DSGAI_MITREATLAS.md](../../dsgai-2026/DSGAI_MITREATLAS.md) — mapeo de técnicas ATLAS, cuatro cadenas de ruta de ataque
+→ [Agentic_MITREATLAS.md](../../agentic-top10/Agentic_MITREATLAS.md) — encadenamiento de técnicas agénticas
 
 **Causas raíz CWE y CVEs confirmados**
-→ [Agentic_CWE_CVE.md](agentic-top10/Agentic_CWE_CVE.md) — taxonomía de causa raíz, evidencia CVE, índice de
+→ [Agentic_CWE_CVE.md](../../agentic-top10/Agentic_CWE_CVE.md) — taxonomía de causa raíz, evidencia CVE, índice de
 referencia cruzada
 
 **Código de implementación, no teoría de marcos de referencia**
-→ [shared/RECIPES.md](shared/RECIPES.md) — 13 patrones de producción con Python funcional
+→ [shared/RECIPES.md](../../shared/RECIPES.md) — 13 patrones de producción con Python funcional
 
 **Todos los riesgos en las tres listas fuente**
-→ [CROSSREF.md](CROSSREF.md) — referencia cruzada maestra
+→ [CROSSREF.md](../../CROSSREF.md) — referencia cruzada maestra
 
 ---
 
@@ -452,13 +452,13 @@ SP 800-82 Rev 3. Incluye ubicación en modelo de zonas, calificaciones de nivel 
 Requisitos Fundamentales y Requisitos de Seguridad, escenarios de amenazas específicos de OT y listas de
 verificación de pre-despliegue para cada lista fuente.
 
-El escenario de envenenamiento de corpus RAG en [DSGAI_ISA62443.md](dsgai-2026/DSGAI_ISA62443.md) — un
+El escenario de envenenamiento de corpus RAG en [DSGAI_ISA62443.md](../../dsgai-2026/DSGAI_ISA62443.md) — un
 ataque de manipulación de procedimientos de seguridad que modifica intervalos de mantenimiento sin ningún
 acceso a la red OT — no existe en ningún otro lugar de la documentación pública.
 
 ### Modelado de amenazas de siete capas MAESTRO
 
-[Agentic_MAESTRO.md](agentic-top10/Agentic_MAESTRO.md) y [DSGAI_MAESTRO.md](dsgai-2026/DSGAI_MAESTRO.md) son
+[Agentic_MAESTRO.md](../../agentic-top10/Agentic_MAESTRO.md) y [DSGAI_MAESTRO.md](../../dsgai-2026/DSGAI_MAESTRO.md) son
 los únicos mapeos públicos de los riesgos GenAI de OWASP hacia el marco de referencia MAESTRO de la Cloud
 Security Alliance. A diferencia de todos los demás archivos en este repositorio — que mapean riesgos a
 controles — MAESTRO mapea cada riesgo a la **capa arquitectónica donde se origina**, indicándole qué equipo
@@ -471,27 +471,27 @@ defendida contra la mayoría del panorama de amenazas de seguridad de datos GenA
 
 ### Prima de autonomía agéntica
 
-[Agentic_AIVSS.md](agentic-top10/Agentic_AIVSS.md) cuantifica lo que cuesta en riesgo eliminar la
+[Agentic_AIVSS.md](../../agentic-top10/Agentic_AIVSS.md) cuantifica lo que cuesta en riesgo eliminar la
 supervisión humana: un promedio de **+1.79 puntos de severidad AIVSS** en las 10 entradas agénticas.
 Eliminar la supervisión humana convierte 7 de 10 entradas de Alta a Crítica — el caso cuantitativo para la
 supervisión humana obligatoria bajo el Artículo 14 de EU AI Act.
 
 ### Cobertura completa de identidad agéntica
 
-[Agentic_OWASP_NHI.md](agentic-top10/Agentic_OWASP_NHI.md) mapea cada entrada NHI Top 10 a cada entrada ASI
+[Agentic_OWASP_NHI.md](../../agentic-top10/Agentic_OWASP_NHI.md) mapea cada entrada NHI Top 10 a cada entrada ASI
 — el único documento público que traduce los riesgos de seguridad agéntica en los controles NHI que los
 equipos de IAM ya operan.
 
 ### Tarjeta de puntuación de madurez SAMM
 
-[LLM_SAMM.md](llm-top10/LLM_SAMM.md) incluye una tarjeta de puntuación de madurez rellenable con niveles
+[LLM_SAMM.md](../../llm-top10/LLM_SAMM.md) incluye una tarjeta de puntuación de madurez rellenable con niveles
 mínimos viables por práctica SAMM para cualquier despliegue LLM en producción — el artefacto que los líderes
 de programas de seguridad utilizan para informar al liderazgo de ingeniería sobre dónde se encuentra el
 programa y qué mejorar a continuación.
 
 ### Recetas de implementación para producción
 
-[shared/RECIPES.md](shared/RECIPES.md) contiene 13 patrones de seguridad listos para producción con Python
+[shared/RECIPES.md](../../shared/RECIPES.md) contiene 13 patrones de seguridad listos para producción con Python
 funcional: recuperación RAG con control de acceso, verificación de integridad de descriptores MCP, emisión
 de credenciales JIT, interruptor de emergencia OT, monitorización de línea base conductual, contención de
 cascada y puertas de confirmación humana.
@@ -503,14 +503,14 @@ cascada y puertas de confirmación humana.
 Las contribuciones son bienvenidas — nuevos mapeos de marcos de referencia, controles actualizados, nuevas
 recetas de implementación, traducciones y entradas de herramientas adicionales.
 
-Consulte [CONTRIBUTING.md](CONTRIBUTING.md) para la plantilla de archivo, proceso de PR y directrices de
+Consulte [CONTRIBUTING.md](../../CONTRIBUTING.md) para la plantilla de archivo, proceso de PR y directrices de
 contribución. Todos los contribuyentes están listados en el CHANGELOG.
 
 ---
 
 ## Licencia
 
-[Creative Commons Attribution-ShareAlike 4.0 International](LICENSE)
+[Creative Commons Attribution-ShareAlike 4.0 International](../../LICENSE.md)
 
 Libre para compartir y adaptar para cualquier propósito, incluido el uso comercial, con la atribución
 adecuada y distribución bajo la misma licencia.
@@ -530,4 +530,4 @@ de referencia MAESTRO y sus contribuciones al OWASP LLM Top 10.
 
 ---
 
-*[genai.owasp.org](https://genai.owasp.org) · [CC BY-SA 4.0](LICENSE)*
+*[genai.owasp.org](https://genai.owasp.org) · [CC BY-SA 4.0](../../LICENSE.md)*

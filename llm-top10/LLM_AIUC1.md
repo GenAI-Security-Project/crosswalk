@@ -23,6 +23,35 @@ standard customer expectation.
 
 ---
 
+## Why AIUC-1 for LLM security
+
+AIUC-1 is the odd one out in this repo, and that is why it is useful. It is
+built for AI procurement and insurance underwriting rather than internal
+governance — it exists so that a buyer, an insurer, or an enterprise
+security reviewer can assess an AI vendor against a common bar. If you sell
+an LLM product to enterprises, this is increasingly the questionnaire behind
+the questionnaire.
+
+Its structure reflects that purpose. The domains cover data and privacy,
+security, safety, reliability, accountability, and societal impact, and each
+requirement is written to be independently testable by a third party rather
+than self-attested. Requirements such as third-party adversarial robustness
+testing, adversarial input detection, prevention of unauthorised agent
+actions, and output over-exposure limits map onto LLM Top 10 entries
+directly, because the standard was drafted against the same threat picture.
+
+The practical consequence: controls you implement for the LLM Top 10 are
+largely the evidence AIUC-1 asks for, and this file is the translation
+table. It is also a reasonable proxy for what a security-mature enterprise
+customer will ask, which makes it useful for readiness work well before any
+certification decision.
+
+Use this file to prepare for vendor security review, to scope third-party
+testing, and to answer AI-specific procurement questionnaires with mapped
+evidence instead of prose.
+
+---
+
 ## AIUC-1 domains at a glance
 
 | Domain | ID | Focus |

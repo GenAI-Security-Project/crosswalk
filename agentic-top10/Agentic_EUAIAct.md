@@ -37,6 +37,37 @@ human oversight implemented and tested.
 
 ---
 
+## Why the EU AI Act for agentic security
+
+The AI Act does not use the word "agent" as a regulatory category, which
+leads some teams to assume it does not reach agentic systems. The opposite
+is true: agentic deployments engage more of the Act than conventional LLM
+applications, because the obligations that bite hardest are about autonomy,
+oversight, and consequential action.
+
+**Article 14** is the centre of gravity. High-risk systems must be designed
+so natural persons can effectively oversee them, including the ability to
+intervene or interrupt. An agent that acts faster than a human can review,
+or whose actions cannot be halted mid-sequence, is difficult to reconcile
+with that requirement. **Article 15** requires robustness and resilience
+against attempts to alter behaviour, which covers goal hijack and memory
+poisoning. **Article 9** requires foreseeable-misuse analysis across the
+lifecycle, and agent tool misuse is foreseeable by construction.
+**Article 12** requires automatic logging sufficient for traceability —
+non-trivial when a decision emerges from a multi-agent trajectory.
+**Article 50** transparency duties apply where an agent interacts with
+people, which bears directly on human-agent trust exploitation.
+
+Autonomy also affects classification. The same capability deployed with a
+human approving each action and deployed autonomously can fall on different
+sides of a risk tier.
+
+Use this file to scope conformity assessment for agentic deployments, to
+design oversight that satisfies Article 14 rather than gestures at it, and
+to document the logging an audit will expect.
+
+---
+
 ## Quick-reference summary
 
 | ID | Name | Severity | Primary EU AI Act Articles | Applies to | Tier |

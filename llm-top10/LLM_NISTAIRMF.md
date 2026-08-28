@@ -11,8 +11,8 @@
 
 Mapping the [OWASP Top 10 for LLM Applications 2026](https://genai.owasp.org/llm-top-10/)
 to the
-[NIST AI Risk Management Framework (AI RMF 1.0)](https://www.nist.gov/system/files/documents/2023/01/26/AI%20RMF%201.0.pdf)
-and its companion [NIST AI RMF Playbook](https://airc.nist.gov/Docs/2).
+[NIST AI Risk Management Framework (AI RMF 1.0)](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf)
+and its companion [NIST AI RMF Playbook](https://airc.nist.gov/AI_RMF_Knowledge_Base/Playbook).
 
 The NIST AI RMF is the primary governance framework for trustworthy AI
 in the United States and is widely adopted globally by enterprises,
@@ -23,6 +23,33 @@ US federal agencies are required to align with the AI RMF under Executive
 Order 14110. It is the foundational framework for enterprise AI governance
 programmes and pairs directly with NIST CSF 2.0 for organisations already
 using the cybersecurity framework.
+
+---
+
+## Why NIST AI RMF for LLM security
+
+The AI Risk Management Framework is the reference US federal agencies,
+their contractors, and a large share of the US private sector use to
+structure AI risk work. It is voluntary and outcome-based rather than
+prescriptive, which is exactly why it needs a crosswalk: it tells you what
+outcome to achieve, not which control achieves it for an LLM application.
+
+Its four functions divide the work cleanly. **GOVERN** establishes policy,
+accountability, and risk tolerance. **MAP** establishes context — what the
+system does, who it affects, and which risks apply. **MEASURE** covers
+testing, evaluation, and metrics. **MANAGE** covers treatment, monitoring,
+and response. Each LLM entry in this file is mapped across all four, so a
+single vulnerability shows its governance, contextual, measurement, and
+treatment obligations together.
+
+The framework pairs with the Generative AI Profile (NIST AI 600-1), which
+enumerates GenAI-specific risks against the same four functions. Where an
+LLM Top 10 entry has a direct 600-1 counterpart, the mapping notes it.
+
+Use this file to build an AI risk register, to structure an AI governance
+programme, or to evidence AI risk management to a federal customer. It is
+the natural companion to `LLM_NISTCSF2.md` for organisations already running
+a CSF-aligned security programme.
 
 ---
 
@@ -140,7 +167,7 @@ invisible-Unicode carriers survive review of the rendered interface.
 |---|---|---|
 | Garak | Open-source | <https://github.com/leondz/garak> |
 | LLM Guard | Open-source | <https://github.com/protectai/llm-guard> |
-| NIST AI RMF Playbook | Reference | <https://airc.nist.gov/Docs/2> |
+| NIST AI RMF Playbook | Reference | <https://airc.nist.gov/AI_RMF_Knowledge_Base/Playbook> |
 
 #### Cross-references
 
@@ -814,12 +841,12 @@ and compliance assessments.
 
 ## References
 
-- [NIST AI RMF 1.0](https://www.nist.gov/system/files/documents/2023/01/26/AI%20RMF%201.0.pdf)
-- [NIST AI RMF Playbook](https://airc.nist.gov/Docs/2)
+- [NIST AI RMF 1.0](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf)
+- [NIST AI RMF Playbook](https://airc.nist.gov/AI_RMF_Knowledge_Base/Playbook)
 - [NIST Trustworthy and Responsible AI Resource Center](https://airc.nist.gov)
 - [OWASP LLM Top 10 2026](https://genai.owasp.org/llm-top-10/)
 - [NIST SP 800-218A — Secure Software Development for AI](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-218A.pdf)
-- [Executive Order 14110 on Safe, Secure, and Trustworthy AI](https://www.whitehouse.gov/briefing-room/presidential-actions/2023/10/30/executive-order-on-the-safe-secure-and-trustworthy-development-and-use-of-artificial-intelligence/)
+- [Executive Order 14110 on Safe, Secure, and Trustworthy AI](https://www.govinfo.gov/content/pkg/FR-2023-11-01/pdf/2023-24283.pdf)
 
 ---
 

@@ -21,6 +21,35 @@ GV.RM-01 before any technical controls are designed.
 
 ---
 
+## Why NIST CSF 2.0 for agentic security
+
+CSF 2.0 is the framework most enterprise security programmes are already
+organised around, and its 2.0 revision added exactly the function agentic
+risk needs most. **GOVERN** — new in 2.0 — covers risk strategy, roles,
+policy, and oversight, which is where the decisions that actually determine
+agentic risk get made: how much autonomy an agent gets, who owns it, and
+what it may do unsupervised.
+
+The remaining functions extend to agents without much strain, but the
+emphasis shifts. **IDENTIFY** has to inventory agents, their tools, their
+credentials, and their memory stores as assets in their own right — an
+untracked agent with a standing token is the agentic equivalent of shadow
+IT. **PROTECT** concentrates on identity and access management, because an
+agent's permission envelope is the real control surface. **DETECT** has to
+cover behavioural deviation over time, not just point-in-time anomalies.
+**RESPOND** and **RECOVER** need containment primitives that conventional
+incident response lacks: quarantining an agent, revoking its credentials
+mid-task, and rolling back actions it already took.
+
+That last point is where most programmes are weakest. Response playbooks
+written for compromised accounts and hosts do not cover an autonomous
+process that is still executing.
+
+Use this file to fold agentic systems into an existing CSF profile, and
+alongside `Agentic_NISTAIRMF.md` for the AI-specific risk process.
+
+---
+
 ## Quick-reference summary
 
 | ID | Name | Severity | Primary CSF 2.0 Categories | Tier |
@@ -622,7 +651,7 @@ without behavioural monitoring, rogue agents operate indefinitely.
 
 - [NIST CSF 2.0](https://www.nist.gov/cyberframework)
 - [OWASP Agentic Top 10 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
-- [NIST AI RMF 1.0](https://www.nist.gov/system/files/documents/2023/01/26/AI%20RMF%201.0.pdf)
+- [NIST AI RMF 1.0](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf)
 
 ---
 

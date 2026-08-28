@@ -7,9 +7,9 @@
   License     : CC BY-SA 4.0
 -->
 
-# DSGAI 2026 – NIST SP 800-218A
+# DSGAI 2026 × NIST SP 800-218A
 
-Mapping the [OWASP GenAI Data Security Risks 2026](https://genai.owasp.org/dsgai-2026/)
+Mapping the [OWASP GenAI Data Security Risks 2026](https://genai.owasp.org/resource/owasp-genai-data-security-risks-mitigations-2026/)
 to
 [NIST SP 800-218A: Secure Software Development Practices for Generative AI and Dual-Use Foundation Models](https://doi.org/10.6028/NIST.SP.800-218A.ipd)
 (Initial Public Draft, March 2024).
@@ -27,6 +27,34 @@ Organisations following SSDF for their conventional software estate can
 extend that programme to their AI data security posture using this mapping.
 US federal agencies are directed to align with SP 800-218A under OMB
 memoranda referencing the SSDF.
+
+---
+
+## Why NIST SP 800-218A for GenAI data security
+
+SP 800-218A extends the Secure Software Development Framework to generative
+AI, and its **PS** practice group — protect the software — is where GenAI
+data security gets an owner and a place in the pipeline rather than a policy
+document.
+
+**PS.1** requires protecting all forms of code and data from unauthorised
+access and tampering. Read against this list, that covers training corpora,
+fine-tuning datasets, embeddings, retrieval indexes, and prompt templates as
+protected artifacts subject to access control and logging — a framing that
+puts them under the same regime as source code, which is roughly the right
+level of care and considerably more than they usually get. **PS.2** and
+**PS.3** cover integrity verification and provenance for data and model
+artifacts, which is the supply-chain half of poisoning defence.
+
+The **PW** practices cover the build side: **PW.5** secure coding, which
+here means keeping credentials and regulated data out of prompts, prompt
+templates, and log statements; **PW.7** review, which means checking model
+behaviour for memorisation and over-broad retrieval before release; and
+**PW.8** testing, which means probing for reconstruction and cross-tenant
+bleed. **RV.1** covers production disclosure incidents.
+
+Use this file to place data protection activities in an existing SDLC, and
+to extend an SSDF attestation to cover AI data pipelines.
 
 ---
 
@@ -430,7 +458,7 @@ vetting (PW.4).
 | Great Expectations | Open-source | <https://greatexpectations.io> |
 | DVC (Data Version Control) | Open-source | <https://dvc.org> |
 | Apache Atlas | Open-source | <https://atlas.apache.org> |
-| Pachyderm | Open-source | <https://www.pachyderm.com> |
+| Pachyderm | Open-source | <https://github.com/pachyderm/pachyderm> |
 
 #### Cross-references
 
@@ -1294,7 +1322,7 @@ and root cause analysis tracing bias to data sources (RV.3).
 | Tool | Type | Link |
 |---|---|---|
 | Fairlearn | Open-source | <https://fairlearn.org> |
-| AI Fairness 360 | Open-source | <https://aif360.mybluemix.net> |
+| AI Fairness 360 | Open-source | <https://github.com/Trusted-AI/AIF360> |
 | What-If Tool | Open-source | <https://pair-code.github.io/what-if-tool> |
 | Aequitas | Open-source | <https://github.com/dssg/aequitas> |
 
@@ -1627,8 +1655,8 @@ failures (RV.3).
 
 - [NIST SP 800-218A (Initial Public Draft, March 2024)](https://doi.org/10.6028/NIST.SP.800-218A.ipd)
 - [NIST SSDF (SP 800-218)](https://csrc.nist.gov/publications/detail/sp/800-218/final)
-- [OWASP GenAI Data Security Risks 2026](https://genai.owasp.org/dsgai-2026/)
-- [NIST AI RMF 1.0](https://www.nist.gov/system/files/documents/2023/01/26/AI%20RMF%201.0.pdf)
+- [OWASP GenAI Data Security Risks 2026](https://genai.owasp.org/resource/owasp-genai-data-security-risks-mitigations-2026/)
+- [NIST AI RMF 1.0](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf)
 - [MITRE ATLAS](https://atlas.mitre.org)
 - [EU AI Act](https://eur-lex.europa.eu/eli/reg/2024/1689)
 - [NIST Privacy Framework](https://www.nist.gov/privacy-framework)

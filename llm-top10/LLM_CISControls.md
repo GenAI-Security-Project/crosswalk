@@ -24,6 +24,34 @@ response (CIS 17), and penetration testing (CIS 18).
 
 ---
 
+## Why CIS Controls for LLM security
+
+The CIS Controls are the most prescriptive framework in this repo. Where
+NIST AI RMF states an outcome and ISO 27001 states a control objective, CIS
+states a safeguard specific enough to hand to an engineer and have it
+implemented the same week. For teams that need to move before a governance
+programme exists, this is the file to start from.
+
+The Implementation Groups are what make it practical. **IG1** is the
+essential cyber hygiene baseline every organisation should meet. **IG2**
+adds the safeguards for organisations managing sensitive data with a
+dedicated security function. **IG3** covers organisations facing targeted
+attack. Each LLM entry here is mapped to safeguards tagged by IG, so a small
+team can implement the IG1 subset honestly rather than pretending to a
+maturity it does not have.
+
+The mapping leans on a handful of controls that carry most of the LLM
+surface: **CIS 3** data protection, **CIS 4** secure configuration, **CIS 5**
+and **6** account and access management, **CIS 8** audit log management,
+**CIS 16** application software security, and **CIS 18** penetration
+testing. LLM-specific work is largely a matter of extending these to a new
+class of asset, not inventing new controls.
+
+Use this file for implementation sequencing and for board reporting against
+a recognised maturity ladder.
+
+---
+
 ## CIS Controls structure
 
 | Group | Controls | Scope |

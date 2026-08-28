@@ -7,7 +7,7 @@
   License     : CC BY-SA 4.0
 -->
 
-# LLM Top 10 2026 x PCI DSS v4.0
+# LLM Top 10 2026 × PCI DSS v4.0
 
 Mapping the [OWASP Top 10 for LLM Applications 2026](https://genai.owasp.org/llm-top-10/)
 to [PCI DSS v4.0](https://www.pcisecuritystandards.org/document_library/)
@@ -899,7 +899,7 @@ reaches a shell, a browser, or a database.
 
 - PCI DSS v4.0: <https://www.pcisecuritystandards.org/document_library/>
 - PCI SSC Information Supplements: <https://www.pcisecuritystandards.org/document_library/#results>
-- PCI DSS v4.0 Summary of Changes: <https://www.pcisecuritystandards.org/documents/PCI-DSS-v4-0-Summary-of-Changes-r2.pdf>
+- PCI DSS v4.0 Summary of Changes: <https://www.pcisecuritystandards.org/document_library/>
 - OWASP LLM Top 10 2026: <https://genai.owasp.org/llm-top-10/>
 
 ---

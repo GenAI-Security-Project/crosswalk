@@ -1191,8 +1191,8 @@ scope control as an AI system integrity and governance requirement.
 
 | Tool | Type | Link |
 |---|---|---|
-| Microsoft Intune | Commercial | <https://www.microsoft.com/en-us/security/business/endpoint-management/microsoft-intune> |
-| Carbon Black | Commercial | <https://www.vmware.com/products/carbon-black-cloud.html> |
+| Microsoft Intune | Commercial | <https://learn.microsoft.com/en-us/mem/intune/> |
+| Carbon Black | Commercial | <https://www.broadcom.com/products/carbon-black> |
 
 #### Cross-references
 
@@ -1546,7 +1546,7 @@ extend to disinformation resilience.
 | Tool | Type | Link |
 |---|---|---|
 | CleanLab | Open-source | <https://github.com/cleanlab/cleanlab> |
-| FactScore | Research | <https://github.com/shmsw25/FActScoring> |
+| FactScore | Research | <https://github.com/shmsw25/FActScore> |
 
 #### Cross-references
 
@@ -1574,7 +1574,7 @@ extend to disinformation resilience.
 - [EU AI Act — Official text](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)
 - [NIS2 Directive](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555)
 - [GDPR Article 10 — Data used for training](https://gdpr-info.eu/art-10-gdpr/)
-- [ENISA AI Cybersecurity Guidelines for the EU AI Act](https://www.enisa.europa.eu/topics/artificial-intelligence)
+- [ENISA AI Cybersecurity Guidelines for the EU AI Act](https://www.enisa.europa.eu/publications/multilayer-framework-for-good-cybersecurity-practices-for-ai)
 
 ---
 

@@ -12,8 +12,8 @@
 Mapping the
 [OWASP GenAI Data Security Risks & Mitigations 2026](https://genai.owasp.org/resource/owasp-genai-data-security-risks-mitigations-2026/)
 (DSGAI01–DSGAI21) to the
-[NIST AI Risk Management Framework (AI RMF 1.0)](https://www.nist.gov/system/files/documents/2023/01/26/AI%20RMF%201.0.pdf)
-and its companion [NIST AI RMF Playbook](https://airc.nist.gov/Docs/2).
+[NIST AI Risk Management Framework (AI RMF 1.0)](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf)
+and its companion [NIST AI RMF Playbook](https://airc.nist.gov/AI_RMF_Knowledge_Base/Playbook).
 
 The NIST AI RMF is the primary governance and risk management framework
 for trustworthy AI in the United States, widely adopted globally across
@@ -28,6 +28,34 @@ to align with the AI RMF under Executive Order 14110), critical
 infrastructure operators, and enterprises running AI RMF-aligned AI
 governance programmes who need to operationalise the DSGAI risks within
 their existing framework.
+
+---
+
+## Why NIST AI RMF for GenAI data security
+
+The AI RMF treats data as a first-class subject rather than an input, which
+is what makes it a good fit for the DSGAI risk set. Its **MAP** function
+requires establishing context before controls — what data the system
+processes, where it came from, who it concerns, and what the consequences of
+its exposure would be. Most GenAI data incidents are failures of that step:
+an over-broad retrieval index, an unscoped drive connection, a telemetry
+pipeline logging full prompts, all of them shipped because nobody
+established what was in scope.
+
+The other functions carry the rest. **GOVERN** sets classification policy,
+retention, and accountability for data flowing into and out of models.
+**MEASURE** covers the testing that surfaces memorisation, reconstruction,
+and cross-tenant bleed — failure modes that only appear under deliberate
+probing. **MANAGE** covers treatment and response, including the remediation
+question that has no clean answer once data has entered a model's weights.
+
+The Generative AI Profile (NIST AI 600-1) supplies GenAI-specific risk
+framing, including data privacy, confabulation, and information integrity
+risks that map onto DSGAI entries directly.
+
+Use this file to build a data-focused AI risk register, to structure data
+governance for GenAI systems, and alongside `DSGAI_ISO27001.md` for the
+control-level implementation of the same outcomes.
 
 ---
 
@@ -1206,7 +1234,7 @@ exfiltration.
 | Tool | Type | Link |
 |---|---|---|
 | LayerX Security | Commercial | <https://layerxsecurity.com> |
-| Microsoft Intune | Commercial | <https://www.microsoft.com/en-us/security/business/endpoint-management> |
+| Microsoft Intune | Commercial | <https://learn.microsoft.com/en-us/mem/intune/> |
 
 #### Cross-references
 
@@ -1604,12 +1632,12 @@ A machine-readable version of this profile is available at:
 
 ## References
 
-- [NIST AI RMF 1.0](https://www.nist.gov/system/files/documents/2023/01/26/AI%20RMF%201.0.pdf)
-- [NIST AI RMF Playbook](https://airc.nist.gov/Docs/2)
+- [NIST AI RMF 1.0](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf)
+- [NIST AI RMF Playbook](https://airc.nist.gov/AI_RMF_Knowledge_Base/Playbook)
 - [NIST Trustworthy and Responsible AI Resource Center](https://airc.nist.gov)
 - [OWASP GenAI Data Security Risks & Mitigations 2026](https://genai.owasp.org/resource/owasp-genai-data-security-risks-mitigations-2026/)
 - [NIST SP 800-218A — Secure Software Development for AI](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-218A.pdf)
-- [Executive Order 14110 on Safe, Secure, and Trustworthy AI](https://www.whitehouse.gov/briefing-room/presidential-actions/2023/10/30/executive-order-on-the-safe-secure-and-trustworthy-development-and-use-of-artificial-intelligence/)
+- [Executive Order 14110 on Safe, Secure, and Trustworthy AI](https://www.govinfo.gov/content/pkg/FR-2023-11-01/pdf/2023-24283.pdf)
 
 ---
 

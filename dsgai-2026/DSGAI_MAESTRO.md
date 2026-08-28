@@ -19,6 +19,35 @@ Co-Chair of AI Safety Working Groups, Cloud Security Alliance.
 
 ---
 
+## Why MAESTRO for GenAI data threat modeling
+
+MAESTRO answers a question no control framework answers: at which
+architectural layer does this risk originate, and therefore who owns it and
+where must the countermeasure sit. For GenAI data security that question is
+unusually load-bearing, because the same data exposure can be caused at four
+different layers and only one of them is fixable by the team that noticed.
+
+Consider a retrieval leak. It can originate at **L2** data operations
+(the index was built over documents that should never have been ingested),
+at **L6** security and compliance (the tenant's entitlements were never
+mapped to the retrieval filter), at **L3** agent frameworks (the filter is
+applied after similarity search rather than before), or at **L4**
+deployment infrastructure (the vector database is directly reachable without
+authentication). The symptom is identical; the owner, the fix, and the cost
+are not.
+
+Layer analysis also exposes propagation, which matters for data risks that
+compound. Poisoned content entering at L2 corrupts L1 model behaviour,
+creates blind spots at L5 observability when the model's outputs look
+internally consistent, and surfaces at L7 if the model participates in
+multi-agent exchange.
+
+Use this file before selecting controls from any other framework here.
+Threat enumeration by layer should precede control selection, or you will
+implement the right control at the wrong layer and it will be bypassed.
+
+---
+
 ## MAESTRO and GenAI data security
 
 The DSGAI 2026 taxonomy follows sensitive data through the full GenAI
@@ -111,6 +140,21 @@ to the right team and system component.
 | DSGAI19 | Human-in-Loop & Labeler Overexposure | Medium | L2 Data Operations | Foundational–Hardening |
 | DSGAI20 | Model Exfiltration & IP Replication | High | L1 Foundation Models | Hardening–Advanced |
 | DSGAI21 | Disinformation via Data Poisoning | High | L2 Data Operations | Hardening–Advanced |
+
+---
+
+## Audience tags
+
+- **Security architect** — full file; layer-to-DSGAI mapping for GenAI data architecture design
+- **Threat modeller** — full file; enumerate by layer before selecting controls from any other framework here
+- **Data engineer** — L2 Data Operations entries, which carry the majority of this list:
+  DSGAI01, DSGAI04, DSGAI05, DSGAI07, DSGAI09, DSGAI10, DSGAI11, DSGAI13, DSGAI15, DSGAI19, DSGAI21
+- **ML / AI engineer** — L1 Foundation Model entries: DSGAI18, DSGAI20
+- **AppSec engineer** — L3 Agent Framework entries: DSGAI06, DSGAI12
+- **DevSecOps engineer** — L4 Deployment and L5 Observability entries: DSGAI14, DSGAI16, DSGAI17
+- **IAM engineer** — L6 Security & Compliance entries: DSGAI02, DSGAI08
+- **CISO / risk manager** — layer propagation analysis and L7 Agent Ecosystem: DSGAI03
+- **Compliance / auditor** — DSGAI07, DSGAI08 for governance and regulatory exposure
 
 ---
 

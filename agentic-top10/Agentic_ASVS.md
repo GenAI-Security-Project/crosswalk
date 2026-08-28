@@ -19,6 +19,33 @@ security, organised into 14 chapters with three verification levels.
 
 ---
 
+## Why OWASP ASVS for agentic security
+
+Agentic systems fail at their integration points far more often than at
+their reasoning. The tool interface, the inter-agent channel, the memory
+store, and the credential handling are all conventional application
+surfaces, and ASVS is the standard that specifies how to verify them.
+
+The mapping leans on the sections that govern those boundaries. **V1**
+architecture and design covers trust boundary definition, which for an agent
+means being explicit about what is instruction, what is data, and what is
+tool output. **V4** access control and **V2**/**V3** authentication and
+session management cover the agent's own identity and the scope it carries
+across chained calls. **V5** validation, sanitisation and encoding covers
+tool arguments constructed from model output and tool responses re-entering
+context. **V7** logging governs the audit trail. **V12** and **V13** cover
+file handling and API security for tool endpoints. **V14** covers the
+configuration of the sandbox an agent executes in.
+
+The L1/L2/L3 levels align with the crosswalk's Foundational, Hardening, and
+Advanced tiers, so the two maturity models can be run as one.
+
+Use this file to write verification requirements for an agent platform, to
+brief a penetration test with testable requirements, and to keep agentic
+work inside an existing secure development lifecycle rather than beside it.
+
+---
+
 ## ASVS and agentic AI
 
 Agentic systems are web applications and APIs with additional attack

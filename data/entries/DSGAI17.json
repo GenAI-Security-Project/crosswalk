@@ -613,7 +613,7 @@
     {
       "name": "AI Fairness 360",
       "type": "open-source",
-      "url": "https://aif360.mybluemix.net"
+      "url": "https://github.com/Trusted-AI/AIF360"
     },
     {
       "name": "What-If Tool",
@@ -628,7 +628,7 @@
     {
       "name": "IBM AI Fairness 360",
       "type": "open-source",
-      "url": "https://aif360.mybluemix.net"
+      "url": "https://github.com/Trusted-AI/AIF360"
     },
     {
       "name": "Fiddler AI",

@@ -22,6 +22,34 @@ and acceptable use requirements are GOVERN responsibilities.
 
 ---
 
+## Why NIST CSF 2.0 for GenAI data security
+
+CSF 2.0 is the organising framework most enterprise security programmes
+already run on, and the fastest route to covering GenAI data risk is usually
+to extend that profile rather than to build something parallel.
+
+The functions carry the DSGAI risk set with a clear division. **GOVERN**,
+added in 2.0, owns data classification policy, retention, third-party data
+sharing terms, and the accountability for what may enter a model at all —
+which is where most of these risks are actually decided. **IDENTIFY** owns
+the inventory that GenAI programmes most often lack: which retrieval indexes
+exist, what they contain, which connectors are in place, and where
+embeddings are stored. **PROTECT** covers access control, encryption, and
+minimisation across prompts, corpora, vector stores, and telemetry.
+**DETECT** covers monitoring for leakage, anomalous retrieval, and
+exfiltration through model output. **RESPOND** and **RECOVER** cover breach
+handling, including notification timelines when regulated data is involved.
+
+The asset inventory deserves emphasis. Conventional data discovery tooling
+does not see a vector index, a semantic cache, or a prompt log as a data
+store, so these accumulate sensitive content outside the classification
+regime that would otherwise govern it.
+
+Use this file to extend an existing CSF profile to GenAI data flows, and
+`DSGAI_NISTAIRMF.md` for the AI-specific risk process.
+
+---
+
 ## Quick-reference summary
 
 | ID | Name | Severity | Primary CSF 2.0 Categories | Tier |
@@ -1104,7 +1132,7 @@ detection (DE.CM) govern RAG corpus integrity.
 
 - [NIST CSF 2.0](https://www.nist.gov/cyberframework)
 - [OWASP GenAI Data Security Risks 2026](https://genai.owasp.org/resource/owasp-genai-data-security-risks-mitigations-2026/)
-- [NIST AI RMF 1.0](https://www.nist.gov/system/files/documents/2023/01/26/AI%20RMF%201.0.pdf)
+- [NIST AI RMF 1.0](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf)
 - [LLM Top 10 × CSF 2.0](../llm-top10/LLM_NISTCSF2.md)
 - [Agentic Top 10 × CSF 2.0](../agentic-top10/Agentic_NISTCSF2.md)
 

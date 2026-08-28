@@ -7,9 +7,9 @@
   License     : CC BY-SA 4.0
 -->
 
-# DSGAI 2026 – DORA
+# DSGAI 2026 × DORA
 
-Mapping the [OWASP GenAI Data Security Risks 2026](https://genai.owasp.org/dsgai-2026/)
+Mapping the [OWASP GenAI Data Security Risks 2026](https://genai.owasp.org/resource/owasp-genai-data-security-risks-mitigations-2026/)
 to the [Digital Operational Resilience Act (DORA)](https://eur-lex.europa.eu/eli/reg/2022/2554/oj)
 (EU Regulation 2022/2554, effective 17 January 2025).
 
@@ -29,6 +29,36 @@ processes, resilience testing programmes, and third-party oversight
 arrangements. This mapping enables financial institutions to trace each
 OWASP DSGAI risk to specific DORA articles and implement controls satisfying
 both data security and operational resilience regulatory obligations.
+
+---
+
+## Why DORA for GenAI data security
+
+DORA is binding EU regulation for financial entities, and it is
+technology-neutral, so it reaches GenAI data flows without naming them. It
+is not a data protection regulation — GDPR occupies that ground — but its
+ICT risk provisions cover the availability, integrity, and third-party
+dimensions of GenAI data that GDPR does not.
+
+**Article 8** asset identification and classification is the provision this
+list engages most directly: retrieval indexes, vector stores, embeddings,
+fine-tuning corpora, and prompt logs are ICT assets holding classified
+information, and they belong in the inventory with a data classification
+attached. Most GenAI data incidents in regulated environments trace back to
+an asset nobody registered. **Article 9** covers protection, including
+encryption and access control for those stores. **Article 10** covers
+detection of anomalous access and exfiltration. **Article 12** covers
+backup and restoration, which for a retrieval corpus is also the rollback
+path after a poisoning event. **Articles 17–23** cover incident
+classification and reporting, with defined timelines that a customer data
+disclosure through a model will trigger. **Articles 28–44** cover
+third-party ICT risk — the provision that bears on routing customer data to
+an external inference provider, including the exit and data-return terms
+DORA requires in contracts.
+
+Use this file to bring GenAI data stores into an existing DORA asset
+register, to classify AI data incidents against reporting thresholds, and to
+review model provider contracts against the third-party requirements.
 
 ---
 
@@ -1233,7 +1263,7 @@ making bias detection a regulatory compliance requirement.
 
 | Tool | Type | Link |
 |---|---|---|
-| IBM AI Fairness 360 | Open-source | <https://aif360.mybluemix.net> |
+| IBM AI Fairness 360 | Open-source | <https://github.com/Trusted-AI/AIF360> |
 | Fairlearn | Open-source | <https://fairlearn.org> |
 | What-If Tool | Open-source | <https://pair-code.github.io/what-if-tool/> |
 | Fiddler AI | Commercial | <https://www.fiddler.ai> |
@@ -1446,7 +1476,7 @@ cloud-based providers may inadvertently cross jurisdictional boundaries.
 
 | Tool | Type | Link |
 |---|---|---|
-| AWS Region Controls / Azure Policy | Commercial | <https://aws.amazon.com/compliance/data-residency/> |
+| AWS Region Controls / Azure Policy | Commercial | <https://aws.amazon.com/compliance/data-privacy/> |
 | Netskope | Commercial | <https://www.netskope.com> |
 | OneTrust | Commercial | <https://www.onetrust.com> |
 | Open Policy Agent | Open-source | <https://www.openpolicyagent.org> |
@@ -1549,8 +1579,8 @@ damage.
 ## References
 
 - [DORA – EU Regulation 2022/2554](https://eur-lex.europa.eu/eli/reg/2022/2554/oj)
-- [EBA DORA Regulatory Technical Standards](https://www.eba.europa.eu/regulation-and-policy/digital-operational-resilience-act-dora)
-- [OWASP GenAI Data Security Risks 2026](https://genai.owasp.org/dsgai-2026/)
+- [EBA DORA Regulatory Technical Standards](https://www.eba.europa.eu/activities/direct-supervision-and-oversight/digital-operational-resilience-act)
+- [OWASP GenAI Data Security Risks 2026](https://genai.owasp.org/resource/owasp-genai-data-security-risks-mitigations-2026/)
 - [GDPR – EU Regulation 2016/679](https://eur-lex.europa.eu/eli/reg/2016/679/oj)
 - [NIST Privacy Framework](https://www.nist.gov/privacy-framework)
 - [ENISA Threat Landscape for AI](https://www.enisa.europa.eu/)

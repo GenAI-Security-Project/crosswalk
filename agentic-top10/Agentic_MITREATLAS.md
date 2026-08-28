@@ -23,6 +23,36 @@ the severity of a technique beyond its baseline LLM rating.
 
 ---
 
+## Why MITRE ATLAS for agentic security
+
+ATLAS is the only framework in this repo organised by what the attacker
+does rather than by what the defender should install, and for agentic
+systems that perspective is the one that exposes the real problem. An agent
+compromise is rarely a single technique. It is a chain: initial access
+through injected content, execution through a tool call, persistence through
+written memory, lateral movement through a peer agent, exfiltration through
+whatever egress the toolchain allows.
+
+The ATLAS tactic set makes that chain expressible. Alongside the tactics
+familiar from model-level attacks, the current content includes
+**Credential Access**, **Privilege Escalation**, **Lateral Movement**, and
+**Command and Control** — the tactics that describe an attacker moving
+through an environment rather than manipulating a single inference. Those
+are precisely the tactics agentic risk needs, and they are why an agent
+incident looks more like an intrusion than like a model failure.
+
+That shared shape is the practical payoff. A SOC already triaging on ATT&CK
+can reason about an agent compromise using the same kill-chain vocabulary,
+and detection engineering for agents becomes an extension of existing work
+rather than a separate discipline.
+
+Use this file for red team scoping, detection coverage assessment, and
+incident classification. Pair it with `Agentic_MAESTRO.md`, which gives the
+architectural layer a threat originates at, where ATLAS gives the sequence
+it travels through.
+
+---
+
 ## Quick-reference summary
 
 | ID | Name | Severity | Primary ATLAS Techniques | Agentic amplifier | Tier |

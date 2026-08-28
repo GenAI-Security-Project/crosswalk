@@ -7,7 +7,7 @@
   License     : CC BY-SA 4.0
 -->
 
-# DSGAI 2026 x PCI DSS v4.0
+# DSGAI 2026 × PCI DSS v4.0
 
 Mapping the [OWASP GenAI Data Security Risks and Mitigations 2026](https://genai.owasp.org/resource/owasp-genai-data-security-risks-mitigations-2026/)
 (DSGAI01-DSGAI21) to [PCI DSS v4.0](https://www.pcisecuritystandards.org/document_library/).
@@ -26,6 +26,37 @@ is one where CHD never enters the LLM context, training data, RAG
 corpus, or embedding store. Design for CHD absence first. Where
 CHD is unavoidable, apply PCI scope controls to every component
 that touches it.
+
+---
+
+## Why PCI DSS for GenAI data security
+
+PCI DSS applies wherever cardholder data is stored, processed, or
+transmitted, and GenAI systems have an unusual talent for pulling it into
+places nobody scoped. A support assistant summarising ticket history, a
+retrieval index built over correspondence, a prompt log capturing what a
+customer typed — any of these can bring a system into the cardholder data
+environment without a design decision ever being made.
+
+Scope is therefore the first question this file answers, and the honest
+answer is often that the model, its retrieval indexes, its vector store, its
+prompt logs, and its telemetry are all in scope. Once that is established the
+requirements are conventional. **Requirement 3** governs storage,
+truncation, masking, and retention of account data, which now applies to
+embeddings and prompt logs. **Requirement 7** restricts access by business
+need to know, which is the retrieval authorisation problem. **Requirement 4**
+covers transmission, relevant when prompts leave for a third-party
+inference provider. **Requirement 10** covers logging and monitoring, with
+the recursive problem that the logs may themselves contain account data.
+**Requirement 12** covers third-party service provider management.
+
+v4.0's customised approach, mandatory from March 2025, matters here: it
+allows meeting a requirement's objective by a different means, with
+documented risk analysis — the right route for controls whose prescriptive
+form does not fit an inference pipeline.
+
+Use this file to scope the CDE for a GenAI feature and to prepare the
+customised approach documentation an assessor will expect.
 
 ---
 
@@ -1188,7 +1219,7 @@ decisions or provide incorrect compliance guidance to analysts.
 
 - PCI DSS v4.0: <https://www.pcisecuritystandards.org/document_library/>
 - PCI SSC Information Supplement — Third-Party Security Assurance: <https://www.pcisecuritystandards.org>
-- PCI DSS v4.0 Summary of Changes: <https://www.pcisecuritystandards.org/documents/PCI-DSS-v4-0-Summary-of-Changes-r2.pdf>
+- PCI DSS v4.0 Summary of Changes: <https://www.pcisecuritystandards.org/document_library/>
 - OWASP GenAI Data Security Risks 2026: <https://genai.owasp.org/resource/owasp-genai-data-security-risks-mitigations-2026/>
 - LLM Top 10 x PCI DSS mapping: see LLM_PCIDSS.md in this repository
 

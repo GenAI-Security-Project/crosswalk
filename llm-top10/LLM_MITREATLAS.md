@@ -23,6 +23,33 @@ on AI systems.
 
 ---
 
+## Why MITRE ATLAS for LLM security
+
+Every other framework in this repo tells you what control to put in place.
+ATLAS tells you what the attacker does. It is the adversary-behaviour
+knowledge base for AI systems — the AI counterpart to MITRE ATT&CK — and it
+is the only reference here organised by attacker objective rather than by
+control family.
+
+That makes it the file to read first. A control mapping answers "am I
+compliant?"; ATLAS answers "how would someone actually take this apart?"
+Threat modelling with ATLAS techniques before selecting controls from ISO
+27001, NIST AI RMF, or the EU AI Act keeps control selection driven by real
+attacker behaviour instead of checklist coverage.
+
+ATLAS is also the shared vocabulary between AI security and the rest of
+security operations. A SOC that already triages on ATT&CK technique IDs can
+ingest ATLAS IDs without inventing new taxonomy, so LLM incidents land in the
+same detection engineering and threat intelligence pipeline as everything
+else. Case studies published alongside the techniques give each mapping
+observed, documented precedent rather than theory.
+
+Use this file for red team scoping, detection engineering, and purple team
+exercises. Pair it with `LLM_CWE_CVE.md` for the weakness and vulnerability
+view of the same attacks.
+
+---
+
 ## MITRE ATLAS structure
 
 ATLAS organises adversarial AI techniques across a kill chain of tactics:

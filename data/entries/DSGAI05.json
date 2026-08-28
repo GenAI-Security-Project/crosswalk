@@ -611,7 +611,7 @@
     {
       "name": "Pachyderm",
       "type": "open-source",
-      "url": "https://www.pachyderm.com"
+      "url": "https://github.com/pachyderm/pachyderm"
     },
     {
       "name": "OpenLineage",

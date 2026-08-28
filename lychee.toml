@@ -1,0 +1,47 @@
+# Link checker configuration for the OWASP GenAI Crosswalk.
+#
+# Dead links get fixed in the source, not silenced here. The exclusions below
+# are only for URLs that are correct and reachable in a browser but cannot be
+# validated by an automated checker, each with the reason.
+
+# Be a good citizen: genai.owasp.org rate-limited the previous unthrottled run.
+max_concurrency = 8
+max_retries = 3
+retry_wait_time = 4
+timeout = 30
+
+# Some standards bodies reject requests without a browser-shaped user agent.
+user_agent = "Mozilla/5.0 (compatible; lychee link checker; +https://github.com/lycheeverse/lychee)"
+
+# Rate limiting is a throttling signal, not a broken link.
+accept = ["200..=299", "429"]
+
+exclude = [
+  # MITRE ATLAS is a client-rendered single-page app served without a SPA
+  # fallback: every deep link returns the index document with a 404 status.
+  # The URLs resolve correctly in a browser; only the status code is wrong.
+  "^https://atlas\\.mitre\\.org/",
+
+  # ISO and IEC serve 403 to any non-interactive client. The standard pages
+  # are correct and public; they simply cannot be fetched by a checker.
+  "^https://www\\.iso\\.org/",
+  "^https://www\\.iec\\.ch/",
+
+  # Bot protection / WAF returns a challenge or drops the connection.
+  "^https://milvus\\.io/?$",
+  "^https://www\\.servicenow\\.com/",
+
+  # This repository is private, so its own URL 404s for an anonymous checker.
+  "^https://github\\.com/GenAI-Security-Project/crosswalk",
+
+  # npm serves 403 to non-browser clients.
+  "^https://www\\.npmjs\\.com/",
+
+  # Fill-in placeholders in the file template, not real targets.
+  "\\[url\\]",
+  "\\[framework-url\\]",
+  "\\[source-list-url\\]",
+]
+
+# Generated or vendored trees are not part of the repo's link surface.
+exclude_path = ["node_modules", "reports", "dist"]

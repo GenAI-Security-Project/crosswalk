@@ -112,8 +112,8 @@ We do not offer monetary rewards (bug bounties) for this repository.
 
 ## OWASP vulnerability disclosure policy
 
-This project follows the OWASP vulnerability disclosure policy:
-<https://owasp.org/www-policy/operational/bug-bounty>
+This project follows the OWASP Foundation's operational policies:
+<https://policy.owasp.org/>
 
 ---
 

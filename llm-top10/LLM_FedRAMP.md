@@ -7,7 +7,7 @@
   License     : CC BY-SA 4.0
 -->
 
-# LLM Top 10 2026 – FedRAMP AI Overlay
+# LLM Top 10 2026 × FedRAMP AI Overlay
 
 Mapping the [OWASP Top 10 for LLM Applications 2026](https://genai.owasp.org/llm-top-10/)
 to the [FedRAMP AI Overlay](https://www.fedramp.gov/) extending
@@ -24,6 +24,36 @@ cloud-hosted AI services must meet FedRAMP AI overlay requirements in
 addition to the standard baseline. This mapping enables organisations to
 trace each OWASP LLM Top 10 risk to specific FedRAMP AI controls and
 implement them within their authorisation boundary.
+
+---
+
+## Why FedRAMP for LLM security
+
+FedRAMP is the authorisation path for any cloud service sold to a US federal
+agency, and LLM features are arriving inside services that already hold an
+authorisation. That creates an immediate, concrete question: does adding a
+model to an authorised system change its security posture enough to require
+reassessment, and which controls does it touch?
+
+This file answers that in NIST SP 800-53 terms, the control language a
+FedRAMP package is actually written in. The mappings concentrate on the
+families where LLM risk lands — **SI** system and information integrity for
+input validation, output filtering, and malicious code protection; **AC**
+access enforcement and least privilege; **SC** system and communications
+protection for data at rest and boundary protection; **AU** audit and
+accountability for inference logging; **SR** supply chain risk management
+for model and dataset provenance; **CM** configuration management and least
+functionality; **RA** and **CA** for scanning, assessment, and penetration
+testing.
+
+Working in 800-53 identifiers rather than AI-specific vocabulary is
+deliberate. It lets an existing System Security Plan absorb AI components as
+control implementation statements rather than as an appendix nobody
+inherits.
+
+Use this file to scope a significant change request, to draft SSP control
+narratives for AI components, and to brief a 3PAO on what the model changes
+about an existing boundary.
 
 ---
 
@@ -845,7 +875,7 @@ reaches a shell, a browser, or a database.
 - [NIST SP 800-53 Rev 5](https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final)
 - [FedRAMP](https://www.fedramp.gov/)
 - [OWASP LLM Top 10 2026](https://genai.owasp.org/llm-top-10/)
-- [NIST AI RMF 1.0](https://www.nist.gov/system/files/documents/2023/01/26/AI%20RMF%201.0.pdf)
+- [NIST AI RMF 1.0](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf)
 - [MITRE ATLAS](https://atlas.mitre.org)
 - [CISA FedRAMP Guidance](https://www.cisa.gov/topics/cyber-threats-and-advisories/federal-information-security-modernization-act)
 

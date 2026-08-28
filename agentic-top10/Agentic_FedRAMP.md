@@ -7,9 +7,9 @@
   License     : CC BY-SA 4.0
 -->
 
-# Agentic Top 10 2026 – FedRAMP AI Overlay
+# Agentic Top 10 2026 × FedRAMP AI Overlay
 
-Mapping the [OWASP Top 10 for Agentic AI 2026](https://genai.owasp.org/agentic-ai/)
+Mapping the [OWASP Top 10 for Agentic AI 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
 to the [FedRAMP AI Overlay](https://www.fedramp.gov/) extending
 [NIST SP 800-53 Rev 5](https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final)
 with AI-specific control enhancements.
@@ -26,6 +26,37 @@ authorisation boundary. Organisations deploying agentic AI in FedRAMP
 environments must address non-human identity management, agent privilege
 controls, cascading automation risk, and supply chain integrity for agent
 components.
+
+---
+
+## Why FedRAMP for agentic security
+
+Agentic capability is arriving inside cloud services that already hold a
+federal authorisation, which makes the practical question a narrow one:
+which 800-53 controls does an autonomous agent touch, and does adding one
+constitute a significant change to the boundary?
+
+The control families that carry agentic risk are identifiable and mostly
+about identity and containment. **AC-2**, **AC-3**, and **AC-6** cover
+account management, access enforcement, and least privilege for agent
+identities — the single largest lever on agentic blast radius. **CM-7**
+least functionality bounds what tools an agent can reach at all. **SI-4**
+system monitoring covers behavioural detection. **AU-2** through **AU-12**
+cover the audit record that makes agent action attributable and
+reconstructable. **SC-7** boundary protection governs egress from the agent's
+execution environment. **SR** family controls cover the provenance of agent
+components and tool descriptors. **IR** family controls cover response,
+where agentic systems need containment primitives conventional playbooks
+lack.
+
+Expressing agentic controls in 800-53 identifiers rather than AI-specific
+vocabulary lets an existing System Security Plan absorb agents as control
+implementation statements, which is considerably easier to get through
+assessment than a new appendix.
+
+Use this file to scope a significant change request, to draft SSP narratives
+for agent components, and to brief a 3PAO on the boundary implications of
+autonomy.
 
 ---
 
@@ -775,8 +806,8 @@ failures (IR-4).
 
 - [NIST SP 800-53 Rev 5](https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final)
 - [FedRAMP](https://www.fedramp.gov/)
-- [OWASP Top 10 for Agentic AI 2026](https://genai.owasp.org/agentic-ai/)
-- [NIST AI RMF 1.0](https://www.nist.gov/system/files/documents/2023/01/26/AI%20RMF%201.0.pdf)
+- [OWASP Top 10 for Agentic AI 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
+- [NIST AI RMF 1.0](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf)
 - [MITRE ATLAS](https://atlas.mitre.org)
 - [OWASP NHI Top 10](https://owasp.org/www-project-non-human-identities-top-10/)
 

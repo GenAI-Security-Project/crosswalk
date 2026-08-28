@@ -7,9 +7,9 @@
   License     : CC BY-SA 4.0
 -->
 
-# Agentic Top 10 2026 – DORA
+# Agentic Top 10 2026 × DORA
 
-Mapping the [OWASP Top 10 for Agentic AI 2026](https://genai.owasp.org/agentic-ai/)
+Mapping the [OWASP Top 10 for Agentic AI 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
 to the [Digital Operational Resilience Act (DORA)](https://eur-lex.europa.eu/eli/reg/2022/2554/oj)
 (EU Regulation 2022/2554, effective 17 January 2025).
 
@@ -25,6 +25,39 @@ and cascade failures through interconnected multi-agent systems. This
 mapping enables financial institutions to trace each OWASP Agentic Top 10
 risk to specific DORA articles and implement controls satisfying regulatory
 obligations for autonomous AI systems.
+
+---
+
+## Why DORA for agentic security
+
+DORA is binding EU regulation for financial entities and it is
+technology-neutral, so it reaches agentic systems without naming them. An
+agent supporting a critical or important function is in scope on the same
+terms as any other ICT system — and agentic deployments engage the
+operational resilience provisions more heavily than conventional software,
+because autonomy compresses the time between compromise and consequence.
+
+The mapping concentrates where that compression bites. **Article 8** asset
+identification has to cover agents, their tools, their credentials, and
+their memory stores; an unregistered agent with a standing token is an
+unmanaged ICT asset. **Article 9** protection covers the permission
+envelope and sandbox. **Article 10** detection covers behavioural deviation.
+**Article 11** response and recovery is where agentic systems demand
+capabilities most incident processes lack — halting an executing agent,
+revoking credentials mid-task, and reversing actions already taken.
+**Article 12** backup and restoration has to account for agent memory and
+state. **Articles 17–23** incident reporting applies with defined timelines
+when an agent causes customer-affecting harm. **Articles 24–27** threat-led
+penetration testing is where adversarial testing of agent goal integrity
+belongs. **Articles 28–44** third-party risk covers agent framework and tool
+providers.
+
+Cascading agent failures map onto DORA's core concern almost exactly: the
+regulation exists because of propagating operational failure in
+interconnected financial systems.
+
+Use this file to bring agentic systems into an existing DORA programme, to
+scope TLPT for agents, and to build containment into incident response.
 
 ---
 
@@ -755,8 +788,8 @@ financial entities to manage third-party risk for agent dependencies
 ## References
 
 - [DORA – EU Regulation 2022/2554](https://eur-lex.europa.eu/eli/reg/2022/2554/oj)
-- [EBA DORA Regulatory Technical Standards](https://www.eba.europa.eu/regulation-and-policy/digital-operational-resilience-act-dora)
-- [OWASP Top 10 for Agentic AI 2026](https://genai.owasp.org/agentic-ai/)
+- [EBA DORA Regulatory Technical Standards](https://www.eba.europa.eu/activities/direct-supervision-and-oversight/digital-operational-resilience-act)
+- [OWASP Top 10 for Agentic AI 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
 - [ECB Guide on Outsourcing and ICT Risk](https://www.bankingsupervision.europa.eu/)
 - [MITRE ATLAS](https://atlas.mitre.org)
 - [OWASP NHI Top 10](https://owasp.org/www-project-non-human-identities-top-10/)

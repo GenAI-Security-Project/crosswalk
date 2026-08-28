@@ -16,6 +16,34 @@ organised into 18 control groups with Implementation Groups (IG1/IG2/IG3).
 
 ---
 
+## Why CIS Controls for agentic security
+
+The CIS Controls give agentic security something it badly needs: safeguards
+concrete enough to implement now, tiered by an honest maturity ladder,
+without waiting for an AI governance programme to stand up first.
+
+Agentic risk concentrates in a handful of controls, and they are mostly the
+identity and access ones. **CIS 5** account management and **CIS 6** access
+control management carry the most weight, because an agent is an account —
+usually a non-human one with a standing credential and a broader grant than
+anyone intended. **CIS 4** secure configuration governs the tool and
+sandbox posture that bounds what a hijacked agent can reach. **CIS 8** audit
+log management is what makes an agent's actions attributable after the fact.
+**CIS 3** data protection covers memory stores and retrieval corpora.
+**CIS 16** application software security and **CIS 18** penetration testing
+cover the build and validation side.
+
+Reading agentic risk through these controls has a clarifying effect: much of
+it is non-human identity management and least privilege, disciplines that
+already have mature tooling and clear owners. The novel part is smaller than
+it first appears, and separating the two lets a team fix the tractable
+majority immediately.
+
+Use this file for implementation sequencing, and `Agentic_OWASP_NHI.md`
+for the non-human identity dimension in depth.
+
+---
+
 ## CIS Controls structure
 
 | Group | Controls | Scope |

@@ -952,7 +952,7 @@ For each automated test case:
 - [OWASP Top 10 for LLM Applications 2026](https://genai.owasp.org/llm-top-10/)
 - [OWASP ASVS 4.0.3](https://owasp.org/www-project-application-security-verification-standard/)
 - [MITRE ATLAS](https://atlas.mitre.org)
-- [NIST AI RMF Playbook](https://airc.nist.gov/Docs/2)
+- [NIST AI RMF Playbook](https://airc.nist.gov/AI_RMF_Knowledge_Base/Playbook)
 - [Garak — LLM vulnerability scanner](https://github.com/leondz/garak)
 - [PyRIT — Python Risk Identification Toolkit](https://github.com/Azure/PyRIT)
 

@@ -784,7 +784,7 @@ profile provides a starting point for LLM security programme alignment:
 
 - [NIST CSF 2.0](https://www.nist.gov/cyberframework)
 - [NIST CSF 2.0 Quick Start Guides](https://www.nist.gov/cyberframework/getting-started)
-- [NIST AI RMF 1.0](https://www.nist.gov/system/files/documents/2023/01/26/AI%20RMF%201.0.pdf)
+- [NIST AI RMF 1.0](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf)
 - [OWASP LLM Top 10 2026](https://genai.owasp.org/llm-top-10/)
 
 ---

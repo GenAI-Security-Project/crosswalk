@@ -23,6 +23,36 @@ using the same language already used for the rest of the application stack.
 
 ---
 
+## Why STRIDE for LLM threat modeling
+
+STRIDE is the threat modelling method most engineering organisations already
+know, and its six categories still partition the LLM attack surface cleanly.
+That familiarity is the point: a team that already runs STRIDE sessions on a
+design document can bring an LLM feature into the same session without
+learning a new method first.
+
+The categories land as follows. **Spoofing** covers identity confusion
+between system instructions and user content, the structural weakness behind
+prompt injection. **Tampering** covers data and model poisoning and
+manipulation of retrieval corpora. **Repudiation** covers the audit gap when
+model-driven actions cannot be attributed. **Information disclosure** covers
+both sensitive data leakage and hidden context exposure. **Denial of
+service** covers unbounded consumption, including denial of wallet.
+**Elevation of privilege** covers excessive agency and improper output
+handling, where model output reaches something that acts on it.
+
+STRIDE's limitation is worth stating plainly: it enumerates threat classes
+against data flows, so it is only as good as the data flow diagram it runs
+on. For LLM applications the trust boundaries that matter — the context
+window, the retrieval corpus, the tool interface — are often missing from
+the diagram entirely. Draw those first.
+
+Use this file to run design-time threat modelling with an existing team, and
+`LLM_MAESTRO.md` when you need the architectural layer a threat originates
+at rather than its category.
+
+---
+
 ## STRIDE categories at a glance
 
 | Category | Letter | Core question | Classic example |

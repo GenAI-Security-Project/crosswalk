@@ -23,6 +23,35 @@ provide confirmed real-world exploitation evidence for DSGAI risk areas.
 
 ---
 
+## Why CWE and CVE for GenAI data security
+
+CWE gives each GenAI data risk a root-cause name the wider security industry
+already recognises, which is what turns a governance concern into a
+trackable engineering defect. "Sensitive Data Leakage" is a category;
+**CWE-200** exposure of sensitive information, **CWE-359** exposure of
+private personal information, or **CWE-522** insufficiently protected
+credentials on a specific code path is a ticket someone can close.
+
+The mapping is useful for separating the genuinely novel from the familiar.
+Cross-tenant conversation bleed resolves to **CWE-488** exposure of data to
+the wrong session and **CWE-863** incorrect authorisation — long-understood
+weaknesses arriving through a new retrieval path, with established mitigation
+practice. Unsafe natural-language data gateways resolve to **CWE-89** SQL
+injection, which needs no new theory. Against that, membership inference and
+embedding inversion map onto **CWE-202** and **CWE-1230**-style observable
+discrepancy and are less well served by existing tooling — worth knowing
+which problems have mature answers and which do not.
+
+CVE references anchor the categories in published instances against real
+vector databases, connectors, and AI platforms, supporting severity
+arguments and letting you check whether a component you already run is
+affected.
+
+Use this file to route data findings into an existing vulnerability
+management workflow and to write scanner rules.
+
+---
+
 ## CWE pillar families most relevant to DSGAI
 
 | CWE Pillar | Covers | DSGAI relevance |
