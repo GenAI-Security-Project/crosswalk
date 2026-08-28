@@ -7,22 +7,26 @@ on:
       - 'llm-top10/**'
       - 'agentic-top10/**'
       - 'dsgai-2026/**'
+      - 'ast-top10/**'
       - 'shared/**'
       - 'data/**'
       - 'CROSSREF.md'
       - 'README.md'
       - 'scripts/validate.js'
+      - 'scripts/generate.js'
   pull_request:
     branches: [main]
     paths:
       - 'llm-top10/**'
       - 'agentic-top10/**'
       - 'dsgai-2026/**'
+      - 'ast-top10/**'
       - 'shared/**'
       - 'data/**'
       - 'CROSSREF.md'
       - 'README.md'
       - 'scripts/validate.js'
+      - 'scripts/generate.js'
 
 # Both jobs only read the tree. Without this they inherit the repository
 # default, which is write.
@@ -80,3 +84,29 @@ jobs:
       # git must agree that nothing moved.
       - name: Assert no uncommitted drift
         run: git diff --exit-code -- README.md data/stats.json
+
+  generator:
+    name: Generator reproducibility
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+
+      - name: Use Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '20'
+
+      # generate.js sat broken on main for several commits: a migration script
+      # was run more than once and left three `const AST_IDS` declarations, so
+      # the file threw a SyntaxError on load. Nothing noticed, because no job
+      # ran it. This one does.
+      - name: Run the generator
+        run: node scripts/generate.js
+
+      # And its output must match what is committed, so a hand-edit to a
+      # generated file, or a source change that was never regenerated, fails
+      # here rather than shipping.
+      - name: Assert generated output is current
+        run: git diff --exit-code -- data/entries docs/data.js docs/incidents.js
