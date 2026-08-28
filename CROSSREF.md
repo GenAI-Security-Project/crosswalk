@@ -14,30 +14,50 @@ Read left to right: an LLM vulnerability → its agentic amplification → its d
 |---|---|---|---|
 | LLM01 Prompt Injection | ASI01 Agent Goal Hijack | DSGAI01 Sensitive Data Leakage | MITRE ATLAS · AIUC-1 B001/B005 · NIST AI RMF · ASVS |
 | LLM01 Prompt Injection | ASI02 Tool Misuse | DSGAI12 Unsafe NL Data Gateways | MITRE ATLAS · AIUC-1 B006 · ISA 62443 · STRIDE |
-| LLM02 Sensitive Information Disclosure | ASI03 Identity & Privilege Abuse | DSGAI01 Sensitive Data Leakage | ISO 27001 · ISO 27701 · AIUC-1 A · SOC 2 · PCIDSS |
+| LLM02 Sensitive Information Disclosure | ASI03 Identity & Privilege Abuse | DSGAI01 Sensitive Data Leakage | ISO 27001 · AIUC-1 A · SOC 2 · PCIDSS |
 | LLM02 Sensitive Information Disclosure | ASI03 Identity & Privilege Abuse | DSGAI02 Agent Identity & Credential Exposure | OWASP NHI · AIUC-1 B007 · NIST CSF 2.0 · ISO 27001 |
-| LLM03 Excessive Agency | ASI01 Agent Goal Hijack | DSGAI06 Tool Plugin & Agent Data Exchange | AIUC-1 B006 · ISA 62443 · NIST AI RMF · COBIT |
+| LLM03 Excessive Agency | ASI01 Agent Goal Hijack | DSGAI06 Tool Plugin & Agent Data Exchange | AIUC-1 B006 · ISA 62443 · NIST AI RMF |
 | LLM03 Excessive Agency | ASI10 Rogue Agents | DSGAI16 Endpoint & Browser Overreach | AIUC-1 C · MITRE ATLAS · STRIDE · EU AI Act |
-| LLM04 Supply Chain | ASI04 Agentic Supply Chain | DSGAI04 Data Model & Artifact Poisoning | CycloneDX ML SBOM · NIST SP 800-218A · BSIMM · SAMM |
+| LLM04 Supply Chain | ASI04 Agentic Supply Chain | DSGAI04 Data Model & Artifact Poisoning | NIST SP 800-218A · SAMM |
 | LLM05 Data and Model Poisoning | ASI06 Memory & Context Poisoning | DSGAI04 Data Model & Artifact Poisoning | MITRE ATLAS · AIUC-1 A · CIS Controls · AITG |
-| LLM05 Data and Model Poisoning | ASI06 Memory & Context Poisoning | DSGAI21 Disinformation via Data Poisoning | MITRE ATT&CK · STRIDE · ENISA · EU AI Act |
+| LLM05 Data and Model Poisoning | ASI06 Memory & Context Poisoning | DSGAI21 Disinformation via Data Poisoning | STRIDE · ENISA · EU AI Act |
 | LLM06 Unbounded Consumption | ASI08 Cascading Failures | DSGAI17 Data Availability & Resilience Failures | AIUC-1 D · ISA 62443 · NIST SP 800-82 · CIS Controls |
 | LLM07 Misinformation | ASI09 Human-Agent Trust Exploitation | DSGAI21 Disinformation via Data Poisoning | AIUC-1 C/F · EU AI Act · ENISA · NIST AI RMF |
 | LLM08 Hidden Context Exposure | ASI01 Agent Goal Hijack | DSGAI15 Over-Broad Context Windows | AIUC-1 B003/B009 · ISO 27001 · CIS Controls · ASVS |
 | LLM09 Vector and Embedding Weaknesses | ASI06 Memory & Context Poisoning | DSGAI13 Vector Store Platform Security | MITRE ATLAS · AIUC-1 A · NIST AI RMF · CWE/CVE |
 | LLM10 Improper Output Handling | ASI02 Tool Misuse | DSGAI05 Data Integrity & Validation Failures | ASVS · CIS Controls · NIST CSF 2.0 · AIUC-1 B009 |
-| — | ASI05 Unexpected Code Execution | DSGAI12 Unsafe NL Data Gateways | MITRE ATT&CK · AIUC-1 B006 · ASVS · CWE/CVE |
+| — | ASI05 Unexpected Code Execution | DSGAI12 Unsafe NL Data Gateways | AIUC-1 B006 · ASVS · CWE/CVE |
 | — | ASI07 Insecure Inter-Agent Comms | DSGAI02 Agent Identity & Credential Exposure | OWASP NHI · AIUC-1 E · ISA 62443 · ISO 27001 |
-| — | — | DSGAI03 Shadow AI & Unsanctioned Data Flows | COBIT · ISO 27001 · ENISA · CIS Controls |
-| — | — | DSGAI07 Data Governance & Lifecycle | ISO 42001 · ISO 27701 · EU AI Act · NIST AI RMF |
-| — | — | DSGAI08 Non-Compliance & Regulatory Violations | EU AI Act · ISO 42001 · ISO 27701 · PCIDSS · SOC 2 |
+| — | — | DSGAI03 Shadow AI & Unsanctioned Data Flows | ISO 27001 · ENISA · CIS Controls |
+| — | — | DSGAI07 Data Governance & Lifecycle | ISO 42001 · EU AI Act · NIST AI RMF |
+| — | — | DSGAI08 Non-Compliance & Regulatory Violations | EU AI Act · ISO 42001 · PCIDSS · SOC 2 |
 | — | — | DSGAI09 Multimodal Cross-Channel Leakage | ISO 27001 · AIUC-1 A · CIS Controls · ENISA |
-| — | — | DSGAI10 Synthetic Data & Anonymization Pitfalls | ISO 27701 · NIST AI RMF · EU AI Act · ENISA |
+| — | — | DSGAI10 Synthetic Data & Anonymization Pitfalls | NIST AI RMF · EU AI Act · ENISA |
 | — | — | DSGAI11 Cross-Context Conversation Bleed | ASVS · ISO 27001 · NIST CSF 2.0 · AIUC-1 A |
 | — | — | DSGAI14 Excessive Telemetry & Monitoring Leakage | ISO 27001 · CIS Controls · SOC 2 · NIST CSF 2.0 |
-| — | — | DSGAI18 Inference & Data Reconstruction | MITRE ATLAS · ISO 27701 · ENISA · AIUC-1 A |
-| — | — | DSGAI19 Human-in-Loop & Labeler Overexposure | ISO 27701 · EU AI Act · NIST AI RMF · BSIMM |
+| — | — | DSGAI18 Inference & Data Reconstruction | MITRE ATLAS · ENISA · AIUC-1 A |
+| — | — | DSGAI19 Human-in-Loop & Labeler Overexposure | EU AI Act · NIST AI RMF |
 | — | — | DSGAI20 Model Exfiltration & IP Replication | MITRE ATLAS · CWE/CVE · ISO 27001 · AIUC-1 B |
+
+---
+
+### Referenced but not yet mapped
+
+These frameworks are relevant to the risks above and are **not** part of this
+crosswalk. They were previously listed in the navigation column, which implied a
+mapping file that does not exist. They are recorded here instead so the omission
+is visible rather than silent:
+
+| Framework | Why it is relevant | Status |
+|---|---|---|
+| MITRE ATT&CK | Enterprise adversary techniques that AI attacks chain into | Not mapped |
+| ISO/IEC 27701 | Privacy information management, extending ISO 27001 | Not mapped |
+| CycloneDX ML-BOM | Machine-readable model and dataset inventory | Not mapped |
+| BSIMM | Software security maturity measurement | Not mapped |
+| COBIT | IT governance and management objectives | Not mapped |
+
+Adding any of them is a maintainer decision about scope, not an oversight —
+see [roadmap issue #19](https://github.com/GenAI-Security-Project/crosswalk/issues/19).
 
 ---
 
