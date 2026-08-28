@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GenAI Crosswalk — OWASP GenAI Security Project</title>
-<meta name="description" content="The most comprehensive mapping of Gen AI and Agentic security risks to industry frameworks. 41 entries across LLM Top 10, Agentic Top 10, and DSGAI mapped to 25 frameworks with 1,500+ controls. Free and open-source from OWASP. Submit your own standard for automated mapping.">
+<meta name="description" content="The most comprehensive mapping of Gen AI and Agentic security risks to industry frameworks. 41 entries across LLM Top 10, Agentic Top 10, and DSGAI mapped to 23 frameworks with 1,372 controls. Free and open-source from OWASP. Submit your own standard for automated mapping.">
 <meta name="author" content="OWASP GenAI Security Project">
 <link rel="canonical" href="https://genai-security-project.github.io/crosswalk/">
 <meta property="og:type" content="website">
@@ -17,7 +17,7 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="GenAI Crosswalk">
-<meta name="twitter:description" content="25 frameworks × 41 entries × 114 incidents. Score your Gen AI and Agentic security coverage in 60 seconds.">
+<meta name="twitter:description" content="23 frameworks × 41 entries × 114 incidents. Score your Gen AI and Agentic security coverage in 60 seconds.">
 <meta name="twitter:image" content="https://genai-security-project.github.io/crosswalk/og-image.svg">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
 <script type="application/ld+json">
@@ -27,7 +27,7 @@
   "name": "GenAI Crosswalk",
   "alternateName": "Crosswalk",
   "url": "https://genai-security-project.github.io/crosswalk/",
-  "description": "The most comprehensive mapping of Gen AI and Agentic security risks to industry frameworks. Maps 41 entries across the OWASP LLM Top 10, Agentic Top 10, and DSGAI to 25 industry frameworks with 1,500+ controls.",
+  "description": "The most comprehensive mapping of Gen AI and Agentic security risks to industry frameworks. Maps 41 entries across the OWASP LLM Top 10, Agentic Top 10, and DSGAI to 23 industry frameworks with 1,372 controls.",
   "applicationCategory": "SecurityApplication",
   "operatingSystem": "Any (web-based)",
   "isAccessibleForFree": true,
@@ -1134,7 +1134,7 @@ input, select { font-family: inherit; }
 <div class="app" id="app"><noscript>
   <div style="max-width:800px;margin:40px auto;padding:0 24px;line-height:1.6;">
     <h1>GenAI Crosswalk</h1>
-    <p>GenAI Crosswalk is the flagship dataset and tool of the <a href="https://genai.owasp.org">OWASP GenAI Security Project</a>. It is the most comprehensive mapping of Gen AI and Agentic security risks to industry frameworks: 41 entries across the OWASP LLM Top 10, the OWASP Top 10 for Agentic Applications, and DSGAI (Data Security for GenAI), mapped to 25 industry frameworks with 1,500+ individual control mappings.</p>
+    <p>GenAI Crosswalk is the flagship dataset and tool of the <a href="https://genai.owasp.org">OWASP GenAI Security Project</a>. It is the most comprehensive mapping of Gen AI and Agentic security risks to industry frameworks: 41 entries across the OWASP LLM Top 10, the OWASP Top 10 for Agentic Applications, and DSGAI (Data Security for GenAI), mapped to 23 industry frameworks with 3,211 individual control mappings.</p>
     <h2>OWASP Top 10 for Agentic AI — Risks &amp; Mitigations</h2>
     <p>See the full <a href="agentic-ai-top10/">OWASP Top 10 for Agentic AI risks and mitigations</a>: Agent Goal Hijack, Tool Misuse &amp; Exploitation, Identity &amp; Privilege Abuse, Agentic Supply Chain Vulnerabilities, Unexpected Code Execution, Memory &amp; Context Poisoning, Insecure Inter-Agent Communication, Cascading Agent Failures, Human-Agent Trust Exploitation, and Rogue Agents.</p>
     <h2>OWASP LLM Top 10 — Risks &amp; Mitigations</h2>
@@ -5557,6 +5557,7 @@ input, select { font-family: inherit; }
       ['2026 Q1', 'v2.0: 20 frameworks, 67 mapping files, 50 incidents (100% entry coverage), 70+ tools, 21 recipes, 25 eval profiles, evidence-based scoring, leaderboard.'],
       ['2026 Q2', 'v3.0: Framework registry (14 frameworks, 505 controls), classifier pipeline (BGE + cross-encoder), backlink index, confidence-aware visualizer, Submit-a-Standard flow with GitHub Actions automation.'],
       ['2026 Q2', 'v3.1: Registry expanded to 25 frameworks (1,514 controls, 100% GT coverage). Gap analysis heatmap. OSCAL catalog + GRC export. Bi-encoder fine-tuning pipeline. Framework version diffing.']
+      ['2026 Q3', 'v4.0: Migrated to OWASP LLM Top 10 2026 (entries renumbered; Hidden Context Exposure, Improper Output Handling). Every headline count generated from the data layer. Registry items typed by kind — 1,372 controls, separated from techniques, weaknesses and layers. npm package ships the registries, so the control-level join works.'],
     ];
     events.forEach(function(ev) {
       var item = el('div', { className: 'timeline-item' });
@@ -5764,7 +5765,6 @@ input, select { font-family: inherit; }
     howSection.appendChild(el('h3', { style: 'margin-top:0;' }, 'How it works'));
     var steps = [
       ['1. Submit', 'Paste your framework controls as JSON and submit. This opens a GitHub Issue.'],
-      ['2. Classify', 'A GitHub Action runs the classifier pipeline (BGE bi-encoder + cross-encoder reranker) to propose mappings to all 41 OWASP entries.'],
       ['3. Review', 'The classifier opens a PR with proposed mappings. Reviewers accept, reject, or edit each mapping.'],
       ['4. Merge', 'Accepted mappings are merged into the crosswalk. Your framework appears on the live site.']
     ];
