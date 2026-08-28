@@ -12,7 +12,7 @@
   "controls": [
     {
       "control_id": "L1",
-      "title": "Foundation Models Layer",
+      "title": "Foundation Models",
       "description": "Base model layer — covers model selection, provenance, fine-tuning security, and model integrity threats.",
       "parent": null,
       "function": "Architecture Layer",
@@ -44,7 +44,7 @@
     },
     {
       "control_id": "L2",
-      "title": "Data Operations Layer",
+      "title": "Data Operations",
       "description": "Data pipelines — covers RAG, vector stores, training data, embedding security, and data governance.",
       "parent": null,
       "function": "Architecture Layer",
@@ -76,7 +76,7 @@
     },
     {
       "control_id": "L3",
-      "title": "Agent Frameworks Layer",
+      "title": "Agent Frameworks",
       "description": "Agent runtime — covers agent orchestration, goal management, memory, and planning security.",
       "parent": null,
       "function": "Architecture Layer",
@@ -108,7 +108,7 @@
     },
     {
       "control_id": "L4",
-      "title": "Tools and Integration Layer",
+      "title": "Deployment & Infrastructure",
       "description": "Tool access — covers MCP, API integrations, plugin security, and tool authorization.",
       "parent": null,
       "function": "Architecture Layer",
@@ -140,7 +140,7 @@
     },
     {
       "control_id": "L5",
-      "title": "Deployment Infrastructure Layer",
+      "title": "Evaluation & Observability",
       "description": "Infrastructure — covers containerization, networking, secrets management, and runtime isolation.",
       "parent": null,
       "function": "Architecture Layer",
@@ -172,7 +172,7 @@
     },
     {
       "control_id": "L6",
-      "title": "Orchestration Layer",
+      "title": "Security & Compliance",
       "description": "Multi-agent coordination — covers inter-agent communication, delegation, consensus, and cascading failure prevention.",
       "parent": null,
       "function": "Architecture Layer",
@@ -204,7 +204,7 @@
     },
     {
       "control_id": "L7",
-      "title": "Interaction and User Interface Layer",
+      "title": "Agent Ecosystem",
       "description": "Human-agent interface — covers user authentication, output validation, human oversight, and trust management.",
       "parent": null,
       "function": "Architecture Layer",

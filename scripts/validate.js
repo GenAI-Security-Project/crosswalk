@@ -744,6 +744,69 @@ function collectMappingFiles(targetFile) {
   return files;
 }
 
+// ─── MAESTRO layer-name guard ─────────────────────────────────────────
+
+/**
+ * 19. The seven MAESTRO layer ids must mean the same thing everywhere.
+ *
+ * `data/frameworks/maestro.json` once named L4/L5/L7 "Tools and Integration",
+ * "Deployment Infrastructure" and "Interaction and User Interface", while the
+ * three MAESTRO mapping files named the same ids "Deployment & Infrastructure",
+ * "Evaluation & Observability" and "Agent Ecosystem". Same ids, different
+ * meanings — so a mapping row and a registry lookup disagreed about which layer
+ * had been mapped, silently.
+ *
+ * The mapping file is the source of truth here: it reproduces the CSA table in
+ * full, it is what a reader sees, and it is what the OWASP AST10 project's own
+ * MAESTRO mapping agrees with. This checks the registry and every incident
+ * record against it.
+ */
+function checkMaestroLayers() {
+  const mdPath = path.join(ROOT, 'llm-top10', 'LLM_MAESTRO.md');
+  const regPath = path.join(ROOT, 'data', 'frameworks', 'maestro.json');
+  if (!fs.existsSync(mdPath) || !fs.existsSync(regPath)) return true;
+
+  // The architecture table: | <name> | L<n> | ... |
+  const canon = {};
+  for (const line of fs.readFileSync(mdPath, 'utf8').split('\n')) {
+    const m = line.match(/^\|\s*([^|]+?)\s*\|\s*(L[1-7])\s*\|/);
+    if (m) canon[m[2]] = m[1].trim();
+  }
+  if (Object.keys(canon).length !== 7) {
+    warn('MAESTRO layers', `Could not read all seven layers from LLM_MAESTRO.md (found ${Object.keys(canon).length})`);
+    return true;
+  }
+
+  let bad = 0;
+  for (const c of JSON.parse(fs.readFileSync(regPath, 'utf8')).controls || []) {
+    if (canon[c.control_id] && c.title !== canon[c.control_id]) {
+      fail('MAESTRO layers',
+        `maestro.json ${c.control_id} is "${c.title}", but LLM_MAESTRO.md calls it "${canon[c.control_id]}"`);
+      bad++;
+    }
+  }
+
+  const incPath = path.join(ROOT, 'data', 'incidents.json');
+  if (fs.existsSync(incPath)) {
+    const doc = JSON.parse(fs.readFileSync(incPath, 'utf8'));
+    const offenders = new Map();
+    for (const inc of doc.incidents || []) {
+      for (const l of inc.maestro_layers || []) {
+        if (l.label && canon[l.layer] && l.label !== canon[l.layer]) {
+          offenders.set(`${l.layer} "${l.label}"`, (offenders.get(`${l.layer} "${l.label}"`) || 0) + 1);
+        }
+      }
+    }
+    for (const [k, n] of offenders) {
+      fail('MAESTRO layers', `incidents.json labels ${k} on ${n} record(s) — not the canonical name`);
+      bad++;
+    }
+  }
+
+  if (!bad) pass('MAESTRO layers', 'Registry and incident labels match all seven canonical layer names');
+  return bad === 0;
+}
+
 function run() {
   const args       = process.argv.slice(2);
   const quickMode  = args.includes('--quick');
@@ -792,6 +855,7 @@ function run() {
     checkDensity();
     checkCrossRefFrameworks();
     checkFrameworkVersions();
+    checkMaestroLayers();
   }
 
   // Encoding guard — mapping files plus the shared/root markdown they link to
