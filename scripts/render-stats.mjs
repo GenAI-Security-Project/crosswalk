@@ -59,6 +59,16 @@ const KEYS = {
   'frameworks-mapped': () => stats.frameworks.mapped,
   'frameworks-registries': () => stats.frameworks.registries,
   'incidents': () => stats.incidents.total,
+  // Reports the measurement's own coverage alongside the result: a bare
+  // "current" count would imply the rest were checked and fine.
+  'freshness': () => {
+    const f = stats.freshness;
+    if (!f) return 'not measured';
+    const parts = [`${f.current} current`];
+    if (f.diverged) parts.push(`${f.diverged} behind upstream`);
+    if (f.unchecked) parts.push(`${f.unchecked} unchecked`);
+    return parts.join(' · ');
+  },
   'frameworks-llm': () => stats.frameworks.by_list['LLM-Top10-2026'],
   'frameworks-agentic': () => stats.frameworks.by_list['Agentic-Top10-2026'],
   'frameworks-dsgai': () => stats.frameworks.by_list['DSGAI-2026'],

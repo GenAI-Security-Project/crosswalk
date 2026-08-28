@@ -52,6 +52,40 @@ const jsonFiles = (dir) =>
 const mdFiles = (dir) =>
   fs.existsSync(dir) ? fs.readdirSync(dir).filter((f) => f.endsWith('.md')) : [];
 
+/**
+ * Framework freshness, derived from data/framework-sources.json.
+ *
+ * A crosswalk's failure mode is not being wrong on day one; it is being right
+ * on day one and unmaintained by day four hundred. This surfaces divergence as
+ * a number so the decay is visible rather than discovered.
+ *
+ * `unchecked` is reported separately from `current`: nobody having looked is a
+ * different state from having looked and found no drift, and collapsing them
+ * would make the figure flattering and useless.
+ */
+function computeFreshness() {
+  const p = path.join(ROOT, 'data', 'framework-sources.json');
+  if (!fs.existsSync(p)) return null;
+  const doc = readJson(p);
+  const out = { current: [], diverged: [], unchecked: [] };
+
+  for (const [key, f] of Object.entries(doc.frameworks || {})) {
+    const rec = { key, name: f.name, mapped: f.mapped_version, current: f.current_version, checked: f.checked };
+    if (!f.current_version) out.unchecked.push(rec);
+    else if (f.current_version !== f.mapped_version) out.diverged.push(rec);
+    else out.current.push(rec);
+  }
+  return {
+    checked: out.current.length + out.diverged.length,
+    current: out.current.length,
+    diverged: out.diverged.length,
+    unchecked: out.unchecked.length,
+    diverged_frameworks: out.diverged.map((r) => ({
+      name: r.name, mapped: r.mapped, current: r.current, checked: r.checked,
+    })),
+  };
+}
+
 function computeStats() {
   const pkg = readJson(path.join(ROOT, 'package.json'));
 
@@ -129,6 +163,7 @@ function computeStats() {
     },
     mapping_files: { total: mappingFilesTotal, by_list: mappingFilesByList },
     incidents: { total: incidents.length },
+    freshness: computeFreshness(),
     controls: {
       // `total` is the honest control count: only kind=control. `registry_items`
       // is every line item of any kind, which is what the old "1,514 controls"

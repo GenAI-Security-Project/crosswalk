@@ -55,6 +55,20 @@
   "incidents": {
     "total": 114
   },
+  "freshness": {
+    "checked": 3,
+    "current": 2,
+    "diverged": 1,
+    "unchecked": 22,
+    "diverged_frameworks": [
+      {
+        "name": "OWASP ASVS 4.0.3",
+        "mapped": "4.0.3",
+        "current": "5.0.0",
+        "checked": "2026-08-28"
+      }
+    ]
+  },
   "controls": {
     "total": 1372,
     "registry_items": 1514,
