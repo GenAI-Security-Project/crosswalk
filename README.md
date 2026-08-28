@@ -469,11 +469,33 @@ npm install genai-security-crosswalk
 ```typescript
 import { getEntry, getFramework, searchEntries, incidents } from 'genai-security-crosswalk';
 
-const llm01 = getEntry('LLM01');        // typed Entry object
-const euai  = getFramework('EU AI Act'); // { framework, entries, controls }
+const llm01 = getEntry('LLM01');           // typed Entry object
+const euai  = getFramework('EU AI Act');   // { framework, entries, controls }
 const hits  = searchEntries('injection');  // Entry[]
-const incs  = incidents;                   // 50 Incident[] with MAESTRO layers
+const incs  = incidents;                   // Incident[] with MAESTRO layers
 ```
+
+**The control-level join.** The framework registries ship with the package, so a
+mapping's control id resolves to its full record — you can go from a risk to the
+actual control text without leaving the package:
+
+```typescript
+import { controlsFor, getControl, entriesFor, coverage, stats } from 'genai-security-crosswalk';
+
+// risk → every mapped control, resolved to its registry record
+for (const { framework, mapping, control } of controlsFor('LLM02')) {
+  console.log(framework, mapping.control_id, '→', control?.title ?? '(unresolved)');
+}
+
+getControl('ISO/IEC 27001:2022', 'A.8.12');  // { title: 'Data leakage prevention', kind: 'control', … }
+entriesFor('MITRE ATLAS', 'AML.T0021');      // reverse join: which risks cite this control
+coverage('ISO/IEC 27001:2022');              // { coverable, referenced, percent, layers, unresolved }
+stats.controls.total;                        // controls only — excludes techniques, weaknesses, layers
+```
+
+`coverage()` excludes `kind: layer` items, which are architecture context rather
+than controls to cover, and reports `unresolved` separately — a non-zero value is
+a broken join, not a coverage gap.
 
 Full TypeScript types included for all data structures.
 

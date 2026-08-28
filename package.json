@@ -7,8 +7,11 @@
   "files": [
     "dist/",
     "data/entries/",
+    "data/frameworks/",
+    "data/stats.json",
     "data/incidents.json",
     "data/schema.json",
+    "data/framework-schema.json",
     "data/incidents-schema.json"
   ],
   "engines": {
