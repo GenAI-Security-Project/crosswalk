@@ -349,6 +349,93 @@ function checkSharedResources() {
   }
 }
 
+// ─── Attribution guard (C1) ───────────────────────────────────────────────────
+
+/**
+ * 11. Personal attribution belongs in exactly two places.
+ *
+ * The project is OWASP-owned, so the maintainer's name and handle appear only
+ * in README.md and the webapp About block. Everywhere else — package metadata,
+ * licence, provenance stamps, issue templates, translated READMEs — the author
+ * is the OWASP GenAI Data Security Initiative.
+ *
+ * The exemptions below are deliberate and each has a reason. They are not a
+ * licence to reintroduce credit; adding a new one needs a maintainer decision.
+ */
+// Assembled from fragments so this file does not match its own pattern. Writing
+// the literal here would either make the guard flag itself or force exempting
+// scripts/validate.js, which would blind it to a real leak in its own source.
+const ATTRIBUTION_RE = new RegExp(
+  ['emmanuel' + 'gjr', 'Emmanuel' + '\\s+' + 'Guilherme'].join('|'),
+  'i',
+);
+
+const ATTRIBUTION_ALLOWED = [
+  'README.md',        // sanctioned credit
+  'docs/index.html',  // sanctioned credit — the About view
+];
+
+const ATTRIBUTION_EXEMPT = [
+  // Access control and review routing, not credit. Rewriting these would
+  // silently drop code ownership and reviewer assignment.
+  '.github/CODEOWNERS',
+  'i18n/WORKFLOW.md',
+  // A factual statement of who currently maintains the project. Governance
+  // wording is GOV-02's call, not an attribution scrub's.
+  'GOVERNANCE.md',
+  // Historical record; past releases are not rewritten.
+  'CHANGELOG.md',
+  // Brand assets are frozen (C2) — the webapp's logo/social images.
+  'docs/og-image.svg',
+  'docs/banner.svg',
+];
+
+const ATTRIBUTION_SKIP_DIRS = ['node_modules', '.git', 'reports', 'dist', 'coverage'];
+
+function walkFiles(dir, out = []) {
+  for (const name of fs.readdirSync(dir)) {
+    if (ATTRIBUTION_SKIP_DIRS.includes(name)) continue;
+    const fp = path.join(dir, name);
+    const st = fs.statSync(fp);
+    if (st.isDirectory()) walkFiles(fp, out);
+    else out.push(fp);
+  }
+  return out;
+}
+
+function checkAttribution() {
+  const TEXT_EXT = new Set([
+    '.md', '.json', '.js', '.mjs', '.ts', '.html', '.yml', '.yaml',
+    '.py', '.sh', '.txt', '.svg',
+  ]);
+  let violations = 0;
+
+  for (const fp of walkFiles(ROOT)) {
+    const rel = path.relative(ROOT, fp).split(path.sep).join('/');
+    if (ATTRIBUTION_ALLOWED.includes(rel) || ATTRIBUTION_EXEMPT.includes(rel)) continue;
+    if (!TEXT_EXT.has(path.extname(fp))) continue;
+
+    let content;
+    try {
+      content = fs.readFileSync(fp, 'utf8');
+    } catch {
+      continue;
+    }
+    if (!ATTRIBUTION_RE.test(content)) continue;
+
+    const line = content.split('\n').findIndex((l) => ATTRIBUTION_RE.test(l)) + 1;
+    fail(
+      rel,
+      `Personal attribution at line ${line} — C1 allows it only in ` +
+        `${ATTRIBUTION_ALLOWED.join(' and ')}. Use "OWASP GenAI Data Security Initiative".`,
+    );
+    violations++;
+  }
+
+  if (!violations) pass('C1 attribution', 'Personal attribution confined to README.md and the About block');
+  return violations === 0;
+}
+
 // ─── Main ─────────────────────────────────────────────────────────────────────
 
 function collectMappingFiles(targetFile) {
@@ -409,6 +496,12 @@ function run() {
     console.log('Checking bidirectional cross-references...\n');
     const crossRefMap = buildCrossRefMap(allFiles);
     checkBidirectional(allFiles, crossRefMap);
+  }
+
+  // Attribution guard (C1) — repo-wide, so only in a full run
+  if (!targetFile) {
+    console.log('Checking attribution (C1)...\n');
+    checkAttribution();
   }
 
   // ─── Report ───────────────────────────────────────────────────────────────

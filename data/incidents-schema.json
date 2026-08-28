@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://github.com/emmanuelgjr/GenAI-Security-Crosswalk/blob/main/data/incidents-schema.json",
+  "$id": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents-schema.json",
   "title": "GenAI Security Crosswalk — Incident Database Schema",
   "description": "Schema for real-world AI security incidents, mapped to OWASP entries and MAESTRO layers",
   "type": "object",

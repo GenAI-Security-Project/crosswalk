@@ -1,6 +1,6 @@
 Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
 
-Copyright (c) 2026 emmanuelgjr
+Copyright (c) 2026 OWASP GenAI Data Security Initiative
 
 You are free to:
 

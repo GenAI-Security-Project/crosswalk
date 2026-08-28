@@ -3,7 +3,7 @@ name: New framework mapping proposal
 about: Propose adding a new security framework to the coverage matrix
 title: '[FRAMEWORK] Add <FrameworkName> mapping for <SourceList>'
 labels: enhancement, new-framework
-assignees: emmanuelgjr
+assignees: OWASP GenAI Data Security Initiative
 ---
 
 ## Framework details
