@@ -81,7 +81,7 @@ Every file answers one question: **which controls from framework X address vulne
 | **70+** open-source tools | Catalogued and organised by function |
 | **25** eval profiles | Runnable Garak (13) + PyRIT (6) + LAAF (6) tests mapped to OWASP entries |
 | **<!-- stats:frameworks-mapped -->23<!-- /stats -->** compliance reports | Per-framework gap assessments auto-generated from data layer (MD, CSV, JSON, OSCAL) |
-| **<!-- stats:incidents -->114<!-- /stats -->** documented incidents | Real-world + research incidents with MAESTRO layer attribution (MD, CSV, JSON, STIX 2.1) |
+| **<!-- stats:incidents -->131<!-- /stats -->** documented incidents | Real-world + research incidents with MAESTRO layer attribution (MD, CSV, JSON, STIX 2.1) |
 | **LAAF v2.0** | First agentic LPCI red-teaming framework — fully integrated with 6-stage × OWASP crosswalk |
 
 All free. All open-source. Built for practitioners.

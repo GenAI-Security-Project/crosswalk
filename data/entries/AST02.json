@@ -13,7 +13,20 @@
   ],
   "mappings": [],
   "tools": [],
-  "incidents": [],
+  "incidents": [
+    {
+      "name": "ClawHavoc — 1,184 malicious skills flooded onto the ClawHub registry",
+      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-115"
+    },
+    {
+      "name": "Claude Code repository config execution before trust dialog (CVE-2025-59536, CVE-2026-21852)",
+      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-123"
+    }
+  ],
   "crossrefs": {},
   "changelog": [
     {

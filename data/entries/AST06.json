@@ -13,7 +13,32 @@
   ],
   "mappings": [],
   "tools": [],
-  "incidents": [],
+  "incidents": [
+    {
+      "name": "ClawJacked — localhost WebSocket hijack of OpenClaw instances (CVE-2026-28363, CVSS 9.9)",
+      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-124"
+    },
+    {
+      "name": "Vidar infostealer variants targeting OpenClaw agent identity files",
+      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-125"
+    },
+    {
+      "name": "36.7% of 7,000+ MCP servers potentially vulnerable to SSRF",
+      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-126"
+    },
+    {
+      "name": "135,000+ OpenClaw instances internet-exposed with insecure defaults",
+      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-127"
+    }
+  ],
   "crossrefs": {},
   "changelog": [
     {

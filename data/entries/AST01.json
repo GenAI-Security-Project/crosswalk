@@ -13,7 +13,44 @@
   ],
   "mappings": [],
   "tools": [],
-  "incidents": [],
+  "incidents": [
+    {
+      "name": "ClawHavoc — 1,184 malicious skills flooded onto the ClawHub registry",
+      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-115"
+    },
+    {
+      "name": "SKILL.md to shell access in three lines of markdown (Snyk threat model)",
+      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-116"
+    },
+    {
+      "name": "Actively malicious OpenClaw skills in use by 6,000+ users, found by behavioural analysis",
+      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-117"
+    },
+    {
+      "name": "ToxicSkills — 36% of 3,984 audited skills contain security flaws",
+      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-118"
+    },
+    {
+      "name": "Brand-impersonating skill on ClawHub tricks users into installing malware",
+      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-120"
+    },
+    {
+      "name": "Vidar infostealer variants targeting OpenClaw agent identity files",
+      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-125"
+    }
+  ],
   "crossrefs": {},
   "changelog": [
     {

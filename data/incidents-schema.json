@@ -75,7 +75,7 @@
           "type": "array",
           "items": {
             "type": "string",
-            "pattern": "^(LLM|ASI|DSGAI)\\d{2}$"
+            "pattern": "^(LLM|ASI|DSGAI|AST)\\d{2}$"
           },
           "minItems": 1,
           "description": "OWASP entry IDs this incident exemplifies"

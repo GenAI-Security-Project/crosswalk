@@ -13,7 +13,26 @@
   ],
   "mappings": [],
   "tools": [],
-  "incidents": [],
+  "incidents": [
+    {
+      "name": "OpenClaw log poisoning — agent logs as an indirect prompt injection channel",
+      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-122"
+    },
+    {
+      "name": "The Story of Skills — a malicious skill reaches 26,000 agents past every scanner",
+      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-129"
+    },
+    {
+      "name": "The Circus of Skills — 17,822 live skills rest on untrusted external instruction sources",
+      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-130"
+    }
+  ],
   "crossrefs": {},
   "changelog": [
     {
