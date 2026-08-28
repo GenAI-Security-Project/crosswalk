@@ -7,7 +7,7 @@ Crosswalk ref: data-security/DSGAI_MITREATLAS.md
 AIVSS score  : 7.8
 
 Cross-references:
-  LLM06  Excessive Agency (bias amplification in decisions)
+  LLM03  Excessive Agency (bias amplification in decisions)
   DSGAI10 Training Data Poisoning (intentional bias injection)
 
 MITRE ATLAS techniques:

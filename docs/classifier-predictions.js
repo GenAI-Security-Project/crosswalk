@@ -825,7 +825,7 @@ window.CROSSWALK_PREDICTIONS = [
     "source_list": "Agentic-Top10-2026",
     "framework": "EU AI Act Code of Practice",
     "control_id": "CoP-III-C5",
-    "title": "Commitment 5 \u2014 Safety mitigations",
+    "title": "Commitment 5 — Safety mitigations",
     "score": -10.4913,
     "rank": 9,
     "curated": false,
@@ -2577,7 +2577,7 @@ window.CROSSWALK_PREDICTIONS = [
     "source_list": "DSGAI-2026",
     "framework": "SOC 2",
     "control_id": "PI1.1",
-    "title": "Processing integrity \u2014 input completeness and accuracy",
+    "title": "Processing integrity — input completeness and accuracy",
     "score": -8.5153,
     "rank": 5,
     "curated": false,
@@ -2601,7 +2601,7 @@ window.CROSSWALK_PREDICTIONS = [
     "source_list": "DSGAI-2026",
     "framework": "SOC 2",
     "control_id": "PI1.2",
-    "title": "Processing integrity \u2014 system processing",
+    "title": "Processing integrity — system processing",
     "score": -8.9258,
     "rank": 7,
     "curated": false,
@@ -3717,7 +3717,7 @@ window.CROSSWALK_PREDICTIONS = [
     "source_list": "DSGAI-2026",
     "framework": "SOC 2",
     "control_id": "CC4.2",
-    "title": "COSO principle 17 \u2014 Deficiency communication",
+    "title": "COSO principle 17 — Deficiency communication",
     "score": -11.2929,
     "rank": 10,
     "curated": false,
@@ -5586,7 +5586,7 @@ window.CROSSWALK_PREDICTIONS = [
   {
     "entry_id": "LLM01",
     "entry_name": "Prompt Injection",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0051",
     "title": "LLM Prompt Injection",
@@ -5598,7 +5598,7 @@ window.CROSSWALK_PREDICTIONS = [
   {
     "entry_id": "LLM01",
     "entry_name": "Prompt Injection",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0051.001",
     "title": "Indirect Prompt Injection",
@@ -5610,7 +5610,7 @@ window.CROSSWALK_PREDICTIONS = [
   {
     "entry_id": "LLM01",
     "entry_name": "Prompt Injection",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0051.000",
     "title": "Direct Prompt Injection",
@@ -5622,7 +5622,7 @@ window.CROSSWALK_PREDICTIONS = [
   {
     "entry_id": "LLM01",
     "entry_name": "Prompt Injection",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0056",
     "title": "LLM Data Leakage",
@@ -5634,7 +5634,7 @@ window.CROSSWALK_PREDICTIONS = [
   {
     "entry_id": "LLM01",
     "entry_name": "Prompt Injection",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "NIST AI RMF 1.0",
     "control_id": "MP-5.1",
     "title": "Likelihood and severity",
@@ -5646,7 +5646,7 @@ window.CROSSWALK_PREDICTIONS = [
   {
     "entry_id": "LLM01",
     "entry_name": "Prompt Injection",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0057",
     "title": "LLM Plugin Compromise",
@@ -5658,7 +5658,7 @@ window.CROSSWALK_PREDICTIONS = [
   {
     "entry_id": "LLM01",
     "entry_name": "Prompt Injection",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0054",
     "title": "LLM Jailbreak",
@@ -5670,7 +5670,7 @@ window.CROSSWALK_PREDICTIONS = [
   {
     "entry_id": "LLM01",
     "entry_name": "Prompt Injection",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "ISO/IEC 42001:2023",
     "control_id": "8.3",
     "title": "AI risk treatment (operational)",
@@ -5682,7 +5682,7 @@ window.CROSSWALK_PREDICTIONS = [
   {
     "entry_id": "LLM01",
     "entry_name": "Prompt Injection",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "ISO/IEC 42001:2023",
     "control_id": "10.2",
     "title": "Nonconformity and corrective action",
@@ -5694,7 +5694,7 @@ window.CROSSWALK_PREDICTIONS = [
   {
     "entry_id": "LLM01",
     "entry_name": "Prompt Injection",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "OWASP ASVS 4.0.3",
     "control_id": "V5.3",
     "title": "Output Encoding and Injection Prevention",
@@ -5706,7 +5706,7 @@ window.CROSSWALK_PREDICTIONS = [
   {
     "entry_id": "LLM01",
     "entry_name": "Prompt Injection",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0001",
     "title": "ML Attack Staging",
@@ -5718,7 +5718,7 @@ window.CROSSWALK_PREDICTIONS = [
   {
     "entry_id": "LLM01",
     "entry_name": "Prompt Injection",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0011",
     "title": "User Execution",
@@ -5730,7 +5730,7 @@ window.CROSSWALK_PREDICTIONS = [
   {
     "entry_id": "LLM01",
     "entry_name": "Prompt Injection",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0035",
     "title": "Denial of ML Service",
@@ -5742,7 +5742,7 @@ window.CROSSWALK_PREDICTIONS = [
   {
     "entry_id": "LLM01",
     "entry_name": "Prompt Injection",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "NIST CSF 2.0",
     "control_id": "DE.AE",
     "title": "Adverse Event Analysis",
@@ -5754,7 +5754,7 @@ window.CROSSWALK_PREDICTIONS = [
   {
     "entry_id": "LLM01",
     "entry_name": "Prompt Injection",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0042",
     "title": "Verify Attack",
@@ -5766,7 +5766,7 @@ window.CROSSWALK_PREDICTIONS = [
   {
     "entry_id": "LLM02",
     "entry_name": "Sensitive Information Disclosure",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0056",
     "title": "LLM Data Leakage",
@@ -5778,7 +5778,7 @@ window.CROSSWALK_PREDICTIONS = [
   {
     "entry_id": "LLM02",
     "entry_name": "Sensitive Information Disclosure",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "SOC 2",
     "control_id": "P6.1",
     "title": "Disclosure of personal information",
@@ -5790,7 +5790,7 @@ window.CROSSWALK_PREDICTIONS = [
   {
     "entry_id": "LLM02",
     "entry_name": "Sensitive Information Disclosure",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0054",
     "title": "LLM Jailbreak",
@@ -5802,7 +5802,7 @@ window.CROSSWALK_PREDICTIONS = [
   {
     "entry_id": "LLM02",
     "entry_name": "Sensitive Information Disclosure",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0051",
     "title": "LLM Prompt Injection",
@@ -5814,7 +5814,7 @@ window.CROSSWALK_PREDICTIONS = [
   {
     "entry_id": "LLM02",
     "entry_name": "Sensitive Information Disclosure",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "OWASP ASVS 4.0.3",
     "control_id": "V8.3",
     "title": "Sensitive Private Data",
@@ -5826,7 +5826,7 @@ window.CROSSWALK_PREDICTIONS = [
   {
     "entry_id": "LLM02",
     "entry_name": "Sensitive Information Disclosure",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "ISA/IEC 62443",
     "control_id": "SR 4.1",
     "title": "Information confidentiality",
@@ -5838,7 +5838,7 @@ window.CROSSWALK_PREDICTIONS = [
   {
     "entry_id": "LLM02",
     "entry_name": "Sensitive Information Disclosure",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "SOC 2",
     "control_id": "C1.1",
     "title": "Confidentiality identification",
@@ -5850,7 +5850,7 @@ window.CROSSWALK_PREDICTIONS = [
   {
     "entry_id": "LLM02",
     "entry_name": "Sensitive Information Disclosure",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "ISO/IEC 27001:2022",
     "control_id": "A.8.3",
     "title": "Information access restriction",
@@ -5862,7 +5862,7 @@ window.CROSSWALK_PREDICTIONS = [
   {
     "entry_id": "LLM02",
     "entry_name": "Sensitive Information Disclosure",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "ISA/IEC 62443",
     "control_id": "FR 4",
     "title": "Data Confidentiality",
@@ -5874,7 +5874,7 @@ window.CROSSWALK_PREDICTIONS = [
   {
     "entry_id": "LLM02",
     "entry_name": "Sensitive Information Disclosure",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "SOC 2",
     "control_id": "P4.1",
     "title": "Use of personal information",
@@ -5886,7 +5886,7 @@ window.CROSSWALK_PREDICTIONS = [
   {
     "entry_id": "LLM02",
     "entry_name": "Sensitive Information Disclosure",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "NIST AI RMF 1.0",
     "control_id": "MS-2.10",
     "title": "Privacy risk",
@@ -5898,7 +5898,7 @@ window.CROSSWALK_PREDICTIONS = [
   {
     "entry_id": "LLM02",
     "entry_name": "Sensitive Information Disclosure",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0035",
     "title": "Denial of ML Service",
@@ -5910,7 +5910,7 @@ window.CROSSWALK_PREDICTIONS = [
   {
     "entry_id": "LLM02",
     "entry_name": "Sensitive Information Disclosure",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "SOC 2",
     "control_id": "C1.2",
     "title": "Confidentiality disposal",
@@ -5922,7 +5922,7 @@ window.CROSSWALK_PREDICTIONS = [
   {
     "entry_id": "LLM02",
     "entry_name": "Sensitive Information Disclosure",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "ISA/IEC 62443",
     "control_id": "SR 3.2",
     "title": "Malicious code protection",
@@ -5934,7 +5934,7 @@ window.CROSSWALK_PREDICTIONS = [
   {
     "entry_id": "LLM02",
     "entry_name": "Sensitive Information Disclosure",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0004",
     "title": "Search for Victim's Publicly Available ML Information",
@@ -5944,9 +5944,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0629
   },
   {
-    "entry_id": "LLM03",
-    "entry_name": "Supply Chain Vulnerabilities",
-    "source_list": "LLM-Top10-2025",
+    "entry_id": "LLM04",
+    "entry_name": "Supply Chain",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0010",
     "title": "ML Supply Chain Compromise",
@@ -5956,9 +5956,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.4387
   },
   {
-    "entry_id": "LLM03",
-    "entry_name": "Supply Chain Vulnerabilities",
-    "source_list": "LLM-Top10-2025",
+    "entry_id": "LLM04",
+    "entry_name": "Supply Chain",
+    "source_list": "LLM-Top10-2026",
     "framework": "CoSAI",
     "control_id": "WS4-AGT-3.1",
     "title": "Agent supply chain security",
@@ -5968,9 +5968,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.4345
   },
   {
-    "entry_id": "LLM03",
-    "entry_name": "Supply Chain Vulnerabilities",
-    "source_list": "LLM-Top10-2025",
+    "entry_id": "LLM04",
+    "entry_name": "Supply Chain",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0056",
     "title": "LLM Data Leakage",
@@ -5980,9 +5980,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.393
   },
   {
-    "entry_id": "LLM03",
-    "entry_name": "Supply Chain Vulnerabilities",
-    "source_list": "LLM-Top10-2025",
+    "entry_id": "LLM04",
+    "entry_name": "Supply Chain",
+    "source_list": "LLM-Top10-2026",
     "framework": "CoSAI",
     "control_id": "WS1-SSC-1",
     "title": "AI software supply chain risk assessment",
@@ -5992,9 +5992,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.328
   },
   {
-    "entry_id": "LLM03",
-    "entry_name": "Supply Chain Vulnerabilities",
-    "source_list": "LLM-Top10-2025",
+    "entry_id": "LLM04",
+    "entry_name": "Supply Chain",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0057",
     "title": "LLM Plugin Compromise",
@@ -6004,9 +6004,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.3087
   },
   {
-    "entry_id": "LLM03",
-    "entry_name": "Supply Chain Vulnerabilities",
-    "source_list": "LLM-Top10-2025",
+    "entry_id": "LLM04",
+    "entry_name": "Supply Chain",
+    "source_list": "LLM-Top10-2026",
     "framework": "CoSAI",
     "control_id": "WS1-SSC-4",
     "title": "Training data supply chain integrity",
@@ -6016,9 +6016,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.2963
   },
   {
-    "entry_id": "LLM03",
-    "entry_name": "Supply Chain Vulnerabilities",
-    "source_list": "LLM-Top10-2025",
+    "entry_id": "LLM04",
+    "entry_name": "Supply Chain",
+    "source_list": "LLM-Top10-2026",
     "framework": "ISO/IEC 27001:2022",
     "control_id": "A.8.8",
     "title": "Management of technical vulnerabilities",
@@ -6028,9 +6028,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.2891
   },
   {
-    "entry_id": "LLM03",
-    "entry_name": "Supply Chain Vulnerabilities",
-    "source_list": "LLM-Top10-2025",
+    "entry_id": "LLM04",
+    "entry_name": "Supply Chain",
+    "source_list": "LLM-Top10-2026",
     "framework": "NIST CSF 2.0",
     "control_id": "GV.SC",
     "title": "Cybersecurity Supply Chain Risk Management",
@@ -6040,9 +6040,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.2862
   },
   {
-    "entry_id": "LLM03",
-    "entry_name": "Supply Chain Vulnerabilities",
-    "source_list": "LLM-Top10-2025",
+    "entry_id": "LLM04",
+    "entry_name": "Supply Chain",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0054",
     "title": "LLM Jailbreak",
@@ -6052,9 +6052,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.2517
   },
   {
-    "entry_id": "LLM03",
-    "entry_name": "Supply Chain Vulnerabilities",
-    "source_list": "LLM-Top10-2025",
+    "entry_id": "LLM04",
+    "entry_name": "Supply Chain",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0051",
     "title": "LLM Prompt Injection",
@@ -6064,9 +6064,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.2393
   },
   {
-    "entry_id": "LLM03",
-    "entry_name": "Supply Chain Vulnerabilities",
-    "source_list": "LLM-Top10-2025",
+    "entry_id": "LLM04",
+    "entry_name": "Supply Chain",
+    "source_list": "LLM-Top10-2026",
     "framework": "ISO/IEC 27001:2022",
     "control_id": "A.5.19",
     "title": "Information security in supplier relationships",
@@ -6076,9 +6076,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0773
   },
   {
-    "entry_id": "LLM03",
-    "entry_name": "Supply Chain Vulnerabilities",
-    "source_list": "LLM-Top10-2025",
+    "entry_id": "LLM04",
+    "entry_name": "Supply Chain",
+    "source_list": "LLM-Top10-2026",
     "framework": "ISA/IEC 62443",
     "control_id": "SR 3.2",
     "title": "Malicious code protection",
@@ -6088,9 +6088,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.046
   },
   {
-    "entry_id": "LLM03",
-    "entry_name": "Supply Chain Vulnerabilities",
-    "source_list": "LLM-Top10-2025",
+    "entry_id": "LLM04",
+    "entry_name": "Supply Chain",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0035",
     "title": "Denial of ML Service",
@@ -6100,9 +6100,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0412
   },
   {
-    "entry_id": "LLM03",
-    "entry_name": "Supply Chain Vulnerabilities",
-    "source_list": "LLM-Top10-2025",
+    "entry_id": "LLM04",
+    "entry_name": "Supply Chain",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0055",
     "title": "Unsafe Model Output",
@@ -6112,9 +6112,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0369
   },
   {
-    "entry_id": "LLM03",
-    "entry_name": "Supply Chain Vulnerabilities",
-    "source_list": "LLM-Top10-2025",
+    "entry_id": "LLM04",
+    "entry_name": "Supply Chain",
+    "source_list": "LLM-Top10-2026",
     "framework": "ISA/IEC 62443",
     "control_id": "SR 3.6",
     "title": "Deterministic output",
@@ -6124,9 +6124,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0279
   },
   {
-    "entry_id": "LLM04",
+    "entry_id": "LLM05",
     "entry_name": "Data and Model Poisoning",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0056",
     "title": "LLM Data Leakage",
@@ -6136,9 +6136,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.5145
   },
   {
-    "entry_id": "LLM04",
+    "entry_id": "LLM05",
     "entry_name": "Data and Model Poisoning",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0019",
     "title": "Publish Poisoned Datasets",
@@ -6148,9 +6148,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.3073
   },
   {
-    "entry_id": "LLM04",
+    "entry_id": "LLM05",
     "entry_name": "Data and Model Poisoning",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0020",
     "title": "Poison Training Data",
@@ -6160,9 +6160,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.2742
   },
   {
-    "entry_id": "LLM04",
+    "entry_id": "LLM05",
     "entry_name": "Data and Model Poisoning",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0051",
     "title": "LLM Prompt Injection",
@@ -6172,9 +6172,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.2703
   },
   {
-    "entry_id": "LLM04",
+    "entry_id": "LLM05",
     "entry_name": "Data and Model Poisoning",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "NIST AI RMF 1.0",
     "control_id": "MP-5.1",
     "title": "Likelihood and severity",
@@ -6184,9 +6184,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.233
   },
   {
-    "entry_id": "LLM04",
+    "entry_id": "LLM05",
     "entry_name": "Data and Model Poisoning",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0054",
     "title": "LLM Jailbreak",
@@ -6196,9 +6196,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.2168
   },
   {
-    "entry_id": "LLM04",
+    "entry_id": "LLM05",
     "entry_name": "Data and Model Poisoning",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0055",
     "title": "Unsafe Model Output",
@@ -6208,9 +6208,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.1361
   },
   {
-    "entry_id": "LLM04",
+    "entry_id": "LLM05",
     "entry_name": "Data and Model Poisoning",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0015",
     "title": "Evade ML Model",
@@ -6220,9 +6220,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.1025
   },
   {
-    "entry_id": "LLM04",
+    "entry_id": "LLM05",
     "entry_name": "Data and Model Poisoning",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MAESTRO",
     "control_id": "L1.2",
     "title": "Model integrity protection",
@@ -6232,9 +6232,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0853
   },
   {
-    "entry_id": "LLM04",
+    "entry_id": "LLM05",
     "entry_name": "Data and Model Poisoning",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0000",
     "title": "ML Model Access",
@@ -6244,9 +6244,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0831
   },
   {
-    "entry_id": "LLM04",
+    "entry_id": "LLM05",
     "entry_name": "Data and Model Poisoning",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0031",
     "title": "Erode ML Model Integrity",
@@ -6256,9 +6256,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0826
   },
   {
-    "entry_id": "LLM04",
+    "entry_id": "LLM05",
     "entry_name": "Data and Model Poisoning",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0048",
     "title": "Discover ML Model Family",
@@ -6268,9 +6268,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0623
   },
   {
-    "entry_id": "LLM04",
+    "entry_id": "LLM05",
     "entry_name": "Data and Model Poisoning",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0018",
     "title": "Backdoor ML Model",
@@ -6280,9 +6280,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0569
   },
   {
-    "entry_id": "LLM04",
+    "entry_id": "LLM05",
     "entry_name": "Data and Model Poisoning",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0040",
     "title": "ML Model Inference API Access",
@@ -6292,9 +6292,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0455
   },
   {
-    "entry_id": "LLM04",
+    "entry_id": "LLM05",
     "entry_name": "Data and Model Poisoning",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0043",
     "title": "Craft Adversarial Data",
@@ -6304,9 +6304,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0306
   },
   {
-    "entry_id": "LLM05",
-    "entry_name": "Insecure Output Handling",
-    "source_list": "LLM-Top10-2025",
+    "entry_id": "LLM10",
+    "entry_name": "Improper Output Handling",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0055",
     "title": "Unsafe Model Output",
@@ -6316,9 +6316,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.5787
   },
   {
-    "entry_id": "LLM05",
-    "entry_name": "Insecure Output Handling",
-    "source_list": "LLM-Top10-2025",
+    "entry_id": "LLM10",
+    "entry_name": "Improper Output Handling",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0056",
     "title": "LLM Data Leakage",
@@ -6328,9 +6328,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.438
   },
   {
-    "entry_id": "LLM05",
-    "entry_name": "Insecure Output Handling",
-    "source_list": "LLM-Top10-2025",
+    "entry_id": "LLM10",
+    "entry_name": "Improper Output Handling",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0051",
     "title": "LLM Prompt Injection",
@@ -6340,9 +6340,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.3452
   },
   {
-    "entry_id": "LLM05",
-    "entry_name": "Insecure Output Handling",
-    "source_list": "LLM-Top10-2025",
+    "entry_id": "LLM10",
+    "entry_name": "Improper Output Handling",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0057",
     "title": "LLM Plugin Compromise",
@@ -6352,9 +6352,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.3359
   },
   {
-    "entry_id": "LLM05",
-    "entry_name": "Insecure Output Handling",
-    "source_list": "LLM-Top10-2025",
+    "entry_id": "LLM10",
+    "entry_name": "Improper Output Handling",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0054",
     "title": "LLM Jailbreak",
@@ -6364,9 +6364,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.2819
   },
   {
-    "entry_id": "LLM05",
-    "entry_name": "Insecure Output Handling",
-    "source_list": "LLM-Top10-2025",
+    "entry_id": "LLM10",
+    "entry_name": "Improper Output Handling",
+    "source_list": "LLM-Top10-2026",
     "framework": "OWASP ASVS 4.0.3",
     "control_id": "V5.3",
     "title": "Output Encoding and Injection Prevention",
@@ -6376,9 +6376,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.2434
   },
   {
-    "entry_id": "LLM05",
-    "entry_name": "Insecure Output Handling",
-    "source_list": "LLM-Top10-2025",
+    "entry_id": "LLM10",
+    "entry_name": "Improper Output Handling",
+    "source_list": "LLM-Top10-2026",
     "framework": "ISA/IEC 62443",
     "control_id": "SR 3.6",
     "title": "Deterministic output",
@@ -6388,9 +6388,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.1682
   },
   {
-    "entry_id": "LLM05",
-    "entry_name": "Insecure Output Handling",
-    "source_list": "LLM-Top10-2025",
+    "entry_id": "LLM10",
+    "entry_name": "Improper Output Handling",
+    "source_list": "LLM-Top10-2026",
     "framework": "MAESTRO",
     "control_id": "L7.1",
     "title": "Output validation and filtering",
@@ -6400,9 +6400,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.118
   },
   {
-    "entry_id": "LLM05",
-    "entry_name": "Insecure Output Handling",
-    "source_list": "LLM-Top10-2025",
+    "entry_id": "LLM10",
+    "entry_name": "Improper Output Handling",
+    "source_list": "LLM-Top10-2026",
     "framework": "MAESTRO",
     "control_id": "L5.1",
     "title": "Runtime isolation",
@@ -6412,9 +6412,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.084
   },
   {
-    "entry_id": "LLM05",
-    "entry_name": "Insecure Output Handling",
-    "source_list": "LLM-Top10-2025",
+    "entry_id": "LLM10",
+    "entry_name": "Improper Output Handling",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0010",
     "title": "ML Supply Chain Compromise",
@@ -6424,9 +6424,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0784
   },
   {
-    "entry_id": "LLM05",
-    "entry_name": "Insecure Output Handling",
-    "source_list": "LLM-Top10-2025",
+    "entry_id": "LLM10",
+    "entry_name": "Improper Output Handling",
+    "source_list": "LLM-Top10-2026",
     "framework": "OWASP ASVS 4.0.3",
     "control_id": "V1.5",
     "title": "Input and Output Architecture",
@@ -6436,9 +6436,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0774
   },
   {
-    "entry_id": "LLM05",
-    "entry_name": "Insecure Output Handling",
-    "source_list": "LLM-Top10-2025",
+    "entry_id": "LLM10",
+    "entry_name": "Improper Output Handling",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0035",
     "title": "Denial of ML Service",
@@ -6448,9 +6448,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0771
   },
   {
-    "entry_id": "LLM05",
-    "entry_name": "Insecure Output Handling",
-    "source_list": "LLM-Top10-2025",
+    "entry_id": "LLM10",
+    "entry_name": "Improper Output Handling",
+    "source_list": "LLM-Top10-2026",
     "framework": "OWASP ASVS 4.0.3",
     "control_id": "V5",
     "title": "Validation, Sanitization and Encoding",
@@ -6460,9 +6460,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0639
   },
   {
-    "entry_id": "LLM05",
-    "entry_name": "Insecure Output Handling",
-    "source_list": "LLM-Top10-2025",
+    "entry_id": "LLM10",
+    "entry_name": "Improper Output Handling",
+    "source_list": "LLM-Top10-2026",
     "framework": "ISA/IEC 62443",
     "control_id": "FR 5",
     "title": "Restricted Data Flow",
@@ -6472,9 +6472,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0563
   },
   {
-    "entry_id": "LLM05",
-    "entry_name": "Insecure Output Handling",
-    "source_list": "LLM-Top10-2025",
+    "entry_id": "LLM10",
+    "entry_name": "Improper Output Handling",
+    "source_list": "LLM-Top10-2026",
     "framework": "SOC 2",
     "control_id": "CC6.8",
     "title": "Malicious software prevention",
@@ -6484,9 +6484,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0541
   },
   {
-    "entry_id": "LLM06",
+    "entry_id": "LLM03",
     "entry_name": "Excessive Agency",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0056",
     "title": "LLM Data Leakage",
@@ -6496,9 +6496,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.2883
   },
   {
-    "entry_id": "LLM06",
+    "entry_id": "LLM03",
     "entry_name": "Excessive Agency",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0054",
     "title": "LLM Jailbreak",
@@ -6508,9 +6508,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.2402
   },
   {
-    "entry_id": "LLM06",
+    "entry_id": "LLM03",
     "entry_name": "Excessive Agency",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0051",
     "title": "LLM Prompt Injection",
@@ -6520,9 +6520,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.2019
   },
   {
-    "entry_id": "LLM06",
+    "entry_id": "LLM03",
     "entry_name": "Excessive Agency",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0057",
     "title": "LLM Plugin Compromise",
@@ -6532,9 +6532,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.2002
   },
   {
-    "entry_id": "LLM06",
+    "entry_id": "LLM03",
     "entry_name": "Excessive Agency",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "SOC 2",
     "control_id": "CC6.8",
     "title": "Malicious software prevention",
@@ -6544,9 +6544,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0424
   },
   {
-    "entry_id": "LLM06",
+    "entry_id": "LLM03",
     "entry_name": "Excessive Agency",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0035",
     "title": "Denial of ML Service",
@@ -6556,9 +6556,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0206
   },
   {
-    "entry_id": "LLM06",
+    "entry_id": "LLM03",
     "entry_name": "Excessive Agency",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "EU AI Act Code of Practice",
     "control_id": "CoP-III-C6-M6.2",
     "title": "Security mitigation implementation",
@@ -6568,9 +6568,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0184
   },
   {
-    "entry_id": "LLM06",
+    "entry_id": "LLM03",
     "entry_name": "Excessive Agency",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "EU AI Act Code of Practice",
     "control_id": "CoP-III-C6-M6.1",
     "title": "Security goal and threat actor definition",
@@ -6580,9 +6580,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0165
   },
   {
-    "entry_id": "LLM06",
+    "entry_id": "LLM03",
     "entry_name": "Excessive Agency",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MAESTRO",
     "control_id": "L6.3",
     "title": "Cascading failure prevention",
@@ -6592,9 +6592,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0137
   },
   {
-    "entry_id": "LLM06",
+    "entry_id": "LLM03",
     "entry_name": "Excessive Agency",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "EU AI Act",
     "control_id": "Annex III",
     "title": "High-risk AI systems",
@@ -6604,9 +6604,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0129
   },
   {
-    "entry_id": "LLM06",
+    "entry_id": "LLM03",
     "entry_name": "Excessive Agency",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0055",
     "title": "Unsafe Model Output",
@@ -6616,9 +6616,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0119
   },
   {
-    "entry_id": "LLM06",
+    "entry_id": "LLM03",
     "entry_name": "Excessive Agency",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MAESTRO",
     "control_id": "L6.1",
     "title": "Inter-agent authentication",
@@ -6628,9 +6628,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0108
   },
   {
-    "entry_id": "LLM06",
+    "entry_id": "LLM03",
     "entry_name": "Excessive Agency",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "EU AI Act",
     "control_id": "Art. 6",
     "title": "Classification rules for high-risk AI systems",
@@ -6640,21 +6640,21 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0089
   },
   {
-    "entry_id": "LLM06",
+    "entry_id": "LLM03",
     "entry_name": "Excessive Agency",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "EU AI Act Code of Practice",
     "control_id": "CoP-III-C6",
-    "title": "Commitment 6 \u2014 Security mitigations",
+    "title": "Commitment 6 — Security mitigations",
     "score": -11.3005,
     "rank": 14,
     "curated": false,
     "confidence": 0.0069
   },
   {
-    "entry_id": "LLM06",
+    "entry_id": "LLM03",
     "entry_name": "Excessive Agency",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "EU AI Act",
     "control_id": "Art. 16",
     "title": "Obligations of providers of high-risk AI systems",
@@ -6664,9 +6664,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0052
   },
   {
-    "entry_id": "LLM07",
-    "entry_name": "System Prompt Leakage",
-    "source_list": "LLM-Top10-2025",
+    "entry_id": "LLM08",
+    "entry_name": "Hidden Context Exposure",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0056",
     "title": "LLM Data Leakage",
@@ -6676,9 +6676,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.8046
   },
   {
-    "entry_id": "LLM07",
-    "entry_name": "System Prompt Leakage",
-    "source_list": "LLM-Top10-2025",
+    "entry_id": "LLM08",
+    "entry_name": "Hidden Context Exposure",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0051",
     "title": "LLM Prompt Injection",
@@ -6688,9 +6688,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.6942
   },
   {
-    "entry_id": "LLM07",
-    "entry_name": "System Prompt Leakage",
-    "source_list": "LLM-Top10-2025",
+    "entry_id": "LLM08",
+    "entry_name": "Hidden Context Exposure",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0057",
     "title": "LLM Plugin Compromise",
@@ -6700,9 +6700,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.3726
   },
   {
-    "entry_id": "LLM07",
-    "entry_name": "System Prompt Leakage",
-    "source_list": "LLM-Top10-2025",
+    "entry_id": "LLM08",
+    "entry_name": "Hidden Context Exposure",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0054",
     "title": "LLM Jailbreak",
@@ -6712,9 +6712,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.3523
   },
   {
-    "entry_id": "LLM07",
-    "entry_name": "System Prompt Leakage",
-    "source_list": "LLM-Top10-2025",
+    "entry_id": "LLM08",
+    "entry_name": "Hidden Context Exposure",
+    "source_list": "LLM-Top10-2026",
     "framework": "ISO/IEC 27001:2022",
     "control_id": "A.8.12",
     "title": "Data leakage prevention",
@@ -6724,9 +6724,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.3259
   },
   {
-    "entry_id": "LLM07",
-    "entry_name": "System Prompt Leakage",
-    "source_list": "LLM-Top10-2025",
+    "entry_id": "LLM08",
+    "entry_name": "Hidden Context Exposure",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0051.000",
     "title": "Direct Prompt Injection",
@@ -6736,9 +6736,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.2058
   },
   {
-    "entry_id": "LLM07",
-    "entry_name": "System Prompt Leakage",
-    "source_list": "LLM-Top10-2025",
+    "entry_id": "LLM08",
+    "entry_name": "Hidden Context Exposure",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0051.001",
     "title": "Indirect Prompt Injection",
@@ -6748,9 +6748,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.1671
   },
   {
-    "entry_id": "LLM07",
-    "entry_name": "System Prompt Leakage",
-    "source_list": "LLM-Top10-2025",
+    "entry_id": "LLM08",
+    "entry_name": "Hidden Context Exposure",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0035",
     "title": "Denial of ML Service",
@@ -6760,9 +6760,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0901
   },
   {
-    "entry_id": "LLM07",
-    "entry_name": "System Prompt Leakage",
-    "source_list": "LLM-Top10-2025",
+    "entry_id": "LLM08",
+    "entry_name": "Hidden Context Exposure",
+    "source_list": "LLM-Top10-2026",
     "framework": "SOC 2",
     "control_id": "CC7.2",
     "title": "Event monitoring",
@@ -6772,9 +6772,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0683
   },
   {
-    "entry_id": "LLM07",
-    "entry_name": "System Prompt Leakage",
-    "source_list": "LLM-Top10-2025",
+    "entry_id": "LLM08",
+    "entry_name": "Hidden Context Exposure",
+    "source_list": "LLM-Top10-2026",
     "framework": "ISA/IEC 62443",
     "control_id": "SR 7.4",
     "title": "Control system recovery and reconstitution",
@@ -6784,9 +6784,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0655
   },
   {
-    "entry_id": "LLM07",
-    "entry_name": "System Prompt Leakage",
-    "source_list": "LLM-Top10-2025",
+    "entry_id": "LLM08",
+    "entry_name": "Hidden Context Exposure",
+    "source_list": "LLM-Top10-2026",
     "framework": "ISA/IEC 62443",
     "control_id": "SR 7.3",
     "title": "Control system backup",
@@ -6796,9 +6796,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0594
   },
   {
-    "entry_id": "LLM07",
-    "entry_name": "System Prompt Leakage",
-    "source_list": "LLM-Top10-2025",
+    "entry_id": "LLM08",
+    "entry_name": "Hidden Context Exposure",
+    "source_list": "LLM-Top10-2026",
     "framework": "ISA/IEC 62443",
     "control_id": "SR 7.1",
     "title": "Denial of service protection",
@@ -6808,9 +6808,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0507
   },
   {
-    "entry_id": "LLM07",
-    "entry_name": "System Prompt Leakage",
-    "source_list": "LLM-Top10-2025",
+    "entry_id": "LLM08",
+    "entry_name": "Hidden Context Exposure",
+    "source_list": "LLM-Top10-2026",
     "framework": "MAESTRO",
     "control_id": "L7.2",
     "title": "Human oversight integration",
@@ -6820,9 +6820,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0503
   },
   {
-    "entry_id": "LLM07",
-    "entry_name": "System Prompt Leakage",
-    "source_list": "LLM-Top10-2025",
+    "entry_id": "LLM08",
+    "entry_name": "Hidden Context Exposure",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0055",
     "title": "Unsafe Model Output",
@@ -6832,9 +6832,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0403
   },
   {
-    "entry_id": "LLM07",
-    "entry_name": "System Prompt Leakage",
-    "source_list": "LLM-Top10-2025",
+    "entry_id": "LLM08",
+    "entry_name": "Hidden Context Exposure",
+    "source_list": "LLM-Top10-2026",
     "framework": "MAESTRO",
     "control_id": "L6.3",
     "title": "Cascading failure prevention",
@@ -6844,9 +6844,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0319
   },
   {
-    "entry_id": "LLM08",
+    "entry_id": "LLM09",
     "entry_name": "Vector and Embedding Weaknesses",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0056",
     "title": "LLM Data Leakage",
@@ -6856,9 +6856,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.3179
   },
   {
-    "entry_id": "LLM08",
+    "entry_id": "LLM09",
     "entry_name": "Vector and Embedding Weaknesses",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0057",
     "title": "LLM Plugin Compromise",
@@ -6868,9 +6868,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.3029
   },
   {
-    "entry_id": "LLM08",
+    "entry_id": "LLM09",
     "entry_name": "Vector and Embedding Weaknesses",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0051",
     "title": "LLM Prompt Injection",
@@ -6880,9 +6880,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.295
   },
   {
-    "entry_id": "LLM08",
+    "entry_id": "LLM09",
     "entry_name": "Vector and Embedding Weaknesses",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "NIST AI RMF 1.0",
     "control_id": "MP-5.1",
     "title": "Likelihood and severity",
@@ -6892,9 +6892,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.2688
   },
   {
-    "entry_id": "LLM08",
+    "entry_id": "LLM09",
     "entry_name": "Vector and Embedding Weaknesses",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0054",
     "title": "LLM Jailbreak",
@@ -6904,9 +6904,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.2205
   },
   {
-    "entry_id": "LLM08",
+    "entry_id": "LLM09",
     "entry_name": "Vector and Embedding Weaknesses",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MAESTRO",
     "control_id": "L2.2",
     "title": "Vector store protection",
@@ -6916,9 +6916,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.1263
   },
   {
-    "entry_id": "LLM08",
+    "entry_id": "LLM09",
     "entry_name": "Vector and Embedding Weaknesses",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0001",
     "title": "ML Attack Staging",
@@ -6928,9 +6928,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0497
   },
   {
-    "entry_id": "LLM08",
+    "entry_id": "LLM09",
     "entry_name": "Vector and Embedding Weaknesses",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0015",
     "title": "Evade ML Model",
@@ -6940,9 +6940,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.037
   },
   {
-    "entry_id": "LLM08",
+    "entry_id": "LLM09",
     "entry_name": "Vector and Embedding Weaknesses",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0000",
     "title": "ML Model Access",
@@ -6952,9 +6952,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0326
   },
   {
-    "entry_id": "LLM08",
+    "entry_id": "LLM09",
     "entry_name": "Vector and Embedding Weaknesses",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0055",
     "title": "Unsafe Model Output",
@@ -6964,9 +6964,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0323
   },
   {
-    "entry_id": "LLM08",
+    "entry_id": "LLM09",
     "entry_name": "Vector and Embedding Weaknesses",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0031",
     "title": "Erode ML Model Integrity",
@@ -6976,9 +6976,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0308
   },
   {
-    "entry_id": "LLM08",
+    "entry_id": "LLM09",
     "entry_name": "Vector and Embedding Weaknesses",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0002",
     "title": "Active Scanning",
@@ -6988,9 +6988,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0288
   },
   {
-    "entry_id": "LLM08",
+    "entry_id": "LLM09",
     "entry_name": "Vector and Embedding Weaknesses",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0020",
     "title": "Poison Training Data",
@@ -7000,9 +7000,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0229
   },
   {
-    "entry_id": "LLM08",
+    "entry_id": "LLM09",
     "entry_name": "Vector and Embedding Weaknesses",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0017",
     "title": "Develop Capabilities",
@@ -7012,9 +7012,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0225
   },
   {
-    "entry_id": "LLM08",
+    "entry_id": "LLM09",
     "entry_name": "Vector and Embedding Weaknesses",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0053",
     "title": "Discover ML Model Ontology",
@@ -7024,9 +7024,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0211
   },
   {
-    "entry_id": "LLM09",
+    "entry_id": "LLM07",
     "entry_name": "Misinformation",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0056",
     "title": "LLM Data Leakage",
@@ -7036,9 +7036,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.3363
   },
   {
-    "entry_id": "LLM09",
+    "entry_id": "LLM07",
     "entry_name": "Misinformation",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "NIST AI RMF 1.0",
     "control_id": "MP-5.1",
     "title": "Likelihood and severity",
@@ -7048,9 +7048,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.2843
   },
   {
-    "entry_id": "LLM09",
+    "entry_id": "LLM07",
     "entry_name": "Misinformation",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0051",
     "title": "LLM Prompt Injection",
@@ -7060,9 +7060,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.2841
   },
   {
-    "entry_id": "LLM09",
+    "entry_id": "LLM07",
     "entry_name": "Misinformation",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0054",
     "title": "LLM Jailbreak",
@@ -7072,9 +7072,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.2609
   },
   {
-    "entry_id": "LLM09",
+    "entry_id": "LLM07",
     "entry_name": "Misinformation",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0057",
     "title": "LLM Plugin Compromise",
@@ -7084,9 +7084,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.2595
   },
   {
-    "entry_id": "LLM09",
+    "entry_id": "LLM07",
     "entry_name": "Misinformation",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "ISO/IEC 42001:2023",
     "control_id": "10.2",
     "title": "Nonconformity and corrective action",
@@ -7096,9 +7096,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0996
   },
   {
-    "entry_id": "LLM09",
+    "entry_id": "LLM07",
     "entry_name": "Misinformation",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0035",
     "title": "Denial of ML Service",
@@ -7108,9 +7108,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0362
   },
   {
-    "entry_id": "LLM09",
+    "entry_id": "LLM07",
     "entry_name": "Misinformation",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0010",
     "title": "ML Supply Chain Compromise",
@@ -7120,9 +7120,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.032
   },
   {
-    "entry_id": "LLM09",
+    "entry_id": "LLM07",
     "entry_name": "Misinformation",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "OWASP ASVS 4.0.3",
     "control_id": "V9",
     "title": "Communication",
@@ -7132,9 +7132,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0289
   },
   {
-    "entry_id": "LLM09",
+    "entry_id": "LLM07",
     "entry_name": "Misinformation",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "OWASP ASVS 4.0.3",
     "control_id": "V10",
     "title": "Malicious Code",
@@ -7144,9 +7144,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0201
   },
   {
-    "entry_id": "LLM09",
+    "entry_id": "LLM07",
     "entry_name": "Misinformation",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0001",
     "title": "ML Attack Staging",
@@ -7156,9 +7156,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0187
   },
   {
-    "entry_id": "LLM09",
+    "entry_id": "LLM07",
     "entry_name": "Misinformation",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "EU AI Act Code of Practice",
     "control_id": "CoP-III-C9-M9.2",
     "title": "Incident reporting to authorities",
@@ -7168,9 +7168,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0174
   },
   {
-    "entry_id": "LLM09",
+    "entry_id": "LLM07",
     "entry_name": "Misinformation",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0004",
     "title": "Search for Victim's Publicly Available ML Information",
@@ -7180,9 +7180,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0173
   },
   {
-    "entry_id": "LLM09",
+    "entry_id": "LLM07",
     "entry_name": "Misinformation",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0015",
     "title": "Evade ML Model",
@@ -7192,9 +7192,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0168
   },
   {
-    "entry_id": "LLM09",
+    "entry_id": "LLM07",
     "entry_name": "Misinformation",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "EU AI Act Code of Practice",
     "control_id": "CoP-III-C9-M9.1",
     "title": "Incident tracking and documentation",
@@ -7204,9 +7204,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0166
   },
   {
-    "entry_id": "LLM10",
+    "entry_id": "LLM06",
     "entry_name": "Unbounded Consumption",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0056",
     "title": "LLM Data Leakage",
@@ -7216,9 +7216,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.3016
   },
   {
-    "entry_id": "LLM10",
+    "entry_id": "LLM06",
     "entry_name": "Unbounded Consumption",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0051",
     "title": "LLM Prompt Injection",
@@ -7228,9 +7228,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.2458
   },
   {
-    "entry_id": "LLM10",
+    "entry_id": "LLM06",
     "entry_name": "Unbounded Consumption",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0057",
     "title": "LLM Plugin Compromise",
@@ -7240,9 +7240,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.2384
   },
   {
-    "entry_id": "LLM10",
+    "entry_id": "LLM06",
     "entry_name": "Unbounded Consumption",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0054",
     "title": "LLM Jailbreak",
@@ -7252,9 +7252,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.1926
   },
   {
-    "entry_id": "LLM10",
+    "entry_id": "LLM06",
     "entry_name": "Unbounded Consumption",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0010",
     "title": "ML Supply Chain Compromise",
@@ -7264,9 +7264,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.1076
   },
   {
-    "entry_id": "LLM10",
+    "entry_id": "LLM06",
     "entry_name": "Unbounded Consumption",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MAESTRO",
     "control_id": "L5.1",
     "title": "Runtime isolation",
@@ -7276,9 +7276,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0235
   },
   {
-    "entry_id": "LLM10",
+    "entry_id": "LLM06",
     "entry_name": "Unbounded Consumption",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0035",
     "title": "Denial of ML Service",
@@ -7288,9 +7288,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0228
   },
   {
-    "entry_id": "LLM10",
+    "entry_id": "LLM06",
     "entry_name": "Unbounded Consumption",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0055",
     "title": "Unsafe Model Output",
@@ -7300,9 +7300,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0126
   },
   {
-    "entry_id": "LLM10",
+    "entry_id": "LLM06",
     "entry_name": "Unbounded Consumption",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "ISO/IEC 27001:2022",
     "control_id": "A.8.3",
     "title": "Information access restriction",
@@ -7312,9 +7312,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0106
   },
   {
-    "entry_id": "LLM10",
+    "entry_id": "LLM06",
     "entry_name": "Unbounded Consumption",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "ISA/IEC 62443",
     "control_id": "FR 5",
     "title": "Restricted Data Flow",
@@ -7324,9 +7324,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0083
   },
   {
-    "entry_id": "LLM10",
+    "entry_id": "LLM06",
     "entry_name": "Unbounded Consumption",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "ISO/IEC 42001:2023",
     "control_id": "10.2",
     "title": "Nonconformity and corrective action",
@@ -7336,9 +7336,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0066
   },
   {
-    "entry_id": "LLM10",
+    "entry_id": "LLM06",
     "entry_name": "Unbounded Consumption",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0011",
     "title": "User Execution",
@@ -7348,9 +7348,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0062
   },
   {
-    "entry_id": "LLM10",
+    "entry_id": "LLM06",
     "entry_name": "Unbounded Consumption",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "SOC 2",
     "control_id": "CC6.7",
     "title": "Data in transit",
@@ -7360,9 +7360,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0046
   },
   {
-    "entry_id": "LLM10",
+    "entry_id": "LLM06",
     "entry_name": "Unbounded Consumption",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0047",
     "title": "ML-Enabled Product or Service",
@@ -7372,9 +7372,9 @@ window.CROSSWALK_PREDICTIONS = [
     "confidence": 0.0043
   },
   {
-    "entry_id": "LLM10",
+    "entry_id": "LLM06",
     "entry_name": "Unbounded Consumption",
-    "source_list": "LLM-Top10-2025",
+    "source_list": "LLM-Top10-2026",
     "framework": "NIST CSF 2.0",
     "control_id": "DE.AE",
     "title": "Adverse Event Analysis",

@@ -194,7 +194,7 @@ when compromised.
 
 #### Cross-references
 
-- LLM Top 10: LLM06 (Excessive Agency)
+- LLM Top 10: LLM03 (Excessive Agency)
 - DSGAI: DSGAI07 (Excessive Data Access)
 - See also: [Agentic_OWASP_NHI.md](Agentic_OWASP_NHI.md) NHI-2/NHI-3, [Agentic_ASVS.md](Agentic_ASVS.md)
 
@@ -280,7 +280,7 @@ across the agent network.
 
 #### Cross-references
 
-- LLM Top 10: LLM08 (Excessive Agency via Multi-Model)
+- LLM Top 10: LLM09 (Excessive Agency via Multi-Model)
 - See also: [Agentic_MITREATLAS.md](Agentic_MITREATLAS.md), [Agentic_OWASP_NHI.md](Agentic_OWASP_NHI.md) NHI-1
 
 ---
@@ -322,7 +322,7 @@ escalation, or unintended action execution via the tool interface.
 
 #### Cross-references
 
-- LLM Top 10: LLM07 (System Prompt Leakage via Tools), LLM03 (Supply Chain)
+- LLM Top 10: LLM08 (Hidden Context Exposure via Tools), LLM04 (Supply Chain)
 - DSGAI: DSGAI13 (Data Leakage through Tool Integration)
 - See also: [Agentic_AITG.md](Agentic_AITG.md) TC-ASI05, [Agentic_CWE_CVE.md](Agentic_CWE_CVE.md)
 
@@ -410,7 +410,7 @@ malicious behaviour into the agent deployment.
 
 #### Cross-references
 
-- LLM Top 10: LLM03 (Supply Chain Vulnerabilities)
+- LLM Top 10: LLM04 (Supply Chain Vulnerabilities)
 - DSGAI: DSGAI16 (Third-Party Data Dependencies), DSGAI17 (Model Supply Chain Risks)
 - See also: [Agentic_CWE_CVE.md](Agentic_CWE_CVE.md), [Agentic_AITG.md](Agentic_AITG.md) TC-ASI07
 
@@ -498,7 +498,7 @@ mechanisms, or audit trails prevent effective human control.
 
 #### Cross-references
 
-- LLM Top 10: LLM06 (Excessive Agency)
+- LLM Top 10: LLM03 (Excessive Agency)
 - DSGAI: DSGAI04 (Insufficient Access Controls for Autonomous Processing)
 - See also: [Agentic_EUAIAct.md](Agentic_EUAIAct.md), [Agentic_AIVSS.md](Agentic_AIVSS.md)
 
@@ -542,7 +542,7 @@ exceeds what any single agent could cause.
 
 #### Cross-references
 
-- LLM Top 10: LLM10 (Unbounded Consumption as cascade trigger)
+- LLM Top 10: LLM06 (Unbounded Consumption as cascade trigger)
 - DSGAI: DSGAI19 (Cascading Data Failures)
 - See also: [Agentic_MAESTRO.md](Agentic_MAESTRO.md) L3 Agent Frameworks, [Agentic_ISA62443.md](Agentic_ISA62443.md)
 
@@ -595,7 +595,7 @@ Art. 14 (human oversight) and Art. 9 (risk management) compliance.
 
 - [OWASP SAMM v2.0](https://owaspsamm.org/)
 - [OWASP Top 10 for Agentic AI Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
-- [OWASP LLM Top 10 2025 × SAMM](../llm-top10/LLM_SAMM.md)
+- [OWASP LLM Top 10 2026 × SAMM](../llm-top10/LLM_SAMM.md)
 - [Agentic_AITG.md](Agentic_AITG.md) — structured test cases for all ASI entries
 - [Agentic_AIVSS.md](Agentic_AIVSS.md) — autonomy premium scoring
 - [shared/RECIPES.md](../shared/RECIPES.md) — implementation patterns

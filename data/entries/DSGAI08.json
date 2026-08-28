@@ -2,7 +2,7 @@
   "id": "DSGAI08",
   "name": "Non-Compliance and Regulatory Violations",
   "source_list": "DSGAI-2026",
-  "version": "2026-Q1",
+  "version": "2026-Q3",
   "severity": "High",
   "aivss_score": null,
   "audience": [
@@ -772,8 +772,8 @@
     ],
     "llm_top10": [
       "LLM02",
+      "LLM09",
       "LLM08",
-      "LLM07",
       "LLM01"
     ],
     "agentic_top10": [

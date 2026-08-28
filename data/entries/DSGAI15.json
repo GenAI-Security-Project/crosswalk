@@ -2,7 +2,7 @@
   "id": "DSGAI15",
   "name": "Over-Broad Context Windows",
   "source_list": "DSGAI-2026",
-  "version": "2026-Q1",
+  "version": "2026-Q3",
   "severity": "High",
   "aivss_score": null,
   "audience": [
@@ -660,10 +660,10 @@
   ],
   "crossrefs": {
     "llm_top10": [
-      "LLM07",
-      "LLM02",
       "LLM08",
-      "LLM06"
+      "LLM02",
+      "LLM09",
+      "LLM03"
     ],
     "agentic_top10": [
       "ASI01",

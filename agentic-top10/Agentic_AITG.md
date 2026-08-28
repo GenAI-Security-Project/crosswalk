@@ -151,7 +151,7 @@ Evidence: Verification logs uninterrupted; injection flagged
 ```
 
 #### Crosswalk
-- LLM Top 10: LLM01 Prompt Injection, LLM06 Excessive Agency
+- LLM Top 10: LLM01 Prompt Injection, LLM03 Excessive Agency
 - DSGAI 2026: DSGAI12 Unsafe NL Data Gateways, DSGAI15 Over-Broad Context Windows
 - Other frameworks: AIUC-1 B001/B005 · MITRE ATLAS AML.T0051 · ISA/IEC 62443 SR 3.3 (OT)
 
@@ -223,7 +223,7 @@ Evidence: Full tool call sequence log; no harmful state change
 ```
 
 #### Crosswalk
-- LLM Top 10: LLM05 Insecure Output Handling, LLM06 Excessive Agency
+- LLM Top 10: LLM10 Improper Output Handling, LLM03 Excessive Agency
 - DSGAI 2026: DSGAI06 Tool Plugin & Agent Data Exchange
 - Other frameworks: AIUC-1 B006/B007 · ISA/IEC 62443 SR 2.2 (OT) · OWASP ASVS V11
 
@@ -293,7 +293,7 @@ Evidence: Access denial log with environment identifier
 ```
 
 #### Crosswalk
-- LLM Top 10: LLM06 Excessive Agency
+- LLM Top 10: LLM03 Excessive Agency
 - DSGAI 2026: DSGAI02 Agent Identity & Credential Exposure
 - Other frameworks: OWASP NHI Top 10 NHI-1 through NHI-10 · AIUC-1 A/B007 · EU AI Act Art. 15
 
@@ -362,7 +362,7 @@ Evidence: Integrity monitoring alert log
 ```
 
 #### Crosswalk
-- LLM Top 10: LLM03 Supply Chain Vulnerabilities
+- LLM Top 10: LLM04 Supply Chain
 - DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning
 - Other frameworks: NIST SP 800-218A · CycloneDX ML-BOM · ISA/IEC 62443 62443-2-4 (OT)
 
@@ -432,7 +432,7 @@ Evidence: Test matrix showing block status for each operation
 ```
 
 #### Crosswalk
-- LLM Top 10: LLM05 Insecure Output Handling
+- LLM Top 10: LLM10 Improper Output Handling
 - DSGAI 2026: DSGAI12 Unsafe NL Data Gateways
 - Other frameworks: AIUC-1 B005/B006 · CWE-94 · ISA/IEC 62443 SR 3.3 (OT)
 
@@ -502,7 +502,7 @@ Evidence: Alert log with timestamp and anomaly description
 ```
 
 #### Crosswalk
-- LLM Top 10: LLM04 Data & Model Poisoning, LLM08 Vector & Embedding Weaknesses
+- LLM Top 10: LLM05 Data and Model Poisoning, LLM09 Vector and Embedding Weaknesses
 - DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning, DSGAI13 Vector Store Platform Security
 - Other frameworks: AIUC-1 A/B002 · NIST AI RMF MS-2.5 · ISA/IEC 62443 SR 3.7 (OT)
 
@@ -641,7 +641,7 @@ Evidence: Restart log; first-session behaviour within baseline parameters
 ```
 
 #### Crosswalk
-- LLM Top 10: LLM10 Unbounded Consumption
+- LLM Top 10: LLM06 Unbounded Consumption
 - DSGAI 2026: DSGAI17 Data Availability & Resilience Failures
 - Other frameworks: AIUC-1 D · ISA/IEC 62443 SR 7.6/7.7 (OT) · NIST SP 800-82 Rev 3
 
@@ -712,7 +712,7 @@ Evidence: Monitoring alert with session ID and pattern description
 ```
 
 #### Crosswalk
-- LLM Top 10: LLM09 Misinformation
+- LLM Top 10: LLM07 Misinformation
 - DSGAI 2026: DSGAI21 Disinformation & Integrity Attacks
 - Other frameworks: EU AI Act Art. 13/50 · AIUC-1 C/F · ISA/IEC 62443 SR 2.3 (OT)
 
@@ -784,7 +784,7 @@ Evidence: Containment procedure execution log with timestamps
 ```
 
 #### Crosswalk
-- LLM Top 10: LLM06 Excessive Agency
+- LLM Top 10: LLM03 Excessive Agency
 - DSGAI 2026: DSGAI16 Endpoint & Browser Overreach
 - Other frameworks: AIUC-1 B001/B002/C/E · EU AI Act Art. 14 · ISA/IEC 62443 SR 3.7 (OT)
 

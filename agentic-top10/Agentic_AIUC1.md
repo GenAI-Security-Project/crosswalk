@@ -153,7 +153,7 @@ Agents misuse legitimate tools due to prompt manipulation, goal hijack, misalign
 | MCP Inspector | Open-source | https://github.com/modelcontextprotocol/inspector |
 
 #### Cross-references
-- LLM Top 10: LLM05 Insecure Output Handling, LLM06 Excessive Agency
+- LLM Top 10: LLM10 Improper Output Handling, LLM03 Excessive Agency
 - DSGAI 2026: DSGAI06 Tool Plugin & Agent Data Exchange, DSGAI12 Unsafe NL Data Gateways
 - Other frameworks: MITRE ATLAS AML.T0054 · ISA/IEC 62443 SR 7.1 (OT)
 
@@ -202,7 +202,7 @@ Agents inherit human or system credentials — session tokens, API keys, SSH key
 | HashiCorp Vault | Open-source | https://www.vaultproject.io |
 
 #### Cross-references
-- LLM Top 10: LLM06 Excessive Agency
+- LLM Top 10: LLM03 Excessive Agency
 - DSGAI 2026: DSGAI02 Agent Identity & Credential Exposure
 - Other frameworks: OWASP NHI Top 10 · MITRE ATT&CK T1552 · ISA/IEC 62443 SR 1.1
 
@@ -250,7 +250,7 @@ Malicious or compromised tools, MCP servers, prompt templates, model files, or a
 | Snyk | Commercial | https://snyk.io |
 
 #### Cross-references
-- LLM Top 10: LLM03 Supply Chain Vulnerabilities
+- LLM Top 10: LLM04 Supply Chain
 - DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning
 - Other frameworks: MITRE ATLAS AML.T0010 · NIST SP 800-218A · BSIMM AM
 
@@ -298,7 +298,7 @@ Agents that generate or execute code — for workflow automation, scripting, dat
 | gVisor | Open-source | https://gvisor.dev |
 
 #### Cross-references
-- LLM Top 10: LLM05 Insecure Output Handling
+- LLM Top 10: LLM10 Improper Output Handling
 - DSGAI 2026: DSGAI12 Unsafe NL Data Gateways
 - Other frameworks: MITRE ATT&CK T1059 · CWE-94 · ASVS V5
 
@@ -346,7 +346,7 @@ Persistent corruption of agent memory, RAG stores, embeddings, or contextual kno
 | Weaviate (with RBAC) | Open-source | https://weaviate.io |
 
 #### Cross-references
-- LLM Top 10: LLM04 Data & Model Poisoning, LLM08 Vector & Embedding Weaknesses
+- LLM Top 10: LLM05 Data and Model Poisoning, LLM09 Vector and Embedding Weaknesses
 - DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning, DSGAI13 Vector Store Platform Security
 - Other frameworks: MITRE ATLAS AML.T0020 · NIST AI RMF MS-2.5
 
@@ -437,7 +437,7 @@ Single-point faults — a poisoned memory entry, a bad plan, a compromised tool 
 | OpenTelemetry | Open-source | https://opentelemetry.io |
 
 #### Cross-references
-- LLM Top 10: LLM10 Unbounded Consumption
+- LLM Top 10: LLM06 Unbounded Consumption
 - DSGAI 2026: DSGAI17 Data Availability & Resilience Failures
 - Other frameworks: ISA/IEC 62443 SR 7.1 · NIST SP 800-82 · AIUC-1 D
 
@@ -476,7 +476,7 @@ Users anthropomorphise agents — trusting their fluency, apparent expertise, an
 - Regular red team exercises simulating trust exploitation scenarios
 
 #### Cross-references
-- LLM Top 10: LLM09 Misinformation
+- LLM Top 10: LLM07 Misinformation
 - DSGAI 2026: DSGAI21 Disinformation & Integrity Attacks
 - Other frameworks: EU AI Act Art. 52 (transparency) · AIUC-1 C/F · ENISA
 
@@ -516,7 +516,7 @@ Malicious or compromised agents that appear compliant on the surface but pursue 
 - Regular red team exercises simulating trust exploitation scenarios
 
 #### Cross-references
-- LLM Top 10: LLM09 Misinformation
+- LLM Top 10: LLM07 Misinformation
 - DSGAI 2026: DSGAI21 Disinformation & Integrity Attacks
 - Other frameworks: EU AI Act Art. 52 (transparency) · AIUC-1 C/F · ENISA
 
@@ -563,7 +563,7 @@ Malicious or compromised agents that appear compliant on the surface but pursue 
 | Langfuse | Open-source | https://langfuse.com |
 
 #### Cross-references
-- LLM Top 10: LLM06 Excessive Agency
+- LLM Top 10: LLM03 Excessive Agency
 - DSGAI 2026: DSGAI16 Endpoint & Browser Overreach
 - Other frameworks: MITRE ATLAS · EU AI Act Art. 9 · AIUC-1 C/E
 

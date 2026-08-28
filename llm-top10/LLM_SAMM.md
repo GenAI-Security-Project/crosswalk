@@ -1,15 +1,15 @@
 <!--
   OWASP GenAI Crosswalk
-  Source list : OWASP Top 10 for LLM Applications 2025 (LLM01-LLM10)
+  Source list : OWASP Top 10 for LLM Applications 2026 (LLM01-LLM10)
   Framework   : OWASP SAMM v2.0 — Software Assurance Maturity Model
-  Version     : 2026-Q1
+  Version     : 2026-Q3
   Maintained by: OWASP GenAI Data Security Initiative — https://genai.owasp.org
   License     : CC BY-SA 4.0
 -->
 
-# LLM Top 10 2025 × OWASP SAMM v2.0
+# LLM Top 10 2026 × OWASP SAMM v2.0
 
-Mapping the [OWASP Top 10 for LLM Applications 2025](https://genai.owasp.org/llm-top-10/)
+Mapping the [OWASP Top 10 for LLM Applications 2026](https://genai.owasp.org/llm-top-10/)
 to the [OWASP Software Assurance Maturity Model (SAMM) v2.0](https://owaspsamm.org/) —
 the framework for measuring and improving software security programme
 maturity across the software development lifecycle.
@@ -66,14 +66,14 @@ SAMM organises security into 5 Business Functions, each containing
 |---|---|---|---|---|---|
 | LLM01 | Prompt Injection | Critical | D-TA, I-SB, V-ST, O-IM | L2 minimum / L3 for high-risk | Foundational–Advanced |
 | LLM02 | Sensitive Information Disclosure | High | D-SR, I-SB, V-RT, O-OM | L2 minimum | Foundational–Advanced |
-| LLM03 | Supply Chain Vulnerabilities | High | G-PC, I-SB, V-AA | L2 minimum | Foundational–Hardening |
-| LLM04 | Data and Model Poisoning | Critical | D-TA, I-SB, V-ST, O-IM | L2 minimum / L3 for high-risk | Hardening–Advanced |
-| LLM05 | Insecure Output Handling | High | D-SR, I-SB, V-RT, V-ST | L1 minimum / L2 target | Foundational–Hardening |
-| LLM06 | Excessive Agency | High | D-TA, D-SA, G-SM, O-OM | L2 minimum | Foundational–Hardening |
-| LLM07 | System Prompt Leakage | High | D-SR, I-SB, V-ST | L1 minimum / L2 target | Foundational–Hardening |
-| LLM08 | Vector and Embedding Weaknesses | Medium | D-TA, I-SB, V-ST | L2 | Hardening–Advanced |
-| LLM09 | Misinformation | Medium | G-EG, D-SR, V-RT, O-OM | L1 minimum / L2 target | Foundational–Hardening |
-| LLM10 | Unbounded Consumption | Medium | D-SR, I-SD, O-IM, O-EM | L1 minimum / L2 target | Foundational–Hardening |
+| LLM03 | Excessive Agency | Critical | D-TA, D-SA, G-SM, O-OM | L2 minimum | Foundational–Hardening |
+| LLM04 | Supply Chain | High | G-PC, I-SB, V-AA | L2 minimum | Foundational–Hardening |
+| LLM05 | Data and Model Poisoning | Critical | D-TA, I-SB, V-ST, O-IM | L2 minimum / L3 for high-risk | Hardening–Advanced |
+| LLM06 | Unbounded Consumption | High | D-SR, I-SD, O-IM, O-EM | L1 minimum / L2 target | Foundational–Hardening |
+| LLM07 | Misinformation | High | G-EG, D-SR, V-RT, O-OM | L1 minimum / L2 target | Foundational–Hardening |
+| LLM08 | Hidden Context Exposure | High | D-SR, I-SB, V-ST | L1 minimum / L2 target | Foundational–Hardening |
+| LLM09 | Vector and Embedding Weaknesses | Medium | D-TA, I-SB, V-ST | L2 | Hardening–Advanced |
+| LLM10 | Improper Output Handling | High | D-SR, I-SB, V-RT, V-ST | L1 minimum / L2 target | Foundational–Hardening |
 
 **SAMM practice codes:**
 G-SM = Governance / Strategy & Metrics ·
@@ -117,6 +117,11 @@ LLM behaviour. Prompt injection maps across the full SAMM lifecycle —
 from threat modelling (Design) through secure coding (Implementation)
 through adversarial testing (Verification) through incident response
 (Operations).
+
+The 2026 entry extends prompt injection to cross-modal payloads.
+Instructions hidden in an image, an audio track, or a video frame reach the
+model without ever being human-readable, and steganographic or
+invisible-Unicode carriers survive review of the rendered interface.
 
 #### SAMM practice mapping
 
@@ -235,198 +240,9 @@ and testing concern throughout the SDLC.
 
 ---
 
-### LLM03 — Supply Chain Vulnerabilities
-
-**Severity:** High
-
-LLM applications depend on third-party model weights, datasets, and
-plugins. SAMM Governance (Policy & Compliance) and Implementation
-(Secure Build) govern supply chain security as a policy and build
-pipeline concern.
-
-#### SAMM practice mapping
-
-| Practice | Stream | Maturity | How it applies |
-|---|---|---|---|
-| Policy & Compliance (G-PC) | Supplier Security | L2 | Supply chain security policy covers LLM component vendors — security requirements in procurement |
-| Secure Build (I-SB) | Security of Build Pipeline | L2 | ML SBOM maintained, CVE scanning in CI/CD — LLM components verified before each deployment |
-| Architecture Assessment (V-AA) | Architecture Validation | L2 | LLM supply chain architecture reviewed — trust boundaries and component integrity verified |
-
-#### Maturity roadmap
-
-**Level 1 — Initial**
-- I-SB: Maintain ML SBOM and pin component versions —
-  every LLM component inventoried with version and
-  source, no automatic updates without review
-- G-PC: Define basic supplier security requirements
-  for LLM component vendors — provenance, disclosure
-  obligations before any component enters production
-
-**Level 2 — Managed**
-- I-SB: CVE scanning in CI/CD for all LLM components —
-  ML library vulnerabilities block deployment when
-  critical, patching process defined
-- G-PC: Supplier security policy covers AI supply
-  chain — contracts include security obligations,
-  periodic assessments for strategic vendors
-- V-AA: Architecture review includes LLM supply chain —
-  trust boundaries, component integrity, runtime loading
-  patterns assessed
-
-**Level 3 — Optimised**
-- I-SB: Automated supply chain integrity verification —
-  cryptographic signature validation in CI/CD pipeline,
-  unsigned components blocked automatically
-- G-PC: Metrics-driven supplier security programme —
-  vendor security posture tracked, incidents measured,
-  programme improved based on data
-
-#### Tools
-
-| Tool | Type | Link |
-|---|---|---|
-| CycloneDX | Open-source | https://cyclonedx.org |
-| ModelScan | Open-source | https://github.com/protectai/modelscan |
-| Grype | Open-source | https://github.com/anchore/grype |
-
-#### Cross-references
-- Agentic Top 10: ASI04 Agentic Supply Chain Vulnerabilities
-- DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning
-- Other frameworks: NIST CSF 2.0 GV.SC-01 · ISO 27001 A.5.19/A.5.21 · NIST SP 800-218A
-
----
-
-### LLM04 — Data and Model Poisoning
+### LLM03 — Excessive Agency
 
 **Severity:** Critical
-
-Adversaries corrupt training data or model weights. SAMM Design
-(Threat Assessment) is the starting point — poisoning must be in
-the threat model before any other control can be effectively
-designed. Verification (Security Testing) provides the adversarial
-testing practice that detects it.
-
-#### SAMM practice mapping
-
-| Practice | Stream | Maturity | How it applies |
-|---|---|---|---|
-| Threat Assessment (D-TA) | Threat Modelling | L2 | Poisoning attack vectors documented in threat model — training data sources, supply chain, fine-tuning pipeline each assessed |
-| Secure Build (I-SB) | Security of Build Pipeline | L2 | Training data integrity controls in build pipeline — source allowlisting, anomaly detection, provenance tracking |
-| Security Testing (V-ST) | Adversarial Testing | L2 | Poisoning detection in adversarial testing — backdoor trigger testing before each model promotion |
-| Incident Management (O-IM) | Incident Response | L2 | Poisoning incident response defined — model rollback, affected deployment scope, disclosure procedure |
-
-#### Maturity roadmap
-
-**Level 1 — Initial**
-- D-TA: Add poisoning to LLM threat model — document
-  which training data sources are potentially adversary-
-  influenced, what the consequence is if poisoning succeeds
-- I-SB: Implement basic training data integrity —
-  source allowlisting, hash verification of training
-  datasets before use
-- Model rollback capability — clean checkpoint always
-  available, procedure documented
-
-**Level 2 — Managed**
-- V-ST: Defined poisoning detection testing — backdoor
-  trigger scenarios in adversarial test plan, results
-  tracked across model versions
-- I-SB: Automated training data validation in pipeline —
-  anomaly detection on data distributions flags potential
-  poisoning before training runs
-- O-IM: Poisoning incident response plan — rollback
-  procedure tested, affected deployment scope assessment,
-  notification checklist
-
-**Level 3 — Optimised**
-- V-ST: Post-training backdoor detection as mandatory
-  CI/CD gate — neural cleanse or equivalent blocks
-  promotion of poisoned models automatically
-- O-IM: Poisoning incident metrics drive programme
-  improvement — detection rates, response times,
-  affected scope measured quarterly
-- D-TA: Threat model updated as new poisoning
-  techniques emerge — proactive intelligence integration
-
-#### Tools
-
-| Tool | Type | Link |
-|---|---|---|
-| IBM Adversarial Robustness Toolbox | Open-source | https://github.com/Trusted-AI/adversarial-robustness-toolbox |
-| CleanLab | Open-source | https://github.com/cleanlab/cleanlab |
-
-#### Cross-references
-- Agentic Top 10: ASI06 Memory & Context Poisoning
-- DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning, DSGAI21 Disinformation via Data Poisoning
-- Other frameworks: NIST AI RMF MS-3.3 · MITRE ATLAS AML.T0020 · ISO 27001 A.8.27
-
----
-
-### LLM05 — Insecure Output Handling
-
-**Severity:** High
-
-LLM output passed to downstream systems without validation enables
-injection attacks. SAMM Design (Security Requirements) and
-Implementation (Secure Build) address output handling as a development
-requirement — output security must be specified before code is written.
-
-#### SAMM practice mapping
-
-| Practice | Stream | Maturity | How it applies |
-|---|---|---|---|
-| Security Requirements (D-SR) | Software Requirements | L1 | Output encoding and schema validation as explicit security requirements before development |
-| Secure Build (I-SB) | Security of Code | L1 | Output validation implemented in code — LLM output treated as untrusted, reviewed in code review |
-| Requirements-Driven Testing (V-RT) | Control Verification | L1 | Output security requirements verified in testing — XSS, SQL injection via LLM output tested |
-| Security Testing (V-ST) | Penetration Testing | L2 | DAST on all interfaces consuming LLM output as penetration testing activity |
-
-#### Maturity roadmap
-
-**Level 1 — Initial**
-- D-SR: Define output security as an explicit
-  requirement — LLM output is untrusted input to
-  downstream systems, encoded and validated before
-  use, documented as security requirement before
-  any LLM integration is developed
-- I-SB: Implement output encoding in code — no eval,
-  no raw LLM output in SQL, shell, or HTML rendering
-  context — enforced through code review
-
-**Level 2 — Managed**
-- V-RT: Verify output security requirements in
-  testing — XSS, SQL injection, command injection
-  via LLM output tested systematically before each
-  release, results tracked
-- V-ST: DAST on all interfaces consuming LLM output
-  as defined penetration testing activity — results
-  remediated before release
-
-**Level 3 — Optimised**
-- V-RT: Automated output injection testing in CI/CD —
-  injection scenarios run against LLM output handling
-  code on every PR
-- V-ST: Output security in red team programme —
-  novel injection techniques tested against your
-  specific downstream consumers
-
-#### Tools
-
-| Tool | Type | Link |
-|---|---|---|
-| OWASP ZAP | Open-source | https://www.zaproxy.org |
-| Semgrep | Open-source | https://semgrep.dev |
-| DOMPurify | Open-source | https://github.com/cure53/DOMPurify |
-
-#### Cross-references
-- Agentic Top 10: ASI02 Tool Misuse, ASI05 Unexpected Code Execution
-- DSGAI 2026: DSGAI05 Data Integrity & Validation Failures, DSGAI12 Unsafe NL Data Gateways
-- Other frameworks: OWASP ASVS V5 · CIS Controls CIS 16 · CWE-79
-
----
-
-### LLM06 — Excessive Agency
-
-**Severity:** High
 
 LLMs with excessive autonomy execute unintended or harmful actions.
 SAMM Governance (Strategy & Metrics) and Design (Security Architecture)
@@ -485,164 +301,147 @@ a configuration choice.
 
 ---
 
-### LLM07 — System Prompt Leakage
+### LLM04 — Supply Chain
 
 **Severity:** High
 
-System prompts containing security controls are extracted by adversaries.
-SAMM Design (Security Requirements) and Implementation (Secure Build)
-address system prompt security as a requirements and code security
-concern.
+LLM applications depend on third-party model weights, datasets, and
+plugins. SAMM Governance (Policy & Compliance) and Implementation
+(Secure Build) govern supply chain security as a policy and build
+pipeline concern.
+
+The 2026 entry adds artifact provenance to this scope. A promoted
+model, adapter, or converted artifact that is not what it claims to be —
+unsigned weights, a hijacked conversion or merge service, or namespace reuse
+on a model hub — is a supply-chain compromise even when every package
+dependency is clean.
 
 #### SAMM practice mapping
 
 | Practice | Stream | Maturity | How it applies |
 |---|---|---|---|
-| Security Requirements (D-SR) | Software Requirements | L1 | System prompt security as explicit requirement — confidentiality, encryption, access control specified before development |
-| Secure Build (I-SB) | Security of Code | L1 | System prompt protection implemented in code — no cleartext storage, version control access restrictions |
-| Security Testing (V-ST) | Penetration Testing | L2 | Prompt extraction testing as penetration testing activity — resistance to known extraction techniques verified |
+| Policy & Compliance (G-PC) | Supplier Security | L2 | Supply chain security policy covers LLM component vendors — security requirements in procurement |
+| Secure Build (I-SB) | Security of Build Pipeline | L2 | ML SBOM maintained, CVE scanning in CI/CD — LLM components verified before each deployment |
+| Architecture Assessment (V-AA) | Architecture Validation | L2 | LLM supply chain architecture reviewed — trust boundaries and component integrity verified |
 
 #### Maturity roadmap
 
 **Level 1 — Initial**
-- D-SR: Define system prompt security requirements —
-  classification, encryption requirements, access
-  control documented before any LLM application
-  is developed
-- I-SB: Implement system prompt protection in code —
-  no hardcoded prompts in source, secret manager
-  required, enforced in code review
+- I-SB: Maintain ML SBOM and pin component versions —
+  every LLM component inventoried with version and
+  source, no automatic updates without review
+- G-PC: Define basic supplier security requirements
+  for LLM component vendors — provenance, disclosure
+  obligations before any component enters production
 
 **Level 2 — Managed**
-- V-ST: Prompt extraction testing in security testing
-  programme — known extraction techniques tested
-  before each deployment, results tracked
+- I-SB: CVE scanning in CI/CD for all LLM components —
+  ML library vulnerabilities block deployment when
+  critical, patching process defined
+- G-PC: Supplier security policy covers AI supply
+  chain — contracts include security obligations,
+  periodic assessments for strategic vendors
+- V-AA: Architecture review includes LLM supply chain —
+  trust boundaries, component integrity, runtime loading
+  patterns assessed
 
 **Level 3 — Optimised**
-- V-ST: Automated prompt confidentiality testing —
-  extraction attempts in CI/CD pipeline
-- I-SB: System prompt tokenisation as advanced
-  build practice — sensitive identifiers replaced
-  with opaque tokens in build pipeline
-
-#### Cross-references
-- Agentic Top 10: ASI01 Agent Goal Hijack
-- DSGAI 2026: DSGAI15 Over-Broad Context Windows
-- Other frameworks: AIUC-1 B003/B009 · ISO 27001 A.5.12 · CWE-200
-
----
-
-### LLM08 — Vector and Embedding Weaknesses
-
-**Severity:** Medium
-
-Vector stores are susceptible to adversarial retrieval and inference
-attacks. SAMM Design (Threat Assessment) and Verification (Security
-Testing) address embedding security as a design-time threat and
-verification-time testing concern.
-
-#### SAMM practice mapping
-
-| Practice | Stream | Maturity | How it applies |
-|---|---|---|---|
-| Threat Assessment (D-TA) | Threat Modelling | L2 | Vector store attack surface threat-modelled — RBAC bypass, embedding inversion, bulk extraction documented |
-| Secure Build (I-SB) | Security of Code | L1 | RBAC and encryption implemented for all vector stores — security requirements enforced in code |
-| Security Testing (V-ST) | Penetration Testing | L2 | Vector store attacks in penetration testing — RBAC bypass, CVE-2024-3584 class, embedding inversion tested |
-
-#### Maturity roadmap
-
-**Level 1 — Initial**
-- I-SB: RBAC and encryption as build requirements
-  for all vector stores — no unauthenticated access
-  in any environment, enforced in code review
-
-**Level 2 — Managed**
-- D-TA: Vector store threat model — RBAC bypass,
-  path traversal, embedding inversion, bulk extraction
-  all documented as threats with mitigations designed
-- V-ST: Vector store attacks in defined penetration
-  testing programme — results tracked, CVEs patched
-  as urgent findings
-
-**Level 3 — Optimised**
-- V-ST: Embedding inversion testing in red team
-  programme — validate sensitive source content
-  cannot be reconstructed under realistic conditions
+- I-SB: Automated supply chain integrity verification —
+  cryptographic signature validation in CI/CD pipeline,
+  unsigned components blocked automatically
+- G-PC: Metrics-driven supplier security programme —
+  vendor security posture tracked, incidents measured,
+  programme improved based on data
 
 #### Tools
 
 | Tool | Type | Link |
 |---|---|---|
-| Weaviate | Open-source | https://weaviate.io |
-| ML Privacy Meter | Open-source | https://github.com/privacytrustlab/ml_privacy_meter |
+| CycloneDX | Open-source | https://cyclonedx.org |
+| ModelScan | Open-source | https://github.com/protectai/modelscan |
+| Grype | Open-source | https://github.com/anchore/grype |
+
+#### Cross-references
+- Agentic Top 10: ASI04 Agentic Supply Chain Vulnerabilities
+- DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning
+- Other frameworks: NIST CSF 2.0 GV.SC-01 · ISO 27001 A.5.19/A.5.21 · NIST SP 800-218A
+
+---
+
+### LLM05 — Data and Model Poisoning
+
+**Severity:** Critical
+
+Adversaries corrupt training data or model weights. SAMM Design
+(Threat Assessment) is the starting point — poisoning must be in
+the threat model before any other control can be effectively
+designed. Verification (Security Testing) provides the adversarial
+testing practice that detects it.
+
+The 2026 entry folds in fine-tuning subversion. A supplier LoRA
+adapter, a customer fine-tune, or a distilled checkpoint can carry a backdoor
+that no pre-training control catches, so poisoning defences must cover every
+stage that writes weights, not just the original training corpus.
+
+#### SAMM practice mapping
+
+| Practice | Stream | Maturity | How it applies |
+|---|---|---|---|
+| Threat Assessment (D-TA) | Threat Modelling | L2 | Poisoning attack vectors documented in threat model — training data sources, supply chain, fine-tuning pipeline each assessed |
+| Secure Build (I-SB) | Security of Build Pipeline | L2 | Training data integrity controls in build pipeline — source allowlisting, anomaly detection, provenance tracking |
+| Security Testing (V-ST) | Adversarial Testing | L2 | Poisoning detection in adversarial testing — backdoor trigger testing before each model promotion |
+| Incident Management (O-IM) | Incident Response | L2 | Poisoning incident response defined — model rollback, affected deployment scope, disclosure procedure |
+
+#### Maturity roadmap
+
+**Level 1 — Initial**
+- D-TA: Add poisoning to LLM threat model — document
+  which training data sources are potentially adversary-
+  influenced, what the consequence is if poisoning succeeds
+- I-SB: Implement basic training data integrity —
+  source allowlisting, hash verification of training
+  datasets before use
+- Model rollback capability — clean checkpoint always
+  available, procedure documented
+
+**Level 2 — Managed**
+- V-ST: Defined poisoning detection testing — backdoor
+  trigger scenarios in adversarial test plan, results
+  tracked across model versions
+- I-SB: Automated training data validation in pipeline —
+  anomaly detection on data distributions flags potential
+  poisoning before training runs
+- O-IM: Poisoning incident response plan — rollback
+  procedure tested, affected deployment scope assessment,
+  notification checklist
+
+**Level 3 — Optimised**
+- V-ST: Post-training backdoor detection as mandatory
+  CI/CD gate — neural cleanse or equivalent blocks
+  promotion of poisoned models automatically
+- O-IM: Poisoning incident metrics drive programme
+  improvement — detection rates, response times,
+  affected scope measured quarterly
+- D-TA: Threat model updated as new poisoning
+  techniques emerge — proactive intelligence integration
+
+#### Tools
+
+| Tool | Type | Link |
+|---|---|---|
+| IBM Adversarial Robustness Toolbox | Open-source | https://github.com/Trusted-AI/adversarial-robustness-toolbox |
+| CleanLab | Open-source | https://github.com/cleanlab/cleanlab |
 
 #### Cross-references
 - Agentic Top 10: ASI06 Memory & Context Poisoning
-- DSGAI 2026: DSGAI13 Vector Store Platform Security, DSGAI18 Inference & Data Reconstruction
-- Other frameworks: NIST AI RMF MS-2.5 · ISO 27001 A.8.3/A.8.24 · CWE-284
+- DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning, DSGAI21 Disinformation via Data Poisoning
+- Other frameworks: NIST AI RMF MS-3.3 · MITRE ATLAS AML.T0020 · ISO 27001 A.8.27
 
 ---
 
-### LLM09 — Misinformation
+### LLM06 — Unbounded Consumption
 
-**Severity:** Medium
-
-LLMs generate plausible but incorrect content. SAMM Governance
-(Education & Guidance) and Design (Security Requirements) address
-misinformation as both a training concern and a requirements concern
-— accuracy requirements must be specified and users must be trained.
-
-#### SAMM practice mapping
-
-| Practice | Stream | Maturity | How it applies |
-|---|---|---|---|
-| Education & Guidance (G-EG) | Training & Awareness | L1 | All users of LLM decision-support tools trained on output limitations — SAMM awareness practice applied to AI limitations |
-| Security Requirements (D-SR) | Software Requirements | L1 | Accuracy thresholds as security requirements — domains requiring verification documented before development |
-| Requirements-Driven Testing (V-RT) | Control Verification | L2 | Accuracy requirements verified in testing — hallucination rates measured against thresholds per domain |
-| Operational Management (O-OM) | Monitoring | L2 | Production accuracy monitoring as operational management — drift detection, degradation alerted |
-
-#### Maturity roadmap
-
-**Level 1 — Initial**
-- G-EG: Train all LLM decision-support users on
-  output limitations — mandatory before access
-  granted, documented as SAMM awareness practice
-- D-SR: Define accuracy thresholds as security
-  requirements — which domains require verification
-  before action, what constitutes acceptable accuracy
-
-**Level 2 — Managed**
-- V-RT: Verify accuracy requirements in testing —
-  hallucination rates measured against thresholds
-  per domain before each release, results tracked
-- O-OM: Production accuracy monitoring — drift
-  detected, degradation alerted as operational control
-
-**Level 3 — Optimised**
-- O-OM: Accuracy incident metrics drive programme —
-  hallucination rates per domain, correction response
-  times measured and improved quarterly
-- V-RT: Automated accuracy regression testing —
-  domain-specific test suites run in CI/CD
-
-#### Tools
-
-| Tool | Type | Link |
-|---|---|---|
-| TruLens | Open-source | https://github.com/truera/trulens |
-| RAGAS | Open-source | https://github.com/explodinggradients/ragas |
-| DeepEval | Open-source | https://github.com/confident-ai/deepeval |
-
-#### Cross-references
-- Agentic Top 10: ASI09 Human-Agent Trust Exploitation
-- DSGAI 2026: DSGAI21 Disinformation & Integrity Attacks
-- Other frameworks: EU AI Act Art. 13/50 · AIUC-1 F · ENISA GOV
-
----
-
-### LLM10 — Unbounded Consumption
-
-**Severity:** Medium
+**Severity:** High
 
 Adversarial inputs trigger disproportionate resource consumption.
 SAMM Design (Security Requirements), Implementation (Secure Deployment),
@@ -701,6 +500,240 @@ resource exhaustion as a requirements, deployment, and operational concern.
 
 ---
 
+### LLM07 — Misinformation
+
+**Severity:** High
+
+LLMs generate plausible but incorrect content. SAMM Governance
+(Education & Guidance) and Design (Security Requirements) address
+misinformation as both a training concern and a requirements concern
+— accuracy requirements must be specified and users must be trained.
+
+#### SAMM practice mapping
+
+| Practice | Stream | Maturity | How it applies |
+|---|---|---|---|
+| Education & Guidance (G-EG) | Training & Awareness | L1 | All users of LLM decision-support tools trained on output limitations — SAMM awareness practice applied to AI limitations |
+| Security Requirements (D-SR) | Software Requirements | L1 | Accuracy thresholds as security requirements — domains requiring verification documented before development |
+| Requirements-Driven Testing (V-RT) | Control Verification | L2 | Accuracy requirements verified in testing — hallucination rates measured against thresholds per domain |
+| Operational Management (O-OM) | Monitoring | L2 | Production accuracy monitoring as operational management — drift detection, degradation alerted |
+
+#### Maturity roadmap
+
+**Level 1 — Initial**
+- G-EG: Train all LLM decision-support users on
+  output limitations — mandatory before access
+  granted, documented as SAMM awareness practice
+- D-SR: Define accuracy thresholds as security
+  requirements — which domains require verification
+  before action, what constitutes acceptable accuracy
+
+**Level 2 — Managed**
+- V-RT: Verify accuracy requirements in testing —
+  hallucination rates measured against thresholds
+  per domain before each release, results tracked
+- O-OM: Production accuracy monitoring — drift
+  detected, degradation alerted as operational control
+
+**Level 3 — Optimised**
+- O-OM: Accuracy incident metrics drive programme —
+  hallucination rates per domain, correction response
+  times measured and improved quarterly
+- V-RT: Automated accuracy regression testing —
+  domain-specific test suites run in CI/CD
+
+#### Tools
+
+| Tool | Type | Link |
+|---|---|---|
+| TruLens | Open-source | https://github.com/truera/trulens |
+| RAGAS | Open-source | https://github.com/explodinggradients/ragas |
+| DeepEval | Open-source | https://github.com/confident-ai/deepeval |
+
+#### Cross-references
+- Agentic Top 10: ASI09 Human-Agent Trust Exploitation
+- DSGAI 2026: DSGAI21 Disinformation & Integrity Attacks
+- Other frameworks: EU AI Act Art. 13/50 · AIUC-1 F · ENISA GOV
+
+---
+
+### LLM08 — Hidden Context Exposure
+
+**Severity:** High
+
+Hidden context — the system prompt, developer instructions, retrieved
+policy text, and the tool and function schemas an application assembles
+into the model's context window — is extracted, inferred, or
+reconstructed by adversaries.
+SAMM Design (Security Requirements) and Implementation (Secure Build)
+address system prompt security as a requirements and code security
+concern.
+
+The 2026 list broadens the former System Prompt Leakage entry to cover all
+non-user-facing context, not just the system prompt. Severity tracks what
+that context holds: internal rules and workflow logic are medium, embedded
+credentials or reliance on context secrecy for authorisation are high, and
+disclosure that chains to code execution or broad exfiltration is critical.
+Design on the assumption that hidden context is discoverable, and never
+treat it as a security boundary.
+
+#### SAMM practice mapping
+
+| Practice | Stream | Maturity | How it applies |
+|---|---|---|---|
+| Security Requirements (D-SR) | Software Requirements | L1 | System prompt security as explicit requirement — confidentiality, encryption, access control specified before development |
+| Secure Build (I-SB) | Security of Code | L1 | System prompt protection implemented in code — no cleartext storage, version control access restrictions |
+| Security Testing (V-ST) | Penetration Testing | L2 | Prompt extraction testing as penetration testing activity — resistance to known extraction techniques verified |
+
+#### Maturity roadmap
+
+**Level 1 — Initial**
+- D-SR: Define system prompt security requirements —
+  classification, encryption requirements, access
+  control documented before any LLM application
+  is developed
+- I-SB: Implement system prompt protection in code —
+  no hardcoded prompts in source, secret manager
+  required, enforced in code review
+
+**Level 2 — Managed**
+- V-ST: Prompt extraction testing in security testing
+  programme — known extraction techniques tested
+  before each deployment, results tracked
+
+**Level 3 — Optimised**
+- V-ST: Automated prompt confidentiality testing —
+  extraction attempts in CI/CD pipeline
+- I-SB: System prompt tokenisation as advanced
+  build practice — sensitive identifiers replaced
+  with opaque tokens in build pipeline
+
+#### Cross-references
+- Agentic Top 10: ASI01 Agent Goal Hijack
+- DSGAI 2026: DSGAI15 Over-Broad Context Windows
+- Other frameworks: AIUC-1 B003/B009 · ISO 27001 A.5.12 · CWE-200
+
+---
+
+### LLM09 — Vector and Embedding Weaknesses
+
+**Severity:** Medium
+
+Vector stores are susceptible to adversarial retrieval and inference
+attacks. SAMM Design (Threat Assessment) and Verification (Security
+Testing) address embedding security as a design-time threat and
+verification-time testing concern.
+
+#### SAMM practice mapping
+
+| Practice | Stream | Maturity | How it applies |
+|---|---|---|---|
+| Threat Assessment (D-TA) | Threat Modelling | L2 | Vector store attack surface threat-modelled — RBAC bypass, embedding inversion, bulk extraction documented |
+| Secure Build (I-SB) | Security of Code | L1 | RBAC and encryption implemented for all vector stores — security requirements enforced in code |
+| Security Testing (V-ST) | Penetration Testing | L2 | Vector store attacks in penetration testing — RBAC bypass, CVE-2024-3584 class, embedding inversion tested |
+
+#### Maturity roadmap
+
+**Level 1 — Initial**
+- I-SB: RBAC and encryption as build requirements
+  for all vector stores — no unauthenticated access
+  in any environment, enforced in code review
+
+**Level 2 — Managed**
+- D-TA: Vector store threat model — RBAC bypass,
+  path traversal, embedding inversion, bulk extraction
+  all documented as threats with mitigations designed
+- V-ST: Vector store attacks in defined penetration
+  testing programme — results tracked, CVEs patched
+  as urgent findings
+
+**Level 3 — Optimised**
+- V-ST: Embedding inversion testing in red team
+  programme — validate sensitive source content
+  cannot be reconstructed under realistic conditions
+
+#### Tools
+
+| Tool | Type | Link |
+|---|---|---|
+| Weaviate | Open-source | https://weaviate.io |
+| ML Privacy Meter | Open-source | https://github.com/privacytrustlab/ml_privacy_meter |
+
+#### Cross-references
+- Agentic Top 10: ASI06 Memory & Context Poisoning
+- DSGAI 2026: DSGAI13 Vector Store Platform Security, DSGAI18 Inference & Data Reconstruction
+- Other frameworks: NIST AI RMF MS-2.5 · ISO 27001 A.8.3/A.8.24 · CWE-284
+
+---
+
+### LLM10 — Improper Output Handling
+
+**Severity:** High
+
+LLM output passed to downstream systems without validation enables
+injection attacks. SAMM Design (Security Requirements) and
+Implementation (Secure Build) address output handling as a development
+requirement — output security must be specified before code is written.
+
+The 2026 entry renames Insecure Output Handling to Improper Output
+Handling and widens it to cover the insecure code that coding assistants
+generate at scale. Output that reaches a compiler, a repository, or a
+production system carries the same downstream-execution risk as output that
+reaches a shell, a browser, or a database.
+
+#### SAMM practice mapping
+
+| Practice | Stream | Maturity | How it applies |
+|---|---|---|---|
+| Security Requirements (D-SR) | Software Requirements | L1 | Output encoding and schema validation as explicit security requirements before development |
+| Secure Build (I-SB) | Security of Code | L1 | Output validation implemented in code — LLM output treated as untrusted, reviewed in code review |
+| Requirements-Driven Testing (V-RT) | Control Verification | L1 | Output security requirements verified in testing — XSS, SQL injection via LLM output tested |
+| Security Testing (V-ST) | Penetration Testing | L2 | DAST on all interfaces consuming LLM output as penetration testing activity |
+
+#### Maturity roadmap
+
+**Level 1 — Initial**
+- D-SR: Define output security as an explicit
+  requirement — LLM output is untrusted input to
+  downstream systems, encoded and validated before
+  use, documented as security requirement before
+  any LLM integration is developed
+- I-SB: Implement output encoding in code — no eval,
+  no raw LLM output in SQL, shell, or HTML rendering
+  context — enforced through code review
+
+**Level 2 — Managed**
+- V-RT: Verify output security requirements in
+  testing — XSS, SQL injection, command injection
+  via LLM output tested systematically before each
+  release, results tracked
+- V-ST: DAST on all interfaces consuming LLM output
+  as defined penetration testing activity — results
+  remediated before release
+
+**Level 3 — Optimised**
+- V-RT: Automated output injection testing in CI/CD —
+  injection scenarios run against LLM output handling
+  code on every PR
+- V-ST: Output security in red team programme —
+  novel injection techniques tested against your
+  specific downstream consumers
+
+#### Tools
+
+| Tool | Type | Link |
+|---|---|---|
+| OWASP ZAP | Open-source | https://www.zaproxy.org |
+| Semgrep | Open-source | https://semgrep.dev |
+| DOMPurify | Open-source | https://github.com/cure53/DOMPurify |
+
+#### Cross-references
+- Agentic Top 10: ASI02 Tool Misuse, ASI05 Unexpected Code Execution
+- DSGAI 2026: DSGAI05 Data Integrity & Validation Failures, DSGAI12 Unsafe NL Data Gateways
+- Other frameworks: OWASP ASVS V5 · CIS Controls CIS 16 · CWE-79
+
+---
+
 ## SAMM scorecard for LLM security
 
 Use this scorecard to assess current LLM security programme maturity
@@ -708,20 +741,20 @@ and define a target state:
 
 | SAMM Practice | Current Level | Target Level | LLM entries covered |
 |---|---|---|---|
-| Threat Assessment (D-TA) | __ | __ | LLM01, LLM04, LLM06, LLM08 |
-| Security Requirements (D-SR) | __ | __ | LLM02, LLM05, LLM07, LLM09, LLM10 |
-| Security Architecture (D-SA) | __ | __ | LLM06 |
-| Secure Build (I-SB) | __ | __ | LLM01, LLM02, LLM03, LLM04, LLM05, LLM07, LLM08 |
-| Secure Deployment (I-SD) | __ | __ | LLM10 |
-| Architecture Assessment (V-AA) | __ | __ | LLM03 |
-| Requirements-Driven Testing (V-RT) | __ | __ | LLM02, LLM05, LLM09 |
-| Security Testing (V-ST) | __ | __ | LLM01, LLM04, LLM07, LLM08, LLM10 |
-| Incident Management (O-IM) | __ | __ | LLM01, LLM04, LLM10 |
-| Environment Management (O-EM) | __ | __ | LLM10 |
-| Operational Management (O-OM) | __ | __ | LLM02, LLM06, LLM09 |
-| Strategy & Metrics (G-SM) | __ | __ | LLM06 |
-| Policy & Compliance (G-PC) | __ | __ | LLM03 |
-| Education & Guidance (G-EG) | __ | __ | LLM09 |
+| Threat Assessment (D-TA) | __ | __ | LLM01, LLM05, LLM03, LLM09 |
+| Security Requirements (D-SR) | __ | __ | LLM02, LLM10, LLM08, LLM07, LLM06 |
+| Security Architecture (D-SA) | __ | __ | LLM03 |
+| Secure Build (I-SB) | __ | __ | LLM01, LLM02, LLM04, LLM05, LLM10, LLM08, LLM09 |
+| Secure Deployment (I-SD) | __ | __ | LLM06 |
+| Architecture Assessment (V-AA) | __ | __ | LLM04 |
+| Requirements-Driven Testing (V-RT) | __ | __ | LLM02, LLM10, LLM07 |
+| Security Testing (V-ST) | __ | __ | LLM01, LLM05, LLM08, LLM09, LLM06 |
+| Incident Management (O-IM) | __ | __ | LLM01, LLM05, LLM06 |
+| Environment Management (O-EM) | __ | __ | LLM06 |
+| Operational Management (O-OM) | __ | __ | LLM02, LLM03, LLM07 |
+| Strategy & Metrics (G-SM) | __ | __ | LLM03 |
+| Policy & Compliance (G-PC) | __ | __ | LLM04 |
+| Education & Guidance (G-EG) | __ | __ | LLM07 |
 
 **Minimum viable maturity for any LLM production deployment:**
 
@@ -740,10 +773,10 @@ and define a target state:
 
 | Phase | LLM entries | SAMM practices | Rationale |
 |---|---|---|---|
-| 1 — Design | LLM01, LLM04, LLM06 | D-TA, D-SR, D-SA | Threat model and requirements before code — highest leverage point |
-| 2 — Build | LLM01, LLM02, LLM05 | I-SB | Input validation, output encoding, DLP in code — closes most common breach paths |
-| 3 — Deploy and monitor | LLM10, LLM09 | I-SD, O-OM, O-IM | Rate limiting deployed, monitoring live, incident response defined |
-| 4 — Test | LLM03, LLM04, LLM07 | V-ST, V-AA, V-RT | Supply chain assessment, adversarial testing, requirements verification |
+| 1 — Design | LLM01, LLM05, LLM03 | D-TA, D-SR, D-SA | Threat model and requirements before code — highest leverage point |
+| 2 — Build | LLM01, LLM02, LLM10 | I-SB | Input validation, output encoding, DLP in code — closes most common breach paths |
+| 3 — Deploy and monitor | LLM06, LLM07 | I-SD, O-OM, O-IM | Rate limiting deployed, monitoring live, incident response defined |
+| 4 — Test | LLM04, LLM05, LLM08 | V-ST, V-AA, V-RT | Supply chain assessment, adversarial testing, requirements verification |
 | 5 — Optimise | All | L3 across all practices | Automation, metrics, proactive programme improvement |
 
 ---
@@ -752,7 +785,7 @@ and define a target state:
 
 - [OWASP SAMM v2.0](https://owaspsamm.org/)
 - [OWASP SAMM GitHub](https://github.com/owaspsamm/core)
-- [OWASP LLM Top 10 2025](https://genai.owasp.org/llm-top-10/)
+- [OWASP LLM Top 10 2026](https://genai.owasp.org/llm-top-10/)
 - [OWASP AI Testing Guide](https://owasp.org/www-project-ai-testing-guide/)
 
 ---
@@ -762,6 +795,7 @@ and define a target state:
 | Date | Version | Change | Author |
 |---|---|---|---|
 | 2026-03-26 | 2026-Q1 | Initial mapping — LLM01–LLM10 full entries with SAMM maturity scorecard | OWASP GenAI Data Security Initiative |
+| 2026-08-28 | 2026-Q3 | Migrated to OWASP Top 10 for LLM Applications 2026 — entries renumbered, LLM08 re-scoped from System Prompt Leakage to Hidden Context Exposure, LLM10 renamed to Improper Output Handling | OWASP GenAI Data Security Initiative |
 
 ---
 

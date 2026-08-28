@@ -2,7 +2,7 @@
 OWASP GenAI Crosswalk — PyRIT Evaluation Script
 ────────────────────────────────────────────────────────────────────────────
 OWASP Entry  : LLM01 — Prompt Injection (Critical)
-Source list  : OWASP LLM Top 10 2025
+Source list  : OWASP LLM Top 10 2026
 Crosswalk ref: llm-top10/LLM_MITREATLAS.md
 
 MITRE ATLAS techniques:
@@ -69,7 +69,7 @@ GOAL_DEVIATION_PROMPTS = [
 
 
 async def run_evaluation():
-    """Run LLM01 prompt injection evaluation using PyRIT."""
+    """Run LLM01 Prompt Injection evaluation using PyRIT."""
     try:
         from pyrit.orchestrator import PromptSendingOrchestrator
         from pyrit.prompt_target import OpenAIChatTarget

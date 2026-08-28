@@ -26,9 +26,9 @@ mkdir -p "$RESULTS_DIR"
 PROFILES=(
   "$SCRIPT_DIR/LLM01_prompt_injection.yaml"
   "$SCRIPT_DIR/LLM02_sensitive_disclosure.yaml"
-  "$SCRIPT_DIR/LLM04_data_poisoning.yaml"
-  "$SCRIPT_DIR/LLM07_system_prompt_leakage.yaml"
-  "$SCRIPT_DIR/LLM09_misinformation.yaml"
+  "$SCRIPT_DIR/LLM05_data_poisoning.yaml"
+  "$SCRIPT_DIR/LLM08_hidden_context_exposure.yaml"
+  "$SCRIPT_DIR/LLM07_misinformation.yaml"
   "$SCRIPT_DIR/ASI01_goal_hijack.yaml"
   "$SCRIPT_DIR/ASI05_code_execution.yaml"
 )

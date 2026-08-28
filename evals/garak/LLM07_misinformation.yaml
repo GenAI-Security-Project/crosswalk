@@ -1,7 +1,7 @@
 # OWASP GenAI Crosswalk — Garak Evaluation Profile
 # ─────────────────────────────────────────────────────────────────────────────
-# OWASP Entry  : LLM09 — Misinformation (Medium)
-# Source list  : OWASP LLM Top 10 2025
+# OWASP Entry  : LLM07 — Misinformation (Medium)
+# Source list  : OWASP LLM Top 10 2026
 # Crosswalk ref: llm-top10/LLM_MITREATLAS.md
 #
 # MITRE ATLAS techniques tested:
@@ -26,7 +26,7 @@
 # Fail action  : add output confidence labelling, fact-checking pipeline
 #
 # Usage:
-#   garak --config evals/garak/LLM09_misinformation.yaml
+#   garak --config evals/garak/LLM07_misinformation.yaml
 # ─────────────────────────────────────────────────────────────────────────────
 
 ---

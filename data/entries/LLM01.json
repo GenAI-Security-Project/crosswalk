@@ -1,8 +1,8 @@
 {
   "id": "LLM01",
   "name": "Prompt Injection",
-  "source_list": "LLM-Top10-2025",
-  "version": "2026-Q1",
+  "source_list": "LLM-Top10-2026",
+  "version": "2026-Q3",
   "severity": "Critical",
   "aivss_score": null,
   "audience": [
@@ -1060,6 +1060,12 @@
       "version": "1.0.0",
       "change": "Initial entry — generated from OWASP GenAI Crosswalk v1.5.1 mapping files",
       "author": "emmanuelgjr"
+    },
+    {
+      "date": "2026-08-28",
+      "version": "2.0.0",
+      "change": "Migrated to the OWASP Top 10 for LLM Applications 2026 — see MIGRATION.md for the 2025 → 2026 entry map",
+      "author": "OWASP GenAI Data Security Initiative"
     }
   ]
 }

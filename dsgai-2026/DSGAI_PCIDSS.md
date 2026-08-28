@@ -278,7 +278,7 @@ security failure.
   programme as customised Req 11.3 testing control
 
 #### Cross-references
-- LLM Top 10: LLM03 Supply Chain, LLM04 Data and Model Poisoning
+- LLM Top 10: LLM04 Supply Chain, LLM05 Data and Model Poisoning
 - Agentic Top 10: ASI06 Memory and Context Poisoning
 - Other frameworks: NIST AI RMF MS-3.3 · MITRE ATLAS AML.T0032 · ISO 27001 A.8.27
 
@@ -323,7 +323,7 @@ achieve arbitrary file write on CDE hosts — a critical finding.
   change management — security testing before production
 
 #### Cross-references
-- LLM Top 10: LLM05 Insecure Output Handling
+- LLM Top 10: LLM10 Improper Output Handling
 - DSGAI 2026: DSGAI13 Vector Store Platform Security
 - Other frameworks: ISO 27001 A.8.26/A.8.28 · CWE-20 · OWASP ASVS V5
 
@@ -640,7 +640,7 @@ and Req 7 critical finding.
   natural language, document as CDE penetration testing
 
 #### Cross-references
-- LLM Top 10: LLM05 Insecure Output Handling
+- LLM Top 10: LLM10 Improper Output Handling
 - Agentic Top 10: ASI02 Tool Misuse, ASI05 Unexpected Code Execution
 - Other frameworks: ISO 27001 A.8.26/A.8.28 · CWE-89 · ISA/IEC 62443 SR 2.2 (OT)
 
@@ -686,7 +686,7 @@ in CDE scope are Req 6.3 and Req 7 findings.
   accessible only from authorised CDE services
 
 #### Cross-references
-- LLM Top 10: LLM08 Vector and Embedding Weaknesses
+- LLM Top 10: LLM09 Vector and Embedding Weaknesses
 - Agentic Top 10: ASI06 Memory and Context Poisoning
 - Other frameworks: ISO 27001 A.8.3/A.8.24 · SOC 2 CC6.1
 
@@ -772,7 +772,7 @@ of any successful injection against a payment-context LLM.
   per deployment context
 
 #### Cross-references
-- LLM Top 10: LLM07 System Prompt Leakage
+- LLM Top 10: LLM08 Hidden Context Exposure
 - Agentic Top 10: ASI01 Agent Goal Hijack
 - Other frameworks: AIUC-1 A/B005 · SOC 2 CC6.1
 
@@ -862,7 +862,7 @@ detection LLMs is a payment processing continuity requirement.
   in fraud detection context
 
 #### Cross-references
-- LLM Top 10: LLM10 Unbounded Consumption
+- LLM Top 10: LLM06 Unbounded Consumption
 - Agentic Top 10: ASI08 Cascading Agent Failures
 - Other frameworks: ISA/IEC 62443 SR 7.6 (OT) · SOC 2 A1.1
 
@@ -1039,7 +1039,7 @@ decisions or provide incorrect compliance guidance to analysts.
   in RAG — verify integrity of regulatory guidance sources
 
 #### Cross-references
-- LLM Top 10: LLM04 Data and Model Poisoning, LLM09 Misinformation
+- LLM Top 10: LLM05 Data and Model Poisoning, LLM07 Misinformation
 - Agentic Top 10: ASI06 Memory and Context Poisoning
 - Other frameworks: MITRE ATLAS AML.T0045 · ISO 27001 A.5.7 · SOC 2 PI1.2
 

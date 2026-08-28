@@ -8,7 +8,7 @@
 
 # Glossary
 
-Unified definitions used consistently across the LLM Top 10 2025,
+Unified definitions used consistently across the LLM Top 10 2026,
 Agentic Top 10 2026, and DSGAI 2026 mappings. Where a term is defined
 differently across frameworks, we note the variance.
 
@@ -89,7 +89,7 @@ between OWASP GenAI lists and industry security frameworks.
 **Data poisoning**
 The injection of malicious, misleading, or corrupted data into training
 datasets, RAG stores, or agent memory to alter model or agent behaviour.
-See LLM04, ASI06, DSGAI04.
+See LLM05, ASI06, DSGAI04.
 
 **DBoM (Dataset Bill of Materials)**
 A structured inventory of all data used in training, fine-tuning, or
@@ -109,7 +109,7 @@ Reference: https://genai.owasp.org
 A numerical vector representation of text, images, or other data,
 used for semantic search and retrieval in RAG systems. Embeddings
 are a data security surface — they can leak information about source
-content and are vulnerable to inversion attacks. See LLM08, DSGAI13.
+content and are vulnerable to inversion attacks. See LLM09, DSGAI13.
 
 ---
 
@@ -280,7 +280,7 @@ Foundational architecture for securing multi-agent systems.
 
 | Prefix | Source list |
 |---|---|
-| `LLM01–LLM10` | OWASP Top 10 for LLM Applications 2025 |
+| `LLM01–LLM10` | OWASP Top 10 for LLM Applications 2026 |
 | `ASI01–ASI10` | OWASP Top 10 for Agentic Applications 2026 |
 | `DSGAI01–DSGAI21` | OWASP GenAI Data Security Risks & Mitigations 2026 |
 

@@ -1,8 +1,8 @@
 {
   "id": "LLM02",
   "name": "Sensitive Information Disclosure",
-  "source_list": "LLM-Top10-2025",
-  "version": "2026-Q1",
+  "source_list": "LLM-Top10-2026",
+  "version": "2026-Q3",
   "severity": "High",
   "aivss_score": null,
   "audience": [
@@ -627,35 +627,35 @@
     },
     {
       "framework": "NIST SP 800-218A",
-      "control_id": "PW.5.1-PS",
-      "control_name": "Secure coding — ML pipeline output handling",
+      "control_id": "PS.1.1-PS",
+      "control_name": "Protect all forms of code and data from unauthorised access — training and retrieval corpora",
       "tier": "Foundational",
-      "scope": "Build",
-      "notes": "Implement secure coding practices for all code paths that consume LLM output; treat model responses as untrusted input to downstream systems"
+      "scope": "Both",
+      "notes": "Classify and access-control training datasets, fine-tuning corpora, and retrieval indexes; restrict who and what can read each store, and log every access"
+    },
+    {
+      "framework": "NIST SP 800-218A",
+      "control_id": "PW.5.1-PS",
+      "control_name": "Use secure coding practices — secret handling",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "Prohibit credentials, tokens, and regulated data in prompts, prompt templates, and log statements; enforce with secret scanning in CI"
     },
     {
       "framework": "NIST SP 800-218A",
       "control_id": "PW.7.2-PS",
-      "control_name": "Review for security vulnerabilities — output validation",
+      "control_name": "Review the software for security vulnerabilities — disclosure review",
       "tier": "Foundational",
-      "scope": "Build",
-      "notes": "Include output injection and unsafe rendering scenarios in pre-release security reviews; verify that output sanitisation controls are present and effective"
+      "scope": "Both",
+      "notes": "Review model outputs for memorised training data, over-broad retrieval results, and unredacted sensitive content before each production release"
     },
     {
       "framework": "NIST SP 800-218A",
-      "control_id": "PS.2.1-PS",
-      "control_name": "Verify software integrity — model artifact integrity",
+      "control_id": "RV.1.1-PS",
+      "control_name": "Identify and confirm vulnerabilities — disclosure incidents",
       "tier": "Foundational",
-      "scope": "Build",
-      "notes": "Verify that the model artifact serving output has not been tampered with; maintain signed model checksums and verify before deployment"
-    },
-    {
-      "framework": "NIST SP 800-218A",
-      "control_id": "PW.8.2-PS",
-      "control_name": "Test for security vulnerabilities — output security",
-      "tier": "Foundational",
-      "scope": "Build",
-      "notes": "Include output-based injection testing (XSS, SQLi, CMDi via LLM output) in adversarial test suites"
+      "scope": "Both",
+      "notes": "Establish procedures to identify, triage, and confirm disclosure incidents in production, including notification paths for regulated data"
     },
     {
       "framework": "FedRAMP",
@@ -764,24 +764,14 @@
       "url": "https://github.com/leondz/garak"
     },
     {
-      "name": "OWASP ZAP",
+      "name": "Gitleaks",
       "type": "open-source",
-      "url": "https://www.zaproxy.org"
+      "url": "https://github.com/gitleaks/gitleaks"
     },
     {
-      "name": "Semgrep",
+      "name": "NIST SP 800-218A",
       "type": "open-source",
-      "url": "https://semgrep.dev"
-    },
-    {
-      "name": "DOMPurify",
-      "type": "open-source",
-      "url": "https://github.com/cure53/DOMPurify"
-    },
-    {
-      "name": "Guardrails AI",
-      "type": "open-source",
-      "url": "https://github.com/guardrails-ai/guardrails"
+      "url": "https://doi.org/10.6028/NIST.SP.800-218A.ipd"
     },
     {
       "name": "OpenTelemetry",
@@ -846,9 +836,7 @@
   "crossrefs": {
     "agentic_top10": [
       "ASI03",
-      "ASI06",
-      "ASI02",
-      "ASI05"
+      "ASI06"
     ],
     "dsgai_2026": [
       "DSGAI01",
@@ -858,8 +846,6 @@
       "DSGAI08",
       "DSGAI06",
       "DSGAI03",
-      "DSGAI05",
-      "DSGAI12",
       "DSGAI16"
     ]
   },
@@ -869,6 +855,12 @@
       "version": "1.0.0",
       "change": "Initial entry — generated from OWASP GenAI Crosswalk v1.5.1 mapping files",
       "author": "emmanuelgjr"
+    },
+    {
+      "date": "2026-08-28",
+      "version": "2.0.0",
+      "change": "Migrated to the OWASP Top 10 for LLM Applications 2026 — see MIGRATION.md for the 2025 → 2026 entry map",
+      "author": "OWASP GenAI Data Security Initiative"
     }
   ]
 }

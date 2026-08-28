@@ -2,7 +2,7 @@
   "id": "DSGAI16",
   "name": "Endpoint and Browser Overreach",
   "source_list": "DSGAI-2026",
-  "version": "2026-Q1",
+  "version": "2026-Q3",
   "severity": "High",
   "aivss_score": null,
   "audience": [
@@ -704,9 +704,9 @@
       "DSGAI17"
     ],
     "llm_top10": [
-      "LLM06",
       "LLM03",
-      "LLM08",
+      "LLM04",
+      "LLM09",
       "LLM01",
       "LLM02"
     ]

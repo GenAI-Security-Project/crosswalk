@@ -15,7 +15,7 @@ assignees: emmanuelgjr
 <!-- Must be freely accessible without payment for core content -->
 
 **Source list(s) to map:**
-- [ ] LLM Top 10 2025 (LLM01–LLM10)
+- [ ] LLM Top 10 2026 (LLM01–LLM10)
 - [ ] Agentic Top 10 2026 (ASI01–ASI10)
 - [ ] DSGAI 2026 (DSGAI01–DSGAI21)
 

@@ -2,7 +2,7 @@
   "id": "ASI02",
   "name": "Tool Misuse and Exploitation",
   "source_list": "Agentic-Top10-2026",
-  "version": "2026-Q1",
+  "version": "2026-Q3",
   "severity": "Critical",
   "aivss_score": 9.6,
   "audience": [
@@ -924,9 +924,9 @@
   ],
   "crossrefs": {
     "llm_top10": [
-      "LLM05",
-      "LLM06",
-      "LLM07"
+      "LLM10",
+      "LLM03",
+      "LLM08"
     ],
     "dsgai_2026": [
       "DSGAI06",

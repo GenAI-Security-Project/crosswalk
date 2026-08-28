@@ -329,7 +329,7 @@ rather than passively monitoring output distributions.
 | Poisoning evading L5 through plausible output | L5 | P1 |
 
 #### Cross-references
-- LLM Top 10: LLM03 Supply Chain, LLM04 Data & Model Poisoning
+- LLM Top 10: LLM04 Supply Chain, LLM05 Data and Model Poisoning
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - Other frameworks: MITRE ATLAS AML.T0020 · NIST AI RMF MS-3.3 · ISO 27001 A.8.27
 
@@ -375,7 +375,7 @@ compromise to L4 infrastructure control.
 | Semantic injection passing schema validation | L2 → L1 | P2 |
 
 #### Cross-references
-- LLM Top 10: LLM05 Insecure Output Handling
+- LLM Top 10: LLM10 Improper Output Handling
 - DSGAI 2026: DSGAI13 Vector Store Platform Security
 - Other frameworks: ISO 27001 A.8.26/A.8.28 · CWE-20 · NIST CSF 2.0 PR.PS-04
 
@@ -722,7 +722,7 @@ is an L6 control that limits the blast radius of any L3 injection.
 | NL gateway executing under shared high-privilege account | L6 → L3 | P1 |
 
 #### Cross-references
-- LLM Top 10: LLM05 Insecure Output Handling
+- LLM Top 10: LLM10 Improper Output Handling
 - Agentic Top 10: ASI02 Tool Misuse, ASI05 Unexpected Code Execution
 - Other frameworks: ISO 27001 A.8.26/A.8.28 · CWE-89 · ISA/IEC 62443 SR 2.2 (OT)
 
@@ -773,7 +773,7 @@ without authentication in any environment.
 | Embedding inversion reconstructing source documents | L2 → L1 | P2 |
 
 #### Cross-references
-- LLM Top 10: LLM08 Vector and Embedding Weaknesses
+- LLM Top 10: LLM09 Vector and Embedding Weaknesses
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - Other frameworks: ISO 27001 A.8.3/A.8.24 · CWE-284 · NIST CSF 2.0 PR.AA-05
 
@@ -875,7 +875,7 @@ independently of retrieval system behaviour.
 | Context window containing data from incompatible trust domains | L2 → L1 | P2 |
 
 #### Cross-references
-- LLM Top 10: LLM07 System Prompt Leakage
+- LLM Top 10: LLM08 Hidden Context Exposure
 - Agentic Top 10: ASI01 Agent Goal Hijack
 - Other frameworks: ISO 27001 A.8.3 · NIST CSF 2.0 PR.AA-05 · AIUC-1 A/B005
 
@@ -980,7 +980,7 @@ the service is responding.
 | Availability failure cascading through multi-agent pipeline | L7 ← L4 | P2 |
 
 #### Cross-references
-- LLM Top 10: LLM10 Unbounded Consumption
+- LLM Top 10: LLM06 Unbounded Consumption
 - Agentic Top 10: ASI08 Cascading Agent Failures
 - Other frameworks: ISA/IEC 62443 SR 7.6 (OT) · NIST CSF 2.0 PR.IR-01 · AIUC-1 D
 
@@ -1033,7 +1033,7 @@ output space coverage, unusual input diversity.
 | Systematic query campaign for model extraction | L1 → L5 | P1 |
 
 #### Cross-references
-- LLM Top 10: LLM02 Sensitive Information Disclosure, LLM08 Vector and Embedding Weaknesses
+- LLM Top 10: LLM02 Sensitive Information Disclosure, LLM09 Vector and Embedding Weaknesses
 - DSGAI 2026: DSGAI10 Synthetic Data Pitfalls
 - Other frameworks: ISO 27001 A.8.11 · GDPR Art. 25 · MITRE ATLAS AML.T0024.000
 
@@ -1192,7 +1192,7 @@ modifications before they reach L1 inference.
 | Corpus modification evading L5 monitoring | L5 | P2 |
 
 #### Cross-references
-- LLM Top 10: LLM04 Data & Model Poisoning, LLM09 Misinformation
+- LLM Top 10: LLM05 Data and Model Poisoning, LLM07 Misinformation
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - Other frameworks: MITRE ATLAS AML.T0045 · ISO 27001 A.5.7 · ISA/IEC 62443 SR 3.3 (OT)
 

@@ -34,7 +34,7 @@ from pathlib import Path
 STAGE_MAP = {
     "S1": {
         "name": "Reconnaissance",
-        "owasp": ["LLM07", "LLM01"],
+        "owasp": ["LLM08", "LLM01"],
         "maestro": [
             {"layer": "L1", "label": "Foundation Models", "role": "origin"},
             {"layer": "L4", "label": "Deployment & Infrastructure", "role": "blind-spot"},
@@ -55,7 +55,7 @@ STAGE_MAP = {
     },
     "S3": {
         "name": "Trigger Execution",
-        "owasp": ["ASI01", "ASI06", "LLM06"],
+        "owasp": ["ASI01", "ASI06", "LLM03"],
         "maestro": [
             {"layer": "L3", "label": "Agent Frameworks", "role": "origin"},
             {"layer": "L7", "label": "Agent Ecosystem", "role": "impact"},
@@ -65,7 +65,7 @@ STAGE_MAP = {
     },
     "S4": {
         "name": "Persistence and Reuse",
-        "owasp": ["ASI06", "LLM06", "DSGAI04"],
+        "owasp": ["ASI06", "LLM03", "DSGAI04"],
         "maestro": [
             {"layer": "L2", "label": "Data Operations", "role": "origin"},
             {"layer": "L7", "label": "Agent Ecosystem", "role": "propagation"},
@@ -85,7 +85,7 @@ STAGE_MAP = {
     },
     "S6": {
         "name": "Trace Tampering",
-        "owasp": ["DSGAI01", "LLM07"],
+        "owasp": ["DSGAI01", "LLM08"],
         "maestro": [
             {"layer": "L5", "label": "Evaluation & Observability", "role": "origin"},
             {"layer": "L6", "label": "Security & Compliance", "role": "blind-spot"},
@@ -109,7 +109,7 @@ AV_MAP = {
     },
     "AV-3": {
         "name": "Role Override via Memory Entrenchment",
-        "owasp": ["ASI03", "LLM06", "ASI01"],
+        "owasp": ["ASI03", "LLM03", "ASI01"],
         "maestro": "L6 — Security & Compliance (origin), L3 — Agent Frameworks (propagation)",
     },
     "AV-4": {
@@ -344,7 +344,7 @@ def _get_mitigations(stage):
     m = {
         "S1": [
             "Do not embed secrets or business logic in system prompts",
-            "Run evals/garak/LLM07_system_prompt_leakage.yaml — threshold 0%",
+            "Run evals/garak/LLM08_hidden_context_exposure.yaml — threshold 0%",
             "Treat system prompt confidentiality as best-effort, not a security boundary",
         ],
         "S2": [

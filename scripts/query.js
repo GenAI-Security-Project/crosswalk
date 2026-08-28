@@ -179,7 +179,7 @@ function showFrameworkCoverage(entries, format) {
   const rows = Object.entries(matrix)
     .sort((a, b) => a[0].localeCompare(b[0]))
     .map(([fw, sources]) => {
-      const llm = entries.filter(e => e.source_list === 'LLM-Top10-2025' && e.mappings.some(m => m.framework === fw)).length;
+      const llm = entries.filter(e => e.source_list === 'LLM-Top10-2026' && e.mappings.some(m => m.framework === fw)).length;
       const asi = entries.filter(e => e.source_list === 'Agentic-Top10-2026' && e.mappings.some(m => m.framework === fw)).length;
       const dsg = entries.filter(e => e.source_list === 'DSGAI-2026' && e.mappings.some(m => m.framework === fw)).length;
       return [fw, llm ? `✅ ${llm}` : '—', asi ? `✅ ${asi}` : '—', dsg ? `✅ ${dsg}` : '—', llm + asi + dsg];

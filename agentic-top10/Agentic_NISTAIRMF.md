@@ -139,7 +139,7 @@ control lacks an anchor.
 | Invariant Analyzer | Open-source | https://github.com/invariantlabs-ai/invariant |
 
 #### Cross-references
-- LLM Top 10: LLM01 Prompt Injection, LLM06 Excessive Agency
+- LLM Top 10: LLM01 Prompt Injection, LLM03 Excessive Agency
 - DSGAI 2026: DSGAI01 Sensitive Data Leakage, DSGAI15 Over-Broad Context Windows
 - Other frameworks: AIUC-1 B001/B005/B006 · MITRE ATLAS AML.T0051 · ISA/IEC 62443 SR 3.3 (OT)
 
@@ -213,7 +213,7 @@ and irreversibility classification before the agent deploys.
 | MCP Inspector | Open-source | https://github.com/modelcontextprotocol/inspector |
 
 #### Cross-references
-- LLM Top 10: LLM05 Insecure Output Handling, LLM06 Excessive Agency
+- LLM Top 10: LLM10 Improper Output Handling, LLM03 Excessive Agency
 - DSGAI 2026: DSGAI06 Tool Plugin & Agent Data Exchange, DSGAI12 Unsafe NL Data Gateways
 - Other frameworks: AIUC-1 B006/B007 · ISA/IEC 62443 SR 2.2 (OT) · MITRE ATLAS AML.T0015
 
@@ -283,7 +283,7 @@ not optional for agentic deployments.
 | Entro Security | Commercial | https://entro.security |
 
 #### Cross-references
-- LLM Top 10: LLM06 Excessive Agency
+- LLM Top 10: LLM03 Excessive Agency
 - DSGAI 2026: DSGAI02 Agent Identity & Credential Exposure
 - Other frameworks: OWASP NHI Top 10 · AIUC-1 A/B007 · ISA/IEC 62443 SR 1.2 (OT)
 
@@ -353,7 +353,7 @@ component inventory.
 | MCP Inspector | Open-source | https://github.com/modelcontextprotocol/inspector |
 
 #### Cross-references
-- LLM Top 10: LLM03 Supply Chain Vulnerabilities
+- LLM Top 10: LLM04 Supply Chain
 - DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning
 - Other frameworks: NIST SP 800-218A · AIUC-1 B001/B003 · ISA/IEC 62443 62443-2-4 (OT)
 
@@ -422,7 +422,7 @@ is a separate, elevated risk category that requires its own treatment.
 | Bandit | Open-source | https://github.com/PyCQA/bandit |
 
 #### Cross-references
-- LLM Top 10: LLM05 Insecure Output Handling
+- LLM Top 10: LLM10 Improper Output Handling
 - DSGAI 2026: DSGAI12 Unsafe NL Data Gateways
 - Other frameworks: AIUC-1 B005/B006 · CWE-94 · ISA/IEC 62443 SR 3.3 (OT)
 
@@ -490,7 +490,7 @@ sessions without any visible triggering event.
 | Langfuse | Open-source | https://langfuse.com |
 
 #### Cross-references
-- LLM Top 10: LLM04 Data & Model Poisoning, LLM08 Vector & Embedding Weaknesses
+- LLM Top 10: LLM05 Data and Model Poisoning, LLM09 Vector and Embedding Weaknesses
 - DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning, DSGAI13 Vector Store Platform Security
 - Other frameworks: AIUC-1 A/B002 · ISO 27001 A.8.15 · ISA/IEC 62443 SR 3.7 (OT)
 
@@ -625,7 +625,7 @@ Critical severity — see `Agentic_ISA62443.md` for OT-specific controls.
 | LangSmith | Commercial | https://smith.langchain.com |
 
 #### Cross-references
-- LLM Top 10: LLM10 Unbounded Consumption
+- LLM Top 10: LLM06 Unbounded Consumption
 - DSGAI 2026: DSGAI17 Data Availability & Resilience Failures
 - Other frameworks: AIUC-1 D · ISA/IEC 62443 SR 7.6 (OT) · NIST SP 800-82 (OT)
 
@@ -684,7 +684,7 @@ aggregate over-trust patterns before they cause harm.
   governance — reviewed annually with input from user research
 
 #### Cross-references
-- LLM Top 10: LLM09 Misinformation
+- LLM Top 10: LLM07 Misinformation
 - DSGAI 2026: DSGAI21 Disinformation & Integrity Attacks
 - Other frameworks: EU AI Act Art. 52 · AIUC-1 C/F · NIST AI RMF GV-1.7
 
@@ -752,7 +752,7 @@ covered in the evaluation programme (MS-2.5) and incident response
 | Weights & Biases | Commercial | https://wandb.ai |
 
 #### Cross-references
-- LLM Top 10: LLM06 Excessive Agency
+- LLM Top 10: LLM03 Excessive Agency
 - DSGAI 2026: DSGAI16 Endpoint & Browser Overreach
 - Other frameworks: AIUC-1 B001/B002/C/E · EU AI Act Art. 9 · ISA/IEC 62443 SR 3.7 (OT)
 

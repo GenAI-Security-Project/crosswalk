@@ -1,15 +1,15 @@
 <!--
   OWASP GenAI Crosswalk
-  Source list : OWASP Top 10 for LLM Applications 2025 (LLM01-LLM10)
+  Source list : OWASP Top 10 for LLM Applications 2026 (LLM01-LLM10)
   Framework   : MAESTRO — Multi-Agent Environment, Security, Threat, Risk, and Outcome
-  Version     : 2026-Q1
+  Version     : 2026-Q3
   Maintained by: OWASP GenAI Data Security Initiative — https://genai.owasp.org
   License     : CC BY-SA 4.0
 -->
 
-# LLM Top 10 2025 × MAESTRO
+# LLM Top 10 2026 × MAESTRO
 
-Mapping the [OWASP Top 10 for LLM Applications 2025](https://genai.owasp.org/llm-top-10/)
+Mapping the [OWASP Top 10 for LLM Applications 2026](https://genai.owasp.org/llm-top-10/)
 to [MAESTRO](https://cloudsecurityalliance.org/blog/2025/02/06/agentic-ai-threat-modeling-framework-maestro)
 (Multi-Agent Environment, Security, Threat, Risk, and Outcome) —
 the Cloud Security Alliance's threat modeling framework designed
@@ -42,7 +42,7 @@ Knowing the originating layer answers three practical questions:
   does not stop an L2 RAG poisoning attack reaching the model
   through a different ingestion path.
 - **How does this threat propagate?** A L2 training data poisoning
-  attack (LLM04) corrupts L1 model behaviour, creates L5
+  attack (LLM05) corrupts L1 model behaviour, creates L5
   monitoring blind spots when the poisoned model produces outputs
   consistent with its poisoned training, and ultimately surfaces
   at L7 if the compromised model participates in multi-agent
@@ -95,13 +95,13 @@ system component, not just *what* the control does.
 
 | MAESTRO Layer | Primary LLM entries | Secondary LLM entries |
 |---|---|---|
-| L1 Foundation Models | LLM01 Prompt Injection, LLM07 System Prompt Leakage, LLM09 Misinformation | LLM02, LLM05 |
-| L2 Data Operations | LLM02 Sensitive Info Disclosure, LLM04 Data & Model Poisoning, LLM08 Vector Weaknesses | LLM01, LLM03 |
-| L3 Agent Frameworks | LLM05 Insecure Output Handling, LLM06 Excessive Agency | LLM01, LLM03 |
-| L4 Deployment & Infrastructure | LLM10 Unbounded Consumption, LLM03 Supply Chain | LLM05, LLM06 |
-| L5 Evaluation & Observability | LLM09 Misinformation (detection gap) | LLM04, LLM10 |
-| L6 Security & Compliance | LLM06 Excessive Agency (permission scope) | LLM02, LLM07 |
-| L7 Agent Ecosystem | — | LLM06, LLM10 |
+| L1 Foundation Models | LLM01 Prompt Injection, LLM08 Hidden Context Exposure, LLM07 Misinformation | LLM02, LLM10 |
+| L2 Data Operations | LLM02 Sensitive Info Disclosure, LLM05 Data & Model Poisoning, LLM09 Vector Weaknesses | LLM01, LLM04 |
+| L3 Agent Frameworks | LLM10 Improper Output Handling, LLM03 Excessive Agency | LLM01, LLM04 |
+| L4 Deployment & Infrastructure | LLM06 Unbounded Consumption, LLM04 Supply Chain | LLM10, LLM03 |
+| L5 Evaluation & Observability | LLM07 Misinformation (detection gap) | LLM05, LLM06 |
+| L6 Security & Compliance | LLM03 Excessive Agency (permission scope) | LLM02, LLM08 |
+| L7 Agent Ecosystem | — | LLM03, LLM06 |
 
 ---
 
@@ -111,14 +111,14 @@ system component, not just *what* the control does.
 |---|---|---|---|---|---|
 | LLM01 | Prompt Injection | Critical | L1 | L1, L2, L3 | Foundational–Advanced |
 | LLM02 | Sensitive Information Disclosure | High | L2 | L2, L1, L5 | Foundational–Advanced |
-| LLM03 | Supply Chain Vulnerabilities | High | L3/L4 | L3, L4, L2 | Foundational–Hardening |
-| LLM04 | Data and Model Poisoning | Critical | L2 | L2, L1, L5 | Hardening–Advanced |
-| LLM05 | Insecure Output Handling | High | L3 | L3, L4, L1 | Foundational–Hardening |
-| LLM06 | Excessive Agency | High | L6 | L6, L3, L7 | Foundational–Advanced |
-| LLM07 | System Prompt Leakage | High | L1 | L1, L6 | Foundational–Hardening |
-| LLM08 | Vector and Embedding Weaknesses | Medium | L2 | L2, L4, L6 | Hardening–Advanced |
-| LLM09 | Misinformation | Medium | L1 | L1, L2, L5 | Foundational–Hardening |
-| LLM10 | Unbounded Consumption | Medium | L4 | L4, L3, L5 | Foundational–Hardening |
+| LLM03 | Excessive Agency | Critical | L6 | L6, L3, L7 | Foundational–Advanced |
+| LLM04 | Supply Chain | High | L3/L4 | L3, L4, L2 | Foundational–Hardening |
+| LLM05 | Data and Model Poisoning | Critical | L2 | L2, L1, L5 | Hardening–Advanced |
+| LLM06 | Unbounded Consumption | High | L4 | L4, L3, L5 | Foundational–Hardening |
+| LLM07 | Misinformation | High | L1 | L1, L2, L5 | Foundational–Hardening |
+| LLM08 | Hidden Context Exposure | High | L1 | L1, L6 | Foundational–Hardening |
+| LLM09 | Vector and Embedding Weaknesses | Medium | L2 | L2, L4, L6 | Hardening–Advanced |
+| LLM10 | Improper Output Handling | High | L3 | L3, L4, L1 | Foundational–Hardening |
 
 ---
 
@@ -150,6 +150,11 @@ distinguish instructions from data is an inherent L1 property.
 The injection vector may arrive through L2 (poisoned RAG content)
 or directly at L1 (user prompt), but acceptance always happens
 at the model layer.
+
+The 2026 entry extends prompt injection to cross-modal payloads.
+Instructions hidden in an image, an audio track, or a video frame reach the
+model without ever being human-readable, and steganographic or
+invisible-Unicode carriers survive review of the rendered interface.
 
 #### MAESTRO layer analysis
 
@@ -273,215 +278,9 @@ Mitigations at L5:
 
 ---
 
-### LLM03 — Supply Chain Vulnerabilities
-
-**Severity:** High
-**Originating layer:** L3/L4 — Agent Frameworks / Deployment & Infrastructure
-**Propagation path:** L3 (plugins/tools) ← L4 (model weights/infra) ← L2 (datasets)
-
-LLM supply chain threats originate at multiple layers: L3 for
-plugin and tool supply chain components, L4 for model weight
-and runtime library integrity, and L2 for training and
-fine-tuning dataset provenance. Compromise at any layer can
-cascade to L1 (backdoored model behaviour) or L5 (undetected
-through compromised monitoring).
-
-#### MAESTRO layer analysis
-
-**L3 — Agent Frameworks (plugin and tool supply chain)**
-
-Third-party plugins, tool integrations, and MCP server
-implementations are L3 supply chain components. A compromised
-plugin descriptor or malicious tool implementation executes
-with the agent's full permission scope — the framework has
-no inherent mechanism to verify that a tool does what its
-descriptor claims.
-
-Mitigations at L3:
-- Plugin and tool SBOM — every integration component
-  inventoried with version, source, and integrity hash
-- Descriptor integrity verification before tool loading —
-  cryptographic signatures on tool descriptors
-- Vendor security assessment before any third-party
-  component enters production
-
-**L4 — Deployment & Infrastructure (model weight and runtime)**
-
-Model weights downloaded from third-party sources and ML
-library dependencies are L4 supply chain assets. Tampered
-model weights or vulnerable runtime libraries compromise the
-entire stack above them — all L1 through L7 security properties
-depend on L4 integrity.
-
-Mitigations at L4:
-- Model weight cryptographic verification before deployment —
-  hash comparison against vendor-published baseline
-- Dependency vulnerability scanning in CI/CD pipeline —
-  ML libraries and inference runtime CVE monitoring
-- Immutable model registry — deployed model versions pinned,
-  verified, and never overwritten in place
-
-**L2 — Data Operations (dataset supply chain)**
-
-Training and fine-tuning datasets sourced from third parties
-are L2 supply chain components. An adversary who controls a
-public dataset used for fine-tuning can introduce backdoors or
-biases that survive into the deployed model (see also LLM04).
-
-Mitigations at L2:
-- Dataset provenance documentation for all training corpora —
-  source, version, integrity hash, and quality review recorded
-- Statistical quality gates on ingested datasets — outlier
-  detection before training begins
-
-#### Cross-references
-- Agentic Top 10: ASI04 Agentic Supply Chain
-- DSGAI 2026: DSGAI06 Tool, Plugin & Agent Data Exchange
-- Other files: LLM_STRIDE.md (Tampering/Repudiation), LLM_CWE_CVE.md (CWE-494/829)
-
----
-
-### LLM04 — Data and Model Poisoning
+### LLM03 — Excessive Agency
 
 **Severity:** Critical
-**Originating layer:** L2 — Data Operations
-**Propagation path:** L2 (poisoned data) → L1 (corrupted behaviour) → L5 (monitoring blind spot)
-
-Poisoning originates at L2 when adversarially crafted training
-data, fine-tuning corpora, or RAG content enters the pipeline.
-The corrupted behaviour manifests at L1 when the model is
-deployed, and L5 monitoring systems may fail to detect it
-because the model produces outputs consistent with its poisoned
-training — the anomaly looks like correct behaviour.
-
-#### MAESTRO layer analysis
-
-**L2 — Data Operations (originating)**
-
-The attacker's leverage point is write access to data that
-shapes the model — training corpora, fine-tuning datasets,
-RAG indexes, or memory stores. Poisoned data at L2 is
-invisible to most runtime security controls because the
-corruption happens before deployment.
-
-Mitigations at L2:
-- Data provenance tracking — every training sample traceable
-  to verified source with integrity hash
-- Statistical anomaly detection on ingested datasets —
-  label inconsistency, outlier distributions, unexpected
-  content patterns detected before model training
-- Immutable training data — once verified, training corpora
-  write-protected to prevent post-verification modification
-
-**L1 — Foundation Models (manifesting layer)**
-
-Poisoned behaviour surfaces at L1 when the deployed model
-responds to trigger inputs or produces systematically biased
-outputs. Behavioural testing at L1 must specifically probe
-for known backdoor trigger patterns before production release.
-
-Mitigations at L1:
-- Pre-deployment adversarial testing — probing with trigger
-  patterns across all use case configurations
-- Behavioural baseline establishment — document expected
-  model response distributions to enable drift detection
-- Model weight integrity verification — verify deployed
-  weights match the training pipeline output
-
-**L5 — Evaluation & Observability (detection challenge)**
-
-Poisoned models produce outputs that appear correct under
-normal operating conditions — the anomaly only manifests
-with trigger inputs. Standard output quality monitoring
-will not detect this. L5 monitoring must include adversarial
-probing, not just passive quality metrics.
-
-Mitigations at L5:
-- Scheduled adversarial probing of deployed models —
-  trigger pattern testing integrated into continuous monitoring
-- Output distribution drift detection — statistical
-  anomalies in response distributions trigger investigation
-
-#### Cross-references
-- Agentic Top 10: ASI06 Memory & Context Poisoning
-- DSGAI 2026: DSGAI04 Data, Model & Artifact Poisoning, DSGAI21 Disinformation via Data Poisoning
-- Other files: LLM_STRIDE.md (Tampering), LLM_CWE_CVE.md (CWE-20/345)
-
----
-
-### LLM05 — Insecure Output Handling
-
-**Severity:** High
-**Originating layer:** L3 — Agent Frameworks
-**Propagation path:** L3 (output passed without sanitisation) → L4 (downstream system executes) ← L1 (model generates dangerous content)
-
-Insecure output handling originates at L3 when the orchestration
-framework passes LLM-generated content to downstream systems —
-HTML renderers, SQL engines, shell interpreters, HTTP clients —
-without sanitisation. The L1 model generated the dangerous
-content; the L3 framework failed to validate it before passing
-it to an L4 system that executes it with real-world consequences.
-
-#### MAESTRO layer analysis
-
-**L3 — Agent Frameworks (originating)**
-
-The framework is responsible for the interface between model
-output and downstream consumers. Treating LLM output as trusted
-content — passing it directly to HTML templates, SQL queries,
-or shell commands — is the architectural failure. The framework
-must validate and sanitise every output before it crosses
-a trust boundary.
-
-Mitigations at L3:
-- Output validation layer between model and downstream system —
-  content type, schema, and injection pattern validation
-  before any LLM output is consumed by another component
-- Contextual output encoding — HTML encoding for web
-  rendering, parameterised queries for database operations,
-  sandbox execution for generated code
-- Output allowlisting — LLM output permitted only in
-  defined, validated forms for each downstream consumer
-
-**L4 — Deployment & Infrastructure (execution layer)**
-
-The downstream system that executes unsafe LLM output is
-an L4 component — a web server rendering HTML, a database
-engine executing SQL, a container running generated scripts.
-L4 defences provide defence-in-depth when L3 validation fails.
-
-Mitigations at L4:
-- WAF rules covering LLM output injection patterns
-  at the network layer
-- Database least-privilege — LLM-connected accounts
-  cannot execute DDL; parameterised queries enforced
-  at the database layer regardless of calling code
-- Container sandboxing for any LLM-generated code execution —
-  no host filesystem or network access from execution sandbox
-
-**L1 — Foundation Models (generation layer)**
-
-While the root cause is L3 handling, L1 system prompt
-configuration can reduce the probability of dangerous output
-generation. Instructing the model to never generate raw HTML,
-SQL, or shell commands reduces the attack surface at the source.
-
-Mitigations at L1:
-- System prompt restrictions — model instructed to produce
-  only plain text or structured JSON, never raw HTML or SQL
-- Output format constraints — structured output with schema
-  validation reduces injection surface
-
-#### Cross-references
-- Agentic Top 10: ASI02 Tool Misuse & Exploitation
-- DSGAI 2026: DSGAI12 Unsafe NL Data Gateways
-- Other files: LLM_STRIDE.md (Tampering/Elevation), LLM_CWE_CVE.md (CWE-79/89/78)
-
----
-
-### LLM06 — Excessive Agency
-
-**Severity:** High
 **Originating layer:** L6 — Security & Compliance
 **Propagation path:** L6 (over-broad permission granted) → L3 (framework executes unrestricted) → L7 (action visible to other agents)
 
@@ -552,208 +351,156 @@ Mitigations at L7:
 
 ---
 
-### LLM07 — System Prompt Leakage
+### LLM04 — Supply Chain
 
 **Severity:** High
-**Originating layer:** L1 — Foundation Models
-**Propagation path:** L1 (model reproduces confidential context) ← L6 (confidential content placed in prompt)
+**Originating layer:** L3/L4 — Agent Frameworks / Deployment & Infrastructure
+**Propagation path:** L3 (plugins/tools) ← L4 (model weights/infra) ← L2 (datasets)
 
-System prompt leakage originates at L1 — the model reproduces
-confidential instructions, credentials, or business logic from
-its context window in response to adversarial extraction prompts.
-The contributing cause is at L6: confidential information that
-should not be in the system prompt has been placed there,
-creating a leakage target.
+LLM supply chain threats originate at multiple layers: L3 for
+plugin and tool supply chain components, L4 for model weight
+and runtime library integrity, and L2 for training and
+fine-tuning dataset provenance. Compromise at any layer can
+cascade to L1 (backdoored model behaviour) or L5 (undetected
+through compromised monitoring).
+
+The 2026 entry adds artifact provenance to this scope. A promoted
+model, adapter, or converted artifact that is not what it claims to be —
+unsigned weights, a hijacked conversion or merge service, or namespace reuse
+on a model hub — is a supply-chain compromise even when every package
+dependency is clean.
 
 #### MAESTRO layer analysis
 
-**L1 — Foundation Models (originating)**
+**L3 — Agent Frameworks (plugin and tool supply chain)**
 
-Current LLMs do not structurally prevent reproduction of system
-prompt content when adversarial prompts create sufficient
-extraction pressure. The model was trained to be helpful and
-to reproduce context content when asked — adversarial extraction
-exploits this property. Instruction-following fine-tuning that
-teaches the model to decline system prompt reproduction is the
-primary L1 mitigation.
+Third-party plugins, tool integrations, and MCP server
+implementations are L3 supply chain components. A compromised
+plugin descriptor or malicious tool implementation executes
+with the agent's full permission scope — the framework has
+no inherent mechanism to verify that a tool does what its
+descriptor claims.
 
-Mitigations at L1:
-- System prompt non-disclosure instruction — explicit
-  instruction that system prompt contents are confidential
-  and must not be reproduced
-- Refusal consistency testing — verify model refuses
-  system prompt extraction across varied request phrasings,
-  translation tasks, and role-play scenarios
-- Minimise confidential content in system prompt —
-  business logic and credentials not placed in context
-  window (move to secure external storage)
+Mitigations at L3:
+- Plugin and tool SBOM — every integration component
+  inventoried with version, source, and integrity hash
+- Descriptor integrity verification before tool loading —
+  cryptographic signatures on tool descriptors
+- Vendor security assessment before any third-party
+  component enters production
 
-**L6 — Security & Compliance (contributing layer)**
+**L4 — Deployment & Infrastructure (model weight and runtime)**
 
-The severity of system prompt leakage scales with the
-sensitivity of what is in the system prompt. Credentials,
-API keys, and proprietary business logic in the system
-prompt create high-severity leakage targets. These assets
-belong in secure external storage, not in the context window.
+Model weights downloaded from third-party sources and ML
+library dependencies are L4 supply chain assets. Tampered
+model weights or vulnerable runtime libraries compromise the
+entire stack above them — all L1 through L7 security properties
+depend on L4 integrity.
 
-Mitigations at L6:
-- Credentials management — all credentials accessed via
-  secrets manager at runtime, never embedded in system prompt
-- System prompt classification — treat system prompt
-  content as a confidential asset; access controls on
-  who can read and modify it
-- System prompt rotation — rotate system prompts on a
-  schedule to limit the impact of leakage
+Mitigations at L4:
+- Model weight cryptographic verification before deployment —
+  hash comparison against vendor-published baseline
+- Dependency vulnerability scanning in CI/CD pipeline —
+  ML libraries and inference runtime CVE monitoring
+- Immutable model registry — deployed model versions pinned,
+  verified, and never overwritten in place
+
+**L2 — Data Operations (dataset supply chain)**
+
+Training and fine-tuning datasets sourced from third parties
+are L2 supply chain components. An adversary who controls a
+public dataset used for fine-tuning can introduce backdoors or
+biases that survive into the deployed model (see also LLM05).
+
+Mitigations at L2:
+- Dataset provenance documentation for all training corpora —
+  source, version, integrity hash, and quality review recorded
+- Statistical quality gates on ingested datasets — outlier
+  detection before training begins
 
 #### Cross-references
-- LLM Top 10: LLM01 Prompt Injection
-- DSGAI 2026: DSGAI15 Over-Broad Context Windows
-- Other files: LLM_STRIDE.md (Information Disclosure/Repudiation), LLM_CWE_CVE.md (CWE-200/922)
+- Agentic Top 10: ASI04 Agentic Supply Chain
+- DSGAI 2026: DSGAI06 Tool, Plugin & Agent Data Exchange
+- Other files: LLM_STRIDE.md (Tampering/Repudiation), LLM_CWE_CVE.md (CWE-494/829)
 
 ---
 
-### LLM08 — Vector and Embedding Weaknesses
+### LLM05 — Data and Model Poisoning
 
-**Severity:** Medium
+**Severity:** Critical
 **Originating layer:** L2 — Data Operations
-**Propagation path:** L2 (insecure vector store) → L4 (infrastructure exposure) → L6 (access control gap)
+**Propagation path:** L2 (poisoned data) → L1 (corrupted behaviour) → L5 (monitoring blind spot)
 
-Vector databases storing embeddings are L2 data assets with
-distinct security properties from traditional databases.
-Embedding inversion attacks can reconstruct training data from
-vectors; retrieval authorisation failures expose documents
-across permission boundaries; vector store infrastructure
-misconfiguration (L4) enables unauthenticated access; and
-missing access controls (L6) allow cross-tenant retrieval.
+Poisoning originates at L2 when adversarially crafted training
+data, fine-tuning corpora, or RAG content enters the pipeline.
+The corrupted behaviour manifests at L1 when the model is
+deployed, and L5 monitoring systems may fail to detect it
+because the model produces outputs consistent with its poisoned
+training — the anomaly looks like correct behaviour.
+
+The 2026 entry folds in fine-tuning subversion. A supplier LoRA
+adapter, a customer fine-tune, or a distilled checkpoint can carry a backdoor
+that no pre-training control catches, so poisoning defences must cover every
+stage that writes weights, not just the original training corpus.
 
 #### MAESTRO layer analysis
 
 **L2 — Data Operations (originating)**
 
-Embeddings are dense representations of the training and
-document corpus — they encode semantic information that can
-be recovered through inversion attacks. The vector store is
-a high-value L2 data asset that requires the same security
-treatment as the primary data store, not the relaxed treatment
-typically applied to search indexes.
+The attacker's leverage point is write access to data that
+shapes the model — training corpora, fine-tuning datasets,
+RAG indexes, or memory stores. Poisoned data at L2 is
+invisible to most runtime security controls because the
+corruption happens before deployment.
 
 Mitigations at L2:
-- Embedding classification — vector stores classified as
-  sensitive data assets with appropriate handling requirements
-- Retrieval scope enforcement — RAG queries bounded to
-  the authenticated user's document permission level;
-  namespace isolation between tenants
-- Embedding provenance — each embedding traceable to its
-  source document with classification label
+- Data provenance tracking — every training sample traceable
+  to verified source with integrity hash
+- Statistical anomaly detection on ingested datasets —
+  label inconsistency, outlier distributions, unexpected
+  content patterns detected before model training
+- Immutable training data — once verified, training corpora
+  write-protected to prevent post-verification modification
 
-**L4 — Deployment & Infrastructure (infrastructure layer)**
+**L1 — Foundation Models (manifesting layer)**
 
-Vector database authentication, network exposure, and access
-logging are L4 concerns. Many default vector database
-deployments are unauthenticated and network-accessible —
-an L4 configuration gap that bypasses all L2 data governance.
+Poisoned behaviour surfaces at L1 when the deployed model
+responds to trigger inputs or produces systematically biased
+outputs. Behavioural testing at L1 must specifically probe
+for known backdoor trigger patterns before production release.
 
-Mitigations at L4:
-- Authentication and encryption required for all vector
-  store API endpoints — no unauthenticated access
-- Network segmentation — vector store not exposed beyond
-  the application tier; no direct external access
-- Access logging — all vector store operations logged
-  with caller identity and query content
+Mitigations at L1:
+- Pre-deployment adversarial testing — probing with trigger
+  patterns across all use case configurations
+- Behavioural baseline establishment — document expected
+  model response distributions to enable drift detection
+- Model weight integrity verification — verify deployed
+  weights match the training pipeline output
 
-**L6 — Security & Compliance (access control layer)**
+**L5 — Evaluation & Observability (detection challenge)**
 
-Cross-tenant and cross-classification retrieval failures
-are L6 access control issues — the permission model does
-not correctly enforce document-level authorisation on
-semantic similarity retrieval.
+Poisoned models produce outputs that appear correct under
+normal operating conditions — the anomaly only manifests
+with trigger inputs. Standard output quality monitoring
+will not detect this. L5 monitoring must include adversarial
+probing, not just passive quality metrics.
 
-Mitigations at L6:
-- Document-level authorisation on retrieval — permission
-  check per document before including in retrieval results
-- Tenant namespace isolation enforced at the access
-  control layer, not just the application layer
+Mitigations at L5:
+- Scheduled adversarial probing of deployed models —
+  trigger pattern testing integrated into continuous monitoring
+- Output distribution drift detection — statistical
+  anomalies in response distributions trigger investigation
 
 #### Cross-references
 - Agentic Top 10: ASI06 Memory & Context Poisoning
-- DSGAI 2026: DSGAI13 Vector Store Platform Security
-- Other files: LLM_STRIDE.md (Information Disclosure), LLM_CWE_CVE.md (CWE-285/306)
+- DSGAI 2026: DSGAI04 Data, Model & Artifact Poisoning, DSGAI21 Disinformation via Data Poisoning
+- Other files: LLM_STRIDE.md (Tampering), LLM_CWE_CVE.md (CWE-20/345)
 
 ---
 
-### LLM09 — Misinformation
+### LLM06 — Unbounded Consumption
 
-**Severity:** Medium
-**Originating layer:** L1 — Foundation Models
-**Propagation path:** L1 (model generates false content) ← L2 (training data quality) → L5 (no detection)
-
-Misinformation originates at L1 — the model generates plausible
-but false content as a fundamental property of generative
-architectures. L2 training data quality affects the frequency
-and domain of hallucination; L5 monitoring must detect
-misinformation events rather than allowing them to reach
-downstream consumers unvalidated.
-
-#### MAESTRO layer analysis
-
-**L1 — Foundation Models (originating)**
-
-Current LLMs generate fluent, confident-sounding text even
-when producing factually incorrect content. This is an inherent
-L1 property: the model optimises for plausible token sequences,
-not for factual accuracy. Retrieval augmentation (L2) reduces
-hallucination rate but does not eliminate it; output confidence
-scores do not reliably predict factual accuracy.
-
-Mitigations at L1:
-- System prompt grounding — instruct model to acknowledge
-  uncertainty rather than fabricate confident responses
-- Output citation requirements — high-stakes use cases
-  require model to cite sources that can be verified
-- Hallucination-resistant prompting patterns —
-  chain-of-thought, step-by-step verification, and
-  explicit uncertainty expression instructions
-
-**L2 — Data Operations (training quality)**
-
-Training data quality shapes the model's domain knowledge.
-Low-quality, biased, or outdated training corpora produce
-models with higher hallucination rates in the affected
-domains. RAG retrieval (also L2) can partially compensate
-by grounding responses in verified document content.
-
-Mitigations at L2:
-- Training data quality gates — factual accuracy assessment,
-  recency review, and source credibility scoring before
-  training data ingestion
-- RAG grounding — high-stakes use cases retrieve from
-  verified, curated document corpora rather than relying
-  on model parametric knowledge
-
-**L5 — Evaluation & Observability (detection layer)**
-
-Without output factual accuracy monitoring, misinformation
-reaches end users undetected. L5 misinformation detection
-requires domain-specific ground truth benchmarks and
-continuous output evaluation, not just generic quality metrics.
-
-Mitigations at L5:
-- Factual accuracy benchmarking — domain-specific
-  question sets with verified answers run against the
-  deployed model on a scheduled basis
-- Citation verification pipeline — automated checking
-  that model-generated citations are real and accurate
-
-#### Cross-references
-- DSGAI 2026: DSGAI21 Disinformation via Data Poisoning
-- Agentic Top 10: ASI09 Human-Agent Trust Exploitation
-- Other files: LLM_STRIDE.md (Repudiation/Tampering), LLM_AITG.md (TC-LLM09)
-
----
-
-### LLM10 — Unbounded Consumption
-
-**Severity:** Medium
+**Severity:** High
 **Originating layer:** L4 — Deployment & Infrastructure
 **Propagation path:** L4 (no resource controls) ← L3 (no framework-level limits) → L5 (no consumption monitoring)
 
@@ -823,6 +570,289 @@ Mitigations at L5:
 
 ---
 
+### LLM07 — Misinformation
+
+**Severity:** High
+**Originating layer:** L1 — Foundation Models
+**Propagation path:** L1 (model generates false content) ← L2 (training data quality) → L5 (no detection)
+
+Misinformation originates at L1 — the model generates plausible
+but false content as a fundamental property of generative
+architectures. L2 training data quality affects the frequency
+and domain of hallucination; L5 monitoring must detect
+misinformation events rather than allowing them to reach
+downstream consumers unvalidated.
+
+#### MAESTRO layer analysis
+
+**L1 — Foundation Models (originating)**
+
+Current LLMs generate fluent, confident-sounding text even
+when producing factually incorrect content. This is an inherent
+L1 property: the model optimises for plausible token sequences,
+not for factual accuracy. Retrieval augmentation (L2) reduces
+hallucination rate but does not eliminate it; output confidence
+scores do not reliably predict factual accuracy.
+
+Mitigations at L1:
+- System prompt grounding — instruct model to acknowledge
+  uncertainty rather than fabricate confident responses
+- Output citation requirements — high-stakes use cases
+  require model to cite sources that can be verified
+- Hallucination-resistant prompting patterns —
+  chain-of-thought, step-by-step verification, and
+  explicit uncertainty expression instructions
+
+**L2 — Data Operations (training quality)**
+
+Training data quality shapes the model's domain knowledge.
+Low-quality, biased, or outdated training corpora produce
+models with higher hallucination rates in the affected
+domains. RAG retrieval (also L2) can partially compensate
+by grounding responses in verified document content.
+
+Mitigations at L2:
+- Training data quality gates — factual accuracy assessment,
+  recency review, and source credibility scoring before
+  training data ingestion
+- RAG grounding — high-stakes use cases retrieve from
+  verified, curated document corpora rather than relying
+  on model parametric knowledge
+
+**L5 — Evaluation & Observability (detection layer)**
+
+Without output factual accuracy monitoring, misinformation
+reaches end users undetected. L5 misinformation detection
+requires domain-specific ground truth benchmarks and
+continuous output evaluation, not just generic quality metrics.
+
+Mitigations at L5:
+- Factual accuracy benchmarking — domain-specific
+  question sets with verified answers run against the
+  deployed model on a scheduled basis
+- Citation verification pipeline — automated checking
+  that model-generated citations are real and accurate
+
+#### Cross-references
+- DSGAI 2026: DSGAI21 Disinformation via Data Poisoning
+- Agentic Top 10: ASI09 Human-Agent Trust Exploitation
+- Other files: LLM_STRIDE.md (Repudiation/Tampering), LLM_AITG.md (TC-LLM07)
+
+---
+
+### LLM08 — Hidden Context Exposure
+
+**Severity:** High
+**Originating layer:** L1 — Foundation Models
+**Propagation path:** L1 (model reproduces confidential context) ← L6 (confidential content placed in prompt)
+
+Hidden context exposure originates at L1 — the model reproduces
+confidential instructions, credentials, or business logic from
+its context window in response to adversarial extraction prompts.
+The contributing cause is at L6: confidential information that
+should not be in the system prompt has been placed there,
+creating a leakage target.
+
+The 2026 list broadens the former System Prompt Leakage entry to cover all
+non-user-facing context, not just the system prompt. Severity tracks what
+that context holds: internal rules and workflow logic are medium, embedded
+credentials or reliance on context secrecy for authorisation are high, and
+disclosure that chains to code execution or broad exfiltration is critical.
+Design on the assumption that hidden context is discoverable, and never
+treat it as a security boundary.
+
+#### MAESTRO layer analysis
+
+**L1 — Foundation Models (originating)**
+
+Current LLMs do not structurally prevent reproduction of system
+prompt content when adversarial prompts create sufficient
+extraction pressure. The model was trained to be helpful and
+to reproduce context content when asked — adversarial extraction
+exploits this property. Instruction-following fine-tuning that
+teaches the model to decline system prompt reproduction is the
+primary L1 mitigation.
+
+Mitigations at L1:
+- System prompt non-disclosure instruction — explicit
+  instruction that system prompt contents are confidential
+  and must not be reproduced
+- Refusal consistency testing — verify model refuses
+  system prompt extraction across varied request phrasings,
+  translation tasks, and role-play scenarios
+- Minimise confidential content in system prompt —
+  business logic and credentials not placed in context
+  window (move to secure external storage)
+
+**L6 — Security & Compliance (contributing layer)**
+
+The severity of hidden context exposure scales with the
+sensitivity of what is in the system prompt. Credentials,
+API keys, and proprietary business logic in the system
+prompt create high-severity leakage targets. These assets
+belong in secure external storage, not in the context window.
+
+Mitigations at L6:
+- Credentials management — all credentials accessed via
+  secrets manager at runtime, never embedded in system prompt
+- System prompt classification — treat system prompt
+  content as a confidential asset; access controls on
+  who can read and modify it
+- System prompt rotation — rotate system prompts on a
+  schedule to limit the impact of leakage
+
+#### Cross-references
+- LLM Top 10: LLM01 Prompt Injection
+- DSGAI 2026: DSGAI15 Over-Broad Context Windows
+- Other files: LLM_STRIDE.md (Information Disclosure/Repudiation), LLM_CWE_CVE.md (CWE-200/922)
+
+---
+
+### LLM09 — Vector and Embedding Weaknesses
+
+**Severity:** Medium
+**Originating layer:** L2 — Data Operations
+**Propagation path:** L2 (insecure vector store) → L4 (infrastructure exposure) → L6 (access control gap)
+
+Vector databases storing embeddings are L2 data assets with
+distinct security properties from traditional databases.
+Embedding inversion attacks can reconstruct training data from
+vectors; retrieval authorisation failures expose documents
+across permission boundaries; vector store infrastructure
+misconfiguration (L4) enables unauthenticated access; and
+missing access controls (L6) allow cross-tenant retrieval.
+
+#### MAESTRO layer analysis
+
+**L2 — Data Operations (originating)**
+
+Embeddings are dense representations of the training and
+document corpus — they encode semantic information that can
+be recovered through inversion attacks. The vector store is
+a high-value L2 data asset that requires the same security
+treatment as the primary data store, not the relaxed treatment
+typically applied to search indexes.
+
+Mitigations at L2:
+- Embedding classification — vector stores classified as
+  sensitive data assets with appropriate handling requirements
+- Retrieval scope enforcement — RAG queries bounded to
+  the authenticated user's document permission level;
+  namespace isolation between tenants
+- Embedding provenance — each embedding traceable to its
+  source document with classification label
+
+**L4 — Deployment & Infrastructure (infrastructure layer)**
+
+Vector database authentication, network exposure, and access
+logging are L4 concerns. Many default vector database
+deployments are unauthenticated and network-accessible —
+an L4 configuration gap that bypasses all L2 data governance.
+
+Mitigations at L4:
+- Authentication and encryption required for all vector
+  store API endpoints — no unauthenticated access
+- Network segmentation — vector store not exposed beyond
+  the application tier; no direct external access
+- Access logging — all vector store operations logged
+  with caller identity and query content
+
+**L6 — Security & Compliance (access control layer)**
+
+Cross-tenant and cross-classification retrieval failures
+are L6 access control issues — the permission model does
+not correctly enforce document-level authorisation on
+semantic similarity retrieval.
+
+Mitigations at L6:
+- Document-level authorisation on retrieval — permission
+  check per document before including in retrieval results
+- Tenant namespace isolation enforced at the access
+  control layer, not just the application layer
+
+#### Cross-references
+- Agentic Top 10: ASI06 Memory & Context Poisoning
+- DSGAI 2026: DSGAI13 Vector Store Platform Security
+- Other files: LLM_STRIDE.md (Information Disclosure), LLM_CWE_CVE.md (CWE-285/306)
+
+---
+
+### LLM10 — Improper Output Handling
+
+**Severity:** High
+**Originating layer:** L3 — Agent Frameworks
+**Propagation path:** L3 (output passed without sanitisation) → L4 (downstream system executes) ← L1 (model generates dangerous content)
+
+Insecure output handling originates at L3 when the orchestration
+framework passes LLM-generated content to downstream systems —
+HTML renderers, SQL engines, shell interpreters, HTTP clients —
+without sanitisation. The L1 model generated the dangerous
+content; the L3 framework failed to validate it before passing
+it to an L4 system that executes it with real-world consequences.
+
+The 2026 entry renames Insecure Output Handling to Improper Output
+Handling and widens it to cover the insecure code that coding assistants
+generate at scale. Output that reaches a compiler, a repository, or a
+production system carries the same downstream-execution risk as output that
+reaches a shell, a browser, or a database.
+
+#### MAESTRO layer analysis
+
+**L3 — Agent Frameworks (originating)**
+
+The framework is responsible for the interface between model
+output and downstream consumers. Treating LLM output as trusted
+content — passing it directly to HTML templates, SQL queries,
+or shell commands — is the architectural failure. The framework
+must validate and sanitise every output before it crosses
+a trust boundary.
+
+Mitigations at L3:
+- Output validation layer between model and downstream system —
+  content type, schema, and injection pattern validation
+  before any LLM output is consumed by another component
+- Contextual output encoding — HTML encoding for web
+  rendering, parameterised queries for database operations,
+  sandbox execution for generated code
+- Output allowlisting — LLM output permitted only in
+  defined, validated forms for each downstream consumer
+
+**L4 — Deployment & Infrastructure (execution layer)**
+
+The downstream system that executes unsafe LLM output is
+an L4 component — a web server rendering HTML, a database
+engine executing SQL, a container running generated scripts.
+L4 defences provide defence-in-depth when L3 validation fails.
+
+Mitigations at L4:
+- WAF rules covering LLM output injection patterns
+  at the network layer
+- Database least-privilege — LLM-connected accounts
+  cannot execute DDL; parameterised queries enforced
+  at the database layer regardless of calling code
+- Container sandboxing for any LLM-generated code execution —
+  no host filesystem or network access from execution sandbox
+
+**L1 — Foundation Models (generation layer)**
+
+While the root cause is L3 handling, L1 system prompt
+configuration can reduce the probability of dangerous output
+generation. Instructing the model to never generate raw HTML,
+SQL, or shell commands reduces the attack surface at the source.
+
+Mitigations at L1:
+- System prompt restrictions — model instructed to produce
+  only plain text or structured JSON, never raw HTML or SQL
+- Output format constraints — structured output with schema
+  validation reduces injection surface
+
+#### Cross-references
+- Agentic Top 10: ASI02 Tool Misuse & Exploitation
+- DSGAI 2026: DSGAI12 Unsafe NL Data Gateways
+- Other files: LLM_STRIDE.md (Tampering/Elevation), LLM_CWE_CVE.md (CWE-79/89/78)
+
+---
+
 ## MAESTRO threat modeling session guide for LLM
 
 ### Session structure
@@ -861,10 +891,10 @@ to fix) × severity × exploitability in your deployment context.
 
 | Priority | LLM IDs | MAESTRO focus layer | Rationale |
 |---|---|---|---|
-| P1 — Critical | LLM01, LLM04 | L1/L2 | Prompt injection and poisoning — fundamental model and data layer risks |
-| P2 — High | LLM02, LLM05, LLM06 | L2/L3/L6 | Data disclosure, output handling, permission scope |
-| P3 — High | LLM03, LLM07 | L3/L4/L1 | Supply chain integrity, system prompt protection |
-| P4 — Medium | LLM08, LLM09, LLM10 | L2/L1/L4/L5 | Vector store, misinformation, consumption controls |
+| P1 — Critical | LLM01, LLM05 | L1/L2 | Prompt injection and poisoning — fundamental model and data layer risks |
+| P2 — High | LLM02, LLM10, LLM03 | L2/L3/L6 | Data disclosure, output handling, permission scope |
+| P3 — High | LLM04, LLM08 | L3/L4/L1 | Supply chain integrity, system prompt protection |
+| P4 — Medium | LLM09, LLM07, LLM06 | L2/L1/L4/L5 | Vector store, misinformation, consumption controls |
 
 ---
 
@@ -872,7 +902,7 @@ to fix) × severity × exploitability in your deployment context.
 
 - [MAESTRO Framework — Cloud Security Alliance](https://cloudsecurityalliance.org/blog/2025/02/06/agentic-ai-threat-modeling-framework-maestro)
 - [MAESTRO GitHub Repository](https://github.com/CloudSecurityAlliance/MAESTRO)
-- [OWASP Top 10 for LLM Applications 2025](https://genai.owasp.org/llm-top-10/)
+- [OWASP Top 10 for LLM Applications 2026](https://genai.owasp.org/llm-top-10/)
 - [OWASP GenAI Security Multi-Agentic System Threat Modeling Guide v1.0](https://genai.owasp.org)
 - [Agentic_MAESTRO.md](../agentic-top10/Agentic_MAESTRO.md) — MAESTRO × Agentic Top 10
 - [DSGAI_MAESTRO.md](../dsgai-2026/DSGAI_MAESTRO.md) — MAESTRO × DSGAI 2026
@@ -884,6 +914,7 @@ to fix) × severity × exploitability in your deployment context.
 | Version | Date | Change |
 |---|---|---|
 | 1.0 | 2026-03-27 | Initial release — full LLM01–LLM10 mapping to MAESTRO seven-layer architecture |
+| 1.1 | 2026-08-28 | Migrated to OWASP Top 10 for LLM Applications 2026 — entries renumbered, LLM08 re-scoped from System Prompt Leakage to Hidden Context Exposure, LLM10 renamed to Improper Output Handling |
 
 ---
 

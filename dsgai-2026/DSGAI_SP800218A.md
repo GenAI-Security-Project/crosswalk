@@ -141,7 +141,7 @@ trails (RV.1).
 | Azure Monitor | Commercial | https://azure.microsoft.com/en-us/products/monitor |
 
 #### Cross-references
-- LLM Top 10: LLM03 Training Data Poisoning, LLM07 System Prompt Leakage
+- LLM Top 10: LLM05 Data and Model Poisoning, LLM08 Hidden Context Exposure
 - Agentic Top 10: ASI02 Tool Misuse, ASI06 Memory & Context Poisoning
 - Other frameworks: NIST CSF 2.0 DE.CM – ISO 42001 6.1.2 – SSDF PS.1
 
@@ -204,7 +204,7 @@ documentation (PW.2).
 | Collibra | Commercial | https://www.collibra.com |
 
 #### Cross-references
-- LLM Top 10: LLM03 Training Data Poisoning, LLM05 Supply Chain Vulnerabilities
+- LLM Top 10: LLM05 Data and Model Poisoning, LLM04 Supply Chain
 - Agentic Top 10: ASI04 Agentic Supply Chain Vulnerabilities
 - Other frameworks: EU AI Act Art. 13 – ISO 42001 A.7 – NIST AI RMF Map 1.1
 
@@ -268,7 +268,7 @@ vulnerability identification for shadow AI exposure (RV.1).
 | OpenDLP | Open-source | https://github.com/ezarko/opendlp |
 
 #### Cross-references
-- LLM Top 10: LLM05 Supply Chain Vulnerabilities, LLM06 Excessive Agency
+- LLM Top 10: LLM04 Supply Chain, LLM03 Excessive Agency
 - Agentic Top 10: ASI04 Agentic Supply Chain Vulnerabilities, ASI10 AI Agent Dependency Failures
 - Other frameworks: NIST CSF 2.0 ID.AM – ISO 27001 A.8.1 – CIS Control 2
 
@@ -344,7 +344,7 @@ analysis (RV.3).
 | Great Expectations | Open-source | https://greatexpectations.io |
 
 #### Cross-references
-- LLM Top 10: LLM03 Training Data Poisoning, LLM05 Supply Chain Vulnerabilities
+- LLM Top 10: LLM05 Data and Model Poisoning, LLM04 Supply Chain
 - Agentic Top 10: ASI04 Agentic Supply Chain Vulnerabilities, ASI06 Memory & Context Poisoning
 - Other frameworks: MITRE ATLAS AML.T0032 – NIST CSF 2.0 PR.DS-8 – ISO 42001 6.1.2
 
@@ -412,7 +412,7 @@ vetting (PW.4).
 | Pachyderm | Open-source | https://www.pachyderm.com |
 
 #### Cross-references
-- LLM Top 10: LLM03 Training Data Poisoning, LLM05 Supply Chain Vulnerabilities
+- LLM Top 10: LLM05 Data and Model Poisoning, LLM04 Supply Chain
 - Agentic Top 10: ASI04 Agentic Supply Chain Vulnerabilities
 - Other frameworks: NIST AI RMF Map 2.3 – ISO 42001 A.7.3 – EU AI Act Art. 10
 
@@ -478,7 +478,7 @@ addresses this through versioned artefact management with lineage metadata
 | DataHub | Open-source | https://datahubproject.io |
 
 #### Cross-references
-- LLM Top 10: LLM03 Training Data Poisoning, LLM05 Supply Chain Vulnerabilities
+- LLM Top 10: LLM05 Data and Model Poisoning, LLM04 Supply Chain
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - Other frameworks: NIST AI RMF Measure 2.6 – ISO 42001 A.7.3 – EU AI Act Art. 12
 
@@ -545,7 +545,7 @@ analysis (PW.2).
 | Presidio | Open-source | https://github.com/microsoft/presidio |
 
 #### Cross-references
-- LLM Top 10: LLM03 Training Data Poisoning, LLM08 Vector and Embedding Weaknesses
+- LLM Top 10: LLM05 Data and Model Poisoning, LLM09 Vector and Embedding Weaknesses
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - Other frameworks: GDPR Art. 5(1)(c) – NIST Privacy Framework CT.DM-P – ISO 27701 A.7.4
 
@@ -618,7 +618,7 @@ and output review for unintended disclosure (PW.7).
 | OpenDP | Open-source | https://opendp.org |
 
 #### Cross-references
-- LLM Top 10: LLM07 System Prompt Leakage, LLM01 Prompt Injection
+- LLM Top 10: LLM08 Hidden Context Exposure, LLM01 Prompt Injection
 - Agentic Top 10: ASI01 Agent Goal Hijack, ASI02 Tool Misuse
 - Other frameworks: MITRE ATLAS AML.T0024 – GDPR Art. 32 – NIST CSF 2.0 PR.DS-5
 
@@ -684,7 +684,7 @@ versioned, access-controlled artefact management (PS.3).
 | Azure Confidential Computing | Commercial | https://azure.microsoft.com/en-us/solutions/confidential-compute/ |
 
 #### Cross-references
-- LLM Top 10: LLM03 Training Data Poisoning, LLM05 Supply Chain Vulnerabilities
+- LLM Top 10: LLM05 Data and Model Poisoning, LLM04 Supply Chain
 - Agentic Top 10: ASI04 Agentic Supply Chain Vulnerabilities
 - Other frameworks: MITRE ATLAS AML.T0024 – TRIPS Agreement Art. 39 – EU Trade Secrets Directive
 
@@ -752,7 +752,7 @@ quality review (PW.7), adversarial testing of synthetic data fidelity
 | Anonymeter | Open-source | https://github.com/statice/anonymeter |
 
 #### Cross-references
-- LLM Top 10: LLM09 Misinformation, LLM03 Training Data Poisoning
+- LLM Top 10: LLM07 Misinformation, LLM05 Data and Model Poisoning
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - Other frameworks: NIST AI RMF Measure 2.11 – Article 29 WP Opinion on Anonymisation – ISO 27559
 
@@ -820,7 +820,7 @@ remediation procedures for deletion requests (RV.2).
 | DVC (Data Version Control) | Open-source | https://dvc.org |
 
 #### Cross-references
-- LLM Top 10: LLM03 Training Data Poisoning, LLM08 Vector and Embedding Weaknesses
+- LLM Top 10: LLM05 Data and Model Poisoning, LLM09 Vector and Embedding Weaknesses
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - Other frameworks: GDPR Art. 17 – CCPA Sec. 1798.105 – NIST Privacy Framework CT.DP-P
 
@@ -887,7 +887,7 @@ data rights (PW.1) and access controls that enforce ownership boundaries
 | CycloneDX | Open-source | https://cyclonedx.org |
 
 #### Cross-references
-- LLM Top 10: LLM05 Supply Chain Vulnerabilities, LLM03 Training Data Poisoning
+- LLM Top 10: LLM04 Supply Chain, LLM05 Data and Model Poisoning
 - Agentic Top 10: ASI04 Agentic Supply Chain Vulnerabilities
 - Other frameworks: EU AI Act Art. 10 – Copyright Directive Art. 4 – WIPO AI & IP Policy
 
@@ -957,7 +957,7 @@ for misuse indicators (PW.7), and monitoring for data misuse in production
 | Collibra | Commercial | https://www.collibra.com |
 
 #### Cross-references
-- LLM Top 10: LLM06 Excessive Agency, LLM03 Training Data Poisoning
+- LLM Top 10: LLM03 Excessive Agency, LLM05 Data and Model Poisoning
 - Agentic Top 10: ASI01 Agent Goal Hijack, ASI02 Tool Misuse
 - Other frameworks: GDPR Art. 5(1)(b) – NIST Privacy Framework CT.PO-P – ISO 27701 A.7.2.2
 
@@ -1024,7 +1024,7 @@ consent enforcement mechanisms (PW.2).
 | Osano | Commercial | https://www.osano.com |
 
 #### Cross-references
-- LLM Top 10: LLM03 Training Data Poisoning, LLM06 Excessive Agency
+- LLM Top 10: LLM05 Data and Model Poisoning, LLM03 Excessive Agency
 - Agentic Top 10: ASI09 Human-Agent Trust Exploitation
 - Other frameworks: GDPR Art. 6–7 – CCPA Sec. 1798.120 – NIST Privacy Framework CT.PO-P
 
@@ -1091,7 +1091,7 @@ principles into pipeline architecture (PW.2).
 | Google Differential Privacy | Open-source | https://github.com/google/differential-privacy |
 
 #### Cross-references
-- LLM Top 10: LLM08 Vector and Embedding Weaknesses, LLM06 Excessive Agency
+- LLM Top 10: LLM09 Vector and Embedding Weaknesses, LLM03 Excessive Agency
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - Other frameworks: GDPR Art. 5(1)(c) – NIST Privacy Framework CT.DM-P – ISO 27701 A.7.4.1
 
@@ -1160,7 +1160,7 @@ that prevent privacy-eroding data combinations (PS.1).
 | Flower (Federated Learning) | Open-source | https://flower.ai |
 
 #### Cross-references
-- LLM Top 10: LLM08 Vector and Embedding Weaknesses, LLM01 Prompt Injection
+- LLM Top 10: LLM09 Vector and Embedding Weaknesses, LLM01 Prompt Injection
 - Agentic Top 10: ASI09 Human-Agent Trust Exploitation
 - Other frameworks: GDPR Art. 25 – NIST Privacy Framework – EU AI Act Art. 10 – ISO 27701
 
@@ -1229,7 +1229,7 @@ and root cause analysis tracing bias to data sources (RV.3).
 | Aequitas | Open-source | https://github.com/dssg/aequitas |
 
 #### Cross-references
-- LLM Top 10: LLM09 Misinformation, LLM03 Training Data Poisoning
+- LLM Top 10: LLM07 Misinformation, LLM05 Data and Model Poisoning
 - Agentic Top 10: ASI09 Human-Agent Trust Exploitation
 - Other frameworks: NIST AI RMF Measure 2.11 – EU AI Act Art. 10 – ISO 42001 A.7.4 – EEOC AI Guidance
 
@@ -1298,7 +1298,7 @@ that identifies governance failures (RV.3).
 | Open Policy Agent | Open-source | https://www.openpolicyagent.org |
 
 #### Cross-references
-- LLM Top 10: LLM06 Excessive Agency, LLM05 Supply Chain Vulnerabilities
+- LLM Top 10: LLM03 Excessive Agency, LLM04 Supply Chain
 - Agentic Top 10: ASI04 Agentic Supply Chain Vulnerabilities, ASI09 Human-Agent Trust Exploitation
 - Other frameworks: NIST AI RMF Govern – ISO 42001 5.1 – EU AI Act Art. 9 – OECD AI Principles
 
@@ -1367,7 +1367,7 @@ third-party vulnerability disclosures (RV.1).
 | OWASP Dependency-Check | Open-source | https://owasp.org/www-project-dependency-check/ |
 
 #### Cross-references
-- LLM Top 10: LLM05 Supply Chain Vulnerabilities, LLM03 Training Data Poisoning
+- LLM Top 10: LLM04 Supply Chain, LLM05 Data and Model Poisoning
 - Agentic Top 10: ASI04 Agentic Supply Chain Vulnerabilities, ASI10 AI Agent Dependency Failures
 - Other frameworks: SSDF PW.4 – NIST CSF 2.0 ID.SC – ISO 27036 – MITRE ATLAS AML.T0056
 
@@ -1438,7 +1438,7 @@ versioned artefact management with jurisdiction metadata (PS.3).
 | Privacera | Commercial | https://privacera.com |
 
 #### Cross-references
-- LLM Top 10: LLM07 System Prompt Leakage, LLM05 Supply Chain Vulnerabilities
+- LLM Top 10: LLM08 Hidden Context Exposure, LLM04 Supply Chain
 - Agentic Top 10: ASI04 Agentic Supply Chain Vulnerabilities
 - Other frameworks: GDPR Ch. V – China PIPL Art. 38 – India DPDP Sec. 16 – NIST Privacy Framework
 
@@ -1518,7 +1518,7 @@ failures (RV.3).
 | Transcend | Commercial | https://transcend.io |
 
 #### Cross-references
-- LLM Top 10: LLM06 Excessive Agency, LLM07 System Prompt Leakage
+- LLM Top 10: LLM03 Excessive Agency, LLM08 Hidden Context Exposure
 - Agentic Top 10: ASI09 Human-Agent Trust Exploitation
 - Other frameworks: GDPR – CCPA – EU AI Act – NIST AI RMF Govern 1.1 – ISO 42001 4.1
 

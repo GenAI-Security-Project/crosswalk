@@ -258,7 +258,7 @@ function loadEntries(severityFilter) {
     .filter(e => !severityFilter || e.severity === severityFilter)
     .sort((a, b) => {
       // Sort by source list order, then by ID number
-      const listOrder = { 'LLM-Top10-2025': 0, 'Agentic-Top10-2026': 1, 'DSGAI-2026': 2 };
+      const listOrder = { 'LLM-Top10-2026': 0, 'Agentic-Top10-2026': 1, 'DSGAI-2026': 2 };
       const la = listOrder[a.source_list] ?? 9;
       const lb = listOrder[b.source_list] ?? 9;
       if (la !== lb) return la - lb;

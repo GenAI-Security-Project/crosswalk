@@ -207,7 +207,7 @@ decisions (AU-2).
 | AWS IAM / Azure RBAC | Commercial | https://aws.amazon.com/iam/ |
 
 #### Cross-references
-- LLM Top 10: LLM06 Excessive Agency
+- LLM Top 10: LLM03 Excessive Agency
 - DSGAI 2026: DSGAI06 Data Lineage Fragmentation
 - Other frameworks: SP 800-218A PW.1.1-PS – NIST CSF 2.0 PR.AC-4 – CIS Controls 6
 
@@ -269,7 +269,7 @@ at tool boundaries (AC-3), and incident handling for escalation events (IR-4).
 | CyberArk | Commercial | https://www.cyberark.com |
 
 #### Cross-references
-- LLM Top 10: LLM06 Excessive Agency
+- LLM Top 10: LLM03 Excessive Agency
 - DSGAI 2026: DSGAI08 Data Leakage & Exposure
 - Other frameworks: SP 800-218A PW.1.1-PS – MITRE ATLAS AML.T0015 – CWE-269
 
@@ -332,7 +332,7 @@ development lifecycle for agent systems (SA-3).
 | OWASP Dependency-Check | Open-source | https://owasp.org/www-project-dependency-check/ |
 
 #### Cross-references
-- LLM Top 10: LLM05 Supply Chain Vulnerabilities
+- LLM Top 10: LLM04 Supply Chain
 - DSGAI 2026: DSGAI04 Data, Model & Artifact Poisoning, DSGAI19 Third-Party Data Risk
 - Other frameworks: MITRE ATLAS AML.T0056 – SP 800-218A PW.4.1-PS – CycloneDX ML SBOM
 
@@ -396,7 +396,7 @@ sandboxes (SC-7), malicious code protection for agent-generated code
 | E2B | Open-source | https://e2b.dev |
 
 #### Cross-references
-- LLM Top 10: LLM01 Prompt Injection, LLM06 Excessive Agency
+- LLM Top 10: LLM01 Prompt Injection, LLM03 Excessive Agency
 - DSGAI 2026: DSGAI08 Data Leakage & Exposure
 - Other frameworks: CWE-94 – SP 800-218A PW.5.1-PS – MITRE ATLAS AML.T0015
 
@@ -458,7 +458,7 @@ scanning covering memory infrastructure (RA-5).
 | HashiCorp Vault | Commercial | https://www.vaultproject.io |
 
 #### Cross-references
-- LLM Top 10: LLM03 Training Data Poisoning, LLM08 Vector and Embedding Weaknesses
+- LLM Top 10: LLM05 Data and Model Poisoning, LLM09 Vector and Embedding Weaknesses
 - DSGAI 2026: DSGAI04 Data, Model & Artifact Poisoning
 - Other frameworks: MITRE ATLAS AML.T0018 – SP 800-218A PS.1.1-PS – CWE-1395
 
@@ -522,7 +522,7 @@ boundary (AC-3), and comprehensive tool invocation logging (AU-2).
 | NeMo Guardrails | Open-source | https://github.com/NVIDIA/NeMo-Guardrails |
 
 #### Cross-references
-- LLM Top 10: LLM06 Excessive Agency
+- LLM Top 10: LLM03 Excessive Agency
 - DSGAI 2026: DSGAI06 Data Lineage Fragmentation
 - Other frameworks: SP 800-218A PW.1.1-PS – MITRE ATLAS AML.T0015 – CWE-269
 
@@ -585,7 +585,7 @@ strategy covering automation risk (PM-9).
 | PagerDuty | Commercial | https://www.pagerduty.com |
 
 #### Cross-references
-- LLM Top 10: LLM04 Model DoS, LLM10 Unbounded Consumption
+- LLM Top 10: LLM06 Unbounded Consumption
 - DSGAI 2026: DSGAI17 Data Availability & Resilience Failures
 - Other frameworks: SP 800-218A PW.2.1-PS – NIST CSF 2.0 RS.RP-1 – ISA/IEC 62443 SR 7.1
 
@@ -650,7 +650,7 @@ agent decisions (AU-6).
 | PyRIT | Open-source | https://github.com/Azure/PyRIT |
 
 #### Cross-references
-- LLM Top 10: LLM09 Misinformation
+- LLM Top 10: LLM07 Misinformation
 - DSGAI 2026: DSGAI18 Governance Gaps
 - Other frameworks: NIST AI RMF MAP 1.5 – SP 800-218A PW.7.2-PS – ISO 42001 A.6.2.6
 
@@ -713,7 +713,7 @@ failures (IR-4).
 | Istio | Open-source | https://istio.io |
 
 #### Cross-references
-- LLM Top 10: LLM05 Supply Chain Vulnerabilities, LLM10 Unbounded Consumption
+- LLM Top 10: LLM04 Supply Chain, LLM06 Unbounded Consumption
 - DSGAI 2026: DSGAI19 Third-Party Data Risk
 - Other frameworks: SP 800-218A PW.4.1-PS – NIST CSF 2.0 ID.SC-2 – CWE-754
 

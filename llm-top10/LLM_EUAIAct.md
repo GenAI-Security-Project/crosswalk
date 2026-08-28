@@ -1,15 +1,15 @@
 <!--
   OWASP GenAI Crosswalk
-  Source list : OWASP Top 10 for LLM Applications 2025 (LLM01–LLM10)
+  Source list : OWASP Top 10 for LLM Applications 2026 (LLM01–LLM10)
   Framework   : EU Artificial Intelligence Act (EU AI Act)
-  Version     : 2026-Q1
+  Version     : 2026-Q3
   Maintained by: OWASP GenAI Data Security Initiative — https://genai.owasp.org
   License     : CC BY-SA 4.0
 -->
 
-# LLM Top 10 2025 × EU AI Act
+# LLM Top 10 2026 × EU AI Act
 
-Mapping the [OWASP Top 10 for LLM Applications 2025](https://genai.owasp.org/llm-top-10/)
+Mapping the [OWASP Top 10 for LLM Applications 2026](https://genai.owasp.org/llm-top-10/)
 to the [EU Artificial Intelligence Act](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)
 (Regulation EU 2024/1689), which entered into force August 1, 2024.
 
@@ -61,14 +61,14 @@ testing and incident reporting obligations.
 |---|---|---|---|---|---|
 | LLM01 | Prompt Injection | Critical | Art. 9, Art. 15, Art. 55(1)(b) | High-risk · GPAI systemic | Foundational–Advanced |
 | LLM02 | Sensitive Information Disclosure | High | Art. 10, Art. 13, Art. 17, GDPR intersection | High-risk · GPAI · Limited risk | Foundational–Advanced |
-| LLM03 | Supply Chain Vulnerabilities | High | Art. 9, Art. 17, Art. 25, Art. 53(1)(a) | High-risk · GPAI | Foundational–Hardening |
-| LLM04 | Data and Model Poisoning | Critical | Art. 9, Art. 10, Art. 15, Art. 55(1)(b) | High-risk · GPAI systemic | Hardening–Advanced |
-| LLM05 | Insecure Output Handling | High | Art. 9, Art. 15, Art. 17 | High-risk · GPAI | Foundational–Hardening |
-| LLM06 | Excessive Agency | High | Art. 9, Art. 14, Art. 29 | High-risk · GPAI | Foundational–Hardening |
-| LLM07 | System Prompt Leakage | High | Art. 13, Art. 17, Art. 53(1)(b) | High-risk · GPAI · Limited risk | Foundational–Hardening |
-| LLM08 | Vector and Embedding Weaknesses | Medium | Art. 9, Art. 10, Art. 15 | High-risk · GPAI | Hardening–Advanced |
-| LLM09 | Misinformation | Medium | Art. 13, Art. 50, Art. 55(1)(a) | All tiers | Foundational–Hardening |
-| LLM10 | Unbounded Consumption | Medium | Art. 9, Art. 15, Art. 17 | High-risk · GPAI | Foundational–Hardening |
+| LLM03 | Excessive Agency | Critical | Art. 9, Art. 14, Art. 29 | High-risk · GPAI | Foundational–Hardening |
+| LLM04 | Supply Chain | High | Art. 9, Art. 17, Art. 25, Art. 53(1)(a) | High-risk · GPAI | Foundational–Hardening |
+| LLM05 | Data and Model Poisoning | Critical | Art. 9, Art. 10, Art. 15, Art. 55(1)(b) | High-risk · GPAI systemic | Hardening–Advanced |
+| LLM06 | Unbounded Consumption | High | Art. 9, Art. 15, Art. 17 | High-risk · GPAI | Foundational–Hardening |
+| LLM07 | Misinformation | High | Art. 13, Art. 50, Art. 55(1)(a) | All tiers | Foundational–Hardening |
+| LLM08 | Hidden Context Exposure | High | Art. 13, Art. 17, Art. 53(1)(b) | High-risk · GPAI · Limited risk | Foundational–Hardening |
+| LLM09 | Vector and Embedding Weaknesses | Medium | Art. 9, Art. 10, Art. 15 | High-risk · GPAI | Hardening–Advanced |
+| LLM10 | Improper Output Handling | High | Art. 9, Art. 15, Art. 17 | High-risk · GPAI | Foundational–Hardening |
 
 ---
 
@@ -76,11 +76,11 @@ testing and incident reporting obligations.
 
 - **CISO / governance** — full file, primary EU AI Act compliance reference
 - **Legal / compliance officer** — Articles mapping, risk classification, fines
-- **DPO (Data Protection Officer)** — LLM02, LLM04, LLM07 GDPR intersection
+- **DPO (Data Protection Officer)** — LLM02, LLM05, LLM08 GDPR intersection
 - **Security engineer** — Art. 9 and Art. 15 entries per vulnerability
 - **Developer** — Art. 15 technical robustness requirements
 - **Auditor** — Art. 17 quality management, Art. 9 risk management
-- **OT engineer** — LLM01, LLM04, LLM10 critical infrastructure provisions
+- **OT engineer** — LLM01, LLM05, LLM06 critical infrastructure provisions
 
 ---
 
@@ -119,6 +119,11 @@ behaviour, bypassing safety controls. The EU AI Act directly mandates
 cybersecurity and robustness measures for high-risk systems and
 adversarial testing for systemic risk GPAI models — both directly
 applicable to prompt injection.
+
+The 2026 entry extends prompt injection to cross-modal payloads.
+Instructions hidden in an image, an audio track, or a video frame reach the
+model without ever being human-readable, and steganographic or
+invisible-Unicode carriers survive review of the rendered interface.
 
 #### EU AI Act mapping
 
@@ -248,185 +253,9 @@ EU AI Act Art. 17 quality management failures: up to
 
 ---
 
-### LLM03 — Supply Chain Vulnerabilities
-
-**Severity:** High
-**Applies to:** High-risk AI systems · GPAI models
-
-Third-party model weights, datasets, libraries, and plugins introduce
-risks the deployer inherits. The EU AI Act explicitly addresses supply
-chain responsibilities — distributing obligations between providers,
-deployers, importers, and distributors.
-
-#### EU AI Act mapping
-
-| Article | Obligation | How it applies |
-|---|---|---|
-| Art. 9 — Risk management | Supply chain risks must be identified and mitigated in the risk management system | Third-party component risks are in scope for Art. 9 risk management |
-| Art. 17 — Quality management | Quality management must cover supply chain controls | Documented supply chain security procedures required |
-| Art. 25 — Value chain responsibilities | Responsibilities distributed along the AI value chain between providers and deployers | Providers must document what deployers inherit — deployers must verify |
-| Art. 53(1)(a) — GPAI documentation | GPAI providers must document training data governance including third-party sources | Third-party training data provenance is a GPAI documentation obligation |
-
-#### Compliance obligations by tier
-
-**Foundational — applies to all LLM deployments**
-- Art. 25: Understand and document your position in the AI value
-  chain — are you a provider, deployer, or both? Each carries
-  distinct obligations
-- Maintain a basic inventory of all third-party components used
-  in your LLM deployment
-
-**Hardening — required for high-risk AI systems**
-- Art. 9: Include supply chain risks in your formal risk management
-  system — third-party components assessed before production use
-- Art. 17: Establish documented supply chain security procedures —
-  component verification, version pinning, integrity checking
-- Art. 25: Document what obligations flow downstream to deployers —
-  include in contractual arrangements
-
-**Advanced — required for GPAI models**
-- Art. 53(1)(a): Document all training data sources including
-  third-party datasets — provenance, quality assessment, copyright
-  status, and privacy compliance
-- Implement ML SBOM generation as part of Art. 53 technical
-  documentation — available to the AI Office on request
-- Establish supply chain incident response — what happens when a
-  third-party component is compromised post-deployment
-
-#### Tools
-
-| Tool | Type | Link |
-|---|---|---|
-| CycloneDX | Open-source | https://cyclonedx.org |
-| ModelScan | Open-source | https://github.com/protectai/modelscan |
-| OWASP Dependency-Check | Open-source | https://owasp.org/www-project-dependency-check/ |
-
-#### Cross-references
-- Agentic Top 10: ASI04 Agentic Supply Chain Vulnerabilities
-- DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning
-- Other frameworks: NIST AI RMF MP-5.1 · NIST SP 800-218A · ISO 42001 8.4
-
----
-
-### LLM04 — Data and Model Poisoning
+### LLM03 — Excessive Agency
 
 **Severity:** Critical
-**Applies to:** High-risk AI systems · GPAI models with systemic risk
-
-Adversaries corrupt training data or model weights. The EU AI Act
-mandates data governance, quality controls, and adversarial robustness
-testing — all directly applicable to poisoning prevention and detection.
-
-#### EU AI Act mapping
-
-| Article | Obligation | How it applies |
-|---|---|---|
-| Art. 9 — Risk management | Data poisoning must be identified as a foreseeable risk and mitigated | Poisoning attack scenarios required in Art. 9 risk assessment |
-| Art. 10 — Data and data governance | Training data must be subject to appropriate governance practices — relevant, representative, free of errors | Data quality controls preventing poisoning are a compliance requirement |
-| Art. 15 — Accuracy, robustness, cybersecurity | High-risk AI must be resilient to attempts to alter performance through data manipulation | Technical robustness against poisoning is a binding Art. 15 requirement |
-| Art. 55(1)(b) — Systemic risk GPAI adversarial testing | Systemic risk GPAI providers must conduct adversarial testing to identify model-level risks | Poisoning detection is in scope for Art. 55 adversarial testing |
-
-#### Compliance obligations by tier
-
-**Foundational**
-- Art. 10: Establish data governance policy for all training data —
-  source validation, quality assessment, and lineage documentation
-  are baseline requirements for high-risk systems
-- Document data poisoning as a foreseeable risk in Art. 9 risk
-  management system
-
-**Hardening — required for high-risk AI systems**
-- Art. 10: Implement technical data quality controls — anomaly
-  detection on training datasets, source allowlisting, lineage
-  tracking — documented as Art. 17 quality management evidence
-- Art. 15: Implement and document adversarial robustness measures
-  against training data manipulation — auditable evidence required
-- Establish model rollback capability as part of Art. 17 post-market
-  monitoring response procedures
-
-**Advanced — required for systemic risk GPAI models**
-- Art. 55(1)(b): Conduct adversarial testing covering poisoning
-  attack scenarios — document results, available to AI Office
-- Art. 55: Implement incident reporting for serious poisoning
-  incidents — notify AI Office without undue delay
-- Apply differential privacy in training as an Art. 10 data
-  governance measure — document privacy budget
-
-#### Tools
-
-| Tool | Type | Link |
-|---|---|---|
-| IBM Adversarial Robustness Toolbox | Open-source | https://github.com/Trusted-AI/adversarial-robustness-toolbox |
-| CleanLab | Open-source | https://github.com/cleanlab/cleanlab |
-| Great Expectations | Open-source | https://greatexpectations.io |
-
-#### Cross-references
-- Agentic Top 10: ASI06 Memory & Context Poisoning
-- DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning, DSGAI21 Disinformation via Data Poisoning
-- Other frameworks: NIST AI RMF MS-3.3 · ISO 42001 8.4 · MITRE ATLAS AML.T0032
-
----
-
-### LLM05 — Insecure Output Handling
-
-**Severity:** High
-**Applies to:** High-risk AI systems · GPAI models
-
-LLM output passed to downstream systems without validation enables
-injection attacks. The EU AI Act requires accuracy and robustness
-of high-risk AI outputs and mandates quality management systems
-covering post-market monitoring of output incidents.
-
-#### EU AI Act mapping
-
-| Article | Obligation | How it applies |
-|---|---|---|
-| Art. 9 — Risk management | Output handling risks identified and mitigated | Insecure output handling included in risk management system |
-| Art. 15 — Accuracy, robustness, cybersecurity | Accurate, robust outputs resilient to misuse | Output validation and sanitisation are Art. 15 technical requirements |
-| Art. 17 — Quality management | Documented procedures covering output quality | Post-market monitoring of output handling incidents required |
-
-#### Compliance obligations by tier
-
-**Foundational**
-- Art. 9: Document insecure output handling as a foreseeable risk
-  in your risk management system — assign treatment controls
-- Treat all LLM output as untrusted input to downstream systems —
-  encoding, validation, and sanitisation mandatory
-
-**Hardening — required for high-risk AI systems**
-- Art. 15: Implement and document technical output security measures —
-  schema validation, sanitisation, encoding — as auditable evidence
-- Art. 17: Establish post-market monitoring for output handling
-  incidents — detection, logging, and response procedures
-- Include output injection scenarios in conformity assessment
-  testing evidence
-
-**Advanced**
-- Conduct DAST on all interfaces consuming LLM output — include
-  results in Art. 17 quality management documentation
-- Deploy dedicated output security layer documented as Art. 15
-  cybersecurity measure
-- Art. 17: Include output security in product change management
-  procedures — any change to output handling triggers re-testing
-
-#### Tools
-
-| Tool | Type | Link |
-|---|---|---|
-| OWASP ZAP | Open-source | https://www.zaproxy.org |
-| Semgrep | Open-source | https://semgrep.dev |
-| DOMPurify | Open-source | https://github.com/cure53/DOMPurify |
-
-#### Cross-references
-- Agentic Top 10: ASI02 Tool Misuse, ASI05 Unexpected Code Execution
-- DSGAI 2026: DSGAI05 Data Integrity & Validation Failures
-- Other frameworks: NIST AI RMF MS-2.6 · OWASP ASVS V5 · CWE-79
-
----
-
-### LLM06 — Excessive Agency
-
-**Severity:** High
 **Applies to:** High-risk AI systems · GPAI models
 
 LLMs with excessive autonomy execute unintended actions when
@@ -483,128 +312,198 @@ article in the entire regulation to this vulnerability.
 
 ---
 
-### LLM07 — System Prompt Leakage
+### LLM04 — Supply Chain
 
 **Severity:** High
-**Applies to:** High-risk AI systems · GPAI models · Limited risk systems
+**Applies to:** High-risk AI systems · GPAI models
 
-System prompt extraction reveals internal instructions and security
-controls. The EU AI Act imposes transparency obligations on all
-AI systems and documentation obligations on high-risk and GPAI systems —
-both of which create a tension with system prompt confidentiality
-that must be actively managed.
+Third-party model weights, datasets, libraries, and plugins introduce
+risks the deployer inherits. The EU AI Act explicitly addresses supply
+chain responsibilities — distributing obligations between providers,
+deployers, importers, and distributors.
+
+The 2026 entry adds artifact provenance to this scope. A promoted
+model, adapter, or converted artifact that is not what it claims to be —
+unsigned weights, a hijacked conversion or merge service, or namespace reuse
+on a model hub — is a supply-chain compromise even when every package
+dependency is clean.
 
 #### EU AI Act mapping
 
 | Article | Obligation | How it applies |
 |---|---|---|
-| Art. 13 — Transparency | Users must receive sufficient information about the AI system — but this does not require disclosing system prompts | Transparency obligation must be met without exposing security-sensitive system prompt content |
-| Art. 17 — Quality management | Configuration management documented | System prompt versions, access controls, and change procedures are quality management artefacts |
-| Art. 53(1)(b) — GPAI transparency | GPAI providers must publish summaries of training data and model capabilities | Published summaries must not inadvertently expose security-sensitive configuration |
+| Art. 9 — Risk management | Supply chain risks must be identified and mitigated in the risk management system | Third-party component risks are in scope for Art. 9 risk management |
+| Art. 17 — Quality management | Quality management must cover supply chain controls | Documented supply chain security procedures required |
+| Art. 25 — Value chain responsibilities | Responsibilities distributed along the AI value chain between providers and deployers | Providers must document what deployers inherit — deployers must verify |
+| Art. 53(1)(a) — GPAI documentation | GPAI providers must document training data governance including third-party sources | Third-party training data provenance is a GPAI documentation obligation |
 
 #### Compliance obligations by tier
 
-**Foundational**
-- Art. 13: Comply with transparency obligations without disclosing
-  security-sensitive system prompt content — the obligation is to
-  explain system capabilities and limitations, not expose internals
-- Classify system prompts as sensitive configuration artefacts
-  subject to access controls — document in Art. 17 quality management
+**Foundational — applies to all LLM deployments**
+- Art. 25: Understand and document your position in the AI value
+  chain — are you a provider, deployer, or both? Each carries
+  distinct obligations
+- Maintain a basic inventory of all third-party components used
+  in your LLM deployment
 
 **Hardening — required for high-risk AI systems**
-- Art. 17: Implement system prompt version control and change
-  management procedures — auditable evidence of who changed what
-  and when required for conformity assessment
-- Include prompt extraction testing in conformity assessment
-  evidence — demonstrate that transparency obligations can be met
-  without leaking security controls
-- Art. 13: Document and test the boundary between what is disclosed
-  for transparency and what is protected as security configuration
+- Art. 9: Include supply chain risks in your formal risk management
+  system — third-party components assessed before production use
+- Art. 17: Establish documented supply chain security procedures —
+  component verification, version pinning, integrity checking
+- Art. 25: Document what obligations flow downstream to deployers —
+  include in contractual arrangements
 
-**Advanced**
-- Art. 53(1)(b): For GPAI models, ensure capability summaries and
-  technical documentation published under Art. 53 do not reveal
-  security-sensitive configuration
-- Implement system prompt tokenisation as Art. 15 cybersecurity
-  measure — document as technical robustness control
-- Conduct adversarial prompt extraction red team exercises and
-  document results as Art. 17 quality management evidence
+**Advanced — required for GPAI models**
+- Art. 53(1)(a): Document all training data sources including
+  third-party datasets — provenance, quality assessment, copyright
+  status, and privacy compliance
+- Implement ML SBOM generation as part of Art. 53 technical
+  documentation — available to the AI Office on request
+- Establish supply chain incident response — what happens when a
+  third-party component is compromised post-deployment
 
 #### Tools
 
 | Tool | Type | Link |
 |---|---|---|
-| LLM Guard | Open-source | https://github.com/protectai/llm-guard |
-| Garak | Open-source | https://github.com/leondz/garak |
+| CycloneDX | Open-source | https://cyclonedx.org |
+| ModelScan | Open-source | https://github.com/protectai/modelscan |
+| OWASP Dependency-Check | Open-source | https://owasp.org/www-project-dependency-check/ |
 
 #### Cross-references
-- Agentic Top 10: ASI01 Agent Goal Hijack
-- DSGAI 2026: DSGAI15 Over-Broad Context Windows
-- Other frameworks: NIST AI RMF GV-1.6 · AIUC-1 B003/B009 · CWE-200
+- Agentic Top 10: ASI04 Agentic Supply Chain Vulnerabilities
+- DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning
+- Other frameworks: NIST AI RMF MP-5.1 · NIST SP 800-218A · ISO 42001 8.4
 
 ---
 
-### LLM08 — Vector and Embedding Weaknesses
+### LLM05 — Data and Model Poisoning
 
-**Severity:** Medium
-**Applies to:** High-risk AI systems · GPAI models
+**Severity:** Critical
+**Applies to:** High-risk AI systems · GPAI models with systemic risk
 
-Embedding store vulnerabilities enable retrieval manipulation and
-information inference. The EU AI Act addresses this through data
-governance and technical robustness requirements for high-risk systems
-whose outputs rely on retrieval-augmented generation.
+Adversaries corrupt training data or model weights. The EU AI Act
+mandates data governance, quality controls, and adversarial robustness
+testing — all directly applicable to poisoning prevention and detection.
+
+The 2026 entry folds in fine-tuning subversion. A supplier LoRA
+adapter, a customer fine-tune, or a distilled checkpoint can carry a backdoor
+that no pre-training control catches, so poisoning defences must cover every
+stage that writes weights, not just the original training corpus.
 
 #### EU AI Act mapping
 
 | Article | Obligation | How it applies |
 |---|---|---|
-| Art. 9 — Risk management | Embedding and retrieval risks identified and mitigated | Vector store attack scenarios included in risk management system |
-| Art. 10 — Data and data governance | Data quality controls applied to all data in scope — including RAG corpora | Quality controls on embedding generation and vector store ingestion required |
-| Art. 15 — Accuracy, robustness, cybersecurity | Technical robustness against adversarial manipulation | Embedding manipulation resistance is an Art. 15 technical requirement |
+| Art. 9 — Risk management | Data poisoning must be identified as a foreseeable risk and mitigated | Poisoning attack scenarios required in Art. 9 risk assessment |
+| Art. 10 — Data and data governance | Training data must be subject to appropriate governance practices — relevant, representative, free of errors | Data quality controls preventing poisoning are a compliance requirement |
+| Art. 15 — Accuracy, robustness, cybersecurity | High-risk AI must be resilient to attempts to alter performance through data manipulation | Technical robustness against poisoning is a binding Art. 15 requirement |
+| Art. 55(1)(b) — Systemic risk GPAI adversarial testing | Systemic risk GPAI providers must conduct adversarial testing to identify model-level risks | Poisoning detection is in scope for Art. 55 adversarial testing |
 
 #### Compliance obligations by tier
 
 **Foundational**
-- Art. 10: Apply data quality controls to all content entering
-  vector stores — classification, validation, and access controls
-  are Art. 10 requirements for high-risk RAG systems
-- Document vector store risks in Art. 9 risk management system
+- Art. 10: Establish data governance policy for all training data —
+  source validation, quality assessment, and lineage documentation
+  are baseline requirements for high-risk systems
+- Document data poisoning as a foreseeable risk in Art. 9 risk
+  management system
 
 **Hardening — required for high-risk AI systems**
-- Art. 15: Implement technical controls for embedding integrity —
-  access controls, anomaly detection, encryption — documented as
-  Art. 15 cybersecurity measures
-- Art. 10: Audit RAG data scope regularly — over-permissive indexes
-  are both a security risk and an Art. 10 data governance failure
-- Include embedding manipulation scenarios in conformity assessment
-  testing evidence
+- Art. 10: Implement technical data quality controls — anomaly
+  detection on training datasets, source allowlisting, lineage
+  tracking — documented as Art. 17 quality management evidence
+- Art. 15: Implement and document adversarial robustness measures
+  against training data manipulation — auditable evidence required
+- Establish model rollback capability as part of Art. 17 post-market
+  monitoring response procedures
 
-**Advanced**
-- Conduct embedding inversion red team exercises — document results
-  as Art. 17 quality management evidence
-- Implement differential privacy in embedding generation for
-  sensitive corpora — document as Art. 15 technical measure
-- Art. 17: Establish vector store integrity monitoring in post-market
-  monitoring programme
+**Advanced — required for systemic risk GPAI models**
+- Art. 55(1)(b): Conduct adversarial testing covering poisoning
+  attack scenarios — document results, available to AI Office
+- Art. 55: Implement incident reporting for serious poisoning
+  incidents — notify AI Office without undue delay
+- Apply differential privacy in training as an Art. 10 data
+  governance measure — document privacy budget
 
 #### Tools
 
 | Tool | Type | Link |
 |---|---|---|
-| Weaviate (with RBAC) | Open-source | https://weaviate.io |
-| Qdrant | Open-source | https://qdrant.tech |
-| RAGAS | Open-source | https://github.com/explodinggradients/ragas |
+| IBM Adversarial Robustness Toolbox | Open-source | https://github.com/Trusted-AI/adversarial-robustness-toolbox |
+| CleanLab | Open-source | https://github.com/cleanlab/cleanlab |
+| Great Expectations | Open-source | https://greatexpectations.io |
 
 #### Cross-references
 - Agentic Top 10: ASI06 Memory & Context Poisoning
-- DSGAI 2026: DSGAI13 Vector Store Platform Security, DSGAI18 Inference & Data Reconstruction
-- Other frameworks: NIST AI RMF MS-3.3 · AIUC-1 A · ISO 27701
+- DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning, DSGAI21 Disinformation via Data Poisoning
+- Other frameworks: NIST AI RMF MS-3.3 · ISO 42001 8.4 · MITRE ATLAS AML.T0032
 
 ---
 
-### LLM09 — Misinformation
+### LLM06 — Unbounded Consumption
 
-**Severity:** Medium
+**Severity:** High
+**Applies to:** High-risk AI systems · GPAI models
+
+Adversarial inputs cause resource exhaustion or denial of service.
+The EU AI Act requires high-risk AI systems to be resilient and
+available, with documented quality management covering operational
+continuity.
+
+#### EU AI Act mapping
+
+| Article | Obligation | How it applies |
+|---|---|---|
+| Art. 9 — Risk management | Availability risks identified and mitigated | Resource exhaustion and DoS scenarios included in risk management system |
+| Art. 15 — Accuracy, robustness, cybersecurity | High-risk AI must remain available under adversarial conditions | Technical resilience against denial-of-service attacks is an Art. 15 requirement |
+| Art. 17 — Quality management | Operational continuity procedures documented | Post-market monitoring and incident response for availability failures required |
+
+#### Compliance obligations by tier
+
+**Foundational**
+- Art. 9: Document resource exhaustion as a foreseeable risk —
+  include in risk management system with treatment controls assigned
+- Implement rate limiting per user, session, and API key —
+  basic Art. 15 cybersecurity measure
+
+**Hardening — required for high-risk AI systems**
+- Art. 15: Implement and document technical resilience measures —
+  rate limiting, token limits, cost budgets — as Art. 15 cybersecurity
+  evidence for conformity assessment
+- Art. 17: Establish post-market monitoring for availability
+  incidents — SLA metrics, incident detection, and response
+  procedures documented
+- Define and document RTO/RPO for high-risk LLM services as
+  Art. 17 quality management requirements
+
+**Advanced**
+- Art. 15: Conduct adversarial cost-maximisation testing — document
+  results as robustness evidence
+- Implement adaptive rate limiting with real-time load awareness —
+  document as Art. 15 cybersecurity measure
+- Art. 17: Include availability SLAs in post-market monitoring
+  programme — reviewed quarterly against actual operational data
+
+#### Tools
+
+| Tool | Type | Link |
+|---|---|---|
+| LiteLLM | Open-source | https://github.com/BerriAI/litellm |
+| Kong Gateway | Open-source | https://github.com/Kong/kong |
+| OpenTelemetry | Open-source | https://opentelemetry.io |
+
+#### Cross-references
+- Agentic Top 10: ASI08 Cascading Agent Failures
+- DSGAI 2026: DSGAI17 Data Availability & Resilience Failures
+- Other frameworks: NIST AI RMF MG-3.2 · ISA/IEC 62443 SR 7.1 (OT) · CWE-400
+
+---
+
+### LLM07 — Misinformation
+
+**Severity:** High
 **Applies to:** All risk tiers — transparency obligations apply universally
 
 LLMs generate plausible but false content. The EU AI Act's transparency
@@ -663,62 +562,196 @@ and Article 13 requires high-risk systems to be sufficiently accurate.
 
 ---
 
-### LLM10 — Unbounded Consumption
+### LLM08 — Hidden Context Exposure
 
-**Severity:** Medium
-**Applies to:** High-risk AI systems · GPAI models
+**Severity:** High
+**Applies to:** High-risk AI systems · GPAI models · Limited risk systems
 
-Adversarial inputs cause resource exhaustion or denial of service.
-The EU AI Act requires high-risk AI systems to be resilient and
-available, with documented quality management covering operational
-continuity.
+Hidden context — the system prompt, developer instructions, retrieved
+policy text, and the tool and function schemas an application assembles
+into the model's context window — is extracted, inferred, or
+reconstructed by adversaries.
+The EU AI Act imposes transparency obligations on all
+AI systems and documentation obligations on high-risk and GPAI systems —
+both of which create a tension with system prompt confidentiality
+that must be actively managed.
+
+The 2026 list broadens the former System Prompt Leakage entry to cover all
+non-user-facing context, not just the system prompt. Severity tracks what
+that context holds: internal rules and workflow logic are medium, embedded
+credentials or reliance on context secrecy for authorisation are high, and
+disclosure that chains to code execution or broad exfiltration is critical.
+Design on the assumption that hidden context is discoverable, and never
+treat it as a security boundary.
 
 #### EU AI Act mapping
 
 | Article | Obligation | How it applies |
 |---|---|---|
-| Art. 9 — Risk management | Availability risks identified and mitigated | Resource exhaustion and DoS scenarios included in risk management system |
-| Art. 15 — Accuracy, robustness, cybersecurity | High-risk AI must remain available under adversarial conditions | Technical resilience against denial-of-service attacks is an Art. 15 requirement |
-| Art. 17 — Quality management | Operational continuity procedures documented | Post-market monitoring and incident response for availability failures required |
+| Art. 13 — Transparency | Users must receive sufficient information about the AI system — but this does not require disclosing system prompts | Transparency obligation must be met without exposing security-sensitive system prompt content |
+| Art. 17 — Quality management | Configuration management documented | System prompt versions, access controls, and change procedures are quality management artefacts |
+| Art. 53(1)(b) — GPAI transparency | GPAI providers must publish summaries of training data and model capabilities | Published summaries must not inadvertently expose security-sensitive configuration |
 
 #### Compliance obligations by tier
 
 **Foundational**
-- Art. 9: Document resource exhaustion as a foreseeable risk —
-  include in risk management system with treatment controls assigned
-- Implement rate limiting per user, session, and API key —
-  basic Art. 15 cybersecurity measure
+- Art. 13: Comply with transparency obligations without disclosing
+  security-sensitive system prompt content — the obligation is to
+  explain system capabilities and limitations, not expose internals
+- Classify system prompts as sensitive configuration artefacts
+  subject to access controls — document in Art. 17 quality management
 
 **Hardening — required for high-risk AI systems**
-- Art. 15: Implement and document technical resilience measures —
-  rate limiting, token limits, cost budgets — as Art. 15 cybersecurity
-  evidence for conformity assessment
-- Art. 17: Establish post-market monitoring for availability
-  incidents — SLA metrics, incident detection, and response
-  procedures documented
-- Define and document RTO/RPO for high-risk LLM services as
-  Art. 17 quality management requirements
+- Art. 17: Implement system prompt version control and change
+  management procedures — auditable evidence of who changed what
+  and when required for conformity assessment
+- Include prompt extraction testing in conformity assessment
+  evidence — demonstrate that transparency obligations can be met
+  without leaking security controls
+- Art. 13: Document and test the boundary between what is disclosed
+  for transparency and what is protected as security configuration
 
 **Advanced**
-- Art. 15: Conduct adversarial cost-maximisation testing — document
-  results as robustness evidence
-- Implement adaptive rate limiting with real-time load awareness —
-  document as Art. 15 cybersecurity measure
-- Art. 17: Include availability SLAs in post-market monitoring
-  programme — reviewed quarterly against actual operational data
+- Art. 53(1)(b): For GPAI models, ensure capability summaries and
+  technical documentation published under Art. 53 do not reveal
+  security-sensitive configuration
+- Implement system prompt tokenisation as Art. 15 cybersecurity
+  measure — document as technical robustness control
+- Conduct adversarial prompt extraction red team exercises and
+  document results as Art. 17 quality management evidence
 
 #### Tools
 
 | Tool | Type | Link |
 |---|---|---|
-| LiteLLM | Open-source | https://github.com/BerriAI/litellm |
-| Kong Gateway | Open-source | https://github.com/Kong/kong |
-| OpenTelemetry | Open-source | https://opentelemetry.io |
+| LLM Guard | Open-source | https://github.com/protectai/llm-guard |
+| Garak | Open-source | https://github.com/leondz/garak |
 
 #### Cross-references
-- Agentic Top 10: ASI08 Cascading Agent Failures
-- DSGAI 2026: DSGAI17 Data Availability & Resilience Failures
-- Other frameworks: NIST AI RMF MG-3.2 · ISA/IEC 62443 SR 7.1 (OT) · CWE-400
+- Agentic Top 10: ASI01 Agent Goal Hijack
+- DSGAI 2026: DSGAI15 Over-Broad Context Windows
+- Other frameworks: NIST AI RMF GV-1.6 · AIUC-1 B003/B009 · CWE-200
+
+---
+
+### LLM09 — Vector and Embedding Weaknesses
+
+**Severity:** Medium
+**Applies to:** High-risk AI systems · GPAI models
+
+Embedding store vulnerabilities enable retrieval manipulation and
+information inference. The EU AI Act addresses this through data
+governance and technical robustness requirements for high-risk systems
+whose outputs rely on retrieval-augmented generation.
+
+#### EU AI Act mapping
+
+| Article | Obligation | How it applies |
+|---|---|---|
+| Art. 9 — Risk management | Embedding and retrieval risks identified and mitigated | Vector store attack scenarios included in risk management system |
+| Art. 10 — Data and data governance | Data quality controls applied to all data in scope — including RAG corpora | Quality controls on embedding generation and vector store ingestion required |
+| Art. 15 — Accuracy, robustness, cybersecurity | Technical robustness against adversarial manipulation | Embedding manipulation resistance is an Art. 15 technical requirement |
+
+#### Compliance obligations by tier
+
+**Foundational**
+- Art. 10: Apply data quality controls to all content entering
+  vector stores — classification, validation, and access controls
+  are Art. 10 requirements for high-risk RAG systems
+- Document vector store risks in Art. 9 risk management system
+
+**Hardening — required for high-risk AI systems**
+- Art. 15: Implement technical controls for embedding integrity —
+  access controls, anomaly detection, encryption — documented as
+  Art. 15 cybersecurity measures
+- Art. 10: Audit RAG data scope regularly — over-permissive indexes
+  are both a security risk and an Art. 10 data governance failure
+- Include embedding manipulation scenarios in conformity assessment
+  testing evidence
+
+**Advanced**
+- Conduct embedding inversion red team exercises — document results
+  as Art. 17 quality management evidence
+- Implement differential privacy in embedding generation for
+  sensitive corpora — document as Art. 15 technical measure
+- Art. 17: Establish vector store integrity monitoring in post-market
+  monitoring programme
+
+#### Tools
+
+| Tool | Type | Link |
+|---|---|---|
+| Weaviate (with RBAC) | Open-source | https://weaviate.io |
+| Qdrant | Open-source | https://qdrant.tech |
+| RAGAS | Open-source | https://github.com/explodinggradients/ragas |
+
+#### Cross-references
+- Agentic Top 10: ASI06 Memory & Context Poisoning
+- DSGAI 2026: DSGAI13 Vector Store Platform Security, DSGAI18 Inference & Data Reconstruction
+- Other frameworks: NIST AI RMF MS-3.3 · AIUC-1 A · ISO 27701
+
+---
+
+### LLM10 — Improper Output Handling
+
+**Severity:** High
+**Applies to:** High-risk AI systems · GPAI models
+
+LLM output passed to downstream systems without validation enables
+injection attacks. The EU AI Act requires accuracy and robustness
+of high-risk AI outputs and mandates quality management systems
+covering post-market monitoring of output incidents.
+
+The 2026 entry renames Insecure Output Handling to Improper Output
+Handling and widens it to cover the insecure code that coding assistants
+generate at scale. Output that reaches a compiler, a repository, or a
+production system carries the same downstream-execution risk as output that
+reaches a shell, a browser, or a database.
+
+#### EU AI Act mapping
+
+| Article | Obligation | How it applies |
+|---|---|---|
+| Art. 9 — Risk management | Output handling risks identified and mitigated | Insecure output handling included in risk management system |
+| Art. 15 — Accuracy, robustness, cybersecurity | Accurate, robust outputs resilient to misuse | Output validation and sanitisation are Art. 15 technical requirements |
+| Art. 17 — Quality management | Documented procedures covering output quality | Post-market monitoring of output handling incidents required |
+
+#### Compliance obligations by tier
+
+**Foundational**
+- Art. 9: Document insecure output handling as a foreseeable risk
+  in your risk management system — assign treatment controls
+- Treat all LLM output as untrusted input to downstream systems —
+  encoding, validation, and sanitisation mandatory
+
+**Hardening — required for high-risk AI systems**
+- Art. 15: Implement and document technical output security measures —
+  schema validation, sanitisation, encoding — as auditable evidence
+- Art. 17: Establish post-market monitoring for output handling
+  incidents — detection, logging, and response procedures
+- Include output injection scenarios in conformity assessment
+  testing evidence
+
+**Advanced**
+- Conduct DAST on all interfaces consuming LLM output — include
+  results in Art. 17 quality management documentation
+- Deploy dedicated output security layer documented as Art. 15
+  cybersecurity measure
+- Art. 17: Include output security in product change management
+  procedures — any change to output handling triggers re-testing
+
+#### Tools
+
+| Tool | Type | Link |
+|---|---|---|
+| OWASP ZAP | Open-source | https://www.zaproxy.org |
+| Semgrep | Open-source | https://semgrep.dev |
+| DOMPurify | Open-source | https://github.com/cure53/DOMPurify |
+
+#### Cross-references
+- Agentic Top 10: ASI02 Tool Misuse, ASI05 Unexpected Code Execution
+- DSGAI 2026: DSGAI05 Data Integrity & Validation Failures
+- Other frameworks: NIST AI RMF MS-2.6 · OWASP ASVS V5 · CWE-79
 
 ---
 
@@ -769,7 +802,7 @@ against the OWASP LLM Top 10:
 - [EU AI Act full text (Regulation EU 2024/1689)](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)
 - [EU AI Office](https://digital-strategy.ec.europa.eu/en/policies/ai-office)
 - [EU AI Act Implementation Guide — European Commission](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)
-- [OWASP LLM Top 10 2025](https://genai.owasp.org/llm-top-10/)
+- [OWASP LLM Top 10 2026](https://genai.owasp.org/llm-top-10/)
 - [NIST AI RMF — EU AI Act crosswalk](https://airc.nist.gov)
 - [ISO 42001 — AI management systems](https://www.iso.org/standard/81230.html)
 - [ENISA — EU AI Act guidance](https://www.enisa.europa.eu)
@@ -781,6 +814,7 @@ against the OWASP LLM Top 10:
 | Date | Version | Change | Author |
 |---|---|---|---|
 | 2026-03-24 | 2026-Q1 | Initial mapping — LLM01–LLM10 full entries with compliance checklist | OWASP GenAI Data Security Initiative |
+| 2026-08-28 | 2026-Q3 | Migrated to OWASP Top 10 for LLM Applications 2026 — entries renumbered, LLM08 re-scoped from System Prompt Leakage to Hidden Context Exposure, LLM10 renamed to Improper Output Handling | OWASP GenAI Data Security Initiative |
 
 ---
 

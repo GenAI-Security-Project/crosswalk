@@ -1,15 +1,15 @@
 <!--
   OWASP GenAI Crosswalk
-  Source list : OWASP Top 10 for LLM Applications 2025 (LLM01-LLM10)
+  Source list : OWASP Top 10 for LLM Applications 2026 (LLM01-LLM10)
   Framework   : ISO/IEC 42001:2023 — Artificial Intelligence Management System
-  Version     : 2026-Q1
+  Version     : 2026-Q3
   Maintained by: OWASP GenAI Data Security Initiative — https://genai.owasp.org
   License     : CC BY-SA 4.0
 -->
 
-# LLM Top 10 2025 × ISO/IEC 42001:2023
+# LLM Top 10 2026 × ISO/IEC 42001:2023
 
-Mapping the [OWASP Top 10 for LLM Applications 2025](https://genai.owasp.org/llm-top-10/)
+Mapping the [OWASP Top 10 for LLM Applications 2026](https://genai.owasp.org/llm-top-10/)
 to [ISO/IEC 42001:2023](https://www.iso.org/standard/81230.html) —
 the international standard for Artificial Intelligence Management Systems (AIMS),
 published December 2023.
@@ -85,14 +85,14 @@ with an AIMS under ISO 42001 for AI deployments.
 |---|---|---|---|---|
 | LLM01 | Prompt Injection | Critical | A.6.2.3, A.6.2.6, A.6.2.8, Cl.6.1 | Foundational–Advanced |
 | LLM02 | Sensitive Information Disclosure | High | A.7.2, A.7.3, A.6.2.3, A.5.2 | Foundational–Advanced |
-| LLM03 | Supply Chain Vulnerabilities | High | A.10.1, A.10.2, A.6.1.2, A.7.2 | Foundational–Hardening |
-| LLM04 | Data and Model Poisoning | Critical | A.7.2, A.7.3, A.6.2.3, A.6.2.6 | Hardening–Advanced |
-| LLM05 | Insecure Output Handling | High | A.6.2.3, A.6.2.6, A.9.1, Cl.8 | Foundational–Hardening |
-| LLM06 | Excessive Agency | High | A.6.1.2, A.6.2.3, A.5.2, Cl.5 | Foundational–Hardening |
-| LLM07 | System Prompt Leakage | High | A.7.3, A.6.2.3, A.8.1, Cl.7 | Foundational–Hardening |
-| LLM08 | Vector and Embedding Weaknesses | Medium | A.7.2, A.7.3, A.6.2.6, A.10.1 | Hardening–Advanced |
-| LLM09 | Misinformation | Medium | A.5.2, A.6.2.8, A.8.1, A.9.1 | Foundational–Hardening |
-| LLM10 | Unbounded Consumption | Medium | A.6.2.3, A.6.2.8, Cl.6.1, Cl.9 | Foundational–Hardening |
+| LLM03 | Excessive Agency | Critical | A.6.1.2, A.6.2.3, A.5.2, Cl.5 | Foundational–Hardening |
+| LLM04 | Supply Chain | High | A.10.1, A.10.2, A.6.1.2, A.7.2 | Foundational–Hardening |
+| LLM05 | Data and Model Poisoning | Critical | A.7.2, A.7.3, A.6.2.3, A.6.2.6 | Hardening–Advanced |
+| LLM06 | Unbounded Consumption | High | A.6.2.3, A.6.2.8, Cl.6.1, Cl.9 | Foundational–Hardening |
+| LLM07 | Misinformation | High | A.5.2, A.6.2.8, A.8.1, A.9.1 | Foundational–Hardening |
+| LLM08 | Hidden Context Exposure | High | A.7.3, A.6.2.3, A.8.1, Cl.7 | Foundational–Hardening |
+| LLM09 | Vector and Embedding Weaknesses | Medium | A.7.2, A.7.3, A.6.2.6, A.10.1 | Hardening–Advanced |
+| LLM10 | Improper Output Handling | High | A.6.2.3, A.6.2.6, A.9.1, Cl.8 | Foundational–Hardening |
 
 ---
 
@@ -103,7 +103,7 @@ with an AIMS under ISO 42001 for AI deployments.
 - **Auditor / certifier** — clause and control mapping for ISO 42001 certification audits
 - **Security engineer** — A.6, A.7 lifecycle and data controls
 - **Compliance officer** — A.5, A.8, A.10 policy and third-party entries
-- **OT engineer** — LLM01, LLM04, LLM10 with ISA 62443 crosswalk
+- **OT engineer** — LLM01, LLM05, LLM06 with ISA 62443 crosswalk
 
 ---
 
@@ -119,6 +119,11 @@ Malicious instructions in user input or processed content manipulate
 LLM behaviour. ISO 42001 addresses this through AI system design
 controls (A.6.2.3), security testing (A.6.2.6), and the broader
 AI risk management process (Clause 6.1).
+
+The 2026 entry extends prompt injection to cross-modal payloads.
+Instructions hidden in an image, an audio track, or a video frame reach the
+model without ever being human-readable, and steganographic or
+invisible-Unicode carriers survive review of the rendered interface.
 
 #### ISO 42001:2023 mapping
 
@@ -242,195 +247,9 @@ control section — data governance is a first-class AIMS concern.
 
 ---
 
-### LLM03 — Supply Chain Vulnerabilities
-
-**Severity:** High
-
-LLM applications depend on third-party model weights, datasets,
-libraries, and plugins. ISO 42001 Annex A.10 (Third-party and
-customer relationships) is the primary control section.
-
-#### ISO 42001:2023 mapping
-
-| Control | ID | How it applies |
-|---|---|---|
-| Third-party AI system acquisition | A.10.1 | Security requirements applied to all LLM component vendors — model providers, dataset suppliers, inference runtime vendors |
-| Customer relationships | A.10.2 | LLM deployment obligations to downstream customers — what security properties are guaranteed |
-| Responsible AI system management | A.6.1.2 | LLM components managed responsibly through lifecycle — acquisition, testing, deployment, decommission |
-| Data quality | A.7.2 | Third-party training datasets assessed for quality — provenance, completeness, representativeness, security |
-
-#### Mitigations for ISO 42001 alignment
-
-**Foundational**
-- A.10.1: Establish AIMS third-party requirements for
-  all LLM component vendors — security obligations,
-  provenance documentation, vulnerability disclosure
-  requirements documented before any component enters
-  production
-- A.7.2: Apply data quality criteria to all third-party
-  training datasets — provenance, appropriateness, and
-  security assessed as AIMS requirements
-- Maintain ML SBOM as AIMS documented information
-  per Clause 7.5 — every component inventoried with
-  version, source, hash
-
-**Hardening**
-- A.10.1: Include security requirements in contracts
-  with all LLM component vendors — provenance,
-  integrity guarantees, incident notification SLA
-  as AIMS contractual controls
-- A.6.2.6: Test all components before deployment in
-  AIMS testing programme — signature verification,
-  backdoor scanning, behavioural baseline
-- Cl.9: Include third-party component incidents in
-  AIMS performance monitoring — supply chain risk
-  trends in management review
-
-**Advanced**
-- A.10.1: Conduct periodic security assessments of
-  strategic LLM component suppliers — include in
-  AIMS third-party review programme with defined cadence
-- Operate isolated component evaluation environment
-  as A.6.2.6 testing control — document as AIMS evidence
-
-#### Tools
-
-| Tool | Type | Link |
-|---|---|---|
-| CycloneDX | Open-source | https://cyclonedx.org |
-| ModelScan | Open-source | https://github.com/protectai/modelscan |
-
-#### Cross-references
-- Agentic Top 10: ASI04 Agentic Supply Chain Vulnerabilities
-- DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning
-- Other frameworks: NIST CSF 2.0 GV.SC-01 · ISO 27001 A.5.19/A.5.21 · NIST SP 800-218A
-
----
-
-### LLM04 — Data and Model Poisoning
+### LLM03 — Excessive Agency
 
 **Severity:** Critical
-
-Adversaries corrupt training data or model weights. ISO 42001 A.7
-(Data for AI systems) and A.6.2.6 (Testing) are the primary controls —
-data integrity is an AIMS first-class concern.
-
-#### ISO 42001:2023 mapping
-
-| Control | ID | How it applies |
-|---|---|---|
-| Data quality | A.7.2 | Training data quality requirements include integrity — anomaly detection, source allowlisting, provenance tracking as data quality controls |
-| Data provenance and characteristics | A.7.3 | Training data provenance documented — full chain from source to training dataset, modification history tracked |
-| AI system security | A.6.2.3 | Training pipeline integrity controls — input validation, source allowlisting as AIMS security design requirements |
-| Testing of AI systems | A.6.2.6 | Poisoning detection in AIMS testing — backdoor trigger testing, biased output detection before each production promotion |
-
-#### Mitigations for ISO 42001 alignment
-
-**Foundational**
-- A.7.2: Establish data quality requirements covering
-  integrity for all training data — source allowlisting,
-  anomaly detection, statistical validation documented
-  as AIMS data quality controls
-- A.7.3: Document complete provenance for all training
-  data — source, preprocessing steps, quality checks,
-  approval chain in AIMS documented information
-- Model rollback capability documented as A.6.1.2
-  responsible management control — clean checkpoint
-  always available
-
-**Hardening**
-- A.6.2.6: Include poisoning detection in AIMS testing
-  programme — backdoor trigger testing and output
-  distribution analysis before every production model
-  promotion, results as AIMS test evidence
-- A.6.2.8: Monitor production models for poisoning
-  indicators — systematic recommendation drift alerted
-  as AIMS operational monitoring control
-- A.10.1: Apply integrity requirements to training
-  data source vendors — provenance attestation in
-  vendor contracts as A.10 third-party control
-
-**Advanced**
-- Post-training backdoor detection as mandatory AIMS
-  deployment gate per A.6.2.6 — neural cleanse or
-  equivalent, results in AIMS documented information
-- Cl.9: Include poisoning incidents in AIMS management
-  review — trend data, affected deployments, control
-  improvements
-
-#### Tools
-
-| Tool | Type | Link |
-|---|---|---|
-| IBM Adversarial Robustness Toolbox | Open-source | https://github.com/Trusted-AI/adversarial-robustness-toolbox |
-| CleanLab | Open-source | https://github.com/cleanlab/cleanlab |
-
-#### Cross-references
-- Agentic Top 10: ASI06 Memory & Context Poisoning
-- DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning, DSGAI21 Disinformation via Data Poisoning
-- Other frameworks: NIST AI RMF MS-3.3 · MITRE ATLAS AML.T0032 · ISO 27001 A.8.27
-
----
-
-### LLM05 — Insecure Output Handling
-
-**Severity:** High
-
-LLM output passed to downstream systems without validation enables
-injection attacks. ISO 42001 A.6.2.3 (security) and Clause 8
-(operation) address output handling as a system design concern.
-
-#### ISO 42001:2023 mapping
-
-| Control | ID | How it applies |
-|---|---|---|
-| AI system security | A.6.2.3 | Output encoding and schema validation as AIMS security design requirements — LLM output treated as untrusted input to downstream systems |
-| Testing of AI systems | A.6.2.6 | Output injection scenarios in AIMS testing — XSS, SQL injection, command injection via LLM output tested before deployment |
-| Use of AI systems | A.9.1 | Guidance on AI system use — downstream consumers informed that LLM output must be validated before use |
-| Operation | Cl.8 | Operational controls for LLM deployment — output handling requirements documented as AIMS operational procedures |
-
-#### Mitigations for ISO 42001 alignment
-
-**Foundational**
-- A.6.2.3: Document output encoding and schema validation
-  as AIMS security design requirements — LLM output
-  treated as untrusted input at all downstream interfaces
-- A.9.1: Communicate output handling requirements to
-  all downstream consumers — validation obligations
-  documented in AIMS user guidance
-- Never pass raw LLM output to database queries, shell
-  commands, or eval functions — AIMS policy control
-
-**Hardening**
-- A.6.2.6: Include output injection in AIMS testing —
-  XSS, SQL injection, command injection via model output
-  tested against all interfaces consuming LLM responses
-- Cl.8: Document output validation as AIMS operational
-  control — procedures, responsible parties, verification
-  cadence in AIMS documented information
-
-**Advanced**
-- Cl.9: Monitor output injection incidents in AIMS
-  performance evaluation — incident trends reported
-  in management review, controls improved based on data
-
-#### Tools
-
-| Tool | Type | Link |
-|---|---|---|
-| OWASP ZAP | Open-source | https://www.zaproxy.org |
-| Semgrep | Open-source | https://semgrep.dev |
-
-#### Cross-references
-- Agentic Top 10: ASI02 Tool Misuse, ASI05 Unexpected Code Execution
-- DSGAI 2026: DSGAI05 Data Integrity & Validation Failures, DSGAI12 Unsafe NL Data Gateways
-- Other frameworks: OWASP ASVS V5 · NIST CSF 2.0 PR.PS-04 · CWE-79
-
----
-
-### LLM06 — Excessive Agency
-
-**Severity:** High
 
 LLMs with excessive autonomy execute unintended or harmful actions.
 ISO 42001 A.6.1.2 (responsible AI system management) and Clause 5
@@ -491,119 +310,208 @@ ISO 42001 A.6.1.2 (responsible AI system management) and Clause 5
 
 ---
 
-### LLM07 — System Prompt Leakage
+### LLM04 — Supply Chain
 
 **Severity:** High
 
-System prompts containing security controls are extracted by
-adversaries. ISO 42001 A.7.3 (data provenance) and Clause 7
-(documented information) govern system prompt protection.
+LLM applications depend on third-party model weights, datasets,
+libraries, and plugins. ISO 42001 Annex A.10 (Third-party and
+customer relationships) is the primary control section.
+
+The 2026 entry adds artifact provenance to this scope. A promoted
+model, adapter, or converted artifact that is not what it claims to be —
+unsigned weights, a hijacked conversion or merge service, or namespace reuse
+on a model hub — is a supply-chain compromise even when every package
+dependency is clean.
 
 #### ISO 42001:2023 mapping
 
 | Control | ID | How it applies |
 |---|---|---|
-| Data provenance and characteristics | A.7.3 | System prompts classified as sensitive operational data — provenance, access controls, handling requirements documented |
-| AI system security | A.6.2.3 | System prompt encryption and access controls as AIMS security design requirements |
-| Information for interested parties | A.8.1 | Transparency obligations balanced with operational security — what must be disclosed vs what may be kept confidential |
-| Support | Cl.7 | Documented information controls — system prompts managed as AIMS documented information with appropriate access controls |
+| Third-party AI system acquisition | A.10.1 | Security requirements applied to all LLM component vendors — model providers, dataset suppliers, inference runtime vendors |
+| Customer relationships | A.10.2 | LLM deployment obligations to downstream customers — what security properties are guaranteed |
+| Responsible AI system management | A.6.1.2 | LLM components managed responsibly through lifecycle — acquisition, testing, deployment, decommission |
+| Data quality | A.7.2 | Third-party training datasets assessed for quality — provenance, completeness, representativeness, security |
 
 #### Mitigations for ISO 42001 alignment
 
 **Foundational**
-- A.7.3: Classify system prompts as sensitive operational
-  data in AIMS — document handling requirements, access
-  controls, and storage standards
-- Cl.7: Manage system prompts as AIMS documented
-  information — version control, access restrictions,
-  retention and disposal documented
-- A.6.2.3: Encrypt system prompts at rest — AIMS
-  security design requirement, not stored in cleartext
+- A.10.1: Establish AIMS third-party requirements for
+  all LLM component vendors — security obligations,
+  provenance documentation, vulnerability disclosure
+  requirements documented before any component enters
+  production
+- A.7.2: Apply data quality criteria to all third-party
+  training datasets — provenance, appropriateness, and
+  security assessed as AIMS requirements
+- Maintain ML SBOM as AIMS documented information
+  per Clause 7.5 — every component inventoried with
+  version, source, hash
 
 **Hardening**
-- A.6.2.6: Include prompt extraction testing in AIMS
-  testing programme — verify resistance to known
-  extraction techniques before deployment
-- A.8.1: Balance transparency obligations with
-  operational security — what must be disclosed under
-  EU AI Act or applicable regulation vs what is
-  legitimately confidential operational configuration
+- A.10.1: Include security requirements in contracts
+  with all LLM component vendors — provenance,
+  integrity guarantees, incident notification SLA
+  as AIMS contractual controls
+- A.6.2.6: Test all components before deployment in
+  AIMS testing programme — signature verification,
+  backdoor scanning, behavioural baseline
+- Cl.9: Include third-party component incidents in
+  AIMS performance monitoring — supply chain risk
+  trends in management review
 
 **Advanced**
-- Implement system prompt tokenisation — sensitive
-  identifiers replaced with opaque tokens as A.6.2.3
-  security design control
-- Cl.9: Include extraction incidents in AIMS
-  performance monitoring — trend data in management review
-
-#### Cross-references
-- Agentic Top 10: ASI01 Agent Goal Hijack
-- DSGAI 2026: DSGAI15 Over-Broad Context Windows
-- Other frameworks: AIUC-1 B003/B009 · ISO 27001 A.5.12 · CWE-200
-
----
-
-### LLM08 — Vector and Embedding Weaknesses
-
-**Severity:** Medium
-
-Vector stores are susceptible to adversarial retrieval and inference
-attacks. ISO 42001 A.7 (Data for AI systems) governs embedding
-stores as AI data assets.
-
-#### ISO 42001:2023 mapping
-
-| Control | ID | How it applies |
-|---|---|---|
-| Data quality | A.7.2 | Vector store content quality requirements — RBAC, encryption, source validation as data quality controls |
-| Data provenance and characteristics | A.7.3 | Embedding provenance documented — source document, classification, access controls tracked |
-| Testing of AI systems | A.6.2.6 | Vector store attacks in AIMS testing — RBAC bypass, embedding inversion, bulk extraction tested |
-| Third-party AI system acquisition | A.10.1 | Vector database providers assessed as third-party AI system components |
-
-#### Mitigations for ISO 42001 alignment
-
-**Foundational**
-- A.7.2: Establish data quality requirements for vector
-  stores — RBAC enabled, encryption at rest, content
-  validation before ingestion documented as AIMS controls
-- A.7.3: Track embedding provenance — source document,
-  classification, access controls as AIMS documented
-  information
-- Patch all vector database CVEs — AIMS vulnerability
-  management obligation under A.6.2.3
-
-**Hardening**
-- A.6.2.6: Include vector store attacks in AIMS testing —
-  RBAC bypass, path traversal, embedding inversion
-  results as AIMS test evidence
-- A.10.1: Assess vector database providers as third-party
-  AI system components — security obligations in vendor
-  contracts
-
-**Advanced**
-- Apply differential privacy in embedding generation —
-  document privacy budget as A.7.2 data quality control
-- Conduct embedding inversion red team as A.6.2.6
-  testing activity — validate source content cannot
-  be reconstructed
+- A.10.1: Conduct periodic security assessments of
+  strategic LLM component suppliers — include in
+  AIMS third-party review programme with defined cadence
+- Operate isolated component evaluation environment
+  as A.6.2.6 testing control — document as AIMS evidence
 
 #### Tools
 
 | Tool | Type | Link |
 |---|---|---|
-| Weaviate | Open-source | https://weaviate.io |
-| ML Privacy Meter | Open-source | https://github.com/privacytrustlab/ml_privacy_meter |
+| CycloneDX | Open-source | https://cyclonedx.org |
+| ModelScan | Open-source | https://github.com/protectai/modelscan |
 
 #### Cross-references
-- Agentic Top 10: ASI06 Memory & Context Poisoning
-- DSGAI 2026: DSGAI13 Vector Store Platform Security, DSGAI18 Inference & Data Reconstruction
-- Other frameworks: NIST AI RMF MS-2.5 · NIST CSF 2.0 PR.DS-01 · CWE-284
+- Agentic Top 10: ASI04 Agentic Supply Chain Vulnerabilities
+- DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning
+- Other frameworks: NIST CSF 2.0 GV.SC-01 · ISO 27001 A.5.19/A.5.21 · NIST SP 800-218A
 
 ---
 
-### LLM09 — Misinformation
+### LLM05 — Data and Model Poisoning
 
-**Severity:** Medium
+**Severity:** Critical
+
+Adversaries corrupt training data or model weights. ISO 42001 A.7
+(Data for AI systems) and A.6.2.6 (Testing) are the primary controls —
+data integrity is an AIMS first-class concern.
+
+The 2026 entry folds in fine-tuning subversion. A supplier LoRA
+adapter, a customer fine-tune, or a distilled checkpoint can carry a backdoor
+that no pre-training control catches, so poisoning defences must cover every
+stage that writes weights, not just the original training corpus.
+
+#### ISO 42001:2023 mapping
+
+| Control | ID | How it applies |
+|---|---|---|
+| Data quality | A.7.2 | Training data quality requirements include integrity — anomaly detection, source allowlisting, provenance tracking as data quality controls |
+| Data provenance and characteristics | A.7.3 | Training data provenance documented — full chain from source to training dataset, modification history tracked |
+| AI system security | A.6.2.3 | Training pipeline integrity controls — input validation, source allowlisting as AIMS security design requirements |
+| Testing of AI systems | A.6.2.6 | Poisoning detection in AIMS testing — backdoor trigger testing, biased output detection before each production promotion |
+
+#### Mitigations for ISO 42001 alignment
+
+**Foundational**
+- A.7.2: Establish data quality requirements covering
+  integrity for all training data — source allowlisting,
+  anomaly detection, statistical validation documented
+  as AIMS data quality controls
+- A.7.3: Document complete provenance for all training
+  data — source, preprocessing steps, quality checks,
+  approval chain in AIMS documented information
+- Model rollback capability documented as A.6.1.2
+  responsible management control — clean checkpoint
+  always available
+
+**Hardening**
+- A.6.2.6: Include poisoning detection in AIMS testing
+  programme — backdoor trigger testing and output
+  distribution analysis before every production model
+  promotion, results as AIMS test evidence
+- A.6.2.8: Monitor production models for poisoning
+  indicators — systematic recommendation drift alerted
+  as AIMS operational monitoring control
+- A.10.1: Apply integrity requirements to training
+  data source vendors — provenance attestation in
+  vendor contracts as A.10 third-party control
+
+**Advanced**
+- Post-training backdoor detection as mandatory AIMS
+  deployment gate per A.6.2.6 — neural cleanse or
+  equivalent, results in AIMS documented information
+- Cl.9: Include poisoning incidents in AIMS management
+  review — trend data, affected deployments, control
+  improvements
+
+#### Tools
+
+| Tool | Type | Link |
+|---|---|---|
+| IBM Adversarial Robustness Toolbox | Open-source | https://github.com/Trusted-AI/adversarial-robustness-toolbox |
+| CleanLab | Open-source | https://github.com/cleanlab/cleanlab |
+
+#### Cross-references
+- Agentic Top 10: ASI06 Memory & Context Poisoning
+- DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning, DSGAI21 Disinformation via Data Poisoning
+- Other frameworks: NIST AI RMF MS-3.3 · MITRE ATLAS AML.T0032 · ISO 27001 A.8.27
+
+---
+
+### LLM06 — Unbounded Consumption
+
+**Severity:** High
+
+Adversarial inputs trigger disproportionate resource consumption.
+ISO 42001 Clause 6.1 (risk assessment) and Clause 9 (performance
+evaluation) address resource risk as an operational AI management concern.
+
+#### ISO 42001:2023 mapping
+
+| Control | ID | How it applies |
+|---|---|---|
+| AI system security | A.6.2.3 | Rate limiting and resource controls as AIMS security design requirements — enforced at deployment |
+| Monitoring of AI systems | A.6.2.8 | Resource consumption monitored in operation — cost anomaly detection as AIMS monitoring control |
+| Risk assessment | Cl.6.1 | Consumption risk in AI risk assessment — impact on service availability, cost exposure documented |
+| Performance evaluation | Cl.9 | Resource consumption metrics in AIMS performance evaluation — consumption trends in management review |
+
+#### Mitigations for ISO 42001 alignment
+
+**Foundational**
+- Cl.6.1: Include unbounded consumption in AI risk
+  assessment — availability impact, cost exposure, DoS
+  risk documented with owner and treatment
+- A.6.2.3: Implement rate limiting and resource controls
+  as AIMS security design requirements — hard token caps,
+  per-user budgets enforced at deployment
+- A.6.2.8: Monitor resource consumption as AIMS
+  operational control — cost anomaly alerts
+
+**Hardening**
+- Cl.9: Include resource consumption in AIMS performance
+  evaluation — trends, incidents, budget adherence
+  reported in management review
+- Implement circuit breakers as operational resilience
+  control — documented as AIMS operational procedure
+  under Clause 8
+
+**Advanced**
+- A.6.2.6: Include adversarial load testing in AIMS
+  testing programme — sponge example attacks tested
+  before production deployment
+- Cl.10: Corrective action process for consumption
+  incidents — root cause, control improvement documented
+
+#### Tools
+
+| Tool | Type | Link |
+|---|---|---|
+| LiteLLM | Open-source | https://github.com/BerriAI/litellm |
+| Kong Gateway | Open-source | https://github.com/Kong/kong |
+
+#### Cross-references
+- Agentic Top 10: ASI08 Cascading Agent Failures
+- DSGAI 2026: DSGAI17 Data Availability & Resilience Failures
+- Other frameworks: NIST CSF 2.0 PR.IR-01 · ISA/IEC 62443 SR 7.6 (OT) · CWE-400
+
+---
+
+### LLM07 — Misinformation
+
+**Severity:** High
 
 LLMs generate plausible but incorrect content. ISO 42001 A.5.2
 (impact assessment) and A.8.1 (information for interested parties)
@@ -661,61 +569,186 @@ address misinformation as both an impact and a transparency concern.
 
 ---
 
-### LLM10 — Unbounded Consumption
+### LLM08 — Hidden Context Exposure
 
-**Severity:** Medium
+**Severity:** High
 
-Adversarial inputs trigger disproportionate resource consumption.
-ISO 42001 Clause 6.1 (risk assessment) and Clause 9 (performance
-evaluation) address resource risk as an operational AI management concern.
+Hidden context — the system prompt, developer instructions, retrieved
+policy text, and the tool and function schemas an application assembles
+into the model's context window — is extracted, inferred, or
+reconstructed by adversaries.
+ISO 42001 A.7.3 (data provenance) and Clause 7
+(documented information) govern system prompt protection.
+
+The 2026 list broadens the former System Prompt Leakage entry to cover all
+non-user-facing context, not just the system prompt. Severity tracks what
+that context holds: internal rules and workflow logic are medium, embedded
+credentials or reliance on context secrecy for authorisation are high, and
+disclosure that chains to code execution or broad exfiltration is critical.
+Design on the assumption that hidden context is discoverable, and never
+treat it as a security boundary.
 
 #### ISO 42001:2023 mapping
 
 | Control | ID | How it applies |
 |---|---|---|
-| AI system security | A.6.2.3 | Rate limiting and resource controls as AIMS security design requirements — enforced at deployment |
-| Monitoring of AI systems | A.6.2.8 | Resource consumption monitored in operation — cost anomaly detection as AIMS monitoring control |
-| Risk assessment | Cl.6.1 | Consumption risk in AI risk assessment — impact on service availability, cost exposure documented |
-| Performance evaluation | Cl.9 | Resource consumption metrics in AIMS performance evaluation — consumption trends in management review |
+| Data provenance and characteristics | A.7.3 | System prompts classified as sensitive operational data — provenance, access controls, handling requirements documented |
+| AI system security | A.6.2.3 | System prompt encryption and access controls as AIMS security design requirements |
+| Information for interested parties | A.8.1 | Transparency obligations balanced with operational security — what must be disclosed vs what may be kept confidential |
+| Support | Cl.7 | Documented information controls — system prompts managed as AIMS documented information with appropriate access controls |
 
 #### Mitigations for ISO 42001 alignment
 
 **Foundational**
-- Cl.6.1: Include unbounded consumption in AI risk
-  assessment — availability impact, cost exposure, DoS
-  risk documented with owner and treatment
-- A.6.2.3: Implement rate limiting and resource controls
-  as AIMS security design requirements — hard token caps,
-  per-user budgets enforced at deployment
-- A.6.2.8: Monitor resource consumption as AIMS
-  operational control — cost anomaly alerts
+- A.7.3: Classify system prompts as sensitive operational
+  data in AIMS — document handling requirements, access
+  controls, and storage standards
+- Cl.7: Manage system prompts as AIMS documented
+  information — version control, access restrictions,
+  retention and disposal documented
+- A.6.2.3: Encrypt system prompts at rest — AIMS
+  security design requirement, not stored in cleartext
 
 **Hardening**
-- Cl.9: Include resource consumption in AIMS performance
-  evaluation — trends, incidents, budget adherence
-  reported in management review
-- Implement circuit breakers as operational resilience
-  control — documented as AIMS operational procedure
-  under Clause 8
+- A.6.2.6: Include prompt extraction testing in AIMS
+  testing programme — verify resistance to known
+  extraction techniques before deployment
+- A.8.1: Balance transparency obligations with
+  operational security — what must be disclosed under
+  EU AI Act or applicable regulation vs what is
+  legitimately confidential operational configuration
 
 **Advanced**
-- A.6.2.6: Include adversarial load testing in AIMS
-  testing programme — sponge example attacks tested
-  before production deployment
-- Cl.10: Corrective action process for consumption
-  incidents — root cause, control improvement documented
+- Implement system prompt tokenisation — sensitive
+  identifiers replaced with opaque tokens as A.6.2.3
+  security design control
+- Cl.9: Include extraction incidents in AIMS
+  performance monitoring — trend data in management review
+
+#### Cross-references
+- Agentic Top 10: ASI01 Agent Goal Hijack
+- DSGAI 2026: DSGAI15 Over-Broad Context Windows
+- Other frameworks: AIUC-1 B003/B009 · ISO 27001 A.5.12 · CWE-200
+
+---
+
+### LLM09 — Vector and Embedding Weaknesses
+
+**Severity:** Medium
+
+Vector stores are susceptible to adversarial retrieval and inference
+attacks. ISO 42001 A.7 (Data for AI systems) governs embedding
+stores as AI data assets.
+
+#### ISO 42001:2023 mapping
+
+| Control | ID | How it applies |
+|---|---|---|
+| Data quality | A.7.2 | Vector store content quality requirements — RBAC, encryption, source validation as data quality controls |
+| Data provenance and characteristics | A.7.3 | Embedding provenance documented — source document, classification, access controls tracked |
+| Testing of AI systems | A.6.2.6 | Vector store attacks in AIMS testing — RBAC bypass, embedding inversion, bulk extraction tested |
+| Third-party AI system acquisition | A.10.1 | Vector database providers assessed as third-party AI system components |
+
+#### Mitigations for ISO 42001 alignment
+
+**Foundational**
+- A.7.2: Establish data quality requirements for vector
+  stores — RBAC enabled, encryption at rest, content
+  validation before ingestion documented as AIMS controls
+- A.7.3: Track embedding provenance — source document,
+  classification, access controls as AIMS documented
+  information
+- Patch all vector database CVEs — AIMS vulnerability
+  management obligation under A.6.2.3
+
+**Hardening**
+- A.6.2.6: Include vector store attacks in AIMS testing —
+  RBAC bypass, path traversal, embedding inversion
+  results as AIMS test evidence
+- A.10.1: Assess vector database providers as third-party
+  AI system components — security obligations in vendor
+  contracts
+
+**Advanced**
+- Apply differential privacy in embedding generation —
+  document privacy budget as A.7.2 data quality control
+- Conduct embedding inversion red team as A.6.2.6
+  testing activity — validate source content cannot
+  be reconstructed
 
 #### Tools
 
 | Tool | Type | Link |
 |---|---|---|
-| LiteLLM | Open-source | https://github.com/BerriAI/litellm |
-| Kong Gateway | Open-source | https://github.com/Kong/kong |
+| Weaviate | Open-source | https://weaviate.io |
+| ML Privacy Meter | Open-source | https://github.com/privacytrustlab/ml_privacy_meter |
 
 #### Cross-references
-- Agentic Top 10: ASI08 Cascading Agent Failures
-- DSGAI 2026: DSGAI17 Data Availability & Resilience Failures
-- Other frameworks: NIST CSF 2.0 PR.IR-01 · ISA/IEC 62443 SR 7.6 (OT) · CWE-400
+- Agentic Top 10: ASI06 Memory & Context Poisoning
+- DSGAI 2026: DSGAI13 Vector Store Platform Security, DSGAI18 Inference & Data Reconstruction
+- Other frameworks: NIST AI RMF MS-2.5 · NIST CSF 2.0 PR.DS-01 · CWE-284
+
+---
+
+### LLM10 — Improper Output Handling
+
+**Severity:** High
+
+LLM output passed to downstream systems without validation enables
+injection attacks. ISO 42001 A.6.2.3 (security) and Clause 8
+(operation) address output handling as a system design concern.
+
+The 2026 entry renames Insecure Output Handling to Improper Output
+Handling and widens it to cover the insecure code that coding assistants
+generate at scale. Output that reaches a compiler, a repository, or a
+production system carries the same downstream-execution risk as output that
+reaches a shell, a browser, or a database.
+
+#### ISO 42001:2023 mapping
+
+| Control | ID | How it applies |
+|---|---|---|
+| AI system security | A.6.2.3 | Output encoding and schema validation as AIMS security design requirements — LLM output treated as untrusted input to downstream systems |
+| Testing of AI systems | A.6.2.6 | Output injection scenarios in AIMS testing — XSS, SQL injection, command injection via LLM output tested before deployment |
+| Use of AI systems | A.9.1 | Guidance on AI system use — downstream consumers informed that LLM output must be validated before use |
+| Operation | Cl.8 | Operational controls for LLM deployment — output handling requirements documented as AIMS operational procedures |
+
+#### Mitigations for ISO 42001 alignment
+
+**Foundational**
+- A.6.2.3: Document output encoding and schema validation
+  as AIMS security design requirements — LLM output
+  treated as untrusted input at all downstream interfaces
+- A.9.1: Communicate output handling requirements to
+  all downstream consumers — validation obligations
+  documented in AIMS user guidance
+- Never pass raw LLM output to database queries, shell
+  commands, or eval functions — AIMS policy control
+
+**Hardening**
+- A.6.2.6: Include output injection in AIMS testing —
+  XSS, SQL injection, command injection via model output
+  tested against all interfaces consuming LLM responses
+- Cl.8: Document output validation as AIMS operational
+  control — procedures, responsible parties, verification
+  cadence in AIMS documented information
+
+**Advanced**
+- Cl.9: Monitor output injection incidents in AIMS
+  performance evaluation — incident trends reported
+  in management review, controls improved based on data
+
+#### Tools
+
+| Tool | Type | Link |
+|---|---|---|
+| OWASP ZAP | Open-source | https://www.zaproxy.org |
+| Semgrep | Open-source | https://semgrep.dev |
+
+#### Cross-references
+- Agentic Top 10: ASI02 Tool Misuse, ASI05 Unexpected Code Execution
+- DSGAI 2026: DSGAI05 Data Integrity & Validation Failures, DSGAI12 Unsafe NL Data Gateways
+- Other frameworks: OWASP ASVS V5 · NIST CSF 2.0 PR.PS-04 · CWE-79
 
 ---
 
@@ -793,7 +826,7 @@ information security foundation, ISO 42001 adds the AI-specific layer.
 - [ISO/IEC 42001:2023](https://www.iso.org/standard/81230.html)
 - [ISO/IEC 42001 — Overview](https://www.iso.org/obp/ui/#iso:std:iso-iec:42001:ed-1:v1:en)
 - [ISO/IEC 27001:2022](https://www.iso.org/standard/82875.html)
-- [OWASP LLM Top 10 2025](https://genai.owasp.org/llm-top-10/)
+- [OWASP LLM Top 10 2026](https://genai.owasp.org/llm-top-10/)
 - [EU AI Act](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)
 
 ---
@@ -803,6 +836,7 @@ information security foundation, ISO 42001 adds the AI-specific layer.
 | Date | Version | Change | Author |
 |---|---|---|---|
 | 2026-03-26 | 2026-Q1 | Initial mapping — LLM01–LLM10 full entries with AIMS implementation checklist and ISO 27001 integration guidance | OWASP GenAI Data Security Initiative |
+| 2026-08-28 | 2026-Q3 | Migrated to OWASP Top 10 for LLM Applications 2026 — entries renumbered, LLM08 re-scoped from System Prompt Leakage to Hidden Context Exposure, LLM10 renamed to Improper Output Handling | OWASP GenAI Data Security Initiative |
 
 ---
 

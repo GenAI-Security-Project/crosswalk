@@ -1,6 +1,6 @@
 <!--
   OWASP GenAI Crosswalk
-  Source list : [REPLACE: OWASP Top 10 for LLM Applications 2025 (LLM01-LLM10)
+  Source list : [REPLACE: OWASP Top 10 for LLM Applications 2026 (LLM01-LLM10)
                | OWASP Top 10 for Agentic AI Applications 2026 (ASI01-ASI10)
                | OWASP GenAI Data Security Risks 2026 (DSGAI01-DSGAI21)]
   Framework   : [REPLACE: Framework Name vX.Y]

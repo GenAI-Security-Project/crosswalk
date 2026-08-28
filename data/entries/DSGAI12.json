@@ -2,7 +2,7 @@
   "id": "DSGAI12",
   "name": "Unsafe Natural Language Data Gateways",
   "source_list": "DSGAI-2026",
-  "version": "2026-Q1",
+  "version": "2026-Q3",
   "severity": "Critical",
   "aivss_score": null,
   "audience": [
@@ -679,11 +679,12 @@
   ],
   "crossrefs": {
     "llm_top10": [
-      "LLM05",
+      "LLM10",
       "LLM01",
       "LLM02",
-      "LLM03",
-      "LLM09"
+      "LLM04",
+      "LLM05",
+      "LLM07"
     ],
     "agentic_top10": [
       "ASI02",

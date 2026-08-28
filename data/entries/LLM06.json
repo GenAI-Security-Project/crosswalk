@@ -1,8 +1,8 @@
 {
   "id": "LLM06",
-  "name": "Excessive Agency",
-  "source_list": "LLM-Top10-2025",
-  "version": "2026-Q1",
+  "name": "Unbounded Consumption",
+  "source_list": "LLM-Top10-2026",
+  "version": "2026-Q3",
   "severity": "High",
   "aivss_score": null,
   "audience": [
@@ -18,117 +18,109 @@
   "mappings": [
     {
       "framework": "MITRE ATLAS",
-      "control_id": "AML.T0015",
-      "control_name": "LLM Capability Escalation",
+      "control_id": "AML.T0029",
+      "control_name": "Denial of ML Service",
       "tier": "Foundational",
-      "scope": "Build",
-      "url": "https://atlas.mitre.org/techniques/AML.T0015",
-      "notes": "Exploiting overly permissive LLM tool access to perform actions beyond intended scope"
+      "scope": "Both",
+      "url": "https://atlas.mitre.org/techniques/AML.T0029",
+      "notes": "Overloading AI systems with computationally expensive inputs to cause service degradation"
     },
     {
       "framework": "MITRE ATLAS",
-      "control_id": "AML.T0068",
-      "control_name": "Automated Collection",
+      "control_id": "AML.T0034",
+      "control_name": "Cost Harvesting",
       "tier": "Foundational",
-      "scope": "Build",
-      "url": "https://atlas.mitre.org/techniques/AML.T0068",
-      "notes": "LLM autonomously collecting data beyond its intended access scope"
-    },
-    {
-      "framework": "NIST AI RMF 1.0",
-      "control_id": "GV-1.7",
-      "control_name": "Policies for trustworthy AI",
-      "tier": "Foundational",
-      "scope": "Build",
-      "notes": "Organisational policy defines and enforces limits on AI system autonomy and decision authority"
-    },
-    {
-      "framework": "NIST AI RMF 1.0",
-      "control_id": "MP-2.3",
-      "control_name": "Risk categorisation",
-      "tier": "Foundational",
-      "scope": "Build",
-      "notes": "Excessive agency risks mapped to specific tool and API integrations in the risk register"
+      "scope": "Both",
+      "url": "https://atlas.mitre.org/techniques/AML.T0034",
+      "notes": "Crafting inputs that maximise token usage or API costs per request"
     },
     {
       "framework": "NIST AI RMF 1.0",
       "control_id": "MS-2.5",
       "control_name": "Testing — adversarial",
       "tier": "Foundational",
-      "scope": "Build",
-      "notes": "Autonomy boundary testing included in adversarial evaluation programme"
+      "scope": "Both",
+      "notes": "Resource exhaustion and denial-of-service scenarios included in adversarial testing"
     },
     {
       "framework": "NIST AI RMF 1.0",
       "control_id": "MG-2.2",
       "control_name": "Risk response",
       "tier": "Foundational",
-      "scope": "Build",
-      "notes": "Defined response for unauthorised autonomous actions including rollback and notification"
+      "scope": "Both",
+      "notes": "Defined response to detected unbounded consumption events including rate limiting activation"
+    },
+    {
+      "framework": "NIST AI RMF 1.0",
+      "control_id": "MG-3.2",
+      "control_name": "Residual risk — availability",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "Residual availability risk from resource exhaustion documented and treated"
+    },
+    {
+      "framework": "NIST AI RMF 1.0",
+      "control_id": "GV-1.7",
+      "control_name": "Policies for trustworthy AI",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "Organisational policy defines resource limits and availability requirements for all LLM deployments"
     },
     {
       "framework": "EU AI Act",
-      "control_id": "Autonomy-related risks identified and mitigated",
+      "control_id": "Availability risks identified and mitigated",
       "control_name": "Art. 9 — Risk management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Excessive agency scenarios required in risk management system"
+      "notes": "Resource exhaustion and DoS scenarios included in risk management system"
     },
     {
       "framework": "EU AI Act",
-      "control_id": "High-risk AI systems designed to allow effective human oversight — ability to pause, stop, and override",
-      "control_name": "Art. 14 — Human oversight",
+      "control_id": "High-risk AI must remain available under adversarial conditions",
+      "control_name": "Art. 15 — Accuracy, robustness, cybersecurity",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Human-in-the-loop requirements are a binding Art. 14 compliance obligation"
+      "notes": "Technical resilience against denial-of-service attacks is an Art. 15 requirement"
     },
     {
       "framework": "EU AI Act",
-      "control_id": "Deployers must ensure human oversight as instructed by provider",
-      "control_name": "Art. 29 — Deployer obligations",
+      "control_id": "Operational continuity procedures documented",
+      "control_name": "Art. 17 — Quality management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Deployers cannot waive Art. 14 human oversight requirements"
+      "notes": "Post-market monitoring and incident response for availability failures required"
     },
     {
       "framework": "ISO/IEC 27001:2022",
-      "control_id": "A.8.2",
-      "control_name": "Privileged access rights",
-      "tier": "Foundational",
-      "scope": "Build",
-      "notes": "LLM tool access managed as privileged access — minimum scope, reviewed regularly"
-    },
-    {
-      "framework": "ISO/IEC 27001:2022",
-      "control_id": "A.5.10",
-      "control_name": "Acceptable use of assets",
-      "tier": "Foundational",
-      "scope": "Build",
-      "notes": "Policy defining acceptable LLM autonomous actions — approved tool use cases documented"
-    },
-    {
-      "framework": "ISO/IEC 27001:2022",
-      "control_id": "A.8.15",
-      "control_name": "Logging",
-      "tier": "Foundational",
-      "scope": "Build",
-      "notes": "All LLM tool invocations logged with full context — every tool call auditable"
-    },
-    {
-      "framework": "ISO/IEC 27001:2022",
-      "control_id": "A.5.15",
-      "control_name": "Identity management",
-      "tier": "Foundational",
-      "scope": "Build",
-      "notes": "LLM tool access governed through identity management — tool permissions scoped per deployment"
-    },
-    {
-      "framework": "ISO/IEC 42001:2023",
-      "control_id": "A.6.1.2",
-      "control_name": "Responsible AI system management",
+      "control_id": "A.8.16",
+      "control_name": "Monitoring activities",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM tool access managed responsibly — minimum permissions, human oversight requirements documented as AIMS responsibilities"
+      "notes": "Real-time monitoring of LLM resource consumption — cost anomaly detection and alerting"
+    },
+    {
+      "framework": "ISO/IEC 27001:2022",
+      "control_id": "A.5.30",
+      "control_name": "ICT readiness for business continuity",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "LLM availability requirements in BCP — RTO/RPO defined, rate limiting as resilience control"
+    },
+    {
+      "framework": "ISO/IEC 27001:2022",
+      "control_id": "A.8.13",
+      "control_name": "Backup",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "Backup and recovery for LLM service infrastructure — failover capability tested"
+    },
+    {
+      "framework": "ISO/IEC 27001:2022",
+      "control_id": "A.5.24",
+      "control_name": "Incident management",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "Incident response procedures for LLM availability failures and cost overruns"
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -136,135 +128,135 @@
       "control_name": "AI system security",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Tool permission enforcement as AIMS security control — scope enforced at orchestration layer"
+      "notes": "Rate limiting and resource controls as AIMS security design requirements — enforced at deployment"
     },
     {
       "framework": "ISO/IEC 42001:2023",
-      "control_id": "A.5.2",
-      "control_name": "Impact assessment",
+      "control_id": "A.6.2.8",
+      "control_name": "Monitoring of AI systems",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Impact assessment covers excessive agency risk — what actions can the LLM take autonomously, what is the worst-case impact"
+      "notes": "Resource consumption monitored in operation — cost anomaly detection as AIMS monitoring control"
     },
     {
       "framework": "ISO/IEC 42001:2023",
-      "control_id": "Cl.5",
-      "control_name": "Policy",
+      "control_id": "Cl.6.1",
+      "control_name": "Risk assessment",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Leadership commitment to human oversight — autonomous action scope defined in AI policy, signed off at executive level"
+      "notes": "Consumption risk in AI risk assessment — impact on service availability, cost exposure documented"
+    },
+    {
+      "framework": "ISO/IEC 42001:2023",
+      "control_id": "Cl.9",
+      "control_name": "Performance evaluation",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "Resource consumption metrics in AIMS performance evaluation — consumption trends in management review"
     },
     {
       "framework": "CIS Controls v8.1",
-      "control_id": "5.4 Restrict administrator privileges",
-      "control_name": "CIS 5 — Account Management",
+      "control_id": "4.1 Establish secure configuration process",
+      "control_name": "CIS 4 — Secure Configuration",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM tool access managed as privileged access — minimum scope, regular review"
+      "notes": "Secure configuration includes resource limits — token caps, rate limits, cost budgets"
     },
     {
       "framework": "CIS Controls v8.1",
-      "control_id": "6.1 Establish access granting process",
-      "control_name": "CIS 6 — Access Control Management",
+      "control_id": "12.6 Use of network-based URL filters",
+      "control_name": "CIS 12 — Network Infrastructure Management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Formal process for granting LLM tool access — documented justification required"
+      "notes": "Rate limiting and traffic controls at the API gateway and network layer"
     },
     {
       "framework": "CIS Controls v8.1",
-      "control_id": "8.5 Collect detailed audit logs",
-      "control_name": "CIS 8 — Audit Log Management",
+      "control_id": "17.1 Designate personnel for incident response",
+      "control_name": "CIS 17 — Incident Response",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All LLM tool invocations logged — every tool call auditable with parameters"
+      "notes": "Defined response for consumption anomalies — automated rate limiting, session suspension, alerting"
     },
     {
       "framework": "OWASP ASVS 4.0.3",
-      "control_id": "V4.1.3",
-      "control_name": "Verify access control enforces least privilege",
+      "control_id": "V13.1.1",
+      "control_name": "Verify API rate limiting",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM tool access enforced at minimum required scope — read-only by default"
+      "notes": "Rate limiting on all LLM API endpoints — per user, per session, per API key"
     },
     {
       "framework": "OWASP ASVS 4.0.3",
-      "control_id": "V4.1.1",
-      "control_name": "Verify all sensitive functions have access control",
+      "control_id": "V13.1.3",
+      "control_name": "Verify API rejects large unexpected payloads",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM cannot access sensitive functions (write, delete, execute) without explicit authorisation"
+      "notes": "Token limits on LLM API inputs — requests exceeding limits rejected at the gateway"
     },
     {
       "framework": "OWASP ASVS 4.0.3",
-      "control_id": "V7.2.2",
-      "control_name": "Verify all business logic decisions logged",
+      "control_id": "V11.1.4",
+      "control_name": "Verify business logic rate limits",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All LLM tool invocations logged with full context — every tool call auditable"
+      "notes": "Business logic controls on LLM usage — per-tenant cost budgets, rate limit policies"
     },
     {
       "framework": "OWASP ASVS 4.0.3",
-      "control_id": "V11.1.2",
-      "control_name": "Verify business logic abuse scenarios identified",
+      "control_id": "V7.4.1",
+      "control_name": "Verify error handling does not expose sensitive data",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Business logic controls preventing tool misuse through prompt manipulation"
+      "notes": "LLM resource exhaustion errors handled gracefully — no sensitive information in error responses"
     },
     {
       "framework": "ISA/IEC 62443",
-      "control_id": "SR 2.2",
-      "control_name": "Least privilege",
+      "control_id": "SR 7.6",
+      "control_name": "Denial of service protection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLMs granted minimum necessary permissions to OT systems — read-only by default, no autonomous write"
+      "notes": "LLM components protected against resource exhaustion attacks affecting OT availability"
     },
     {
       "framework": "ISA/IEC 62443",
-      "control_id": "SR 2.1",
-      "control_name": "Use control enforcement",
+      "control_id": "SR 7.7",
+      "control_name": "Control system backup",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All LLM actions in OT context subject to explicit use controls — no autonomous action without human confirmation"
+      "notes": "LLM resource exhaustion cannot affect backup and recovery of OT control systems"
     },
     {
       "framework": "ISA/IEC 62443",
-      "control_id": "SR 1.2",
-      "control_name": "User authentication",
+      "control_id": "SR 6.6",
+      "control_name": "Timely response to events",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM actions in OT context authenticated as a distinct identity — traceable in OT audit log"
-    },
-    {
-      "framework": "ISA/IEC 62443",
-      "control_id": "SR 1.9",
-      "control_name": "Session lock",
-      "tier": "Foundational",
-      "scope": "Both",
-      "notes": "LLM sessions with OT access can be locked and terminated immediately by operators"
+      "notes": "Network monitoring detects and responds to LLM-related resource exhaustion before OT impact"
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
-      "control_id": "Unauthorised command execution via IT/OT interfaces",
-      "control_name": "Section 5.3 — Threats",
+      "control_id": "Denial of service attacks targeting OT availability",
+      "control_name": "Section 5.6 — DoS threats",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM autonomous actions as a new path for unauthorised command execution"
+      "notes": "LLM-induced resource exhaustion as a DoS vector affecting shared OT network infrastructure"
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
-      "control_id": "Assess impact of unauthorised access and control",
+      "control_id": "Assess availability risks for OT systems",
       "control_name": "Section 6.2 — Risk assessment",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM excessive agency assessed as an unauthorised access risk for each OT interface"
+      "notes": "LLM resource consumption impact assessed on shared OT network and compute infrastructure"
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
-      "control_id": "Minimal necessary connectivity at IT/OT boundary",
-      "control_name": "Section 7.1 — Architecture",
+      "control_id": "Network architecture preventing DoS propagation",
+      "control_name": "Section 7.2 — Network segmentation",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM access to OT systems restricted to minimum required — read-only by default"
+      "notes": "LLM infrastructure isolated from OT control network — bandwidth caps at DMZ boundary"
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -276,19 +268,19 @@
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
-      "control_id": "Least Privilege",
-      "control_name": "AC-6",
+      "control_id": "Denial of Service Protection",
+      "control_name": "SC-5",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM granted minimum necessary OT access — read-only to historian, no write access without documented justification"
+      "notes": "LLM infrastructure protected against resource exhaustion attacks affecting OT availability"
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
-      "control_id": "Access Enforcement",
-      "control_name": "AC-3",
+      "control_id": "Fail-Safe Procedures",
+      "control_name": "SI-17",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM access to OT systems enforced by policy — scope cannot be exceeded regardless of model instruction"
+      "notes": "LLM service degradation has defined fail-safe behaviour — process control continues without LLM"
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -296,23 +288,15 @@
       "control_name": "AU-12",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All LLM actions in OT context logged — full accountability for every OT data access and any recommended action"
+      "notes": "LLM resource consumption logged — patterns indicating exhaustion attacks detectable"
     },
     {
       "framework": "NIST CSF 2.0",
-      "control_id": "PR.AA-05",
-      "control_name": "Identity Management, Authentication & Access Control",
+      "control_id": "PR.IR-01",
+      "control_name": "Infrastructure Resilience",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Access permissions managed — LLM tool access managed as privileged access with least privilege enforcement"
-    },
-    {
-      "framework": "NIST CSF 2.0",
-      "control_id": "PR.AA-01",
-      "control_name": "Identity Management, Authentication & Access Control",
-      "tier": "Foundational",
-      "scope": "Both",
-      "notes": "Identities managed — LLM service identities inventoried and managed, tool permissions scoped per identity"
+      "notes": "Networks and environments protected to achieve resilience — rate limiting and resource controls as resilience measures"
     },
     {
       "framework": "NIST CSF 2.0",
@@ -320,67 +304,75 @@
       "control_name": "Continuous Monitoring",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Networks and assets monitored — all LLM tool invocations logged and monitored for anomalous scope"
+      "notes": "LLM resource consumption monitored — anomalous usage patterns detected and alerted"
     },
     {
       "framework": "NIST CSF 2.0",
-      "control_id": "GV.OC-01",
-      "control_name": "Organisational Context",
+      "control_id": "RS.MI-01",
+      "control_name": "Incident Mitigation",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Acceptable use of LLM autonomous actions defined — policy specifies what actions require human confirmation"
+      "notes": "Incidents contained — automated rate limiting, circuit breakers, cost budgets as containment controls"
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "control_id": "GV.RM-01",
+      "control_name": "Risk Management Strategy",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "Risk management strategy established — LLM availability requirements and acceptable consumption risk defined"
     },
     {
       "framework": "SOC 2",
-      "control_id": "LLM tool access managed under least privilege — minimum scope, documented justification, regular review",
-      "control_name": "CC6.1 — Logical access restrictions",
+      "control_id": "LLM service availability commitments documented — SLAs, RTO/RPO, resource limits that protect availability",
+      "control_name": "A1.1 — Availability policies",
       "tier": "Foundational",
       "scope": "Both"
     },
     {
       "framework": "SOC 2",
-      "control_id": "LLM tool permissions removed promptly when no longer required — access review process covers LLM tool scope",
-      "control_name": "CC6.3 — Access removal",
+      "control_id": "Rate limiting and resource controls protect LLM service availability — implemented and monitored",
+      "control_name": "A1.2 — Environmental protections",
       "tier": "Foundational",
       "scope": "Both"
     },
     {
       "framework": "SOC 2",
-      "control_id": "Human oversight procedures for LLM autonomous actions — confirmation requirements documented and enforced",
-      "control_name": "CC5.2 — Control activities",
+      "control_id": "Real-time monitoring of LLM resource consumption — cost anomalies and unusual volume patterns alerted",
+      "control_name": "CC7.2 — Anomaly detection",
       "tier": "Foundational",
       "scope": "Both"
     },
     {
       "framework": "SOC 2",
-      "control_id": "Excessive agency risks identified — what autonomous actions can the LLM take, what is the blast radius",
+      "control_id": "Resource exhaustion risks identified in LLM risk assessment — DoS and sponge attack vectors assessed",
       "control_name": "CC3.2 — Risk assessment",
       "tier": "Foundational",
       "scope": "Both"
     },
     {
       "framework": "PCI DSS v4.0",
-      "control_id": "Req 7.2.1",
-      "control_name": "Restrict access to system components",
+      "control_id": "Req 1.3.2",
+      "control_name": "Network security controls",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM tool access to CDE systems restricted to minimum required — read-only by default, write access formally approved"
+      "notes": "Network controls restrict inbound traffic to CDE — rate limiting at network layer for LLM applications"
     },
     {
       "framework": "PCI DSS v4.0",
-      "control_id": "Req 7.3.1",
-      "control_name": "Access control system",
+      "control_id": "Req 6.4.1",
+      "control_name": "Public-facing application protection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Access control system enforces LLM tool scope — agent cannot exceed defined CDE access without explicit authorisation"
+      "notes": "LLM-powered public-facing applications protected against DoS — rate limiting and payload limits enforced"
     },
     {
       "framework": "PCI DSS v4.0",
-      "control_id": "Req 10.2.1",
-      "control_name": "Logging and monitoring",
+      "control_id": "Req 10.6.1",
+      "control_name": "Audit log review",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All LLM tool invocations in CDE logged — tool identity, parameters, invoking user identity, timestamp"
+      "notes": "Automated monitoring for resource exhaustion patterns — unusual consumption volumes alerted"
     },
     {
       "framework": "PCI DSS v4.0",
@@ -388,23 +380,15 @@
       "control_name": "Targeted risk analysis",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Targeted risk analysis for LLM autonomous action scope in CDE — blast radius documented and accepted"
+      "notes": "Targeted risk analysis for LLM availability in CDE — DoS impact on payment processing, controls documented"
     },
     {
       "framework": "ENISA Multilayer Framework",
-      "control_id": "L2",
-      "control_name": "Governance and Risk (GOV)",
+      "control_id": "L1",
+      "control_name": "General ICT — Availability",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Human oversight requirements for autonomous LLM actions — acceptable autonomy scope defined in AI governance policy"
-    },
-    {
-      "framework": "ENISA Multilayer Framework",
-      "control_id": "L2",
-      "control_name": "AI System Integrity (ASI)",
-      "tier": "Foundational",
-      "scope": "Both",
-      "notes": "Tool permission enforcement and action guardrails as ASI controls — LLM cannot exceed defined scope"
+      "notes": "Rate limiting and resource controls as L1 availability practices — LLM infrastructure protected against exhaustion"
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -412,121 +396,115 @@
       "control_name": "Monitoring and Detection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All LLM tool invocations logged and monitored — anomalous scope detected through AI-specific monitoring"
+      "notes": "LLM resource consumption monitored — cost anomaly detection as ENISA monitoring practice"
     },
     {
       "framework": "ENISA Multilayer Framework",
       "control_id": "L1",
-      "control_name": "General ICT — Access Control",
+      "control_name": "Incident Response (IRS)",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM tool access managed as privileged access — minimum permissions, regular review"
+      "notes": "Incident response for consumption anomalies — automated rate limiting, circuit breakers, cost budgets"
+    },
+    {
+      "framework": "ENISA Multilayer Framework",
+      "control_id": "L2",
+      "control_name": "Governance and Risk (GOV)",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "LLM availability in risk management — RTO/RPO defined, consumption risk in AI risk register"
     },
     {
       "framework": "OWASP SAMM v2.0",
-      "control_id": "G-SM",
-      "control_name": "Strategy & Metrics",
+      "control_id": "D-SR",
+      "control_name": "Security Requirements",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "AI autonomy policy as security programme strategy — acceptable autonomous action scope defined and communicated"
+      "notes": "Rate limiting and resource caps as security requirements — specified before LLM infrastructure deployment"
     },
     {
       "framework": "OWASP SAMM v2.0",
-      "control_id": "D-SA",
-      "control_name": "Security Architecture",
+      "control_id": "I-SD",
+      "control_name": "Secure Deployment",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Least privilege architecture for LLM tool access — action scope enforced by design, not just policy"
+      "notes": "Rate limiting and resource controls deployed with every LLM deployment — not optional post-deployment hardening"
     },
     {
       "framework": "OWASP SAMM v2.0",
-      "control_id": "D-TA",
-      "control_name": "Threat Assessment",
+      "control_id": "O-IM",
+      "control_name": "Incident Management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Excessive agency threat modelled — what happens if each tool is invoked autonomously with adversarial parameters"
+      "notes": "Consumption anomaly detection as incident management control — automated response, escalation procedure"
     },
     {
       "framework": "OWASP SAMM v2.0",
-      "control_id": "O-OM",
-      "control_name": "Operational Management",
+      "control_id": "O-EM",
+      "control_name": "Environment Management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All LLM tool invocations logged and monitored — anomalous scope detected as operational control"
-    },
-    {
-      "framework": "STRIDE",
-      "control_id": "E",
-      "control_name": "Privilege Escalation via Excessive Tool Access",
-      "tier": "Foundational",
-      "scope": "Build"
-    },
-    {
-      "framework": "STRIDE",
-      "control_id": "T",
-      "control_name": "Unauthorised State Tampering",
-      "tier": "Foundational",
-      "scope": "Build"
+      "notes": "Resource limits as environment configuration — documented, version-controlled, reviewed on change"
     },
     {
       "framework": "STRIDE",
       "control_id": "D",
-      "control_name": "Resource Exhaustion via Uncontrolled Actions",
+      "control_name": "Resource Exhaustion (Denial of Service)",
       "tier": "Foundational",
-      "scope": "Build"
+      "scope": "Both"
     },
     {
       "framework": "CWE/CVE",
-      "control_id": "CWE-269",
-      "control_name": "CWE-269",
-      "tier": "Foundational",
-      "scope": "Build",
-      "url": "https://cwe.mitre.org/data/definitions/269.html"
-    },
-    {
-      "framework": "CWE/CVE",
-      "control_id": "CWE-272",
-      "control_name": "CWE-272",
-      "tier": "Foundational",
-      "scope": "Build",
-      "url": "https://cwe.mitre.org/data/definitions/272.html"
-    },
-    {
-      "framework": "CWE/CVE",
-      "control_id": "CWE-284",
-      "control_name": "CWE-284",
-      "tier": "Foundational",
-      "scope": "Build",
-      "url": "https://cwe.mitre.org/data/definitions/284.html"
-    },
-    {
-      "framework": "OWASP AI Testing Guide",
-      "control_id": "Permission scope enforcement",
-      "control_name": "ACT — Access Control",
+      "control_id": "CWE-400",
+      "control_name": "CWE-400",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Verify LLM cannot invoke capabilities, tools, or APIs outside its defined role; test scope boundaries under adversarial conditions"
+      "url": "https://cwe.mitre.org/data/definitions/400.html"
     },
     {
-      "framework": "OWASP AI Testing Guide",
-      "control_id": "Irreversibility gate enforcement",
-      "control_name": "AST — Agent-Specific",
+      "framework": "CWE/CVE",
+      "control_id": "CWE-770",
+      "control_name": "CWE-770",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Verify irreversible actions require human confirmation; test that confirmation gates cannot be bypassed through crafted inputs"
+      "url": "https://cwe.mitre.org/data/definitions/770.html"
+    },
+    {
+      "framework": "CWE/CVE",
+      "control_id": "CWE-799",
+      "control_name": "CWE-799",
+      "tier": "Foundational",
+      "scope": "Both",
+      "url": "https://cwe.mitre.org/data/definitions/799.html"
     },
     {
       "framework": "OWASP AI Testing Guide",
-      "control_id": "Action audit completeness",
+      "control_id": "Resource exhaustion and rate limiting",
+      "control_name": "AVT — Availability",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "Test rate limiting enforcement, token budget controls, and compute throttling under load; verify graceful degradation"
+    },
+    {
+      "framework": "OWASP AI Testing Guide",
+      "control_id": "Consumption anomaly detection",
       "control_name": "LMT — Logging & Monitoring",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Verify all LLM-initiated actions are logged with sufficient detail for forensic review"
+      "notes": "Verify monitoring detects abnormal consumption patterns — token flooding, API abuse, wallet drainage — before service impact"
+    },
+    {
+      "framework": "OWASP AI Testing Guide",
+      "control_id": "Per-user quota enforcement",
+      "control_name": "ACT — Access Control",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "Verify per-user and per-tenant quotas are enforced and cannot be bypassed through session switching or credential abuse"
     },
     {
       "framework": "MAESTRO",
-      "control_id": "L6",
-      "control_name": "Security & Compliance",
+      "control_id": "L4",
+      "control_name": "Deployment & Infrastructure",
       "tier": "Foundational",
       "scope": "Both"
     },
@@ -539,10 +517,18 @@
     },
     {
       "framework": "MAESTRO",
-      "control_id": "L7",
-      "control_name": "Agent Ecosystem",
+      "control_id": "L5",
+      "control_name": "Evaluation & Observability",
       "tier": "Foundational",
       "scope": "Both"
+    },
+    {
+      "framework": "AIUC-1",
+      "control_id": "D",
+      "control_name": "Reliability domain (all)",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "Foundational"
     },
     {
       "framework": "AIUC-1",
@@ -554,169 +540,145 @@
     },
     {
       "framework": "AIUC-1",
-      "control_id": "B007",
-      "control_name": "Third-party permission controls",
-      "tier": "Foundational",
-      "scope": "Both",
-      "notes": "Hardening"
-    },
-    {
-      "framework": "AIUC-1",
-      "control_id": "C",
-      "control_name": "Safety domain (human oversight)",
-      "tier": "Foundational",
-      "scope": "Both",
-      "notes": "Foundational"
-    },
-    {
-      "framework": "AIUC-1",
       "control_id": "E",
-      "control_name": "Accountability domain (audit trails)",
+      "control_name": "Accountability domain",
       "tier": "Foundational",
       "scope": "Both",
       "notes": "Foundational"
     },
     {
       "framework": "OWASP NHI Top 10",
-      "control_id": "Tool/API credentials with more scope than task requires",
+      "control_id": "Single credential with access to multiple services — one exhaustion affects all",
       "control_name": "NHI-5 Over-Privileged NHI",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Minimum credential scope per tool integration"
+      "notes": "Separate credentials per service with independent quotas"
     },
     {
       "framework": "OWASP NHI Top 10",
-      "control_id": "Long-lived tool credentials enable extended unauthorised access",
-      "control_name": "NHI-7 Long-Lived Credentials",
-      "tier": "Foundational",
-      "scope": "Both",
-      "notes": "Short-lived JIT credentials per task (see RECIPES.md)"
-    },
-    {
-      "framework": "OWASP NHI Top 10",
-      "control_id": "Same credential used for multiple tools — compromise of one exposes all",
+      "control_id": "Shared credential used across services — quota exhaustion in one affects all",
       "control_name": "NHI-9 NHI Reuse",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Separate credentials per tool integration"
-    },
-    {
-      "framework": "NIST SP 800-218A",
-      "control_id": "PW.1.1-PS",
-      "control_name": "Define security requirements — AI capability constraints",
-      "tier": "Foundational",
-      "scope": "Build",
-      "notes": "Define explicit security requirements limiting the capabilities, tool access, and autonomous action scope permitted for each AI deployment"
+      "notes": "Separate credentials per integration"
     },
     {
       "framework": "NIST SP 800-218A",
       "control_id": "PW.2.1-PS",
-      "control_name": "Design software — autonomy boundary threat modelling",
+      "control_name": "Design software — resource and throttling requirements",
       "tier": "Foundational",
-      "scope": "Build",
-      "notes": "Threat model all tool integrations and autonomous action paths; design least-privilege tool manifests and human approval gates for irreversible actions"
-    },
-    {
-      "framework": "NIST SP 800-218A",
-      "control_id": "PW.7.2-PS",
-      "control_name": "Review for security vulnerabilities — autonomy boundary validation",
-      "tier": "Foundational",
-      "scope": "Build",
-      "notes": "Review model behaviour for scope violations — verify that the model cannot invoke tools or take actions outside its defined permission manifest"
+      "scope": "Both",
+      "notes": "Define token limits, rate limits, and cost budgets as explicit security design requirements for all AI inference services; document in design specifications"
     },
     {
       "framework": "NIST SP 800-218A",
       "control_id": "PW.8.2-PS",
-      "control_name": "Test for security vulnerabilities — adversarial autonomy testing",
+      "control_name": "Test for security vulnerabilities — load and adversarial consumption testing",
       "tier": "Foundational",
-      "scope": "Build",
-      "notes": "Conduct adversarial testing targeting excessive agency through indirect injection and permission escalation scenarios"
+      "scope": "Both",
+      "notes": "Conduct adversarial resource consumption testing (sponge examples, token amplification, recursive context injection) before each production release"
+    },
+    {
+      "framework": "NIST SP 800-218A",
+      "control_id": "RV.2.1-PS",
+      "control_name": "Assess, prioritise, and remediate — availability remediation",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "Define and test remediation procedures for availability incidents — rate limit tightening, model rollback, cost circuit breaker activation"
+    },
+    {
+      "framework": "NIST SP 800-218A",
+      "control_id": "PS.2.1-PS",
+      "control_name": "Verify software integrity — throttle and limit configuration integrity",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "Verify that rate limit and resource constraint configurations have not been altered before deployment; treat throttle configuration as a security artefact"
     },
     {
       "framework": "FedRAMP",
-      "control_id": "AC-6",
-      "control_name": "Least Privilege — AI agent permissions",
+      "control_id": "SC-7",
+      "control_name": "Boundary Protection — rate limiting and cost controls",
       "tier": "Foundational",
-      "scope": "Build",
-      "notes": "Enforce least privilege for all AI agent tool access, API permissions, and autonomous action scope; restrict to minimum capabilities needed per deployment"
+      "scope": "Both",
+      "notes": "Enforce rate limiting, token quotas, and cost circuit breakers at the AI service boundary; define per-user and per-session consumption limits"
+    },
+    {
+      "framework": "FedRAMP",
+      "control_id": "SI-4",
+      "control_name": "System Monitoring — consumption anomaly detection",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "Monitor AI service consumption metrics — tokens, latency, cost — in real time; alert and auto-mitigate on consumption anomalies"
     },
     {
       "framework": "FedRAMP",
       "control_id": "CM-7",
-      "control_name": "Least Functionality — AI capability restrictions",
+      "control_name": "Least Functionality — resource budget enforcement",
       "tier": "Foundational",
-      "scope": "Build",
-      "notes": "Restrict AI systems to minimum necessary capabilities; disable unused tools, APIs, and action types; enforce capability restrictions in configuration"
+      "scope": "Both",
+      "notes": "Restrict AI services to defined resource budgets; disable unnecessary model capabilities; enforce compute and cost limits in configuration"
     },
     {
       "framework": "FedRAMP",
-      "control_id": "AC-3",
-      "control_name": "Access Enforcement — tool invocation control",
+      "control_id": "IR-4",
+      "control_name": "Incident Handling — consumption incident response",
       "tier": "Foundational",
-      "scope": "Build",
-      "notes": "Enforce access control on all AI tool invocations; require authorisation for each tool call based on agent identity, context, and action type"
-    },
-    {
-      "framework": "FedRAMP",
-      "control_id": "PM-9",
-      "control_name": "Risk Management Strategy — AI autonomy risk",
-      "tier": "Foundational",
-      "scope": "Build",
-      "notes": "Include AI autonomy and excessive agency in the organisational risk management strategy; define acceptable autonomy thresholds and escalation procedures"
-    },
-    {
-      "framework": "DORA",
-      "control_id": "Art. 5–7",
-      "control_name": "ICT Risk Management — AI autonomy governance",
-      "tier": "Foundational",
-      "scope": "Build",
-      "notes": "Include AI autonomy and excessive agency in the ICT risk management framework; define acceptable autonomy thresholds and escalation procedures for financial AI systems"
+      "scope": "Both",
+      "notes": "Define incident handling procedures for AI consumption anomalies including automatic throttling, service suspension, and cost cap enforcement"
     },
     {
       "framework": "DORA",
       "control_id": "Art. 9",
-      "control_name": "Protection and Prevention — agent action boundaries",
+      "control_name": "Protection and Prevention — consumption controls",
       "tier": "Foundational",
-      "scope": "Build",
-      "notes": "Implement security controls enforcing least privilege on AI agent tool access, API permissions, and autonomous action scope within financial systems"
-    },
-    {
-      "framework": "DORA",
-      "control_id": "Art. 24–27",
-      "control_name": "Resilience Testing — autonomy boundary testing",
-      "tier": "Foundational",
-      "scope": "Build",
-      "notes": "Include excessive agency scenarios in resilience testing; test that AI agents cannot exceed defined permission boundaries under adversarial conditions"
+      "scope": "Both",
+      "notes": "Implement rate limiting, token quotas, and cost circuit breakers on financial AI inference services; define per-user and per-service consumption limits"
     },
     {
       "framework": "DORA",
       "control_id": "Art. 10",
-      "control_name": "Detection — unauthorised action detection",
+      "control_name": "Detection — consumption anomaly detection",
       "tier": "Foundational",
-      "scope": "Build",
-      "notes": "Monitor AI agent actions for unauthorised tool invocations, scope violations, and anomalous behaviour patterns; alert on detection"
+      "scope": "Both",
+      "notes": "Monitor AI service consumption metrics in real time; alert on token spikes, latency degradation, and cost overruns affecting financial service availability"
+    },
+    {
+      "framework": "DORA",
+      "control_id": "Art. 12",
+      "control_name": "Backup Policies — AI service continuity",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "Maintain backup model deployments and fallback inference paths for AI services supporting critical financial functions; test restoration procedures"
+    },
+    {
+      "framework": "DORA",
+      "control_id": "Art. 11",
+      "control_name": "Response and Recovery — consumption incident response",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "Define response and recovery procedures for AI consumption incidents; include automatic throttling, failover activation, and service restoration"
     }
   ],
   "tools": [
     {
-      "name": "LangChain (with guardrails)",
+      "name": "Kong Gateway",
       "type": "open-source",
-      "url": "https://github.com/langchain-ai/langchain"
+      "url": "https://github.com/Kong/kong"
     },
     {
-      "name": "Guardrails AI",
+      "name": "Nginx (rate limiting)",
       "type": "open-source",
-      "url": "https://github.com/guardrails-ai/guardrails"
+      "url": "https://nginx.org"
     },
     {
-      "name": "NeMo Guardrails",
+      "name": "LiteLLM",
       "type": "open-source",
-      "url": "https://github.com/NVIDIA/NeMo-Guardrails"
+      "url": "https://github.com/BerriAI/litellm"
     },
     {
-      "name": "LangSmith",
-      "type": "commercial",
-      "url": "https://smith.langchain.com"
+      "name": "OpenTelemetry",
+      "type": "open-source",
+      "url": "https://opentelemetry.io"
     },
     {
       "name": "Claroty",
@@ -724,46 +686,38 @@
       "url": "https://claroty.com"
     },
     {
-      "name": "Open Policy Agent",
-      "type": "open-source",
-      "url": "https://www.openpolicyagent.org"
+      "name": "Nozomi Networks",
+      "type": "commercial",
+      "url": "https://www.nozominetworks.com"
     },
     {
-      "name": "LAAF v2.0",
-      "url": "https://github.com/qorvexconsulting1/laaf-V2.0",
+      "name": "LiteLLM (rate limiting)",
+      "type": "open-source",
+      "url": "https://github.com/BerriAI/litellm"
+    },
+    {
+      "name": "AWS Budgets / Azure Cost Management",
+      "type": "commercial",
+      "url": "https://aws.amazon.com/aws-cost-management/aws-budgets/"
+    },
+    {
+      "name": "Inspect AI",
+      "url": "https://github.com/UKGovernmentBEIS/inspect_ai",
       "type": "open-source"
     }
   ],
   "incidents": [
     {
-      "name": "Bing Chat 'Sydney' jailbreak — persona escape and threatening behaviour",
+      "name": "Clarkesworld magazine overwhelmed by AI-generated fiction submissions",
       "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
       "year": 2023,
-      "incident_id": "INC-002"
+      "incident_id": "INC-014"
     },
     {
-      "name": "Air Canada chatbot invents bereavement discount policy — tribunal ruling",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
-      "year": 2024,
-      "incident_id": "INC-004"
-    },
-    {
-      "name": "Chevrolet dealership chatbot agrees to sell car for $1",
+      "name": "AutoGPT and BabyAGI — uncontrolled web browsing and file system access",
       "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
       "year": 2023,
-      "incident_id": "INC-005"
-    },
-    {
-      "name": "WormGPT — uncensored LLM sold for cybercrime on dark web forums",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
-      "year": 2023,
-      "incident_id": "INC-011"
-    },
-    {
-      "name": "LAAF v2.0 — Empirical LPCI breakthrough rates of 67–100% across 5 production LLMs",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
-      "year": 2026,
-      "incident_id": "INC-021"
+      "incident_id": "INC-017"
     },
     {
       "name": "AI voice deepfake CEO fraud — Hong Kong $25M loss",
@@ -772,123 +726,19 @@
       "incident_id": "INC-026"
     },
     {
-      "name": "MathPrompt: symbolic mathematics jailbreak attack",
+      "name": "Anthropic Claude context flooding — resource exhaustion via adversarial long-context prompts",
       "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
       "year": 2024,
-      "incident_id": "INC-027"
-    },
-    {
-      "name": "Many-shot jailbreaking (Anthropic research)",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
-      "year": 2024,
-      "incident_id": "INC-028"
-    },
-    {
-      "name": "Crescendo: multi-turn escalation attack (Microsoft)",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
-      "year": 2024,
-      "incident_id": "INC-029"
-    },
-    {
-      "name": "Skeleton Key: direct system prompt override (Microsoft)",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
-      "year": 2024,
-      "incident_id": "INC-030"
-    },
-    {
-      "name": "Meta Galactica model withdrawn after misinformation at launch",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
-      "year": 2022,
-      "incident_id": "INC-031"
-    },
-    {
-      "name": "OpenAI o1/o3 reasoning chain jailbreak via chain-of-thought manipulation",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
-      "year": 2025,
-      "incident_id": "INC-033"
-    },
-    {
-      "name": "Apollo Research: frontier models demonstrate strategic deception to avoid shutdown",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
-      "year": 2024,
-      "incident_id": "INC-047"
-    },
-    {
-      "name": "AI companion apps: manipulation and exploitation of human-agent trust",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
-      "year": 2025,
-      "incident_id": "INC-048"
-    },
-    {
-      "name": "NYC city chatbot tells businesses to break the law — fabricated legal guidance",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
-      "year": 2024,
-      "incident_id": "INC-052"
-    },
-    {
-      "name": "DPD AI chatbot swears at customer and criticises company — prompt injection via customer input",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
-      "year": 2024,
-      "incident_id": "INC-053"
-    },
-    {
-      "name": "Character.AI teen suicide — AI companion encouraged self-harm",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
-      "year": 2024,
-      "incident_id": "INC-057"
-    },
-    {
-      "name": "LLM-generated malware evades endpoint detection — AI-assisted polymorphic code",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
-      "year": 2024,
-      "incident_id": "INC-075"
-    },
-    {
-      "name": "Claude Skills ransomware deployment — MedusaLocker via malicious plugin",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
-      "year": 2025,
-      "incident_id": "INC-081"
-    },
-    {
-      "name": "Google Antigravity AI IDE deletes entire D: drive — misinterpreted cache-clearing instruction",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
-      "year": 2025,
-      "incident_id": "INC-082"
-    },
-    {
-      "name": "Claude hijacked for state-sponsored cyberattacks — 80-90% autonomous operation against 30 entities",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
-      "year": 2025,
-      "incident_id": "INC-083"
-    },
-    {
-      "name": "XBOW — first critical CVE discovered entirely by autonomous AI penetration testing agent",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
-      "year": 2026,
-      "incident_id": "INC-096"
-    },
-    {
-      "name": "Anthropic Claude misuse report — ransomware development, North Korean employment fraud, extortion",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
-      "year": 2025,
-      "incident_id": "INC-110"
+      "incident_id": "INC-045"
     }
   ],
   "crossrefs": {
     "agentic_top10": [
-      "ASI01",
-      "ASI02",
-      "ASI10",
-      "ASI09",
-      "ASI03",
-      "ASI07"
+      "ASI08",
+      "ASI10"
     ],
     "dsgai_2026": [
-      "DSGAI06",
-      "DSGAI16",
-      "DSGAI12",
-      "DSGAI02",
-      "DSGAI07"
+      "DSGAI17"
     ]
   },
   "changelog": [
@@ -897,6 +747,12 @@
       "version": "1.0.0",
       "change": "Initial entry — generated from OWASP GenAI Crosswalk v1.5.1 mapping files",
       "author": "emmanuelgjr"
+    },
+    {
+      "date": "2026-08-28",
+      "version": "2.0.0",
+      "change": "Migrated to the OWASP Top 10 for LLM Applications 2026 — see MIGRATION.md for the 2025 → 2026 entry map",
+      "author": "OWASP GenAI Data Security Initiative"
     }
   ]
 }

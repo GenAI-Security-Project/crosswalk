@@ -386,7 +386,7 @@ detection.
   possible poisoned recommendation for each process area
 
 #### Cross-references
-- LLM Top 10: LLM03 Supply Chain, LLM04 Data & Model Poisoning
+- LLM Top 10: LLM04 Supply Chain, LLM05 Data and Model Poisoning
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - Other frameworks: NIST SP 800-82 Rev 3 Section 5.3 · ISO 27001 A.8.27 · MITRE ATLAS AML.T0020
 
@@ -434,7 +434,7 @@ hosts within Zone 3 — a direct path to Zone 3 host compromise.
   as potential integrity attack
 
 #### Cross-references
-- LLM Top 10: LLM05 Insecure Output Handling
+- LLM Top 10: LLM10 Improper Output Handling
 - DSGAI 2026: DSGAI13 Vector Store Platform Security
 - Other frameworks: NIST SP 800-82 Rev 3 Section 7.2 · CWE-20 · ISO 27001 A.8.26/A.8.28
 
@@ -770,7 +770,7 @@ Repositories) realised in Zone 3.
   work order creation or setpoint access
 
 #### Cross-references
-- LLM Top 10: LLM05 Insecure Output Handling
+- LLM Top 10: LLM10 Improper Output Handling
 - Agentic Top 10: ASI02 Tool Misuse, ASI05 Unexpected Code Execution
 - Other frameworks: NIST SP 800-82 Rev 3 Section 7.2 · CWE-89 · MITRE ATLAS AML.T0057
 
@@ -816,7 +816,7 @@ OT data historians.
   through OT SIEM integration
 
 #### Cross-references
-- LLM Top 10: LLM08 Vector & Embedding Weaknesses
+- LLM Top 10: LLM09 Vector and Embedding Weaknesses
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - Other frameworks: NIST SP 800-82 Rev 3 · ISO 27001 A.8.3/A.8.24
 
@@ -897,7 +897,7 @@ of any injection that reaches this context in Zone 3.
   drives response handling requirements
 
 #### Cross-references
-- LLM Top 10: LLM07 System Prompt Leakage
+- LLM Top 10: LLM08 Hidden Context Exposure
 - Agentic Top 10: ASI01 Agent Goal Hijack
 - Other frameworks: NIST SP 800-82 Rev 3 · ISO 27001 A.8.3
 
@@ -1014,7 +1014,7 @@ availability failures because the consequence is physical.
   possible if advisory system provides incorrect data
 
 #### Cross-references
-- LLM Top 10: LLM10 Unbounded Consumption
+- LLM Top 10: LLM06 Unbounded Consumption
 - Agentic Top 10: ASI08 Cascading Agent Failures
 - Other frameworks: NIST SP 800-82 Rev 3 Section 5.6 · IEC 61511 (functional safety) · AIUC-1 D
 
@@ -1056,7 +1056,7 @@ or safety system configurations embedded in training data.
   and equipment characteristics cannot be reconstructed
 
 #### Cross-references
-- LLM Top 10: LLM02 Sensitive Information Disclosure, LLM08 Vector & Embedding Weaknesses
+- LLM Top 10: LLM02 Sensitive Information Disclosure, LLM09 Vector and Embedding Weaknesses
 - DSGAI 2026: DSGAI10 Synthetic Data Pitfalls
 - Other frameworks: NIST SP 800-82 Rev 3 Section 5.4 · MITRE ATLAS AML.T0024.000
 
@@ -1204,7 +1204,7 @@ documentation system that feeds the RAG corpus.
   documentation source, verify detection holds
 
 #### Cross-references
-- LLM Top 10: LLM04 Data & Model Poisoning, LLM09 Misinformation
+- LLM Top 10: LLM05 Data and Model Poisoning, LLM07 Misinformation
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - Other frameworks: NIST SP 800-82 Rev 3 Section 5.3 · IEC 61511 · MITRE ATLAS AML.T0045
 

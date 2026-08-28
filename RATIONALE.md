@@ -2,7 +2,7 @@
   OWASP GenAI Crosswalk
   File    : RATIONALE.md
   Purpose : Rationale behind all framework mappings — what was included, why, and how
-  Version : 2026-Q1
+  Version : 2026-Q3
   License : CC BY-SA 4.0
 -->
 
@@ -26,7 +26,7 @@ The Crosswalk maps **from** three OWASP source lists that together cover the ful
 
 | Source List | Entries | Scope | Why Included |
 |---|---|---|---|
-| **OWASP LLM Top 10 2025** | LLM01–LLM10 | Core LLM application risks (prompt injection, data leakage, supply chain, etc.) | The foundational OWASP list for LLM risks; widest industry adoption; the starting point for any GenAI security programme. |
+| **OWASP LLM Top 10 2026** | LLM01–LLM10 | Core LLM application risks (prompt injection, data leakage, supply chain, etc.) | The foundational OWASP list for LLM risks; widest industry adoption; the starting point for any GenAI security programme. |
 | **OWASP Agentic Top 10 2026** | ASI01–ASI10 | Autonomous agent risks (goal hijack, tool misuse, privilege escalation, cascading failures, etc.) | Agents introduce qualitatively different risks — autonomy, tool access, multi-agent orchestration, persistent memory — that the LLM Top 10 was not designed to cover. |
 | **OWASP GenAI Data Security 2026** | DSGAI01–DSGAI21 | Data lifecycle risks (training data poisoning, embedding leakage, model theft, PII in context, etc.) | Data is the through-line of every GenAI system. DSGAI covers the full data lifecycle from ingestion through training, inference, storage, and deletion — filling the gap between the application-level LLM/Agentic lists and data governance requirements. |
 
@@ -180,6 +180,27 @@ Severity ratings follow the unified scale defined in `shared/SEVERITY.md`:
 - **Consistent terminology** — all entries use the unified glossary (`shared/GLOSSARY.md`)
 
 ---
+
+### 4.5 2026 Severity Re-baselining
+
+The migration to the OWASP Top 10 for LLM Applications 2026 moved three entries
+on the severity scale. Each change cites the published rank movement of the 2026
+list and the reasoning the project leads gave for it, which is what
+"the OWASP source list definition" means in the rule above.
+
+| Entry | 2025 | 2026 | Basis in the 2026 list |
+|---|---|---|---|
+| LLM03 Excessive Agency | High | **Critical** | Climbed from sixth to third, the largest move on the list. The 2026 preface identifies it as "the most consequential move," with the community vote and the incident record agreeing that agentic deployments are where damage is landing. |
+| LLM06 Unbounded Consumption | Medium | **High** | Rose four places, from tenth to sixth, carried by practitioners weighting resource and cost exhaustion higher than its previous rank reflected. |
+| LLM07 Misinformation | Medium | **High** | The widest vote-versus-evidence gap on the list, in the direction that hurts: voters placed it near the bottom, the 6,639-incident classified corpus placed it near the top. The 2026 list seats it mid-table on that evidence. |
+
+The remaining seven entries kept their 2025 severity. LLM08 Hidden Context
+Exposure stays High even though its scope widened: the 2026 entry defines
+severity as a function of what the hidden context holds, ranging from
+informational to critical, and High is the crosswalk's rating for the common
+case of embedded credentials or reliance on context secrecy for authorisation.
+
+The full 2025 → 2026 entry map is in [MIGRATION.md](MIGRATION.md).
 
 ## 5. What Was Deliberately Excluded
 

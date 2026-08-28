@@ -147,7 +147,7 @@ procedures for goal hijacking incidents in production (RV.1).
 | NIST SP 800-218A | Reference | https://doi.org/10.6028/NIST.SP.800-218A.ipd |
 
 #### Cross-references
-- LLM Top 10: LLM01 Prompt Injection, LLM06 Excessive Agency
+- LLM Top 10: LLM01 Prompt Injection, LLM03 Excessive Agency
 - DSGAI 2026: DSGAI01 Sensitive Data Leakage, DSGAI12 Unsafe NL Data Gateways
 - Other frameworks: MITRE ATLAS AML.T0051 – SSDF PW.2 – NIST CSF 2.0 PR.AC-5
 
@@ -220,7 +220,7 @@ enforcement (PW.7).
 | Guardrails AI | Open-source | https://github.com/guardrails-ai/guardrails |
 
 #### Cross-references
-- LLM Top 10: LLM06 Excessive Agency, LLM07 System Prompt Leakage
+- LLM Top 10: LLM03 Excessive Agency, LLM08 Hidden Context Exposure
 - DSGAI 2026: DSGAI06 Tool, Plugin & Agent Data Exchange, DSGAI08 Non-Compliance & Regulatory Violations
 - Other frameworks: AIUC-1 B006 – NIST CSF 2.0 PR.AC-1 – CWE-285
 
@@ -299,7 +299,7 @@ incidents (RV.1).
 | Falco | Open-source | https://falco.org |
 
 #### Cross-references
-- LLM Top 10: LLM06 Excessive Agency, LLM01 Prompt Injection
+- LLM Top 10: LLM03 Excessive Agency, LLM01 Prompt Injection
 - DSGAI 2026: DSGAI06 Tool, Plugin & Agent Data Exchange, DSGAI08 Non-Compliance & Regulatory Violations
 - Other frameworks: MITRE ATLAS AML.T0015 – CWE-269 – NIST CSF 2.0 PR.AC-4
 
@@ -373,7 +373,7 @@ verification of all artefacts (PS.2), secure model and artefact registries
 | Sigstore | Open-source | https://www.sigstore.dev |
 
 #### Cross-references
-- LLM Top 10: LLM05 Supply Chain Vulnerabilities
+- LLM Top 10: LLM04 Supply Chain
 - DSGAI 2026: DSGAI04 Data, Model & Artifact Poisoning, DSGAI06 Tool, Plugin & Agent Data Exchange
 - Other frameworks: SSDF PW.4 – MITRE ATLAS AML.T0056 – CycloneDX ML SBOM
 
@@ -455,7 +455,7 @@ sandbox escapes (PW.8), and protection of execution environments (PS.1).
 | Semgrep | Open-source | https://semgrep.dev |
 
 #### Cross-references
-- LLM Top 10: LLM02 Insecure Output Handling, LLM01 Prompt Injection
+- LLM Top 10: LLM10 Improper Output Handling, LLM01 Prompt Injection
 - DSGAI 2026: DSGAI06 Tool, Plugin & Agent Data Exchange, DSGAI05 Data Integrity & Validation Failures
 - Other frameworks: CWE-94 – MITRE ATLAS AML.T0015 – NIST CSF 2.0 PR.DS-5
 
@@ -537,7 +537,7 @@ anomalies (PW.7), and root cause analysis for poisoning incidents (RV.3).
 | Great Expectations | Open-source | https://greatexpectations.io |
 
 #### Cross-references
-- LLM Top 10: LLM03 Training Data Poisoning, LLM08 Vector and Embedding Weaknesses
+- LLM Top 10: LLM05 Data and Model Poisoning, LLM09 Vector and Embedding Weaknesses
 - DSGAI 2026: DSGAI04 Data, Model & Artifact Poisoning, DSGAI13 Vector Store Platform Security
 - Other frameworks: MITRE ATLAS AML.T0032 – NIST CSF 2.0 PR.DS-8 – ISO 42001 6.1.2
 
@@ -612,7 +612,7 @@ chaining incidents (RV.1).
 | NeMo Guardrails | Open-source | https://github.com/NVIDIA/NeMo-Guardrails |
 
 #### Cross-references
-- LLM Top 10: LLM06 Excessive Agency, LLM01 Prompt Injection
+- LLM Top 10: LLM03 Excessive Agency, LLM01 Prompt Injection
 - DSGAI 2026: DSGAI06 Tool, Plugin & Agent Data Exchange
 - Other frameworks: MITRE ATLAS AML.T0015 – CWE-285 – AIUC-1 B006
 
@@ -688,7 +688,7 @@ requirements for automation boundaries (PW.1).
 | Kong Gateway | Open-source | https://github.com/Kong/kong |
 
 #### Cross-references
-- LLM Top 10: LLM04 Model DoS, LLM10 Unbounded Consumption
+- LLM Top 10: LLM06 Unbounded Consumption
 - DSGAI 2026: DSGAI17 Data Availability & Resilience Failures
 - Other frameworks: CWE-400 – ISA/IEC 62443 SR 7.1 – NIST SP 800-82 Rev 3
 
@@ -763,7 +763,7 @@ analysis for incidents involving novel agent capabilities (RV.3).
 | MITRE ATLAS | Reference | https://atlas.mitre.org |
 
 #### Cross-references
-- LLM Top 10: LLM09 Misinformation, LLM06 Excessive Agency
+- LLM Top 10: LLM07 Misinformation, LLM03 Excessive Agency
 - DSGAI 2026: DSGAI06 Tool, Plugin & Agent Data Exchange
 - Other frameworks: EU AI Act Art. 13 – MITRE ATLAS – ENISA AI Threat Landscape
 
@@ -839,7 +839,7 @@ failure incidents (RV.2).
 | PagerDuty | Commercial | https://www.pagerduty.com |
 
 #### Cross-references
-- LLM Top 10: LLM05 Supply Chain Vulnerabilities, LLM10 Unbounded Consumption
+- LLM Top 10: LLM04 Supply Chain, LLM06 Unbounded Consumption
 - DSGAI 2026: DSGAI17 Data Availability & Resilience Failures, DSGAI06 Tool, Plugin & Agent Data Exchange
 - Other frameworks: CWE-400 – SSDF PW.4 – NIST CSF 2.0 ID.SC
 

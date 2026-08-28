@@ -112,7 +112,7 @@ agents before any human can intervene.
 | Invariant Analyzer | Open-source | https://github.com/invariantlabs-ai/invariant |
 
 #### Cross-references
-- LLM Top 10: LLM01 Prompt Injection, LLM06 Excessive Agency
+- LLM Top 10: LLM01 Prompt Injection, LLM03 Excessive Agency
 - DSGAI 2026: DSGAI01 Sensitive Data Leakage, DSGAI15 Over-Broad Context Windows
 - Other frameworks: AIUC-1 B001/B005/B006 · STRIDE Tampering/Spoofing · CWE-20
 
@@ -178,7 +178,7 @@ tool does in response: delete, send, execute, publish.
 | MCP Inspector | Open-source | https://github.com/modelcontextprotocol/inspector |
 
 #### Cross-references
-- LLM Top 10: LLM05 Insecure Output Handling, LLM06 Excessive Agency
+- LLM Top 10: LLM10 Improper Output Handling, LLM03 Excessive Agency
 - DSGAI 2026: DSGAI06 Tool Plugin & Agent Data Exchange, DSGAI12 Unsafe NL Data Gateways
 - Other frameworks: AIUC-1 B006/B007 · ISA/IEC 62443 SR 2.1 (OT) · CWE-94
 
@@ -244,7 +244,7 @@ the original session ends.
 | Entro Security | Commercial | https://entro.security |
 
 #### Cross-references
-- LLM Top 10: LLM06 Excessive Agency
+- LLM Top 10: LLM03 Excessive Agency
 - DSGAI 2026: DSGAI02 Agent Identity & Credential Exposure
 - Other frameworks: OWASP NHI Top 10 · AIUC-1 A/B007/B008 · ISA/IEC 62443 SR 1.1 (OT)
 
@@ -310,7 +310,7 @@ runtime with no static inventory and no signature verification.
 | OWASP Dependency-Check | Open-source | https://owasp.org/www-project-dependency-check/ |
 
 #### Cross-references
-- LLM Top 10: LLM03 Supply Chain Vulnerabilities
+- LLM Top 10: LLM04 Supply Chain
 - DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning
 - Other frameworks: NIST SP 800-218A · AIUC-1 B001/B003/B008 · BSIMM AM
 
@@ -375,7 +375,7 @@ with the agent's full system permissions.
 | Firecracker | Open-source | https://firecracker-microvm.github.io |
 
 #### Cross-references
-- LLM Top 10: LLM05 Insecure Output Handling
+- LLM Top 10: LLM10 Improper Output Handling
 - DSGAI 2026: DSGAI12 Unsafe NL Data Gateways
 - Other frameworks: AIUC-1 B005/B006/B009 · CWE-94 · OWASP ASVS V5
 
@@ -439,7 +439,7 @@ without triggering any single detectable event.
 | Langfuse | Open-source | https://langfuse.com |
 
 #### Cross-references
-- LLM Top 10: LLM04 Data & Model Poisoning, LLM08 Vector & Embedding Weaknesses
+- LLM Top 10: LLM05 Data and Model Poisoning, LLM09 Vector and Embedding Weaknesses
 - DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning, DSGAI13 Vector Store Platform Security
 - Other frameworks: AIUC-1 A/B002/B005 · NIST AI RMF MS-2.5 · CWE-693
 
@@ -565,7 +565,7 @@ crosswalks for OT-specific controls.
 | LangSmith | Commercial | https://smith.langchain.com |
 
 #### Cross-references
-- LLM Top 10: LLM10 Unbounded Consumption
+- LLM Top 10: LLM06 Unbounded Consumption
 - DSGAI 2026: DSGAI17 Data Availability & Resilience Failures
 - Other frameworks: AIUC-1 D · ISA/IEC 62443 SR 7.1 (OT) · NIST SP 800-82 (OT)
 
@@ -616,7 +616,7 @@ forensics shows a legitimate user decision, not an agent manipulation.
   your specific user population and agent deployment
 
 #### Cross-references
-- LLM Top 10: LLM09 Misinformation
+- LLM Top 10: LLM07 Misinformation
 - DSGAI 2026: DSGAI21 Disinformation & Integrity Attacks
 - Other frameworks: EU AI Act Art. 52 · AIUC-1 C/F · ENISA AI Threat Landscape
 
@@ -674,7 +674,7 @@ ASI06 attack that has gone undetected across multiple sessions.
 | Weights & Biases | Commercial | https://wandb.ai |
 
 #### Cross-references
-- LLM Top 10: LLM06 Excessive Agency
+- LLM Top 10: LLM03 Excessive Agency
 - DSGAI 2026: DSGAI16 Endpoint & Browser Overreach
 - Other frameworks: MITRE ATT&CK T1078 · EU AI Act Art. 9 · AIUC-1 B001/B002/C/E
 

@@ -151,7 +151,7 @@ threat intelligence (A.5.7).
 | Invariant Analyzer | Open-source | https://github.com/invariantlabs-ai/invariant |
 
 #### Cross-references
-- LLM Top 10: LLM01 Prompt Injection, LLM06 Excessive Agency
+- LLM Top 10: LLM01 Prompt Injection, LLM03 Excessive Agency
 - DSGAI 2026: DSGAI12 Unsafe NL Data Gateways, DSGAI15 Over-Broad Context Windows
 - Other frameworks: AIUC-1 B001/B005 · NIST AI RMF GV-1.7 · EU AI Act Art. 14/15
 
@@ -215,7 +215,7 @@ humans from misusing privileged access apply to agent tool scope.
 | Invariant Analyzer | Open-source | https://github.com/invariantlabs-ai/invariant |
 
 #### Cross-references
-- LLM Top 10: LLM05 Insecure Output Handling, LLM06 Excessive Agency
+- LLM Top 10: LLM10 Improper Output Handling, LLM03 Excessive Agency
 - DSGAI 2026: DSGAI06 Tool Plugin & Agent Data Exchange
 - Other frameworks: AIUC-1 B006/B007 · OWASP NHI Top 10 NHI-5 · ISA/IEC 62443 SR 2.2 (OT)
 
@@ -343,7 +343,7 @@ all agent component providers as information security suppliers.
 | Syft | Open-source | https://github.com/anchore/syft |
 
 #### Cross-references
-- LLM Top 10: LLM03 Supply Chain Vulnerabilities
+- LLM Top 10: LLM04 Supply Chain
 - DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning
 - Other frameworks: NIST CSF 2.0 GV.SC-01 · NIST SP 800-218A · ISA/IEC 62443 62443-2-4 (OT)
 
@@ -404,7 +404,7 @@ govern code execution security as a development and operational control.
 | Bandit | Open-source | https://github.com/PyCQA/bandit |
 
 #### Cross-references
-- LLM Top 10: LLM05 Insecure Output Handling
+- LLM Top 10: LLM10 Improper Output Handling
 - DSGAI 2026: DSGAI12 Unsafe NL Data Gateways
 - Other frameworks: AIUC-1 B005/B006 · CWE-94 · EU AI Act Art. 15
 
@@ -464,7 +464,7 @@ subject to ISMS access and protection controls.
 | Langfuse | Open-source | https://langfuse.com |
 
 #### Cross-references
-- LLM Top 10: LLM04 Data & Model Poisoning, LLM08 Vector & Embedding Weaknesses
+- LLM Top 10: LLM05 Data and Model Poisoning, LLM09 Vector and Embedding Weaknesses
 - DSGAI 2026: DSGAI13 Vector Store Platform Security
 - Other frameworks: AIUC-1 A/B002 · NIST AI RMF MS-2.5 · ISA/IEC 62443 SR 3.7 (OT)
 
@@ -580,7 +580,7 @@ obligations. In OT environments this is Critical severity.
 | Resilience4j | Open-source | https://resilience4j.readme.io |
 
 #### Cross-references
-- LLM Top 10: LLM10 Unbounded Consumption
+- LLM Top 10: LLM06 Unbounded Consumption
 - DSGAI 2026: DSGAI17 Data Availability & Resilience Failures
 - Other frameworks: AIUC-1 D · ISA/IEC 62443 SR 7.6/7.7 (OT) · NIST SP 800-82 Rev 3
 
@@ -638,7 +638,7 @@ a people and policy risk, not only a technical risk.
   in your specific deployment
 
 #### Cross-references
-- LLM Top 10: LLM09 Misinformation
+- LLM Top 10: LLM07 Misinformation
 - DSGAI 2026: DSGAI21 Disinformation & Integrity Attacks
 - Other frameworks: EU AI Act Art. 13/50 · AIUC-1 C/F · ISA/IEC 62443 SR 2.3 (OT)
 
@@ -704,7 +704,7 @@ management) governs the containment response.
 | Wazuh | Open-source | https://wazuh.com |
 
 #### Cross-references
-- LLM Top 10: LLM06 Excessive Agency
+- LLM Top 10: LLM03 Excessive Agency
 - DSGAI 2026: DSGAI16 Endpoint & Browser Overreach
 - Other frameworks: AIUC-1 B001/B002/C/E · EU AI Act Art. 14/15 · ISA/IEC 62443 SR 3.7 (OT)
 

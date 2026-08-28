@@ -78,7 +78,7 @@ Alles kostenlos. Alles Open Source. Entwickelt fuer Praktiker.
 
 ## Alle Zuordnungsdateien
 
-### LLM Top 10 2025 — 20 Rahmenwerk-Zuordnungen
+### LLM Top 10 2026 — 20 Rahmenwerk-Zuordnungen
 
 | Datei | Rahmenwerk | Herausragender Inhalt |
 |---|---|---|
@@ -303,12 +303,12 @@ laaf scan --target mock --dry-run     # Kein API-Schluessel erforderlich
 
 | LAAF-Stufe | OWASP | Schwellenwert |
 |---|---|---|
-| S1 Aufklaerung | LLM07, LLM01 | 0% |
+| S1 Aufklaerung | LLM08, LLM01 | 0% |
 | S2 Logikschicht-Injektion | LLM01, ASI01, DSGAI04 | 5% |
-| S3 Trigger-Ausfuehrung | ASI01, ASI06, LLM06 | 0% |
-| S4 Persistenz | ASI06, LLM06, DSGAI04 | 0% |
+| S3 Trigger-Ausfuehrung | ASI01, ASI06, LLM03 | 0% |
+| S4 Persistenz | ASI06, LLM03, DSGAI04 | 0% |
 | S5 Umgehung | LLM01, LLM02 | 10% |
-| S6 Spurenmanipulation | DSGAI01, LLM07 | 0% |
+| S6 Spurenmanipulation | DSGAI01, LLM08 | 0% |
 
 Den vollstaendigen LPCI-Angriffsvektor → OWASP → MAESTRO-Crosswalk finden Sie unter `evals/laaf/README.md`.
 

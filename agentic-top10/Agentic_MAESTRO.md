@@ -231,7 +231,7 @@ Mitigations at L3:
 | Goal-verification bypass via injection | L1 → L3 | Low | Critical | P2 |
 
 #### Cross-references
-- LLM Top 10: LLM01 Prompt Injection, LLM06 Excessive Agency
+- LLM Top 10: LLM01 Prompt Injection, LLM03 Excessive Agency
 - DSGAI 2026: DSGAI12 Unsafe NL Data Gateways, DSGAI15 Over-Broad Context Windows
 - Other frameworks: MITRE ATLAS AML.T0051 · ISO 27001 A.8.28 · AIUC-1 B001/B005
 
@@ -311,7 +311,7 @@ Mitigations at L4:
 | Tool chain exploitation (combined harm) | L3 → L6 → L4 | Low | Critical | P2 |
 
 #### Cross-references
-- LLM Top 10: LLM05 Insecure Output Handling, LLM06 Excessive Agency
+- LLM Top 10: LLM10 Improper Output Handling, LLM03 Excessive Agency
 - DSGAI 2026: DSGAI06 Tool, Plugin & Agent Data Exchange
 - Other frameworks: ISO 27001 A.8.2 · CIS Controls CIS 5 · AIUC-1 B006/B007
 
@@ -481,7 +481,7 @@ Mitigations at L1:
 | CI/CD pipeline compromise | L4 | Low | Critical | P2 |
 
 #### Cross-references
-- LLM Top 10: LLM03 Supply Chain Vulnerabilities
+- LLM Top 10: LLM04 Supply Chain
 - DSGAI 2026: DSGAI04 Data, Model & Artifact Poisoning
 - Other frameworks: NIST CSF 2.0 GV.SC-01 · ISO 27001 A.5.19/A.5.21 · CWE-494
 
@@ -557,7 +557,7 @@ L1 is the weakest layer for this risk; L3 and L4 controls are primary.
 | Sandbox escape to host | L4 | Low | Critical | P1 |
 
 #### Cross-references
-- LLM Top 10: LLM05 Insecure Output Handling
+- LLM Top 10: LLM10 Improper Output Handling
 - DSGAI 2026: DSGAI12 Unsafe NL Data Gateways
 - Other frameworks: AIUC-1 B005/B006 · CWE-94 · ISA/IEC 62443 SR 3.3 (OT)
 
@@ -642,7 +642,7 @@ Mitigations at L5:
 | Monitoring evasion through plausible-but-wrong output | L5 | High | High | P2 |
 
 #### Cross-references
-- LLM Top 10: LLM04 Data and Model Poisoning, LLM08 Vector and Embedding Weaknesses
+- LLM Top 10: LLM05 Data and Model Poisoning, LLM09 Vector and Embedding Weaknesses
 - DSGAI 2026: DSGAI04 Data, Model & Artifact Poisoning, DSGAI13 Vector Store Platform Security
 - Other frameworks: NIST AI RMF MS-2.5 · AIUC-1 A/B002 · ISA/IEC 62443 SR 3.7 (OT)
 
@@ -810,7 +810,7 @@ Mitigations at L5:
 | OT cascade reaching process control interface | L7 → L4 | Low | Critical | P1 |
 
 #### Cross-references
-- LLM Top 10: LLM10 Unbounded Consumption
+- LLM Top 10: LLM06 Unbounded Consumption
 - DSGAI 2026: DSGAI17 Data Availability & Resilience Failures
 - Other frameworks: AIUC-1 D · ISA/IEC 62443 SR 7.6/7.7 (OT) · NIST SP 800-82 Rev 3
 
@@ -889,7 +889,7 @@ Mitigations at L6:
 | Identity concealment — AI claims to be human | L1 | Low | High | P2 |
 
 #### Cross-references
-- LLM Top 10: LLM09 Misinformation
+- LLM Top 10: LLM07 Misinformation
 - DSGAI 2026: DSGAI21 Disinformation via Data Poisoning
 - Other frameworks: EU AI Act Art. 13/50 · ISO 27001 A.6.3 · AIUC-1 C/F
 
@@ -985,7 +985,7 @@ Mitigations at L6:
 | Rogue agent coordinating across agent ecosystem | L7 | Low | Critical | P2 |
 
 #### Cross-references
-- LLM Top 10: LLM06 Excessive Agency
+- LLM Top 10: LLM03 Excessive Agency
 - DSGAI 2026: DSGAI16 Endpoint & Browser Assistant Overreach
 - Other frameworks: AIUC-1 B001/B002/C/E · EU AI Act Art. 14/15 · ISA/IEC 62443 SR 3.7 (OT)
 
@@ -1049,7 +1049,7 @@ The integration across OWASP artefacts is:
 
 | OWASP artefact | MAESTRO integration point |
 |---|---|
-| LLM Top 10 | L1 Foundation Model threats map to LLM01, LLM04, LLM09 |
+| LLM Top 10 | L1 Foundation Model threats map to LLM01, LLM05, LLM07 |
 | Agentic Top 10 | Full mapping — this file |
 | DSGAI 2026 | L2 Data Operations threats map to DSGAI — see `DSGAI_MAESTRO.md` |
 | AI Testing Guide | MAESTRO threat enumeration → AITG test case selection |

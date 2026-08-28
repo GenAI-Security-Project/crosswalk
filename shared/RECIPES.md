@@ -210,7 +210,7 @@ for r in results:
 
 ## Recipe R-02: Ingestion Pipeline Integrity
 
-**Threat:** LLM04 Data & Model Poisoning / DSGAI05 Data Integrity
+**Threat:** LLM05 Data and Model Poisoning / DSGAI05 Data Integrity
 & Validation Failures — adversarially crafted documents corrupt the
 RAG knowledge base or exploit ingestion pipeline vulnerabilities.
 
@@ -363,7 +363,7 @@ def safe_snapshot_import(archive_path: str, destination: Path) -> list[str]:
     return extracted
 ```
 
-**Crosswalk:** LLM04 — DSGAI05 — DSGAI13 — ISO 27001 A.8.26/A.8.28/A.8.29
+**Crosswalk:** LLM05 — DSGAI05 — DSGAI13 — ISO 27001 A.8.26/A.8.28/A.8.29
 
 ---
 
@@ -583,7 +583,7 @@ def fallback_no_rag(query: str) -> list[dict]:
     }]
 ```
 
-**Crosswalk:** DSGAI17 — ASI08 — LLM10 — ISA/IEC 62443 SR 7.6 (OT) — NIST SP 800-82 (OT)
+**Crosswalk:** DSGAI17 — ASI08 — LLM06 — ISA/IEC 62443 SR 7.6 (OT) — NIST SP 800-82 (OT)
 
 ---
 
@@ -651,7 +651,7 @@ def log_rag_interaction(
     audit_log.write(base_record)
 ```
 
-**Crosswalk:** DSGAI14 — LLM07 — ISO 27001 A.8.15 — NIST AI RMF GV-1.6
+**Crosswalk:** DSGAI14 — LLM08 — ISO 27001 A.8.15 — NIST AI RMF GV-1.6
 
 ---
 
@@ -888,7 +888,7 @@ def load_tool_for_agent(tool_id: str, descriptor: dict) -> Optional[dict]:
     return descriptor
 ```
 
-**Crosswalk:** ASI04 — LLM03 — DSGAI04 — ISO 27001 A.5.19/A.5.21 — NIST AI RMF MP-5.1
+**Crosswalk:** ASI04 — LLM04 — DSGAI04 — ISO 27001 A.5.19/A.5.21 — NIST AI RMF MP-5.1
 
 ---
 
@@ -1048,7 +1048,7 @@ class AgentCredentialManager:
 
 ## Recipe M-04: MCP Rate Limiting and Anomaly Detection
 
-**Threat:** LLM10 Unbounded Consumption / ASI08 Cascading Failures —
+**Threat:** LLM06 Unbounded Consumption / ASI08 Cascading Failures —
 agent tool invocations saturate downstream systems or exhibit
 anomalous patterns indicating compromise.
 
@@ -1142,7 +1142,7 @@ class ToolInvocationTracker:
             self._baselines[baseline_key].pop(0)
 ```
 
-**Crosswalk:** LLM10 — ASI08 — DSGAI17 — ISA/IEC 62443 SR 7.6 (OT) — CIS Controls CIS 12
+**Crosswalk:** LLM06 — ASI08 — DSGAI17 — ISA/IEC 62443 SR 7.6 (OT) — CIS Controls CIS 12
 
 ---
 
@@ -1310,7 +1310,7 @@ class SecureAgent:
         return execute_tool(tool_name, params, credential)
 ```
 
-**Crosswalk:** ASI01 — ASI10 — LLM06 — ISA/IEC 62443 SR 2.1 (OT) — EU AI Act Art. 14
+**Crosswalk:** ASI01 — ASI10 — LLM03 — ISA/IEC 62443 SR 2.1 (OT) — EU AI Act Art. 14
 
 ---
 
@@ -1567,13 +1567,13 @@ def agent_inter_call_gate(
         raise
 ```
 
-**Crosswalk:** ASI08 — LLM10 — DSGAI17 — ISA/IEC 62443 SR 7.6/7.7 (OT) — NIST SP 800-82 (OT)
+**Crosswalk:** ASI08 — LLM06 — DSGAI17 — ISA/IEC 62443 SR 7.6/7.7 (OT) — NIST SP 800-82 (OT)
 
 ---
 
 ## Recipe O-04: Human Confirmation Gate for Irreversible OT Actions
 
-**Threat:** LLM06 Excessive Agency / ASI02 Tool Misuse — agent
+**Threat:** LLM03 Excessive Agency / ASI02 Tool Misuse — agent
 autonomously executes an irreversible action in the OT environment.
 
 **Design principle:**
@@ -1752,7 +1752,7 @@ class HumanConfirmationGate:
         return any(role in required_roles for role in operator_roles)
 ```
 
-**Crosswalk:** LLM06 — ASI01 — ASI02 — ISA/IEC 62443 SR 2.1 (OT) — EU AI Act Art. 14 — NIST SP 800-82 (OT)
+**Crosswalk:** LLM03 — ASI01 — ASI02 — ISA/IEC 62443 SR 2.1 (OT) — EU AI Act Art. 14 — NIST SP 800-82 (OT)
 
 ---
 
@@ -2039,7 +2039,7 @@ the audit trail contains all lifecycle events.
 
 ## Recipe A-04: Agent Output Guardrails
 
-**Threat:** ASI01 Goal Hijacking / LLM05 Insecure Output Handling —
+**Threat:** ASI01 Goal Hijacking / LLM10 Improper Output Handling —
 agent executes tool calls based on hijacked instructions, bypassing
 intended operational boundaries.
 
@@ -2125,7 +2125,7 @@ Test allowed tool calls (pass), forbidden tool name (block), argument
 pattern violation (block), and rate limit exhaustion (block after
 max_calls_per_session invocations).
 
-**Crosswalk:** ASI01 — LLM05 — ASI02 — NIST AI RMF MANAGE-4.1 — EU AI Act Art. 14
+**Crosswalk:** ASI01 — LLM10 — ASI02 — NIST AI RMF MANAGE-4.1 — EU AI Act Art. 14
 
 ---
 
@@ -2253,7 +2253,7 @@ one record's file_hash and verify that chain verification detects the
 break. Confirm audit_report accurately reflects consent breakdown and
 PII flags.
 
-**Crosswalk:** DSGAI05 — DSGAI06 — LLM03 — ISO 42001 A.7.4 — NIST AI RMF MAP-2.3
+**Crosswalk:** DSGAI05 — DSGAI06 — LLM04 — ISO 42001 A.7.4 — NIST AI RMF MAP-2.3
 
 ---
 
@@ -2544,23 +2544,23 @@ contains complete records of all enforcement actions.
 | Recipe | OWASP source list entries covered |
 |---|---|
 | R-01 Access-Controlled Retrieval | LLM02 — DSGAI01 — DSGAI11 |
-| R-02 Ingestion Pipeline Integrity | LLM04 — DSGAI05 — DSGAI13 |
+| R-02 Ingestion Pipeline Integrity | LLM05 — DSGAI05 — DSGAI13 |
 | R-03 Output Redaction | LLM02 — DSGAI01 — DSGAI09 — DSGAI14 |
-| R-04 RAG Circuit Breaker | DSGAI17 — ASI08 — LLM10 |
-| R-05 Telemetry Least-Logging | DSGAI14 — LLM07 |
+| R-04 RAG Circuit Breaker | DSGAI17 — ASI08 — LLM06 |
+| R-05 Telemetry Least-Logging | DSGAI14 — LLM08 |
 | M-01 MCP Input Validation | ASI02 — LLM05 — LLM06 — DSGAI06 |
-| M-02 Descriptor Integrity | ASI04 — LLM03 — DSGAI04 |
+| M-02 Descriptor Integrity | ASI04 — LLM04 — DSGAI04 |
 | M-03 Per-Session Credentials | ASI03 — DSGAI02 |
-| M-04 Rate Limiting & Anomaly | LLM10 — ASI08 — DSGAI17 |
-| O-01 Kill Switch | ASI01 — ASI10 — LLM06 |
+| M-04 Rate Limiting & Anomaly | LLM06 — ASI08 — DSGAI17 |
+| O-01 Kill Switch | ASI01 — ASI10 — LLM03 |
 | O-02 Behavioural Baseline | ASI10 — ASI01 — ASI06 |
-| O-03 Cascade Containment | ASI08 — LLM10 — DSGAI17 |
-| O-04 Human Confirmation Gate | LLM06 — ASI01 — ASI02 |
+| O-03 Cascade Containment | ASI08 — LLM06 — DSGAI17 |
+| O-04 Human Confirmation Gate | LLM03 — ASI01 — ASI02 |
 | A-01 Agent Memory Sanitization | ASI06 — DSGAI04 — LLM01 |
 | A-02 Multi-Agent Message Validation | ASI07 — ASI08 — ASI01 |
 | A-03 Agent Credential Rotation | ASI02 — ASI03 |
-| A-04 Agent Output Guardrails | ASI01 — LLM05 — ASI02 |
-| D-01 Training Data Provenance | DSGAI05 — DSGAI06 — LLM03 |
+| A-04 Agent Output Guardrails | ASI01 — LLM10 — ASI02 |
+| D-01 Training Data Provenance | DSGAI05 — DSGAI06 — LLM04 |
 | D-02 PII Detection & Redaction | DSGAI14 — DSGAI15 — DSGAI16 — LLM02 |
 | D-03 Differential Privacy | DSGAI10 — DSGAI18 — DSGAI16 |
 | D-04 Data Retention Enforcer | DSGAI11 — DSGAI08 — DSGAI14 |
@@ -2596,7 +2596,7 @@ contains complete records of all enforcement actions.
 ## References
 
 - [OWASP GenAI Data Security Risks 2026](https://genai.owasp.org/resource/owasp-genai-data-security-risks-mitigations-2026/)
-- [OWASP LLM Top 10 2025](https://genai.owasp.org/llm-top-10/)
+- [OWASP LLM Top 10 2026](https://genai.owasp.org/llm-top-10/)
 - [OWASP Agentic Top 10 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
 - [ISA/IEC 62443 series](https://www.isa.org/standards-and-publications/isa-standards/isa-iec-62443-series-of-standards)
 - [NIST SP 800-82 Rev 3](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-82r3.pdf)

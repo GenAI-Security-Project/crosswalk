@@ -1,15 +1,15 @@
 <!--
   OWASP GenAI Crosswalk
-  Source list : OWASP Top 10 for LLM Applications 2025 (LLM01-LLM10)
+  Source list : OWASP Top 10 for LLM Applications 2026 (LLM01-LLM10)
   Framework   : SOC 2 Type II — AICPA Trust Services Criteria
-  Version     : 2026-Q1
+  Version     : 2026-Q3
   Maintained by: OWASP GenAI Data Security Initiative — https://genai.owasp.org
   License     : CC BY-SA 4.0
 -->
 
-# LLM Top 10 2025 x SOC 2
+# LLM Top 10 2026 x SOC 2
 
-Mapping the [OWASP Top 10 for LLM Applications 2025](https://genai.owasp.org/llm-top-10/)
+Mapping the [OWASP Top 10 for LLM Applications 2026](https://genai.owasp.org/llm-top-10/)
 to [SOC 2](https://www.aicpa-cima.com/resources/landing/system-and-organization-controls-soc-suite-of-services)
 — the AICPA's System and Organization Controls 2 report framework,
 based on the Trust Services Criteria (TSC).
@@ -90,14 +90,14 @@ and supply chain components are managed through change management
 |---|---|---|---|---|
 | LLM01 | Prompt Injection | Critical | CC3, CC7, CC5, CC6 | Foundational-Advanced |
 | LLM02 | Sensitive Information Disclosure | High | C1, C2, CC6, P3, P5 | Foundational-Advanced |
-| LLM03 | Supply Chain Vulnerabilities | High | CC9, CC8, CC3, CC5 | Foundational-Hardening |
-| LLM04 | Data and Model Poisoning | Critical | CC3, CC7, CC8, CC9 | Hardening-Advanced |
-| LLM05 | Insecure Output Handling | High | CC5, CC7, PI1, CC3 | Foundational-Hardening |
-| LLM06 | Excessive Agency | High | CC6, CC5, CC3, CC7 | Foundational-Hardening |
-| LLM07 | System Prompt Leakage | High | C2, CC6, CC5, CC7 | Foundational-Hardening |
-| LLM08 | Vector and Embedding Weaknesses | Medium | C2, CC6, CC7, P5 | Hardening-Advanced |
-| LLM09 | Misinformation | Medium | PI1, CC3, CC7, CC5 | Foundational-Hardening |
-| LLM10 | Unbounded Consumption | Medium | A1, CC7, CC3, CC5 | Foundational-Hardening |
+| LLM03 | Excessive Agency | Critical | CC6, CC5, CC3, CC7 | Foundational-Hardening |
+| LLM04 | Supply Chain | High | CC9, CC8, CC3, CC5 | Foundational-Hardening |
+| LLM05 | Data and Model Poisoning | Critical | CC3, CC7, CC8, CC9 | Hardening-Advanced |
+| LLM06 | Unbounded Consumption | High | A1, CC7, CC3, CC5 | Foundational-Hardening |
+| LLM07 | Misinformation | High | PI1, CC3, CC7, CC5 | Foundational-Hardening |
+| LLM08 | Hidden Context Exposure | High | C2, CC6, CC5, CC7 | Foundational-Hardening |
+| LLM09 | Vector and Embedding Weaknesses | Medium | C2, CC6, CC7, P5 | Hardening-Advanced |
+| LLM10 | Improper Output Handling | High | CC5, CC7, PI1, CC3 | Foundational-Hardening |
 
 ---
 
@@ -107,7 +107,7 @@ and supply chain components are managed through change management
 - **SOC 2 audit preparation team** — criteria-to-control mapping for auditor evidence
 - **SaaS / cloud AI product team** — customer trust and vendor compliance context
 - **Security engineer** — CC6/CC7 technical control implementation
-- **DPO** — LLM02, LLM08 Privacy criteria entries
+- **DPO** — LLM02, LLM09 Privacy criteria entries
 - **Sales / legal** — vendor trust and supply chain criteria (CC9, CC8)
 
 ---
@@ -126,6 +126,11 @@ prompt injection must be identified as a risk), CC7 (system operations
 — monitoring must detect injection attempts), CC5 (control activities —
 input validation procedures), and CC6 (logical access — LLM access
 controls limit the damage from successful injection).
+
+The 2026 entry extends prompt injection to cross-modal payloads.
+Instructions hidden in an image, an audio track, or a video frame reach the
+model without ever being human-readable, and steganographic or
+invisible-Unicode carriers survive review of the rendered interface.
 
 **Auditor expectation:** For LLM applications in scope of a SOC 2
 audit, auditors will expect to see prompt injection identified in
@@ -272,7 +277,72 @@ included in the audit scope explicitly.
 
 ---
 
-### LLM03 — Supply Chain Vulnerabilities
+### LLM03 — Excessive Agency
+
+**Severity:** Critical
+
+LLMs with excessive autonomy execute unintended or harmful actions.
+SOC 2 CC6 (logical access — least privilege) is the primary criterion.
+CC5 (control activities — human oversight procedures) and CC3 (risk
+assessment — autonomous action risks identified) also apply.
+
+#### SOC 2 criteria mapping
+
+| Criteria | How it applies |
+|---|---|
+| CC6.1 — Logical access restrictions | LLM tool access managed under least privilege — minimum scope, documented justification, regular review |
+| CC6.3 — Access removal | LLM tool permissions removed promptly when no longer required — access review process covers LLM tool scope |
+| CC5.2 — Control activities | Human oversight procedures for LLM autonomous actions — confirmation requirements documented and enforced |
+| CC3.2 — Risk assessment | Excessive agency risks identified — what autonomous actions can the LLM take, what is the blast radius |
+
+#### Mitigations for SOC 2 evidence
+
+**Control implementation**
+- Manage LLM tool access under CC6.1 least privilege —
+  document minimum scope justification, regular review
+  schedule, access control configuration as audit evidence
+- Document human oversight procedures (CC5.2 evidence) —
+  which actions require human confirmation, who approves,
+  how overrides are logged
+- Include excessive agency in LLM risk assessment
+  (CC3.2 evidence) — autonomous action vectors and
+  blast radius documented
+
+**Audit evidence preparation**
+- LLM tool access control configuration showing least privilege (CC6.1)
+- Access review records for LLM tool permissions (CC6.1, CC6.3)
+- Human oversight procedure documentation (CC5.2)
+- Risk assessment entries for excessive agency (CC3.2)
+- Audit logs of LLM tool invocations (CC7.2)
+
+**Hardening**
+- Implement formal quarterly access reviews for LLM tool
+  permissions — CC6.3 access removal evidence
+- Deploy action guardrails as independent layer —
+  CC5.2 documented control activity
+- Log all LLM tool invocations — CC7.2 monitoring evidence
+
+**Advanced**
+- Red team testing of excessive agency via injection —
+  CC7.4 security testing evidence
+- Formally specify permitted action graphs — CC5.2
+  detailed control activity documentation
+
+#### Tools
+
+| Tool | Type | Link |
+|---|---|---|
+| Guardrails AI | Open-source | https://github.com/guardrails-ai/guardrails |
+| NeMo Guardrails | Open-source | https://github.com/NVIDIA/NeMo-Guardrails |
+
+#### Cross-references
+- Agentic Top 10: ASI01 Agent Goal Hijack, ASI02 Tool Misuse
+- DSGAI 2026: DSGAI06 Tool Plugin and Agent Data Exchange
+- Other frameworks: EU AI Act Art. 14 · AIUC-1 B006 · ISO 27001 A.8.2
+
+---
+
+### LLM04 — Supply Chain
 
 **Severity:** High
 
@@ -282,6 +352,12 @@ third-party risk) is the primary criterion. CC8 (change management)
 applies to model updates as system changes. Auditors increasingly
 ask about AI-specific supply chain controls given the rapid growth
 of model supply chain incidents.
+
+The 2026 entry adds artifact provenance to this scope. A promoted
+model, adapter, or converted artifact that is not what it claims to be —
+unsigned weights, a hijacked conversion or merge service, or namespace reuse
+on a model hub — is a supply-chain compromise even when every package
+dependency is clean.
 
 **Auditor expectation:** Auditors will expect to see LLM component
 vendors assessed under your vendor risk management programme (CC9.1,
@@ -346,7 +422,7 @@ CC9.2), model and component updates managed through change management
 
 ---
 
-### LLM04 — Data and Model Poisoning
+### LLM05 — Data and Model Poisoning
 
 **Severity:** Critical
 
@@ -355,6 +431,11 @@ assessment), CC7 (anomaly detection), CC8 (change management), and
 CC9 (vendor risk) all apply. For SaaS providers offering AI products,
 a poisoned model affecting customer data is a CC7 security event
 requiring incident response and CC3 risk treatment.
+
+The 2026 entry folds in fine-tuning subversion. A supplier LoRA
+adapter, a customer fine-tune, or a distilled checkpoint can carry a backdoor
+that no pre-training control catches, so poisoning defences must cover every
+stage that writes weights, not just the original training corpus.
 
 #### SOC 2 criteria mapping
 
@@ -413,307 +494,9 @@ requiring incident response and CC3 risk treatment.
 
 ---
 
-### LLM05 — Insecure Output Handling
+### LLM06 — Unbounded Consumption
 
 **Severity:** High
-
-LLM output passed to downstream systems without validation enables
-injection attacks. SOC 2 Processing Integrity (PI1) applies —
-LLM outputs are system processing outputs that must be complete,
-accurate, and processed only in authorised ways. CC5 (control
-activities) covers the input validation procedures that downstream
-systems must implement.
-
-#### SOC 2 criteria mapping
-
-| Criteria | How it applies |
-|---|---|
-| PI1.1 — Processing integrity policies | Policy requiring LLM output validation before use in downstream processing — complete and authorised processing |
-| CC5.2 — Select and develop control activities | Input validation procedures for all systems consuming LLM output — encoding, schema validation, sanitisation |
-| CC7.2 — Anomaly detection | Monitoring for injection patterns in LLM output channels — detect anomalous processing before downstream harm |
-| CC3.2 — Risk assessment | Output injection risks identified in LLM risk assessment — XSS, SQL injection, command injection via AI-generated content |
-
-#### Mitigations for SOC 2 evidence
-
-**Control implementation**
-- Document output validation procedures (CC5.2 evidence) —
-  encoding, schema validation, and sanitisation requirements
-  for all interfaces consuming LLM output
-- Include output injection risks in LLM risk assessment
-  (CC3.2 evidence) — downstream consumers assessed
-- Document processing integrity policy for LLM outputs
-  (PI1.1 evidence) — what constitutes authorised and
-  valid LLM output processing
-
-**Audit evidence preparation**
-- Output validation procedure documentation (CC5.2, PI1.1)
-- Risk assessment entries for output injection (CC3.2)
-- Security testing results for output injection (CC7.4)
-- Monitoring configuration for output channels (CC7.2)
-
-**Hardening**
-- Conduct DAST on all interfaces consuming LLM output —
-  CC7.4 security testing evidence
-- Implement output schema validation — CC5.2 documented
-  control activity evidence
-- Include output injection in security testing programme —
-  CC7.4 results retained as audit evidence
-
-#### Tools
-
-| Tool | Type | Link |
-|---|---|---|
-| OWASP ZAP | Open-source | https://www.zaproxy.org |
-| Semgrep | Open-source | https://semgrep.dev |
-
-#### Cross-references
-- Agentic Top 10: ASI02 Tool Misuse, ASI05 Unexpected Code Execution
-- DSGAI 2026: DSGAI05 Data Integrity and Validation Failures
-- Other frameworks: OWASP ASVS V5 · CIS Controls CIS 16 · CWE-79
-
----
-
-### LLM06 — Excessive Agency
-
-**Severity:** High
-
-LLMs with excessive autonomy execute unintended or harmful actions.
-SOC 2 CC6 (logical access — least privilege) is the primary criterion.
-CC5 (control activities — human oversight procedures) and CC3 (risk
-assessment — autonomous action risks identified) also apply.
-
-#### SOC 2 criteria mapping
-
-| Criteria | How it applies |
-|---|---|
-| CC6.1 — Logical access restrictions | LLM tool access managed under least privilege — minimum scope, documented justification, regular review |
-| CC6.3 — Access removal | LLM tool permissions removed promptly when no longer required — access review process covers LLM tool scope |
-| CC5.2 — Control activities | Human oversight procedures for LLM autonomous actions — confirmation requirements documented and enforced |
-| CC3.2 — Risk assessment | Excessive agency risks identified — what autonomous actions can the LLM take, what is the blast radius |
-
-#### Mitigations for SOC 2 evidence
-
-**Control implementation**
-- Manage LLM tool access under CC6.1 least privilege —
-  document minimum scope justification, regular review
-  schedule, access control configuration as audit evidence
-- Document human oversight procedures (CC5.2 evidence) —
-  which actions require human confirmation, who approves,
-  how overrides are logged
-- Include excessive agency in LLM risk assessment
-  (CC3.2 evidence) — autonomous action vectors and
-  blast radius documented
-
-**Audit evidence preparation**
-- LLM tool access control configuration showing least privilege (CC6.1)
-- Access review records for LLM tool permissions (CC6.1, CC6.3)
-- Human oversight procedure documentation (CC5.2)
-- Risk assessment entries for excessive agency (CC3.2)
-- Audit logs of LLM tool invocations (CC7.2)
-
-**Hardening**
-- Implement formal quarterly access reviews for LLM tool
-  permissions — CC6.3 access removal evidence
-- Deploy action guardrails as independent layer —
-  CC5.2 documented control activity
-- Log all LLM tool invocations — CC7.2 monitoring evidence
-
-**Advanced**
-- Red team testing of excessive agency via injection —
-  CC7.4 security testing evidence
-- Formally specify permitted action graphs — CC5.2
-  detailed control activity documentation
-
-#### Tools
-
-| Tool | Type | Link |
-|---|---|---|
-| Guardrails AI | Open-source | https://github.com/guardrails-ai/guardrails |
-| NeMo Guardrails | Open-source | https://github.com/NVIDIA/NeMo-Guardrails |
-
-#### Cross-references
-- Agentic Top 10: ASI01 Agent Goal Hijack, ASI02 Tool Misuse
-- DSGAI 2026: DSGAI06 Tool Plugin and Agent Data Exchange
-- Other frameworks: EU AI Act Art. 14 · AIUC-1 B006 · ISO 27001 A.8.2
-
----
-
-### LLM07 — System Prompt Leakage
-
-**Severity:** High
-
-System prompts containing internal instructions are extracted.
-SOC 2 Confidentiality (C2) applies — system prompts may contain
-confidential business logic and security controls that qualify
-as confidential information. CC6 (logical access — restricting
-access to system prompts) and CC5 (procedures for prompt security)
-also apply.
-
-#### SOC 2 criteria mapping
-
-| Criteria | How it applies |
-|---|---|
-| C2.1 — Confidential information protection | System prompts classified as confidential — encryption at rest, access-controlled, not in cleartext config |
-| CC6.1 — Logical access | Access controls on system prompt storage — only authorised personnel can read or modify, all access logged |
-| CC5.2 — Control activities | System prompt security procedures — version control, rotation, extraction resistance testing documented |
-| CC7.2 — Monitoring | Access to system prompt storage monitored — anomalous access attempts detected and alerted |
-
-#### Mitigations for SOC 2 evidence
-
-**Control implementation**
-- Classify and document system prompts as confidential
-  information (C2.1 evidence) — encryption at rest,
-  access-controlled, policy documented
-- Implement access controls on system prompt storage
-  (CC6.1 evidence) — access control configuration,
-  authorised accessor list, access logs
-- Document system prompt security procedures (CC5.2 evidence) —
-  version control, rotation schedule, extraction testing
-
-**Audit evidence preparation**
-- System prompt classification and protection documentation (C2.1)
-- Access control configuration and accessor records (CC6.1)
-- Version control and rotation records (CC5.2)
-- Extraction testing results (CC7.4)
-- Access monitoring configuration and alerts (CC7.2)
-
-**Hardening**
-- Conduct prompt extraction testing — CC7.4 security
-  testing evidence demonstrating extraction resistance
-- Implement system prompt rotation — CC5.2 procedure
-  evidence showing ongoing maintenance of controls
-- Log all access to system prompts — CC7.2 monitoring
-  and CC6.1 access traceability evidence
-
-#### Cross-references
-- Agentic Top 10: ASI01 Agent Goal Hijack
-- DSGAI 2026: DSGAI15 Over-Broad Context Windows
-- Other frameworks: AIUC-1 B003/B009 · CWE-200 · ISO 27001 A.5.12
-
----
-
-### LLM08 — Vector and Embedding Weaknesses
-
-**Severity:** Medium
-
-Weaknesses in vector stores enable adversarial retrieval and
-embedding inversion. SOC 2 Confidentiality (C2) applies if
-embeddings contain confidential information. Privacy (P5) applies
-if embeddings encode personal data — the ENISA pseudonymisation
-guidance position that embeddings of personal data are personal
-data is increasingly reflected in SOC 2 audit expectations.
-
-#### SOC 2 criteria mapping
-
-| Criteria | How it applies |
-|---|---|
-| C2.1 — Confidential information protection | Embeddings of confidential information protected — encrypted at rest, access-controlled, inversion-resistant |
-| CC6.1 — Logical access | RBAC on all vector store collections — no unauthenticated access in any environment |
-| CC7.2 — Anomaly detection | Anomaly detection on vector store query patterns — bulk extraction and unusual retrieval volumes detected |
-| P5.1 — Personal information use | Embeddings of personal data used only for authorised purposes — privacy commitments apply to derived forms |
-
-#### Mitigations for SOC 2 evidence
-
-**Control implementation**
-- Document embeddings as confidential/personal information
-  where applicable (C2.1, P5.1 evidence) — classification,
-  protection requirements, authorised use cases
-- Implement RBAC on vector stores (CC6.1 evidence) —
-  access control configuration, access logs
-- Deploy query monitoring (CC7.2 evidence) — alert
-  configuration, sample alerts for auditors
-
-**Audit evidence preparation**
-- Embedding classification and protection documentation (C2.1)
-- Vector store access control configuration (CC6.1)
-- Query monitoring configuration and alerts (CC7.2)
-- Encryption configuration for vector stores at rest (C2.1)
-- Privacy documentation for embeddings of personal data (P5.1)
-
-**Hardening**
-- Conduct embedding inversion testing — CC7.4 security
-  testing evidence showing protection effectiveness
-- Apply differential privacy in embedding generation —
-  C2.1 advanced technical control evidence
-- Patch all known vector database CVEs — CC8.1
-  change management evidence
-
-#### Tools
-
-| Tool | Type | Link |
-|---|---|---|
-| Weaviate | Open-source | https://weaviate.io |
-| ML Privacy Meter | Open-source | https://github.com/privacytrustlab/ml_privacy_meter |
-
-#### Cross-references
-- Agentic Top 10: ASI06 Memory and Context Poisoning
-- DSGAI 2026: DSGAI13 Vector Store Platform Security, DSGAI18 Inference and Data Reconstruction
-- Other frameworks: NIST AI RMF MS-2.5 · ISO 27001 A.8.3/A.8.24 · GDPR Recital 26
-
----
-
-### LLM09 — Misinformation
-
-**Severity:** Medium
-
-LLMs generate plausible but incorrect content. SOC 2 Processing
-Integrity (PI1) applies — LLM outputs are processing results that
-must be complete and accurate for the purposes for which they are
-used. CC3 (risk assessment — misinformation harm identified) and
-CC7 (monitoring — accuracy degradation detected) also apply.
-
-#### SOC 2 criteria mapping
-
-| Criteria | How it applies |
-|---|---|
-| PI1.1 — Processing integrity policy | Policy on LLM output accuracy — acceptable accuracy thresholds, verification requirements for high-stakes use cases |
-| PI1.2 — System inputs are complete and accurate | LLM inputs (RAG sources, training data) quality controls — authoritative, current, verified sources |
-| CC3.2 — Risk assessment | Misinformation risk identified in LLM risk assessment — harm potential of incorrect outputs per use case |
-| CC7.2 — Anomaly detection | Production monitoring for accuracy degradation and hallucination patterns — drift detection |
-
-#### Mitigations for SOC 2 evidence
-
-**Control implementation**
-- Document processing integrity policy for LLM outputs
-  (PI1.1 evidence) — accuracy thresholds, verification
-  requirements for high-stakes use cases
-- Document RAG source quality controls (PI1.2 evidence) —
-  authoritative sources, version control, freshness controls
-- Include misinformation in LLM risk assessment
-  (CC3.2 evidence) — harm potential per use case
-
-**Audit evidence preparation**
-- Processing integrity policy for LLM (PI1.1)
-- RAG source governance documentation (PI1.2)
-- Risk assessment entries for misinformation (CC3.2)
-- Production accuracy monitoring configuration (CC7.2)
-- User communication on LLM output limitations (CC2.1)
-
-**Hardening**
-- Implement production accuracy monitoring — CC7.2
-  ongoing monitoring evidence
-- Deploy confidence scoring — PI1.1 processing integrity
-  control evidence
-- Conduct domain-specific accuracy testing — CC7.4
-  security testing evidence
-
-#### Tools
-
-| Tool | Type | Link |
-|---|---|---|
-| TruLens | Open-source | https://github.com/truera/trulens |
-| RAGAS | Open-source | https://github.com/explodinggradients/ragas |
-
-#### Cross-references
-- Agentic Top 10: ASI09 Human-Agent Trust Exploitation
-- DSGAI 2026: DSGAI21 Disinformation and Integrity Attacks
-- Other frameworks: EU AI Act Art. 13/50 · AIUC-1 F · NIST CSF 2.0 GV.OC-01
-
----
-
-### LLM10 — Unbounded Consumption
-
-**Severity:** Medium
 
 Adversarial inputs trigger disproportionate resource consumption.
 SOC 2 Availability (A1) is the primary criterion — availability
@@ -774,6 +557,256 @@ DoS risks identified) also apply.
 - Agentic Top 10: ASI08 Cascading Agent Failures
 - DSGAI 2026: DSGAI17 Data Availability and Resilience Failures
 - Other frameworks: ISA/IEC 62443 SR 7.6 (OT) · CIS Controls CIS 12 · NIST CSF 2.0 PR.IR-01
+
+---
+
+### LLM07 — Misinformation
+
+**Severity:** High
+
+LLMs generate plausible but incorrect content. SOC 2 Processing
+Integrity (PI1) applies — LLM outputs are processing results that
+must be complete and accurate for the purposes for which they are
+used. CC3 (risk assessment — misinformation harm identified) and
+CC7 (monitoring — accuracy degradation detected) also apply.
+
+#### SOC 2 criteria mapping
+
+| Criteria | How it applies |
+|---|---|
+| PI1.1 — Processing integrity policy | Policy on LLM output accuracy — acceptable accuracy thresholds, verification requirements for high-stakes use cases |
+| PI1.2 — System inputs are complete and accurate | LLM inputs (RAG sources, training data) quality controls — authoritative, current, verified sources |
+| CC3.2 — Risk assessment | Misinformation risk identified in LLM risk assessment — harm potential of incorrect outputs per use case |
+| CC7.2 — Anomaly detection | Production monitoring for accuracy degradation and hallucination patterns — drift detection |
+
+#### Mitigations for SOC 2 evidence
+
+**Control implementation**
+- Document processing integrity policy for LLM outputs
+  (PI1.1 evidence) — accuracy thresholds, verification
+  requirements for high-stakes use cases
+- Document RAG source quality controls (PI1.2 evidence) —
+  authoritative sources, version control, freshness controls
+- Include misinformation in LLM risk assessment
+  (CC3.2 evidence) — harm potential per use case
+
+**Audit evidence preparation**
+- Processing integrity policy for LLM (PI1.1)
+- RAG source governance documentation (PI1.2)
+- Risk assessment entries for misinformation (CC3.2)
+- Production accuracy monitoring configuration (CC7.2)
+- User communication on LLM output limitations (CC2.1)
+
+**Hardening**
+- Implement production accuracy monitoring — CC7.2
+  ongoing monitoring evidence
+- Deploy confidence scoring — PI1.1 processing integrity
+  control evidence
+- Conduct domain-specific accuracy testing — CC7.4
+  security testing evidence
+
+#### Tools
+
+| Tool | Type | Link |
+|---|---|---|
+| TruLens | Open-source | https://github.com/truera/trulens |
+| RAGAS | Open-source | https://github.com/explodinggradients/ragas |
+
+#### Cross-references
+- Agentic Top 10: ASI09 Human-Agent Trust Exploitation
+- DSGAI 2026: DSGAI21 Disinformation and Integrity Attacks
+- Other frameworks: EU AI Act Art. 13/50 · AIUC-1 F · NIST CSF 2.0 GV.OC-01
+
+---
+
+### LLM08 — Hidden Context Exposure
+
+**Severity:** High
+
+Hidden context — the system prompt, developer instructions, retrieved
+policy text, and the tool and function schemas an application assembles
+into the model's context window — is extracted, inferred, or
+reconstructed by adversaries.
+SOC 2 Confidentiality (C2) applies — system prompts may contain
+confidential business logic and security controls that qualify
+as confidential information. CC6 (logical access — restricting
+access to system prompts) and CC5 (procedures for prompt security)
+also apply.
+
+The 2026 list broadens the former System Prompt Leakage entry to cover all
+non-user-facing context, not just the system prompt. Severity tracks what
+that context holds: internal rules and workflow logic are medium, embedded
+credentials or reliance on context secrecy for authorisation are high, and
+disclosure that chains to code execution or broad exfiltration is critical.
+Design on the assumption that hidden context is discoverable, and never
+treat it as a security boundary.
+
+#### SOC 2 criteria mapping
+
+| Criteria | How it applies |
+|---|---|
+| C2.1 — Confidential information protection | System prompts classified as confidential — encryption at rest, access-controlled, not in cleartext config |
+| CC6.1 — Logical access | Access controls on system prompt storage — only authorised personnel can read or modify, all access logged |
+| CC5.2 — Control activities | System prompt security procedures — version control, rotation, extraction resistance testing documented |
+| CC7.2 — Monitoring | Access to system prompt storage monitored — anomalous access attempts detected and alerted |
+
+#### Mitigations for SOC 2 evidence
+
+**Control implementation**
+- Classify and document system prompts as confidential
+  information (C2.1 evidence) — encryption at rest,
+  access-controlled, policy documented
+- Implement access controls on system prompt storage
+  (CC6.1 evidence) — access control configuration,
+  authorised accessor list, access logs
+- Document system prompt security procedures (CC5.2 evidence) —
+  version control, rotation schedule, extraction testing
+
+**Audit evidence preparation**
+- System prompt classification and protection documentation (C2.1)
+- Access control configuration and accessor records (CC6.1)
+- Version control and rotation records (CC5.2)
+- Extraction testing results (CC7.4)
+- Access monitoring configuration and alerts (CC7.2)
+
+**Hardening**
+- Conduct prompt extraction testing — CC7.4 security
+  testing evidence demonstrating extraction resistance
+- Implement system prompt rotation — CC5.2 procedure
+  evidence showing ongoing maintenance of controls
+- Log all access to system prompts — CC7.2 monitoring
+  and CC6.1 access traceability evidence
+
+#### Cross-references
+- Agentic Top 10: ASI01 Agent Goal Hijack
+- DSGAI 2026: DSGAI15 Over-Broad Context Windows
+- Other frameworks: AIUC-1 B003/B009 · CWE-200 · ISO 27001 A.5.12
+
+---
+
+### LLM09 — Vector and Embedding Weaknesses
+
+**Severity:** Medium
+
+Weaknesses in vector stores enable adversarial retrieval and
+embedding inversion. SOC 2 Confidentiality (C2) applies if
+embeddings contain confidential information. Privacy (P5) applies
+if embeddings encode personal data — the ENISA pseudonymisation
+guidance position that embeddings of personal data are personal
+data is increasingly reflected in SOC 2 audit expectations.
+
+#### SOC 2 criteria mapping
+
+| Criteria | How it applies |
+|---|---|
+| C2.1 — Confidential information protection | Embeddings of confidential information protected — encrypted at rest, access-controlled, inversion-resistant |
+| CC6.1 — Logical access | RBAC on all vector store collections — no unauthenticated access in any environment |
+| CC7.2 — Anomaly detection | Anomaly detection on vector store query patterns — bulk extraction and unusual retrieval volumes detected |
+| P5.1 — Personal information use | Embeddings of personal data used only for authorised purposes — privacy commitments apply to derived forms |
+
+#### Mitigations for SOC 2 evidence
+
+**Control implementation**
+- Document embeddings as confidential/personal information
+  where applicable (C2.1, P5.1 evidence) — classification,
+  protection requirements, authorised use cases
+- Implement RBAC on vector stores (CC6.1 evidence) —
+  access control configuration, access logs
+- Deploy query monitoring (CC7.2 evidence) — alert
+  configuration, sample alerts for auditors
+
+**Audit evidence preparation**
+- Embedding classification and protection documentation (C2.1)
+- Vector store access control configuration (CC6.1)
+- Query monitoring configuration and alerts (CC7.2)
+- Encryption configuration for vector stores at rest (C2.1)
+- Privacy documentation for embeddings of personal data (P5.1)
+
+**Hardening**
+- Conduct embedding inversion testing — CC7.4 security
+  testing evidence showing protection effectiveness
+- Apply differential privacy in embedding generation —
+  C2.1 advanced technical control evidence
+- Patch all known vector database CVEs — CC8.1
+  change management evidence
+
+#### Tools
+
+| Tool | Type | Link |
+|---|---|---|
+| Weaviate | Open-source | https://weaviate.io |
+| ML Privacy Meter | Open-source | https://github.com/privacytrustlab/ml_privacy_meter |
+
+#### Cross-references
+- Agentic Top 10: ASI06 Memory and Context Poisoning
+- DSGAI 2026: DSGAI13 Vector Store Platform Security, DSGAI18 Inference and Data Reconstruction
+- Other frameworks: NIST AI RMF MS-2.5 · ISO 27001 A.8.3/A.8.24 · GDPR Recital 26
+
+---
+
+### LLM10 — Improper Output Handling
+
+**Severity:** High
+
+LLM output passed to downstream systems without validation enables
+injection attacks. SOC 2 Processing Integrity (PI1) applies —
+LLM outputs are system processing outputs that must be complete,
+accurate, and processed only in authorised ways. CC5 (control
+activities) covers the input validation procedures that downstream
+systems must implement.
+
+The 2026 entry renames Insecure Output Handling to Improper Output
+Handling and widens it to cover the insecure code that coding assistants
+generate at scale. Output that reaches a compiler, a repository, or a
+production system carries the same downstream-execution risk as output that
+reaches a shell, a browser, or a database.
+
+#### SOC 2 criteria mapping
+
+| Criteria | How it applies |
+|---|---|
+| PI1.1 — Processing integrity policies | Policy requiring LLM output validation before use in downstream processing — complete and authorised processing |
+| CC5.2 — Select and develop control activities | Input validation procedures for all systems consuming LLM output — encoding, schema validation, sanitisation |
+| CC7.2 — Anomaly detection | Monitoring for injection patterns in LLM output channels — detect anomalous processing before downstream harm |
+| CC3.2 — Risk assessment | Output injection risks identified in LLM risk assessment — XSS, SQL injection, command injection via AI-generated content |
+
+#### Mitigations for SOC 2 evidence
+
+**Control implementation**
+- Document output validation procedures (CC5.2 evidence) —
+  encoding, schema validation, and sanitisation requirements
+  for all interfaces consuming LLM output
+- Include output injection risks in LLM risk assessment
+  (CC3.2 evidence) — downstream consumers assessed
+- Document processing integrity policy for LLM outputs
+  (PI1.1 evidence) — what constitutes authorised and
+  valid LLM output processing
+
+**Audit evidence preparation**
+- Output validation procedure documentation (CC5.2, PI1.1)
+- Risk assessment entries for output injection (CC3.2)
+- Security testing results for output injection (CC7.4)
+- Monitoring configuration for output channels (CC7.2)
+
+**Hardening**
+- Conduct DAST on all interfaces consuming LLM output —
+  CC7.4 security testing evidence
+- Implement output schema validation — CC5.2 documented
+  control activity evidence
+- Include output injection in security testing programme —
+  CC7.4 results retained as audit evidence
+
+#### Tools
+
+| Tool | Type | Link |
+|---|---|---|
+| OWASP ZAP | Open-source | https://www.zaproxy.org |
+| Semgrep | Open-source | https://semgrep.dev |
+
+#### Cross-references
+- Agentic Top 10: ASI02 Tool Misuse, ASI05 Unexpected Code Execution
+- DSGAI 2026: DSGAI05 Data Integrity and Validation Failures
+- Other frameworks: OWASP ASVS V5 · CIS Controls CIS 16 · CWE-79
 
 ---
 
@@ -839,10 +872,10 @@ DoS risks identified) also apply.
 
 | Phase | LLM entries | SOC 2 criteria | Rationale |
 |---|---|---|---|
-| 1 — Audit readiness | LLM01, LLM02, LLM03 | CC3, CC9, C1/C2 | Risk register, vendor risk, and data classification are the first auditor asks |
-| 2 — This sprint | LLM06, LLM07, LLM10 | CC6, CC5, A1 | Access control, configuration security, and availability commitments |
-| 3 — This quarter | LLM04, LLM05 | CC8, CC7, PI1 | Change management and monitoring programme for integrity and output security |
-| 4 — Ongoing | LLM08, LLM09 | C2, P5, CC7 | Embedding security and accuracy monitoring hardening |
+| 1 — Audit readiness | LLM01, LLM02, LLM04 | CC3, CC9, C1/C2 | Risk register, vendor risk, and data classification are the first auditor asks |
+| 2 — This sprint | LLM03, LLM08, LLM06 | CC6, CC5, A1 | Access control, configuration security, and availability commitments |
+| 3 — This quarter | LLM05, LLM10 | CC8, CC7, PI1 | Change management and monitoring programme for integrity and output security |
+| 4 — Ongoing | LLM09, LLM07 | C2, P5, CC7 | Embedding security and accuracy monitoring hardening |
 
 ---
 
@@ -850,7 +883,7 @@ DoS risks identified) also apply.
 
 - AICPA SOC 2 Trust Services Criteria: https://www.aicpa-cima.com/resources/landing/system-and-organization-controls-soc-suite-of-services
 - AICPA Trust Services Criteria 2017 (updated 2022): https://us.aicpa.org/content/dam/aicpa/interestareas/frc/assuranceadvisoryservices/downloadabledocuments/trust-services-criteria.pdf
-- OWASP LLM Top 10 2025: https://genai.owasp.org/llm-top-10/
+- OWASP LLM Top 10 2026: https://genai.owasp.org/llm-top-10/
 - ENISA AI Cybersecurity recommendations: https://www.enisa.europa.eu/publications/multilayer-framework-for-good-cybersecurity-practices-for-ai
 
 ---
@@ -860,6 +893,7 @@ DoS risks identified) also apply.
 | Date | Version | Change | Author |
 |---|---|---|---|
 | 2026-03-25 | 2026-Q1 | Initial mapping — LLM01-LLM10 full entries with SOC 2 audit preparation checklist | OWASP GenAI Data Security Initiative |
+| 2026-08-28 | 2026-Q3 | Migrated to OWASP Top 10 for LLM Applications 2026 — entries renumbered, LLM08 re-scoped from System Prompt Leakage to Hidden Context Exposure, LLM10 renamed to Improper Output Handling | OWASP GenAI Data Security Initiative |
 
 ---
 

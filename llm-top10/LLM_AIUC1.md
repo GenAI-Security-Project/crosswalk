@@ -1,15 +1,15 @@
 <!--
   OWASP GenAI Crosswalk
-  Source list : OWASP Top 10 for LLM Applications 2025 (LLM01-LLM10)
+  Source list : OWASP Top 10 for LLM Applications 2026 (LLM01-LLM10)
   Framework   : AIUC-1 — The standard for AI agent security, safety and reliability
-  Version     : 2026-Q1
+  Version     : 2026-Q3
   Maintained by: OWASP GenAI Data Security Initiative — https://genai.owasp.org
   License     : CC BY-SA 4.0
 -->
 
-# LLM Top 10 2025 × AIUC-1
+# LLM Top 10 2026 × AIUC-1
 
-Mapping the [OWASP Top 10 for LLM Applications 2025](https://genai.owasp.org/llm-top-10/)
+Mapping the [OWASP Top 10 for LLM Applications 2026](https://genai.owasp.org/llm-top-10/)
 to [AIUC-1](https://www.aiuc-1.com/) — the world's first AI agent security,
 safety and reliability certification framework, developed with 100+
 Fortune 500 CISOs and used as the SOC 2 analog for AI agents.
@@ -42,14 +42,14 @@ standard customer expectation.
 |---|---|---|---|---|
 | LLM01 | Prompt Injection | Critical | B001, B002, B005, B006 | Foundational–Advanced |
 | LLM02 | Sensitive Information Disclosure | High | A (all), B006, E | Foundational–Advanced |
-| LLM03 | Supply Chain Vulnerabilities | High | B001, B003, B008, A | Foundational–Hardening |
-| LLM04 | Data and Model Poisoning | Critical | A (all), B001, B002, E | Hardening–Advanced |
-| LLM05 | Insecure Output Handling | High | B005, B006, B009, C | Foundational–Hardening |
-| LLM06 | Excessive Agency | High | B006, B007, C, E | Foundational–Hardening |
-| LLM07 | System Prompt Leakage | High | A, B006, E | Foundational–Hardening |
-| LLM08 | Vector and Embedding Weaknesses | Medium | A, B001, B002, B005 | Hardening–Advanced |
-| LLM09 | Misinformation | Medium | C, F, B009, E | Foundational–Hardening |
-| LLM10 | Unbounded Consumption | Medium | D, B006, E | Foundational–Hardening |
+| LLM03 | Excessive Agency | Critical | B006, B007, C, E | Foundational–Hardening |
+| LLM04 | Supply Chain | High | B001, B003, B008, A | Foundational–Hardening |
+| LLM05 | Data and Model Poisoning | Critical | A (all), B001, B002, E | Hardening–Advanced |
+| LLM06 | Unbounded Consumption | High | D, B006, E | Foundational–Hardening |
+| LLM07 | Misinformation | High | C, F, B009, E | Foundational–Hardening |
+| LLM08 | Hidden Context Exposure | High | A, B006, E | Foundational–Hardening |
+| LLM09 | Vector and Embedding Weaknesses | Medium | A, B001, B002, B005 | Hardening–Advanced |
+| LLM10 | Improper Output Handling | High | B005, B006, B009, C | Foundational–Hardening |
 
 ---
 
@@ -74,6 +74,11 @@ standard customer expectation.
 Untrusted input overrides model instructions — via direct user
 manipulation or indirect injection through retrieved data, tool
 outputs, or multi-modal content.
+
+The 2026 entry extends prompt injection to cross-modal payloads.
+Instructions hidden in an image, an audio track, or a video frame reach the
+model without ever being human-readable, and steganographic or
+invisible-Unicode carriers survive review of the rendered interface.
 
 #### AIUC-1 mapping
 
@@ -147,123 +152,7 @@ or insufficient output filtering.
 
 ---
 
-### LLM03 — Supply Chain Vulnerabilities
-
-Third-party components — model providers, fine-tuning services, plugins,
-tool libraries, RAG frameworks — are compromised or malicious, introducing
-vulnerabilities into the LLM deployment.
-
-#### AIUC-1 mapping
-
-| Control | ID | Description | Tier |
-|---|---|---|---|
-| Third-party adversarial robustness testing | B001 | Extend testing scope to third-party components | Foundational |
-| Third-party security assessment | B003 | Formal assessment of all third-party integrations | Hardening |
-| Third-party NHI controls | B008 | Controls for third-party credentials and identities | Hardening |
-| Data & Privacy supply chain controls | A | Training data and model provenance verification | Foundational |
-
-#### Three-tier mitigations
-
-**Foundational:**
-- Inventory all third-party components (models, tools, frameworks)
-- Generate SBOM for LLM deployment
-- Pin all dependency versions; reject floating versions in production
-
-**Hardening:**
-- B003: formal third-party security assessment for critical components
-- B008: apply NHI controls to all third-party credentials and tokens
-- Automated vulnerability scanning for LLM SBOM
-
-**Advanced:**
-- B001 supply chain adversarial testing: can a compromised plugin affect model behaviour?
-- Annual third-party security review programme
-- Formal model provenance attestation for regulated deployments
-
-#### Cross-references
-
-- Agentic: ASI07 (Supply Chain Compromise in Agent Ecosystems)
-- DSGAI: DSGAI16, DSGAI17 (Third-Party and Model Supply Chain)
-- See also: [LLM_CWE_CVE.md](LLM_CWE_CVE.md)
-
----
-
-### LLM04 — Data and Model Poisoning
-
-Training data, fine-tuning datasets, or model weights are corrupted —
-causing models to learn backdoored, biased, or degraded behaviours.
-
-#### AIUC-1 mapping
-
-| Control | ID | Description | Tier |
-|---|---|---|---|
-| Data & Privacy domain (all controls) | A | Training data integrity, provenance, and access control | Foundational |
-| Third-party adversarial robustness testing | B001 | Backdoor and poisoning detection in training pipeline | Foundational |
-| Detect adversarial input | B002 | Detect anomalous training data patterns | Hardening |
-| Audit trails and logging | E | Chain of custody for training data | Foundational |
-
-#### Three-tier mitigations
-
-**Foundational:**
-- Apply Domain A controls to all training datasets
-- Hash verification for all training data at ingestion
-- B001 adversarial probing of trained models for backdoor triggers
-
-**Hardening:**
-- B002 anomaly detection on training data distributions
-- Domain E: immutable chain of custody log from data source to training job
-- Restrict training data write access to authorised pipeline only
-
-**Advanced:**
-- B001 automated poisoning detection in ML CI/CD
-- Differential privacy for high-sensitivity training scenarios
-- Periodic model re-evaluation against clean held-out dataset
-
-#### Cross-references
-
-- DSGAI: DSGAI02 (Training Data Poisoning), DSGAI09 (RAG Corpus Manipulation)
-- See also: [LLM_MITREATLAS.md](LLM_MITREATLAS.md) AML.T0018
-
----
-
-### LLM05 — Insecure Output Handling
-
-LLM output is processed by downstream systems (code interpreters,
-browsers, SQL engines) without sanitisation — enabling XSS, code
-injection, SSRF, or privilege escalation via crafted model responses.
-
-#### AIUC-1 mapping
-
-| Control | ID | Description | Tier |
-|---|---|---|---|
-| Implement real-time input filtering | B005 | Apply output validation before downstream processing | Foundational |
-| Prevent unauthorized AI actions | B006 | Scope restrictions on what downstream systems can execute from model output | Foundational |
-| Validate AI-generated content | B009 | Validation of all model output before use in downstream systems | Foundational |
-| Safety domain (harm prevention) | C | Safety controls on content passed to executors | Foundational |
-
-#### Three-tier mitigations
-
-**Foundational:**
-- B009: validate all model output before passing to code interpreters or databases
-- B005: output filtering before downstream processing
-- Never pass raw model output to shell, SQL, or browser without sanitisation
-
-**Hardening:**
-- B006: scope restrictions on code execution environments
-- Output content type enforcement: model cannot output JavaScript in contexts that will render it
-- Red team: attempt code injection via crafted model output
-
-**Advanced:**
-- Automated output validation test suite in CI/CD
-- Sandboxed execution environment for all model-generated code
-- B009 output schema validation for structured output pipelines
-
-#### Cross-references
-
-- See also: [LLM_ASVS.md](LLM_ASVS.md), [LLM_CWE_CVE.md](LLM_CWE_CVE.md) CWE-79, CWE-89
-
----
-
-### LLM06 — Excessive Agency
+### LLM03 — Excessive Agency
 
 LLM-enabled features with access to tools, plugins, or APIs take
 autonomous actions with real-world consequences — without appropriate
@@ -303,11 +192,185 @@ scope limitations, human oversight, or reversibility controls.
 
 ---
 
-### LLM07 — System Prompt Leakage
+### LLM04 — Supply Chain
 
-Confidential system prompt contents — instructions, personas, access
-tokens, business logic — are extracted through adversarial prompting
-or model over-disclosure.
+Third-party components — model providers, fine-tuning services, plugins,
+tool libraries, RAG frameworks — are compromised or malicious, introducing
+vulnerabilities into the LLM deployment.
+
+The 2026 entry adds artifact provenance to this scope. A promoted
+model, adapter, or converted artifact that is not what it claims to be —
+unsigned weights, a hijacked conversion or merge service, or namespace reuse
+on a model hub — is a supply-chain compromise even when every package
+dependency is clean.
+
+#### AIUC-1 mapping
+
+| Control | ID | Description | Tier |
+|---|---|---|---|
+| Third-party adversarial robustness testing | B001 | Extend testing scope to third-party components | Foundational |
+| Third-party security assessment | B003 | Formal assessment of all third-party integrations | Hardening |
+| Third-party NHI controls | B008 | Controls for third-party credentials and identities | Hardening |
+| Data & Privacy supply chain controls | A | Training data and model provenance verification | Foundational |
+
+#### Three-tier mitigations
+
+**Foundational:**
+- Inventory all third-party components (models, tools, frameworks)
+- Generate SBOM for LLM deployment
+- Pin all dependency versions; reject floating versions in production
+
+**Hardening:**
+- B003: formal third-party security assessment for critical components
+- B008: apply NHI controls to all third-party credentials and tokens
+- Automated vulnerability scanning for LLM SBOM
+
+**Advanced:**
+- B001 supply chain adversarial testing: can a compromised plugin affect model behaviour?
+- Annual third-party security review programme
+- Formal model provenance attestation for regulated deployments
+
+#### Cross-references
+
+- Agentic: ASI07 (Supply Chain Compromise in Agent Ecosystems)
+- DSGAI: DSGAI16, DSGAI17 (Third-Party and Model Supply Chain)
+- See also: [LLM_CWE_CVE.md](LLM_CWE_CVE.md)
+
+---
+
+### LLM05 — Data and Model Poisoning
+
+Training data, fine-tuning datasets, or model weights are corrupted —
+causing models to learn backdoored, biased, or degraded behaviours.
+
+The 2026 entry folds in fine-tuning subversion. A supplier LoRA
+adapter, a customer fine-tune, or a distilled checkpoint can carry a backdoor
+that no pre-training control catches, so poisoning defences must cover every
+stage that writes weights, not just the original training corpus.
+
+#### AIUC-1 mapping
+
+| Control | ID | Description | Tier |
+|---|---|---|---|
+| Data & Privacy domain (all controls) | A | Training data integrity, provenance, and access control | Foundational |
+| Third-party adversarial robustness testing | B001 | Backdoor and poisoning detection in training pipeline | Foundational |
+| Detect adversarial input | B002 | Detect anomalous training data patterns | Hardening |
+| Audit trails and logging | E | Chain of custody for training data | Foundational |
+
+#### Three-tier mitigations
+
+**Foundational:**
+- Apply Domain A controls to all training datasets
+- Hash verification for all training data at ingestion
+- B001 adversarial probing of trained models for backdoor triggers
+
+**Hardening:**
+- B002 anomaly detection on training data distributions
+- Domain E: immutable chain of custody log from data source to training job
+- Restrict training data write access to authorised pipeline only
+
+**Advanced:**
+- B001 automated poisoning detection in ML CI/CD
+- Differential privacy for high-sensitivity training scenarios
+- Periodic model re-evaluation against clean held-out dataset
+
+#### Cross-references
+
+- DSGAI: DSGAI02 (Training Data Poisoning), DSGAI09 (RAG Corpus Manipulation)
+- See also: [LLM_MITREATLAS.md](LLM_MITREATLAS.md) AML.T0018
+
+---
+
+### LLM06 — Unbounded Consumption
+
+LLM applications have no resource consumption limits — enabling
+denial-of-service via excessive API calls, token flooding, context
+window exhaustion, or disproportionate compute consumption.
+
+#### AIUC-1 mapping
+
+| Control | ID | Description | Tier |
+|---|---|---|---|
+| Reliability domain (all) | D | Availability controls, rate limiting, and failure recovery | Foundational |
+| Prevent unauthorized AI actions | B006 | Scope restrictions preventing resource exhaustion | Foundational |
+| Accountability domain | E | Monitoring and alerting for consumption anomalies | Foundational |
+
+#### Three-tier mitigations
+
+**Foundational:**
+- Domain D: implement rate limiting per user/tenant at API gateway
+- B006: maximum token budget per request enforced at application layer
+- Domain E: alert on consumption anomalies
+
+**Hardening:**
+- Domain D: circuit breakers and graceful degradation under load
+- Per-user and per-tenant consumption quotas with soft/hard limits
+- Domain E: forensic logging of high-volume sessions
+
+**Advanced:**
+- Domain D: predictive capacity management based on usage patterns
+- Red team: DoS simulation targeting token consumption and context flooding
+- Cost attribution per user for enterprise deployments
+
+#### Cross-references
+
+- Agentic: ASI10 (Cascading Agent Failures)
+- See also: [LLM_ASVS.md](LLM_ASVS.md), [LLM_NISTCSF2.md](LLM_NISTCSF2.md)
+
+---
+
+### LLM07 — Misinformation
+
+LLMs generate confident, plausible, but factually incorrect information —
+hallucinations, fabricated citations, outdated facts — that users or
+downstream systems act upon as if true.
+
+#### AIUC-1 mapping
+
+| Control | ID | Description | Tier |
+|---|---|---|---|
+| Safety domain (harm prevention) | C | Guardrails against harmful misinformation outputs | Foundational |
+| Society domain | F | Transparency about AI-generated content limitations | Foundational |
+| Validate AI-generated content | B009 | Factual validation of outputs in high-stakes domains | Foundational |
+| Accountability domain | E | Logging and explainability for misinformation incidents | Foundational |
+
+#### Three-tier mitigations
+
+**Foundational:**
+- Domain C: content guardrails flagging low-confidence outputs in high-stakes domains
+- Domain F: user-facing disclosure that content is AI-generated
+- B009: validation layer for outputs in regulated or safety-critical domains
+
+**Hardening:**
+- RAG with authoritative sources to ground model outputs
+- Human review gates for high-stakes decisions based on model output
+- Domain E: audit logs of all outputs for misinformation incident investigation
+
+**Advanced:**
+- Automated fact-checking pipeline for high-stakes domains
+- Domain F: feedback mechanism for users to report hallucinations
+- Red team: identify high-hallucination domains for this specific model
+
+#### Cross-references
+
+- See also: [LLM_SAMM.md](LLM_SAMM.md), [LLM_EUAIAct.md](LLM_EUAIAct.md)
+
+---
+
+### LLM08 — Hidden Context Exposure
+
+Hidden context — the system prompt, developer instructions, retrieved
+policy text, and the tool and function schemas an application assembles
+into the model's context window — is extracted, inferred, or
+reconstructed by adversaries.
+
+The 2026 list broadens the former System Prompt Leakage entry to cover all
+non-user-facing context, not just the system prompt. Severity tracks what
+that context holds: internal rules and workflow logic are medium, embedded
+credentials or reliance on context secrecy for authorisation are high, and
+disclosure that chains to code execution or broad exfiltration is critical.
+Design on the assumption that hidden context is discoverable, and never
+treat it as a security boundary.
 
 #### AIUC-1 mapping
 
@@ -339,7 +402,7 @@ or model over-disclosure.
 
 ---
 
-### LLM08 — Vector and Embedding Weaknesses
+### LLM09 — Vector and Embedding Weaknesses
 
 Embedding stores used in RAG systems are vulnerable to cross-tenant
 leakage, semantic injection, direct database access, and integrity
@@ -378,85 +441,53 @@ attacks on stored vector representations.
 
 ---
 
-### LLM09 — Misinformation
+### LLM10 — Improper Output Handling
 
-LLMs generate confident, plausible, but factually incorrect information —
-hallucinations, fabricated citations, outdated facts — that users or
-downstream systems act upon as if true.
+LLM output is processed by downstream systems (code interpreters,
+browsers, SQL engines) without sanitisation — enabling XSS, code
+injection, SSRF, or privilege escalation via crafted model responses.
 
-#### AIUC-1 mapping
-
-| Control | ID | Description | Tier |
-|---|---|---|---|
-| Safety domain (harm prevention) | C | Guardrails against harmful misinformation outputs | Foundational |
-| Society domain | F | Transparency about AI-generated content limitations | Foundational |
-| Validate AI-generated content | B009 | Factual validation of outputs in high-stakes domains | Foundational |
-| Accountability domain | E | Logging and explainability for misinformation incidents | Foundational |
-
-#### Three-tier mitigations
-
-**Foundational:**
-- Domain C: content guardrails flagging low-confidence outputs in high-stakes domains
-- Domain F: user-facing disclosure that content is AI-generated
-- B009: validation layer for outputs in regulated or safety-critical domains
-
-**Hardening:**
-- RAG with authoritative sources to ground model outputs
-- Human review gates for high-stakes decisions based on model output
-- Domain E: audit logs of all outputs for misinformation incident investigation
-
-**Advanced:**
-- Automated fact-checking pipeline for high-stakes domains
-- Domain F: feedback mechanism for users to report hallucinations
-- Red team: identify high-hallucination domains for this specific model
-
-#### Cross-references
-
-- See also: [LLM_SAMM.md](LLM_SAMM.md), [LLM_EUAIAct.md](LLM_EUAIAct.md)
-
----
-
-### LLM10 — Unbounded Consumption
-
-LLM applications have no resource consumption limits — enabling
-denial-of-service via excessive API calls, token flooding, context
-window exhaustion, or disproportionate compute consumption.
+The 2026 entry renames Insecure Output Handling to Improper Output
+Handling and widens it to cover the insecure code that coding assistants
+generate at scale. Output that reaches a compiler, a repository, or a
+production system carries the same downstream-execution risk as output that
+reaches a shell, a browser, or a database.
 
 #### AIUC-1 mapping
 
 | Control | ID | Description | Tier |
 |---|---|---|---|
-| Reliability domain (all) | D | Availability controls, rate limiting, and failure recovery | Foundational |
-| Prevent unauthorized AI actions | B006 | Scope restrictions preventing resource exhaustion | Foundational |
-| Accountability domain | E | Monitoring and alerting for consumption anomalies | Foundational |
+| Implement real-time input filtering | B005 | Apply output validation before downstream processing | Foundational |
+| Prevent unauthorized AI actions | B006 | Scope restrictions on what downstream systems can execute from model output | Foundational |
+| Validate AI-generated content | B009 | Validation of all model output before use in downstream systems | Foundational |
+| Safety domain (harm prevention) | C | Safety controls on content passed to executors | Foundational |
 
 #### Three-tier mitigations
 
 **Foundational:**
-- Domain D: implement rate limiting per user/tenant at API gateway
-- B006: maximum token budget per request enforced at application layer
-- Domain E: alert on consumption anomalies
+- B009: validate all model output before passing to code interpreters or databases
+- B005: output filtering before downstream processing
+- Never pass raw model output to shell, SQL, or browser without sanitisation
 
 **Hardening:**
-- Domain D: circuit breakers and graceful degradation under load
-- Per-user and per-tenant consumption quotas with soft/hard limits
-- Domain E: forensic logging of high-volume sessions
+- B006: scope restrictions on code execution environments
+- Output content type enforcement: model cannot output JavaScript in contexts that will render it
+- Red team: attempt code injection via crafted model output
 
 **Advanced:**
-- Domain D: predictive capacity management based on usage patterns
-- Red team: DoS simulation targeting token consumption and context flooding
-- Cost attribution per user for enterprise deployments
+- Automated output validation test suite in CI/CD
+- Sandboxed execution environment for all model-generated code
+- B009 output schema validation for structured output pipelines
 
 #### Cross-references
 
-- Agentic: ASI10 (Cascading Agent Failures)
-- See also: [LLM_ASVS.md](LLM_ASVS.md), [LLM_NISTCSF2.md](LLM_NISTCSF2.md)
+- See also: [LLM_ASVS.md](LLM_ASVS.md), [LLM_CWE_CVE.md](LLM_CWE_CVE.md) CWE-79, CWE-89
 
 ---
 
 ## AIUC-1 certification readiness checklist — LLM deployments
 
-| Domain | Control | LLM01 | LLM02 | LLM03 | LLM04 | LLM05 | LLM06 | LLM07 | LLM08 | LLM09 | LLM10 |
+| Domain | Control | LLM01 | LLM02 | LLM04 | LLM05 | LLM10 | LLM03 | LLM08 | LLM09 | LLM07 | LLM06 |
 |---|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | A — Data & Privacy | Data classification and access controls | | ✓ | ✓ | ✓ | | | ✓ | ✓ | | |
 | B — Security | B001 Adversarial testing | ✓ | | ✓ | ✓ | | | | ✓ | | |
@@ -474,7 +505,7 @@ window exhaustion, or disproportionate compute consumption.
 ## References
 
 - [AIUC-1 Standard](https://www.aiuc-1.com/)
-- [OWASP LLM Top 10 2025](https://genai.owasp.org/llm-top-10/)
+- [OWASP LLM Top 10 2026](https://genai.owasp.org/llm-top-10/)
 - [Agentic_AIUC1.md](../agentic-top10/Agentic_AIUC1.md) — AIUC-1 for agentic deployments
 - [LLM_AITG.md](LLM_AITG.md) — testing guide aligned with B001 adversarial testing
 - [LLM_SAMM.md](LLM_SAMM.md) — programme maturity complement to AIUC-1 certification
@@ -486,6 +517,7 @@ window exhaustion, or disproportionate compute consumption.
 | Version | Date | Change |
 |---|---|---|
 | 1.0.0 | 2026-03-27 | Initial release — full mapping LLM01–LLM10 to AIUC-1 |
+| 1.1.0 | 2026-08-28 | Migrated to OWASP Top 10 for LLM Applications 2026 — entries renumbered, LLM08 re-scoped from System Prompt Leakage to Hidden Context Exposure, LLM10 renamed to Improper Output Handling |
 
 ---
 

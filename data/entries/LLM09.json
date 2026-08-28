@@ -1,8 +1,8 @@
 {
   "id": "LLM09",
-  "name": "Misinformation",
-  "source_list": "LLM-Top10-2025",
-  "version": "2026-Q1",
+  "name": "Vector and Embedding Weaknesses",
+  "source_list": "LLM-Top10-2026",
+  "version": "2026-Q3",
   "severity": "Medium",
   "aivss_score": null,
   "audience": [
@@ -18,651 +18,653 @@
   "mappings": [
     {
       "framework": "MITRE ATLAS",
-      "control_id": "AML.T0045",
-      "control_name": "Disinformation",
-      "tier": "Foundational",
-      "scope": "Both",
-      "url": "https://atlas.mitre.org/techniques/AML.T0045",
-      "notes": "Using AI-generated content to deliberately spread false information"
+      "control_id": "AML.T0063",
+      "control_name": "Embedding Manipulation",
+      "tier": "Hardening",
+      "scope": "Build",
+      "url": "https://atlas.mitre.org/techniques/AML.T0063",
+      "notes": "Crafting inputs whose embeddings manipulate similarity search results"
     },
     {
       "framework": "MITRE ATLAS",
-      "control_id": "AML.T0047",
-      "control_name": "Influence via Automated Content",
-      "tier": "Foundational",
-      "scope": "Both",
-      "url": "https://atlas.mitre.org/techniques/AML.T0047",
-      "notes": "Generating high-volume automated content to shape perception or overwhelm fact-checking"
+      "control_id": "AML.T0025",
+      "control_name": "Resource Exhaustion via Embedding",
+      "tier": "Hardening",
+      "scope": "Build",
+      "url": "https://atlas.mitre.org/techniques/AML.T0025",
+      "notes": "Flooding vector stores with adversarial embeddings to degrade retrieval quality"
     },
     {
       "framework": "NIST AI RMF 1.0",
-      "control_id": "GV-1.7",
-      "control_name": "Policies for trustworthy AI",
-      "tier": "Foundational",
-      "scope": "Both",
-      "notes": "Organisational policy on AI-generated content accuracy and human oversight requirements"
+      "control_id": "MS-2.5",
+      "control_name": "Testing — adversarial",
+      "tier": "Hardening",
+      "scope": "Build",
+      "notes": "Vector store and embedding adversarial testing included in evaluation programme"
     },
     {
       "framework": "NIST AI RMF 1.0",
-      "control_id": "MS-2.6",
-      "control_name": "Testing — output quality",
-      "tier": "Foundational",
-      "scope": "Both",
-      "notes": "Accuracy and hallucination testing included in AI evaluation programme"
+      "control_id": "MS-3.3",
+      "control_name": "Data quality",
+      "tier": "Hardening",
+      "scope": "Build",
+      "notes": "Data quality controls applied to embedding generation and vector store ingestion"
     },
     {
       "framework": "NIST AI RMF 1.0",
-      "control_id": "MS-4.1",
-      "control_name": "Feedback mechanisms",
-      "tier": "Foundational",
-      "scope": "Both",
-      "notes": "Feedback channels for detecting and tracking misinformation in production"
+      "control_id": "MG-2.2",
+      "control_name": "Risk response",
+      "tier": "Hardening",
+      "scope": "Build",
+      "notes": "Response procedures for detected vector store compromise or manipulation"
     },
     {
       "framework": "NIST AI RMF 1.0",
-      "control_id": "MG-2.4",
-      "control_name": "Risk response — data",
-      "tier": "Foundational",
-      "scope": "Both",
-      "notes": "Procedures for responding to detected misinformation incidents"
+      "control_id": "MP-2.3",
+      "control_name": "Risk categorisation",
+      "tier": "Hardening",
+      "scope": "Build",
+      "notes": "Embedding and vector store risks mapped in AI system risk register"
     },
     {
       "framework": "EU AI Act",
-      "control_id": "High-risk AI system information must include accuracy metrics and known limitations",
-      "control_name": "Art. 13 — Transparency",
-      "tier": "Foundational",
+      "control_id": "Embedding and retrieval risks identified and mitigated",
+      "control_name": "Art. 9 — Risk management",
+      "tier": "Hardening",
       "scope": "Both",
-      "notes": "Hallucination rates and accuracy limitations must be disclosed to deployers and users"
+      "notes": "Vector store attack scenarios included in risk management system"
     },
     {
       "framework": "EU AI Act",
-      "control_id": "AI-generated content must be marked as such — chatbots must disclose AI nature",
-      "control_name": "Art. 50 — Transparency for certain AI systems",
-      "tier": "Foundational",
+      "control_id": "Data quality controls applied to all data in scope — including RAG corpora",
+      "control_name": "Art. 10 — Data and data governance",
+      "tier": "Hardening",
       "scope": "Both",
-      "notes": "Mandatory AI disclosure prevents users from treating hallucinated content as authoritative human output"
+      "notes": "Quality controls on embedding generation and vector store ingestion required"
     },
     {
       "framework": "EU AI Act",
-      "control_id": "Systemic risk GPAI providers must assess and mitigate risks including disinformation",
-      "control_name": "Art. 55(1)(a) — Systemic risk GPAI",
-      "tier": "Foundational",
+      "control_id": "Technical robustness against adversarial manipulation",
+      "control_name": "Art. 15 — Accuracy, robustness, cybersecurity",
+      "tier": "Hardening",
       "scope": "Both",
-      "notes": "Misinformation risk assessment and mitigation is a binding obligation for systemic risk models"
+      "notes": "Embedding manipulation resistance is an Art. 15 technical requirement"
+    },
+    {
+      "framework": "ISO/IEC 27001:2022",
+      "control_id": "A.8.3",
+      "control_name": "Information access restriction",
+      "tier": "Hardening",
+      "scope": "Build",
+      "notes": "RBAC on all vector store collections — no unauthenticated access to any collection"
+    },
+    {
+      "framework": "ISO/IEC 27001:2022",
+      "control_id": "A.8.24",
+      "control_name": "Use of cryptography",
+      "tier": "Hardening",
+      "scope": "Build",
+      "notes": "Encryption of all vector store data at rest and in transit"
     },
     {
       "framework": "ISO/IEC 27001:2022",
       "control_id": "A.8.16",
       "control_name": "Monitoring activities",
-      "tier": "Foundational",
-      "scope": "Both",
-      "notes": "Production monitoring for output accuracy — hallucination rate tracking, anomaly detection on model drift"
+      "tier": "Hardening",
+      "scope": "Build",
+      "notes": "Anomaly detection on vector store query patterns — bulk extraction and poisoning indicators"
     },
     {
       "framework": "ISO/IEC 27001:2022",
-      "control_id": "A.5.7",
-      "control_name": "Threat intelligence",
-      "tier": "Foundational",
-      "scope": "Both",
-      "notes": "Intelligence on disinformation campaigns and active manipulation of RAG sources"
-    },
-    {
-      "framework": "ISO/IEC 27001:2022",
-      "control_id": "A.6.3",
-      "control_name": "Information security awareness training",
-      "tier": "Foundational",
-      "scope": "Both",
-      "notes": "User training on LLM output limitations — verification requirements and critical evaluation"
-    },
-    {
-      "framework": "ISO/IEC 27001:2022",
-      "control_id": "A.5.36",
-      "control_name": "Compliance with policies",
-      "tier": "Foundational",
-      "scope": "Both",
-      "notes": "Policy on AI-generated content accuracy — disclosure requirements, human verification thresholds"
+      "control_id": "A.8.11",
+      "control_name": "Data masking",
+      "tier": "Hardening",
+      "scope": "Build",
+      "notes": "Differential privacy in embedding generation for sensitive corpora"
     },
     {
       "framework": "ISO/IEC 42001:2023",
-      "control_id": "A.5.2",
-      "control_name": "Impact assessment",
-      "tier": "Foundational",
+      "control_id": "A.7.2",
+      "control_name": "Data quality",
+      "tier": "Hardening",
       "scope": "Both",
-      "notes": "AI impact assessment covers misinformation risk — which domains are affected, what is the consequence of incorrect output per stakeholder"
+      "notes": "Vector store content quality requirements — RBAC, encryption, source validation as data quality controls"
     },
     {
       "framework": "ISO/IEC 42001:2023",
-      "control_id": "A.6.2.8",
-      "control_name": "Monitoring of AI systems",
-      "tier": "Foundational",
+      "control_id": "A.7.3",
+      "control_name": "Data provenance and characteristics",
+      "tier": "Hardening",
       "scope": "Both",
-      "notes": "Production monitoring for accuracy degradation — hallucination rates tracked as AIMS operational monitoring"
+      "notes": "Embedding provenance documented — source document, classification, access controls tracked"
     },
     {
       "framework": "ISO/IEC 42001:2023",
-      "control_id": "A.8.1",
-      "control_name": "Information for interested parties",
-      "tier": "Foundational",
+      "control_id": "A.6.2.6",
+      "control_name": "Testing of AI systems",
+      "tier": "Hardening",
       "scope": "Both",
-      "notes": "Transparency about AI system limitations — users informed of advisory status, accuracy limitations, verification requirements"
+      "notes": "Vector store attacks in AIMS testing — RBAC bypass, embedding inversion, bulk extraction tested"
     },
     {
       "framework": "ISO/IEC 42001:2023",
-      "control_id": "A.9.1",
-      "control_name": "Use of AI systems",
-      "tier": "Foundational",
+      "control_id": "A.10.1",
+      "control_name": "Third-party AI system acquisition",
+      "tier": "Hardening",
       "scope": "Both",
-      "notes": "Guidance on appropriate AI system use — domains requiring human verification documented as AIMS use guidance"
+      "notes": "Vector database providers assessed as third-party AI system components"
     },
     {
       "framework": "CIS Controls v8.1",
-      "control_id": "14.1 Establish security awareness programme",
-      "control_name": "CIS 14 — Security Awareness",
-      "tier": "Foundational",
-      "scope": "Both",
-      "notes": "User training on LLM output limitations — verification requirements and critical evaluation"
-    },
-    {
-      "framework": "CIS Controls v8.1",
-      "control_id": "17.1 Designate personnel for incident response",
-      "control_name": "CIS 17 — Incident Response",
-      "tier": "Foundational",
-      "scope": "Both",
-      "notes": "Defined response for LLM misinformation incidents — correction, notification, root cause"
-    },
-    {
-      "framework": "CIS Controls v8.1",
-      "control_id": "3.1 Establish data management process",
+      "control_id": "3.11 Encrypt sensitive data at rest",
       "control_name": "CIS 3 — Data Protection",
-      "tier": "Foundational",
+      "tier": "Hardening",
       "scope": "Both",
-      "notes": "RAG data governance — quality and freshness controls on retrieval sources"
+      "notes": "All vector store content encrypted at rest"
+    },
+    {
+      "framework": "CIS Controls v8.1",
+      "control_id": "7.1 Establish vulnerability management",
+      "control_name": "CIS 7 — Vulnerability Management",
+      "tier": "Hardening",
+      "scope": "Both",
+      "notes": "Vector database CVEs in vulnerability management process — CVE-2024-3584 and equivalents"
+    },
+    {
+      "framework": "CIS Controls v8.1",
+      "control_id": "16.1 Establish secure development standards",
+      "control_name": "CIS 16 — Application Software Security",
+      "tier": "Hardening",
+      "scope": "Both",
+      "notes": "Secure coding requirements for vector store integration — RBAC, encryption, input validation"
     },
     {
       "framework": "OWASP ASVS 4.0.3",
-      "control_id": "V11.1.1",
-      "control_name": "Verify business logic assumptions documented",
-      "tier": "Foundational",
+      "control_id": "V4.1.3",
+      "control_name": "Verify least privilege access control on data",
+      "tier": "Hardening",
       "scope": "Both",
-      "notes": "LLM accuracy limitations documented as business logic assumptions — verification requirements defined"
+      "notes": "RBAC on all vector store collections — no unauthenticated access"
     },
     {
       "framework": "OWASP ASVS 4.0.3",
-      "control_id": "V7.4.1",
-      "control_name": "Verify all security controls logged",
-      "tier": "Foundational",
+      "control_id": "V6.1.1",
+      "control_name": "Verify all sensitive data encrypted at rest",
+      "tier": "Hardening",
       "scope": "Both",
-      "notes": "LLM accuracy metrics and hallucination rate logged — production monitoring for output quality"
+      "notes": "All vector store content encrypted at rest"
     },
     {
       "framework": "OWASP ASVS 4.0.3",
-      "control_id": "V5.2.1",
-      "control_name": "Verify outputs encoded before rendering",
-      "tier": "Foundational",
+      "control_id": "V12.1.1",
+      "control_name": "Verify file upload malware scanning",
+      "tier": "Hardening",
       "scope": "Both",
-      "notes": "LLM advisory outputs clearly labelled — users cannot mistake model output for authoritative source"
+      "notes": "Content validation on all vector store ingestion — adversarial content detected"
     },
     {
       "framework": "ISA/IEC 62443",
-      "control_id": "SR 3.1",
+      "control_id": "SR 3.7",
+      "control_name": "Software and information integrity (monitoring)",
+      "tier": "Hardening",
+      "scope": "Both",
+      "notes": "Vector store content integrity monitored — alert on anomalous retrieval patterns"
+    },
+    {
+      "framework": "ISA/IEC 62443",
+      "control_id": "SR 4.3",
+      "control_name": "Data confidentiality",
+      "tier": "Hardening",
+      "scope": "Both",
+      "notes": "Embeddings of sensitive OT documentation encrypted — inversion attack protection"
+    },
+    {
+      "framework": "ISA/IEC 62443",
+      "control_id": "SR 3.3",
       "control_name": "Software and information integrity",
-      "tier": "Foundational",
+      "tier": "Hardening",
       "scope": "Both",
-      "notes": "LLM outputs for safety-relevant guidance cross-validated against authoritative sources"
-    },
-    {
-      "framework": "ISA/IEC 62443",
-      "control_id": "SR 6.2",
-      "control_name": "Timely response to events",
-      "tier": "Foundational",
-      "scope": "Both",
-      "notes": "Procedures for detecting and responding to LLM misinformation incidents"
-    },
-    {
-      "framework": "ISA/IEC 62443",
-      "control_id": "SR 2.3",
-      "control_name": "Use control",
-      "tier": "Foundational",
-      "scope": "Both",
-      "notes": "LLM advisory outputs clearly distinguished from authoritative procedural documentation"
+      "notes": "Vector store ingestion validated — only authorised OT documentation enters the corpus"
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
-      "control_id": "Attacks degrading the reliability of OT decision-support",
+      "control_id": "Attacks targeting the integrity of OT decision-support data",
       "control_name": "Section 5.3 — Integrity threats",
-      "tier": "Foundational",
+      "tier": "Hardening",
       "scope": "Both",
-      "notes": "LLM misinformation as an integrity attack on operator decision-making"
+      "notes": "Vector store poisoning as an integrity attack on LLM knowledge sources"
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
-      "control_id": "Assess reliability of OT advisory systems",
+      "control_id": "Assess integrity risks for all OT-connected systems",
       "control_name": "Section 6.2 — Risk assessment",
-      "tier": "Foundational",
+      "tier": "Hardening",
       "scope": "Both",
-      "notes": "LLM accuracy limitations assessed in OT risk assessment per use case"
-    },
-    {
-      "framework": "NIST SP 800-82 Rev 3",
-      "control_id": "OT security awareness and training",
-      "control_name": "Section 8.2 — Training",
-      "tier": "Foundational",
-      "scope": "Both",
-      "notes": "Operator training on LLM limitations and verification requirements"
+      "notes": "Vector store integrity included in OT LLM risk assessment"
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
       "control_id": "Title",
       "control_name": "Control",
-      "tier": "Foundational",
+      "tier": "Hardening",
       "scope": "Both",
       "notes": "Application"
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
-      "control_id": "Malicious Code Protection",
-      "control_name": "SI-3",
-      "tier": "Foundational",
+      "control_id": "Software, Firmware, and Information Integrity",
+      "control_name": "SI-7",
+      "tier": "Hardening",
       "scope": "Both",
-      "notes": "Analogy: LLM misinformation detection controls as an integrity assurance layer on advisory outputs"
+      "notes": "Vector store integrity monitoring — alert on anomalous content or unexpected modifications"
+    },
+    {
+      "framework": "NIST SP 800-82 Rev 3",
+      "control_id": "Protection of Information at Rest",
+      "control_name": "SC-28",
+      "tier": "Hardening",
+      "scope": "Both",
+      "notes": "OT vector store content encrypted at rest"
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
       "control_id": "Access Enforcement",
       "control_name": "AC-3",
-      "tier": "Foundational",
+      "tier": "Hardening",
       "scope": "Both",
-      "notes": "LLM advisory outputs restricted to defined advisory roles — never authoritative source for safety-critical procedures"
-    },
-    {
-      "framework": "NIST SP 800-82 Rev 3",
-      "control_id": "Role-Based Training",
-      "control_name": "AT-3",
-      "tier": "Foundational",
-      "scope": "Both",
-      "notes": "Operator training on LLM advisory limitations — mandatory for all operators using LLM decision-support tools"
+      "notes": "Access controls on OT vector stores — RBAC enforced at collection level"
     },
     {
       "framework": "NIST CSF 2.0",
-      "control_id": "GV.OC-01",
-      "control_name": "Organisational Context",
-      "tier": "Foundational",
+      "control_id": "PR.DS-01",
+      "control_name": "Data Security",
+      "tier": "Hardening",
       "scope": "Both",
-      "notes": "Acceptable use policy defines which LLM outputs require verification — high-stakes domains identified"
+      "notes": "Vector store content encrypted at rest — embeddings treated as sensitive derived data"
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "control_id": "PR.DS-02",
+      "control_name": "Data Security",
+      "tier": "Hardening",
+      "scope": "Both",
+      "notes": "Data in transit protected — vector store queries and results encrypted"
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "control_id": "ID.AM-08",
+      "control_name": "Asset Management",
+      "tier": "Hardening",
+      "scope": "Both",
+      "notes": "Vector stores inventoried as AI data assets — RBAC status, encryption status, CVE patching status"
     },
     {
       "framework": "NIST CSF 2.0",
       "control_id": "DE.CM-09",
       "control_name": "Continuous Monitoring",
-      "tier": "Foundational",
+      "tier": "Hardening",
       "scope": "Both",
-      "notes": "Production monitoring for accuracy degradation — hallucination rates tracked per domain"
-    },
-    {
-      "framework": "NIST CSF 2.0",
-      "control_id": "ID.RA-01",
-      "control_name": "Risk Assessment",
-      "tier": "Foundational",
-      "scope": "Both",
-      "notes": "LLM misinformation risk assessed per use case — what decisions are influenced, what is the consequence"
-    },
-    {
-      "framework": "NIST CSF 2.0",
-      "control_id": "PR.AT-01",
-      "control_name": "Awareness and Training",
-      "tier": "Foundational",
-      "scope": "Both",
-      "notes": "Users trained on LLM output limitations — verification requirements for each use case"
+      "notes": "Monitoring for unauthorised software and anomalous access — vector store query anomalies detected"
     },
     {
       "framework": "SOC 2",
-      "control_id": "Policy on LLM output accuracy — acceptable accuracy thresholds, verification requirements for high-stakes use cases",
-      "control_name": "PI1.1 — Processing integrity policy",
-      "tier": "Foundational",
+      "control_id": "Embeddings of confidential information protected — encrypted at rest, access-controlled, inversion-resistant",
+      "control_name": "C2.1 — Confidential information protection",
+      "tier": "Hardening",
       "scope": "Both"
     },
     {
       "framework": "SOC 2",
-      "control_id": "LLM inputs (RAG sources, training data) quality controls — authoritative, current, verified sources",
-      "control_name": "PI1.2 — System inputs are complete and accurate",
-      "tier": "Foundational",
+      "control_id": "RBAC on all vector store collections — no unauthenticated access in any environment",
+      "control_name": "CC6.1 — Logical access",
+      "tier": "Hardening",
       "scope": "Both"
     },
     {
       "framework": "SOC 2",
-      "control_id": "Misinformation risk identified in LLM risk assessment — harm potential of incorrect outputs per use case",
-      "control_name": "CC3.2 — Risk assessment",
-      "tier": "Foundational",
-      "scope": "Both"
-    },
-    {
-      "framework": "SOC 2",
-      "control_id": "Production monitoring for accuracy degradation and hallucination patterns — drift detection",
+      "control_id": "Anomaly detection on vector store query patterns — bulk extraction and unusual retrieval volumes detected",
       "control_name": "CC7.2 — Anomaly detection",
-      "tier": "Foundational",
+      "tier": "Hardening",
+      "scope": "Both"
+    },
+    {
+      "framework": "SOC 2",
+      "control_id": "Embeddings of personal data used only for authorised purposes — privacy commitments apply to derived forms",
+      "control_name": "P5.1 — Personal information use",
+      "tier": "Hardening",
       "scope": "Both"
     },
     {
       "framework": "PCI DSS v4.0",
-      "control_id": "Req 12.3.2",
-      "control_name": "Targeted risk analysis",
-      "tier": "Foundational",
+      "control_id": "Req 3.4.1",
+      "control_name": "Protect stored account data",
+      "tier": "Hardening",
       "scope": "Both",
-      "notes": "Targeted risk analysis for LLM advisory outputs in payment context — what decisions are influenced, what is the consequence of incorrect output"
+      "notes": "Embeddings derived from CHD-containing documents encrypted — PAN cannot be reconstructed from cleartext embeddings"
     },
     {
       "framework": "PCI DSS v4.0",
-      "control_id": "Req 6.2",
-      "control_name": "Bespoke software security",
-      "tier": "Foundational",
+      "control_id": "Req 3.5.1",
+      "control_name": "Protect stored account data — SAD",
+      "tier": "Hardening",
       "scope": "Both",
-      "notes": "LLM integration code specifies accuracy requirements — high-stakes payment outputs require verification before action"
+      "notes": "Vector stores in CDE scope encrypted with strong cryptography"
     },
     {
       "framework": "PCI DSS v4.0",
-      "control_id": "Req 10.6.1",
-      "control_name": "Audit log review",
-      "tier": "Foundational",
+      "control_id": "Req 7.2.1",
+      "control_name": "Restrict access",
+      "tier": "Hardening",
       "scope": "Both",
-      "notes": "Monitoring for LLM accuracy degradation — output quality metrics reviewed"
+      "notes": "RBAC on all vector stores in CDE scope — no unauthenticated access"
     },
     {
       "framework": "PCI DSS v4.0",
-      "control_id": "Req 12.6.1",
-      "control_name": "Security awareness programme",
-      "tier": "Foundational",
+      "control_id": "Req 11.3.1",
+      "control_name": "Penetration testing",
+      "tier": "Hardening",
       "scope": "Both",
-      "notes": "PCI staff trained on LLM output limitations — advisory status of AI recommendations communicated"
+      "notes": "Vector store attacks in CDE penetration testing — RBAC bypass, bulk extraction, embedding inversion"
     },
     {
       "framework": "ENISA Multilayer Framework",
       "control_id": "L2",
-      "control_name": "Governance and Risk (GOV)",
-      "tier": "Foundational",
+      "control_name": "Data and Model Security (DMS)",
+      "tier": "Hardening",
       "scope": "Both",
-      "notes": "Acceptable accuracy thresholds defined per use case — domains requiring human verification documented in AI governance"
+      "notes": "Vector stores classified as AI data assets — RBAC, encryption, provenance tracking as DMS practices"
     },
     {
       "framework": "ENISA Multilayer Framework",
       "control_id": "L2",
       "control_name": "AI System Integrity (ASI)",
-      "tier": "Foundational",
+      "tier": "Hardening",
       "scope": "Both",
-      "notes": "Production accuracy monitoring as ASI practice — hallucination rates tracked per domain, drift detected"
+      "notes": "Vector store attacks in ENISA adversarial testing — RBAC bypass, embedding inversion, bulk extraction"
     },
     {
       "framework": "ENISA Multilayer Framework",
       "control_id": "L2",
       "control_name": "Monitoring and Detection (MON)",
-      "tier": "Foundational",
+      "tier": "Hardening",
       "scope": "Both",
-      "notes": "Accuracy degradation monitoring — ENISA L2 monitoring covering AI-specific failure modes"
+      "notes": "Vector store query patterns monitored — bulk extraction and unusual diversity detected"
     },
     {
       "framework": "ENISA Multilayer Framework",
-      "control_id": "L1",
-      "control_name": "General ICT — Awareness",
-      "tier": "Foundational",
+      "control_id": "SCS",
+      "control_name": "Supply Chain Security",
+      "tier": "Hardening",
       "scope": "Both",
-      "notes": "Users of LLM decision-support tools trained on output limitations — ENISA awareness practice"
+      "notes": "Vector database CVEs in vulnerability management — CVE-2024-3584 class urgent"
     },
     {
       "framework": "OWASP SAMM v2.0",
-      "control_id": "G-EG",
-      "control_name": "Education & Guidance",
-      "tier": "Foundational",
+      "control_id": "D-TA",
+      "control_name": "Threat Assessment",
+      "tier": "Hardening",
       "scope": "Both",
-      "notes": "All users of LLM decision-support tools trained on output limitations — SAMM awareness practice applied to AI limitations"
+      "notes": "Vector store attack surface threat-modelled — RBAC bypass, embedding inversion, bulk extraction documented"
     },
     {
       "framework": "OWASP SAMM v2.0",
-      "control_id": "D-SR",
-      "control_name": "Security Requirements",
-      "tier": "Foundational",
+      "control_id": "I-SB",
+      "control_name": "Secure Build",
+      "tier": "Hardening",
       "scope": "Both",
-      "notes": "Accuracy thresholds as security requirements — domains requiring verification documented before development"
+      "notes": "RBAC and encryption implemented for all vector stores — security requirements enforced in code"
     },
     {
       "framework": "OWASP SAMM v2.0",
-      "control_id": "V-RT",
-      "control_name": "Requirements-Driven Testing",
-      "tier": "Foundational",
+      "control_id": "V-ST",
+      "control_name": "Security Testing",
+      "tier": "Hardening",
       "scope": "Both",
-      "notes": "Accuracy requirements verified in testing — hallucination rates measured against thresholds per domain"
-    },
-    {
-      "framework": "OWASP SAMM v2.0",
-      "control_id": "Monitoring",
-      "control_name": "Operational Management (O-OM)",
-      "tier": "Foundational",
-      "scope": "Both",
-      "notes": "Production accuracy monitoring as operational management — drift detection, degradation alerted"
+      "notes": "Vector store attacks in penetration testing — RBAC bypass, CVE-2024-3584 class, embedding inversion tested"
     },
     {
       "framework": "STRIDE",
       "control_id": "T",
-      "control_name": "Output Tampering via Hallucination",
-      "tier": "Foundational",
-      "scope": "Both"
+      "control_name": "Embedding Store Tampering",
+      "tier": "Hardening",
+      "scope": "Build"
     },
     {
       "framework": "STRIDE",
-      "control_id": "R",
-      "control_name": "Hallucination Repudiation",
-      "tier": "Foundational",
-      "scope": "Both"
+      "control_id": "I",
+      "control_name": "Embedding Inversion Disclosure",
+      "tier": "Hardening",
+      "scope": "Build"
     },
     {
       "framework": "CWE/CVE",
-      "control_id": "CWE-1021",
-      "control_name": "CWE-1021",
-      "tier": "Foundational",
-      "scope": "Both",
-      "url": "https://cwe.mitre.org/data/definitions/1021.html"
+      "control_id": "CWE-327",
+      "control_name": "CWE-327",
+      "tier": "Hardening",
+      "scope": "Build",
+      "url": "https://cwe.mitre.org/data/definitions/327.html"
     },
     {
       "framework": "CWE/CVE",
-      "control_id": "CWE-116",
-      "control_name": "CWE-116",
-      "tier": "Foundational",
-      "scope": "Both",
-      "url": "https://cwe.mitre.org/data/definitions/116.html"
+      "control_id": "CWE-330",
+      "control_name": "CWE-330",
+      "tier": "Hardening",
+      "scope": "Build",
+      "url": "https://cwe.mitre.org/data/definitions/330.html"
+    },
+    {
+      "framework": "CWE/CVE",
+      "control_id": "CWE-345",
+      "control_name": "CWE-345",
+      "tier": "Hardening",
+      "scope": "Build",
+      "url": "https://cwe.mitre.org/data/definitions/345.html"
     },
     {
       "framework": "OWASP AI Testing Guide",
-      "control_id": "Factual accuracy and hallucination rate",
-      "control_name": "MBT — Model Behaviour",
-      "tier": "Foundational",
+      "control_id": "Embedding inversion and data reconstruction",
+      "control_name": "DPT — Data Protection",
+      "tier": "Hardening",
       "scope": "Both",
-      "notes": "Test model outputs against known-correct facts across the deployment use case domain; measure hallucination rate against benchmark ground truth"
+      "notes": "Test whether embedding vectors can be inverted to reconstruct training data; verify embedding stores do not leak source content through metadata"
     },
     {
       "framework": "OWASP AI Testing Guide",
-      "control_id": "Citation verifiability",
-      "control_name": "OHT — Output Handling",
-      "tier": "Foundational",
+      "control_id": "Vector database security configuration",
+      "control_name": "SCT — Supply Chain",
+      "tier": "Hardening",
       "scope": "Both",
-      "notes": "Verify that citations generated by the LLM are real and accurately represent source content; test that outputs requiring citations enforce this"
+      "notes": "Verify vector database is correctly configured — authentication, encryption, namespace isolation, API key protection"
     },
     {
       "framework": "OWASP AI Testing Guide",
-      "control_id": "Misinformation incident detection",
-      "control_name": "LMT — Logging & Monitoring",
-      "tier": "Foundational",
+      "control_id": "Retrieval authorisation enforcement",
+      "control_name": "ACT — Access Control",
+      "tier": "Hardening",
       "scope": "Both",
-      "notes": "Verify that the monitoring pipeline can detect and flag systematic misinformation patterns — accuracy drift, citation fabrication rate"
-    },
-    {
-      "framework": "MAESTRO",
-      "control_id": "L1",
-      "control_name": "Foundation Models",
-      "tier": "Foundational",
-      "scope": "Both"
+      "notes": "Verify RAG queries cannot retrieve documents above the authenticated user's permission level"
     },
     {
       "framework": "MAESTRO",
       "control_id": "L2",
       "control_name": "Data Operations",
-      "tier": "Foundational",
+      "tier": "Hardening",
       "scope": "Both"
     },
     {
       "framework": "MAESTRO",
-      "control_id": "L5",
-      "control_name": "Evaluation & Observability",
-      "tier": "Foundational",
+      "control_id": "L4",
+      "control_name": "Deployment & Infrastructure",
+      "tier": "Hardening",
+      "scope": "Both"
+    },
+    {
+      "framework": "MAESTRO",
+      "control_id": "L6",
+      "control_name": "Security & Compliance",
+      "tier": "Hardening",
       "scope": "Both"
     },
     {
       "framework": "AIUC-1",
-      "control_id": "C",
-      "control_name": "Safety domain (harm prevention)",
-      "tier": "Foundational",
+      "control_id": "A",
+      "control_name": "Data & Privacy domain",
+      "tier": "Hardening",
       "scope": "Both",
       "notes": "Foundational"
     },
     {
       "framework": "AIUC-1",
-      "control_id": "F",
-      "control_name": "Society domain",
-      "tier": "Foundational",
+      "control_id": "B001",
+      "control_name": "Third-party adversarial robustness testing",
+      "tier": "Hardening",
       "scope": "Both",
       "notes": "Foundational"
     },
     {
       "framework": "AIUC-1",
-      "control_id": "B009",
-      "control_name": "Validate AI-generated content",
-      "tier": "Foundational",
+      "control_id": "B002",
+      "control_name": "Detect adversarial input",
+      "tier": "Hardening",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Hardening"
     },
     {
       "framework": "AIUC-1",
-      "control_id": "E",
-      "control_name": "Accountability domain",
-      "tier": "Foundational",
+      "control_id": "B005",
+      "control_name": "Implement real-time input filtering",
+      "tier": "Hardening",
       "scope": "Both",
       "notes": "Foundational"
     },
     {
       "framework": "OWASP NHI Top 10",
-      "control_id": "Audit log service credentials leaked or compromised",
-      "control_name": "NHI-2 Secret Leakage",
-      "tier": "Foundational",
+      "control_id": "Embedding store service account with cross-tenant read access",
+      "control_name": "NHI-5 Over-Privileged NHI",
+      "tier": "Hardening",
       "scope": "Both",
-      "notes": "Protect audit log credentials as sensitive NHI"
+      "notes": "Per-tenant credentials or least-privilege scope restrictions"
     },
     {
       "framework": "OWASP NHI Top 10",
-      "control_id": "Humans using LLM service account credentials — no attribution",
-      "control_name": "NHI-10 Human Use of NHI",
-      "tier": "Foundational",
+      "control_id": "Unauthenticated embedding store access",
+      "control_name": "NHI-4 Insecure Authentication",
+      "tier": "Hardening",
       "scope": "Both",
-      "notes": "Enforce separate human and machine credentials"
+      "notes": "Require authentication for all vector database connections"
     },
     {
       "framework": "NIST SP 800-218A",
-      "control_id": "PW.7.2-PS",
-      "control_name": "Review for security vulnerabilities — output validation",
+      "control_id": "PS.1.1-PS",
+      "control_name": "Protect all code from unauthorised access — embedding store protection",
       "tier": "Foundational",
-      "scope": "Both",
-      "notes": "Include accuracy, hallucination, and misinformation scenarios in pre-release model behaviour reviews; validate output quality against domain benchmarks"
+      "scope": "Build",
+      "notes": "Classify embedding stores and vector databases as sensitive AI artefacts; apply access controls, encryption at rest/in transit, and audit logging"
     },
     {
       "framework": "NIST SP 800-218A",
       "control_id": "PW.8.2-PS",
-      "control_name": "Test for security vulnerabilities — behavioural and accuracy testing",
+      "control_name": "Test for security vulnerabilities — embedding adversarial testing",
       "tier": "Foundational",
-      "scope": "Both",
-      "notes": "Conduct adversarial and behavioural testing covering hallucination rates, factual accuracy, and misinformation generation potential before each release"
+      "scope": "Build",
+      "notes": "Conduct adversarial testing of retrieval pipelines including embedding inversion, retrieval poisoning, and semantic search manipulation scenarios"
     },
     {
       "framework": "NIST SP 800-218A",
-      "control_id": "RV.1.1-PS",
-      "control_name": "Identify and confirm vulnerabilities — emergent behaviour monitoring",
+      "control_id": "RV.3.1-PS",
+      "control_name": "Analyse root causes — embedding incident forensics",
       "tier": "Foundational",
-      "scope": "Both",
-      "notes": "Establish procedures to detect and triage misinformation incidents in production including user feedback channels, automated fact-checking, and output monitoring"
+      "scope": "Build",
+      "notes": "When an embedding or retrieval security incident occurs, conduct forensic analysis of the vector store, ingestion pipeline, and query patterns"
     },
     {
       "framework": "NIST SP 800-218A",
-      "control_id": "PW.2.1-PS",
-      "control_name": "Design software — output confidence and citation requirements",
+      "control_id": "PW.4.1-PS",
+      "control_name": "Reuse existing well-secured software — vector store vetting",
       "tier": "Foundational",
-      "scope": "Both",
-      "notes": "Design AI systems to surface confidence indicators, source citations, and uncertainty signals in output; include as explicit security and quality requirements"
+      "scope": "Build",
+      "notes": "Vet vector database platforms and embedding model providers for security posture before adoption; review access control capabilities"
     },
     {
       "framework": "FedRAMP",
-      "control_id": "SI-4",
-      "control_name": "System Monitoring — output quality monitoring",
+      "control_id": "SC-28",
+      "control_name": "Protection of Information at Rest — embedding store protection",
       "tier": "Foundational",
-      "scope": "Both",
-      "notes": "Monitor model outputs for factual accuracy, consistency, and hallucination indicators; alert when confidence scores or factual grounding drops below thresholds"
+      "scope": "Build",
+      "notes": "Encrypt vector databases and embedding stores at rest; enforce access controls and audit logging on all embedding read and write operations"
     },
     {
       "framework": "FedRAMP",
-      "control_id": "CA-7",
-      "control_name": "Continuous Monitoring — model drift detection",
+      "control_id": "SI-3",
+      "control_name": "Malicious Code Protection — adversarial embedding detection",
       "tier": "Foundational",
-      "scope": "Both",
-      "notes": "Include model output quality and drift monitoring in FedRAMP continuous monitoring programme; track accuracy metrics, hallucination rates, and output consistency over time"
+      "scope": "Build",
+      "notes": "Extend malicious code protection to detect adversarial manipulation of embeddings — poisoned vectors, out-of-distribution injections, and embedding inversion attacks"
     },
     {
       "framework": "FedRAMP",
-      "control_id": "AU-6",
-      "control_name": "Audit Review — AI behaviour review",
+      "control_id": "RA-5",
+      "control_name": "Vulnerability Scanning — embedding infrastructure",
       "tier": "Foundational",
-      "scope": "Both",
-      "notes": "Regularly review AI inference logs and output samples for hallucination patterns, factual errors, and misleading content; escalate findings through security channels"
+      "scope": "Build",
+      "notes": "Include vector databases, embedding pipelines, and retrieval infrastructure in vulnerability scanning; test for injection, access control bypass, and data extraction"
     },
     {
       "framework": "FedRAMP",
-      "control_id": "SI-10",
-      "control_name": "Information Input Validation — grounding and retrieval validation",
+      "control_id": "AC-3",
+      "control_name": "Access Enforcement — embedding store access",
       "tier": "Foundational",
-      "scope": "Both",
-      "notes": "Validate retrieval sources and grounding data provided to the model; ensure factual grounding sources are authoritative and current"
-    },
-    {
-      "framework": "DORA",
-      "control_id": "Art. 10",
-      "control_name": "Detection — output quality monitoring",
-      "tier": "Foundational",
-      "scope": "Both",
-      "notes": "Deploy detection mechanisms for AI output quality degradation — hallucinations, factual errors, and misleading content in financial AI outputs"
-    },
-    {
-      "framework": "DORA",
-      "control_id": "Art. 5–7",
-      "control_name": "ICT Risk Management — AI reliability governance",
-      "tier": "Foundational",
-      "scope": "Both",
-      "notes": "Include AI output reliability in the ICT risk management framework; define acceptable accuracy thresholds for financial AI use cases"
-    },
-    {
-      "framework": "DORA",
-      "control_id": "Art. 13",
-      "control_name": "Learning and Evolving — misinformation post-mortem",
-      "tier": "Foundational",
-      "scope": "Both",
-      "notes": "Conduct post-incident analysis for misinformation events; identify root cause, assess customer and regulatory impact, and update controls"
+      "scope": "Build",
+      "notes": "Enforce role-based access control on vector database operations; restrict who can read, write, and delete embeddings"
     },
     {
       "framework": "DORA",
       "control_id": "Art. 9",
-      "control_name": "Protection and Prevention — grounding controls",
+      "control_name": "Protection and Prevention — embedding store protection",
       "tier": "Foundational",
-      "scope": "Both",
-      "notes": "Implement factual grounding controls for financial AI outputs — RAG with authoritative sources, confidence scoring, and human review for high-stakes outputs"
+      "scope": "Build",
+      "notes": "Implement security controls for vector databases and embedding stores — encryption at rest, access controls, and integrity monitoring for financial data embeddings"
+    },
+    {
+      "framework": "DORA",
+      "control_id": "Art. 24–27",
+      "control_name": "Resilience Testing — embedding security testing",
+      "tier": "Foundational",
+      "scope": "Build",
+      "notes": "Include vector database and embedding pipeline security in resilience testing; test for injection, access control bypass, and data extraction from embeddings"
+    },
+    {
+      "framework": "DORA",
+      "control_id": "Art. 8",
+      "control_name": "Identification — embedding infrastructure assets",
+      "tier": "Foundational",
+      "scope": "Build",
+      "notes": "Register vector databases, embedding models, and retrieval infrastructure in the ICT asset inventory with classification per data sensitivity"
+    },
+    {
+      "framework": "DORA",
+      "control_id": "Art. 10",
+      "control_name": "Detection — embedding tampering detection",
+      "tier": "Foundational",
+      "scope": "Build",
+      "notes": "Monitor embedding stores for unauthorised modifications, anomalous writes, and bulk access patterns indicative of extraction or poisoning"
     }
   ],
   "tools": [
     {
-      "name": "TruLens",
+      "name": "Weaviate (with RBAC)",
       "type": "open-source",
-      "url": "https://github.com/truera/trulens"
+      "url": "https://weaviate.io"
+    },
+    {
+      "name": "Qdrant",
+      "type": "open-source",
+      "url": "https://qdrant.tech"
+    },
+    {
+      "name": "Pinecone Canopy",
+      "type": "open-source",
+      "url": "https://github.com/pinecone-io/canopy"
     },
     {
       "name": "RAGAS",
@@ -670,85 +672,58 @@
       "url": "https://github.com/explodinggradients/ragas"
     },
     {
-      "name": "DeepEval",
+      "name": "Weaviate",
       "type": "open-source",
-      "url": "https://github.com/confident-ai/deepeval"
+      "url": "https://weaviate.io"
     },
     {
-      "name": "Evals (OpenAI)",
+      "name": "ML Privacy Meter",
       "type": "open-source",
-      "url": "https://github.com/openai/evals"
+      "url": "https://github.com/privacytrustlab/ml_privacy_meter"
     },
     {
-      "name": "Ragas",
+      "name": "LanceDB",
       "type": "open-source",
-      "url": "https://github.com/explodinggradients/ragas"
+      "url": "https://lancedb.com"
     },
     {
-      "name": "LangSmith",
-      "type": "commercial",
-      "url": "https://smith.langchain.com"
+      "name": "Milvus",
+      "type": "open-source",
+      "url": "https://milvus.io"
     },
     {
-      "name": "Evidently",
-      "url": "https://github.com/evidentlyai/evidently",
+      "name": "LLM Guard",
+      "type": "open-source",
+      "url": "https://github.com/protectai/llm-guard"
+    },
+    {
+      "name": "OWASP ZAP",
+      "type": "open-source",
+      "url": "https://www.zaproxy.org"
+    },
+    {
+      "name": "Foolbox",
+      "url": "https://github.com/bethgelab/foolbox",
+      "type": "open-source"
+    },
+    {
+      "name": "TextAttack",
+      "url": "https://github.com/QData/TextAttack",
       "type": "open-source"
     }
   ],
   "incidents": [
     {
-      "name": "Bing Chat 'Sydney' jailbreak — persona escape and threatening behaviour",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
-      "year": 2023,
-      "incident_id": "INC-002"
-    },
-    {
-      "name": "Air Canada chatbot invents bereavement discount policy — tribunal ruling",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
-      "year": 2024,
-      "incident_id": "INC-004"
-    },
-    {
-      "name": "Clarkesworld magazine overwhelmed by AI-generated fiction submissions",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
-      "year": 2023,
-      "incident_id": "INC-014"
-    },
-    {
-      "name": "AI voice deepfake CEO fraud — Hong Kong $25M loss",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
-      "year": 2024,
-      "incident_id": "INC-026"
-    },
-    {
-      "name": "Meta Galactica model withdrawn after misinformation at launch",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
-      "year": 2022,
-      "incident_id": "INC-031"
-    },
-    {
-      "name": "OpenAI o1/o3 reasoning chain jailbreak via chain-of-thought manipulation",
+      "name": "Azure OpenAI content filter bypass via structured output mode",
       "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
       "year": 2025,
-      "incident_id": "INC-033"
+      "incident_id": "INC-037"
     },
     {
-      "name": "AI companion apps: manipulation and exploitation of human-agent trust",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
-      "year": 2025,
-      "incident_id": "INC-048"
-    },
-    {
-      "name": "Google Gemini AI image generator refuses to depict white people — overcorrected safety filters",
+      "name": "Adversarial embedding attacks on production RAG systems",
       "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
       "year": 2024,
-      "incident_id": "INC-051"
-    },
-    {
-      "name": "NYC city chatbot tells businesses to break the law — fabricated legal guidance",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
-      "year": 2024,
-      "incident_id": "INC-052"
+      "incident_id": "INC-046"
     },
     {
       "name": "Google AI Overviews recommends adding glue to pizza — RAG hallucination at search scale",
@@ -757,80 +732,23 @@
       "incident_id": "INC-056"
     },
     {
-      "name": "Character.AI teen suicide — AI companion encouraged self-harm",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
-      "year": 2024,
-      "incident_id": "INC-057"
-    },
-    {
-      "name": "AI-generated Biden robocalls — deepfake voice used to suppress voter turnout",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
-      "year": 2024,
-      "incident_id": "INC-058"
-    },
-    {
-      "name": "Perplexity AI plagiarism — verbatim content reproduction without attribution",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
-      "year": 2024,
-      "incident_id": "INC-059"
-    },
-    {
-      "name": "Apple Intelligence notification hallucinations — fabricated BBC news headlines",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
-      "year": 2024,
-      "incident_id": "INC-060"
-    },
-    {
-      "name": "EU GDPR enforcement: ChatGPT cannot correct factually wrong personal data",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
-      "year": 2024,
-      "incident_id": "INC-068"
-    },
-    {
-      "name": "OpenAI GPT-4o sycophancy — model agrees with users even when they are wrong",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
-      "year": 2025,
-      "incident_id": "INC-073"
-    },
-    {
-      "name": "Tesla FSD phantom braking and obstacle hallucination — AI perception failures at highway speed",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
-      "year": 2024,
-      "incident_id": "INC-076"
-    },
-    {
-      "name": "Midjourney Trump arrest deepfakes go viral — AI-generated images shape public perception",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
-      "year": 2023,
-      "incident_id": "INC-077"
-    },
-    {
       "name": "OpenAI Whisper hallucinating medical transcriptions — fabricated diagnoses in healthcare AI",
       "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-080"
-    },
-    {
-      "name": "Meta Rogue AI Agent Sev-1 — autonomous agent posts incorrect advice, exposing proprietary data",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
-      "year": 2026,
-      "incident_id": "INC-091"
-    },
-    {
-      "name": "Replit vibe coding meltdown — agent hallucinated data, deleted production database, hid mistakes",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
-      "year": 2025,
-      "incident_id": "INC-106"
     }
   ],
   "crossrefs": {
     "agentic_top10": [
-      "ASI09"
+      "ASI06"
     ],
     "dsgai_2026": [
-      "DSGAI21",
-      "DSGAI10",
-      "DSGAI17"
+      "DSGAI13",
+      "DSGAI18",
+      "DSGAI08",
+      "DSGAI09",
+      "DSGAI04",
+      "DSGAI05"
     ]
   },
   "changelog": [
@@ -839,6 +757,12 @@
       "version": "1.0.0",
       "change": "Initial entry — generated from OWASP GenAI Crosswalk v1.5.1 mapping files",
       "author": "emmanuelgjr"
+    },
+    {
+      "date": "2026-08-28",
+      "version": "2.0.0",
+      "change": "Migrated to the OWASP Top 10 for LLM Applications 2026 — see MIGRATION.md for the 2025 → 2026 entry map",
+      "author": "OWASP GenAI Data Security Initiative"
     }
   ]
 }

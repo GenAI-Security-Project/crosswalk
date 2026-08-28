@@ -204,7 +204,7 @@ and deploy detection for unauthorised access patterns (Art. 10).
 | AWS IAM / Azure RBAC | Commercial | https://aws.amazon.com/iam/ |
 
 #### Cross-references
-- LLM Top 10: LLM06 Excessive Agency
+- LLM Top 10: LLM03 Excessive Agency
 - DSGAI 2026: DSGAI06 Data Lineage Fragmentation
 - Other frameworks: FedRAMP AC-3 – SP 800-218A PW.1.1-PS – CIS Controls 6
 
@@ -266,7 +266,7 @@ escalation scenarios in resilience testing (Art. 24–27).
 | CyberArk | Commercial | https://www.cyberark.com |
 
 #### Cross-references
-- LLM Top 10: LLM06 Excessive Agency
+- LLM Top 10: LLM03 Excessive Agency
 - DSGAI 2026: DSGAI08 Data Leakage & Exposure
 - Other frameworks: FedRAMP AC-6 – SP 800-218A PW.1.1-PS – MITRE ATLAS AML.T0015
 
@@ -327,7 +327,7 @@ agent components (Art. 28–44), identify all agent supply chain assets
 | OWASP Dependency-Check | Open-source | https://owasp.org/www-project-dependency-check/ |
 
 #### Cross-references
-- LLM Top 10: LLM05 Supply Chain Vulnerabilities
+- LLM Top 10: LLM04 Supply Chain
 - DSGAI 2026: DSGAI04 Data, Model & Artifact Poisoning, DSGAI19 Third-Party Data Risk
 - Other frameworks: MITRE ATLAS AML.T0056 – FedRAMP SR-2 – EBA Outsourcing Guidelines
 
@@ -389,7 +389,7 @@ boundaries (Art. 9), conduct resilience testing of execution sandboxes
 | E2B | Open-source | https://e2b.dev |
 
 #### Cross-references
-- LLM Top 10: LLM01 Prompt Injection, LLM06 Excessive Agency
+- LLM Top 10: LLM01 Prompt Injection, LLM03 Excessive Agency
 - DSGAI 2026: DSGAI08 Data Leakage & Exposure
 - Other frameworks: CWE-94 – FedRAMP CM-7 – SP 800-218A PW.5.1-PS
 
@@ -451,7 +451,7 @@ memory stores as ICT assets (Art. 8).
 | HashiCorp Vault | Commercial | https://www.vaultproject.io |
 
 #### Cross-references
-- LLM Top 10: LLM03 Training Data Poisoning, LLM08 Vector and Embedding Weaknesses
+- LLM Top 10: LLM05 Data and Model Poisoning, LLM09 Vector and Embedding Weaknesses
 - DSGAI 2026: DSGAI04 Data, Model & Artifact Poisoning
 - Other frameworks: MITRE ATLAS AML.T0018 – FedRAMP SC-28 – SP 800-218A PS.1.1-PS
 
@@ -512,7 +512,7 @@ testing (Art. 24–27).
 | NeMo Guardrails | Open-source | https://github.com/NVIDIA/NeMo-Guardrails |
 
 #### Cross-references
-- LLM Top 10: LLM06 Excessive Agency
+- LLM Top 10: LLM03 Excessive Agency
 - DSGAI 2026: DSGAI06 Data Lineage Fragmentation
 - Other frameworks: FedRAMP AC-6 – SP 800-218A PW.1.1-PS – CWE-269
 
@@ -573,7 +573,7 @@ restoration capabilities for agent systems (Art. 12).
 | PagerDuty | Commercial | https://www.pagerduty.com |
 
 #### Cross-references
-- LLM Top 10: LLM04 Model DoS, LLM10 Unbounded Consumption
+- LLM Top 10: LLM06 Unbounded Consumption
 - DSGAI 2026: DSGAI17 Data Availability & Resilience Failures
 - Other frameworks: FedRAMP SC-7 – SP 800-218A PW.2.1-PS – NIST CSF 2.0 RS.RP-1
 
@@ -633,7 +633,7 @@ security (Art. 13).
 | PyRIT | Open-source | https://github.com/Azure/PyRIT |
 
 #### Cross-references
-- LLM Top 10: LLM09 Misinformation
+- LLM Top 10: LLM07 Misinformation
 - DSGAI 2026: DSGAI18 Governance Gaps
 - Other frameworks: NIST AI RMF MAP 1.5 – FedRAMP CA-7 – SP 800-218A PW.7.2-PS
 
@@ -694,7 +694,7 @@ financial entities to manage third-party risk for agent dependencies
 | Istio | Open-source | https://istio.io |
 
 #### Cross-references
-- LLM Top 10: LLM05 Supply Chain Vulnerabilities, LLM10 Unbounded Consumption
+- LLM Top 10: LLM04 Supply Chain, LLM06 Unbounded Consumption
 - DSGAI 2026: DSGAI19 Third-Party Data Risk
 - Other frameworks: FedRAMP SA-9 – SP 800-218A PW.4.1-PS – EBA Outsourcing Guidelines
 

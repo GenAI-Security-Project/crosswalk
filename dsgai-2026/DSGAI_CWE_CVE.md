@@ -215,7 +215,7 @@ exfiltrating information to external providers without organisational visibility
 | OpenDLP | Open-source | https://github.com/ezarko/opendlp |
 
 #### Cross-references
-- LLM Top 10: LLM03 Supply Chain Vulnerabilities
+- LLM Top 10: LLM04 Supply Chain
 - Other frameworks: ISO 27001 A.5.23 — CIS 2.1 — ASVS V14
 
 ---
@@ -265,7 +265,7 @@ stores alters model behaviour — introducing backdoors or misinformation.
 | Great Expectations | Open-source | https://github.com/great-expectations/great_expectations |
 
 #### Cross-references
-- LLM Top 10: LLM04 Data and Model Poisoning
+- LLM Top 10: LLM05 Data and Model Poisoning
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - Other frameworks: MITRE ATLAS AML.T0032 — CIS 7.1 — ASVS V10
 
@@ -315,7 +315,7 @@ attacks, silent corruption, and downstream security bypasses.
 | Semgrep | Open-source | https://semgrep.dev |
 
 #### Cross-references
-- LLM Top 10: LLM05 Insecure Output Handling
+- LLM Top 10: LLM10 Improper Output Handling
 - Other frameworks: ISO 27001 A.8.28 — CIS 16.1 — ASVS V5
 
 ---
@@ -364,7 +364,7 @@ controls — enabling exposure, injection via tool outputs, or exfiltration.
 | NeMo Guardrails | Open-source | https://github.com/NVIDIA/NeMo-Guardrails |
 
 #### Cross-references
-- LLM Top 10: LLM06 Excessive Agency
+- LLM Top 10: LLM03 Excessive Agency
 - Agentic Top 10: ASI02 Tool Misuse, ASI07 Insecure Inter-Agent Communication
 - Other frameworks: ISO 27001 A.5.19 — CIS 6.3 — ASVS V4
 
@@ -604,7 +604,7 @@ validated NL-to-query translation to bypass access controls.
 | SQLFluff | Open-source | https://github.com/sqlfluff/sqlfluff |
 
 #### Cross-references
-- LLM Top 10: LLM05 Insecure Output Handling, LLM01 Prompt Injection
+- LLM Top 10: LLM10 Improper Output Handling, LLM01 Prompt Injection
 - Other frameworks: ASVS V5.3 — CIS 16.2 — OWASP Top 10 A3
 
 ---
@@ -646,7 +646,7 @@ adversarial vector injection, and source content reconstruction.
 | Qdrant | Open-source | https://qdrant.tech |
 
 #### Cross-references
-- LLM Top 10: LLM08 Vector and Embedding Weaknesses
+- LLM Top 10: LLM09 Vector and Embedding Weaknesses
 - Other frameworks: ISO 27001 A.8.3 — CIS 3.11 — ASVS V6
 
 ---
@@ -730,7 +730,7 @@ cross-source leakage and context poisoning.
 | LLM Guard | Open-source | https://github.com/protectai/llm-guard |
 
 #### Cross-references
-- LLM Top 10: LLM02, LLM07
+- LLM Top 10: LLM02, LLM08
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - Other frameworks: ISO 27001 A.8.3 — CIS 3.3 — ASVS V4
 
@@ -815,7 +815,7 @@ or inability to recover from data corruption events.
 | Chaos Monkey | Open-source | https://github.com/Netflix/chaosmonkey |
 
 #### Cross-references
-- LLM Top 10: LLM10 Unbounded Consumption
+- LLM Top 10: LLM06 Unbounded Consumption
 - Agentic Top 10: ASI08 Cascading Agent Failures
 - Other frameworks: ISO 27001 A.5.30 — CIS 11.1 — ASVS V11
 
@@ -977,7 +977,7 @@ systematically generate false outputs for targeted topics or entities.
 | RAGAS | Open-source | https://github.com/explodinggradients/ragas |
 
 #### Cross-references
-- LLM Top 10: LLM04 Data and Model Poisoning, LLM09 Misinformation
+- LLM Top 10: LLM05 Data and Model Poisoning, LLM07 Misinformation
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - Other frameworks: MITRE ATLAS AML.T0045 — CIS 7.1 — EU AI Act Art. 13
 

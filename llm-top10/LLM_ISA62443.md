@@ -1,15 +1,15 @@
 <!--
   OWASP GenAI Crosswalk
-  Source list : OWASP Top 10 for LLM Applications 2025 (LLM01–LLM10)
+  Source list : OWASP Top 10 for LLM Applications 2026 (LLM01–LLM10)
   Framework   : ISA/IEC 62443 — Industrial Automation and Control Systems Security
-  Version     : 2026-Q1
+  Version     : 2026-Q3
   Maintained by: OWASP GenAI Data Security Initiative — https://genai.owasp.org
   License     : CC BY-SA 4.0
 -->
 
-# LLM Top 10 2025 × ISA/IEC 62443
+# LLM Top 10 2026 × ISA/IEC 62443
 
-Mapping the [OWASP Top 10 for LLM Applications 2025](https://genai.owasp.org/llm-top-10/)
+Mapping the [OWASP Top 10 for LLM Applications 2026](https://genai.owasp.org/llm-top-10/)
 to [ISA/IEC 62443](https://www.isa.org/standards-and-publications/isa-standards/isa-iec-62443-series-of-standards)
 — the international standard series for Industrial Automation and
 Control Systems (IACS) security, widely mandated across energy, water,
@@ -81,14 +81,14 @@ OT practitioners work with every day.
 |---|---|---|---|---|---|
 | LLM01 | Prompt Injection | **Critical** in OT | FR 3 SI-3, FR 2 UC-2, FR 1 IAC-6 | SL 2–3 | Foundational–Advanced |
 | LLM02 | Sensitive Information Disclosure | High | FR 4 DC-4, FR 5 RDF-1, FR 1 IAC-2 | SL 2 | Foundational–Advanced |
-| LLM03 | Supply Chain Vulnerabilities | High | FR 3 SI-2, FR 2 UC-6, 62443-2-4 | SL 2 | Foundational–Hardening |
-| LLM04 | Data and Model Poisoning | **Critical** in OT | FR 3 SI-3, FR 3 SI-7, FR 6 TRE-1 | SL 2–3 | Hardening–Advanced |
-| LLM05 | Insecure Output Handling | High | FR 3 SI-3, FR 2 UC-3, FR 3 SI-1 | SL 2 | Foundational–Hardening |
-| LLM06 | Excessive Agency | **Critical** in OT | FR 2 UC-2, FR 2 UC-6, FR 1 IAC-2 | SL 2–3 | Foundational–Advanced |
-| LLM07 | System Prompt Leakage | Medium | FR 4 DC-4, FR 3 SI-1, FR 5 RDF-1 | SL 2 | Foundational–Hardening |
-| LLM08 | Vector and Embedding Weaknesses | Medium | FR 3 SI-7, FR 4 DC-3, FR 3 SI-3 | SL 2 | Hardening–Advanced |
-| LLM09 | Misinformation | High in OT | FR 3 SI-1, FR 6 TRE-2, FR 2 UC-3 | SL 2 | Foundational–Hardening |
-| LLM10 | Unbounded Consumption | **Critical** in OT | FR 7 RA-6, FR 7 RA-7, FR 6 TRE-6 | SL 2 | Foundational–Advanced |
+| LLM03 | Excessive Agency | **Critical** in OT | FR 2 UC-2, FR 2 UC-6, FR 1 IAC-2 | SL 2–3 | Foundational–Advanced |
+| LLM04 | Supply Chain | High | FR 3 SI-2, FR 2 UC-6, 62443-2-4 | SL 2 | Foundational–Hardening |
+| LLM05 | Data and Model Poisoning | **Critical** in OT | FR 3 SI-3, FR 3 SI-7, FR 6 TRE-1 | SL 2–3 | Hardening–Advanced |
+| LLM06 | Unbounded Consumption | **Critical** in OT | FR 7 RA-6, FR 7 RA-7, FR 6 TRE-6 | SL 2 | Foundational–Advanced |
+| LLM07 | Misinformation | High in OT | FR 3 SI-1, FR 6 TRE-2, FR 2 UC-3 | SL 2 | Foundational–Hardening |
+| LLM08 | Hidden Context Exposure | High | FR 4 DC-4, FR 3 SI-1, FR 5 RDF-1 | SL 2 | Foundational–Hardening |
+| LLM09 | Vector and Embedding Weaknesses | Medium | FR 3 SI-7, FR 4 DC-3, FR 3 SI-3 | SL 2 | Hardening–Advanced |
+| LLM10 | Improper Output Handling | High | FR 3 SI-3, FR 2 UC-3, FR 3 SI-1 | SL 2 | Foundational–Hardening |
 
 **OT severity note:** Several vulnerabilities rated Medium or High in
 IT contexts are elevated to High or Critical in OT environments due
@@ -102,7 +102,7 @@ in each entry.
 - **OT security engineer** — full file, primary reference
 - **ICS security architect** — zone/conduit model sections
 - **CISO (critical infrastructure)** — SL mapping and governance sections
-- **Control system engineer** — LLM01, LLM06, LLM10 entries
+- **Control system engineer** — LLM01, LLM03, LLM06 entries
 - **Procurement / vendor assessment** — 62443-2-4, supply chain entries
 - **Compliance (NERC CIP, NIS2, CFATS)** — full file with regulatory crosswalk notes
 
@@ -133,12 +133,12 @@ Zone 1: Field devices / PLCs / RTUs
 
 | Deployment pattern | Zone location | Primary risks |
 |---|---|---|
-| Predictive maintenance copilot | Zone 3 or Zone 3/4 boundary | LLM01, LLM02, LLM06 |
-| NL-to-SCADA / NL-to-historian gateway | Zone 3 | LLM01, LLM05, LLM06, LLM10 |
-| Operator decision-support system | Zone 3 | LLM09, LLM01 |
-| Digital twin orchestration | Zone 3/4 boundary | LLM04, LLM06, LLM10 |
-| Anomaly detection / alert triage | Zone 3 | LLM04, LLM09 |
-| Incident report generation | Zone 3/4 boundary | LLM02, LLM07 |
+| Predictive maintenance copilot | Zone 3 or Zone 3/4 boundary | LLM01, LLM02, LLM03 |
+| NL-to-SCADA / NL-to-historian gateway | Zone 3 | LLM01, LLM10, LLM03, LLM06 |
+| Operator decision-support system | Zone 3 | LLM07, LLM01 |
+| Digital twin orchestration | Zone 3/4 boundary | LLM05, LLM03, LLM06 |
+| Anomaly detection / alert triage | Zone 3 | LLM05, LLM07 |
+| Incident report generation | Zone 3/4 boundary | LLM02, LLM08 |
 
 **Key principle:** LLMs must never be deployed in Zone 2 or Zone 1.
 Any LLM integration must be behind at least one conduit from control
@@ -156,6 +156,11 @@ human-in-the-loop confirmation — not directly from the LLM output.
 
 **OT Severity:** Critical (elevated from High — NL-to-SCADA makes
 this a process disruption vector, not just a data risk)
+
+The 2026 entry extends prompt injection to cross-modal payloads.
+Instructions hidden in an image, an audio track, or a video frame reach the
+model without ever being human-readable, and steganographic or
+invisible-Unicode carriers survive review of the rendered interface.
 
 Malicious instructions in input or processed content manipulate LLM
 behaviour. In OT environments, the impact is not limited to data
@@ -327,247 +332,7 @@ physical or cyber attack on specific assets.
 
 ---
 
-### LLM03 — Supply Chain Vulnerabilities
-
-**OT Severity:** High
-
-LLM components, model weights, and plugins introduced into OT
-environments inherit OT supply chain criticality. A backdoored
-LLM component in a Zone 3 maintenance assistant is a persistent
-threat actor inside the industrial network perimeter.
-
-#### ISA/IEC 62443 mapping
-
-| Requirement | SR | FR | How it applies in OT |
-|---|---|---|---|
-| Software and information integrity | SR 3.2 | FR 3 — System Integrity | Integrity verification of all LLM components before deployment in OT environment |
-| Use control | SR 2.6 | FR 2 — Use Control | Restrictions on software installation — only approved, verified LLM components permitted in OT zones |
-| 62443-2-4 | Supplier security requirements | — | Security requirements applied to all LLM vendors with access to OT environments |
-
-#### Zone and conduit controls
-
-- Apply OT change management processes to all LLM component
-  updates — no automatic model weight updates in OT environments
-- Treat LLM model versions as IACS software components — subject
-  to the same approval, testing, and rollback procedures as
-  SCADA software updates
-- Conduit controls must block unapproved LLM component downloads —
-  LLM components for OT deployment approved and staged from
-  a controlled repository, never pulled from public internet
-  from within the OT network
-
-#### Mitigations by tier
-
-**Foundational (SL 1–2)**
-- Apply 62443-2-4 supplier security requirements to all LLM
-  vendors with components deployed in OT environments —
-  provenance, integrity guarantees, and vulnerability disclosure
-  obligations contractually required
-- Maintain ML SBOM for every LLM component in OT deployment —
-  model, adapters, libraries, and inference runtime
-- Pin all LLM component versions — no dynamic updates in
-  production OT environments
-
-**Hardening (SL 2–3)**
-- SR 3.2: Verify cryptographic signatures of all LLM components
-  before deployment in OT environment — unsigned components
-  rejected at the OT network boundary
-- Apply OT change management to LLM model updates — test in
-  a representative non-production environment before OT deployment
-- Scan all LLM components for embedded backdoors before
-  each OT deployment — ModelScan or equivalent
-
-**Advanced (SL 3–4)**
-- Implement isolated model evaluation environment — LLM
-  components evaluated for backdoor behaviour in an air-gapped
-  test environment before promotion to OT production
-- 62443-2-4: Require vendor security attestation for each
-  LLM component update — signed statement of security testing
-  coverage and known vulnerability status
-- Establish responsible disclosure relationship with LLM
-  vendors — OT-specific vulnerability notification path
-  with defined SLA
-
-#### Tools
-
-| Tool | Type | Link |
-|---|---|---|
-| ModelScan | Open-source | https://github.com/protectai/modelscan |
-| CycloneDX | Open-source | https://cyclonedx.org |
-
-#### Cross-references
-- Agentic Top 10: ASI04 Agentic Supply Chain Vulnerabilities
-- DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning
-- Other frameworks: NIST SP 800-82 Rev 3 · NIST SP 800-218A · NERC CIP-013
-
----
-
-### LLM04 — Data and Model Poisoning
-
-**OT Severity:** Critical (elevated — poisoned process recommendations
-can cause physical harm)
-
-Adversaries corrupt training data or model weights to embed backdoors
-that cause the LLM to generate incorrect process recommendations,
-suppress safety alarms, or provide false operational guidance —
-effects that may not manifest until a specific trigger condition
-is reached during operations.
-
-**OT-specific threat scenario:**
-A threat actor compromises the training pipeline for an LLM used for
-alarm rationalisation. A backdoor is embedded that, when a specific
-combination of process conditions appears, causes the model to classify
-a genuine safety alarm as a nuisance alarm — suppressing operator
-response to an actual process upset.
-
-**Real-world reference:**
-- Research demonstrating that LLMs used for industrial decision support
-  can be poisoned to produce systematically incorrect recommendations
-  for specific equipment types or process conditions (2024–2025)
-
-#### ISA/IEC 62443 mapping
-
-| Requirement | SR | FR | How it applies in OT |
-|---|---|---|---|
-| Software and information integrity | SR 3.3 | FR 3 — System Integrity | LLM model integrity verified before each OT deployment — poisoning detection as integrity control |
-| Software and information integrity (monitoring) | SR 3.7 | FR 3 — System Integrity | Continuous monitoring of LLM outputs for anomalous recommendations — statistical deviation detection |
-| Timely response to events | SR 6.1 | FR 6 — TRE | Detection and response to poisoning indicators — LLM output anomalies treated as security events |
-
-#### Zone and conduit controls
-
-- All data sourced from OT historian or SCADA for LLM training
-  must pass through a data integrity gate — cryptographic
-  lineage from source to training dataset
-- LLM training pipelines for OT-deployed models must be
-  air-gapped or strictly isolated — no internet-connected
-  training infrastructure for models deployed in Zone 3
-- Implement output monitoring in Zone 3 — LLM recommendations
-  cross-checked against a physics-based or rule-based reference
-  model for plausibility before display to operator
-
-#### Mitigations by tier
-
-**Foundational (SL 1–2)**
-- SR 3.3: Implement model integrity verification before each
-  OT deployment — hash-based integrity check, deviation from
-  approved baseline triggers rejection
-- Validate LLM outputs against independent rule-based checks
-  for all safety-relevant recommendations — LLM is advisory,
-  never authoritative, on safety-critical decisions
-- Establish model rollback capability — approved baseline
-  version always available for immediate revert
-
-**Hardening (SL 2–3)**
-- SR 3.7: Implement continuous output monitoring — statistical
-  anomaly detection on LLM recommendation distributions,
-  alert on deviation from established baseline
-- Apply adversarial testing covering OT-specific poisoning
-  scenarios — alarm suppression, incorrect setpoint
-  recommendation, false equipment health assessment
-- Conduct post-training backdoor detection before each
-  OT deployment — treat as mandatory security gate
-
-**Advanced (SL 3–4)**
-- SR 6.1: Integrate LLM output anomaly detection into
-  OT SIEM — poisoning indicators treated as security events
-  with defined response procedures
-- Implement independent safety validation layer — LLM
-  recommendations for safety-relevant actions cross-validated
-  against SIS (Safety Instrumented System) logic before display
-- Establish OT-specific threat intelligence on AI model
-  poisoning campaigns targeting industrial sectors
-
-#### Tools
-
-| Tool | Type | Link |
-|---|---|---|
-| IBM Adversarial Robustness Toolbox | Open-source | https://github.com/Trusted-AI/adversarial-robustness-toolbox |
-| Claroty (OT monitoring) | Commercial | https://claroty.com |
-| Dragos | Commercial | https://www.dragos.com |
-
-#### Cross-references
-- Agentic Top 10: ASI06 Memory & Context Poisoning
-- DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning, DSGAI21 Disinformation via Poisoning
-- Other frameworks: NIST SP 800-82 Rev 3 · MITRE ATT&CK ICS T0831 · NERC CIP-010
-
----
-
-### LLM05 — Insecure Output Handling
-
-**OT Severity:** High
-
-LLM-generated output passed to downstream OT systems without
-validation can enable injection into SCADA interfaces, HMI rendering,
-historian write-back, or work order systems — turning LLM output
-into an OT attack vector.
-
-**OT-specific threat scenario:**
-An LLM-generated maintenance work order is rendered in an HMI without
-output sanitisation. The LLM output contains a crafted string that
-exploits a known parsing vulnerability in the HMI software, enabling
-code execution on the HMI workstation in Zone 3.
-
-#### ISA/IEC 62443 mapping
-
-| Requirement | SR | FR | How it applies in OT |
-|---|---|---|---|
-| Software and information integrity | SR 3.3 | FR 3 — System Integrity | All LLM output validated before rendering or passing to OT systems |
-| Use control | SR 2.3 | FR 2 — Use Control | LLM output restricted to authorised actions — no raw output directly to control interfaces |
-| Software and information integrity | SR 3.1 | FR 3 — System Integrity | Communication integrity enforcement on all LLM-to-OT data paths |
-
-#### Zone and conduit controls
-
-- Conduit from LLM output to Zone 3 systems must implement
-  output schema validation — only outputs conforming to a
-  predefined safe structure pass the conduit
-- LLM-generated commands to any OT system must be validated
-  against an approved command set at the conduit — no raw
-  LLM output reaches Zone 2 or below
-- HMI and SCADA rendering layers must sanitise all LLM-sourced
-  content — treat as untrusted input regardless of source
-
-#### Mitigations by tier
-
-**Foundational (SL 1–2)**
-- Treat all LLM output as untrusted input to OT systems —
-  encode, validate, and sanitise before rendering or passing
-  to any Zone 3 component
-- SR 2.3: Implement output allowlisting — only predefined
-  output formats accepted by OT interfaces, all other
-  formats rejected at the boundary
-- Never pass raw LLM output directly to historian write-back,
-  work order systems, or HMI rendering — always through
-  a validated formatting layer
-
-**Hardening (SL 2–3)**
-- SR 3.3: Implement output schema validation as a conduit
-  control — LLM output parsed and validated before crossing
-  any zone boundary
-- Apply OT-specific output sanitisation — strip or reject
-  any LLM output containing HTML, script tags, or control
-  characters before presentation to OT systems
-- Test all OT interfaces that consume LLM output for injection
-  vulnerabilities — include in OT penetration testing scope
-
-**Advanced (SL 3–4)**
-- Implement a dedicated LLM output validation gateway between
-  Zone 4/3 LLM and Zone 3 OT systems — independent validation
-  layer not controlled by the LLM
-- Conduct adversarial output testing specifically targeting
-  your OT HMI and SCADA parsing — test LLM output injection
-  against real OT system interfaces
-- SR 3.1: Enforce communication integrity on all LLM-to-OT
-  paths — message authentication codes on all LLM output
-  destined for OT systems
-
-#### Cross-references
-- Agentic Top 10: ASI02 Tool Misuse, ASI05 Unexpected Code Execution
-- DSGAI 2026: DSGAI05 Data Integrity & Validation Failures, DSGAI12 Unsafe NL Data Gateways
-- Other frameworks: NIST SP 800-82 Rev 3 · MITRE ATT&CK ICS T0855 · CWE-79
-
----
-
-### LLM06 — Excessive Agency
+### LLM03 — Excessive Agency
 
 **OT Severity:** Critical (elevated — autonomous action in OT has
 physical consequence potential that IT autonomous action does not)
@@ -662,185 +427,183 @@ must do so through:
 
 ---
 
-### LLM07 — System Prompt Leakage
+### LLM04 — Supply Chain
 
-**OT Severity:** Medium (elevated to High if prompt contains OT
-network topology or safety system configuration)
+**OT Severity:** High
 
-System prompts for LLMs deployed in OT environments often contain
-operationally sensitive information — network topology, equipment
-identifiers, safety thresholds, and operational parameters. Extraction
-of this information provides reconnaissance capability for targeted OT attacks.
+LLM components, model weights, and plugins introduced into OT
+environments inherit OT supply chain criticality. A backdoored
+LLM component in a Zone 3 maintenance assistant is a persistent
+threat actor inside the industrial network perimeter.
+
+The 2026 entry adds artifact provenance to this scope. A promoted
+model, adapter, or converted artifact that is not what it claims to be —
+unsigned weights, a hijacked conversion or merge service, or namespace reuse
+on a model hub — is a supply-chain compromise even when every package
+dependency is clean.
 
 #### ISA/IEC 62443 mapping
 
 | Requirement | SR | FR | How it applies in OT |
 |---|---|---|---|
-| Data confidentiality in transit | SR 4.1 | FR 4 — Data Confidentiality | System prompt content treated as sensitive OT configuration data — encrypted in transit |
-| Software and information integrity | SR 3.1 | FR 3 — System Integrity | System prompt integrity protected — unauthorised modification detected |
-| Information flow restriction | SR 5.1 | FR 5 — Restricted Data Flow | System prompt content cannot flow to unauthorised external destinations |
+| Software and information integrity | SR 3.2 | FR 3 — System Integrity | Integrity verification of all LLM components before deployment in OT environment |
+| Use control | SR 2.6 | FR 2 — Use Control | Restrictions on software installation — only approved, verified LLM components permitted in OT zones |
+| 62443-2-4 | Supplier security requirements | — | Security requirements applied to all LLM vendors with access to OT environments |
+
+#### Zone and conduit controls
+
+- Apply OT change management processes to all LLM component
+  updates — no automatic model weight updates in OT environments
+- Treat LLM model versions as IACS software components — subject
+  to the same approval, testing, and rollback procedures as
+  SCADA software updates
+- Conduit controls must block unapproved LLM component downloads —
+  LLM components for OT deployment approved and staged from
+  a controlled repository, never pulled from public internet
+  from within the OT network
 
 #### Mitigations by tier
 
 **Foundational (SL 1–2)**
-- Classify OT LLM system prompts as sensitive operational
-  configuration — subject to same access controls as SCADA
-  configuration files
-- Remove all OT-specific identifiers from system prompts
-  where possible — use generic references, resolve to
-  specific assets at runtime through a controlled lookup
-- SR 4.1: Encrypt system prompts at rest and in transit —
-  do not store in cleartext in application configuration files
+- Apply 62443-2-4 supplier security requirements to all LLM
+  vendors with components deployed in OT environments —
+  provenance, integrity guarantees, and vulnerability disclosure
+  obligations contractually required
+- Maintain ML SBOM for every LLM component in OT deployment —
+  model, adapters, libraries, and inference runtime
+- Pin all LLM component versions — no dynamic updates in
+  production OT environments
 
 **Hardening (SL 2–3)**
-- Implement prompt extraction testing against OT LLM
-  deployments before go-live — test recovery of OT network
-  topology and equipment data from the system prompt
-- SR 5.1: Enforce information flow restriction — system prompt
-  content cannot be output to any destination outside the
-  authorised OT operator scope
-- Rotate system prompt versions on schedule — limits shelf
-  life of any extracted OT configuration data
+- SR 3.2: Verify cryptographic signatures of all LLM components
+  before deployment in OT environment — unsigned components
+  rejected at the OT network boundary
+- Apply OT change management to LLM model updates — test in
+  a representative non-production environment before OT deployment
+- Scan all LLM components for embedded backdoors before
+  each OT deployment — ModelScan or equivalent
 
 **Advanced (SL 3–4)**
-- Implement system prompt tokenisation for all OT-specific
-  identifiers — equipment tags, IP addresses, and safety
-  parameters replaced with opaque tokens resolved at runtime
-- Include system prompt leakage in OT red team exercises —
-  assess what OT reconnaissance value extracted prompts provide
-- Apply SR 3.1 integrity protection to system prompts —
-  hash verification on load, alert on modification
+- Implement isolated model evaluation environment — LLM
+  components evaluated for backdoor behaviour in an air-gapped
+  test environment before promotion to OT production
+- 62443-2-4: Require vendor security attestation for each
+  LLM component update — signed statement of security testing
+  coverage and known vulnerability status
+- Establish responsible disclosure relationship with LLM
+  vendors — OT-specific vulnerability notification path
+  with defined SLA
+
+#### Tools
+
+| Tool | Type | Link |
+|---|---|---|
+| ModelScan | Open-source | https://github.com/protectai/modelscan |
+| CycloneDX | Open-source | https://cyclonedx.org |
 
 #### Cross-references
-- Agentic Top 10: ASI01 Agent Goal Hijack
-- DSGAI 2026: DSGAI15 Over-Broad Context Windows
-- Other frameworks: NIST SP 800-82 Rev 3 · NERC CIP-011 (BES Cyber System Information)
+- Agentic Top 10: ASI04 Agentic Supply Chain Vulnerabilities
+- DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning
+- Other frameworks: NIST SP 800-82 Rev 3 · NIST SP 800-218A · NERC CIP-013
 
 ---
 
-### LLM08 — Vector and Embedding Weaknesses
+### LLM05 — Data and Model Poisoning
 
-**OT Severity:** Medium (elevated if embedding stores contain OT
-operational data or safety system documentation)
+**OT Severity:** Critical (elevated — poisoned process recommendations
+can cause physical harm)
 
-Vector stores used by OT LLMs — containing equipment documentation,
-maintenance procedures, process parameters — are susceptible to
-adversarial retrieval manipulation and embedding inversion attacks
-that could surface incorrect technical guidance to operators.
+The 2026 entry folds in fine-tuning subversion. A supplier LoRA
+adapter, a customer fine-tune, or a distilled checkpoint can carry a backdoor
+that no pre-training control catches, so poisoning defences must cover every
+stage that writes weights, not just the original training corpus.
+
+Adversaries corrupt training data or model weights to embed backdoors
+that cause the LLM to generate incorrect process recommendations,
+suppress safety alarms, or provide false operational guidance —
+effects that may not manifest until a specific trigger condition
+is reached during operations.
+
+**OT-specific threat scenario:**
+A threat actor compromises the training pipeline for an LLM used for
+alarm rationalisation. A backdoor is embedded that, when a specific
+combination of process conditions appears, causes the model to classify
+a genuine safety alarm as a nuisance alarm — suppressing operator
+response to an actual process upset.
+
+**Real-world reference:**
+- Research demonstrating that LLMs used for industrial decision support
+  can be poisoned to produce systematically incorrect recommendations
+  for specific equipment types or process conditions (2024–2025)
 
 #### ISA/IEC 62443 mapping
 
 | Requirement | SR | FR | How it applies in OT |
 |---|---|---|---|
-| Software and information integrity (monitoring) | SR 3.7 | FR 3 — System Integrity | Vector store content integrity monitored — alert on anomalous retrieval patterns |
-| Data confidentiality | SR 4.3 | FR 4 — Data Confidentiality | Embeddings of sensitive OT documentation encrypted — inversion attack protection |
-| Software and information integrity | SR 3.3 | FR 3 — System Integrity | Vector store ingestion validated — only authorised OT documentation enters the corpus |
+| Software and information integrity | SR 3.3 | FR 3 — System Integrity | LLM model integrity verified before each OT deployment — poisoning detection as integrity control |
+| Software and information integrity (monitoring) | SR 3.7 | FR 3 — System Integrity | Continuous monitoring of LLM outputs for anomalous recommendations — statistical deviation detection |
+| Timely response to events | SR 6.1 | FR 6 — TRE | Detection and response to poisoning indicators — LLM output anomalies treated as security events |
+
+#### Zone and conduit controls
+
+- All data sourced from OT historian or SCADA for LLM training
+  must pass through a data integrity gate — cryptographic
+  lineage from source to training dataset
+- LLM training pipelines for OT-deployed models must be
+  air-gapped or strictly isolated — no internet-connected
+  training infrastructure for models deployed in Zone 3
+- Implement output monitoring in Zone 3 — LLM recommendations
+  cross-checked against a physics-based or rule-based reference
+  model for plausibility before display to operator
 
 #### Mitigations by tier
 
 **Foundational (SL 1–2)**
-- SR 3.3: Implement access controls on OT vector stores —
-  RBAC enforced at collection level, operator-class access
-  to operational content, restricted access to safety docs
-- Classify all OT documentation before ingestion into vector
-  stores — safety procedures require higher access tier
-- SR 4.3: Encrypt all OT vector store content at rest
+- SR 3.3: Implement model integrity verification before each
+  OT deployment — hash-based integrity check, deviation from
+  approved baseline triggers rejection
+- Validate LLM outputs against independent rule-based checks
+  for all safety-relevant recommendations — LLM is advisory,
+  never authoritative, on safety-critical decisions
+- Establish model rollback capability — approved baseline
+  version always available for immediate revert
 
 **Hardening (SL 2–3)**
-- SR 3.7: Implement vector store query monitoring — alert
-  on anomalous query patterns or unusual retrieval volumes
-- Implement trust-tiered retrieval — safety-critical and
-  vendor-sensitive documentation weighted by source trust,
-  not only semantic similarity
-- Apply content integrity verification on vector store
-  ingestion — only hash-verified authorised documents admitted
+- SR 3.7: Implement continuous output monitoring — statistical
+  anomaly detection on LLM recommendation distributions,
+  alert on deviation from established baseline
+- Apply adversarial testing covering OT-specific poisoning
+  scenarios — alarm suppression, incorrect setpoint
+  recommendation, false equipment health assessment
+- Conduct post-training backdoor detection before each
+  OT deployment — treat as mandatory security gate
 
 **Advanced (SL 3–4)**
-- Conduct embedding inversion testing against OT vector
-  stores — validate that safety procedure details and
-  equipment specifications cannot be reconstructed
-- Implement adversarial retrieval testing — attempt to
-  manipulate retrieval to surface incorrect maintenance
-  procedures through crafted queries
-- SR 3.7: Integrate vector store anomaly alerts into
-  OT SIEM — unusual retrieval patterns treated as
-  potential reconnaissance activity
+- SR 6.1: Integrate LLM output anomaly detection into
+  OT SIEM — poisoning indicators treated as security events
+  with defined response procedures
+- Implement independent safety validation layer — LLM
+  recommendations for safety-relevant actions cross-validated
+  against SIS (Safety Instrumented System) logic before display
+- Establish OT-specific threat intelligence on AI model
+  poisoning campaigns targeting industrial sectors
+
+#### Tools
+
+| Tool | Type | Link |
+|---|---|---|
+| IBM Adversarial Robustness Toolbox | Open-source | https://github.com/Trusted-AI/adversarial-robustness-toolbox |
+| Claroty (OT monitoring) | Commercial | https://claroty.com |
+| Dragos | Commercial | https://www.dragos.com |
 
 #### Cross-references
 - Agentic Top 10: ASI06 Memory & Context Poisoning
-- DSGAI 2026: DSGAI13 Vector Store Platform Security
-- Other frameworks: NIST SP 800-82 Rev 3 · NIST AI RMF MS-2.5
+- DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning, DSGAI21 Disinformation via Poisoning
+- Other frameworks: NIST SP 800-82 Rev 3 · MITRE ATT&CK ICS T0831 · NERC CIP-010
 
 ---
 
-### LLM09 — Misinformation
-
-**OT Severity:** High (elevated — incorrect process guidance in OT
-can cause equipment damage, environmental incidents, or personnel harm)
-
-LLMs generate plausible but incorrect operational guidance —
-incorrect maintenance procedures, incorrect setpoint recommendations,
-incorrect alarm interpretations. In OT environments, operators
-acting on LLM-generated misinformation can cause process upsets,
-equipment damage, or safety incidents.
-
-**OT-specific threat scenario:**
-An LLM-powered troubleshooting assistant hallucinates a
-maintenance procedure for an unfamiliar equipment variant —
-the procedure is plausible but incorrect, leading an operator
-to perform actions that damage the equipment and cause an
-unplanned process shutdown.
-
-#### ISA/IEC 62443 mapping
-
-| Requirement | SR | FR | How it applies in OT |
-|---|---|---|---|
-| Software and information integrity | SR 3.1 | FR 3 — System Integrity | LLM outputs for safety-relevant guidance cross-validated against authoritative sources |
-| Timely response to events | SR 6.2 | FR 6 — TRE | Procedures for detecting and responding to LLM misinformation incidents |
-| Use control | SR 2.3 | FR 2 — Use Control | LLM advisory outputs clearly distinguished from authoritative procedural documentation |
-
-#### Mitigations by tier
-
-**Foundational (SL 1–2)**
-- Clearly distinguish LLM advisory output from authoritative
-  OT documentation — operators must know when guidance is
-  LLM-generated vs engineering-approved
-- SR 2.3: Restrict LLM use in OT to specific advisory
-  functions — never as the sole source for safety-critical
-  procedures or setpoint recommendations
-- Implement citation display — LLM recommendations must
-  reference the source documentation they are based on,
-  operators verify against the source before acting
-
-**Hardening (SL 2–3)**
-- SR 3.1: Implement cross-validation for LLM recommendations
-  on safety-relevant procedures — independent rule-based
-  check or engineering review before operator action
-- Deploy RAG grounded on authoritative, version-controlled
-  OT documentation — not on uncontrolled web content
-- SR 6.2: Establish incident response for LLM misinformation
-  events — process for identifying affected operations,
-  correcting actions taken, and preventing recurrence
-
-**Advanced (SL 3–4)**
-- Implement OT-specific hallucination detection — test LLM
-  accuracy on equipment-specific procedures for all equipment
-  types in your plant before deployment
-- Deploy confidence threshold controls — low-confidence
-  LLM recommendations flagged prominently or escalated to
-  engineering review before operator action
-- Include LLM misinformation scenarios in operator training —
-  ensure operators understand LLM limitations and verification
-  requirements in OT context
-
-#### Cross-references
-- Agentic Top 10: ASI09 Human-Agent Trust Exploitation
-- DSGAI 2026: DSGAI21 Disinformation via Data Poisoning
-- Other frameworks: NIST SP 800-82 Rev 3 · IEC 61511 (SIL) · AIUC-1 C/F
-
----
-
-### LLM10 — Unbounded Consumption
+### LLM06 — Unbounded Consumption
 
 **OT Severity:** Critical (elevated — resource exhaustion in OT
 environments can directly affect process availability and safety systems)
@@ -928,6 +691,276 @@ Zone 3 critical infrastructure availability under load. Specifically:
 
 ---
 
+### LLM07 — Misinformation
+
+**OT Severity:** High (elevated — incorrect process guidance in OT
+can cause equipment damage, environmental incidents, or personnel harm)
+
+LLMs generate plausible but incorrect operational guidance —
+incorrect maintenance procedures, incorrect setpoint recommendations,
+incorrect alarm interpretations. In OT environments, operators
+acting on LLM-generated misinformation can cause process upsets,
+equipment damage, or safety incidents.
+
+**OT-specific threat scenario:**
+An LLM-powered troubleshooting assistant hallucinates a
+maintenance procedure for an unfamiliar equipment variant —
+the procedure is plausible but incorrect, leading an operator
+to perform actions that damage the equipment and cause an
+unplanned process shutdown.
+
+#### ISA/IEC 62443 mapping
+
+| Requirement | SR | FR | How it applies in OT |
+|---|---|---|---|
+| Software and information integrity | SR 3.1 | FR 3 — System Integrity | LLM outputs for safety-relevant guidance cross-validated against authoritative sources |
+| Timely response to events | SR 6.2 | FR 6 — TRE | Procedures for detecting and responding to LLM misinformation incidents |
+| Use control | SR 2.3 | FR 2 — Use Control | LLM advisory outputs clearly distinguished from authoritative procedural documentation |
+
+#### Mitigations by tier
+
+**Foundational (SL 1–2)**
+- Clearly distinguish LLM advisory output from authoritative
+  OT documentation — operators must know when guidance is
+  LLM-generated vs engineering-approved
+- SR 2.3: Restrict LLM use in OT to specific advisory
+  functions — never as the sole source for safety-critical
+  procedures or setpoint recommendations
+- Implement citation display — LLM recommendations must
+  reference the source documentation they are based on,
+  operators verify against the source before acting
+
+**Hardening (SL 2–3)**
+- SR 3.1: Implement cross-validation for LLM recommendations
+  on safety-relevant procedures — independent rule-based
+  check or engineering review before operator action
+- Deploy RAG grounded on authoritative, version-controlled
+  OT documentation — not on uncontrolled web content
+- SR 6.2: Establish incident response for LLM misinformation
+  events — process for identifying affected operations,
+  correcting actions taken, and preventing recurrence
+
+**Advanced (SL 3–4)**
+- Implement OT-specific hallucination detection — test LLM
+  accuracy on equipment-specific procedures for all equipment
+  types in your plant before deployment
+- Deploy confidence threshold controls — low-confidence
+  LLM recommendations flagged prominently or escalated to
+  engineering review before operator action
+- Include LLM misinformation scenarios in operator training —
+  ensure operators understand LLM limitations and verification
+  requirements in OT context
+
+#### Cross-references
+- Agentic Top 10: ASI09 Human-Agent Trust Exploitation
+- DSGAI 2026: DSGAI21 Disinformation via Data Poisoning
+- Other frameworks: NIST SP 800-82 Rev 3 · IEC 61511 (SIL) · AIUC-1 C/F
+
+---
+
+### LLM08 — Hidden Context Exposure
+
+**OT Severity:** Medium (elevated to High if prompt contains OT
+Hidden context — the system prompt, developer instructions, retrieved
+policy text, and the tool and function schemas an application assembles
+into the model's context window — is extracted, inferred, or
+reconstructed by adversaries.
+
+The 2026 list broadens the former System Prompt Leakage entry to cover all
+non-user-facing context, not just the system prompt. Severity tracks what
+that context holds: internal rules and workflow logic are medium, embedded
+credentials or reliance on context secrecy for authorisation are high, and
+disclosure that chains to code execution or broad exfiltration is critical.
+Design on the assumption that hidden context is discoverable, and never
+treat it as a security boundary.
+
+System prompts for LLMs deployed in OT environments often contain
+operationally sensitive information — network topology, equipment
+identifiers, safety thresholds, and operational parameters. Extraction
+of this information provides reconnaissance capability for targeted OT attacks.
+
+#### ISA/IEC 62443 mapping
+
+| Requirement | SR | FR | How it applies in OT |
+|---|---|---|---|
+| Data confidentiality in transit | SR 4.1 | FR 4 — Data Confidentiality | System prompt content treated as sensitive OT configuration data — encrypted in transit |
+| Software and information integrity | SR 3.1 | FR 3 — System Integrity | System prompt integrity protected — unauthorised modification detected |
+| Information flow restriction | SR 5.1 | FR 5 — Restricted Data Flow | System prompt content cannot flow to unauthorised external destinations |
+
+#### Mitigations by tier
+
+**Foundational (SL 1–2)**
+- Classify OT LLM system prompts as sensitive operational
+  configuration — subject to same access controls as SCADA
+  configuration files
+- Remove all OT-specific identifiers from system prompts
+  where possible — use generic references, resolve to
+  specific assets at runtime through a controlled lookup
+- SR 4.1: Encrypt system prompts at rest and in transit —
+  do not store in cleartext in application configuration files
+
+**Hardening (SL 2–3)**
+- Implement prompt extraction testing against OT LLM
+  deployments before go-live — test recovery of OT network
+  topology and equipment data from the system prompt
+- SR 5.1: Enforce information flow restriction — system prompt
+  content cannot be output to any destination outside the
+  authorised OT operator scope
+- Rotate system prompt versions on schedule — limits shelf
+  life of any extracted OT configuration data
+
+**Advanced (SL 3–4)**
+- Implement system prompt tokenisation for all OT-specific
+  identifiers — equipment tags, IP addresses, and safety
+  parameters replaced with opaque tokens resolved at runtime
+- Include hidden context exposure in OT red team exercises —
+  assess what OT reconnaissance value extracted prompts provide
+- Apply SR 3.1 integrity protection to system prompts —
+  hash verification on load, alert on modification
+
+#### Cross-references
+- Agentic Top 10: ASI01 Agent Goal Hijack
+- DSGAI 2026: DSGAI15 Over-Broad Context Windows
+- Other frameworks: NIST SP 800-82 Rev 3 · NERC CIP-011 (BES Cyber System Information)
+
+---
+
+### LLM09 — Vector and Embedding Weaknesses
+
+**OT Severity:** Medium (elevated if embedding stores contain OT
+operational data or safety system documentation)
+
+Vector stores used by OT LLMs — containing equipment documentation,
+maintenance procedures, process parameters — are susceptible to
+adversarial retrieval manipulation and embedding inversion attacks
+that could surface incorrect technical guidance to operators.
+
+#### ISA/IEC 62443 mapping
+
+| Requirement | SR | FR | How it applies in OT |
+|---|---|---|---|
+| Software and information integrity (monitoring) | SR 3.7 | FR 3 — System Integrity | Vector store content integrity monitored — alert on anomalous retrieval patterns |
+| Data confidentiality | SR 4.3 | FR 4 — Data Confidentiality | Embeddings of sensitive OT documentation encrypted — inversion attack protection |
+| Software and information integrity | SR 3.3 | FR 3 — System Integrity | Vector store ingestion validated — only authorised OT documentation enters the corpus |
+
+#### Mitigations by tier
+
+**Foundational (SL 1–2)**
+- SR 3.3: Implement access controls on OT vector stores —
+  RBAC enforced at collection level, operator-class access
+  to operational content, restricted access to safety docs
+- Classify all OT documentation before ingestion into vector
+  stores — safety procedures require higher access tier
+- SR 4.3: Encrypt all OT vector store content at rest
+
+**Hardening (SL 2–3)**
+- SR 3.7: Implement vector store query monitoring — alert
+  on anomalous query patterns or unusual retrieval volumes
+- Implement trust-tiered retrieval — safety-critical and
+  vendor-sensitive documentation weighted by source trust,
+  not only semantic similarity
+- Apply content integrity verification on vector store
+  ingestion — only hash-verified authorised documents admitted
+
+**Advanced (SL 3–4)**
+- Conduct embedding inversion testing against OT vector
+  stores — validate that safety procedure details and
+  equipment specifications cannot be reconstructed
+- Implement adversarial retrieval testing — attempt to
+  manipulate retrieval to surface incorrect maintenance
+  procedures through crafted queries
+- SR 3.7: Integrate vector store anomaly alerts into
+  OT SIEM — unusual retrieval patterns treated as
+  potential reconnaissance activity
+
+#### Cross-references
+- Agentic Top 10: ASI06 Memory & Context Poisoning
+- DSGAI 2026: DSGAI13 Vector Store Platform Security
+- Other frameworks: NIST SP 800-82 Rev 3 · NIST AI RMF MS-2.5
+
+---
+
+### LLM10 — Improper Output Handling
+
+**OT Severity:** High
+
+LLM-generated output passed to downstream OT systems without
+validation can enable injection into SCADA interfaces, HMI rendering,
+historian write-back, or work order systems — turning LLM output
+into an OT attack vector.
+
+The 2026 entry renames Insecure Output Handling to Improper Output
+Handling and widens it to cover the insecure code that coding assistants
+generate at scale. Output that reaches a compiler, a repository, or a
+production system carries the same downstream-execution risk as output that
+reaches a shell, a browser, or a database.
+
+**OT-specific threat scenario:**
+An LLM-generated maintenance work order is rendered in an HMI without
+output sanitisation. The LLM output contains a crafted string that
+exploits a known parsing vulnerability in the HMI software, enabling
+code execution on the HMI workstation in Zone 3.
+
+#### ISA/IEC 62443 mapping
+
+| Requirement | SR | FR | How it applies in OT |
+|---|---|---|---|
+| Software and information integrity | SR 3.3 | FR 3 — System Integrity | All LLM output validated before rendering or passing to OT systems |
+| Use control | SR 2.3 | FR 2 — Use Control | LLM output restricted to authorised actions — no raw output directly to control interfaces |
+| Software and information integrity | SR 3.1 | FR 3 — System Integrity | Communication integrity enforcement on all LLM-to-OT data paths |
+
+#### Zone and conduit controls
+
+- Conduit from LLM output to Zone 3 systems must implement
+  output schema validation — only outputs conforming to a
+  predefined safe structure pass the conduit
+- LLM-generated commands to any OT system must be validated
+  against an approved command set at the conduit — no raw
+  LLM output reaches Zone 2 or below
+- HMI and SCADA rendering layers must sanitise all LLM-sourced
+  content — treat as untrusted input regardless of source
+
+#### Mitigations by tier
+
+**Foundational (SL 1–2)**
+- Treat all LLM output as untrusted input to OT systems —
+  encode, validate, and sanitise before rendering or passing
+  to any Zone 3 component
+- SR 2.3: Implement output allowlisting — only predefined
+  output formats accepted by OT interfaces, all other
+  formats rejected at the boundary
+- Never pass raw LLM output directly to historian write-back,
+  work order systems, or HMI rendering — always through
+  a validated formatting layer
+
+**Hardening (SL 2–3)**
+- SR 3.3: Implement output schema validation as a conduit
+  control — LLM output parsed and validated before crossing
+  any zone boundary
+- Apply OT-specific output sanitisation — strip or reject
+  any LLM output containing HTML, script tags, or control
+  characters before presentation to OT systems
+- Test all OT interfaces that consume LLM output for injection
+  vulnerabilities — include in OT penetration testing scope
+
+**Advanced (SL 3–4)**
+- Implement a dedicated LLM output validation gateway between
+  Zone 4/3 LLM and Zone 3 OT systems — independent validation
+  layer not controlled by the LLM
+- Conduct adversarial output testing specifically targeting
+  your OT HMI and SCADA parsing — test LLM output injection
+  against real OT system interfaces
+- SR 3.1: Enforce communication integrity on all LLM-to-OT
+  paths — message authentication codes on all LLM output
+  destined for OT systems
+
+#### Cross-references
+- Agentic Top 10: ASI02 Tool Misuse, ASI05 Unexpected Code Execution
+- DSGAI 2026: DSGAI05 Data Integrity & Validation Failures, DSGAI12 Unsafe NL Data Gateways
+- Other frameworks: NIST SP 800-82 Rev 3 · MITRE ATT&CK ICS T0855 · CWE-79
+
+---
+
 ## OT deployment checklist for LLM integrations
 
 Use this checklist before deploying any LLM system in or adjacent
@@ -977,11 +1010,11 @@ mapping directly relevant:
 
 | Regulation | Relevance | Key intersection |
 |---|---|---|
-| NERC CIP (North America electric) | CIP-007 (ports/services), CIP-010 (config), CIP-013 (supply chain) | LLM01, LLM03, LLM04, LLM10 |
-| NIS2 Directive (EU) | Essential entities cybersecurity obligations | LLM01, LLM06, LLM10 |
-| CFATS (US chemical) | Chemical facility security — Tier 1–4 | LLM01, LLM06, LLM09 |
-| IEC 62351 (power systems) | Communication security for power systems | LLM02, LLM07 |
-| IEC 61511 (safety systems) | Safety Instrumented Systems — SIL requirements | LLM06, LLM09, LLM10 |
+| NERC CIP (North America electric) | CIP-007 (ports/services), CIP-010 (config), CIP-013 (supply chain) | LLM01, LLM04, LLM05, LLM06 |
+| NIS2 Directive (EU) | Essential entities cybersecurity obligations | LLM01, LLM03, LLM06 |
+| CFATS (US chemical) | Chemical facility security — Tier 1–4 | LLM01, LLM03, LLM07 |
+| IEC 62351 (power systems) | Communication security for power systems | LLM02, LLM08 |
+| IEC 61511 (safety systems) | Safety Instrumented Systems — SIL requirements | LLM03, LLM07, LLM06 |
 | EU AI Act Annex III | High-risk AI in critical infrastructure | All entries — see LLM_EUAIAct.md |
 
 ---
@@ -990,10 +1023,10 @@ mapping directly relevant:
 
 | Phase | LLM entries | 62443 requirements | Rationale |
 |---|---|---|---|
-| 1 — Before any OT deployment | LLM06, LLM10 | SR 2.1/2.2, SR 7.6 | Excessive agency and resource exhaustion are the two risks that can cause immediate physical impact |
-| 2 — Deployment gates | LLM01, LLM05 | SR 3.3, SR 2.3 | Prompt injection and output handling must be validated before go-live |
-| 3 — First 30 days | LLM03, LLM04 | SR 3.2, SR 3.3/3.7 | Supply chain and poisoning require pipeline-level controls before production training |
-| 4 — Ongoing | LLM02, LLM07, LLM08, LLM09 | SR 4.1/4.2, SR 3.1/3.7 | Data confidentiality, prompt leakage, vector security, misinformation monitoring |
+| 1 — Before any OT deployment | LLM03, LLM06 | SR 2.1/2.2, SR 7.6 | Excessive agency and resource exhaustion are the two risks that can cause immediate physical impact |
+| 2 — Deployment gates | LLM01, LLM10 | SR 3.3, SR 2.3 | Prompt injection and output handling must be validated before go-live |
+| 3 — First 30 days | LLM04, LLM05 | SR 3.2, SR 3.3/3.7 | Supply chain and poisoning require pipeline-level controls before production training |
+| 4 — Ongoing | LLM02, LLM08, LLM09, LLM07 | SR 4.1/4.2, SR 3.1/3.7 | Data confidentiality, prompt leakage, vector security, misinformation monitoring |
 
 ---
 
@@ -1002,7 +1035,7 @@ mapping directly relevant:
 - [ISA/IEC 62443 series](https://www.isa.org/standards-and-publications/isa-standards/isa-iec-62443-series-of-standards)
 - [ISA/IEC 62443-3-3 System Security Requirements](https://www.isa.org/products/isa-iec-62443-3-3-system-security-requirements)
 - [NIST SP 800-82 Rev 3 — Guide to OT Security](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-82r3.pdf)
-- [OWASP LLM Top 10 2025](https://genai.owasp.org/llm-top-10/)
+- [OWASP LLM Top 10 2026](https://genai.owasp.org/llm-top-10/)
 - [CISA ICS-CERT Advisories](https://www.cisa.gov/ics)
 - [MITRE ATT&CK for ICS](https://attack.mitre.org/matrices/ics/)
 - [IEC 62351 — Security for Power Systems Communications](https://www.iec.ch/homepage)
@@ -1014,6 +1047,7 @@ mapping directly relevant:
 | Date | Version | Change | Author |
 |---|---|---|---|
 | 2026-03-24 | 2026-Q1 | Initial mapping — LLM01–LLM10 full OT entries with zone model and deployment checklist | OWASP GenAI Data Security Initiative |
+| 2026-08-28 | 2026-Q3 | Migrated to OWASP Top 10 for LLM Applications 2026 — entries renumbered, LLM08 re-scoped from System Prompt Leakage to Hidden Context Exposure, LLM10 renamed to Improper Output Handling | OWASP GenAI Data Security Initiative |
 
 ---
 

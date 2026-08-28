@@ -208,7 +208,7 @@ invocations are authorised.
   change management including security review
 
 #### Crosswalk
-- LLM Top 10: LLM05 Insecure Output Handling, LLM06 Excessive Agency
+- LLM Top 10: LLM10 Improper Output Handling, LLM03 Excessive Agency
 - DSGAI 2026: DSGAI06 Tool, Plugin & Agent Data Exchange
 
 ---
@@ -258,7 +258,7 @@ credentials provide access to personal data.
   tool payloads; retain results as CC7 test evidence
 
 #### Crosswalk
-- LLM Top 10: LLM06 Excessive Agency
+- LLM Top 10: LLM03 Excessive Agency
 - DSGAI 2026: DSGAI02 Agent Identity & Credential Exposure
 
 ---
@@ -303,7 +303,7 @@ risk management; CC8 covers change management for component updates.
   changes flagged for immediate review
 
 #### Crosswalk
-- LLM Top 10: LLM03 Supply Chain Vulnerabilities
+- LLM Top 10: LLM04 Supply Chain
 
 ---
 
@@ -348,7 +348,7 @@ execution events; PI1 requires that code execution is authorised.
   escape techniques; retain results as CC7 evidence
 
 #### Crosswalk
-- LLM Top 10: LLM05 Insecure Output Handling
+- LLM Top 10: LLM10 Improper Output Handling
 
 ---
 
@@ -395,7 +395,7 @@ memory stores.
   as CC7 test evidence
 
 #### Crosswalk
-- LLM Top 10: LLM04 Data and Model Poisoning
+- LLM Top 10: LLM05 Data and Model Poisoning
 - DSGAI 2026: DSGAI04 Data, Model & Artifact Poisoning
 
 ---
@@ -488,7 +488,7 @@ failure detection and incident response.
   as A1 availability evidence
 
 #### Crosswalk
-- LLM Top 10: LLM10 Unbounded Consumption
+- LLM Top 10: LLM06 Unbounded Consumption
 - DSGAI 2026: DSGAI17 Data Availability & Resilience Failures
 
 ---
@@ -531,7 +531,7 @@ inaccurate AI outputs affect individuals.
   report inaccurate AI claims
 
 #### Crosswalk
-- LLM Top 10: LLM09 Misinformation
+- LLM Top 10: LLM07 Misinformation
 - DSGAI 2026: DSGAI21 Disinformation via Data Poisoning
 
 ---
@@ -579,7 +579,7 @@ service for legitimate operations.
   triggers; retain results as CC7 test evidence
 
 #### Crosswalk
-- LLM Top 10: LLM06 Excessive Agency
+- LLM Top 10: LLM03 Excessive Agency
 - DSGAI 2026: DSGAI03 Shadow AI & Unsanctioned Data Flows
 
 ---

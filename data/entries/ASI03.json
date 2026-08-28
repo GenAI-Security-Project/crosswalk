@@ -2,7 +2,7 @@
   "id": "ASI03",
   "name": "Identity and Privilege Abuse",
   "source_list": "Agentic-Top10-2026",
-  "version": "2026-Q1",
+  "version": "2026-Q3",
   "severity": "Critical",
   "aivss_score": 9.3,
   "audience": [
@@ -934,7 +934,7 @@
   ],
   "crossrefs": {
     "llm_top10": [
-      "LLM06",
+      "LLM03",
       "LLM01"
     ],
     "dsgai_2026": [

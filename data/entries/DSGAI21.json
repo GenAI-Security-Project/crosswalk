@@ -2,7 +2,7 @@
   "id": "DSGAI21",
   "name": "Disinformation via Data Poisoning",
   "source_list": "DSGAI-2026",
-  "version": "2026-Q1",
+  "version": "2026-Q3",
   "severity": "High",
   "aivss_score": null,
   "audience": [
@@ -848,10 +848,10 @@
   ],
   "crossrefs": {
     "llm_top10": [
-      "LLM04",
-      "LLM09",
-      "LLM06",
+      "LLM05",
       "LLM07",
+      "LLM03",
+      "LLM08",
       "LLM02"
     ],
     "agentic_top10": [

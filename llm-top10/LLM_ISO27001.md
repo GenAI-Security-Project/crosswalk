@@ -1,15 +1,15 @@
 <!--
   OWASP GenAI Crosswalk
-  Source list : OWASP Top 10 for LLM Applications 2025 (LLM01–LLM10)
+  Source list : OWASP Top 10 for LLM Applications 2026 (LLM01–LLM10)
   Framework   : ISO/IEC 27001:2022 — Information Security Management Systems
-  Version     : 2026-Q1
+  Version     : 2026-Q3
   Maintained by: OWASP GenAI Data Security Initiative — https://genai.owasp.org
   License     : CC BY-SA 4.0
 -->
 
-# LLM Top 10 2025 × ISO/IEC 27001:2022
+# LLM Top 10 2026 × ISO/IEC 27001:2022
 
-Mapping the [OWASP Top 10 for LLM Applications 2025](https://genai.owasp.org/llm-top-10/)
+Mapping the [OWASP Top 10 for LLM Applications 2026](https://genai.owasp.org/llm-top-10/)
 to [ISO/IEC 27001:2022](https://www.iso.org/standard/82875.html) — the world's most
 widely deployed information security management system standard,
 certified by over 70,000 organisations globally.
@@ -49,14 +49,14 @@ A.8.16 Monitoring activities · A.8.28 Secure coding
 |---|---|---|---|---|---|
 | LLM01 | Prompt Injection | Critical | A.8.28, A.8.29, A.5.7, A.8.16 | Foundational–Advanced | Both |
 | LLM02 | Sensitive Information Disclosure | High | A.8.11, A.8.12, A.5.12, A.8.3 | Foundational–Advanced | Both |
-| LLM03 | Supply Chain Vulnerabilities | High | A.5.19, A.5.20, A.5.21, A.8.8 | Foundational–Hardening | Both |
-| LLM04 | Data and Model Poisoning | Critical | A.8.8, A.8.27, A.8.29, A.5.7 | Hardening–Advanced | Both |
-| LLM05 | Insecure Output Handling | High | A.8.28, A.8.26, A.8.29, A.8.16 | Foundational–Hardening | Build |
-| LLM06 | Excessive Agency | High | A.8.2, A.5.10, A.8.15, A.5.15 | Foundational–Hardening | Build |
-| LLM07 | System Prompt Leakage | High | A.5.12, A.8.3, A.8.24, A.8.15 | Foundational–Hardening | Build |
-| LLM08 | Vector and Embedding Weaknesses | Medium | A.8.3, A.8.24, A.8.16, A.8.11 | Hardening–Advanced | Build |
-| LLM09 | Misinformation | Medium | A.8.16, A.5.7, A.6.3, A.5.36 | Foundational–Hardening | Both |
-| LLM10 | Unbounded Consumption | Medium | A.8.16, A.5.30, A.8.13, A.5.24 | Foundational–Hardening | Both |
+| LLM03 | Excessive Agency | Critical | A.8.2, A.5.10, A.8.15, A.5.15 | Foundational–Hardening | Build |
+| LLM04 | Supply Chain | High | A.5.19, A.5.20, A.5.21, A.8.8 | Foundational–Hardening | Both |
+| LLM05 | Data and Model Poisoning | Critical | A.8.8, A.8.27, A.8.29, A.5.7 | Hardening–Advanced | Both |
+| LLM06 | Unbounded Consumption | High | A.8.16, A.5.30, A.8.13, A.5.24 | Foundational–Hardening | Both |
+| LLM07 | Misinformation | High | A.8.16, A.5.7, A.6.3, A.5.36 | Foundational–Hardening | Both |
+| LLM08 | Hidden Context Exposure | High | A.5.12, A.8.3, A.8.24, A.8.15 | Foundational–Hardening | Build |
+| LLM09 | Vector and Embedding Weaknesses | Medium | A.8.3, A.8.24, A.8.16, A.8.11 | Hardening–Advanced | Build |
+| LLM10 | Improper Output Handling | High | A.8.28, A.8.26, A.8.29, A.8.16 | Foundational–Hardening | Build |
 
 ---
 
@@ -67,7 +67,7 @@ A.8.16 Monitoring activities · A.8.28 Secure coding
 - **Security engineer** — A.8 technological controls per vulnerability
 - **Developer** — A.8.28 secure coding, A.8.26 application security requirements
 - **Compliance officer** — A.5 organisational controls, supplier management entries
-- **OT engineer** — LLM01, LLM04, LLM10 with ISA 62443 crosswalk for OT context
+- **OT engineer** — LLM01, LLM05, LLM06 with ISA 62443 crosswalk for OT context
 
 ---
 
@@ -83,6 +83,11 @@ Malicious instructions in user input or processed content manipulate
 LLM behaviour, bypassing safety controls and executing unauthorised
 actions. ISO 27001 addresses this through secure coding requirements,
 security testing, threat intelligence, and monitoring controls.
+
+The 2026 entry extends prompt injection to cross-modal payloads.
+Instructions hidden in an image, an audio track, or a video frame reach the
+model without ever being human-readable, and steganographic or
+invisible-Unicode carriers survive review of the rendered interface.
 
 **Real-world references:**
 - EchoLeak (2025) — indirect injection via email turned Microsoft 365
@@ -214,13 +219,83 @@ over-permissive RAG retrieval, or improperly sanitised responses.
 
 ---
 
-### LLM03 — Supply Chain Vulnerabilities
+### LLM03 — Excessive Agency
+
+**Severity:** Critical
+
+LLMs granted too much autonomy over tools, APIs, and systems execute
+unintended or harmful actions when manipulated through prompt injection
+or misaligned goal-following.
+
+#### ISO 27001:2022 mapping
+
+| Control | ID | Domain | How it applies |
+|---|---|---|---|
+| Privileged access rights | A.8.2 | Technological | LLM tool access managed as privileged access — minimum scope, reviewed regularly |
+| Acceptable use of assets | A.5.10 | Organisational | Policy defining acceptable LLM autonomous actions — approved tool use cases documented |
+| Logging | A.8.15 | Technological | All LLM tool invocations logged with full context — every tool call auditable |
+| Identity management | A.5.15 | Organisational | LLM tool access governed through identity management — tool permissions scoped per deployment |
+
+#### Mitigations by tier
+
+**Foundational**
+- A.8.2: Manage LLM tool access as privileged access —
+  minimum scope enforced, regular access reviews, no
+  standing broad permissions
+- A.5.10: Establish acceptable use policy for LLM autonomous
+  actions — approved tool use cases documented, human
+  confirmation required for irreversible actions
+- A.8.15: Log all LLM tool invocations with full context —
+  tool identity, parameters, user session, timestamp —
+  immutable audit trail
+
+**Hardening**
+- A.5.15: Govern LLM tool permissions through identity
+  management — tool access scoped per deployment, reviewed
+  on change and quarterly
+- Implement action guardrails as an independent layer from
+  the model — A.8.27 secure architecture applied to
+  autonomous action scope
+- Define and enforce a tool permission manifest for every
+  LLM deployment — reviewed before each release
+
+**Advanced**
+- A.8.2: Include LLM tool access in privileged access
+  reviews — any permission not actively used is removed
+- Formally specify permitted action graphs — only
+  pre-approved action sequences can execute in production
+- Conduct red team exercises testing excessive agency via
+  indirect prompt injection — document results in ISMS
+  security testing records
+
+#### Tools
+
+| Tool | Type | Link |
+|---|---|---|
+| Guardrails AI | Open-source | https://github.com/guardrails-ai/guardrails |
+| NeMo Guardrails | Open-source | https://github.com/NVIDIA/NeMo-Guardrails |
+| LangSmith | Commercial | https://smith.langchain.com |
+
+#### Cross-references
+- Agentic Top 10: ASI01 Agent Goal Hijack, ASI02 Tool Misuse, ASI10 Rogue Agents
+- DSGAI 2026: DSGAI06 Tool Plugin & Agent Data Exchange
+- Other frameworks: AIUC-1 B006 · MITRE ATLAS AML.T0015 · ISA/IEC 62443 SR 2.1 (OT)
+
+---
+
+### LLM04 — Supply Chain
 
 **Severity:** High
 
 LLM applications depend on third-party model weights, fine-tuned
 adapters, training datasets, libraries, and plugins — any of which
 can be compromised to introduce backdoors or malicious functionality.
+
+The 2026 entry adds artifact provenance to this scope. A promoted
+model, adapter, or converted artifact that is not what it claims to be —
+unsigned weights, a hijacked conversion or merge service, or namespace reuse
+on a model hub — is a supply-chain compromise even when every package
+dependency is clean.
 
 **Real-world references:**
 - Multiple malicious models with embedded backdoors uploaded to
@@ -284,13 +359,18 @@ can be compromised to introduce backdoors or malicious functionality.
 
 ---
 
-### LLM04 — Data and Model Poisoning
+### LLM05 — Data and Model Poisoning
 
 **Severity:** Critical
 
 Attackers inject malicious data into training datasets or fine-tuning
 pipelines — corrupting model behaviour in ways baked into the weights
 and invisible to standard testing until a trigger condition is reached.
+
+The 2026 entry folds in fine-tuning subversion. A supplier LoRA
+adapter, a customer fine-tune, or a distilled checkpoint can carry a backdoor
+that no pre-training control catches, so poisoning defences must cover every
+stage that writes weights, not just the original training corpus.
 
 **Real-world references:**
 - Nightshade (2023) — poison pixels in training images corrupted
@@ -352,337 +432,9 @@ and invisible to standard testing until a trigger condition is reached.
 
 ---
 
-### LLM05 — Insecure Output Handling
+### LLM06 — Unbounded Consumption
 
 **Severity:** High
-
-LLM output passed to downstream systems without validation enables
-XSS, command injection, SSRF, or SQL injection via AI-generated
-content.
-
-**Real-world references:**
-- Multiple bug bounty reports of XSS via unsanitised LLM markdown
-  output rendered in web browsers (2024)
-- LLM-to-SQL interfaces executing destructive queries from
-  AI-generated SQL
-
-#### ISO 27001:2022 mapping
-
-| Control | ID | Domain | How it applies |
-|---|---|---|---|
-| Secure coding | A.8.28 | Technological | Output encoding, sanitisation, and schema validation as secure coding requirements |
-| Application security requirements | A.8.26 | Technological | Security requirements for all interfaces consuming LLM output — specified before development |
-| Security testing | A.8.29 | Technological | Output injection scenarios in security testing — XSS, SQL injection, command injection via LLM output |
-| Monitoring activities | A.8.16 | Technological | Runtime monitoring for output handling incidents — injection attempts in LLM output channels |
-
-#### Mitigations by tier
-
-**Foundational**
-- A.8.28: Establish secure coding requirements mandating that
-  all LLM output is treated as untrusted input to downstream
-  systems — encoding, validation, and sanitisation mandatory
-- A.8.26: Define security requirements for all application
-  interfaces that consume LLM output before development —
-  specify acceptable output formats, validation requirements
-- Never pass raw LLM output to database queries, shell
-  commands, or eval functions — enforced through code review
-
-**Hardening**
-- A.8.29: Include output injection scenarios in security
-  testing programme — XSS, SQL injection, and command
-  injection via LLM output tested on each significant release
-- A.8.16: Deploy runtime monitoring on all LLM output
-  channels — detect injection patterns in model responses
-  before they reach downstream consumers
-- Implement output schema validation — reject responses
-  that do not conform to defined safe structures
-
-**Advanced**
-- Conduct DAST on all interfaces consuming LLM output —
-  include in A.8.29 security testing programme
-- Deploy dedicated output security layer independent of
-  the LLM — A.8.27 secure architecture principle applied
-  to output handling
-- A.8.28: Include output security in developer training —
-  specific module on LLM output injection risks and mitigations
-
-#### Tools
-
-| Tool | Type | Link |
-|---|---|---|
-| OWASP ZAP | Open-source | https://www.zaproxy.org |
-| Semgrep | Open-source | https://semgrep.dev |
-| DOMPurify | Open-source | https://github.com/cure53/DOMPurify |
-
-#### Cross-references
-- Agentic Top 10: ASI02 Tool Misuse, ASI05 Unexpected Code Execution
-- DSGAI 2026: DSGAI05 Data Integrity & Validation Failures, DSGAI12 Unsafe NL Data Gateways
-- Other frameworks: OWASP ASVS V5 · NIST AI RMF MS-2.6 · CWE-79
-
----
-
-### LLM06 — Excessive Agency
-
-**Severity:** High
-
-LLMs granted too much autonomy over tools, APIs, and systems execute
-unintended or harmful actions when manipulated through prompt injection
-or misaligned goal-following.
-
-#### ISO 27001:2022 mapping
-
-| Control | ID | Domain | How it applies |
-|---|---|---|---|
-| Privileged access rights | A.8.2 | Technological | LLM tool access managed as privileged access — minimum scope, reviewed regularly |
-| Acceptable use of assets | A.5.10 | Organisational | Policy defining acceptable LLM autonomous actions — approved tool use cases documented |
-| Logging | A.8.15 | Technological | All LLM tool invocations logged with full context — every tool call auditable |
-| Identity management | A.5.15 | Organisational | LLM tool access governed through identity management — tool permissions scoped per deployment |
-
-#### Mitigations by tier
-
-**Foundational**
-- A.8.2: Manage LLM tool access as privileged access —
-  minimum scope enforced, regular access reviews, no
-  standing broad permissions
-- A.5.10: Establish acceptable use policy for LLM autonomous
-  actions — approved tool use cases documented, human
-  confirmation required for irreversible actions
-- A.8.15: Log all LLM tool invocations with full context —
-  tool identity, parameters, user session, timestamp —
-  immutable audit trail
-
-**Hardening**
-- A.5.15: Govern LLM tool permissions through identity
-  management — tool access scoped per deployment, reviewed
-  on change and quarterly
-- Implement action guardrails as an independent layer from
-  the model — A.8.27 secure architecture applied to
-  autonomous action scope
-- Define and enforce a tool permission manifest for every
-  LLM deployment — reviewed before each release
-
-**Advanced**
-- A.8.2: Include LLM tool access in privileged access
-  reviews — any permission not actively used is removed
-- Formally specify permitted action graphs — only
-  pre-approved action sequences can execute in production
-- Conduct red team exercises testing excessive agency via
-  indirect prompt injection — document results in ISMS
-  security testing records
-
-#### Tools
-
-| Tool | Type | Link |
-|---|---|---|
-| Guardrails AI | Open-source | https://github.com/guardrails-ai/guardrails |
-| NeMo Guardrails | Open-source | https://github.com/NVIDIA/NeMo-Guardrails |
-| LangSmith | Commercial | https://smith.langchain.com |
-
-#### Cross-references
-- Agentic Top 10: ASI01 Agent Goal Hijack, ASI02 Tool Misuse, ASI10 Rogue Agents
-- DSGAI 2026: DSGAI06 Tool Plugin & Agent Data Exchange
-- Other frameworks: AIUC-1 B006 · MITRE ATLAS AML.T0015 · ISA/IEC 62443 SR 2.1 (OT)
-
----
-
-### LLM07 — System Prompt Leakage
-
-**Severity:** High
-
-System prompts containing internal instructions, business logic, or
-security controls are extracted by adversaries — enabling targeted
-attacks against specific defences.
-
-**Real-world references:**
-- Bing Chat / Sydney (2023) — full system prompt extracted through
-  persistent adversarial questioning
-- Multiple enterprise LLM deployments with proprietary business
-  logic leaked via prompt extraction
-
-#### ISO 27001:2022 mapping
-
-| Control | ID | Domain | How it applies |
-|---|---|---|---|
-| Classification of information | A.5.12 | Organisational | System prompts classified as sensitive configuration — subject to data governance policy |
-| Information access restriction | A.8.3 | Technological | Access controls on system prompt storage — version controlled, access logged |
-| Use of cryptography | A.8.24 | Technological | System prompts encrypted at rest — not stored in cleartext configuration files |
-| Logging | A.8.15 | Technological | Access to system prompts logged — unauthorised access attempts detectable |
-
-#### Mitigations by tier
-
-**Foundational**
-- A.5.12: Classify system prompts as sensitive operational
-  configuration — subject to the same access controls as
-  application secrets and configuration data
-- A.8.24: Encrypt system prompts at rest — never stored
-  in cleartext source code, configuration files, or
-  environment variables without encryption
-- A.8.3: Implement version control and access controls
-  on system prompt storage — who can read, who can modify,
-  all access logged
-
-**Hardening**
-- A.8.15: Protect and retain system prompt access logs —
-  detect and alert on anomalous access attempts
-- Conduct prompt extraction testing before each deployment —
-  verify that transparency obligations can be met without
-  disclosing security-sensitive configuration
-- Remove all secrets, credentials, and sensitive data from
-  system prompts — use environment variables and secret
-  managers instead
-
-**Advanced**
-- Implement system prompt tokenisation — sensitive phrases
-  replaced with opaque tokens resolved at runtime
-- Deploy output classifiers trained to detect and block
-  responses containing system prompt content
-- A.5.12: Include system prompt security in ISMS design
-  reviews — formal security objective with measurable
-  extraction resistance targets
-
-#### Tools
-
-| Tool | Type | Link |
-|---|---|---|
-| LLM Guard | Open-source | https://github.com/protectai/llm-guard |
-| Garak | Open-source | https://github.com/leondz/garak |
-
-#### Cross-references
-- Agentic Top 10: ASI01 Agent Goal Hijack
-- DSGAI 2026: DSGAI15 Over-Broad Context Windows
-- Other frameworks: AIUC-1 B003/B009 · NIST AI RMF GV-1.6 · CWE-200
-
----
-
-### LLM08 — Vector and Embedding Weaknesses
-
-**Severity:** Medium
-
-Weaknesses in vector stores enable adversarial retrieval manipulation,
-inference of sensitive information from embeddings, and semantic
-search poisoning to return attacker-controlled content.
-
-#### ISO 27001:2022 mapping
-
-| Control | ID | Domain | How it applies |
-|---|---|---|---|
-| Information access restriction | A.8.3 | Technological | RBAC on all vector store collections — no unauthenticated access to any collection |
-| Use of cryptography | A.8.24 | Technological | Encryption of all vector store data at rest and in transit |
-| Monitoring activities | A.8.16 | Technological | Anomaly detection on vector store query patterns — bulk extraction and poisoning indicators |
-| Data masking | A.8.11 | Technological | Differential privacy in embedding generation for sensitive corpora |
-
-#### Mitigations by tier
-
-**Foundational**
-- A.8.3: Enable RBAC on all vector store collections —
-  no unauthenticated access in any environment including
-  development
-- A.8.24: Encrypt all vector store content at rest and
-  in transit — embeddings can leak source content through
-  inversion attacks if unencrypted
-- Validate and sanitise all content before generating
-  embeddings — quality and security controls at ingestion
-
-**Hardening**
-- A.8.16: Implement anomaly detection on vector store
-  query patterns — alert on bulk extraction, unusual query
-  diversity, or high-volume confidence score harvesting
-- Apply trust-tiered retrieval — weight results by source
-  provenance and trust score, not only semantic similarity
-- Conduct embedding inversion testing — validate that
-  embeddings do not reconstruct sensitive source content
-
-**Advanced**
-- Apply differential privacy in embedding generation —
-  document privacy budget as A.8.11 masking control evidence
-- A.8.16: Integrate vector store anomaly alerts into SIEM —
-  unusual retrieval patterns treated as potential
-  reconnaissance or extraction activity
-- Conduct adversarial retrieval testing — attempt to
-  manipulate retrieval results through crafted queries
-
-#### Tools
-
-| Tool | Type | Link |
-|---|---|---|
-| Weaviate (with RBAC) | Open-source | https://weaviate.io |
-| Qdrant | Open-source | https://qdrant.tech |
-| Pinecone Canopy | Open-source | https://github.com/pinecone-io/canopy |
-
-#### Cross-references
-- Agentic Top 10: ASI06 Memory & Context Poisoning
-- DSGAI 2026: DSGAI13 Vector Store Platform Security, DSGAI18 Inference & Data Reconstruction
-- Other frameworks: NIST AI RMF MS-2.5 · AIUC-1 A · CWE-327
-
----
-
-### LLM09 — Misinformation
-
-**Severity:** Medium
-
-LLMs generate plausible but factually incorrect or hallucinated
-content that users, downstream systems, or automated pipelines
-act upon — causing incorrect decisions, erosion of trust, or
-reputational harm.
-
-#### ISO 27001:2022 mapping
-
-| Control | ID | Domain | How it applies |
-|---|---|---|---|
-| Monitoring activities | A.8.16 | Technological | Production monitoring for output accuracy — hallucination rate tracking, anomaly detection on model drift |
-| Threat intelligence | A.5.7 | Organisational | Intelligence on disinformation campaigns and active manipulation of RAG sources |
-| Information security awareness training | A.6.3 | People | User training on LLM output limitations — verification requirements and critical evaluation |
-| Compliance with policies | A.5.36 | Organisational | Policy on AI-generated content accuracy — disclosure requirements, human verification thresholds |
-
-#### Mitigations by tier
-
-**Foundational**
-- A.5.36: Establish policy on LLM content accuracy — define
-  domains requiring human verification before action, especially
-  medical, legal, financial, and safety-critical contexts
-- A.6.3: Provide awareness training on LLM output limitations —
-  all users of LLM decision-support tools trained before
-  access is granted
-- Deploy RAG grounded on authoritative, version-controlled
-  sources — display citations alongside responses
-
-**Hardening**
-- A.8.16: Implement production monitoring for hallucination
-  patterns — track accuracy metrics per domain, alert on
-  significant drift from baseline
-- A.5.7: Monitor threat intelligence for disinformation
-  campaigns targeting your RAG sources — proactive source
-  validation based on intelligence signals
-- Implement confidence scoring — low-confidence responses
-  flagged for human review before action
-
-**Advanced**
-- Build automated fact-checking pipelines for high-stakes
-  output domains — accuracy gates before responses reach
-  regulated or safety-critical decision workflows
-- A.8.16: Implement continuous drift detection — alert when
-  hallucination rates exceed defined thresholds per domain
-- Include misinformation scenarios in ISMS risk register —
-  formal risk with defined treatment and measurement criteria
-
-#### Tools
-
-| Tool | Type | Link |
-|---|---|---|
-| TruLens | Open-source | https://github.com/truera/trulens |
-| RAGAS | Open-source | https://github.com/explodinggradients/ragas |
-| DeepEval | Open-source | https://github.com/confident-ai/deepeval |
-
-#### Cross-references
-- Agentic Top 10: ASI09 Human-Agent Trust Exploitation
-- DSGAI 2026: DSGAI21 Disinformation & Integrity Attacks
-- Other frameworks: EU AI Act Art. 13/50 · AIUC-1 F · NIST AI RMF GV-1.7
-
----
-
-### LLM10 — Unbounded Consumption
-
-**Severity:** Medium
 
 Adversarial inputs trigger disproportionate resource consumption —
 CPU, memory, tokens, API costs — causing denial of service or
@@ -748,6 +500,285 @@ runaway cost in production LLM deployments.
 
 ---
 
+### LLM07 — Misinformation
+
+**Severity:** High
+
+LLMs generate plausible but factually incorrect or hallucinated
+content that users, downstream systems, or automated pipelines
+act upon — causing incorrect decisions, erosion of trust, or
+reputational harm.
+
+#### ISO 27001:2022 mapping
+
+| Control | ID | Domain | How it applies |
+|---|---|---|---|
+| Monitoring activities | A.8.16 | Technological | Production monitoring for output accuracy — hallucination rate tracking, anomaly detection on model drift |
+| Threat intelligence | A.5.7 | Organisational | Intelligence on disinformation campaigns and active manipulation of RAG sources |
+| Information security awareness training | A.6.3 | People | User training on LLM output limitations — verification requirements and critical evaluation |
+| Compliance with policies | A.5.36 | Organisational | Policy on AI-generated content accuracy — disclosure requirements, human verification thresholds |
+
+#### Mitigations by tier
+
+**Foundational**
+- A.5.36: Establish policy on LLM content accuracy — define
+  domains requiring human verification before action, especially
+  medical, legal, financial, and safety-critical contexts
+- A.6.3: Provide awareness training on LLM output limitations —
+  all users of LLM decision-support tools trained before
+  access is granted
+- Deploy RAG grounded on authoritative, version-controlled
+  sources — display citations alongside responses
+
+**Hardening**
+- A.8.16: Implement production monitoring for hallucination
+  patterns — track accuracy metrics per domain, alert on
+  significant drift from baseline
+- A.5.7: Monitor threat intelligence for disinformation
+  campaigns targeting your RAG sources — proactive source
+  validation based on intelligence signals
+- Implement confidence scoring — low-confidence responses
+  flagged for human review before action
+
+**Advanced**
+- Build automated fact-checking pipelines for high-stakes
+  output domains — accuracy gates before responses reach
+  regulated or safety-critical decision workflows
+- A.8.16: Implement continuous drift detection — alert when
+  hallucination rates exceed defined thresholds per domain
+- Include misinformation scenarios in ISMS risk register —
+  formal risk with defined treatment and measurement criteria
+
+#### Tools
+
+| Tool | Type | Link |
+|---|---|---|
+| TruLens | Open-source | https://github.com/truera/trulens |
+| RAGAS | Open-source | https://github.com/explodinggradients/ragas |
+| DeepEval | Open-source | https://github.com/confident-ai/deepeval |
+
+#### Cross-references
+- Agentic Top 10: ASI09 Human-Agent Trust Exploitation
+- DSGAI 2026: DSGAI21 Disinformation & Integrity Attacks
+- Other frameworks: EU AI Act Art. 13/50 · AIUC-1 F · NIST AI RMF GV-1.7
+
+---
+
+### LLM08 — Hidden Context Exposure
+
+**Severity:** High
+
+Hidden context — the system prompt, developer instructions, retrieved
+policy text, and the tool and function schemas an application assembles
+into the model's context window — is extracted, inferred, or
+reconstructed by adversaries.
+
+The 2026 list broadens the former System Prompt Leakage entry to cover all
+non-user-facing context, not just the system prompt. Severity tracks what
+that context holds: internal rules and workflow logic are medium, embedded
+credentials or reliance on context secrecy for authorisation are high, and
+disclosure that chains to code execution or broad exfiltration is critical.
+Design on the assumption that hidden context is discoverable, and never
+treat it as a security boundary.
+
+**Real-world references:**
+- Bing Chat / Sydney (2023) — full system prompt extracted through
+  persistent adversarial questioning
+- Multiple enterprise LLM deployments with proprietary business
+  logic leaked via prompt extraction
+
+#### ISO 27001:2022 mapping
+
+| Control | ID | Domain | How it applies |
+|---|---|---|---|
+| Classification of information | A.5.12 | Organisational | System prompts classified as sensitive configuration — subject to data governance policy |
+| Information access restriction | A.8.3 | Technological | Access controls on system prompt storage — version controlled, access logged |
+| Use of cryptography | A.8.24 | Technological | System prompts encrypted at rest — not stored in cleartext configuration files |
+| Logging | A.8.15 | Technological | Access to system prompts logged — unauthorised access attempts detectable |
+
+#### Mitigations by tier
+
+**Foundational**
+- A.5.12: Classify system prompts as sensitive operational
+  configuration — subject to the same access controls as
+  application secrets and configuration data
+- A.8.24: Encrypt system prompts at rest — never stored
+  in cleartext source code, configuration files, or
+  environment variables without encryption
+- A.8.3: Implement version control and access controls
+  on system prompt storage — who can read, who can modify,
+  all access logged
+
+**Hardening**
+- A.8.15: Protect and retain system prompt access logs —
+  detect and alert on anomalous access attempts
+- Conduct prompt extraction testing before each deployment —
+  verify that transparency obligations can be met without
+  disclosing security-sensitive configuration
+- Remove all secrets, credentials, and sensitive data from
+  system prompts — use environment variables and secret
+  managers instead
+
+**Advanced**
+- Implement system prompt tokenisation — sensitive phrases
+  replaced with opaque tokens resolved at runtime
+- Deploy output classifiers trained to detect and block
+  responses containing system prompt content
+- A.5.12: Include system prompt security in ISMS design
+  reviews — formal security objective with measurable
+  extraction resistance targets
+
+#### Tools
+
+| Tool | Type | Link |
+|---|---|---|
+| LLM Guard | Open-source | https://github.com/protectai/llm-guard |
+| Garak | Open-source | https://github.com/leondz/garak |
+
+#### Cross-references
+- Agentic Top 10: ASI01 Agent Goal Hijack
+- DSGAI 2026: DSGAI15 Over-Broad Context Windows
+- Other frameworks: AIUC-1 B003/B009 · NIST AI RMF GV-1.6 · CWE-200
+
+---
+
+### LLM09 — Vector and Embedding Weaknesses
+
+**Severity:** Medium
+
+Weaknesses in vector stores enable adversarial retrieval manipulation,
+inference of sensitive information from embeddings, and semantic
+search poisoning to return attacker-controlled content.
+
+#### ISO 27001:2022 mapping
+
+| Control | ID | Domain | How it applies |
+|---|---|---|---|
+| Information access restriction | A.8.3 | Technological | RBAC on all vector store collections — no unauthenticated access to any collection |
+| Use of cryptography | A.8.24 | Technological | Encryption of all vector store data at rest and in transit |
+| Monitoring activities | A.8.16 | Technological | Anomaly detection on vector store query patterns — bulk extraction and poisoning indicators |
+| Data masking | A.8.11 | Technological | Differential privacy in embedding generation for sensitive corpora |
+
+#### Mitigations by tier
+
+**Foundational**
+- A.8.3: Enable RBAC on all vector store collections —
+  no unauthenticated access in any environment including
+  development
+- A.8.24: Encrypt all vector store content at rest and
+  in transit — embeddings can leak source content through
+  inversion attacks if unencrypted
+- Validate and sanitise all content before generating
+  embeddings — quality and security controls at ingestion
+
+**Hardening**
+- A.8.16: Implement anomaly detection on vector store
+  query patterns — alert on bulk extraction, unusual query
+  diversity, or high-volume confidence score harvesting
+- Apply trust-tiered retrieval — weight results by source
+  provenance and trust score, not only semantic similarity
+- Conduct embedding inversion testing — validate that
+  embeddings do not reconstruct sensitive source content
+
+**Advanced**
+- Apply differential privacy in embedding generation —
+  document privacy budget as A.8.11 masking control evidence
+- A.8.16: Integrate vector store anomaly alerts into SIEM —
+  unusual retrieval patterns treated as potential
+  reconnaissance or extraction activity
+- Conduct adversarial retrieval testing — attempt to
+  manipulate retrieval results through crafted queries
+
+#### Tools
+
+| Tool | Type | Link |
+|---|---|---|
+| Weaviate (with RBAC) | Open-source | https://weaviate.io |
+| Qdrant | Open-source | https://qdrant.tech |
+| Pinecone Canopy | Open-source | https://github.com/pinecone-io/canopy |
+
+#### Cross-references
+- Agentic Top 10: ASI06 Memory & Context Poisoning
+- DSGAI 2026: DSGAI13 Vector Store Platform Security, DSGAI18 Inference & Data Reconstruction
+- Other frameworks: NIST AI RMF MS-2.5 · AIUC-1 A · CWE-327
+
+---
+
+### LLM10 — Improper Output Handling
+
+**Severity:** High
+
+LLM output passed to downstream systems without validation enables
+XSS, command injection, SSRF, or SQL injection via AI-generated
+content.
+
+The 2026 entry renames Insecure Output Handling to Improper Output
+Handling and widens it to cover the insecure code that coding assistants
+generate at scale. Output that reaches a compiler, a repository, or a
+production system carries the same downstream-execution risk as output that
+reaches a shell, a browser, or a database.
+
+**Real-world references:**
+- Multiple bug bounty reports of XSS via unsanitised LLM markdown
+  output rendered in web browsers (2024)
+- LLM-to-SQL interfaces executing destructive queries from
+  AI-generated SQL
+
+#### ISO 27001:2022 mapping
+
+| Control | ID | Domain | How it applies |
+|---|---|---|---|
+| Secure coding | A.8.28 | Technological | Output encoding, sanitisation, and schema validation as secure coding requirements |
+| Application security requirements | A.8.26 | Technological | Security requirements for all interfaces consuming LLM output — specified before development |
+| Security testing | A.8.29 | Technological | Output injection scenarios in security testing — XSS, SQL injection, command injection via LLM output |
+| Monitoring activities | A.8.16 | Technological | Runtime monitoring for output handling incidents — injection attempts in LLM output channels |
+
+#### Mitigations by tier
+
+**Foundational**
+- A.8.28: Establish secure coding requirements mandating that
+  all LLM output is treated as untrusted input to downstream
+  systems — encoding, validation, and sanitisation mandatory
+- A.8.26: Define security requirements for all application
+  interfaces that consume LLM output before development —
+  specify acceptable output formats, validation requirements
+- Never pass raw LLM output to database queries, shell
+  commands, or eval functions — enforced through code review
+
+**Hardening**
+- A.8.29: Include output injection scenarios in security
+  testing programme — XSS, SQL injection, and command
+  injection via LLM output tested on each significant release
+- A.8.16: Deploy runtime monitoring on all LLM output
+  channels — detect injection patterns in model responses
+  before they reach downstream consumers
+- Implement output schema validation — reject responses
+  that do not conform to defined safe structures
+
+**Advanced**
+- Conduct DAST on all interfaces consuming LLM output —
+  include in A.8.29 security testing programme
+- Deploy dedicated output security layer independent of
+  the LLM — A.8.27 secure architecture principle applied
+  to output handling
+- A.8.28: Include output security in developer training —
+  specific module on LLM output injection risks and mitigations
+
+#### Tools
+
+| Tool | Type | Link |
+|---|---|---|
+| OWASP ZAP | Open-source | https://www.zaproxy.org |
+| Semgrep | Open-source | https://semgrep.dev |
+| DOMPurify | Open-source | https://github.com/cure53/DOMPurify |
+
+#### Cross-references
+- Agentic Top 10: ASI02 Tool Misuse, ASI05 Unexpected Code Execution
+- DSGAI 2026: DSGAI05 Data Integrity & Validation Failures, DSGAI12 Unsafe NL Data Gateways
+- Other frameworks: OWASP ASVS V5 · NIST AI RMF MS-2.6 · CWE-79
+
+---
+
 ## ISO 27001 ISMS extension checklist for LLM applications
 
 ### Scope and asset management
@@ -786,10 +817,10 @@ runaway cost in production LLM deployments.
 
 | Phase | LLM entries | Controls | Rationale |
 |---|---|---|---|
-| 1 — Do now | LLM01, LLM06, LLM07 | A.8.28, A.8.2, A.5.12 | Highest exploitability, most active in wild |
-| 2 — This sprint | LLM02, LLM05 | A.8.11/A.8.12, A.8.26 | Data exposure and output handling close common breach paths |
-| 3 — This quarter | LLM03, LLM04 | A.5.19/A.5.21, A.8.27 | Supply chain and poisoning require pipeline-level changes |
-| 4 — Ongoing | LLM08, LLM09, LLM10 | A.8.16, A.5.30, A.6.3 | Monitoring, resilience, and training hardening |
+| 1 — Do now | LLM01, LLM03, LLM08 | A.8.28, A.8.2, A.5.12 | Highest exploitability, most active in wild |
+| 2 — This sprint | LLM02, LLM10 | A.8.11/A.8.12, A.8.26 | Data exposure and output handling close common breach paths |
+| 3 — This quarter | LLM04, LLM05 | A.5.19/A.5.21, A.8.27 | Supply chain and poisoning require pipeline-level changes |
+| 4 — Ongoing | LLM09, LLM07, LLM06 | A.8.16, A.5.30, A.6.3 | Monitoring, resilience, and training hardening |
 
 ---
 
@@ -797,7 +828,7 @@ runaway cost in production LLM deployments.
 
 - [ISO/IEC 27001:2022](https://www.iso.org/standard/82875.html)
 - [ISO/IEC 27001:2022 Annex A summary](https://www.iso.org/obp/ui/#iso:std:iso-iec:27001:ed-3:v1:en)
-- [OWASP LLM Top 10 2025](https://genai.owasp.org/llm-top-10/)
+- [OWASP LLM Top 10 2026](https://genai.owasp.org/llm-top-10/)
 - [ISO/IEC 27701 — Privacy extension](https://www.iso.org/standard/71670.html)
 - [ISO/IEC 42001 — AI management systems](https://www.iso.org/standard/81230.html)
 
@@ -808,6 +839,7 @@ runaway cost in production LLM deployments.
 | Date | Version | Change | Author |
 |---|---|---|---|
 | 2026-03-24 | 2026-Q1 | Initial mapping — LLM01–LLM10 full entries with ISMS checklist | OWASP GenAI Data Security Initiative |
+| 2026-08-28 | 2026-Q3 | Migrated to OWASP Top 10 for LLM Applications 2026 — entries renumbered, LLM08 re-scoped from System Prompt Leakage to Hidden Context Exposure, LLM10 renamed to Improper Output Handling | OWASP GenAI Data Security Initiative |
 
 ---
 
