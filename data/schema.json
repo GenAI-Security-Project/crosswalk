@@ -145,6 +145,10 @@
             "type": "string",
             "description": "Prose justification citing the specific framework clause. Exports to the OLIR Comments field, not to OLIR Rationale (which is `rationale_type`)."
           },
+          "broad_applicability": {
+            "type": "boolean",
+            "description": "Set true to assert that this control genuinely applies across most of the list — an ISMS clause or a risk-management article, say. Requires a `rationale`. Without it, a control mapped to more than 40% of entries is flagged by scripts/density-report.js as discriminating nothing."
+          },
           "confidence": {
             "type": "string",
             "enum": [
