@@ -13,7 +13,32 @@
   ],
   "mappings": [],
   "tools": [],
-  "incidents": [],
+  "incidents": [
+    {
+      "name": "SKILL.md to shell access in three lines of markdown (Snyk threat model)",
+      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-116"
+    },
+    {
+      "name": "Brand-impersonating skill on ClawHub tricks users into installing malware",
+      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-120"
+    },
+    {
+      "name": "OpenClaw log poisoning — agent logs as an indirect prompt injection channel",
+      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-122"
+    },
+    {
+      "name": "Claude Code repository config execution before trust dialog (CVE-2025-59536, CVE-2026-21852)",
+      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-123"
+    }
+  ],
   "crossrefs": {},
   "changelog": [
     {

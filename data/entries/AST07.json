@@ -13,7 +13,20 @@
   ],
   "mappings": [],
   "tools": [],
-  "incidents": [],
+  "incidents": [
+    {
+      "name": "ClawJacked — localhost WebSocket hijack of OpenClaw instances (CVE-2026-28363, CVSS 9.9)",
+      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-124"
+    },
+    {
+      "name": "SkillJacking — 925 skills sit on instantly hijackable dependencies",
+      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-131"
+    }
+  ],
   "crossrefs": {},
   "changelog": [
     {

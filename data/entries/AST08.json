@@ -13,7 +13,32 @@
   ],
   "mappings": [],
   "tools": [],
-  "incidents": [],
+  "incidents": [
+    {
+      "name": "Actively malicious OpenClaw skills in use by 6,000+ users, found by behavioural analysis",
+      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-117"
+    },
+    {
+      "name": "Pattern-matching skill scanners miss the majority of critical threats",
+      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-121"
+    },
+    {
+      "name": "Every public skill scanner bypassed in under an hour (Trail of Bits)",
+      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-128"
+    },
+    {
+      "name": "The Story of Skills — a malicious skill reaches 26,000 agents past every scanner",
+      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-129"
+    }
+  ],
   "crossrefs": {},
   "changelog": [
     {

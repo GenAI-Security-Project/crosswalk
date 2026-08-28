@@ -10166,7 +10166,44 @@ window.CROSSWALK_DATA = [
     ],
     "mappings": [],
     "tools": [],
-    "incidents": [],
+    "incidents": [
+      {
+        "name": "ClawHavoc — 1,184 malicious skills flooded onto the ClawHub registry",
+        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-115"
+      },
+      {
+        "name": "SKILL.md to shell access in three lines of markdown (Snyk threat model)",
+        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-116"
+      },
+      {
+        "name": "Actively malicious OpenClaw skills in use by 6,000+ users, found by behavioural analysis",
+        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-117"
+      },
+      {
+        "name": "ToxicSkills — 36% of 3,984 audited skills contain security flaws",
+        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-118"
+      },
+      {
+        "name": "Brand-impersonating skill on ClawHub tricks users into installing malware",
+        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-120"
+      },
+      {
+        "name": "Vidar infostealer variants targeting OpenClaw agent identity files",
+        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-125"
+      }
+    ],
     "crossrefs": {},
     "changelog": [
       {
@@ -10198,7 +10235,20 @@ window.CROSSWALK_DATA = [
     ],
     "mappings": [],
     "tools": [],
-    "incidents": [],
+    "incidents": [
+      {
+        "name": "ClawHavoc — 1,184 malicious skills flooded onto the ClawHub registry",
+        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-115"
+      },
+      {
+        "name": "Claude Code repository config execution before trust dialog (CVE-2025-59536, CVE-2026-21852)",
+        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-123"
+      }
+    ],
     "crossrefs": {},
     "changelog": [
       {
@@ -10230,7 +10280,26 @@ window.CROSSWALK_DATA = [
     ],
     "mappings": [],
     "tools": [],
-    "incidents": [],
+    "incidents": [
+      {
+        "name": "ToxicSkills — 36% of 3,984 audited skills contain security flaws",
+        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-118"
+      },
+      {
+        "name": "280+ leaky skills exposing API keys and PII through over-permissioning",
+        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-119"
+      },
+      {
+        "name": "36.7% of 7,000+ MCP servers potentially vulnerable to SSRF",
+        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-126"
+      }
+    ],
     "crossrefs": {},
     "changelog": [
       {
@@ -10262,7 +10331,32 @@ window.CROSSWALK_DATA = [
     ],
     "mappings": [],
     "tools": [],
-    "incidents": [],
+    "incidents": [
+      {
+        "name": "SKILL.md to shell access in three lines of markdown (Snyk threat model)",
+        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-116"
+      },
+      {
+        "name": "Brand-impersonating skill on ClawHub tricks users into installing malware",
+        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-120"
+      },
+      {
+        "name": "OpenClaw log poisoning — agent logs as an indirect prompt injection channel",
+        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-122"
+      },
+      {
+        "name": "Claude Code repository config execution before trust dialog (CVE-2025-59536, CVE-2026-21852)",
+        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-123"
+      }
+    ],
     "crossrefs": {},
     "changelog": [
       {
@@ -10294,7 +10388,26 @@ window.CROSSWALK_DATA = [
     ],
     "mappings": [],
     "tools": [],
-    "incidents": [],
+    "incidents": [
+      {
+        "name": "OpenClaw log poisoning — agent logs as an indirect prompt injection channel",
+        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-122"
+      },
+      {
+        "name": "The Story of Skills — a malicious skill reaches 26,000 agents past every scanner",
+        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-129"
+      },
+      {
+        "name": "The Circus of Skills — 17,822 live skills rest on untrusted external instruction sources",
+        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-130"
+      }
+    ],
     "crossrefs": {},
     "changelog": [
       {
@@ -10326,7 +10439,32 @@ window.CROSSWALK_DATA = [
     ],
     "mappings": [],
     "tools": [],
-    "incidents": [],
+    "incidents": [
+      {
+        "name": "ClawJacked — localhost WebSocket hijack of OpenClaw instances (CVE-2026-28363, CVSS 9.9)",
+        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-124"
+      },
+      {
+        "name": "Vidar infostealer variants targeting OpenClaw agent identity files",
+        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-125"
+      },
+      {
+        "name": "36.7% of 7,000+ MCP servers potentially vulnerable to SSRF",
+        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-126"
+      },
+      {
+        "name": "135,000+ OpenClaw instances internet-exposed with insecure defaults",
+        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-127"
+      }
+    ],
     "crossrefs": {},
     "changelog": [
       {
@@ -10358,7 +10496,20 @@ window.CROSSWALK_DATA = [
     ],
     "mappings": [],
     "tools": [],
-    "incidents": [],
+    "incidents": [
+      {
+        "name": "ClawJacked — localhost WebSocket hijack of OpenClaw instances (CVE-2026-28363, CVSS 9.9)",
+        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-124"
+      },
+      {
+        "name": "SkillJacking — 925 skills sit on instantly hijackable dependencies",
+        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-131"
+      }
+    ],
     "crossrefs": {},
     "changelog": [
       {
@@ -10390,7 +10541,32 @@ window.CROSSWALK_DATA = [
     ],
     "mappings": [],
     "tools": [],
-    "incidents": [],
+    "incidents": [
+      {
+        "name": "Actively malicious OpenClaw skills in use by 6,000+ users, found by behavioural analysis",
+        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-117"
+      },
+      {
+        "name": "Pattern-matching skill scanners miss the majority of critical threats",
+        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-121"
+      },
+      {
+        "name": "Every public skill scanner bypassed in under an hour (Trail of Bits)",
+        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-128"
+      },
+      {
+        "name": "The Story of Skills — a malicious skill reaches 26,000 agents past every scanner",
+        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-129"
+      }
+    ],
     "crossrefs": {},
     "changelog": [
       {
@@ -10422,7 +10598,14 @@ window.CROSSWALK_DATA = [
     ],
     "mappings": [],
     "tools": [],
-    "incidents": [],
+    "incidents": [
+      {
+        "name": "135,000+ OpenClaw instances internet-exposed with insecure defaults",
+        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-127"
+      }
+    ],
     "crossrefs": {},
     "changelog": [
       {
@@ -10454,7 +10637,14 @@ window.CROSSWALK_DATA = [
     ],
     "mappings": [],
     "tools": [],
-    "incidents": [],
+    "incidents": [
+      {
+        "name": "SkillJacking — 925 skills sit on instantly hijackable dependencies",
+        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-131"
+      }
+    ],
     "crossrefs": {},
     "changelog": [
       {

@@ -13,7 +13,26 @@
   ],
   "mappings": [],
   "tools": [],
-  "incidents": [],
+  "incidents": [
+    {
+      "name": "ToxicSkills — 36% of 3,984 audited skills contain security flaws",
+      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-118"
+    },
+    {
+      "name": "280+ leaky skills exposing API keys and PII through over-permissioning",
+      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-119"
+    },
+    {
+      "name": "36.7% of 7,000+ MCP servers potentially vulnerable to SSRF",
+      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-126"
+    }
+  ],
   "crossrefs": {},
   "changelog": [
     {

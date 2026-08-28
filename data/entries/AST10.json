@@ -13,7 +13,14 @@
   ],
   "mappings": [],
   "tools": [],
-  "incidents": [],
+  "incidents": [
+    {
+      "name": "SkillJacking — 925 skills sit on instantly hijackable dependencies",
+      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-131"
+    }
+  ],
   "crossrefs": {},
   "changelog": [
     {
