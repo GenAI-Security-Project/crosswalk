@@ -16023,6 +16023,15 @@ window.CROSSWALK_BACKLINKS = [
         "notes": null
       },
       {
+        "id": "AST05",
+        "name": "Untrusted External Instructions",
+        "source_list": "AST-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
         "id": "ASI01",
         "name": "Agent Goal Hijack",
         "source_list": "Agentic-Top10-2026",
@@ -16264,6 +16273,78 @@ window.CROSSWALK_BACKLINKS = [
         "notes": null
       },
       {
+        "id": "AST01",
+        "name": "Malicious Skills",
+        "source_list": "AST-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "AST02",
+        "name": "Supply Chain Compromise",
+        "source_list": "AST-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "AST03",
+        "name": "Over-Privileged Skills",
+        "source_list": "AST-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "AST04",
+        "name": "Insecure Metadata",
+        "source_list": "AST-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "AST05",
+        "name": "Untrusted External Instructions",
+        "source_list": "AST-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "AST06",
+        "name": "Weak Isolation",
+        "source_list": "AST-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "AST08",
+        "name": "Poor Scanning",
+        "source_list": "AST-Top10-2026",
+        "severity": "Medium",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "AST10",
+        "name": "Cross-Platform Reuse",
+        "source_list": "AST-Top10-2026",
+        "severity": "Medium",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
         "id": "ASI01",
         "name": "Agent Goal Hijack",
         "source_list": "Agentic-Top10-2026",
@@ -16386,6 +16467,60 @@ window.CROSSWALK_BACKLINKS = [
         "tier": "Foundational",
         "scope": "Both",
         "notes": null
+      },
+      {
+        "id": "AST01",
+        "name": "Malicious Skills",
+        "source_list": "AST-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "AST02",
+        "name": "Supply Chain Compromise",
+        "source_list": "AST-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "AST03",
+        "name": "Over-Privileged Skills",
+        "source_list": "AST-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "AST04",
+        "name": "Insecure Metadata",
+        "source_list": "AST-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "AST06",
+        "name": "Weak Isolation",
+        "source_list": "AST-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "AST07",
+        "name": "Update Drift",
+        "source_list": "AST-Top10-2026",
+        "severity": "Medium",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
       },
       {
         "id": "ASI02",
@@ -16521,6 +16656,33 @@ window.CROSSWALK_BACKLINKS = [
         "notes": null
       },
       {
+        "id": "AST01",
+        "name": "Malicious Skills",
+        "source_list": "AST-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "AST08",
+        "name": "Poor Scanning",
+        "source_list": "AST-Top10-2026",
+        "severity": "Medium",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "AST09",
+        "name": "No Governance",
+        "source_list": "AST-Top10-2026",
+        "severity": "Medium",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
         "id": "ASI06",
         "name": "Memory and Context Poisoning",
         "source_list": "Agentic-Top10-2026",
@@ -16652,6 +16814,96 @@ window.CROSSWALK_BACKLINKS = [
         "tier": "Hardening",
         "scope": "Both",
         "notes": null
+      },
+      {
+        "id": "AST01",
+        "name": "Malicious Skills",
+        "source_list": "AST-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "AST02",
+        "name": "Supply Chain Compromise",
+        "source_list": "AST-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "AST03",
+        "name": "Over-Privileged Skills",
+        "source_list": "AST-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "AST04",
+        "name": "Insecure Metadata",
+        "source_list": "AST-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "AST05",
+        "name": "Untrusted External Instructions",
+        "source_list": "AST-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "AST06",
+        "name": "Weak Isolation",
+        "source_list": "AST-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "AST07",
+        "name": "Update Drift",
+        "source_list": "AST-Top10-2026",
+        "severity": "Medium",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "AST08",
+        "name": "Poor Scanning",
+        "source_list": "AST-Top10-2026",
+        "severity": "Medium",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "AST09",
+        "name": "No Governance",
+        "source_list": "AST-Top10-2026",
+        "severity": "Medium",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "AST10",
+        "name": "Cross-Platform Reuse",
+        "source_list": "AST-Top10-2026",
+        "severity": "Medium",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
       },
       {
         "id": "ASI02",
@@ -16821,6 +17073,78 @@ window.CROSSWALK_BACKLINKS = [
         "tier": "Foundational",
         "scope": "Both",
         "notes": null
+      },
+      {
+        "id": "AST01",
+        "name": "Malicious Skills",
+        "source_list": "AST-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "AST02",
+        "name": "Supply Chain Compromise",
+        "source_list": "AST-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "AST03",
+        "name": "Over-Privileged Skills",
+        "source_list": "AST-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "AST04",
+        "name": "Insecure Metadata",
+        "source_list": "AST-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "AST05",
+        "name": "Untrusted External Instructions",
+        "source_list": "AST-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "AST07",
+        "name": "Update Drift",
+        "source_list": "AST-Top10-2026",
+        "severity": "Medium",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "AST09",
+        "name": "No Governance",
+        "source_list": "AST-Top10-2026",
+        "severity": "Medium",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
+      },
+      {
+        "id": "AST10",
+        "name": "Cross-Platform Reuse",
+        "source_list": "AST-Top10-2026",
+        "severity": "Medium",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required"
       },
       {
         "id": "ASI03",

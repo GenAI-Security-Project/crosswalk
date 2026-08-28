@@ -27,10 +27,10 @@
     }
   },
   "mappings": {
-    "total": 3211,
+    "total": 3247,
     "by_list": {
       "Agentic-Top10-2026": 849,
-      "AST-Top10-2026": 0,
+      "AST-Top10-2026": 36,
       "DSGAI-2026": 1521,
       "LLM-Top10-2026": 841
     }
@@ -46,16 +46,16 @@
       "LLM-Top10-2026": 23,
       "Agentic-Top10-2026": 23,
       "DSGAI-2026": 21,
-      "AST-Top10-2026": 0
+      "AST-Top10-2026": 1
     }
   },
   "mapping_files": {
-    "total": 67,
+    "total": 68,
     "by_list": {
       "LLM-Top10-2026": 23,
       "Agentic-Top10-2026": 23,
       "DSGAI-2026": 21,
-      "AST-Top10-2026": 0
+      "AST-Top10-2026": 1
     }
   },
   "incidents": {

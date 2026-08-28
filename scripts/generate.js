@@ -168,6 +168,9 @@ const FRAMEWORK_FILES = [
   { rel: 'dsgai-2026/DSGAI_SAMM.md',        framework: 'OWASP SAMM v2.0',          ids: DSGAI_IDS },
   { rel: 'dsgai-2026/DSGAI_CWE_CVE.md',     framework: 'CWE/CVE',                  ids: DSGAI_IDS },
   { rel: 'dsgai-2026/DSGAI_MAESTRO.md',     framework: 'MAESTRO',                  ids: DSGAI_IDS },
+
+  // Agentic Skills Top 10 — scaffold only; every row is DRAFT pending SME review (T-A10-03).
+  { rel: 'ast-top10/AST_MAESTRO.md',     framework: 'MAESTRO',                  ids: AST_IDS },
   { rel: 'dsgai-2026/DSGAI_AIUC1.md',       framework: 'AIUC-1',                   ids: DSGAI_IDS },
   { rel: 'dsgai-2026/DSGAI_NHI.md',         framework: 'OWASP NHI Top 10',         ids: DSGAI_IDS },
   { rel: 'dsgai-2026/DSGAI_SP800218A.md',  framework: 'NIST SP 800-218A',         ids: DSGAI_IDS },

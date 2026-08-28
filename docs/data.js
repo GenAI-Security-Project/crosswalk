@@ -10160,11 +10160,67 @@ window.CROSSWALK_DATA = [
     "aivss_score": null,
     "audience": [
       "security-engineer",
-      "data-engineer",
-      "auditor",
-      "compliance"
+      "red-teamer",
+      "ciso",
+      "auditor"
     ],
-    "mappings": [],
+    "mappings": [
+      {
+        "framework": "MAESTRO",
+        "control_id": "L7",
+        "control_name": "Agent Ecosystem",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "MAESTRO 1.0",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "MAESTRO",
+        "control_id": "L3",
+        "control_name": "Agent Frameworks",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "MAESTRO 1.0",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "MAESTRO",
+        "control_id": "L6",
+        "control_name": "Security & Compliance",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "MAESTRO 1.0",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "MAESTRO",
+        "control_id": "L4",
+        "control_name": "Deployment & Infrastructure",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "MAESTRO 1.0",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "MAESTRO",
+        "control_id": "L5",
+        "control_name": "Evaluation & Observability",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "MAESTRO 1.0",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      }
+    ],
     "tools": [],
     "incidents": [
       {
@@ -10229,11 +10285,56 @@ window.CROSSWALK_DATA = [
     "aivss_score": null,
     "audience": [
       "security-engineer",
-      "data-engineer",
-      "auditor",
-      "compliance"
+      "red-teamer",
+      "ciso",
+      "auditor"
     ],
-    "mappings": [],
+    "mappings": [
+      {
+        "framework": "MAESTRO",
+        "control_id": "L7",
+        "control_name": "Agent Ecosystem",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "MAESTRO 1.0",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "MAESTRO",
+        "control_id": "L3",
+        "control_name": "Agent Frameworks",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "MAESTRO 1.0",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "MAESTRO",
+        "control_id": "L6",
+        "control_name": "Security & Compliance",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "MAESTRO 1.0",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "MAESTRO",
+        "control_id": "L4",
+        "control_name": "Deployment & Infrastructure",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "MAESTRO 1.0",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      }
+    ],
     "tools": [],
     "incidents": [
       {
@@ -10274,11 +10375,56 @@ window.CROSSWALK_DATA = [
     "aivss_score": null,
     "audience": [
       "security-engineer",
-      "data-engineer",
-      "auditor",
-      "compliance"
+      "red-teamer",
+      "ciso",
+      "auditor"
     ],
-    "mappings": [],
+    "mappings": [
+      {
+        "framework": "MAESTRO",
+        "control_id": "L6",
+        "control_name": "Security & Compliance",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "MAESTRO 1.0",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "MAESTRO",
+        "control_id": "L4",
+        "control_name": "Deployment & Infrastructure",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "MAESTRO 1.0",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "MAESTRO",
+        "control_id": "L3",
+        "control_name": "Agent Frameworks",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "MAESTRO 1.0",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "MAESTRO",
+        "control_id": "L7",
+        "control_name": "Agent Ecosystem",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "MAESTRO 1.0",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      }
+    ],
     "tools": [],
     "incidents": [
       {
@@ -10325,11 +10471,56 @@ window.CROSSWALK_DATA = [
     "aivss_score": null,
     "audience": [
       "security-engineer",
-      "data-engineer",
-      "auditor",
-      "compliance"
+      "red-teamer",
+      "ciso",
+      "auditor"
     ],
-    "mappings": [],
+    "mappings": [
+      {
+        "framework": "MAESTRO",
+        "control_id": "L7",
+        "control_name": "Agent Ecosystem",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "MAESTRO 1.0",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "MAESTRO",
+        "control_id": "L3",
+        "control_name": "Agent Frameworks",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "MAESTRO 1.0",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "MAESTRO",
+        "control_id": "L4",
+        "control_name": "Deployment & Infrastructure",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "MAESTRO 1.0",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "MAESTRO",
+        "control_id": "L6",
+        "control_name": "Security & Compliance",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "MAESTRO 1.0",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      }
+    ],
     "tools": [],
     "incidents": [
       {
@@ -10382,11 +10573,56 @@ window.CROSSWALK_DATA = [
     "aivss_score": null,
     "audience": [
       "security-engineer",
-      "data-engineer",
-      "auditor",
-      "compliance"
+      "red-teamer",
+      "ciso",
+      "auditor"
     ],
-    "mappings": [],
+    "mappings": [
+      {
+        "framework": "MAESTRO",
+        "control_id": "L3",
+        "control_name": "Agent Frameworks",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "MAESTRO 1.0",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "MAESTRO",
+        "control_id": "L2",
+        "control_name": "Data Operations",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "MAESTRO 1.0",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "MAESTRO",
+        "control_id": "L7",
+        "control_name": "Agent Ecosystem",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "MAESTRO 1.0",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "MAESTRO",
+        "control_id": "L6",
+        "control_name": "Security & Compliance",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "MAESTRO 1.0",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      }
+    ],
     "tools": [],
     "incidents": [
       {
@@ -10433,11 +10669,45 @@ window.CROSSWALK_DATA = [
     "aivss_score": null,
     "audience": [
       "security-engineer",
-      "data-engineer",
-      "auditor",
-      "compliance"
+      "red-teamer",
+      "ciso",
+      "auditor"
     ],
-    "mappings": [],
+    "mappings": [
+      {
+        "framework": "MAESTRO",
+        "control_id": "L4",
+        "control_name": "Deployment & Infrastructure",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "MAESTRO 1.0",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "MAESTRO",
+        "control_id": "L6",
+        "control_name": "Security & Compliance",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "MAESTRO 1.0",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "MAESTRO",
+        "control_id": "L3",
+        "control_name": "Agent Frameworks",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "MAESTRO 1.0",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      }
+    ],
     "tools": [],
     "incidents": [
       {
@@ -10490,11 +10760,45 @@ window.CROSSWALK_DATA = [
     "aivss_score": null,
     "audience": [
       "security-engineer",
-      "data-engineer",
-      "auditor",
-      "compliance"
+      "red-teamer",
+      "ciso",
+      "auditor"
     ],
-    "mappings": [],
+    "mappings": [
+      {
+        "framework": "MAESTRO",
+        "control_id": "L4",
+        "control_name": "Deployment & Infrastructure",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "MAESTRO 1.0",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "MAESTRO",
+        "control_id": "L6",
+        "control_name": "Security & Compliance",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "MAESTRO 1.0",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "MAESTRO",
+        "control_id": "L7",
+        "control_name": "Agent Ecosystem",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "MAESTRO 1.0",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      }
+    ],
     "tools": [],
     "incidents": [
       {
@@ -10535,11 +10839,45 @@ window.CROSSWALK_DATA = [
     "aivss_score": null,
     "audience": [
       "security-engineer",
-      "data-engineer",
-      "auditor",
-      "compliance"
+      "red-teamer",
+      "ciso",
+      "auditor"
     ],
-    "mappings": [],
+    "mappings": [
+      {
+        "framework": "MAESTRO",
+        "control_id": "L5",
+        "control_name": "Evaluation & Observability",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "MAESTRO 1.0",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "MAESTRO",
+        "control_id": "L6",
+        "control_name": "Security & Compliance",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "MAESTRO 1.0",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "MAESTRO",
+        "control_id": "L3",
+        "control_name": "Agent Frameworks",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "MAESTRO 1.0",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      }
+    ],
     "tools": [],
     "incidents": [
       {
@@ -10592,11 +10930,45 @@ window.CROSSWALK_DATA = [
     "aivss_score": null,
     "audience": [
       "security-engineer",
-      "data-engineer",
-      "auditor",
-      "compliance"
+      "red-teamer",
+      "ciso",
+      "auditor"
     ],
-    "mappings": [],
+    "mappings": [
+      {
+        "framework": "MAESTRO",
+        "control_id": "L6",
+        "control_name": "Security & Compliance",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "MAESTRO 1.0",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "MAESTRO",
+        "control_id": "L7",
+        "control_name": "Agent Ecosystem",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "MAESTRO 1.0",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "MAESTRO",
+        "control_id": "L5",
+        "control_name": "Evaluation & Observability",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "MAESTRO 1.0",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      }
+    ],
     "tools": [],
     "incidents": [
       {
@@ -10631,11 +11003,45 @@ window.CROSSWALK_DATA = [
     "aivss_score": null,
     "audience": [
       "security-engineer",
-      "data-engineer",
-      "auditor",
-      "compliance"
+      "red-teamer",
+      "ciso",
+      "auditor"
     ],
-    "mappings": [],
+    "mappings": [
+      {
+        "framework": "MAESTRO",
+        "control_id": "L7",
+        "control_name": "Agent Ecosystem",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "MAESTRO 1.0",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "MAESTRO",
+        "control_id": "L3",
+        "control_name": "Agent Frameworks",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "MAESTRO 1.0",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "MAESTRO",
+        "control_id": "L6",
+        "control_name": "Security & Compliance",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "DRAFT — SME review required",
+        "framework_version": "MAESTRO 1.0",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      }
+    ],
     "tools": [],
     "incidents": [
       {
