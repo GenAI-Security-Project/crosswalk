@@ -5,7 +5,7 @@
 <!-- stats:badges -->
 [![Version](https://img.shields.io/badge/version-4.0.0-green)](CHANGELOG.md)
 [![Source Lists](https://img.shields.io/badge/source%20lists-4-blueviolet)](README.md)
-[![Mapping Files](https://img.shields.io/badge/mapping%20files-67-brightgreen)](README.md)
+[![Mapping Files](https://img.shields.io/badge/mapping%20files-68-brightgreen)](README.md)
 [![Frameworks](https://img.shields.io/badge/frameworks-23-orange)](README.md)
 <!-- /stats -->
 [![npm](https://img.shields.io/npm/v/genai-security-crosswalk?color=red&label=npm)](https://www.npmjs.com/package/genai-security-crosswalk)
@@ -75,7 +75,7 @@ Every file answers one question: **which controls from framework X address vulne
 |---|---|
 | **<!-- stats:source-lists -->4<!-- /stats -->** source lists | LLM Top 10 · Agentic Top 10 · DSGAI 2026 |
 | **<!-- stats:frameworks-mapped -->23<!-- /stats -->** frameworks | Compliance · Governance · Threat modeling · Testing · OT/ICS · Identity · Secure SDLC · Financial |
-| **<!-- stats:mapping-files -->67<!-- /stats -->** mapping files | Every source list entry × every applicable framework |
+| **<!-- stats:mapping-files -->68<!-- /stats -->** mapping files | Every source list entry × every applicable framework |
 | **Framework freshness** | <!-- stats:freshness -->2 current · 1 behind upstream · 22 unchecked<!-- /stats --> — see [docs/FRESHNESS_SLA.md](docs/FRESHNESS_SLA.md) |
 | **21** implementation recipes | Production-ready Python patterns |
 | **70+** open-source tools | Catalogued and organised by function |
