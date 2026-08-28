@@ -94,17 +94,25 @@ jobs:
         run: |
           git diff --quiet -I'^// Generated: ' || echo "changed=true" >> "$GITHUB_OUTPUT"
 
-      # This repository does not permit GitHub Actions to create pull requests,
-      # and that is an org-level policy we should not depend on. Actions can
-      # open issues, so the branch is pushed and an issue carries the compare
-      # link: the regeneration is never lost and the build does not go red.
-      - name: Push regenerated branch and open a tracking issue
+      # GitHub Actions is not permitted to create pull requests in this
+      # repository, and issues are disabled, so neither can be depended on.
+      # The branch is pushed and the compare link is written to the run
+      # summary, which always works and needs no repository settings. Opening
+      # an issue is attempted as a convenience and never fails the build.
+      - name: Push regenerated branch and report where to review it
         if: steps.gate.outputs.run == 'true' && steps.diff.outputs.changed == 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
           BRANCH="auto/monthly-regenerate-$(date +%Y%m%d)"
+          BASE="${{ github.event.repository.default_branch }}"
+          COMPARE="${{ github.server_url }}/${{ github.repository }}/compare/${BASE}...${BRANCH}?expand=1"
+
+          # Capture the summary before committing: the checkout is shallow, so
+          # HEAD~1 and origin/<base> are not necessarily available afterwards.
+          STAT=$(git --no-pager diff --stat)
+
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -B "$BRANCH"
@@ -112,15 +120,23 @@ jobs:
           git commit -m "chore: monthly regeneration of data layer and compliance reports"
           git push --force-with-lease origin "$BRANCH"
 
-          COMPARE="${{ github.server_url }}/${{ github.repository }}/compare/${{ github.event.repository.default_branch }}...${BRANCH}?expand=1"
-          TITLE="chore: monthly report regeneration ($(date +%Y-%m-%d))"
-          BODY=$(printf '%s\n' \
-            "Automated regeneration of \`data/entries/\` and \`docs/*.js\` is ready on \`${BRANCH}\`." \
-            "" \
-            "**Open the pull request:** ${COMPARE}" \
-            "" \
-            "This workflow cannot open the PR itself — GitHub Actions is not permitted to create pull requests in this repository — so it pushes the branch and files this issue instead. Review the diff, open the PR from the link above, and close this issue once merged." \
-            "" \
-            "Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}")
+          {
+            echo "## Monthly report regeneration"
+            echo
+            echo "The data layer changed. Regenerated output is on \`${BRANCH}\`."
+            echo
+            echo "**[Open the pull request](${COMPARE})**"
+            echo
+            echo "This workflow cannot open the PR itself: GitHub Actions is not"
+            echo "permitted to create pull requests in this repository."
+            echo
+            echo '```'
+            echo "${STAT}"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
 
-          gh issue create --title "$TITLE" --body "$BODY" --label automated-watch
+          gh issue create \
+            --title "chore: monthly report regeneration ($(date +%Y-%m-%d))" \
+            --body "Regenerated output is on \`${BRANCH}\`. Open the PR: ${COMPARE}" \
+            --label automated-watch \
+            || echo "Issue not created (issues are disabled on this repository) — see the run summary above."
