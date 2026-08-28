@@ -4,7 +4,7 @@
 [![OWASP Lab](https://img.shields.io/badge/OWASP-GenAI%20Data%20Security-blue)](https://genai.owasp.org)
 <!-- stats:badges -->
 [![Version](https://img.shields.io/badge/version-4.0.0-green)](CHANGELOG.md)
-[![Source Lists](https://img.shields.io/badge/source%20lists-3-blueviolet)](README.md)
+[![Source Lists](https://img.shields.io/badge/source%20lists-4-blueviolet)](README.md)
 [![Mapping Files](https://img.shields.io/badge/mapping%20files-67-brightgreen)](README.md)
 [![Frameworks](https://img.shields.io/badge/frameworks-23-orange)](README.md)
 <!-- /stats -->
@@ -13,7 +13,7 @@
 > The most comprehensive publicly available mapping of OWASP GenAI security risks to industry frameworks —
 > covering LLM applications, autonomous agentic AI, and GenAI data security across
 > **<!-- stats:frameworks-mapped -->23<!-- /stats --> frameworks** and
-> **<!-- stats:source-lists -->3<!-- /stats --> OWASP source lists**.
+> **<!-- stats:source-lists -->4<!-- /stats --> OWASP source lists**.
 
 ## [Live Web App](https://genai-security-project.github.io/crosswalk/) | [Score Your Coverage](https://genai-security-project.github.io/crosswalk/#/score) | [Explore Entries](https://genai-security-project.github.io/crosswalk/#/explorer) | [View Incidents](https://genai-security-project.github.io/crosswalk/#/incidents)
 
@@ -29,7 +29,7 @@ apply — across EU AI Act, NIST, ISO, SOC 2, FedRAMP, DORA, and 14 more framewo
 AI risks to all of them.
 
 **This repo solves that.** Every OWASP GenAI vulnerability
-(<!-- stats:entries -->41<!-- /stats --> total) is mapped to specific controls in
+(<!-- stats:entries -->51<!-- /stats --> total) is mapped to specific controls in
 <!-- stats:frameworks-mapped -->23<!-- /stats --> industry frameworks.
 Pick your risk, find your controls.
 
@@ -73,7 +73,7 @@ Every file answers one question: **which controls from framework X address vulne
 
 | | |
 |---|---|
-| **<!-- stats:source-lists -->3<!-- /stats -->** source lists | LLM Top 10 · Agentic Top 10 · DSGAI 2026 |
+| **<!-- stats:source-lists -->4<!-- /stats -->** source lists | LLM Top 10 · Agentic Top 10 · DSGAI 2026 |
 | **<!-- stats:frameworks-mapped -->23<!-- /stats -->** frameworks | Compliance · Governance · Threat modeling · Testing · OT/ICS · Identity · Secure SDLC · Financial |
 | **<!-- stats:mapping-files -->67<!-- /stats -->** mapping files | Every source list entry × every applicable framework |
 | **Framework freshness** | <!-- stats:freshness -->2 current · 1 behind upstream · 22 unchecked<!-- /stats --> — see [docs/FRESHNESS_SLA.md](docs/FRESHNESS_SLA.md) |
@@ -95,6 +95,7 @@ All free. All open-source. Built for practitioners.
 | [OWASP LLM Top 10](https://genai.owasp.org/llm-top-10/) | LLM01–LLM10 | 2026 | 23 |
 | [OWASP Agentic Top 10](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/) | ASI01–ASI10 | 2026 | 23 |
 | [OWASP GenAI Data Security Risks](https://genai.owasp.org/resource/owasp-genai-data-security-risks-mitigations-2026/) | DSGAI01–DSGAI21 | 2026 | 21 |
+| [OWASP Agentic Skills Top 10](https://owasp.org/www-project-agentic-skills-top-10/) | AST01–AST10 | 2026 | — *(registered; mappings pending)* |
 
 ---
 
@@ -327,7 +328,7 @@ crosswalk/
 │   ├── incidents.json               ← 50 incidents with MAESTRO layer attribution
 │   ├── incidents-schema.json        ← JSON Schema for incidents
 │   ├── tools-supplement.json        ← Supplemental tools merged at generation time
-│   ├── entries/                     ← <!-- stats:entries -->41<!-- /stats --> machine-readable entry JSON files
+│   ├── entries/                     ← <!-- stats:entries -->51<!-- /stats --> machine-readable entry JSON files
 │   └── README.md                    ← Data layer docs, jq query examples
 │
 ├── scripts/
@@ -430,8 +431,8 @@ No install required. Works on desktop and mobile.
 | Page | What it does |
 |------|-------------|
 | [**Score**](https://genai-security-project.github.io/crosswalk/#/score) | Select your frameworks, see coverage gaps. Upload Garak/PyRIT/LAAF results to validate. Share your score card on LinkedIn. |
-| [**Explorer**](https://genai-security-project.github.io/crosswalk/#/explorer) | Search and filter all <!-- stats:entries -->41<!-- /stats --> entries. Click any entry to see controls across all <!-- stats:frameworks-mapped -->23<!-- /stats --> frameworks. |
-| [**Frameworks**](https://genai-security-project.github.io/crosswalk/#/frameworks) | Interactive <!-- stats:entries -->41<!-- /stats -->×<!-- stats:frameworks-mapped -->23<!-- /stats --> coverage matrix. Click any cell to see the specific controls mapped. |
+| [**Explorer**](https://genai-security-project.github.io/crosswalk/#/explorer) | Search and filter all <!-- stats:entries -->51<!-- /stats --> entries. Click any entry to see controls across all <!-- stats:frameworks-mapped -->23<!-- /stats --> frameworks. |
+| [**Frameworks**](https://genai-security-project.github.io/crosswalk/#/frameworks) | Interactive <!-- stats:entries -->51<!-- /stats -->×<!-- stats:frameworks-mapped -->23<!-- /stats --> coverage matrix. Click any cell to see the specific controls mapped. |
 | [**Incidents**](https://genai-security-project.github.io/crosswalk/#/incidents) | Browse 50 AI security incidents. Filter by severity, year, MAESTRO layer. Full attribution details. |
 
 **Evidence-based scoring** — three validation tiers:

@@ -13,8 +13,8 @@
   "properties": {
     "id": {
       "type": "string",
-      "description": "Vulnerability identifier e.g. LLM01, ASI03, DSGAI07",
-      "pattern": "^(LLM\\d{2}|ASI\\d{2}|DSGAI\\d{2})$"
+      "description": "Vulnerability identifier e.g. LLM01, ASI03, DSGAI07, AST01",
+      "pattern": "^(LLM\\d{2}|ASI\\d{2}|DSGAI\\d{2}|AST\\d{2})$"
     },
     "name": {
       "type": "string",
@@ -25,7 +25,8 @@
       "enum": [
         "LLM-Top10-2026",
         "Agentic-Top10-2026",
-        "DSGAI-2026"
+        "DSGAI-2026",
+        "AST-Top10-2026"
       ],
       "description": "Which OWASP list this entry belongs to"
     },
@@ -237,6 +238,12 @@
           }
         },
         "dsgai_2026": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "ast_top10": {
           "type": "array",
           "items": {
             "type": "string"

@@ -41,6 +41,37 @@ Read left to right: an LLM vulnerability → its agentic amplification → its d
 
 ---
 
+### Agentic Skills Top 10 (AST) — the skill/behaviour layer
+
+A fourth OWASP source list, registered here as `AST01`–`AST10`. It covers the
+**skill layer**: the SKILL.md and manifest files telling an agent *how* to
+orchestrate tools, as distinct from MCP, which defines *what* tools exist.
+
+> **Attribution.** The Agentic Skills Top 10 is a **sibling OWASP project** with
+> its own leads and contributors. It is credited to that project exactly as the
+> LLM Top 10 and the Agentic Top 10 are, and appears here as an external source
+> list. Canonical spec:
+> <https://owasp.org/www-project-agentic-skills-top-10/>
+
+Names, severities and MAESTRO layers are transcribed from that page (verified
+2026-08-28). **Framework mappings are not yet authored** — that is expert work,
+tracked as T-A10-03. These rows are an index, not a mapping.
+
+| ID | Risk | Severity | MAESTRO layers |
+|---|---|---|---|
+| AST01 | Malicious Skills | Critical | 7, 3, 6, 4, 5 |
+| AST02 | Supply Chain Compromise | Critical | 7, 3, 6, 4 |
+| AST03 | Over-Privileged Skills | High | 6, 4, 3, 7 |
+| AST04 | Insecure Metadata | High | 7, 3, 4, 6 |
+| AST05 | Untrusted External Instructions | High | 3, 2, 7, 6 |
+| AST06 | Weak Isolation | High | 4, 6, 3 |
+| AST07 | Update Drift | Medium | 4, 6, 7 |
+| AST08 | Poor Scanning | Medium | 5, 6, 3 |
+| AST09 | No Governance | Medium | 6, 7, 5 |
+| AST10 | Cross-Platform Reuse | Medium | 7, 3, 6 |
+
+---
+
 ### Referenced but not yet mapped
 
 These frameworks are relevant to the risks above and are **not** part of this

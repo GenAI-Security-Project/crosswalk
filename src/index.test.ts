@@ -5,8 +5,12 @@ import { entries, incidents, getEntry, getFramework, searchEntries, frameworks, 
   coverage } from './index';
 
 describe('@owasp/genai-crosswalk', () => {
-  it('loads all 41 entries', () => {
-    assert.equal(entries.length, 41);
+  // Asserted against the generated count rather than a literal. This test said
+  // 41 and broke the moment a fourth source list was registered — exactly the
+  // hardcoded-count drift T-DATA01 removed from the README.
+  it('loads every entry the stats report', () => {
+    assert.equal(entries.length, stats.entries.total);
+    assert.ok(entries.length > 0);
   });
 
   it('loads 31 incidents', () => {

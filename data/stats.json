@@ -3,22 +3,25 @@
   "schema": 1,
   "version": "4.0.0",
   "source_lists": {
-    "count": 3,
+    "count": 4,
     "ids": [
       "LLM-Top10-2026",
       "Agentic-Top10-2026",
-      "DSGAI-2026"
+      "DSGAI-2026",
+      "AST-Top10-2026"
     ],
     "labels": [
       "LLM Top 10",
       "Agentic Top 10",
-      "DSGAI 2026"
+      "DSGAI 2026",
+      "Agentic Skills Top 10"
     ]
   },
   "entries": {
-    "total": 41,
+    "total": 51,
     "by_list": {
       "Agentic-Top10-2026": 10,
+      "AST-Top10-2026": 10,
       "DSGAI-2026": 21,
       "LLM-Top10-2026": 10
     }
@@ -27,6 +30,7 @@
     "total": 3211,
     "by_list": {
       "Agentic-Top10-2026": 849,
+      "AST-Top10-2026": 0,
       "DSGAI-2026": 1521,
       "LLM-Top10-2026": 841
     }
@@ -41,7 +45,8 @@
     "by_list": {
       "LLM-Top10-2026": 23,
       "Agentic-Top10-2026": 23,
-      "DSGAI-2026": 21
+      "DSGAI-2026": 21,
+      "AST-Top10-2026": 0
     }
   },
   "mapping_files": {
@@ -49,7 +54,8 @@
     "by_list": {
       "LLM-Top10-2026": 23,
       "Agentic-Top10-2026": 23,
-      "DSGAI-2026": 21
+      "DSGAI-2026": 21,
+      "AST-Top10-2026": 0
     }
   },
   "incidents": {

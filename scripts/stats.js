@@ -41,6 +41,7 @@ const SOURCE_LISTS = [
   { id: 'LLM-Top10-2026', label: 'LLM Top 10', dir: 'llm-top10' },
   { id: 'Agentic-Top10-2026', label: 'Agentic Top 10', dir: 'agentic-top10' },
   { id: 'DSGAI-2026', label: 'DSGAI 2026', dir: 'dsgai-2026' },
+  { id: 'AST-Top10-2026', label: 'Agentic Skills Top 10', dir: 'ast-top10' },
 ];
 
 /** LF-normalise so comparisons are content-based, not checkout-dependent. */
@@ -49,8 +50,12 @@ const normalizeEol = (s) => s.replace(/\r\n/g, '\n');
 const readJson = (p) => JSON.parse(fs.readFileSync(p, 'utf8'));
 const jsonFiles = (dir) =>
   fs.readdirSync(dir).filter((f) => f.endsWith('.json')).map((f) => path.join(dir, f));
+// A directory README documents the folder rather than mapping a framework, so
+// it is not counted as a mapping file.
 const mdFiles = (dir) =>
-  fs.existsSync(dir) ? fs.readdirSync(dir).filter((f) => f.endsWith('.md')) : [];
+  fs.existsSync(dir)
+    ? fs.readdirSync(dir).filter((f) => f.endsWith('.md') && f.toLowerCase() !== 'readme.md')
+    : [];
 
 /**
  * Framework freshness, derived from data/framework-sources.json.
