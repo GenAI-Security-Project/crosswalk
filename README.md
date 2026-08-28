@@ -76,6 +76,7 @@ Every file answers one question: **which controls from framework X address vulne
 | **<!-- stats:source-lists -->3<!-- /stats -->** source lists | LLM Top 10 · Agentic Top 10 · DSGAI 2026 |
 | **<!-- stats:frameworks-mapped -->23<!-- /stats -->** frameworks | Compliance · Governance · Threat modeling · Testing · OT/ICS · Identity · Secure SDLC · Financial |
 | **<!-- stats:mapping-files -->67<!-- /stats -->** mapping files | Every source list entry × every applicable framework |
+| **Framework freshness** | <!-- stats:freshness -->2 current · 1 behind upstream · 22 unchecked<!-- /stats --> — see [docs/FRESHNESS_SLA.md](docs/FRESHNESS_SLA.md) |
 | **21** implementation recipes | Production-ready Python patterns |
 | **70+** open-source tools | Catalogued and organised by function |
 | **25** eval profiles | Runnable Garak (13) + PyRIT (6) + LAAF (6) tests mapped to OWASP entries |
