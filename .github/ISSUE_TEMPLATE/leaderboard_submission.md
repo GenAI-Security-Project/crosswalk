@@ -12,7 +12,7 @@ assignees: OWASP GenAI Data Security Initiative
 
 **Industry:** (e.g. Financial Services, Healthcare, Technology, Government, etc.)
 
-**Score:** (from the [scoring tool](https://OWASP GenAI Data Security Initiative.github.io/GenAI-Security-Crosswalk/#/score))
+**Score:** (from the [scoring tool](https://genai-security-project.github.io/crosswalk/#/score))
 
 **Frameworks selected:** (list the frameworks you implement)
 

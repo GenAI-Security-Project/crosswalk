@@ -20,7 +20,7 @@
 > referencia** y **3 listas fuente de OWASP**.
 
 Mantenido por la [Iniciativa de Seguridad de Datos GenAI de OWASP](https://genai.owasp.org).
-Creado por **[OWASP GenAI Data Security Initiative](https://github.com/OWASP GenAI Data Security Initiative)**.
+Creado por **[OWASP GenAI Data Security Initiative](https://github.com/GenAI-Security-Project)**.
 
 ---
 
@@ -519,7 +519,7 @@ adecuada y distribución bajo la misma licencia.
 
 ## Agradecimientos
 
-Creado y mantenido por **[OWASP GenAI Data Security Initiative](https://github.com/OWASP GenAI Data Security Initiative)** y la
+Creado y mantenido por **[OWASP GenAI Data Security Initiative](https://github.com/GenAI-Security-Project)** y la
 [Iniciativa de Seguridad de Datos GenAI de OWASP](https://genai.owasp.org) .
 
 Construido sobre el trabajo de los equipos de proyectos OWASP LLM Top 10, OWASP Agentic Top 10, OWASP GenAI
