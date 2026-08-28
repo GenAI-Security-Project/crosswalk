@@ -25,6 +25,7 @@
     "registry-coverage": "node scripts/coverage-of-registry.js",
     "density": "node scripts/density-report.js",
     "inventory": "node scripts/inventory-completeness.js",
+    "export:olir": "node scripts/export-olir.mjs",
     "compliance": "node scripts/compliance-report.js",
     "incidents": "node scripts/incidents-report.js",
     "query": "node scripts/query.js",
@@ -37,7 +38,8 @@
     "build:reports": "npm run compliance && npm run incidents && npm run registry-coverage && npm run density && npm run inventory",
     "ci": "npm run build && npm run build:reports",
     "compile": "tsc",
-    "prepublishOnly": "npm run compile"
+    "prepublishOnly": "npm run compile",
+    "test:scripts": "node --test \"scripts/**/*.test.mjs\""
   },
   "license": "CC-BY-SA-4.0",
   "repository": {
