@@ -1355,7 +1355,8 @@ input, select { font-family: inherit; }
   var SOURCE_LABELS = {
     'LLM-Top10-2026': 'LLM Top 10 2026',
     'Agentic-Top10-2026': 'Agentic Top 10 2026',
-    'DSGAI-2026': 'DSGAI 2026'
+    'DSGAI-2026': 'DSGAI 2026',
+    'AST-Top10-2026': 'Agentic Skills Top 10'
   };
 
   // Placeholder entries — replace with real submissions
@@ -1854,7 +1855,8 @@ input, select { font-family: inherit; }
     var sourceGroups = [
       { key: 'LLM-Top10-2026', name: 'LLM Top 10 2026', prefix: 'LLM' },
       { key: 'Agentic-Top10-2026', name: 'Agentic Top 10 2026', prefix: 'ASI' },
-      { key: 'DSGAI-2026', name: 'DSGAI 2026', prefix: 'DSGAI' }
+      { key: 'DSGAI-2026', name: 'DSGAI 2026', prefix: 'DSGAI' },
+      { key: 'AST-Top10-2026', name: 'Agentic Skills Top 10', prefix: 'AST' }
     ];
 
     sourceGroups.forEach(function(sg) {
@@ -1959,7 +1961,7 @@ input, select { font-family: inherit; }
 
     // Source pills
     var srcGroup = el('div', { className: 'pill-group' });
-    [['All', ''], ['LLM', 'LLM-Top10-2026'], ['Agentic', 'Agentic-Top10-2026'], ['DSGAI', 'DSGAI-2026']].forEach(function(item) {
+    [['All', ''], ['LLM', 'LLM-Top10-2026'], ['Agentic', 'Agentic-Top10-2026'], ['DSGAI', 'DSGAI-2026'], ['Skills', 'AST-Top10-2026']].forEach(function(item) {
       var p = el('button', {
         className: 'pill' + (item[0] === 'All' ? ' active' : ''),
         'aria-label': 'Filter by ' + item[0] + ' source list'
@@ -2246,6 +2248,12 @@ input, select { font-family: inherit; }
   // ══════════════════════════════════════════════════════════════════════════════
   function renderFrameworks(container) {
     // Build framework data
+    // Entries with no mappings at all cannot be covered by any framework, so
+    // they are excluded from the coverage denominator. Counting them would
+    // deflate every framework's percentage by the size of an unmapped source
+    // list (see ast-top10/README.md).
+    var MAPPABLE = DATA.filter(function(e) { return e.mappings.length > 0; }).length;
+
     var fwData = FRAMEWORKS.map(function(fw) {
       var entries = DATA.filter(function(e) { return e.mappings.some(function(m) { return m.framework === fw; }); });
       var totalControls = 0;
@@ -2253,13 +2261,14 @@ input, select { font-family: inherit; }
       var llm = entries.filter(function(e) { return e.source_list === 'LLM-Top10-2026'; }).length;
       var asi = entries.filter(function(e) { return e.source_list === 'Agentic-Top10-2026'; }).length;
       var dsg = entries.filter(function(e) { return e.source_list === 'DSGAI-2026'; }).length;
-      var covLevel = Math.round(entries.length / DATA.length * 100) >= 90 ? 'High' : Math.round(entries.length / DATA.length * 100) >= 70 ? 'Medium' : 'Low';
+      var covPct = MAPPABLE > 0 ? Math.round(entries.length / MAPPABLE * 100) : 0;
+      var covLevel = covPct >= 90 ? 'High' : covPct >= 70 ? 'Medium' : 'Low';
       // Collect unique source lists
       var srcLists = [];
       if (llm > 0) srcLists.push('LLM');
       if (asi > 0) srcLists.push('Agentic');
       if (dsg > 0) srcLists.push('DSGAI');
-      return { name: fw, entries: entries.length, controls: totalControls, pct: Math.round(entries.length / DATA.length * 100), llm: llm, asi: asi, dsg: dsg, covLevel: covLevel, srcLists: srcLists };
+      return { name: fw, entries: entries.length, controls: totalControls, pct: covPct, llm: llm, asi: asi, dsg: dsg, covLevel: covLevel, srcLists: srcLists };
     }).sort(function(a, b) { return b.entries - a.entries; });
 
     var totalMapped = 0;
@@ -3325,7 +3334,8 @@ input, select { font-family: inherit; }
   var CW_OWASP_COLOR = {
     'LLM-Top10-2026': '#dc2626',
     'Agentic-Top10-2026': '#7c3aed',
-    'DSGAI-2026': '#0891b2'
+    'DSGAI-2026': '#0891b2',
+    'AST-Top10-2026': '#7c3aed'
   };
   function cwColorFor(framework, colorMap) {
     if (CW_OWASP_COLOR[framework]) return CW_OWASP_COLOR[framework];
@@ -3389,7 +3399,8 @@ input, select { font-family: inherit; }
   var CW_SOURCE_META = {
     'LLM-Top10-2026': { label: 'LLM Top 10', sub: '2026' },
     'Agentic-Top10-2026': { label: 'Agentic Top 10', sub: '2026' },
-    'DSGAI-2026': { label: 'DSGAI', sub: '2026' }
+    'DSGAI-2026': { label: 'DSGAI', sub: '2026' },
+    'AST-Top10-2026': { label: 'Agentic Skills', sub: '2026' }
   };
 
   function renderCrosswalk(container) {
@@ -3534,6 +3545,7 @@ input, select { font-family: inherit; }
       { id: 'LLM-Top10-2026', label: 'LLM Top 10' },
       { id: 'Agentic-Top10-2026', label: 'Agentic Top 10' },
       { id: 'DSGAI-2026', label: 'DSGAI' },
+      { id: 'AST-Top10-2026', label: 'Agentic Skills' },
       { id: 'risks', label: 'Risks only' },
       { id: 'frameworks', label: 'Frameworks only' }
     ];
@@ -4261,7 +4273,8 @@ input, select { font-family: inherit; }
     var SOURCE_GROUPS = [
       { label: 'LLM Top 10', prefix: 'LLM', list: 'LLM-Top10-2026' },
       { label: 'Agentic Top 10', prefix: 'ASI', list: 'Agentic-Top10-2026' },
-      { label: 'DSGAI 2026', prefix: 'DSGAI', list: 'DSGAI-2026' }
+      { label: 'DSGAI 2026', prefix: 'DSGAI', list: 'DSGAI-2026' },
+      { label: 'Agentic Skills Top 10', prefix: 'AST', list: 'AST-Top10-2026' }
     ];
 
     function computeGaps() {
@@ -4292,7 +4305,7 @@ input, select { font-family: inherit; }
       // Sort: group by source_list, then status (none first), then severity
       var sevOrder = { Critical: 0, High: 1, Medium: 2, Low: 3 };
       var statusOrder = { none: 0, partial: 1, full: 2 };
-      var sourceOrder = { 'LLM-Top10-2026': 0, 'Agentic-Top10-2026': 1, 'DSGAI-2026': 2 };
+      var sourceOrder = { 'LLM-Top10-2026': 0, 'Agentic-Top10-2026': 1, 'DSGAI-2026': 2, 'AST-Top10-2026': 3 };
       results.sort(function(a, b) {
         var s = (sourceOrder[a.source_list] || 9) - (sourceOrder[b.source_list] || 9);
         if (s !== 0) return s;
@@ -4824,7 +4837,7 @@ input, select { font-family: inherit; }
       var overallPct = totalWeight > 0 ? Math.round((weightedScore / totalWeight) * 100) : 0;
 
       // Per source list
-      var sourceLists = ['LLM-Top10-2026', 'Agentic-Top10-2026', 'DSGAI-2026'];
+      var sourceLists = ['LLM-Top10-2026', 'Agentic-Top10-2026', 'DSGAI-2026', 'AST-Top10-2026'];
       var sourceStats = {};
       sourceLists.forEach(function(sl) {
         var slEntries = entryScores.filter(function(es) { return es.entry.source_list === sl; });
