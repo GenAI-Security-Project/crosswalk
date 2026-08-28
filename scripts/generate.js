@@ -312,21 +312,100 @@ function parseMaestroLayers(sectionBody, frameworkName, qr) {
     const key       = `${layerId}:${layerName}`;
     if (seen.has(key)) continue;
     seen.add(key);
-    mappings.push({
+    // MAESTRO layers come from bold headers rather than a table, so they take
+    // the same v2 defaults every other unmigrated row gets — otherwise these
+    // 120 rows would carry no confidence field at all and read as exempt.
+    mappings.push(applyV2({
       framework:    frameworkName,
       control_id:   layerId,
       control_name: layerName,
       tier:         qr?.tier  ?? 'Foundational',
       scope:        qr?.scope ?? 'Both',
-    });
+    }, {}));
   }
   return mappings;
+}
+
+// ─── Schema v2 ────────────────────────────────────────────────────────────────
+
+/**
+ * Schema-v2 relationship vocabulary, from NIST IR 8278A Rev. 1 §3.1:
+ * "subset of, intersects with, equal, superset of, or not related to".
+ * Stored hyphenated so the value is a stable machine token; the OLIR export
+ * expands it back to the spec's spacing.
+ */
+const OLIR_RELATIONSHIPS = ['equal', 'subset-of', 'superset-of', 'intersects-with', 'not-related-to'];
+const OLIR_RATIONALE_TYPES = ['syntactic', 'semantic', 'functional'];
+const CONFIDENCE_LEVELS = ['high', 'medium', 'low', 'unreviewed'];
+
+/** Normalise a table cell to a v2 enum value, or undefined if it is not one. */
+function v2Enum(cell, allowed) {
+  if (!cell) return undefined;
+  const v = cell.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z-]/g, '');
+  return allowed.includes(v) ? v : undefined;
+}
+
+/**
+ * Attach schema-v2 fields to a mapping.
+ *
+ * A row that carries no v2 columns is tagged `confidence: unreviewed` rather
+ * than left bare. That is the honest label for the 3,211 rows written before
+ * the schema existed: they assert a relationship nobody has typed, scored, or
+ * signed. Silence would read as "fine".
+ */
+function applyV2(mapping, cells) {
+  const rel = v2Enum(cells.relationship, OLIR_RELATIONSHIPS);
+  const rt = v2Enum(cells.rationale_type, OLIR_RATIONALE_TYPES);
+  const conf = v2Enum(cells.confidence, CONFIDENCE_LEVELS);
+
+  if (rel) mapping.relationship = rel;
+  if (rt) mapping.rationale_type = rt;
+  if (cells.rationale) mapping.rationale = cells.rationale.replace(/\s+/g, ' ').trim();
+  if (cells.framework_version) mapping.framework_version = cells.framework_version.trim();
+
+  mapping.confidence = conf || 'unreviewed';
+  mapping.reviewed_by = cells.reviewed_by
+    ? cells.reviewed_by.split(/\s*[,;]\s*/).filter((s) => s && !/^\(?unreviewed\)?$/i.test(s))
+    : [];
+  if (cells.review_date && /^\d{4}-\d{2}-\d{2}$/.test(cells.review_date.trim())) {
+    mapping.review_date = cells.review_date.trim();
+  }
+  return mapping;
 }
 
 /**
  * Parse framework control mappings from a vulnerability section body.
  * Returns Mapping[]
  */
+/**
+ * Map a markdown table's header cells to schema-v2 field names.
+ *
+ * Files are migrated one at a time, so a table may carry all, some, or none of
+ * the v2 columns, in any order. Matching by header name rather than position
+ * keeps a partially migrated repo parseable. Order matters below: "rationale
+ * type" must be tested before "rationale", or the prose column would win.
+ */
+function v2HeaderIndex(tableText) {
+  const idx = {
+    relationship: -1, rationale_type: -1, rationale: -1, confidence: -1,
+    framework_version: -1, reviewed_by: -1, review_date: -1,
+  };
+  const headerLine = tableText.split('\n').find((l) => l.trim().startsWith('|'));
+  if (!headerLine) return idx;
+
+  splitRow(headerLine).forEach((cell, i) => {
+    const h = cell.toLowerCase().replace(/[^a-z ]/g, ' ').replace(/\s+/g, ' ').trim();
+    if (/^relationship/.test(h)) idx.relationship = i;
+    else if (/^rationale (type|kind)/.test(h)) idx.rationale_type = i;
+    else if (/^(rationale|justification)/.test(h)) idx.rationale = i;
+    else if (/^confidence/.test(h)) idx.confidence = i;
+    else if (/^framework ver|^version/.test(h)) idx.framework_version = i;
+    else if (/^reviewed by|^reviewer/.test(h)) idx.reviewed_by = i;
+    else if (/^review date/.test(h)) idx.review_date = i;
+  });
+  return idx;
+}
+
 function parseControlTable(sectionBody, frameworkName, qr) {
   const subsections = extractSubsections(sectionBody);
 
@@ -347,6 +426,7 @@ function parseControlTable(sectionBody, frameworkName, qr) {
   const rows = parseTable(mappingSection.body);
   if (!rows.length) return [];
 
+  const header = v2HeaderIndex(mappingSection.body);
   const mappings = [];
 
   for (const cols of rows) {
@@ -354,7 +434,14 @@ function parseControlTable(sectionBody, frameworkName, qr) {
 
     const col0 = cols[0];
     const col1 = cols[1];
-    const lastCol = cols[cols.length - 1];
+    // `notes` is taken from the last descriptive column. Once a file is
+    // migrated to schema v2 the trailing columns are metadata (relationship,
+    // confidence, reviewed by, …), so they are skipped — otherwise notes would
+    // read "(unreviewed)".
+    const v2Cols = new Set(Object.values(header).filter((i) => i >= 0));
+    let lastIdx = cols.length - 1;
+    while (lastIdx > 1 && v2Cols.has(lastIdx)) lastIdx--;
+    const lastCol = cols[lastIdx];
 
     // Extract control name and ID
     let controlName = '';
@@ -410,6 +497,18 @@ function parseControlTable(sectionBody, frameworkName, qr) {
     if (cols.length >= 3 && lastCol && lastCol !== controlId && lastCol !== controlName && lastCol.length > 5) {
       mapping.notes = lastCol.replace(/\s+/g, ' ').trim().substring(0, 350);
     }
+
+    // Schema v2: read the columns when a file has been migrated, and tag the
+    // row `unreviewed` when it has not.
+    applyV2(mapping, {
+      relationship:      header.relationship      >= 0 ? cols[header.relationship]      : '',
+      rationale_type:    header.rationale_type    >= 0 ? cols[header.rationale_type]    : '',
+      rationale:         header.rationale         >= 0 ? cols[header.rationale]         : '',
+      confidence:        header.confidence        >= 0 ? cols[header.confidence]        : '',
+      framework_version: header.framework_version >= 0 ? cols[header.framework_version] : '',
+      reviewed_by:       header.reviewed_by       >= 0 ? cols[header.reviewed_by]       : '',
+      review_date:       header.review_date       >= 0 ? cols[header.review_date]       : '',
+    });
 
     mappings.push(mapping);
   }

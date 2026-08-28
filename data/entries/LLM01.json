@@ -23,7 +23,9 @@
       "tier": "Foundational",
       "scope": "Both",
       "url": "https://atlas.mitre.org/techniques/AML.T0051.000",
-      "notes": "Attacker directly manipulates user-facing prompt to alter model behaviour"
+      "notes": "Attacker directly manipulates user-facing prompt to alter model behaviour",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MITRE ATLAS",
@@ -32,7 +34,9 @@
       "tier": "Foundational",
       "scope": "Both",
       "url": "https://atlas.mitre.org/techniques/AML.T0051.001",
-      "notes": "Hidden instructions in content the model processes (documents, web, RAG)"
+      "notes": "Hidden instructions in content the model processes (documents, web, RAG)",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MITRE ATLAS",
@@ -41,7 +45,9 @@
       "tier": "Foundational",
       "scope": "Both",
       "url": "https://atlas.mitre.org/techniques/AML.T0054",
-      "notes": "Circumventing model safety guardrails via crafted prompt sequences"
+      "notes": "Circumventing model safety guardrails via crafted prompt sequences",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -49,7 +55,9 @@
       "control_name": "Policies for trustworthy AI characteristics",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Organisational policies explicitly address adversarial input risks including prompt injection"
+      "notes": "Organisational policies explicitly address adversarial input risks including prompt injection",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -57,7 +65,9 @@
       "control_name": "Risk categorisation",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Prompt injection categorised as a high-priority risk in the AI system risk register"
+      "notes": "Prompt injection categorised as a high-priority risk in the AI system risk register",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -65,7 +75,9 @@
       "control_name": "Testing and evaluation — adversarial",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Adversarial testing programme validates model resilience to prompt injection at each release"
+      "notes": "Adversarial testing programme validates model resilience to prompt injection at each release",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -73,7 +85,9 @@
       "control_name": "Risk response — incident",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Defined incident response procedures for detected prompt injection attacks"
+      "notes": "Defined incident response procedures for detected prompt injection attacks",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -81,7 +95,9 @@
       "control_name": "Art. 9 — Risk management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Prompt injection must be identified, analysed, and mitigated in the risk management system"
+      "notes": "Prompt injection must be identified, analysed, and mitigated in the risk management system",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -89,7 +105,9 @@
       "control_name": "Art. 15 — Accuracy, robustness, cybersecurity",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Robustness against prompt injection is a technical compliance requirement — not optional"
+      "notes": "Robustness against prompt injection is a technical compliance requirement — not optional",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -97,7 +115,9 @@
       "control_name": "Art. 55(1)(b) — Systemic risk GPAI",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Prompt injection adversarial testing is a binding obligation for systemic risk models"
+      "notes": "Prompt injection adversarial testing is a binding obligation for systemic risk models",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -105,7 +125,10 @@
       "control_name": "Secure coding",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Secure coding requirements for all LLM integration code — input validation, sanitisation, context separation"
+      "notes": "Secure coding requirements for all LLM integration code — input validation, sanitisation, context separation",
+      "framework_version": "ISO 27001:2022",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -113,7 +136,10 @@
       "control_name": "Security testing",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Adversarial testing programme covering prompt injection scenarios before each release"
+      "notes": "Adversarial testing programme covering prompt injection scenarios before each release",
+      "framework_version": "ISO 27001:2022",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -121,7 +147,10 @@
       "control_name": "Threat intelligence",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Active intelligence on prompt injection techniques — new attack patterns inform detection controls"
+      "notes": "Active intelligence on prompt injection techniques — new attack patterns inform detection controls",
+      "framework_version": "ISO 27001:2022",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -129,7 +158,10 @@
       "control_name": "Monitoring activities",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Runtime monitoring for prompt injection indicators in LLM inputs and outputs"
+      "notes": "Runtime monitoring for prompt injection indicators in LLM inputs and outputs",
+      "framework_version": "ISO 27001:2022",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -137,7 +169,9 @@
       "control_name": "AI system security",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "AI systems designed with security controls — input validation, context separation, injection detection as AIMS design requirements"
+      "notes": "AI systems designed with security controls — input validation, context separation, injection detection as AIMS design requirements",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -145,7 +179,9 @@
       "control_name": "Testing of AI systems",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "AI systems tested before deployment — adversarial testing for prompt injection as AIMS testing requirement"
+      "notes": "AI systems tested before deployment — adversarial testing for prompt injection as AIMS testing requirement",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -153,7 +189,9 @@
       "control_name": "Monitoring of AI systems",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "AI systems monitored in operation — runtime injection detection as AIMS monitoring control"
+      "notes": "AI systems monitored in operation — runtime injection detection as AIMS monitoring control",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -161,7 +199,9 @@
       "control_name": "Risk assessment",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Prompt injection included in AI risk assessment — risk owner, treatment, review cadence documented"
+      "notes": "Prompt injection included in AI risk assessment — risk owner, treatment, review cadence documented",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
@@ -169,7 +209,9 @@
       "control_name": "CIS 16 — Application Software Security",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Secure development standards covering LLM integration — input validation, context separation"
+      "notes": "Secure development standards covering LLM integration — input validation, context separation",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
@@ -177,7 +219,9 @@
       "control_name": "CIS 16 — Application Software Security",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Code review for all LLM integration code — prompt injection patterns reviewed"
+      "notes": "Code review for all LLM integration code — prompt injection patterns reviewed",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
@@ -185,7 +229,9 @@
       "control_name": "CIS 18 — Penetration Testing",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Adversarial testing programme covering prompt injection scenarios"
+      "notes": "Adversarial testing programme covering prompt injection scenarios",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
@@ -193,7 +239,9 @@
       "control_name": "CIS 8 — Audit Log Management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Runtime logging of all LLM inputs — injection attempts detectable through log analysis"
+      "notes": "Runtime logging of all LLM inputs — injection attempts detectable through log analysis",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
@@ -201,7 +249,9 @@
       "control_name": "Verify all user input validated against an allowlist or rejected",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All inputs to LLMs validated — indirect injection through processed content equally in scope"
+      "notes": "All inputs to LLMs validated — indirect injection through processed content equally in scope",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
@@ -209,7 +259,9 @@
       "control_name": "Verify that HTTP request parts are validated, sanitised, or rejected",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM API request validation — prompt structure, content type, and character set enforced"
+      "notes": "LLM API request validation — prompt structure, content type, and character set enforced",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
@@ -217,7 +269,9 @@
       "control_name": "Verify output encoding prevents injection attacks",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM output encoding before passing to downstream renderers or interpreters"
+      "notes": "LLM output encoding before passing to downstream renderers or interpreters",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
@@ -225,7 +279,9 @@
       "control_name": "Verify application protects against OS command injection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM-generated content validated before execution in any shell or interpreter context"
+      "notes": "LLM-generated content validated before execution in any shell or interpreter context",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
@@ -233,7 +289,9 @@
       "control_name": "Threat modelling of all data flows",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM data flows threat-modelled — all injection paths identified and documented"
+      "notes": "LLM data flows threat-modelled — all injection paths identified and documented",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
@@ -241,7 +299,9 @@
       "control_name": "Verify business logic limits prevent abuse of LLM functions",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Business logic controls preventing prompt injection from triggering unauthorised actions"
+      "notes": "Business logic controls preventing prompt injection from triggering unauthorised actions",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -249,7 +309,9 @@
       "control_name": "Software and information integrity",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All inputs to LLMs connected to OT systems validated for integrity — crafted inputs rejected"
+      "notes": "All inputs to LLMs connected to OT systems validated for integrity — crafted inputs rejected",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -257,7 +319,9 @@
       "control_name": "Least privilege",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLMs granted minimum necessary access to OT data — cannot read or write to control systems without explicit scoping"
+      "notes": "LLMs granted minimum necessary access to OT data — cannot read or write to control systems without explicit scoping",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -265,7 +329,9 @@
       "control_name": "Use control enforcement",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Enforcement of permitted use of LLM within OT context — out-of-scope requests rejected at the gateway layer"
+      "notes": "Enforcement of permitted use of LLM within OT context — out-of-scope requests rejected at the gateway layer",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -273,7 +339,9 @@
       "control_name": "Authenticator feedback",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM interactions logged with user identity — injection attempts attributable to specific sessions"
+      "notes": "LLM interactions logged with user identity — injection attempts attributable to specific sessions",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -281,7 +349,9 @@
       "control_name": "Remote session termination",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Ability to terminate LLM sessions immediately on detection of suspicious behaviour"
+      "notes": "Ability to terminate LLM sessions immediately on detection of suspicious behaviour",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -289,7 +359,9 @@
       "control_name": "Section 5.3 — Threats",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Prompt injection as a new logic attack vector through LLM at the IT/OT boundary"
+      "notes": "Prompt injection as a new logic attack vector through LLM at the IT/OT boundary",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -297,7 +369,9 @@
       "control_name": "Section 6.2 — Risk assessment",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Prompt injection documented in OT risk assessment for each LLM integration"
+      "notes": "Prompt injection documented in OT risk assessment for each LLM integration",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -305,7 +379,9 @@
       "control_name": "Section 7.2 — Network segmentation",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Input validation layer at the DMZ/control zone boundary — prompt injection filtered before reaching LLM"
+      "notes": "Input validation layer at the DMZ/control zone boundary — prompt injection filtered before reaching LLM",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -313,7 +389,9 @@
       "control_name": "Control",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Application"
+      "notes": "Application",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -321,7 +399,9 @@
       "control_name": "SI-10",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Validate all inputs to LLMs connected to OT systems — reject inputs containing injection indicators"
+      "notes": "Validate all inputs to LLMs connected to OT systems — reject inputs containing injection indicators",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -329,7 +409,9 @@
       "control_name": "SI-3",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Treat prompt injection as a malicious code analog — detection and response controls required"
+      "notes": "Treat prompt injection as a malicious code analog — detection and response controls required",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -337,7 +419,9 @@
       "control_name": "AC-3",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM access to OT systems enforced by policy — injection cannot escalate LLM access beyond defined scope"
+      "notes": "LLM access to OT systems enforced by policy — injection cannot escalate LLM access beyond defined scope",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -345,7 +429,9 @@
       "control_name": "Platform Security",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Secure software development practices applied to LLM integrations — input validation as a platform security control"
+      "notes": "Secure software development practices applied to LLM integrations — input validation as a platform security control",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -353,7 +439,9 @@
       "control_name": "Continuous Monitoring",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Networks and assets monitored for anomalies — LLM input channels monitored for injection indicators"
+      "notes": "Networks and assets monitored for anomalies — LLM input channels monitored for injection indicators",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -361,7 +449,9 @@
       "control_name": "Risk Assessment",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Vulnerabilities in assets identified and documented — prompt injection as a documented vulnerability class for all LLM deployments"
+      "notes": "Vulnerabilities in assets identified and documented — prompt injection as a documented vulnerability class for all LLM deployments",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -369,35 +459,45 @@
       "control_name": "Organisational Context",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Mission and stakeholder expectations inform cybersecurity risk decisions — acceptable LLM use scope defines injection risk surface"
+      "notes": "Mission and stakeholder expectations inform cybersecurity risk decisions — acceptable LLM use scope defines injection risk surface",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Prompt injection documented as a threat in LLM application risk assessment — vectors, likelihood, impact assessed",
       "control_name": "CC3.2 — Risk assessment identifies threats and vulnerabilities",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Runtime monitoring for prompt injection indicators on all LLM input channels — alerts integrated into SOC monitoring",
       "control_name": "CC7.2 — Anomaly and threat detection",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Input validation procedures documented for all LLM integrations — implemented, tested, and reviewed",
       "control_name": "CC5.2 — Select and develop control activities",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "LLM access controls limit the blast radius of successful injection — least privilege enforced on all tool access",
       "control_name": "CC6.1 — Logical access restrictions",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -405,7 +505,9 @@
       "control_name": "Secure software development",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All injection vulnerabilities addressed in LLM integration code — prompt injection as a known injection class"
+      "notes": "All injection vulnerabilities addressed in LLM integration code — prompt injection as a known injection class",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -413,7 +515,9 @@
       "control_name": "Public-facing application protection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM-powered customer-facing applications protected against prompt injection — WAF or equivalent, security testing"
+      "notes": "LLM-powered customer-facing applications protected against prompt injection — WAF or equivalent, security testing",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -421,7 +525,9 @@
       "control_name": "Audit log review",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Automated log analysis covering LLM injection indicators — anomalous inputs detected and reviewed"
+      "notes": "Automated log analysis covering LLM injection indicators — anomalous inputs detected and reviewed",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -429,7 +535,9 @@
       "control_name": "External and internal penetration testing",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Penetration testing includes prompt injection scenarios for all LLM applications in PCI scope"
+      "notes": "Penetration testing includes prompt injection scenarios for all LLM applications in PCI scope",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -437,7 +545,9 @@
       "control_name": "AI System Integrity (ASI)",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM applications tested against prompt injection before deployment — adversarial inputs validated as part of AI system integrity verification"
+      "notes": "LLM applications tested against prompt injection before deployment — adversarial inputs validated as part of AI system integrity verification",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -445,7 +555,9 @@
       "control_name": "Monitoring and Detection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Runtime monitoring for injection indicators across all LLM input channels — AI-specific anomaly detection"
+      "notes": "Runtime monitoring for injection indicators across all LLM input channels — AI-specific anomaly detection",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -453,7 +565,9 @@
       "control_name": "Governance and Risk (GOV)",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Prompt injection documented in AI risk register — risk assessment per deployment, treatment controls, review cadence"
+      "notes": "Prompt injection documented in AI risk register — risk assessment per deployment, treatment controls, review cadence",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -461,7 +575,9 @@
       "control_name": "General ICT — Secure Development",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Input validation and context separation as secure development requirements for all LLM integrations"
+      "notes": "Input validation and context separation as secure development requirements for all LLM integrations",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -469,7 +585,9 @@
       "control_name": "Threat Assessment",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM data flows threat-modelled — all injection paths (direct, indirect, multi-turn) identified and documented"
+      "notes": "LLM data flows threat-modelled — all injection paths (direct, indirect, multi-turn) identified and documented",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -477,7 +595,9 @@
       "control_name": "Secure Build",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Input validation and context separation as secure build requirements — reviewed in CI/CD before merge"
+      "notes": "Input validation and context separation as secure build requirements — reviewed in CI/CD before merge",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -485,7 +605,9 @@
       "control_name": "Security Testing",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Adversarial testing programme covering prompt injection — direct, indirect, RAG-specific, jailbreak scenarios"
+      "notes": "Adversarial testing programme covering prompt injection — direct, indirect, RAG-specific, jailbreak scenarios",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -493,28 +615,36 @@
       "control_name": "Incident Management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Runtime injection detection as operational monitoring — alerts integrated into incident management"
+      "notes": "Runtime injection detection as operational monitoring — alerts integrated into incident management",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "STRIDE",
       "control_id": "S",
       "control_name": "Instruction Spoofing",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "STRIDE",
       "control_id": "T",
       "control_name": "Behaviour Tampering",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "STRIDE",
       "control_id": "E",
       "control_name": "Privilege Elevation via Injection",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -522,7 +652,9 @@
       "control_name": "CWE-20",
       "tier": "Foundational",
       "scope": "Both",
-      "url": "https://cwe.mitre.org/data/definitions/20.html"
+      "url": "https://cwe.mitre.org/data/definitions/20.html",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -530,7 +662,9 @@
       "control_name": "CWE-74",
       "tier": "Foundational",
       "scope": "Both",
-      "url": "https://cwe.mitre.org/data/definitions/74.html"
+      "url": "https://cwe.mitre.org/data/definitions/74.html",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -538,7 +672,9 @@
       "control_name": "CWE-77",
       "tier": "Foundational",
       "scope": "Both",
-      "url": "https://cwe.mitre.org/data/definitions/77.html"
+      "url": "https://cwe.mitre.org/data/definitions/77.html",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP AI Testing Guide",
@@ -546,7 +682,9 @@
       "control_name": "IHT — Input Handling",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Inject instruction-overriding content through user prompt, RAG-retrieved documents, tool return values, uploaded files, and any other data source the LLM processes"
+      "notes": "Inject instruction-overriding content through user prompt, RAG-retrieved documents, tool return values, uploaded files, and any other data source the LLM processes",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP AI Testing Guide",
@@ -554,7 +692,9 @@
       "control_name": "MBT — Model Behaviour",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Verify the LLM's task framing at request start matches its actions and outputs at completion — test divergence after injection"
+      "notes": "Verify the LLM's task framing at request start matches its actions and outputs at completion — test divergence after injection",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP AI Testing Guide",
@@ -562,28 +702,36 @@
       "control_name": "LMT — Logging & Monitoring",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Verify that injection attempts are flagged in monitoring and appear in audit logs with sufficient detail for incident response"
+      "notes": "Verify that injection attempts are flagged in monitoring and appear in audit logs with sufficient detail for incident response",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L1",
       "control_name": "Foundation Models",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L2",
       "control_name": "Data Operations",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L3",
       "control_name": "Agent Frameworks",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -591,7 +739,9 @@
       "control_name": "Third-party adversarial robustness testing",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -599,7 +749,9 @@
       "control_name": "Detect adversarial input",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Hardening"
+      "notes": "Hardening",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -607,7 +759,9 @@
       "control_name": "Implement real-time input filtering",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -615,7 +769,9 @@
       "control_name": "Prevent unauthorized AI actions",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -623,7 +779,9 @@
       "control_name": "NHI-5 Over-Privileged NHI",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Apply least-privilege to all LLM application credentials"
+      "notes": "Apply least-privilege to all LLM application credentials",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -631,7 +789,9 @@
       "control_name": "NHI-7 Long-Lived Credentials",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Rotate all LLM application tokens; implement short-lived token pattern"
+      "notes": "Rotate all LLM application tokens; implement short-lived token pattern",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -639,7 +799,9 @@
       "control_name": "Design software to meet security requirements — adversarial input",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Threat model the AI pipeline for adversarial input vectors including direct and indirect prompt injection; document mitigating design decisions"
+      "notes": "Threat model the AI pipeline for adversarial input vectors including direct and indirect prompt injection; document mitigating design decisions",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -647,7 +809,9 @@
       "control_name": "Review the software for security vulnerabilities — model behaviour",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Review model outputs and system behaviour for unexpected responses to adversarial inputs; include injection bypass scenarios in code and design reviews"
+      "notes": "Review model outputs and system behaviour for unexpected responses to adversarial inputs; include injection bypass scenarios in code and design reviews",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -655,7 +819,9 @@
       "control_name": "Test for security vulnerabilities — adversarial / red-team",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Conduct adversarial testing (red-teaming) against prompt injection vectors before each production release; cover direct, indirect, and multimodal injection paths"
+      "notes": "Conduct adversarial testing (red-teaming) against prompt injection vectors before each production release; cover direct, indirect, and multimodal injection paths",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -663,7 +829,9 @@
       "control_name": "Identify and confirm vulnerabilities — AI-specific",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Establish procedures to identify prompt injection incidents in production including monitoring, triage, and confirmation workflows"
+      "notes": "Establish procedures to identify prompt injection incidents in production including monitoring, triage, and confirmation workflows",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -671,7 +839,9 @@
       "control_name": "Malicious Code Protection — adversarial AI inputs",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Extend malicious code protection to detect and block adversarial inputs including direct and indirect prompt injection payloads"
+      "notes": "Extend malicious code protection to detect and block adversarial inputs including direct and indirect prompt injection payloads",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -679,7 +849,9 @@
       "control_name": "Information Input Validation — prompt validation",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Validate all inputs to LLM inference endpoints; enforce structural separation between instruction and data contexts; reject known injection patterns"
+      "notes": "Validate all inputs to LLM inference endpoints; enforce structural separation between instruction and data contexts; reject known injection patterns",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -687,7 +859,9 @@
       "control_name": "Vulnerability Scanning — AI red-teaming",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Include prompt injection vectors in vulnerability scanning programme; conduct regular automated and manual injection testing"
+      "notes": "Include prompt injection vectors in vulnerability scanning programme; conduct regular automated and manual injection testing",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -695,7 +869,9 @@
       "control_name": "Penetration Testing — AI adversarial testing",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Include prompt injection scenarios in penetration testing engagements; cover direct, indirect, and multimodal injection paths"
+      "notes": "Include prompt injection scenarios in penetration testing engagements; cover direct, indirect, and multimodal injection paths",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -703,7 +879,9 @@
       "control_name": "Protection and Prevention — adversarial input controls",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Implement ICT security controls to detect and block adversarial inputs including direct and indirect prompt injection; treat as a mandatory protection measure"
+      "notes": "Implement ICT security controls to detect and block adversarial inputs including direct and indirect prompt injection; treat as a mandatory protection measure",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -711,7 +889,9 @@
       "control_name": "Digital Operational Resilience Testing — AI red-teaming",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Include prompt injection scenarios in threat-led penetration testing (TLPT); cover direct, indirect, and multimodal injection vectors targeting financial AI services"
+      "notes": "Include prompt injection scenarios in threat-led penetration testing (TLPT); cover direct, indirect, and multimodal injection vectors targeting financial AI services",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -719,7 +899,9 @@
       "control_name": "Detection — injection monitoring",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Deploy detection mechanisms for prompt injection attempts; monitor inference requests for adversarial patterns and alert security operations"
+      "notes": "Deploy detection mechanisms for prompt injection attempts; monitor inference requests for adversarial patterns and alert security operations",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -727,7 +909,9 @@
       "control_name": "Information Sharing — injection threat intelligence",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Share prompt injection threat intelligence with sector peers through DORA information sharing arrangements"
+      "notes": "Share prompt injection threat intelligence with sector peers through DORA information sharing arrangements",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     }
   ],
   "tools": [

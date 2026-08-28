@@ -23,7 +23,9 @@
       "control_name": "Denial of ML Service",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Adversary saturates GenAI pipeline — vector store, RAG retrieval, or inference endpoint rendered unavailable"
+      "notes": "Adversary saturates GenAI pipeline — vector store, RAG retrieval, or inference endpoint rendered unavailable",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MITRE ATLAS",
@@ -31,7 +33,9 @@
       "control_name": "Cost Harvesting",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Adversary triggers disproportionate resource consumption through crafted queries — financial or operational DoS"
+      "notes": "Adversary triggers disproportionate resource consumption through crafted queries — financial or operational DoS",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MITRE ATLAS",
@@ -39,7 +43,9 @@
       "control_name": "Data from Information Repositories",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Pipeline failures may expose data through error messages or fallback paths that lack normal access controls"
+      "notes": "Pipeline failures may expose data through error messages or fallback paths that lack normal access controls",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -47,7 +53,9 @@
       "control_name": "Risk tolerance",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Availability risk tolerance defined for AI pipelines — RTO/RPO per component documented"
+      "notes": "Availability risk tolerance defined for AI pipelines — RTO/RPO per component documented",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -55,7 +63,9 @@
       "control_name": "Testing — adversarial",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Resilience testing of RAG pipelines — vector store saturation, stale replica, index corruption"
+      "notes": "Resilience testing of RAG pipelines — vector store saturation, stale replica, index corruption",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -63,7 +73,9 @@
       "control_name": "Risk response",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Incident response for AI pipeline availability failures — silent degradation detection and response"
+      "notes": "Incident response for AI pipeline availability failures — silent degradation detection and response",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -71,7 +83,9 @@
       "control_name": "Residual risk",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Residual availability risk documented — BCP coverage for AI pipeline components"
+      "notes": "Residual availability risk documented — BCP coverage for AI pipeline components",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -79,7 +93,9 @@
       "control_name": "Art. 15 — Accuracy, robustness, cybersecurity",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Vector store redundancy, circuit breakers, and staleness detection are Art. 15 requirements"
+      "notes": "Vector store redundancy, circuit breakers, and staleness detection are Art. 15 requirements",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -87,7 +103,9 @@
       "control_name": "Art. 17 — Quality management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "AI pipeline availability monitoring in quality management and post-market monitoring programme"
+      "notes": "AI pipeline availability monitoring in quality management and post-market monitoring programme",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -95,7 +113,9 @@
       "control_name": "ICT readiness for business continuity",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "AI pipeline availability requirements included in BCP — RTO/RPO defined for vector stores and RAG components"
+      "notes": "AI pipeline availability requirements included in BCP — RTO/RPO defined for vector stores and RAG components",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -103,7 +123,9 @@
       "control_name": "Backup",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Backup and recovery for all AI data assets — vector stores, embedding indexes, RAG corpora"
+      "notes": "Backup and recovery for all AI data assets — vector stores, embedding indexes, RAG corpora",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -111,7 +133,9 @@
       "control_name": "Redundancy",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Redundancy and failover for production RAG and vector store infrastructure"
+      "notes": "Redundancy and failover for production RAG and vector store infrastructure",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -119,7 +143,9 @@
       "control_name": "Incident management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Incident management procedures covering AI pipeline availability failures"
+      "notes": "Incident management procedures covering AI pipeline availability failures",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -127,7 +153,9 @@
       "control_name": "A.6.2.8",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -135,7 +163,9 @@
       "control_name": "A.6.2.6",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Hardening"
+      "notes": "Hardening",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -143,7 +173,9 @@
       "control_name": "Cl.8",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -151,42 +183,54 @@
       "control_name": "Cl.10",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Hardening"
+      "notes": "Hardening",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
       "control_id": "CIS 11",
       "control_name": "11.1 — Establish recovery capability",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
       "control_id": "CIS 11",
       "control_name": "11.4 — Test data recovery",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
       "control_id": "CIS 13",
       "control_name": "13.8 — Deploy DNS filtering",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
       "control_id": "V11 Business Logic",
       "control_name": "V11.1.7 — Anti-automation controls",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
       "control_id": "V13 API",
       "control_name": "V13.1.2 — API throttling",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -194,7 +238,9 @@
       "control_name": "Denial of service protection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Circuit breakers preventing OT GenAI service degradation from affecting process control"
+      "notes": "Circuit breakers preventing OT GenAI service degradation from affecting process control",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -202,7 +248,9 @@
       "control_name": "Control system backup",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "OT GenAI failures cannot affect backup and recovery of process control — independence verified"
+      "notes": "OT GenAI failures cannot affect backup and recovery of process control — independence verified",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -210,7 +258,9 @@
       "control_name": "Timely response to events",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "OT GenAI pipeline failures treated as security events — process control fallback activated"
+      "notes": "OT GenAI pipeline failures treated as security events — process control fallback activated",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -218,7 +268,9 @@
       "control_name": "Information flow restriction",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "OT GenAI availability events do not propagate to process control — architectural separation"
+      "notes": "OT GenAI availability events do not propagate to process control — architectural separation",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -226,7 +278,9 @@
       "control_name": "§5.5",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Model components are supply chain assets in OT"
+      "notes": "Model components are supply chain assets in OT",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -234,7 +288,9 @@
       "control_name": "§6.3",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Model provenance for OT deployments"
+      "notes": "Model provenance for OT deployments",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -242,7 +298,9 @@
       "control_name": "§8.4",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Vendor assessment for model providers"
+      "notes": "Vendor assessment for model providers",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -250,7 +308,9 @@
       "control_name": "Infrastructure Resilience",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Networks and environments protected for resilience — circuit breakers, freshness monitoring, redundancy"
+      "notes": "Networks and environments protected for resilience — circuit breakers, freshness monitoring, redundancy",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -258,7 +318,9 @@
       "control_name": "Continuous Monitoring",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "GenAI pipeline health monitored — freshness, availability metrics reviewed continuously"
+      "notes": "GenAI pipeline health monitored — freshness, availability metrics reviewed continuously",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -266,7 +328,9 @@
       "control_name": "Incident Mitigation",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Pipeline failures contained — circuit breaker activation, graceful degradation, user notification"
+      "notes": "Pipeline failures contained — circuit breaker activation, graceful degradation, user notification",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -274,35 +338,45 @@
       "control_name": "Incident Recovery",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Recovery plan includes GenAI pipeline failures — BCP covers AI availability, RTO/RPO defined"
+      "notes": "Recovery plan includes GenAI pipeline failures — BCP covers AI availability, RTO/RPO defined",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "LLM service availability commitments cover RAG freshness — stale data producing misinformation is an availability failure",
       "control_name": "A1.1 — Availability policy",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Circuit breakers and freshness monitoring protect availability commitments — graceful degradation over silent failure",
       "control_name": "A1.2 — Environmental protections",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "RAG freshness monitoring — alert when index staleness exceeds threshold before misinformation reaches users",
       "control_name": "CC7.2 — Anomaly detection",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Silent RAG degradation identified as availability risk in assessment",
       "control_name": "CC3.2 — Risk assessment",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -310,7 +384,9 @@
       "control_name": "Targeted risk analysis",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Targeted risk analysis for GenAI availability in payment processing — silent failure impact on fraud detection"
+      "notes": "Targeted risk analysis for GenAI availability in payment processing — silent failure impact on fraud detection",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -318,7 +394,9 @@
       "control_name": "Network security",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Rate limiting protecting availability of CDE-facing LLM endpoints — DoS prevention"
+      "notes": "Rate limiting protecting availability of CDE-facing LLM endpoints — DoS prevention",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -326,7 +404,9 @@
       "control_name": "Audit log review",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Automated monitoring for GenAI pipeline health in CDE — freshness and availability metrics reviewed"
+      "notes": "Automated monitoring for GenAI pipeline health in CDE — freshness and availability metrics reviewed",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -334,7 +414,9 @@
       "control_name": "Incident response",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Incident response procedure covers GenAI pipeline failures affecting payment processing"
+      "notes": "Incident response procedure covers GenAI pipeline failures affecting payment processing",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -342,7 +424,9 @@
       "control_name": "General ICT — Business Continuity",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All GenAI critical assets backed up — training data, model weights, embedding stores, RAG corpora subject to backup and recovery testing"
+      "notes": "All GenAI critical assets backed up — training data, model weights, embedding stores, RAG corpora subject to backup and recovery testing",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -350,7 +434,9 @@
       "control_name": "Incident Response",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "AI incident response plan covers availability failures — model rollback procedure, RAG corpus recovery, embedding store restoration"
+      "notes": "AI incident response plan covers availability failures — model rollback procedure, RAG corpus recovery, embedding store restoration",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -358,7 +444,9 @@
       "control_name": "Monitoring and Detection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "GenAI asset availability monitored — alerts on data store unavailability, model health degradation, pipeline failures"
+      "notes": "GenAI asset availability monitored — alerts on data store unavailability, model health degradation, pipeline failures",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -366,7 +454,9 @@
       "control_name": "Data and Model Security (DMS)",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Model weights and training artefacts protected against accidental or malicious deletion — versioned storage, immutable backups"
+      "notes": "Model weights and training artefacts protected against accidental or malicious deletion — versioned storage, immutable backups",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -374,7 +464,9 @@
       "control_name": "Governance / Policy & Compliance",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Only approved model sources; provenance verification required"
+      "notes": "Only approved model sources; provenance verification required",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -382,7 +474,9 @@
       "control_name": "Implementation / Secure Build",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "SBOM covering base models, adapters, and ML framework dependencies"
+      "notes": "SBOM covering base models, adapters, and ML framework dependencies",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -390,7 +484,9 @@
       "control_name": "Verification / Architecture Assessment",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Architecture review validates model sourcing against policy"
+      "notes": "Architecture review validates model sourcing against policy",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -398,7 +494,9 @@
       "control_name": "Design / Threat Assessment",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Model compromise scenarios for base models, adapters, and frameworks"
+      "notes": "Model compromise scenarios for base models, adapters, and frameworks",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -406,7 +504,9 @@
       "control_name": "Operations / Operational Management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Track CVEs and security advisories for all model components"
+      "notes": "Track CVEs and security advisories for all model components",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -414,7 +514,9 @@
       "control_name": "CWE-400",
       "tier": "Foundational",
       "scope": "Both",
-      "url": "https://cwe.mitre.org/data/definitions/400.html"
+      "url": "https://cwe.mitre.org/data/definitions/400.html",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -422,28 +524,36 @@
       "control_name": "CWE-770",
       "tier": "Foundational",
       "scope": "Both",
-      "url": "https://cwe.mitre.org/data/definitions/770.html"
+      "url": "https://cwe.mitre.org/data/definitions/770.html",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L4",
       "control_name": "Deployment & Infrastructure",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L7",
       "control_name": "Agent Ecosystem",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L5",
       "control_name": "Evaluation & Observability",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -451,7 +561,9 @@
       "control_name": "Third-party adversarial robustness testing",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -459,7 +571,9 @@
       "control_name": "Third-party security assessment",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Hardening"
+      "notes": "Hardening",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -467,7 +581,9 @@
       "control_name": "Third-party NHI controls",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Hardening"
+      "notes": "Hardening",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -475,7 +591,9 @@
       "control_name": "Data & Privacy domain",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -483,7 +601,9 @@
       "control_name": "NHI-3 Vulnerable Third-Party NHI",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Review and scope all model provider credentials"
+      "notes": "Review and scope all model provider credentials",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -491,7 +611,9 @@
       "control_name": "NHI-8 Environment Isolation Failure",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Separate credentials per environment"
+      "notes": "Separate credentials per environment",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -499,7 +621,9 @@
       "control_name": "NHI-2 Secret Leakage",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Vault all model provider credentials"
+      "notes": "Vault all model provider credentials",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -507,7 +631,9 @@
       "control_name": "Review for security vulnerabilities — bias and fairness review",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Include bias, fairness, and discrimination testing in pre-release model behaviour reviews; assess model outputs across protected attributes and demographic groups"
+      "notes": "Include bias, fairness, and discrimination testing in pre-release model behaviour reviews; assess model outputs across protected attributes and demographic groups",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -515,7 +641,9 @@
       "control_name": "Test for security vulnerabilities — adversarial fairness testing",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Conduct adversarial testing for discriminatory outputs; test model behaviour across demographic groups, intersectional categories, and edge cases"
+      "notes": "Conduct adversarial testing for discriminatory outputs; test model behaviour across demographic groups, intersectional categories, and edge cases",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -523,7 +651,9 @@
       "control_name": "Analyse root causes — bias source tracing",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "When discriminatory behaviour is identified, conduct root cause analysis tracing bias to specific training data sources, labelling processes, or preprocessing steps"
+      "notes": "When discriminatory behaviour is identified, conduct root cause analysis tracing bias to specific training data sources, labelling processes, or preprocessing steps",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -531,7 +661,9 @@
       "control_name": "System Monitoring — bias detection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Monitor AI outputs for bias indicators; track fairness metrics across demographic groups and use cases"
+      "notes": "Monitor AI outputs for bias indicators; track fairness metrics across demographic groups and use cases",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -539,7 +671,9 @@
       "control_name": "Continuous Monitoring — fairness monitoring",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Include bias and fairness metrics in continuous monitoring; track output equity over time"
+      "notes": "Include bias and fairness metrics in continuous monitoring; track output equity over time",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -547,7 +681,9 @@
       "control_name": "Vulnerability Scanning — bias assessment",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Include bias detection and fairness assessment in vulnerability scanning; test for disparate impact"
+      "notes": "Include bias detection and fairness assessment in vulnerability scanning; test for disparate impact",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -555,7 +691,9 @@
       "control_name": "ICT Risk Management — fairness governance",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Include AI bias and fairness in ICT risk management; define fairness requirements for financial AI systems and acceptable disparity thresholds"
+      "notes": "Include AI bias and fairness in ICT risk management; define fairness requirements for financial AI systems and acceptable disparity thresholds",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -563,7 +701,9 @@
       "control_name": "Resilience Testing — bias testing",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Include bias detection and fairness testing in resilience testing programme; test for disparate impact in financial AI outputs across demographic groups"
+      "notes": "Include bias detection and fairness testing in resilience testing programme; test for disparate impact in financial AI outputs across demographic groups",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -571,7 +711,9 @@
       "control_name": "Learning and Evolving — fairness improvement",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Apply lessons learned from bias incidents; update training data, model parameters, and controls based on fairness assessments"
+      "notes": "Apply lessons learned from bias incidents; update training data, model parameters, and controls based on fairness assessments",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     }
   ],
   "tools": [

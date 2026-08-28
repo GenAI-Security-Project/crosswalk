@@ -25,6 +25,14 @@ This file covers LLM01–LLM10 mapped to ISO 27001:2022 Annex A controls.
 For the DSGAI 2026 × ISO 27001 mapping covering the full GenAI data
 security surface, see `dsgai-2026/DSGAI_ISO27001.md`.
 
+> **Schema v2 — request for review.** This file is the migration template for
+> [schema v2](../docs/SCHEMA_V2_MIGRATION.md). Every row now carries the OLIR
+> relationship fields, and every one of those values reads `DRAFT`: the shape is
+> in place, the judgment is not. An agent does not author a relationship type,
+> a confidence level, or a rationale. Until a named reviewer fills these in and
+> appears in **Reviewed by**, treat the mappings here exactly as you would the
+> rest of the repository — `confidence: unreviewed`.
+
 ---
 
 ## Why ISO 27001 for LLM security
@@ -128,12 +136,12 @@ invisible-Unicode carriers survive review of the rendered interface.
 
 #### ISO 27001:2022 mapping
 
-| Control | ID | Domain | How it applies |
-|---|---|---|---|
-| Secure coding | A.8.28 | Technological | Secure coding requirements for all LLM integration code — input validation, sanitisation, context separation |
-| Security testing | A.8.29 | Technological | Adversarial testing programme covering prompt injection scenarios before each release |
-| Threat intelligence | A.5.7 | Organisational | Active intelligence on prompt injection techniques — new attack patterns inform detection controls |
-| Monitoring activities | A.8.16 | Technological | Runtime monitoring for prompt injection indicators in LLM inputs and outputs |
+| Control | ID | Domain | How it applies | Relationship | Rationale type | Confidence | Framework ver. | Reviewed by |
+|---|---|---|---|---|---|---|---|---|
+| Secure coding | A.8.28 | Technological | Secure coding requirements for all LLM integration code — input validation, sanitisation, context separation | DRAFT | DRAFT | DRAFT | ISO 27001:2022 | (unreviewed) |
+| Security testing | A.8.29 | Technological | Adversarial testing programme covering prompt injection scenarios before each release | DRAFT | DRAFT | DRAFT | ISO 27001:2022 | (unreviewed) |
+| Threat intelligence | A.5.7 | Organisational | Active intelligence on prompt injection techniques — new attack patterns inform detection controls | DRAFT | DRAFT | DRAFT | ISO 27001:2022 | (unreviewed) |
+| Monitoring activities | A.8.16 | Technological | Runtime monitoring for prompt injection indicators in LLM inputs and outputs | DRAFT | DRAFT | DRAFT | ISO 27001:2022 | (unreviewed) |
 
 #### Mitigations by tier
 
@@ -203,12 +211,12 @@ over-permissive RAG retrieval, or improperly sanitised responses.
 
 #### ISO 27001:2022 mapping
 
-| Control | ID | Domain | How it applies |
-|---|---|---|---|
-| Data masking | A.8.11 | Technological | Output redaction for PII and sensitive patterns before responses reach users |
-| Data leakage prevention | A.8.12 | Technological | DLP on all LLM output channels — API, chat interface, logs |
-| Classification of information | A.5.12 | Organisational | All data in LLM scope classified — training data, RAG sources, outputs, embeddings |
-| Information access restriction | A.8.3 | Technological | Access controls on RAG retrieval — users retrieve only data they are authorised to access |
+| Control | ID | Domain | How it applies | Relationship | Rationale type | Confidence | Framework ver. | Reviewed by |
+|---|---|---|---|---|---|---|---|---|
+| Data masking | A.8.11 | Technological | Output redaction for PII and sensitive patterns before responses reach users | DRAFT | DRAFT | DRAFT | ISO 27001:2022 | (unreviewed) |
+| Data leakage prevention | A.8.12 | Technological | DLP on all LLM output channels — API, chat interface, logs | DRAFT | DRAFT | DRAFT | ISO 27001:2022 | (unreviewed) |
+| Classification of information | A.5.12 | Organisational | All data in LLM scope classified — training data, RAG sources, outputs, embeddings | DRAFT | DRAFT | DRAFT | ISO 27001:2022 | (unreviewed) |
+| Information access restriction | A.8.3 | Technological | Access controls on RAG retrieval — users retrieve only data they are authorised to access | DRAFT | DRAFT | DRAFT | ISO 27001:2022 | (unreviewed) |
 
 #### Mitigations by tier
 
@@ -269,12 +277,12 @@ or misaligned goal-following.
 
 #### ISO 27001:2022 mapping
 
-| Control | ID | Domain | How it applies |
-|---|---|---|---|
-| Privileged access rights | A.8.2 | Technological | LLM tool access managed as privileged access — minimum scope, reviewed regularly |
-| Acceptable use of assets | A.5.10 | Organisational | Policy defining acceptable LLM autonomous actions — approved tool use cases documented |
-| Logging | A.8.15 | Technological | All LLM tool invocations logged with full context — every tool call auditable |
-| Identity management | A.5.15 | Organisational | LLM tool access governed through identity management — tool permissions scoped per deployment |
+| Control | ID | Domain | How it applies | Relationship | Rationale type | Confidence | Framework ver. | Reviewed by |
+|---|---|---|---|---|---|---|---|---|
+| Privileged access rights | A.8.2 | Technological | LLM tool access managed as privileged access — minimum scope, reviewed regularly | DRAFT | DRAFT | DRAFT | ISO 27001:2022 | (unreviewed) |
+| Acceptable use of assets | A.5.10 | Organisational | Policy defining acceptable LLM autonomous actions — approved tool use cases documented | DRAFT | DRAFT | DRAFT | ISO 27001:2022 | (unreviewed) |
+| Logging | A.8.15 | Technological | All LLM tool invocations logged with full context — every tool call auditable | DRAFT | DRAFT | DRAFT | ISO 27001:2022 | (unreviewed) |
+| Identity management | A.5.15 | Organisational | LLM tool access governed through identity management — tool permissions scoped per deployment | DRAFT | DRAFT | DRAFT | ISO 27001:2022 | (unreviewed) |
 
 #### Mitigations by tier
 
@@ -350,12 +358,12 @@ dependency is clean.
 
 #### ISO 27001:2022 mapping
 
-| Control | ID | Domain | How it applies |
-|---|---|---|---|
-| Supplier relationships | A.5.19 | Organisational | Security requirements applied to all LLM model and data vendors — provenance, integrity, disclosure obligations |
-| Supplier agreements | A.5.20 | Organisational | Contractual security requirements for LLM component suppliers — integrity guarantees, vulnerability notification |
-| Supply chain security | A.5.21 | Organisational | Managing ICT supply chain risks — LLM model and library supply chain explicitly in scope |
-| Management of technical vulnerabilities | A.8.8 | Technological | Scanning and patching LLM component vulnerabilities — model weights and inference runtime libraries |
+| Control | ID | Domain | How it applies | Relationship | Rationale type | Confidence | Framework ver. | Reviewed by |
+|---|---|---|---|---|---|---|---|---|
+| Supplier relationships | A.5.19 | Organisational | Security requirements applied to all LLM model and data vendors — provenance, integrity, disclosure obligations | DRAFT | DRAFT | DRAFT | ISO 27001:2022 | (unreviewed) |
+| Supplier agreements | A.5.20 | Organisational | Contractual security requirements for LLM component suppliers — integrity guarantees, vulnerability notification | DRAFT | DRAFT | DRAFT | ISO 27001:2022 | (unreviewed) |
+| Supply chain security | A.5.21 | Organisational | Managing ICT supply chain risks — LLM model and library supply chain explicitly in scope | DRAFT | DRAFT | DRAFT | ISO 27001:2022 | (unreviewed) |
+| Management of technical vulnerabilities | A.8.8 | Technological | Scanning and patching LLM component vulnerabilities — model weights and inference runtime libraries | DRAFT | DRAFT | DRAFT | ISO 27001:2022 | (unreviewed) |
 
 #### Mitigations by tier
 
@@ -430,12 +438,12 @@ stage that writes weights, not just the original training corpus.
 
 #### ISO 27001:2022 mapping
 
-| Control | ID | Domain | How it applies |
-|---|---|---|---|
-| Management of technical vulnerabilities | A.8.8 | Technological | Training pipeline dependency scanning — vulnerabilities in training infrastructure components |
-| Secure system architecture | A.8.27 | Technological | Training pipeline designed with integrity controls — data validation, source allowlisting, lineage tracking |
-| Security testing | A.8.29 | Technological | Adversarial testing covering poisoning detection before each production model promotion |
-| Threat intelligence | A.5.7 | Organisational | Intelligence on active data poisoning campaigns targeting your sector and model type |
+| Control | ID | Domain | How it applies | Relationship | Rationale type | Confidence | Framework ver. | Reviewed by |
+|---|---|---|---|---|---|---|---|---|
+| Management of technical vulnerabilities | A.8.8 | Technological | Training pipeline dependency scanning — vulnerabilities in training infrastructure components | DRAFT | DRAFT | DRAFT | ISO 27001:2022 | (unreviewed) |
+| Secure system architecture | A.8.27 | Technological | Training pipeline designed with integrity controls — data validation, source allowlisting, lineage tracking | DRAFT | DRAFT | DRAFT | ISO 27001:2022 | (unreviewed) |
+| Security testing | A.8.29 | Technological | Adversarial testing covering poisoning detection before each production model promotion | DRAFT | DRAFT | DRAFT | ISO 27001:2022 | (unreviewed) |
+| Threat intelligence | A.5.7 | Organisational | Intelligence on active data poisoning campaigns targeting your sector and model type | DRAFT | DRAFT | DRAFT | ISO 27001:2022 | (unreviewed) |
 
 #### Mitigations by tier
 
@@ -503,12 +511,12 @@ runaway cost in production LLM deployments.
 
 #### ISO 27001:2022 mapping
 
-| Control | ID | Domain | How it applies |
-|---|---|---|---|
-| Monitoring activities | A.8.16 | Technological | Real-time monitoring of LLM resource consumption — cost anomaly detection and alerting |
-| ICT readiness for business continuity | A.5.30 | Organisational | LLM availability requirements in BCP — RTO/RPO defined, rate limiting as resilience control |
-| Backup | A.8.13 | Technological | Backup and recovery for LLM service infrastructure — failover capability tested |
-| Incident management | A.5.24 | Organisational | Incident response procedures for LLM availability failures and cost overruns |
+| Control | ID | Domain | How it applies | Relationship | Rationale type | Confidence | Framework ver. | Reviewed by |
+|---|---|---|---|---|---|---|---|---|
+| Monitoring activities | A.8.16 | Technological | Real-time monitoring of LLM resource consumption — cost anomaly detection and alerting | DRAFT | DRAFT | DRAFT | ISO 27001:2022 | (unreviewed) |
+| ICT readiness for business continuity | A.5.30 | Organisational | LLM availability requirements in BCP — RTO/RPO defined, rate limiting as resilience control | DRAFT | DRAFT | DRAFT | ISO 27001:2022 | (unreviewed) |
+| Backup | A.8.13 | Technological | Backup and recovery for LLM service infrastructure — failover capability tested | DRAFT | DRAFT | DRAFT | ISO 27001:2022 | (unreviewed) |
+| Incident management | A.5.24 | Organisational | Incident response procedures for LLM availability failures and cost overruns | DRAFT | DRAFT | DRAFT | ISO 27001:2022 | (unreviewed) |
 
 #### Mitigations by tier
 
@@ -570,12 +578,12 @@ reputational harm.
 
 #### ISO 27001:2022 mapping
 
-| Control | ID | Domain | How it applies |
-|---|---|---|---|
-| Monitoring activities | A.8.16 | Technological | Production monitoring for output accuracy — hallucination rate tracking, anomaly detection on model drift |
-| Threat intelligence | A.5.7 | Organisational | Intelligence on disinformation campaigns and active manipulation of RAG sources |
-| Information security awareness training | A.6.3 | People | User training on LLM output limitations — verification requirements and critical evaluation |
-| Compliance with policies | A.5.36 | Organisational | Policy on AI-generated content accuracy — disclosure requirements, human verification thresholds |
+| Control | ID | Domain | How it applies | Relationship | Rationale type | Confidence | Framework ver. | Reviewed by |
+|---|---|---|---|---|---|---|---|---|
+| Monitoring activities | A.8.16 | Technological | Production monitoring for output accuracy — hallucination rate tracking, anomaly detection on model drift | DRAFT | DRAFT | DRAFT | ISO 27001:2022 | (unreviewed) |
+| Threat intelligence | A.5.7 | Organisational | Intelligence on disinformation campaigns and active manipulation of RAG sources | DRAFT | DRAFT | DRAFT | ISO 27001:2022 | (unreviewed) |
+| Information security awareness training | A.6.3 | People | User training on LLM output limitations — verification requirements and critical evaluation | DRAFT | DRAFT | DRAFT | ISO 27001:2022 | (unreviewed) |
+| Compliance with policies | A.5.36 | Organisational | Policy on AI-generated content accuracy — disclosure requirements, human verification thresholds | DRAFT | DRAFT | DRAFT | ISO 27001:2022 | (unreviewed) |
 
 #### Mitigations by tier
 
@@ -653,12 +661,12 @@ treat it as a security boundary.
 
 #### ISO 27001:2022 mapping
 
-| Control | ID | Domain | How it applies |
-|---|---|---|---|
-| Classification of information | A.5.12 | Organisational | System prompts classified as sensitive configuration — subject to data governance policy |
-| Information access restriction | A.8.3 | Technological | Access controls on system prompt storage — version controlled, access logged |
-| Use of cryptography | A.8.24 | Technological | System prompts encrypted at rest — not stored in cleartext configuration files |
-| Logging | A.8.15 | Technological | Access to system prompts logged — unauthorised access attempts detectable |
+| Control | ID | Domain | How it applies | Relationship | Rationale type | Confidence | Framework ver. | Reviewed by |
+|---|---|---|---|---|---|---|---|---|
+| Classification of information | A.5.12 | Organisational | System prompts classified as sensitive configuration — subject to data governance policy | DRAFT | DRAFT | DRAFT | ISO 27001:2022 | (unreviewed) |
+| Information access restriction | A.8.3 | Technological | Access controls on system prompt storage — version controlled, access logged | DRAFT | DRAFT | DRAFT | ISO 27001:2022 | (unreviewed) |
+| Use of cryptography | A.8.24 | Technological | System prompts encrypted at rest — not stored in cleartext configuration files | DRAFT | DRAFT | DRAFT | ISO 27001:2022 | (unreviewed) |
+| Logging | A.8.15 | Technological | Access to system prompts logged — unauthorised access attempts detectable | DRAFT | DRAFT | DRAFT | ISO 27001:2022 | (unreviewed) |
 
 #### Mitigations by tier
 
@@ -720,12 +728,12 @@ search poisoning to return attacker-controlled content.
 
 #### ISO 27001:2022 mapping
 
-| Control | ID | Domain | How it applies |
-|---|---|---|---|
-| Information access restriction | A.8.3 | Technological | RBAC on all vector store collections — no unauthenticated access to any collection |
-| Use of cryptography | A.8.24 | Technological | Encryption of all vector store data at rest and in transit |
-| Monitoring activities | A.8.16 | Technological | Anomaly detection on vector store query patterns — bulk extraction and poisoning indicators |
-| Data masking | A.8.11 | Technological | Differential privacy in embedding generation for sensitive corpora |
+| Control | ID | Domain | How it applies | Relationship | Rationale type | Confidence | Framework ver. | Reviewed by |
+|---|---|---|---|---|---|---|---|---|
+| Information access restriction | A.8.3 | Technological | RBAC on all vector store collections — no unauthenticated access to any collection | DRAFT | DRAFT | DRAFT | ISO 27001:2022 | (unreviewed) |
+| Use of cryptography | A.8.24 | Technological | Encryption of all vector store data at rest and in transit | DRAFT | DRAFT | DRAFT | ISO 27001:2022 | (unreviewed) |
+| Monitoring activities | A.8.16 | Technological | Anomaly detection on vector store query patterns — bulk extraction and poisoning indicators | DRAFT | DRAFT | DRAFT | ISO 27001:2022 | (unreviewed) |
+| Data masking | A.8.11 | Technological | Differential privacy in embedding generation for sensitive corpora | DRAFT | DRAFT | DRAFT | ISO 27001:2022 | (unreviewed) |
 
 #### Mitigations by tier
 
@@ -799,12 +807,12 @@ reaches a shell, a browser, or a database.
 
 #### ISO 27001:2022 mapping
 
-| Control | ID | Domain | How it applies |
-|---|---|---|---|
-| Secure coding | A.8.28 | Technological | Output encoding, sanitisation, and schema validation as secure coding requirements |
-| Application security requirements | A.8.26 | Technological | Security requirements for all interfaces consuming LLM output — specified before development |
-| Security testing | A.8.29 | Technological | Output injection scenarios in security testing — XSS, SQL injection, command injection via LLM output |
-| Monitoring activities | A.8.16 | Technological | Runtime monitoring for output handling incidents — injection attempts in LLM output channels |
+| Control | ID | Domain | How it applies | Relationship | Rationale type | Confidence | Framework ver. | Reviewed by |
+|---|---|---|---|---|---|---|---|---|
+| Secure coding | A.8.28 | Technological | Output encoding, sanitisation, and schema validation as secure coding requirements | DRAFT | DRAFT | DRAFT | ISO 27001:2022 | (unreviewed) |
+| Application security requirements | A.8.26 | Technological | Security requirements for all interfaces consuming LLM output — specified before development | DRAFT | DRAFT | DRAFT | ISO 27001:2022 | (unreviewed) |
+| Security testing | A.8.29 | Technological | Output injection scenarios in security testing — XSS, SQL injection, command injection via LLM output | DRAFT | DRAFT | DRAFT | ISO 27001:2022 | (unreviewed) |
+| Monitoring activities | A.8.16 | Technological | Runtime monitoring for output handling incidents — injection attempts in LLM output channels | DRAFT | DRAFT | DRAFT | ISO 27001:2022 | (unreviewed) |
 
 #### Mitigations by tier
 

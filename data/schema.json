@@ -3,7 +3,13 @@
   "title": "GenAI Security Crosswalk Entry",
   "description": "Schema for mapping OWASP GenAI vulnerabilities to security frameworks",
   "type": "object",
-  "required": ["id", "name", "source_list", "severity", "mappings"],
+  "required": [
+    "id",
+    "name",
+    "source_list",
+    "severity",
+    "mappings"
+  ],
   "properties": {
     "id": {
       "type": "string",
@@ -16,7 +22,11 @@
     },
     "source_list": {
       "type": "string",
-      "enum": ["LLM-Top10-2026", "Agentic-Top10-2026", "DSGAI-2026"],
+      "enum": [
+        "LLM-Top10-2026",
+        "Agentic-Top10-2026",
+        "DSGAI-2026"
+      ],
       "description": "Which OWASP list this entry belongs to"
     },
     "version": {
@@ -25,11 +35,19 @@
     },
     "severity": {
       "type": "string",
-      "enum": ["Critical", "High", "Medium", "Low"],
+      "enum": [
+        "Critical",
+        "High",
+        "Medium",
+        "Low"
+      ],
       "description": "Standardised severity aligned to AIVSS"
     },
     "aivss_score": {
-      "type": ["number", "null"],
+      "type": [
+        "number",
+        "null"
+      ],
       "minimum": 0,
       "maximum": 10,
       "description": "OWASP AIVSS score where available"
@@ -39,9 +57,15 @@
       "items": {
         "type": "string",
         "enum": [
-          "developer", "security-engineer", "auditor",
-          "ciso", "red-teamer", "data-engineer",
-          "ml-engineer", "ot-engineer", "compliance"
+          "developer",
+          "security-engineer",
+          "auditor",
+          "ciso",
+          "red-teamer",
+          "data-engineer",
+          "ml-engineer",
+          "ot-engineer",
+          "compliance"
         ]
       }
     },
@@ -50,7 +74,13 @@
       "description": "One entry per framework control",
       "items": {
         "type": "object",
-        "required": ["framework", "control_id", "control_name", "tier", "scope"],
+        "required": [
+          "framework",
+          "control_id",
+          "control_name",
+          "tier",
+          "scope"
+        ],
         "properties": {
           "framework": {
             "type": "string",
@@ -71,17 +101,75 @@
           },
           "tier": {
             "type": "string",
-            "enum": ["Foundational", "Hardening", "Advanced"],
+            "enum": [
+              "Foundational",
+              "Hardening",
+              "Advanced"
+            ],
             "description": "Implementation maturity tier"
           },
           "scope": {
             "type": "string",
-            "enum": ["Buy", "Build", "Both"],
+            "enum": [
+              "Buy",
+              "Build",
+              "Both"
+            ],
             "description": "Whether this is addressed by vendor capability, internal engineering, or both"
           },
           "notes": {
             "type": "string",
             "description": "Optional implementation notes"
+          },
+          "relationship": {
+            "type": "string",
+            "enum": [
+              "equal",
+              "subset-of",
+              "superset-of",
+              "intersects-with",
+              "not-related-to"
+            ],
+            "description": "OLIR Relationship: the logical comparison asserted between this control (Reference Document Element) and the risk entry (Focal Document Element). Hyphenated form of the spec vocabulary \"equal, subset of, superset of, intersects with, not related to\" (NIST IR 8278A Rev. 1 §3.1)."
+          },
+          "rationale_type": {
+            "type": "string",
+            "enum": [
+              "syntactic",
+              "semantic",
+              "functional"
+            ],
+            "description": "OLIR Rationale: the KIND of reasoning behind the relationship. This is an enum in the OLIR spec, not free text — the prose justification lives in `rationale`, which exports to the OLIR Comments field."
+          },
+          "rationale": {
+            "type": "string",
+            "description": "Prose justification citing the specific framework clause. Exports to the OLIR Comments field, not to OLIR Rationale (which is `rationale_type`)."
+          },
+          "confidence": {
+            "type": "string",
+            "enum": [
+              "high",
+              "medium",
+              "low",
+              "unreviewed"
+            ],
+            "description": "How strongly the relationship is asserted; maps to the optional OLIR \"Strength of Relationship\". Rows predating schema v2 carry `unreviewed`, which is an honest label rather than a quality claim."
+          },
+          "framework_version": {
+            "type": "string",
+            "description": "The framework release this row was authored against, e.g. \"ISO 27001:2022\". Pinning it is what makes version rot detectable instead of silent."
+          },
+          "reviewed_by": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Named human reviewers who confirmed this row. Empty means unreviewed; an agent never adds itself here."
+          },
+          "review_date": {
+            "type": "string",
+            "format": "date",
+            "description": "Date of the most recent human review."
           }
         }
       }
@@ -91,9 +179,21 @@
       "items": {
         "type": "object",
         "properties": {
-          "name": { "type": "string" },
-          "url": { "type": "string", "format": "uri" },
-          "type": { "type": "string", "enum": ["open-source", "commercial", "both"] }
+          "name": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "open-source",
+              "commercial",
+              "both"
+            ]
+          }
         }
       }
     },
@@ -103,9 +203,16 @@
       "items": {
         "type": "object",
         "properties": {
-          "name": { "type": "string" },
-          "url": { "type": "string", "format": "uri" },
-          "year": { "type": "integer" }
+          "name": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "year": {
+            "type": "integer"
+          }
         }
       }
     },
@@ -113,9 +220,24 @@
       "type": "object",
       "description": "Links to related entries in other OWASP lists",
       "properties": {
-        "llm_top10": { "type": "array", "items": { "type": "string" } },
-        "agentic_top10": { "type": "array", "items": { "type": "string" } },
-        "dsgai_2026": { "type": "array", "items": { "type": "string" } }
+        "llm_top10": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "agentic_top10": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "dsgai_2026": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
       }
     },
     "changelog": {
@@ -123,10 +245,19 @@
       "items": {
         "type": "object",
         "properties": {
-          "date": { "type": "string", "format": "date" },
-          "version": { "type": "string" },
-          "change": { "type": "string" },
-          "author": { "type": "string" }
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "version": {
+            "type": "string"
+          },
+          "change": {
+            "type": "string"
+          },
+          "author": {
+            "type": "string"
+          }
         }
       }
     }

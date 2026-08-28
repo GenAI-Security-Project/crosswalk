@@ -23,7 +23,9 @@
       "control_name": "Obtain Capabilities",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Shadow AI tools are external AI capabilities the adversary may already operate or compromise"
+      "notes": "Shadow AI tools are external AI capabilities the adversary may already operate or compromise",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MITRE ATLAS",
@@ -31,7 +33,9 @@
       "control_name": "Exploit Public-Facing Application",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Unapproved AI services may themselves be adversary-controlled or compromised"
+      "notes": "Unapproved AI services may themselves be adversary-controlled or compromised",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MITRE ATLAS",
@@ -39,7 +43,9 @@
       "control_name": "Data from Information Repositories",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Sensitive data pasted into shadow AI tools ends up in external data stores accessible to the AI service provider"
+      "notes": "Sensitive data pasted into shadow AI tools ends up in external data stores accessible to the AI service provider",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -47,7 +53,9 @@
       "control_name": "Policies for trustworthy AI",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Acceptable use policy for AI tools — approved list, prohibited use cases, data handling requirements"
+      "notes": "Acceptable use policy for AI tools — approved list, prohibited use cases, data handling requirements",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -55,7 +63,9 @@
       "control_name": "AI system impact",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Impact assessment of shadow AI on organisational data security posture — ungoverned data flows quantified"
+      "notes": "Impact assessment of shadow AI on organisational data security posture — ungoverned data flows quantified",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -63,7 +73,9 @@
       "control_name": "Testing — data leakage",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Evaluation of shadow AI detection effectiveness — DLP coverage, endpoint monitoring"
+      "notes": "Evaluation of shadow AI detection effectiveness — DLP coverage, endpoint monitoring",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -71,7 +83,9 @@
       "control_name": "Risk response — data",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Response procedures for detected shadow AI usage — data impact assessment, user notification"
+      "notes": "Response procedures for detected shadow AI usage — data impact assessment, user notification",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -79,7 +93,9 @@
       "control_name": "Art. 9 — Risk management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Ungoverned AI tool usage mapped and treated in Art. 9 risk assessment"
+      "notes": "Ungoverned AI tool usage mapped and treated in Art. 9 risk assessment",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -87,7 +103,9 @@
       "control_name": "Art. 25 — Value chain responsibilities",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Shadow AI use by employees does not exempt the deployer from AI Act obligations triggered by that use"
+      "notes": "Shadow AI use by employees does not exempt the deployer from AI Act obligations triggered by that use",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -95,7 +113,9 @@
       "control_name": "Art. 29 — Deployer obligations",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Deployers have affirmative obligations to prevent and detect shadow AI usage"
+      "notes": "Deployers have affirmative obligations to prevent and detect shadow AI usage",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -103,7 +123,9 @@
       "control_name": "Acceptable use of assets",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Policy explicitly covering acceptable use of AI tools — approved list and prohibited use cases"
+      "notes": "Policy explicitly covering acceptable use of AI tools — approved list and prohibited use cases",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -111,7 +133,9 @@
       "control_name": "Security for cloud services",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Due diligence and security requirements for any cloud-based AI service including shadow AI SaaS"
+      "notes": "Due diligence and security requirements for any cloud-based AI service including shadow AI SaaS",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -119,7 +143,9 @@
       "control_name": "Data leakage prevention",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "DLP controls detecting and blocking sensitive data transfer to unapproved AI endpoints"
+      "notes": "DLP controls detecting and blocking sensitive data transfer to unapproved AI endpoints",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -127,7 +153,9 @@
       "control_name": "Policies for information security",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "AI acceptable use policy as a formal ISMS policy document"
+      "notes": "AI acceptable use policy as a formal ISMS policy document",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -135,7 +163,9 @@
       "control_name": "A.2.2",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -143,7 +173,9 @@
       "control_name": "A.9.1",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -151,7 +183,9 @@
       "control_name": "A.10.1",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Hardening"
+      "notes": "Hardening",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -159,63 +193,81 @@
       "control_name": "Cl.4",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
       "control_id": "CIS 2",
       "control_name": "2.1 — Maintain authorised software inventory",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
       "control_id": "CIS 4",
       "control_name": "4.1 — Establish secure configuration",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
       "control_id": "CIS 13",
       "control_name": "13.4 — Perform traffic filtering",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
       "control_id": "CIS 14",
       "control_name": "14.6 — Train workforce on AI security",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
       "control_id": "V1 Architecture",
       "control_name": "V1.1.4 — Trust boundaries documented and enforced",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
       "control_id": "V4 Access Control",
       "control_name": "V4.1.5 — Access control failures logged",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
       "control_id": "V7 Logging",
       "control_name": "V7.2.2 — Log entries contain required information",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
       "control_id": "V14 Configuration",
       "control_name": "V14.1.4 — All components inventoried",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -223,7 +275,9 @@
       "control_name": "Information flow restriction",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Network controls block OT data flows to unapproved AI endpoints — DLP at OT DMZ boundary"
+      "notes": "Network controls block OT data flows to unapproved AI endpoints — DLP at OT DMZ boundary",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -231,7 +285,9 @@
       "control_name": "Use control",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Approved AI tools only on OT workstations — unapproved services blocked at network layer"
+      "notes": "Approved AI tools only on OT workstations — unapproved services blocked at network layer",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -239,7 +295,9 @@
       "control_name": "Timely response to events",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Shadow AI discovery triggers incident response — data impact assessment, vendor notification"
+      "notes": "Shadow AI discovery triggers incident response — data impact assessment, vendor notification",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -247,7 +305,9 @@
       "control_name": "§5.4",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "OT data confidentiality requirements apply to training data"
+      "notes": "OT data confidentiality requirements apply to training data",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -255,7 +315,9 @@
       "control_name": "§6.2",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Assess sensitivity of OT data in training sets"
+      "notes": "Assess sensitivity of OT data in training sets",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -263,7 +325,9 @@
       "control_name": "§7.3",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Monitor for unexpected exfiltration of OT training data"
+      "notes": "Monitor for unexpected exfiltration of OT training data",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -271,7 +335,9 @@
       "control_name": "Organisational Context",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Acceptable use policy for AI tools — approved list, prohibited use cases, data handling requirements"
+      "notes": "Acceptable use policy for AI tools — approved list, prohibited use cases, data handling requirements",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -279,7 +345,9 @@
       "control_name": "Awareness and Training",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Users trained on shadow AI risk — policy awareness, prohibited tool use, reporting obligations"
+      "notes": "Users trained on shadow AI risk — policy awareness, prohibited tool use, reporting obligations",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -287,7 +355,9 @@
       "control_name": "Continuous Monitoring",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Monitoring for use of unauthorised software — shadow AI tool usage detected on endpoints and network"
+      "notes": "Monitoring for use of unauthorised software — shadow AI tool usage detected on endpoints and network",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -295,35 +365,45 @@
       "control_name": "Supply Chain Risk Management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All approved AI tools managed as suppliers — TPSP assessment, contractual obligations"
+      "notes": "All approved AI tools managed as suppliers — TPSP assessment, contractual obligations",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Acceptable use procedures for AI tools — approved list, prohibited use cases, employee acknowledgement",
       "control_name": "CC5.2 — Control activities",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Shadow AI vendors not in vendor risk programme — shadow AI discovery identifies unapproved vendors",
       "control_name": "CC9.1 — Vendor risk",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Shadow AI usage identified as a risk in assessment — ungoverned data flows, training use by vendors",
       "control_name": "CC3.2 — Risk assessment",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Confidentiality policy covers AI tool use — employees informed of restrictions on sharing confidential data",
       "control_name": "C1.1 — Confidentiality policy",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -331,7 +411,9 @@
       "control_name": "Third-party service providers",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Shadow AI tools processing CHD are unapproved TPSPs — not in TPSP list, no written agreements"
+      "notes": "Shadow AI tools processing CHD are unapproved TPSPs — not in TPSP list, no written agreements",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -339,7 +421,9 @@
       "control_name": "TPSP oversight",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Shadow AI discovery as part of TPSP monitoring — identify unapproved vendors receiving CHD"
+      "notes": "Shadow AI discovery as part of TPSP monitoring — identify unapproved vendors receiving CHD",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -347,7 +431,9 @@
       "control_name": "Network security",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Network controls prevent CHD flows to unapproved AI endpoints — block at network layer"
+      "notes": "Network controls prevent CHD flows to unapproved AI endpoints — block at network layer",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -355,7 +441,9 @@
       "control_name": "Security awareness",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "PCI security awareness programme covers shadow AI risk — staff trained on prohibition"
+      "notes": "PCI security awareness programme covers shadow AI risk — staff trained on prohibition",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -363,7 +451,9 @@
       "control_name": "Governance and Risk (GOV)",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Acceptable use policy covers all GenAI services — unapproved use is a policy violation; AI asset register maintained"
+      "notes": "Acceptable use policy covers all GenAI services — unapproved use is a policy violation; AI asset register maintained",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -371,7 +461,9 @@
       "control_name": "Monitoring and Detection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Network-level detection of data flows to unapproved AI endpoints — DLP covering SaaS AI API calls"
+      "notes": "Network-level detection of data flows to unapproved AI endpoints — DLP covering SaaS AI API calls",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -379,7 +471,9 @@
       "control_name": "Supply Chain Security (SCS)",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All AI services assessed before authorisation — vendor security review, data processing agreement, sub-processor disclosure"
+      "notes": "All AI services assessed before authorisation — vendor security review, data processing agreement, sub-processor disclosure",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -387,7 +481,9 @@
       "control_name": "General ICT — Network",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Egress filtering to block unapproved AI service domains; proxy logging of AI API calls"
+      "notes": "Egress filtering to block unapproved AI service domains; proxy logging of AI API calls",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -395,7 +491,9 @@
       "control_name": "Design / Security Requirements",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Require data classification check before any dataset enters training pipeline"
+      "notes": "Require data classification check before any dataset enters training pipeline",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -403,7 +501,9 @@
       "control_name": "Governance / Policy & Compliance",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Policy mandating PII/sensitive data removal before training"
+      "notes": "Policy mandating PII/sensitive data removal before training",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -411,7 +511,9 @@
       "control_name": "Implementation / Secure Build",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Automated PII scanning of all training datasets before use"
+      "notes": "Automated PII scanning of all training datasets before use",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -419,7 +521,9 @@
       "control_name": "Verification / Requirements-Driven Testing",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Automated tests verifying PII detection coverage"
+      "notes": "Automated tests verifying PII detection coverage",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -427,7 +531,9 @@
       "control_name": "Operations / Operational Management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Periodic probing of deployed models for sensitive data memorisation"
+      "notes": "Periodic probing of deployed models for sensitive data memorisation",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -435,7 +541,9 @@
       "control_name": "CWE-668",
       "tier": "Foundational",
       "scope": "Both",
-      "url": "https://cwe.mitre.org/data/definitions/668.html"
+      "url": "https://cwe.mitre.org/data/definitions/668.html",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -443,28 +551,36 @@
       "control_name": "CWE-284",
       "tier": "Foundational",
       "scope": "Both",
-      "url": "https://cwe.mitre.org/data/definitions/284.html"
+      "url": "https://cwe.mitre.org/data/definitions/284.html",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L7",
       "control_name": "Agent Ecosystem",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L6",
       "control_name": "Security & Compliance",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L2",
       "control_name": "Data Operations",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -472,7 +588,9 @@
       "control_name": "Data & Privacy domain (all)",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -480,7 +598,9 @@
       "control_name": "Prevent unauthorized AI actions",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -488,7 +608,9 @@
       "control_name": "Audit trails and logging",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -496,7 +618,9 @@
       "control_name": "NHI-5 Over-Privileged NHI",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Scope pipeline credentials to approved data sources only"
+      "notes": "Scope pipeline credentials to approved data sources only",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -504,7 +628,9 @@
       "control_name": "NHI-2 Secret Leakage",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Audit config files for embedded credentials"
+      "notes": "Audit config files for embedded credentials",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -512,7 +638,9 @@
       "control_name": "Reuse existing well-secured software — AI tool vetting",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Vet all AI tools, services, and plugins before organisational adoption; verify data handling, security posture, and compliance capabilities"
+      "notes": "Vet all AI tools, services, and plugins before organisational adoption; verify data handling, security posture, and compliance capabilities",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -520,7 +648,9 @@
       "control_name": "Protect all code from unauthorised access — shadow AI detection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Implement controls to detect and prevent unauthorised AI tool usage that processes organisational data outside governed pipelines"
+      "notes": "Implement controls to detect and prevent unauthorised AI tool usage that processes organisational data outside governed pipelines",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -528,7 +658,9 @@
       "control_name": "Identify and confirm vulnerabilities — shadow AI exposure monitoring",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Establish procedures to identify data exposure from shadow AI tool usage; define triage and remediation workflows for unsanctioned data processing"
+      "notes": "Establish procedures to identify data exposure from shadow AI tool usage; define triage and remediation workflows for unsanctioned data processing",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -536,7 +668,9 @@
       "control_name": "Least Functionality — approved AI tools only",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Restrict AI tool usage to approved, vetted tools within the FedRAMP boundary; disable or block access to unauthorised AI services"
+      "notes": "Restrict AI tool usage to approved, vetted tools within the FedRAMP boundary; disable or block access to unauthorised AI services",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -544,7 +678,9 @@
       "control_name": "External Information System Services — third-party AI controls",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Require FedRAMP authorisation or equivalent for all third-party AI services; block data transfer to unauthorised AI tools"
+      "notes": "Require FedRAMP authorisation or equivalent for all third-party AI services; block data transfer to unauthorised AI tools",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -552,7 +688,9 @@
       "control_name": "Access Enforcement — AI tool access control",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Enforce access control preventing data transfer to unauthorised AI tools; monitor and block shadow AI usage"
+      "notes": "Enforce access control preventing data transfer to unauthorised AI tools; monitor and block shadow AI usage",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -560,7 +698,9 @@
       "control_name": "Third-Party Risk — AI tool vendor oversight",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Include AI tools and services in third-party ICT risk management; conduct due diligence before approval; monitor ongoing compliance with financial sector requirements"
+      "notes": "Include AI tools and services in third-party ICT risk management; conduct due diligence before approval; monitor ongoing compliance with financial sector requirements",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -568,7 +708,9 @@
       "control_name": "Identification — shadow AI discovery",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Identify and register all AI tools — authorised and unauthorised — in the ICT asset inventory; maintain discovery mechanisms for unapproved AI services"
+      "notes": "Identify and register all AI tools — authorised and unauthorised — in the ICT asset inventory; maintain discovery mechanisms for unapproved AI services",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -576,7 +718,9 @@
       "control_name": "ICT Risk Management — AI tool governance",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Define approved AI tools policy in ICT risk management framework; require vetting and approval before use in financial data processing"
+      "notes": "Define approved AI tools policy in ICT risk management framework; require vetting and approval before use in financial data processing",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     }
   ],
   "tools": [

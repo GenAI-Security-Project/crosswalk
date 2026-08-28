@@ -23,7 +23,9 @@
       "tier": "Foundational",
       "scope": "Build",
       "url": "https://atlas.mitre.org/techniques/AML.T0037",
-      "notes": "Crafting inputs that produce dangerous outputs consumed by downstream systems"
+      "notes": "Crafting inputs that produce dangerous outputs consumed by downstream systems",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MITRE ATLAS",
@@ -32,7 +34,9 @@
       "tier": "Foundational",
       "scope": "Build",
       "url": "https://atlas.mitre.org/techniques/AML.T0040",
-      "notes": "LLM outputs containing serialised payloads executed by downstream components"
+      "notes": "LLM outputs containing serialised payloads executed by downstream components",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -40,7 +44,9 @@
       "control_name": "Testing — output safety",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Output handling security included in AI evaluation and testing programme"
+      "notes": "Output handling security included in AI evaluation and testing programme",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -48,7 +54,9 @@
       "control_name": "Testing — data leakage",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Output leakage and injection scenarios covered in evaluation"
+      "notes": "Output leakage and injection scenarios covered in evaluation",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -56,7 +64,9 @@
       "control_name": "Risk response",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Incident response for output handling failures defined and tested"
+      "notes": "Incident response for output handling failures defined and tested",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -64,7 +74,9 @@
       "control_name": "Policies for trustworthy AI",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Organisational policy requires secure output handling for all LLM integrations"
+      "notes": "Organisational policy requires secure output handling for all LLM integrations",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -72,7 +84,9 @@
       "control_name": "Art. 9 — Risk management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Insecure output handling included in risk management system"
+      "notes": "Insecure output handling included in risk management system",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -80,7 +94,9 @@
       "control_name": "Art. 15 — Accuracy, robustness, cybersecurity",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Output validation and sanitisation are Art. 15 technical requirements"
+      "notes": "Output validation and sanitisation are Art. 15 technical requirements",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -88,7 +104,9 @@
       "control_name": "Art. 17 — Quality management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Post-market monitoring of output handling incidents required"
+      "notes": "Post-market monitoring of output handling incidents required",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -96,7 +114,10 @@
       "control_name": "Secure coding",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Output encoding, sanitisation, and schema validation as secure coding requirements"
+      "notes": "Output encoding, sanitisation, and schema validation as secure coding requirements",
+      "framework_version": "ISO 27001:2022",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -104,7 +125,10 @@
       "control_name": "Application security requirements",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Security requirements for all interfaces consuming LLM output — specified before development"
+      "notes": "Security requirements for all interfaces consuming LLM output — specified before development",
+      "framework_version": "ISO 27001:2022",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -112,7 +136,10 @@
       "control_name": "Security testing",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Output injection scenarios in security testing — XSS, SQL injection, command injection via LLM output"
+      "notes": "Output injection scenarios in security testing — XSS, SQL injection, command injection via LLM output",
+      "framework_version": "ISO 27001:2022",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -120,7 +147,10 @@
       "control_name": "Monitoring activities",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Runtime monitoring for output handling incidents — injection attempts in LLM output channels"
+      "notes": "Runtime monitoring for output handling incidents — injection attempts in LLM output channels",
+      "framework_version": "ISO 27001:2022",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -128,7 +158,9 @@
       "control_name": "AI system security",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Output encoding and schema validation as AIMS security design requirements — LLM output treated as untrusted input to downstream systems"
+      "notes": "Output encoding and schema validation as AIMS security design requirements — LLM output treated as untrusted input to downstream systems",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -136,7 +168,9 @@
       "control_name": "Testing of AI systems",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Output injection scenarios in AIMS testing — XSS, SQL injection, command injection via LLM output tested before deployment"
+      "notes": "Output injection scenarios in AIMS testing — XSS, SQL injection, command injection via LLM output tested before deployment",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -144,7 +178,9 @@
       "control_name": "Use of AI systems",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Guidance on AI system use — downstream consumers informed that LLM output must be validated before use"
+      "notes": "Guidance on AI system use — downstream consumers informed that LLM output must be validated before use",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -152,7 +188,9 @@
       "control_name": "Operation",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Operational controls for LLM deployment — output handling requirements documented as AIMS operational procedures"
+      "notes": "Operational controls for LLM deployment — output handling requirements documented as AIMS operational procedures",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
@@ -160,7 +198,9 @@
       "control_name": "CIS 16 — Application Software Security",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Output encoding and sanitisation as secure development requirements"
+      "notes": "Output encoding and sanitisation as secure development requirements",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
@@ -168,7 +208,9 @@
       "control_name": "CIS 8 — Audit Log Management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Log all LLM outputs — injection attempts in model responses detectable"
+      "notes": "Log all LLM outputs — injection attempts in model responses detectable",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
@@ -176,7 +218,9 @@
       "control_name": "CIS 18 — Penetration Testing",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Output injection scenarios in penetration testing — XSS, SQL injection via LLM output"
+      "notes": "Output injection scenarios in penetration testing — XSS, SQL injection via LLM output",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
@@ -184,7 +228,9 @@
       "control_name": "Verify output encoding of untrusted data in HTML context",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM responses rendered in browser contexts encoded against XSS"
+      "notes": "LLM responses rendered in browser contexts encoded against XSS",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
@@ -192,7 +238,9 @@
       "control_name": "Verify output encoding in SQL query context",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM-generated SQL parameterised — never raw LLM output in SQL context"
+      "notes": "LLM-generated SQL parameterised — never raw LLM output in SQL context",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
@@ -200,7 +248,9 @@
       "control_name": "Verify output encoding in OS command context",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM-generated commands validated — never raw output in shell context"
+      "notes": "LLM-generated commands validated — never raw output in shell context",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
@@ -208,7 +258,9 @@
       "control_name": "Verify application does not use eval or dynamic code",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "No eval or dynamic code execution of LLM-generated content"
+      "notes": "No eval or dynamic code execution of LLM-generated content",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
@@ -216,7 +268,9 @@
       "control_name": "Verify anti-CSRF tokens in state-changing operations",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "CSRF protection on endpoints where LLM output triggers state changes"
+      "notes": "CSRF protection on endpoints where LLM output triggers state changes",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -224,7 +278,9 @@
       "control_name": "Software and information integrity",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All LLM output validated before rendering or passing to OT systems"
+      "notes": "All LLM output validated before rendering or passing to OT systems",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -232,7 +288,9 @@
       "control_name": "Use control",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM output restricted to authorised actions — no raw output directly to control interfaces"
+      "notes": "LLM output restricted to authorised actions — no raw output directly to control interfaces",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -240,7 +298,9 @@
       "control_name": "Software and information integrity",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Communication integrity enforcement on all LLM-to-OT data paths"
+      "notes": "Communication integrity enforcement on all LLM-to-OT data paths",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -248,7 +308,9 @@
       "control_name": "Section 5.3 — Threats",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM output injection as a new instantiation of this threat at the IT/OT boundary"
+      "notes": "LLM output injection as a new instantiation of this threat at the IT/OT boundary",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -256,7 +318,9 @@
       "control_name": "Section 7.2 — Network segmentation",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM output validated at DMZ boundary before entering control zone display or data systems"
+      "notes": "LLM output validated at DMZ boundary before entering control zone display or data systems",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -264,7 +328,9 @@
       "control_name": "Control",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Application"
+      "notes": "Application",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -272,7 +338,9 @@
       "control_name": "SI-10",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM outputs validated before passing to OT systems — schema validation, allowlist enforcement"
+      "notes": "LLM outputs validated before passing to OT systems — schema validation, allowlist enforcement",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -280,7 +348,9 @@
       "control_name": "SI-3",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM output scanning for malicious content before OT system ingestion"
+      "notes": "LLM output scanning for malicious content before OT system ingestion",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -288,7 +358,9 @@
       "control_name": "CM-7",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "OT interfaces that consume LLM output configured to accept only defined, safe input formats"
+      "notes": "OT interfaces that consume LLM output configured to accept only defined, safe input formats",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -296,7 +368,9 @@
       "control_name": "Platform Security",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Secure software development practices — output encoding and schema validation as platform security requirements"
+      "notes": "Secure software development practices — output encoding and schema validation as platform security requirements",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -304,7 +378,9 @@
       "control_name": "Data Security",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Data in transit protected — LLM output validated before passing to downstream systems"
+      "notes": "Data in transit protected — LLM output validated before passing to downstream systems",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -312,7 +388,9 @@
       "control_name": "Continuous Monitoring",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Networks and assets monitored — output injection patterns detected in LLM output channels"
+      "notes": "Networks and assets monitored — output injection patterns detected in LLM output channels",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -320,35 +398,45 @@
       "control_name": "Risk Assessment",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Output injection documented as vulnerability class in risk assessment for all LLM integrations"
+      "notes": "Output injection documented as vulnerability class in risk assessment for all LLM integrations",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Policy requiring LLM output validation before use in downstream processing — complete and authorised processing",
       "control_name": "PI1.1 — Processing integrity policies",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Input validation procedures for all systems consuming LLM output — encoding, schema validation, sanitisation",
       "control_name": "CC5.2 — Select and develop control activities",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Monitoring for injection patterns in LLM output channels — detect anomalous processing before downstream harm",
       "control_name": "CC7.2 — Anomaly detection",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Output injection risks identified in LLM risk assessment — XSS, SQL injection, command injection via AI-generated content",
       "control_name": "CC3.2 — Risk assessment",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -356,7 +444,9 @@
       "control_name": "Bespoke and custom software",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Output handling in LLM integrations addresses all injection vulnerability classes — LLM output treated as untrusted"
+      "notes": "Output handling in LLM integrations addresses all injection vulnerability classes — LLM output treated as untrusted",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -364,7 +454,9 @@
       "control_name": "Public-facing web application protection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All interfaces consuming LLM output in PCI scope protected — input validation on all downstream consumers"
+      "notes": "All interfaces consuming LLM output in PCI scope protected — input validation on all downstream consumers",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -372,7 +464,9 @@
       "control_name": "Penetration testing",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Output injection scenarios in penetration testing — SQL injection, command injection via LLM output"
+      "notes": "Output injection scenarios in penetration testing — SQL injection, command injection via LLM output",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -380,7 +474,9 @@
       "control_name": "Audit log review",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Monitoring for injection patterns in LLM output channels within CDE"
+      "notes": "Monitoring for injection patterns in LLM output channels within CDE",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -388,7 +484,9 @@
       "control_name": "General ICT — Secure Development",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Output encoding and schema validation as L1 secure development requirements — LLM output treated as untrusted"
+      "notes": "Output encoding and schema validation as L1 secure development requirements — LLM output treated as untrusted",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -396,7 +494,9 @@
       "control_name": "AI System Integrity (ASI)",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "AI-specific output validation — schema enforcement, injection pattern detection before downstream consumption"
+      "notes": "AI-specific output validation — schema enforcement, injection pattern detection before downstream consumption",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -404,7 +504,9 @@
       "control_name": "Monitoring and Detection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Runtime monitoring of LLM output channels — injection patterns in model responses detected"
+      "notes": "Runtime monitoring of LLM output channels — injection patterns in model responses detected",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -412,7 +514,9 @@
       "control_name": "General ICT — Application Security",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "DAST on all interfaces consuming LLM output as L1 application security practice"
+      "notes": "DAST on all interfaces consuming LLM output as L1 application security practice",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -420,7 +524,9 @@
       "control_name": "Security Requirements",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Output encoding and schema validation as explicit security requirements before development"
+      "notes": "Output encoding and schema validation as explicit security requirements before development",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -428,7 +534,9 @@
       "control_name": "Secure Build",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Output validation implemented in code — LLM output treated as untrusted, reviewed in code review"
+      "notes": "Output validation implemented in code — LLM output treated as untrusted, reviewed in code review",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -436,7 +544,9 @@
       "control_name": "Requirements-Driven Testing",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Output security requirements verified in testing — XSS, SQL injection via LLM output tested"
+      "notes": "Output security requirements verified in testing — XSS, SQL injection via LLM output tested",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -444,21 +554,27 @@
       "control_name": "Security Testing",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "DAST on all interfaces consuming LLM output as penetration testing activity"
+      "notes": "DAST on all interfaces consuming LLM output as penetration testing activity",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "STRIDE",
       "control_id": "T",
       "control_name": "Output Tampering into Downstream Systems",
       "tier": "Foundational",
-      "scope": "Build"
+      "scope": "Build",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "STRIDE",
       "control_id": "E",
       "control_name": "Privilege Escalation via Output Injection",
       "tier": "Foundational",
-      "scope": "Build"
+      "scope": "Build",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -466,7 +582,9 @@
       "control_name": "CWE-79",
       "tier": "Foundational",
       "scope": "Build",
-      "url": "https://cwe.mitre.org/data/definitions/79.html"
+      "url": "https://cwe.mitre.org/data/definitions/79.html",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -474,7 +592,9 @@
       "control_name": "CWE-89",
       "tier": "Foundational",
       "scope": "Build",
-      "url": "https://cwe.mitre.org/data/definitions/89.html"
+      "url": "https://cwe.mitre.org/data/definitions/89.html",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -482,7 +602,9 @@
       "control_name": "CWE-78",
       "tier": "Foundational",
       "scope": "Build",
-      "url": "https://cwe.mitre.org/data/definitions/78.html"
+      "url": "https://cwe.mitre.org/data/definitions/78.html",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP AI Testing Guide",
@@ -490,7 +612,9 @@
       "control_name": "OHT — Output Handling",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Verify LLM-generated content is sanitised before insertion into HTML, SQL, shell commands, URLs, and other interpreters"
+      "notes": "Verify LLM-generated content is sanitised before insertion into HTML, SQL, shell commands, URLs, and other interpreters",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP AI Testing Guide",
@@ -498,7 +622,9 @@
       "control_name": "IHT — Input Handling",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Craft inputs designed to coerce the LLM into generating content that will be interpreted as code or commands by downstream systems"
+      "notes": "Craft inputs designed to coerce the LLM into generating content that will be interpreted as code or commands by downstream systems",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP AI Testing Guide",
@@ -506,28 +632,36 @@
       "control_name": "ACT — Access Control",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Verify that downstream systems do not grant LLM outputs excessive permissions or execute LLM-generated commands without validation"
+      "notes": "Verify that downstream systems do not grant LLM outputs excessive permissions or execute LLM-generated commands without validation",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L3",
       "control_name": "Agent Frameworks",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L4",
       "control_name": "Deployment & Infrastructure",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L1",
       "control_name": "Foundation Models",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -535,7 +669,9 @@
       "control_name": "Implement real-time input filtering",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -543,7 +679,9 @@
       "control_name": "Prevent unauthorized AI actions",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -551,7 +689,9 @@
       "control_name": "Validate AI-generated content",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -559,7 +699,9 @@
       "control_name": "Safety domain (harm prevention)",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -567,7 +709,9 @@
       "control_name": "NHI-2 Secret Leakage",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Credential detection in output pipeline before execution"
+      "notes": "Credential detection in output pipeline before execution",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -575,7 +719,9 @@
       "control_name": "NHI-5 Over-Privileged NHI",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Apply least-privilege to all credentials used in downstream processing"
+      "notes": "Apply least-privilege to all credentials used in downstream processing",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -583,7 +729,9 @@
       "control_name": "Secure coding — ML pipeline output handling",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Implement secure coding practices for all code paths that consume LLM output; treat model responses as untrusted input to downstream systems"
+      "notes": "Implement secure coding practices for all code paths that consume LLM output; treat model responses as untrusted input to downstream systems",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -591,7 +739,9 @@
       "control_name": "Review for security vulnerabilities — output validation",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Include output injection and unsafe rendering scenarios in pre-release security reviews; verify that output sanitisation controls are present and effective"
+      "notes": "Include output injection and unsafe rendering scenarios in pre-release security reviews; verify that output sanitisation controls are present and effective",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -599,7 +749,9 @@
       "control_name": "Verify software integrity — model artifact integrity",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Verify that the model artifact serving output has not been tampered with; maintain signed model checksums and verify before deployment"
+      "notes": "Verify that the model artifact serving output has not been tampered with; maintain signed model checksums and verify before deployment",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -607,7 +759,9 @@
       "control_name": "Test for security vulnerabilities — output security",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Include output-based injection testing (XSS, SQLi, CMDi via LLM output) in adversarial test suites"
+      "notes": "Include output-based injection testing (XSS, SQLi, CMDi via LLM output) in adversarial test suites",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -615,7 +769,9 @@
       "control_name": "Information Input Validation — output as downstream input",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Validate model output at every consuming boundary; the consumer treats generated content as untrusted input and applies syntactic and schema validation before acting on it"
+      "notes": "Validate model output at every consuming boundary; the consumer treats generated content as untrusted input and applies syntactic and schema validation before acting on it",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -623,7 +779,9 @@
       "control_name": "Information Output Filtering — model response filtering",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Filter and encode model responses before release to a renderer, interpreter, or downstream service; reject content that fails the boundary content-type policy"
+      "notes": "Filter and encode model responses before release to a renderer, interpreter, or downstream service; reject content that fails the boundary content-type policy",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -631,7 +789,9 @@
       "control_name": "Least Functionality — output consumer hardening",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Remove interpreter, shell, and dynamic-evaluation paths from components that consume model output; disable any capability the consumer does not require"
+      "notes": "Remove interpreter, shell, and dynamic-evaluation paths from components that consume model output; disable any capability the consumer does not require",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -639,7 +799,9 @@
       "control_name": "Audit Events — output boundary logging",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Log model output crossing into privileged systems, including the payload, the consuming component, and the validation verdict, for incident reconstruction"
+      "notes": "Log model output crossing into privileged systems, including the payload, the consuming component, and the validation verdict, for incident reconstruction",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -647,7 +809,9 @@
       "control_name": "Access Enforcement — downstream privilege limits",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Enforce least-privilege service accounts on every consumer of model output so unvalidated content cannot reach a high-privilege operation"
+      "notes": "Enforce least-privilege service accounts on every consumer of model output so unvalidated content cannot reach a high-privilege operation",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -655,7 +819,9 @@
       "control_name": "Protection and Prevention — output validation",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Validate, encode, and escape all model output before it reaches a browser, shell, database, or downstream financial system; treat model output as untrusted input to the consuming component"
+      "notes": "Validate, encode, and escape all model output before it reaches a browser, shell, database, or downstream financial system; treat model output as untrusted input to the consuming component",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -663,7 +829,9 @@
       "control_name": "Identification — output consumer inventory",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Record every downstream consumer of model output in the ICT asset inventory, with its execution privileges and the validation applied at the boundary"
+      "notes": "Record every downstream consumer of model output in the ICT asset inventory, with its execution privileges and the validation applied at the boundary",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -671,7 +839,9 @@
       "control_name": "Detection — anomalous output monitoring",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Monitor model output reaching privileged sinks; alert on generated code, markup, or query syntax that fails the boundary validation policy"
+      "notes": "Monitor model output reaching privileged sinks; alert on generated code, markup, or query syntax that fails the boundary validation policy",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -679,7 +849,9 @@
       "control_name": "Digital Operational Resilience Testing — output-handling scenarios",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Include output-handling exploitation in threat-led penetration testing; cover XSS, SQL injection, command injection, and insecure generated code paths"
+      "notes": "Include output-handling exploitation in threat-led penetration testing; cover XSS, SQL injection, command injection, and insecure generated code paths",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     }
   ],
   "tools": [

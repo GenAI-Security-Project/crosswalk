@@ -23,7 +23,9 @@
       "tier": "Foundational",
       "scope": "Both",
       "url": "https://atlas.mitre.org/techniques/AML.T0045",
-      "notes": "Agent generates persuasive false information to manipulate human approvals"
+      "notes": "Agent generates persuasive false information to manipulate human approvals",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MITRE ATLAS",
@@ -32,7 +34,9 @@
       "tier": "Foundational",
       "scope": "Both",
       "url": "https://atlas.mitre.org/techniques/AML.T0047",
-      "notes": "Agent produces high-volume, fluent content that overwhelms human critical assessment"
+      "notes": "Agent produces high-volume, fluent content that overwhelms human critical assessment",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MITRE ATLAS",
@@ -41,7 +45,9 @@
       "tier": "Foundational",
       "scope": "Both",
       "url": "https://atlas.mitre.org/techniques/AML.T0049",
-      "notes": "Compromised agent crafts highly personalised, convincing manipulation targeted at specific users"
+      "notes": "Compromised agent crafts highly personalised, convincing manipulation targeted at specific users",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -49,7 +55,9 @@
       "control_name": "Policies for trustworthy AI",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Policy on agent transparency — agents must identify as AI, advisory outputs clearly distinguished from authoritative"
+      "notes": "Policy on agent transparency — agents must identify as AI, advisory outputs clearly distinguished from authoritative",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -57,7 +65,9 @@
       "control_name": "Testing — data leakage",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Evaluation of transparency controls — verify advisory labels persist in all interface contexts"
+      "notes": "Evaluation of transparency controls — verify advisory labels persist in all interface contexts",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -65,7 +75,9 @@
       "control_name": "Feedback mechanisms",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Feedback channels detecting operator over-trust patterns — aggregate analysis of agent-influenced decisions"
+      "notes": "Feedback channels detecting operator over-trust patterns — aggregate analysis of agent-influenced decisions",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -73,7 +85,9 @@
       "control_name": "Risk response — data",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Response for detected trust exploitation patterns — operator retraining, interface redesign, aggregate audit"
+      "notes": "Response for detected trust exploitation patterns — operator retraining, interface redesign, aggregate audit",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -81,7 +95,9 @@
       "control_name": "Art. 13 — Transparency",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agents must clearly communicate their AI nature and advisory limitations"
+      "notes": "Agents must clearly communicate their AI nature and advisory limitations",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -89,7 +105,9 @@
       "control_name": "Art. 14 — Human oversight",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Humans must be able to override agent recommendations — trust exploitation undermines Art. 14 effectiveness"
+      "notes": "Humans must be able to override agent recommendations — trust exploitation undermines Art. 14 effectiveness",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -97,7 +115,9 @@
       "control_name": "Art. 50 — Transparency for certain AI systems",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All agent-user interactions require AI disclosure — universal obligation"
+      "notes": "All agent-user interactions require AI disclosure — universal obligation",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -105,7 +125,9 @@
       "control_name": "Information security awareness, education and training",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All users of agentic decision-support tools trained on AI limitations — verification requirements, how to identify manipulation"
+      "notes": "All users of agentic decision-support tools trained on AI limitations — verification requirements, how to identify manipulation",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -113,7 +135,9 @@
       "control_name": "Compliance with policies",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Policy on agentic AI advisory use — domains requiring verification, approval flow independence from agent interface"
+      "notes": "Policy on agentic AI advisory use — domains requiring verification, approval flow independence from agent interface",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -121,7 +145,9 @@
       "control_name": "Monitoring activities",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Aggregate over-trust patterns monitored — systematic operator acceptance without verification detected"
+      "notes": "Aggregate over-trust patterns monitored — systematic operator acceptance without verification detected",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -129,7 +155,9 @@
       "control_name": "Classification of information",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent advisory output classified — users cannot mistake model recommendations for authoritative system content"
+      "notes": "Agent advisory output classified — users cannot mistake model recommendations for authoritative system content",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -137,7 +165,9 @@
       "control_name": "Impact assessment",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Trust exploitation impact assessed — which persons are affected by AI decisions influenced by manipulated trust"
+      "notes": "Trust exploitation impact assessed — which persons are affected by AI decisions influenced by manipulated trust",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -145,7 +175,9 @@
       "control_name": "Information for interested parties",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "AI system transparency obligations — users informed of AI nature, advisory status, limitations, EU AI Act Art. 50 alignment"
+      "notes": "AI system transparency obligations — users informed of AI nature, advisory status, limitations, EU AI Act Art. 50 alignment",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -153,7 +185,9 @@
       "control_name": "Use of AI systems",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Guidance on appropriate use — domains requiring human verification, how to distinguish AI advisory from authoritative content"
+      "notes": "Guidance on appropriate use — domains requiring human verification, how to distinguish AI advisory from authoritative content",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -161,7 +195,9 @@
       "control_name": "Policy",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Leadership commitment to AI transparency — AI disclosure and advisory labelling requirements in AI policy"
+      "notes": "Leadership commitment to AI transparency — AI disclosure and advisory labelling requirements in AI policy",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
@@ -169,7 +205,9 @@
       "control_name": "CIS 14 — Security Awareness and Skills Training",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All users of agentic tools trained on AI limitations — verification requirements, how to identify manipulation"
+      "notes": "All users of agentic tools trained on AI limitations — verification requirements, how to identify manipulation",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
@@ -177,7 +215,9 @@
       "control_name": "CIS 17 — Incident Response",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Defined response for trust exploitation incidents — operator retraining, pattern audit, interface redesign"
+      "notes": "Defined response for trust exploitation incidents — operator retraining, pattern audit, interface redesign",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
@@ -185,7 +225,9 @@
       "control_name": "CIS 5 — Account Management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Approval flows independent of agent interface — sensitive approvals cannot be completed via agent chat"
+      "notes": "Approval flows independent of agent interface — sensitive approvals cannot be completed via agent chat",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
@@ -193,7 +235,9 @@
       "control_name": "CIS 8 — Audit Log Management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent-influenced operator decisions logged — aggregate over-trust patterns detectable"
+      "notes": "Agent-influenced operator decisions logged — aggregate over-trust patterns detectable",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
@@ -201,7 +245,9 @@
       "control_name": "Verify business logic assumptions documented",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "AI advisory limitations documented as business logic assumptions — verification requirements per domain"
+      "notes": "AI advisory limitations documented as business logic assumptions — verification requirements per domain",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
@@ -209,7 +255,9 @@
       "control_name": "Verify outputs encoded before rendering",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent advisory outputs clearly labelled — users cannot mistake AI output for authoritative content"
+      "notes": "Agent advisory outputs clearly labelled — users cannot mistake AI output for authoritative content",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
@@ -217,7 +265,9 @@
       "control_name": "Verify all security controls logged",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent-influenced operator decisions logged — aggregate patterns detectable"
+      "notes": "Agent-influenced operator decisions logged — aggregate patterns detectable",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
@@ -225,7 +275,9 @@
       "control_name": "Verify API rejects large unexpected payloads",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Approval flows independent of agent interface — no state-changing approvals via agent chat"
+      "notes": "Approval flows independent of agent interface — no state-changing approvals via agent chat",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -233,7 +285,9 @@
       "control_name": "Use control",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM advisory outputs clearly distinguished from authoritative documentation — source always visible"
+      "notes": "LLM advisory outputs clearly distinguished from authoritative documentation — source always visible",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -241,7 +295,9 @@
       "control_name": "Timely response to events",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Procedures for detecting operator over-trust patterns — aggregate analysis of agent-influenced decisions"
+      "notes": "Procedures for detecting operator over-trust patterns — aggregate analysis of agent-influenced decisions",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -249,7 +305,9 @@
       "control_name": "Software and information integrity",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent recommendations for safety-relevant decisions cross-validated against independent reference"
+      "notes": "Agent recommendations for safety-relevant decisions cross-validated against independent reference",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -257,7 +315,9 @@
       "control_name": "§5.3",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Inadequate human oversight cited as OT vulnerability category"
+      "notes": "Inadequate human oversight cited as OT vulnerability category",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -265,7 +325,9 @@
       "control_name": "§6.2",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Quantify consequences of unsupervised agent OT actions"
+      "notes": "Quantify consequences of unsupervised agent OT actions",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -273,7 +335,9 @@
       "control_name": "§8.2",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Governance policy for autonomous OT systems"
+      "notes": "Governance policy for autonomous OT systems",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -281,7 +345,9 @@
       "control_name": "Organisational Context",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Policy requires AI disclosure and advisory labelling — agent transparency as a governance requirement"
+      "notes": "Policy requires AI disclosure and advisory labelling — agent transparency as a governance requirement",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -289,7 +355,9 @@
       "control_name": "Awareness and Training",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Users trained on AI limitations — operators understand agent advisory status and verification requirements"
+      "notes": "Users trained on AI limitations — operators understand agent advisory status and verification requirements",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -297,7 +365,9 @@
       "control_name": "Continuous Monitoring",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Monitoring for aggregate over-trust patterns — systematic operator acceptance without verification detected"
+      "notes": "Monitoring for aggregate over-trust patterns — systematic operator acceptance without verification detected",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -305,7 +375,9 @@
       "control_name": "Communication",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Information shared following incidents — trust exploitation incidents reported to affected users"
+      "notes": "Information shared following incidents — trust exploitation incidents reported to affected users",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
@@ -313,7 +385,9 @@
       "control_name": "CC5.3",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "AI disclosure policy, UI evidence"
+      "notes": "AI disclosure policy, UI evidence",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
@@ -321,7 +395,9 @@
       "control_name": "CC3.3",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Risk register with trust exploitation entries"
+      "notes": "Risk register with trust exploitation entries",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
@@ -329,7 +405,9 @@
       "control_name": "PI1.3",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Output quality controls, factual accuracy testing"
+      "notes": "Output quality controls, factual accuracy testing",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
@@ -337,7 +415,9 @@
       "control_name": "P7.1",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Accuracy review procedures"
+      "notes": "Accuracy review procedures",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -345,7 +425,9 @@
       "control_name": "Req 12.6",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Training curriculum, completion records"
+      "notes": "Training curriculum, completion records",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -353,7 +435,9 @@
       "control_name": "Req 6.2",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Secure development policy, design review records"
+      "notes": "Secure development policy, design review records",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -361,7 +445,9 @@
       "control_name": "Req 10.2",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Interaction audit log"
+      "notes": "Interaction audit log",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -369,7 +455,9 @@
       "control_name": "Req 12.3",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Risk analysis documentation"
+      "notes": "Risk analysis documentation",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -377,7 +465,9 @@
       "control_name": "Governance and Risk (GOV)",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Users informed when interacting with AI agents — disclosure requirements, impersonation prohibitions, accountability for agent outputs"
+      "notes": "Users informed when interacting with AI agents — disclosure requirements, impersonation prohibitions, accountability for agent outputs",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -385,7 +475,9 @@
       "control_name": "AI System Integrity (ASI)",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "AI system integrity testing includes deceptive output scenarios — social engineering, false urgency, impersonation tested before deployment"
+      "notes": "AI system integrity testing includes deceptive output scenarios — social engineering, false urgency, impersonation tested before deployment",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -393,7 +485,9 @@
       "control_name": "Monitoring and Detection (MON)",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent outputs monitored for deceptive content patterns — AI-specific detection for impersonation and social engineering indicators"
+      "notes": "Agent outputs monitored for deceptive content patterns — AI-specific detection for impersonation and social engineering indicators",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -401,7 +495,9 @@
       "control_name": "General ICT — Governance",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Acceptable use policy covers agent interaction design — deceptive design patterns prohibited"
+      "notes": "Acceptable use policy covers agent interaction design — deceptive design patterns prohibited",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -409,7 +505,9 @@
       "control_name": "Governance / Strategy & Metrics",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Define maximum autonomy scope per agent class; mandate oversight gates"
+      "notes": "Define maximum autonomy scope per agent class; mandate oversight gates",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -417,7 +515,9 @@
       "control_name": "Design / Security Architecture",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Design confirmation gate pattern for all high-impact actions"
+      "notes": "Design confirmation gate pattern for all high-impact actions",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -425,7 +525,9 @@
       "control_name": "Operations / Incident Management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Alert when agent executes high-impact actions without confirmation"
+      "notes": "Alert when agent executes high-impact actions without confirmation",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -433,7 +535,9 @@
       "control_name": "Operations / Operational Management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Immutable audit log of all autonomous actions for post-hoc review"
+      "notes": "Immutable audit log of all autonomous actions for post-hoc review",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -441,7 +545,9 @@
       "control_name": "Governance / Education & Guidance",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Operators understand when to intervene and how to trigger override"
+      "notes": "Operators understand when to intervene and how to trigger override",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -449,7 +555,9 @@
       "control_name": "CWE-183",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "System accepts human-like agent output without disclosure requirements"
+      "notes": "System accepts human-like agent output without disclosure requirements",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -457,7 +565,9 @@
       "control_name": "CWE-451",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent advisory output not clearly distinguished from authoritative system information in UI"
+      "notes": "Agent advisory output not clearly distinguished from authoritative system information in UI",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -465,7 +575,9 @@
       "control_name": "CWE-346",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "User cannot determine whether advice originates from AI or human — no origin verification"
+      "notes": "User cannot determine whether advice originates from AI or human — no origin verification",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -473,7 +585,9 @@
       "control_name": "CWE-940",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "User cannot verify the agent is operating under its stated configuration"
+      "notes": "User cannot verify the agent is operating under its stated configuration",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -481,7 +595,9 @@
       "control_name": "CWE-200",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "System prompt and agent configuration not protected — extraction enables targeted trust exploitation"
+      "notes": "System prompt and agent configuration not protected — extraction enables targeted trust exploitation",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP AI Testing Guide",
@@ -489,7 +605,9 @@
       "control_name": "MBT — Model Behaviour",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Verify agent identifies as AI in all interface contexts; test for identity concealment"
+      "notes": "Verify agent identifies as AI in all interface contexts; test for identity concealment",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP AI Testing Guide",
@@ -497,7 +615,9 @@
       "control_name": "OHT — Output Handling",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Verify advisory labels persist through all rendering environments"
+      "notes": "Verify advisory labels persist through all rendering environments",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP AI Testing Guide",
@@ -505,56 +625,72 @@
       "control_name": "LMT — Logging & Monitoring",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Verify monitoring can detect aggregate patterns of uncritical operator acceptance"
+      "notes": "Verify monitoring can detect aggregate patterns of uncritical operator acceptance",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L1",
       "control_name": "Foundation Models",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L7",
       "control_name": "Agent Ecosystem",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L6",
       "control_name": "Security & Compliance",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
       "control_id": "C",
       "control_name": "Safety (full domain)",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
       "control_id": "F",
       "control_name": "Society (full domain)",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
       "control_id": "B009",
       "control_name": "Limit output over-exposure",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
       "control_id": "E",
       "control_name": "Accountability (full domain)",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -562,7 +698,9 @@
       "control_name": "NHI-10 Human Use of NHI",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Strict separation: agent credentials machine-only, human credentials human-only"
+      "notes": "Strict separation: agent credentials machine-only, human credentials human-only",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -570,7 +708,9 @@
       "control_name": "NHI-5 Over-Privileged NHI",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Least privilege makes agent capabilities visible and bounded — users understand what the agent can actually do"
+      "notes": "Least privilege makes agent capabilities visible and bounded — users understand what the agent can actually do",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -578,7 +718,9 @@
       "control_name": "PW.7.2-PS – Review the software for security vulnerabilities",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Catches emergent pattern risks before production"
+      "notes": "Catches emergent pattern risks before production",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -586,7 +728,9 @@
       "control_name": "PW.8.2-PS – Test for security vulnerabilities",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Validates controls against novel attack surfaces"
+      "notes": "Validates controls against novel attack surfaces",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -594,7 +738,9 @@
       "control_name": "RV.1.1-PS – Identify and confirm vulnerabilities",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Enables detection of emerging risks in production"
+      "notes": "Enables detection of emerging risks in production",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -602,7 +748,9 @@
       "control_name": "RV.3.1-PS – Analyse root causes",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Builds organisational knowledge of emerging agentic risks"
+      "notes": "Builds organisational knowledge of emerging agentic risks",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -610,7 +758,9 @@
       "control_name": "Continuous Monitoring — novel pattern detection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Include monitoring for novel agentic behaviour patterns in FedRAMP continuous monitoring; track for unexpected capabilities, emergent behaviours, and architectural drift"
+      "notes": "Include monitoring for novel agentic behaviour patterns in FedRAMP continuous monitoring; track for unexpected capabilities, emergent behaviours, and architectural drift",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -618,7 +768,9 @@
       "control_name": "Vulnerability Scanning — emerging attack surfaces",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Include emerging agentic attack surfaces in vulnerability scanning; assess novel architectures for security implications before production deployment"
+      "notes": "Include emerging agentic attack surfaces in vulnerability scanning; assess novel architectures for security implications before production deployment",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -626,7 +778,9 @@
       "control_name": "System Monitoring — unexpected behaviour detection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Monitor agent systems for unexpected behaviour — novel tool use patterns, unanticipated goal decomposition, and emergent inter-agent coordination"
+      "notes": "Monitor agent systems for unexpected behaviour — novel tool use patterns, unanticipated goal decomposition, and emergent inter-agent coordination",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -634,7 +788,9 @@
       "control_name": "Audit Review — agent decision review",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Conduct regular audit review of agent decision logs; identify patterns indicative of unexpected capabilities or emergent behaviours requiring security assessment"
+      "notes": "Conduct regular audit review of agent decision logs; identify patterns indicative of unexpected capabilities or emergent behaviours requiring security assessment",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -642,7 +798,9 @@
       "control_name": "ICT Risk Management — novel agentic risk governance",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Include emerging agentic pattern risks in ICT risk management framework; assess novel architectures for operational resilience implications before deployment"
+      "notes": "Include emerging agentic pattern risks in ICT risk management framework; assess novel architectures for operational resilience implications before deployment",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -650,7 +808,9 @@
       "control_name": "Detection — unexpected behaviour monitoring",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Monitor agent systems for unexpected behaviour — novel tool use patterns, unanticipated goal decomposition, and emergent inter-agent coordination"
+      "notes": "Monitor agent systems for unexpected behaviour — novel tool use patterns, unanticipated goal decomposition, and emergent inter-agent coordination",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -658,7 +818,9 @@
       "control_name": "Learning and Evolving — emerging pattern assessment",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Apply lessons learned from emerging agentic pattern incidents; update governance and controls as new attack techniques and defence approaches emerge"
+      "notes": "Apply lessons learned from emerging agentic pattern incidents; update governance and controls as new attack techniques and defence approaches emerge",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -666,7 +828,9 @@
       "control_name": "Resilience Testing — novel architecture testing",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Include emerging agentic architecture security in resilience testing; assess novel patterns for resilience implications before production deployment"
+      "notes": "Include emerging agentic architecture security in resilience testing; assess novel patterns for resilience implications before production deployment",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     }
   ],
   "tools": [

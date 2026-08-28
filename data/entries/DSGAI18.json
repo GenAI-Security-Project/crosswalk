@@ -23,7 +23,9 @@
       "control_name": "Membership Inference",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Adversary determines whether specific sensitive records were used in training through systematic query analysis"
+      "notes": "Adversary determines whether specific sensitive records were used in training through systematic query analysis",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MITRE ATLAS",
@@ -31,7 +33,9 @@
       "control_name": "Exfiltrate via Cyber Means",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Training data confirmed present and partially reconstructed through inference, then exfiltrated"
+      "notes": "Training data confirmed present and partially reconstructed through inference, then exfiltrated",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MITRE ATLAS",
@@ -39,7 +43,9 @@
       "control_name": "Model Inversion",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Adversary reconstructs sensitive training examples from model outputs through systematic query campaigns"
+      "notes": "Adversary reconstructs sensitive training examples from model outputs through systematic query campaigns",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -47,7 +53,9 @@
       "control_name": "Policies for data privacy",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Privacy policy extended to cover inference attack resistance — not just direct disclosure"
+      "notes": "Privacy policy extended to cover inference attack resistance — not just direct disclosure",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -55,7 +63,9 @@
       "control_name": "Risk categorisation",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Inference attack risks mapped — membership inference, model inversion, embedding inversion per deployment"
+      "notes": "Inference attack risks mapped — membership inference, model inversion, embedding inversion per deployment",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -63,7 +73,9 @@
       "control_name": "Testing — adversarial",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Red team exercises covering membership inference and model inversion attack scenarios"
+      "notes": "Red team exercises covering membership inference and model inversion attack scenarios",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -71,7 +83,9 @@
       "control_name": "Risk response — data",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Response for confirmed inference attack — unlearning, output rate limiting, disclosure assessment"
+      "notes": "Response for confirmed inference attack — unlearning, output rate limiting, disclosure assessment",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -79,7 +93,9 @@
       "control_name": "Art. 10 — Data and data governance",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Differential privacy and inference attack resistance are Art. 10 data governance requirements"
+      "notes": "Differential privacy and inference attack resistance are Art. 10 data governance requirements",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -87,7 +103,9 @@
       "control_name": "Art. 15 — Accuracy, robustness, cybersecurity",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Output rate limiting, confidence score suppression, and embedding encryption are Art. 15 requirements"
+      "notes": "Output rate limiting, confidence score suppression, and embedding encryption are Art. 15 requirements",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -95,7 +113,9 @@
       "control_name": "Data masking",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Differential privacy and output masking reducing information available for reconstruction attacks"
+      "notes": "Differential privacy and output masking reducing information available for reconstruction attacks",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -103,7 +123,9 @@
       "control_name": "Privacy and PII protection",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Privacy requirements extended to cover inference attack resistance — not just direct disclosure"
+      "notes": "Privacy requirements extended to cover inference attack resistance — not just direct disclosure",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -111,7 +133,9 @@
       "control_name": "Use of cryptography",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Cryptographic protection of embedding vectors preventing inversion attacks"
+      "notes": "Cryptographic protection of embedding vectors preventing inversion attacks",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -119,7 +143,9 @@
       "control_name": "Data leakage prevention",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Output monitoring for responses that reconstruct training data or sensitive source content"
+      "notes": "Output monitoring for responses that reconstruct training data or sensitive source content",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -127,7 +153,9 @@
       "control_name": "A.7.2",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Hardening"
+      "notes": "Hardening",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -135,7 +163,9 @@
       "control_name": "A.5.2",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Hardening"
+      "notes": "Hardening",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -143,7 +173,9 @@
       "control_name": "A.6.2.6",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Advanced"
+      "notes": "Advanced",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -151,35 +183,45 @@
       "control_name": "Cl.6.1",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Hardening"
+      "notes": "Hardening",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
       "control_id": "CIS 3",
       "control_name": "3.11 — Encrypt sensitive data at rest",
       "tier": "Hardening",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
       "control_id": "CIS 18",
       "control_name": "18.1 — Penetration testing",
       "tier": "Hardening",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
       "control_id": "V8 Data Protection",
       "control_name": "V8.3.4 — Sensitive data identified",
       "tier": "Hardening",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
       "control_id": "V6 Cryptography",
       "control_name": "V6.1.1 — Sensitive data not stored in cleartext",
       "tier": "Hardening",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -187,7 +229,9 @@
       "control_name": "Data confidentiality",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Inference attack resistance as OT data protection measure — differential privacy for OT training data"
+      "notes": "Inference attack resistance as OT data protection measure — differential privacy for OT training data",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -195,7 +239,9 @@
       "control_name": "Timely response to events",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Inference attack campaigns detected — systematic query patterns indicative of AML.T0024.000 alerted"
+      "notes": "Inference attack campaigns detected — systematic query patterns indicative of AML.T0024.000 alerted",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -203,7 +249,9 @@
       "control_name": "Software and information integrity",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Confidence score suppression as OT integrity control — limits information available for model inversion"
+      "notes": "Confidence score suppression as OT integrity control — limits information available for model inversion",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -211,7 +259,9 @@
       "control_name": "§5.4",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Retention of OT data beyond required period is a confidentiality risk"
+      "notes": "Retention of OT data beyond required period is a confidentiality risk",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -219,7 +269,9 @@
       "control_name": "§6.2",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Data retention as OT risk scenario"
+      "notes": "Data retention as OT risk scenario",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -227,7 +279,9 @@
       "control_name": "Data Security",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Reconstruction resistance as data protection measure — differential privacy in training, confidence score suppression"
+      "notes": "Reconstruction resistance as data protection measure — differential privacy in training, confidence score suppression",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -235,7 +289,9 @@
       "control_name": "Continuous Monitoring",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Monitoring for inference attack patterns — systematic output space probing detected"
+      "notes": "Monitoring for inference attack patterns — systematic output space probing detected",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -243,7 +299,9 @@
       "control_name": "Risk Assessment",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Inference attack risks documented per deployment — models trained on sensitive data assessed"
+      "notes": "Inference attack risks documented per deployment — models trained on sensitive data assessed",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -251,35 +309,45 @@
       "control_name": "Risk Management Strategy",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Risk tolerance for inference attacks established — acceptable reconstruction risk defined per use case"
+      "notes": "Risk tolerance for inference attacks established — acceptable reconstruction risk defined per use case",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Inference attack resistance as confidentiality protection — technical measures limiting reconstruction success",
       "control_name": "C2.1 — Confidential information protection",
       "tier": "Hardening",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Using model outputs to reconstruct personal information beyond authorised purposes is a P5 violation",
       "control_name": "P5.1 — Personal information use",
       "tier": "Hardening",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Output monitoring for reconstruction indicators — systematic query patterns detected",
       "control_name": "CC7.2 — Anomaly detection",
       "tier": "Hardening",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Inference attack risks identified in GenAI risk assessment — membership inference, model inversion vectors",
       "control_name": "CC3.2 — Risk assessment",
       "tier": "Hardening",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -287,7 +355,9 @@
       "control_name": "PAN rendering",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "PANs reconstructed from model outputs must be prevented — inference attack resistance as Req 3 control"
+      "notes": "PANs reconstructed from model outputs must be prevented — inference attack resistance as Req 3 control",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -295,7 +365,9 @@
       "control_name": "Protect stored CHD",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Embeddings that can reconstruct PANs require Req 3 protection — differential privacy as encryption equivalent"
+      "notes": "Embeddings that can reconstruct PANs require Req 3 protection — differential privacy as encryption equivalent",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -303,7 +375,9 @@
       "control_name": "Penetration testing",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Inference attack testing for GenAI models trained on CHD — membership inference and inversion attacks"
+      "notes": "Inference attack testing for GenAI models trained on CHD — membership inference and inversion attacks",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -311,7 +385,9 @@
       "control_name": "Targeted risk analysis",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Targeted risk analysis for inference attack risk against CHD-trained GenAI models"
+      "notes": "Targeted risk analysis for inference attack risk against CHD-trained GenAI models",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -319,7 +395,9 @@
       "control_name": "Data and Model Security (DMS)",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Differential privacy, output perturbation, and prediction API rate limiting applied as DMS privacy-preserving controls"
+      "notes": "Differential privacy, output perturbation, and prediction API rate limiting applied as DMS privacy-preserving controls",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -327,7 +405,9 @@
       "control_name": "AI System Integrity (ASI)",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Inference attack red teaming included in AI system integrity verification — membership inference, model inversion, attribute inference tested before deployment"
+      "notes": "Inference attack red teaming included in AI system integrity verification — membership inference, model inversion, attribute inference tested before deployment",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -335,7 +415,9 @@
       "control_name": "Governance and Risk (GOV)",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Inference attack risk documented in AI risk assessment — treatment controls (differential privacy, output restrictions) justified"
+      "notes": "Inference attack risk documented in AI risk assessment — treatment controls (differential privacy, output restrictions) justified",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -343,7 +425,9 @@
       "control_name": "Monitoring and Detection (MON)",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Prediction API monitoring for inference attack patterns — high-volume, systematic query patterns that indicate shadow model training"
+      "notes": "Prediction API monitoring for inference attack patterns — high-volume, systematic query patterns that indicate shadow model training",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -351,7 +435,9 @@
       "control_name": "Governance / Policy & Compliance",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Documented retention periods and deletion procedures for all GenAI data"
+      "notes": "Documented retention periods and deletion procedures for all GenAI data",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -359,7 +445,9 @@
       "control_name": "Design / Security Requirements",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Right-to-erasure and retention limits built into system requirements"
+      "notes": "Right-to-erasure and retention limits built into system requirements",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -367,7 +455,9 @@
       "control_name": "Operations / Operational Management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Automated verification that data is deleted per retention schedule"
+      "notes": "Automated verification that data is deleted per retention schedule",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -375,7 +465,9 @@
       "control_name": "Governance / Strategy & Metrics",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "GenAI data lifecycle integrated into existing privacy programme"
+      "notes": "GenAI data lifecycle integrated into existing privacy programme",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -383,7 +475,9 @@
       "control_name": "CWE-200",
       "tier": "Hardening",
       "scope": "Both",
-      "url": "https://cwe.mitre.org/data/definitions/200.html"
+      "url": "https://cwe.mitre.org/data/definitions/200.html",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -391,28 +485,36 @@
       "control_name": "CWE-327",
       "tier": "Hardening",
       "scope": "Both",
-      "url": "https://cwe.mitre.org/data/definitions/327.html"
+      "url": "https://cwe.mitre.org/data/definitions/327.html",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L1",
       "control_name": "Foundation Models",
       "tier": "Hardening",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L2",
       "control_name": "Data Operations",
       "tier": "Hardening",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L5",
       "control_name": "Evaluation & Observability",
       "tier": "Hardening",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -420,7 +522,9 @@
       "control_name": "Data & Privacy domain",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -428,7 +532,9 @@
       "control_name": "Audit trails and logging",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -436,7 +542,9 @@
       "control_name": "NHI-5 Over-Privileged NHI",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Minimum scope for data access credentials"
+      "notes": "Minimum scope for data access credentials",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -444,7 +552,9 @@
       "control_name": "NHI-10 Human Use of NHI",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Enforce human identity for all compliance operations"
+      "notes": "Enforce human identity for all compliance operations",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -452,7 +562,9 @@
       "control_name": "Define security requirements — AI data governance requirements",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Define security requirements mandating AI-specific data governance including data stewardship, accountability structures, and policy enforcement mechanisms"
+      "notes": "Define security requirements mandating AI-specific data governance including data stewardship, accountability structures, and policy enforcement mechanisms",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -460,7 +572,9 @@
       "control_name": "Design software — governance-integrated AI architecture",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Design AI systems with governance controls integrated into pipeline architecture; embed policy enforcement, approval workflows, and audit capabilities"
+      "notes": "Design AI systems with governance controls integrated into pipeline architecture; embed policy enforcement, approval workflows, and audit capabilities",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -468,7 +582,9 @@
       "control_name": "Analyse root causes — governance failure analysis",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "When data governance failures contribute to AI incidents, conduct root cause analysis to identify governance gaps and strengthen frameworks"
+      "notes": "When data governance failures contribute to AI incidents, conduct root cause analysis to identify governance gaps and strengthen frameworks",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -476,7 +592,9 @@
       "control_name": "Risk Management Strategy — AI governance framework",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Establish comprehensive AI data governance framework within risk management strategy; define roles, policies, and oversight mechanisms"
+      "notes": "Establish comprehensive AI data governance framework within risk management strategy; define roles, policies, and oversight mechanisms",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -484,7 +602,9 @@
       "control_name": "Configuration Change Control — governance policy management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Maintain AI governance policies under change control; require approval for policy modifications; audit all changes"
+      "notes": "Maintain AI governance policies under change control; require approval for policy modifications; audit all changes",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -492,7 +612,9 @@
       "control_name": "Risk Assessment — governance completeness",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Assess AI governance completeness; identify gaps in roles, policies, oversight, and accountability"
+      "notes": "Assess AI governance completeness; identify gaps in roles, policies, oversight, and accountability",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -500,7 +622,9 @@
       "control_name": "ICT Risk Management — AI governance framework",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Establish comprehensive AI data governance within ICT risk management; define roles, policies, accountability, and oversight mechanisms"
+      "notes": "Establish comprehensive AI data governance within ICT risk management; define roles, policies, accountability, and oversight mechanisms",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -508,7 +632,9 @@
       "control_name": "Learning and Evolving — governance improvement",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Apply lessons learned to improve AI data governance; update policies and controls based on incident analysis and regulatory changes"
+      "notes": "Apply lessons learned to improve AI data governance; update policies and controls based on incident analysis and regulatory changes",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -516,7 +642,9 @@
       "control_name": "Identification — governance scope mapping",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Map all AI systems subject to governance; ensure complete coverage of AI data assets in governance framework"
+      "notes": "Map all AI systems subject to governance; ensure complete coverage of AI data assets in governance framework",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     }
   ],
   "tools": [

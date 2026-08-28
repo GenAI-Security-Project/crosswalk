@@ -23,7 +23,9 @@
       "tier": "Foundational",
       "scope": "Both",
       "url": "https://atlas.mitre.org/techniques/AML.T0029",
-      "notes": "Overloading AI systems with computationally expensive inputs to cause service degradation"
+      "notes": "Overloading AI systems with computationally expensive inputs to cause service degradation",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MITRE ATLAS",
@@ -32,7 +34,9 @@
       "tier": "Foundational",
       "scope": "Both",
       "url": "https://atlas.mitre.org/techniques/AML.T0034",
-      "notes": "Crafting inputs that maximise token usage or API costs per request"
+      "notes": "Crafting inputs that maximise token usage or API costs per request",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -40,7 +44,9 @@
       "control_name": "Testing — adversarial",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Resource exhaustion and denial-of-service scenarios included in adversarial testing"
+      "notes": "Resource exhaustion and denial-of-service scenarios included in adversarial testing",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -48,7 +54,9 @@
       "control_name": "Risk response",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Defined response to detected unbounded consumption events including rate limiting activation"
+      "notes": "Defined response to detected unbounded consumption events including rate limiting activation",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -56,7 +64,9 @@
       "control_name": "Residual risk — availability",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Residual availability risk from resource exhaustion documented and treated"
+      "notes": "Residual availability risk from resource exhaustion documented and treated",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -64,7 +74,9 @@
       "control_name": "Policies for trustworthy AI",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Organisational policy defines resource limits and availability requirements for all LLM deployments"
+      "notes": "Organisational policy defines resource limits and availability requirements for all LLM deployments",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -72,7 +84,9 @@
       "control_name": "Art. 9 — Risk management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Resource exhaustion and DoS scenarios included in risk management system"
+      "notes": "Resource exhaustion and DoS scenarios included in risk management system",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -80,7 +94,9 @@
       "control_name": "Art. 15 — Accuracy, robustness, cybersecurity",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Technical resilience against denial-of-service attacks is an Art. 15 requirement"
+      "notes": "Technical resilience against denial-of-service attacks is an Art. 15 requirement",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -88,7 +104,9 @@
       "control_name": "Art. 17 — Quality management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Post-market monitoring and incident response for availability failures required"
+      "notes": "Post-market monitoring and incident response for availability failures required",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -96,7 +114,10 @@
       "control_name": "Monitoring activities",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Real-time monitoring of LLM resource consumption — cost anomaly detection and alerting"
+      "notes": "Real-time monitoring of LLM resource consumption — cost anomaly detection and alerting",
+      "framework_version": "ISO 27001:2022",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -104,7 +125,10 @@
       "control_name": "ICT readiness for business continuity",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM availability requirements in BCP — RTO/RPO defined, rate limiting as resilience control"
+      "notes": "LLM availability requirements in BCP — RTO/RPO defined, rate limiting as resilience control",
+      "framework_version": "ISO 27001:2022",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -112,7 +136,10 @@
       "control_name": "Backup",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Backup and recovery for LLM service infrastructure — failover capability tested"
+      "notes": "Backup and recovery for LLM service infrastructure — failover capability tested",
+      "framework_version": "ISO 27001:2022",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -120,7 +147,10 @@
       "control_name": "Incident management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Incident response procedures for LLM availability failures and cost overruns"
+      "notes": "Incident response procedures for LLM availability failures and cost overruns",
+      "framework_version": "ISO 27001:2022",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -128,7 +158,9 @@
       "control_name": "AI system security",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Rate limiting and resource controls as AIMS security design requirements — enforced at deployment"
+      "notes": "Rate limiting and resource controls as AIMS security design requirements — enforced at deployment",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -136,7 +168,9 @@
       "control_name": "Monitoring of AI systems",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Resource consumption monitored in operation — cost anomaly detection as AIMS monitoring control"
+      "notes": "Resource consumption monitored in operation — cost anomaly detection as AIMS monitoring control",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -144,7 +178,9 @@
       "control_name": "Risk assessment",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Consumption risk in AI risk assessment — impact on service availability, cost exposure documented"
+      "notes": "Consumption risk in AI risk assessment — impact on service availability, cost exposure documented",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -152,7 +188,9 @@
       "control_name": "Performance evaluation",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Resource consumption metrics in AIMS performance evaluation — consumption trends in management review"
+      "notes": "Resource consumption metrics in AIMS performance evaluation — consumption trends in management review",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
@@ -160,7 +198,9 @@
       "control_name": "CIS 4 — Secure Configuration",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Secure configuration includes resource limits — token caps, rate limits, cost budgets"
+      "notes": "Secure configuration includes resource limits — token caps, rate limits, cost budgets",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
@@ -168,7 +208,9 @@
       "control_name": "CIS 12 — Network Infrastructure Management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Rate limiting and traffic controls at the API gateway and network layer"
+      "notes": "Rate limiting and traffic controls at the API gateway and network layer",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
@@ -176,7 +218,9 @@
       "control_name": "CIS 17 — Incident Response",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Defined response for consumption anomalies — automated rate limiting, session suspension, alerting"
+      "notes": "Defined response for consumption anomalies — automated rate limiting, session suspension, alerting",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
@@ -184,7 +228,9 @@
       "control_name": "Verify API rate limiting",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Rate limiting on all LLM API endpoints — per user, per session, per API key"
+      "notes": "Rate limiting on all LLM API endpoints — per user, per session, per API key",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
@@ -192,7 +238,9 @@
       "control_name": "Verify API rejects large unexpected payloads",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Token limits on LLM API inputs — requests exceeding limits rejected at the gateway"
+      "notes": "Token limits on LLM API inputs — requests exceeding limits rejected at the gateway",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
@@ -200,7 +248,9 @@
       "control_name": "Verify business logic rate limits",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Business logic controls on LLM usage — per-tenant cost budgets, rate limit policies"
+      "notes": "Business logic controls on LLM usage — per-tenant cost budgets, rate limit policies",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
@@ -208,7 +258,9 @@
       "control_name": "Verify error handling does not expose sensitive data",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM resource exhaustion errors handled gracefully — no sensitive information in error responses"
+      "notes": "LLM resource exhaustion errors handled gracefully — no sensitive information in error responses",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -216,7 +268,9 @@
       "control_name": "Denial of service protection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM components protected against resource exhaustion attacks affecting OT availability"
+      "notes": "LLM components protected against resource exhaustion attacks affecting OT availability",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -224,7 +278,9 @@
       "control_name": "Control system backup",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM resource exhaustion cannot affect backup and recovery of OT control systems"
+      "notes": "LLM resource exhaustion cannot affect backup and recovery of OT control systems",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -232,7 +288,9 @@
       "control_name": "Timely response to events",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Network monitoring detects and responds to LLM-related resource exhaustion before OT impact"
+      "notes": "Network monitoring detects and responds to LLM-related resource exhaustion before OT impact",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -240,7 +298,9 @@
       "control_name": "Section 5.6 — DoS threats",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM-induced resource exhaustion as a DoS vector affecting shared OT network infrastructure"
+      "notes": "LLM-induced resource exhaustion as a DoS vector affecting shared OT network infrastructure",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -248,7 +308,9 @@
       "control_name": "Section 6.2 — Risk assessment",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM resource consumption impact assessed on shared OT network and compute infrastructure"
+      "notes": "LLM resource consumption impact assessed on shared OT network and compute infrastructure",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -256,7 +318,9 @@
       "control_name": "Section 7.2 — Network segmentation",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM infrastructure isolated from OT control network — bandwidth caps at DMZ boundary"
+      "notes": "LLM infrastructure isolated from OT control network — bandwidth caps at DMZ boundary",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -264,7 +328,9 @@
       "control_name": "Control",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Application"
+      "notes": "Application",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -272,7 +338,9 @@
       "control_name": "SC-5",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM infrastructure protected against resource exhaustion attacks affecting OT availability"
+      "notes": "LLM infrastructure protected against resource exhaustion attacks affecting OT availability",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -280,7 +348,9 @@
       "control_name": "SI-17",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM service degradation has defined fail-safe behaviour — process control continues without LLM"
+      "notes": "LLM service degradation has defined fail-safe behaviour — process control continues without LLM",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -288,7 +358,9 @@
       "control_name": "AU-12",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM resource consumption logged — patterns indicating exhaustion attacks detectable"
+      "notes": "LLM resource consumption logged — patterns indicating exhaustion attacks detectable",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -296,7 +368,9 @@
       "control_name": "Infrastructure Resilience",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Networks and environments protected to achieve resilience — rate limiting and resource controls as resilience measures"
+      "notes": "Networks and environments protected to achieve resilience — rate limiting and resource controls as resilience measures",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -304,7 +378,9 @@
       "control_name": "Continuous Monitoring",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM resource consumption monitored — anomalous usage patterns detected and alerted"
+      "notes": "LLM resource consumption monitored — anomalous usage patterns detected and alerted",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -312,7 +388,9 @@
       "control_name": "Incident Mitigation",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Incidents contained — automated rate limiting, circuit breakers, cost budgets as containment controls"
+      "notes": "Incidents contained — automated rate limiting, circuit breakers, cost budgets as containment controls",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -320,35 +398,45 @@
       "control_name": "Risk Management Strategy",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Risk management strategy established — LLM availability requirements and acceptable consumption risk defined"
+      "notes": "Risk management strategy established — LLM availability requirements and acceptable consumption risk defined",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "LLM service availability commitments documented — SLAs, RTO/RPO, resource limits that protect availability",
       "control_name": "A1.1 — Availability policies",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Rate limiting and resource controls protect LLM service availability — implemented and monitored",
       "control_name": "A1.2 — Environmental protections",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Real-time monitoring of LLM resource consumption — cost anomalies and unusual volume patterns alerted",
       "control_name": "CC7.2 — Anomaly detection",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Resource exhaustion risks identified in LLM risk assessment — DoS and sponge attack vectors assessed",
       "control_name": "CC3.2 — Risk assessment",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -356,7 +444,9 @@
       "control_name": "Network security controls",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Network controls restrict inbound traffic to CDE — rate limiting at network layer for LLM applications"
+      "notes": "Network controls restrict inbound traffic to CDE — rate limiting at network layer for LLM applications",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -364,7 +454,9 @@
       "control_name": "Public-facing application protection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM-powered public-facing applications protected against DoS — rate limiting and payload limits enforced"
+      "notes": "LLM-powered public-facing applications protected against DoS — rate limiting and payload limits enforced",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -372,7 +464,9 @@
       "control_name": "Audit log review",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Automated monitoring for resource exhaustion patterns — unusual consumption volumes alerted"
+      "notes": "Automated monitoring for resource exhaustion patterns — unusual consumption volumes alerted",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -380,7 +474,9 @@
       "control_name": "Targeted risk analysis",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Targeted risk analysis for LLM availability in CDE — DoS impact on payment processing, controls documented"
+      "notes": "Targeted risk analysis for LLM availability in CDE — DoS impact on payment processing, controls documented",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -388,7 +484,9 @@
       "control_name": "General ICT — Availability",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Rate limiting and resource controls as L1 availability practices — LLM infrastructure protected against exhaustion"
+      "notes": "Rate limiting and resource controls as L1 availability practices — LLM infrastructure protected against exhaustion",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -396,7 +494,9 @@
       "control_name": "Monitoring and Detection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM resource consumption monitored — cost anomaly detection as ENISA monitoring practice"
+      "notes": "LLM resource consumption monitored — cost anomaly detection as ENISA monitoring practice",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -404,7 +504,9 @@
       "control_name": "Incident Response (IRS)",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Incident response for consumption anomalies — automated rate limiting, circuit breakers, cost budgets"
+      "notes": "Incident response for consumption anomalies — automated rate limiting, circuit breakers, cost budgets",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -412,7 +514,9 @@
       "control_name": "Governance and Risk (GOV)",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM availability in risk management — RTO/RPO defined, consumption risk in AI risk register"
+      "notes": "LLM availability in risk management — RTO/RPO defined, consumption risk in AI risk register",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -420,7 +524,9 @@
       "control_name": "Security Requirements",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Rate limiting and resource caps as security requirements — specified before LLM infrastructure deployment"
+      "notes": "Rate limiting and resource caps as security requirements — specified before LLM infrastructure deployment",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -428,7 +534,9 @@
       "control_name": "Secure Deployment",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Rate limiting and resource controls deployed with every LLM deployment — not optional post-deployment hardening"
+      "notes": "Rate limiting and resource controls deployed with every LLM deployment — not optional post-deployment hardening",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -436,7 +544,9 @@
       "control_name": "Incident Management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Consumption anomaly detection as incident management control — automated response, escalation procedure"
+      "notes": "Consumption anomaly detection as incident management control — automated response, escalation procedure",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -444,14 +554,18 @@
       "control_name": "Environment Management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Resource limits as environment configuration — documented, version-controlled, reviewed on change"
+      "notes": "Resource limits as environment configuration — documented, version-controlled, reviewed on change",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "STRIDE",
       "control_id": "D",
       "control_name": "Resource Exhaustion (Denial of Service)",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -459,7 +573,9 @@
       "control_name": "CWE-400",
       "tier": "Foundational",
       "scope": "Both",
-      "url": "https://cwe.mitre.org/data/definitions/400.html"
+      "url": "https://cwe.mitre.org/data/definitions/400.html",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -467,7 +583,9 @@
       "control_name": "CWE-770",
       "tier": "Foundational",
       "scope": "Both",
-      "url": "https://cwe.mitre.org/data/definitions/770.html"
+      "url": "https://cwe.mitre.org/data/definitions/770.html",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -475,7 +593,9 @@
       "control_name": "CWE-799",
       "tier": "Foundational",
       "scope": "Both",
-      "url": "https://cwe.mitre.org/data/definitions/799.html"
+      "url": "https://cwe.mitre.org/data/definitions/799.html",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP AI Testing Guide",
@@ -483,7 +603,9 @@
       "control_name": "AVT — Availability",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Test rate limiting enforcement, token budget controls, and compute throttling under load; verify graceful degradation"
+      "notes": "Test rate limiting enforcement, token budget controls, and compute throttling under load; verify graceful degradation",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP AI Testing Guide",
@@ -491,7 +613,9 @@
       "control_name": "LMT — Logging & Monitoring",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Verify monitoring detects abnormal consumption patterns — token flooding, API abuse, wallet drainage — before service impact"
+      "notes": "Verify monitoring detects abnormal consumption patterns — token flooding, API abuse, wallet drainage — before service impact",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP AI Testing Guide",
@@ -499,28 +623,36 @@
       "control_name": "ACT — Access Control",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Verify per-user and per-tenant quotas are enforced and cannot be bypassed through session switching or credential abuse"
+      "notes": "Verify per-user and per-tenant quotas are enforced and cannot be bypassed through session switching or credential abuse",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L4",
       "control_name": "Deployment & Infrastructure",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L3",
       "control_name": "Agent Frameworks",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L5",
       "control_name": "Evaluation & Observability",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -528,7 +660,9 @@
       "control_name": "Reliability domain (all)",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -536,7 +670,9 @@
       "control_name": "Prevent unauthorized AI actions",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -544,7 +680,9 @@
       "control_name": "Accountability domain",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -552,7 +690,9 @@
       "control_name": "NHI-5 Over-Privileged NHI",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Separate credentials per service with independent quotas"
+      "notes": "Separate credentials per service with independent quotas",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -560,7 +700,9 @@
       "control_name": "NHI-9 NHI Reuse",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Separate credentials per integration"
+      "notes": "Separate credentials per integration",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -568,7 +710,9 @@
       "control_name": "Design software — resource and throttling requirements",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Define token limits, rate limits, and cost budgets as explicit security design requirements for all AI inference services; document in design specifications"
+      "notes": "Define token limits, rate limits, and cost budgets as explicit security design requirements for all AI inference services; document in design specifications",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -576,7 +720,9 @@
       "control_name": "Test for security vulnerabilities — load and adversarial consumption testing",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Conduct adversarial resource consumption testing (sponge examples, token amplification, recursive context injection) before each production release"
+      "notes": "Conduct adversarial resource consumption testing (sponge examples, token amplification, recursive context injection) before each production release",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -584,7 +730,9 @@
       "control_name": "Assess, prioritise, and remediate — availability remediation",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Define and test remediation procedures for availability incidents — rate limit tightening, model rollback, cost circuit breaker activation"
+      "notes": "Define and test remediation procedures for availability incidents — rate limit tightening, model rollback, cost circuit breaker activation",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -592,7 +740,9 @@
       "control_name": "Verify software integrity — throttle and limit configuration integrity",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Verify that rate limit and resource constraint configurations have not been altered before deployment; treat throttle configuration as a security artefact"
+      "notes": "Verify that rate limit and resource constraint configurations have not been altered before deployment; treat throttle configuration as a security artefact",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -600,7 +750,9 @@
       "control_name": "Boundary Protection — rate limiting and cost controls",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Enforce rate limiting, token quotas, and cost circuit breakers at the AI service boundary; define per-user and per-session consumption limits"
+      "notes": "Enforce rate limiting, token quotas, and cost circuit breakers at the AI service boundary; define per-user and per-session consumption limits",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -608,7 +760,9 @@
       "control_name": "System Monitoring — consumption anomaly detection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Monitor AI service consumption metrics — tokens, latency, cost — in real time; alert and auto-mitigate on consumption anomalies"
+      "notes": "Monitor AI service consumption metrics — tokens, latency, cost — in real time; alert and auto-mitigate on consumption anomalies",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -616,7 +770,9 @@
       "control_name": "Least Functionality — resource budget enforcement",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Restrict AI services to defined resource budgets; disable unnecessary model capabilities; enforce compute and cost limits in configuration"
+      "notes": "Restrict AI services to defined resource budgets; disable unnecessary model capabilities; enforce compute and cost limits in configuration",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -624,7 +780,9 @@
       "control_name": "Incident Handling — consumption incident response",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Define incident handling procedures for AI consumption anomalies including automatic throttling, service suspension, and cost cap enforcement"
+      "notes": "Define incident handling procedures for AI consumption anomalies including automatic throttling, service suspension, and cost cap enforcement",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -632,7 +790,9 @@
       "control_name": "Protection and Prevention — consumption controls",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Implement rate limiting, token quotas, and cost circuit breakers on financial AI inference services; define per-user and per-service consumption limits"
+      "notes": "Implement rate limiting, token quotas, and cost circuit breakers on financial AI inference services; define per-user and per-service consumption limits",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -640,7 +800,9 @@
       "control_name": "Detection — consumption anomaly detection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Monitor AI service consumption metrics in real time; alert on token spikes, latency degradation, and cost overruns affecting financial service availability"
+      "notes": "Monitor AI service consumption metrics in real time; alert on token spikes, latency degradation, and cost overruns affecting financial service availability",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -648,7 +810,9 @@
       "control_name": "Backup Policies — AI service continuity",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Maintain backup model deployments and fallback inference paths for AI services supporting critical financial functions; test restoration procedures"
+      "notes": "Maintain backup model deployments and fallback inference paths for AI services supporting critical financial functions; test restoration procedures",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -656,7 +820,9 @@
       "control_name": "Response and Recovery — consumption incident response",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Define response and recovery procedures for AI consumption incidents; include automatic throttling, failover activation, and service restoration"
+      "notes": "Define response and recovery procedures for AI consumption incidents; include automatic throttling, failover activation, and service restoration",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     }
   ],
   "tools": [

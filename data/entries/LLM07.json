@@ -23,7 +23,9 @@
       "tier": "Foundational",
       "scope": "Both",
       "url": "https://atlas.mitre.org/techniques/AML.T0045",
-      "notes": "Using AI-generated content to deliberately spread false information"
+      "notes": "Using AI-generated content to deliberately spread false information",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MITRE ATLAS",
@@ -32,7 +34,9 @@
       "tier": "Foundational",
       "scope": "Both",
       "url": "https://atlas.mitre.org/techniques/AML.T0047",
-      "notes": "Generating high-volume automated content to shape perception or overwhelm fact-checking"
+      "notes": "Generating high-volume automated content to shape perception or overwhelm fact-checking",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -40,7 +44,9 @@
       "control_name": "Policies for trustworthy AI",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Organisational policy on AI-generated content accuracy and human oversight requirements"
+      "notes": "Organisational policy on AI-generated content accuracy and human oversight requirements",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -48,7 +54,9 @@
       "control_name": "Testing — output quality",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Accuracy and hallucination testing included in AI evaluation programme"
+      "notes": "Accuracy and hallucination testing included in AI evaluation programme",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -56,7 +64,9 @@
       "control_name": "Feedback mechanisms",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Feedback channels for detecting and tracking misinformation in production"
+      "notes": "Feedback channels for detecting and tracking misinformation in production",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -64,7 +74,9 @@
       "control_name": "Risk response — data",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Procedures for responding to detected misinformation incidents"
+      "notes": "Procedures for responding to detected misinformation incidents",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -72,7 +84,9 @@
       "control_name": "Art. 13 — Transparency",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Hallucination rates and accuracy limitations must be disclosed to deployers and users"
+      "notes": "Hallucination rates and accuracy limitations must be disclosed to deployers and users",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -80,7 +94,9 @@
       "control_name": "Art. 50 — Transparency for certain AI systems",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Mandatory AI disclosure prevents users from treating hallucinated content as authoritative human output"
+      "notes": "Mandatory AI disclosure prevents users from treating hallucinated content as authoritative human output",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -88,7 +104,9 @@
       "control_name": "Art. 55(1)(a) — Systemic risk GPAI",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Misinformation risk assessment and mitigation is a binding obligation for systemic risk models"
+      "notes": "Misinformation risk assessment and mitigation is a binding obligation for systemic risk models",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -96,7 +114,10 @@
       "control_name": "Monitoring activities",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Production monitoring for output accuracy — hallucination rate tracking, anomaly detection on model drift"
+      "notes": "Production monitoring for output accuracy — hallucination rate tracking, anomaly detection on model drift",
+      "framework_version": "ISO 27001:2022",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -104,7 +125,10 @@
       "control_name": "Threat intelligence",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Intelligence on disinformation campaigns and active manipulation of RAG sources"
+      "notes": "Intelligence on disinformation campaigns and active manipulation of RAG sources",
+      "framework_version": "ISO 27001:2022",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -112,7 +136,10 @@
       "control_name": "Information security awareness training",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "User training on LLM output limitations — verification requirements and critical evaluation"
+      "notes": "User training on LLM output limitations — verification requirements and critical evaluation",
+      "framework_version": "ISO 27001:2022",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -120,7 +147,10 @@
       "control_name": "Compliance with policies",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Policy on AI-generated content accuracy — disclosure requirements, human verification thresholds"
+      "notes": "Policy on AI-generated content accuracy — disclosure requirements, human verification thresholds",
+      "framework_version": "ISO 27001:2022",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -128,7 +158,9 @@
       "control_name": "Impact assessment",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "AI impact assessment covers misinformation risk — which domains are affected, what is the consequence of incorrect output per stakeholder"
+      "notes": "AI impact assessment covers misinformation risk — which domains are affected, what is the consequence of incorrect output per stakeholder",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -136,7 +168,9 @@
       "control_name": "Monitoring of AI systems",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Production monitoring for accuracy degradation — hallucination rates tracked as AIMS operational monitoring"
+      "notes": "Production monitoring for accuracy degradation — hallucination rates tracked as AIMS operational monitoring",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -144,7 +178,9 @@
       "control_name": "Information for interested parties",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Transparency about AI system limitations — users informed of advisory status, accuracy limitations, verification requirements"
+      "notes": "Transparency about AI system limitations — users informed of advisory status, accuracy limitations, verification requirements",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -152,7 +188,9 @@
       "control_name": "Use of AI systems",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Guidance on appropriate AI system use — domains requiring human verification documented as AIMS use guidance"
+      "notes": "Guidance on appropriate AI system use — domains requiring human verification documented as AIMS use guidance",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
@@ -160,7 +198,9 @@
       "control_name": "CIS 14 — Security Awareness",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "User training on LLM output limitations — verification requirements and critical evaluation"
+      "notes": "User training on LLM output limitations — verification requirements and critical evaluation",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
@@ -168,7 +208,9 @@
       "control_name": "CIS 17 — Incident Response",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Defined response for LLM misinformation incidents — correction, notification, root cause"
+      "notes": "Defined response for LLM misinformation incidents — correction, notification, root cause",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
@@ -176,7 +218,9 @@
       "control_name": "CIS 3 — Data Protection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "RAG data governance — quality and freshness controls on retrieval sources"
+      "notes": "RAG data governance — quality and freshness controls on retrieval sources",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
@@ -184,7 +228,9 @@
       "control_name": "Verify business logic assumptions documented",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM accuracy limitations documented as business logic assumptions — verification requirements defined"
+      "notes": "LLM accuracy limitations documented as business logic assumptions — verification requirements defined",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
@@ -192,7 +238,9 @@
       "control_name": "Verify all security controls logged",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM accuracy metrics and hallucination rate logged — production monitoring for output quality"
+      "notes": "LLM accuracy metrics and hallucination rate logged — production monitoring for output quality",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
@@ -200,7 +248,9 @@
       "control_name": "Verify outputs encoded before rendering",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM advisory outputs clearly labelled — users cannot mistake model output for authoritative source"
+      "notes": "LLM advisory outputs clearly labelled — users cannot mistake model output for authoritative source",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -208,7 +258,9 @@
       "control_name": "Software and information integrity",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM outputs for safety-relevant guidance cross-validated against authoritative sources"
+      "notes": "LLM outputs for safety-relevant guidance cross-validated against authoritative sources",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -216,7 +268,9 @@
       "control_name": "Timely response to events",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Procedures for detecting and responding to LLM misinformation incidents"
+      "notes": "Procedures for detecting and responding to LLM misinformation incidents",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -224,7 +278,9 @@
       "control_name": "Use control",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM advisory outputs clearly distinguished from authoritative procedural documentation"
+      "notes": "LLM advisory outputs clearly distinguished from authoritative procedural documentation",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -232,7 +288,9 @@
       "control_name": "Section 5.3 — Integrity threats",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM misinformation as an integrity attack on operator decision-making"
+      "notes": "LLM misinformation as an integrity attack on operator decision-making",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -240,7 +298,9 @@
       "control_name": "Section 6.2 — Risk assessment",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM accuracy limitations assessed in OT risk assessment per use case"
+      "notes": "LLM accuracy limitations assessed in OT risk assessment per use case",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -248,7 +308,9 @@
       "control_name": "Section 8.2 — Training",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Operator training on LLM limitations and verification requirements"
+      "notes": "Operator training on LLM limitations and verification requirements",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -256,7 +318,9 @@
       "control_name": "Control",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Application"
+      "notes": "Application",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -264,7 +328,9 @@
       "control_name": "SI-3",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Analogy: LLM misinformation detection controls as an integrity assurance layer on advisory outputs"
+      "notes": "Analogy: LLM misinformation detection controls as an integrity assurance layer on advisory outputs",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -272,7 +338,9 @@
       "control_name": "AC-3",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM advisory outputs restricted to defined advisory roles — never authoritative source for safety-critical procedures"
+      "notes": "LLM advisory outputs restricted to defined advisory roles — never authoritative source for safety-critical procedures",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -280,7 +348,9 @@
       "control_name": "AT-3",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Operator training on LLM advisory limitations — mandatory for all operators using LLM decision-support tools"
+      "notes": "Operator training on LLM advisory limitations — mandatory for all operators using LLM decision-support tools",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -288,7 +358,9 @@
       "control_name": "Organisational Context",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Acceptable use policy defines which LLM outputs require verification — high-stakes domains identified"
+      "notes": "Acceptable use policy defines which LLM outputs require verification — high-stakes domains identified",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -296,7 +368,9 @@
       "control_name": "Continuous Monitoring",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Production monitoring for accuracy degradation — hallucination rates tracked per domain"
+      "notes": "Production monitoring for accuracy degradation — hallucination rates tracked per domain",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -304,7 +378,9 @@
       "control_name": "Risk Assessment",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM misinformation risk assessed per use case — what decisions are influenced, what is the consequence"
+      "notes": "LLM misinformation risk assessed per use case — what decisions are influenced, what is the consequence",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -312,35 +388,45 @@
       "control_name": "Awareness and Training",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Users trained on LLM output limitations — verification requirements for each use case"
+      "notes": "Users trained on LLM output limitations — verification requirements for each use case",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Policy on LLM output accuracy — acceptable accuracy thresholds, verification requirements for high-stakes use cases",
       "control_name": "PI1.1 — Processing integrity policy",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "LLM inputs (RAG sources, training data) quality controls — authoritative, current, verified sources",
       "control_name": "PI1.2 — System inputs are complete and accurate",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Misinformation risk identified in LLM risk assessment — harm potential of incorrect outputs per use case",
       "control_name": "CC3.2 — Risk assessment",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Production monitoring for accuracy degradation and hallucination patterns — drift detection",
       "control_name": "CC7.2 — Anomaly detection",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -348,7 +434,9 @@
       "control_name": "Targeted risk analysis",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Targeted risk analysis for LLM advisory outputs in payment context — what decisions are influenced, what is the consequence of incorrect output"
+      "notes": "Targeted risk analysis for LLM advisory outputs in payment context — what decisions are influenced, what is the consequence of incorrect output",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -356,7 +444,9 @@
       "control_name": "Bespoke software security",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM integration code specifies accuracy requirements — high-stakes payment outputs require verification before action"
+      "notes": "LLM integration code specifies accuracy requirements — high-stakes payment outputs require verification before action",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -364,7 +454,9 @@
       "control_name": "Audit log review",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Monitoring for LLM accuracy degradation — output quality metrics reviewed"
+      "notes": "Monitoring for LLM accuracy degradation — output quality metrics reviewed",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -372,7 +464,9 @@
       "control_name": "Security awareness programme",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "PCI staff trained on LLM output limitations — advisory status of AI recommendations communicated"
+      "notes": "PCI staff trained on LLM output limitations — advisory status of AI recommendations communicated",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -380,7 +474,9 @@
       "control_name": "Governance and Risk (GOV)",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Acceptable accuracy thresholds defined per use case — domains requiring human verification documented in AI governance"
+      "notes": "Acceptable accuracy thresholds defined per use case — domains requiring human verification documented in AI governance",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -388,7 +484,9 @@
       "control_name": "AI System Integrity (ASI)",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Production accuracy monitoring as ASI practice — hallucination rates tracked per domain, drift detected"
+      "notes": "Production accuracy monitoring as ASI practice — hallucination rates tracked per domain, drift detected",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -396,7 +494,9 @@
       "control_name": "Monitoring and Detection (MON)",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Accuracy degradation monitoring — ENISA L2 monitoring covering AI-specific failure modes"
+      "notes": "Accuracy degradation monitoring — ENISA L2 monitoring covering AI-specific failure modes",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -404,7 +504,9 @@
       "control_name": "General ICT — Awareness",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Users of LLM decision-support tools trained on output limitations — ENISA awareness practice"
+      "notes": "Users of LLM decision-support tools trained on output limitations — ENISA awareness practice",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -412,7 +514,9 @@
       "control_name": "Education & Guidance",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All users of LLM decision-support tools trained on output limitations — SAMM awareness practice applied to AI limitations"
+      "notes": "All users of LLM decision-support tools trained on output limitations — SAMM awareness practice applied to AI limitations",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -420,7 +524,9 @@
       "control_name": "Security Requirements",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Accuracy thresholds as security requirements — domains requiring verification documented before development"
+      "notes": "Accuracy thresholds as security requirements — domains requiring verification documented before development",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -428,7 +534,9 @@
       "control_name": "Requirements-Driven Testing",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Accuracy requirements verified in testing — hallucination rates measured against thresholds per domain"
+      "notes": "Accuracy requirements verified in testing — hallucination rates measured against thresholds per domain",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -436,21 +544,27 @@
       "control_name": "Operational Management (O-OM)",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Production accuracy monitoring as operational management — drift detection, degradation alerted"
+      "notes": "Production accuracy monitoring as operational management — drift detection, degradation alerted",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "STRIDE",
       "control_id": "T",
       "control_name": "Output Tampering via Hallucination",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "STRIDE",
       "control_id": "R",
       "control_name": "Hallucination Repudiation",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -458,7 +572,9 @@
       "control_name": "CWE-1021",
       "tier": "Foundational",
       "scope": "Both",
-      "url": "https://cwe.mitre.org/data/definitions/1021.html"
+      "url": "https://cwe.mitre.org/data/definitions/1021.html",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -466,7 +582,9 @@
       "control_name": "CWE-116",
       "tier": "Foundational",
       "scope": "Both",
-      "url": "https://cwe.mitre.org/data/definitions/116.html"
+      "url": "https://cwe.mitre.org/data/definitions/116.html",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP AI Testing Guide",
@@ -474,7 +592,9 @@
       "control_name": "MBT — Model Behaviour",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Test model outputs against known-correct facts across the deployment use case domain; measure hallucination rate against benchmark ground truth"
+      "notes": "Test model outputs against known-correct facts across the deployment use case domain; measure hallucination rate against benchmark ground truth",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP AI Testing Guide",
@@ -482,7 +602,9 @@
       "control_name": "OHT — Output Handling",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Verify that citations generated by the LLM are real and accurately represent source content; test that outputs requiring citations enforce this"
+      "notes": "Verify that citations generated by the LLM are real and accurately represent source content; test that outputs requiring citations enforce this",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP AI Testing Guide",
@@ -490,28 +612,36 @@
       "control_name": "LMT — Logging & Monitoring",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Verify that the monitoring pipeline can detect and flag systematic misinformation patterns — accuracy drift, citation fabrication rate"
+      "notes": "Verify that the monitoring pipeline can detect and flag systematic misinformation patterns — accuracy drift, citation fabrication rate",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L1",
       "control_name": "Foundation Models",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L2",
       "control_name": "Data Operations",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L5",
       "control_name": "Evaluation & Observability",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -519,7 +649,9 @@
       "control_name": "Safety domain (harm prevention)",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -527,7 +659,9 @@
       "control_name": "Society domain",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -535,7 +669,9 @@
       "control_name": "Validate AI-generated content",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -543,7 +679,9 @@
       "control_name": "Accountability domain",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -551,7 +689,9 @@
       "control_name": "NHI-2 Secret Leakage",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Protect audit log credentials as sensitive NHI"
+      "notes": "Protect audit log credentials as sensitive NHI",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -559,7 +699,9 @@
       "control_name": "NHI-10 Human Use of NHI",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Enforce separate human and machine credentials"
+      "notes": "Enforce separate human and machine credentials",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -567,7 +709,9 @@
       "control_name": "Review for security vulnerabilities — output validation",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Include accuracy, hallucination, and misinformation scenarios in pre-release model behaviour reviews; validate output quality against domain benchmarks"
+      "notes": "Include accuracy, hallucination, and misinformation scenarios in pre-release model behaviour reviews; validate output quality against domain benchmarks",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -575,7 +719,9 @@
       "control_name": "Test for security vulnerabilities — behavioural and accuracy testing",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Conduct adversarial and behavioural testing covering hallucination rates, factual accuracy, and misinformation generation potential before each release"
+      "notes": "Conduct adversarial and behavioural testing covering hallucination rates, factual accuracy, and misinformation generation potential before each release",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -583,7 +729,9 @@
       "control_name": "Identify and confirm vulnerabilities — emergent behaviour monitoring",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Establish procedures to detect and triage misinformation incidents in production including user feedback channels, automated fact-checking, and output monitoring"
+      "notes": "Establish procedures to detect and triage misinformation incidents in production including user feedback channels, automated fact-checking, and output monitoring",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -591,7 +739,9 @@
       "control_name": "Design software — output confidence and citation requirements",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Design AI systems to surface confidence indicators, source citations, and uncertainty signals in output; include as explicit security and quality requirements"
+      "notes": "Design AI systems to surface confidence indicators, source citations, and uncertainty signals in output; include as explicit security and quality requirements",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -599,7 +749,9 @@
       "control_name": "System Monitoring — output quality monitoring",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Monitor model outputs for factual accuracy, consistency, and hallucination indicators; alert when confidence scores or factual grounding drops below thresholds"
+      "notes": "Monitor model outputs for factual accuracy, consistency, and hallucination indicators; alert when confidence scores or factual grounding drops below thresholds",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -607,7 +759,9 @@
       "control_name": "Continuous Monitoring — model drift detection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Include model output quality and drift monitoring in FedRAMP continuous monitoring programme; track accuracy metrics, hallucination rates, and output consistency over time"
+      "notes": "Include model output quality and drift monitoring in FedRAMP continuous monitoring programme; track accuracy metrics, hallucination rates, and output consistency over time",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -615,7 +769,9 @@
       "control_name": "Audit Review — AI behaviour review",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Regularly review AI inference logs and output samples for hallucination patterns, factual errors, and misleading content; escalate findings through security channels"
+      "notes": "Regularly review AI inference logs and output samples for hallucination patterns, factual errors, and misleading content; escalate findings through security channels",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -623,7 +779,9 @@
       "control_name": "Information Input Validation — grounding and retrieval validation",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Validate retrieval sources and grounding data provided to the model; ensure factual grounding sources are authoritative and current"
+      "notes": "Validate retrieval sources and grounding data provided to the model; ensure factual grounding sources are authoritative and current",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -631,7 +789,9 @@
       "control_name": "Detection — output quality monitoring",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Deploy detection mechanisms for AI output quality degradation — hallucinations, factual errors, and misleading content in financial AI outputs"
+      "notes": "Deploy detection mechanisms for AI output quality degradation — hallucinations, factual errors, and misleading content in financial AI outputs",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -639,7 +799,9 @@
       "control_name": "ICT Risk Management — AI reliability governance",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Include AI output reliability in the ICT risk management framework; define acceptable accuracy thresholds for financial AI use cases"
+      "notes": "Include AI output reliability in the ICT risk management framework; define acceptable accuracy thresholds for financial AI use cases",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -647,7 +809,9 @@
       "control_name": "Learning and Evolving — misinformation post-mortem",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Conduct post-incident analysis for misinformation events; identify root cause, assess customer and regulatory impact, and update controls"
+      "notes": "Conduct post-incident analysis for misinformation events; identify root cause, assess customer and regulatory impact, and update controls",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -655,7 +819,9 @@
       "control_name": "Protection and Prevention — grounding controls",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Implement factual grounding controls for financial AI outputs — RAG with authoritative sources, confidence scoring, and human review for high-stakes outputs"
+      "notes": "Implement factual grounding controls for financial AI outputs — RAG with authoritative sources, confidence scoring, and human review for high-stakes outputs",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     }
   ],
   "tools": [

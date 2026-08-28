@@ -23,7 +23,9 @@
       "control_name": "Data from Information Repositories",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Regulatory violations often arise from ungoverned data repositories — adversary exploits what compliance missed"
+      "notes": "Regulatory violations often arise from ungoverned data repositories — adversary exploits what compliance missed",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MITRE ATLAS",
@@ -31,7 +33,9 @@
       "control_name": "Exploit Public-Facing Application",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Non-compliant AI deployments may lack security controls that compliance would have required"
+      "notes": "Non-compliant AI deployments may lack security controls that compliance would have required",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MITRE ATLAS",
@@ -39,7 +43,9 @@
       "control_name": "Exfiltrate via ML Inference API",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Regulatory violations in training data scope make inference API exfiltration more damaging"
+      "notes": "Regulatory violations in training data scope make inference API exfiltration more damaging",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -47,7 +53,9 @@
       "control_name": "Policies for data privacy",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Legal and regulatory compliance obligations for GenAI documented in governance policy"
+      "notes": "Legal and regulatory compliance obligations for GenAI documented in governance policy",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -55,7 +63,9 @@
       "control_name": "Organisational teams",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Cross-functional team accountable for GenAI regulatory compliance — legal, privacy, security, AI"
+      "notes": "Cross-functional team accountable for GenAI regulatory compliance — legal, privacy, security, AI",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -63,7 +73,9 @@
       "control_name": "Testing — data leakage",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Compliance testing — lawful basis verification, data subject rights fulfilment, retention compliance"
+      "notes": "Compliance testing — lawful basis verification, data subject rights fulfilment, retention compliance",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -71,7 +83,9 @@
       "control_name": "Risk response — data",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Regulatory incident response — breach notification timelines, regulatory reporting obligations"
+      "notes": "Regulatory incident response — breach notification timelines, regulatory reporting obligations",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -79,7 +93,9 @@
       "control_name": "Art. 9 — Risk management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Absence of a documented risk management system is an Art. 9 violation"
+      "notes": "Absence of a documented risk management system is an Art. 9 violation",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -87,7 +103,9 @@
       "control_name": "Art. 17 — Quality management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Absence of a quality management system is an Art. 17 violation"
+      "notes": "Absence of a quality management system is an Art. 17 violation",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -95,7 +113,9 @@
       "control_name": "Art. 72 — Fines",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Understanding fine exposure is the starting point for compliance prioritisation"
+      "notes": "Understanding fine exposure is the starting point for compliance prioritisation",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -103,7 +123,9 @@
       "control_name": "Compliance with legal requirements",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Identifying and complying with all legal, regulatory, and contractual requirements applicable to GenAI"
+      "notes": "Identifying and complying with all legal, regulatory, and contractual requirements applicable to GenAI",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -111,7 +133,9 @@
       "control_name": "Privacy and PII protection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Privacy requirements for GenAI-processed personal data — lawful basis, minimisation, rights support"
+      "notes": "Privacy requirements for GenAI-processed personal data — lawful basis, minimisation, rights support",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -119,7 +143,9 @@
       "control_name": "Compliance with policies",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Internal policies for GenAI compliance — reviewed and enforced"
+      "notes": "Internal policies for GenAI compliance — reviewed and enforced",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -127,7 +153,9 @@
       "control_name": "Policies for information security",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Governance policies covering regulatory obligations for GenAI"
+      "notes": "Governance policies covering regulatory obligations for GenAI",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -135,7 +163,9 @@
       "control_name": "A.2.2",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -143,7 +173,9 @@
       "control_name": "A.8.1",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Hardening"
+      "notes": "Hardening",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -151,7 +183,9 @@
       "control_name": "Cl.4.2",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -159,49 +193,63 @@
       "control_name": "Cl.6.1",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Hardening"
+      "notes": "Hardening",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
       "control_id": "CIS 3",
       "control_name": "3.1 — Data management process",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
       "control_id": "CIS 8",
       "control_name": "8.2 — Collect audit logs",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
       "control_id": "CIS 17",
       "control_name": "17.1 — Incident response management",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
       "control_id": "V8 Data Protection",
       "control_name": "V8.3.3 — Consent obtained before PI processing",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
       "control_id": "V8 Data Protection",
       "control_name": "V8.3.10 — Personal data not kept longer than needed",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
       "control_id": "V7 Logging",
       "control_name": "V7.2.2 — Audit trail sufficient for compliance",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -209,7 +257,9 @@
       "control_name": "62443-2-1",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "OT security management system updated to cover GenAI deployments — policy, roles, assessment"
+      "notes": "OT security management system updated to cover GenAI deployments — policy, roles, assessment",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -217,7 +267,9 @@
       "control_name": "62443-2-4",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "GenAI vendors assessed under OT supplier security programme — same requirements as OT software vendors"
+      "notes": "GenAI vendors assessed under OT supplier security programme — same requirements as OT software vendors",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -225,7 +277,9 @@
       "control_name": "Timely response to events",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Non-compliance incidents trigger defined response — regulatory notification procedures documented"
+      "notes": "Non-compliance incidents trigger defined response — regulatory notification procedures documented",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -233,7 +287,9 @@
       "control_name": "§5.4",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "OT data in retrieval corpora requires access control"
+      "notes": "OT data in retrieval corpora requires access control",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -241,7 +297,9 @@
       "control_name": "§6.2",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Entitlement leakage in OT data retrieval"
+      "notes": "Entitlement leakage in OT data retrieval",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -249,7 +307,9 @@
       "control_name": "§7.3",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Monitor retrieval patterns for unauthorised OT data access"
+      "notes": "Monitor retrieval patterns for unauthorised OT data access",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -257,7 +317,9 @@
       "control_name": "Organisational Context",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Regulatory obligations inform cybersecurity risk management — GenAI regulatory scope assessed and documented"
+      "notes": "Regulatory obligations inform cybersecurity risk management — GenAI regulatory scope assessed and documented",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -265,7 +327,9 @@
       "control_name": "Risk Management Strategy",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Risk management strategy includes regulatory compliance risk — GenAI-specific obligations in risk programme"
+      "notes": "Risk management strategy includes regulatory compliance risk — GenAI-specific obligations in risk programme",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -273,7 +337,9 @@
       "control_name": "Risk Assessment",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Compliance risks identified per GenAI deployment — applicable regulations, triggered obligations, controls gaps"
+      "notes": "Compliance risks identified per GenAI deployment — applicable regulations, triggered obligations, controls gaps",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -281,35 +347,45 @@
       "control_name": "Communication",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Regulatory incident communication — breach notification, regulatory reporting, authority contact procedures"
+      "notes": "Regulatory incident communication — breach notification, regulatory reporting, authority contact procedures",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Commitment to compliance with applicable laws and regulations including AI-specific obligations",
       "control_name": "CC5.1 — Control environment",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Regulatory risks identified in GenAI risk assessment — GDPR, EU AI Act, sector-specific regulations",
       "control_name": "CC3.2 — Risk assessment",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Privacy programme covers GenAI processing of personal information — policies, notices, accountability",
       "control_name": "P1.1 — Privacy management",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Regulatory compliance status communicated to management — AI Act obligations, NIS2 requirements",
       "control_name": "CC2.1 — Communication",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -317,7 +393,9 @@
       "control_name": "Security policy",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "PCI security policy covers GenAI processing of CHD — updated to reflect AI system deployments"
+      "notes": "PCI security policy covers GenAI processing of CHD — updated to reflect AI system deployments",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -325,7 +403,9 @@
       "control_name": "Annual assessment",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Annual targeted risk analysis covers all GenAI systems that may process CHD"
+      "notes": "Annual targeted risk analysis covers all GenAI systems that may process CHD",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -333,7 +413,9 @@
       "control_name": "Programme oversight",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Executive accountability for GenAI PCI compliance — CISO or equivalent with oversight documented"
+      "notes": "Executive accountability for GenAI PCI compliance — CISO or equivalent with oversight documented",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -341,7 +423,9 @@
       "control_name": "Security awareness",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Security awareness covers PCI obligations in GenAI context — staff understand scope implications"
+      "notes": "Security awareness covers PCI obligations in GenAI context — staff understand scope implications",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -349,7 +433,9 @@
       "control_name": "Governance and Risk",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All applicable regulations identified and mapped to AI controls — EU AI Act, GDPR, NIS2, sector-specific obligations tracked in AI governance programme"
+      "notes": "All applicable regulations identified and mapped to AI controls — EU AI Act, GDPR, NIS2, sector-specific obligations tracked in AI governance programme",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -357,7 +443,9 @@
       "control_name": "Data and Model Security (DMS)",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Data controls designed to meet regulatory requirements — GDPR Article 10 training data obligations, NIS2 data security measures"
+      "notes": "Data controls designed to meet regulatory requirements — GDPR Article 10 training data obligations, NIS2 data security measures",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -365,7 +453,9 @@
       "control_name": "Incident Response",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "AI incident response plan includes regulatory notification procedures — NIS2 Article 23 significant incident reporting, GDPR breach notification"
+      "notes": "AI incident response plan includes regulatory notification procedures — NIS2 Article 23 significant incident reporting, GDPR breach notification",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -373,7 +463,9 @@
       "control_name": "General ICT — Governance",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "AI acceptable use and data protection policies document regulatory obligations and controls"
+      "notes": "AI acceptable use and data protection policies document regulatory obligations and controls",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -381,7 +473,9 @@
       "control_name": "Design / Threat Assessment",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Model all paths where over-retrieval can expose unauthorised content"
+      "notes": "Model all paths where over-retrieval can expose unauthorised content",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -389,7 +483,9 @@
       "control_name": "Implementation / Secure Build",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Enforce per-query entitlement filtering in retrieval pipeline"
+      "notes": "Enforce per-query entitlement filtering in retrieval pipeline",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -397,7 +493,9 @@
       "control_name": "Verification / Security Testing",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Test whether queries can retrieve documents from other tenants or restricted tiers"
+      "notes": "Test whether queries can retrieve documents from other tenants or restricted tiers",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -405,7 +503,9 @@
       "control_name": "Operations / Operational Management",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Log all retrieved documents with user identity for forensic review"
+      "notes": "Log all retrieved documents with user identity for forensic review",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -413,7 +513,9 @@
       "control_name": "Governance / Policy & Compliance",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Policy mapping corpus access to user roles and data classification"
+      "notes": "Policy mapping corpus access to user roles and data classification",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -421,7 +523,9 @@
       "control_name": "CWE-359",
       "tier": "Foundational",
       "scope": "Both",
-      "url": "https://cwe.mitre.org/data/definitions/359.html"
+      "url": "https://cwe.mitre.org/data/definitions/359.html",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -429,28 +533,36 @@
       "control_name": "CWE-778",
       "tier": "Foundational",
       "scope": "Both",
-      "url": "https://cwe.mitre.org/data/definitions/778.html"
+      "url": "https://cwe.mitre.org/data/definitions/778.html",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L6",
       "control_name": "Security & Compliance",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L2",
       "control_name": "Data Operations",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L7",
       "control_name": "Agent Ecosystem",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -458,7 +570,9 @@
       "control_name": "Data & Privacy domain",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -466,7 +580,9 @@
       "control_name": "Implement real-time input filtering",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -474,7 +590,9 @@
       "control_name": "Prevent unauthorized AI actions",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -482,7 +600,9 @@
       "control_name": "NHI-5 Over-Privileged NHI",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Per-tenant credentials or row-level security with minimum scope"
+      "notes": "Per-tenant credentials or row-level security with minimum scope",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -490,7 +610,9 @@
       "control_name": "NHI-4 Insecure Authentication",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Require authentication for all vector database connections"
+      "notes": "Require authentication for all vector database connections",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -498,7 +620,9 @@
       "control_name": "NHI-9 NHI Reuse",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Separate credentials per tenant or use row-level security"
+      "notes": "Separate credentials per tenant or use row-level security",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -506,7 +630,9 @@
       "control_name": "Protect all code from unauthorised access — data exfiltration prevention",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Implement controls preventing sensitive data exfiltration through model interfaces, API endpoints, and pipeline outputs; enforce data classification boundaries"
+      "notes": "Implement controls preventing sensitive data exfiltration through model interfaces, API endpoints, and pipeline outputs; enforce data classification boundaries",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -514,7 +640,9 @@
       "control_name": "Secure coding — data handling in AI pipelines",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Enforce secure coding practices for all data handling in AI pipelines; implement output filtering, PII detection, and data masking before model responses reach consumers"
+      "notes": "Enforce secure coding practices for all data handling in AI pipelines; implement output filtering, PII detection, and data masking before model responses reach consumers",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -522,7 +650,9 @@
       "control_name": "Review for security vulnerabilities — data leakage review",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Include data leakage and memorisation scenarios in pre-release security reviews; verify that outputs cannot reveal training data or sensitive context"
+      "notes": "Include data leakage and memorisation scenarios in pre-release security reviews; verify that outputs cannot reveal training data or sensitive context",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -530,7 +660,9 @@
       "control_name": "Protection of Information at Rest — AI data encryption",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Encrypt all AI data at rest — training data, model weights, inference logs, embedding stores — using FIPS 140-validated modules"
+      "notes": "Encrypt all AI data at rest — training data, model weights, inference logs, embedding stores — using FIPS 140-validated modules",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -538,7 +670,9 @@
       "control_name": "Access Enforcement — AI data access",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Enforce role-based access control on all AI data stores; restrict access based on clearance, need-to-know, and data sensitivity"
+      "notes": "Enforce role-based access control on all AI data stores; restrict access based on clearance, need-to-know, and data sensitivity",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -546,7 +680,9 @@
       "control_name": "Event Logging — leakage detection logging",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Log AI data access and model outputs with sufficient detail to detect data leakage; include output content metadata"
+      "notes": "Log AI data access and model outputs with sufficient detail to detect data leakage; include output content metadata",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -554,7 +690,9 @@
       "control_name": "System Monitoring — leakage indicator detection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Monitor model outputs and data access patterns for leakage indicators — PII, credentials, classification markings in outputs; alert on detection"
+      "notes": "Monitor model outputs and data access patterns for leakage indicators — PII, credentials, classification markings in outputs; alert on detection",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -562,7 +700,9 @@
       "control_name": "Protection and Prevention — data leakage controls",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Implement security controls preventing AI data leakage — output monitoring, DLP, access controls, and encryption for all financial AI data"
+      "notes": "Implement security controls preventing AI data leakage — output monitoring, DLP, access controls, and encryption for all financial AI data",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -570,7 +710,9 @@
       "control_name": "ICT Incident Management — data breach reporting",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Classify AI data leakage events as ICT-related incidents; report to competent authorities per DORA incident classification criteria"
+      "notes": "Classify AI data leakage events as ICT-related incidents; report to competent authorities per DORA incident classification criteria",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -578,7 +720,9 @@
       "control_name": "Detection — leakage indicator monitoring",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Deploy detection for data leakage indicators in model outputs — PII, financial data, credentials; alert and block on detection"
+      "notes": "Deploy detection for data leakage indicators in model outputs — PII, financial data, credentials; alert and block on detection",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -586,7 +730,9 @@
       "control_name": "Learning and Evolving — leakage post-mortem",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Conduct post-incident analysis for data leakage events; identify root cause and update controls"
+      "notes": "Conduct post-incident analysis for data leakage events; identify root cause and update controls",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     }
   ],
   "tools": [

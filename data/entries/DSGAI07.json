@@ -23,7 +23,9 @@
       "control_name": "Exfiltrate via ML Inference API",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Ungoverned derived assets (embeddings, caches) accessible through inference API without classification controls"
+      "notes": "Ungoverned derived assets (embeddings, caches) accessible through inference API without classification controls",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MITRE ATLAS",
@@ -31,7 +33,9 @@
       "control_name": "Membership Inference",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Ungoverned training data status — adversary determines what sensitive data is in scope without classification barriers"
+      "notes": "Ungoverned training data status — adversary determines what sensitive data is in scope without classification barriers",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MITRE ATLAS",
@@ -39,7 +43,9 @@
       "control_name": "Data from Information Repositories",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Ungoverned embedding stores and agent memory databases accessed without access controls"
+      "notes": "Ungoverned embedding stores and agent memory databases accessed without access controls",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -47,7 +53,9 @@
       "control_name": "Policies for data privacy",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Data governance policy extended to all GenAI-derived assets — embeddings, caches, memory, telemetry"
+      "notes": "Data governance policy extended to all GenAI-derived assets — embeddings, caches, memory, telemetry",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -55,7 +63,9 @@
       "control_name": "Context establishment",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "GenAI data assets inventoried and mapped — source through derivation chain documented"
+      "notes": "GenAI data assets inventoried and mapped — source through derivation chain documented",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -63,7 +73,9 @@
       "control_name": "Data quality",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Data quality and governance controls measured across full GenAI data lifecycle"
+      "notes": "Data quality and governance controls measured across full GenAI data lifecycle",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -71,7 +83,9 @@
       "control_name": "Residual risk",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Residual governance risk from ungoverned derived assets documented and treated"
+      "notes": "Residual governance risk from ungoverned derived assets documented and treated",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -79,7 +93,9 @@
       "control_name": "Art. 10 — Data and data governance",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Data governance policy covering the full AI data lifecycle is an Art. 10 compliance requirement"
+      "notes": "Data governance policy covering the full AI data lifecycle is an Art. 10 compliance requirement",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -87,7 +103,9 @@
       "control_name": "Art. 17 — Quality management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Data lifecycle procedures — classification, retention, deletion — documented in quality management"
+      "notes": "Data lifecycle procedures — classification, retention, deletion — documented in quality management",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -95,7 +113,9 @@
       "control_name": "Art. 53(1)(a) — GPAI documentation",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Full data governance documentation for GPAI training data is a binding Art. 53 obligation"
+      "notes": "Full data governance documentation for GPAI training data is a binding Art. 53 obligation",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -103,7 +123,9 @@
       "control_name": "Inventory of assets",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All GenAI data assets inventoried — training data, embeddings, caches, agent memory, logs"
+      "notes": "All GenAI data assets inventoried — training data, embeddings, caches, agent memory, logs",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -111,7 +133,9 @@
       "control_name": "Classification of information",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Classification extended to GenAI-derived assets — embeddings inherit source classification"
+      "notes": "Classification extended to GenAI-derived assets — embeddings inherit source classification",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -119,7 +143,9 @@
       "control_name": "Labelling of information",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Classification labels propagate through the full GenAI data lifecycle"
+      "notes": "Classification labels propagate through the full GenAI data lifecycle",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -127,7 +153,9 @@
       "control_name": "Information deletion",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Deletion and erasure obligations enforced across all derived assets — embeddings, caches, backups"
+      "notes": "Deletion and erasure obligations enforced across all derived assets — embeddings, caches, backups",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -135,7 +163,9 @@
       "control_name": "A.7.2",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -143,7 +173,9 @@
       "control_name": "A.7.3",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Hardening"
+      "notes": "Hardening",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -151,7 +183,9 @@
       "control_name": "A.2.2",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -159,56 +193,72 @@
       "control_name": "Cl.6.1",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Hardening"
+      "notes": "Hardening",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
       "control_id": "CIS 3",
       "control_name": "3.2 — Establish data inventory",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
       "control_id": "CIS 3",
       "control_name": "3.3 — Configure data access control lists",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
       "control_id": "CIS 3",
       "control_name": "3.11 — Encrypt sensitive data at rest",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
       "control_id": "CIS 8",
       "control_name": "8.3 — Ensure adequate audit log storage",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
       "control_id": "V8 Data Protection",
       "control_name": "V8.1.4 — Sensitive data minimisation",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
       "control_id": "V8 Data Protection",
       "control_name": "V8.3.4 — Sensitive data identified and classified",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
       "control_id": "V4 Access Control",
       "control_name": "V4.1.5 — Attribute-based access control",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -216,7 +266,9 @@
       "control_name": "Data confidentiality",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "OT-derived GenAI assets (embeddings, caches) classified and protected — not treated as general IT data"
+      "notes": "OT-derived GenAI assets (embeddings, caches) classified and protected — not treated as general IT data",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -224,7 +276,9 @@
       "control_name": "Human user authentication",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Access controls on all GenAI-derived OT data assets — same authentication requirements as source data"
+      "notes": "Access controls on all GenAI-derived OT data assets — same authentication requirements as source data",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -232,7 +286,9 @@
       "control_name": "62443-2-4",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "GenAI vendors handling OT-derived assets subject to 62443-2-4 programme"
+      "notes": "GenAI vendors handling OT-derived assets subject to 62443-2-4 programme",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -240,7 +296,9 @@
       "control_name": "§5.3",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Excessive OT data access is a documented vulnerability"
+      "notes": "Excessive OT data access is a documented vulnerability",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -248,7 +306,9 @@
       "control_name": "§6.2",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Data access scope in OT risk assessment"
+      "notes": "Data access scope in OT risk assessment",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -256,7 +316,9 @@
       "control_name": "§7.1",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Least privilege enforced at OT data boundary"
+      "notes": "Least privilege enforced at OT data boundary",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -264,7 +326,9 @@
       "control_name": "Organisational Context",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Data governance policy extended to all GenAI-derived assets — embeddings, caches, agent memory"
+      "notes": "Data governance policy extended to all GenAI-derived assets — embeddings, caches, agent memory",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -272,7 +336,9 @@
       "control_name": "Asset Management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "GenAI data assets inventoried — training datasets, embeddings, RAG stores, agent memory, telemetry logs"
+      "notes": "GenAI data assets inventoried — training datasets, embeddings, RAG stores, agent memory, telemetry logs",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -280,7 +346,9 @@
       "control_name": "Data Security",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All GenAI data assets protected per classification — derived assets inherit source classification"
+      "notes": "All GenAI data assets protected per classification — derived assets inherit source classification",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -288,35 +356,45 @@
       "control_name": "Continuous Monitoring",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Monitoring for ungoverned data assets — new GenAI deployments creating untracked data flows detected"
+      "notes": "Monitoring for ungoverned data assets — new GenAI deployments creating untracked data flows detected",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Policy identifies all confidential information in GenAI scope — including derived assets (embeddings, caches, traces)",
       "control_name": "C1.1 — Confidentiality policy",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Personal information lifecycle management covers GenAI-derived assets — embeddings inherit source data obligations",
       "control_name": "P4.1 — Privacy information lifecycle",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Data lifecycle procedures documented — classification propagation, retention schedules, deletion procedures",
       "control_name": "CC5.2 — Control activities",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Ungoverned derived asset risks identified in assessment — embeddings, caches, agent memory outside governance scope",
       "control_name": "CC3.2 — Risk assessment",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -324,7 +402,9 @@
       "control_name": "Account data inventory",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All CHD locations documented — derived GenAI assets (embeddings, caches) included in data inventory"
+      "notes": "All CHD locations documented — derived GenAI assets (embeddings, caches) included in data inventory",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -332,7 +412,9 @@
       "control_name": "Data flow documentation",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Data flow diagrams include all GenAI pipeline paths — source through embedding, retrieval, generation, logging"
+      "notes": "Data flow diagrams include all GenAI pipeline paths — source through embedding, retrieval, generation, logging",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -340,7 +422,9 @@
       "control_name": "Media disposal",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Derived GenAI assets containing CHD disposed of securely — deletion verified per Req 9.4 requirements"
+      "notes": "Derived GenAI assets containing CHD disposed of securely — deletion verified per Req 9.4 requirements",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -348,7 +432,9 @@
       "control_name": "Targeted risk analysis",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Targeted risk analysis for ungoverned GenAI-derived assets — scope, protection, lifecycle documented"
+      "notes": "Targeted risk analysis for ungoverned GenAI-derived assets — scope, protection, lifecycle documented",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -356,7 +442,9 @@
       "control_name": "Governance and Risk (GOV)",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Comprehensive data governance policy for all GenAI assets — classification, ownership, retention, deletion, and unlearning capability documented"
+      "notes": "Comprehensive data governance policy for all GenAI assets — classification, ownership, retention, deletion, and unlearning capability documented",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -364,7 +452,9 @@
       "control_name": "Data and Model Security (DMS)",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Data lifecycle controls for training corpora, embeddings, and RAG stores — retention periods enforced, deletion verified"
+      "notes": "Data lifecycle controls for training corpora, embeddings, and RAG stores — retention periods enforced, deletion verified",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -372,7 +462,9 @@
       "control_name": "Monitoring and Detection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Data asset inventory monitored for stale or unclassified assets — alerts on policy violations"
+      "notes": "Data asset inventory monitored for stale or unclassified assets — alerts on policy violations",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -380,7 +472,9 @@
       "control_name": "General ICT — Data Protection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Classified data protected per classification level — access control enforced at storage layer"
+      "notes": "Classified data protected per classification level — access control enforced at storage layer",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -388,7 +482,9 @@
       "control_name": "Design / Security Architecture",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Define minimum data scope for each system component"
+      "notes": "Define minimum data scope for each system component",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -396,7 +492,9 @@
       "control_name": "Governance / Strategy & Metrics",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Formalise data access review as part of security programme"
+      "notes": "Formalise data access review as part of security programme",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -404,7 +502,9 @@
       "control_name": "Verification / Architecture Assessment",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Periodic review of declared vs actual data access per component"
+      "notes": "Periodic review of declared vs actual data access per component",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -412,7 +512,9 @@
       "control_name": "Operations / Operational Management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Alert when component requests data outside declared scope"
+      "notes": "Alert when component requests data outside declared scope",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -420,7 +522,9 @@
       "control_name": "Governance / Policy & Compliance",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Documented policy requiring data access justification"
+      "notes": "Documented policy requiring data access justification",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -428,7 +532,9 @@
       "control_name": "CWE-359",
       "tier": "Foundational",
       "scope": "Both",
-      "url": "https://cwe.mitre.org/data/definitions/359.html"
+      "url": "https://cwe.mitre.org/data/definitions/359.html",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -436,28 +542,36 @@
       "control_name": "CWE-213",
       "tier": "Foundational",
       "scope": "Both",
-      "url": "https://cwe.mitre.org/data/definitions/213.html"
+      "url": "https://cwe.mitre.org/data/definitions/213.html",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L2",
       "control_name": "Data Operations",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L6",
       "control_name": "Security & Compliance",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L5",
       "control_name": "Evaluation & Observability",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -465,7 +579,9 @@
       "control_name": "Data & Privacy domain",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -473,7 +589,9 @@
       "control_name": "Prevent unauthorized AI actions",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -481,7 +599,9 @@
       "control_name": "Third-party permission controls",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Hardening"
+      "notes": "Hardening",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -489,7 +609,9 @@
       "control_name": "Audit trails and logging",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -497,7 +619,9 @@
       "control_name": "NHI-5 Over-Privileged NHI",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Audit and reduce credential scope per system component"
+      "notes": "Audit and reduce credential scope per system component",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -505,7 +629,9 @@
       "control_name": "NHI-7 Long-Lived Credentials",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Rotate or replace with short-lived tokens"
+      "notes": "Rotate or replace with short-lived tokens",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -513,7 +639,9 @@
       "control_name": "NHI-9 NHI Reuse",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Separate credentials per function"
+      "notes": "Separate credentials per function",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -521,7 +649,9 @@
       "control_name": "Define security requirements — data aggregation controls",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Define security requirements governing how datasets may be combined for AI training and inference; require aggregation impact assessments before merging datasets"
+      "notes": "Define security requirements governing how datasets may be combined for AI training and inference; require aggregation impact assessments before merging datasets",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -529,7 +659,9 @@
       "control_name": "Design software — aggregation-aware data architecture",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Design AI data pipelines with aggregation controls that prevent combination of datasets whose joint sensitivity exceeds authorised classification levels"
+      "notes": "Design AI data pipelines with aggregation controls that prevent combination of datasets whose joint sensitivity exceeds authorised classification levels",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -537,7 +669,9 @@
       "control_name": "Least Privilege — data aggregation restrictions",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Restrict data aggregation scope to minimum necessary; enforce controls preventing combination of datasets that create higher-sensitivity aggregates"
+      "notes": "Restrict data aggregation scope to minimum necessary; enforce controls preventing combination of datasets that create higher-sensitivity aggregates",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -545,7 +679,9 @@
       "control_name": "Boundary Protection — data flow control",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Enforce boundary protection on data flows between systems; prevent uncontrolled data aggregation across security boundaries"
+      "notes": "Enforce boundary protection on data flows between systems; prevent uncontrolled data aggregation across security boundaries",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -553,7 +689,9 @@
       "control_name": "Risk Management Strategy — aggregation risk",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Include data aggregation risk in AI risk management strategy; assess combined sensitivity of aggregated datasets"
+      "notes": "Include data aggregation risk in AI risk management strategy; assess combined sensitivity of aggregated datasets",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -561,7 +699,9 @@
       "control_name": "ICT Risk Management — aggregation risk governance",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Include data aggregation risk in ICT risk management; assess combined sensitivity of aggregated financial datasets used in AI systems"
+      "notes": "Include data aggregation risk in ICT risk management; assess combined sensitivity of aggregated financial datasets used in AI systems",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -569,7 +709,9 @@
       "control_name": "Protection and Prevention — aggregation controls",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Implement controls preventing uncontrolled data aggregation; enforce restrictions on combining datasets that create higher-sensitivity aggregates"
+      "notes": "Implement controls preventing uncontrolled data aggregation; enforce restrictions on combining datasets that create higher-sensitivity aggregates",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -577,7 +719,9 @@
       "control_name": "Detection — aggregation anomaly detection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Monitor for excessive data aggregation patterns; alert on dataset combinations exceeding defined sensitivity thresholds"
+      "notes": "Monitor for excessive data aggregation patterns; alert on dataset combinations exceeding defined sensitivity thresholds",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     }
   ],
   "tools": [

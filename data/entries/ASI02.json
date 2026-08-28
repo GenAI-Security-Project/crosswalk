@@ -23,7 +23,9 @@
       "tier": "Foundational",
       "scope": "Both",
       "url": "https://atlas.mitre.org/techniques/AML.T0037",
-      "notes": "Crafting inputs that produce tool calls with destructive parameters"
+      "notes": "Crafting inputs that produce tool calls with destructive parameters",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MITRE ATLAS",
@@ -32,7 +34,9 @@
       "tier": "Foundational",
       "scope": "Both",
       "url": "https://atlas.mitre.org/techniques/AML.T0015",
-      "notes": "Exploiting overly permissive tool access to exceed intended agent scope"
+      "notes": "Exploiting overly permissive tool access to exceed intended agent scope",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MITRE ATLAS",
@@ -41,7 +45,9 @@
       "tier": "Foundational",
       "scope": "Both",
       "url": "https://atlas.mitre.org/techniques/AML.T0068",
-      "notes": "Agent autonomously harvesting data through tool chains beyond authorised scope"
+      "notes": "Agent autonomously harvesting data through tool chains beyond authorised scope",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -49,7 +55,9 @@
       "control_name": "Policies for trustworthy AI",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Policy defines permissible tool invocations per agent role — human confirmation required for irreversible tools"
+      "notes": "Policy defines permissible tool invocations per agent role — human confirmation required for irreversible tools",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -57,7 +65,9 @@
       "control_name": "Interdependencies",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All agent tool integrations mapped — data received, permission scope, reversibility, and risk rating per tool"
+      "notes": "All agent tool integrations mapped — data received, permission scope, reversibility, and risk rating per tool",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -65,7 +75,9 @@
       "control_name": "Testing — adversarial",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Adversarial testing of tool misuse scenarios — destructive parameter injection, tool chaining, MCP descriptor poisoning"
+      "notes": "Adversarial testing of tool misuse scenarios — destructive parameter injection, tool chaining, MCP descriptor poisoning",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -73,7 +85,9 @@
       "control_name": "Risk response",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Incident response for tool misuse — tool disable, parameter audit, downstream impact assessment"
+      "notes": "Incident response for tool misuse — tool disable, parameter audit, downstream impact assessment",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -81,7 +95,9 @@
       "control_name": "Art. 9 — Risk management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All agent tool integrations assessed in Art. 9 risk management — reversibility classification documented"
+      "notes": "All agent tool integrations assessed in Art. 9 risk management — reversibility classification documented",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -89,7 +105,9 @@
       "control_name": "Art. 14 — Human oversight",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Irreversible tool invocations require human confirmation — Art. 14 binding requirement"
+      "notes": "Irreversible tool invocations require human confirmation — Art. 14 binding requirement",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -97,7 +115,9 @@
       "control_name": "Art. 15 — Accuracy, robustness, cybersecurity",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Per-tool permission manifests and parameter validation are Art. 15 technical requirements"
+      "notes": "Per-tool permission manifests and parameter validation are Art. 15 technical requirements",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -105,7 +125,9 @@
       "control_name": "Privileged access rights",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent tool access managed as privileged access — per-tool permission manifests, minimum scope, regular review"
+      "notes": "Agent tool access managed as privileged access — per-tool permission manifests, minimum scope, regular review",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -113,7 +135,9 @@
       "control_name": "Identity management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent tool access governed through identity management — tool permissions scoped per agent identity"
+      "notes": "Agent tool access governed through identity management — tool permissions scoped per agent identity",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -121,7 +145,9 @@
       "control_name": "Logging",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All tool invocations logged with full context — tool identity, parameters, agent identity, timestamp"
+      "notes": "All tool invocations logged with full context — tool identity, parameters, agent identity, timestamp",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -129,7 +155,9 @@
       "control_name": "Secure coding",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Tool parameter validation as secure coding requirement — LLM-generated parameters treated as untrusted"
+      "notes": "Tool parameter validation as secure coding requirement — LLM-generated parameters treated as untrusted",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -137,7 +165,9 @@
       "control_name": "Responsible AI system management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Tool access managed responsibly throughout agent lifecycle — permission review, irreversibility classification, human oversight requirements"
+      "notes": "Tool access managed responsibly throughout agent lifecycle — permission review, irreversibility classification, human oversight requirements",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -145,7 +175,9 @@
       "control_name": "AI system security",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Per-tool permission manifests and parameter validation as AIMS security controls"
+      "notes": "Per-tool permission manifests and parameter validation as AIMS security controls",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -153,7 +185,9 @@
       "control_name": "Impact assessment",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Tool misuse impact assessed — what harm is possible if each tool is misused autonomously"
+      "notes": "Tool misuse impact assessed — what harm is possible if each tool is misused autonomously",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -161,7 +195,9 @@
       "control_name": "Third-party AI system acquisition",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Tool and MCP server providers assessed as third-party AI components — security obligations in contracts"
+      "notes": "Tool and MCP server providers assessed as third-party AI components — security obligations in contracts",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
@@ -169,7 +205,9 @@
       "control_name": "CIS 5 — Account Management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent tool access managed as privileged access — minimum scope, regular review"
+      "notes": "Agent tool access managed as privileged access — minimum scope, regular review",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
@@ -177,7 +215,9 @@
       "control_name": "CIS 6 — Access Control Management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Formal process for granting agent tool access — documented justification per tool"
+      "notes": "Formal process for granting agent tool access — documented justification per tool",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
@@ -185,7 +225,9 @@
       "control_name": "CIS 8 — Audit Log Management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All tool invocations logged — tool identity, parameters, agent identity, timestamp"
+      "notes": "All tool invocations logged — tool identity, parameters, agent identity, timestamp",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
@@ -193,7 +235,9 @@
       "control_name": "CIS 16 — Application Software Security",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Tool parameter validation as secure development requirement"
+      "notes": "Tool parameter validation as secure development requirement",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
@@ -201,7 +245,9 @@
       "control_name": "Verify access control enforces least privilege",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent tool access scoped to minimum required operations — read-only by default, write access formally approved"
+      "notes": "Agent tool access scoped to minimum required operations — read-only by default, write access formally approved",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
@@ -209,7 +255,9 @@
       "control_name": "Verify all sensitive functions have access control",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All destructive tool operations require explicit authorisation — not inheritable from agent session"
+      "notes": "All destructive tool operations require explicit authorisation — not inheritable from agent session",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
@@ -217,7 +265,9 @@
       "control_name": "Verify all business logic decisions logged",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All tool invocations logged — tool identity, parameters, agent session, timestamp"
+      "notes": "All tool invocations logged — tool identity, parameters, agent session, timestamp",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
@@ -225,7 +275,9 @@
       "control_name": "Verify business logic abuse scenarios identified",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Tool chain exploitation scenarios identified in threat model — mitigations implemented and verified"
+      "notes": "Tool chain exploitation scenarios identified in threat model — mitigations implemented and verified",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
@@ -233,7 +285,9 @@
       "control_name": "Verify API rate limiting",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Tool API endpoints rate-limited — anomalous invocation frequency detected"
+      "notes": "Tool API endpoints rate-limited — anomalous invocation frequency detected",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -241,7 +295,9 @@
       "control_name": "Least privilege",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Per-tool minimum permission — setpoint adjustment tool restricted to specific tags and safe ranges"
+      "notes": "Per-tool minimum permission — setpoint adjustment tool restricted to specific tags and safe ranges",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -249,7 +305,9 @@
       "control_name": "Use control",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Allowlisted tool operations for each agent role — agent cannot invoke tools outside its defined function"
+      "notes": "Allowlisted tool operations for each agent role — agent cannot invoke tools outside its defined function",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -257,7 +315,9 @@
       "control_name": "Timely response to events",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Anomalous tool invocation patterns detected and responded to — alert, suspend, investigate"
+      "notes": "Anomalous tool invocation patterns detected and responded to — alert, suspend, investigate",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -265,7 +325,9 @@
       "control_name": "Software and information integrity",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Tool descriptor integrity verified — poisoned MCP tool descriptors rejected at loading"
+      "notes": "Tool descriptor integrity verified — poisoned MCP tool descriptors rejected at loading",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -273,7 +335,9 @@
       "control_name": "§5.3",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Excessive privilege is specifically listed as OT vulnerability class"
+      "notes": "Excessive privilege is specifically listed as OT vulnerability class",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -281,7 +345,9 @@
       "control_name": "§6.2",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Assess agent permission scope as part of OT risk register"
+      "notes": "Assess agent permission scope as part of OT risk register",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -289,7 +355,9 @@
       "control_name": "§7.1",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Least privilege must be enforced at zone boundary for all automated systems"
+      "notes": "Least privilege must be enforced at zone boundary for all automated systems",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -297,7 +365,9 @@
       "control_name": "Identity Management, Authentication & Access Control",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Access permissions managed — per-tool permission manifests, least privilege per tool, irreversibility classification"
+      "notes": "Access permissions managed — per-tool permission manifests, least privilege per tool, irreversibility classification",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -305,7 +375,9 @@
       "control_name": "Organisational Context",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Policy defines permissible tool invocations — which tools require human confirmation"
+      "notes": "Policy defines permissible tool invocations — which tools require human confirmation",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -313,7 +385,9 @@
       "control_name": "Continuous Monitoring",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All tool invocations logged and monitored — anomalous parameters, unusual sequences, high frequency detected"
+      "notes": "All tool invocations logged and monitored — anomalous parameters, unusual sequences, high frequency detected",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -321,7 +395,9 @@
       "control_name": "Incident Analysis",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Root cause analysis — which tool was misused, what downstream impact occurred, what parameters were used"
+      "notes": "Root cause analysis — which tool was misused, what downstream impact occurred, what parameters were used",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
@@ -329,7 +405,9 @@
       "control_name": "CC5.2",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Tool permission policy, permitted action allowlist"
+      "notes": "Tool permission policy, permitted action allowlist",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
@@ -337,7 +415,9 @@
       "control_name": "CC6.1",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Tool invocation logs, access rejection records"
+      "notes": "Tool invocation logs, access rejection records",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
@@ -345,7 +425,9 @@
       "control_name": "CC7.2",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Tool call audit log, anomaly alert records"
+      "notes": "Tool call audit log, anomaly alert records",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
@@ -353,7 +435,9 @@
       "control_name": "PI1.2",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Validation configuration, rejected call logs"
+      "notes": "Validation configuration, rejected call logs",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -361,7 +445,9 @@
       "control_name": "Req 7.2",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Access control matrix for agent tools, privilege review records"
+      "notes": "Access control matrix for agent tools, privilege review records",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -369,7 +455,9 @@
       "control_name": "Req 7.3",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Periodic access review records"
+      "notes": "Periodic access review records",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -377,7 +465,9 @@
       "control_name": "Req 10.2",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Tool invocation audit log"
+      "notes": "Tool invocation audit log",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -385,7 +475,9 @@
       "control_name": "Req 6.2",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Code review records covering parameter validation"
+      "notes": "Code review records covering parameter validation",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -393,7 +485,9 @@
       "control_name": "AI System Integrity (ASI)",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Tool permissions defined per agent role — scope enforced at the framework layer; irreversibility controls prevent unrecoverable actions"
+      "notes": "Tool permissions defined per agent role — scope enforced at the framework layer; irreversibility controls prevent unrecoverable actions",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -401,7 +495,9 @@
       "control_name": "Supply Chain Security",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All tool integrations assessed as supply chain components — integrity verification, vendor security review before integration"
+      "notes": "All tool integrations assessed as supply chain components — integrity verification, vendor security review before integration",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -409,7 +505,9 @@
       "control_name": "Monitoring and Detection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All agent tool invocations logged — data volumes, destination, and parameter patterns monitored for anomalies"
+      "notes": "All agent tool invocations logged — data volumes, destination, and parameter patterns monitored for anomalies",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -417,7 +515,9 @@
       "control_name": "General ICT — Access Control",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent tool credentials issued with least-privilege — no unnecessary tool permissions granted"
+      "notes": "Agent tool credentials issued with least-privilege — no unnecessary tool permissions granted",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -425,7 +525,9 @@
       "control_name": "Design / Security Architecture",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Define per-agent permission sets; review in architecture assessment"
+      "notes": "Define per-agent permission sets; review in architecture assessment",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -433,7 +535,9 @@
       "control_name": "Governance / Strategy & Metrics",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Formalise agent identity and permission lifecycle"
+      "notes": "Formalise agent identity and permission lifecycle",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -441,7 +545,9 @@
       "control_name": "Verification / Architecture Assessment",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Periodic review of declared vs granted permissions per agent"
+      "notes": "Periodic review of declared vs granted permissions per agent",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -449,7 +555,9 @@
       "control_name": "Operations / Operational Management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Alert when agent requests permissions outside declared scope"
+      "notes": "Alert when agent requests permissions outside declared scope",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -457,7 +565,9 @@
       "control_name": "Governance / Policy & Compliance",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Document what permissions each agent class is authorised to hold"
+      "notes": "Document what permissions each agent class is authorised to hold",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -465,7 +575,9 @@
       "control_name": "CWE-284",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent can invoke tools it should not have access to; tool parameters not range-validated"
+      "notes": "Agent can invoke tools it should not have access to; tool parameters not range-validated",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -473,7 +585,9 @@
       "control_name": "CWE-862",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "No authorisation check before irreversible tool invocations; human confirmation not required"
+      "notes": "No authorisation check before irreversible tool invocations; human confirmation not required",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -481,7 +595,9 @@
       "control_name": "CWE-434",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Analogy: agent accepts and executes tool payloads without content validation"
+      "notes": "Analogy: agent accepts and executes tool payloads without content validation",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -489,7 +605,9 @@
       "control_name": "CWE-913",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "MCP descriptors and tool specifications are dynamically loaded code resources — modification not controlled"
+      "notes": "MCP descriptors and tool specifications are dynamically loaded code resources — modification not controlled",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -497,7 +615,9 @@
       "control_name": "CWE-20",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Tool parameters generated by LLM not validated against safe ranges before execution"
+      "notes": "Tool parameters generated by LLM not validated against safe ranges before execution",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP AI Testing Guide",
@@ -505,7 +625,9 @@
       "control_name": "AST — Agent-Specific",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Attempt to invoke tools outside the agent's defined role; test parameter ranges; verify irreversibility controls"
+      "notes": "Attempt to invoke tools outside the agent's defined role; test parameter ranges; verify irreversibility controls",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP AI Testing Guide",
@@ -513,7 +635,9 @@
       "control_name": "ACT — Access Control",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Verify each tool enforces its own access controls independently of the agent framework"
+      "notes": "Verify each tool enforces its own access controls independently of the agent framework",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP AI Testing Guide",
@@ -521,56 +645,72 @@
       "control_name": "OHT — Output Handling",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Verify tool call parameters generated by the LLM are validated before execution"
+      "notes": "Verify tool call parameters generated by the LLM are validated before execution",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L3",
       "control_name": "Agent Frameworks",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L6",
       "control_name": "Security & Compliance",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L4",
       "control_name": "Deployment & Infrastructure",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
       "control_id": "B001",
       "control_name": "Third-party testing of adversarial robustness",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
       "control_id": "B004",
       "control_name": "Prevent AI endpoint scraping",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
       "control_id": "B006",
       "control_name": "Prevent unauthorized AI agent actions",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
       "control_id": "B007",
       "control_name": "Enforce user access privileges to AI systems",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -578,7 +718,9 @@
       "control_name": "NHI-5 Over-Privileged NHI",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Per-tool permission manifests — each tool scoped to minimum required operations"
+      "notes": "Per-tool permission manifests — each tool scoped to minimum required operations",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -586,7 +728,9 @@
       "control_name": "NHI-3 Vulnerable Third-Party NHI",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Validate all third-party tool identities — reject tokens from unregistered issuers"
+      "notes": "Validate all third-party tool identities — reject tokens from unregistered issuers",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -594,7 +738,9 @@
       "control_name": "NHI-9 NHI Reuse",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Unique credential per tool integration — tool-scoped tokens, not agent-wide tokens"
+      "notes": "Unique credential per tool integration — tool-scoped tokens, not agent-wide tokens",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -602,7 +748,9 @@
       "control_name": "PW.1.1-PS – Define security requirements",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Establishes access control as a mandatory deployment requirement"
+      "notes": "Establishes access control as a mandatory deployment requirement",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -610,7 +758,9 @@
       "control_name": "PW.2.1-PS – Design software to meet security requirements",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Ensures access boundaries are designed before implementation"
+      "notes": "Ensures access boundaries are designed before implementation",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -618,7 +768,9 @@
       "control_name": "PS.1.1-PS – Protect all code from unauthorised access",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Prevents tampering with access control configuration"
+      "notes": "Prevents tampering with access control configuration",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -626,7 +778,9 @@
       "control_name": "PW.7.2-PS – Review the software for security vulnerabilities",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Validates access controls before production deployment"
+      "notes": "Validates access controls before production deployment",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -634,7 +788,9 @@
       "control_name": "Access Enforcement — agent resource access",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Enforce role-based access control on all agent resources — tools, data stores, APIs, and inter-agent communication channels; deny by default"
+      "notes": "Enforce role-based access control on all agent resources — tools, data stores, APIs, and inter-agent communication channels; deny by default",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -642,7 +798,9 @@
       "control_name": "Least Privilege — agent permissions",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Enforce least privilege for all agent permissions; restrict tool access, data store access, and API scope to minimum necessary per agent role"
+      "notes": "Enforce least privilege for all agent permissions; restrict tool access, data store access, and API scope to minimum necessary per agent role",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -650,7 +808,9 @@
       "control_name": "Least Functionality — agent capability restrictions",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Restrict agents to minimum necessary capabilities; disable unused tools, APIs, and action types; enforce capability restrictions in agent configuration"
+      "notes": "Restrict agents to minimum necessary capabilities; disable unused tools, APIs, and action types; enforce capability restrictions in agent configuration",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -658,7 +818,9 @@
       "control_name": "Event Logging — access decision logging",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Log all agent access decisions — permitted and denied — with sufficient detail for access control review and incident investigation"
+      "notes": "Log all agent access decisions — permitted and denied — with sufficient detail for access control review and incident investigation",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -666,7 +828,9 @@
       "control_name": "Protection and Prevention — agent access controls",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Implement security controls enforcing least privilege on agent tool access, data store access, and API permissions within financial systems"
+      "notes": "Implement security controls enforcing least privilege on agent tool access, data store access, and API permissions within financial systems",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -674,7 +838,9 @@
       "control_name": "ICT Risk Management — agent permission governance",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Include agent access control policies in ICT risk management framework; define acceptable permission scopes per agent role and financial function"
+      "notes": "Include agent access control policies in ICT risk management framework; define acceptable permission scopes per agent role and financial function",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -682,7 +848,9 @@
       "control_name": "Detection — unauthorised access detection",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Monitor agent access patterns for unauthorised tool invocations, data access beyond scope, and permission violations; alert on detection"
+      "notes": "Monitor agent access patterns for unauthorised tool invocations, data access beyond scope, and permission violations; alert on detection",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -690,7 +858,9 @@
       "control_name": "Resilience Testing — access control testing",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Include agent access control bypass in resilience testing; verify that agents cannot exceed defined permission boundaries under adversarial conditions"
+      "notes": "Include agent access control bypass in resilience testing; verify that agents cannot exceed defined permission boundaries under adversarial conditions",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     }
   ],
   "tools": [

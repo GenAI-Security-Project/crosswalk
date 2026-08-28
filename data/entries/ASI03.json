@@ -23,7 +23,9 @@
       "tier": "Foundational",
       "scope": "Both",
       "url": "https://atlas.mitre.org/techniques/AML.T0022",
-      "notes": "Exploiting legitimate agent credentials to access AI systems or data pipelines"
+      "notes": "Exploiting legitimate agent credentials to access AI systems or data pipelines",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MITRE ATLAS",
@@ -32,7 +34,9 @@
       "tier": "Foundational",
       "scope": "Both",
       "url": "https://atlas.mitre.org/techniques/AML.T0016",
-      "notes": "Using compromised agent credentials to exfiltrate data through inference API"
+      "notes": "Using compromised agent credentials to exfiltrate data through inference API",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MITRE ATLAS",
@@ -41,7 +45,9 @@
       "tier": "Foundational",
       "scope": "Both",
       "url": "https://atlas.mitre.org/techniques/AML.T0024",
-      "notes": "Reconstructing sensitive data accessible to the agent through credential abuse"
+      "notes": "Reconstructing sensitive data accessible to the agent through credential abuse",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -49,7 +55,9 @@
       "control_name": "Policies for data privacy",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent identity and credential governance policy — NHI inventory, short-lived credentials, scope controls"
+      "notes": "Agent identity and credential governance policy — NHI inventory, short-lived credentials, scope controls",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -57,7 +65,9 @@
       "control_name": "Risk categorisation",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent credential exposure risks mapped per deployment — credential types, scope, and lateral movement potential"
+      "notes": "Agent credential exposure risks mapped per deployment — credential types, scope, and lateral movement potential",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -65,7 +75,9 @@
       "control_name": "Testing — adversarial",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Adversarial testing covering credential leakage and abuse — memory stores, logs, tool payload captures"
+      "notes": "Adversarial testing covering credential leakage and abuse — memory stores, logs, tool payload captures",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -73,7 +85,9 @@
       "control_name": "Risk response",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Incident response for credential exposure — rotation, containment, lateral movement assessment, downstream notification"
+      "notes": "Incident response for credential exposure — rotation, containment, lateral movement assessment, downstream notification",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -81,7 +95,9 @@
       "control_name": "Art. 9 — Risk management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent credential lifecycle in Art. 9 risk management — NHI inventory, scope controls, rotation documented"
+      "notes": "Agent credential lifecycle in Art. 9 risk management — NHI inventory, scope controls, rotation documented",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -89,7 +105,9 @@
       "control_name": "Art. 15 — Accuracy, robustness, cybersecurity",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Short-lived credentials, JIT access, PKI-backed identities are Art. 15 requirements"
+      "notes": "Short-lived credentials, JIT access, PKI-backed identities are Art. 15 requirements",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -97,7 +115,9 @@
       "control_name": "Art. 17 — Quality management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent credential incident response in quality management system — rotation, containment, lateral movement assessment"
+      "notes": "Agent credential incident response in quality management system — rotation, containment, lateral movement assessment",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -105,7 +125,9 @@
       "control_name": "Privileged access rights",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent credentials managed as privileged access — JIT issuance, minimum scope, regular review, automatic expiry"
+      "notes": "Agent credentials managed as privileged access — JIT issuance, minimum scope, regular review, automatic expiry",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -113,7 +135,9 @@
       "control_name": "Identity management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "NHI lifecycle management — all agent identities inventoried, provisioned, reviewed, and deprovisioned through formal process"
+      "notes": "NHI lifecycle management — all agent identities inventoried, provisioned, reviewed, and deprovisioned through formal process",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -121,7 +145,9 @@
       "control_name": "Use of cryptography",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent credentials encrypted at rest and in transit — secret manager, no cleartext storage"
+      "notes": "Agent credentials encrypted at rest and in transit — secret manager, no cleartext storage",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -129,7 +155,9 @@
       "control_name": "Logging",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All credential operations logged — issuance, use, expiry, anomalous patterns detectable"
+      "notes": "All credential operations logged — issuance, use, expiry, anomalous patterns detectable",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -137,7 +165,9 @@
       "control_name": "AI system security",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Credential security as AIMS design requirement — short-lived JIT credentials, no cleartext storage, least privilege"
+      "notes": "Credential security as AIMS design requirement — short-lived JIT credentials, no cleartext storage, least privilege",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -145,7 +175,9 @@
       "control_name": "Data provenance and characteristics",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent credentials tracked as AI system data — issuance, scope, expiry, rotation documented"
+      "notes": "Agent credentials tracked as AI system data — issuance, scope, expiry, rotation documented",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -153,7 +185,9 @@
       "control_name": "Support",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Resources for AI systems include NHIs — agent identities inventoried and managed as AIMS resources"
+      "notes": "Resources for AI systems include NHIs — agent identities inventoried and managed as AIMS resources",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -161,7 +195,9 @@
       "control_name": "Third-party AI system acquisition",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Third-party services accessed via agent credentials assessed — security obligations in access arrangements"
+      "notes": "Third-party services accessed via agent credentials assessed — security obligations in access arrangements",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
@@ -169,7 +205,9 @@
       "control_name": "CIS 5 — Account Management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent credentials managed as privileged accounts — minimum scope, regular review, JIT issuance"
+      "notes": "Agent credentials managed as privileged accounts — minimum scope, regular review, JIT issuance",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
@@ -177,7 +215,9 @@
       "control_name": "CIS 6 — Access Control Management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent credential revocation process — immediate revocation on detection, decommission procedure"
+      "notes": "Agent credential revocation process — immediate revocation on detection, decommission procedure",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
@@ -185,7 +225,9 @@
       "control_name": "CIS 8 — Audit Log Management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All credential operations logged — issuance, use, anomalous patterns detectable"
+      "notes": "All credential operations logged — issuance, use, anomalous patterns detectable",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
@@ -193,7 +235,9 @@
       "control_name": "CIS 3 — Data Protection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent credentials encrypted at rest — secret manager, no cleartext storage"
+      "notes": "Agent credentials encrypted at rest — secret manager, no cleartext storage",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
@@ -201,7 +245,9 @@
       "control_name": "Verify credentials not in source code",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent credentials not hardcoded — secret manager required"
+      "notes": "Agent credentials not hardcoded — secret manager required",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
@@ -209,7 +255,9 @@
       "control_name": "Verify access control enforces least privilege",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent credential scope minimum required — no over-privileged NHIs"
+      "notes": "Agent credential scope minimum required — no over-privileged NHIs",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
@@ -217,7 +265,9 @@
       "control_name": "Verify sensitive data encrypted at rest",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent credentials encrypted at rest — no cleartext in config or agent memory"
+      "notes": "Agent credentials encrypted at rest — no cleartext in config or agent memory",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
@@ -225,7 +275,9 @@
       "control_name": "Verify access control decisions logged",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All credential usage logged — issuance, access, expiry detectable"
+      "notes": "All credential usage logged — issuance, access, expiry detectable",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
@@ -233,7 +285,9 @@
       "control_name": "Verify secrets not in source code",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent credentials not committed to source control"
+      "notes": "Agent credentials not committed to source control",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -241,7 +295,9 @@
       "control_name": "Identification and authentication",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All agent access to OT systems using distinct, traceable identity — not shared service accounts"
+      "notes": "All agent access to OT systems using distinct, traceable identity — not shared service accounts",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -249,7 +305,9 @@
       "control_name": "Authenticator management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent credentials managed with defined lifecycle — issuance, rotation, revocation procedures"
+      "notes": "Agent credentials managed with defined lifecycle — issuance, rotation, revocation procedures",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -257,7 +315,9 @@
       "control_name": "Least privilege",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent credentials scoped to minimum OT data access required for defined task"
+      "notes": "Agent credentials scoped to minimum OT data access required for defined task",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -265,7 +325,9 @@
       "control_name": "Data confidentiality in transit",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent credentials never transmitted or stored in cleartext within OT network"
+      "notes": "Agent credentials never transmitted or stored in cleartext within OT network",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -273,7 +335,9 @@
       "control_name": "Session lock",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent sessions terminated and credentials revoked immediately on compromise detection"
+      "notes": "Agent sessions terminated and credentials revoked immediately on compromise detection",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -281,7 +345,9 @@
       "control_name": "§5.3",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Memory corruption and state manipulation"
+      "notes": "Memory corruption and state manipulation",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -289,7 +355,9 @@
       "control_name": "§6.2",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Assess agent memory stores as OT data integrity risk"
+      "notes": "Assess agent memory stores as OT data integrity risk",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -297,7 +365,9 @@
       "control_name": "Identity Management, Authentication & Access Control",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Identities and credentials managed — NHI inventory, lifecycle management, unique identity per agent"
+      "notes": "Identities and credentials managed — NHI inventory, lifecycle management, unique identity per agent",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -305,7 +375,9 @@
       "control_name": "Identity Management, Authentication & Access Control",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Access permissions managed — agent credential scope enforced, least privilege per agent role"
+      "notes": "Access permissions managed — agent credential scope enforced, least privilege per agent role",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -313,7 +385,9 @@
       "control_name": "Data Security",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Sensitive data protected at rest — agent credentials encrypted, not stored in cleartext"
+      "notes": "Sensitive data protected at rest — agent credentials encrypted, not stored in cleartext",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -321,7 +395,9 @@
       "control_name": "Continuous Monitoring",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Credential usage monitored — anomalous access patterns detected"
+      "notes": "Credential usage monitored — anomalous access patterns detected",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
@@ -329,7 +405,9 @@
       "control_name": "CC6.1",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Credential lifecycle records, provisioning logs"
+      "notes": "Credential lifecycle records, provisioning logs",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
@@ -337,7 +415,9 @@
       "control_name": "CC6.3",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Session termination logs, credential TTL configuration"
+      "notes": "Session termination logs, credential TTL configuration",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
@@ -345,7 +425,9 @@
       "control_name": "CC7.3",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Credential audit log, anomaly alert records"
+      "notes": "Credential audit log, anomaly alert records",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
@@ -353,7 +435,9 @@
       "control_name": "C1.1",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Secrets management configuration, access control evidence"
+      "notes": "Secrets management configuration, access control evidence",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -361,7 +445,9 @@
       "control_name": "Req 8.2",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Account inventory, unique account evidence"
+      "notes": "Account inventory, unique account evidence",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -369,7 +455,9 @@
       "control_name": "Req 8.3",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Credential management policy, rotation records"
+      "notes": "Credential management policy, rotation records",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -377,7 +465,9 @@
       "control_name": "Req 7.2",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Access control matrix, need-to-know justification"
+      "notes": "Access control matrix, need-to-know justification",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -385,7 +475,9 @@
       "control_name": "Req 10.2",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Authentication audit log"
+      "notes": "Authentication audit log",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -393,7 +485,9 @@
       "control_name": "Data and Model Security (DMS)",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent credentials treated as sensitive AI data assets — stored in secrets manager, never in agent memory or model context"
+      "notes": "Agent credentials treated as sensitive AI data assets — stored in secrets manager, never in agent memory or model context",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -401,7 +495,9 @@
       "control_name": "Governance and Risk (GOV)",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent credential lifecycle policy documented in AI governance framework — scope, lifetime, rotation, revocation"
+      "notes": "Agent credential lifecycle policy documented in AI governance framework — scope, lifetime, rotation, revocation",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -409,7 +505,9 @@
       "control_name": "Monitoring and Detection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All agent credential operations logged — anomaly detection for scope expansion or after-session access"
+      "notes": "All agent credential operations logged — anomaly detection for scope expansion or after-session access",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -417,7 +515,9 @@
       "control_name": "General ICT — Access Control",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Short-lived tokens for all agent interactions — credential TTL enforced at the IAM layer"
+      "notes": "Short-lived tokens for all agent interactions — credential TTL enforced at the IAM layer",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -425,7 +525,9 @@
       "control_name": "Design / Threat Assessment",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Include memory store read/write paths in threat model"
+      "notes": "Include memory store read/write paths in threat model",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -433,7 +535,9 @@
       "control_name": "Implementation / Secure Build",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Validate and sanitise all content written to persistent memory"
+      "notes": "Validate and sanitise all content written to persistent memory",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -441,7 +545,9 @@
       "control_name": "Verification / Security Testing",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Test persistent memory integrity across session boundaries"
+      "notes": "Test persistent memory integrity across session boundaries",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -449,7 +555,9 @@
       "control_name": "Operations / Environment Management",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Apply access controls, encryption at rest, and integrity verification to all memory stores"
+      "notes": "Apply access controls, encryption at rest, and integrity verification to all memory stores",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -457,7 +565,9 @@
       "control_name": "Verification / Architecture Assessment",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Confirm memory stores have appropriate access controls"
+      "notes": "Confirm memory stores have appropriate access controls",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -465,7 +575,9 @@
       "control_name": "CWE-250",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent runs with broader credentials than its task requires; NHI-5 over-privilege"
+      "notes": "Agent runs with broader credentials than its task requires; NHI-5 over-privilege",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -473,7 +585,9 @@
       "control_name": "CWE-522",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent credentials stored in cleartext memory, logs, config, or tool payloads"
+      "notes": "Agent credentials stored in cleartext memory, logs, config, or tool payloads",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -481,7 +595,9 @@
       "control_name": "CWE-312",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Credentials and tokens not encrypted at rest in agent memory or configuration"
+      "notes": "Credentials and tokens not encrypted at rest in agent memory or configuration",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -489,7 +605,9 @@
       "control_name": "CWE-798",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent credentials hardcoded in prompts or source code"
+      "notes": "Agent credentials hardcoded in prompts or source code",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -497,7 +615,9 @@
       "control_name": "CWE-613",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Long-lived agent credentials without expiry or rotation — NHI-7"
+      "notes": "Long-lived agent credentials without expiry or rotation — NHI-7",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP AI Testing Guide",
@@ -505,7 +625,9 @@
       "control_name": "ACT — Access Control",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Verify agent cannot access systems beyond its credential scope; test scope boundaries"
+      "notes": "Verify agent cannot access systems beyond its credential scope; test scope boundaries",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP AI Testing Guide",
@@ -513,7 +635,9 @@
       "control_name": "LMT — Logging & Monitoring",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Verify all credential operations are logged with sufficient detail for forensic investigation"
+      "notes": "Verify all credential operations are logged with sufficient detail for forensic investigation",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP AI Testing Guide",
@@ -521,56 +645,72 @@
       "control_name": "DPT — Data Protection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Test whether credentials appear in agent outputs, logs, memory stores, or tool payloads"
+      "notes": "Test whether credentials appear in agent outputs, logs, memory stores, or tool payloads",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L6",
       "control_name": "Security & Compliance",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L7",
       "control_name": "Agent Ecosystem",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L4",
       "control_name": "Deployment & Infrastructure",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
       "control_id": "A",
       "control_name": "Data & Privacy (full domain)",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
       "control_id": "B007",
       "control_name": "Enforce user access privileges to AI systems",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
       "control_id": "B008",
       "control_name": "Protect model deployment environment",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
       "control_id": "E",
       "control_name": "Accountability (full domain)",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -578,7 +718,9 @@
       "control_name": "NHI-1 Improper Offboarding",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Formal agent offboarding — all credentials revoked, tokens invalidated, access removed"
+      "notes": "Formal agent offboarding — all credentials revoked, tokens invalidated, access removed",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -586,7 +728,9 @@
       "control_name": "NHI-2 Secret Leakage",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "No credentials in agent context, logs, or tool payloads — secret manager only"
+      "notes": "No credentials in agent context, logs, or tool payloads — secret manager only",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -594,7 +738,9 @@
       "control_name": "NHI-3 Vulnerable Third-Party NHI",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Validate all third-party NHIs — revoke over-privileged third-party tokens"
+      "notes": "Validate all third-party NHIs — revoke over-privileged third-party tokens",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -602,7 +748,9 @@
       "control_name": "NHI-4 Insecure Authentication",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Strong authentication for all agent-to-system connections — mTLS, short-lived tokens"
+      "notes": "Strong authentication for all agent-to-system connections — mTLS, short-lived tokens",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -610,7 +758,9 @@
       "control_name": "NHI-5 Over-Privileged NHI",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Least privilege per agent role — scope enforced, reviewed quarterly"
+      "notes": "Least privilege per agent role — scope enforced, reviewed quarterly",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -618,7 +768,9 @@
       "control_name": "NHI-6 Insecure Credential Storage",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Secret manager for all agent credentials — no cleartext storage anywhere"
+      "notes": "Secret manager for all agent credentials — no cleartext storage anywhere",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -626,7 +778,9 @@
       "control_name": "NHI-7 Long-Lived Credentials",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Short-lived credentials — task-scoped tokens with automatic expiry"
+      "notes": "Short-lived credentials — task-scoped tokens with automatic expiry",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -634,7 +788,9 @@
       "control_name": "NHI-8 Environment Isolation Failure",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Strict environment isolation — separate credentials per environment, no cross-environment reuse"
+      "notes": "Strict environment isolation — separate credentials per environment, no cross-environment reuse",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -642,7 +798,9 @@
       "control_name": "NHI-9 NHI Reuse",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Unique identity per agent deployment — no credential sharing"
+      "notes": "Unique identity per agent deployment — no credential sharing",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -650,7 +808,9 @@
       "control_name": "NHI-10 Human Use of NHI",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Agent credentials machine-only — human use detected and blocked"
+      "notes": "Agent credentials machine-only — human use detected and blocked",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -658,7 +818,9 @@
       "control_name": "PW.1.1-PS – Define security requirements",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Establishes privilege boundaries as mandatory requirements"
+      "notes": "Establishes privilege boundaries as mandatory requirements",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -666,7 +828,9 @@
       "control_name": "PW.5.1-PS – Secure coding practices",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Prevents credential leakage through agent code paths"
+      "notes": "Prevents credential leakage through agent code paths",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -674,7 +838,9 @@
       "control_name": "PS.1.1-PS – Protect all code from unauthorised access",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Prevents tampering with privilege boundaries"
+      "notes": "Prevents tampering with privilege boundaries",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -682,7 +848,9 @@
       "control_name": "RV.1.1-PS – Identify and confirm vulnerabilities",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Enables rapid detection of privilege escalation in production"
+      "notes": "Enables rapid detection of privilege escalation in production",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -690,7 +858,9 @@
       "control_name": "Least Privilege — escalation prevention",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Enforce least privilege with explicit privilege ceilings per agent; prevent accumulation of permissions through tool chaining or inter-agent delegation"
+      "notes": "Enforce least privilege with explicit privilege ceilings per agent; prevent accumulation of permissions through tool chaining or inter-agent delegation",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -698,7 +868,9 @@
       "control_name": "Identification and Authentication — agent NHI",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Assign unique non-human identities to each AI agent; authenticate agent identity at each tool invocation and inter-agent communication boundary"
+      "notes": "Assign unique non-human identities to each AI agent; authenticate agent identity at each tool invocation and inter-agent communication boundary",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -706,7 +878,9 @@
       "control_name": "Access Enforcement — tool boundary enforcement",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Enforce access control at every tool invocation boundary; validate agent identity and authorisation for each requested action regardless of calling context"
+      "notes": "Enforce access control at every tool invocation boundary; validate agent identity and authorisation for each requested action regardless of calling context",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -714,7 +888,9 @@
       "control_name": "Incident Handling — escalation incident response",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Define incident handling procedures for agent privilege escalation events; include automated containment, privilege revocation, and forensic investigation"
+      "notes": "Define incident handling procedures for agent privilege escalation events; include automated containment, privilege revocation, and forensic investigation",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -722,7 +898,9 @@
       "control_name": "Protection and Prevention — escalation prevention controls",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Implement security controls preventing agent privilege escalation through tool chaining, inter-agent delegation, or permission accumulation"
+      "notes": "Implement security controls preventing agent privilege escalation through tool chaining, inter-agent delegation, or permission accumulation",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -730,7 +908,9 @@
       "control_name": "ICT Incident Management — escalation incident reporting",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Classify agent privilege escalation as an ICT-related incident; assess impact on financial systems and report per DORA incident classification criteria"
+      "notes": "Classify agent privilege escalation as an ICT-related incident; assess impact on financial systems and report per DORA incident classification criteria",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -738,7 +918,9 @@
       "control_name": "Resilience Testing — escalation scenario testing",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Include agent privilege escalation scenarios in threat-led penetration testing; test for escalation through tool chaining and inter-agent trust"
+      "notes": "Include agent privilege escalation scenarios in threat-led penetration testing; test for escalation through tool chaining and inter-agent trust",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -746,7 +928,9 @@
       "control_name": "Detection — escalation detection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Deploy detection mechanisms for agent privilege escalation; monitor for permission boundary violations and unexpected privilege accumulation"
+      "notes": "Deploy detection mechanisms for agent privilege escalation; monitor for permission boundary violations and unexpected privilege accumulation",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     }
   ],
   "tools": [

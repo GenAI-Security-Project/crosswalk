@@ -23,7 +23,9 @@
       "control_name": "Discover ML Model Ontology",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Adversary learns what data the browser assistant can access across open applications"
+      "notes": "Adversary learns what data the browser assistant can access across open applications",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MITRE ATLAS",
@@ -31,7 +33,9 @@
       "control_name": "Data from Information Repositories",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Browser assistant accesses sensitive data across tabs and applications — adversary controls assistant to exfiltrate"
+      "notes": "Browser assistant accesses sensitive data across tabs and applications — adversary controls assistant to exfiltrate",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MITRE ATLAS",
@@ -39,7 +43,9 @@
       "control_name": "Exfiltrate via ML Inference API",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Compromised browser assistant used as exfiltration channel — sensitive data from accessible applications transmitted"
+      "notes": "Compromised browser assistant used as exfiltration channel — sensitive data from accessible applications transmitted",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -47,7 +53,9 @@
       "control_name": "Policies for trustworthy AI",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Endpoint AI agent governance policy — approved extensions, permission scoping, mandatory updates"
+      "notes": "Endpoint AI agent governance policy — approved extensions, permission scoping, mandatory updates",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -55,7 +63,9 @@
       "control_name": "AI system impact",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Impact assessment of endpoint AI agents — data access scope, exfiltration paths, user risk"
+      "notes": "Impact assessment of endpoint AI agents — data access scope, exfiltration paths, user risk",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -63,7 +73,9 @@
       "control_name": "Testing — adversarial",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Adversarial testing of approved browser extensions — prompt injection via web content scenarios"
+      "notes": "Adversarial testing of approved browser extensions — prompt injection via web content scenarios",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST AI RMF 1.0",
@@ -71,7 +83,9 @@
       "control_name": "Risk response",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Incident response for endpoint AI agent compromise — extension disable, data impact assessment"
+      "notes": "Incident response for endpoint AI agent compromise — extension disable, data impact assessment",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -79,7 +93,9 @@
       "control_name": "Art. 9 — Risk management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Browser and endpoint agent deployments assessed in Art. 9 risk management"
+      "notes": "Browser and endpoint agent deployments assessed in Art. 9 risk management",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -87,7 +103,9 @@
       "control_name": "Art. 14 — Human oversight",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Users must be able to pause and override endpoint AI agents — Art. 14 human oversight requirement"
+      "notes": "Users must be able to pause and override endpoint AI agents — Art. 14 human oversight requirement",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "EU AI Act",
@@ -95,7 +113,9 @@
       "control_name": "Art. 29 — Deployer obligations",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Deployers responsible for ensuring endpoint AI agents operate within Art. 14 human oversight scope"
+      "notes": "Deployers responsible for ensuring endpoint AI agents operate within Art. 14 human oversight scope",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -103,7 +123,9 @@
       "control_name": "Endpoint device management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Endpoint AI agents managed under device management policy — approved versions, permissions scoped"
+      "notes": "Endpoint AI agents managed under device management policy — approved versions, permissions scoped",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -111,7 +133,9 @@
       "control_name": "Protection against malware",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Endpoint AI agents subject to malware protection — extension integrity verification"
+      "notes": "Endpoint AI agents subject to malware protection — extension integrity verification",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -119,7 +143,9 @@
       "control_name": "Acceptable use of assets",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Policy governing permitted browser AI extensions and endpoint agent permissions"
+      "notes": "Policy governing permitted browser AI extensions and endpoint agent permissions",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 27001:2022",
@@ -127,7 +153,9 @@
       "control_name": "Data leakage prevention",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "DLP controls on endpoint AI agent data access and exfiltration paths"
+      "notes": "DLP controls on endpoint AI agent data access and exfiltration paths",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -135,7 +163,9 @@
       "control_name": "A.9.1",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -143,7 +173,9 @@
       "control_name": "A.6.1.2",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -151,7 +183,9 @@
       "control_name": "A.2.2",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -159,49 +193,63 @@
       "control_name": "Cl.4",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
       "control_id": "CIS 2",
       "control_name": "2.6 — Allowlist authorised software",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
       "control_id": "CIS 4",
       "control_name": "4.1 — Secure configuration baseline",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CIS Controls v8.1",
       "control_id": "CIS 10",
       "control_name": "10.1 — Deploy anti-malware",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
       "control_id": "V4 Access Control",
       "control_name": "V4.1.2 — Least privilege",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
       "control_id": "V11 Business Logic",
       "control_name": "V11.1.5 — Business logic prevents excess data access",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
       "control_id": "V1 Architecture",
       "control_name": "V1.1.2 — Secure architecture and design",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -209,7 +257,9 @@
       "control_name": "Software and information integrity",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Browser AI extensions assessed as third-party software — 62443-2-4 requirements before Zone 3 deployment"
+      "notes": "Browser AI extensions assessed as third-party software — 62443-2-4 requirements before Zone 3 deployment",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -217,7 +267,9 @@
       "control_name": "Human user authentication",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Approved extensions only on Zone 3 workstations — unapproved AI extensions blocked at device management"
+      "notes": "Approved extensions only on Zone 3 workstations — unapproved AI extensions blocked at device management",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ISA/IEC 62443",
@@ -225,7 +277,9 @@
       "control_name": "Timely response to events",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Browser AI anomalies on Zone 3 workstations treated as security events"
+      "notes": "Browser AI anomalies on Zone 3 workstations treated as security events",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -233,7 +287,9 @@
       "control_name": "§5.5",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Third-party data in OT context"
+      "notes": "Third-party data in OT context",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -241,7 +297,9 @@
       "control_name": "§6.3",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Data source assessment for OT GenAI"
+      "notes": "Data source assessment for OT GenAI",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -249,7 +307,9 @@
       "control_name": "§8.4",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Vendor programme for OT data suppliers"
+      "notes": "Vendor programme for OT data suppliers",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -257,7 +317,9 @@
       "control_name": "Supply Chain Risk Management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Browser AI extension providers with sensitive data access treated as third-party suppliers"
+      "notes": "Browser AI extension providers with sensitive data access treated as third-party suppliers",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -265,7 +327,9 @@
       "control_name": "Platform Security",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Software managed to reduce risk — browser AI extensions version-controlled, patched, approved before deployment"
+      "notes": "Software managed to reduce risk — browser AI extensions version-controlled, patched, approved before deployment",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -273,7 +337,9 @@
       "control_name": "Continuous Monitoring",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "AI assistant access to sensitive data on endpoints monitored"
+      "notes": "AI assistant access to sensitive data on endpoints monitored",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST CSF 2.0",
@@ -281,35 +347,45 @@
       "control_name": "Asset Management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Approved browser AI extensions inventoried — data access scope, security assessment status"
+      "notes": "Approved browser AI extensions inventoried — data access scope, security assessment status",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Approved AI assistants with scoped permissions — permission minimisation documented and enforced",
       "control_name": "CC6.1 — Logical access",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Browser AI extension providers assessed in vendor risk programme — data handling, telemetry, update security",
       "control_name": "CC9.1 — Vendor risk",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Endpoint AI acceptable use procedures — approved extension list, prohibited data access, employee acknowledgement",
       "control_name": "CC5.2 — Control activities",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "SOC 2",
       "control_id": "Endpoint AI overreach risks identified — data access scope, exfiltration paths assessed",
       "control_name": "CC3.2 — Risk assessment",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -317,7 +393,9 @@
       "control_name": "TPSP programme",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Browser AI extension providers with CDE access are TPSPs — add to TPSP list, initiate compliance process"
+      "notes": "Browser AI extension providers with CDE access are TPSPs — add to TPSP list, initiate compliance process",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -325,7 +403,9 @@
       "control_name": "Vulnerability management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Browser AI extensions patched and version-controlled — vulnerable extensions are Req 6.3 findings in CDE"
+      "notes": "Browser AI extensions patched and version-controlled — vulnerable extensions are Req 6.3 findings in CDE",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -333,7 +413,9 @@
       "control_name": "Logging",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "AI assistant access to CDE data on endpoint logged — Req 10 audit trail requirement"
+      "notes": "AI assistant access to CDE data on endpoint logged — Req 10 audit trail requirement",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "PCI DSS v4.0",
@@ -341,7 +423,9 @@
       "control_name": "Targeted risk analysis",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Targeted risk analysis for endpoint AI assistant scope in CDE — data accessible, exfiltration paths"
+      "notes": "Targeted risk analysis for endpoint AI assistant scope in CDE — data accessible, exfiltration paths",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -349,7 +433,9 @@
       "control_name": "AI System Integrity (ASI)",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Endpoint AI assistants operate under explicit, minimal permissions — scope defined and enforced by the underlying platform"
+      "notes": "Endpoint AI assistants operate under explicit, minimal permissions — scope defined and enforced by the underlying platform",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -357,7 +443,9 @@
       "control_name": "Governance and Risk (GOV)",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Privacy policy explicitly covers endpoint AI assistant data collection — user consent, scope disclosure, and opt-out mechanism required"
+      "notes": "Privacy policy explicitly covers endpoint AI assistant data collection — user consent, scope disclosure, and opt-out mechanism required",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -365,7 +453,9 @@
       "control_name": "Monitoring and Detection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Endpoint AI assistant activity logged — data access, network calls, and file operations monitored"
+      "notes": "Endpoint AI assistant activity logged — data access, network calls, and file operations monitored",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -373,7 +463,9 @@
       "control_name": "General ICT — Access Control",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Endpoint AI assistants installed with least-privilege permissions — no broad file system or browser data access without per-action authorisation"
+      "notes": "Endpoint AI assistants installed with least-privilege permissions — no broad file system or browser data access without per-action authorisation",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -381,7 +473,9 @@
       "control_name": "Governance / Policy & Compliance",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Approved vendor list for all external data sources"
+      "notes": "Approved vendor list for all external data sources",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -389,7 +483,9 @@
       "control_name": "Implementation / Secure Build",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Inventory of all external data sources with security contact and last-verified date"
+      "notes": "Inventory of all external data sources with security contact and last-verified date",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -397,7 +493,9 @@
       "control_name": "Verification / Architecture Assessment",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Architecture review validates all external data dependencies against policy"
+      "notes": "Architecture review validates all external data dependencies against policy",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -405,7 +503,9 @@
       "control_name": "Operations / Operational Management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Track security advisories and availability for all integrated data sources"
+      "notes": "Track security advisories and availability for all integrated data sources",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -413,7 +513,9 @@
       "control_name": "CWE-668",
       "tier": "Foundational",
       "scope": "Both",
-      "url": "https://cwe.mitre.org/data/definitions/668.html"
+      "url": "https://cwe.mitre.org/data/definitions/668.html",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -421,7 +523,9 @@
       "control_name": "CWE-272",
       "tier": "Foundational",
       "scope": "Both",
-      "url": "https://cwe.mitre.org/data/definitions/272.html"
+      "url": "https://cwe.mitre.org/data/definitions/272.html",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "CWE/CVE",
@@ -429,28 +533,36 @@
       "control_name": "CWE-284",
       "tier": "Foundational",
       "scope": "Both",
-      "url": "https://cwe.mitre.org/data/definitions/284.html"
+      "url": "https://cwe.mitre.org/data/definitions/284.html",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L4",
       "control_name": "Deployment & Infrastructure",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L2",
       "control_name": "Data Operations",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "MAESTRO",
       "control_id": "L6",
       "control_name": "Security & Compliance",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Both",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -458,7 +570,9 @@
       "control_name": "Third-party adversarial robustness testing",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Foundational"
+      "notes": "Foundational",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -466,7 +580,9 @@
       "control_name": "Third-party security assessment",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Hardening"
+      "notes": "Hardening",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "AIUC-1",
@@ -474,7 +590,9 @@
       "control_name": "Third-party NHI controls",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Hardening"
+      "notes": "Hardening",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -482,7 +600,9 @@
       "control_name": "NHI-3 Vulnerable Third-Party NHI",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Review all third-party credentials; reduce to minimum"
+      "notes": "Review all third-party credentials; reduce to minimum",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -490,7 +610,9 @@
       "control_name": "NHI-8 Environment Isolation Failure",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Enforce environment isolation for third-party credentials"
+      "notes": "Enforce environment isolation for third-party credentials",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -498,7 +620,9 @@
       "control_name": "NHI-2 Secret Leakage",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Vault all third-party data source credentials"
+      "notes": "Vault all third-party data source credentials",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -506,7 +630,9 @@
       "control_name": "Define security requirements — privacy preservation requirements",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Define security requirements that mandate privacy impact assessments, privacy-preserving techniques, and limits on inference of sensitive attributes for all AI systems"
+      "notes": "Define security requirements that mandate privacy impact assessments, privacy-preserving techniques, and limits on inference of sensitive attributes for all AI systems",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -514,7 +640,9 @@
       "control_name": "Design software — privacy-preserving AI architecture",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Design AI systems with privacy preservation as a core architectural principle; embed differential privacy, federated learning, or secure computation where appropriate"
+      "notes": "Design AI systems with privacy preservation as a core architectural principle; embed differential privacy, federated learning, or secure computation where appropriate",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "NIST SP 800-218A",
@@ -522,7 +650,9 @@
       "control_name": "Protect all code from unauthorised access — privacy boundary enforcement",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Implement access controls that prevent cross-context data combination enabling re-identification or sensitive attribute inference"
+      "notes": "Implement access controls that prevent cross-context data combination enabling re-identification or sensitive attribute inference",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -530,7 +660,9 @@
       "control_name": "Protection of Information at Rest — privacy-preserving storage",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Encrypt AI data at rest; implement privacy-preserving storage techniques to prevent inference and re-identification"
+      "notes": "Encrypt AI data at rest; implement privacy-preserving storage techniques to prevent inference and re-identification",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -538,7 +670,9 @@
       "control_name": "Access Enforcement — privacy-aligned access",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Enforce access controls that account for inference and aggregation risk; restrict access based on combined sensitivity"
+      "notes": "Enforce access controls that account for inference and aggregation risk; restrict access based on combined sensitivity",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -546,7 +680,9 @@
       "control_name": "Risk Management Strategy — privacy risk assessment",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Include AI privacy erosion in risk management; assess inference, aggregation, and memorisation risks for AI systems"
+      "notes": "Include AI privacy erosion in risk management; assess inference, aggregation, and memorisation risks for AI systems",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "FedRAMP",
@@ -554,7 +690,9 @@
       "control_name": "System Monitoring — privacy erosion detection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Monitor for privacy erosion indicators; detect inference capabilities, re-identification risk, and memorisation patterns"
+      "notes": "Monitor for privacy erosion indicators; detect inference capabilities, re-identification risk, and memorisation patterns",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -562,7 +700,9 @@
       "control_name": "ICT Risk Management — privacy risk governance",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Include AI privacy erosion in ICT risk management; assess inference, aggregation, and memorisation risks for financial AI systems"
+      "notes": "Include AI privacy erosion in ICT risk management; assess inference, aggregation, and memorisation risks for financial AI systems",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -570,7 +710,9 @@
       "control_name": "Protection and Prevention — privacy-preserving controls",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Implement privacy-preserving controls for AI systems; prevent inference, re-identification, and memorisation-based privacy erosion"
+      "notes": "Implement privacy-preserving controls for AI systems; prevent inference, re-identification, and memorisation-based privacy erosion",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     },
     {
       "framework": "DORA",
@@ -578,7 +720,9 @@
       "control_name": "Detection — privacy degradation monitoring",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Monitor for privacy degradation indicators; detect inference attacks, re-identification attempts, and memorisation in model outputs"
+      "notes": "Monitor for privacy degradation indicators; detect inference attacks, re-identification attempts, and memorisation in model outputs",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     }
   ],
   "tools": [
