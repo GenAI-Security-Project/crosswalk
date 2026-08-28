@@ -40,5 +40,12 @@
       "title": "Resource Exhaustion via Uncontrolled Actions",
       "kind": "threat-category"
     }
-  ]
+  ],
+  "inventory_completeness": {
+    "status": "complete",
+    "included": 6,
+    "total": 6,
+    "note": "STRIDE is a closed six-element mnemonic; all six are present.",
+    "source": "https://learn.microsoft.com/en-us/azure/security/develop/threat-modeling-tool-threats"
+  }
 }

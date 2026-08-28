@@ -325,5 +325,12 @@
       "change": "Initial seed — 22 CSF 2.0 categories across GOVERN/IDENTIFY/PROTECT/DETECT/RESPOND/RECOVER",
       "author": "OWASP GenAI Data Security Initiative"
     }
-  ]
+  ],
+  "inventory_completeness": {
+    "status": "unknown",
+    "included": 44,
+    "total": null,
+    "note": "Authoritative control count not established. Needs a count from the published framework.",
+    "source": "https://www.nist.gov/cyberframework"
+  }
 }

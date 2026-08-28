@@ -613,5 +613,12 @@
       "change": "Initial seed — 37 controls from clauses 4-10 and Annexes A/B",
       "author": "OWASP GenAI Data Security Initiative"
     }
-  ]
+  ],
+  "inventory_completeness": {
+    "status": "unknown",
+    "included": 87,
+    "total": null,
+    "note": "Authoritative control count not established. The standard is paywalled, so the total cannot be verified from a public source here.",
+    "source": "https://www.iso.org/standard/81230.html"
+  }
 }

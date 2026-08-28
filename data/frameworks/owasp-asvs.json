@@ -517,5 +517,12 @@
       "change": "Initial seed — 32 ASVS verification requirements and sub-requirements",
       "author": "OWASP GenAI Data Security Initiative"
     }
-  ]
+  ],
+  "inventory_completeness": {
+    "status": "unknown",
+    "included": 75,
+    "total": null,
+    "note": "Authoritative control count not established. Needs a count from the published framework.",
+    "source": "https://owasp.org/www-project-application-security-verification-standard/"
+  }
 }

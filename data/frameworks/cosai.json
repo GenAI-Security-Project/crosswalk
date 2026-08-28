@@ -273,5 +273,12 @@
       "change": "Initial seed — 4 workstreams + agentic security principles",
       "author": "OWASP GenAI Data Security Initiative"
     }
-  ]
+  ],
+  "inventory_completeness": {
+    "status": "unknown",
+    "included": 32,
+    "total": null,
+    "note": "Authoritative control count not established. Needs a count from the published framework.",
+    "source": "https://www.coalitionforsecureai.org/"
+  }
 }

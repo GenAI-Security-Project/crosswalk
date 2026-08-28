@@ -148,5 +148,12 @@
       "description": "Assess AI governance completeness; identify gaps in roles, policies, oversight, and accountability; Conduct regulatory compliance gap analysis for AI systems; identify areas of non-compliance and define remediation plans",
       "kind": "control"
     }
-  ]
+  ],
+  "inventory_completeness": {
+    "status": "partial",
+    "included": 23,
+    "total": null,
+    "note": "Every item in this registry is referenced by a mapping, so the registry was derived from the mappings rather than from the framework. It cannot contain controls this crosswalk has not mapped. Authoritative total not yet established.",
+    "source": "https://www.fedramp.gov/"
+  }
 }

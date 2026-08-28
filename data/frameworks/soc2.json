@@ -1225,5 +1225,12 @@
       "change": "Initial seed — 41 Trust Services Criteria across CC, Availability, Confidentiality, PI, Privacy",
       "author": "OWASP GenAI Data Security Initiative"
     }
-  ]
+  ],
+  "inventory_completeness": {
+    "status": "unknown",
+    "included": 209,
+    "total": null,
+    "note": "Authoritative control count not established. Needs a count from the published framework.",
+    "source": "https://www.aicpa-cima.com/resources/landing/2017-trust-services-criteria"
+  }
 }

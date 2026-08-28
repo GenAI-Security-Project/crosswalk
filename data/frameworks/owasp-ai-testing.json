@@ -358,5 +358,12 @@
       "description": "Verify per-user and per-tenant quotas are enforced and cannot be bypassed through session switching or credential abuse",
       "kind": "control"
     }
-  ]
+  ],
+  "inventory_completeness": {
+    "status": "partial",
+    "included": 58,
+    "total": null,
+    "note": "Every item in this registry is referenced by a mapping, so the registry was derived from the mappings rather than from the framework. It cannot contain controls this crosswalk has not mapped. Authoritative total not yet established.",
+    "source": "https://owasp.org/www-project-ai-security-and-privacy-guide/"
+  }
 }

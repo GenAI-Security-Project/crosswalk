@@ -357,5 +357,12 @@
       "change": "Initial seed — 7 foundational requirements with 25 system requirements",
       "author": "OWASP GenAI Data Security Initiative"
     }
-  ]
+  ],
+  "inventory_completeness": {
+    "status": "unknown",
+    "included": 46,
+    "total": null,
+    "note": "Authoritative control count not established. The standard is paywalled, so the total cannot be verified from a public source here.",
+    "source": "https://www.isa.org/standards-and-publications/isa-standards/isa-iec-62443-series-of-standards"
+  }
 }
