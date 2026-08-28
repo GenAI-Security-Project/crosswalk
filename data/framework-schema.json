@@ -73,6 +73,7 @@
     "controls": {
       "type": "array",
       "description": "Complete inventory of controls/clauses/requirements",
+      "minItems": 1,
       "items": {
         "type": "object",
         "required": [

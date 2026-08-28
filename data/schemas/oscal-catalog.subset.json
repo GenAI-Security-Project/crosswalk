@@ -1,0 +1,74 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/schemas/oscal-catalog.subset.json",
+  "title": "OSCAL 1.1.2 Catalog — structural subset",
+  "description": "A SUBSET of the NIST OSCAL 1.1.2 catalog model, written and owned by this project. It encodes the structure compliance-report.js --format oscal-catalog must emit. Passing proves the export has not lost its shape; it does not prove OSCAL conformance. See data/schemas/README.md.",
+  "type": "object",
+  "required": ["catalog"],
+  "additionalProperties": false,
+  "properties": {
+    "catalog": {
+      "type": "object",
+      "required": ["uuid", "metadata"],
+      "properties": {
+        "uuid": { "$ref": "#/definitions/uuid" },
+        "metadata": { "$ref": "#/definitions/metadata" },
+        "groups": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/group" }
+        },
+        "controls": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/control" }
+        },
+        "back-matter": { "type": "object" }
+      }
+    }
+  },
+  "definitions": {
+    "uuid": {
+      "type": "string",
+      "pattern": "^[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12}$"
+    },
+    "metadata": {
+      "type": "object",
+      "required": ["title", "last-modified", "version", "oscal-version"],
+      "properties": {
+        "title": { "type": "string", "minLength": 1 },
+        "last-modified": { "type": "string", "format": "date-time" },
+        "version": { "type": "string", "minLength": 1 },
+        "oscal-version": { "const": "1.1.2" },
+        "roles": { "type": "array" },
+        "parties": { "type": "array" },
+        "responsible-parties": { "type": "array" }
+      }
+    },
+    "group": {
+      "type": "object",
+      "required": ["id", "title"],
+      "properties": {
+        "id": { "$ref": "#/definitions/tokenId" },
+        "title": { "type": "string", "minLength": 1 },
+        "controls": { "type": "array", "items": { "$ref": "#/definitions/control" } },
+        "groups": { "type": "array", "items": { "$ref": "#/definitions/group" } }
+      }
+    },
+    "control": {
+      "type": "object",
+      "required": ["id", "title"],
+      "properties": {
+        "id": { "$ref": "#/definitions/tokenId" },
+        "title": { "type": "string", "minLength": 1 },
+        "props": { "type": "array", "items": { "type": "object", "required": ["name", "value"] } },
+        "links": { "type": "array", "items": { "type": "object", "required": ["href"] } },
+        "parts": { "type": "array" },
+        "controls": { "type": "array", "items": { "$ref": "#/definitions/control" } }
+      }
+    },
+    "tokenId": {
+      "type": "string",
+      "description": "OSCAL identifiers are NCName-like tokens: they must not start with a digit and must not contain whitespace. Control ids taken straight from a framework often do both, so this is the check most likely to catch a real regression.",
+      "pattern": "^[A-Za-z_][A-Za-z0-9._~:-]*$"
+    }
+  }
+}

@@ -71,6 +71,11 @@ function validateFramework(fw, schema) {
   // controls
   if (!Array.isArray(fw.controls)) {
     errors.push('controls must be an array');
+  } else if (fw.controls.length === 0) {
+    // A registry with no controls validates cleanly, lands in
+    // data/frameworks/, and then counts as a framework with an empty
+    // inventory — inflating the registry count while covering nothing.
+    errors.push('controls is empty — a registry with no controls is not a framework');
   } else {
     const ids = new Set();
     fw.controls.forEach((c, i) => {

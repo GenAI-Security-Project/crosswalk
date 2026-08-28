@@ -39,10 +39,11 @@
     "state-report": "node scripts/state-report.js",
     "build": "npm run generate && npm run validate && npm run stats:check",
     "build:reports": "npm run compliance && npm run incidents && npm run registry-coverage && npm run density && npm run inventory && npm run audit:incidents && npm run validate:aivss && npm run freshness",
-    "ci": "npm run build && npm run build:reports",
+    "ci": "npm run build && npm run test:scripts && npm run build:reports",
     "compile": "tsc",
     "prepublishOnly": "npm run compile",
-    "test:scripts": "node --test \"scripts/**/*.test.mjs\""
+    "test:scripts": "node --test scripts/*.test.mjs",
+    "test": "node --test scripts/*.test.mjs"
   },
   "license": "CC-BY-SA-4.0",
   "repository": {
@@ -74,6 +75,8 @@
   ],
   "devDependencies": {
     "@types/node": "^25.5.0",
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1",
     "typescript": "^5.4.0"
   }
 }

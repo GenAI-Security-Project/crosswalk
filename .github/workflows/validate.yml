@@ -14,6 +14,8 @@ on:
       - 'README.md'
       - 'scripts/validate.js'
       - 'scripts/generate.js'
+      - 'scripts/*.test.mjs'
+      - 'package.json'
       - '.github/workflows/validate.yml'
   pull_request:
     branches: [main]
@@ -28,6 +30,8 @@ on:
       - 'README.md'
       - 'scripts/validate.js'
       - 'scripts/generate.js'
+      - 'scripts/*.test.mjs'
+      - 'package.json'
       - '.github/workflows/validate.yml'
 
 # Both jobs only read the tree. Without this they inherit the repository
@@ -112,3 +116,32 @@ jobs:
       # here rather than shipping.
       - name: Assert generated output is current
         run: git diff --exit-code -- data/entries docs/data.js docs/incidents.js
+
+  unit-tests:
+    name: Unit tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+
+      - name: Use Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '20'
+          cache: npm
+
+      # ajv is the only runtime dependency the suite needs, and it is a
+      # devDependency. --ignore-scripts because nothing here needs a postinstall.
+      - name: Install dependencies
+        run: npm ci --ignore-scripts
+
+      # Covers stats.js, generate.js, the three report CLIs, the framework
+      # ingest path, and schema validation of the OSCAL and STIX exports.
+      - name: Run the test suite
+        run: npm run test:scripts
+
+      # The suite re-runs the generator to prove it is deterministic. If that
+      # left anything behind, the tree must still be clean.
+      - name: Assert the tests left no changes behind
+        run: git diff --exit-code

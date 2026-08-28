@@ -737,6 +737,39 @@ function renderSummaryMarkdown(frameworks, allEntries, opts) {
 
 const crypto = require('crypto');
 
+/**
+ * Coerce a framework control identifier into a valid OSCAL token.
+ *
+ * OSCAL ids are NCName-like: they may not begin with a digit and may not
+ * contain whitespace. Real control ids routinely do both — `Art. 5` (DORA),
+ * `SR 1.1` (ISA 62443), `4.1` (ISO 42001), `V8 Data Protection` (ASVS) — so
+ * emitting them verbatim produced catalogs that no OSCAL tool would load.
+ * Thirteen of the twenty-five frameworks were affected and nothing caught it,
+ * because nothing read the export back.
+ *
+ * The rule is deliberately boring and deterministic, so the same control gets
+ * the same id in the catalog and in the component definition, and so the id is
+ * stable across runs:
+ *
+ *   whitespace and invalid characters → `-`, collapsed
+ *   leading digit                     → `c-` prefix
+ *   longer than 60 characters         → truncated, plus a hash of the original
+ *
+ * The original is never lost: it is preserved verbatim in the control `title`
+ * and in a `source-control-id` prop.
+ */
+function oscalToken(raw) {
+  const original = String(raw == null ? '' : raw).trim();
+  let t = original.replace(/[^A-Za-z0-9._~:-]+/g, '-').replace(/-{2,}/g, '-').replace(/^-+|-+$/g, '');
+  if (!t) t = 'control';
+  if (!/^[A-Za-z_]/.test(t)) t = 'c-' + t;
+  if (t.length > 60) {
+    const h = crypto.createHash('sha1').update(original).digest('hex').slice(0, 6);
+    t = t.slice(0, 52).replace(/-+$/, '') + '-' + h;
+  }
+  return t;
+}
+
 function renderOSCAL(fw, allEntries) {
   const r   = buildFrameworkReport(fw, allEntries);
   const now = new Date().toISOString();
@@ -771,9 +804,10 @@ function renderOSCAL(fw, allEntries) {
           'implemented-requirements': [...r.controls.values()].flatMap(ctrl =>
             ctrl.entries.map(entry => ({
               uuid: crypto.randomUUID(),
-              'control-id': ctrl.control_id,
+              'control-id': oscalToken(ctrl.control_id),
               description: `${entry.id}: ${entry.name} — ${ctrl.control_name}${ctrl.notes.length ? ' | ' + ctrl.notes.join('; ') : ''}`,
               props: [
+                { name: 'source-control-id', value: String(ctrl.control_id) },
                 { name: 'implementation-status', value: 'planned', ns: 'https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk' },
                 { name: 'owasp-entry', value: entry.id, ns: 'https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk' },
                 { name: 'severity', value: entry.severity, ns: 'https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk' },
@@ -844,15 +878,16 @@ function renderOSCALCatalog(fw, allEntries) {
         links: registryFw ? [{ href: registryFw.url, rel: 'canonical' }] : [],
       },
       groups: [...groups.entries()].map(([groupName, ctrls]) => ({
-        id: groupName.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
+        id: oscalToken(groupName.toLowerCase()),
         title: groupName,
         controls: ctrls.map(ctrl => {
           const cid = registryFw ? ctrl.control_id : ctrl.control_id;
           const mappedData = r.controls.get(cid);
           return {
-            id: cid,
+            id: oscalToken(cid),
             title: registryFw ? ctrl.title : (ctrl.control_name || ctrl.title),
             props: [
+              { name: 'source-control-id', value: String(cid) },
               ...(ctrl.description ? [{ name: 'description', value: ctrl.description }] : []),
               ...(mappedData ? [
                 { name: 'owasp-coverage', value: mappedData.entries.map(e => e.id).join(','), ns: 'https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk' },
