@@ -1,0 +1,32 @@
+{
+  "id": "AST03",
+  "name": "Over-Privileged Skills",
+  "source_list": "AST-Top10-2026",
+  "version": "2026-Q3",
+  "severity": "High",
+  "aivss_score": null,
+  "audience": [
+    "security-engineer",
+    "data-engineer",
+    "auditor",
+    "compliance"
+  ],
+  "mappings": [],
+  "tools": [],
+  "incidents": [],
+  "crossrefs": {},
+  "changelog": [
+    {
+      "date": "2026-03-27",
+      "version": "1.0.0",
+      "change": "Initial entry — generated from OWASP GenAI Crosswalk v1.5.1 mapping files",
+      "author": "OWASP GenAI Data Security Initiative"
+    },
+    {
+      "date": "2026-08-28",
+      "version": "1.0.0",
+      "change": "Registered by T-A10-01. Name and severity transcribed from owasp.org/www-project-agentic-skills-top-10/ (verified 2026-08-28). Mappings are authored by an SME under T-A10-03 and are deliberately empty.",
+      "author": "OWASP GenAI Data Security Initiative"
+    }
+  ]
+}

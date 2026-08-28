@@ -36,6 +36,48 @@ const VULNERABILITIES = {
   LLM09: { name: 'Vector and Embedding Weaknesses',          source_list: 'LLM-Top10-2026',    severity: 'Medium'   },
   LLM10: { name: 'Improper Output Handling',                 source_list: 'LLM-Top10-2026',    severity: 'High'     },
 
+  // Agentic Skills Top 10 2026 — a sibling OWASP project (lead: Ken Huang et al.),
+  // credited to its own project exactly as the LLM and Agentic Top 10 are.
+  // Names and severities transcribed from owasp.org/www-project-agentic-skills-top-10/.
+  AST01: { name: 'Malicious Skills',                       source_list: 'AST-Top10-2026', severity: 'Critical' },
+  AST02: { name: 'Supply Chain Compromise',                source_list: 'AST-Top10-2026', severity: 'Critical' },
+  AST03: { name: 'Over-Privileged Skills',                 source_list: 'AST-Top10-2026', severity: 'High' },
+  AST04: { name: 'Insecure Metadata',                      source_list: 'AST-Top10-2026', severity: 'High' },
+  AST05: { name: 'Untrusted External Instructions',        source_list: 'AST-Top10-2026', severity: 'High' },
+  AST06: { name: 'Weak Isolation',                         source_list: 'AST-Top10-2026', severity: 'High' },
+  AST07: { name: 'Update Drift',                           source_list: 'AST-Top10-2026', severity: 'Medium' },
+  AST08: { name: 'Poor Scanning',                          source_list: 'AST-Top10-2026', severity: 'Medium' },
+  AST09: { name: 'No Governance',                          source_list: 'AST-Top10-2026', severity: 'Medium' },
+  AST10: { name: 'Cross-Platform Reuse',                   source_list: 'AST-Top10-2026', severity: 'Medium' },
+
+  // Agentic Skills Top 10 2026 — a sibling OWASP project (lead: Ken Huang et al.),
+  // credited to its own project exactly as the LLM and Agentic Top 10 are.
+  // Names and severities transcribed from owasp.org/www-project-agentic-skills-top-10/.
+  AST01: { name: 'Malicious Skills',                       source_list: 'AST-Top10-2026', severity: 'Critical' },
+  AST02: { name: 'Supply Chain Compromise',                source_list: 'AST-Top10-2026', severity: 'Critical' },
+  AST03: { name: 'Over-Privileged Skills',                 source_list: 'AST-Top10-2026', severity: 'High' },
+  AST04: { name: 'Insecure Metadata',                      source_list: 'AST-Top10-2026', severity: 'High' },
+  AST05: { name: 'Untrusted External Instructions',        source_list: 'AST-Top10-2026', severity: 'High' },
+  AST06: { name: 'Weak Isolation',                         source_list: 'AST-Top10-2026', severity: 'High' },
+  AST07: { name: 'Update Drift',                           source_list: 'AST-Top10-2026', severity: 'Medium' },
+  AST08: { name: 'Poor Scanning',                          source_list: 'AST-Top10-2026', severity: 'Medium' },
+  AST09: { name: 'No Governance',                          source_list: 'AST-Top10-2026', severity: 'Medium' },
+  AST10: { name: 'Cross-Platform Reuse',                   source_list: 'AST-Top10-2026', severity: 'Medium' },
+
+  // Agentic Skills Top 10 2026 — a sibling OWASP project (lead: Ken Huang et al.),
+  // credited to its own project exactly as the LLM and Agentic Top 10 are.
+  // Names and severities transcribed from owasp.org/www-project-agentic-skills-top-10/.
+  AST01: { name: 'Malicious Skills',                       source_list: 'AST-Top10-2026', severity: 'Critical' },
+  AST02: { name: 'Supply Chain Compromise',                source_list: 'AST-Top10-2026', severity: 'Critical' },
+  AST03: { name: 'Over-Privileged Skills',                 source_list: 'AST-Top10-2026', severity: 'High' },
+  AST04: { name: 'Insecure Metadata',                      source_list: 'AST-Top10-2026', severity: 'High' },
+  AST05: { name: 'Untrusted External Instructions',        source_list: 'AST-Top10-2026', severity: 'High' },
+  AST06: { name: 'Weak Isolation',                         source_list: 'AST-Top10-2026', severity: 'High' },
+  AST07: { name: 'Update Drift',                           source_list: 'AST-Top10-2026', severity: 'Medium' },
+  AST08: { name: 'Poor Scanning',                          source_list: 'AST-Top10-2026', severity: 'Medium' },
+  AST09: { name: 'No Governance',                          source_list: 'AST-Top10-2026', severity: 'Medium' },
+  AST10: { name: 'Cross-Platform Reuse',                   source_list: 'AST-Top10-2026', severity: 'Medium' },
+
   // Agentic Top 10 2026
   ASI01: { name: 'Agent Goal Hijack',                        source_list: 'Agentic-Top10-2026', severity: 'Critical' },
   ASI02: { name: 'Tool Misuse and Exploitation',             source_list: 'Agentic-Top10-2026', severity: 'Critical' },
@@ -82,6 +124,9 @@ const AIVSS_SCORES = {
 const LLM_IDS    = Object.keys(VULNERABILITIES).filter(k => k.startsWith('LLM'));
 const ASI_IDS    = Object.keys(VULNERABILITIES).filter(k => k.startsWith('ASI'));
 const DSGAI_IDS  = Object.keys(VULNERABILITIES).filter(k => k.startsWith('DSGAI'));
+const AST_IDS    = Object.keys(VULNERABILITIES).filter(k => k.startsWith('AST'));
+const AST_IDS    = Object.keys(VULNERABILITIES).filter(k => k.startsWith('AST'));
+const AST_IDS    = Object.keys(VULNERABILITIES).filter(k => k.startsWith('AST'));
 
 // ─── Framework file catalog ───────────────────────────────────────────────────
 // Agentic_AIVSS is a scoring file, not a standard mapping — handled separately.
@@ -774,6 +819,14 @@ function main() {
           change:  `Initial entry — generated from OWASP GenAI Crosswalk v1.5.1 mapping files`,
           author:  'OWASP GenAI Data Security Initiative',
         },
+        ...(id.startsWith('AST') ? [{
+          date:    '2026-08-28',
+          version: '1.0.0',
+          change:  `Registered by T-A10-01. Name and severity transcribed from ` +
+                   `owasp.org/www-project-agentic-skills-top-10/ (verified 2026-08-28). ` +
+                   `Mappings are authored by an SME under T-A10-03 and are deliberately empty.`,
+          author:  'OWASP GenAI Data Security Initiative',
+        }] : []),
         ...(id.startsWith('LLM') ? [{
           date:    '2026-08-28',
           version: '2.0.0',
@@ -784,8 +837,16 @@ function main() {
     };
 
     if (!data.mappings.length) {
-      console.warn(`  WARN: ${id} — no mappings extracted`);
-      warnings++;
+      if (id.startsWith('AST')) {
+        // Expected: the AST source list is registered (T-A10-01) but its
+        // risk→control mappings are expert work (T-A10-03) and not yet
+        // authored. Saying so keeps this from reading as a defect, while a
+        // zero-mapping entry in any other list still stands out.
+        console.log(`  note: ${id} — no mappings yet (awaiting T-A10-03 SME authoring)`);
+      } else {
+        console.warn(`  WARN: ${id} — no mappings extracted`);
+        warnings++;
+      }
     }
 
     const outPath = path.join(ENTRIES_DIR, `${id}.json`);

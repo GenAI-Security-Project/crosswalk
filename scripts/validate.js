@@ -29,6 +29,7 @@ const MAPPING_FOLDERS = [
   'llm-top10',
   'agentic-top10',
   'dsgai-2026',
+  'ast-top10',
 ];
 
 // Every mapping file must contain these heading patterns (case-insensitive)
@@ -48,6 +49,7 @@ const VALID_PREFIXES = {
   'llm-top10':     /^LLM_/,
   'agentic-top10': /^Agentic_/,
   'dsgai-2026':    /^DSGAI_/,
+  'ast-top10':     /^AST_/,
 };
 
 // Known valid cross-reference IDs
@@ -55,6 +57,7 @@ const VALID_IDS = {
   llm:     Array.from({length: 10}, (_, i) => `LLM${String(i+1).padStart(2,'0')}`),
   agentic: Array.from({length: 10}, (_, i) => `ASI${String(i+1).padStart(2,'0')}`),
   dsgai:   Array.from({length: 21}, (_, i) => `DSGAI${String(i+1).padStart(2,'0')}`),
+  ast:     Array.from({length: 10}, (_, i) => `AST${String(i+1).padStart(2,'0')}`),
 };
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
@@ -178,13 +181,14 @@ function checkHeader(filePath, content) {
  */
 function checkCrossRefFormat(filePath, content) {
   const rel = relPath(filePath);
-  const idRe = /\b(LLM\d{2}|ASI\d{2}|DSGAI\d{2})\b/g;
+  const idRe = /\b(LLM\d{2}|ASI\d{2}|DSGAI\d{2}|AST\d{2})\b/g;
   let match;
   let invalid = 0;
   const allValid = [
     ...VALID_IDS.llm,
     ...VALID_IDS.agentic,
     ...VALID_IDS.dsgai,
+    ...VALID_IDS.ast,
   ];
 
   while ((match = idRe.exec(content)) !== null) {
@@ -269,7 +273,7 @@ function checkCrossRefFile() {
   const content = fs.readFileSync(crossRefPath, 'utf8');
   const missing = [];
 
-  for (const id of [...VALID_IDS.llm, ...VALID_IDS.agentic, ...VALID_IDS.dsgai]) {
+  for (const id of [...VALID_IDS.llm, ...VALID_IDS.agentic, ...VALID_IDS.dsgai, ...VALID_IDS.ast]) {
     if (!content.includes(id)) missing.push(id);
   }
 
@@ -299,7 +303,8 @@ function checkReadmeCounts() {
   for (const folder of MAPPING_FOLDERS) {
     const dir = path.join(ROOT, folder);
     if (fs.existsSync(dir)) {
-      actual += fs.readdirSync(dir).filter(f => f.endsWith('.md')).length;
+      actual += fs.readdirSync(dir)
+        .filter(f => f.endsWith('.md') && f.toLowerCase() !== 'readme.md').length;
     }
   }
 
@@ -417,11 +422,18 @@ function checkCrossRefFrameworks() {
 
   const content = fs.readFileSync(crossref, 'utf8');
   const lines = content.split('\n');
-  const footnoteAt = lines.findIndex((l) => /^###\s+Referenced but not yet mapped/i.test(l));
+  // Scope to the cross-reference table itself. The file carries other
+  // five-column tables — the AST index uses column 4 for MAESTRO layers — and
+  // an unscoped check reads those values as framework names.
+  const tableAt = lines.findIndex((l) => /^##\s+Cross-reference table/i.test(l));
+  // Any subsequent heading ends the scope, including an h3 — the AST index sits
+  // under one, before the next h2.
+  const tableEnd = lines.findIndex((l, i) => i > tableAt && /^#{2,6}\s/.test(l));
 
   const unknown = new Set();
   lines.forEach((line, i) => {
-    if (footnoteAt !== -1 && i >= footnoteAt) return;      // the gap list itself
+    if (tableAt === -1 || i < tableAt) return;
+    if (tableEnd !== -1 && i >= tableEnd) return;
     if (!line.startsWith('|') || line.split('|').length < 6) return;
     const col = line.split('|')[4];
     if (/primary frameworks/i.test(col) || /^[\s-]*$/.test(col)) return;
@@ -722,7 +734,9 @@ function collectMappingFiles(targetFile) {
     const dir = path.join(ROOT, folder);
     if (!fs.existsSync(dir)) continue;
     for (const filename of fs.readdirSync(dir)) {
-      if (filename.endsWith('.md')) {
+      // A directory README is documentation, not a mapping file: it has no
+      // framework, no entries and no quick-reference table to validate.
+      if (filename.endsWith('.md') && filename.toLowerCase() !== 'readme.md') {
         files.push(path.join(dir, filename));
       }
     }
