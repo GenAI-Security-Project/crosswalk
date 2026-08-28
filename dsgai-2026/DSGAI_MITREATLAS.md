@@ -314,7 +314,7 @@ canonical ATLAS descriptions of this attack class.
   embedded backdoors through adversarial inputs
 
 #### Cross-references
-- LLM Top 10: LLM03 Supply Chain, LLM04 Data & Model Poisoning
+- LLM Top 10: LLM04 Supply Chain, LLM05 Data and Model Poisoning
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - Other frameworks: NIST AI RMF MS-3.3 · ISO 27001 A.8.27 · NIST CSF 2.0 DE.CM-09
 
@@ -353,7 +353,7 @@ data that enters the AI system.
   detected before entering RAG corpus or training data
 
 #### Cross-references
-- LLM Top 10: LLM05 Insecure Output Handling
+- LLM Top 10: LLM10 Improper Output Handling
 - DSGAI 2026: DSGAI13 Vector Store Platform Security
 - Other frameworks: ISO 27001 A.8.26/A.8.28 · CWE-20 · NIST CSF 2.0 PR.PS-04
 
@@ -636,7 +636,7 @@ exploits the AI interface to access data stores.
   deployment
 
 #### Cross-references
-- LLM Top 10: LLM05 Insecure Output Handling
+- LLM Top 10: LLM10 Improper Output Handling
 - Agentic Top 10: ASI02 Tool Misuse, ASI05 Unexpected Code Execution
 - Other frameworks: ISO 27001 A.8.26/A.8.28 · CWE-89 · ISA/IEC 62443 SR 2.2 (OT)
 
@@ -681,7 +681,7 @@ Repositories).
   indicative of AML.T0035 detected
 
 #### Cross-references
-- LLM Top 10: LLM08 Vector & Embedding Weaknesses
+- LLM Top 10: LLM09 Vector and Embedding Weaknesses
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - Other frameworks: ISO 27001 A.8.3/A.8.24 · CWE-284 · NIST CSF 2.0 PR.AA-05
 
@@ -754,7 +754,7 @@ Application) by maximising the data accessible to an injection attack.
   exfiltration value
 
 #### Cross-references
-- LLM Top 10: LLM07 System Prompt Leakage
+- LLM Top 10: LLM08 Hidden Context Exposure
 - Agentic Top 10: ASI01 Agent Goal Hijack
 - Other frameworks: AIUC-1 A/B005 · ISO 27001 A.8.3 · NIST CSF 2.0 PR.AA-05
 
@@ -837,7 +837,7 @@ may deliberately trigger availability failures.
   reaches users, limiting AML.T0029 impact
 
 #### Cross-references
-- LLM Top 10: LLM10 Unbounded Consumption
+- LLM Top 10: LLM06 Unbounded Consumption
 - Agentic Top 10: ASI08 Cascading Agent Failures
 - Other frameworks: ISA/IEC 62443 SR 7.6 (OT) · NIST CSF 2.0 PR.IR-01 · AIUC-1 D
 
@@ -884,7 +884,7 @@ are the primary techniques.
   realistic attacker conditions
 
 #### Cross-references
-- LLM Top 10: LLM02 Sensitive Information Disclosure, LLM08 Vector & Embedding Weaknesses
+- LLM Top 10: LLM02 Sensitive Information Disclosure, LLM09 Vector and Embedding Weaknesses
 - DSGAI 2026: DSGAI10 Synthetic Data Pitfalls
 - Other frameworks: ISO 27001 A.8.11 · GDPR Art. 25 · NIST CSF 2.0 GV.RM-06
 
@@ -1028,7 +1028,7 @@ into retrieval sources without needing training access.
   trust tiering effectiveness
 
 #### Cross-references
-- LLM Top 10: LLM04 Data & Model Poisoning, LLM09 Misinformation
+- LLM Top 10: LLM05 Data and Model Poisoning, LLM07 Misinformation
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - Other frameworks: ISO 27001 A.5.7 · NIST CSF 2.0 GV.SC-01 · SOC 2 PI1.2
 

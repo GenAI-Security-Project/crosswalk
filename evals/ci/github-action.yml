@@ -92,17 +92,17 @@ jobs:
             --report_prefix ${{ env.RESULTS_DIR }}/LLM02 \
           || echo "LLM02_STATUS=FAIL" >> $GITHUB_ENV
 
-      - name: Run LLM07 — System Prompt Leakage
-        if: ${{ github.event.inputs.profile == '' || github.event.inputs.profile == 'LLM07' }}
+      - name: Run LLM08 — Hidden Context Exposure
+        if: ${{ github.event.inputs.profile == '' || github.event.inputs.profile == 'LLM08' }}
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
           garak \
-            --config evals/garak/LLM07_system_prompt_leakage.yaml \
+            --config evals/garak/LLM08_hidden_context_exposure.yaml \
             --model_type ${{ env.EVAL_MODEL_TYPE }} \
             --model_name ${{ env.EVAL_MODEL_NAME }} \
-            --report_prefix ${{ env.RESULTS_DIR }}/LLM07 \
-          || echo "LLM07_STATUS=FAIL" >> $GITHUB_ENV
+            --report_prefix ${{ env.RESULTS_DIR }}/LLM08 \
+          || echo "LLM08_STATUS=FAIL" >> $GITHUB_ENV
 
       - name: Run ASI01 — Agent Goal Hijack
         if: ${{ github.event.inputs.profile == '' || github.event.inputs.profile == 'ASI01' }}
@@ -130,7 +130,7 @@ jobs:
           FAILED=""
           [ "${LLM01_STATUS:-}" = "FAIL" ] && FAILED="${FAILED}LLM01 "
           [ "${LLM02_STATUS:-}" = "FAIL" ] && FAILED="${FAILED}LLM02 "
-          [ "${LLM07_STATUS:-}" = "FAIL" ] && FAILED="${FAILED}LLM07 "
+          [ "${LLM08_STATUS:-}" = "FAIL" ] && FAILED="${FAILED}LLM08 "
           [ "${ASI01_STATUS:-}" = "FAIL" ] && FAILED="${FAILED}ASI01 "
 
           if [ -n "$FAILED" ]; then
@@ -300,11 +300,11 @@ jobs:
         if: always()
         run: |
           FAILED=""
-          [ "${LAAF_S1_STATUS:-}" = "FAIL" ]    && FAILED="${FAILED}S1(LLM07/LLM01) "
+          [ "${LAAF_S1_STATUS:-}" = "FAIL" ]    && FAILED="${FAILED}S1(LLM08/LLM01) "
           [ "${LAAF_S2_STATUS:-}" = "FAIL" ]    && FAILED="${FAILED}S2(LLM01/ASI01/DSGAI04) "
           [ "${LAAF_S3S4_STATUS:-}" = "FAIL" ]  && FAILED="${FAILED}S3+S4(ASI06/ASI01) "
           [ "${LAAF_S5_STATUS:-}" = "FAIL" ]    && FAILED="${FAILED}S5(LLM01/LLM02) "
-          [ "${LAAF_S6_STATUS:-}" = "FAIL" ]    && FAILED="${FAILED}S6(DSGAI01/LLM07) "
+          [ "${LAAF_S6_STATUS:-}" = "FAIL" ]    && FAILED="${FAILED}S6(DSGAI01/LLM08) "
 
           if [ -n "$FAILED" ]; then
             echo "::error::LAAF LPCI evaluation FAILED for stages: $FAILED"

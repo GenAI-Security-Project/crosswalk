@@ -221,7 +221,7 @@ gateway at the conduit. The gateway enforces:
 | Garak (adversarial testing) | Open-source | https://github.com/leondz/garak |
 
 #### Cross-references
-- LLM Top 10: LLM01 Prompt Injection, LLM06 Excessive Agency
+- LLM Top 10: LLM01 Prompt Injection, LLM03 Excessive Agency
 - DSGAI 2026: DSGAI12 Unsafe NL Data Gateways, DSGAI15 Over-Broad Context Windows
 - Other frameworks: NIST SP 800-82 Rev 3 · MITRE ATT&CK ICS T0855 · IEC 61511
 
@@ -325,7 +325,7 @@ All OT agent tools classified by reversibility:
 | MCP Inspector | Open-source | https://github.com/modelcontextprotocol/inspector |
 
 #### Cross-references
-- LLM Top 10: LLM05 Insecure Output Handling, LLM06 Excessive Agency
+- LLM Top 10: LLM10 Improper Output Handling, LLM03 Excessive Agency
 - DSGAI 2026: DSGAI06 Tool Plugin & Agent Data Exchange, DSGAI12 Unsafe NL Data Gateways
 - Other frameworks: NIST SP 800-82 Rev 3 · IEC 61511 (SIL) · MITRE ATT&CK ICS T0831
 
@@ -429,7 +429,7 @@ a Zone 3 historian proxy — never directly.
 | Claroty (OT identity) | Commercial | https://claroty.com |
 
 #### Cross-references
-- LLM Top 10: LLM06 Excessive Agency
+- LLM Top 10: LLM03 Excessive Agency
 - DSGAI 2026: DSGAI02 Agent Identity & Credential Exposure
 - Other frameworks: NIST SP 800-82 Rev 3 Section 6 · NERC CIP-007 · OWASP NHI Top 10
 
@@ -525,7 +525,7 @@ only. The conduit blocks agent connections to external tool registries.
 | MCP Inspector | Open-source | https://github.com/modelcontextprotocol/inspector |
 
 #### Cross-references
-- LLM Top 10: LLM03 Supply Chain Vulnerabilities
+- LLM Top 10: LLM04 Supply Chain
 - DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning
 - Other frameworks: NIST SP 800-82 Rev 3 · NERC CIP-013 · NIST SP 800-218A
 
@@ -626,7 +626,7 @@ the following sandbox requirements apply as a minimum:
 | Dragos | Commercial | https://www.dragos.com |
 
 #### Cross-references
-- LLM Top 10: LLM05 Insecure Output Handling
+- LLM Top 10: LLM10 Improper Output Handling
 - DSGAI 2026: DSGAI12 Unsafe NL Data Gateways
 - Other frameworks: NIST SP 800-82 Rev 3 · MITRE ATT&CK ICS T0807 · CWE-94
 
@@ -730,7 +730,7 @@ engineering review.
 | Claroty | Commercial | https://claroty.com |
 
 #### Cross-references
-- LLM Top 10: LLM04 Data & Model Poisoning, LLM08 Vector & Embedding Weaknesses
+- LLM Top 10: LLM05 Data and Model Poisoning, LLM09 Vector and Embedding Weaknesses
 - DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning, DSGAI13 Vector Store Platform Security
 - Other frameworks: NIST SP 800-82 Rev 3 · MITRE ATT&CK ICS T0831 · NIST AI RMF MS-2.5
 
@@ -933,7 +933,7 @@ cascade containment architecture specifying:
 | Claroty | Commercial | https://claroty.com |
 
 #### Cross-references
-- LLM Top 10: LLM10 Unbounded Consumption
+- LLM Top 10: LLM06 Unbounded Consumption
 - DSGAI 2026: DSGAI17 Data Availability & Resilience Failures
 - Other frameworks: IEC 61511 (functional safety) · NIST SP 800-82 Rev 3 · ISA/IEC 62443 SR 7.6
 
@@ -1034,7 +1034,7 @@ verify before any alarm action.
 | Nozomi Networks | Commercial | https://www.nozominetworks.com |
 
 #### Cross-references
-- LLM Top 10: LLM09 Misinformation
+- LLM Top 10: LLM07 Misinformation
 - DSGAI 2026: DSGAI21 Disinformation via Data Poisoning
 - Other frameworks: IEC 61511 (human factors) · NIST SP 800-82 Rev 3 · AIUC-1 C/F
 
@@ -1144,7 +1144,7 @@ When a rogue agent is detected in Zone 3:
 | Dragos | Commercial | https://www.dragos.com |
 
 #### Cross-references
-- LLM Top 10: LLM06 Excessive Agency
+- LLM Top 10: LLM03 Excessive Agency
 - DSGAI 2026: DSGAI16 Endpoint & Browser Overreach
 - Other frameworks: MITRE ATT&CK ICS · IEC 61511 (safety case) · NIST SP 800-82 Rev 3
 

@@ -77,7 +77,7 @@ All free. All open-source. Built for practitioners.
  
 | List | Entries | Version | Frameworks mapped |
 |---|---|---|---|
-| [OWASP LLM Top 10](https://genai.owasp.org/llm-top-10/) | LLM01–LLM10 | 2025 | 23 |
+| [OWASP LLM Top 10](https://genai.owasp.org/llm-top-10/) | LLM01–LLM10 | 2026 | 23 |
 | [OWASP Agentic Top 10](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/) | ASI01–ASI10 | 2026 | 23 |
 | [OWASP GenAI Data Security Risks](https://genai.owasp.org/resource/owasp-genai-data-security-risks-mitigations-2026/) | DSGAI01–DSGAI21 | 2026 | 21 |
  
@@ -112,7 +112,7 @@ All free. All open-source. Built for practitioners.
 
 ## All mapping files
 
-### LLM Top 10 2025 — 23 framework mappings
+### LLM Top 10 2026 — 23 framework mappings
  
 | File | Framework | Standout content |
 |---|---|---|
@@ -325,7 +325,7 @@ GenAI-Security-Crosswalk/
 │
 ├── evals/
 │   ├── README.md                    ← Setup guide and result interpretation
-│   ├── garak/                       ← 7 YAML profiles (LLM01/02/04/07/09, ASI01/05)
+│   ├── garak/                       ← 7 YAML profiles (LLM01/02/05/07/08, ASI01/05)
 │   ├── pyrit/                       ← 3 async Python scripts (LLM01, DSGAI04, ASI01)
 │   ├── laaf/                        ← LAAF v2.0 LPCI suite (S1–S6 + crosswalk reporter)
 │   └── ci/                          ← github-action.yml — drop-in CI/CD template
@@ -375,12 +375,12 @@ laaf scan --target mock --dry-run     # No API key needed
 
 | LAAF Stage | OWASP | Threshold |
 |---|---|---|
-| S1 Reconnaissance | LLM07, LLM01 | 0% |
+| S1 Reconnaissance | LLM08, LLM01 | 0% |
 | S2 Logic-Layer Injection | LLM01, ASI01, DSGAI04 | 5% |
-| S3 Trigger Execution | ASI01, ASI06, LLM06 | 0% |
-| S4 Persistence | ASI06, LLM06, DSGAI04 | 0% |
+| S3 Trigger Execution | ASI01, ASI06, LLM03 | 0% |
+| S4 Persistence | ASI06, LLM03, DSGAI04 | 0% |
 | S5 Evasion | LLM01, LLM02 | 10% |
-| S6 Trace Tampering | DSGAI01, LLM07 | 0% |
+| S6 Trace Tampering | DSGAI01, LLM08 | 0% |
 
 See `evals/laaf/README.md` for the full LPCI attack vector → OWASP → MAESTRO crosswalk.
 

@@ -348,7 +348,7 @@ the weights and invisible to standard testing until triggered.
 | ModelScan | Open-source | https://github.com/protectai/modelscan |
 
 #### Cross-references
-- LLM Top 10: LLM03 Supply Chain, LLM04 Data & Model Poisoning
+- LLM Top 10: LLM04 Supply Chain, LLM05 Data and Model Poisoning
 - Agentic Top 10: ASI04 Supply Chain, ASI06 Memory & Context Poisoning
 - Other frameworks: ISO 27001 A.8.27/A.8.29 · MITRE ATLAS AML.T0032 · CycloneDX ML SBOM
 
@@ -415,7 +415,7 @@ arbitrary file write on vector DB hosts.
 | OWASP ZAP | Open-source | https://www.zaproxy.org |
 
 #### Cross-references
-- LLM Top 10: LLM05 Insecure Output Handling
+- LLM Top 10: LLM10 Improper Output Handling
 - DSGAI 2026: DSGAI13 Vector Store Platform Security
 - Other frameworks: ISO 27001 A.8.26/A.8.28/A.8.29 · CWE-20 · OWASP ASVS V5
 
@@ -475,7 +475,7 @@ minimisation, creating ungoverned third-party data flows.
 | Nightfall AI | Commercial | https://nightfall.ai |
 
 #### Cross-references
-- LLM Top 10: LLM06 Excessive Agency
+- LLM Top 10: LLM03 Excessive Agency
 - Agentic Top 10: ASI02 Tool Misuse, ASI04 Supply Chain
 - Other frameworks: ISO 27001 A.5.19/A.5.20 · AIUC-1 A/B006 · EU AI Act Art. 25
 
@@ -869,7 +869,7 @@ enforcement.
 | Immuta | Commercial | https://www.immuta.com |
 
 #### Cross-references
-- LLM Top 10: LLM05 Insecure Output Handling
+- LLM Top 10: LLM10 Improper Output Handling
 - Agentic Top 10: ASI02 Tool Misuse, ASI05 Unexpected Code Execution
 - Other frameworks: ISO 27001 A.8.26/A.8.28 · CWE-89 · OWASP ASVS V5
 
@@ -937,7 +937,7 @@ unauthenticated collection access are common.
 | OWASP ZAP | Open-source | https://www.zaproxy.org |
 
 #### Cross-references
-- LLM Top 10: LLM08 Vector & Embedding Weaknesses
+- LLM Top 10: LLM09 Vector and Embedding Weaknesses
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - Other frameworks: ISO 27001 A.8.3/A.8.24 · NIST CSF 2.0 PR.DS-7 · CWE-284
 
@@ -1068,7 +1068,7 @@ injection that reaches this context.
 | Guardrails AI | Open-source | https://github.com/guardrails-ai/guardrails |
 
 #### Cross-references
-- LLM Top 10: LLM07 System Prompt Leakage
+- LLM Top 10: LLM08 Hidden Context Exposure
 - Agentic Top 10: ASI01 Agent Goal Hijack
 - Other frameworks: ISO 27001 A.8.3 · AIUC-1 A/B005 · NIST CSF 2.0 PR.DS-5
 
@@ -1208,7 +1208,7 @@ deployments. See ISA/IEC 62443 and NIST SP 800-82 crosswalks.
 | Resilience4j | Open-source | https://resilience4j.readme.io |
 
 #### Cross-references
-- LLM Top 10: LLM10 Unbounded Consumption
+- LLM Top 10: LLM06 Unbounded Consumption
 - Agentic Top 10: ASI08 Cascading Agent Failures
 - Other frameworks: AIUC-1 D · ISA/IEC 62443 SR 7.6 (OT) · NIST SP 800-82 (OT)
 
@@ -1273,7 +1273,7 @@ data access.
 | ML Privacy Meter | Open-source | https://github.com/privacytrustlab/ml_privacy_meter |
 
 #### Cross-references
-- LLM Top 10: LLM02 Sensitive Information Disclosure, LLM08 Vector & Embedding Weaknesses
+- LLM Top 10: LLM02 Sensitive Information Disclosure, LLM09 Vector and Embedding Weaknesses
 - DSGAI 2026: DSGAI10 Synthetic Data Pitfalls
 - Other frameworks: ISO 27001 A.8.11 · ISO 27701 · GDPR Art. 25 · MITRE ATLAS AML.T0024
 
@@ -1474,7 +1474,7 @@ as authoritative output, with no training access required.
 | TruLens | Open-source | https://github.com/truera/trulens |
 
 #### Cross-references
-- LLM Top 10: LLM04 Data & Model Poisoning, LLM09 Misinformation
+- LLM Top 10: LLM05 Data and Model Poisoning, LLM07 Misinformation
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - Other frameworks: MITRE ATLAS AML.T0045 · ISO 27001 A.5.7 · EU AI Act Art. 55(1)(a)
 

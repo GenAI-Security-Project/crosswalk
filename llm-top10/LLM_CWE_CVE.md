@@ -1,15 +1,15 @@
 <!--
   OWASP GenAI Crosswalk
-  Source list : OWASP Top 10 for LLM Applications 2025 (LLM01–LLM10)
+  Source list : OWASP Top 10 for LLM Applications 2026 (LLM01–LLM10)
   Framework   : CWE / CVE — Common Weakness Enumeration / Common Vulnerabilities and Exposures
-  Version     : 2026-Q1
+  Version     : 2026-Q3
   Maintained by: OWASP GenAI Data Security Initiative — https://genai.owasp.org
   License     : CC BY-SA 4.0
 -->
 
-# LLM Top 10 2025 × CWE / CVE
+# LLM Top 10 2026 × CWE / CVE
 
-Mapping the [OWASP Top 10 for LLM Applications 2025](https://genai.owasp.org/llm-top-10/)
+Mapping the [OWASP Top 10 for LLM Applications 2026](https://genai.owasp.org/llm-top-10/)
 to the [Common Weakness Enumeration (CWE)](https://cwe.mitre.org/) taxonomy and
 documented [Common Vulnerabilities and Exposures (CVE)](https://www.cve.org/) entries.
 
@@ -26,7 +26,7 @@ compliance reporting. CVE entries provide confirmed real-world evidence of explo
 | CWE Pillar | What it covers | LLM relevance |
 |---|---|---|
 | Input Validation (CWE-20 family) | Improper handling of untrusted input | Prompt injection, output handling |
-| Information Exposure (CWE-200 family) | Unauthorised data disclosure | Sensitive data disclosure, system prompt leakage |
+| Information Exposure (CWE-200 family) | Unauthorised data disclosure | Sensitive data disclosure, hidden context exposure |
 | Injection (CWE-74 family) | Injection of code or commands via input | Prompt injection, insecure output handling |
 | Resource Management (CWE-400 family) | Uncontrolled resource consumption | Unbounded consumption |
 | Data Integrity (CWE-345 family) | Verification failures on data origin | Supply chain, data poisoning |
@@ -41,23 +41,23 @@ compliance reporting. CVE entries provide confirmed real-world evidence of explo
 |---|---|---|---|---|---|---|
 | LLM01 | Prompt Injection | Critical | CWE-20, CWE-74, CWE-77 | CVE-2024-5184, CVE-2024-34359 | Foundational–Advanced | Both |
 | LLM02 | Sensitive Information Disclosure | High | CWE-200, CWE-201, CWE-359 | CVE-2019-20634, CVE-2023-28119 | Foundational–Advanced | Both |
-| LLM03 | Supply Chain Vulnerabilities | High | CWE-494, CWE-345, CWE-1357 | CVE-2024-3116, CVE-2024-34359 | Foundational–Hardening | Both |
-| LLM04 | Data and Model Poisoning | Critical | CWE-345, CWE-346, CWE-20 | CVE-2019-20634 | Hardening–Advanced | Both |
-| LLM05 | Insecure Output Handling | High | CWE-79, CWE-89, CWE-78 | CVE-2024-5184 | Foundational–Hardening | Build |
-| LLM06 | Excessive Agency | High | CWE-269, CWE-272, CWE-284 | — | Foundational–Hardening | Build |
-| LLM07 | System Prompt Leakage | High | CWE-200, CWE-312, CWE-215 | CVE-2023-29374 | Foundational–Hardening | Build |
-| LLM08 | Vector and Embedding Weaknesses | Medium | CWE-327, CWE-330, CWE-345 | — | Hardening–Advanced | Build |
-| LLM09 | Misinformation | Medium | CWE-1021, CWE-116 | — | Foundational–Hardening | Both |
-| LLM10 | Unbounded Consumption | Medium | CWE-400, CWE-770, CWE-799 | CVE-2024-27564 | Foundational–Hardening | Both |
+| LLM03 | Excessive Agency | Critical | CWE-269, CWE-272, CWE-284 | — | Foundational–Hardening | Build |
+| LLM04 | Supply Chain | High | CWE-494, CWE-345, CWE-1357 | CVE-2024-3116, CVE-2024-34359 | Foundational–Hardening | Both |
+| LLM05 | Data and Model Poisoning | Critical | CWE-345, CWE-346, CWE-20 | CVE-2019-20634 | Hardening–Advanced | Both |
+| LLM06 | Unbounded Consumption | High | CWE-400, CWE-770, CWE-799 | CVE-2024-27564 | Foundational–Hardening | Both |
+| LLM07 | Misinformation | High | CWE-1021, CWE-116 | — | Foundational–Hardening | Both |
+| LLM08 | Hidden Context Exposure | High | CWE-200, CWE-312, CWE-215 | CVE-2023-29374 | Foundational–Hardening | Build |
+| LLM09 | Vector and Embedding Weaknesses | Medium | CWE-327, CWE-330, CWE-345 | — | Hardening–Advanced | Build |
+| LLM10 | Improper Output Handling | High | CWE-79, CWE-89, CWE-78 | CVE-2024-5184 | Foundational–Hardening | Build |
 
 ---
 
 ## Audience tags
 
 - **Security engineer** — full file, use CWE IDs to configure SAST tools and bug trackers
-- **AppSec reviewer** — LLM01, LLM05, LLM07, CWE injection and disclosure families
+- **AppSec reviewer** — LLM01, LLM08, LLM10CWE injection and disclosure families
 - **Vulnerability management** — CVE entries for patch prioritisation evidence
-- **Developer** — LLM01, LLM05, LLM06 — root cause patterns for secure coding
+- **Developer** — LLM01, LLM03, LLM10 — root cause patterns for secure coding
 - **Red teamer** — CVE entries for confirmed exploitation techniques
 - **Compliance / auditor** — CWE mappings for SAST tool baseline configuration
 
@@ -74,6 +74,11 @@ compliance reporting. CVE entries provide confirmed real-world evidence of explo
 Malicious instructions embedded in user input or processed content manipulate
 the LLM's behaviour, bypassing safety measures, executing unauthorised actions,
 or leaking data.
+
+The 2026 entry extends prompt injection to cross-modal payloads.
+Instructions hidden in an image, an audio track, or a video frame reach the
+model without ever being human-readable, and steganographic or
+invisible-Unicode carriers survive review of the rendered interface.
 
 #### CWE root causes
 
@@ -177,13 +182,63 @@ or improperly sanitised responses.
 
 ---
 
-### LLM03 — Supply Chain Vulnerabilities
+### LLM03 — Excessive Agency
+
+**Severity:** Critical
+
+LLMs with over-permissive tool access execute unintended or harmful actions
+when manipulated through prompt injection or misaligned goal-following.
+
+#### CWE root causes
+
+| CWE | Name | Description | Tier | Scope |
+|---|---|---|---|---|
+| [CWE-269](https://cwe.mitre.org/data/definitions/269.html) | Improper Privilege Management | LLM granted privileges beyond what is required for its defined task | Foundational | Build |
+| [CWE-272](https://cwe.mitre.org/data/definitions/272.html) | Least Privilege Violation | Failure to apply least privilege — LLM retains elevated permissions after they are no longer needed | Foundational | Build |
+| [CWE-284](https://cwe.mitre.org/data/definitions/284.html) | Improper Access Control | Absence of explicit access control enforcement on LLM tool invocations | Foundational | Build |
+
+#### Mitigations by tier
+
+**Foundational**
+- Apply least agency — grant minimum tool access required for the defined task
+- Require explicit human confirmation before any irreversible action
+- Define and enforce a tool permission manifest for every LLM deployment
+
+**Hardening**
+- Implement action logging with anomaly detection
+- Scope API credentials per LLM task — no shared high-privilege accounts
+
+**Advanced**
+- Formally specify permitted action graphs — only pre-approved sequences execute
+- Conduct red team exercises targeting excessive agency via indirect injection
+
+#### Tools
+
+| Tool | Type | Link |
+|---|---|---|
+| Guardrails AI | Open-source | https://github.com/guardrails-ai/guardrails |
+| NeMo Guardrails | Open-source | https://github.com/NVIDIA/NeMo-Guardrails |
+
+#### Cross-references
+- Agentic Top 10: ASI01 Agent Goal Hijack, ASI02 Tool Misuse, ASI10 Rogue Agents
+- DSGAI 2026: DSGAI06 Tool Plugin & Agent Data Exchange
+- Other frameworks: AIUC-1 B006 — STRIDE E — ISA/IEC 62443 SR 2.1
+
+---
+
+### LLM04 — Supply Chain
 
 **Severity:** High
 
 Malicious or compromised components introduced through the model supply chain —
 pre-trained models, fine-tuning datasets, plugins, libraries — inject backdoors or
 malicious behaviour that are difficult to detect after integration.
+
+The 2026 entry adds artifact provenance to this scope. A promoted
+model, adapter, or converted artifact that is not what it claims to be —
+unsigned weights, a hijacked conversion or merge service, or namespace reuse
+on a model hub — is a supply-chain compromise even when every package
+dependency is clean.
 
 #### CWE root causes
 
@@ -229,13 +284,18 @@ malicious behaviour that are difficult to detect after integration.
 
 ---
 
-### LLM04 — Data and Model Poisoning
+### LLM05 — Data and Model Poisoning
 
 **Severity:** Critical
 
 Attackers inject malicious data into training datasets, fine-tuning corpora, or RAG
 stores to alter model behaviour — introducing backdoors, biases, or misinformation
 that persist into production.
+
+The 2026 entry folds in fine-tuning subversion. A supplier LoRA
+adapter, a customer fine-tune, or a distilled checkpoint can carry a backdoor
+that no pre-training control catches, so poisoning defences must cover every
+stage that writes weights, not just the original training corpus.
 
 #### CWE root causes
 
@@ -281,243 +341,9 @@ that persist into production.
 
 ---
 
-### LLM05 — Insecure Output Handling
+### LLM06 — Unbounded Consumption
 
 **Severity:** High
-
-LLM-generated output passed to downstream components without validation enables
-secondary injection attacks: XSS, SQLi, SSRF, or OS command injection.
-
-#### CWE root causes
-
-| CWE | Name | Description | Tier | Scope |
-|---|---|---|---|---|
-| [CWE-79](https://cwe.mitre.org/data/definitions/79.html) | Cross-site Scripting (XSS) | LLM output containing JavaScript rendered in a browser without sanitisation | Foundational | Build |
-| [CWE-89](https://cwe.mitre.org/data/definitions/89.html) | SQL Injection | LLM output incorporated into SQL queries without parameterisation | Foundational | Build |
-| [CWE-78](https://cwe.mitre.org/data/definitions/78.html) | OS Command Injection | LLM output passed to shell execution without sanitisation | Foundational | Build |
-
-#### Confirmed CVEs
-
-| CVE | Description | CVSS | Evidence |
-|---|---|---|---|
-| CVE-2024-5184 | LangChain email agent — LLM output used to construct email actions enabling command injection via manipulated output | 9.8 Critical | [GitHub advisory](https://github.com/advisories/GHSA-h59x-p739-982c) |
-
-#### Mitigations by tier
-
-**Foundational**
-- Treat all LLM output as untrusted input to any downstream consumer
-- Apply context-aware output encoding before passing responses to HTML
-  renderers, SQL engines, or shell interpreters
-- Define and validate against an explicit output schema for every LLM integration
-
-**Hardening**
-- Implement a dedicated output sanitisation layer independent of the model
-- Apply allowlist-based output validation — reject output outside the permitted
-  syntax for the target consumer
-
-**Advanced**
-- Conduct DAST on all interfaces consuming LLM output
-- Include output injection scenarios in the adversarial test suite
-
-#### Tools
-
-| Tool | Type | Link |
-|---|---|---|
-| DOMPurify | Open-source | https://github.com/cure53/DOMPurify |
-| Semgrep | Open-source | https://semgrep.dev |
-| OWASP ZAP | Open-source | https://www.zaproxy.org |
-
-#### Cross-references
-- Agentic Top 10: ASI02 Tool Misuse, ASI05 Unexpected Code Execution
-- DSGAI 2026: DSGAI05 Data Integrity & Validation Failures
-- Other frameworks: ASVS V5 — STRIDE T/E — MITRE ATLAS AML.T0037
-
----
-
-### LLM06 — Excessive Agency
-
-**Severity:** High
-
-LLMs with over-permissive tool access execute unintended or harmful actions
-when manipulated through prompt injection or misaligned goal-following.
-
-#### CWE root causes
-
-| CWE | Name | Description | Tier | Scope |
-|---|---|---|---|---|
-| [CWE-269](https://cwe.mitre.org/data/definitions/269.html) | Improper Privilege Management | LLM granted privileges beyond what is required for its defined task | Foundational | Build |
-| [CWE-272](https://cwe.mitre.org/data/definitions/272.html) | Least Privilege Violation | Failure to apply least privilege — LLM retains elevated permissions after they are no longer needed | Foundational | Build |
-| [CWE-284](https://cwe.mitre.org/data/definitions/284.html) | Improper Access Control | Absence of explicit access control enforcement on LLM tool invocations | Foundational | Build |
-
-#### Mitigations by tier
-
-**Foundational**
-- Apply least agency — grant minimum tool access required for the defined task
-- Require explicit human confirmation before any irreversible action
-- Define and enforce a tool permission manifest for every LLM deployment
-
-**Hardening**
-- Implement action logging with anomaly detection
-- Scope API credentials per LLM task — no shared high-privilege accounts
-
-**Advanced**
-- Formally specify permitted action graphs — only pre-approved sequences execute
-- Conduct red team exercises targeting excessive agency via indirect injection
-
-#### Tools
-
-| Tool | Type | Link |
-|---|---|---|
-| Guardrails AI | Open-source | https://github.com/guardrails-ai/guardrails |
-| NeMo Guardrails | Open-source | https://github.com/NVIDIA/NeMo-Guardrails |
-
-#### Cross-references
-- Agentic Top 10: ASI01 Agent Goal Hijack, ASI02 Tool Misuse, ASI10 Rogue Agents
-- DSGAI 2026: DSGAI06 Tool Plugin & Agent Data Exchange
-- Other frameworks: AIUC-1 B006 — STRIDE E — ISA/IEC 62443 SR 2.1
-
----
-
-### LLM07 — System Prompt Leakage
-
-**Severity:** High
-
-System prompts containing internal instructions, business logic, or security controls
-are extracted by adversaries — enabling targeted attacks against the model's defences.
-
-#### CWE root causes
-
-| CWE | Name | Description | Tier | Scope |
-|---|---|---|---|---|
-| [CWE-200](https://cwe.mitre.org/data/definitions/200.html) | Exposure of Sensitive Information to an Unauthorised Actor | System prompt content disclosed to an attacker who should not have access to it | Foundational | Build |
-| [CWE-312](https://cwe.mitre.org/data/definitions/312.html) | Cleartext Storage of Sensitive Information | Security-relevant instructions or credentials stored in system prompts without protection | Foundational | Build |
-| [CWE-215](https://cwe.mitre.org/data/definitions/215.html) | Insertion of Sensitive Information Into Debugging Code | System prompts that include verbose internal information expose more than intended | Hardening | Build |
-
-#### Confirmed CVEs
-
-| CVE | Description | CVSS | Evidence |
-|---|---|---|---|
-| CVE-2023-29374 | System prompt extraction in early LangChain versions via crafted inputs exposing internal chain configuration | 7.5 High | [NVD](https://nvd.nist.gov/vuln/detail/CVE-2023-29374) |
-
-#### Mitigations by tier
-
-**Foundational**
-- Never embed secrets or credentials in system prompts — use environment variables
-- Instruct models to refuse prompt introspection — enforce at guardrail layer
-- Minimise information density in system prompts
-
-**Hardening**
-- Monitor for response patterns indicating system prompt leakage
-- Conduct prompt extraction red team exercises before go-live
-
-**Advanced**
-- Implement system prompt tokenisation with runtime resolution
-- Deploy output classifiers blocking responses containing system prompt content
-
-#### Tools
-
-| Tool | Type | Link |
-|---|---|---|
-| LLM Guard | Open-source | https://github.com/protectai/llm-guard |
-| Garak | Open-source | https://github.com/leondz/garak |
-
-#### Cross-references
-- Agentic Top 10: ASI01 Agent Goal Hijack
-- DSGAI 2026: DSGAI15 Over-Broad Context Windows
-- Other frameworks: STRIDE I — ASVS V14 — MITRE ATLAS AML.T0041
-
----
-
-### LLM08 — Vector and Embedding Weaknesses
-
-**Severity:** Medium
-
-Weaknesses in vector stores enable adversarial manipulation of retrieval results
-and inference of sensitive information from embeddings.
-
-#### CWE root causes
-
-| CWE | Name | Description | Tier | Scope |
-|---|---|---|---|---|
-| [CWE-327](https://cwe.mitre.org/data/definitions/327.html) | Use of a Broken or Risky Cryptographic Algorithm | Weak or absent encryption on embedding vectors enables inversion attacks and data leakage | Hardening | Build |
-| [CWE-330](https://cwe.mitre.org/data/definitions/330.html) | Use of Insufficiently Random Values | Deterministic embedding generation enables fingerprinting and inversion of source content | Advanced | Build |
-| [CWE-345](https://cwe.mitre.org/data/definitions/345.html) | Insufficient Verification of Data Authenticity | Embedding store accepts injected vectors without verifying their origin or integrity | Hardening | Build |
-
-#### Mitigations by tier
-
-**Foundational**
-- Implement access controls on vector store read and write operations
-- Validate and sanitise all content before generating embeddings
-
-**Hardening**
-- Encrypt embedding vectors at rest and in transit
-- Apply trust-tiered retrieval weighted by source provenance
-
-**Advanced**
-- Conduct embedding inversion red team exercises
-- Implement differential privacy in embedding generation for sensitive corpora
-
-#### Tools
-
-| Tool | Type | Link |
-|---|---|---|
-| Weaviate (with RBAC) | Open-source | https://weaviate.io |
-| Qdrant | Open-source | https://qdrant.tech |
-
-#### Cross-references
-- Agentic Top 10: ASI06 Memory & Context Poisoning
-- DSGAI 2026: DSGAI13 Vector Store Platform Security, DSGAI18 Inference & Data Reconstruction
-- Other frameworks: NIST AI RMF MS-2.5 — STRIDE T/I — AIUC-1 A
-
----
-
-### LLM09 — Misinformation
-
-**Severity:** Medium
-
-LLMs generate plausible but factually incorrect or hallucinated content that users
-or downstream systems act upon.
-
-#### CWE root causes
-
-| CWE | Name | Description | Tier | Scope |
-|---|---|---|---|---|
-| [CWE-1021](https://cwe.mitre.org/data/definitions/1021.html) | Improper Restriction of Rendered UI Layers or Frames | Users unable to distinguish model-generated content from verified truth — relevant when LLM output is rendered without provenance indicators | Foundational | Both |
-| [CWE-116](https://cwe.mitre.org/data/definitions/116.html) | Improper Encoding or Escaping of Output | Model output presented without appropriate framing as AI-generated content — downstream systems treat hallucinated output as ground truth | Foundational | Both |
-
-#### Mitigations by tier
-
-**Foundational**
-- Implement RAG to ground responses in verified, up-to-date source material
-- Display source citations alongside model responses
-- Set clear user expectations about model limitations in high-stakes domains
-
-**Hardening**
-- Deploy confidence scoring — flag low-confidence responses for human review
-- Log model outputs with version and timestamp for post-incident reconstruction
-
-**Advanced**
-- Build automated fact-checking pipelines for high-stakes outputs
-- Deploy adversarial probing to identify frequent hallucination topics
-
-#### Tools
-
-| Tool | Type | Link |
-|---|---|---|
-| TruLens | Open-source | https://github.com/truera/trulens |
-| RAGAS | Open-source | https://github.com/explodinggradients/ragas |
-| DeepEval | Open-source | https://github.com/confident-ai/deepeval |
-
-#### Cross-references
-- Agentic Top 10: ASI09 Human-Agent Trust Exploitation
-- DSGAI 2026: DSGAI21 Disinformation & Integrity Attacks
-- Other frameworks: EU AI Act Art. 13 — AIUC-1 F — STRIDE T/R
-
----
-
-### LLM10 — Unbounded Consumption
-
-**Severity:** Medium
 
 Adversarial inputs trigger expensive model computations or excessive API calls,
 resulting in denial of service or runaway cost.
@@ -567,14 +393,220 @@ resulting in denial of service or runaway cost.
 
 ---
 
+### LLM07 — Misinformation
+
+**Severity:** High
+
+LLMs generate plausible but factually incorrect or hallucinated content that users
+or downstream systems act upon.
+
+#### CWE root causes
+
+| CWE | Name | Description | Tier | Scope |
+|---|---|---|---|---|
+| [CWE-1021](https://cwe.mitre.org/data/definitions/1021.html) | Improper Restriction of Rendered UI Layers or Frames | Users unable to distinguish model-generated content from verified truth — relevant when LLM output is rendered without provenance indicators | Foundational | Both |
+| [CWE-116](https://cwe.mitre.org/data/definitions/116.html) | Improper Encoding or Escaping of Output | Model output presented without appropriate framing as AI-generated content — downstream systems treat hallucinated output as ground truth | Foundational | Both |
+
+#### Mitigations by tier
+
+**Foundational**
+- Implement RAG to ground responses in verified, up-to-date source material
+- Display source citations alongside model responses
+- Set clear user expectations about model limitations in high-stakes domains
+
+**Hardening**
+- Deploy confidence scoring — flag low-confidence responses for human review
+- Log model outputs with version and timestamp for post-incident reconstruction
+
+**Advanced**
+- Build automated fact-checking pipelines for high-stakes outputs
+- Deploy adversarial probing to identify frequent hallucination topics
+
+#### Tools
+
+| Tool | Type | Link |
+|---|---|---|
+| TruLens | Open-source | https://github.com/truera/trulens |
+| RAGAS | Open-source | https://github.com/explodinggradients/ragas |
+| DeepEval | Open-source | https://github.com/confident-ai/deepeval |
+
+#### Cross-references
+- Agentic Top 10: ASI09 Human-Agent Trust Exploitation
+- DSGAI 2026: DSGAI21 Disinformation & Integrity Attacks
+- Other frameworks: EU AI Act Art. 13 — AIUC-1 F — STRIDE T/R
+
+---
+
+### LLM08 — Hidden Context Exposure
+
+**Severity:** High
+
+Hidden context — the system prompt, developer instructions, retrieved
+policy text, and the tool and function schemas an application assembles
+into the model's context window — is extracted, inferred, or
+reconstructed by adversaries.
+
+The 2026 list broadens the former System Prompt Leakage entry to cover all
+non-user-facing context, not just the system prompt. Severity tracks what
+that context holds: internal rules and workflow logic are medium, embedded
+credentials or reliance on context secrecy for authorisation are high, and
+disclosure that chains to code execution or broad exfiltration is critical.
+Design on the assumption that hidden context is discoverable, and never
+treat it as a security boundary.
+
+#### CWE root causes
+
+| CWE | Name | Description | Tier | Scope |
+|---|---|---|---|---|
+| [CWE-200](https://cwe.mitre.org/data/definitions/200.html) | Exposure of Sensitive Information to an Unauthorised Actor | System prompt content disclosed to an attacker who should not have access to it | Foundational | Build |
+| [CWE-312](https://cwe.mitre.org/data/definitions/312.html) | Cleartext Storage of Sensitive Information | Security-relevant instructions or credentials stored in system prompts without protection | Foundational | Build |
+| [CWE-215](https://cwe.mitre.org/data/definitions/215.html) | Insertion of Sensitive Information Into Debugging Code | System prompts that include verbose internal information expose more than intended | Hardening | Build |
+
+#### Confirmed CVEs
+
+| CVE | Description | CVSS | Evidence |
+|---|---|---|---|
+| CVE-2023-29374 | System prompt extraction in early LangChain versions via crafted inputs exposing internal chain configuration | 7.5 High | [NVD](https://nvd.nist.gov/vuln/detail/CVE-2023-29374) |
+
+#### Mitigations by tier
+
+**Foundational**
+- Never embed secrets or credentials in system prompts — use environment variables
+- Instruct models to refuse prompt introspection — enforce at guardrail layer
+- Minimise information density in system prompts
+
+**Hardening**
+- Monitor for response patterns indicating hidden context exposure
+- Conduct prompt extraction red team exercises before go-live
+
+**Advanced**
+- Implement system prompt tokenisation with runtime resolution
+- Deploy output classifiers blocking responses containing system prompt content
+
+#### Tools
+
+| Tool | Type | Link |
+|---|---|---|
+| LLM Guard | Open-source | https://github.com/protectai/llm-guard |
+| Garak | Open-source | https://github.com/leondz/garak |
+
+#### Cross-references
+- Agentic Top 10: ASI01 Agent Goal Hijack
+- DSGAI 2026: DSGAI15 Over-Broad Context Windows
+- Other frameworks: STRIDE I — ASVS V14 — MITRE ATLAS AML.T0041
+
+---
+
+### LLM09 — Vector and Embedding Weaknesses
+
+**Severity:** Medium
+
+Weaknesses in vector stores enable adversarial manipulation of retrieval results
+and inference of sensitive information from embeddings.
+
+#### CWE root causes
+
+| CWE | Name | Description | Tier | Scope |
+|---|---|---|---|---|
+| [CWE-327](https://cwe.mitre.org/data/definitions/327.html) | Use of a Broken or Risky Cryptographic Algorithm | Weak or absent encryption on embedding vectors enables inversion attacks and data leakage | Hardening | Build |
+| [CWE-330](https://cwe.mitre.org/data/definitions/330.html) | Use of Insufficiently Random Values | Deterministic embedding generation enables fingerprinting and inversion of source content | Advanced | Build |
+| [CWE-345](https://cwe.mitre.org/data/definitions/345.html) | Insufficient Verification of Data Authenticity | Embedding store accepts injected vectors without verifying their origin or integrity | Hardening | Build |
+
+#### Mitigations by tier
+
+**Foundational**
+- Implement access controls on vector store read and write operations
+- Validate and sanitise all content before generating embeddings
+
+**Hardening**
+- Encrypt embedding vectors at rest and in transit
+- Apply trust-tiered retrieval weighted by source provenance
+
+**Advanced**
+- Conduct embedding inversion red team exercises
+- Implement differential privacy in embedding generation for sensitive corpora
+
+#### Tools
+
+| Tool | Type | Link |
+|---|---|---|
+| Weaviate (with RBAC) | Open-source | https://weaviate.io |
+| Qdrant | Open-source | https://qdrant.tech |
+
+#### Cross-references
+- Agentic Top 10: ASI06 Memory & Context Poisoning
+- DSGAI 2026: DSGAI13 Vector Store Platform Security, DSGAI18 Inference & Data Reconstruction
+- Other frameworks: NIST AI RMF MS-2.5 — STRIDE T/I — AIUC-1 A
+
+---
+
+### LLM10 — Improper Output Handling
+
+**Severity:** High
+
+LLM-generated output passed to downstream components without validation enables
+secondary injection attacks: XSS, SQLi, SSRF, or OS command injection.
+
+The 2026 entry renames Insecure Output Handling to Improper Output
+Handling and widens it to cover the insecure code that coding assistants
+generate at scale. Output that reaches a compiler, a repository, or a
+production system carries the same downstream-execution risk as output that
+reaches a shell, a browser, or a database.
+
+#### CWE root causes
+
+| CWE | Name | Description | Tier | Scope |
+|---|---|---|---|---|
+| [CWE-79](https://cwe.mitre.org/data/definitions/79.html) | Cross-site Scripting (XSS) | LLM output containing JavaScript rendered in a browser without sanitisation | Foundational | Build |
+| [CWE-89](https://cwe.mitre.org/data/definitions/89.html) | SQL Injection | LLM output incorporated into SQL queries without parameterisation | Foundational | Build |
+| [CWE-78](https://cwe.mitre.org/data/definitions/78.html) | OS Command Injection | LLM output passed to shell execution without sanitisation | Foundational | Build |
+
+#### Confirmed CVEs
+
+| CVE | Description | CVSS | Evidence |
+|---|---|---|---|
+| CVE-2024-5184 | LangChain email agent — LLM output used to construct email actions enabling command injection via manipulated output | 9.8 Critical | [GitHub advisory](https://github.com/advisories/GHSA-h59x-p739-982c) |
+
+#### Mitigations by tier
+
+**Foundational**
+- Treat all LLM output as untrusted input to any downstream consumer
+- Apply context-aware output encoding before passing responses to HTML
+  renderers, SQL engines, or shell interpreters
+- Define and validate against an explicit output schema for every LLM integration
+
+**Hardening**
+- Implement a dedicated output sanitisation layer independent of the model
+- Apply allowlist-based output validation — reject output outside the permitted
+  syntax for the target consumer
+
+**Advanced**
+- Conduct DAST on all interfaces consuming LLM output
+- Include output injection scenarios in the adversarial test suite
+
+#### Tools
+
+| Tool | Type | Link |
+|---|---|---|
+| DOMPurify | Open-source | https://github.com/cure53/DOMPurify |
+| Semgrep | Open-source | https://semgrep.dev |
+| OWASP ZAP | Open-source | https://www.zaproxy.org |
+
+#### Cross-references
+- Agentic Top 10: ASI02 Tool Misuse, ASI05 Unexpected Code Execution
+- DSGAI 2026: DSGAI05 Data Integrity & Validation Failures
+- Other frameworks: ASVS V5 — STRIDE T/E — MITRE ATLAS AML.T0037
+
+---
+
 ## Implementation priority
 
 | Phase | LLM entries | Key CWEs | Rationale |
 |---|---|---|---|
-| 1 — Do now | LLM01, LLM05, LLM06 | CWE-20, CWE-79, CWE-269 | Input validation and privilege control — highest exploitability |
-| 2 — This sprint | LLM02, LLM07 | CWE-200, CWE-312 | Information disclosure — closes most common data exposure paths |
-| 3 — This quarter | LLM03, LLM04 | CWE-494, CWE-345 | Supply chain integrity — requires pipeline-level architectural changes |
-| 4 — Ongoing | LLM08, LLM09, LLM10 | CWE-327, CWE-400 | Defence-in-depth and resilience hardening |
+| 1 — Do now | LLM01, LLM10, LLM03 | CWE-20, CWE-79, CWE-269 | Input validation and privilege control — highest exploitability |
+| 2 — This sprint | LLM02, LLM08 | CWE-200, CWE-312 | Information disclosure — closes most common data exposure paths |
+| 3 — This quarter | LLM04, LLM05 | CWE-494, CWE-345 | Supply chain integrity — requires pipeline-level architectural changes |
+| 4 — Ongoing | LLM09, LLM07, LLM06 | CWE-327, CWE-400 | Defence-in-depth and resilience hardening |
 
 ---
 
@@ -582,7 +614,7 @@ resulting in denial of service or runaway cost.
 
 - [CWE — Common Weakness Enumeration](https://cwe.mitre.org/)
 - [CVE Program](https://www.cve.org/)
-- [OWASP LLM Top 10 2025](https://genai.owasp.org/llm-top-10/)
+- [OWASP LLM Top 10 2026](https://genai.owasp.org/llm-top-10/)
 - [NVD — National Vulnerability Database](https://nvd.nist.gov/)
 - [OWASP AIVSS](https://aivss.owasp.org)
 
@@ -593,6 +625,7 @@ resulting in denial of service or runaway cost.
 | Date | Version | Change | Author |
 |---|---|---|---|
 | 2026-03-27 | 2026-Q1 | Initial mapping — LLM01–LLM10 full entries | OWASP GenAI Data Security Initiative |
+| 2026-08-28 | 2026-Q3 | Migrated to OWASP Top 10 for LLM Applications 2026 — entries renumbered, LLM08 re-scoped from System Prompt Leakage to Hidden Context Exposure, LLM10 renamed to Improper Output Handling | OWASP GenAI Data Security Initiative |
 
 ---
 

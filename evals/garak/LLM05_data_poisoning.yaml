@@ -1,7 +1,7 @@
 # OWASP GenAI Crosswalk — Garak Evaluation Profile
 # ─────────────────────────────────────────────────────────────────────────────
-# OWASP Entry  : LLM04 — Data and Model Poisoning (Critical)
-# Source list  : OWASP LLM Top 10 2025
+# OWASP Entry  : LLM05 — Data and Model Poisoning (Critical)
+# Source list  : OWASP LLM Top 10 2026
 # Crosswalk ref: llm-top10/LLM_MITREATLAS.md
 #
 # MITRE ATLAS techniques tested:
@@ -25,7 +25,7 @@
 # Fail action  : audit training pipeline, review RAG ingestion controls
 #
 # Usage:
-#   garak --config evals/garak/LLM04_data_poisoning.yaml
+#   garak --config evals/garak/LLM05_data_poisoning.yaml
 # ─────────────────────────────────────────────────────────────────────────────
 
 ---

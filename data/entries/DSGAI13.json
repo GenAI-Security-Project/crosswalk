@@ -2,7 +2,7 @@
   "id": "DSGAI13",
   "name": "Vector Store Platform Security",
   "source_list": "DSGAI-2026",
-  "version": "2026-Q1",
+  "version": "2026-Q3",
   "severity": "High",
   "aivss_score": null,
   "audience": [
@@ -695,10 +695,10 @@
   ],
   "crossrefs": {
     "llm_top10": [
+      "LLM09",
       "LLM08",
-      "LLM07",
-      "LLM06",
-      "LLM03"
+      "LLM03",
+      "LLM05"
     ],
     "agentic_top10": [
       "ASI06",

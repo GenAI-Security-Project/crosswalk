@@ -143,7 +143,7 @@ stolen long-lived tokens for extended periods before revocation.
 | Teleport | Open-source/Commercial | https://goteleport.com |
 
 #### Cross-references
-- LLM Top 10: LLM01 Prompt Injection, LLM06 Excessive Agency
+- LLM Top 10: LLM01 Prompt Injection, LLM03 Excessive Agency
 - DSGAI 2026: DSGAI02 Agent Identity & Credential Exposure
 - Other frameworks: AIUC-1 A/B006 · EU AI Act Art. 14 · NIST AI RMF GV-1.6
 
@@ -208,7 +208,7 @@ the agent's credential scope permits.
 | HashiCorp Vault | Open-source | https://www.vaultproject.io |
 
 #### Cross-references
-- LLM Top 10: LLM05 Insecure Output Handling, LLM06 Excessive Agency
+- LLM Top 10: LLM10 Improper Output Handling, LLM03 Excessive Agency
 - DSGAI 2026: DSGAI06 Tool Plugin & Agent Data Exchange
 - Other frameworks: AIUC-1 B006/B007 · EU AI Act Art. 15 · ISA/IEC 62443 SR 2.2 (OT)
 
@@ -278,7 +278,7 @@ it to agent identities addresses ASI03 almost entirely.
 | SPIFFE / SPIRE | Open-source | https://spiffe.io |
 
 #### Cross-references
-- LLM Top 10: LLM06 Excessive Agency
+- LLM Top 10: LLM03 Excessive Agency
 - DSGAI 2026: DSGAI02 Agent Identity & Credential Exposure
 - Other frameworks: AIUC-1 A/B007/B008 · EU AI Act Art. 15 · ISA/IEC 62443 SR 1.2 (OT)
 
@@ -327,7 +327,7 @@ is the primary supply chain NHI risk.
   unusual permission requests from supply chain components
 
 #### Cross-references
-- LLM Top 10: LLM03 Supply Chain Vulnerabilities
+- LLM Top 10: LLM04 Supply Chain
 - DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning
 - Other frameworks: AIUC-1 B001/B003 · EU AI Act Art. 25 · NIST SP 800-218A
 
@@ -374,7 +374,7 @@ intended.
   agent — privilege review required before deployment
 
 #### Cross-references
-- LLM Top 10: LLM05 Insecure Output Handling
+- LLM Top 10: LLM10 Improper Output Handling
 - DSGAI 2026: DSGAI12 Unsafe NL Data Gateways
 - Other frameworks: AIUC-1 B005/B006 · EU AI Act Art. 15
 
@@ -424,7 +424,7 @@ without going through the agent at all.
   behaviour analysis
 
 #### Cross-references
-- LLM Top 10: LLM04 Data & Model Poisoning
+- LLM Top 10: LLM05 Data and Model Poisoning
 - DSGAI 2026: DSGAI13 Vector Store Platform Security
 - Other frameworks: AIUC-1 A/B002 · ISO 27001 A.8.24 · NIST AI RMF GV-1.6
 
@@ -526,7 +526,7 @@ to — across the entire cascade path.
   during cascade have been rotated before agent reactivation
 
 #### Cross-references
-- LLM Top 10: LLM10 Unbounded Consumption
+- LLM Top 10: LLM06 Unbounded Consumption
 - DSGAI 2026: DSGAI17 Data Availability & Resilience Failures
 - Other frameworks: AIUC-1 D · EU AI Act Art. 14/15 · ISA/IEC 62443 SR 7.6 (OT)
 
@@ -573,7 +573,7 @@ trust exploitation. Attribution is the core NHI control here.
   credential revocation and alert
 
 #### Cross-references
-- LLM Top 10: LLM09 Misinformation
+- LLM Top 10: LLM07 Misinformation
 - DSGAI 2026: DSGAI21 Disinformation & Integrity Attacks
 - Other frameworks: AIUC-1 C/F · EU AI Act Art. 50 · NIST AI RMF GV-1.7
 
@@ -637,7 +637,7 @@ can operate indefinitely post-detection.
 | Teleport | Open-source/Commercial | https://goteleport.com |
 
 #### Cross-references
-- LLM Top 10: LLM06 Excessive Agency
+- LLM Top 10: LLM03 Excessive Agency
 - DSGAI 2026: DSGAI02 Agent Identity & Credential Exposure, DSGAI16 Endpoint & Browser Overreach
 - Other frameworks: AIUC-1 B001/B002/C/E · EU AI Act Art. 14 · ISA/IEC 62443 SR 3.7 (OT)
 

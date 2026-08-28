@@ -242,7 +242,7 @@ access control practices provide the technical implementation.
 | AWS Secrets Manager | Commercial | https://aws.amazon.com/secrets-manager/ |
 
 #### Cross-references
-- LLM Top 10: LLM06 Excessive Agency
+- LLM Top 10: LLM03 Excessive Agency
 - Agentic Top 10: ASI03 Identity & Privilege Abuse
 - Other frameworks: OWASP NHI Top 10 — NIST AI RMF GV-1.6 — EU AI Act Art. 15
 
@@ -310,7 +310,7 @@ use policy.
 | Microsoft Defender for Cloud Apps | Commercial | https://www.microsoft.com/en-us/security/business/siem-and-xdr/microsoft-defender-cloud-apps |
 
 #### Cross-references
-- LLM Top 10: LLM03 Supply Chain Vulnerabilities
+- LLM Top 10: LLM04 Supply Chain
 - Agentic Top 10: ASI04 Agentic Supply Chain
 - Other frameworks: ISO 27001 A.5.23 — NIST AI RMF GV-1.7 — EU AI Act Art. 9
 
@@ -381,7 +381,7 @@ by ASI red teaming for backdoor detection.
 | Armory | Open-source | https://github.com/twosixlabs/armory |
 
 #### Cross-references
-- LLM Top 10: LLM04 Data and Model Poisoning
+- LLM Top 10: LLM05 Data and Model Poisoning
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - Other frameworks: MITRE ATLAS AML.T0020 — NIST AI RMF MS-3.3 — EU AI Act Art. 10/15
 
@@ -439,7 +439,7 @@ and system integrity concern.
 | Pandera | Open-source | https://github.com/unionai-oss/pandera |
 
 #### Cross-references
-- LLM Top 10: LLM04 Data and Model Poisoning
+- LLM Top 10: LLM05 Data and Model Poisoning
 - DSGAI 2026: DSGAI04 Data, Model & Artifact Poisoning
 - Other frameworks: ISO 27001 A.8.28 — NIST AI RMF MS-2.5 — EU AI Act Art. 10
 
@@ -501,7 +501,7 @@ third-party component security and AI system integrity controls.
 | OWASP Dependency-Check | Open-source | https://github.com/jeremylong/DependencyCheck |
 
 #### Cross-references
-- LLM Top 10: LLM03 Supply Chain Vulnerabilities, LLM05 Insecure Output Handling
+- LLM Top 10: LLM04 Supply Chain, LLM10 Improper Output Handling
 - Agentic Top 10: ASI02 Tool Misuse & Exploitation, ASI04 Agentic Supply Chain
 - Other frameworks: NIST AI RMF MP-5.1 — ISO 27001 A.5.22 — EU AI Act Art. 9
 
@@ -808,7 +808,7 @@ as both a data isolation failure and an AI system integrity issue.
 | Azure AI Content Safety | Commercial | https://azure.microsoft.com/en-us/products/ai-services/ai-content-safety |
 
 #### Cross-references
-- LLM Top 10: LLM02 Sensitive Information Disclosure, LLM07 System Prompt Leakage
+- LLM Top 10: LLM02 Sensitive Information Disclosure, LLM08 Hidden Context Exposure
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - Other frameworks: ISO 27001 A.8.3 — NIST AI RMF MP-2.3 — EU AI Act Art. 10
 
@@ -879,7 +879,7 @@ ASI controls provide the implementation framework.
 | Garak | Open-source | https://github.com/leondz/garak |
 
 #### Cross-references
-- LLM Top 10: LLM01 Prompt Injection, LLM05 Insecure Output Handling
+- LLM Top 10: LLM01 Prompt Injection, LLM10 Improper Output Handling
 - Agentic Top 10: ASI01 Agent Goal Hijack, ASI02 Tool Misuse & Exploitation
 - Other frameworks: OWASP ASVS V5 — NIST AI RMF MP-2.3 — EU AI Act Art. 15
 
@@ -943,7 +943,7 @@ controls beyond standard database protection.
 | Qdrant | Open-source | https://github.com/qdrant/qdrant |
 
 #### Cross-references
-- LLM Top 10: LLM08 Vector and Embedding Weaknesses
+- LLM Top 10: LLM09 Vector and Embedding Weaknesses
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - Other frameworks: ISO 27001 A.8.3 — NIST AI RMF MP-2.3 — EU AI Act Art. 10
 
@@ -1064,7 +1064,7 @@ integrity concern.
 | LLM Guard | Open-source | https://github.com/protectai/llm-guard |
 
 #### Cross-references
-- LLM Top 10: LLM02 Sensitive Information Disclosure, LLM07 System Prompt Leakage
+- LLM Top 10: LLM02 Sensitive Information Disclosure, LLM08 Hidden Context Exposure
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - Other frameworks: GDPR Art. 5(1)(c) — NIST AI RMF MS-2.5 — EU AI Act Art. 10
 
@@ -1128,7 +1128,7 @@ scope control as an AI system integrity and governance requirement.
 | Carbon Black | Commercial | https://www.vmware.com/products/carbon-black-cloud.html |
 
 #### Cross-references
-- LLM Top 10: LLM06 Excessive Agency
+- LLM Top 10: LLM03 Excessive Agency
 - Agentic Top 10: ASI02 Tool Misuse & Exploitation, ASI03 Identity & Privilege Abuse
 - Other frameworks: ISO 27001 A.8.19 — NIST AI RMF GV-1.7 — EU AI Act Art. 9
 
@@ -1199,7 +1199,7 @@ are a direct Article 15 compliance requirement.
 | MLflow | Open-source | https://github.com/mlflow/mlflow |
 
 #### Cross-references
-- LLM Top 10: LLM10 Unbounded Consumption
+- LLM Top 10: LLM06 Unbounded Consumption
 - Agentic Top 10: ASI08 Cascading Agent Failures
 - Other frameworks: ISO 27001 A.8.14 — NIST AI RMF MG-2.2 — EU AI Act Art. 15
 
@@ -1389,7 +1389,7 @@ protection of model artefacts as high-value AI assets.
 | ModelScan | Open-source | https://github.com/protectai/modelscan |
 
 #### Cross-references
-- LLM Top 10: LLM04 Data and Model Poisoning
+- LLM Top 10: LLM05 Data and Model Poisoning
 - DSGAI 2026: DSGAI04 Data, Model & Artifact Poisoning
 - Other frameworks: ISO 27001 A.8.24 — NIST AI RMF MS-2.6 — EU AI Act Art. 15
 
@@ -1462,7 +1462,7 @@ extend to disinformation resilience.
 | FactScore | Research | https://github.com/shmsw25/FActScoring |
 
 #### Cross-references
-- LLM Top 10: LLM04 Data and Model Poisoning, LLM09 Misinformation
+- LLM Top 10: LLM05 Data and Model Poisoning, LLM07 Misinformation
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - Other frameworks: MITRE ATLAS AML.T0020 — NIST AI RMF MS-3.3 — EU AI Act Art. 52
 

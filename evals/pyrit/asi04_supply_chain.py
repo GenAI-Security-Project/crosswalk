@@ -7,7 +7,7 @@ Crosswalk ref: agentic-top10/Agentic_MITREATLAS.md
 AIVSS score  : 8.5 (autonomous) — autonomy premium +1.5
 
 Cross-references:
-  LLM05  Supply Chain Vulnerabilities (model/package integrity)
+  LLM04  Supply Chain (model/package integrity)
   DSGAI04 RAG Data Poisoning (tainted data dependencies)
 
 MITRE ATLAS techniques:

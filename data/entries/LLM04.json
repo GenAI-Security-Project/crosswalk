@@ -1,9 +1,9 @@
 {
   "id": "LLM04",
-  "name": "Data and Model Poisoning",
-  "source_list": "LLM-Top10-2025",
-  "version": "2026-Q1",
-  "severity": "Critical",
+  "name": "Supply Chain",
+  "source_list": "LLM-Top10-2026",
+  "version": "2026-Q3",
+  "severity": "High",
   "aivss_score": null,
   "audience": [
     "red-teamer",
@@ -18,714 +18,716 @@
   "mappings": [
     {
       "framework": "MITRE ATLAS",
-      "control_id": "AML.T0032",
-      "control_name": "Data Poisoning",
-      "tier": "Hardening",
+      "control_id": "AML.T0056",
+      "control_name": "Adversarial Model Manipulation",
+      "tier": "Foundational",
       "scope": "Both",
-      "url": "https://atlas.mitre.org/techniques/AML.T0032",
-      "notes": "Injecting malicious data into training pipelines to corrupt model behaviour"
+      "url": "https://atlas.mitre.org/techniques/AML.T0056",
+      "notes": "Tampering with model weights, adapters, or configurations during supply chain"
     },
     {
       "framework": "MITRE ATLAS",
-      "control_id": "AML.T0031",
+      "control_id": "AML.T0048",
+      "control_name": "Model Contamination",
+      "tier": "Foundational",
+      "scope": "Both",
+      "url": "https://atlas.mitre.org/techniques/AML.T0048",
+      "notes": "Introducing persistent malicious behaviour into model through supply chain"
+    },
+    {
+      "framework": "MITRE ATLAS",
+      "control_id": "AML.T0010",
       "control_name": "Backdoor ML Model",
-      "tier": "Hardening",
+      "tier": "Foundational",
       "scope": "Both",
-      "url": "https://atlas.mitre.org/techniques/AML.T0031",
-      "notes": "Embedding hidden trigger-response patterns in model via poisoned training data"
-    },
-    {
-      "framework": "MITRE ATLAS",
-      "control_id": "AML.T0027",
-      "control_name": "Model Inversion",
-      "tier": "Hardening",
-      "scope": "Both",
-      "url": "https://atlas.mitre.org/techniques/AML.T0027",
-      "notes": "Reconstructing sensitive training data from model outputs"
+      "url": "https://atlas.mitre.org/techniques/AML.T0010",
+      "notes": "Embedding trigger-based backdoors in model weights via training or fine-tuning supply chain"
     },
     {
       "framework": "NIST AI RMF 1.0",
-      "control_id": "MP-2.3",
-      "control_name": "Risk categorisation",
-      "tier": "Hardening",
+      "control_id": "GV-1.6",
+      "control_name": "Policies for data privacy",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Data and model poisoning categorised as Critical in AI risk register"
+      "notes": "Supply chain data governance — policies for third-party model and data provenance"
+    },
+    {
+      "framework": "NIST AI RMF 1.0",
+      "control_id": "MP-5.1",
+      "control_name": "Interdependencies",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "Mapping of all AI system dependencies including third-party models, datasets, and libraries"
     },
     {
       "framework": "NIST AI RMF 1.0",
       "control_id": "MS-2.5",
-      "control_name": "Testing — adversarial",
-      "tier": "Hardening",
+      "control_name": "Testing and evaluation",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Adversarial testing specifically covering poisoning detection in training pipelines"
+      "notes": "Evaluation programme includes supply chain component integrity testing"
     },
     {
       "framework": "NIST AI RMF 1.0",
-      "control_id": "MS-3.3",
-      "control_name": "Data quality",
-      "tier": "Hardening",
+      "control_id": "MG-3.2",
+      "control_name": "Residual risk — third party",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Data quality measurement and validation applied to all training and fine-tuning data"
-    },
-    {
-      "framework": "NIST AI RMF 1.0",
-      "control_id": "MG-2.2",
-      "control_name": "Risk response",
-      "tier": "Hardening",
-      "scope": "Both",
-      "notes": "Defined response procedures including model rollback for detected poisoning events"
+      "notes": "Residual risk from third-party components documented, monitored, and treated"
     },
     {
       "framework": "EU AI Act",
-      "control_id": "Data poisoning must be identified as a foreseeable risk and mitigated",
+      "control_id": "Supply chain risks must be identified and mitigated in the risk management system",
       "control_name": "Art. 9 — Risk management",
-      "tier": "Hardening",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Poisoning attack scenarios required in Art. 9 risk assessment"
+      "notes": "Third-party component risks are in scope for Art. 9 risk management"
     },
     {
       "framework": "EU AI Act",
-      "control_id": "Training data must be subject to appropriate governance practices — relevant, representative, free of errors",
-      "control_name": "Art. 10 — Data and data governance",
-      "tier": "Hardening",
+      "control_id": "Quality management must cover supply chain controls",
+      "control_name": "Art. 17 — Quality management",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Data quality controls preventing poisoning are a compliance requirement"
+      "notes": "Documented supply chain security procedures required"
     },
     {
       "framework": "EU AI Act",
-      "control_id": "High-risk AI must be resilient to attempts to alter performance through data manipulation",
-      "control_name": "Art. 15 — Accuracy, robustness, cybersecurity",
-      "tier": "Hardening",
+      "control_id": "Responsibilities distributed along the AI value chain between providers and deployers",
+      "control_name": "Art. 25 — Value chain responsibilities",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Technical robustness against poisoning is a binding Art. 15 requirement"
+      "notes": "Providers must document what deployers inherit — deployers must verify"
     },
     {
       "framework": "EU AI Act",
-      "control_id": "Systemic risk GPAI providers must conduct adversarial testing to identify model-level risks",
-      "control_name": "Art. 55(1)(b) — Systemic risk GPAI adversarial testing",
-      "tier": "Hardening",
+      "control_id": "GPAI providers must document training data governance including third-party sources",
+      "control_name": "Art. 53(1)(a) — GPAI documentation",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Poisoning detection is in scope for Art. 55 adversarial testing"
+      "notes": "Third-party training data provenance is a GPAI documentation obligation"
+    },
+    {
+      "framework": "ISO/IEC 27001:2022",
+      "control_id": "A.5.19",
+      "control_name": "Supplier relationships",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "Security requirements applied to all LLM model and data vendors — provenance, integrity, disclosure obligations"
+    },
+    {
+      "framework": "ISO/IEC 27001:2022",
+      "control_id": "A.5.20",
+      "control_name": "Supplier agreements",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "Contractual security requirements for LLM component suppliers — integrity guarantees, vulnerability notification"
+    },
+    {
+      "framework": "ISO/IEC 27001:2022",
+      "control_id": "A.5.21",
+      "control_name": "Supply chain security",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "Managing ICT supply chain risks — LLM model and library supply chain explicitly in scope"
     },
     {
       "framework": "ISO/IEC 27001:2022",
       "control_id": "A.8.8",
       "control_name": "Management of technical vulnerabilities",
-      "tier": "Hardening",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Training pipeline dependency scanning — vulnerabilities in training infrastructure components"
+      "notes": "Scanning and patching LLM component vulnerabilities — model weights and inference runtime libraries"
     },
     {
-      "framework": "ISO/IEC 27001:2022",
-      "control_id": "A.8.27",
-      "control_name": "Secure system architecture",
-      "tier": "Hardening",
+      "framework": "ISO/IEC 42001:2023",
+      "control_id": "A.10.1",
+      "control_name": "Third-party AI system acquisition",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Training pipeline designed with integrity controls — data validation, source allowlisting, lineage tracking"
+      "notes": "Security requirements applied to all LLM component vendors — model providers, dataset suppliers, inference runtime vendors"
     },
     {
-      "framework": "ISO/IEC 27001:2022",
-      "control_id": "A.8.29",
-      "control_name": "Security testing",
-      "tier": "Hardening",
+      "framework": "ISO/IEC 42001:2023",
+      "control_id": "A.10.2",
+      "control_name": "Customer relationships",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Adversarial testing covering poisoning detection before each production model promotion"
+      "notes": "LLM deployment obligations to downstream customers — what security properties are guaranteed"
     },
     {
-      "framework": "ISO/IEC 27001:2022",
-      "control_id": "A.5.7",
-      "control_name": "Threat intelligence",
-      "tier": "Hardening",
+      "framework": "ISO/IEC 42001:2023",
+      "control_id": "A.6.1.2",
+      "control_name": "Responsible AI system management",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Intelligence on active data poisoning campaigns targeting your sector and model type"
+      "notes": "LLM components managed responsibly through lifecycle — acquisition, testing, deployment, decommission"
     },
     {
       "framework": "ISO/IEC 42001:2023",
       "control_id": "A.7.2",
       "control_name": "Data quality",
-      "tier": "Hardening",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Training data quality requirements include integrity — anomaly detection, source allowlisting, provenance tracking as data quality controls"
-    },
-    {
-      "framework": "ISO/IEC 42001:2023",
-      "control_id": "A.7.3",
-      "control_name": "Data provenance and characteristics",
-      "tier": "Hardening",
-      "scope": "Both",
-      "notes": "Training data provenance documented — full chain from source to training dataset, modification history tracked"
-    },
-    {
-      "framework": "ISO/IEC 42001:2023",
-      "control_id": "A.6.2.3",
-      "control_name": "AI system security",
-      "tier": "Hardening",
-      "scope": "Both",
-      "notes": "Training pipeline integrity controls — input validation, source allowlisting as AIMS security design requirements"
-    },
-    {
-      "framework": "ISO/IEC 42001:2023",
-      "control_id": "A.6.2.6",
-      "control_name": "Testing of AI systems",
-      "tier": "Hardening",
-      "scope": "Both",
-      "notes": "Poisoning detection in AIMS testing — backdoor trigger testing, biased output detection before each production promotion"
+      "notes": "Third-party training datasets assessed for quality — provenance, completeness, representativeness, security"
     },
     {
       "framework": "CIS Controls v8.1",
-      "control_id": "7.5 Perform automated vulnerability scanning",
+      "control_id": "2.1 Establish and maintain software asset inventory",
+      "control_name": "CIS 2 — Inventory and Control of Software Assets",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "ML SBOM maintained as part of software asset inventory — model versions, libraries, adapters"
+    },
+    {
+      "framework": "CIS Controls v8.1",
+      "control_id": "7.1 Establish vulnerability management process",
       "control_name": "CIS 7 — Continuous Vulnerability Management",
-      "tier": "Hardening",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Automated scanning of training pipeline components — vulnerabilities in data processing libraries"
+      "notes": "Vulnerability management process covers LLM component CVEs and dependency risks"
     },
     {
       "framework": "CIS Controls v8.1",
-      "control_id": "16.7 Use standard hardening configuration templates",
+      "control_id": "16.6 Use only up-to-date and trusted third-party components",
       "control_name": "CIS 16 — Application Software Security",
-      "tier": "Hardening",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Hardened training pipeline configurations — immutable infrastructure, locked data sources"
-    },
-    {
-      "framework": "CIS Controls v8.1",
-      "control_id": "18.3 Remediate penetration testing findings",
-      "control_name": "CIS 18 — Penetration Testing",
-      "tier": "Hardening",
-      "scope": "Both",
-      "notes": "Poisoning scenarios in penetration testing — verify data integrity controls hold under attack"
-    },
-    {
-      "framework": "CIS Controls v8.1",
-      "control_id": "8.12 Collect service provider logs",
-      "control_name": "CIS 8 — Audit Log Management",
-      "tier": "Hardening",
-      "scope": "Both",
-      "notes": "Full audit trail of training data provenance and model training runs"
-    },
-    {
-      "framework": "OWASP ASVS 4.0.3",
-      "control_id": "V5.1.1",
-      "control_name": "Verify all inputs validated against allowlist",
-      "tier": "Hardening",
-      "scope": "Both",
-      "notes": "Training data pipeline input validation — anomalous data rejected before training"
+      "notes": "Only approved, verified LLM components used in production — unsigned components rejected"
     },
     {
       "framework": "OWASP ASVS 4.0.3",
       "control_id": "V10.2.1",
-      "control_name": "Verify third-party components free of vulnerabilities",
-      "tier": "Hardening",
+      "control_name": "Verify third-party components are current and free from vulnerabilities",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Training pipeline components scanned — compromised dependencies rejected"
+      "notes": "All LLM component libraries and dependencies scanned for CVEs — ML SBOM maintained"
     },
     {
       "framework": "OWASP ASVS 4.0.3",
-      "control_id": "V12.1.1",
-      "control_name": "Verify file uploads scanned for malware",
-      "tier": "Hardening",
+      "control_id": "V10.2.2",
+      "control_name": "Verify only minimal approved external libraries are used",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Training data uploads scanned before ingestion — adversarial content detected"
+      "notes": "Approved component list for LLM deployments — unsigned or unverified components rejected"
+    },
+    {
+      "framework": "OWASP ASVS 4.0.3",
+      "control_id": "V14.2.2",
+      "control_name": "Verify build pipelines include security checks",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "CI/CD pipeline for LLM components includes integrity verification and vulnerability scanning"
     },
     {
       "framework": "ISA/IEC 62443",
-      "control_id": "SR 3.3",
+      "control_id": "SR 3.2",
       "control_name": "Software and information integrity",
-      "tier": "Hardening",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM model integrity verified before each OT deployment — poisoning detection as integrity control"
+      "notes": "Integrity verification of all LLM components before deployment in OT environment"
     },
     {
       "framework": "ISA/IEC 62443",
-      "control_id": "SR 3.7",
-      "control_name": "Software and information integrity (monitoring)",
-      "tier": "Hardening",
+      "control_id": "SR 2.6",
+      "control_name": "Use control",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Continuous monitoring of LLM outputs for anomalous recommendations — statistical deviation detection"
+      "notes": "Restrictions on software installation — only approved, verified LLM components permitted in OT zones"
     },
     {
       "framework": "ISA/IEC 62443",
-      "control_id": "SR 6.1",
-      "control_name": "Timely response to events",
-      "tier": "Hardening",
+      "control_id": "Supplier security requirements",
+      "control_name": "62443-2-4",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Detection and response to poisoning indicators — LLM output anomalies treated as security events"
+      "notes": "Security requirements applied to all LLM vendors with access to OT environments"
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
-      "control_id": "Attacks targeting OT data and system integrity",
-      "control_name": "Section 5.3 — Integrity threats",
-      "tier": "Hardening",
+      "control_id": "Third-party software compromise as OT attack vector",
+      "control_name": "Section 5.5 — Supply chain threats",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Model poisoning as an integrity attack on the LLM advisory system"
+      "notes": "LLM model weights and plugins as supply chain risk components"
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
-      "control_id": "Assess integrity risks for all OT-connected systems",
-      "control_name": "Section 6.2 — Risk assessment",
-      "tier": "Hardening",
+      "control_id": "Supply chain risk treatment",
+      "control_name": "Section 6.3 — Risk response",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Model poisoning scenarios included in OT risk assessment for each LLM"
+      "notes": "ML SBOM and component integrity verification as supply chain controls"
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
-      "control_id": "Layered controls to maintain system integrity",
-      "control_name": "Section 7.2 — Defense-in-depth",
-      "tier": "Hardening",
+      "control_id": "OT supply chain risk management programme",
+      "control_name": "Section 8.4 — Supply chain programme",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Independent validation of LLM outputs against rule-based reference systems"
+      "notes": "LLM vendors subject to same supply chain security requirements as OT software vendors"
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
       "control_id": "Title",
       "control_name": "Control",
-      "tier": "Hardening",
+      "tier": "Foundational",
       "scope": "Both",
       "notes": "Application"
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
-      "control_id": "Software, Firmware, and Information Integrity",
-      "control_name": "SI-7",
-      "tier": "Hardening",
+      "control_id": "Supply Chain Protection",
+      "control_name": "SA-12",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Model integrity verification before each OT deployment — hash-based integrity check"
+      "notes": "Security requirements applied to all LLM component vendors — provenance, integrity, vulnerability disclosure"
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
-      "control_id": "Information Input Validation",
-      "control_name": "SI-10",
-      "tier": "Hardening",
+      "control_id": "Supply Chain Controls and Plans",
+      "control_name": "SR-3",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Training data validation — adversarial content detected and rejected before training"
+      "notes": "Documented supply chain security plan covering LLM components in OT deployment"
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
-      "control_id": "Audit Record Generation",
-      "control_name": "AU-12",
-      "tier": "Hardening",
+      "control_id": "Supplier Assessments and Reviews",
+      "control_name": "SR-6",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Full audit trail of LLM outputs — poisoning indicators detectable through output analysis"
+      "notes": "Periodic security assessment of LLM vendors with OT-deployed components"
     },
     {
       "framework": "NIST CSF 2.0",
-      "control_id": "PR.DS-01",
-      "control_name": "Data Security",
-      "tier": "Hardening",
+      "control_id": "GV.SC-01",
+      "control_name": "Supply Chain Risk Management",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Training data protected at rest — integrity verification, source allowlisting, provenance tracking"
+      "notes": "Cybersecurity supply chain risk management programme — LLM component vendors in scope"
     },
     {
       "framework": "NIST CSF 2.0",
-      "control_id": "DE.CM-09",
-      "control_name": "Continuous Monitoring",
-      "tier": "Hardening",
+      "control_id": "GV.SC-06",
+      "control_name": "Supply Chain Risk Management",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Monitoring for unauthorised software and configuration changes — model integrity verification at deployment"
+      "notes": "Cybersecurity requirements included in contracts with suppliers — LLM model and data vendors"
     },
     {
       "framework": "NIST CSF 2.0",
-      "control_id": "ID.RA-01",
-      "control_name": "Risk Assessment",
-      "tier": "Hardening",
+      "control_id": "ID.AM-08",
+      "control_name": "Asset Management",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Poisoning attack vectors identified and documented in risk assessment for each LLM deployment"
+      "notes": "Systems and hardware managed — ML SBOM as asset inventory for LLM components"
     },
     {
       "framework": "NIST CSF 2.0",
-      "control_id": "RS.AN-03",
-      "control_name": "Incident Analysis",
-      "tier": "Hardening",
+      "control_id": "PR.PS-02",
+      "control_name": "Platform Security",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Root cause analysis for poisoning incidents — identify affected deployments, assess physical impact"
+      "notes": "Software managed to reduce risk — LLM component vulnerability management and patching"
     },
     {
       "framework": "SOC 2",
-      "control_id": "Data and model poisoning identified as threats in LLM risk assessment — training pipeline, supply chain, and model update vectors",
-      "control_name": "CC3.2 — Risk assessment",
-      "tier": "Hardening",
+      "control_id": "LLM component vendors assessed before use — security questionnaires, SOC 2 reports reviewed, ongoing monitoring",
+      "control_name": "CC9.1 — Vendor risk management",
+      "tier": "Foundational",
       "scope": "Both"
     },
     {
       "framework": "SOC 2",
-      "control_id": "Anomaly detection on model outputs and training data distributions — poisoning indicators detected before operational impact",
-      "control_name": "CC7.2 — Threat detection",
-      "tier": "Hardening",
+      "control_id": "Contractual security obligations for LLM vendors — data handling, vulnerability disclosure, incident notification",
+      "control_name": "CC9.2 — Vendor agreements",
+      "tier": "Foundational",
       "scope": "Both"
     },
     {
       "framework": "SOC 2",
-      "control_id": "Model promotions managed through change management — integrity verification before production deployment",
+      "control_id": "LLM model updates and component changes managed through change management — approval, testing, rollback",
       "control_name": "CC8.1 — Change management",
-      "tier": "Hardening",
+      "tier": "Foundational",
       "scope": "Both"
     },
     {
       "framework": "SOC 2",
-      "control_id": "Training data providers assessed — data provenance, quality, and integrity guarantees required from vendors",
-      "control_name": "CC9.1 — Vendor risk",
-      "tier": "Hardening",
+      "control_id": "Supply chain attack vectors identified in LLM risk assessment — training data sources, model providers, plugin vendors",
+      "control_name": "CC3.2 — Risk assessment",
+      "tier": "Foundational",
       "scope": "Both"
     },
     {
       "framework": "PCI DSS v4.0",
-      "control_id": "Req 6.5.6",
+      "control_id": "Req 12.8.1",
+      "control_name": "Third-party service providers",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "List of all TPSPs maintained — LLM component vendors with CDE access or data in scope"
+    },
+    {
+      "framework": "PCI DSS v4.0",
+      "control_id": "Req 12.8.3",
+      "control_name": "TPSP agreements",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "Written agreements with LLM vendors — acknowledge responsibility for CHD security"
+    },
+    {
+      "framework": "PCI DSS v4.0",
+      "control_id": "Req 12.8.4",
+      "control_name": "TPSP PCI DSS compliance",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "Monitor TPSP PCI DSS compliance status — LLM component vendors with CHD access have compliant status verified"
+    },
+    {
+      "framework": "PCI DSS v4.0",
+      "control_id": "Req 6.3.3",
+      "control_name": "Security vulnerabilities",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "All LLM software components at latest security patches — ML libraries and inference runtime patched"
+    },
+    {
+      "framework": "PCI DSS v4.0",
+      "control_id": "Req 6.5.1",
       "control_name": "Secure system changes",
-      "tier": "Hardening",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "All model promotions tested for unexpected functionality before CDE deployment — poisoning as unexpected functionality"
+      "notes": "Model component updates follow change management — security testing before production"
     },
     {
-      "framework": "PCI DSS v4.0",
-      "control_id": "Req 10.6.1",
-      "control_name": "Audit log review",
-      "tier": "Hardening",
+      "framework": "ENISA Multilayer Framework",
+      "control_id": "SCS",
+      "control_name": "Supply Chain Security",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Automated monitoring of LLM outputs in CDE — poisoning indicators (systematic anomalous recommendations) detected"
-    },
-    {
-      "framework": "PCI DSS v4.0",
-      "control_id": "Req 11.3.1",
-      "control_name": "Penetration testing",
-      "tier": "Hardening",
-      "scope": "Both",
-      "notes": "Poisoning detection included in penetration testing programme for LLM applications in CDE"
-    },
-    {
-      "framework": "PCI DSS v4.0",
-      "control_id": "Req 12.3.2",
-      "control_name": "Targeted risk analysis",
-      "tier": "Hardening",
-      "scope": "Both",
-      "notes": "Targeted risk analysis for training pipeline security — documented controls and frequency of review"
+      "notes": "LLM component vendors assessed — model providers, dataset vendors, inference runtime suppliers subject to SCS practices"
     },
     {
       "framework": "ENISA Multilayer Framework",
       "control_id": "L2",
       "control_name": "Data and Model Security (DMS)",
-      "tier": "Hardening",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Training data integrity controls — source allowlisting, anomaly detection, provenance tracking as DMS practices"
+      "notes": "Model weight integrity verification — cryptographic signatures, hash-based baseline"
     },
     {
       "framework": "ENISA Multilayer Framework",
       "control_id": "L2",
-      "control_name": "AI System Integrity (ASI)",
-      "tier": "Hardening",
+      "control_name": "Governance and Risk (GOV)",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Post-training backdoor detection and model integrity verification as ASI practices before deployment"
+      "notes": "Vendor risk management extended to AI component suppliers — contractual security obligations"
     },
     {
       "framework": "ENISA Multilayer Framework",
-      "control_id": "L2",
-      "control_name": "Monitoring and Detection (MON)",
-      "tier": "Hardening",
+      "control_id": "L1",
+      "control_name": "General ICT — Supply Chain",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Production monitoring for poisoning indicators — systematic output anomalies detected through AI-specific monitoring"
-    },
-    {
-      "framework": "ENISA Multilayer Framework",
-      "control_id": "IRS",
-      "control_name": "Incident Response",
-      "tier": "Hardening",
-      "scope": "Both",
-      "notes": "Model rollback and poisoning incident response as ENISA IRS practice for AI-specific incidents"
+      "notes": "ML SBOM as software asset inventory — all LLM components inventoried, CVEs monitored"
     },
     {
       "framework": "OWASP SAMM v2.0",
-      "control_id": "D-TA",
-      "control_name": "Threat Assessment",
-      "tier": "Hardening",
+      "control_id": "G-PC",
+      "control_name": "Policy & Compliance",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Poisoning attack vectors documented in threat model — training data sources, supply chain, fine-tuning pipeline each assessed"
+      "notes": "Supply chain security policy covers LLM component vendors — security requirements in procurement"
     },
     {
       "framework": "OWASP SAMM v2.0",
       "control_id": "I-SB",
       "control_name": "Secure Build",
-      "tier": "Hardening",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Training data integrity controls in build pipeline — source allowlisting, anomaly detection, provenance tracking"
+      "notes": "ML SBOM maintained, CVE scanning in CI/CD — LLM components verified before each deployment"
     },
     {
       "framework": "OWASP SAMM v2.0",
-      "control_id": "V-ST",
-      "control_name": "Security Testing",
-      "tier": "Hardening",
+      "control_id": "V-AA",
+      "control_name": "Architecture Assessment",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Poisoning detection in adversarial testing — backdoor trigger testing before each model promotion"
+      "notes": "LLM supply chain architecture reviewed — trust boundaries and component integrity verified"
     },
     {
-      "framework": "OWASP SAMM v2.0",
-      "control_id": "O-IM",
-      "control_name": "Incident Management",
-      "tier": "Hardening",
-      "scope": "Both",
-      "notes": "Poisoning incident response defined — model rollback, affected deployment scope, disclosure procedure"
+      "framework": "STRIDE",
+      "control_id": "S",
+      "control_name": "Component Spoofing",
+      "tier": "Foundational",
+      "scope": "Both"
     },
     {
       "framework": "STRIDE",
       "control_id": "T",
-      "control_name": "Training Data Tampering",
-      "tier": "Hardening",
+      "control_name": "Supply Chain Tampering",
+      "tier": "Foundational",
       "scope": "Both"
     },
     {
       "framework": "STRIDE",
-      "control_id": "R",
-      "control_name": "Poisoning Without Audit Trail",
-      "tier": "Hardening",
+      "control_id": "E",
+      "control_name": "Escalation via Trusted Component",
+      "tier": "Foundational",
       "scope": "Both"
+    },
+    {
+      "framework": "CWE/CVE",
+      "control_id": "CWE-494",
+      "control_name": "CWE-494",
+      "tier": "Foundational",
+      "scope": "Both",
+      "url": "https://cwe.mitre.org/data/definitions/494.html"
     },
     {
       "framework": "CWE/CVE",
       "control_id": "CWE-345",
       "control_name": "CWE-345",
-      "tier": "Hardening",
+      "tier": "Foundational",
       "scope": "Both",
       "url": "https://cwe.mitre.org/data/definitions/345.html"
     },
     {
       "framework": "CWE/CVE",
-      "control_id": "CWE-346",
-      "control_name": "CWE-346",
-      "tier": "Hardening",
+      "control_id": "CWE-1357",
+      "control_name": "CWE-1357",
+      "tier": "Foundational",
       "scope": "Both",
-      "url": "https://cwe.mitre.org/data/definitions/346.html"
-    },
-    {
-      "framework": "CWE/CVE",
-      "control_id": "CWE-20",
-      "control_name": "CWE-20",
-      "tier": "Hardening",
-      "scope": "Both",
-      "url": "https://cwe.mitre.org/data/definitions/20.html"
+      "url": "https://cwe.mitre.org/data/definitions/1357.html"
     },
     {
       "framework": "OWASP AI Testing Guide",
-      "control_id": "Training data integrity verification",
-      "control_name": "DPT — Data Protection",
-      "tier": "Hardening",
-      "scope": "Both",
-      "notes": "Verify data quality gates and integrity checks at each pipeline stage catch adversarially modified samples"
-    },
-    {
-      "framework": "OWASP AI Testing Guide",
-      "control_id": "Backdoor trigger detection",
-      "control_name": "MBT — Model Behaviour",
-      "tier": "Hardening",
-      "scope": "Both",
-      "notes": "Test deployed model with known trigger patterns across all deployment configurations; verify unexpected behaviour is not present"
-    },
-    {
-      "framework": "OWASP AI Testing Guide",
-      "control_id": "Dataset provenance verification",
+      "control_id": "Component integrity verification",
       "control_name": "SCT — Supply Chain",
-      "tier": "Hardening",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Verify all training datasets have documented provenance; test that unverified datasets are rejected by the pipeline"
+      "notes": "Verify cryptographic integrity of model weights, adapters, and libraries; test that procurement pipeline rejects tampered components"
+    },
+    {
+      "framework": "OWASP AI Testing Guide",
+      "control_id": "Backdoor behaviour detection",
+      "control_name": "MBT — Model Behaviour",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "Test model with trigger inputs across all deployment configurations to detect backdoors introduced through supply chain"
+    },
+    {
+      "framework": "OWASP AI Testing Guide",
+      "control_id": "Plugin and tool descriptor integrity",
+      "control_name": "AST — Agent-Specific",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "Verify plugin descriptors and tool registries have not been tampered with; test that integrity checks reject modified components"
+    },
+    {
+      "framework": "MAESTRO",
+      "control_id": "L3",
+      "control_name": "Agent Frameworks",
+      "tier": "Foundational",
+      "scope": "Both"
+    },
+    {
+      "framework": "MAESTRO",
+      "control_id": "L4",
+      "control_name": "Deployment & Infrastructure",
+      "tier": "Foundational",
+      "scope": "Both"
     },
     {
       "framework": "MAESTRO",
       "control_id": "L2",
       "control_name": "Data Operations",
-      "tier": "Hardening",
+      "tier": "Foundational",
       "scope": "Both"
-    },
-    {
-      "framework": "MAESTRO",
-      "control_id": "L1",
-      "control_name": "Foundation Models",
-      "tier": "Hardening",
-      "scope": "Both"
-    },
-    {
-      "framework": "MAESTRO",
-      "control_id": "L5",
-      "control_name": "Evaluation & Observability",
-      "tier": "Hardening",
-      "scope": "Both"
-    },
-    {
-      "framework": "AIUC-1",
-      "control_id": "A",
-      "control_name": "Data & Privacy domain (all controls)",
-      "tier": "Hardening",
-      "scope": "Both",
-      "notes": "Foundational"
     },
     {
       "framework": "AIUC-1",
       "control_id": "B001",
       "control_name": "Third-party adversarial robustness testing",
-      "tier": "Hardening",
+      "tier": "Foundational",
       "scope": "Both",
       "notes": "Foundational"
     },
     {
       "framework": "AIUC-1",
-      "control_id": "B002",
-      "control_name": "Detect adversarial input",
-      "tier": "Hardening",
+      "control_id": "B003",
+      "control_name": "Third-party security assessment",
+      "tier": "Foundational",
       "scope": "Both",
       "notes": "Hardening"
     },
     {
       "framework": "AIUC-1",
-      "control_id": "E",
-      "control_name": "Audit trails and logging",
-      "tier": "Hardening",
+      "control_id": "B008",
+      "control_name": "Third-party NHI controls",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "Hardening"
+    },
+    {
+      "framework": "AIUC-1",
+      "control_id": "A",
+      "control_name": "Data & Privacy supply chain controls",
+      "tier": "Foundational",
       "scope": "Both",
       "notes": "Foundational"
     },
     {
       "framework": "OWASP NHI Top 10",
-      "control_id": "Write access to training data stores enables poisoning",
-      "control_name": "NHI-5 Over-Privileged NHI",
-      "tier": "Hardening",
+      "control_id": "Third-party plugin tokens with excessive permissions",
+      "control_name": "NHI-3 Vulnerable Third-Party NHI",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Read-only credentials for data consumption; separate write credentials with MFA"
+      "notes": "Review all third-party credentials; apply minimum scope"
     },
     {
       "framework": "OWASP NHI Top 10",
-      "control_id": "Third-party data pipeline credentials with training data write access",
-      "control_name": "NHI-3 Vulnerable Third-Party NHI",
-      "tier": "Hardening",
+      "control_id": "Third-party dev/staging credentials used in production",
+      "control_name": "NHI-8 Environment Isolation Failure",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Apply NHI-3 controls to all data pipeline third-party credentials"
+      "notes": "Enforce environment isolation for all third-party integrations"
+    },
+    {
+      "framework": "OWASP NHI Top 10",
+      "control_id": "Third-party component credentials exposed in shared config",
+      "control_name": "NHI-2 Secret Leakage",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "Separate credential stores per third-party component"
     },
     {
       "framework": "NIST SP 800-218A",
-      "control_id": "PW.2.1-PS",
-      "control_name": "Design software — resource and availability constraints",
+      "control_id": "PW.4.1-PS",
+      "control_name": "Reuse existing well-secured software — third-party AI model and dataset vetting",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Include resource limits, rate limiting, and availability requirements as explicit security design requirements for AI inference services"
+      "notes": "Vet all third-party model weights, datasets, plugins, and libraries before use; verify provenance, licence, and security posture"
     },
     {
       "framework": "NIST SP 800-218A",
-      "control_id": "PW.8.2-PS",
-      "control_name": "Test for security vulnerabilities — load and adversarial testing",
+      "control_id": "PS.2.1-PS",
+      "control_name": "Verify software integrity — model and library supply chain",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Conduct adversarial load testing and sponge example testing to validate resource consumption limits hold under attack conditions"
+      "notes": "Verify integrity of all model artefacts and third-party components using cryptographic signatures and checksums before deployment"
     },
     {
       "framework": "NIST SP 800-218A",
-      "control_id": "RV.2.1-PS",
-      "control_name": "Assess, prioritise, and remediate — availability remediation",
+      "control_id": "PS.3.1-PS",
+      "control_name": "Archive and protect software releases — model registry",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Define remediation procedures for availability incidents including model rollback, rate limit tightening, and cost circuit breakers"
+      "notes": "Maintain a secure, versioned model registry with provenance records for all components; enable auditability and rollback"
     },
     {
       "framework": "NIST SP 800-218A",
-      "control_id": "PW.7.2-PS",
-      "control_name": "Review for security vulnerabilities — resource handling",
+      "control_id": "RV.1.1-PS",
+      "control_name": "Identify and confirm vulnerabilities — supply chain monitoring",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Include resource exhaustion scenarios in pre-release security reviews; verify that token limits and rate limits are enforced by design"
+      "notes": "Monitor for newly disclosed vulnerabilities in third-party AI components; establish a triage process for AI-specific CVEs"
     },
     {
       "framework": "FedRAMP",
-      "control_id": "SC-7",
-      "control_name": "Boundary Protection — AI API endpoints",
+      "control_id": "SR-2",
+      "control_name": "Supply Chain Risk Management Plan — AI components",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Enforce boundary protection on all AI inference endpoints — rate limiting, token quotas, and cost circuit breakers at the network and application boundary"
+      "notes": "Include all AI components — models, datasets, adapters, libraries, plugins — in the supply chain risk management plan with provenance and risk assessment"
     },
     {
       "framework": "FedRAMP",
-      "control_id": "SI-4",
-      "control_name": "System Monitoring — consumption anomaly detection",
+      "control_id": "SR-3",
+      "control_name": "Supply Chain Controls — model provenance verification",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Monitor AI inference services for resource consumption anomalies — token spikes, latency degradation, cost overruns; alert and auto-mitigate on threshold breach"
+      "notes": "Implement integrity verification for all AI supply chain components using cryptographic signatures, checksums, and attestation before deployment"
     },
     {
       "framework": "FedRAMP",
-      "control_id": "CM-7",
-      "control_name": "Least Functionality — AI resource restrictions",
+      "control_id": "SA-9",
+      "control_name": "External Information System Services — third-party AI",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Restrict AI inference services to minimum necessary compute, memory, and token budgets; disable unused model capabilities and endpoints"
+      "notes": "Require third-party AI service providers to meet FedRAMP requirements; establish SLAs covering model security, data handling, and incident notification"
     },
     {
       "framework": "FedRAMP",
-      "control_id": "AU-2",
-      "control_name": "Event Logging — resource consumption logging",
+      "control_id": "SA-3",
+      "control_name": "System Development Life Cycle — AI SDLC",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Log resource consumption per inference request — tokens, latency, cost; enable detection and forensic analysis of DoS patterns"
+      "notes": "Integrate AI-specific security activities into the SDLC — model security review, adversarial testing, supply chain verification at each lifecycle phase"
     },
     {
       "framework": "DORA",
-      "control_id": "Art. 9",
-      "control_name": "Protection and Prevention — availability controls",
+      "control_id": "Art. 28–44",
+      "control_name": "Third-Party Risk — AI vendor oversight",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Implement rate limiting, token quotas, and cost circuit breakers on AI inference services to prevent resource exhaustion and denial of service"
+      "notes": "Include AI model providers, dataset vendors, and ML library maintainers in third-party ICT risk management; conduct due diligence, contractual oversight, and ongoing monitoring"
     },
     {
       "framework": "DORA",
-      "control_id": "Art. 10",
-      "control_name": "Detection — consumption anomaly detection",
+      "control_id": "Art. 8",
+      "control_name": "Identification — AI supply chain assets",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Monitor AI inference services for resource consumption anomalies; alert on token spikes, latency degradation, and cost overruns"
+      "notes": "Identify and classify all AI supply chain components — models, datasets, adapters, libraries, plugins — in the ICT asset inventory with provenance records"
     },
     {
       "framework": "DORA",
-      "control_id": "Art. 12",
-      "control_name": "Backup Policies — AI service continuity",
+      "control_id": "Art. 5–7",
+      "control_name": "ICT Risk Management — AI supply chain governance",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Maintain backup model deployments, checkpoint restoration capability, and fallback inference paths for AI services supporting critical financial functions"
+      "notes": "Include AI supply chain risk in the ICT risk management framework; define policies for AI component sourcing, vetting, and lifecycle management"
     },
     {
       "framework": "DORA",
-      "control_id": "Art. 11",
-      "control_name": "Response and Recovery — DoS incident response",
+      "control_id": "Art. 24–27",
+      "control_name": "Resilience Testing — supply chain resilience",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Define response and recovery procedures for AI denial of service events; include automated throttling, failover, and service restoration"
+      "notes": "Include AI supply chain disruption scenarios in resilience testing; test fallback procedures for third-party AI service failures"
     }
   ],
   "tools": [
     {
-      "name": "IBM Adversarial Robustness Toolbox",
+      "name": "CycloneDX",
       "type": "open-source",
-      "url": "https://github.com/Trusted-AI/adversarial-robustness-toolbox"
+      "url": "https://cyclonedx.org"
     },
     {
-      "name": "CleanLab",
+      "name": "OWASP Dependency-Check",
       "type": "open-source",
-      "url": "https://github.com/cleanlab/cleanlab"
+      "url": "https://owasp.org/www-project-dependency-check/"
     },
     {
-      "name": "BackdoorBench",
+      "name": "ModelScan",
       "type": "open-source",
-      "url": "https://github.com/SCLBD/BackdoorBench"
+      "url": "https://github.com/protectai/modelscan"
     },
     {
-      "name": "Great Expectations",
-      "type": "open-source",
-      "url": "https://greatexpectations.io"
-    },
-    {
-      "name": "Claroty (OT monitoring)",
+      "name": "Snyk",
       "type": "commercial",
-      "url": "https://claroty.com"
+      "url": "https://snyk.io"
     },
     {
-      "name": "Dragos",
-      "type": "commercial",
-      "url": "https://www.dragos.com"
-    },
-    {
-      "name": "Cleanlab",
+      "name": "Grype",
       "type": "open-source",
-      "url": "https://github.com/cleanlab/cleanlab"
+      "url": "https://github.com/anchore/grype"
+    },
+    {
+      "name": "Syft",
+      "type": "open-source",
+      "url": "https://github.com/anchore/syft"
     },
     {
       "name": "Garak",
@@ -733,93 +735,72 @@
       "url": "https://github.com/leondz/garak"
     },
     {
-      "name": "LiteLLM",
+      "name": "Sigstore",
       "type": "open-source",
-      "url": "https://github.com/BerriAI/litellm"
+      "url": "https://www.sigstore.dev"
     },
     {
-      "name": "Kong Gateway",
-      "type": "open-source",
-      "url": "https://github.com/Kong/kong"
+      "name": "Counterfit",
+      "url": "https://github.com/Azure/counterfit",
+      "type": "open-source"
     },
     {
-      "name": "OpenTelemetry",
-      "type": "open-source",
-      "url": "https://opentelemetry.io"
-    },
-    {
-      "name": "Locust",
-      "type": "open-source",
-      "url": "https://locust.io"
-    },
-    {
-      "name": "AWS WAF / Azure Front Door",
-      "type": "commercial",
-      "url": "https://aws.amazon.com/waf/"
+      "name": "WhyLogs",
+      "url": "https://github.com/whylabs/whylogs",
+      "type": "open-source"
     }
   ],
   "incidents": [
     {
-      "name": "Many-shot jailbreaking (Anthropic research)",
+      "name": "Hugging Face model repository pickle-based malware supply chain",
       "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
       "year": 2024,
-      "incident_id": "INC-028"
+      "incident_id": "INC-009"
     },
     {
-      "name": "Anthropic Claude context flooding — resource exhaustion via adversarial long-context prompts",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
-      "year": 2024,
-      "incident_id": "INC-045"
-    },
-    {
-      "name": "Google Gemini AI image generator refuses to depict white people — overcorrected safety filters",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
-      "year": 2024,
-      "incident_id": "INC-051"
-    },
-    {
-      "name": "Anthropic Sleeper Agents paper — models trained to hide malicious behaviour",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
-      "year": 2024,
-      "incident_id": "INC-061"
-    },
-    {
-      "name": "AI-generated CSAM detection evasion — adversarial manipulation of content safety classifiers",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
-      "year": 2024,
-      "incident_id": "INC-063"
-    },
-    {
-      "name": "OpenAI GPT-4o sycophancy — model agrees with users even when they are wrong",
+      "name": "Hugging Face model card supply chain manipulation",
       "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
       "year": 2025,
-      "incident_id": "INC-073"
+      "incident_id": "INC-038"
     },
     {
-      "name": "AI recruiting tool gender bias — Amazon scraps internal ML hiring tool",
+      "name": "Scale AI / Sama contractor data exposure — third-party AI labeling workforce privacy violations",
       "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
       "year": 2024,
-      "incident_id": "INC-074"
+      "incident_id": "INC-044"
     },
     {
-      "name": "PoisonedRAG — 5 malicious texts in millions achieve 90% attack success rate on RAG systems",
+      "name": "Stability AI synthetic CSAM generation — training data and output safety failures",
       "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
-      "year": 2025,
-      "incident_id": "INC-108"
+      "year": 2024,
+      "incident_id": "INC-049"
+    },
+    {
+      "name": "Meta Llama model weights stolen and leaked — open-source model security incident",
+      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "year": 2023,
+      "incident_id": "INC-078"
+    },
+    {
+      "name": "Lasso Security — 1,500+ HuggingFace API tokens exposed in code repositories",
+      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "year": 2023,
+      "incident_id": "INC-079"
     }
   ],
   "crossrefs": {
     "agentic_top10": [
-      "ASI06",
-      "ASI08"
+      "ASI04",
+      "ASI07",
+      "ASI10"
     ],
     "dsgai_2026": [
       "DSGAI04",
-      "DSGAI21",
       "DSGAI03",
-      "DSGAI02",
-      "DSGAI09",
-      "DSGAI17"
+      "DSGAI06",
+      "DSGAI16",
+      "DSGAI17",
+      "DSGAI19"
     ]
   },
   "changelog": [
@@ -828,6 +809,12 @@
       "version": "1.0.0",
       "change": "Initial entry — generated from OWASP GenAI Crosswalk v1.5.1 mapping files",
       "author": "emmanuelgjr"
+    },
+    {
+      "date": "2026-08-28",
+      "version": "2.0.0",
+      "change": "Migrated to the OWASP Top 10 for LLM Applications 2026 — see MIGRATION.md for the 2025 → 2026 entry map",
+      "author": "OWASP GenAI Data Security Initiative"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "id": "ASI06",
   "name": "Memory and Context Poisoning",
   "source_list": "Agentic-Top10-2026",
-  "version": "2026-Q1",
+  "version": "2026-Q3",
   "severity": "High",
   "aivss_score": 8.7,
   "audience": [
@@ -824,10 +824,9 @@
   ],
   "crossrefs": {
     "llm_top10": [
-      "LLM04",
-      "LLM08",
-      "LLM02",
-      "LLM03"
+      "LLM05",
+      "LLM09",
+      "LLM02"
     ],
     "dsgai_2026": [
       "DSGAI04",

@@ -1,9 +1,9 @@
 {
   "id": "LLM08",
-  "name": "Vector and Embedding Weaknesses",
-  "source_list": "LLM-Top10-2025",
-  "version": "2026-Q1",
-  "severity": "Medium",
+  "name": "Hidden Context Exposure",
+  "source_list": "LLM-Top10-2026",
+  "version": "2026-Q3",
+  "severity": "High",
   "aivss_score": null,
   "audience": [
     "red-teamer",
@@ -18,737 +18,736 @@
   "mappings": [
     {
       "framework": "MITRE ATLAS",
-      "control_id": "AML.T0063",
-      "control_name": "Embedding Manipulation",
-      "tier": "Hardening",
+      "control_id": "AML.T0041",
+      "control_name": "Configuration Exposure",
+      "tier": "Foundational",
       "scope": "Build",
-      "url": "https://atlas.mitre.org/techniques/AML.T0063",
-      "notes": "Crafting inputs whose embeddings manipulate similarity search results"
+      "url": "https://atlas.mitre.org/techniques/AML.T0041",
+      "notes": "Extraction of internal model configuration, instructions, or system prompts"
     },
     {
       "framework": "MITRE ATLAS",
-      "control_id": "AML.T0025",
-      "control_name": "Resource Exhaustion via Embedding",
-      "tier": "Hardening",
+      "control_id": "AML.T0051.000",
+      "control_name": "Direct Prompt Injection",
+      "tier": "Foundational",
       "scope": "Build",
-      "url": "https://atlas.mitre.org/techniques/AML.T0025",
-      "notes": "Flooding vector stores with adversarial embeddings to degrade retrieval quality"
+      "url": "https://atlas.mitre.org/techniques/AML.T0051.000",
+      "notes": "Crafting inputs specifically designed to reveal or override system prompt content"
     },
     {
       "framework": "NIST AI RMF 1.0",
-      "control_id": "MS-2.5",
-      "control_name": "Testing — adversarial",
-      "tier": "Hardening",
+      "control_id": "GV-1.6",
+      "control_name": "Policies for data privacy",
+      "tier": "Foundational",
       "scope": "Build",
-      "notes": "Vector store and embedding adversarial testing included in evaluation programme"
+      "notes": "System prompts classified as sensitive configuration — subject to data governance policy"
     },
     {
       "framework": "NIST AI RMF 1.0",
-      "control_id": "MS-3.3",
-      "control_name": "Data quality",
-      "tier": "Hardening",
+      "control_id": "MS-2.6",
+      "control_name": "Testing — data leakage",
+      "tier": "Foundational",
       "scope": "Build",
-      "notes": "Data quality controls applied to embedding generation and vector store ingestion"
+      "notes": "Prompt extraction scenarios included in evaluation programme"
     },
     {
       "framework": "NIST AI RMF 1.0",
-      "control_id": "MG-2.2",
-      "control_name": "Risk response",
-      "tier": "Hardening",
+      "control_id": "MG-2.4",
+      "control_name": "Risk response — data",
+      "tier": "Foundational",
       "scope": "Build",
-      "notes": "Response procedures for detected vector store compromise or manipulation"
+      "notes": "Defined response for detected hidden context exposure"
     },
     {
       "framework": "NIST AI RMF 1.0",
       "control_id": "MP-2.3",
       "control_name": "Risk categorisation",
-      "tier": "Hardening",
+      "tier": "Foundational",
       "scope": "Build",
-      "notes": "Embedding and vector store risks mapped in AI system risk register"
+      "notes": "Hidden context exposure risk mapped and rated in AI risk register"
     },
     {
       "framework": "EU AI Act",
-      "control_id": "Embedding and retrieval risks identified and mitigated",
-      "control_name": "Art. 9 — Risk management",
-      "tier": "Hardening",
+      "control_id": "Users must receive sufficient information about the AI system — but this does not require disclosing system prompts",
+      "control_name": "Art. 13 — Transparency",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Vector store attack scenarios included in risk management system"
+      "notes": "Transparency obligation must be met without exposing security-sensitive system prompt content"
     },
     {
       "framework": "EU AI Act",
-      "control_id": "Data quality controls applied to all data in scope — including RAG corpora",
-      "control_name": "Art. 10 — Data and data governance",
-      "tier": "Hardening",
+      "control_id": "Configuration management documented",
+      "control_name": "Art. 17 — Quality management",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Quality controls on embedding generation and vector store ingestion required"
+      "notes": "System prompt versions, access controls, and change procedures are quality management artefacts"
     },
     {
       "framework": "EU AI Act",
-      "control_id": "Technical robustness against adversarial manipulation",
-      "control_name": "Art. 15 — Accuracy, robustness, cybersecurity",
-      "tier": "Hardening",
+      "control_id": "GPAI providers must publish summaries of training data and model capabilities",
+      "control_name": "Art. 53(1)(b) — GPAI transparency",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Embedding manipulation resistance is an Art. 15 technical requirement"
+      "notes": "Published summaries must not inadvertently expose security-sensitive configuration"
+    },
+    {
+      "framework": "ISO/IEC 27001:2022",
+      "control_id": "A.5.12",
+      "control_name": "Classification of information",
+      "tier": "Foundational",
+      "scope": "Build",
+      "notes": "System prompts classified as sensitive configuration — subject to data governance policy"
     },
     {
       "framework": "ISO/IEC 27001:2022",
       "control_id": "A.8.3",
       "control_name": "Information access restriction",
-      "tier": "Hardening",
+      "tier": "Foundational",
       "scope": "Build",
-      "notes": "RBAC on all vector store collections — no unauthenticated access to any collection"
+      "notes": "Access controls on system prompt storage — version controlled, access logged"
     },
     {
       "framework": "ISO/IEC 27001:2022",
       "control_id": "A.8.24",
       "control_name": "Use of cryptography",
-      "tier": "Hardening",
+      "tier": "Foundational",
       "scope": "Build",
-      "notes": "Encryption of all vector store data at rest and in transit"
+      "notes": "System prompts encrypted at rest — not stored in cleartext configuration files"
     },
     {
       "framework": "ISO/IEC 27001:2022",
-      "control_id": "A.8.16",
-      "control_name": "Monitoring activities",
-      "tier": "Hardening",
+      "control_id": "A.8.15",
+      "control_name": "Logging",
+      "tier": "Foundational",
       "scope": "Build",
-      "notes": "Anomaly detection on vector store query patterns — bulk extraction and poisoning indicators"
-    },
-    {
-      "framework": "ISO/IEC 27001:2022",
-      "control_id": "A.8.11",
-      "control_name": "Data masking",
-      "tier": "Hardening",
-      "scope": "Build",
-      "notes": "Differential privacy in embedding generation for sensitive corpora"
-    },
-    {
-      "framework": "ISO/IEC 42001:2023",
-      "control_id": "A.7.2",
-      "control_name": "Data quality",
-      "tier": "Hardening",
-      "scope": "Both",
-      "notes": "Vector store content quality requirements — RBAC, encryption, source validation as data quality controls"
+      "notes": "Access to system prompts logged — unauthorised access attempts detectable"
     },
     {
       "framework": "ISO/IEC 42001:2023",
       "control_id": "A.7.3",
       "control_name": "Data provenance and characteristics",
-      "tier": "Hardening",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Embedding provenance documented — source document, classification, access controls tracked"
+      "notes": "System prompts classified as sensitive operational data — provenance, access controls, handling requirements documented"
     },
     {
       "framework": "ISO/IEC 42001:2023",
-      "control_id": "A.6.2.6",
-      "control_name": "Testing of AI systems",
-      "tier": "Hardening",
+      "control_id": "A.6.2.3",
+      "control_name": "AI system security",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Vector store attacks in AIMS testing — RBAC bypass, embedding inversion, bulk extraction tested"
+      "notes": "System prompt encryption and access controls as AIMS security design requirements"
     },
     {
       "framework": "ISO/IEC 42001:2023",
-      "control_id": "A.10.1",
-      "control_name": "Third-party AI system acquisition",
-      "tier": "Hardening",
+      "control_id": "A.8.1",
+      "control_name": "Information for interested parties",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Vector database providers assessed as third-party AI system components"
+      "notes": "Transparency obligations balanced with operational security — what must be disclosed vs what may be kept confidential"
+    },
+    {
+      "framework": "ISO/IEC 42001:2023",
+      "control_id": "Cl.7",
+      "control_name": "Support",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "Documented information controls — system prompts managed as AIMS documented information with appropriate access controls"
     },
     {
       "framework": "CIS Controls v8.1",
-      "control_id": "3.11 Encrypt sensitive data at rest",
+      "control_id": "3.1 Establish data management process",
       "control_name": "CIS 3 — Data Protection",
-      "tier": "Hardening",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "All vector store content encrypted at rest"
+      "notes": "System prompts classified as sensitive configuration — data handling policy applied"
     },
     {
       "framework": "CIS Controls v8.1",
-      "control_id": "7.1 Establish vulnerability management",
-      "control_name": "CIS 7 — Vulnerability Management",
-      "tier": "Hardening",
+      "control_id": "4.1 Establish secure configuration process",
+      "control_name": "CIS 4 — Secure Configuration",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Vector database CVEs in vulnerability management process — CVE-2024-3584 and equivalents"
+      "notes": "Secure configuration for LLM deployments — system prompts not in cleartext config"
     },
     {
       "framework": "CIS Controls v8.1",
-      "control_id": "16.1 Establish secure development standards",
-      "control_name": "CIS 16 — Application Software Security",
-      "tier": "Hardening",
+      "control_id": "8.2 Collect audit logs",
+      "control_name": "CIS 8 — Audit Log Management",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Secure coding requirements for vector store integration — RBAC, encryption, input validation"
+      "notes": "System prompt access logged — unauthorised access attempts detectable"
+    },
+    {
+      "framework": "OWASP ASVS 4.0.3",
+      "control_id": "V8.1.1",
+      "control_name": "Verify sensitive data not cached in cleartext",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "System prompts not stored in cleartext application configuration or source code"
     },
     {
       "framework": "OWASP ASVS 4.0.3",
       "control_id": "V4.1.3",
-      "control_name": "Verify least privilege access control on data",
-      "tier": "Hardening",
+      "control_name": "Verify access control enforces least privilege",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "RBAC on all vector store collections — no unauthenticated access"
+      "notes": "System prompt access restricted to authorised personnel — read access logged"
     },
     {
       "framework": "OWASP ASVS 4.0.3",
-      "control_id": "V6.1.1",
-      "control_name": "Verify all sensitive data encrypted at rest",
-      "tier": "Hardening",
+      "control_id": "V7.2.1",
+      "control_name": "Verify access control decisions logged",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "All vector store content encrypted at rest"
+      "notes": "All access to system prompts logged — unauthorised access attempts detectable"
     },
     {
       "framework": "OWASP ASVS 4.0.3",
-      "control_id": "V12.1.1",
-      "control_name": "Verify file upload malware scanning",
-      "tier": "Hardening",
+      "control_id": "V14.2.3",
+      "control_name": "Verify secrets not in source code",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Content validation on all vector store ingestion — adversarial content detected"
+      "notes": "System prompts not hardcoded in source code — stored in secret management system"
     },
     {
       "framework": "ISA/IEC 62443",
-      "control_id": "SR 3.7",
-      "control_name": "Software and information integrity (monitoring)",
-      "tier": "Hardening",
+      "control_id": "SR 4.1",
+      "control_name": "Data confidentiality in transit",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Vector store content integrity monitored — alert on anomalous retrieval patterns"
+      "notes": "System prompt content treated as sensitive OT configuration data — encrypted in transit"
     },
     {
       "framework": "ISA/IEC 62443",
-      "control_id": "SR 4.3",
-      "control_name": "Data confidentiality",
-      "tier": "Hardening",
-      "scope": "Both",
-      "notes": "Embeddings of sensitive OT documentation encrypted — inversion attack protection"
-    },
-    {
-      "framework": "ISA/IEC 62443",
-      "control_id": "SR 3.3",
+      "control_id": "SR 3.1",
       "control_name": "Software and information integrity",
-      "tier": "Hardening",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Vector store ingestion validated — only authorised OT documentation enters the corpus"
+      "notes": "System prompt integrity protected — unauthorised modification detected"
+    },
+    {
+      "framework": "ISA/IEC 62443",
+      "control_id": "SR 5.1",
+      "control_name": "Information flow restriction",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "System prompt content cannot flow to unauthorised external destinations"
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
-      "control_id": "Attacks targeting the integrity of OT decision-support data",
-      "control_name": "Section 5.3 — Integrity threats",
-      "tier": "Hardening",
+      "control_id": "OT configuration and topology data as espionage target",
+      "control_name": "Section 5.4 — Information disclosure",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Vector store poisoning as an integrity attack on LLM knowledge sources"
+      "notes": "System prompts containing OT specifics treated as sensitive configuration data"
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
-      "control_id": "Assess integrity risks for all OT-connected systems",
-      "control_name": "Section 6.2 — Risk assessment",
-      "tier": "Hardening",
+      "control_id": "Protecting sensitive OT data",
+      "control_name": "Section 7.3 — Data protection",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Vector store integrity included in OT LLM risk assessment"
+      "notes": "System prompt encryption and access controls as data protection measures"
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
       "control_id": "Title",
       "control_name": "Control",
-      "tier": "Hardening",
+      "tier": "Foundational",
       "scope": "Both",
       "notes": "Application"
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
-      "control_id": "Software, Firmware, and Information Integrity",
-      "control_name": "SI-7",
-      "tier": "Hardening",
-      "scope": "Both",
-      "notes": "Vector store integrity monitoring — alert on anomalous content or unexpected modifications"
-    },
-    {
-      "framework": "NIST SP 800-82 Rev 3",
       "control_id": "Protection of Information at Rest",
       "control_name": "SC-28",
-      "tier": "Hardening",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "OT vector store content encrypted at rest"
+      "notes": "System prompts encrypted at rest — not stored in cleartext configuration files"
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
       "control_id": "Access Enforcement",
       "control_name": "AC-3",
-      "tier": "Hardening",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Access controls on OT vector stores — RBAC enforced at collection level"
+      "notes": "System prompt access restricted to authorised personnel — version controlled, access logged"
+    },
+    {
+      "framework": "NIST SP 800-82 Rev 3",
+      "control_id": "Protection of Audit Information",
+      "control_name": "AU-9",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "System prompt access logs protected — unauthorised access attempts detectable"
     },
     {
       "framework": "NIST CSF 2.0",
       "control_id": "PR.DS-01",
       "control_name": "Data Security",
-      "tier": "Hardening",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Vector store content encrypted at rest — embeddings treated as sensitive derived data"
+      "notes": "System prompts classified as sensitive configuration and protected at rest — encrypted, access-controlled"
     },
     {
       "framework": "NIST CSF 2.0",
-      "control_id": "PR.DS-02",
-      "control_name": "Data Security",
-      "tier": "Hardening",
+      "control_id": "PR.AA-05",
+      "control_name": "Identity Management, Authentication & Access Control",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Data in transit protected — vector store queries and results encrypted"
+      "notes": "Access to system prompt storage restricted to authorised personnel — least privilege enforced"
     },
     {
       "framework": "NIST CSF 2.0",
-      "control_id": "ID.AM-08",
-      "control_name": "Asset Management",
-      "tier": "Hardening",
-      "scope": "Both",
-      "notes": "Vector stores inventoried as AI data assets — RBAC status, encryption status, CVE patching status"
-    },
-    {
-      "framework": "NIST CSF 2.0",
-      "control_id": "DE.CM-09",
+      "control_id": "DE.CM-01",
       "control_name": "Continuous Monitoring",
-      "tier": "Hardening",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Monitoring for unauthorised software and anomalous access — vector store query anomalies detected"
+      "notes": "Access to system prompt storage logged and monitored — anomalous access detected"
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "control_id": "GV.RM-06",
+      "control_name": "Risk Management Strategy",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "Risk tolerance defined for system prompt exposure — operational security value of prompt confidentiality assessed"
     },
     {
       "framework": "SOC 2",
-      "control_id": "Embeddings of confidential information protected — encrypted at rest, access-controlled, inversion-resistant",
+      "control_id": "System prompts classified as confidential — encryption at rest, access-controlled, not in cleartext config",
       "control_name": "C2.1 — Confidential information protection",
-      "tier": "Hardening",
+      "tier": "Foundational",
       "scope": "Both"
     },
     {
       "framework": "SOC 2",
-      "control_id": "RBAC on all vector store collections — no unauthenticated access in any environment",
+      "control_id": "Access controls on system prompt storage — only authorised personnel can read or modify, all access logged",
       "control_name": "CC6.1 — Logical access",
-      "tier": "Hardening",
+      "tier": "Foundational",
       "scope": "Both"
     },
     {
       "framework": "SOC 2",
-      "control_id": "Anomaly detection on vector store query patterns — bulk extraction and unusual retrieval volumes detected",
-      "control_name": "CC7.2 — Anomaly detection",
-      "tier": "Hardening",
+      "control_id": "System prompt security procedures — version control, rotation, extraction resistance testing documented",
+      "control_name": "CC5.2 — Control activities",
+      "tier": "Foundational",
       "scope": "Both"
     },
     {
       "framework": "SOC 2",
-      "control_id": "Embeddings of personal data used only for authorised purposes — privacy commitments apply to derived forms",
-      "control_name": "P5.1 — Personal information use",
-      "tier": "Hardening",
+      "control_id": "Access to system prompt storage monitored — anomalous access attempts detected and alerted",
+      "control_name": "CC7.2 — Monitoring",
+      "tier": "Foundational",
       "scope": "Both"
-    },
-    {
-      "framework": "PCI DSS v4.0",
-      "control_id": "Req 3.4.1",
-      "control_name": "Protect stored account data",
-      "tier": "Hardening",
-      "scope": "Both",
-      "notes": "Embeddings derived from CHD-containing documents encrypted — PAN cannot be reconstructed from cleartext embeddings"
     },
     {
       "framework": "PCI DSS v4.0",
       "control_id": "Req 3.5.1",
-      "control_name": "Protect stored account data — SAD",
-      "tier": "Hardening",
+      "control_name": "Protection of sensitive authentication data",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Vector stores in CDE scope encrypted with strong cryptography"
+      "notes": "System prompts containing CDE configuration treated as sensitive — encrypted at rest, access-controlled"
     },
     {
       "framework": "PCI DSS v4.0",
       "control_id": "Req 7.2.1",
-      "control_name": "Restrict access",
-      "tier": "Hardening",
+      "control_name": "Restrict access by need to know",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "RBAC on all vector stores in CDE scope — no unauthenticated access"
+      "notes": "System prompt access restricted — only authorised personnel with documented business need"
     },
     {
       "framework": "PCI DSS v4.0",
-      "control_id": "Req 11.3.1",
-      "control_name": "Penetration testing",
-      "tier": "Hardening",
+      "control_id": "Req 10.2.1",
+      "control_name": "Logging and monitoring",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Vector store attacks in CDE penetration testing — RBAC bypass, bulk extraction, embedding inversion"
+      "notes": "All access to system prompt storage logged — access to CDE configuration data requires audit trail"
+    },
+    {
+      "framework": "PCI DSS v4.0",
+      "control_id": "Req 6.2.4",
+      "control_name": "Bespoke software security",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "System prompt design prevents leakage — no cleartext CDE identifiers, tokens resolved at runtime"
     },
     {
       "framework": "ENISA Multilayer Framework",
       "control_id": "L2",
       "control_name": "Data and Model Security (DMS)",
-      "tier": "Hardening",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Vector stores classified as AI data assets — RBAC, encryption, provenance tracking as DMS practices"
+      "notes": "System prompts classified as sensitive AI system configuration — encrypted, access-controlled, version-managed"
     },
     {
       "framework": "ENISA Multilayer Framework",
       "control_id": "L2",
-      "control_name": "AI System Integrity (ASI)",
-      "tier": "Hardening",
+      "control_name": "Governance and Risk (GOV)",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Vector store attacks in ENISA adversarial testing — RBAC bypass, embedding inversion, bulk extraction"
+      "notes": "System prompt security as AI governance obligation — operational security value assessed"
     },
     {
       "framework": "ENISA Multilayer Framework",
-      "control_id": "L2",
-      "control_name": "Monitoring and Detection (MON)",
-      "tier": "Hardening",
+      "control_id": "MON",
+      "control_name": "Monitoring and Detection",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Vector store query patterns monitored — bulk extraction and unusual diversity detected"
+      "notes": "System prompt access logged and monitored — anomalous access detected"
     },
     {
       "framework": "ENISA Multilayer Framework",
-      "control_id": "SCS",
-      "control_name": "Supply Chain Security",
-      "tier": "Hardening",
+      "control_id": "L1",
+      "control_name": "General ICT — Data Protection",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Vector database CVEs in vulnerability management — CVE-2024-3584 class urgent"
+      "notes": "System prompts not stored in cleartext — encryption at rest as L1 data protection practice"
     },
     {
       "framework": "OWASP SAMM v2.0",
-      "control_id": "D-TA",
-      "control_name": "Threat Assessment",
-      "tier": "Hardening",
+      "control_id": "D-SR",
+      "control_name": "Security Requirements",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Vector store attack surface threat-modelled — RBAC bypass, embedding inversion, bulk extraction documented"
+      "notes": "System prompt security as explicit requirement — confidentiality, encryption, access control specified before development"
     },
     {
       "framework": "OWASP SAMM v2.0",
       "control_id": "I-SB",
       "control_name": "Secure Build",
-      "tier": "Hardening",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "RBAC and encryption implemented for all vector stores — security requirements enforced in code"
+      "notes": "System prompt protection implemented in code — no cleartext storage, version control access restrictions"
     },
     {
       "framework": "OWASP SAMM v2.0",
       "control_id": "V-ST",
       "control_name": "Security Testing",
-      "tier": "Hardening",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Vector store attacks in penetration testing — RBAC bypass, CVE-2024-3584 class, embedding inversion tested"
-    },
-    {
-      "framework": "STRIDE",
-      "control_id": "T",
-      "control_name": "Embedding Store Tampering",
-      "tier": "Hardening",
-      "scope": "Build"
+      "notes": "Prompt extraction testing as penetration testing activity — resistance to known extraction techniques verified"
     },
     {
       "framework": "STRIDE",
       "control_id": "I",
-      "control_name": "Embedding Inversion Disclosure",
-      "tier": "Hardening",
+      "control_name": "Configuration Information Disclosure",
+      "tier": "Foundational",
+      "scope": "Build"
+    },
+    {
+      "framework": "STRIDE",
+      "control_id": "R",
+      "control_name": "Security Control Repudiation",
+      "tier": "Foundational",
       "scope": "Build"
     },
     {
       "framework": "CWE/CVE",
-      "control_id": "CWE-327",
-      "control_name": "CWE-327",
-      "tier": "Hardening",
+      "control_id": "CWE-200",
+      "control_name": "CWE-200",
+      "tier": "Foundational",
       "scope": "Build",
-      "url": "https://cwe.mitre.org/data/definitions/327.html"
+      "url": "https://cwe.mitre.org/data/definitions/200.html"
     },
     {
       "framework": "CWE/CVE",
-      "control_id": "CWE-330",
-      "control_name": "CWE-330",
-      "tier": "Hardening",
+      "control_id": "CWE-312",
+      "control_name": "CWE-312",
+      "tier": "Foundational",
       "scope": "Build",
-      "url": "https://cwe.mitre.org/data/definitions/330.html"
+      "url": "https://cwe.mitre.org/data/definitions/312.html"
     },
     {
       "framework": "CWE/CVE",
-      "control_id": "CWE-345",
-      "control_name": "CWE-345",
-      "tier": "Hardening",
+      "control_id": "CWE-215",
+      "control_name": "CWE-215",
+      "tier": "Foundational",
       "scope": "Build",
-      "url": "https://cwe.mitre.org/data/definitions/345.html"
+      "url": "https://cwe.mitre.org/data/definitions/215.html"
     },
     {
       "framework": "OWASP AI Testing Guide",
-      "control_id": "Embedding inversion and data reconstruction",
+      "control_id": "System prompt extraction via crafted inputs",
+      "control_name": "IHT — Input Handling",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "Attempt to extract system prompt contents through direct requests, indirect summarisation, translation, and instruction-override techniques"
+    },
+    {
+      "framework": "OWASP AI Testing Guide",
+      "control_id": "Credential and sensitive content in system prompt",
       "control_name": "DPT — Data Protection",
-      "tier": "Hardening",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Test whether embedding vectors can be inverted to reconstruct training data; verify embedding stores do not leak source content through metadata"
+      "notes": "Verify that credentials, API keys, or sensitive business logic in the system prompt are not reproducible by any input technique"
     },
     {
       "framework": "OWASP AI Testing Guide",
-      "control_id": "Vector database security configuration",
-      "control_name": "SCT — Supply Chain",
-      "tier": "Hardening",
+      "control_id": "Refusal robustness for system prompt disclosure",
+      "control_name": "MBT — Model Behaviour",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Verify vector database is correctly configured — authentication, encryption, namespace isolation, API key protection"
-    },
-    {
-      "framework": "OWASP AI Testing Guide",
-      "control_id": "Retrieval authorisation enforcement",
-      "control_name": "ACT — Access Control",
-      "tier": "Hardening",
-      "scope": "Both",
-      "notes": "Verify RAG queries cannot retrieve documents above the authenticated user's permission level"
+      "notes": "Verify that the model consistently refuses system prompt disclosure across varied request phrasings and social engineering approaches"
     },
     {
       "framework": "MAESTRO",
-      "control_id": "L2",
-      "control_name": "Data Operations",
-      "tier": "Hardening",
-      "scope": "Both"
-    },
-    {
-      "framework": "MAESTRO",
-      "control_id": "L4",
-      "control_name": "Deployment & Infrastructure",
-      "tier": "Hardening",
+      "control_id": "L1",
+      "control_name": "Foundation Models",
+      "tier": "Foundational",
       "scope": "Both"
     },
     {
       "framework": "MAESTRO",
       "control_id": "L6",
       "control_name": "Security & Compliance",
-      "tier": "Hardening",
+      "tier": "Foundational",
       "scope": "Both"
     },
     {
       "framework": "AIUC-1",
       "control_id": "A",
       "control_name": "Data & Privacy domain",
-      "tier": "Hardening",
+      "tier": "Foundational",
       "scope": "Both",
       "notes": "Foundational"
     },
     {
       "framework": "AIUC-1",
-      "control_id": "B001",
-      "control_name": "Third-party adversarial robustness testing",
-      "tier": "Hardening",
+      "control_id": "B006",
+      "control_name": "Prevent unauthorized AI actions",
+      "tier": "Foundational",
       "scope": "Both",
       "notes": "Foundational"
     },
     {
       "framework": "AIUC-1",
-      "control_id": "B002",
-      "control_name": "Detect adversarial input",
-      "tier": "Hardening",
-      "scope": "Both",
-      "notes": "Hardening"
-    },
-    {
-      "framework": "AIUC-1",
-      "control_id": "B005",
-      "control_name": "Implement real-time input filtering",
-      "tier": "Hardening",
+      "control_id": "E",
+      "control_name": "Accountability domain",
+      "tier": "Foundational",
       "scope": "Both",
       "notes": "Foundational"
     },
     {
       "framework": "OWASP NHI Top 10",
-      "control_id": "Embedding store service account with cross-tenant read access",
-      "control_name": "NHI-5 Over-Privileged NHI",
-      "tier": "Hardening",
+      "control_id": "API keys or tokens embedded in system prompt",
+      "control_name": "NHI-2 Secret Leakage",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Per-tenant credentials or least-privilege scope restrictions"
+      "notes": "Scan system prompts for credential patterns before deployment"
     },
     {
       "framework": "OWASP NHI Top 10",
-      "control_id": "Unauthenticated embedding store access",
-      "control_name": "NHI-4 Insecure Authentication",
-      "tier": "Hardening",
+      "control_id": "System prompt stored as plaintext config with embedded credentials",
+      "control_name": "NHI-6 Insecure Credential Storage",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Require authentication for all vector database connections"
+      "notes": "Externalise credentials to vault; reference by ID in system prompt"
     },
     {
       "framework": "NIST SP 800-218A",
       "control_id": "PS.1.1-PS",
-      "control_name": "Protect all code from unauthorised access — embedding store protection",
+      "control_name": "Protect all code from unauthorised access — system prompt confidentiality",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Classify embedding stores and vector databases as sensitive AI artefacts; apply access controls, encryption at rest/in transit, and audit logging"
+      "notes": "Classify system prompts as sensitive configuration artefacts; apply access controls, version control, and audit logging to all prompt stores"
+    },
+    {
+      "framework": "NIST SP 800-218A",
+      "control_id": "PW.5.1-PS",
+      "control_name": "Secure coding — no credentials in prompts",
+      "tier": "Foundational",
+      "scope": "Build",
+      "notes": "Enforce secure coding standards prohibiting embedding of credentials, API keys, or sensitive configuration data in system prompts or model context"
+    },
+    {
+      "framework": "NIST SP 800-218A",
+      "control_id": "PW.7.2-PS",
+      "control_name": "Review for security vulnerabilities — prompt disclosure",
+      "tier": "Foundational",
+      "scope": "Build",
+      "notes": "Include system prompt extraction scenarios in pre-release security reviews; verify that outputs cannot reveal system prompt content"
     },
     {
       "framework": "NIST SP 800-218A",
       "control_id": "PW.8.2-PS",
-      "control_name": "Test for security vulnerabilities — embedding adversarial testing",
+      "control_name": "Test for security vulnerabilities — prompt extraction",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Conduct adversarial testing of retrieval pipelines including embedding inversion, retrieval poisoning, and semantic search manipulation scenarios"
-    },
-    {
-      "framework": "NIST SP 800-218A",
-      "control_id": "RV.3.1-PS",
-      "control_name": "Analyse root causes — embedding incident forensics",
-      "tier": "Foundational",
-      "scope": "Build",
-      "notes": "When an embedding or retrieval security incident occurs, conduct forensic analysis of the vector store, ingestion pipeline, and query patterns"
-    },
-    {
-      "framework": "NIST SP 800-218A",
-      "control_id": "PW.4.1-PS",
-      "control_name": "Reuse existing well-secured software — vector store vetting",
-      "tier": "Foundational",
-      "scope": "Build",
-      "notes": "Vet vector database platforms and embedding model providers for security posture before adoption; review access control capabilities"
+      "notes": "Conduct adversarial prompt extraction testing against all known extraction techniques before deployment and after each system prompt change"
     },
     {
       "framework": "FedRAMP",
       "control_id": "SC-28",
-      "control_name": "Protection of Information at Rest — embedding store protection",
+      "control_name": "Protection of Information at Rest — system prompt confidentiality",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Encrypt vector databases and embedding stores at rest; enforce access controls and audit logging on all embedding read and write operations"
-    },
-    {
-      "framework": "FedRAMP",
-      "control_id": "SI-3",
-      "control_name": "Malicious Code Protection — adversarial embedding detection",
-      "tier": "Foundational",
-      "scope": "Build",
-      "notes": "Extend malicious code protection to detect adversarial manipulation of embeddings — poisoned vectors, out-of-distribution injections, and embedding inversion attacks"
-    },
-    {
-      "framework": "FedRAMP",
-      "control_id": "RA-5",
-      "control_name": "Vulnerability Scanning — embedding infrastructure",
-      "tier": "Foundational",
-      "scope": "Build",
-      "notes": "Include vector databases, embedding pipelines, and retrieval infrastructure in vulnerability scanning; test for injection, access control bypass, and data extraction"
+      "notes": "Classify system prompts as sensitive configuration; encrypt at rest, enforce access controls, and apply version control and audit logging to all prompt stores"
     },
     {
       "framework": "FedRAMP",
       "control_id": "AC-3",
-      "control_name": "Access Enforcement — embedding store access",
+      "control_name": "Access Enforcement — prompt configuration access",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Enforce role-based access control on vector database operations; restrict who can read, write, and delete embeddings"
+      "notes": "Restrict access to system prompt configurations to authorised personnel; enforce role-based access control and change management on all prompt modifications"
+    },
+    {
+      "framework": "FedRAMP",
+      "control_id": "AU-2",
+      "control_name": "Event Logging — prompt extraction detection",
+      "tier": "Foundational",
+      "scope": "Build",
+      "notes": "Log inference interactions with sufficient detail to detect system prompt extraction attempts; alert on query patterns indicative of extraction techniques"
+    },
+    {
+      "framework": "FedRAMP",
+      "control_id": "SI-3",
+      "control_name": "Malicious Code Protection — prompt extraction defence",
+      "tier": "Foundational",
+      "scope": "Build",
+      "notes": "Deploy output monitoring to detect and block responses containing system prompt content; treat extraction as a security event"
     },
     {
       "framework": "DORA",
       "control_id": "Art. 9",
-      "control_name": "Protection and Prevention — embedding store protection",
+      "control_name": "Protection and Prevention — prompt confidentiality",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Implement security controls for vector databases and embedding stores — encryption at rest, access controls, and integrity monitoring for financial data embeddings"
+      "notes": "Classify system prompts as sensitive ICT configuration; implement protection controls including encryption, access control, and output monitoring to prevent extraction"
     },
     {
       "framework": "DORA",
-      "control_id": "Art. 24–27",
-      "control_name": "Resilience Testing — embedding security testing",
+      "control_id": "Art. 17–23",
+      "control_name": "ICT Incident Management — prompt extraction reporting",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Include vector database and embedding pipeline security in resilience testing; test for injection, access control bypass, and data extraction from embeddings"
+      "notes": "Classify successful system prompt extraction as an ICT-related incident; assess impact and report per DORA incident classification criteria"
     },
     {
       "framework": "DORA",
-      "control_id": "Art. 8",
-      "control_name": "Identification — embedding infrastructure assets",
+      "control_id": "Art. 13",
+      "control_name": "Learning and Evolving — extraction post-mortem",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Register vector databases, embedding models, and retrieval infrastructure in the ICT asset inventory with classification per data sensitivity"
+      "notes": "Conduct post-incident analysis for prompt extraction events; identify root cause, assess business impact, and update protection controls"
     },
     {
       "framework": "DORA",
       "control_id": "Art. 10",
-      "control_name": "Detection — embedding tampering detection",
+      "control_name": "Detection — extraction attempt detection",
       "tier": "Foundational",
       "scope": "Build",
-      "notes": "Monitor embedding stores for unauthorised modifications, anomalous writes, and bulk access patterns indicative of extraction or poisoning"
+      "notes": "Deploy detection mechanisms for system prompt extraction attempts; monitor inference requests for extraction technique patterns"
     }
   ],
   "tools": [
-    {
-      "name": "Weaviate (with RBAC)",
-      "type": "open-source",
-      "url": "https://weaviate.io"
-    },
-    {
-      "name": "Qdrant",
-      "type": "open-source",
-      "url": "https://qdrant.tech"
-    },
-    {
-      "name": "Pinecone Canopy",
-      "type": "open-source",
-      "url": "https://github.com/pinecone-io/canopy"
-    },
-    {
-      "name": "RAGAS",
-      "type": "open-source",
-      "url": "https://github.com/explodinggradients/ragas"
-    },
-    {
-      "name": "Weaviate",
-      "type": "open-source",
-      "url": "https://weaviate.io"
-    },
-    {
-      "name": "ML Privacy Meter",
-      "type": "open-source",
-      "url": "https://github.com/privacytrustlab/ml_privacy_meter"
-    },
-    {
-      "name": "LanceDB",
-      "type": "open-source",
-      "url": "https://lancedb.com"
-    },
-    {
-      "name": "Milvus",
-      "type": "open-source",
-      "url": "https://milvus.io"
-    },
     {
       "name": "LLM Guard",
       "type": "open-source",
       "url": "https://github.com/protectai/llm-guard"
     },
     {
-      "name": "OWASP ZAP",
+      "name": "Garak",
       "type": "open-source",
-      "url": "https://www.zaproxy.org"
+      "url": "https://github.com/leondz/garak"
     },
     {
-      "name": "Foolbox",
-      "url": "https://github.com/bethgelab/foolbox",
-      "type": "open-source"
+      "name": "Trufflehog",
+      "type": "open-source",
+      "url": "https://github.com/trufflesecurity/trufflehog"
     },
     {
-      "name": "TextAttack",
-      "url": "https://github.com/QData/TextAttack",
+      "name": "Rebuff",
+      "type": "open-source",
+      "url": "https://github.com/protectai/rebuff"
+    },
+    {
+      "name": "HashiCorp Vault",
+      "type": "commercial",
+      "url": "https://www.vaultproject.io"
+    },
+    {
+      "name": "LAAF v2.0",
+      "url": "https://github.com/qorvexconsulting1/laaf-V2.0",
       "type": "open-source"
     }
   ],
   "incidents": [
     {
-      "name": "Azure OpenAI content filter bypass via structured output mode",
+      "name": "GitHub Copilot reproduces verbatim licensed code and embedded secrets",
       "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
-      "year": 2025,
-      "incident_id": "INC-037"
+      "year": 2023,
+      "incident_id": "INC-008"
     },
     {
-      "name": "Adversarial embedding attacks on production RAG systems",
+      "name": "WormGPT — uncensored LLM sold for cybercrime on dark web forums",
       "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
-      "year": 2024,
-      "incident_id": "INC-046"
+      "year": 2023,
+      "incident_id": "INC-011"
     },
     {
-      "name": "Google AI Overviews recommends adding glue to pizza — RAG hallucination at search scale",
+      "name": "Perez & Ribeiro — 'Ignore Previous Prompt': foundational direct injection study",
       "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
-      "year": 2024,
-      "incident_id": "INC-056"
+      "year": 2022,
+      "incident_id": "INC-013"
     },
     {
-      "name": "OpenAI Whisper hallucinating medical transcriptions — fabricated diagnoses in healthcare AI",
+      "name": "GPT-4 system prompt extraction via jailbreak in production deployments",
+      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "year": 2023,
+      "incident_id": "INC-018"
+    },
+    {
+      "name": "LAAF v2.0 — Empirical LPCI breakthrough rates of 67–100% across 5 production LLMs",
+      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-021"
+    },
+    {
+      "name": "Greshake et al. \"Not What You've Signed Up For\" indirect prompt injection paper",
+      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "year": 2023,
+      "incident_id": "INC-022"
+    },
+    {
+      "name": "GitHub Copilot Workspace prompt injection via repository content",
       "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
       "year": 2024,
-      "incident_id": "INC-080"
+      "incident_id": "INC-025"
+    },
+    {
+      "name": "Skeleton Key: direct system prompt override (Microsoft)",
+      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "year": 2024,
+      "incident_id": "INC-030"
+    },
+    {
+      "name": "DPD AI chatbot swears at customer and criticises company — prompt injection via customer input",
+      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "year": 2024,
+      "incident_id": "INC-053"
+    },
+    {
+      "name": "OpenAI GPT-4 system prompt extraction toolkit — systematic prompt leakage",
+      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "year": 2024,
+      "incident_id": "INC-065"
     }
   ],
   "crossrefs": {
     "agentic_top10": [
-      "ASI06"
+      "ASI01",
+      "ASI02"
     ],
     "dsgai_2026": [
-      "DSGAI13",
-      "DSGAI18",
-      "DSGAI08",
-      "DSGAI09",
-      "DSGAI04",
-      "DSGAI05"
+      "DSGAI15",
+      "DSGAI08"
+    ],
+    "llm_top10": [
+      "LLM01"
     ]
   },
   "changelog": [
@@ -757,6 +756,12 @@
       "version": "1.0.0",
       "change": "Initial entry — generated from OWASP GenAI Crosswalk v1.5.1 mapping files",
       "author": "emmanuelgjr"
+    },
+    {
+      "date": "2026-08-28",
+      "version": "2.0.0",
+      "change": "Migrated to the OWASP Top 10 for LLM Applications 2026 — see MIGRATION.md for the 2025 → 2026 entry map",
+      "author": "OWASP GenAI Data Security Initiative"
     }
   ]
 }

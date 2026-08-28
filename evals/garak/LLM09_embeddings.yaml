@@ -1,7 +1,7 @@
 # OWASP GenAI Crosswalk — Garak Evaluation Profile
 # ─────────────────────────────────────────────────────────────────────────────
-# OWASP Entry  : LLM08 — Vector and Embedding Weaknesses (High)
-# Source list  : OWASP LLM Top 10 2025
+# OWASP Entry  : LLM09 — Vector and Embedding Weaknesses (High)
+# Source list  : OWASP LLM Top 10 2026
 # Crosswalk ref: llm-top10/LLM_MITREATLAS.md
 #
 # MITRE ATLAS techniques tested:
@@ -29,8 +29,8 @@
 #                filtering, enforce provenance tagging on embedded documents
 #
 # Usage:
-#   garak --config evals/garak/LLM08_embeddings.yaml
-#   garak --config evals/garak/LLM08_embeddings.yaml \
+#   garak --config evals/garak/LLM09_embeddings.yaml
+#   garak --config evals/garak/LLM09_embeddings.yaml \
 #         --model_type openai --model_name gpt-4o
 # ─────────────────────────────────────────────────────────────────────────────
 

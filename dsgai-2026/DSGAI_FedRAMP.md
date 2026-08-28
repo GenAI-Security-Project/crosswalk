@@ -206,7 +206,7 @@ change control for data pipelines (CM-3).
 | Collibra | Commercial | https://www.collibra.com |
 
 #### Cross-references
-- LLM Top 10: LLM09 Misinformation
+- LLM Top 10: LLM07 Misinformation
 - Agentic Top 10: ASI09 Emerging Agentic Patterns
 - Other frameworks: SP 800-218A PW.1.1-PS – NIST AI RMF MAP 2.3 – ISO 42001 A.7.2
 
@@ -266,7 +266,7 @@ preventing unauthorised AI tool usage (AC-3).
 | Open Policy Agent | Open-source | https://www.openpolicyagent.org |
 
 #### Cross-references
-- LLM Top 10: LLM05 Supply Chain Vulnerabilities
+- LLM Top 10: LLM04 Supply Chain
 - Agentic Top 10: ASI04 Supply Chain Compromise
 - Other frameworks: SP 800-218A PW.4.1-PS – CIS Controls 2 – NIST CSF 2.0 ID.AM-2
 
@@ -327,7 +327,7 @@ at rest (SC-28).
 | Sigstore | Open-source | https://www.sigstore.dev |
 
 #### Cross-references
-- LLM Top 10: LLM03 Training Data Poisoning
+- LLM Top 10: LLM05 Data and Model Poisoning
 - Agentic Top 10: ASI06 Memory Poisoning & Context Confusion
 - Other frameworks: MITRE ATLAS AML.T0032 – SP 800-218A PS.1.1-PS – NIST CSF 2.0 PR.DS-8
 
@@ -385,7 +385,7 @@ configuration change control for data pipeline changes (CM-3).
 | Collibra | Commercial | https://www.collibra.com |
 
 #### Cross-references
-- LLM Top 10: LLM03 Training Data Poisoning
+- LLM Top 10: LLM05 Data and Model Poisoning
 - Agentic Top 10: ASI06 Memory Poisoning & Context Confusion
 - Other frameworks: SP 800-218A PS.3.1-PS – NIST CSF 2.0 PR.DS-8 – ISO 42001 A.7.4
 
@@ -444,7 +444,7 @@ visibility (PM-9).
 | Collibra | Commercial | https://www.collibra.com |
 
 #### Cross-references
-- LLM Top 10: LLM03 Training Data Poisoning
+- LLM Top 10: LLM05 Data and Model Poisoning
 - Agentic Top 10: ASI07 Lateral Tool Chaining
 - Other frameworks: SP 800-218A PS.3.1-PS – NIST AI RMF MAP 2.3 – ISO 42001 A.7.4
 
@@ -558,7 +558,7 @@ comprehensive logging (AU-2), and system monitoring for leakage indicators
 | AWS Macie / Azure Purview | Commercial | https://aws.amazon.com/macie/ |
 
 #### Cross-references
-- LLM Top 10: LLM02 Sensitive Information Disclosure, LLM07 System Prompt Leakage
+- LLM Top 10: LLM02 Sensitive Information Disclosure, LLM08 Hidden Context Exposure
 - Agentic Top 10: ASI03 Privilege Escalation
 - Other frameworks: SP 800-218A PS.1.1-PS – CWE-200 – NIST CSF 2.0 PR.DS-5
 
@@ -667,7 +667,7 @@ covering synthetic data risks (RA-5).
 | Microsoft Presidio | Open-source | https://github.com/microsoft/presidio |
 
 #### Cross-references
-- LLM Top 10: LLM09 Misinformation
+- LLM Top 10: LLM07 Misinformation
 - Agentic Top 10: ASI09 Emerging Agentic Patterns
 - Other frameworks: SP 800-218A PW.7.2-PS – NIST Privacy Framework – ISO 27701
 
@@ -773,7 +773,7 @@ access enforcement based on ownership (AC-3), and logging of data usage
 | Alation | Commercial | https://www.alation.com |
 
 #### Cross-references
-- LLM Top 10: LLM09 Misinformation
+- LLM Top 10: LLM07 Misinformation
 - Agentic Top 10: ASI09 Emerging Agentic Patterns
 - Other frameworks: SP 800-218A PW.1.1-PS – ISO 42001 A.7.2 – NIST Privacy Framework
 
@@ -825,7 +825,7 @@ enforcement restricting data usage (AC-3), logging of all data operations
 | Splunk | Commercial | https://www.splunk.com |
 
 #### Cross-references
-- LLM Top 10: LLM06 Excessive Agency
+- LLM Top 10: LLM03 Excessive Agency
 - Agentic Top 10: ASI02 Misconfigured Access Controls
 - Other frameworks: SP 800-218A PW.1.1-PS – NIST Privacy Framework – GDPR Art. 5
 
@@ -1032,7 +1032,7 @@ scanning covering bias detection (RA-5).
 | Fiddler AI | Commercial | https://www.fiddler.ai |
 
 #### Cross-references
-- LLM Top 10: LLM09 Misinformation
+- LLM Top 10: LLM07 Misinformation
 - Agentic Top 10: ASI09 Emerging Agentic Patterns
 - Other frameworks: SP 800-218A PW.7.2-PS – NIST AI RMF MAP 2.3 – ISO 42001 A.6.2.6
 
@@ -1084,7 +1084,7 @@ assessment for governance completeness (RA-3).
 | ServiceNow GRC | Commercial | https://www.servicenow.com |
 
 #### Cross-references
-- LLM Top 10: LLM09 Misinformation
+- LLM Top 10: LLM07 Misinformation
 - Agentic Top 10: ASI09 Emerging Agentic Patterns
 - Other frameworks: SP 800-218A PW.1.1-PS – NIST AI RMF GOV – ISO 42001 5.1
 
@@ -1134,7 +1134,7 @@ external service controls (SA-9), supply chain planning for data providers
 | ServiceNow VRM | Commercial | https://www.servicenow.com |
 
 #### Cross-references
-- LLM Top 10: LLM05 Supply Chain Vulnerabilities
+- LLM Top 10: LLM04 Supply Chain
 - Agentic Top 10: ASI04 Supply Chain Compromise
 - Other frameworks: SP 800-218A PW.4.1-PS – NIST CSF 2.0 ID.SC-2 – EBA Outsourcing Guidelines
 

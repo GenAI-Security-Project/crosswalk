@@ -1,9 +1,9 @@
 {
   "id": "LLM10",
-  "name": "Unbounded Consumption",
-  "source_list": "LLM-Top10-2025",
-  "version": "2026-Q1",
-  "severity": "Medium",
+  "name": "Improper Output Handling",
+  "source_list": "LLM-Top10-2026",
+  "version": "2026-Q3",
+  "severity": "High",
   "aivss_score": null,
   "audience": [
     "red-teamer",
@@ -18,109 +18,109 @@
   "mappings": [
     {
       "framework": "MITRE ATLAS",
-      "control_id": "AML.T0029",
-      "control_name": "Denial of ML Service",
+      "control_id": "AML.T0037",
+      "control_name": "Output Manipulation",
       "tier": "Foundational",
-      "scope": "Both",
-      "url": "https://atlas.mitre.org/techniques/AML.T0029",
-      "notes": "Overloading AI systems with computationally expensive inputs to cause service degradation"
+      "scope": "Build",
+      "url": "https://atlas.mitre.org/techniques/AML.T0037",
+      "notes": "Crafting inputs that produce dangerous outputs consumed by downstream systems"
     },
     {
       "framework": "MITRE ATLAS",
-      "control_id": "AML.T0034",
-      "control_name": "Cost Harvesting",
+      "control_id": "AML.T0040",
+      "control_name": "Unsafe Deserialisation via LLM",
       "tier": "Foundational",
-      "scope": "Both",
-      "url": "https://atlas.mitre.org/techniques/AML.T0034",
-      "notes": "Crafting inputs that maximise token usage or API costs per request"
+      "scope": "Build",
+      "url": "https://atlas.mitre.org/techniques/AML.T0040",
+      "notes": "LLM outputs containing serialised payloads executed by downstream components"
     },
     {
       "framework": "NIST AI RMF 1.0",
       "control_id": "MS-2.5",
-      "control_name": "Testing — adversarial",
+      "control_name": "Testing — output safety",
       "tier": "Foundational",
-      "scope": "Both",
-      "notes": "Resource exhaustion and denial-of-service scenarios included in adversarial testing"
+      "scope": "Build",
+      "notes": "Output handling security included in AI evaluation and testing programme"
+    },
+    {
+      "framework": "NIST AI RMF 1.0",
+      "control_id": "MS-2.6",
+      "control_name": "Testing — data leakage",
+      "tier": "Foundational",
+      "scope": "Build",
+      "notes": "Output leakage and injection scenarios covered in evaluation"
     },
     {
       "framework": "NIST AI RMF 1.0",
       "control_id": "MG-2.2",
       "control_name": "Risk response",
       "tier": "Foundational",
-      "scope": "Both",
-      "notes": "Defined response to detected unbounded consumption events including rate limiting activation"
-    },
-    {
-      "framework": "NIST AI RMF 1.0",
-      "control_id": "MG-3.2",
-      "control_name": "Residual risk — availability",
-      "tier": "Foundational",
-      "scope": "Both",
-      "notes": "Residual availability risk from resource exhaustion documented and treated"
+      "scope": "Build",
+      "notes": "Incident response for output handling failures defined and tested"
     },
     {
       "framework": "NIST AI RMF 1.0",
       "control_id": "GV-1.7",
       "control_name": "Policies for trustworthy AI",
       "tier": "Foundational",
-      "scope": "Both",
-      "notes": "Organisational policy defines resource limits and availability requirements for all LLM deployments"
+      "scope": "Build",
+      "notes": "Organisational policy requires secure output handling for all LLM integrations"
     },
     {
       "framework": "EU AI Act",
-      "control_id": "Availability risks identified and mitigated",
+      "control_id": "Output handling risks identified and mitigated",
       "control_name": "Art. 9 — Risk management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Resource exhaustion and DoS scenarios included in risk management system"
+      "notes": "Insecure output handling included in risk management system"
     },
     {
       "framework": "EU AI Act",
-      "control_id": "High-risk AI must remain available under adversarial conditions",
+      "control_id": "Accurate, robust outputs resilient to misuse",
       "control_name": "Art. 15 — Accuracy, robustness, cybersecurity",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Technical resilience against denial-of-service attacks is an Art. 15 requirement"
+      "notes": "Output validation and sanitisation are Art. 15 technical requirements"
     },
     {
       "framework": "EU AI Act",
-      "control_id": "Operational continuity procedures documented",
+      "control_id": "Documented procedures covering output quality",
       "control_name": "Art. 17 — Quality management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Post-market monitoring and incident response for availability failures required"
+      "notes": "Post-market monitoring of output handling incidents required"
+    },
+    {
+      "framework": "ISO/IEC 27001:2022",
+      "control_id": "A.8.28",
+      "control_name": "Secure coding",
+      "tier": "Foundational",
+      "scope": "Build",
+      "notes": "Output encoding, sanitisation, and schema validation as secure coding requirements"
+    },
+    {
+      "framework": "ISO/IEC 27001:2022",
+      "control_id": "A.8.26",
+      "control_name": "Application security requirements",
+      "tier": "Foundational",
+      "scope": "Build",
+      "notes": "Security requirements for all interfaces consuming LLM output — specified before development"
+    },
+    {
+      "framework": "ISO/IEC 27001:2022",
+      "control_id": "A.8.29",
+      "control_name": "Security testing",
+      "tier": "Foundational",
+      "scope": "Build",
+      "notes": "Output injection scenarios in security testing — XSS, SQL injection, command injection via LLM output"
     },
     {
       "framework": "ISO/IEC 27001:2022",
       "control_id": "A.8.16",
       "control_name": "Monitoring activities",
       "tier": "Foundational",
-      "scope": "Both",
-      "notes": "Real-time monitoring of LLM resource consumption — cost anomaly detection and alerting"
-    },
-    {
-      "framework": "ISO/IEC 27001:2022",
-      "control_id": "A.5.30",
-      "control_name": "ICT readiness for business continuity",
-      "tier": "Foundational",
-      "scope": "Both",
-      "notes": "LLM availability requirements in BCP — RTO/RPO defined, rate limiting as resilience control"
-    },
-    {
-      "framework": "ISO/IEC 27001:2022",
-      "control_id": "A.8.13",
-      "control_name": "Backup",
-      "tier": "Foundational",
-      "scope": "Both",
-      "notes": "Backup and recovery for LLM service infrastructure — failover capability tested"
-    },
-    {
-      "framework": "ISO/IEC 27001:2022",
-      "control_id": "A.5.24",
-      "control_name": "Incident management",
-      "tier": "Foundational",
-      "scope": "Both",
-      "notes": "Incident response procedures for LLM availability failures and cost overruns"
+      "scope": "Build",
+      "notes": "Runtime monitoring for output handling incidents — injection attempts in LLM output channels"
     },
     {
       "framework": "ISO/IEC 42001:2023",
@@ -128,135 +128,135 @@
       "control_name": "AI system security",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Rate limiting and resource controls as AIMS security design requirements — enforced at deployment"
+      "notes": "Output encoding and schema validation as AIMS security design requirements — LLM output treated as untrusted input to downstream systems"
     },
     {
       "framework": "ISO/IEC 42001:2023",
-      "control_id": "A.6.2.8",
-      "control_name": "Monitoring of AI systems",
+      "control_id": "A.6.2.6",
+      "control_name": "Testing of AI systems",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Resource consumption monitored in operation — cost anomaly detection as AIMS monitoring control"
+      "notes": "Output injection scenarios in AIMS testing — XSS, SQL injection, command injection via LLM output tested before deployment"
     },
     {
       "framework": "ISO/IEC 42001:2023",
-      "control_id": "Cl.6.1",
-      "control_name": "Risk assessment",
+      "control_id": "A.9.1",
+      "control_name": "Use of AI systems",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Consumption risk in AI risk assessment — impact on service availability, cost exposure documented"
+      "notes": "Guidance on AI system use — downstream consumers informed that LLM output must be validated before use"
     },
     {
       "framework": "ISO/IEC 42001:2023",
-      "control_id": "Cl.9",
-      "control_name": "Performance evaluation",
+      "control_id": "Cl.8",
+      "control_name": "Operation",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Resource consumption metrics in AIMS performance evaluation — consumption trends in management review"
+      "notes": "Operational controls for LLM deployment — output handling requirements documented as AIMS operational procedures"
     },
     {
       "framework": "CIS Controls v8.1",
-      "control_id": "4.1 Establish secure configuration process",
-      "control_name": "CIS 4 — Secure Configuration",
+      "control_id": "16.1 Establish secure development standards",
+      "control_name": "CIS 16 — Application Software Security",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Secure configuration includes resource limits — token caps, rate limits, cost budgets"
+      "notes": "Output encoding and sanitisation as secure development requirements"
     },
     {
       "framework": "CIS Controls v8.1",
-      "control_id": "12.6 Use of network-based URL filters",
-      "control_name": "CIS 12 — Network Infrastructure Management",
+      "control_id": "8.2 Collect audit logs",
+      "control_name": "CIS 8 — Audit Log Management",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Rate limiting and traffic controls at the API gateway and network layer"
+      "notes": "Log all LLM outputs — injection attempts in model responses detectable"
     },
     {
       "framework": "CIS Controls v8.1",
-      "control_id": "17.1 Designate personnel for incident response",
-      "control_name": "CIS 17 — Incident Response",
+      "control_id": "18.1 Establish penetration testing",
+      "control_name": "CIS 18 — Penetration Testing",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Defined response for consumption anomalies — automated rate limiting, session suspension, alerting"
+      "notes": "Output injection scenarios in penetration testing — XSS, SQL injection via LLM output"
     },
     {
       "framework": "OWASP ASVS 4.0.3",
-      "control_id": "V13.1.1",
-      "control_name": "Verify API rate limiting",
+      "control_id": "V5.2.1",
+      "control_name": "Verify output encoding of untrusted data in HTML context",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Rate limiting on all LLM API endpoints — per user, per session, per API key"
+      "notes": "LLM responses rendered in browser contexts encoded against XSS"
     },
     {
       "framework": "OWASP ASVS 4.0.3",
-      "control_id": "V13.1.3",
-      "control_name": "Verify API rejects large unexpected payloads",
+      "control_id": "V5.3.5",
+      "control_name": "Verify output encoding in SQL query context",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Token limits on LLM API inputs — requests exceeding limits rejected at the gateway"
+      "notes": "LLM-generated SQL parameterised — never raw LLM output in SQL context"
     },
     {
       "framework": "OWASP ASVS 4.0.3",
-      "control_id": "V11.1.4",
-      "control_name": "Verify business logic rate limits",
+      "control_id": "V5.2.5",
+      "control_name": "Verify output encoding in OS command context",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Business logic controls on LLM usage — per-tenant cost budgets, rate limit policies"
+      "notes": "LLM-generated commands validated — never raw output in shell context"
     },
     {
       "framework": "OWASP ASVS 4.0.3",
-      "control_id": "V7.4.1",
-      "control_name": "Verify error handling does not expose sensitive data",
+      "control_id": "V5.2.4",
+      "control_name": "Verify application does not use eval or dynamic code",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM resource exhaustion errors handled gracefully — no sensitive information in error responses"
+      "notes": "No eval or dynamic code execution of LLM-generated content"
+    },
+    {
+      "framework": "OWASP ASVS 4.0.3",
+      "control_id": "V4.2.2",
+      "control_name": "Verify anti-CSRF tokens in state-changing operations",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "CSRF protection on endpoints where LLM output triggers state changes"
     },
     {
       "framework": "ISA/IEC 62443",
-      "control_id": "SR 7.6",
-      "control_name": "Denial of service protection",
+      "control_id": "SR 3.3",
+      "control_name": "Software and information integrity",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM components protected against resource exhaustion attacks affecting OT availability"
+      "notes": "All LLM output validated before rendering or passing to OT systems"
     },
     {
       "framework": "ISA/IEC 62443",
-      "control_id": "SR 7.7",
-      "control_name": "Control system backup",
+      "control_id": "SR 2.3",
+      "control_name": "Use control",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM resource exhaustion cannot affect backup and recovery of OT control systems"
+      "notes": "LLM output restricted to authorised actions — no raw output directly to control interfaces"
     },
     {
       "framework": "ISA/IEC 62443",
-      "control_id": "SR 6.6",
-      "control_name": "Timely response to events",
+      "control_id": "SR 3.1",
+      "control_name": "Software and information integrity",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Network monitoring detects and responds to LLM-related resource exhaustion before OT impact"
+      "notes": "Communication integrity enforcement on all LLM-to-OT data paths"
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
-      "control_id": "Denial of service attacks targeting OT availability",
-      "control_name": "Section 5.6 — DoS threats",
+      "control_id": "Code injection and execution via data paths",
+      "control_name": "Section 5.3 — Threats",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM-induced resource exhaustion as a DoS vector affecting shared OT network infrastructure"
+      "notes": "LLM output injection as a new instantiation of this threat at the IT/OT boundary"
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
-      "control_id": "Assess availability risks for OT systems",
-      "control_name": "Section 6.2 — Risk assessment",
-      "tier": "Foundational",
-      "scope": "Both",
-      "notes": "LLM resource consumption impact assessed on shared OT network and compute infrastructure"
-    },
-    {
-      "framework": "NIST SP 800-82 Rev 3",
-      "control_id": "Network architecture preventing DoS propagation",
+      "control_id": "Validated data flows across zone boundaries",
       "control_name": "Section 7.2 — Network segmentation",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM infrastructure isolated from OT control network — bandwidth caps at DMZ boundary"
+      "notes": "LLM output validated at DMZ boundary before entering control zone display or data systems"
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
@@ -268,35 +268,43 @@
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
-      "control_id": "Denial of Service Protection",
-      "control_name": "SC-5",
+      "control_id": "Information Input Validation",
+      "control_name": "SI-10",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM infrastructure protected against resource exhaustion attacks affecting OT availability"
+      "notes": "LLM outputs validated before passing to OT systems — schema validation, allowlist enforcement"
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
-      "control_id": "Fail-Safe Procedures",
-      "control_name": "SI-17",
+      "control_id": "Malicious Code Protection",
+      "control_name": "SI-3",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM service degradation has defined fail-safe behaviour — process control continues without LLM"
+      "notes": "LLM output scanning for malicious content before OT system ingestion"
     },
     {
       "framework": "NIST SP 800-82 Rev 3",
-      "control_id": "Audit Record Generation",
-      "control_name": "AU-12",
+      "control_id": "Least Functionality",
+      "control_name": "CM-7",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM resource consumption logged — patterns indicating exhaustion attacks detectable"
+      "notes": "OT interfaces that consume LLM output configured to accept only defined, safe input formats"
     },
     {
       "framework": "NIST CSF 2.0",
-      "control_id": "PR.IR-01",
-      "control_name": "Infrastructure Resilience",
+      "control_id": "PR.PS-04",
+      "control_name": "Platform Security",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Networks and environments protected to achieve resilience — rate limiting and resource controls as resilience measures"
+      "notes": "Secure software development practices — output encoding and schema validation as platform security requirements"
+    },
+    {
+      "framework": "NIST CSF 2.0",
+      "control_id": "PR.DS-02",
+      "control_name": "Data Security",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "Data in transit protected — LLM output validated before passing to downstream systems"
     },
     {
       "framework": "NIST CSF 2.0",
@@ -304,67 +312,67 @@
       "control_name": "Continuous Monitoring",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM resource consumption monitored — anomalous usage patterns detected and alerted"
+      "notes": "Networks and assets monitored — output injection patterns detected in LLM output channels"
     },
     {
       "framework": "NIST CSF 2.0",
-      "control_id": "RS.MI-01",
-      "control_name": "Incident Mitigation",
+      "control_id": "ID.RA-01",
+      "control_name": "Risk Assessment",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Incidents contained — automated rate limiting, circuit breakers, cost budgets as containment controls"
-    },
-    {
-      "framework": "NIST CSF 2.0",
-      "control_id": "GV.RM-01",
-      "control_name": "Risk Management Strategy",
-      "tier": "Foundational",
-      "scope": "Both",
-      "notes": "Risk management strategy established — LLM availability requirements and acceptable consumption risk defined"
+      "notes": "Output injection documented as vulnerability class in risk assessment for all LLM integrations"
     },
     {
       "framework": "SOC 2",
-      "control_id": "LLM service availability commitments documented — SLAs, RTO/RPO, resource limits that protect availability",
-      "control_name": "A1.1 — Availability policies",
+      "control_id": "Policy requiring LLM output validation before use in downstream processing — complete and authorised processing",
+      "control_name": "PI1.1 — Processing integrity policies",
       "tier": "Foundational",
       "scope": "Both"
     },
     {
       "framework": "SOC 2",
-      "control_id": "Rate limiting and resource controls protect LLM service availability — implemented and monitored",
-      "control_name": "A1.2 — Environmental protections",
+      "control_id": "Input validation procedures for all systems consuming LLM output — encoding, schema validation, sanitisation",
+      "control_name": "CC5.2 — Select and develop control activities",
       "tier": "Foundational",
       "scope": "Both"
     },
     {
       "framework": "SOC 2",
-      "control_id": "Real-time monitoring of LLM resource consumption — cost anomalies and unusual volume patterns alerted",
+      "control_id": "Monitoring for injection patterns in LLM output channels — detect anomalous processing before downstream harm",
       "control_name": "CC7.2 — Anomaly detection",
       "tier": "Foundational",
       "scope": "Both"
     },
     {
       "framework": "SOC 2",
-      "control_id": "Resource exhaustion risks identified in LLM risk assessment — DoS and sponge attack vectors assessed",
+      "control_id": "Output injection risks identified in LLM risk assessment — XSS, SQL injection, command injection via AI-generated content",
       "control_name": "CC3.2 — Risk assessment",
       "tier": "Foundational",
       "scope": "Both"
     },
     {
       "framework": "PCI DSS v4.0",
-      "control_id": "Req 1.3.2",
-      "control_name": "Network security controls",
+      "control_id": "Req 6.2.4",
+      "control_name": "Bespoke and custom software",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Network controls restrict inbound traffic to CDE — rate limiting at network layer for LLM applications"
+      "notes": "Output handling in LLM integrations addresses all injection vulnerability classes — LLM output treated as untrusted"
     },
     {
       "framework": "PCI DSS v4.0",
       "control_id": "Req 6.4.1",
-      "control_name": "Public-facing application protection",
+      "control_name": "Public-facing web application protection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM-powered public-facing applications protected against DoS — rate limiting and payload limits enforced"
+      "notes": "All interfaces consuming LLM output in PCI scope protected — input validation on all downstream consumers"
+    },
+    {
+      "framework": "PCI DSS v4.0",
+      "control_id": "Req 11.3.1",
+      "control_name": "Penetration testing",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "Output injection scenarios in penetration testing — SQL injection, command injection via LLM output"
     },
     {
       "framework": "PCI DSS v4.0",
@@ -372,23 +380,23 @@
       "control_name": "Audit log review",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Automated monitoring for resource exhaustion patterns — unusual consumption volumes alerted"
-    },
-    {
-      "framework": "PCI DSS v4.0",
-      "control_id": "Req 12.3.2",
-      "control_name": "Targeted risk analysis",
-      "tier": "Foundational",
-      "scope": "Both",
-      "notes": "Targeted risk analysis for LLM availability in CDE — DoS impact on payment processing, controls documented"
+      "notes": "Monitoring for injection patterns in LLM output channels within CDE"
     },
     {
       "framework": "ENISA Multilayer Framework",
       "control_id": "L1",
-      "control_name": "General ICT — Availability",
+      "control_name": "General ICT — Secure Development",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Rate limiting and resource controls as L1 availability practices — LLM infrastructure protected against exhaustion"
+      "notes": "Output encoding and schema validation as L1 secure development requirements — LLM output treated as untrusted"
+    },
+    {
+      "framework": "ENISA Multilayer Framework",
+      "control_id": "L2",
+      "control_name": "AI System Integrity (ASI)",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "AI-specific output validation — schema enforcement, injection pattern detection before downstream consumption"
     },
     {
       "framework": "ENISA Multilayer Framework",
@@ -396,23 +404,15 @@
       "control_name": "Monitoring and Detection",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "LLM resource consumption monitored — cost anomaly detection as ENISA monitoring practice"
+      "notes": "Runtime monitoring of LLM output channels — injection patterns in model responses detected"
     },
     {
       "framework": "ENISA Multilayer Framework",
       "control_id": "L1",
-      "control_name": "Incident Response (IRS)",
+      "control_name": "General ICT — Application Security",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Incident response for consumption anomalies — automated rate limiting, circuit breakers, cost budgets"
-    },
-    {
-      "framework": "ENISA Multilayer Framework",
-      "control_id": "L2",
-      "control_name": "Governance and Risk (GOV)",
-      "tier": "Foundational",
-      "scope": "Both",
-      "notes": "LLM availability in risk management — RTO/RPO defined, consumption risk in AI risk register"
+      "notes": "DAST on all interfaces consuming LLM output as L1 application security practice"
     },
     {
       "framework": "OWASP SAMM v2.0",
@@ -420,93 +420,93 @@
       "control_name": "Security Requirements",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Rate limiting and resource caps as security requirements — specified before LLM infrastructure deployment"
+      "notes": "Output encoding and schema validation as explicit security requirements before development"
     },
     {
       "framework": "OWASP SAMM v2.0",
-      "control_id": "I-SD",
-      "control_name": "Secure Deployment",
+      "control_id": "I-SB",
+      "control_name": "Secure Build",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Rate limiting and resource controls deployed with every LLM deployment — not optional post-deployment hardening"
+      "notes": "Output validation implemented in code — LLM output treated as untrusted, reviewed in code review"
     },
     {
       "framework": "OWASP SAMM v2.0",
-      "control_id": "O-IM",
-      "control_name": "Incident Management",
+      "control_id": "V-RT",
+      "control_name": "Requirements-Driven Testing",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Consumption anomaly detection as incident management control — automated response, escalation procedure"
+      "notes": "Output security requirements verified in testing — XSS, SQL injection via LLM output tested"
     },
     {
       "framework": "OWASP SAMM v2.0",
-      "control_id": "O-EM",
-      "control_name": "Environment Management",
+      "control_id": "V-ST",
+      "control_name": "Security Testing",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Resource limits as environment configuration — documented, version-controlled, reviewed on change"
+      "notes": "DAST on all interfaces consuming LLM output as penetration testing activity"
     },
     {
       "framework": "STRIDE",
-      "control_id": "D",
-      "control_name": "Resource Exhaustion (Denial of Service)",
+      "control_id": "T",
+      "control_name": "Output Tampering into Downstream Systems",
       "tier": "Foundational",
-      "scope": "Both"
+      "scope": "Build"
+    },
+    {
+      "framework": "STRIDE",
+      "control_id": "E",
+      "control_name": "Privilege Escalation via Output Injection",
+      "tier": "Foundational",
+      "scope": "Build"
     },
     {
       "framework": "CWE/CVE",
-      "control_id": "CWE-400",
-      "control_name": "CWE-400",
+      "control_id": "CWE-79",
+      "control_name": "CWE-79",
       "tier": "Foundational",
-      "scope": "Both",
-      "url": "https://cwe.mitre.org/data/definitions/400.html"
+      "scope": "Build",
+      "url": "https://cwe.mitre.org/data/definitions/79.html"
     },
     {
       "framework": "CWE/CVE",
-      "control_id": "CWE-770",
-      "control_name": "CWE-770",
+      "control_id": "CWE-89",
+      "control_name": "CWE-89",
       "tier": "Foundational",
-      "scope": "Both",
-      "url": "https://cwe.mitre.org/data/definitions/770.html"
+      "scope": "Build",
+      "url": "https://cwe.mitre.org/data/definitions/89.html"
     },
     {
       "framework": "CWE/CVE",
-      "control_id": "CWE-799",
-      "control_name": "CWE-799",
+      "control_id": "CWE-78",
+      "control_name": "CWE-78",
       "tier": "Foundational",
-      "scope": "Both",
-      "url": "https://cwe.mitre.org/data/definitions/799.html"
+      "scope": "Build",
+      "url": "https://cwe.mitre.org/data/definitions/78.html"
     },
     {
       "framework": "OWASP AI Testing Guide",
-      "control_id": "Resource exhaustion and rate limiting",
-      "control_name": "AVT — Availability",
+      "control_id": "Output injection into downstream systems",
+      "control_name": "OHT — Output Handling",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Test rate limiting enforcement, token budget controls, and compute throttling under load; verify graceful degradation"
+      "notes": "Verify LLM-generated content is sanitised before insertion into HTML, SQL, shell commands, URLs, and other interpreters"
     },
     {
       "framework": "OWASP AI Testing Guide",
-      "control_id": "Consumption anomaly detection",
-      "control_name": "LMT — Logging & Monitoring",
+      "control_id": "Crafted inputs designed to produce malicious outputs",
+      "control_name": "IHT — Input Handling",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Verify monitoring detects abnormal consumption patterns — token flooding, API abuse, wallet drainage — before service impact"
+      "notes": "Craft inputs designed to coerce the LLM into generating content that will be interpreted as code or commands by downstream systems"
     },
     {
       "framework": "OWASP AI Testing Guide",
-      "control_id": "Per-user quota enforcement",
+      "control_id": "Downstream system access controls",
       "control_name": "ACT — Access Control",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Verify per-user and per-tenant quotas are enforced and cannot be bypassed through session switching or credential abuse"
-    },
-    {
-      "framework": "MAESTRO",
-      "control_id": "L4",
-      "control_name": "Deployment & Infrastructure",
-      "tier": "Foundational",
-      "scope": "Both"
+      "notes": "Verify that downstream systems do not grant LLM outputs excessive permissions or execute LLM-generated commands without validation"
     },
     {
       "framework": "MAESTRO",
@@ -517,15 +517,22 @@
     },
     {
       "framework": "MAESTRO",
-      "control_id": "L5",
-      "control_name": "Evaluation & Observability",
+      "control_id": "L4",
+      "control_name": "Deployment & Infrastructure",
+      "tier": "Foundational",
+      "scope": "Both"
+    },
+    {
+      "framework": "MAESTRO",
+      "control_id": "L1",
+      "control_name": "Foundation Models",
       "tier": "Foundational",
       "scope": "Both"
     },
     {
       "framework": "AIUC-1",
-      "control_id": "D",
-      "control_name": "Reliability domain (all)",
+      "control_id": "B005",
+      "control_name": "Implement real-time input filtering",
       "tier": "Foundational",
       "scope": "Both",
       "notes": "Foundational"
@@ -540,216 +547,235 @@
     },
     {
       "framework": "AIUC-1",
-      "control_id": "E",
-      "control_name": "Accountability domain",
+      "control_id": "B009",
+      "control_name": "Validate AI-generated content",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "Foundational"
+    },
+    {
+      "framework": "AIUC-1",
+      "control_id": "C",
+      "control_name": "Safety domain (harm prevention)",
       "tier": "Foundational",
       "scope": "Both",
       "notes": "Foundational"
     },
     {
       "framework": "OWASP NHI Top 10",
-      "control_id": "Single credential with access to multiple services — one exhaustion affects all",
-      "control_name": "NHI-5 Over-Privileged NHI",
+      "control_id": "Credentials appearing in model outputs passed to executors",
+      "control_name": "NHI-2 Secret Leakage",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Separate credentials per service with independent quotas"
+      "notes": "Credential detection in output pipeline before execution"
     },
     {
       "framework": "OWASP NHI Top 10",
-      "control_id": "Shared credential used across services — quota exhaustion in one affects all",
-      "control_name": "NHI-9 NHI Reuse",
+      "control_id": "Downstream service credentials with excessive scope",
+      "control_name": "NHI-5 Over-Privileged NHI",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Separate credentials per integration"
+      "notes": "Apply least-privilege to all credentials used in downstream processing"
     },
     {
       "framework": "NIST SP 800-218A",
-      "control_id": "PW.2.1-PS",
-      "control_name": "Design software — resource and throttling requirements",
+      "control_id": "PW.5.1-PS",
+      "control_name": "Secure coding — ML pipeline output handling",
       "tier": "Foundational",
-      "scope": "Both",
-      "notes": "Define token limits, rate limits, and cost budgets as explicit security design requirements for all AI inference services; document in design specifications"
+      "scope": "Build",
+      "notes": "Implement secure coding practices for all code paths that consume LLM output; treat model responses as untrusted input to downstream systems"
     },
     {
       "framework": "NIST SP 800-218A",
-      "control_id": "PW.8.2-PS",
-      "control_name": "Test for security vulnerabilities — load and adversarial consumption testing",
+      "control_id": "PW.7.2-PS",
+      "control_name": "Review for security vulnerabilities — output validation",
       "tier": "Foundational",
-      "scope": "Both",
-      "notes": "Conduct adversarial resource consumption testing (sponge examples, token amplification, recursive context injection) before each production release"
-    },
-    {
-      "framework": "NIST SP 800-218A",
-      "control_id": "RV.2.1-PS",
-      "control_name": "Assess, prioritise, and remediate — availability remediation",
-      "tier": "Foundational",
-      "scope": "Both",
-      "notes": "Define and test remediation procedures for availability incidents — rate limit tightening, model rollback, cost circuit breaker activation"
+      "scope": "Build",
+      "notes": "Include output injection and unsafe rendering scenarios in pre-release security reviews; verify that output sanitisation controls are present and effective"
     },
     {
       "framework": "NIST SP 800-218A",
       "control_id": "PS.2.1-PS",
-      "control_name": "Verify software integrity — throttle and limit configuration integrity",
+      "control_name": "Verify software integrity — model artifact integrity",
       "tier": "Foundational",
-      "scope": "Both",
-      "notes": "Verify that rate limit and resource constraint configurations have not been altered before deployment; treat throttle configuration as a security artefact"
+      "scope": "Build",
+      "notes": "Verify that the model artifact serving output has not been tampered with; maintain signed model checksums and verify before deployment"
+    },
+    {
+      "framework": "NIST SP 800-218A",
+      "control_id": "PW.8.2-PS",
+      "control_name": "Test for security vulnerabilities — output security",
+      "tier": "Foundational",
+      "scope": "Build",
+      "notes": "Include output-based injection testing (XSS, SQLi, CMDi via LLM output) in adversarial test suites"
     },
     {
       "framework": "FedRAMP",
-      "control_id": "SC-7",
-      "control_name": "Boundary Protection — rate limiting and cost controls",
+      "control_id": "SI-10",
+      "control_name": "Information Input Validation — output as downstream input",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Enforce rate limiting, token quotas, and cost circuit breakers at the AI service boundary; define per-user and per-session consumption limits"
+      "notes": "Validate model output at every consuming boundary; the consumer treats generated content as untrusted input and applies syntactic and schema validation before acting on it"
     },
     {
       "framework": "FedRAMP",
-      "control_id": "SI-4",
-      "control_name": "System Monitoring — consumption anomaly detection",
+      "control_id": "SI-15",
+      "control_name": "Information Output Filtering — model response filtering",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Monitor AI service consumption metrics — tokens, latency, cost — in real time; alert and auto-mitigate on consumption anomalies"
+      "notes": "Filter and encode model responses before release to a renderer, interpreter, or downstream service; reject content that fails the boundary content-type policy"
     },
     {
       "framework": "FedRAMP",
       "control_id": "CM-7",
-      "control_name": "Least Functionality — resource budget enforcement",
+      "control_name": "Least Functionality — output consumer hardening",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Restrict AI services to defined resource budgets; disable unnecessary model capabilities; enforce compute and cost limits in configuration"
+      "notes": "Remove interpreter, shell, and dynamic-evaluation paths from components that consume model output; disable any capability the consumer does not require"
     },
     {
       "framework": "FedRAMP",
-      "control_id": "IR-4",
-      "control_name": "Incident Handling — consumption incident response",
+      "control_id": "AU-2",
+      "control_name": "Audit Events — output boundary logging",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Define incident handling procedures for AI consumption anomalies including automatic throttling, service suspension, and cost cap enforcement"
+      "notes": "Log model output crossing into privileged systems, including the payload, the consuming component, and the validation verdict, for incident reconstruction"
+    },
+    {
+      "framework": "FedRAMP",
+      "control_id": "AC-3",
+      "control_name": "Access Enforcement — downstream privilege limits",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "Enforce least-privilege service accounts on every consumer of model output so unvalidated content cannot reach a high-privilege operation"
     },
     {
       "framework": "DORA",
       "control_id": "Art. 9",
-      "control_name": "Protection and Prevention — consumption controls",
+      "control_name": "Protection and Prevention — output validation",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Implement rate limiting, token quotas, and cost circuit breakers on financial AI inference services; define per-user and per-service consumption limits"
+      "notes": "Validate, encode, and escape all model output before it reaches a browser, shell, database, or downstream financial system; treat model output as untrusted input to the consuming component"
+    },
+    {
+      "framework": "DORA",
+      "control_id": "Art. 8",
+      "control_name": "Identification — output consumer inventory",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "Record every downstream consumer of model output in the ICT asset inventory, with its execution privileges and the validation applied at the boundary"
     },
     {
       "framework": "DORA",
       "control_id": "Art. 10",
-      "control_name": "Detection — consumption anomaly detection",
+      "control_name": "Detection — anomalous output monitoring",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Monitor AI service consumption metrics in real time; alert on token spikes, latency degradation, and cost overruns affecting financial service availability"
+      "notes": "Monitor model output reaching privileged sinks; alert on generated code, markup, or query syntax that fails the boundary validation policy"
     },
     {
       "framework": "DORA",
-      "control_id": "Art. 12",
-      "control_name": "Backup Policies — AI service continuity",
+      "control_id": "Art. 24–27",
+      "control_name": "Digital Operational Resilience Testing — output-handling scenarios",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Maintain backup model deployments and fallback inference paths for AI services supporting critical financial functions; test restoration procedures"
-    },
-    {
-      "framework": "DORA",
-      "control_id": "Art. 11",
-      "control_name": "Response and Recovery — consumption incident response",
-      "tier": "Foundational",
-      "scope": "Both",
-      "notes": "Define response and recovery procedures for AI consumption incidents; include automatic throttling, failover activation, and service restoration"
+      "notes": "Include output-handling exploitation in threat-led penetration testing; cover XSS, SQL injection, command injection, and insecure generated code paths"
     }
   ],
   "tools": [
     {
-      "name": "Kong Gateway",
+      "name": "OWASP ZAP",
       "type": "open-source",
-      "url": "https://github.com/Kong/kong"
+      "url": "https://www.zaproxy.org"
     },
     {
-      "name": "Nginx (rate limiting)",
+      "name": "DOMPurify",
       "type": "open-source",
-      "url": "https://nginx.org"
+      "url": "https://github.com/cure53/DOMPurify"
     },
     {
-      "name": "LiteLLM",
+      "name": "Semgrep",
       "type": "open-source",
-      "url": "https://github.com/BerriAI/litellm"
+      "url": "https://semgrep.dev"
     },
     {
-      "name": "OpenTelemetry",
+      "name": "Guardrails AI",
       "type": "open-source",
-      "url": "https://opentelemetry.io"
+      "url": "https://github.com/guardrails-ai/guardrails"
     },
     {
-      "name": "Claroty",
-      "type": "commercial",
-      "url": "https://claroty.com"
-    },
-    {
-      "name": "Nozomi Networks",
-      "type": "commercial",
-      "url": "https://www.nozominetworks.com"
-    },
-    {
-      "name": "LiteLLM (rate limiting)",
+      "name": "LLM Guard",
       "type": "open-source",
-      "url": "https://github.com/BerriAI/litellm"
+      "url": "https://github.com/protectai/llm-guard"
     },
     {
-      "name": "AWS Budgets / Azure Cost Management",
-      "type": "commercial",
-      "url": "https://aws.amazon.com/aws-cost-management/aws-budgets/"
+      "name": "FedRAMP",
+      "type": "open-source",
+      "url": "https://www.fedramp.gov"
     },
     {
-      "name": "Inspect AI",
-      "url": "https://github.com/UKGovernmentBEIS/inspect_ai",
+      "name": "DORA RTS/ITS",
+      "type": "open-source",
+      "url": "https://www.eba.europa.eu/regulation-and-policy/digital-operational-resilience-act-dora"
+    },
+    {
+      "name": "Vigil",
+      "url": "https://github.com/deadbits/vigil-llm",
       "type": "open-source"
     }
   ],
   "incidents": [
     {
-      "name": "Clarkesworld magazine overwhelmed by AI-generated fiction submissions",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
-      "year": 2023,
-      "incident_id": "INC-014"
-    },
-    {
-      "name": "AutoGPT and BabyAGI — uncontrolled web browsing and file system access",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
-      "year": 2023,
-      "incident_id": "INC-017"
-    },
-    {
-      "name": "AI voice deepfake CEO fraud — Hong Kong $25M loss",
+      "name": "GitHub Copilot Workspace prompt injection via repository content",
       "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
       "year": 2024,
-      "incident_id": "INC-026"
+      "incident_id": "INC-025"
     },
     {
-      "name": "Anthropic Claude context flooding — resource exhaustion via adversarial long-context prompts",
+      "name": "Azure OpenAI content filter bypass via structured output mode",
+      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "year": 2025,
+      "incident_id": "INC-037"
+    },
+    {
+      "name": "Hugging Face model card supply chain manipulation",
+      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "year": 2025,
+      "incident_id": "INC-038"
+    },
+    {
+      "name": "Apple Intelligence notification hallucinations — fabricated BBC news headlines",
       "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
       "year": 2024,
-      "incident_id": "INC-045"
+      "incident_id": "INC-060"
+    },
+    {
+      "name": "LLM-generated malware evades endpoint detection — AI-assisted polymorphic code",
+      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "year": 2024,
+      "incident_id": "INC-075"
     }
   ],
   "crossrefs": {
     "llm_top10": [
       "LLM01",
-      "LLM06",
-      "LLM07",
-      "LLM02",
-      "LLM05",
       "LLM03",
-      "LLM04",
       "LLM08",
-      "LLM09"
+      "LLM02",
+      "LLM04",
+      "LLM05",
+      "LLM09",
+      "LLM07",
+      "LLM06"
     ],
     "agentic_top10": [
-      "ASI08",
-      "ASI10"
+      "ASI02",
+      "ASI05"
     ],
     "dsgai_2026": [
-      "DSGAI17"
+      "DSGAI05",
+      "DSGAI12",
+      "DSGAI06"
     ]
   },
   "changelog": [
@@ -758,6 +784,12 @@
       "version": "1.0.0",
       "change": "Initial entry — generated from OWASP GenAI Crosswalk v1.5.1 mapping files",
       "author": "emmanuelgjr"
+    },
+    {
+      "date": "2026-08-28",
+      "version": "2.0.0",
+      "change": "Migrated to the OWASP Top 10 for LLM Applications 2026 — see MIGRATION.md for the 2025 → 2026 entry map",
+      "author": "OWASP GenAI Data Security Initiative"
     }
   ]
 }

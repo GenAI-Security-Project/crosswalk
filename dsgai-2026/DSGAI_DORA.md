@@ -223,7 +223,7 @@ demonstrate regulatory compliance.
 | Alation | Commercial | https://www.alation.com |
 
 #### Cross-references
-- LLM Top 10: LLM09 Misinformation
+- LLM Top 10: LLM07 Misinformation
 - Agentic Top 10: ASI09 Emerging Agentic Patterns
 - Other frameworks: FedRAMP PM-9 – SP 800-218A PW.1.1-PS – ISO 42001 A.7.2
 
@@ -288,7 +288,7 @@ both DORA and GDPR oversight.
 | Open Policy Agent | Open-source | https://www.openpolicyagent.org |
 
 #### Cross-references
-- LLM Top 10: LLM05 Supply Chain Vulnerabilities
+- LLM Top 10: LLM04 Supply Chain
 - Agentic Top 10: ASI04 Supply Chain Compromise
 - Other frameworks: FedRAMP CM-7 – SP 800-218A PW.4.1-PS – EBA Outsourcing Guidelines
 
@@ -360,7 +360,7 @@ or biased credit decisions.
 | Sigstore | Open-source | https://www.sigstore.dev |
 
 #### Cross-references
-- LLM Top 10: LLM03 Training Data Poisoning
+- LLM Top 10: LLM05 Data and Model Poisoning
 - Agentic Top 10: ASI06 Memory Poisoning & Context Confusion
 - Other frameworks: MITRE ATLAS AML.T0032 – FedRAMP SR-2 – SP 800-218A PS.1.1-PS
 
@@ -428,7 +428,7 @@ or legally restricted data.
 | Collibra | Commercial | https://www.collibra.com |
 
 #### Cross-references
-- LLM Top 10: LLM03 Training Data Poisoning
+- LLM Top 10: LLM05 Data and Model Poisoning
 - Agentic Top 10: ASI06 Memory Poisoning & Context Confusion
 - Other frameworks: FedRAMP SR-3 – SP 800-218A PS.3.1-PS – ISO 42001 A.7.4
 
@@ -485,7 +485,7 @@ impact analysis when data quality issues or poisoning events are detected.
 | Collibra | Commercial | https://www.collibra.com |
 
 #### Cross-references
-- LLM Top 10: LLM03 Training Data Poisoning
+- LLM Top 10: LLM05 Data and Model Poisoning
 - Agentic Top 10: ASI07 Lateral Tool Chaining
 - Other frameworks: FedRAMP CM-3 – SP 800-218A PS.3.1-PS – ISO 42001 A.7.4
 
@@ -613,7 +613,7 @@ PII, credit data, trading strategies, or regulatory-protected information.
 | AWS Macie / Azure Purview | Commercial | https://aws.amazon.com/macie/ |
 
 #### Cross-references
-- LLM Top 10: LLM02 Sensitive Information Disclosure, LLM07 System Prompt Leakage
+- LLM Top 10: LLM02 Sensitive Information Disclosure, LLM08 Hidden Context Exposure
 - Agentic Top 10: ASI03 Privilege Escalation
 - Other frameworks: FedRAMP SC-28 – GDPR Art. 33–34 – SP 800-218A PS.1.1-PS
 
@@ -734,7 +734,7 @@ data for model training and testing, making privacy validation critical.
 | Microsoft Presidio | Open-source | https://github.com/microsoft/presidio |
 
 #### Cross-references
-- LLM Top 10: LLM09 Misinformation
+- LLM Top 10: LLM07 Misinformation
 - Agentic Top 10: ASI09 Emerging Agentic Patterns
 - Other frameworks: FedRAMP SI-4 – SP 800-218A PW.7.2-PS – NIST Privacy Framework
 
@@ -855,7 +855,7 @@ derived data to avoid disputes and ensure regulatory compliance.
 | Alation | Commercial | https://www.alation.com |
 
 #### Cross-references
-- LLM Top 10: LLM09 Misinformation
+- LLM Top 10: LLM07 Misinformation
 - Agentic Top 10: ASI09 Emerging Agentic Patterns
 - Other frameworks: FedRAMP PM-9 – SP 800-218A PW.1.1-PS – ISO 42001 A.7.2
 
@@ -914,7 +914,7 @@ respects both DORA requirements and data subject rights.
 | Splunk | Commercial | https://www.splunk.com |
 
 #### Cross-references
-- LLM Top 10: LLM06 Excessive Agency
+- LLM Top 10: LLM03 Excessive Agency
 - Agentic Top 10: ASI02 Misconfigured Access Controls
 - Other frameworks: FedRAMP AC-3 – GDPR Art. 5 – SP 800-218A PW.1.1-PS
 
@@ -1164,7 +1164,7 @@ making bias detection a regulatory compliance requirement.
 | Fiddler AI | Commercial | https://www.fiddler.ai |
 
 #### Cross-references
-- LLM Top 10: LLM09 Misinformation
+- LLM Top 10: LLM07 Misinformation
 - Agentic Top 10: ASI09 Emerging Agentic Patterns
 - Other frameworks: FedRAMP SI-4 – NIST AI RMF MAP 2.3 – ISO 42001 A.6.2.6
 
@@ -1225,7 +1225,7 @@ across AI deployments.
 | Alation | Commercial | https://www.alation.com |
 
 #### Cross-references
-- LLM Top 10: LLM09 Misinformation
+- LLM Top 10: LLM07 Misinformation
 - Agentic Top 10: ASI09 Emerging Agentic Patterns
 - Other frameworks: FedRAMP PM-9 – NIST AI RMF GOV – ISO 42001 5.1
 
@@ -1297,7 +1297,7 @@ of critical third-party providers by European Supervisory Authorities.
 | Great Expectations | Open-source | https://greatexpectations.io |
 
 #### Cross-references
-- LLM Top 10: LLM05 Supply Chain Vulnerabilities
+- LLM Top 10: LLM04 Supply Chain
 - Agentic Top 10: ASI04 Supply Chain Compromise
 - Other frameworks: FedRAMP SA-9 – EBA Outsourcing Guidelines – SP 800-218A PW.4.1-PS
 

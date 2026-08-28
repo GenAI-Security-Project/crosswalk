@@ -2,7 +2,7 @@
   "id": "ASI08",
   "name": "Cascading Agent Failures",
   "source_list": "Agentic-Top10-2026",
-  "version": "2026-Q1",
+  "version": "2026-Q3",
   "severity": "Critical",
   "aivss_score": 9.1,
   "audience": [
@@ -786,9 +786,8 @@
   ],
   "crossrefs": {
     "llm_top10": [
-      "LLM10",
-      "LLM01",
-      "LLM04"
+      "LLM06",
+      "LLM01"
     ],
     "dsgai_2026": [
       "DSGAI17",

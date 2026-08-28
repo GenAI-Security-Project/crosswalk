@@ -2,7 +2,7 @@
   "id": "ASI05",
   "name": "Unexpected Code Execution",
   "source_list": "Agentic-Top10-2026",
-  "version": "2026-Q1",
+  "version": "2026-Q3",
   "severity": "Critical",
   "aivss_score": 9.9,
   "audience": [
@@ -840,12 +840,11 @@
   ],
   "crossrefs": {
     "llm_top10": [
-      "LLM05",
-      "LLM07",
-      "LLM03",
-      "LLM02",
+      "LLM10",
+      "LLM08",
+      "LLM04",
       "LLM01",
-      "LLM06"
+      "LLM03"
     ],
     "dsgai_2026": [
       "DSGAI12",

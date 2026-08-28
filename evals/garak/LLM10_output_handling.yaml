@@ -1,7 +1,7 @@
 # OWASP GenAI Crosswalk — Garak Evaluation Profile
 # ─────────────────────────────────────────────────────────────────────────────
-# OWASP Entry  : LLM05 — Insecure Output Handling (High)
-# Source list  : OWASP LLM Top 10 2025
+# OWASP Entry  : LLM10 — Improper Output Handling (High)
+# Source list  : OWASP LLM Top 10 2026
 # Crosswalk ref: llm-top10/LLM_MITREATLAS.md
 #
 # MITRE ATLAS techniques tested:
@@ -30,8 +30,8 @@
 #                policy, review downstream consumers of model output
 #
 # Usage:
-#   garak --config evals/garak/LLM05_output_handling.yaml
-#   garak --config evals/garak/LLM05_output_handling.yaml \
+#   garak --config evals/garak/LLM10_output_handling.yaml
+#   garak --config evals/garak/LLM10_output_handling.yaml \
 #         --model_type openai --model_name gpt-4o
 # ─────────────────────────────────────────────────────────────────────────────
 

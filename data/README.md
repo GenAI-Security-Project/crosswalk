@@ -26,7 +26,7 @@ Every mapping entry conforms to `schema.json`. Key fields:
 {
   "id": "LLM01",
   "name": "Prompt Injection",
-  "source_list": "LLM-Top10-2025",
+  "source_list": "LLM-Top10-2026",
   "severity": "Critical",
   "aivss_score": 9.1,
   "mappings": [

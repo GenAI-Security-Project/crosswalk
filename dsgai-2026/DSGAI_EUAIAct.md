@@ -357,7 +357,7 @@ Art. 55 systemic risk violations: up to **€35M or 7% global turnover**.
 | ModelScan | Open-source | https://github.com/protectai/modelscan |
 
 #### Cross-references
-- LLM Top 10: LLM03 Supply Chain, LLM04 Data & Model Poisoning
+- LLM Top 10: LLM04 Supply Chain, LLM05 Data and Model Poisoning
 - Agentic Top 10: ASI04 Supply Chain, ASI06 Memory & Context Poisoning
 - Other frameworks: ISO 27001 A.8.27/A.8.29 · NIST AI RMF MS-3.3 · MITRE ATLAS AML.T0032
 
@@ -420,7 +420,7 @@ Art. 15 violations: up to **€15M or 3% global turnover**.
 | OWASP ZAP | Open-source | https://www.zaproxy.org |
 
 #### Cross-references
-- LLM Top 10: LLM05 Insecure Output Handling
+- LLM Top 10: LLM10 Improper Output Handling
 - DSGAI 2026: DSGAI13 Vector Store Platform Security
 - Other frameworks: ISO 27001 A.8.26/A.8.28 · NIST AI RMF MS-3.3 · CWE-20
 
@@ -853,7 +853,7 @@ Art. 15 cybersecurity violations: up to **€15M or 3% global turnover**.
 | Immuta | Commercial | https://www.immuta.com |
 
 #### Cross-references
-- LLM Top 10: LLM05 Insecure Output Handling
+- LLM Top 10: LLM10 Improper Output Handling
 - Agentic Top 10: ASI02 Tool Misuse, ASI05 Unexpected Code Execution
 - Other frameworks: ISO 27001 A.8.26/A.8.28 · NIST AI RMF MS-2.5 · CWE-89
 
@@ -910,7 +910,7 @@ Art. 15 violations: up to **€15M or 3% global turnover**.
 | Qdrant (with API key auth) | Open-source | https://qdrant.tech |
 
 #### Cross-references
-- LLM Top 10: LLM08 Vector & Embedding Weaknesses
+- LLM Top 10: LLM09 Vector and Embedding Weaknesses
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - Other frameworks: ISO 27001 A.8.3/A.8.24 · NIST AI RMF MS-2.5 · CWE-284
 
@@ -1015,7 +1015,7 @@ for the data processed within AI system context windows.
 Art. 10/15 violations: up to **€15M or 3% global turnover**.
 
 #### Cross-references
-- LLM Top 10: LLM07 System Prompt Leakage
+- LLM Top 10: LLM08 Hidden Context Exposure
 - Agentic Top 10: ASI01 Agent Goal Hijack
 - Other frameworks: ISO 27001 A.8.3 · NIST AI RMF MS-2.5 · AIUC-1 A/B005
 
@@ -1130,7 +1130,7 @@ Annex III critical infrastructure failures: potential Art. 5
 review if safety systems affected.
 
 #### Cross-references
-- LLM Top 10: LLM10 Unbounded Consumption
+- LLM Top 10: LLM06 Unbounded Consumption
 - Agentic Top 10: ASI08 Cascading Agent Failures
 - Other frameworks: AIUC-1 D · ISA/IEC 62443 SR 7.6 (OT) · NIST SP 800-82 (OT)
 
@@ -1186,7 +1186,7 @@ Art. 10/15 violations: up to **€15M or 3% global turnover**.
 GDPR Art. 25 violations: up to **€20M or 4% global turnover**.
 
 #### Cross-references
-- LLM Top 10: LLM02 Sensitive Information Disclosure, LLM08 Vector & Embedding Weaknesses
+- LLM Top 10: LLM02 Sensitive Information Disclosure, LLM09 Vector and Embedding Weaknesses
 - DSGAI 2026: DSGAI10 Synthetic Data Pitfalls
 - Other frameworks: ISO 27001 A.8.11 · ISO 27701 · NIST AI RMF GV-1.6 · MITRE ATLAS AML.T0024
 
@@ -1350,7 +1350,7 @@ Art. 55 systemic risk violations: up to **€35M or 7% global turnover**.
 Art. 50 transparency violations: up to **€7.5M or 1.5% global turnover**.
 
 #### Cross-references
-- LLM Top 10: LLM04 Data & Model Poisoning, LLM09 Misinformation
+- LLM Top 10: LLM05 Data and Model Poisoning, LLM07 Misinformation
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - Other frameworks: ISO 27001 A.5.7/A.8.27 · NIST AI RMF MS-3.3 · MITRE ATLAS AML.T0045
 

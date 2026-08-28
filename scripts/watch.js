@@ -258,12 +258,12 @@ function mapArxivToOwasp(text) {
   const mappings = [];
 
   if (/prompt injection|jailbreak/.test(lower))            mappings.push('LLM01');
-  if (/data poisoning|rag/.test(lower))                    mappings.push('DSGAI04', 'LLM03');
+  if (/data poisoning|rag/.test(lower))                    mappings.push('DSGAI04', 'LLM04');
   if (/\bmemory\b|persistence/.test(lower))                mappings.push('ASI06');
   if (/\btool\b|\bagent\b|agentic/.test(lower))            mappings.push('ASI01', 'ASI02');
   if (/exfiltration|\bleak\b/.test(lower))                 mappings.push('LLM02', 'DSGAI01');
-  if (/hallucination|misinformation/.test(lower))          mappings.push('LLM09');
-  if (/supply chain/.test(lower))                          mappings.push('LLM05', 'ASI04');
+  if (/hallucination|misinformation/.test(lower))          mappings.push('LLM07');
+  if (/supply chain/.test(lower))                          mappings.push('LLM10', 'ASI04');
 
   return [...new Set(mappings)];
 }
@@ -380,11 +380,11 @@ async function watchArxiv(state) {
 function mapCveToOwasp(description) {
   const lower = description.toLowerCase();
   if (/prompt injection|jailbreak/.test(lower))   return 'LLM01';
-  if (/training data|poisoning/.test(lower))       return 'LLM03 / DSGAI04';
-  if (/supply chain/.test(lower))                  return 'LLM05 / ASI04';
-  if (/denial.of.service|availability/.test(lower)) return 'LLM04';
+  if (/training data|poisoning/.test(lower))       return 'LLM04 / DSGAI04';
+  if (/supply chain/.test(lower))                  return 'LLM10 / ASI04';
+  if (/denial.of.service|availability/.test(lower)) return 'LLM05';
   if (/exfiltrat|data leak/.test(lower))           return 'LLM02 / DSGAI01';
-  if (/plugin|tool|agent/.test(lower))             return 'LLM07 / ASI01';
+  if (/plugin|tool|agent/.test(lower))             return 'LLM08 / ASI01';
   return '_Manual mapping required_';
 }
 

@@ -109,7 +109,7 @@ An attacker redirects agent objectives through instruction injection.
   documents
 
 #### Cross-references
-- LLM Top 10: LLM01 Prompt Injection, LLM06 Excessive Agency
+- LLM Top 10: LLM01 Prompt Injection, LLM03 Excessive Agency
 - DSGAI 2026: DSGAI12 Unsafe NL Data Gateways
 - Other frameworks: ISO 27001 A.8.28 · NIST CSF 2.0 PR.PS-04 · AIUC-1 B001/B005
 
@@ -162,7 +162,7 @@ govern agent tool permissions as privileged access.
   legitimate tool invocations within defined scope
 
 #### Cross-references
-- LLM Top 10: LLM05 Insecure Output Handling, LLM06 Excessive Agency
+- LLM Top 10: LLM10 Improper Output Handling, LLM03 Excessive Agency
 - DSGAI 2026: DSGAI06 Tool Plugin & Agent Data Exchange
 - Other frameworks: ISO 27001 A.8.2 · OWASP NHI Top 10 NHI-5 · AIUC-1 B006/B007
 
@@ -267,7 +267,7 @@ management) govern agent components as software assets.
   behavioural testing before each production promotion
 
 #### Cross-references
-- LLM Top 10: LLM03 Supply Chain Vulnerabilities
+- LLM Top 10: LLM04 Supply Chain
 - DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning
 - Other frameworks: ISO 27001 A.5.19/A.5.21 · NIST CSF 2.0 GV.SC-01 · ISA/IEC 62443 62443-2-4 (OT)
 
@@ -316,7 +316,7 @@ execution security as application and configuration controls.
   gVisor or Firecracker as advanced configuration control
 
 #### Cross-references
-- LLM Top 10: LLM05 Insecure Output Handling
+- LLM Top 10: LLM10 Improper Output Handling
 - DSGAI 2026: DSGAI12 Unsafe NL Data Gateways
 - Other frameworks: AIUC-1 B005/B006 · CWE-94 · ISO 27001 A.8.28
 
@@ -367,7 +367,7 @@ stores as data assets with access control and logging requirements.
   tamper detection between write and read
 
 #### Cross-references
-- LLM Top 10: LLM04 Data & Model Poisoning, LLM08 Vector & Embedding Weaknesses
+- LLM Top 10: LLM05 Data and Model Poisoning, LLM09 Vector and Embedding Weaknesses
 - DSGAI 2026: DSGAI13 Vector Store Platform Security
 - Other frameworks: ISO 27001 A.8.3/A.8.24 · NIST AI RMF MS-2.5 · AIUC-1 A/B002
 
@@ -467,7 +467,7 @@ and network controls. In OT environments this is Critical severity.
   path validated
 
 #### Cross-references
-- LLM Top 10: LLM10 Unbounded Consumption
+- LLM Top 10: LLM06 Unbounded Consumption
 - DSGAI 2026: DSGAI17 Data Availability & Resilience Failures
 - Other frameworks: ISO 27001 A.5.30 · ISA/IEC 62443 SR 7.6/7.7 (OT) · AIUC-1 D
 
@@ -521,7 +521,7 @@ exploitation is fundamentally a people risk addressed by training.
   verify operators can identify manipulated recommendations
 
 #### Cross-references
-- LLM Top 10: LLM09 Misinformation
+- LLM Top 10: LLM07 Misinformation
 - DSGAI 2026: DSGAI21 Disinformation & Integrity Attacks
 - Other frameworks: EU AI Act Art. 13/50 · ISO 27001 A.6.3 · AIUC-1 C/F
 
@@ -578,7 +578,7 @@ behavioural monitoring are the foundational rogue agent defences.
   next deployment
 
 #### Cross-references
-- LLM Top 10: LLM06 Excessive Agency
+- LLM Top 10: LLM03 Excessive Agency
 - DSGAI 2026: DSGAI16 Endpoint & Browser Overreach
 - Other frameworks: ISO 27001 A.8.16/A.8.15 · AIUC-1 B001/B002/C/E · EU AI Act Art. 14/15
 

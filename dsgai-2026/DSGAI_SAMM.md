@@ -186,7 +186,7 @@ causing models to learn biased, backdoored, or degraded behaviours.
 
 #### Cross-references
 
-- LLM Top 10: LLM04 (Data and Model Poisoning)
+- LLM Top 10: LLM05 (Data and Model Poisoning)
 - See also: [DSGAI_MITREATLAS.md](DSGAI_MITREATLAS.md), [DSGAI_ISO27001.md](DSGAI_ISO27001.md)
 
 ---
@@ -270,7 +270,7 @@ enabling injection, tampering, or exfiltration of data in transit.
 
 #### Cross-references
 
-- LLM Top 10: LLM03 (Supply Chain), LLM08 (Vector and Embedding Weaknesses)
+- LLM Top 10: LLM04 (Supply Chain), LLM09 (Vector and Embedding Weaknesses)
 - See also: [DSGAI_ISO27001.md](DSGAI_ISO27001.md), [DSGAI_NISTCSF2.md](DSGAI_NISTCSF2.md)
 
 ---
@@ -399,7 +399,7 @@ creating unnecessary exposure and blast radius on compromise.
 
 #### Cross-references
 
-- LLM Top 10: LLM06 (Excessive Agency)
+- LLM Top 10: LLM03 (Excessive Agency)
 - Agentic: ASI02 (Excessive Permissions and Scope)
 - See also: [DSGAI_ISO27001.md](DSGAI_ISO27001.md), [DSGAI_CISControls.md](DSGAI_CISControls.md)
 
@@ -442,7 +442,7 @@ tenants, higher-sensitivity tiers, or access-controlled corpora.
 
 #### Cross-references
 
-- LLM Top 10: LLM08 (Vector and Embedding Weaknesses)
+- LLM Top 10: LLM09 (Vector and Embedding Weaknesses)
 - Agentic: ASI06 (Data Exfiltration via Agentic Channels)
 - See also: [DSGAI_ASVS.md](DSGAI_ASVS.md), [DSGAI_ISO27001.md](DSGAI_ISO27001.md)
 
@@ -486,7 +486,7 @@ steers model outputs.
 
 #### Cross-references
 
-- LLM Top 10: LLM04 (Data and Model Poisoning), LLM08 (Vector and Embedding Weaknesses)
+- LLM Top 10: LLM05 (Data and Model Poisoning), LLM09 (Vector and Embedding Weaknesses)
 - See also: [DSGAI_MITREATLAS.md](DSGAI_MITREATLAS.md), [DSGAI_NISTCSF2.md](DSGAI_NISTCSF2.md)
 
 ---
@@ -526,7 +526,7 @@ in-context reasoning without persisting to long-term memory.
 
 #### Cross-references
 
-- LLM Top 10: LLM01 (Prompt Injection), LLM08 (Vector and Embedding Weaknesses)
+- LLM Top 10: LLM01 (Prompt Injection), LLM09 (Vector and Embedding Weaknesses)
 - Agentic: ASI03 (Memory Manipulation and Persistence)
 - See also: [DSGAI_ENISA.md](DSGAI_ENISA.md), [DSGAI_CWE_CVE.md](DSGAI_CWE_CVE.md)
 
@@ -653,7 +653,7 @@ implementations.
 #### Cross-references
 
 - Agentic: ASI05 (Tool and Plugin Abuse)
-- LLM Top 10: LLM07 (System Prompt Leakage via Tools)
+- LLM Top 10: LLM08 (Hidden Context Exposure via Tools)
 - See also: [DSGAI_ASVS.md](DSGAI_ASVS.md), [DSGAI_CWE_CVE.md](DSGAI_CWE_CVE.md)
 
 ---
@@ -697,7 +697,7 @@ that bypass original safety controls.
 #### Cross-references
 
 - DSGAI12 (Model Inversion and Extraction)
-- LLM Top 10: LLM03 (Supply Chain)
+- LLM Top 10: LLM04 (Supply Chain)
 - See also: [DSGAI_ISO27001.md](DSGAI_ISO27001.md), [DSGAI_MITREATLAS.md](DSGAI_MITREATLAS.md) AML.T0044
 
 ---
@@ -782,7 +782,7 @@ supply chain risks.
 
 #### Cross-references
 
-- LLM Top 10: LLM03 (Supply Chain Vulnerabilities)
+- LLM Top 10: LLM04 (Supply Chain Vulnerabilities)
 - Agentic: ASI07 (Supply Chain Compromise in Agent Ecosystems)
 - DSGAI17 (Model Supply Chain Risks)
 - See also: [DSGAI_CWE_CVE.md](DSGAI_CWE_CVE.md), [DSGAI_ISO27001.md](DSGAI_ISO27001.md)
@@ -826,7 +826,7 @@ adapters, or vulnerable ML library code into production GenAI systems.
 
 #### Cross-references
 
-- LLM Top 10: LLM03 (Supply Chain Vulnerabilities), LLM04 (Data and Model Poisoning)
+- LLM Top 10: LLM04 (Supply Chain Vulnerabilities), LLM05 (Data and Model Poisoning)
 - Agentic: ASI07 (Supply Chain Compromise)
 - See also: [DSGAI_MITREATLAS.md](DSGAI_MITREATLAS.md) AML.T0010
 
@@ -998,7 +998,7 @@ traceability requirements in regulated sectors.
 
 #### Cross-references
 
-- LLM Top 10: LLM04 (Data and Model Poisoning)
+- LLM Top 10: LLM05 (Data and Model Poisoning)
 - DSGAI02 (Training Data Poisoning), DSGAI09 (RAG Corpus Manipulation)
 - See also: [DSGAI_ISO42001.md](DSGAI_ISO42001.md), [DSGAI_NISTAIRMF.md](DSGAI_NISTAIRMF.md)
 
@@ -1047,7 +1047,7 @@ personal data in GenAI systems operating in jurisdictions covered by GDPR or CCP
 
 - [OWASP SAMM v2.0](https://owaspsamm.org/)
 - [OWASP GenAI Data Security Risks 2026](https://genai.owasp.org/resource/owasp-genai-data-security-risks-mitigations-2026/)
-- [OWASP LLM Top 10 2025 × SAMM](../llm-top10/LLM_SAMM.md)
+- [OWASP LLM Top 10 2026 × SAMM](../llm-top10/LLM_SAMM.md)
 - [Agentic Top 10 2026 × SAMM](../agentic-top10/Agentic_SAMM.md)
 - [shared/RECIPES.md](../shared/RECIPES.md) — Pattern 1: Access-Controlled RAG Retrieval
 - [DSGAI_ISO42001.md](DSGAI_ISO42001.md) — AIMS controls complement SAMM data governance practices

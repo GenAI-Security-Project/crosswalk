@@ -1,7 +1,7 @@
 # OWASP GenAI Crosswalk — Garak Evaluation Profile
 # ─────────────────────────────────────────────────────────────────────────────
-# OWASP Entry  : LLM03 — Supply Chain Vulnerabilities (Critical)
-# Source list  : OWASP LLM Top 10 2025
+# OWASP Entry  : LLM04 — Supply Chain (Critical)
+# Source list  : OWASP LLM Top 10 2026
 # Crosswalk ref: llm-top10/LLM_MITREATLAS.md
 #
 # MITRE ATLAS techniques tested:
@@ -27,8 +27,8 @@
 #                enforce signature verification on model loads
 #
 # Usage:
-#   garak --config evals/garak/LLM03_supply_chain.yaml
-#   garak --config evals/garak/LLM03_supply_chain.yaml \
+#   garak --config evals/garak/LLM04_supply_chain.yaml
+#   garak --config evals/garak/LLM04_supply_chain.yaml \
 #         --model_type openai --model_name gpt-4o
 # ─────────────────────────────────────────────────────────────────────────────
 

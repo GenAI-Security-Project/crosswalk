@@ -235,7 +235,7 @@ Article 15 for tool misuse scenarios.
 | Semgrep | Open-source | https://github.com/returntocorp/semgrep |
 
 #### Cross-references
-- LLM Top 10: LLM05 Insecure Output Handling, LLM06 Excessive Agency
+- LLM Top 10: LLM10 Improper Output Handling, LLM03 Excessive Agency
 - DSGAI 2026: DSGAI06 Tool, Plugin & Agent Data Exchange
 - Other frameworks: OWASP ASVS V11 — ISA/IEC 62443 SR 2.2 — EU AI Act Art. 15
 
@@ -301,7 +301,7 @@ provide the technical implementation framework.
 | AWS Secrets Manager | Commercial | https://aws.amazon.com/secrets-manager/ |
 
 #### Cross-references
-- LLM Top 10: LLM06 Excessive Agency
+- LLM Top 10: LLM03 Excessive Agency
 - DSGAI 2026: DSGAI02 Agent Identity & Credential Exposure
 - Other frameworks: OWASP NHI Top 10 — NIST AI RMF GV-1.6 — EU AI Act Art. 15
 
@@ -360,7 +360,7 @@ AI-specific requirements for model and plugin integrity.
 | Syft | Open-source | https://github.com/anchore/syft |
 
 #### Cross-references
-- LLM Top 10: LLM03 Supply Chain Vulnerabilities
+- LLM Top 10: LLM04 Supply Chain
 - DSGAI 2026: DSGAI06 Tool, Plugin & Agent Data Exchange
 - Other frameworks: ISO 27001 A.5.22 — NIST AI RMF MP-5.1 — EU AI Act Art. 9
 
@@ -421,7 +421,7 @@ for agentic systems capable of executing generated code.
 | Firecracker | Open-source | https://github.com/firecracker-microvm/firecracker |
 
 #### Cross-references
-- LLM Top 10: LLM05 Insecure Output Handling
+- LLM Top 10: LLM10 Improper Output Handling
 - DSGAI 2026: DSGAI12 Unsafe NL Data Gateways
 - Other frameworks: ISA/IEC 62443 SR 3.3 — CWE-78 — EU AI Act Art. 15
 
@@ -476,7 +476,7 @@ adversarial robustness testing of agent memory systems.
 | Azure AI Content Safety | Commercial | https://azure.microsoft.com/en-us/products/ai-services/ai-content-safety |
 
 #### Cross-references
-- LLM Top 10: LLM04 Data and Model Poisoning
+- LLM Top 10: LLM05 Data and Model Poisoning
 - DSGAI 2026: DSGAI04 Data, Model & Artifact Poisoning, DSGAI13 Vector Store Platform Security
 - Other frameworks: ENISA DMS L2 — NIST AI RMF MS-3.3 — EU AI Act Art. 10
 
@@ -604,7 +604,7 @@ compliance requirement for multi-agent deployments.
 | Netflix Hystrix | Open-source | https://github.com/Netflix/Hystrix |
 
 #### Cross-references
-- LLM Top 10: LLM10 Unbounded Consumption
+- LLM Top 10: LLM06 Unbounded Consumption
 - DSGAI 2026: DSGAI17 Data Availability & Resilience Failures
 - Other frameworks: ISO 27001 A.8.14 — ISA/IEC 62443 SR 7.1 — EU AI Act Art. 15
 
@@ -672,7 +672,7 @@ agentic interaction design.
 | Garak | Open-source | https://github.com/leondz/garak |
 
 #### Cross-references
-- LLM Top 10: LLM09 Misinformation
+- LLM Top 10: LLM07 Misinformation
 - DSGAI 2026: DSGAI21 Disinformation via Data Poisoning
 - Other frameworks: ISO 27001 A.5.31 — NIST AI RMF GV-1.6 — EU AI Act Art. 52
 
@@ -741,7 +741,7 @@ capability requirement.
 | Falco | Open-source | https://falco.org |
 
 #### Cross-references
-- LLM Top 10: LLM06 Excessive Agency
+- LLM Top 10: LLM03 Excessive Agency
 - DSGAI 2026: DSGAI03 Shadow AI & Unsanctioned Data Flows
 - Other frameworks: ISO 27001 A.8.16 — NIST AI RMF MG-2.2 — EU AI Act Art. 14
 

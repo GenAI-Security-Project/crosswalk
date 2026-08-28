@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>OWASP LLM Top 10 — Risks & Mitigations | GenAI Crosswalk</title>
-<meta name="description" content="The OWASP LLM Top 10: Prompt Injection, Sensitive Information Disclosure, Supply Chain Vulnerabilities, Data and Model Poisoning, and more — with severity ratings and tiered mitigations, mapped to 25 industry security frameworks by the OWASP GenAI Security Project.">
+<meta name="description" content="The OWASP LLM Top 10 for 2026: Prompt Injection, Sensitive Information Disclosure, Excessive Agency, Supply Chain, Data and Model Poisoning, and more — with severity ratings and tiered mitigations, mapped to 25 industry security frameworks by the OWASP GenAI Security Project.">
 <meta name="author" content="OWASP GenAI Security Project">
 <link rel="canonical" href="https://genai-security-project.github.io/crosswalk/llm-top10/">
 <meta property="og:type" content="article">
@@ -29,14 +29,14 @@
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "LLM01 Prompt Injection" },
     { "@type": "ListItem", "position": 2, "name": "LLM02 Sensitive Information Disclosure" },
-    { "@type": "ListItem", "position": 3, "name": "LLM03 Supply Chain Vulnerabilities" },
-    { "@type": "ListItem", "position": 4, "name": "LLM04 Data and Model Poisoning" },
-    { "@type": "ListItem", "position": 5, "name": "LLM05 Insecure Output Handling" },
-    { "@type": "ListItem", "position": 6, "name": "LLM06 Excessive Agency" },
-    { "@type": "ListItem", "position": 7, "name": "LLM07 System Prompt Leakage" },
-    { "@type": "ListItem", "position": 8, "name": "LLM08 Vector and Embedding Weaknesses" },
-    { "@type": "ListItem", "position": 9, "name": "LLM09 Misinformation" },
-    { "@type": "ListItem", "position": 10, "name": "LLM10 Unbounded Consumption" }
+    { "@type": "ListItem", "position": 3, "name": "LLM03 Excessive Agency" },
+    { "@type": "ListItem", "position": 4, "name": "LLM04 Supply Chain" },
+    { "@type": "ListItem", "position": 5, "name": "LLM05 Data and Model Poisoning" },
+    { "@type": "ListItem", "position": 6, "name": "LLM06 Unbounded Consumption" },
+    { "@type": "ListItem", "position": 7, "name": "LLM07 Misinformation" },
+    { "@type": "ListItem", "position": 8, "name": "LLM08 Hidden Context Exposure" },
+    { "@type": "ListItem", "position": 9, "name": "LLM09 Vector and Embedding Weaknesses" },
+    { "@type": "ListItem", "position": 10, "name": "LLM10 Improper Output Handling" }
   ]
 }
 </script>
@@ -58,49 +58,49 @@
 </div>
 
 <main>
-  <p class="intro">The OWASP LLM Top 10 (LLM-Top10-2025) is the foundational risk taxonomy for large language model applications — covering everything from prompt injection to unbounded resource consumption. Each category below is rated by severity and mapped to concrete mitigations across foundational, hardening, and advanced tiers.</p>
+  <p class="intro">The OWASP LLM Top 10 (LLM-Top10-2026) is the foundational risk taxonomy for large language model applications — covering everything from prompt injection to unbounded resource consumption. Each category below is rated by severity and mapped to concrete mitigations across foundational, hardening, and advanced tiers.</p>
 
   <h2>The 10 LLM risk categories</h2>
 
   <div class="entry-card">
     <h3><span class="id">LLM01</span> Prompt Injection <span class="badge critical">Critical</span></h3>
-    <p>Untrusted input overrides model instructions — via direct user manipulation or indirect injection through retrieved data, tool outputs, or multi-modal content.</p>
+    <p>Untrusted input overrides model instructions — via direct user manipulation, indirect injection through retrieved data and tool outputs, or cross-modal payloads hidden in image, audio, and video content.</p>
   </div>
   <div class="entry-card">
     <h3><span class="id">LLM02</span> Sensitive Information Disclosure <span class="badge high">High</span></h3>
     <p>Models surface confidential data — PII, credentials, trade secrets, private training data — in responses through memorisation, over-retrieval, or insufficient output filtering.</p>
   </div>
   <div class="entry-card">
-    <h3><span class="id">LLM03</span> Supply Chain Vulnerabilities <span class="badge high">High</span></h3>
-    <p>Third-party components — model providers, fine-tuning services, plugins, tool libraries, RAG frameworks — are compromised or malicious, introducing vulnerabilities into the LLM deployment.</p>
-  </div>
-  <div class="entry-card">
-    <h3><span class="id">LLM04</span> Data and Model Poisoning <span class="badge critical">Critical</span></h3>
-    <p>Training data, fine-tuning datasets, or model weights are corrupted — causing models to learn backdoored, biased, or degraded behaviours.</p>
-  </div>
-  <div class="entry-card">
-    <h3><span class="id">LLM05</span> Insecure Output Handling <span class="badge high">High</span></h3>
-    <p>LLM output is processed by downstream systems (code interpreters, browsers, SQL engines) without sanitisation — enabling XSS, code injection, SSRF, or privilege escalation via crafted model responses.</p>
-  </div>
-  <div class="entry-card">
-    <h3><span class="id">LLM06</span> Excessive Agency <span class="badge high">High</span></h3>
+    <h3><span class="id">LLM03</span> Excessive Agency <span class="badge critical">Critical</span></h3>
     <p>LLM-enabled features with access to tools, plugins, or APIs take autonomous actions with real-world consequences — without appropriate scope limitations, human oversight, or reversibility controls.</p>
   </div>
   <div class="entry-card">
-    <h3><span class="id">LLM07</span> System Prompt Leakage <span class="badge high">High</span></h3>
-    <p>Confidential system prompt contents — instructions, personas, access tokens, business logic — are extracted through adversarial prompting or model over-disclosure.</p>
+    <h3><span class="id">LLM04</span> Supply Chain <span class="badge high">High</span></h3>
+    <p>Third-party components — model providers, fine-tuning services, plugins, tool libraries, RAG frameworks — are compromised or malicious, and promoted model artifacts are not what they claim to be: unsigned weights, hijacked conversion services, or namespace reuse on a model hub.</p>
   </div>
   <div class="entry-card">
-    <h3><span class="id">LLM08</span> Vector and Embedding Weaknesses <span class="badge medium">Medium</span></h3>
-    <p>Embedding stores used in RAG systems are vulnerable to cross-tenant leakage, semantic injection, direct database access, and integrity attacks on stored vector representations.</p>
+    <h3><span class="id">LLM05</span> Data and Model Poisoning <span class="badge critical">Critical</span></h3>
+    <p>Training data, fine-tuning datasets, adapters, or model weights are corrupted — causing models to learn backdoored, biased, or degraded behaviours at any stage that writes weights, not just pre-training.</p>
   </div>
   <div class="entry-card">
-    <h3><span class="id">LLM09</span> Misinformation <span class="badge medium">Medium</span></h3>
+    <h3><span class="id">LLM06</span> Unbounded Consumption <span class="badge high">High</span></h3>
+    <p>LLM applications have no resource consumption limits — enabling denial of service and denial of wallet via excessive API calls, token flooding, context window exhaustion, reasoning loops, or disproportionate compute consumption.</p>
+  </div>
+  <div class="entry-card">
+    <h3><span class="id">LLM07</span> Misinformation <span class="badge high">High</span></h3>
     <p>LLMs generate confident, plausible, but factually incorrect information — hallucinations, fabricated citations, outdated facts — that users or downstream systems act upon as if true.</p>
   </div>
   <div class="entry-card">
-    <h3><span class="id">LLM10</span> Unbounded Consumption <span class="badge medium">Medium</span></h3>
-    <p>LLM applications have no resource consumption limits — enabling denial-of-service via excessive API calls, token flooding, context window exhaustion, or disproportionate compute consumption.</p>
+    <h3><span class="id">LLM08</span> Hidden Context Exposure <span class="badge high">High</span></h3>
+    <p>Non-user-facing context — the system prompt, developer instructions, retrieved policy text, and the tool and function schemas exposed to the model — is extracted, inferred, or reconstructed, handing attackers credentials, control logic, and concrete targets.</p>
+  </div>
+  <div class="entry-card">
+    <h3><span class="id">LLM09</span> Vector and Embedding Weaknesses <span class="badge medium">Medium</span></h3>
+    <p>Embedding stores used in RAG systems are vulnerable to cross-tenant leakage, semantic injection, direct database access, and integrity attacks on stored vector representations.</p>
+  </div>
+  <div class="entry-card">
+    <h3><span class="id">LLM10</span> Improper Output Handling <span class="badge high">High</span></h3>
+    <p>LLM output is processed by downstream systems (code interpreters, browsers, SQL engines, compilers, repositories) without sanitisation — enabling XSS, code injection, SSRF, or privilege escalation via crafted model responses and insecure generated code.</p>
   </div>
 
   <h2>Mapped to 25 industry frameworks</h2>

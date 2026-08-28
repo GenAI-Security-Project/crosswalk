@@ -16,7 +16,7 @@
     },
     "source_list": {
       "type": "string",
-      "enum": ["LLM-Top10-2025", "Agentic-Top10-2026", "DSGAI-2026"],
+      "enum": ["LLM-Top10-2026", "Agentic-Top10-2026", "DSGAI-2026"],
       "description": "Which OWASP list this entry belongs to"
     },
     "version": {

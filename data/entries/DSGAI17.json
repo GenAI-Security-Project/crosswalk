@@ -2,7 +2,7 @@
   "id": "DSGAI17",
   "name": "Data Availability and Resilience Failures",
   "source_list": "DSGAI-2026",
-  "version": "2026-Q1",
+  "version": "2026-Q3",
   "severity": "High",
   "aivss_score": null,
   "audience": [
@@ -722,10 +722,10 @@
   ],
   "crossrefs": {
     "llm_top10": [
-      "LLM10",
-      "LLM03",
+      "LLM06",
       "LLM04",
-      "LLM09"
+      "LLM05",
+      "LLM07"
     ],
     "agentic_top10": [
       "ASI08",

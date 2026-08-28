@@ -78,7 +78,7 @@
 
 ## 全マッピングファイル
 
-### LLM Top 10 2025 — 20フレームワークマッピング
+### LLM Top 10 2026 — 20フレームワークマッピング
 
 | ファイル | フレームワーク | 注目コンテンツ |
 |---|---|---|
@@ -303,12 +303,12 @@ laaf scan --target mock --dry-run     # APIキー不要
 
 | LAAFステージ | OWASP | しきい値 |
 |---|---|---|
-| S1 偵察 | LLM07, LLM01 | 0% |
+| S1 偵察 | LLM08, LLM01 | 0% |
 | S2 ロジックレイヤーインジェクション | LLM01, ASI01, DSGAI04 | 5% |
-| S3 トリガー実行 | ASI01, ASI06, LLM06 | 0% |
-| S4 永続化 | ASI06, LLM06, DSGAI04 | 0% |
+| S3 トリガー実行 | ASI01, ASI06, LLM03 | 0% |
+| S4 永続化 | ASI06, LLM03, DSGAI04 | 0% |
 | S5 回避 | LLM01, LLM02 | 10% |
-| S6 トレース改ざん | DSGAI01, LLM07 | 0% |
+| S6 トレース改ざん | DSGAI01, LLM08 | 0% |
 
 完全なLPCI攻撃ベクトル → OWASP → MAESTROクロスウォークについては`evals/laaf/README.md`をご覧ください。
 

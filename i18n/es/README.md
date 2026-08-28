@@ -78,7 +78,7 @@ Todo gratuito. Todo de código abierto. Construido para profesionales.
 
 ## Todos los archivos de mapeo
 
-### LLM Top 10 2025 — 20 mapeos de marcos de referencia
+### LLM Top 10 2026 — 20 mapeos de marcos de referencia
 
 | Archivo | Marco de referencia | Contenido destacado |
 |---|---|---|
@@ -303,12 +303,12 @@ laaf scan --target mock --dry-run     # No requiere clave API
 
 | Etapa LAAF | OWASP | Umbral |
 |---|---|---|
-| S1 Reconocimiento | LLM07, LLM01 | 0% |
+| S1 Reconocimiento | LLM08, LLM01 | 0% |
 | S2 Inyección de capa lógica | LLM01, ASI01, DSGAI04 | 5% |
-| S3 Ejecución de disparador | ASI01, ASI06, LLM06 | 0% |
-| S4 Persistencia | ASI06, LLM06, DSGAI04 | 0% |
+| S3 Ejecución de disparador | ASI01, ASI06, LLM03 | 0% |
+| S4 Persistencia | ASI06, LLM03, DSGAI04 | 0% |
 | S5 Evasión | LLM01, LLM02 | 10% |
-| S6 Manipulación de trazas | DSGAI01, LLM07 | 0% |
+| S6 Manipulación de trazas | DSGAI01, LLM08 | 0% |
 
 Consulte `evals/laaf/README.md` para el crosswalk completo de vector de ataque LPCI → OWASP → MAESTRO.
 

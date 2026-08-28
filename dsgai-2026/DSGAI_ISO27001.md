@@ -220,7 +220,7 @@ movement across all systems the agent has access to.
 | Entro Security | Commercial | https://entro.security |
 
 #### Cross-references
-- LLM Top 10: LLM06 Excessive Agency
+- LLM Top 10: LLM03 Excessive Agency
 - Agentic Top 10: ASI03 Identity & Privilege Abuse, ASI07 Insecure Inter-Agent Comms
 - Other frameworks: OWASP NHI Top 10 · AIUC-1 A/B007 · NIST AI RMF MS-2.5
 
@@ -357,7 +357,7 @@ downstream deployments until detected and remediated.
 | CleanLab | Open-source | https://github.com/cleanlab/cleanlab |
 
 #### Cross-references
-- LLM Top 10: LLM03 Supply Chain, LLM04 Data & Model Poisoning
+- LLM Top 10: LLM04 Supply Chain, LLM05 Data and Model Poisoning
 - Agentic Top 10: ASI04 Supply Chain, ASI06 Memory & Context Poisoning
 - Other frameworks: NIST AI RMF MS-3.3 · CycloneDX ML SBOM · MITRE ATLAS AML.T0032
 
@@ -427,7 +427,7 @@ to achieve arbitrary file write on the vector DB host.
 | OWASP ZAP (API fuzzing) | Open-source | https://www.zaproxy.org |
 
 #### Cross-references
-- LLM Top 10: LLM05 Insecure Output Handling
+- LLM Top 10: LLM10 Improper Output Handling
 - DSGAI 2026: DSGAI13 Vector Store Platform Security
 - Other frameworks: OWASP ASVS V5 · CWE-20 · NIST AI RMF MS-3.3
 
@@ -488,7 +488,7 @@ APIs receive full context payloads with no data minimisation.
 | Nightfall AI | Commercial | https://nightfall.ai |
 
 #### Cross-references
-- LLM Top 10: LLM06 Excessive Agency
+- LLM Top 10: LLM03 Excessive Agency
 - Agentic Top 10: ASI02 Tool Misuse, ASI04 Supply Chain
 - Other frameworks: AIUC-1 A/B006 · EU AI Act Art. 25
 
@@ -882,7 +882,7 @@ a high-privilege service account with no row-level enforcement.
 | Immuta | Commercial | https://www.immuta.com |
 
 #### Cross-references
-- LLM Top 10: LLM05 Insecure Output Handling
+- LLM Top 10: LLM10 Improper Output Handling
 - Agentic Top 10: ASI02 Tool Misuse, ASI05 Unexpected Code Execution
 - Other frameworks: OWASP ASVS V5 · CWE-89 · NIST AI RMF MS-2.5
 
@@ -949,7 +949,7 @@ snapshot endpoints, and unauthenticated collection access are common.
 | OWASP ZAP | Open-source | https://www.zaproxy.org |
 
 #### Cross-references
-- LLM Top 10: LLM08 Vector & Embedding Weaknesses
+- LLM Top 10: LLM09 Vector and Embedding Weaknesses
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - Other frameworks: NIST AI RMF MS-2.5 · AIUC-1 A · CWE-284
 
@@ -1077,7 +1077,7 @@ injected content.
 | Guardrails AI | Open-source | https://github.com/guardrails-ai/guardrails |
 
 #### Cross-references
-- LLM Top 10: LLM07 System Prompt Leakage
+- LLM Top 10: LLM08 Hidden Context Exposure
 - Agentic Top 10: ASI01 Agent Goal Hijack
 - Other frameworks: AIUC-1 A/B005 · NIST AI RMF MS-2.5
 
@@ -1214,7 +1214,7 @@ silent misinformation at inference time.
 | Resilience4j | Open-source | https://resilience4j.readme.io |
 
 #### Cross-references
-- LLM Top 10: LLM10 Unbounded Consumption
+- LLM Top 10: LLM06 Unbounded Consumption
 - Agentic Top 10: ASI08 Cascading Agent Failures
 - Other frameworks: AIUC-1 D · ISA/IEC 62443 SR 7.6 (OT) · NIST SP 800-82 (OT)
 
@@ -1279,7 +1279,7 @@ records that were present in training or retrieval corpora.
 | ML Privacy Meter | Open-source | https://github.com/privacytrustlab/ml_privacy_meter |
 
 #### Cross-references
-- LLM Top 10: LLM02 Sensitive Information Disclosure, LLM08 Vector & Embedding Weaknesses
+- LLM Top 10: LLM02 Sensitive Information Disclosure, LLM09 Vector and Embedding Weaknesses
 - DSGAI 2026: DSGAI10 Synthetic Data Pitfalls
 - Other frameworks: ISO 27701 · GDPR Art. 25 · MITRE ATLAS AML.T0024
 
@@ -1480,7 +1480,7 @@ rather than the model, requiring no training access.
 | TruLens | Open-source | https://github.com/truera/trulens |
 
 #### Cross-references
-- LLM Top 10: LLM04 Data & Model Poisoning, LLM09 Misinformation
+- LLM Top 10: LLM05 Data and Model Poisoning, LLM07 Misinformation
 - Agentic Top 10: ASI06 Memory & Context Poisoning
 - Other frameworks: MITRE ATLAS AML.T0045 · EU AI Act Art. 55(1)(a) · ENISA
 

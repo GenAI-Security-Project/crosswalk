@@ -1,15 +1,15 @@
 <!--
   OWASP GenAI Crosswalk
-  Source list : OWASP Top 10 for LLM Applications 2025 (LLM01–LLM10)
+  Source list : OWASP Top 10 for LLM Applications 2026 (LLM01–LLM10)
   Framework   : CIS Controls v8.1
-  Version     : 2026-Q1
+  Version     : 2026-Q3
   Maintained by: OWASP GenAI Data Security Initiative — https://genai.owasp.org
   License     : CC BY-SA 4.0
 -->
 
-# LLM Top 10 2025 × CIS Controls v8.1
+# LLM Top 10 2026 × CIS Controls v8.1
 
-Mapping the [OWASP Top 10 for LLM Applications 2025](https://genai.owasp.org/llm-top-10/)
+Mapping the [OWASP Top 10 for LLM Applications 2026](https://genai.owasp.org/llm-top-10/)
 to the [CIS Controls v8.1](https://www.cisecurity.org/controls) — the
 Center for Internet Security's prioritised set of safeguards for
 cyber defence, organised into 18 control groups with Implementation
@@ -45,14 +45,14 @@ response (CIS 17), and penetration testing (CIS 18).
 |---|---|---|---|---|---|
 | LLM01 | Prompt Injection | Critical | CIS 16, CIS 18, CIS 8 | IG2–IG3 | Foundational–Advanced |
 | LLM02 | Sensitive Information Disclosure | High | CIS 3, CIS 14, CIS 8 | IG1–IG3 | Foundational–Advanced |
-| LLM03 | Supply Chain Vulnerabilities | High | CIS 2, CIS 7, CIS 16 | IG1–IG3 | Foundational–Hardening |
-| LLM04 | Data and Model Poisoning | Critical | CIS 7, CIS 16, CIS 18 | IG2–IG3 | Hardening–Advanced |
-| LLM05 | Insecure Output Handling | High | CIS 16, CIS 8, CIS 18 | IG2–IG3 | Foundational–Hardening |
-| LLM06 | Excessive Agency | High | CIS 5, CIS 6, CIS 8 | IG1–IG3 | Foundational–Hardening |
-| LLM07 | System Prompt Leakage | High | CIS 3, CIS 4, CIS 8 | IG1–IG2 | Foundational–Hardening |
-| LLM08 | Vector and Embedding Weaknesses | Medium | CIS 3, CIS 7, CIS 16 | IG2–IG3 | Hardening–Advanced |
-| LLM09 | Misinformation | Medium | CIS 14, CIS 17, CIS 3 | IG2–IG3 | Foundational–Hardening |
-| LLM10 | Unbounded Consumption | Medium | CIS 4, CIS 12, CIS 17 | IG1–IG3 | Foundational–Hardening |
+| LLM03 | Excessive Agency | Critical | CIS 5, CIS 6, CIS 8 | IG1–IG3 | Foundational–Hardening |
+| LLM04 | Supply Chain | High | CIS 2, CIS 7, CIS 16 | IG1–IG3 | Foundational–Hardening |
+| LLM05 | Data and Model Poisoning | Critical | CIS 7, CIS 16, CIS 18 | IG2–IG3 | Hardening–Advanced |
+| LLM06 | Unbounded Consumption | High | CIS 4, CIS 12, CIS 17 | IG1–IG3 | Foundational–Hardening |
+| LLM07 | Misinformation | High | CIS 14, CIS 17, CIS 3 | IG2–IG3 | Foundational–Hardening |
+| LLM08 | Hidden Context Exposure | High | CIS 3, CIS 4, CIS 8 | IG1–IG2 | Foundational–Hardening |
+| LLM09 | Vector and Embedding Weaknesses | Medium | CIS 3, CIS 7, CIS 16 | IG2–IG3 | Hardening–Advanced |
+| LLM10 | Improper Output Handling | High | CIS 16, CIS 8, CIS 18 | IG2–IG3 | Foundational–Hardening |
 
 ---
 
@@ -63,7 +63,7 @@ response (CIS 17), and penetration testing (CIS 18).
 - **Enterprise (IG3)** — full safeguard coverage including penetration testing
 - **Developer** — CIS 16 application security safeguards
 - **Auditor** — CIS 18 penetration testing, CIS 8 audit log management
-- **OT engineer** — LLM01, LLM04, LLM10 with ISA 62443 crosswalk for OT context
+- **OT engineer** — LLM01, LLM05, LLM06 with ISA 62443 crosswalk for OT context
 
 ---
 
@@ -77,6 +77,11 @@ response (CIS 17), and penetration testing (CIS 18).
 
 Malicious instructions in user input or processed content manipulate
 LLM behaviour, bypassing safety controls.
+
+The 2026 entry extends prompt injection to cross-modal payloads.
+Instructions hidden in an image, an audio track, or a video frame reach the
+model without ever being human-readable, and steganographic or
+invisible-Unicode carriers survive review of the rendered interface.
 
 #### CIS Controls mapping
 
@@ -191,184 +196,9 @@ over-permissive RAG retrieval.
 
 ---
 
-### LLM03 — Supply Chain Vulnerabilities
-
-**Severity:** High
-
-LLM applications depend on third-party model weights, datasets,
-libraries, and plugins — any of which can be compromised to introduce
-backdoors or malicious functionality.
-
-#### CIS Controls mapping
-
-| Control | Safeguard | IG | How it applies |
-|---|---|---|---|
-| CIS 2 — Inventory and Control of Software Assets | 2.1 Establish and maintain software asset inventory | IG1 | ML SBOM maintained as part of software asset inventory — model versions, libraries, adapters |
-| CIS 7 — Continuous Vulnerability Management | 7.1 Establish vulnerability management process | IG1 | Vulnerability management process covers LLM component CVEs and dependency risks |
-| CIS 16 — Application Software Security | 16.6 Use only up-to-date and trusted third-party components | IG2 | Only approved, verified LLM components used in production — unsigned components rejected |
-
-#### Mitigations by tier
-
-**Foundational (IG1)**
-- CIS 2.1: Maintain ML SBOM as part of software asset
-  inventory — every LLM component (model, adapters, inference
-  runtime, libraries) inventoried with version and source
-- CIS 7.1: Include LLM component CVEs in vulnerability
-  management process — model inference libraries and
-  dependencies scanned and patched on schedule
-- Pin all LLM component versions — no automatic updates
-  in production without review and approval
-
-**Hardening (IG2)**
-- CIS 16.6: Establish approved component list for LLM
-  deployments — only sourced from approved vendors,
-  cryptographic signatures verified before deployment
-- Apply supplier security requirements to all LLM component
-  vendors — provenance, integrity guarantees, vulnerability
-  disclosure obligations
-- Implement automated SBOM generation and drift detection —
-  alert on any unplanned component change
-
-**Advanced (IG3)**
-- CIS 18.1: Include supply chain integrity in penetration
-  testing programme — attempt to introduce compromised
-  components through supply chain attack vectors
-- Operate isolated model evaluation environment — behavioural
-  testing before each production promotion
-- Establish responsible disclosure relationship with LLM
-  vendors — defined vulnerability notification SLA
-
-#### Tools
-
-| Tool | Type | Link |
-|---|---|---|
-| CycloneDX | Open-source | https://cyclonedx.org |
-| ModelScan | Open-source | https://github.com/protectai/modelscan |
-| OWASP Dependency-Check | Open-source | https://owasp.org/www-project-dependency-check/ |
-
-#### Cross-references
-- Agentic Top 10: ASI04 Agentic Supply Chain Vulnerabilities
-- DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning
-- Other frameworks: ISO 27001 A.5.19/A.5.21 · NIST AI RMF MP-5.1 · NIST SP 800-218A
-
----
-
-### LLM04 — Data and Model Poisoning
+### LLM03 — Excessive Agency
 
 **Severity:** Critical
-
-Attackers corrupt training data or model weights — effects baked
-into the model and invisible until a trigger condition is reached.
-
-#### CIS Controls mapping
-
-| Control | Safeguard | IG | How it applies |
-|---|---|---|---|
-| CIS 7 — Continuous Vulnerability Management | 7.5 Perform automated vulnerability scanning | IG2 | Automated scanning of training pipeline components — vulnerabilities in data processing libraries |
-| CIS 16 — Application Software Security | 16.7 Use standard hardening configuration templates | IG2 | Hardened training pipeline configurations — immutable infrastructure, locked data sources |
-| CIS 18 — Penetration Testing | 18.3 Remediate penetration testing findings | IG3 | Poisoning scenarios in penetration testing — verify data integrity controls hold under attack |
-| CIS 8 — Audit Log Management | 8.12 Collect service provider logs | IG2 | Full audit trail of training data provenance and model training runs |
-
-#### Mitigations by tier
-
-**Foundational (IG1)**
-- CIS 7: Apply vulnerability management to training pipeline
-  components — anomaly detection on training data, source
-  validation, and lineage tracking before any training run
-- Implement model rollback capability — approved baseline
-  version available for immediate revert on poisoning detection
-- Source allowlisting for training data — only approved,
-  validated sources enter production training pipelines
-
-**Hardening (IG2)**
-- CIS 16.7: Apply hardened configurations to training
-  infrastructure — immutable data pipelines, locked source
-  repositories, integrity verification on all data inputs
-- CIS 7.5: Automated scanning of training pipeline components —
-  detect compromised libraries or dependencies before training
-- CIS 8.12: Maintain full audit trail of training data
-  provenance — every data source, every preprocessing step,
-  every training run logged and auditable
-
-**Advanced (IG3)**
-- CIS 18.3: Include data poisoning in penetration testing
-  programme — verify data integrity controls hold under
-  realistic adversarial scenarios
-- Conduct post-training backdoor detection as mandatory
-  pre-deployment gate
-- Apply differential privacy during training — limits
-  influence of any single training example
-
-#### Tools
-
-| Tool | Type | Link |
-|---|---|---|
-| IBM Adversarial Robustness Toolbox | Open-source | https://github.com/Trusted-AI/adversarial-robustness-toolbox |
-| CleanLab | Open-source | https://github.com/cleanlab/cleanlab |
-| Great Expectations | Open-source | https://greatexpectations.io |
-
-#### Cross-references
-- Agentic Top 10: ASI06 Memory & Context Poisoning
-- DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning, DSGAI21 Disinformation via Data Poisoning
-- Other frameworks: ISO 27001 A.8.27/A.8.29 · NIST AI RMF MS-3.3 · MITRE ATLAS AML.T0032
-
----
-
-### LLM05 — Insecure Output Handling
-
-**Severity:** High
-
-LLM output passed to downstream systems without validation enables
-XSS, command injection, or SQL injection via AI-generated content.
-
-#### CIS Controls mapping
-
-| Control | Safeguard | IG | How it applies |
-|---|---|---|---|
-| CIS 16 — Application Software Security | 16.1 Establish secure development standards | IG2 | Output encoding and sanitisation as secure development requirements |
-| CIS 8 — Audit Log Management | 8.2 Collect audit logs | IG1 | Log all LLM outputs — injection attempts in model responses detectable |
-| CIS 18 — Penetration Testing | 18.1 Establish penetration testing | IG3 | Output injection scenarios in penetration testing — XSS, SQL injection via LLM output |
-
-#### Mitigations by tier
-
-**Foundational (IG1)**
-- CIS 8.2: Log all LLM outputs — enable detection of
-  injection patterns in model responses
-- Treat all LLM output as untrusted input to downstream
-  systems — encode, validate, and sanitise before rendering
-
-**Hardening (IG2)**
-- CIS 16.1: Include output security in secure development
-  standards — mandatory output encoding and schema
-  validation for all LLM integration code
-- Implement output schema validation — only outputs
-  conforming to defined safe structures passed to downstream
-
-**Advanced (IG3)**
-- CIS 18.1: Include output injection in penetration testing —
-  XSS, SQL injection, command injection via LLM output
-  tested against all interfaces consuming model responses
-- Deploy dedicated output security layer independent of
-  the LLM — structural guarantee, not just validation
-
-#### Tools
-
-| Tool | Type | Link |
-|---|---|---|
-| OWASP ZAP | Open-source | https://www.zaproxy.org |
-| Semgrep | Open-source | https://semgrep.dev |
-| DOMPurify | Open-source | https://github.com/cure53/DOMPurify |
-
-#### Cross-references
-- Agentic Top 10: ASI02 Tool Misuse, ASI05 Unexpected Code Execution
-- DSGAI 2026: DSGAI05 Data Integrity & Validation Failures, DSGAI12 Unsafe NL Data Gateways
-- Other frameworks: ISO 27001 A.8.28 · OWASP ASVS V5 · CWE-79
-
----
-
-### LLM06 — Excessive Agency
-
-**Severity:** High
 
 LLMs with excessive autonomy over tools, APIs, and systems execute
 unintended or harmful actions when manipulated.
@@ -427,181 +257,143 @@ unintended or harmful actions when manipulated.
 
 ---
 
-### LLM07 — System Prompt Leakage
+### LLM04 — Supply Chain
 
 **Severity:** High
 
-System prompts containing internal instructions or security controls
-are extracted by adversaries — enabling targeted attacks against
-specific defences.
+LLM applications depend on third-party model weights, datasets,
+libraries, and plugins — any of which can be compromised to introduce
+backdoors or malicious functionality.
+
+The 2026 entry adds artifact provenance to this scope. A promoted
+model, adapter, or converted artifact that is not what it claims to be —
+unsigned weights, a hijacked conversion or merge service, or namespace reuse
+on a model hub — is a supply-chain compromise even when every package
+dependency is clean.
 
 #### CIS Controls mapping
 
 | Control | Safeguard | IG | How it applies |
 |---|---|---|---|
-| CIS 3 — Data Protection | 3.1 Establish data management process | IG1 | System prompts classified as sensitive configuration — data handling policy applied |
-| CIS 4 — Secure Configuration | 4.1 Establish secure configuration process | IG1 | Secure configuration for LLM deployments — system prompts not in cleartext config |
-| CIS 8 — Audit Log Management | 8.2 Collect audit logs | IG1 | System prompt access logged — unauthorised access attempts detectable |
+| CIS 2 — Inventory and Control of Software Assets | 2.1 Establish and maintain software asset inventory | IG1 | ML SBOM maintained as part of software asset inventory — model versions, libraries, adapters |
+| CIS 7 — Continuous Vulnerability Management | 7.1 Establish vulnerability management process | IG1 | Vulnerability management process covers LLM component CVEs and dependency risks |
+| CIS 16 — Application Software Security | 16.6 Use only up-to-date and trusted third-party components | IG2 | Only approved, verified LLM components used in production — unsigned components rejected |
 
 #### Mitigations by tier
 
 **Foundational (IG1)**
-- CIS 3.1: Classify system prompts as sensitive configuration —
-  subject to the same data management policy as application
-  secrets and operational configuration
-- CIS 4.1: Establish secure configuration requirement — system
-  prompts never stored in cleartext configuration files,
-  source code, or environment variables without encryption
-- CIS 8.2: Log all access to system prompt storage — detect
-  and alert on anomalous access patterns
+- CIS 2.1: Maintain ML SBOM as part of software asset
+  inventory — every LLM component (model, adapters, inference
+  runtime, libraries) inventoried with version and source
+- CIS 7.1: Include LLM component CVEs in vulnerability
+  management process — model inference libraries and
+  dependencies scanned and patched on schedule
+- Pin all LLM component versions — no automatic updates
+  in production without review and approval
 
 **Hardening (IG2)**
-- CIS 3: Remove all secrets and sensitive identifiers from
-  system prompts — use environment variables and secret
-  managers, not inline cleartext
-- Conduct prompt extraction testing before each deployment —
-  verify that system prompt content cannot be recovered
-  through known extraction techniques
-- Rotate system prompt versions on schedule — limits
-  shelf life of any extracted content
+- CIS 16.6: Establish approved component list for LLM
+  deployments — only sourced from approved vendors,
+  cryptographic signatures verified before deployment
+- Apply supplier security requirements to all LLM component
+  vendors — provenance, integrity guarantees, vulnerability
+  disclosure obligations
+- Implement automated SBOM generation and drift detection —
+  alert on any unplanned component change
 
 **Advanced (IG3)**
-- CIS 18.1: Include prompt extraction in penetration testing —
-  attempt to recover system prompt content through all known
-  techniques against your specific deployment
-- Implement system prompt tokenisation — sensitive identifiers
-  replaced with opaque tokens resolved at runtime
-- Deploy output classifier to detect and block responses
-  containing system prompt content
-
-#### Cross-references
-- Agentic Top 10: ASI01 Agent Goal Hijack
-- DSGAI 2026: DSGAI15 Over-Broad Context Windows
-- Other frameworks: ISO 27001 A.5.12/A.8.24 · AIUC-1 B003 · CWE-200
-
----
-
-### LLM08 — Vector and Embedding Weaknesses
-
-**Severity:** Medium
-
-Weaknesses in vector stores enable adversarial retrieval manipulation
-and inference of sensitive information from embeddings.
-
-#### CIS Controls mapping
-
-| Control | Safeguard | IG | How it applies |
-|---|---|---|---|
-| CIS 3 — Data Protection | 3.11 Encrypt sensitive data at rest | IG1 | All vector store content encrypted at rest |
-| CIS 7 — Vulnerability Management | 7.1 Establish vulnerability management | IG1 | Vector database CVEs in vulnerability management process — CVE-2024-3584 and equivalents |
-| CIS 16 — Application Software Security | 16.1 Establish secure development standards | IG2 | Secure coding requirements for vector store integration — RBAC, encryption, input validation |
-
-#### Mitigations by tier
-
-**Foundational (IG1)**
-- CIS 3.11: Encrypt all vector store content at rest —
-  embeddings can leak source content through inversion
-  attacks if unencrypted
-- Enable RBAC on all vector store collections — no
-  unauthenticated access in any environment
-- CIS 7.1: Apply vulnerability management to vector database
-  components — CVE-2024-3584 and equivalents patched promptly
-
-**Hardening (IG2)**
-- CIS 16.1: Include vector store security in secure
-  development standards — RBAC, encryption, input
-  validation all specified as requirements
-- Implement anomaly detection on vector store query patterns —
-  alert on bulk extraction and unusual retrieval volumes
-- Apply content integrity verification on ingestion —
-  only hash-verified authorised documents admitted
-
-**Advanced (IG3)**
-- CIS 18.1: Include vector store attacks in penetration
-  testing — RBAC bypass, path traversal, bulk extraction,
-  and embedding inversion scenarios
-- Apply differential privacy in embedding generation —
-  document privacy budget as data protection control
-- Conduct embedding inversion testing — validate that
-  source content cannot be reconstructed from embeddings
+- CIS 18.1: Include supply chain integrity in penetration
+  testing programme — attempt to introduce compromised
+  components through supply chain attack vectors
+- Operate isolated model evaluation environment — behavioural
+  testing before each production promotion
+- Establish responsible disclosure relationship with LLM
+  vendors — defined vulnerability notification SLA
 
 #### Tools
 
 | Tool | Type | Link |
 |---|---|---|
-| Weaviate (with RBAC) | Open-source | https://weaviate.io |
-| Qdrant | Open-source | https://qdrant.tech |
+| CycloneDX | Open-source | https://cyclonedx.org |
+| ModelScan | Open-source | https://github.com/protectai/modelscan |
+| OWASP Dependency-Check | Open-source | https://owasp.org/www-project-dependency-check/ |
+
+#### Cross-references
+- Agentic Top 10: ASI04 Agentic Supply Chain Vulnerabilities
+- DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning
+- Other frameworks: ISO 27001 A.5.19/A.5.21 · NIST AI RMF MP-5.1 · NIST SP 800-218A
+
+---
+
+### LLM05 — Data and Model Poisoning
+
+**Severity:** Critical
+
+Attackers corrupt training data or model weights — effects baked
+into the model and invisible until a trigger condition is reached.
+
+The 2026 entry folds in fine-tuning subversion. A supplier LoRA
+adapter, a customer fine-tune, or a distilled checkpoint can carry a backdoor
+that no pre-training control catches, so poisoning defences must cover every
+stage that writes weights, not just the original training corpus.
+
+#### CIS Controls mapping
+
+| Control | Safeguard | IG | How it applies |
+|---|---|---|---|
+| CIS 7 — Continuous Vulnerability Management | 7.5 Perform automated vulnerability scanning | IG2 | Automated scanning of training pipeline components — vulnerabilities in data processing libraries |
+| CIS 16 — Application Software Security | 16.7 Use standard hardening configuration templates | IG2 | Hardened training pipeline configurations — immutable infrastructure, locked data sources |
+| CIS 18 — Penetration Testing | 18.3 Remediate penetration testing findings | IG3 | Poisoning scenarios in penetration testing — verify data integrity controls hold under attack |
+| CIS 8 — Audit Log Management | 8.12 Collect service provider logs | IG2 | Full audit trail of training data provenance and model training runs |
+
+#### Mitigations by tier
+
+**Foundational (IG1)**
+- CIS 7: Apply vulnerability management to training pipeline
+  components — anomaly detection on training data, source
+  validation, and lineage tracking before any training run
+- Implement model rollback capability — approved baseline
+  version available for immediate revert on poisoning detection
+- Source allowlisting for training data — only approved,
+  validated sources enter production training pipelines
+
+**Hardening (IG2)**
+- CIS 16.7: Apply hardened configurations to training
+  infrastructure — immutable data pipelines, locked source
+  repositories, integrity verification on all data inputs
+- CIS 7.5: Automated scanning of training pipeline components —
+  detect compromised libraries or dependencies before training
+- CIS 8.12: Maintain full audit trail of training data
+  provenance — every data source, every preprocessing step,
+  every training run logged and auditable
+
+**Advanced (IG3)**
+- CIS 18.3: Include data poisoning in penetration testing
+  programme — verify data integrity controls hold under
+  realistic adversarial scenarios
+- Conduct post-training backdoor detection as mandatory
+  pre-deployment gate
+- Apply differential privacy during training — limits
+  influence of any single training example
+
+#### Tools
+
+| Tool | Type | Link |
+|---|---|---|
+| IBM Adversarial Robustness Toolbox | Open-source | https://github.com/Trusted-AI/adversarial-robustness-toolbox |
+| CleanLab | Open-source | https://github.com/cleanlab/cleanlab |
+| Great Expectations | Open-source | https://greatexpectations.io |
 
 #### Cross-references
 - Agentic Top 10: ASI06 Memory & Context Poisoning
-- DSGAI 2026: DSGAI13 Vector Store Platform Security
-- Other frameworks: ISO 27001 A.8.3/A.8.24 · NIST AI RMF MS-2.5 · CWE-284
+- DSGAI 2026: DSGAI04 Data Model & Artifact Poisoning, DSGAI21 Disinformation via Data Poisoning
+- Other frameworks: ISO 27001 A.8.27/A.8.29 · NIST AI RMF MS-3.3 · MITRE ATLAS AML.T0032
 
 ---
 
-### LLM09 — Misinformation
+### LLM06 — Unbounded Consumption
 
-**Severity:** Medium
-
-LLMs generate plausible but incorrect content that users or downstream
-systems act upon.
-
-#### CIS Controls mapping
-
-| Control | Safeguard | IG | How it applies |
-|---|---|---|---|
-| CIS 14 — Security Awareness | 14.1 Establish security awareness programme | IG1 | User training on LLM output limitations — verification requirements and critical evaluation |
-| CIS 17 — Incident Response | 17.1 Designate personnel for incident response | IG1 | Defined response for LLM misinformation incidents — correction, notification, root cause |
-| CIS 3 — Data Protection | 3.1 Establish data management process | IG1 | RAG data governance — quality and freshness controls on retrieval sources |
-
-#### Mitigations by tier
-
-**Foundational (IG1)**
-- CIS 14.1: Provide awareness training on LLM output
-  limitations — all users of LLM decision-support tools
-  trained before access is granted, refreshed annually
-- CIS 17.1: Define incident response for misinformation
-  events — who is responsible, what is corrected, how
-  users are notified of incorrect outputs acted upon
-- Display source citations alongside LLM responses —
-  users verify claims against cited sources before acting
-
-**Hardening (IG2)**
-- CIS 3.1: Implement data management for RAG sources —
-  freshness controls, authoritative source validation,
-  version control on knowledge base content
-- Deploy confidence scoring — low-confidence responses
-  flagged prominently before user action
-- Implement cross-verification for responses in regulated
-  domains — independent source check before delivery
-
-**Advanced (IG3)**
-- Build automated fact-checking pipelines for high-stakes
-  output domains — accuracy gates before responses reach
-  safety-critical or regulated workflows
-- Implement continuous drift detection — alert when
-  hallucination rates exceed defined thresholds per domain
-- CIS 18.1: Include misinformation scenarios in red team
-  exercises — test LLM accuracy under adversarial conditions
-
-#### Tools
-
-| Tool | Type | Link |
-|---|---|---|
-| TruLens | Open-source | https://github.com/truera/trulens |
-| RAGAS | Open-source | https://github.com/explodinggradients/ragas |
-| DeepEval | Open-source | https://github.com/confident-ai/deepeval |
-
-#### Cross-references
-- Agentic Top 10: ASI09 Human-Agent Trust Exploitation
-- DSGAI 2026: DSGAI21 Disinformation & Integrity Attacks
-- Other frameworks: ISO 27001 A.8.16 · EU AI Act Art. 13/50 · AIUC-1 F
-
----
-
-### LLM10 — Unbounded Consumption
-
-**Severity:** Medium
+**Severity:** High
 
 Adversarial inputs trigger disproportionate resource consumption —
 causing denial of service or runaway cost.
@@ -659,34 +451,273 @@ causing denial of service or runaway cost.
 
 ---
 
+### LLM07 — Misinformation
+
+**Severity:** High
+
+LLMs generate plausible but incorrect content that users or downstream
+systems act upon.
+
+#### CIS Controls mapping
+
+| Control | Safeguard | IG | How it applies |
+|---|---|---|---|
+| CIS 14 — Security Awareness | 14.1 Establish security awareness programme | IG1 | User training on LLM output limitations — verification requirements and critical evaluation |
+| CIS 17 — Incident Response | 17.1 Designate personnel for incident response | IG1 | Defined response for LLM misinformation incidents — correction, notification, root cause |
+| CIS 3 — Data Protection | 3.1 Establish data management process | IG1 | RAG data governance — quality and freshness controls on retrieval sources |
+
+#### Mitigations by tier
+
+**Foundational (IG1)**
+- CIS 14.1: Provide awareness training on LLM output
+  limitations — all users of LLM decision-support tools
+  trained before access is granted, refreshed annually
+- CIS 17.1: Define incident response for misinformation
+  events — who is responsible, what is corrected, how
+  users are notified of incorrect outputs acted upon
+- Display source citations alongside LLM responses —
+  users verify claims against cited sources before acting
+
+**Hardening (IG2)**
+- CIS 3.1: Implement data management for RAG sources —
+  freshness controls, authoritative source validation,
+  version control on knowledge base content
+- Deploy confidence scoring — low-confidence responses
+  flagged prominently before user action
+- Implement cross-verification for responses in regulated
+  domains — independent source check before delivery
+
+**Advanced (IG3)**
+- Build automated fact-checking pipelines for high-stakes
+  output domains — accuracy gates before responses reach
+  safety-critical or regulated workflows
+- Implement continuous drift detection — alert when
+  hallucination rates exceed defined thresholds per domain
+- CIS 18.1: Include misinformation scenarios in red team
+  exercises — test LLM accuracy under adversarial conditions
+
+#### Tools
+
+| Tool | Type | Link |
+|---|---|---|
+| TruLens | Open-source | https://github.com/truera/trulens |
+| RAGAS | Open-source | https://github.com/explodinggradients/ragas |
+| DeepEval | Open-source | https://github.com/confident-ai/deepeval |
+
+#### Cross-references
+- Agentic Top 10: ASI09 Human-Agent Trust Exploitation
+- DSGAI 2026: DSGAI21 Disinformation & Integrity Attacks
+- Other frameworks: ISO 27001 A.8.16 · EU AI Act Art. 13/50 · AIUC-1 F
+
+---
+
+### LLM08 — Hidden Context Exposure
+
+**Severity:** High
+
+Hidden context — the system prompt, developer instructions, retrieved
+policy text, and the tool and function schemas an application assembles
+into the model's context window — is extracted, inferred, or
+reconstructed by adversaries.
+
+The 2026 list broadens the former System Prompt Leakage entry to cover all
+non-user-facing context, not just the system prompt. Severity tracks what
+that context holds: internal rules and workflow logic are medium, embedded
+credentials or reliance on context secrecy for authorisation are high, and
+disclosure that chains to code execution or broad exfiltration is critical.
+Design on the assumption that hidden context is discoverable, and never
+treat it as a security boundary.
+
+#### CIS Controls mapping
+
+| Control | Safeguard | IG | How it applies |
+|---|---|---|---|
+| CIS 3 — Data Protection | 3.1 Establish data management process | IG1 | System prompts classified as sensitive configuration — data handling policy applied |
+| CIS 4 — Secure Configuration | 4.1 Establish secure configuration process | IG1 | Secure configuration for LLM deployments — system prompts not in cleartext config |
+| CIS 8 — Audit Log Management | 8.2 Collect audit logs | IG1 | System prompt access logged — unauthorised access attempts detectable |
+
+#### Mitigations by tier
+
+**Foundational (IG1)**
+- CIS 3.1: Classify system prompts as sensitive configuration —
+  subject to the same data management policy as application
+  secrets and operational configuration
+- CIS 4.1: Establish secure configuration requirement — system
+  prompts never stored in cleartext configuration files,
+  source code, or environment variables without encryption
+- CIS 8.2: Log all access to system prompt storage — detect
+  and alert on anomalous access patterns
+
+**Hardening (IG2)**
+- CIS 3: Remove all secrets and sensitive identifiers from
+  system prompts — use environment variables and secret
+  managers, not inline cleartext
+- Conduct prompt extraction testing before each deployment —
+  verify that system prompt content cannot be recovered
+  through known extraction techniques
+- Rotate system prompt versions on schedule — limits
+  shelf life of any extracted content
+
+**Advanced (IG3)**
+- CIS 18.1: Include prompt extraction in penetration testing —
+  attempt to recover system prompt content through all known
+  techniques against your specific deployment
+- Implement system prompt tokenisation — sensitive identifiers
+  replaced with opaque tokens resolved at runtime
+- Deploy output classifier to detect and block responses
+  containing system prompt content
+
+#### Cross-references
+- Agentic Top 10: ASI01 Agent Goal Hijack
+- DSGAI 2026: DSGAI15 Over-Broad Context Windows
+- Other frameworks: ISO 27001 A.5.12/A.8.24 · AIUC-1 B003 · CWE-200
+
+---
+
+### LLM09 — Vector and Embedding Weaknesses
+
+**Severity:** Medium
+
+Weaknesses in vector stores enable adversarial retrieval manipulation
+and inference of sensitive information from embeddings.
+
+#### CIS Controls mapping
+
+| Control | Safeguard | IG | How it applies |
+|---|---|---|---|
+| CIS 3 — Data Protection | 3.11 Encrypt sensitive data at rest | IG1 | All vector store content encrypted at rest |
+| CIS 7 — Vulnerability Management | 7.1 Establish vulnerability management | IG1 | Vector database CVEs in vulnerability management process — CVE-2024-3584 and equivalents |
+| CIS 16 — Application Software Security | 16.1 Establish secure development standards | IG2 | Secure coding requirements for vector store integration — RBAC, encryption, input validation |
+
+#### Mitigations by tier
+
+**Foundational (IG1)**
+- CIS 3.11: Encrypt all vector store content at rest —
+  embeddings can leak source content through inversion
+  attacks if unencrypted
+- Enable RBAC on all vector store collections — no
+  unauthenticated access in any environment
+- CIS 7.1: Apply vulnerability management to vector database
+  components — CVE-2024-3584 and equivalents patched promptly
+
+**Hardening (IG2)**
+- CIS 16.1: Include vector store security in secure
+  development standards — RBAC, encryption, input
+  validation all specified as requirements
+- Implement anomaly detection on vector store query patterns —
+  alert on bulk extraction and unusual retrieval volumes
+- Apply content integrity verification on ingestion —
+  only hash-verified authorised documents admitted
+
+**Advanced (IG3)**
+- CIS 18.1: Include vector store attacks in penetration
+  testing — RBAC bypass, path traversal, bulk extraction,
+  and embedding inversion scenarios
+- Apply differential privacy in embedding generation —
+  document privacy budget as data protection control
+- Conduct embedding inversion testing — validate that
+  source content cannot be reconstructed from embeddings
+
+#### Tools
+
+| Tool | Type | Link |
+|---|---|---|
+| Weaviate (with RBAC) | Open-source | https://weaviate.io |
+| Qdrant | Open-source | https://qdrant.tech |
+
+#### Cross-references
+- Agentic Top 10: ASI06 Memory & Context Poisoning
+- DSGAI 2026: DSGAI13 Vector Store Platform Security
+- Other frameworks: ISO 27001 A.8.3/A.8.24 · NIST AI RMF MS-2.5 · CWE-284
+
+---
+
+### LLM10 — Improper Output Handling
+
+**Severity:** High
+
+LLM output passed to downstream systems without validation enables
+XSS, command injection, or SQL injection via AI-generated content.
+
+The 2026 entry renames Insecure Output Handling to Improper Output
+Handling and widens it to cover the insecure code that coding assistants
+generate at scale. Output that reaches a compiler, a repository, or a
+production system carries the same downstream-execution risk as output that
+reaches a shell, a browser, or a database.
+
+#### CIS Controls mapping
+
+| Control | Safeguard | IG | How it applies |
+|---|---|---|---|
+| CIS 16 — Application Software Security | 16.1 Establish secure development standards | IG2 | Output encoding and sanitisation as secure development requirements |
+| CIS 8 — Audit Log Management | 8.2 Collect audit logs | IG1 | Log all LLM outputs — injection attempts in model responses detectable |
+| CIS 18 — Penetration Testing | 18.1 Establish penetration testing | IG3 | Output injection scenarios in penetration testing — XSS, SQL injection via LLM output |
+
+#### Mitigations by tier
+
+**Foundational (IG1)**
+- CIS 8.2: Log all LLM outputs — enable detection of
+  injection patterns in model responses
+- Treat all LLM output as untrusted input to downstream
+  systems — encode, validate, and sanitise before rendering
+
+**Hardening (IG2)**
+- CIS 16.1: Include output security in secure development
+  standards — mandatory output encoding and schema
+  validation for all LLM integration code
+- Implement output schema validation — only outputs
+  conforming to defined safe structures passed to downstream
+
+**Advanced (IG3)**
+- CIS 18.1: Include output injection in penetration testing —
+  XSS, SQL injection, command injection via LLM output
+  tested against all interfaces consuming model responses
+- Deploy dedicated output security layer independent of
+  the LLM — structural guarantee, not just validation
+
+#### Tools
+
+| Tool | Type | Link |
+|---|---|---|
+| OWASP ZAP | Open-source | https://www.zaproxy.org |
+| Semgrep | Open-source | https://semgrep.dev |
+| DOMPurify | Open-source | https://github.com/cure53/DOMPurify |
+
+#### Cross-references
+- Agentic Top 10: ASI02 Tool Misuse, ASI05 Unexpected Code Execution
+- DSGAI 2026: DSGAI05 Data Integrity & Validation Failures, DSGAI12 Unsafe NL Data Gateways
+- Other frameworks: ISO 27001 A.8.28 · OWASP ASVS V5 · CWE-79
+
+---
+
 ## CIS Controls implementation priority by IG
 
 ### IG1 — Essential hygiene (start here)
 
 | LLM entry | CIS safeguards | Action |
 |---|---|---|
-| LLM02, LLM07 | CIS 3.1, CIS 3.11 | Data classification and encryption for all LLM data assets |
-| LLM06 | CIS 5.4, CIS 6.1 | LLM tool access as privileged access — least privilege enforced |
-| LLM01, LLM05 | CIS 8.2 | Audit logging on all LLM inputs and outputs |
-| LLM10 | CIS 4.1 | Rate limits and token caps in secure configuration baseline |
-| LLM09 | CIS 14.1 | User awareness training on LLM output limitations |
+| LLM02, LLM08 | CIS 3.1, CIS 3.11 | Data classification and encryption for all LLM data assets |
+| LLM03 | CIS 5.4, CIS 6.1 | LLM tool access as privileged access — least privilege enforced |
+| LLM01, LLM10 | CIS 8.2 | Audit logging on all LLM inputs and outputs |
+| LLM06 | CIS 4.1 | Rate limits and token caps in secure configuration baseline |
+| LLM07 | CIS 14.1 | User awareness training on LLM output limitations |
 
 ### IG2 — For organisations with sensitive data (add next)
 
 | LLM entry | CIS safeguards | Action |
 |---|---|---|
-| LLM01, LLM05 | CIS 16.1/16.2 | Secure development standards covering LLM integration |
+| LLM01, LLM10 | CIS 16.1/16.2 | Secure development standards covering LLM integration |
 | LLM02 | CIS 8.5 | Detailed audit logs for all LLM data access |
-| LLM03 | CIS 7.5, CIS 16.6 | Automated vulnerability scanning and approved component list |
-| LLM04 | CIS 16.7, CIS 8.12 | Hardened training pipeline configurations and provenance logs |
-| LLM10 | CIS 12.6 | Network-layer rate limiting and traffic controls |
+| LLM04 | CIS 7.5, CIS 16.6 | Automated vulnerability scanning and approved component list |
+| LLM05 | CIS 16.7, CIS 8.12 | Hardened training pipeline configurations and provenance logs |
+| LLM06 | CIS 12.6 | Network-layer rate limiting and traffic controls |
 
 ### IG3 — Enterprise and regulated (complete coverage)
 
 | LLM entry | CIS safeguards | Action |
 |---|---|---|
 | All | CIS 18.1, CIS 18.3 | Penetration testing programme covering all LLM vulnerability scenarios |
-| LLM01, LLM04 | CIS 18.3 | Remediate and retest after each red team finding |
+| LLM01, LLM05 | CIS 18.3 | Remediate and retest after each red team finding |
 
 ---
 
@@ -694,7 +725,7 @@ causing denial of service or runaway cost.
 
 - [CIS Controls v8.1](https://www.cisecurity.org/controls)
 - [CIS Controls implementation guide](https://www.cisecurity.org/controls/implementation-groups)
-- [OWASP LLM Top 10 2025](https://genai.owasp.org/llm-top-10/)
+- [OWASP LLM Top 10 2026](https://genai.owasp.org/llm-top-10/)
 - [OWASP AI Testing Guide](https://owasp.org/www-project-ai-testing-guide/)
 
 ---
@@ -704,6 +735,7 @@ causing denial of service or runaway cost.
 | Date | Version | Change | Author |
 |---|---|---|---|
 | 2026-03-24 | 2026-Q1 | Initial mapping — LLM01–LLM10 full entries with IG-tiered safeguards | OWASP GenAI Data Security Initiative |
+| 2026-08-28 | 2026-Q3 | Migrated to OWASP Top 10 for LLM Applications 2026 — entries renumbered, LLM08 re-scoped from System Prompt Leakage to Hidden Context Exposure, LLM10 renamed to Improper Output Handling | OWASP GenAI Data Security Initiative |
 
 ---
 

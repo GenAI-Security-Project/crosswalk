@@ -24,17 +24,17 @@ const SINGLE_ID  = (() => { const i = process.argv.indexOf('--id'); return i !==
 // ─── Vulnerability catalog ────────────────────────────────────────────────────
 
 const VULNERABILITIES = {
-  // LLM Top 10 2025
-  LLM01: { name: 'Prompt Injection',                         source_list: 'LLM-Top10-2025',    severity: 'Critical' },
-  LLM02: { name: 'Sensitive Information Disclosure',         source_list: 'LLM-Top10-2025',    severity: 'High'     },
-  LLM03: { name: 'Supply Chain Vulnerabilities',             source_list: 'LLM-Top10-2025',    severity: 'High'     },
-  LLM04: { name: 'Data and Model Poisoning',                 source_list: 'LLM-Top10-2025',    severity: 'Critical' },
-  LLM05: { name: 'Insecure Output Handling',                 source_list: 'LLM-Top10-2025',    severity: 'High'     },
-  LLM06: { name: 'Excessive Agency',                         source_list: 'LLM-Top10-2025',    severity: 'High'     },
-  LLM07: { name: 'System Prompt Leakage',                    source_list: 'LLM-Top10-2025',    severity: 'High'     },
-  LLM08: { name: 'Vector and Embedding Weaknesses',          source_list: 'LLM-Top10-2025',    severity: 'Medium'   },
-  LLM09: { name: 'Misinformation',                           source_list: 'LLM-Top10-2025',    severity: 'Medium'   },
-  LLM10: { name: 'Unbounded Consumption',                    source_list: 'LLM-Top10-2025',    severity: 'Medium'   },
+  // LLM Top 10 2026
+  LLM01: { name: 'Prompt Injection',                         source_list: 'LLM-Top10-2026',    severity: 'Critical' },
+  LLM02: { name: 'Sensitive Information Disclosure',         source_list: 'LLM-Top10-2026',    severity: 'High'     },
+  LLM03: { name: 'Excessive Agency',                         source_list: 'LLM-Top10-2026',    severity: 'Critical' },
+  LLM04: { name: 'Supply Chain',                             source_list: 'LLM-Top10-2026',    severity: 'High'     },
+  LLM05: { name: 'Data and Model Poisoning',                 source_list: 'LLM-Top10-2026',    severity: 'Critical' },
+  LLM06: { name: 'Unbounded Consumption',                    source_list: 'LLM-Top10-2026',    severity: 'High'     },
+  LLM07: { name: 'Misinformation',                           source_list: 'LLM-Top10-2026',    severity: 'High'     },
+  LLM08: { name: 'Hidden Context Exposure',                  source_list: 'LLM-Top10-2026',    severity: 'High'     },
+  LLM09: { name: 'Vector and Embedding Weaknesses',          source_list: 'LLM-Top10-2026',    severity: 'Medium'   },
+  LLM10: { name: 'Improper Output Handling',                 source_list: 'LLM-Top10-2026',    severity: 'High'     },
 
   // Agentic Top 10 2026
   ASI01: { name: 'Agent Goal Hijack',                        source_list: 'Agentic-Top10-2026', severity: 'Critical' },
@@ -655,7 +655,7 @@ function main() {
       id,
       name:        vuln.name,
       source_list: vuln.source_list,
-      version:     '2026-Q1',
+      version:     '2026-Q3',
       severity:    vuln.severity,
       aivss_score: AIVSS_SCORES[id] ?? null,
       audience:    data.audiences.length ? data.audiences : defaultAudience(vuln.source_list),
@@ -670,6 +670,12 @@ function main() {
           change:  `Initial entry — generated from OWASP GenAI Crosswalk v1.5.1 mapping files`,
           author:  'emmanuelgjr',
         },
+        ...(id.startsWith('LLM') ? [{
+          date:    '2026-08-28',
+          version: '2.0.0',
+          change:  `Migrated to the OWASP Top 10 for LLM Applications 2026 — see MIGRATION.md for the 2025 → 2026 entry map`,
+          author:  'OWASP GenAI Data Security Initiative',
+        }] : []),
       ],
     };
 
@@ -804,7 +810,7 @@ function main() {
 }
 
 function defaultAudience(sourceList) {
-  if (sourceList === 'LLM-Top10-2025')    return ['developer', 'security-engineer', 'red-teamer', 'auditor'];
+  if (sourceList === 'LLM-Top10-2026')    return ['developer', 'security-engineer', 'red-teamer', 'auditor'];
   if (sourceList === 'Agentic-Top10-2026') return ['security-engineer', 'ciso', 'red-teamer', 'auditor'];
   return ['security-engineer', 'data-engineer', 'auditor', 'compliance'];
 }

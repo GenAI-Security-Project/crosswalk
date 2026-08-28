@@ -6,7 +6,7 @@ Source list  : OWASP GenAI Data Security Risks 2026
 Crosswalk ref: dsgai-2026/DSGAI_MITREATLAS.md
 
 Cross-references:
-  LLM04  Data and Model Poisoning
+  LLM05  Data and Model Poisoning
   ASI06  Memory and Context Poisoning
 
 MITRE ATLAS techniques:

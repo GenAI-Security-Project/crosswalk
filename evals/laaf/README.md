@@ -31,7 +31,7 @@ layered encoding, semantic reframing, and multi-stage lifecycle execution.
 |---|---|---|---|
 | **AV-1** Tool Poisoning | Compromise external tool definitions fed to agent | ASI02, LLM01, DSGAI04 | L3 Origin |
 | **AV-2** Memory-Persistent Encoded Triggers | Dormant encoded payloads in persistent memory activate on condition | ASI06, ASI01 | L2 Origin, L7 Impact |
-| **AV-3** Role Override | Privilege escalation through memory-entrenched authority spoofing | ASI03, LLM06, ASI01 | L6 Origin, L3 Propagation |
+| **AV-3** Role Override | Privilege escalation through memory-entrenched authority spoofing | ASI03, LLM03, ASI01 | L6 Origin, L3 Propagation |
 | **AV-4** Vector Store Payload Persistence | Adversarial content indexed into RAG corpus; retrieved on demand | DSGAI04, LLM01, ASI06 | L2 Origin, L1 Impact |
 
 ---
@@ -40,12 +40,12 @@ layered encoding, semantic reframing, and multi-stage lifecycle execution.
 
 | Stage | Name | Goal | Primary OWASP | MAESTRO layer |
 |---|---|---|---|---|
-| **S1** | Reconnaissance | Extract system instructions, map authorised scope | LLM07, LLM01 | L1 Origin, L4 Blind-spot |
+| **S1** | Reconnaissance | Extract system instructions, map authorised scope | LLM08, LLM01 | L1 Origin, L4 Blind-spot |
 | **S2** | Logic-Layer Injection | Embed payload in document/RAG context | LLM01, ASI01, DSGAI04 | L2 Origin, L3 Propagation |
-| **S3** | Trigger Execution | Activate memory-restored dormant payload | ASI01, ASI06, LLM06 | L3 Origin, L7 Impact |
-| **S4** | Persistence and Reuse | Maintain access across sessions | ASI06, LLM06, DSGAI04 | L2 Origin, L7 Propagation |
+| **S3** | Trigger Execution | Activate memory-restored dormant payload | ASI01, ASI06, LLM03 | L3 Origin, L7 Impact |
+| **S4** | Persistence and Reuse | Maintain access across sessions | ASI06, LLM03, DSGAI04 | L2 Origin, L7 Propagation |
 | **S5** | Evasion and Obfuscation | Bypass security filters with layered encoding | LLM01, LLM02 | L1 Propagation, L5 Blind-spot |
-| **S6** | Trace Tampering | Conceal evidence in audit logs and telemetry | DSGAI01, LLM07 | L5 Origin, L6 Blind-spot |
+| **S6** | Trace Tampering | Conceal evidence in audit logs and telemetry | DSGAI01, LLM08 | L5 Origin, L6 Blind-spot |
 
 ---
 
@@ -55,7 +55,7 @@ layered encoding, semantic reframing, and multi-stage lifecycle execution.
 |---|---|---|---|
 | Encoding E1–E11 | Base64, hex, unicode, ROT13, nested, URL | LLM01 | Exploits filter/decode asymmetry |
 | Structural S1–S8 | JSON, YAML, Markdown, HTML meta, XML, PDF | DSGAI04, LLM01, ASI01 | Embeds in RAG-indexed document formats |
-| Semantic M1–M8 | Compliance, authority, trust, formatting, audit | LLM01, ASI01, LLM06 | Reframes attack as legitimate instruction |
+| Semantic M1–M8 | Compliance, authority, trust, formatting, audit | LLM01, ASI01, LLM03 | Reframes attack as legitimate instruction |
 | Layered L1–L5 | Multi-layer chains (3–4 techniques combined) | LLM01, DSGAI04 | Multiplicative detection bypass |
 | Trigger/Timing T1–T12 | Keyword, temporal, role, session, steganographic | ASI06, ASI01, ASI08 | Delayed/conditional activation |
 | Exfiltration EX1–EX5 | Markdown beacon, image ping, tool callback | DSGAI01, ASI02 | Confirmed data theft PoCs |

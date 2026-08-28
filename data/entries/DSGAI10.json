@@ -2,7 +2,7 @@
   "id": "DSGAI10",
   "name": "Synthetic Data and Anonymization Pitfalls",
   "source_list": "DSGAI-2026",
-  "version": "2026-Q1",
+  "version": "2026-Q3",
   "severity": "Medium",
   "aivss_score": null,
   "audience": [
@@ -624,9 +624,9 @@
     "llm_top10": [
       "LLM02",
       "LLM01",
-      "LLM08",
       "LLM09",
-      "LLM03"
+      "LLM07",
+      "LLM05"
     ],
     "agentic_top10": [
       "ASI03",

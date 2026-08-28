@@ -1,15 +1,15 @@
 <!--
   OWASP GenAI Crosswalk
-  Source list : OWASP Top 10 for LLM Applications 2025 (LLM01-LLM10)
+  Source list : OWASP Top 10 for LLM Applications 2026 (LLM01-LLM10)
   Framework   : OWASP Non-Human Identities (NHI) Top 10
-  Version     : 2026-Q1
+  Version     : 2026-Q3
   Maintained by: OWASP GenAI Data Security Initiative — https://genai.owasp.org
   License     : CC BY-SA 4.0
 -->
 
-# LLM Top 10 2025 × OWASP NHI Top 10
+# LLM Top 10 2026 × OWASP NHI Top 10
 
-Mapping the [OWASP Top 10 for LLM Applications 2025](https://genai.owasp.org/llm-top-10/)
+Mapping the [OWASP Top 10 for LLM Applications 2026](https://genai.owasp.org/llm-top-10/)
 to the [OWASP Non-Human Identities (NHI) Top 10](https://owasp.org/www-project-non-human-identities-top-10/) —
 the framework for securing machine identities including service
 accounts, API keys, OAuth tokens, certificates, and agent credentials.
@@ -32,8 +32,8 @@ service account (NHI-5) can cause far more damage than a model
 that generates offensive content.
 
 Key structural overlaps:
-- **LLM03 (Supply Chain)** — third-party component credentials (NHI-3, NHI-8)
-- **LLM06 (Excessive Agency)** — over-privileged tool credentials (NHI-5, NHI-7)
+- **LLM04 (Supply Chain)** — third-party component credentials (NHI-3, NHI-8)
+- **LLM03 (Excessive Agency)** — over-privileged tool credentials (NHI-5, NHI-7)
 - **LLM02 (Sensitive Information Disclosure)** — credential leakage in outputs (NHI-2)
 
 ---
@@ -61,14 +61,14 @@ Key structural overlaps:
 |---|---|---|---|---|
 | LLM01 | Prompt Injection | Critical | NHI-5, NHI-7 (blast radius amplifiers) | Foundational–Advanced |
 | LLM02 | Sensitive Information Disclosure | High | NHI-2, NHI-6 (credential leakage in outputs) | Foundational–Advanced |
-| LLM03 | Supply Chain Vulnerabilities | High | NHI-3, NHI-8, NHI-2 | Foundational–Hardening |
-| LLM04 | Data and Model Poisoning | Critical | NHI-5, NHI-3 (pipeline access) | Hardening–Advanced |
-| LLM05 | Insecure Output Handling | High | NHI-2 (credential in output), NHI-5 | Foundational–Hardening |
-| LLM06 | Excessive Agency | High | NHI-5, NHI-7, NHI-9 | Foundational–Hardening |
-| LLM07 | System Prompt Leakage | High | NHI-2 (API keys in system prompt) | Foundational–Hardening |
-| LLM08 | Vector and Embedding Weaknesses | Medium | NHI-5, NHI-4 | Hardening–Advanced |
-| LLM09 | Misinformation | Medium | NHI-2 (service account logging) | Foundational–Hardening |
-| LLM10 | Unbounded Consumption | Medium | NHI-5, NHI-9 (credential reuse amplifies DoS) | Foundational–Hardening |
+| LLM03 | Excessive Agency | Critical | NHI-5, NHI-7, NHI-9 | Foundational–Hardening |
+| LLM04 | Supply Chain | High | NHI-3, NHI-8, NHI-2 | Foundational–Hardening |
+| LLM05 | Data and Model Poisoning | Critical | NHI-5, NHI-3 (pipeline access) | Hardening–Advanced |
+| LLM06 | Unbounded Consumption | High | NHI-5, NHI-9 (credential reuse amplifies DoS) | Foundational–Hardening |
+| LLM07 | Misinformation | High | NHI-2 (service account logging) | Foundational–Hardening |
+| LLM08 | Hidden Context Exposure | High | NHI-2 (API keys in system prompt) | Foundational–Hardening |
+| LLM09 | Vector and Embedding Weaknesses | Medium | NHI-5, NHI-4 | Hardening–Advanced |
+| LLM10 | Improper Output Handling | High | NHI-2 (credential in output), NHI-5 | Foundational–Hardening |
 
 ---
 
@@ -92,6 +92,11 @@ NHI impact: prompt injection is most destructive when the LLM application
 holds over-privileged credentials (NHI-5) or long-lived tokens (NHI-7).
 A hijacked application with a read-write API key causes far more harm
 than one with a read-only key.
+
+The 2026 entry extends prompt injection to cross-modal payloads.
+Instructions hidden in an image, an audio track, or a video frame reach the
+model without ever being human-readable, and steganographic or
+invisible-Unicode carriers survive review of the rendered interface.
 
 #### NHI mapping
 
@@ -139,88 +144,7 @@ reproduced; service account tokens logged alongside outputs are exposed.
 
 ---
 
-### LLM03 — Supply Chain Vulnerabilities
-
-NHI impact: third-party model providers, plugins, and tool integrations
-bring their own NHI risks. A compromised plugin's credentials grant
-attackers whatever permissions the plugin holds — often more than the
-LLM application itself.
-
-#### NHI mapping
-
-| NHI Entry | How it applies | Mitigation |
-|---|---|---|
-| NHI-3 Vulnerable Third-Party NHI | Third-party plugin tokens with excessive permissions | Review all third-party credentials; apply minimum scope |
-| NHI-8 Environment Isolation Failure | Third-party dev/staging credentials used in production | Enforce environment isolation for all third-party integrations |
-| NHI-2 Secret Leakage | Third-party component credentials exposed in shared config | Separate credential stores per third-party component |
-
-#### Mitigations
-
-**Immediate:**
-- Inventory all third-party credentials in LLM deployment
-- Verify no development credentials are used in production integrations
-
-**Short-term:**
-- NHI-3: review permissions of all third-party credentials; reduce to minimum
-- NHI-8: separate credential stores for each environment
-- NHI-2: automated secret scanning in all pipeline and deployment configs
-
----
-
-### LLM04 — Data and Model Poisoning
-
-NHI impact: training and fine-tuning pipelines have their own
-NHI surface. Over-privileged pipeline credentials (NHI-5) or
-third-party data source credentials (NHI-3) enable poisoning
-attacks that wouldn't be possible with correctly-scoped access.
-
-#### NHI mapping
-
-| NHI Entry | How it applies | Mitigation |
-|---|---|---|
-| NHI-5 Over-Privileged NHI | Write access to training data stores enables poisoning | Read-only credentials for data consumption; separate write credentials with MFA |
-| NHI-3 Vulnerable Third-Party NHI | Third-party data pipeline credentials with training data write access | Apply NHI-3 controls to all data pipeline third-party credentials |
-
-#### Mitigations
-
-**Immediate:**
-- Audit write access to all training data stores
-- Separate read and write credentials for training data pipelines
-
-**Short-term:**
-- NHI-5: least-privilege for all training pipeline service accounts
-- NHI-3: assess all third-party data pipeline credentials for excessive scope
-- MFA or hardware token for any credential with training data write access
-
----
-
-### LLM05 — Insecure Output Handling
-
-NHI impact: LLM outputs passed to downstream systems — code
-interpreters, databases, APIs — often carry credentials to access
-those systems. These credentials may be embedded in outputs and
-misused if the output is weaponised.
-
-#### NHI mapping
-
-| NHI Entry | How it applies | Mitigation |
-|---|---|---|
-| NHI-2 Secret Leakage | Credentials appearing in model outputs passed to executors | Credential detection in output pipeline before execution |
-| NHI-5 Over-Privileged NHI | Downstream service credentials with excessive scope | Apply least-privilege to all credentials used in downstream processing |
-
-#### Mitigations
-
-**Immediate:**
-- Add credential pattern detection before passing model output to any executor
-- Audit scope of credentials used by downstream processing systems
-
-**Short-term:**
-- NHI-2: automated output scanning for credential patterns
-- NHI-5: minimum scope for all service accounts in output processing pipeline
-
----
-
-### LLM06 — Excessive Agency
+### LLM03 — Excessive Agency
 
 NHI is the control plane for agency. An LLM with excessive agency
 is an LLM holding NHI credentials with over-broad scope. The NHI
@@ -251,84 +175,73 @@ Top 10 directly controls the blast radius of agency violations.
 
 ---
 
-### LLM07 — System Prompt Leakage
+### LLM04 — Supply Chain
 
-NHI impact: developers frequently embed API keys, service account
-tokens, or credential fragments in system prompts for convenience.
-These are extracted when the system prompt is leaked.
+NHI impact: third-party model providers, plugins, and tool integrations
+bring their own NHI risks. A compromised plugin's credentials grant
+attackers whatever permissions the plugin holds — often more than the
+LLM application itself.
 
-#### NHI mapping
-
-| NHI Entry | How it applies | Mitigation |
-|---|---|---|
-| NHI-2 Secret Leakage | API keys or tokens embedded in system prompt | Scan system prompts for credential patterns before deployment |
-| NHI-6 Insecure Credential Storage | System prompt stored as plaintext config with embedded credentials | Externalise credentials to vault; reference by ID in system prompt |
-
-#### Mitigations
-
-**Immediate:**
-- Automated secret scanning of all system prompt content
-- Remove any credentials found in system prompts immediately
-
-**Short-term:**
-- NHI-6: vault all credentials; system prompt references vault path, not credential value
-- NHI-2: CI/CD gate that fails if system prompt contains credential patterns
-- Periodic system prompt audit for inadvertent credential inclusion
-
----
-
-### LLM08 — Vector and Embedding Weaknesses
-
-NHI impact: vector database service accounts and embedding store
-credentials are often over-privileged — allowing cross-tenant
-read access that enables the leakage scenarios in LLM08.
+The 2026 entry adds artifact provenance to this scope. A promoted
+model, adapter, or converted artifact that is not what it claims to be —
+unsigned weights, a hijacked conversion or merge service, or namespace reuse
+on a model hub — is a supply-chain compromise even when every package
+dependency is clean.
 
 #### NHI mapping
 
 | NHI Entry | How it applies | Mitigation |
 |---|---|---|
-| NHI-5 Over-Privileged NHI | Embedding store service account with cross-tenant read access | Per-tenant credentials or least-privilege scope restrictions |
-| NHI-4 Insecure Authentication | Unauthenticated embedding store access | Require authentication for all vector database connections |
+| NHI-3 Vulnerable Third-Party NHI | Third-party plugin tokens with excessive permissions | Review all third-party credentials; apply minimum scope |
+| NHI-8 Environment Isolation Failure | Third-party dev/staging credentials used in production | Enforce environment isolation for all third-party integrations |
+| NHI-2 Secret Leakage | Third-party component credentials exposed in shared config | Separate credential stores per third-party component |
 
 #### Mitigations
 
 **Immediate:**
-- Audit authentication on all vector database connections
-- Verify no embedding store service account has cross-tenant read access
+- Inventory all third-party credentials in LLM deployment
+- Verify no development credentials are used in production integrations
 
 **Short-term:**
-- NHI-5: per-tenant credentials or fine-grained access controls for embedding stores
-- NHI-4: mTLS or equivalent for all embedding store connections
+- NHI-3: review permissions of all third-party credentials; reduce to minimum
+- NHI-8: separate credential stores for each environment
+- NHI-2: automated secret scanning in all pipeline and deployment configs
 
 ---
 
-### LLM09 — Misinformation
+### LLM05 — Data and Model Poisoning
 
-NHI impact: misinformation incidents require investigation — which
-requires audit logs attributing LLM actions to specific identities.
-NHI-10 (human use of machine credentials) destroys attribution and
-makes investigation impossible.
+NHI impact: training and fine-tuning pipelines have their own
+NHI surface. Over-privileged pipeline credentials (NHI-5) or
+third-party data source credentials (NHI-3) enable poisoning
+attacks that wouldn't be possible with correctly-scoped access.
+
+The 2026 entry folds in fine-tuning subversion. A supplier LoRA
+adapter, a customer fine-tune, or a distilled checkpoint can carry a backdoor
+that no pre-training control catches, so poisoning defences must cover every
+stage that writes weights, not just the original training corpus.
 
 #### NHI mapping
 
 | NHI Entry | How it applies | Mitigation |
 |---|---|---|
-| NHI-2 Secret Leakage | Audit log service credentials leaked or compromised | Protect audit log credentials as sensitive NHI |
-| NHI-10 Human Use of NHI | Humans using LLM service account credentials — no attribution | Enforce separate human and machine credentials |
+| NHI-5 Over-Privileged NHI | Write access to training data stores enables poisoning | Read-only credentials for data consumption; separate write credentials with MFA |
+| NHI-3 Vulnerable Third-Party NHI | Third-party data pipeline credentials with training data write access | Apply NHI-3 controls to all data pipeline third-party credentials |
 
 #### Mitigations
 
 **Immediate:**
-- Ensure all LLM application actions are attributed to machine identity, not human identity
-- Protect audit log service credentials as high-sensitivity NHI
+- Audit write access to all training data stores
+- Separate read and write credentials for training data pipelines
 
 **Short-term:**
-- NHI-10: enforce separation of human and machine credentials across the LLM deployment
-- Immutable audit logging with tamper-evident storage
+- NHI-5: least-privilege for all training pipeline service accounts
+- NHI-3: assess all third-party data pipeline credentials for excessive scope
+- MFA or hardware token for any credential with training data write access
 
 ---
 
-### LLM10 — Unbounded Consumption
+### LLM06 — Unbounded Consumption
 
 NHI impact: credential reuse (NHI-9) across multiple services means
 a DoS attack consuming one service's quota can cascade to all services
@@ -355,6 +268,127 @@ blast radius.
 
 ---
 
+### LLM07 — Misinformation
+
+NHI impact: misinformation incidents require investigation — which
+requires audit logs attributing LLM actions to specific identities.
+NHI-10 (human use of machine credentials) destroys attribution and
+makes investigation impossible.
+
+#### NHI mapping
+
+| NHI Entry | How it applies | Mitigation |
+|---|---|---|
+| NHI-2 Secret Leakage | Audit log service credentials leaked or compromised | Protect audit log credentials as sensitive NHI |
+| NHI-10 Human Use of NHI | Humans using LLM service account credentials — no attribution | Enforce separate human and machine credentials |
+
+#### Mitigations
+
+**Immediate:**
+- Ensure all LLM application actions are attributed to machine identity, not human identity
+- Protect audit log service credentials as high-sensitivity NHI
+
+**Short-term:**
+- NHI-10: enforce separation of human and machine credentials across the LLM deployment
+- Immutable audit logging with tamper-evident storage
+
+---
+
+### LLM08 — Hidden Context Exposure
+
+Hidden context — the system prompt, developer instructions, retrieved
+policy text, and the tool and function schemas an application assembles
+into the model's context window — is extracted, inferred, or
+reconstructed by adversaries. The NHI impact is direct: developers
+frequently embed API keys, service-account tokens, or credential
+fragments in that context for convenience, and every one of them is
+harvested the moment the context is disclosed.
+
+The 2026 list broadens the former System Prompt Leakage entry to cover all
+non-user-facing context, not just the system prompt. Severity tracks what
+that context holds: internal rules and workflow logic are medium, embedded
+credentials or reliance on context secrecy for authorisation are high, and
+disclosure that chains to code execution or broad exfiltration is critical.
+Design on the assumption that hidden context is discoverable, and never
+treat it as a security boundary.
+
+#### NHI mapping
+
+| NHI Entry | How it applies | Mitigation |
+|---|---|---|
+| NHI-2 Secret Leakage | API keys or tokens embedded in system prompt | Scan system prompts for credential patterns before deployment |
+| NHI-6 Insecure Credential Storage | System prompt stored as plaintext config with embedded credentials | Externalise credentials to vault; reference by ID in system prompt |
+
+#### Mitigations
+
+**Immediate:**
+- Automated secret scanning of all system prompt content
+- Remove any credentials found in system prompts immediately
+
+**Short-term:**
+- NHI-6: vault all credentials; system prompt references vault path, not credential value
+- NHI-2: CI/CD gate that fails if system prompt contains credential patterns
+- Periodic system prompt audit for inadvertent credential inclusion
+
+---
+
+### LLM09 — Vector and Embedding Weaknesses
+
+NHI impact: vector database service accounts and embedding store
+credentials are often over-privileged — allowing cross-tenant
+read access that enables the leakage scenarios in LLM09.
+
+#### NHI mapping
+
+| NHI Entry | How it applies | Mitigation |
+|---|---|---|
+| NHI-5 Over-Privileged NHI | Embedding store service account with cross-tenant read access | Per-tenant credentials or least-privilege scope restrictions |
+| NHI-4 Insecure Authentication | Unauthenticated embedding store access | Require authentication for all vector database connections |
+
+#### Mitigations
+
+**Immediate:**
+- Audit authentication on all vector database connections
+- Verify no embedding store service account has cross-tenant read access
+
+**Short-term:**
+- NHI-5: per-tenant credentials or fine-grained access controls for embedding stores
+- NHI-4: mTLS or equivalent for all embedding store connections
+
+---
+
+### LLM10 — Improper Output Handling
+
+NHI impact: LLM outputs passed to downstream systems — code
+interpreters, databases, APIs — often carry credentials to access
+those systems. These credentials may be embedded in outputs and
+misused if the output is weaponised.
+
+The 2026 entry renames Insecure Output Handling to Improper Output
+Handling and widens it to cover the insecure code that coding assistants
+generate at scale. Output that reaches a compiler, a repository, or a
+production system carries the same downstream-execution risk as output that
+reaches a shell, a browser, or a database.
+
+#### NHI mapping
+
+| NHI Entry | How it applies | Mitigation |
+|---|---|---|
+| NHI-2 Secret Leakage | Credentials appearing in model outputs passed to executors | Credential detection in output pipeline before execution |
+| NHI-5 Over-Privileged NHI | Downstream service credentials with excessive scope | Apply least-privilege to all credentials used in downstream processing |
+
+#### Mitigations
+
+**Immediate:**
+- Add credential pattern detection before passing model output to any executor
+- Audit scope of credentials used by downstream processing systems
+
+**Short-term:**
+- NHI-2: automated output scanning for credential patterns
+- NHI-5: minimum scope for all service accounts in output processing pipeline
+
+---
+
 ## NHI programme maturity for LLM deployments
 
 | NHI Risk | Current State | Target | Owner |
@@ -375,7 +409,7 @@ blast radius.
 ## References
 
 - [OWASP NHI Top 10](https://owasp.org/www-project-non-human-identities-top-10/)
-- [OWASP LLM Top 10 2025](https://genai.owasp.org/llm-top-10/)
+- [OWASP LLM Top 10 2026](https://genai.owasp.org/llm-top-10/)
 - [Agentic_OWASP_NHI.md](../agentic-top10/Agentic_OWASP_NHI.md) — full NHI-to-ASI cross-mapping
 - [LLM_SAMM.md](LLM_SAMM.md) — security programme maturity for LLM deployments
 - [shared/RECIPES.md](../shared/RECIPES.md) — Pattern 3: JIT Credential Issuance
@@ -387,6 +421,7 @@ blast radius.
 | Version | Date | Change |
 |---|---|---|
 | 1.0.0 | 2026-03-27 | Initial release — full mapping LLM01–LLM10 to NHI Top 10 |
+| 1.1.0 | 2026-08-28 | Migrated to OWASP Top 10 for LLM Applications 2026 — entries renumbered, LLM08 re-scoped from System Prompt Leakage to Hidden Context Exposure, LLM10 renamed to Improper Output Handling |
 
 ---
 

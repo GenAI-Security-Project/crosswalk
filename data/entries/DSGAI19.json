@@ -2,7 +2,7 @@
   "id": "DSGAI19",
   "name": "Human-in-Loop and Labeler Overexposure",
   "source_list": "DSGAI-2026",
-  "version": "2026-Q1",
+  "version": "2026-Q3",
   "severity": "Medium",
   "aivss_score": null,
   "audience": [
@@ -661,8 +661,8 @@
     ],
     "llm_top10": [
       "LLM02",
-      "LLM05",
-      "LLM03"
+      "LLM04",
+      "LLM05"
     ],
     "agentic_top10": [
       "ASI10",

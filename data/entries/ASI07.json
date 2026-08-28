@@ -2,7 +2,7 @@
   "id": "ASI07",
   "name": "Insecure Inter-Agent Communications",
   "source_list": "Agentic-Top10-2026",
-  "version": "2026-Q1",
+  "version": "2026-Q3",
   "severity": "High",
   "aivss_score": 8.2,
   "audience": [
@@ -791,8 +791,8 @@
       "DSGAI06"
     ],
     "llm_top10": [
+      "LLM04",
       "LLM03",
-      "LLM06",
       "LLM01"
     ]
   },

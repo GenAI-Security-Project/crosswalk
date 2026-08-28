@@ -2,7 +2,7 @@
   "id": "DSGAI09",
   "name": "Multimodal Cross-Channel Leakage",
   "source_list": "DSGAI-2026",
-  "version": "2026-Q1",
+  "version": "2026-Q3",
   "severity": "High",
   "aivss_score": null,
   "audience": [
@@ -696,10 +696,9 @@
     ],
     "llm_top10": [
       "LLM02",
-      "LLM04",
-      "LLM08",
-      "LLM03",
-      "LLM05"
+      "LLM05",
+      "LLM09",
+      "LLM04"
     ],
     "agentic_top10": [
       "ASI03",

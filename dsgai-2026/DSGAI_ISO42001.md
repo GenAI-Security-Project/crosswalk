@@ -297,7 +297,7 @@ that covers all AI system use within the organisation.
 | Microsoft Defender for Cloud Apps | Commercial | https://www.microsoft.com/en-us/security/business/siem-and-xdr/microsoft-defender-cloud-apps |
 
 #### Cross-references
-- LLM Top 10: LLM03 Supply Chain Vulnerabilities
+- LLM Top 10: LLM04 Supply Chain
 - DSGAI frameworks: DSGAI_NISTAIRMF.md (GV-1.7), DSGAI_EUAIAct.md (Art. 9)
 
 ---
@@ -355,7 +355,7 @@ integrity throughout the AI data lifecycle.
 | Armory | Open-source | https://github.com/twosixlabs/armory |
 
 #### Cross-references
-- LLM Top 10: LLM04 Data and Model Poisoning
+- LLM Top 10: LLM05 Data and Model Poisoning
 - DSGAI frameworks: DSGAI_NISTAIRMF.md (MS-3.3), DSGAI_ENISA.md (DMS L2)
 
 ---
@@ -414,7 +414,7 @@ concern throughout the AI system development and operation phases.
 | Pandera | Open-source | https://github.com/unionai-oss/pandera |
 
 #### Cross-references
-- LLM Top 10: LLM04 Data and Model Poisoning
+- LLM Top 10: LLM05 Data and Model Poisoning
 - DSGAI frameworks: DSGAI_NISTAIRMF.md (MS-2.5), DSGAI_EUAIAct.md (Art. 10)
 
 ---
@@ -750,7 +750,7 @@ governance and operational concern.
 | Azure AI Content Safety | Commercial | https://azure.microsoft.com/en-us/products/ai-services/ai-content-safety |
 
 #### Cross-references
-- LLM Top 10: LLM02 Sensitive Information Disclosure, LLM07 System Prompt Leakage
+- LLM Top 10: LLM02 Sensitive Information Disclosure, LLM08 Hidden Context Exposure
 - DSGAI frameworks: DSGAI_NISTAIRMF.md (MP-2.3), DSGAI_EUAIAct.md (Art. 10)
 
 ---
@@ -805,7 +805,7 @@ and adversarial testing are core lifecycle requirements.
 | Garak | Open-source | https://github.com/leondz/garak |
 
 #### Cross-references
-- LLM Top 10: LLM01 Prompt Injection, LLM05 Insecure Output Handling
+- LLM Top 10: LLM01 Prompt Injection, LLM10 Improper Output Handling
 - DSGAI frameworks: DSGAI_NISTAIRMF.md (MP-2.3), DSGAI_EUAIAct.md (Art. 15)
 
 ---
@@ -859,7 +859,7 @@ vector database vendors as third-party AI components.
 | Qdrant | Open-source | https://github.com/qdrant/qdrant |
 
 #### Cross-references
-- LLM Top 10: LLM08 Vector and Embedding Weaknesses
+- LLM Top 10: LLM09 Vector and Embedding Weaknesses
 - DSGAI frameworks: DSGAI_NISTAIRMF.md (MP-2.3), DSGAI_ENISA.md (DMS L2)
 
 ---
@@ -969,7 +969,7 @@ a data governance and AI impact concern.
 | LLM Guard | Open-source | https://github.com/protectai/llm-guard |
 
 #### Cross-references
-- LLM Top 10: LLM07 System Prompt Leakage
+- LLM Top 10: LLM08 Hidden Context Exposure
 - DSGAI frameworks: DSGAI_NISTAIRMF.md (MS-2.5), DSGAI_EUAIAct.md (Art. 10)
 
 ---
@@ -1025,7 +1025,7 @@ AIMS use policy and operational controls.
 | Carbon Black | Commercial | https://www.vmware.com/products/carbon-black-cloud.html |
 
 #### Cross-references
-- LLM Top 10: LLM06 Excessive Agency
+- LLM Top 10: LLM03 Excessive Agency
 - DSGAI frameworks: DSGAI_NISTAIRMF.md (GV-1.7), DSGAI_EUAIAct.md (Art. 9)
 
 ---
@@ -1080,7 +1080,7 @@ as lifecycle management responsibilities.
 | MLflow | Open-source | https://github.com/mlflow/mlflow |
 
 #### Cross-references
-- LLM Top 10: LLM10 Unbounded Consumption
+- LLM Top 10: LLM06 Unbounded Consumption
 - DSGAI frameworks: DSGAI_NISTAIRMF.md (MG-2.2), DSGAI_EUAIAct.md (Art. 15)
 
 ---
@@ -1294,7 +1294,7 @@ governance and AI impact concern.
 | FactScore | Research | https://github.com/shmsw25/FActScoring |
 
 #### Cross-references
-- LLM Top 10: LLM04 Data and Model Poisoning, LLM09 Misinformation
+- LLM Top 10: LLM05 Data and Model Poisoning, LLM07 Misinformation
 - DSGAI frameworks: DSGAI_NISTAIRMF.md (MS-3.3), DSGAI_EUAIAct.md (Art. 52)
 
 ---

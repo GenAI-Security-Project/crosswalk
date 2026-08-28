@@ -20,7 +20,7 @@ Runnable security test profiles mapped to OWASP GenAI vulnerability entries.
 
 | Folder | Tool | Profiles |
 |---|---|---|
-| `garak/` | [Garak](https://github.com/NVIDIA/garak) | 7 YAML run configs (LLM01, LLM02, LLM04, LLM07, LLM09, ASI01, ASI05) |
+| `garak/` | [Garak](https://github.com/NVIDIA/garak) | 7 YAML run configs (LLM01, LLM02, LLM05, LLM08, LLM07, ASI01, ASI05) |
 | `pyrit/` | [PyRIT](https://github.com/Azure/PyRIT) | 3 Python scripts (prompt injection, RAG poisoning, agentic goal hijack) |
 | `ci/` | GitHub Actions | 1 workflow template for CI/CD integration |
 
@@ -93,10 +93,10 @@ GARAK_MODEL_TYPE=openai GARAK_MODEL_NAME=gpt-4o bash evals/garak/run_all.sh
 | Profile | OWASP Entry | MITRE ATLAS Techniques | Controls validated |
 |---|---|---|---|
 | `LLM01_prompt_injection.yaml` | LLM01 Prompt Injection | AML.T0051.000, AML.T0051.001, AML.T0054 | Input validation, context separation, injection detection |
-| `LLM02_sensitive_disclosure.yaml` | LLM02 Sensitive Info Disclosure | AML.T0021, AML.T0024 | Output scanning, DLP, access control on RAG |
-| `LLM04_data_poisoning.yaml` | LLM04 Data & Model Poisoning | AML.T0020, AML.T0031, AML.T0032 | Input integrity, adversarial robustness |
-| `LLM07_system_prompt_leakage.yaml` | LLM07 System Prompt Leakage | AML.T0041, AML.T0051.000 | System prompt confidentiality |
-| `LLM09_misinformation.yaml` | LLM09 Misinformation | AML.T0045, AML.T0047 | Output factuality, hallucination detection |
+| `LLM02_sensitive_disclosure.yaml` | LLM02 Sensitive Information Disclosure | AML.T0021, AML.T0024 | Output scanning, DLP, access control on RAG |
+| `LLM05_data_poisoning.yaml` | LLM05 Data and Model Poisoning | AML.T0020, AML.T0031, AML.T0032 | Input integrity, adversarial robustness |
+| `LLM08_hidden_context_exposure.yaml` | LLM08 Hidden Context Exposure | AML.T0041, AML.T0051.000 | System prompt confidentiality |
+| `LLM07_misinformation.yaml` | LLM07 Misinformation | AML.T0045, AML.T0047 | Output factuality, hallucination detection |
 | `ASI01_goal_hijack.yaml` | ASI01 Agent Goal Hijack | AML.T0051, AML.T0054 | Goal integrity, instruction hierarchy, human oversight |
 | `ASI05_code_execution.yaml` | ASI05 Unexpected Code Execution | AML.T0057, CWE-78, CWE-94 | Sandboxing, code execution controls |
 

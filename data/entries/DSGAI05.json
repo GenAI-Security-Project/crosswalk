@@ -2,7 +2,7 @@
   "id": "DSGAI05",
   "name": "Data Integrity and Validation Failures",
   "source_list": "DSGAI-2026",
-  "version": "2026-Q1",
+  "version": "2026-Q3",
   "severity": "High",
   "aivss_score": null,
   "audience": [
@@ -704,10 +704,10 @@
   ],
   "crossrefs": {
     "llm_top10": [
+      "LLM10",
       "LLM05",
-      "LLM04",
       "LLM01",
-      "LLM03"
+      "LLM04"
     ],
     "dsgai_2026": [
       "DSGAI13",

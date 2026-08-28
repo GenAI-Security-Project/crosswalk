@@ -2,7 +2,7 @@
   "id": "ASI04",
   "name": "Agentic Supply Chain",
   "source_list": "Agentic-Top10-2026",
-  "version": "2026-Q1",
+  "version": "2026-Q3",
   "severity": "High",
   "aivss_score": 8.4,
   "audience": [
@@ -840,9 +840,8 @@
   ],
   "crossrefs": {
     "llm_top10": [
-      "LLM03",
-      "LLM08",
-      "LLM05"
+      "LLM04",
+      "LLM09"
     ],
     "dsgai_2026": [
       "DSGAI04",
