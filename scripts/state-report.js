@@ -34,9 +34,13 @@ for (const inc of incidents.incidents) {
 
 // Framework stats
 const fwFiles = fs.readdirSync(fwDir).filter(f => f.endsWith(".json"));
+// Count controls only. Registry items also include ATLAS techniques, CWE
+// weaknesses, STRIDE threat categories and ENISA/MAESTRO architectural layers;
+// lumping them together is what produced the inflated "1,514 controls" figure.
 let totalControls = 0;
 fwFiles.forEach(f => {
-  totalControls += JSON.parse(fs.readFileSync(path.join(fwDir, f))).controls.length;
+  const items = JSON.parse(fs.readFileSync(path.join(fwDir, f))).controls;
+  totalControls += items.filter(c => c.kind === "control").length;
 });
 
 // Entry stats

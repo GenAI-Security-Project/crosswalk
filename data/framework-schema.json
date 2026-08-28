@@ -3,7 +3,13 @@
   "title": "OWASP GenAI Crosswalk — Framework Registry Entry",
   "description": "Schema for first-class framework definitions with full control inventories",
   "type": "object",
-  "required": ["id", "name", "version", "url", "controls"],
+  "required": [
+    "id",
+    "name",
+    "version",
+    "url",
+    "controls"
+  ],
   "properties": {
     "id": {
       "type": "string",
@@ -58,7 +64,10 @@
       "description": "Date this registry file was last verified against the source"
     },
     "source_sha": {
-      "type": ["string", "null"],
+      "type": [
+        "string",
+        "null"
+      ],
       "description": "Git SHA or document hash of the source used for this version"
     },
     "controls": {
@@ -66,7 +75,11 @@
       "description": "Complete inventory of controls/clauses/requirements",
       "items": {
         "type": "object",
-        "required": ["control_id", "title"],
+        "required": [
+          "control_id",
+          "title",
+          "kind"
+        ],
         "properties": {
           "control_id": {
             "type": "string",
@@ -76,16 +89,33 @@
             "type": "string",
             "description": "Human-readable control title"
           },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "control",
+              "technique",
+              "weakness",
+              "threat-category",
+              "layer"
+            ],
+            "description": "What this registry item actually is. Only `control` counts toward the control total; `layer` items are architecture context and are excluded from coverage scoring. Set by scripts/stats.js rules, not by hand."
+          },
           "description": {
             "type": "string",
             "description": "Brief description of what the control requires"
           },
           "parent": {
-            "type": ["string", "null"],
+            "type": [
+              "string",
+              "null"
+            ],
             "description": "Parent control_id for hierarchical frameworks"
           },
           "function": {
-            "type": ["string", "null"],
+            "type": [
+              "string",
+              "null"
+            ],
             "description": "Top-level function/domain e.g. GOVERN, MAP, MEASURE, MANAGE"
           },
           "url": {
@@ -101,9 +131,16 @@
       "items": {
         "type": "object",
         "properties": {
-          "date": { "type": "string", "format": "date" },
-          "change": { "type": "string" },
-          "author": { "type": "string" }
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "change": {
+            "type": "string"
+          },
+          "author": {
+            "type": "string"
+          }
         }
       }
     }

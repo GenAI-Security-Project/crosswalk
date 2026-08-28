@@ -12,27 +12,33 @@
   "controls": [
     {
       "control_id": "S",
-      "title": "Instruction Spoofing"
+      "title": "Instruction Spoofing",
+      "kind": "threat-category"
     },
     {
       "control_id": "T",
-      "title": "Behaviour Tampering"
+      "title": "Behaviour Tampering",
+      "kind": "threat-category"
     },
     {
       "control_id": "E",
-      "title": "Privilege Elevation via Injection"
+      "title": "Privilege Elevation via Injection",
+      "kind": "threat-category"
     },
     {
       "control_id": "I",
-      "title": "Sensitive Data Disclosure"
+      "title": "Sensitive Data Disclosure",
+      "kind": "threat-category"
     },
     {
       "control_id": "R",
-      "title": "Disclosure Without Audit Trail"
+      "title": "Disclosure Without Audit Trail",
+      "kind": "threat-category"
     },
     {
       "control_id": "D",
-      "title": "Resource Exhaustion via Uncontrolled Actions"
+      "title": "Resource Exhaustion via Uncontrolled Actions",
+      "kind": "threat-category"
     }
   ]
 }

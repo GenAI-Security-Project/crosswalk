@@ -13,110 +13,133 @@
     {
       "control_id": "B001",
       "title": "Third-party testing of adversarial robustness",
-      "description": "Foundational; Hardening"
+      "description": "Foundational; Hardening",
+      "kind": "control"
     },
     {
       "control_id": "B002",
       "title": "Detect adversarial input",
-      "description": "Hardening"
+      "description": "Hardening",
+      "kind": "control"
     },
     {
       "control_id": "B005",
       "title": "Implement real-time input filtering",
-      "description": "Foundational"
+      "description": "Foundational",
+      "kind": "control"
     },
     {
       "control_id": "B006",
       "title": "Prevent unauthorized AI agent actions",
-      "description": "Foundational"
+      "description": "Foundational",
+      "kind": "control"
     },
     {
       "control_id": "B004",
-      "title": "Prevent AI endpoint scraping"
+      "title": "Prevent AI endpoint scraping",
+      "kind": "control"
     },
     {
       "control_id": "B007",
       "title": "Enforce user access privileges to AI systems",
-      "description": "Hardening"
+      "description": "Hardening",
+      "kind": "control"
     },
     {
       "control_id": "A",
       "title": "Data & Privacy (full domain)",
-      "description": "Foundational"
+      "description": "Foundational",
+      "kind": "control"
     },
     {
       "control_id": "B008",
       "title": "Protect model deployment environment",
-      "description": "Hardening"
+      "description": "Hardening",
+      "kind": "control"
     },
     {
       "control_id": "E",
       "title": "Accountability (full domain)",
-      "description": "Foundational"
+      "description": "Foundational",
+      "kind": "control"
     },
     {
       "control_id": "B003",
       "title": "Manage public release of technical details",
-      "description": "Hardening"
+      "description": "Hardening",
+      "kind": "control"
     },
     {
       "control_id": "B009",
       "title": "Limit output over-exposure",
-      "description": "Foundational"
+      "description": "Foundational",
+      "kind": "control"
     },
     {
       "control_id": "D",
       "title": "Reliability (full domain)",
-      "description": "Foundational"
+      "description": "Foundational",
+      "kind": "control"
     },
     {
       "control_id": "C",
       "title": "Safety (full domain)",
-      "description": "Foundational"
+      "description": "Foundational",
+      "kind": "control"
     },
     {
       "control_id": "F",
       "title": "Society (full domain)",
-      "description": "Foundational"
+      "description": "Foundational",
+      "kind": "control"
     },
     {
       "control_id": "Primary DSGAI entries",
       "title": "AIUC-1 Domain",
-      "description": "Status"
+      "description": "Status",
+      "kind": "control"
     },
     {
       "control_id": "DSGAI02, DSGAI03, DSGAI06, DSGAI07, DSGAI08, DSGAI09, DSGAI14, DSGAI15, DSGAI18, DSGAI21",
-      "title": "A — Data & Privacy"
+      "title": "A — Data & Privacy",
+      "kind": "control"
     },
     {
       "control_id": "DSGAI01, DSGAI04, DSGAI05, DSGAI10, DSGAI12, DSGAI16, DSGAI17",
-      "title": "B — Security"
+      "title": "B — Security",
+      "kind": "control"
     },
     {
       "control_id": "DSGAI05, DSGAI20",
-      "title": "C — Safety"
+      "title": "C — Safety",
+      "kind": "control"
     },
     {
       "control_id": "DSGAI12, DSGAI19",
-      "title": "D — Reliability"
+      "title": "D — Reliability",
+      "kind": "control"
     },
     {
       "control_id": "DSGAI02, DSGAI06, DSGAI09, DSGAI13, DSGAI18, DSGAI20, DSGAI21",
-      "title": "E — Accountability"
+      "title": "E — Accountability",
+      "kind": "control"
     },
     {
       "control_id": "DSGAI20",
-      "title": "F — Society"
+      "title": "F — Society",
+      "kind": "control"
     },
     {
       "control_id": "Date",
       "title": "Version",
-      "description": "Change"
+      "description": "Change",
+      "kind": "control"
     },
     {
       "control_id": "2026-03-27",
       "title": "1.0.0",
-      "description": "Initial release — full mapping DSGAI01–DSGAI21 to AIUC-1"
+      "description": "Initial release — full mapping DSGAI01–DSGAI21 to AIUC-1",
+      "kind": "control"
     }
   ]
 }

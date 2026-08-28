@@ -56,8 +56,14 @@
     "total": 114
   },
   "controls": {
+    "total": 1372,
     "registry_items": 1514,
-    "by_kind": null,
-    "TODO": "T-DATA02: type registry items by kind and count only kind=control"
+    "by_kind": {
+      "control": 1372,
+      "layer": 10,
+      "technique": 50,
+      "threat-category": 6,
+      "weakness": 76
+    }
   }
 }
