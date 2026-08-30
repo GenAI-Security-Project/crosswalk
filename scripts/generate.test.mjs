@@ -117,6 +117,20 @@ test('DRAFT never survives into a stored enum field', () => {
   assert.deepEqual(leaked.slice(0, 5), [], `${leaked.length} field(s) stored the literal "DRAFT"`);
 });
 
+test('webapp bundles carry no build timestamp', () => {
+  // docs/ is served straight from main and CI diffs these files against a
+  // fresh generation. A `// Generated: <date>` header made that diff fail on
+  // every day but the one the bundle was committed — so the header must
+  // describe the data, never the run.
+  for (const f of BUNDLES.filter((b) => fs.existsSync(b))) {
+    const header = fs.readFileSync(f, 'utf8').split(/\r?\n/).filter((l) => l.startsWith('//'));
+    for (const line of header) {
+      assert.doesNotMatch(line, /Generated:/i, `${path.basename(f)} header names a run: ${line}`);
+      assert.doesNotMatch(line, /\d{4}-\d{2}-\d{2}/, `${path.basename(f)} header carries a date: ${line}`);
+    }
+  }
+});
+
 test('webapp bundles stay in step with the entry files', () => {
   const src = fs.readFileSync(path.join(ROOT, 'docs', 'data.js'), 'utf8');
   const start = src.indexOf('[');
