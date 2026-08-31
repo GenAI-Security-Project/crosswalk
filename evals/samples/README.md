@@ -88,7 +88,7 @@ Every item, every time. The repository is public.
 
 A `RUN.md` in the track directory, filled in by the person who ran it:
 
-```
+```text
 Run date        : YYYY-MM-DD
 Tool version    : garak x.y.z / pyrit x.y.z / laaf commit <sha>
 Target          : <type> / <name or neutral label>
