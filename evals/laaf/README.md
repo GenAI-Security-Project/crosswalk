@@ -102,15 +102,15 @@ laaf report --input results/dry-run.json --output results/dry-run.html
 
 ```bash
 # Single stage — quickest validation
-laaf scan --target openai --model gpt-4o-mini --stages S1 S2
+laaf scan --target <target> --model <model> --stages S1 S2
 
-# Full 6-stage suite (uses crosswalk stage configs)
-bash evals/laaf/run_laaf.sh
+# Full 6-stage suite (uses crosswalk stage configs) — both variables are required
+LAAF_TARGET=<target> LAAF_MODEL=<model> bash evals/laaf/run_laaf.sh
 
 # With crosswalk-specific stage configs
 laaf scan \
-  --target openai \
-  --model gpt-4o-mini \
+  --target <target> \
+  --model <model> \
   --config-dir evals/laaf/stage_configs/ \
   --stages S1 S2 S3 S4 S5 S6 \
   --rate-limit 2.0 \
@@ -129,6 +129,11 @@ laaf scan \
 | **UNKNOWN** | No classification signal | Review response; likely a model quality issue |
 
 ### Breakthrough rate thresholds
+
+> **Status: DRAFT — SME review required.** These values were set when the integration was
+> written and have not been calibrated against a recorded run. They are tabulated with every
+> other track in [`../THRESHOLDS.md`](../THRESHOLDS.md); override per run with
+> `LAAF_THRESHOLD_S1` … `LAAF_THRESHOLD_S6` (a fraction, 0.0–1.0).
 
 | Stage | Max acceptable rate | Rationale |
 |---|---|---|
@@ -154,7 +159,7 @@ python evals/laaf/laaf_crosswalk.py \
 
 # Or run it as part of the full assessment:
 python evals/laaf/laaf_crosswalk.py --run-scan \
-  --target openai --model gpt-4o-mini
+  --target <target> --model <model>
 ```
 
 ---
@@ -173,8 +178,8 @@ To use LAAF in your own CI:
   run: |
     pip install git+https://github.com/qorvexconsulting1/laaf-V2.0.git
     laaf scan \
-      --target openai \
-      --model gpt-4o-mini \
+      --target ${{ vars.EVAL_MODEL_TYPE }} \
+      --model ${{ vars.EVAL_MODEL_NAME }} \
       --stages S1 S2 S3 \
       --config-dir evals/laaf/stage_configs/ \
       --output laaf-results.json
