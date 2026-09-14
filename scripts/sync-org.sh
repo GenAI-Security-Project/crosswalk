@@ -72,7 +72,7 @@ echo ""
 if [[ $REPLY =~ ^[Yy]$ ]]; then
   git commit -m "Sync crosswalk v$VERSION — $(date +%Y-%m-%d)
 
-Source: https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk/releases/tag/v$VERSION"
+Source: https://github.com/GenAI-Security-Project/crosswalk/releases/tag/v$VERSION"
 
   git push origin main
   echo ""
