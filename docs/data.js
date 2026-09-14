@@ -10877,7 +10877,14 @@ window.CROSSWALK_DATA = [
         "notes": "DRAFT — SME review required",
         "framework_version": "MAESTRO 1.0",
         "confidence": "unreviewed",
-        "reviewed_by": []
+        "reviewed_by": [],
+        "evidence_count": 0,
+        "evidence": {
+          "confirmed": [],
+          "drafted": [
+            "INC-115"
+          ]
+        }
       },
       {
         "framework": "MAESTRO",
@@ -11002,7 +11009,14 @@ window.CROSSWALK_DATA = [
         "notes": "DRAFT — SME review required",
         "framework_version": "MAESTRO 1.0",
         "confidence": "unreviewed",
-        "reviewed_by": []
+        "reviewed_by": [],
+        "evidence_count": 0,
+        "evidence": {
+          "confirmed": [],
+          "drafted": [
+            "INC-115"
+          ]
+        }
       },
       {
         "framework": "MAESTRO",
@@ -11013,7 +11027,14 @@ window.CROSSWALK_DATA = [
         "notes": "DRAFT — SME review required",
         "framework_version": "MAESTRO 1.0",
         "confidence": "unreviewed",
-        "reviewed_by": []
+        "reviewed_by": [],
+        "evidence_count": 0,
+        "evidence": {
+          "confirmed": [],
+          "drafted": [
+            "INC-123"
+          ]
+        }
       },
       {
         "framework": "MAESTRO",
@@ -11210,7 +11231,14 @@ window.CROSSWALK_DATA = [
         "notes": "DRAFT — SME review required",
         "framework_version": "MAESTRO 1.0",
         "confidence": "unreviewed",
-        "reviewed_by": []
+        "reviewed_by": [],
+        "evidence_count": 0,
+        "evidence": {
+          "confirmed": [],
+          "drafted": [
+            "INC-123"
+          ]
+        }
       }
     ],
     "tools": [],
@@ -11386,7 +11414,14 @@ window.CROSSWALK_DATA = [
         "notes": "DRAFT — SME review required",
         "framework_version": "MAESTRO 1.0",
         "confidence": "unreviewed",
-        "reviewed_by": []
+        "reviewed_by": [],
+        "evidence_count": 0,
+        "evidence": {
+          "confirmed": [],
+          "drafted": [
+            "INC-124"
+          ]
+        }
       },
       {
         "framework": "MAESTRO",
@@ -11477,7 +11512,14 @@ window.CROSSWALK_DATA = [
         "notes": "DRAFT — SME review required",
         "framework_version": "MAESTRO 1.0",
         "confidence": "unreviewed",
-        "reviewed_by": []
+        "reviewed_by": [],
+        "evidence_count": 0,
+        "evidence": {
+          "confirmed": [],
+          "drafted": [
+            "INC-124"
+          ]
+        }
       },
       {
         "framework": "MAESTRO",
