@@ -10807,17 +10807,6 @@ window.CROSSWALK_DATA = [
       }
     ],
     "crossrefs": {
-      "llm_top10": [
-        "LLM01",
-        "LLM03",
-        "LLM08",
-        "LLM02",
-        "LLM04",
-        "LLM05",
-        "LLM09",
-        "LLM07",
-        "LLM06"
-      ],
       "agentic_top10": [
         "ASI02",
         "ASI05"
@@ -22933,17 +22922,6 @@ window.CROSSWALK_DATA = [
         "LLM03",
         "LLM06",
         "LLM04"
-      ],
-      "agentic_top10": [
-        "ASI01",
-        "ASI02",
-        "ASI03",
-        "ASI05",
-        "ASI04",
-        "ASI06",
-        "ASI07",
-        "ASI08",
-        "ASI09"
       ],
       "dsgai_2026": [
         "DSGAI16",
@@ -42160,90 +42138,6 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "AIUC-1",
-        "control_id": "Primary DSGAI entries",
-        "control_name": "AIUC-1 Domain",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "Status",
-        "confidence": "unreviewed",
-        "reviewed_by": []
-      },
-      {
-        "framework": "AIUC-1",
-        "control_id": "DSGAI02, DSGAI03, DSGAI06, DSGAI07, DSGAI08, DSGAI09, DSGAI14, DSGAI15, DSGAI18, DSGAI21",
-        "control_name": "A — Data & Privacy",
-        "tier": "Foundational",
-        "scope": "Both",
-        "confidence": "unreviewed",
-        "reviewed_by": []
-      },
-      {
-        "framework": "AIUC-1",
-        "control_id": "DSGAI01, DSGAI04, DSGAI05, DSGAI10, DSGAI12, DSGAI16, DSGAI17",
-        "control_name": "B — Security",
-        "tier": "Foundational",
-        "scope": "Both",
-        "confidence": "unreviewed",
-        "reviewed_by": []
-      },
-      {
-        "framework": "AIUC-1",
-        "control_id": "DSGAI05, DSGAI20",
-        "control_name": "C — Safety",
-        "tier": "Foundational",
-        "scope": "Both",
-        "confidence": "unreviewed",
-        "reviewed_by": []
-      },
-      {
-        "framework": "AIUC-1",
-        "control_id": "DSGAI12, DSGAI19",
-        "control_name": "D — Reliability",
-        "tier": "Foundational",
-        "scope": "Both",
-        "confidence": "unreviewed",
-        "reviewed_by": []
-      },
-      {
-        "framework": "AIUC-1",
-        "control_id": "DSGAI02, DSGAI06, DSGAI09, DSGAI13, DSGAI18, DSGAI20, DSGAI21",
-        "control_name": "E — Accountability",
-        "tier": "Foundational",
-        "scope": "Both",
-        "confidence": "unreviewed",
-        "reviewed_by": []
-      },
-      {
-        "framework": "AIUC-1",
-        "control_id": "DSGAI20",
-        "control_name": "F — Society",
-        "tier": "Foundational",
-        "scope": "Both",
-        "confidence": "unreviewed",
-        "reviewed_by": []
-      },
-      {
-        "framework": "AIUC-1",
-        "control_id": "Date",
-        "control_name": "Version",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "Change",
-        "confidence": "unreviewed",
-        "reviewed_by": []
-      },
-      {
-        "framework": "AIUC-1",
-        "control_id": "2026-03-27",
-        "control_name": "1.0.0",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "Initial release — full mapping DSGAI01–DSGAI21 to AIUC-1",
-        "confidence": "unreviewed",
-        "reviewed_by": []
-      },
-      {
         "framework": "OWASP NHI Top 10",
         "control_id": "Machine credentials used for ingestion operations — no individual attribution",
         "control_name": "NHI-10 Human Use of NHI",
@@ -42270,130 +42164,6 @@ window.CROSSWALK_DATA = [
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Protect lineage system credentials",
-        "confidence": "unreviewed",
-        "reviewed_by": []
-      },
-      {
-        "framework": "OWASP NHI Top 10",
-        "control_id": "DSGAI entries most affected",
-        "control_name": "NHI Risk",
-        "tier": "Foundational",
-        "scope": "Both",
-        "confidence": "unreviewed",
-        "reviewed_by": []
-      },
-      {
-        "framework": "OWASP NHI Top 10",
-        "control_id": "DSGAI21",
-        "control_name": "NHI-1 Improper Offboarding",
-        "tier": "Foundational",
-        "scope": "Both",
-        "confidence": "unreviewed",
-        "reviewed_by": []
-      },
-      {
-        "framework": "OWASP NHI Top 10",
-        "control_id": "DSGAI03, DSGAI06, DSGAI16",
-        "control_name": "NHI-2 Secret Leakage",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "DevSecOps",
-        "confidence": "unreviewed",
-        "reviewed_by": []
-      },
-      {
-        "framework": "OWASP NHI Top 10",
-        "control_id": "DSGAI13, DSGAI16, DSGAI17",
-        "control_name": "NHI-3 Third-Party NHI",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "Security",
-        "confidence": "unreviewed",
-        "reviewed_by": []
-      },
-      {
-        "framework": "OWASP NHI Top 10",
-        "control_id": "DSGAI04, DSGAI08",
-        "control_name": "NHI-4 Insecure Authentication",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "Platform",
-        "confidence": "unreviewed",
-        "reviewed_by": []
-      },
-      {
-        "framework": "OWASP NHI Top 10",
-        "control_id": "DSGAI02, DSGAI07, DSGAI08, DSGAI09",
-        "control_name": "NHI-5 Over-Privileged NHI",
-        "tier": "Foundational",
-        "scope": "Both",
-        "confidence": "unreviewed",
-        "reviewed_by": []
-      },
-      {
-        "framework": "OWASP NHI Top 10",
-        "control_id": "DSGAI02, DSGAI09, DSGAI14",
-        "control_name": "NHI-6 Insecure Storage",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "Platform",
-        "confidence": "unreviewed",
-        "reviewed_by": []
-      },
-      {
-        "framework": "OWASP NHI Top 10",
-        "control_id": "DSGAI02, DSGAI07, DSGAI09, DSGAI12",
-        "control_name": "NHI-7 Long-Lived",
-        "tier": "Foundational",
-        "scope": "Both",
-        "confidence": "unreviewed",
-        "reviewed_by": []
-      },
-      {
-        "framework": "OWASP NHI Top 10",
-        "control_id": "DSGAI16, DSGAI17",
-        "control_name": "NHI-8 Env Isolation",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "DevSecOps",
-        "confidence": "unreviewed",
-        "reviewed_by": []
-      },
-      {
-        "framework": "OWASP NHI Top 10",
-        "control_id": "DSGAI04, DSGAI07, DSGAI08, DSGAI19",
-        "control_name": "NHI-9 NHI Reuse",
-        "tier": "Foundational",
-        "scope": "Both",
-        "confidence": "unreviewed",
-        "reviewed_by": []
-      },
-      {
-        "framework": "OWASP NHI Top 10",
-        "control_id": "DSGAI18, DSGAI20, DSGAI21",
-        "control_name": "NHI-10 Human Use",
-        "tier": "Foundational",
-        "scope": "Both",
-        "confidence": "unreviewed",
-        "reviewed_by": []
-      },
-      {
-        "framework": "OWASP NHI Top 10",
-        "control_id": "Date",
-        "control_name": "Version",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "Change",
-        "confidence": "unreviewed",
-        "reviewed_by": []
-      },
-      {
-        "framework": "OWASP NHI Top 10",
-        "control_id": "2026-03-27",
-        "control_name": "1.0.0",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "Initial release — full mapping DSGAI01–DSGAI21 to NHI Top 10",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -42622,26 +42392,8 @@ window.CROSSWALK_DATA = [
         "ASI02"
       ],
       "dsgai_2026": [
-        "DSGAI01",
-        "DSGAI03",
-        "DSGAI07",
-        "DSGAI08",
         "DSGAI02",
-        "DSGAI06",
-        "DSGAI12",
-        "DSGAI13",
-        "DSGAI04",
-        "DSGAI05",
-        "DSGAI11",
-        "DSGAI18",
-        "DSGAI17",
-        "DSGAI14",
-        "DSGAI15",
-        "DSGAI09",
-        "DSGAI16",
-        "DSGAI10",
-        "DSGAI19",
-        "DSGAI20"
+        "DSGAI09"
       ]
     },
     "changelog": [

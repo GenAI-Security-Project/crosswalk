@@ -1100,17 +1100,6 @@
       "LLM06",
       "LLM04"
     ],
-    "agentic_top10": [
-      "ASI01",
-      "ASI02",
-      "ASI03",
-      "ASI05",
-      "ASI04",
-      "ASI06",
-      "ASI07",
-      "ASI08",
-      "ASI09"
-    ],
     "dsgai_2026": [
       "DSGAI16",
       "DSGAI03",
