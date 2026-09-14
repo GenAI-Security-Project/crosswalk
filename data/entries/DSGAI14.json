@@ -777,6 +777,72 @@
       "notes": "Monitor for AI processing inconsistent with consent status; alert on violations",
       "confidence": "unreviewed",
       "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "12.1.3",
+      "control_name": "Verify that log entries for AI inference events follow a structured, interoperable schema that includes at least the model identifier, token usage ...",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C12-Monitoring-and-Logging.md#c121-request--response-logging",
+      "notes": "Level 2. Log entries for inference events follow a structured, interoperable schema with a defined field set (model identifier, token usage, provider, operation type), bounding what telemetry carries",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "9.5.4",
+      "control_name": "Verify that secrets and credentials required by an agent at runtime are not exposed within the model's observable context, including the context wi...",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c95-agent-authorization-delegation-and-continuous-enforcement",
+      "notes": "Level 2. Secrets and credentials not exposed within the model observable context including tool call parameters, which are a primary source of credentials reaching logs",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "5.2.7",
+      "control_name": "Verify that data classification labels propagate to downstream resources (embeddings, prompt caches, model outputs).",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C05-Access-Control-and-Identity.md#c52-ai-resource-authorization--classification",
+      "notes": "Level 3. Data classification labels propagate to downstream resources, so sensitive content retains its handling requirement when it reaches telemetry",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "1.2.3",
+      "control_name": "Verify that sensitive information in labels is redacted, anonymized, or encrypted before being used in any labeling artifact.",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c12-data-labeling-and-annotation-security",
+      "notes": "Level 2. Sensitive information redacted, anonymized or encrypted before being used in any labeling artifact",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "12.1.4",
+      "control_name": "Verify that RAG pipeline retrieval events are logged, including the query, documents retrieved, and knowledge source.",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C12-Monitoring-and-Logging.md#c121-request--response-logging",
+      "notes": "Level 2. RAG retrieval events logged with query, documents retrieved and knowledge source, which is exactly the high-value content this risk says logging infrastructure accumulates",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "12.1.2",
+      "control_name": "Verify that safety filtering and policy decisions are logged with sufficient detail to support audit, debugging, and forensic analysis of content m...",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C12-Monitoring-and-Logging.md#c121-request--response-logging",
+      "notes": "Level 2. Safety filtering and policy decisions logged with sufficient detail for audit, debugging and forensics, scoping moderation telemetry to a defined purpose",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     }
   ],
   "tools": [
@@ -849,67 +915,67 @@
   "incidents": [
     {
       "name": "Cursor AI code agent leaking repository secrets via context window",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2025,
       "incident_id": "INC-034"
     },
     {
       "name": "Italy Garante orders ChatGPT GDPR enforcement — consent and data minimization failures",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2025,
       "incident_id": "INC-035"
     },
     {
       "name": "Clearview AI biometric bias — $50M class action settlement",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2025,
       "incident_id": "INC-036"
     },
     {
       "name": "TikTok EU data localization enforcement — Project Clover + EUR 345M GDPR fine",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2023,
       "incident_id": "INC-043"
     },
     {
       "name": "Scale AI / Sama contractor data exposure — third-party AI labeling workforce privacy violations",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-044"
     },
     {
       "name": "OpenAI ChatGPT data retention GDPR challenge — right to erasure vs model training",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-050"
     },
     {
       "name": "Microsoft Recall screenshots everything — OS-level data retention without consent",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-055"
     },
     {
       "name": "Waymo autonomous vehicle data retention — 75 petabytes of driving footage with faces",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-066"
     },
     {
       "name": "EU GDPR enforcement: ChatGPT cannot correct factually wrong personal data",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-068"
     },
     {
       "name": "EU AI Act first enforcement actions — prohibited AI practices take effect",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2025,
       "incident_id": "INC-071"
     },
     {
       "name": "DeepSeek R1 data exfiltration — Chinese AI model sends data to China-linked servers",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2025,
       "incident_id": "INC-072"
     }

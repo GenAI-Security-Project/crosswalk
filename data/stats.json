@@ -27,17 +27,17 @@
     }
   },
   "mappings": {
-    "total": 3497,
+    "total": 3803,
     "by_list": {
-      "Agentic-Top10-2026": 910,
+      "Agentic-Top10-2026": 993,
       "AST-Top10-2026": 36,
-      "DSGAI-2026": 1647,
-      "LLM-Top10-2026": 904
+      "DSGAI-2026": 1788,
+      "LLM-Top10-2026": 986
     }
   },
   "frameworks": {
-    "registries": 25,
-    "mapped": 25,
+    "registries": 26,
+    "mapped": 26,
     "unmapped_registries": [],
     "draft_only": [
       "CoSAI",
@@ -45,18 +45,18 @@
     ],
     "draft_rows": 286,
     "by_list": {
-      "LLM-Top10-2026": 25,
-      "Agentic-Top10-2026": 25,
-      "DSGAI-2026": 23,
+      "LLM-Top10-2026": 26,
+      "Agentic-Top10-2026": 26,
+      "DSGAI-2026": 24,
       "AST-Top10-2026": 1
     }
   },
   "mapping_files": {
-    "total": 74,
+    "total": 77,
     "by_list": {
-      "LLM-Top10-2026": 25,
-      "Agentic-Top10-2026": 25,
-      "DSGAI-2026": 23,
+      "LLM-Top10-2026": 26,
+      "Agentic-Top10-2026": 26,
+      "DSGAI-2026": 24,
       "AST-Top10-2026": 1
     }
   },
@@ -64,8 +64,8 @@
     "total": 131
   },
   "freshness": {
-    "checked": 3,
-    "current": 2,
+    "checked": 4,
+    "current": 3,
     "diverged": 1,
     "unchecked": 22,
     "diverged_frameworks": [
@@ -78,10 +78,10 @@
     ]
   },
   "controls": {
-    "total": 1372,
-    "registry_items": 1514,
+    "total": 1563,
+    "registry_items": 1705,
     "by_kind": {
-      "control": 1372,
+      "control": 1563,
       "layer": 10,
       "technique": 50,
       "threat-category": 6,

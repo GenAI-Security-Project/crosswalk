@@ -771,6 +771,105 @@
       "notes": "Include external data sources in third-party risk management; assess data quality, provenance practices, and licensing compliance",
       "confidence": "unreviewed",
       "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "1.1.3",
+      "control_name": "Verify that data integrity is provided when training data is stored and transferred.",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c11-training-data-origin--data-security",
+      "notes": "Level 2. Data integrity provided when training data is stored and transferred",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "7.1.1",
+      "control_name": "Verify that the application validates all model outputs against a defined schema and rejects any output that does not match.",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C07-Model-Behavior.md#c71-output-format-enforcement",
+      "notes": "Level 1. All model outputs validated against a defined schema and rejected when they do not match",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "9.3.2",
+      "control_name": "Verify that tool outputs are validated against schemas.",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
+      "notes": "Level 1. Tool outputs validated against schemas",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "10.4.4",
+      "control_name": "Verify that all MCP servers enforce strict schema validation.",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C10-MCP-Security.md#c104-schema-message-and-input-validation",
+      "notes": "Level 2. All MCP servers enforce strict schema validation",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "10.4.3",
+      "control_name": "Verify that MCP servers reject unrecognized or oversized parameters in function calls.",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C10-MCP-Security.md#c104-schema-message-and-input-validation",
+      "notes": "Level 1. MCP servers reject unrecognized or oversized parameters in function calls",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "1.3.2",
+      "control_name": "Verify that automatically generated labels are subject to confidence thresholds and consistency checks to detect misleading or low-confidence labels.",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c13-training-data-quality-and-security-assurance",
+      "notes": "Level 2. Automatically generated labels subject to confidence thresholds and consistency checks",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "6.2.3",
+      "control_name": "Verify that AI BOM completeness checks fail the build if any component metadata is missing.",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C06-Supply-Chain.md#c62-ai-bom--supply-chain-monitoring",
+      "notes": "Level 2. AI BOM completeness checks fail the build if any component metadata is missing, turning silent pipeline gaps into build failures",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "12.3.1",
+      "control_name": "Verify that data drift detection monitors input distribution changes that may impact model performance, using statistically validated methods match...",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C12-Monitoring-and-Logging.md#c123-model-data-and-performance-drift-detection",
+      "notes": "Level 1. Data drift detection monitors input distribution changes using statistically validated methods matched to the data type, catching silent pipeline corruption",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "3.5.3",
+      "control_name": "Verify that in multi-stage fine-tuning pipelines, each stage's output is integrity-verified before it is consumed by the next stage.",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C03-Model-Lifecycle-Management.md#c35-pipeline-fine-tuning",
+      "notes": "Level 3. Each fine-tuning stage output integrity-verified before the next stage consumes it",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     }
   ],
   "tools": [
@@ -843,67 +942,67 @@
   "incidents": [
     {
       "name": "Meta Galactica model withdrawn after misinformation at launch",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2022,
       "incident_id": "INC-031"
     },
     {
       "name": "Hugging Face model card supply chain manipulation",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2025,
       "incident_id": "INC-038"
     },
     {
       "name": "NYT v OpenAI — copyright training data ruling implications",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2025,
       "incident_id": "INC-039"
     },
     {
       "name": "Uber ML platform data lineage audit — fragmented provenance across 30+ feature stores",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-042"
     },
     {
       "name": "Google Gemini AI image generator refuses to depict white people — overcorrected safety filters",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-051"
     },
     {
       "name": "Google AI Overviews recommends adding glue to pizza — RAG hallucination at search scale",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-056"
     },
     {
       "name": "Perplexity AI plagiarism — verbatim content reproduction without attribution",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-059"
     },
     {
       "name": "Anthropic Sleeper Agents paper — models trained to hide malicious behaviour",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-061"
     },
     {
       "name": "AI recruiting tool gender bias — Amazon scraps internal ML hiring tool",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-074"
     },
     {
       "name": "Tesla FSD phantom braking and obstacle hallucination — AI perception failures at highway speed",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-076"
     },
     {
       "name": "PoisonedRAG — 5 malicious texts in millions achieve 90% attack success rate on RAG systems",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2025,
       "incident_id": "INC-108"
     }

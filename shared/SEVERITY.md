@@ -254,5 +254,5 @@ When submitting a new mapping or updating an existing one:
 ---
 
 *Part of the
-[OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk)
+[OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/crosswalk)
 *
