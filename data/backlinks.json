@@ -19931,8 +19931,26 @@
   {
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0012",
-    "control_name": "Obtain Capabilities",
+    "control_name": "Valid Accounts",
     "entries": [
+      {
+        "id": "ASI03",
+        "name": "Identity and Privilege Abuse",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Exploiting legitimate agent credentials to access AI systems or data pipelines"
+      },
+      {
+        "id": "ASI07",
+        "name": "Insecure Inter-Agent Communications",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "High",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Using compromised agent credentials to impersonate trusted agents in A2A channels"
+      },
       {
         "id": "DSGAI02",
         "name": "Agent Identity and Credential Exposure",
@@ -19956,7 +19974,7 @@
   {
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0013",
-    "control_name": "Discover ML Model Ontology",
+    "control_name": "Discover AI Model Ontology",
     "entries": [
       {
         "id": "DSGAI16",
@@ -20006,26 +20024,8 @@
   {
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0016",
-    "control_name": "Exfiltration via AI Inference API",
+    "control_name": "Extract ML Model",
     "entries": [
-      {
-        "id": "ASI03",
-        "name": "Identity and Privilege Abuse",
-        "source_list": "Agentic-Top10-2026",
-        "severity": "Critical",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "Using compromised agent credentials to exfiltrate data through inference API"
-      },
-      {
-        "id": "ASI07",
-        "name": "Insecure Inter-Agent Communications",
-        "source_list": "Agentic-Top10-2026",
-        "severity": "High",
-        "tier": "Hardening",
-        "scope": "Both",
-        "notes": "Intercepting inter-agent messages to exfiltrate sensitive context passed between agents"
-      },
       {
         "id": "DSGAI20",
         "name": "Model Exfiltration and IP Replication",
@@ -20040,7 +20040,7 @@
   {
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0018",
-    "control_name": "Backdoor ML Model",
+    "control_name": "Manipulate AI Model",
     "entries": [
       {
         "id": "DSGAI04",
@@ -20141,31 +20141,6 @@
   },
   {
     "framework": "MITRE ATLAS",
-    "control_id": "AML.T0022",
-    "control_name": "Valid Accounts",
-    "entries": [
-      {
-        "id": "ASI03",
-        "name": "Identity and Privilege Abuse",
-        "source_list": "Agentic-Top10-2026",
-        "severity": "Critical",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "Exploiting legitimate agent credentials to access AI systems or data pipelines"
-      },
-      {
-        "id": "ASI07",
-        "name": "Insecure Inter-Agent Communications",
-        "source_list": "Agentic-Top10-2026",
-        "severity": "High",
-        "tier": "Hardening",
-        "scope": "Both",
-        "notes": "Using compromised agent credentials to impersonate trusted agents in A2A channels"
-      }
-    ]
-  },
-  {
-    "framework": "MITRE ATLAS",
     "control_id": "AML.T0024",
     "control_name": "Model Inversion",
     "entries": [
@@ -20185,14 +20160,23 @@
         "severity": "Critical",
         "tier": "Foundational",
         "scope": "Both",
-        "notes": "Reconstructing sensitive data accessible to the agent through credential abuse"
+        "notes": "Using compromised agent credentials to exfiltrate data through inference API"
+      },
+      {
+        "id": "ASI07",
+        "name": "Insecure Inter-Agent Communications",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "High",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Intercepting inter-agent messages to exfiltrate sensitive context passed between agents"
       }
     ]
   },
   {
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0024.000",
-    "control_name": "Membership Inference",
+    "control_name": "Infer Training Data Membership",
     "entries": [
       {
         "id": "DSGAI01",
@@ -20366,7 +20350,7 @@
   {
     "framework": "MITRE ATLAS",
     "control_id": "AML.T0029",
-    "control_name": "Denial of ML Service",
+    "control_name": "Denial of AI Service",
     "entries": [
       {
         "id": "LLM06",
@@ -20426,33 +20410,6 @@
         "tier": "Hardening",
         "scope": "Both",
         "notes": "Embedding hidden trigger-response patterns in model via poisoned training data"
-      },
-      {
-        "id": "DSGAI04",
-        "name": "Data Model and Artifact Poisoning",
-        "source_list": "DSGAI-2026",
-        "severity": "Critical",
-        "tier": "Hardening",
-        "scope": "Both",
-        "notes": "Adversarially crafted training examples designed to produce specific model behaviours without detection"
-      },
-      {
-        "id": "DSGAI05",
-        "name": "Data Integrity and Validation Failures",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "Payloads crafted to pass syntactic validation while embedding malicious semantic content"
-      },
-      {
-        "id": "DSGAI21",
-        "name": "Disinformation via Data Poisoning",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Hardening",
-        "scope": "Both",
-        "notes": "False content crafted to appear authoritative and rank highly in semantic similarity searches"
       }
     ]
   },
@@ -20659,6 +20616,94 @@
   },
   {
     "framework": "MITRE ATLAS",
+    "control_id": "AML.T0036",
+    "control_name": "Data from Information Repositories",
+    "entries": [
+      {
+        "id": "DSGAI03",
+        "name": "Shadow AI and Unsanctioned Data Flows",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Sensitive data pasted into shadow AI tools ends up in external data stores accessible to the AI service provider"
+      },
+      {
+        "id": "DSGAI06",
+        "name": "Tool Plugin and Agent Data Exchange",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Context data flowing through tool integrations captured and transmitted to adversary"
+      },
+      {
+        "id": "DSGAI07",
+        "name": "Data Governance and Lifecycle",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Ungoverned embedding stores and agent memory databases accessed without access controls"
+      },
+      {
+        "id": "DSGAI08",
+        "name": "Non-Compliance and Regulatory Violations",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Regulatory violations often arise from ungoverned data repositories — adversary exploits what compliance missed"
+      },
+      {
+        "id": "DSGAI12",
+        "name": "Unsafe Natural Language Data Gateways",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Database accessed through LLM-generated queries — adversary extracts sensitive records without direct database access"
+      },
+      {
+        "id": "DSGAI14",
+        "name": "Excessive Telemetry and Monitoring Leakage",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Observability databases and log stores accessed as information repositories — sensitive content available at scale"
+      },
+      {
+        "id": "DSGAI16",
+        "name": "Endpoint and Browser Overreach",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Browser assistant accesses sensitive data across tabs and applications — adversary controls assistant to exfiltrate"
+      },
+      {
+        "id": "DSGAI17",
+        "name": "Data Availability and Resilience Failures",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Pipeline failures may expose data through error messages or fallback paths that lack normal access controls"
+      },
+      {
+        "id": "DSGAI19",
+        "name": "Human-in-Loop and Labeler Overexposure",
+        "source_list": "DSGAI-2026",
+        "severity": "Medium",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Labelling vendor's data stores containing sensitive annotation tasks accessed as information repositories"
+      }
+    ]
+  },
+  {
+    "framework": "MITRE ATLAS",
     "control_id": "AML.T0037",
     "control_name": "Output Manipulation",
     "entries": [
@@ -20745,6 +20790,33 @@
         "tier": "Hardening",
         "scope": "Both",
         "notes": "Identifying and mapping inter-agent communication endpoints for targeting"
+      },
+      {
+        "id": "DSGAI04",
+        "name": "Data Model and Artifact Poisoning",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Adversarially crafted training examples designed to produce specific model behaviours without detection"
+      },
+      {
+        "id": "DSGAI05",
+        "name": "Data Integrity and Validation Failures",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Payloads crafted to pass syntactic validation while embedding malicious semantic content"
+      },
+      {
+        "id": "DSGAI21",
+        "name": "Disinformation via Data Poisoning",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "False content crafted to appear authoritative and rank highly in semantic similarity searches"
       }
     ]
   },
@@ -20845,14 +20917,7 @@
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Compromised agent crafts highly personalised, convincing manipulation targeted at specific users"
-      }
-    ]
-  },
-  {
-    "framework": "MITRE ATLAS",
-    "control_id": "AML.T0051",
-    "control_name": "Exploit Public-Facing Application",
-    "entries": [
+      },
       {
         "id": "DSGAI02",
         "name": "Agent Identity and Credential Exposure",
@@ -21067,87 +21132,6 @@
         "tier": "Hardening",
         "scope": "Both",
         "notes": "Compromised agent maintains persistent access and hidden execution across sessions"
-      },
-      {
-        "id": "DSGAI03",
-        "name": "Shadow AI and Unsanctioned Data Flows",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "Sensitive data pasted into shadow AI tools ends up in external data stores accessible to the AI service provider"
-      },
-      {
-        "id": "DSGAI06",
-        "name": "Tool Plugin and Agent Data Exchange",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "Context data flowing through tool integrations captured and transmitted to adversary"
-      },
-      {
-        "id": "DSGAI07",
-        "name": "Data Governance and Lifecycle",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "Ungoverned embedding stores and agent memory databases accessed without access controls"
-      },
-      {
-        "id": "DSGAI08",
-        "name": "Non-Compliance and Regulatory Violations",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "Regulatory violations often arise from ungoverned data repositories — adversary exploits what compliance missed"
-      },
-      {
-        "id": "DSGAI12",
-        "name": "Unsafe Natural Language Data Gateways",
-        "source_list": "DSGAI-2026",
-        "severity": "Critical",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "Database accessed through LLM-generated queries — adversary extracts sensitive records without direct database access"
-      },
-      {
-        "id": "DSGAI14",
-        "name": "Excessive Telemetry and Monitoring Leakage",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "Observability databases and log stores accessed as information repositories — sensitive content available at scale"
-      },
-      {
-        "id": "DSGAI16",
-        "name": "Endpoint and Browser Overreach",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "Browser assistant accesses sensitive data across tabs and applications — adversary controls assistant to exfiltrate"
-      },
-      {
-        "id": "DSGAI17",
-        "name": "Data Availability and Resilience Failures",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "Pipeline failures may expose data through error messages or fallback paths that lack normal access controls"
-      },
-      {
-        "id": "DSGAI19",
-        "name": "Human-in-Loop and Labeler Overexposure",
-        "source_list": "DSGAI-2026",
-        "severity": "Medium",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "Labelling vendor's data stores containing sensitive annotation tasks accessed as information repositories"
       }
     ]
   },
@@ -28751,6 +28735,15 @@
     "control_name": "Verify that training data includes only features, attributes, and fields required for the model's stated purpose.",
     "entries": [
       {
+        "id": "LLM02",
+        "name": "Sensitive Information Disclosure",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Level 1. Training data restricted to features required for the stated purpose, reducing what can be disclosed at all"
+      },
+      {
         "id": "DSGAI01",
         "name": "Sensitive Data Leakage",
         "source_list": "DSGAI-2026",
@@ -28784,6 +28777,15 @@
     "control_id": "1.1.2",
     "control_name": "Verify that an up-to-date inventory is kept of every training-data source, including its origin, responsible party, license, collection method, int...",
     "entries": [
+      {
+        "id": "LLM05",
+        "name": "Data and Model Poisoning",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Level 2. Current inventory of every training-data source with origin, responsible party, license, collection method, use constraints and processing history"
+      },
       {
         "id": "DSGAI03",
         "name": "Shadow AI and Unsanctioned Data Flows",
@@ -28828,6 +28830,15 @@
     "control_name": "Verify that data integrity is provided when training data is stored and transferred.",
     "entries": [
       {
+        "id": "LLM05",
+        "name": "Data and Model Poisoning",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Level 2. Data integrity provided for training data in storage and in transit"
+      },
+      {
         "id": "DSGAI05",
         "name": "Data Integrity and Validation Failures",
         "source_list": "DSGAI-2026",
@@ -28843,6 +28854,15 @@
     "control_id": "1.1.4",
     "control_name": "Verify that integrity monitoring is applied to guard against unauthorized modifications or corruption of training data.",
     "entries": [
+      {
+        "id": "LLM05",
+        "name": "Data and Model Poisoning",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Level 2. Integrity monitoring guards training data against unauthorized modification or corruption"
+      },
       {
         "id": "DSGAI04",
         "name": "Data Model and Artifact Poisoning",
@@ -28944,6 +28964,15 @@
     "control_name": "Verify that training and fine-tuning pipelines implement poisoning detection techniques to identify potential data poisoning or unintentional corru...",
     "entries": [
       {
+        "id": "LLM05",
+        "name": "Data and Model Poisoning",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Level 2. Training and fine-tuning pipelines implement poisoning detection for deliberate poisoning and unintentional corruption"
+      },
+      {
         "id": "DSGAI04",
         "name": "Data Model and Artifact Poisoning",
         "source_list": "DSGAI-2026",
@@ -29001,6 +29030,15 @@
     "control_name": "Verify that disallowed content is detected and removed before training.",
     "entries": [
       {
+        "id": "LLM05",
+        "name": "Data and Model Poisoning",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Level 2. Disallowed content detected and removed before training"
+      },
+      {
         "id": "DSGAI19",
         "name": "Human-in-Loop and Labeler Overexposure",
         "source_list": "DSGAI-2026",
@@ -29025,6 +29063,15 @@
     "control_id": "1.3.5",
     "control_name": "Verify that defenses against clean-label poisoning attacks are implemented.",
     "entries": [
+      {
+        "id": "LLM05",
+        "name": "Data and Model Poisoning",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Level 3. Clean-label poisoning defenses, the attack class that survives label inspection"
+      },
       {
         "id": "DSGAI04",
         "name": "Data Model and Artifact Poisoning",
@@ -29164,6 +29211,15 @@
     "control_id": "10.2.4",
     "control_name": "Verify that MCP tools/list returns only tools permitted by resource owners' authorized scopes.",
     "entries": [
+      {
+        "id": "LLM08",
+        "name": "Hidden Context Exposure",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Level 2. Hidden context exposure (2026 scope): tools/list returns only tools the caller is authorised for, so tool and function schemas are not exposed beyond scope"
+      },
       {
         "id": "DSGAI06",
         "name": "Tool Plugin and Agent Data Exchange",
@@ -29309,6 +29365,15 @@
     "control_name": "Verify that MCP tools/list and tools/call responses are screened for indirect prompt injection before being injected into the model context.",
     "entries": [
       {
+        "id": "LLM01",
+        "name": "Prompt Injection",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Level 1. Indirect injection path: MCP tools/list and tools/call responses screened before entering model context"
+      },
+      {
         "id": "ASI01",
         "name": "Agent Goal Hijack",
         "source_list": "Agentic-Top10-2026",
@@ -29410,9 +29475,34 @@
   },
   {
     "framework": "OWASP AISVS 1.0",
+    "control_id": "11.1.2",
+    "control_name": "Verify that a version-controlled alignment test suite is run on every model update or release.",
+    "entries": [
+      {
+        "id": "LLM07",
+        "name": "Misinformation",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Level 1. Version-controlled alignment test suite run on every model update or release, catching factuality regressions before they ship"
+      }
+    ]
+  },
+  {
+    "framework": "OWASP AISVS 1.0",
     "control_id": "11.2.1",
     "control_name": "Verify that model-inferred sensitive attributes are not directly returned in outputs.",
     "entries": [
+      {
+        "id": "LLM02",
+        "name": "Sensitive Information Disclosure",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Level 1. Model-inferred sensitive attributes are not returned directly in outputs"
+      },
       {
         "id": "DSGAI01",
         "name": "Sensitive Data Leakage",
@@ -29438,6 +29528,15 @@
     "control_id": "11.2.2",
     "control_name": "Verify that inference endpoints enforce per-principal and global rate limits sized to the extraction threat model, and not solely as a generic API ...",
     "entries": [
+      {
+        "id": "LLM06",
+        "name": "Unbounded Consumption",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Level 1. Per-principal and global rate limits sized to the threat model rather than as a generic API throttle"
+      },
       {
         "id": "DSGAI18",
         "name": "Inference and Data Reconstruction",
@@ -29488,6 +29587,15 @@
     "control_id": "11.2.4",
     "control_name": "Verify that training on sensitive datasets employs differentially-private optimization.",
     "entries": [
+      {
+        "id": "LLM02",
+        "name": "Sensitive Information Disclosure",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Level 2. Differentially-private optimization when training on sensitive datasets, limiting memorisation-driven disclosure"
+      },
       {
         "id": "DSGAI08",
         "name": "Non-Compliance and Regulatory Violations",
@@ -29547,6 +29655,15 @@
     "control_id": "11.3.1",
     "control_name": "Verify that query-pattern analysis feeds an extraction-attempt detector.",
     "entries": [
+      {
+        "id": "LLM08",
+        "name": "Hidden Context Exposure",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Level 1. Query-pattern analysis feeds an extraction-attempt detector, covering iterative prompt reconstruction"
+      },
       {
         "id": "DSGAI20",
         "name": "Model Exfiltration and IP Replication",
@@ -29710,6 +29827,15 @@
     "control_name": "Verify that the system detects and alerts on known jailbreak patterns, prompt injection attempts, and adversarial inputs.",
     "entries": [
       {
+        "id": "LLM01",
+        "name": "Prompt Injection",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Level 1. Detection layer: known jailbreak patterns, injection attempts and adversarial inputs alerted on"
+      },
+      {
         "id": "ASI01",
         "name": "Agent Goal Hijack",
         "source_list": "Agentic-Top10-2026",
@@ -29733,6 +29859,38 @@
         "tier": "Hardening",
         "scope": "Both",
         "notes": "Level 2. Behavioral anomaly detection identifies unusual conversation patterns, excessive retry attempts and probing behaviors"
+      }
+    ]
+  },
+  {
+    "framework": "OWASP AISVS 1.0",
+    "control_id": "12.2.3",
+    "control_name": "Verify that custom rules detect AI-specific threat patterns for coordinated jailbreak attempts, prompt injection, and system prompt extraction atte...",
+    "entries": [
+      {
+        "id": "LLM08",
+        "name": "Hidden Context Exposure",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Level 2. Custom rules detect coordinated jailbreak attempts, injection and system prompt extraction attempts"
+      }
+    ]
+  },
+  {
+    "framework": "OWASP AISVS 1.0",
+    "control_id": "12.2.5",
+    "control_name": "Verify that token usage is tracked at granular attribution levels including per user, per session, per feature endpoint, and per team or workspace.",
+    "entries": [
+      {
+        "id": "LLM06",
+        "name": "Unbounded Consumption",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Level 2. Token usage tracked per user, session, feature endpoint and team so cost abuse is attributable"
       }
     ]
   },
@@ -29774,6 +29932,15 @@
     "control_name": "Verify that hallucination detection monitors identify and flag model outputs that contain factually incorrect, inconsistent, or fabricated informat...",
     "entries": [
       {
+        "id": "LLM07",
+        "name": "Misinformation",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Level 2. Hallucination detection monitors flag factually incorrect, inconsistent or fabricated output"
+      },
+      {
         "id": "DSGAI21",
         "name": "Disinformation via Data Poisoning",
         "source_list": "DSGAI-2026",
@@ -29781,6 +29948,22 @@
         "tier": "Hardening",
         "scope": "Both",
         "notes": "Level 2. Hallucination detection monitors identify and flag factually incorrect, inconsistent or fabricated output"
+      }
+    ]
+  },
+  {
+    "framework": "OWASP AISVS 1.0",
+    "control_id": "12.3.3",
+    "control_name": "Verify that hallucination rates are tracked as continuous time-series metrics to enable trend analysis and detection of sustained model degradation.",
+    "entries": [
+      {
+        "id": "LLM07",
+        "name": "Misinformation",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Level 2. Hallucination rates tracked as continuous time-series metrics to detect sustained degradation"
       }
     ]
   },
@@ -29853,6 +30036,15 @@
     "control_id": "12.5.1",
     "control_name": "Verify that dataset lineage records each dataset and its components, including all transformations, augmentations, and merges.",
     "entries": [
+      {
+        "id": "LLM05",
+        "name": "Data and Model Poisoning",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Level 1. Dataset lineage records each dataset and its components including transformations, augmentations and merges, enabling post-hoc poisoning attribution"
+      },
       {
         "id": "DSGAI07",
         "name": "Data Governance and Lifecycle",
@@ -29950,9 +30142,50 @@
   },
   {
     "framework": "OWASP AISVS 1.0",
+    "control_id": "2.1.1",
+    "control_name": "Verify that input normalization is applied before tokenization or embedding.",
+    "entries": [
+      {
+        "id": "LLM01",
+        "name": "Prompt Injection",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Level 1. Input normalization applied before tokenization or embedding, closing the pre-tokenizer bypass class"
+      }
+    ]
+  },
+  {
+    "framework": "OWASP AISVS 1.0",
+    "control_id": "2.1.2",
+    "control_name": "Verify that encoding and representation smuggling in inputs is detected and mitigated. Approved mitigations include canonicalization, strict schema...",
+    "entries": [
+      {
+        "id": "LLM01",
+        "name": "Prompt Injection",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Level 1. Encoding and representation smuggling defeated by canonicalization, strict schema validation, policy rejection or explicit marking"
+      }
+    ]
+  },
+  {
+    "framework": "OWASP AISVS 1.0",
     "control_id": "2.1.3",
     "control_name": "Verify that all inputs that could steer model behavior are treated as untrusted and screened by a prompt injection detection ruleset or classifier,...",
     "entries": [
+      {
+        "id": "LLM01",
+        "name": "Prompt Injection",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Level 1. Direct control: all inputs able to steer model behavior are treated as untrusted and screened by an injection ruleset or classifier, with flagged inputs blocked"
+      },
       {
         "id": "ASI01",
         "name": "Agent Goal Hijack",
@@ -29979,6 +30212,15 @@
     "control_name": "Verify that input length controls prevent content from exceeding the context window. The controls must reject inputs that exceed token limits rathe...",
     "entries": [
       {
+        "id": "LLM06",
+        "name": "Unbounded Consumption",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Level 1. Input length controls reject inputs exceeding token limits rather than truncating them"
+      },
+      {
         "id": "DSGAI15",
         "name": "Over-Broad Context Windows",
         "source_list": "DSGAI-2026",
@@ -29991,9 +30233,43 @@
   },
   {
     "framework": "OWASP AISVS 1.0",
+    "control_id": "2.1.5",
+    "control_name": "Verify that the system implements a character set restriction for all inputs. The restriction must use an allow-list approach that permits only cha...",
+    "entries": [
+      {
+        "id": "LLM01",
+        "name": "Prompt Injection",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Level 1. Character set restricted by allow-list to only explicitly required characters, removing the exotic-codepoint smuggling surface"
+      }
+    ]
+  },
+  {
+    "framework": "OWASP AISVS 1.0",
     "control_id": "2.1.6",
     "control_name": "Verify that the system enforces an instruction hierarchy in which system and developer messages override user instructions and other untrusted inpu...",
     "entries": [
+      {
+        "id": "LLM01",
+        "name": "Prompt Injection",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Level 2. Instruction hierarchy so system and developer messages keep precedence over user and other untrusted input, including after user text is processed"
+      },
+      {
+        "id": "LLM08",
+        "name": "Hidden Context Exposure",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Level 2. Instruction hierarchy resists the override-then-reveal extraction pattern"
+      },
       {
         "id": "ASI01",
         "name": "Agent Goal Hijack",
@@ -30016,9 +30292,50 @@
   },
   {
     "framework": "OWASP AISVS 1.0",
+    "control_id": "2.1.7",
+    "control_name": "Verify that reserved special tokens are encoded as literal characters and cannot be injected into the model context.",
+    "entries": [
+      {
+        "id": "LLM01",
+        "name": "Prompt Injection",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Level 2. Reserved special tokens encoded as literals so control tokens cannot be injected into the model context"
+      }
+    ]
+  },
+  {
+    "framework": "OWASP AISVS 1.0",
+    "control_id": "2.1.8",
+    "control_name": "Verify that the system can detect many-shot jailbreaking patterns.",
+    "entries": [
+      {
+        "id": "LLM01",
+        "name": "Prompt Injection",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Level 3. Many-shot jailbreaking pattern detection for long-context in-context-learning attacks"
+      }
+    ]
+  },
+  {
+    "framework": "OWASP AISVS 1.0",
     "control_id": "2.2.3",
     "control_name": "Verify that non-text inputs (image/video/audio) are checked for adversarial perturbations, steganographic payloads, hidden or embedded content, or ...",
     "entries": [
+      {
+        "id": "LLM01",
+        "name": "Prompt Injection",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Level 2. Cross-modal injection (2026 scope): non-text inputs checked for adversarial perturbations, steganographic payloads and hidden embedded content before they reach the model"
+      },
       {
         "id": "DSGAI09",
         "name": "Multimodal Cross-Channel Leakage",
@@ -30036,6 +30353,15 @@
     "control_name": "Verify that coordinated attacks spanning multiple input types (e.g., steganographic payloads in images combined with prompt injection in text) are ...",
     "entries": [
       {
+        "id": "LLM01",
+        "name": "Prompt Injection",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Level 3. Cross-modal injection (2026 scope): coordinated attacks that split an instruction across image and text inputs detected and blocked"
+      },
+      {
         "id": "DSGAI09",
         "name": "Multimodal Cross-Channel Leakage",
         "source_list": "DSGAI-2026",
@@ -30051,6 +30377,15 @@
     "control_id": "3.1.1",
     "control_name": "Verify that a model registry maintains an inventory of all deployed model artifacts and their origin.",
     "entries": [
+      {
+        "id": "LLM04",
+        "name": "Supply Chain",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Level 1. Artifact provenance (2026 scope): registry inventory of every deployed artifact and its origin, the record that exposes model namespace reuse"
+      },
       {
         "id": "DSGAI03",
         "name": "Shadow AI and Unsanctioned Data Flows",
@@ -30073,9 +30408,34 @@
   },
   {
     "framework": "OWASP AISVS 1.0",
+    "control_id": "3.1.2",
+    "control_name": "Verify that all model artifacts (weights, configurations, tokenizers, base models, fine-tunes, adapters, and safety/policy models) are cryptographi...",
+    "entries": [
+      {
+        "id": "LLM04",
+        "name": "Supply Chain",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Level 2. Weights, configurations, tokenizers, base models, fine-tunes, adapters and safety models signed by authorized entities"
+      }
+    ]
+  },
+  {
+    "framework": "OWASP AISVS 1.0",
     "control_id": "3.1.3",
     "control_name": "Verify that model cryptographic signatures are verified at deployment admission and on load.",
     "entries": [
+      {
+        "id": "LLM04",
+        "name": "Supply Chain",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Level 2. Artifact provenance (2026 scope): signatures verified at deployment admission and on load, so unsigned or swapped weights are rejected"
+      },
       {
         "id": "DSGAI04",
         "name": "Data Model and Artifact Poisoning",
@@ -30169,6 +30529,22 @@
   },
   {
     "framework": "OWASP AISVS 1.0",
+    "control_id": "3.5.1",
+    "control_name": "Verify that models used in RLHF fine-tuning are versioned and integrity-verified before use in a training run.",
+    "entries": [
+      {
+        "id": "LLM05",
+        "name": "Data and Model Poisoning",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Level 2. Fine-tuning subversion (2026 scope): models used in RLHF fine-tuning versioned and integrity-verified before a training run"
+      }
+    ]
+  },
+  {
+    "framework": "OWASP AISVS 1.0",
     "control_id": "3.5.2",
     "control_name": "Verify that RLHF training stages include automated detection of reward hacking or reward model over-optimization.",
     "entries": [
@@ -30188,6 +30564,15 @@
     "control_id": "3.5.3",
     "control_name": "Verify that in multi-stage fine-tuning pipelines, each stage's output is integrity-verified before it is consumed by the next stage.",
     "entries": [
+      {
+        "id": "LLM05",
+        "name": "Data and Model Poisoning",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Level 3. Each stage output integrity-verified before the next stage consumes it in multi-stage fine-tuning"
+      },
       {
         "id": "DSGAI05",
         "name": "Data Integrity and Validation Failures",
@@ -30236,6 +30621,15 @@
     "control_id": "4.1.2",
     "control_name": "Verify that model artifact loading enforces an explicit allow-list of serialization formats that do not permit arbitrary code execution during dese...",
     "entries": [
+      {
+        "id": "LLM04",
+        "name": "Supply Chain",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Level 1. Model artifact loading restricted to an allow-list of serialization formats that cannot execute code on deserialization, the pickle class of supply chain RCE"
+      },
       {
         "id": "ASI05",
         "name": "Unexpected Code Execution",
@@ -30374,6 +30768,15 @@
     "control_name": "Verify that retrieval pipelines (e.g., RAG queries, embedding lookups) enforce the end-user's authorization context at each retrieval and assembly ...",
     "entries": [
       {
+        "id": "LLM02",
+        "name": "Sensitive Information Disclosure",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Level 2. Retrieval pipelines enforce the end-user authorization context at each retrieval and assembly stage rather than the service account permissions"
+      },
+      {
         "id": "DSGAI01",
         "name": "Sensitive Data Leakage",
         "source_list": "DSGAI-2026",
@@ -30407,6 +30810,15 @@
     "control_id": "5.2.4",
     "control_name": "Verify that post-inference filtering mechanisms prevent responses from including data that the requester is not authorized to receive.",
     "entries": [
+      {
+        "id": "LLM02",
+        "name": "Sensitive Information Disclosure",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Level 2. Post-inference filtering prevents responses containing data the requester is not authorized to receive"
+      },
       {
         "id": "DSGAI01",
         "name": "Sensitive Data Leakage",
@@ -30492,6 +30904,15 @@
     "control_name": "Verify that data classification labels propagate to downstream resources (embeddings, prompt caches, model outputs).",
     "entries": [
       {
+        "id": "LLM02",
+        "name": "Sensitive Information Disclosure",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Level 3. Data classification labels propagate to embeddings, prompt caches and model outputs so downstream handling matches the source sensitivity"
+      },
+      {
         "id": "DSGAI01",
         "name": "Sensitive Data Leakage",
         "source_list": "DSGAI-2026",
@@ -30563,9 +30984,43 @@
   },
   {
     "framework": "OWASP AISVS 1.0",
+    "control_id": "6.1.1",
+    "control_name": "Verify that models are scanned for malicious code before import.",
+    "entries": [
+      {
+        "id": "LLM04",
+        "name": "Supply Chain",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Level 1. Models scanned for malicious code before import"
+      }
+    ]
+  },
+  {
+    "framework": "OWASP AISVS 1.0",
     "control_id": "6.1.2",
     "control_name": "Verify that model weights, datasets, and fine-tuning adapters are downloaded only from approved sources.",
     "entries": [
+      {
+        "id": "LLM04",
+        "name": "Supply Chain",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Level 1. Model weights, datasets and fine-tuning adapters downloaded only from approved sources"
+      },
+      {
+        "id": "LLM05",
+        "name": "Data and Model Poisoning",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Level 1. Fine-tuning subversion (2026 scope): weights, datasets and fine-tuning adapters pulled only from approved sources, closing the backdoored-adapter path"
+      },
       {
         "id": "ASI04",
         "name": "Agentic Supply Chain",
@@ -30592,6 +31047,15 @@
     "control_name": "Verify that every third-party model artifact can be integrity-verified.",
     "entries": [
       {
+        "id": "LLM04",
+        "name": "Supply Chain",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Level 2. Every third-party model artifact is integrity-verifiable"
+      },
+      {
         "id": "ASI04",
         "name": "Agentic Supply Chain",
         "source_list": "Agentic-Top10-2026",
@@ -30613,9 +31077,34 @@
   },
   {
     "framework": "OWASP AISVS 1.0",
+    "control_id": "6.1.4",
+    "control_name": "Verify that models pass a behavioral acceptance test suite before being promoted to any non-development environment.",
+    "entries": [
+      {
+        "id": "LLM04",
+        "name": "Supply Chain",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Level 2. Behavioral acceptance test suite passed before promotion beyond development, catching backdoors that signature checks cannot"
+      }
+    ]
+  },
+  {
+    "framework": "OWASP AISVS 1.0",
     "control_id": "6.2.1",
     "control_name": "Verify that every model artifact publishes a version-controlled, machine-readable AI BOM listing datasets, weights, licenses, and data-origin state...",
     "entries": [
+      {
+        "id": "LLM04",
+        "name": "Supply Chain",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Level 1. Version-controlled machine-readable AI BOM listing datasets, weights, licenses and data-origin statements"
+      },
       {
         "id": "ASI04",
         "name": "Agentic Supply Chain",
@@ -30624,6 +31113,22 @@
         "tier": "Hardening",
         "scope": "Both",
         "notes": "Level 1. Version-controlled machine-readable AI BOM per model artifact, giving the static inventory this risk says is usually missing"
+      }
+    ]
+  },
+  {
+    "framework": "OWASP AISVS 1.0",
+    "control_id": "6.2.2",
+    "control_name": "Verify that AI BOMs are cryptographically signed before deployment.",
+    "entries": [
+      {
+        "id": "LLM04",
+        "name": "Supply Chain",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Level 2. AI BOMs cryptographically signed before deployment"
       }
     ]
   },
@@ -30649,6 +31154,15 @@
     "control_name": "Verify that the application validates all model outputs against a defined schema and rejects any output that does not match.",
     "entries": [
       {
+        "id": "LLM10",
+        "name": "Improper Output Handling",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Level 1. All model outputs validated against a defined schema, non-matching output rejected"
+      },
+      {
         "id": "ASI05",
         "name": "Unexpected Code Execution",
         "source_list": "Agentic-Top10-2026",
@@ -30670,9 +31184,43 @@
   },
   {
     "framework": "OWASP AISVS 1.0",
+    "control_id": "7.1.2",
+    "control_name": "Verify that model-generated output is bounded by length limits and termination controls.",
+    "entries": [
+      {
+        "id": "LLM06",
+        "name": "Unbounded Consumption",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Level 1. Output bounded by length limits and termination controls, capping runaway generation"
+      },
+      {
+        "id": "LLM10",
+        "name": "Improper Output Handling",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Level 1. Model-generated output bounded by length limits and termination controls"
+      }
+    ]
+  },
+  {
+    "framework": "OWASP AISVS 1.0",
     "control_id": "7.2.1",
     "control_name": "Verify that the system assesses the reliability of generated answers using a confidence estimation method.",
     "entries": [
+      {
+        "id": "LLM07",
+        "name": "Misinformation",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Level 2. Reliability of generated answers assessed using a confidence estimation method"
+      },
       {
         "id": "ASI09",
         "name": "Human-Agent Trust Exploitation",
@@ -30686,9 +31234,59 @@
   },
   {
     "framework": "OWASP AISVS 1.0",
+    "control_id": "7.2.2",
+    "control_name": "Verify that the application automatically blocks answers or switches to a fallback message if the confidence score drops below a defined threshold.",
+    "entries": [
+      {
+        "id": "LLM07",
+        "name": "Misinformation",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Level 2. Answers blocked or a fallback message returned when the confidence score falls below a defined threshold"
+      }
+    ]
+  },
+  {
+    "framework": "OWASP AISVS 1.0",
+    "control_id": "7.2.3",
+    "control_name": "Verify that for responses classified as high-risk by policy, the system performs an additional verification step.",
+    "entries": [
+      {
+        "id": "LLM07",
+        "name": "Misinformation",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Level 3. Additional verification step for responses classified as high-risk by policy"
+      }
+    ]
+  },
+  {
+    "framework": "OWASP AISVS 1.0",
     "control_id": "7.3.2",
     "control_name": "Verify that output filters detect and block responses that disclose system prompt content or backend data.",
     "entries": [
+      {
+        "id": "LLM02",
+        "name": "Sensitive Information Disclosure",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Level 2. Output filters block responses disclosing system prompt content or backend data"
+      },
+      {
+        "id": "LLM08",
+        "name": "Hidden Context Exposure",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Level 2. Output filters detect and block responses that disclose system prompt content or backend data"
+      },
       {
         "id": "DSGAI01",
         "name": "Sensitive Data Leakage",
@@ -30706,6 +31304,15 @@
     "control_name": "Verify that model-generated output is prevented from triggering outbound requests.",
     "entries": [
       {
+        "id": "LLM10",
+        "name": "Improper Output Handling",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Level 2. Model-generated output prevented from triggering outbound requests"
+      },
+      {
         "id": "DSGAI16",
         "name": "Endpoint and Browser Overreach",
         "source_list": "DSGAI-2026",
@@ -30721,6 +31328,15 @@
     "control_id": "7.3.4",
     "control_name": "Verify that model outputs are checked for hidden, encoded, or misleading content created through homoglyphs, formatting, metadata, or structured fi...",
     "entries": [
+      {
+        "id": "LLM10",
+        "name": "Improper Output Handling",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Level 3. Outputs checked for hidden, encoded or misleading content via homoglyphs, formatting, metadata or structured fields"
+      },
       {
         "id": "DSGAI09",
         "name": "Multimodal Cross-Channel Leakage",
@@ -30738,6 +31354,15 @@
     "control_name": "Verify that responses generated using retrieval-augmented generation (RAG) include attribution to the source documents.",
     "entries": [
       {
+        "id": "LLM07",
+        "name": "Misinformation",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Level 1. RAG responses include attribution to the source documents"
+      },
+      {
         "id": "ASI09",
         "name": "Human-Agent Trust Exploitation",
         "source_list": "Agentic-Top10-2026",
@@ -30754,6 +31379,38 @@
         "tier": "Hardening",
         "scope": "Both",
         "notes": "Level 1. RAG responses include attribution to the source documents, letting a reader check a poisoned claim against its source"
+      }
+    ]
+  },
+  {
+    "framework": "OWASP AISVS 1.0",
+    "control_id": "7.4.2",
+    "control_name": "Verify that RAG attributions are derived from retrieval metadata and are not generated by the model, so provenance cannot be fabricated.",
+    "entries": [
+      {
+        "id": "LLM07",
+        "name": "Misinformation",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Level 1. RAG attributions derived from retrieval metadata rather than generated by the model, so provenance cannot be fabricated"
+      }
+    ]
+  },
+  {
+    "framework": "OWASP AISVS 1.0",
+    "control_id": "7.4.3",
+    "control_name": "Verify that claims in a RAG response can be traced to the retrieved chunk.",
+    "entries": [
+      {
+        "id": "LLM07",
+        "name": "Misinformation",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Level 2. Claims in a RAG response traceable to the retrieved chunk"
       }
     ]
   },
@@ -30778,6 +31435,15 @@
     "control_id": "8.1.1",
     "control_name": "Verify that vector identifiers and namespaces enforce uniqueness per tenant and prevent cross-tenant collisions.",
     "entries": [
+      {
+        "id": "LLM09",
+        "name": "Vector and Embedding Weaknesses",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Medium",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Level 1. Vector identifiers and namespaces enforce per-tenant uniqueness and prevent cross-tenant collisions"
+      },
       {
         "id": "DSGAI11",
         "name": "Cross-Context Conversation Bleed",
@@ -30804,6 +31470,15 @@
     "control_name": "Verify that document metadata tags are immutable after the initial write.",
     "entries": [
       {
+        "id": "LLM09",
+        "name": "Vector and Embedding Weaknesses",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Medium",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Level 2. Document metadata tags immutable after initial write, blocking post-hoc retrieval manipulation"
+      },
+      {
         "id": "ASI06",
         "name": "Memory and Context Poisoning",
         "source_list": "Agentic-Top10-2026",
@@ -30829,6 +31504,15 @@
     "control_name": "Verify that retrieval operations enforce scope constraints.",
     "entries": [
       {
+        "id": "LLM09",
+        "name": "Vector and Embedding Weaknesses",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Medium",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Level 2. Retrieval operations enforce scope constraints"
+      },
+      {
         "id": "DSGAI13",
         "name": "Vector Store Platform Security",
         "source_list": "DSGAI-2026",
@@ -30853,6 +31537,24 @@
     "control_id": "8.2.1",
     "control_name": "Verify that sensitive fields are detected before embedding and are masked, tokenized, or dropped.",
     "entries": [
+      {
+        "id": "LLM02",
+        "name": "Sensitive Information Disclosure",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Level 1. Sensitive fields detected and masked, tokenized or dropped before embedding, so disclosure is prevented at the index rather than the response"
+      },
+      {
+        "id": "LLM09",
+        "name": "Vector and Embedding Weaknesses",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Medium",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Level 1. Sensitive fields detected before embedding and masked, tokenized or dropped"
+      },
       {
         "id": "DSGAI01",
         "name": "Sensitive Data Leakage",
@@ -30897,6 +31599,15 @@
     "control_name": "Verify that vectors that fall outside normal clustering patterns are flagged and quarantined before entering production indices.",
     "entries": [
       {
+        "id": "LLM09",
+        "name": "Vector and Embedding Weaknesses",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Medium",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Level 2. Vectors outside normal clustering patterns flagged and quarantined before entering production indices"
+      },
+      {
         "id": "DSGAI13",
         "name": "Vector Store Platform Security",
         "source_list": "DSGAI-2026",
@@ -30937,6 +31648,15 @@
     "control_id": "8.2.4",
     "control_name": "Verify that content crafted to manipulate retrieval results is detected and rejected or quarantined before vectorization.",
     "entries": [
+      {
+        "id": "LLM09",
+        "name": "Vector and Embedding Weaknesses",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Medium",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Level 3. Content crafted to manipulate retrieval results detected and rejected or quarantined before vectorization"
+      },
       {
         "id": "ASI06",
         "name": "Memory and Context Poisoning",
@@ -30987,6 +31707,15 @@
     "control_id": "8.3.1",
     "control_name": "Verify that expired vectors are excluded from retrieval results.",
     "entries": [
+      {
+        "id": "LLM09",
+        "name": "Vector and Embedding Weaknesses",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Medium",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Level 2. Expired vectors excluded from retrieval results"
+      },
       {
         "id": "DSGAI07",
         "name": "Data Governance and Lifecycle",
@@ -31072,6 +31801,15 @@
     "control_name": "Verify that per-tool quotas and timeouts (e.g., CPU, memory, disk, egress, and execution time) are enforced.",
     "entries": [
       {
+        "id": "LLM06",
+        "name": "Unbounded Consumption",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Level 1. Per-tool quotas and timeouts for CPU, memory, disk, egress and execution time"
+      },
+      {
         "id": "ASI05",
         "name": "Unexpected Code Execution",
         "source_list": "Agentic-Top10-2026",
@@ -31096,6 +31834,24 @@
     "control_id": "9.1.2",
     "control_name": "Verify that per-execution budgets (e.g., max recursion depth, token use, and monetary spend) are configured and enforced by the runtime.",
     "entries": [
+      {
+        "id": "LLM03",
+        "name": "Excessive Agency",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Level 1. Per-execution budgets for recursion depth, token use and monetary spend configured and enforced by the runtime"
+      },
+      {
+        "id": "LLM06",
+        "name": "Unbounded Consumption",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Level 1. Per-execution budgets for max recursion depth, token use and monetary spend enforced by the runtime"
+      },
       {
         "id": "ASI08",
         "name": "Cascading Agent Failures",
@@ -31128,6 +31884,15 @@
     "control_id": "9.2.1",
     "control_name": "Verify that the agent runtime blocks execution of privileged, high-impact, or irreversible actions until explicit human approval is received and ve...",
     "entries": [
+      {
+        "id": "LLM03",
+        "name": "Excessive Agency",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Level 1. Agent runtime blocks privileged, high-impact or irreversible actions until explicit human approval is received and verified"
+      },
       {
         "id": "DSGAI16",
         "name": "Endpoint and Browser Overreach",
@@ -31177,6 +31942,15 @@
     "control_name": "Verify that each high-impact action has a trusted reversibility classification, such as read-only, reversible, externally reversible, or irreversible.",
     "entries": [
       {
+        "id": "LLM03",
+        "name": "Excessive Agency",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Level 2. Each high-impact action carries a trusted reversibility classification"
+      },
+      {
         "id": "DSGAI12",
         "name": "Unsafe Natural Language Data Gateways",
         "source_list": "DSGAI-2026",
@@ -31184,6 +31958,22 @@
         "tier": "Hardening",
         "scope": "Both",
         "notes": "Level 2. High-impact actions carry a trusted reversibility classification, distinguishing read queries from data-store mutations"
+      }
+    ]
+  },
+  {
+    "framework": "OWASP AISVS 1.0",
+    "control_id": "9.2.4",
+    "control_name": "Verify that the agent runtime enforces reversibility classifications by blocking, requiring approval, or restricting actions based on their impact ...",
+    "entries": [
+      {
+        "id": "LLM03",
+        "name": "Excessive Agency",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Level 2. Runtime enforces reversibility classifications by blocking, requiring approval or restricting the action"
       }
     ]
   },
@@ -31282,6 +32072,15 @@
     "control_name": "Verify that each tool/plugin executes in a least-privilege sandbox or is otherwise isolated from model operations.",
     "entries": [
       {
+        "id": "LLM03",
+        "name": "Excessive Agency",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Level 1. Each tool or plugin executes in a least-privilege sandbox or is otherwise isolated from model operations"
+      },
+      {
         "id": "ASI02",
         "name": "Tool Misuse and Exploitation",
         "source_list": "Agentic-Top10-2026",
@@ -31315,6 +32114,15 @@
     "control_id": "9.3.2",
     "control_name": "Verify that tool outputs are validated against schemas.",
     "entries": [
+      {
+        "id": "LLM10",
+        "name": "Improper Output Handling",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Level 1. Tool outputs validated against schemas before the agent consumes them"
+      },
       {
         "id": "ASI02",
         "name": "Tool Misuse and Exploitation",
@@ -31434,6 +32242,15 @@
     "control_name": "Verify that there is architectural separation between processing of untrusted tool outputs and agent operations.",
     "entries": [
       {
+        "id": "LLM10",
+        "name": "Improper Output Handling",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Level 2. Architectural separation between processing of untrusted tool outputs and agent operations"
+      },
+      {
         "id": "ASI05",
         "name": "Unexpected Code Execution",
         "source_list": "Agentic-Top10-2026",
@@ -31458,6 +32275,15 @@
     "control_id": "9.3.7",
     "control_name": "Verify that external resources named in model output are verified against an approved allow-list or registry before the agent installs or invokes t...",
     "entries": [
+      {
+        "id": "LLM10",
+        "name": "Improper Output Handling",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Level 2. Generated code (2026 scope): packages and external resources named in model output verified against an allow-list before they are installed or invoked"
+      },
       {
         "id": "ASI02",
         "name": "Tool Misuse and Exploitation",
@@ -31609,6 +32435,15 @@
     "control_name": "Verify that agent actions are authorized against fine-grained policies enforced by the runtime that restrict which tools an agent may invoke, and w...",
     "entries": [
       {
+        "id": "LLM03",
+        "name": "Excessive Agency",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Level 2. Fine-grained runtime policy restricting which tools an agent may invoke and which parameter values it may supply"
+      },
+      {
         "id": "ASI02",
         "name": "Tool Misuse and Exploitation",
         "source_list": "Agentic-Top10-2026",
@@ -31650,6 +32485,15 @@
     "control_name": "Verify that all access control decisions are enforced by application logic or a policy engine, never by the AI model itself.",
     "entries": [
       {
+        "id": "LLM03",
+        "name": "Excessive Agency",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Level 2. All access control decisions enforced by application logic or a policy engine, never by the model itself"
+      },
+      {
         "id": "DSGAI12",
         "name": "Unsafe Natural Language Data Gateways",
         "source_list": "DSGAI-2026",
@@ -31665,6 +32509,15 @@
     "control_id": "9.5.4",
     "control_name": "Verify that secrets and credentials required by an agent at runtime are not exposed within the model's observable context, including the context wi...",
     "entries": [
+      {
+        "id": "LLM08",
+        "name": "Hidden Context Exposure",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Level 2. Secrets and credentials kept out of the model observable context including context window, system prompts and tool call parameters, so a leaked prompt is not a leaked credential"
+      },
       {
         "id": "ASI03",
         "name": "Identity and Privilege Abuse",
@@ -31731,6 +32584,15 @@
     "control_id": "9.6.1",
     "control_name": "Verify that a manual kill-switch mechanism exists to immediately halt AI model inference and outputs.",
     "entries": [
+      {
+        "id": "LLM03",
+        "name": "Excessive Agency",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Level 1. Manual kill-switch to immediately halt model inference and outputs"
+      },
       {
         "id": "ASI08",
         "name": "Cascading Agent Failures",

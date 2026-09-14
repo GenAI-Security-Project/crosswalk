@@ -1134,7 +1134,7 @@ input, select { font-family: inherit; }
 <div class="app" id="app"><noscript>
   <div style="max-width:800px;margin:40px auto;padding:0 24px;line-height:1.6;">
     <h1>GenAI Crosswalk</h1>
-    <p>GenAI Crosswalk is the flagship dataset and tool of the <a href="https://genai.owasp.org">OWASP GenAI Security Project</a>. It is the most comprehensive mapping of Gen AI and Agentic security risks to industry frameworks: 51 entries across the OWASP LLM Top 10, the OWASP Top 10 for Agentic Applications, DSGAI (Data Security for GenAI) and the OWASP Agentic Skills Top 10, mapped to 26 industry frameworks with 3,721 individual control mappings.</p>
+    <p>GenAI Crosswalk is the flagship dataset and tool of the <a href="https://genai.owasp.org">OWASP GenAI Security Project</a>. It is the most comprehensive mapping of Gen AI and Agentic security risks to industry frameworks: 51 entries across the OWASP LLM Top 10, the OWASP Top 10 for Agentic Applications, DSGAI (Data Security for GenAI) and the OWASP Agentic Skills Top 10, mapped to 26 industry frameworks with 3,803 individual control mappings.</p>
     <p><strong>Review state.</strong> Every mapping in this project is <code>unreviewed</code> until a named reviewer signs it. 2 of the 26 mapped frameworks — CoSAI and the EU AI Act Code of Practice — currently carry <em>candidate</em> rows only: the control ids are accurate to the published framework, but the pairing to a risk is a proposal awaiting subject-matter review, not an assertion. They are counted as mapped because a mapping file exists; they are not counted as verified, because nothing here is.</p>
     <h2>OWASP Top 10 for Agentic AI — Risks &amp; Mitigations</h2>
     <p>See the full <a href="agentic-ai-top10/">OWASP Top 10 for Agentic AI risks and mitigations</a>: Agent Goal Hijack, Tool Misuse &amp; Exploitation, Identity &amp; Privilege Abuse, Agentic Supply Chain Vulnerabilities, Unexpected Code Execution, Memory &amp; Context Poisoning, Insecure Inter-Agent Communication, Cascading Agent Failures, Human-Agent Trust Exploitation, and Rogue Agents.</p>
@@ -1537,6 +1537,14 @@ input, select { font-family: inherit; }
     return div.innerHTML;
   }
 
+  // Only a real DOM node may be appended. Anything else — most importantly a
+  // string that reached here from the URL — becomes a text node, so it is
+  // rendered as text and can never be parsed as markup.
+  function toNode(value) {
+    if (value && typeof value.nodeType === 'number') return value;
+    return document.createTextNode(String(value));
+  }
+
   function el(tag, attrs, children) {
     var node = document.createElement(tag);
     if (attrs) {
@@ -1549,8 +1557,8 @@ input, select { font-family: inherit; }
     }
     if (children) {
       if (typeof children === 'string') node.textContent = children;
-      else if (Array.isArray(children)) children.forEach(function(c) { if (c) node.appendChild(c); });
-      else node.appendChild(children);
+      else if (Array.isArray(children)) children.forEach(function(c) { if (c) node.appendChild(toNode(c)); });
+      else node.appendChild(toNode(children));
     }
     return node;
   }
@@ -1674,6 +1682,31 @@ input, select { font-family: inherit; }
     '/review': renderReview
   };
 
+  // Resolve a control id supplied in the URL to the canonical string held in
+  // our own data, searching the same three places renderControlDetail reads:
+  // the framework registry, the backlink index, then the mappings in DATA.
+  // Returns null when nothing matches. Callers render the returned value
+  // rather than the URL, so nothing user-supplied is ever put on the page —
+  // a control id that matches nothing could only have produced an empty page
+  // echoing the URL back anyway.
+  function resolveControlId(fwName, controlId) {
+    var regFw = Object.prototype.hasOwnProperty.call(FW_REGISTRY_MAP, fwName) ? FW_REGISTRY_MAP[fwName] : null;
+    if (regFw) {
+      var regControl = (regFw.controls || []).find(function(c) { return c.control_id === controlId; });
+      if (regControl) return regControl.control_id;
+    }
+    var blKey = fwName + '::' + controlId;
+    var bl = Object.prototype.hasOwnProperty.call(BACKLINK_MAP, blKey) ? BACKLINK_MAP[blKey] : null;
+    if (bl) return bl.control_id;
+    var found = null;
+    DATA.forEach(function(e) {
+      (e.mappings || []).forEach(function(m) {
+        if (found === null && m.framework === fwName && m.control_id === controlId) found = m.control_id;
+      });
+    });
+    return found;
+  }
+
   function getRoute() {
     var hash = window.location.hash || '#/';
     // Extract the path part (before any query params)
@@ -1709,9 +1742,20 @@ input, select { font-family: inherit; }
     if (fwControlMatch) {
       var fwNameCtrl = decodeURIComponent(fwControlMatch[1]);
       var ctrlId = decodeURIComponent(fwControlMatch[2]);
-      renderControlDetail(app, fwNameCtrl, ctrlId);
-      window.scrollTo(0, 0);
-      return;
+      // Resolve both halves of the deep link against our own data and render
+      // the resolved values, never the URL text. The framework name gets the
+      // same allow-list the plain framework route uses below; an unknown
+      // framework or control falls through to the frameworks index.
+      var fwIdx = FRAMEWORKS.indexOf(fwNameCtrl);
+      if (fwIdx !== -1) {
+        var knownFw = FRAMEWORKS[fwIdx];
+        var knownCtrl = resolveControlId(knownFw, ctrlId);
+        if (knownCtrl !== null) {
+          renderControlDetail(app, knownFw, knownCtrl);
+          window.scrollTo(0, 0);
+          return;
+        }
+      }
     }
     // Framework detail is a full page, not a modal
     if (frameworkMatch) {

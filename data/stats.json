@@ -27,12 +27,12 @@
     }
   },
   "mappings": {
-    "total": 3721,
+    "total": 3803,
     "by_list": {
       "Agentic-Top10-2026": 993,
       "AST-Top10-2026": 36,
       "DSGAI-2026": 1788,
-      "LLM-Top10-2026": 904
+      "LLM-Top10-2026": 986
     }
   },
   "frameworks": {
@@ -45,16 +45,16 @@
     ],
     "draft_rows": 286,
     "by_list": {
-      "LLM-Top10-2026": 25,
+      "LLM-Top10-2026": 26,
       "Agentic-Top10-2026": 26,
       "DSGAI-2026": 24,
       "AST-Top10-2026": 1
     }
   },
   "mapping_files": {
-    "total": 76,
+    "total": 77,
     "by_list": {
-      "LLM-Top10-2026": 25,
+      "LLM-Top10-2026": 26,
       "Agentic-Top10-2026": 26,
       "DSGAI-2026": 24,
       "AST-Top10-2026": 1

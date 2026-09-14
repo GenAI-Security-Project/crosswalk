@@ -845,6 +845,127 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "2.1.3",
+        "control_name": "Verify that all inputs that could steer model behavior are treated as untrusted and screened by a prompt injection detection ruleset or classifier,...",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C02-Input-Validation.md#c21-prompt-injection-defenses",
+        "notes": "Level 1. Direct control: all inputs able to steer model behavior are treated as untrusted and screened by an injection ruleset or classifier, with flagged inputs blocked",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "2.1.6",
+        "control_name": "Verify that the system enforces an instruction hierarchy in which system and developer messages override user instructions and other untrusted inpu...",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C02-Input-Validation.md#c21-prompt-injection-defenses",
+        "notes": "Level 2. Instruction hierarchy so system and developer messages keep precedence over user and other untrusted input, including after user text is processed",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "2.1.2",
+        "control_name": "Verify that encoding and representation smuggling in inputs is detected and mitigated. Approved mitigations include canonicalization, strict schema...",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C02-Input-Validation.md#c21-prompt-injection-defenses",
+        "notes": "Level 1. Encoding and representation smuggling defeated by canonicalization, strict schema validation, policy rejection or explicit marking",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "2.1.1",
+        "control_name": "Verify that input normalization is applied before tokenization or embedding.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C02-Input-Validation.md#c21-prompt-injection-defenses",
+        "notes": "Level 1. Input normalization applied before tokenization or embedding, closing the pre-tokenizer bypass class",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "2.1.7",
+        "control_name": "Verify that reserved special tokens are encoded as literal characters and cannot be injected into the model context.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C02-Input-Validation.md#c21-prompt-injection-defenses",
+        "notes": "Level 2. Reserved special tokens encoded as literals so control tokens cannot be injected into the model context",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "2.1.5",
+        "control_name": "Verify that the system implements a character set restriction for all inputs. The restriction must use an allow-list approach that permits only cha...",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C02-Input-Validation.md#c21-prompt-injection-defenses",
+        "notes": "Level 1. Character set restricted by allow-list to only explicitly required characters, removing the exotic-codepoint smuggling surface",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "2.1.8",
+        "control_name": "Verify that the system can detect many-shot jailbreaking patterns.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C02-Input-Validation.md#c21-prompt-injection-defenses",
+        "notes": "Level 3. Many-shot jailbreaking pattern detection for long-context in-context-learning attacks",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "10.4.2",
+        "control_name": "Verify that MCP tools/list and tools/call responses are screened for indirect prompt injection before being injected into the model context.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C10-MCP-Security.md#c104-schema-message-and-input-validation",
+        "notes": "Level 1. Indirect injection path: MCP tools/list and tools/call responses screened before entering model context",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "12.2.1",
+        "control_name": "Verify that the system detects and alerts on known jailbreak patterns, prompt injection attempts, and adversarial inputs.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C12-Monitoring-and-Logging.md#c122-detection-and-alerting",
+        "notes": "Level 1. Detection layer: known jailbreak patterns, injection attempts and adversarial inputs alerted on",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "2.2.3",
+        "control_name": "Verify that non-text inputs (image/video/audio) are checked for adversarial perturbations, steganographic payloads, hidden or embedded content, or ...",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C02-Input-Validation.md#c22-content--policy-screening",
+        "notes": "Level 2. Cross-modal injection (2026 scope): non-text inputs checked for adversarial perturbations, steganographic payloads and hidden embedded content before they reach the model",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "2.2.4",
+        "control_name": "Verify that coordinated attacks spanning multiple input types (e.g., steganographic payloads in images combined with prompt injection in text) are ...",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C02-Input-Validation.md#c22-content--policy-screening",
+        "notes": "Level 3. Cross-modal injection (2026 scope): coordinated attacks that split an instruction across image and text inputs detected and blocked",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
         "framework": "OWASP NHI Top 10",
         "control_id": "Injection blast radius proportional to credential scope",
         "control_name": "NHI-5 Over-Privileged NHI",
@@ -2156,6 +2277,94 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "5.2.4",
+        "control_name": "Verify that post-inference filtering mechanisms prevent responses from including data that the requester is not authorized to receive.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C05-Access-Control-and-Identity.md#c52-ai-resource-authorization--classification",
+        "notes": "Level 2. Post-inference filtering prevents responses containing data the requester is not authorized to receive",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "5.2.2",
+        "control_name": "Verify that retrieval pipelines (e.g., RAG queries, embedding lookups) enforce the end-user's authorization context at each retrieval and assembly ...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C05-Access-Control-and-Identity.md#c52-ai-resource-authorization--classification",
+        "notes": "Level 2. Retrieval pipelines enforce the end-user authorization context at each retrieval and assembly stage rather than the service account permissions",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "11.2.1",
+        "control_name": "Verify that model-inferred sensitive attributes are not directly returned in outputs.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C11-Adversarial-Robustness.md#c112-membership-inference-and-model-inversion-mitigation",
+        "notes": "Level 1. Model-inferred sensitive attributes are not returned directly in outputs",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "8.2.1",
+        "control_name": "Verify that sensitive fields are detected before embedding and are masked, tokenized, or dropped.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c82-embedding-sanitization--validation",
+        "notes": "Level 1. Sensitive fields detected and masked, tokenized or dropped before embedding, so disclosure is prevented at the index rather than the response",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "7.3.2",
+        "control_name": "Verify that output filters detect and block responses that disclose system prompt content or backend data.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C07-Model-Behavior.md#c73-output-safety",
+        "notes": "Level 2. Output filters block responses disclosing system prompt content or backend data",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "11.2.4",
+        "control_name": "Verify that training on sensitive datasets employs differentially-private optimization.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C11-Adversarial-Robustness.md#c112-membership-inference-and-model-inversion-mitigation",
+        "notes": "Level 2. Differentially-private optimization when training on sensitive datasets, limiting memorisation-driven disclosure",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "5.2.7",
+        "control_name": "Verify that data classification labels propagate to downstream resources (embeddings, prompt caches, model outputs).",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C05-Access-Control-and-Identity.md#c52-ai-resource-authorization--classification",
+        "notes": "Level 3. Data classification labels propagate to embeddings, prompt caches and model outputs so downstream handling matches the source sensitivity",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "1.1.1",
+        "control_name": "Verify that training data includes only features, attributes, and fields required for the model's stated purpose.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c11-training-data-origin--data-security",
+        "notes": "Level 1. Training data restricted to features required for the stated purpose, reducing what can be disclosed at all",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
         "framework": "OWASP NHI Top 10",
         "control_id": "LLM outputs containing API keys, tokens, or credentials",
         "control_name": "NHI-2 Secret Leakage",
@@ -2410,7 +2619,9 @@ window.CROSSWALK_DATA = [
     "crossrefs": {
       "agentic_top10": [
         "ASI03",
-        "ASI06"
+        "ASI06",
+        "ASI02",
+        "ASI05"
       ],
       "dsgai_2026": [
         "DSGAI01",
@@ -2420,6 +2631,8 @@ window.CROSSWALK_DATA = [
         "DSGAI08",
         "DSGAI06",
         "DSGAI03",
+        "DSGAI05",
+        "DSGAI12",
         "DSGAI16"
       ]
     },
@@ -3236,6 +3449,94 @@ window.CROSSWALK_DATA = [
         "scope": "Both",
         "notes": "DRAFT — SME review required",
         "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.2.1",
+        "control_name": "Verify that the agent runtime blocks execution of privileged, high-impact, or irreversible actions until explicit human approval is received and ve...",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c92-high-impact-action-approval-and-irreversibility-controls",
+        "notes": "Level 1. Agent runtime blocks privileged, high-impact or irreversible actions until explicit human approval is received and verified",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.1.2",
+        "control_name": "Verify that per-execution budgets (e.g., max recursion depth, token use, and monetary spend) are configured and enforced by the runtime.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c91-execution-budgets-loop-control-and-circuit-breakers",
+        "notes": "Level 1. Per-execution budgets for recursion depth, token use and monetary spend configured and enforced by the runtime",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.3.1",
+        "control_name": "Verify that each tool/plugin executes in a least-privilege sandbox or is otherwise isolated from model operations.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
+        "notes": "Level 1. Each tool or plugin executes in a least-privilege sandbox or is otherwise isolated from model operations",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.5.3",
+        "control_name": "Verify that all access control decisions are enforced by application logic or a policy engine, never by the AI model itself.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c95-agent-authorization-delegation-and-continuous-enforcement",
+        "notes": "Level 2. All access control decisions enforced by application logic or a policy engine, never by the model itself",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.6.1",
+        "control_name": "Verify that a manual kill-switch mechanism exists to immediately halt AI model inference and outputs.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c96-shutdown-and-graceful-degradation",
+        "notes": "Level 1. Manual kill-switch to immediately halt model inference and outputs",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.5.1",
+        "control_name": "Verify that agent actions are authorized against fine-grained policies enforced by the runtime that restrict which tools an agent may invoke, and w...",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c95-agent-authorization-delegation-and-continuous-enforcement",
+        "notes": "Level 2. Fine-grained runtime policy restricting which tools an agent may invoke and which parameter values it may supply",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.2.3",
+        "control_name": "Verify that each high-impact action has a trusted reversibility classification, such as read-only, reversible, externally reversible, or irreversible.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c92-high-impact-action-approval-and-irreversibility-controls",
+        "notes": "Level 2. Each high-impact action carries a trusted reversibility classification",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.2.4",
+        "control_name": "Verify that the agent runtime enforces reversibility classifications by blocking, requiring approval, or restricting actions based on their impact ...",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c92-high-impact-action-approval-and-irreversibility-controls",
+        "notes": "Level 2. Runtime enforces reversibility classifications by blocking, requiring approval or restricting the action",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -4413,6 +4714,116 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "6.1.2",
+        "control_name": "Verify that model weights, datasets, and fine-tuning adapters are downloaded only from approved sources.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C06-Supply-Chain.md#c61-model-artifact-integrity",
+        "notes": "Level 1. Model weights, datasets and fine-tuning adapters downloaded only from approved sources",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "6.1.1",
+        "control_name": "Verify that models are scanned for malicious code before import.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C06-Supply-Chain.md#c61-model-artifact-integrity",
+        "notes": "Level 1. Models scanned for malicious code before import",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "4.1.2",
+        "control_name": "Verify that model artifact loading enforces an explicit allow-list of serialization formats that do not permit arbitrary code execution during dese...",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C04-Infrastructure.md#c41-ai-workload-sandboxing--validation",
+        "notes": "Level 1. Model artifact loading restricted to an allow-list of serialization formats that cannot execute code on deserialization, the pickle class of supply chain RCE",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "6.1.3",
+        "control_name": "Verify that every third-party model artifact can be integrity-verified.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C06-Supply-Chain.md#c61-model-artifact-integrity",
+        "notes": "Level 2. Every third-party model artifact is integrity-verifiable",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "6.2.1",
+        "control_name": "Verify that every model artifact publishes a version-controlled, machine-readable AI BOM listing datasets, weights, licenses, and data-origin state...",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C06-Supply-Chain.md#c62-ai-bom--supply-chain-monitoring",
+        "notes": "Level 1. Version-controlled machine-readable AI BOM listing datasets, weights, licenses and data-origin statements",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "6.2.2",
+        "control_name": "Verify that AI BOMs are cryptographically signed before deployment.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C06-Supply-Chain.md#c62-ai-bom--supply-chain-monitoring",
+        "notes": "Level 2. AI BOMs cryptographically signed before deployment",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "3.1.2",
+        "control_name": "Verify that all model artifacts (weights, configurations, tokenizers, base models, fine-tunes, adapters, and safety/policy models) are cryptographi...",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C03-Model-Lifecycle-Management.md#c31-model-authorization--integrity",
+        "notes": "Level 2. Weights, configurations, tokenizers, base models, fine-tunes, adapters and safety models signed by authorized entities",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "6.1.4",
+        "control_name": "Verify that models pass a behavioral acceptance test suite before being promoted to any non-development environment.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C06-Supply-Chain.md#c61-model-artifact-integrity",
+        "notes": "Level 2. Behavioral acceptance test suite passed before promotion beyond development, catching backdoors that signature checks cannot",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "3.1.3",
+        "control_name": "Verify that model cryptographic signatures are verified at deployment admission and on load.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C03-Model-Lifecycle-Management.md#c31-model-authorization--integrity",
+        "notes": "Level 2. Artifact provenance (2026 scope): signatures verified at deployment admission and on load, so unsigned or swapped weights are rejected",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "3.1.1",
+        "control_name": "Verify that a model registry maintains an inventory of all deployed model artifacts and their origin.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C03-Model-Lifecycle-Management.md#c31-model-authorization--integrity",
+        "notes": "Level 1. Artifact provenance (2026 scope): registry inventory of every deployed artifact and its origin, the record that exposes model namespace reuse",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
         "framework": "OWASP NHI Top 10",
         "control_id": "Third-party plugin tokens with excessive permissions",
         "control_name": "NHI-3 Vulnerable Third-Party NHI",
@@ -4657,6 +5068,7 @@ window.CROSSWALK_DATA = [
       "agentic_top10": [
         "ASI04",
         "ASI07",
+        "ASI06",
         "ASI10"
       ],
       "dsgai_2026": [
@@ -4665,6 +5077,7 @@ window.CROSSWALK_DATA = [
         "DSGAI06",
         "DSGAI16",
         "DSGAI17",
+        "DSGAI05",
         "DSGAI19"
       ]
     },
@@ -5476,6 +5889,116 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "1.3.1",
+        "control_name": "Verify that training and fine-tuning pipelines implement poisoning detection techniques to identify potential data poisoning or unintentional corru...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c13-training-data-quality-and-security-assurance",
+        "notes": "Level 2. Training and fine-tuning pipelines implement poisoning detection for deliberate poisoning and unintentional corruption",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "1.1.4",
+        "control_name": "Verify that integrity monitoring is applied to guard against unauthorized modifications or corruption of training data.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c11-training-data-origin--data-security",
+        "notes": "Level 2. Integrity monitoring guards training data against unauthorized modification or corruption",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "1.1.3",
+        "control_name": "Verify that data integrity is provided when training data is stored and transferred.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c11-training-data-origin--data-security",
+        "notes": "Level 2. Data integrity provided for training data in storage and in transit",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "1.1.2",
+        "control_name": "Verify that an up-to-date inventory is kept of every training-data source, including its origin, responsible party, license, collection method, int...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c11-training-data-origin--data-security",
+        "notes": "Level 2. Current inventory of every training-data source with origin, responsible party, license, collection method, use constraints and processing history",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "1.3.4",
+        "control_name": "Verify that disallowed content is detected and removed before training.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c13-training-data-quality-and-security-assurance",
+        "notes": "Level 2. Disallowed content detected and removed before training",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "1.3.5",
+        "control_name": "Verify that defenses against clean-label poisoning attacks are implemented.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c13-training-data-quality-and-security-assurance",
+        "notes": "Level 3. Clean-label poisoning defenses, the attack class that survives label inspection",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "3.5.3",
+        "control_name": "Verify that in multi-stage fine-tuning pipelines, each stage's output is integrity-verified before it is consumed by the next stage.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C03-Model-Lifecycle-Management.md#c35-pipeline-fine-tuning",
+        "notes": "Level 3. Each stage output integrity-verified before the next stage consumes it in multi-stage fine-tuning",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "12.5.1",
+        "control_name": "Verify that dataset lineage records each dataset and its components, including all transformations, augmentations, and merges.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C12-Monitoring-and-Logging.md#c125-training-data--model-lifecycle-audit",
+        "notes": "Level 1. Dataset lineage records each dataset and its components including transformations, augmentations and merges, enabling post-hoc poisoning attribution",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "6.1.2",
+        "control_name": "Verify that model weights, datasets, and fine-tuning adapters are downloaded only from approved sources.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C06-Supply-Chain.md#c61-model-artifact-integrity",
+        "notes": "Level 1. Fine-tuning subversion (2026 scope): weights, datasets and fine-tuning adapters pulled only from approved sources, closing the backdoored-adapter path",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "3.5.1",
+        "control_name": "Verify that models used in RLHF fine-tuning are versioned and integrity-verified before use in a training run.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C03-Model-Lifecycle-Management.md#c35-pipeline-fine-tuning",
+        "notes": "Level 2. Fine-tuning subversion (2026 scope): models used in RLHF fine-tuning versioned and integrity-verified before a training run",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
         "framework": "OWASP NHI Top 10",
         "control_id": "Write access to training data stores enables poisoning",
         "control_name": "NHI-5 Over-Privileged NHI",
@@ -5720,7 +6243,8 @@ window.CROSSWALK_DATA = [
     ],
     "crossrefs": {
       "agentic_top10": [
-        "ASI06"
+        "ASI06",
+        "ASI08"
       ],
       "dsgai_2026": [
         "DSGAI04",
@@ -5728,6 +6252,7 @@ window.CROSSWALK_DATA = [
         "DSGAI03",
         "DSGAI02",
         "DSGAI09",
+        "DSGAI17",
         "DSGAI05"
       ]
     },
@@ -5767,7 +6292,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0029",
-        "control_name": "Denial of ML Service",
+        "control_name": "Denial of AI Service",
         "tier": "Foundational",
         "scope": "Both",
         "url": "https://atlas.mitre.org/techniques/AML.T0029",
@@ -6499,6 +7024,72 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.1.2",
+        "control_name": "Verify that per-execution budgets (e.g., max recursion depth, token use, and monetary spend) are configured and enforced by the runtime.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c91-execution-budgets-loop-control-and-circuit-breakers",
+        "notes": "Level 1. Per-execution budgets for max recursion depth, token use and monetary spend enforced by the runtime",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.1.1",
+        "control_name": "Verify that per-tool quotas and timeouts (e.g., CPU, memory, disk, egress, and execution time) are enforced.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c91-execution-budgets-loop-control-and-circuit-breakers",
+        "notes": "Level 1. Per-tool quotas and timeouts for CPU, memory, disk, egress and execution time",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "2.1.4",
+        "control_name": "Verify that input length controls prevent content from exceeding the context window. The controls must reject inputs that exceed token limits rathe...",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C02-Input-Validation.md#c21-prompt-injection-defenses",
+        "notes": "Level 1. Input length controls reject inputs exceeding token limits rather than truncating them",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "11.2.2",
+        "control_name": "Verify that inference endpoints enforce per-principal and global rate limits sized to the extraction threat model, and not solely as a generic API ...",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C11-Adversarial-Robustness.md#c112-membership-inference-and-model-inversion-mitigation",
+        "notes": "Level 1. Per-principal and global rate limits sized to the threat model rather than as a generic API throttle",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "7.1.2",
+        "control_name": "Verify that model-generated output is bounded by length limits and termination controls.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C07-Model-Behavior.md#c71-output-format-enforcement",
+        "notes": "Level 1. Output bounded by length limits and termination controls, capping runaway generation",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "12.2.5",
+        "control_name": "Verify that token usage is tracked at granular attribution levels including per user, per session, per feature endpoint, and per team or workspace.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C12-Monitoring-and-Logging.md#c122-detection-and-alerting",
+        "notes": "Level 2. Token usage tracked per user, session, feature endpoint and team so cost abuse is attributable",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
         "framework": "OWASP NHI Top 10",
         "control_id": "Single credential with access to multiple services — one exhaustion affects all",
         "control_name": "NHI-5 Over-Privileged NHI",
@@ -6719,6 +7310,17 @@ window.CROSSWALK_DATA = [
       ],
       "dsgai_2026": [
         "DSGAI17"
+      ],
+      "llm_top10": [
+        "LLM01",
+        "LLM03",
+        "LLM08",
+        "LLM02",
+        "LLM10",
+        "LLM04",
+        "LLM05",
+        "LLM09",
+        "LLM07"
       ]
     },
     "changelog": [
@@ -7484,6 +8086,105 @@ window.CROSSWALK_DATA = [
         "scope": "Both",
         "notes": "DRAFT — SME review required",
         "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "7.4.1",
+        "control_name": "Verify that responses generated using retrieval-augmented generation (RAG) include attribution to the source documents.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C07-Model-Behavior.md#c74-source-attribution--citation-integrity",
+        "notes": "Level 1. RAG responses include attribution to the source documents",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "7.4.2",
+        "control_name": "Verify that RAG attributions are derived from retrieval metadata and are not generated by the model, so provenance cannot be fabricated.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C07-Model-Behavior.md#c74-source-attribution--citation-integrity",
+        "notes": "Level 1. RAG attributions derived from retrieval metadata rather than generated by the model, so provenance cannot be fabricated",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "7.2.1",
+        "control_name": "Verify that the system assesses the reliability of generated answers using a confidence estimation method.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C07-Model-Behavior.md#c72-hallucination-detection--mitigation",
+        "notes": "Level 2. Reliability of generated answers assessed using a confidence estimation method",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "7.2.2",
+        "control_name": "Verify that the application automatically blocks answers or switches to a fallback message if the confidence score drops below a defined threshold.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C07-Model-Behavior.md#c72-hallucination-detection--mitigation",
+        "notes": "Level 2. Answers blocked or a fallback message returned when the confidence score falls below a defined threshold",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "7.4.3",
+        "control_name": "Verify that claims in a RAG response can be traced to the retrieved chunk.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C07-Model-Behavior.md#c74-source-attribution--citation-integrity",
+        "notes": "Level 2. Claims in a RAG response traceable to the retrieved chunk",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "12.3.2",
+        "control_name": "Verify that hallucination detection monitors identify and flag model outputs that contain factually incorrect, inconsistent, or fabricated informat...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C12-Monitoring-and-Logging.md#c123-model-data-and-performance-drift-detection",
+        "notes": "Level 2. Hallucination detection monitors flag factually incorrect, inconsistent or fabricated output",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "12.3.3",
+        "control_name": "Verify that hallucination rates are tracked as continuous time-series metrics to enable trend analysis and detection of sustained model degradation.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C12-Monitoring-and-Logging.md#c123-model-data-and-performance-drift-detection",
+        "notes": "Level 2. Hallucination rates tracked as continuous time-series metrics to detect sustained degradation",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "7.2.3",
+        "control_name": "Verify that for responses classified as high-risk by policy, the system performs an additional verification step.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C07-Model-Behavior.md#c72-hallucination-detection--mitigation",
+        "notes": "Level 3. Additional verification step for responses classified as high-risk by policy",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "11.1.2",
+        "control_name": "Verify that a version-controlled alignment test suite is run on every model update or release.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C11-Adversarial-Robustness.md#c111-model-alignment-safety-and-robustness-testing-and-training",
+        "notes": "Level 1. Version-controlled alignment test suite run on every model update or release, catching factuality regressions before they ship",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -8551,6 +9252,72 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "7.3.2",
+        "control_name": "Verify that output filters detect and block responses that disclose system prompt content or backend data.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C07-Model-Behavior.md#c73-output-safety",
+        "notes": "Level 2. Output filters detect and block responses that disclose system prompt content or backend data",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "2.1.6",
+        "control_name": "Verify that the system enforces an instruction hierarchy in which system and developer messages override user instructions and other untrusted inpu...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C02-Input-Validation.md#c21-prompt-injection-defenses",
+        "notes": "Level 2. Instruction hierarchy resists the override-then-reveal extraction pattern",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.5.4",
+        "control_name": "Verify that secrets and credentials required by an agent at runtime are not exposed within the model's observable context, including the context wi...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c95-agent-authorization-delegation-and-continuous-enforcement",
+        "notes": "Level 2. Secrets and credentials kept out of the model observable context including context window, system prompts and tool call parameters, so a leaked prompt is not a leaked credential",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "12.2.3",
+        "control_name": "Verify that custom rules detect AI-specific threat patterns for coordinated jailbreak attempts, prompt injection, and system prompt extraction atte...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C12-Monitoring-and-Logging.md#c122-detection-and-alerting",
+        "notes": "Level 2. Custom rules detect coordinated jailbreak attempts, injection and system prompt extraction attempts",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "11.3.1",
+        "control_name": "Verify that query-pattern analysis feeds an extraction-attempt detector.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C11-Adversarial-Robustness.md#c113-model-extraction-defense",
+        "notes": "Level 1. Query-pattern analysis feeds an extraction-attempt detector, covering iterative prompt reconstruction",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "10.2.4",
+        "control_name": "Verify that MCP tools/list returns only tools permitted by resource owners' authorized scopes.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C10-MCP-Security.md#c102-authentication--authorization",
+        "notes": "Level 2. Hidden context exposure (2026 scope): tools/list returns only tools the caller is authorised for, so tool and function schemas are not exposed beyond scope",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
         "framework": "OWASP NHI Top 10",
         "control_id": "API keys or tokens embedded in system prompt",
         "control_name": "NHI-2 Secret Leakage",
@@ -9551,6 +10318,83 @@ window.CROSSWALK_DATA = [
         "scope": "Both",
         "notes": "DRAFT — SME review required",
         "framework_version": "GPAI CoP Final",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "8.1.1",
+        "control_name": "Verify that vector identifiers and namespaces enforce uniqueness per tenant and prevent cross-tenant collisions.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c81-access-controls-on-memory--rag-indices",
+        "notes": "Level 1. Vector identifiers and namespaces enforce per-tenant uniqueness and prevent cross-tenant collisions",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "8.1.3",
+        "control_name": "Verify that retrieval operations enforce scope constraints.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c81-access-controls-on-memory--rag-indices",
+        "notes": "Level 2. Retrieval operations enforce scope constraints",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "8.2.1",
+        "control_name": "Verify that sensitive fields are detected before embedding and are masked, tokenized, or dropped.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c82-embedding-sanitization--validation",
+        "notes": "Level 1. Sensitive fields detected before embedding and masked, tokenized or dropped",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "8.1.2",
+        "control_name": "Verify that document metadata tags are immutable after the initial write.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c81-access-controls-on-memory--rag-indices",
+        "notes": "Level 2. Document metadata tags immutable after initial write, blocking post-hoc retrieval manipulation",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "8.2.2",
+        "control_name": "Verify that vectors that fall outside normal clustering patterns are flagged and quarantined before entering production indices.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c82-embedding-sanitization--validation",
+        "notes": "Level 2. Vectors outside normal clustering patterns flagged and quarantined before entering production indices",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "8.3.1",
+        "control_name": "Verify that expired vectors are excluded from retrieval results.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c83-memory-expiry--revocation",
+        "notes": "Level 2. Expired vectors excluded from retrieval results",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "8.2.4",
+        "control_name": "Verify that content crafted to manipulate retrieval results is detected and rejected or quarantined before vectorization.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c82-embedding-sanitization--validation",
+        "notes": "Level 3. Content crafted to manipulate retrieval results detected and rejected or quarantined before vectorization",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -10583,6 +11427,83 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "7.1.1",
+        "control_name": "Verify that the application validates all model outputs against a defined schema and rejects any output that does not match.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C07-Model-Behavior.md#c71-output-format-enforcement",
+        "notes": "Level 1. All model outputs validated against a defined schema, non-matching output rejected",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "7.1.2",
+        "control_name": "Verify that model-generated output is bounded by length limits and termination controls.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C07-Model-Behavior.md#c71-output-format-enforcement",
+        "notes": "Level 1. Model-generated output bounded by length limits and termination controls",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "7.3.3",
+        "control_name": "Verify that model-generated output is prevented from triggering outbound requests.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C07-Model-Behavior.md#c73-output-safety",
+        "notes": "Level 2. Model-generated output prevented from triggering outbound requests",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.3.2",
+        "control_name": "Verify that tool outputs are validated against schemas.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
+        "notes": "Level 1. Tool outputs validated against schemas before the agent consumes them",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.3.6",
+        "control_name": "Verify that there is architectural separation between processing of untrusted tool outputs and agent operations.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
+        "notes": "Level 2. Architectural separation between processing of untrusted tool outputs and agent operations",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "7.3.4",
+        "control_name": "Verify that model outputs are checked for hidden, encoded, or misleading content created through homoglyphs, formatting, metadata, or structured fi...",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C07-Model-Behavior.md#c73-output-safety",
+        "notes": "Level 3. Outputs checked for hidden, encoded or misleading content via homoglyphs, formatting, metadata or structured fields",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.3.7",
+        "control_name": "Verify that external resources named in model output are verified against an approved allow-list or registry before the agent installs or invokes t...",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
+        "notes": "Level 2. Generated code (2026 scope): packages and external resources named in model output verified against an allow-list before they are installed or invoked",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
         "framework": "OWASP NHI Top 10",
         "control_id": "Credentials appearing in model outputs passed to executors",
         "control_name": "NHI-2 Secret Leakage",
@@ -10821,11 +11742,15 @@ window.CROSSWALK_DATA = [
       ],
       "agentic_top10": [
         "ASI02",
-        "ASI05"
+        "ASI05",
+        "ASI04",
+        "ASI10"
       ],
       "dsgai_2026": [
         "DSGAI05",
         "DSGAI12",
+        "DSGAI04",
+        "DSGAI19",
         "DSGAI06"
       ]
     },
@@ -14463,22 +15388,22 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0022",
+        "control_id": "AML.T0012",
         "control_name": "Valid Accounts",
         "tier": "Foundational",
         "scope": "Both",
-        "url": "https://atlas.mitre.org/techniques/AML.T0022",
+        "url": "https://atlas.mitre.org/techniques/AML.T0012",
         "notes": "Exploiting legitimate agent credentials to access AI systems or data pipelines",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0016",
+        "control_id": "AML.T0024",
         "control_name": "Exfiltration via AI Inference API",
         "tier": "Foundational",
         "scope": "Both",
-        "url": "https://atlas.mitre.org/techniques/AML.T0016",
+        "url": "https://atlas.mitre.org/techniques/AML.T0024",
         "notes": "Using compromised agent credentials to exfiltrate data through inference API",
         "confidence": "unreviewed",
         "reviewed_by": []
@@ -19350,22 +20275,22 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0022",
+        "control_id": "AML.T0012",
         "control_name": "Valid Accounts",
         "tier": "Hardening",
         "scope": "Both",
-        "url": "https://atlas.mitre.org/techniques/AML.T0022",
+        "url": "https://atlas.mitre.org/techniques/AML.T0012",
         "notes": "Using compromised agent credentials to impersonate trusted agents in A2A channels",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0016",
+        "control_id": "AML.T0024",
         "control_name": "Exfiltration via AI Inference API",
         "tier": "Hardening",
         "scope": "Both",
-        "url": "https://atlas.mitre.org/techniques/AML.T0016",
+        "url": "https://atlas.mitre.org/techniques/AML.T0024",
         "notes": "Intercepting inter-agent messages to exfiltrate sensitive context passed between agents",
         "confidence": "unreviewed",
         "reviewed_by": []
@@ -20467,7 +21392,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0029",
-        "control_name": "Denial of ML Service",
+        "control_name": "Denial of AI Service",
         "tier": "Foundational",
         "scope": "Both",
         "url": "https://atlas.mitre.org/techniques/AML.T0029",
@@ -23980,7 +24905,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0024.000",
-        "control_name": "Membership Inference",
+        "control_name": "Infer Training Data Membership",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Adversary determines whether specific sensitive records were used in training — confirms presence of target data",
@@ -23990,7 +24915,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0025",
-        "control_name": "Exfiltrate via Cyber Means",
+        "control_name": "Exfiltration via Cyber Means",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Sensitive content in LLM outputs, logs, or observability pipelines captured and transmitted to adversary",
@@ -25182,7 +26107,7 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0051",
+        "control_id": "AML.T0049",
         "control_name": "Exploit Public-Facing Application",
         "tier": "Foundational",
         "scope": "Both",
@@ -26233,7 +27158,7 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0051",
+        "control_id": "AML.T0049",
         "control_name": "Exploit Public-Facing Application",
         "tier": "Foundational",
         "scope": "Both",
@@ -26243,7 +27168,7 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0057",
+        "control_id": "AML.T0036",
         "control_name": "Data from Information Repositories",
         "tier": "Foundational",
         "scope": "Both",
@@ -27195,7 +28120,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0020",
-        "control_name": "Poison Training Data",
+        "control_name": "Training Data Poisoning",
         "tier": "Hardening",
         "scope": "Both",
         "notes": "Adversary introduces malicious data into training pipeline — corrupts model behaviour in ways baked into weights",
@@ -27205,7 +28130,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0018",
-        "control_name": "Backdoor ML Model",
+        "control_name": "Manipulate AI Model",
         "tier": "Hardening",
         "scope": "Both",
         "notes": "Hidden functionality embedded in model weights — triggered by specific inputs, invisible to standard testing",
@@ -27214,7 +28139,7 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0031",
+        "control_id": "AML.T0043",
         "control_name": "Craft Adversarial Data",
         "tier": "Hardening",
         "scope": "Both",
@@ -28291,7 +29216,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0020",
-        "control_name": "Poison Training Data",
+        "control_name": "Training Data Poisoning",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Adversarially crafted payloads bypass ingestion validation to corrupt training or RAG data",
@@ -28301,7 +29226,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0018",
-        "control_name": "Backdoor ML Model",
+        "control_name": "Manipulate AI Model",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Path traversal in snapshot imports (CVE-2024-3584) enables write to model host — backdoor installation path",
@@ -28310,7 +29235,7 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0031",
+        "control_id": "AML.T0043",
         "control_name": "Craft Adversarial Data",
         "tier": "Foundational",
         "scope": "Both",
@@ -29326,7 +30251,7 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0051",
+        "control_id": "AML.T0049",
         "control_name": "Exploit Public-Facing Application",
         "tier": "Foundational",
         "scope": "Both",
@@ -29336,7 +30261,7 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0057",
+        "control_id": "AML.T0036",
         "control_name": "Data from Information Repositories",
         "tier": "Foundational",
         "scope": "Both",
@@ -30308,7 +31233,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0024.000",
-        "control_name": "Membership Inference",
+        "control_name": "Infer Training Data Membership",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Ungoverned training data status — adversary determines what sensitive data is in scope without classification barriers",
@@ -30317,7 +31242,7 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0057",
+        "control_id": "AML.T0036",
         "control_name": "Data from Information Repositories",
         "tier": "Foundational",
         "scope": "Both",
@@ -31271,7 +32196,7 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0057",
+        "control_id": "AML.T0036",
         "control_name": "Data from Information Repositories",
         "tier": "Foundational",
         "scope": "Both",
@@ -31281,7 +32206,7 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0051",
+        "control_id": "AML.T0049",
         "control_name": "Exploit Public-Facing Application",
         "tier": "Foundational",
         "scope": "Both",
@@ -32344,7 +33269,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0025",
-        "control_name": "Exfiltrate via Cyber Means",
+        "control_name": "Exfiltration via Cyber Means",
         "tier": "Hardening",
         "scope": "Both",
         "notes": "Sensitive content extracted from multimodal inputs (OCR, transcription) transmitted through standard exfiltration paths",
@@ -32364,7 +33289,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0024.000",
-        "control_name": "Membership Inference",
+        "control_name": "Infer Training Data Membership",
         "tier": "Hardening",
         "scope": "Both",
         "notes": "Sensitive multimodal content in training data confirmed through membership inference queries",
@@ -33322,7 +34247,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0024.000",
-        "control_name": "Membership Inference",
+        "control_name": "Infer Training Data Membership",
         "tier": "Hardening",
         "scope": "Both",
         "notes": "Adversary probes synthetic dataset to determine whether specific individuals are re-identifiable",
@@ -33332,7 +34257,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0025",
-        "control_name": "Exfiltrate via Cyber Means",
+        "control_name": "Exfiltration via Cyber Means",
         "tier": "Hardening",
         "scope": "Both",
         "notes": "Re-identified individuals from synthetic data extracted via standard exfiltration paths",
@@ -34225,7 +35150,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0025",
-        "control_name": "Exfiltrate via Cyber Means",
+        "control_name": "Exfiltration via Cyber Means",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Cross-session data captured and transmitted to adversary through inference API",
@@ -34234,7 +35159,7 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0051",
+        "control_id": "AML.T0049",
         "control_name": "Exploit Public-Facing Application",
         "tier": "Foundational",
         "scope": "Both",
@@ -35172,7 +36097,7 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0051",
+        "control_id": "AML.T0049",
         "control_name": "Exploit Public-Facing Application",
         "tier": "Foundational",
         "scope": "Both",
@@ -35182,7 +36107,7 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0057",
+        "control_id": "AML.T0036",
         "control_name": "Data from Information Repositories",
         "tier": "Foundational",
         "scope": "Both",
@@ -36172,7 +37097,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0025",
-        "control_name": "Exfiltrate via Cyber Means",
+        "control_name": "Exfiltration via Cyber Means",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Vector store content exfiltrated through unauthenticated access or RBAC bypass",
@@ -36192,7 +37117,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0020",
-        "control_name": "Poison Training Data",
+        "control_name": "Training Data Poisoning",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Vector store content poisoned through path traversal or unauthenticated write (CVE-2024-3584)",
@@ -37188,7 +38113,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0025",
-        "control_name": "Exfiltrate via Cyber Means",
+        "control_name": "Exfiltration via Cyber Means",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Telemetry stores containing sensitive GenAI interaction data exfiltrated through standard data access paths",
@@ -37197,7 +38122,7 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0057",
+        "control_id": "AML.T0036",
         "control_name": "Data from Information Repositories",
         "tier": "Foundational",
         "scope": "Both",
@@ -38185,7 +39110,7 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0051",
+        "control_id": "AML.T0049",
         "control_name": "Exploit Public-Facing Application",
         "tier": "Foundational",
         "scope": "Both",
@@ -38196,7 +39121,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0025",
-        "control_name": "Exfiltrate via Cyber Means",
+        "control_name": "Exfiltration via Cyber Means",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Over-broad context window content exfiltrated through successful injection — adversary retrieves aggregated sensitive data",
@@ -39141,7 +40066,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0013",
-        "control_name": "Discover ML Model Ontology",
+        "control_name": "Discover AI Model Ontology",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Adversary learns what data the browser assistant can access across open applications",
@@ -39150,7 +40075,7 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0057",
+        "control_id": "AML.T0036",
         "control_name": "Data from Information Repositories",
         "tier": "Foundational",
         "scope": "Both",
@@ -40150,7 +41075,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0029",
-        "control_name": "Denial of ML Service",
+        "control_name": "Denial of AI Service",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Adversary saturates GenAI pipeline — vector store, RAG retrieval, or inference endpoint rendered unavailable",
@@ -40169,7 +41094,7 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0057",
+        "control_id": "AML.T0036",
         "control_name": "Data from Information Repositories",
         "tier": "Foundational",
         "scope": "Both",
@@ -41179,7 +42104,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0024.000",
-        "control_name": "Membership Inference",
+        "control_name": "Infer Training Data Membership",
         "tier": "Hardening",
         "scope": "Both",
         "notes": "Adversary determines whether specific sensitive records were used in training through systematic query analysis",
@@ -41189,7 +42114,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0025",
-        "control_name": "Exfiltrate via Cyber Means",
+        "control_name": "Exfiltration via Cyber Means",
         "tier": "Hardening",
         "scope": "Both",
         "notes": "Training data confirmed present and partially reconstructed through inference, then exfiltrated",
@@ -42073,7 +42998,7 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0057",
+        "control_id": "AML.T0036",
         "control_name": "Data from Information Repositories",
         "tier": "Foundational",
         "scope": "Both",
@@ -42084,7 +43009,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0020",
-        "control_name": "Poison Training Data",
+        "control_name": "Training Data Poisoning",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Adversary-controlled labelling vendor introduces biased or poisoned annotations into training data",
@@ -43014,7 +43939,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0025",
-        "control_name": "Exfiltrate via Cyber Means",
+        "control_name": "Exfiltration via Cyber Means",
         "tier": "Hardening",
         "scope": "Both",
         "notes": "Query results and model outputs systematically collected and transmitted to adversary infrastructure",
@@ -43998,7 +44923,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0020",
-        "control_name": "Poison Training Data",
+        "control_name": "Training Data Poisoning",
         "tier": "Hardening",
         "scope": "Both",
         "notes": "Adversary introduces false content into RAG corpus through ingestion path — no public publication required",
@@ -44007,7 +44932,7 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0031",
+        "control_id": "AML.T0043",
         "control_name": "Craft Adversarial Data",
         "tier": "Hardening",
         "scope": "Both",

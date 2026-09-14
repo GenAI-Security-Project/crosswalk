@@ -5,7 +5,7 @@
 <!-- stats:badges -->
 [![Version](https://img.shields.io/badge/version-4.0.0-green)](CHANGELOG.md)
 [![Source Lists](https://img.shields.io/badge/source%20lists-4-blueviolet)](README.md)
-[![Mapping Files](https://img.shields.io/badge/mapping%20files-76-brightgreen)](README.md)
+[![Mapping Files](https://img.shields.io/badge/mapping%20files-77-brightgreen)](README.md)
 [![Frameworks](https://img.shields.io/badge/frameworks-26-orange)](README.md)
 <!-- /stats -->
 [![npm](https://img.shields.io/npm/v/genai-security-crosswalk?color=red&label=npm)](https://www.npmjs.com/package/genai-security-crosswalk)
@@ -75,7 +75,7 @@ Every file answers one question: **which controls from framework X address vulne
 |---|---|
 | **<!-- stats:source-lists -->4<!-- /stats -->** source lists | LLM Top 10 · Agentic Top 10 · DSGAI 2026 · Agentic Skills Top 10 |
 | **<!-- stats:frameworks-mapped -->26<!-- /stats -->** frameworks | Compliance · Governance · Threat modeling · Testing · OT/ICS · Identity · Secure SDLC · Financial |
-| **<!-- stats:mapping-files -->76<!-- /stats -->** mapping files | Every source list entry × every applicable framework |
+| **<!-- stats:mapping-files -->77<!-- /stats -->** mapping files | Every source list entry × every applicable framework |
 | **Mapping review state** | <!-- stats:frameworks-draft -->2 of 26 carry candidate DRAFT rows only — CoSAI · EU AI Act Code of Practice<!-- /stats --> — see [docs/SCHEMA_V2_MIGRATION.md](docs/SCHEMA_V2_MIGRATION.md) |
 | **Framework freshness** | <!-- stats:freshness -->3 current · 1 behind upstream · 22 unchecked<!-- /stats --> — see [docs/FRESHNESS_SLA.md](docs/FRESHNESS_SLA.md) |
 | **21** implementation recipes | Production-ready Python patterns |
@@ -114,7 +114,7 @@ All free. All open-source. Built for practitioners.
 | [ISO/IEC 42001:2023](https://www.iso.org/standard/81230.html) | ✅ | ✅ | ✅ |
 | [CIS Controls v8.1](https://www.cisecurity.org/controls) | ✅ | ✅ | ✅ |
 | [OWASP ASVS 4.0.3](https://owasp.org/www-project-application-security-verification-standard/) | ✅ | ✅ | ✅ |
-| [OWASP AISVS 1.0](https://github.com/OWASP/AISVS/tree/main/1.0/en) | — | ✅ | ✅ |
+| [OWASP AISVS 1.0](https://github.com/OWASP/AISVS/tree/main/1.0/en) | ✅ | ✅ | ✅ |
 | [SOC 2 Trust Services Criteria](https://www.aicpa-cima.com/resources/landing/2017-trust-services-criteria) | ✅ | ✅ | ✅ |
 | [PCI DSS v4.0](https://www.pcisecuritystandards.org/document_library/) | ✅ | ✅ | ✅ |
 | [ENISA Multilayer Framework](https://www.enisa.europa.eu/publications/multilayer-framework-for-good-cybersecurity-practices-for-ai) | ✅ | ✅ | ✅ |
@@ -130,7 +130,7 @@ All free. All open-source. Built for practitioners.
 
 ## All mapping files
 
-### LLM Top 10 2026 — <!-- stats:frameworks-llm -->25<!-- /stats --> framework mappings
+### LLM Top 10 2026 — <!-- stats:frameworks-llm -->26<!-- /stats --> framework mappings
 
 | File | Framework | Standout content |
 |---|---|---|
@@ -157,6 +157,7 @@ All free. All open-source. Built for practitioners.
 | [LLM_SP800218A.md](llm-top10/LLM_SP800218A.md) | NIST SP 800-218A | Secure AI SDLC practices — PW/PS/RV practice mapping per LLM entry |
 | [LLM_FedRAMP.md](llm-top10/LLM_FedRAMP.md) | FedRAMP | SP 800-53 AI overlay — AC/AU/CA/CM/IA/IR/RA/SA/SC/SI/SR control families |
 | [LLM_DORA.md](llm-top10/LLM_DORA.md) | DORA | EU financial sector resilience — Art. 5–45 per LLM entry |
+| [LLM_AISVS.md](llm-top10/LLM_AISVS.md) | OWASP AISVS 1.0 | Level 1–3 verification requirements for all 10 entries — injection defenses, output control, agent budgets, cross-modal inputs |
 
 ### Agentic Top 10 2026 — <!-- stats:frameworks-agentic -->26<!-- /stats --> framework mappings
 
@@ -247,7 +248,7 @@ crosswalk/
 │   ├── index.ts                     ← Typed API: getEntry, getFramework, searchEntries
 │   └── index.test.ts                ← 12 smoke tests (Node.js built-in runner)
 │
-├── llm-top10/                       ← LLM01–LLM10 × <!-- stats:frameworks-llm -->25<!-- /stats --> frameworks
+├── llm-top10/                       ← LLM01–LLM10 × <!-- stats:frameworks-llm -->26<!-- /stats --> frameworks
 │   ├── LLM_MITREATLAS.md
 │   ├── LLM_NISTAIRMF.md
 │   ├── LLM_EUAIAct.md
@@ -270,7 +271,8 @@ crosswalk/
 │   ├── LLM_NHI.md                   ← Non-Human Identity controls
 │   ├── LLM_SP800218A.md             ← Secure AI SDLC (SSDF extension)
 │   ├── LLM_FedRAMP.md               ← US federal cloud AI (SP 800-53 overlay)
-│   └── LLM_DORA.md                  ← EU financial sector resilience
+│   ├── LLM_DORA.md                  ← EU financial sector resilience
+│   └── LLM_AISVS.md                 ← AI Security Verification Standard — testable requirements
 │
 ├── agentic-top10/                   ← ASI01–ASI10 × <!-- stats:frameworks-agentic -->26<!-- /stats --> frameworks
 │   ├── Agentic_AIUC1.md

@@ -124,6 +124,7 @@ const FRAMEWORK_FILES = [
   { rel: 'llm-top10/LLM_AIUC1.md',       framework: 'AIUC-1',                   ids: LLM_IDS },
   { rel: 'llm-top10/LLM_COSAI.md', framework: 'CoSAI', ids: LLM_IDS },
   { rel: 'llm-top10/LLM_GPAICOP.md', framework: 'EU AI Act Code of Practice', ids: LLM_IDS },
+  { rel: 'llm-top10/LLM_AISVS.md', framework: 'OWASP AISVS 1.0', ids: LLM_IDS },
   { rel: 'agentic-top10/Agentic_COSAI.md', framework: 'CoSAI', ids: ASI_IDS },
   { rel: 'agentic-top10/Agentic_GPAICOP.md', framework: 'EU AI Act Code of Practice', ids: ASI_IDS },
   { rel: 'dsgai-2026/DSGAI_COSAI.md', framework: 'CoSAI', ids: DSGAI_IDS },

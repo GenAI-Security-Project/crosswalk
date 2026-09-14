@@ -791,6 +791,116 @@
       "reviewed_by": []
     },
     {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "1.3.1",
+      "control_name": "Verify that training and fine-tuning pipelines implement poisoning detection techniques to identify potential data poisoning or unintentional corru...",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c13-training-data-quality-and-security-assurance",
+      "notes": "Level 2. Training and fine-tuning pipelines implement poisoning detection for deliberate poisoning and unintentional corruption",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "1.1.4",
+      "control_name": "Verify that integrity monitoring is applied to guard against unauthorized modifications or corruption of training data.",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c11-training-data-origin--data-security",
+      "notes": "Level 2. Integrity monitoring guards training data against unauthorized modification or corruption",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "1.1.3",
+      "control_name": "Verify that data integrity is provided when training data is stored and transferred.",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c11-training-data-origin--data-security",
+      "notes": "Level 2. Data integrity provided for training data in storage and in transit",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "1.1.2",
+      "control_name": "Verify that an up-to-date inventory is kept of every training-data source, including its origin, responsible party, license, collection method, int...",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c11-training-data-origin--data-security",
+      "notes": "Level 2. Current inventory of every training-data source with origin, responsible party, license, collection method, use constraints and processing history",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "1.3.4",
+      "control_name": "Verify that disallowed content is detected and removed before training.",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c13-training-data-quality-and-security-assurance",
+      "notes": "Level 2. Disallowed content detected and removed before training",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "1.3.5",
+      "control_name": "Verify that defenses against clean-label poisoning attacks are implemented.",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c13-training-data-quality-and-security-assurance",
+      "notes": "Level 3. Clean-label poisoning defenses, the attack class that survives label inspection",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "3.5.3",
+      "control_name": "Verify that in multi-stage fine-tuning pipelines, each stage's output is integrity-verified before it is consumed by the next stage.",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C03-Model-Lifecycle-Management.md#c35-pipeline-fine-tuning",
+      "notes": "Level 3. Each stage output integrity-verified before the next stage consumes it in multi-stage fine-tuning",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "12.5.1",
+      "control_name": "Verify that dataset lineage records each dataset and its components, including all transformations, augmentations, and merges.",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C12-Monitoring-and-Logging.md#c125-training-data--model-lifecycle-audit",
+      "notes": "Level 1. Dataset lineage records each dataset and its components including transformations, augmentations and merges, enabling post-hoc poisoning attribution",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "6.1.2",
+      "control_name": "Verify that model weights, datasets, and fine-tuning adapters are downloaded only from approved sources.",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C06-Supply-Chain.md#c61-model-artifact-integrity",
+      "notes": "Level 1. Fine-tuning subversion (2026 scope): weights, datasets and fine-tuning adapters pulled only from approved sources, closing the backdoored-adapter path",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "3.5.1",
+      "control_name": "Verify that models used in RLHF fine-tuning are versioned and integrity-verified before use in a training run.",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C03-Model-Lifecycle-Management.md#c35-pipeline-fine-tuning",
+      "notes": "Level 2. Fine-tuning subversion (2026 scope): models used in RLHF fine-tuning versioned and integrity-verified before a training run",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
       "framework": "OWASP NHI Top 10",
       "control_id": "Write access to training data stores enables poisoning",
       "control_name": "NHI-5 Over-Privileged NHI",
@@ -1035,7 +1145,8 @@
   ],
   "crossrefs": {
     "agentic_top10": [
-      "ASI06"
+      "ASI06",
+      "ASI08"
     ],
     "dsgai_2026": [
       "DSGAI04",
@@ -1043,6 +1154,7 @@
       "DSGAI03",
       "DSGAI02",
       "DSGAI09",
+      "DSGAI17",
       "DSGAI05"
     ]
   },
