@@ -66,9 +66,9 @@ point.
    it through the stats markers.
 4. `npm run watch` monitors upstream sources.
 
-The chain only works if `current_version` is populated. **22 of 25 frameworks
+The chain only works if `current_version` is populated. **22 of 26 frameworks
 are unchecked**, so the honest reading today is that freshness is measured for
-three frameworks and unknown for the rest.
+four frameworks and unknown for the rest.
 
 ## Filling in an unchecked framework
 

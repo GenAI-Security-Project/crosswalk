@@ -53,6 +53,7 @@ const REPORT_FRAMEWORKS = [
   'ISA/IEC 62443',
   'NIST SP 800-82 Rev 3',
   'OWASP ASVS 4.0.3',
+  'OWASP AISVS 1.0',
   'OWASP SAMM v2.0',
   'PCI DSS v4.0',
   'MITRE ATLAS',
@@ -131,6 +132,12 @@ const FW_META = {
     deadline: 'Ongoing — L1/L2/L3 verification',
     audience: 'AppSec engineers, pen testers',
     note: 'Application Security Verification Standard — L1-L3 levels.',
+  },
+  'OWASP AISVS 1.0': {
+    short: 'AISVS',
+    deadline: 'Ongoing — frozen 1.0 release',
+    audience: 'AI engineers, AppSec testers, auditors',
+    note: 'AI Security Verification Standard — 191 testable requirements at Levels 1–3 across 12 chapters.',
   },
   'OWASP SAMM v2.0': {
     short: 'OWASP SAMM',
