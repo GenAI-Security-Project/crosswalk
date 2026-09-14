@@ -21,7 +21,14 @@
       "notes": "DRAFT — SME review required",
       "framework_version": "MAESTRO 1.0",
       "confidence": "unreviewed",
-      "reviewed_by": []
+      "reviewed_by": [],
+      "evidence_count": 0,
+      "evidence": {
+        "confirmed": [],
+        "drafted": [
+          "INC-119"
+        ]
+      }
     },
     {
       "framework": "MAESTRO",
@@ -32,7 +39,14 @@
       "notes": "DRAFT — SME review required",
       "framework_version": "MAESTRO 1.0",
       "confidence": "unreviewed",
-      "reviewed_by": []
+      "reviewed_by": [],
+      "evidence_count": 0,
+      "evidence": {
+        "confirmed": [],
+        "drafted": [
+          "INC-126"
+        ]
+      }
     },
     {
       "framework": "MAESTRO",
@@ -54,7 +68,14 @@
       "notes": "DRAFT — SME review required",
       "framework_version": "MAESTRO 1.0",
       "confidence": "unreviewed",
-      "reviewed_by": []
+      "reviewed_by": [],
+      "evidence_count": 0,
+      "evidence": {
+        "confirmed": [],
+        "drafted": [
+          "INC-118"
+        ]
+      }
     }
   ],
   "tools": [],

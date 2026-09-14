@@ -64,12 +64,12 @@
     "total": 131
   },
   "evidence": {
-    "incidents_annotated": 3,
-    "control_failures": 3,
+    "incidents_annotated": 13,
+    "control_failures": 18,
     "confirmed": 0,
-    "drafted": 3,
+    "drafted": 18,
     "mappings_with_confirmed_evidence": 0,
-    "mappings_with_drafted_evidence_only": 6,
+    "mappings_with_drafted_evidence_only": 18,
     "orphan_failures": 0
   },
   "freshness": {
