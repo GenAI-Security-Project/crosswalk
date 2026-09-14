@@ -122,6 +122,28 @@ the corresponding JSON file in `/data/`. The schema is in
 [`data/schema.json`](data/schema.json). This keeps the machine-readable
 layer in sync with the markdown.
 
+### Generated files
+
+`data/entries/*.json`, `data/backlinks.json` and the webapp bundles
+(`docs/data.js`, `docs/backlinks.js`, `docs/frameworks-registry.js`,
+`docs/incidents.js`) are **written by `scripts/generate.js`, never by hand**.
+`data/stats.json` and the README badges come from `npm run stats`.
+
+The build is deterministic: running `npm run build` twice on the same
+sources produces byte-identical output, and the generated files carry no
+run date, machine name or other build-time value. CI regenerates everything
+and fails on any diff, so after changing a mapping file run:
+
+```bash
+npm run build          # generate → validate → stats:check
+npm test               # includes the determinism and bundle checks
+git diff --exit-code   # must be clean apart from your intended change
+```
+
+GitHub Pages serves `docs/` straight from `main`, which is why the bundles
+are committed rather than built on deploy. Keep it that way unless the
+Pages source is deliberately switched to a workflow-based deploy.
+
 ---
 
 ## Code of conduct
