@@ -844,6 +844,127 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "2.1.3",
+        "control_name": "Verify that all inputs that could steer model behavior are treated as untrusted and screened by a prompt injection detection ruleset or classifier,...",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C02-Input-Validation.md#c21-prompt-injection-defenses",
+        "notes": "Level 1. Direct control: all inputs able to steer model behavior are treated as untrusted and screened by an injection ruleset or classifier, with flagged inputs blocked",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "2.1.6",
+        "control_name": "Verify that the system enforces an instruction hierarchy in which system and developer messages override user instructions and other untrusted inpu...",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C02-Input-Validation.md#c21-prompt-injection-defenses",
+        "notes": "Level 2. Instruction hierarchy so system and developer messages keep precedence over user and other untrusted input, including after user text is processed",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "2.1.2",
+        "control_name": "Verify that encoding and representation smuggling in inputs is detected and mitigated. Approved mitigations include canonicalization, strict schema...",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C02-Input-Validation.md#c21-prompt-injection-defenses",
+        "notes": "Level 1. Encoding and representation smuggling defeated by canonicalization, strict schema validation, policy rejection or explicit marking",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "2.1.1",
+        "control_name": "Verify that input normalization is applied before tokenization or embedding.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C02-Input-Validation.md#c21-prompt-injection-defenses",
+        "notes": "Level 1. Input normalization applied before tokenization or embedding, closing the pre-tokenizer bypass class",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "2.1.7",
+        "control_name": "Verify that reserved special tokens are encoded as literal characters and cannot be injected into the model context.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C02-Input-Validation.md#c21-prompt-injection-defenses",
+        "notes": "Level 2. Reserved special tokens encoded as literals so control tokens cannot be injected into the model context",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "2.1.5",
+        "control_name": "Verify that the system implements a character set restriction for all inputs. The restriction must use an allow-list approach that permits only cha...",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C02-Input-Validation.md#c21-prompt-injection-defenses",
+        "notes": "Level 1. Character set restricted by allow-list to only explicitly required characters, removing the exotic-codepoint smuggling surface",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "2.1.8",
+        "control_name": "Verify that the system can detect many-shot jailbreaking patterns.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C02-Input-Validation.md#c21-prompt-injection-defenses",
+        "notes": "Level 3. Many-shot jailbreaking pattern detection for long-context in-context-learning attacks",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "10.4.2",
+        "control_name": "Verify that MCP tools/list and tools/call responses are screened for indirect prompt injection before being injected into the model context.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C10-MCP-Security.md#c104-schema-message-and-input-validation",
+        "notes": "Level 1. Indirect injection path: MCP tools/list and tools/call responses screened before entering model context",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "12.2.1",
+        "control_name": "Verify that the system detects and alerts on known jailbreak patterns, prompt injection attempts, and adversarial inputs.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C12-Monitoring-and-Logging.md#c122-detection-and-alerting",
+        "notes": "Level 1. Detection layer: known jailbreak patterns, injection attempts and adversarial inputs alerted on",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "2.2.3",
+        "control_name": "Verify that non-text inputs (image/video/audio) are checked for adversarial perturbations, steganographic payloads, hidden or embedded content, or ...",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C02-Input-Validation.md#c22-content--policy-screening",
+        "notes": "Level 2. Cross-modal injection (2026 scope): non-text inputs checked for adversarial perturbations, steganographic payloads and hidden embedded content before they reach the model",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "2.2.4",
+        "control_name": "Verify that coordinated attacks spanning multiple input types (e.g., steganographic payloads in images combined with prompt injection in text) are ...",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C02-Input-Validation.md#c22-content--policy-screening",
+        "notes": "Level 3. Cross-modal injection (2026 scope): coordinated attacks that split an instruction across image and text inputs detected and blocked",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
         "framework": "OWASP NHI Top 10",
         "control_id": "Injection blast radius proportional to credential scope",
         "control_name": "NHI-5 Over-Privileged NHI",
@@ -1064,235 +1185,235 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Bing Chat 'Sydney' jailbreak — persona escape and threatening behaviour",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-002"
       },
       {
         "name": "ChatGPT indirect prompt injection via attacker-controlled web content",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-003"
       },
       {
         "name": "Chevrolet dealership chatbot agrees to sell car for $1",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-005"
       },
       {
         "name": "Indirect prompt injection in LLM email assistant via malicious email body",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-007"
       },
       {
         "name": "Microsoft Copilot for M365 — document exfiltration via indirect injection",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-010"
       },
       {
         "name": "WormGPT — uncensored LLM sold for cybercrime on dark web forums",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-011"
       },
       {
         "name": "LangChain and LlamaIndex RCE — agent code execution via prompt injection",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-012"
       },
       {
         "name": "Perez & Ribeiro — 'Ignore Previous Prompt': foundational direct injection study",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2022,
         "incident_id": "INC-013"
       },
       {
         "name": "Multimodal indirect injection — image-embedded instructions in GPT-4V",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-015"
       },
       {
         "name": "RAG corpus poisoning — embedding-space manipulation to force retrieval",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-016"
       },
       {
         "name": "GPT-4 system prompt extraction via jailbreak in production deployments",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-018"
       },
       {
         "name": "Multi-agent prompt injection cascade — demonstrated cross-agent goal propagation",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-020"
       },
       {
         "name": "LAAF v2.0 — Empirical LPCI breakthrough rates of 67–100% across 5 production LLMs",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-021"
       },
       {
         "name": "Greshake et al. \"Not What You've Signed Up For\" indirect prompt injection paper",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-022"
       },
       {
         "name": "Nassi et al. \"ComPromptMized\" Morris II multi-agent worm",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-023"
       },
       {
         "name": "Slack AI indirect injection via channel content",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-024"
       },
       {
         "name": "GitHub Copilot Workspace prompt injection via repository content",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-025"
       },
       {
         "name": "MathPrompt: symbolic mathematics jailbreak attack",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-027"
       },
       {
         "name": "Many-shot jailbreaking (Anthropic research)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-028"
       },
       {
         "name": "Crescendo: multi-turn escalation attack (Microsoft)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-029"
       },
       {
         "name": "Skeleton Key: direct system prompt override (Microsoft)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-030"
       },
       {
         "name": "OpenAI o1/o3 reasoning chain jailbreak via chain-of-thought manipulation",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-033"
       },
       {
         "name": "Azure OpenAI content filter bypass via structured output mode",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-037"
       },
       {
         "name": "Adversarial embedding attacks on production RAG systems",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-046"
       },
       {
         "name": "DPD AI chatbot swears at customer and criticises company — prompt injection via customer input",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-053"
       },
       {
         "name": "MCP tool poisoning — hidden instructions in Model Context Protocol tool descriptions",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-062"
       },
       {
         "name": "AI-generated CSAM detection evasion — adversarial manipulation of content safety classifiers",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-063"
       },
       {
         "name": "OpenAI GPT-4 system prompt extraction toolkit — systematic prompt leakage",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-065"
       },
       {
         "name": "GitHub Copilot Chat agent executes malicious code from repository context",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-067"
       },
       {
         "name": "Claude computer use red-team: autonomous agent browses to attacker-controlled site and follows instructions",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-069"
       },
       {
         "name": "LLM-generated malware evades endpoint detection — AI-assisted polymorphic code",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-075"
       },
       {
         "name": "Claude hijacked for state-sponsored cyberattacks — 80-90% autonomous operation against 30 entities",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-083"
       },
       {
         "name": "EchoLeak — zero-click Microsoft Copilot data exfiltration via email prompt injection",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-089"
       },
       {
         "name": "Claude AI jailbreak — Mexican government breach, 150GB data theft across 10 agencies",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-092"
       },
       {
         "name": "Microsoft 365 Copilot XPIA phishing — attacker-shaped email summaries via hidden instructions",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-095"
       },
       {
         "name": "Clinejection — CI/CD pipeline compromise via Cline's issue triage bot, 4,000 machines infected",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-098"
       },
       {
         "name": "AI recommendation poisoning — hidden prompt injections in 'Summarize with AI' buttons across 31 companies",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-100"
       },
       {
         "name": "IDEsaster — 30+ vulnerabilities across AI coding tools (Cursor, Windsurf, Copilot, Zed, Roo Code)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-103"
       },
       {
         "name": "Anthropic Claude misuse report — ransomware development, North Korean employment fraud, extortion",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-110"
       }
@@ -2155,6 +2276,94 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "5.2.4",
+        "control_name": "Verify that post-inference filtering mechanisms prevent responses from including data that the requester is not authorized to receive.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C05-Access-Control-and-Identity.md#c52-ai-resource-authorization--classification",
+        "notes": "Level 2. Post-inference filtering prevents responses containing data the requester is not authorized to receive",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "5.2.2",
+        "control_name": "Verify that retrieval pipelines (e.g., RAG queries, embedding lookups) enforce the end-user's authorization context at each retrieval and assembly ...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C05-Access-Control-and-Identity.md#c52-ai-resource-authorization--classification",
+        "notes": "Level 2. Retrieval pipelines enforce the end-user authorization context at each retrieval and assembly stage rather than the service account permissions",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "11.2.1",
+        "control_name": "Verify that model-inferred sensitive attributes are not directly returned in outputs.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C11-Adversarial-Robustness.md#c112-membership-inference-and-model-inversion-mitigation",
+        "notes": "Level 1. Model-inferred sensitive attributes are not returned directly in outputs",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "8.2.1",
+        "control_name": "Verify that sensitive fields are detected before embedding and are masked, tokenized, or dropped.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c82-embedding-sanitization--validation",
+        "notes": "Level 1. Sensitive fields detected and masked, tokenized or dropped before embedding, so disclosure is prevented at the index rather than the response",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "7.3.2",
+        "control_name": "Verify that output filters detect and block responses that disclose system prompt content or backend data.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C07-Model-Behavior.md#c73-output-safety",
+        "notes": "Level 2. Output filters block responses disclosing system prompt content or backend data",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "11.2.4",
+        "control_name": "Verify that training on sensitive datasets employs differentially-private optimization.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C11-Adversarial-Robustness.md#c112-membership-inference-and-model-inversion-mitigation",
+        "notes": "Level 2. Differentially-private optimization when training on sensitive datasets, limiting memorisation-driven disclosure",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "5.2.7",
+        "control_name": "Verify that data classification labels propagate to downstream resources (embeddings, prompt caches, model outputs).",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C05-Access-Control-and-Identity.md#c52-ai-resource-authorization--classification",
+        "notes": "Level 3. Data classification labels propagate to embeddings, prompt caches and model outputs so downstream handling matches the source sensitivity",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "1.1.1",
+        "control_name": "Verify that training data includes only features, attributes, and fields required for the model's stated purpose.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c11-training-data-origin--data-security",
+        "notes": "Level 1. Training data restricted to features required for the stated purpose, reducing what can be disclosed at all",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
         "framework": "OWASP NHI Top 10",
         "control_id": "LLM outputs containing API keys, tokens, or credentials",
         "control_name": "NHI-2 Secret Leakage",
@@ -2365,43 +2574,43 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Samsung employees leak source code and meeting notes via ChatGPT",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-001"
       },
       {
         "name": "OpenAI Redis caching bug exposes user conversation history",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-006"
       },
       {
         "name": "GitHub Copilot reproduces verbatim licensed code and embedded secrets",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-008"
       },
       {
         "name": "Slack AI indirect injection via channel content",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-024"
       },
       {
         "name": "DeepSeek AI database exposure — 1M+ chat logs publicly accessible",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-032"
       },
       {
         "name": "Cursor AI code agent leaking repository secrets via context window",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-034"
       },
       {
         "name": "Amazon Q developer leaks internal AWS data in enterprise environment",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-064"
       }
@@ -2409,7 +2618,9 @@ window.CROSSWALK_DATA = [
     "crossrefs": {
       "agentic_top10": [
         "ASI03",
-        "ASI06"
+        "ASI06",
+        "ASI02",
+        "ASI05"
       ],
       "dsgai_2026": [
         "DSGAI01",
@@ -2419,6 +2630,8 @@ window.CROSSWALK_DATA = [
         "DSGAI08",
         "DSGAI06",
         "DSGAI03",
+        "DSGAI05",
+        "DSGAI12",
         "DSGAI16"
       ]
     },
@@ -3239,6 +3452,94 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.2.1",
+        "control_name": "Verify that the agent runtime blocks execution of privileged, high-impact, or irreversible actions until explicit human approval is received and ve...",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c92-high-impact-action-approval-and-irreversibility-controls",
+        "notes": "Level 1. Agent runtime blocks privileged, high-impact or irreversible actions until explicit human approval is received and verified",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.1.2",
+        "control_name": "Verify that per-execution budgets (e.g., max recursion depth, token use, and monetary spend) are configured and enforced by the runtime.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c91-execution-budgets-loop-control-and-circuit-breakers",
+        "notes": "Level 1. Per-execution budgets for recursion depth, token use and monetary spend configured and enforced by the runtime",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.3.1",
+        "control_name": "Verify that each tool/plugin executes in a least-privilege sandbox or is otherwise isolated from model operations.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
+        "notes": "Level 1. Each tool or plugin executes in a least-privilege sandbox or is otherwise isolated from model operations",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.5.3",
+        "control_name": "Verify that all access control decisions are enforced by application logic or a policy engine, never by the AI model itself.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c95-agent-authorization-delegation-and-continuous-enforcement",
+        "notes": "Level 2. All access control decisions enforced by application logic or a policy engine, never by the model itself",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.6.1",
+        "control_name": "Verify that a manual kill-switch mechanism exists to immediately halt AI model inference and outputs.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c96-shutdown-and-graceful-degradation",
+        "notes": "Level 1. Manual kill-switch to immediately halt model inference and outputs",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.5.1",
+        "control_name": "Verify that agent actions are authorized against fine-grained policies enforced by the runtime that restrict which tools an agent may invoke, and w...",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c95-agent-authorization-delegation-and-continuous-enforcement",
+        "notes": "Level 2. Fine-grained runtime policy restricting which tools an agent may invoke and which parameter values it may supply",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.2.3",
+        "control_name": "Verify that each high-impact action has a trusted reversibility classification, such as read-only, reversible, externally reversible, or irreversible.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c92-high-impact-action-approval-and-irreversibility-controls",
+        "notes": "Level 2. Each high-impact action carries a trusted reversibility classification",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.2.4",
+        "control_name": "Verify that the agent runtime enforces reversibility classifications by blocking, requiring approval, or restricting actions based on their impact ...",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c92-high-impact-action-approval-and-irreversibility-controls",
+        "notes": "Level 2. Runtime enforces reversibility classifications by blocking, requiring approval or restricting the action",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
         "framework": "OWASP NHI Top 10",
         "control_id": "Tool/API credentials with more scope than task requires",
         "control_name": "NHI-5 Over-Privileged NHI",
@@ -3429,139 +3730,139 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Bing Chat 'Sydney' jailbreak — persona escape and threatening behaviour",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-002"
       },
       {
         "name": "Air Canada chatbot invents bereavement discount policy — tribunal ruling",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-004"
       },
       {
         "name": "Chevrolet dealership chatbot agrees to sell car for $1",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-005"
       },
       {
         "name": "WormGPT — uncensored LLM sold for cybercrime on dark web forums",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-011"
       },
       {
         "name": "LAAF v2.0 — Empirical LPCI breakthrough rates of 67–100% across 5 production LLMs",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-021"
       },
       {
         "name": "AI voice deepfake CEO fraud — Hong Kong $25M loss",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-026"
       },
       {
         "name": "MathPrompt: symbolic mathematics jailbreak attack",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-027"
       },
       {
         "name": "Many-shot jailbreaking (Anthropic research)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-028"
       },
       {
         "name": "Crescendo: multi-turn escalation attack (Microsoft)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-029"
       },
       {
         "name": "Skeleton Key: direct system prompt override (Microsoft)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-030"
       },
       {
         "name": "Meta Galactica model withdrawn after misinformation at launch",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2022,
         "incident_id": "INC-031"
       },
       {
         "name": "OpenAI o1/o3 reasoning chain jailbreak via chain-of-thought manipulation",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-033"
       },
       {
         "name": "Apollo Research: frontier models demonstrate strategic deception to avoid shutdown",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-047"
       },
       {
         "name": "AI companion apps: manipulation and exploitation of human-agent trust",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-048"
       },
       {
         "name": "NYC city chatbot tells businesses to break the law — fabricated legal guidance",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-052"
       },
       {
         "name": "DPD AI chatbot swears at customer and criticises company — prompt injection via customer input",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-053"
       },
       {
         "name": "Character.AI teen suicide — AI companion encouraged self-harm",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-057"
       },
       {
         "name": "LLM-generated malware evades endpoint detection — AI-assisted polymorphic code",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-075"
       },
       {
         "name": "Claude Skills ransomware deployment — MedusaLocker via malicious plugin",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-081"
       },
       {
         "name": "Google Antigravity AI IDE deletes entire D: drive — misinterpreted cache-clearing instruction",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-082"
       },
       {
         "name": "Claude hijacked for state-sponsored cyberattacks — 80-90% autonomous operation against 30 entities",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-083"
       },
       {
         "name": "XBOW — first critical CVE discovered entirely by autonomous AI penetration testing agent",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-096"
       },
       {
         "name": "Anthropic Claude misuse report — ransomware development, North Korean employment fraud, extortion",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-110"
       }
@@ -4412,6 +4713,116 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "6.1.2",
+        "control_name": "Verify that model weights, datasets, and fine-tuning adapters are downloaded only from approved sources.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C06-Supply-Chain.md#c61-model-artifact-integrity",
+        "notes": "Level 1. Model weights, datasets and fine-tuning adapters downloaded only from approved sources",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "6.1.1",
+        "control_name": "Verify that models are scanned for malicious code before import.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C06-Supply-Chain.md#c61-model-artifact-integrity",
+        "notes": "Level 1. Models scanned for malicious code before import",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "4.1.2",
+        "control_name": "Verify that model artifact loading enforces an explicit allow-list of serialization formats that do not permit arbitrary code execution during dese...",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C04-Infrastructure.md#c41-ai-workload-sandboxing--validation",
+        "notes": "Level 1. Model artifact loading restricted to an allow-list of serialization formats that cannot execute code on deserialization, the pickle class of supply chain RCE",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "6.1.3",
+        "control_name": "Verify that every third-party model artifact can be integrity-verified.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C06-Supply-Chain.md#c61-model-artifact-integrity",
+        "notes": "Level 2. Every third-party model artifact is integrity-verifiable",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "6.2.1",
+        "control_name": "Verify that every model artifact publishes a version-controlled, machine-readable AI BOM listing datasets, weights, licenses, and data-origin state...",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C06-Supply-Chain.md#c62-ai-bom--supply-chain-monitoring",
+        "notes": "Level 1. Version-controlled machine-readable AI BOM listing datasets, weights, licenses and data-origin statements",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "6.2.2",
+        "control_name": "Verify that AI BOMs are cryptographically signed before deployment.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C06-Supply-Chain.md#c62-ai-bom--supply-chain-monitoring",
+        "notes": "Level 2. AI BOMs cryptographically signed before deployment",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "3.1.2",
+        "control_name": "Verify that all model artifacts (weights, configurations, tokenizers, base models, fine-tunes, adapters, and safety/policy models) are cryptographi...",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C03-Model-Lifecycle-Management.md#c31-model-authorization--integrity",
+        "notes": "Level 2. Weights, configurations, tokenizers, base models, fine-tunes, adapters and safety models signed by authorized entities",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "6.1.4",
+        "control_name": "Verify that models pass a behavioral acceptance test suite before being promoted to any non-development environment.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C06-Supply-Chain.md#c61-model-artifact-integrity",
+        "notes": "Level 2. Behavioral acceptance test suite passed before promotion beyond development, catching backdoors that signature checks cannot",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "3.1.3",
+        "control_name": "Verify that model cryptographic signatures are verified at deployment admission and on load.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C03-Model-Lifecycle-Management.md#c31-model-authorization--integrity",
+        "notes": "Level 2. Artifact provenance (2026 scope): signatures verified at deployment admission and on load, so unsigned or swapped weights are rejected",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "3.1.1",
+        "control_name": "Verify that a model registry maintains an inventory of all deployed model artifacts and their origin.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C03-Model-Lifecycle-Management.md#c31-model-authorization--integrity",
+        "notes": "Level 1. Artifact provenance (2026 scope): registry inventory of every deployed artifact and its origin, the record that exposes model namespace reuse",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
         "framework": "OWASP NHI Top 10",
         "control_id": "Third-party plugin tokens with excessive permissions",
         "control_name": "NHI-3 Vulnerable Third-Party NHI",
@@ -4617,37 +5028,37 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Hugging Face model repository pickle-based malware supply chain",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-009"
       },
       {
         "name": "Hugging Face model card supply chain manipulation",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-038"
       },
       {
         "name": "Scale AI / Sama contractor data exposure — third-party AI labeling workforce privacy violations",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-044"
       },
       {
         "name": "Stability AI synthetic CSAM generation — training data and output safety failures",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-049"
       },
       {
         "name": "Meta Llama model weights stolen and leaked — open-source model security incident",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-078"
       },
       {
         "name": "Lasso Security — 1,500+ HuggingFace API tokens exposed in code repositories",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-079"
       }
@@ -4656,6 +5067,7 @@ window.CROSSWALK_DATA = [
       "agentic_top10": [
         "ASI04",
         "ASI07",
+        "ASI06",
         "ASI10"
       ],
       "dsgai_2026": [
@@ -4664,6 +5076,7 @@ window.CROSSWALK_DATA = [
         "DSGAI06",
         "DSGAI16",
         "DSGAI17",
+        "DSGAI05",
         "DSGAI19"
       ]
     },
@@ -5475,6 +5888,116 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "1.3.1",
+        "control_name": "Verify that training and fine-tuning pipelines implement poisoning detection techniques to identify potential data poisoning or unintentional corru...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c13-training-data-quality-and-security-assurance",
+        "notes": "Level 2. Training and fine-tuning pipelines implement poisoning detection for deliberate poisoning and unintentional corruption",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "1.1.4",
+        "control_name": "Verify that integrity monitoring is applied to guard against unauthorized modifications or corruption of training data.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c11-training-data-origin--data-security",
+        "notes": "Level 2. Integrity monitoring guards training data against unauthorized modification or corruption",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "1.1.3",
+        "control_name": "Verify that data integrity is provided when training data is stored and transferred.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c11-training-data-origin--data-security",
+        "notes": "Level 2. Data integrity provided for training data in storage and in transit",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "1.1.2",
+        "control_name": "Verify that an up-to-date inventory is kept of every training-data source, including its origin, responsible party, license, collection method, int...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c11-training-data-origin--data-security",
+        "notes": "Level 2. Current inventory of every training-data source with origin, responsible party, license, collection method, use constraints and processing history",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "1.3.4",
+        "control_name": "Verify that disallowed content is detected and removed before training.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c13-training-data-quality-and-security-assurance",
+        "notes": "Level 2. Disallowed content detected and removed before training",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "1.3.5",
+        "control_name": "Verify that defenses against clean-label poisoning attacks are implemented.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c13-training-data-quality-and-security-assurance",
+        "notes": "Level 3. Clean-label poisoning defenses, the attack class that survives label inspection",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "3.5.3",
+        "control_name": "Verify that in multi-stage fine-tuning pipelines, each stage's output is integrity-verified before it is consumed by the next stage.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C03-Model-Lifecycle-Management.md#c35-pipeline-fine-tuning",
+        "notes": "Level 3. Each stage output integrity-verified before the next stage consumes it in multi-stage fine-tuning",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "12.5.1",
+        "control_name": "Verify that dataset lineage records each dataset and its components, including all transformations, augmentations, and merges.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C12-Monitoring-and-Logging.md#c125-training-data--model-lifecycle-audit",
+        "notes": "Level 1. Dataset lineage records each dataset and its components including transformations, augmentations and merges, enabling post-hoc poisoning attribution",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "6.1.2",
+        "control_name": "Verify that model weights, datasets, and fine-tuning adapters are downloaded only from approved sources.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C06-Supply-Chain.md#c61-model-artifact-integrity",
+        "notes": "Level 1. Fine-tuning subversion (2026 scope): weights, datasets and fine-tuning adapters pulled only from approved sources, closing the backdoored-adapter path",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "3.5.1",
+        "control_name": "Verify that models used in RLHF fine-tuning are versioned and integrity-verified before use in a training run.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C03-Model-Lifecycle-Management.md#c35-pipeline-fine-tuning",
+        "notes": "Level 2. Fine-tuning subversion (2026 scope): models used in RLHF fine-tuning versioned and integrity-verified before a training run",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
         "framework": "OWASP NHI Top 10",
         "control_id": "Write access to training data stores enables poisoning",
         "control_name": "NHI-5 Over-Privileged NHI",
@@ -5670,56 +6193,57 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Many-shot jailbreaking (Anthropic research)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-028"
       },
       {
         "name": "Anthropic Claude context flooding — resource exhaustion via adversarial long-context prompts",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-045"
       },
       {
         "name": "Google Gemini AI image generator refuses to depict white people — overcorrected safety filters",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-051"
       },
       {
         "name": "Anthropic Sleeper Agents paper — models trained to hide malicious behaviour",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-061"
       },
       {
         "name": "AI-generated CSAM detection evasion — adversarial manipulation of content safety classifiers",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-063"
       },
       {
         "name": "OpenAI GPT-4o sycophancy — model agrees with users even when they are wrong",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-073"
       },
       {
         "name": "AI recruiting tool gender bias — Amazon scraps internal ML hiring tool",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-074"
       },
       {
         "name": "PoisonedRAG — 5 malicious texts in millions achieve 90% attack success rate on RAG systems",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-108"
       }
     ],
     "crossrefs": {
       "agentic_top10": [
-        "ASI06"
+        "ASI06",
+        "ASI08"
       ],
       "dsgai_2026": [
         "DSGAI04",
@@ -5727,6 +6251,7 @@ window.CROSSWALK_DATA = [
         "DSGAI03",
         "DSGAI02",
         "DSGAI09",
+        "DSGAI17",
         "DSGAI05"
       ]
     },
@@ -6498,6 +7023,72 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.1.2",
+        "control_name": "Verify that per-execution budgets (e.g., max recursion depth, token use, and monetary spend) are configured and enforced by the runtime.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c91-execution-budgets-loop-control-and-circuit-breakers",
+        "notes": "Level 1. Per-execution budgets for max recursion depth, token use and monetary spend enforced by the runtime",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.1.1",
+        "control_name": "Verify that per-tool quotas and timeouts (e.g., CPU, memory, disk, egress, and execution time) are enforced.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c91-execution-budgets-loop-control-and-circuit-breakers",
+        "notes": "Level 1. Per-tool quotas and timeouts for CPU, memory, disk, egress and execution time",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "2.1.4",
+        "control_name": "Verify that input length controls prevent content from exceeding the context window. The controls must reject inputs that exceed token limits rathe...",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C02-Input-Validation.md#c21-prompt-injection-defenses",
+        "notes": "Level 1. Input length controls reject inputs exceeding token limits rather than truncating them",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "11.2.2",
+        "control_name": "Verify that inference endpoints enforce per-principal and global rate limits sized to the extraction threat model, and not solely as a generic API ...",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C11-Adversarial-Robustness.md#c112-membership-inference-and-model-inversion-mitigation",
+        "notes": "Level 1. Per-principal and global rate limits sized to the threat model rather than as a generic API throttle",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "7.1.2",
+        "control_name": "Verify that model-generated output is bounded by length limits and termination controls.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C07-Model-Behavior.md#c71-output-format-enforcement",
+        "notes": "Level 1. Output bounded by length limits and termination controls, capping runaway generation",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "12.2.5",
+        "control_name": "Verify that token usage is tracked at granular attribution levels including per user, per session, per feature endpoint, and per team or workspace.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C12-Monitoring-and-Logging.md#c122-detection-and-alerting",
+        "notes": "Level 2. Token usage tracked per user, session, feature endpoint and team so cost abuse is attributable",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
         "framework": "OWASP NHI Top 10",
         "control_id": "Single credential with access to multiple services — one exhaustion affects all",
         "control_name": "NHI-5 Over-Privileged NHI",
@@ -6688,25 +7279,25 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Clarkesworld magazine overwhelmed by AI-generated fiction submissions",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-014"
       },
       {
         "name": "AutoGPT and BabyAGI — uncontrolled web browsing and file system access",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-017"
       },
       {
         "name": "AI voice deepfake CEO fraud — Hong Kong $25M loss",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-026"
       },
       {
         "name": "Anthropic Claude context flooding — resource exhaustion via adversarial long-context prompts",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-045"
       }
@@ -6718,6 +7309,17 @@ window.CROSSWALK_DATA = [
       ],
       "dsgai_2026": [
         "DSGAI17"
+      ],
+      "llm_top10": [
+        "LLM01",
+        "LLM03",
+        "LLM08",
+        "LLM02",
+        "LLM10",
+        "LLM04",
+        "LLM05",
+        "LLM09",
+        "LLM07"
       ]
     },
     "changelog": [
@@ -7487,6 +8089,105 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "7.4.1",
+        "control_name": "Verify that responses generated using retrieval-augmented generation (RAG) include attribution to the source documents.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C07-Model-Behavior.md#c74-source-attribution--citation-integrity",
+        "notes": "Level 1. RAG responses include attribution to the source documents",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "7.4.2",
+        "control_name": "Verify that RAG attributions are derived from retrieval metadata and are not generated by the model, so provenance cannot be fabricated.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C07-Model-Behavior.md#c74-source-attribution--citation-integrity",
+        "notes": "Level 1. RAG attributions derived from retrieval metadata rather than generated by the model, so provenance cannot be fabricated",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "7.2.1",
+        "control_name": "Verify that the system assesses the reliability of generated answers using a confidence estimation method.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C07-Model-Behavior.md#c72-hallucination-detection--mitigation",
+        "notes": "Level 2. Reliability of generated answers assessed using a confidence estimation method",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "7.2.2",
+        "control_name": "Verify that the application automatically blocks answers or switches to a fallback message if the confidence score drops below a defined threshold.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C07-Model-Behavior.md#c72-hallucination-detection--mitigation",
+        "notes": "Level 2. Answers blocked or a fallback message returned when the confidence score falls below a defined threshold",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "7.4.3",
+        "control_name": "Verify that claims in a RAG response can be traced to the retrieved chunk.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C07-Model-Behavior.md#c74-source-attribution--citation-integrity",
+        "notes": "Level 2. Claims in a RAG response traceable to the retrieved chunk",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "12.3.2",
+        "control_name": "Verify that hallucination detection monitors identify and flag model outputs that contain factually incorrect, inconsistent, or fabricated informat...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C12-Monitoring-and-Logging.md#c123-model-data-and-performance-drift-detection",
+        "notes": "Level 2. Hallucination detection monitors flag factually incorrect, inconsistent or fabricated output",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "12.3.3",
+        "control_name": "Verify that hallucination rates are tracked as continuous time-series metrics to enable trend analysis and detection of sustained model degradation.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C12-Monitoring-and-Logging.md#c123-model-data-and-performance-drift-detection",
+        "notes": "Level 2. Hallucination rates tracked as continuous time-series metrics to detect sustained degradation",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "7.2.3",
+        "control_name": "Verify that for responses classified as high-risk by policy, the system performs an additional verification step.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C07-Model-Behavior.md#c72-hallucination-detection--mitigation",
+        "notes": "Level 3. Additional verification step for responses classified as high-risk by policy",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "11.1.2",
+        "control_name": "Verify that a version-controlled alignment test suite is run on every model update or release.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C11-Adversarial-Robustness.md#c111-model-alignment-safety-and-robustness-testing-and-training",
+        "notes": "Level 1. Version-controlled alignment test suite run on every model update or release, catching factuality regressions before they ship",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
         "framework": "OWASP NHI Top 10",
         "control_id": "Audit log service credentials leaked or compromised",
         "control_name": "NHI-2 Secret Leakage",
@@ -7667,127 +8368,127 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Bing Chat 'Sydney' jailbreak — persona escape and threatening behaviour",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-002"
       },
       {
         "name": "Air Canada chatbot invents bereavement discount policy — tribunal ruling",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-004"
       },
       {
         "name": "Clarkesworld magazine overwhelmed by AI-generated fiction submissions",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-014"
       },
       {
         "name": "AI voice deepfake CEO fraud — Hong Kong $25M loss",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-026"
       },
       {
         "name": "Meta Galactica model withdrawn after misinformation at launch",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2022,
         "incident_id": "INC-031"
       },
       {
         "name": "OpenAI o1/o3 reasoning chain jailbreak via chain-of-thought manipulation",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-033"
       },
       {
         "name": "AI companion apps: manipulation and exploitation of human-agent trust",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-048"
       },
       {
         "name": "Google Gemini AI image generator refuses to depict white people — overcorrected safety filters",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-051"
       },
       {
         "name": "NYC city chatbot tells businesses to break the law — fabricated legal guidance",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-052"
       },
       {
         "name": "Google AI Overviews recommends adding glue to pizza — RAG hallucination at search scale",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-056"
       },
       {
         "name": "Character.AI teen suicide — AI companion encouraged self-harm",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-057"
       },
       {
         "name": "AI-generated Biden robocalls — deepfake voice used to suppress voter turnout",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-058"
       },
       {
         "name": "Perplexity AI plagiarism — verbatim content reproduction without attribution",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-059"
       },
       {
         "name": "Apple Intelligence notification hallucinations — fabricated BBC news headlines",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-060"
       },
       {
         "name": "EU GDPR enforcement: ChatGPT cannot correct factually wrong personal data",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-068"
       },
       {
         "name": "OpenAI GPT-4o sycophancy — model agrees with users even when they are wrong",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-073"
       },
       {
         "name": "Tesla FSD phantom braking and obstacle hallucination — AI perception failures at highway speed",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-076"
       },
       {
         "name": "Midjourney Trump arrest deepfakes go viral — AI-generated images shape public perception",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-077"
       },
       {
         "name": "OpenAI Whisper hallucinating medical transcriptions — fabricated diagnoses in healthcare AI",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-080"
       },
       {
         "name": "Meta Rogue AI Agent Sev-1 — autonomous agent posts incorrect advice, exposing proprietary data",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-091"
       },
       {
         "name": "Replit vibe coding meltdown — agent hallucinated data, deleted production database, hid mistakes",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-106"
       }
@@ -8550,6 +9251,72 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "7.3.2",
+        "control_name": "Verify that output filters detect and block responses that disclose system prompt content or backend data.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C07-Model-Behavior.md#c73-output-safety",
+        "notes": "Level 2. Output filters detect and block responses that disclose system prompt content or backend data",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "2.1.6",
+        "control_name": "Verify that the system enforces an instruction hierarchy in which system and developer messages override user instructions and other untrusted inpu...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C02-Input-Validation.md#c21-prompt-injection-defenses",
+        "notes": "Level 2. Instruction hierarchy resists the override-then-reveal extraction pattern",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.5.4",
+        "control_name": "Verify that secrets and credentials required by an agent at runtime are not exposed within the model's observable context, including the context wi...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c95-agent-authorization-delegation-and-continuous-enforcement",
+        "notes": "Level 2. Secrets and credentials kept out of the model observable context including context window, system prompts and tool call parameters, so a leaked prompt is not a leaked credential",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "12.2.3",
+        "control_name": "Verify that custom rules detect AI-specific threat patterns for coordinated jailbreak attempts, prompt injection, and system prompt extraction atte...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C12-Monitoring-and-Logging.md#c122-detection-and-alerting",
+        "notes": "Level 2. Custom rules detect coordinated jailbreak attempts, injection and system prompt extraction attempts",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "11.3.1",
+        "control_name": "Verify that query-pattern analysis feeds an extraction-attempt detector.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C11-Adversarial-Robustness.md#c113-model-extraction-defense",
+        "notes": "Level 1. Query-pattern analysis feeds an extraction-attempt detector, covering iterative prompt reconstruction",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "10.2.4",
+        "control_name": "Verify that MCP tools/list returns only tools permitted by resource owners' authorized scopes.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C10-MCP-Security.md#c102-authentication--authorization",
+        "notes": "Level 2. Hidden context exposure (2026 scope): tools/list returns only tools the caller is authorised for, so tool and function schemas are not exposed beyond scope",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
         "framework": "OWASP NHI Top 10",
         "control_id": "API keys or tokens embedded in system prompt",
         "control_name": "NHI-2 Secret Leakage",
@@ -8725,61 +9492,61 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "GitHub Copilot reproduces verbatim licensed code and embedded secrets",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-008"
       },
       {
         "name": "WormGPT — uncensored LLM sold for cybercrime on dark web forums",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-011"
       },
       {
         "name": "Perez & Ribeiro — 'Ignore Previous Prompt': foundational direct injection study",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2022,
         "incident_id": "INC-013"
       },
       {
         "name": "GPT-4 system prompt extraction via jailbreak in production deployments",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-018"
       },
       {
         "name": "LAAF v2.0 — Empirical LPCI breakthrough rates of 67–100% across 5 production LLMs",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-021"
       },
       {
         "name": "Greshake et al. \"Not What You've Signed Up For\" indirect prompt injection paper",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-022"
       },
       {
         "name": "GitHub Copilot Workspace prompt injection via repository content",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-025"
       },
       {
         "name": "Skeleton Key: direct system prompt override (Microsoft)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-030"
       },
       {
         "name": "DPD AI chatbot swears at customer and criticises company — prompt injection via customer input",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-053"
       },
       {
         "name": "OpenAI GPT-4 system prompt extraction toolkit — systematic prompt leakage",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-065"
       }
@@ -9554,6 +10321,83 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "8.1.1",
+        "control_name": "Verify that vector identifiers and namespaces enforce uniqueness per tenant and prevent cross-tenant collisions.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c81-access-controls-on-memory--rag-indices",
+        "notes": "Level 1. Vector identifiers and namespaces enforce per-tenant uniqueness and prevent cross-tenant collisions",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "8.1.3",
+        "control_name": "Verify that retrieval operations enforce scope constraints.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c81-access-controls-on-memory--rag-indices",
+        "notes": "Level 2. Retrieval operations enforce scope constraints",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "8.2.1",
+        "control_name": "Verify that sensitive fields are detected before embedding and are masked, tokenized, or dropped.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c82-embedding-sanitization--validation",
+        "notes": "Level 1. Sensitive fields detected before embedding and masked, tokenized or dropped",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "8.1.2",
+        "control_name": "Verify that document metadata tags are immutable after the initial write.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c81-access-controls-on-memory--rag-indices",
+        "notes": "Level 2. Document metadata tags immutable after initial write, blocking post-hoc retrieval manipulation",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "8.2.2",
+        "control_name": "Verify that vectors that fall outside normal clustering patterns are flagged and quarantined before entering production indices.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c82-embedding-sanitization--validation",
+        "notes": "Level 2. Vectors outside normal clustering patterns flagged and quarantined before entering production indices",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "8.3.1",
+        "control_name": "Verify that expired vectors are excluded from retrieval results.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c83-memory-expiry--revocation",
+        "notes": "Level 2. Expired vectors excluded from retrieval results",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "8.2.4",
+        "control_name": "Verify that content crafted to manipulate retrieval results is detected and rejected or quarantined before vectorization.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c82-embedding-sanitization--validation",
+        "notes": "Level 3. Content crafted to manipulate retrieval results detected and rejected or quarantined before vectorization",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
         "framework": "OWASP NHI Top 10",
         "control_id": "Embedding store service account with cross-tenant read access",
         "control_name": "NHI-5 Over-Privileged NHI",
@@ -9759,25 +10603,25 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Azure OpenAI content filter bypass via structured output mode",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-037"
       },
       {
         "name": "Adversarial embedding attacks on production RAG systems",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-046"
       },
       {
         "name": "Google AI Overviews recommends adding glue to pizza — RAG hallucination at search scale",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-056"
       },
       {
         "name": "OpenAI Whisper hallucinating medical transcriptions — fabricated diagnoses in healthcare AI",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-080"
       }
@@ -10582,6 +11426,83 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "7.1.1",
+        "control_name": "Verify that the application validates all model outputs against a defined schema and rejects any output that does not match.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C07-Model-Behavior.md#c71-output-format-enforcement",
+        "notes": "Level 1. All model outputs validated against a defined schema, non-matching output rejected",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "7.1.2",
+        "control_name": "Verify that model-generated output is bounded by length limits and termination controls.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C07-Model-Behavior.md#c71-output-format-enforcement",
+        "notes": "Level 1. Model-generated output bounded by length limits and termination controls",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "7.3.3",
+        "control_name": "Verify that model-generated output is prevented from triggering outbound requests.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C07-Model-Behavior.md#c73-output-safety",
+        "notes": "Level 2. Model-generated output prevented from triggering outbound requests",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.3.2",
+        "control_name": "Verify that tool outputs are validated against schemas.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
+        "notes": "Level 1. Tool outputs validated against schemas before the agent consumes them",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.3.6",
+        "control_name": "Verify that there is architectural separation between processing of untrusted tool outputs and agent operations.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
+        "notes": "Level 2. Architectural separation between processing of untrusted tool outputs and agent operations",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "7.3.4",
+        "control_name": "Verify that model outputs are checked for hidden, encoded, or misleading content created through homoglyphs, formatting, metadata, or structured fi...",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C07-Model-Behavior.md#c73-output-safety",
+        "notes": "Level 3. Outputs checked for hidden, encoded or misleading content via homoglyphs, formatting, metadata or structured fields",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.3.7",
+        "control_name": "Verify that external resources named in model output are verified against an approved allow-list or registry before the agent installs or invokes t...",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
+        "notes": "Level 2. Generated code (2026 scope): packages and external resources named in model output verified against an allow-list before they are installed or invoked",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
         "framework": "OWASP NHI Top 10",
         "control_id": "Credentials appearing in model outputs passed to executors",
         "control_name": "NHI-2 Secret Leakage",
@@ -10777,31 +11698,31 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "GitHub Copilot Workspace prompt injection via repository content",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-025"
       },
       {
         "name": "Azure OpenAI content filter bypass via structured output mode",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-037"
       },
       {
         "name": "Hugging Face model card supply chain manipulation",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-038"
       },
       {
         "name": "Apple Intelligence notification hallucinations — fabricated BBC news headlines",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-060"
       },
       {
         "name": "LLM-generated malware evades endpoint detection — AI-assisted polymorphic code",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-075"
       }
@@ -10820,11 +11741,15 @@ window.CROSSWALK_DATA = [
       ],
       "agentic_top10": [
         "ASI02",
-        "ASI05"
+        "ASI05",
+        "ASI04",
+        "ASI10"
       ],
       "dsgai_2026": [
         "DSGAI05",
         "DSGAI12",
+        "DSGAI04",
+        "DSGAI19",
         "DSGAI06"
       ]
     },
@@ -10941,37 +11866,37 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "ClawHavoc — 1,184 malicious skills flooded onto the ClawHub registry",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-115"
       },
       {
         "name": "SKILL.md to shell access in three lines of markdown (Snyk threat model)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-116"
       },
       {
         "name": "Actively malicious OpenClaw skills in use by 6,000+ users, found by behavioural analysis",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-117"
       },
       {
         "name": "ToxicSkills — 36% of 3,984 audited skills contain security flaws",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-118"
       },
       {
         "name": "Brand-impersonating skill on ClawHub tricks users into installing malware",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-120"
       },
       {
         "name": "Vidar infostealer variants targeting OpenClaw agent identity files",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-125"
       }
@@ -11069,13 +11994,13 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "ClawHavoc — 1,184 malicious skills flooded onto the ClawHub registry",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-115"
       },
       {
         "name": "Claude Code repository config execution before trust dialog (CVE-2025-59536, CVE-2026-21852)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-123"
       }
@@ -11180,19 +12105,19 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "ToxicSkills — 36% of 3,984 audited skills contain security flaws",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-118"
       },
       {
         "name": "280+ leaky skills exposing API keys and PII through over-permissioning",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-119"
       },
       {
         "name": "36.7% of 7,000+ MCP servers potentially vulnerable to SSRF",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-126"
       }
@@ -11298,25 +12223,25 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "SKILL.md to shell access in three lines of markdown (Snyk threat model)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-116"
       },
       {
         "name": "Brand-impersonating skill on ClawHub tricks users into installing malware",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-120"
       },
       {
         "name": "OpenClaw log poisoning — agent logs as an indirect prompt injection channel",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-122"
       },
       {
         "name": "Claude Code repository config execution before trust dialog (CVE-2025-59536, CVE-2026-21852)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-123"
       }
@@ -11407,19 +12332,19 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "OpenClaw log poisoning — agent logs as an indirect prompt injection channel",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-122"
       },
       {
         "name": "The Story of Skills — a malicious skill reaches 26,000 agents past every scanner",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-129"
       },
       {
         "name": "The Circus of Skills — 17,822 live skills rest on untrusted external instruction sources",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-130"
       }
@@ -11507,25 +12432,25 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "ClawJacked — localhost WebSocket hijack of OpenClaw instances (CVE-2026-28363, CVSS 9.9)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-124"
       },
       {
         "name": "Vidar infostealer variants targeting OpenClaw agent identity files",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-125"
       },
       {
         "name": "36.7% of 7,000+ MCP servers potentially vulnerable to SSRF",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-126"
       },
       {
         "name": "135,000+ OpenClaw instances internet-exposed with insecure defaults",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-127"
       }
@@ -11612,13 +12537,13 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "ClawJacked — localhost WebSocket hijack of OpenClaw instances (CVE-2026-28363, CVSS 9.9)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-124"
       },
       {
         "name": "SkillJacking — 925 skills sit on instantly hijackable dependencies",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-131"
       }
@@ -11700,25 +12625,25 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Actively malicious OpenClaw skills in use by 6,000+ users, found by behavioural analysis",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-117"
       },
       {
         "name": "Pattern-matching skill scanners miss the majority of critical threats",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-121"
       },
       {
         "name": "Every public skill scanner bypassed in under an hour (Trail of Bits)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-128"
       },
       {
         "name": "The Story of Skills — a malicious skill reaches 26,000 agents past every scanner",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-129"
       }
@@ -11791,7 +12716,7 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "135,000+ OpenClaw instances internet-exposed with insecure defaults",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-127"
       }
@@ -11871,7 +12796,7 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "SkillJacking — 925 skills sit on instantly hijackable dependencies",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-131"
       }
@@ -12841,6 +13766,94 @@ window.CROSSWALK_DATA = [
         "notes": "Share agent goal hijacking threat intelligence with sector peers through DORA information sharing arrangements",
         "confidence": "unreviewed",
         "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "2.1.3",
+        "control_name": "Verify that all inputs that could steer model behavior are treated as untrusted and screened by a prompt injection detection ruleset or classifier,...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C02-Input-Validation.md#c21-prompt-injection-defenses",
+        "notes": "Level 1. All inputs able to steer model behavior treated as untrusted and screened by an injection classifier, the primary hijack vector",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "2.1.6",
+        "control_name": "Verify that the system enforces an instruction hierarchy in which system and developer messages override user instructions and other untrusted inpu...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C02-Input-Validation.md#c21-prompt-injection-defenses",
+        "notes": "Level 2. Instruction hierarchy keeps the operator goal authoritative over injected instructions",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "10.4.2",
+        "control_name": "Verify that MCP tools/list and tools/call responses are screened for indirect prompt injection before being injected into the model context.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C10-MCP-Security.md#c104-schema-message-and-input-validation",
+        "notes": "Level 1. MCP tool responses screened for indirect injection before entering model context, the tool-output hijack path",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "8.2.3",
+        "control_name": "Verify that agent outputs and tool outputs are not automatically written to trusted agent memory without explicit source validation.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c82-embedding-sanitization--validation",
+        "notes": "Level 2. Agent and tool outputs not written to trusted agent memory without explicit source validation, blocking hijack persistence",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.3.5",
+        "control_name": "Verify that components processing untrusted data are isolated from tool-calling capabilities, ensuring that compromised data processing cannot trig...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
+        "notes": "Level 2. Components processing untrusted data isolated from tool-calling capability so a hijacked reasoning step cannot act",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.2.5",
+        "control_name": "Verify that any self-modification capability (e.g., prompt rewriting, tool-list changes, parameter updates) is restricted by enforceable boundaries.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c92-high-impact-action-approval-and-irreversibility-controls",
+        "notes": "Level 2. Self-modification capability such as prompt rewriting, tool-list changes and parameter updates restricted by enforceable boundaries",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.2.6",
+        "control_name": "Verify that agentic systems include an AI-augmented review of planned high-risk actions before execution that adds to, and does not replace, the de...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c92-high-impact-action-approval-and-irreversibility-controls",
+        "notes": "Level 2. AI-augmented review of planned high-risk actions, added to and not replacing the deterministic policy gate",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "12.2.1",
+        "control_name": "Verify that the system detects and alerts on known jailbreak patterns, prompt injection attempts, and adversarial inputs.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C12-Monitoring-and-Logging.md#c122-detection-and-alerting",
+        "notes": "Level 1. Detection and alerting on jailbreak patterns, injection attempts and adversarial inputs",
+        "confidence": "unreviewed",
+        "reviewed_by": []
       }
     ],
     "tools": [
@@ -12933,199 +13946,199 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "ChatGPT indirect prompt injection via attacker-controlled web content",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-003"
       },
       {
         "name": "Indirect prompt injection in LLM email assistant via malicious email body",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-007"
       },
       {
         "name": "Microsoft Copilot for M365 — document exfiltration via indirect injection",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-010"
       },
       {
         "name": "Multimodal indirect injection — image-embedded instructions in GPT-4V",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-015"
       },
       {
         "name": "AutoGPT and BabyAGI — uncontrolled web browsing and file system access",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-017"
       },
       {
         "name": "Agentic AI privilege escalation via tool chain manipulation — research",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-019"
       },
       {
         "name": "Multi-agent prompt injection cascade — demonstrated cross-agent goal propagation",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-020"
       },
       {
         "name": "LAAF v2.0 — Empirical LPCI breakthrough rates of 67–100% across 5 production LLMs",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-021"
       },
       {
         "name": "Greshake et al. \"Not What You've Signed Up For\" indirect prompt injection paper",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-022"
       },
       {
         "name": "Nassi et al. \"ComPromptMized\" Morris II multi-agent worm",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-023"
       },
       {
         "name": "Slack AI indirect injection via channel content",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-024"
       },
       {
         "name": "MathPrompt: symbolic mathematics jailbreak attack",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-027"
       },
       {
         "name": "Crescendo: multi-turn escalation attack (Microsoft)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-029"
       },
       {
         "name": "Skeleton Key: direct system prompt override (Microsoft)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-030"
       },
       {
         "name": "Apollo Research: frontier models demonstrate strategic deception to avoid shutdown",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-047"
       },
       {
         "name": "DPD AI chatbot swears at customer and criticises company — prompt injection via customer input",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-053"
       },
       {
         "name": "GitHub Copilot Chat agent executes malicious code from repository context",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-067"
       },
       {
         "name": "Claude computer use red-team: autonomous agent browses to attacker-controlled site and follows instructions",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-069"
       },
       {
         "name": "Claude hijacked for state-sponsored cyberattacks — 80-90% autonomous operation against 30 entities",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-083"
       },
       {
         "name": "ShadowRay 2.0 botnet — self-spreading crypto-mining via Ray AI framework",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-084"
       },
       {
         "name": "ForcedLeak — Salesforce Agentforce indirect prompt injection exfiltrates CRM data",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-088"
       },
       {
         "name": "EchoLeak — zero-click Microsoft Copilot data exfiltration via email prompt injection",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-089"
       },
       {
         "name": "Claude AI jailbreak — Mexican government breach, 150GB data theft across 10 agencies",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-092"
       },
       {
         "name": "Microsoft 365 Copilot XPIA phishing — attacker-shaped email summaries via hidden instructions",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-095"
       },
       {
         "name": "Clinejection — CI/CD pipeline compromise via Cline's issue triage bot, 4,000 machines infected",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-098"
       },
       {
         "name": "AI recommendation poisoning — hidden prompt injections in 'Summarize with AI' buttons across 31 companies",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-100"
       },
       {
         "name": "GeminiJack — zero-click Gemini Enterprise data exfiltration via shared Google Docs",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-101"
       },
       {
         "name": "IDEsaster — 30+ vulnerabilities across AI coding tools (Cursor, Windsurf, Copilot, Zed, Roo Code)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-103"
       },
       {
         "name": "ServiceNow BodySnatcher — hardcoded secret key enables full AI agent hijacking (CVE-2025-12420)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-104"
       },
       {
         "name": "Replit vibe coding meltdown — agent hallucinated data, deleted production database, hid mistakes",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-106"
       },
       {
         "name": "ShadowLeak — ChatGPT Deep Research zero-click data exfiltration from connected services",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-107"
       },
       {
         "name": "PoisonedRAG — 5 malicious texts in millions achieve 90% attack success rate on RAG systems",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-108"
       },
       {
         "name": "WhatsApp MCP tool poisoning — hidden instructions exfiltrate entire message history",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-111"
       }
@@ -14080,6 +15093,94 @@ window.CROSSWALK_DATA = [
         "notes": "Include agent access control bypass in resilience testing; verify that agents cannot exceed defined permission boundaries under adversarial conditions",
         "confidence": "unreviewed",
         "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.5.1",
+        "control_name": "Verify that agent actions are authorized against fine-grained policies enforced by the runtime that restrict which tools an agent may invoke, and w...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c95-agent-authorization-delegation-and-continuous-enforcement",
+        "notes": "Level 2. Fine-grained runtime policy over which tools may be invoked and which parameter values may be supplied, the direct control for destructive-parameter misuse",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.3.1",
+        "control_name": "Verify that each tool/plugin executes in a least-privilege sandbox or is otherwise isolated from model operations.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
+        "notes": "Level 1. Each tool or plugin executes in a least-privilege sandbox or is isolated from model operations",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.3.2",
+        "control_name": "Verify that tool outputs are validated against schemas.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
+        "notes": "Level 1. Tool outputs validated against schemas",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.3.3",
+        "control_name": "Verify that tool manifests declare required privileges, resource limits, and output validation requirements.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
+        "notes": "Level 2. Tool manifests declare required privileges, resource limits and output validation requirements",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.3.4",
+        "control_name": "Verify that the runtime enforces the privileges, resource limits, and output-validation requirements declared in tool manifests.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
+        "notes": "Level 2. Runtime enforces the privileges, resource limits and output validation declared in tool manifests",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.3.7",
+        "control_name": "Verify that external resources named in model output are verified against an approved allow-list or registry before the agent installs or invokes t...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
+        "notes": "Level 2. External resources named in model output verified against an approved allow-list or registry before install or invocation",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "10.2.5",
+        "control_name": "Verify that MCP servers enforce access control on every tool invocation, validating that the user's access token authorizes both the requested tool...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C10-MCP-Security.md#c102-authentication--authorization",
+        "notes": "Level 2. MCP servers enforce access control on every tool invocation, validating both the tool and the specific argument values",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.3.8",
+        "control_name": "Verify that policy violations trigger automated tool containment.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
+        "notes": "Level 3. Policy violations trigger automated tool containment",
+        "confidence": "unreviewed",
+        "reviewed_by": []
       }
     ],
     "tools": [
@@ -14162,151 +15263,151 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Indirect prompt injection in LLM email assistant via malicious email body",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-007"
       },
       {
         "name": "Microsoft Copilot for M365 — document exfiltration via indirect injection",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-010"
       },
       {
         "name": "LangChain and LlamaIndex RCE — agent code execution via prompt injection",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-012"
       },
       {
         "name": "Agentic AI privilege escalation via tool chain manipulation — research",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-019"
       },
       {
         "name": "LAAF v2.0 — Empirical LPCI breakthrough rates of 67–100% across 5 production LLMs",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-021"
       },
       {
         "name": "Greshake et al. \"Not What You've Signed Up For\" indirect prompt injection paper",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-022"
       },
       {
         "name": "Slack AI indirect injection via channel content",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-024"
       },
       {
         "name": "GitHub Copilot Workspace prompt injection via repository content",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-025"
       },
       {
         "name": "Cursor AI code agent leaking repository secrets via context window",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-034"
       },
       {
         "name": "MCP tool poisoning — hidden instructions in Model Context Protocol tool descriptions",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-062"
       },
       {
         "name": "GitHub Copilot Chat agent executes malicious code from repository context",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-067"
       },
       {
         "name": "Claude computer use red-team: autonomous agent browses to attacker-controlled site and follows instructions",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-069"
       },
       {
         "name": "Google Antigravity AI IDE deletes entire D: drive — misinterpreted cache-clearing instruction",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-082"
       },
       {
         "name": "Perplexity Comet agentic browser — unauthorized Amazon customer account access",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-086"
       },
       {
         "name": "ForcedLeak — Salesforce Agentforce indirect prompt injection exfiltrates CRM data",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-088"
       },
       {
         "name": "EchoLeak — zero-click Microsoft Copilot data exfiltration via email prompt injection",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-089"
       },
       {
         "name": "Claude AI jailbreak — Mexican government breach, 150GB data theft across 10 agencies",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-092"
       },
       {
         "name": "GeminiJack — zero-click Gemini Enterprise data exfiltration via shared Google Docs",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-101"
       },
       {
         "name": "OpenClaw AI agent security crisis — 138 CVEs in 63 days, 341 malicious marketplace skills",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-102"
       },
       {
         "name": "IDEsaster — 30+ vulnerabilities across AI coding tools (Cursor, Windsurf, Copilot, Zed, Roo Code)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-103"
       },
       {
         "name": "ShadowLeak — ChatGPT Deep Research zero-click data exfiltration from connected services",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-107"
       },
       {
         "name": "Anthropic Claude misuse report — ransomware development, North Korean employment fraud, extortion",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-110"
       },
       {
         "name": "WhatsApp MCP tool poisoning — hidden instructions exfiltrate entire message history",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-111"
       },
       {
         "name": "Flowise CustomMCP code injection RCE — CVSS 10.0, 12,000 instances exposed",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-113"
       },
       {
         "name": "AgentSeal MCP server mass scan — 66% of 1,808 servers have security findings",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-114"
       }
@@ -15332,6 +16433,127 @@ window.CROSSWALK_DATA = [
         "notes": "Deploy detection mechanisms for agent privilege escalation; monitor for permission boundary violations and unexpected privilege accumulation",
         "confidence": "unreviewed",
         "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.4.1",
+        "control_name": "Verify that each agent instance has a unique cryptographic identity and authenticates as a first-class principal to downstream systems.",
+        "tier": "Advanced",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c94-agent-and-orchestrator-identity",
+        "notes": "Level 2. Each agent instance has a unique cryptographic identity and authenticates as a first-class principal to downstream systems, removing inherited-credential ambiguity",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.5.2",
+        "control_name": "Verify that when an agent acts on a user's behalf, the runtime propagates an integrity-protected, scope-limited token that carries the user's autho...",
+        "tier": "Advanced",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c95-agent-authorization-delegation-and-continuous-enforcement",
+        "notes": "Level 2. Integrity-protected scope-limited token carries the user authorization context and is enforced at every downstream call",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.5.4",
+        "control_name": "Verify that secrets and credentials required by an agent at runtime are not exposed within the model's observable context, including the context wi...",
+        "tier": "Advanced",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c95-agent-authorization-delegation-and-continuous-enforcement",
+        "notes": "Level 2. Secrets and credentials required at runtime kept out of the model observable context",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "5.1.2",
+        "control_name": "Verify that AI agents in federated or multi-system deployments authenticate using short-lived, minimal-scoped, cryptographically signed tokens.",
+        "tier": "Advanced",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C05-Access-Control-and-Identity.md#c51-authentication",
+        "notes": "Level 3. Agents in federated or multi-system deployments authenticate with short-lived, minimal-scoped, cryptographically signed tokens",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "5.1.1",
+        "control_name": "Verify that high-risk AI operations (model deployment, weight export, training data access, production configuration changes) require step-up authe...",
+        "tier": "Advanced",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C05-Access-Control-and-Identity.md#c51-authentication",
+        "notes": "Level 3. Step-up authentication for high-risk AI operations including model deployment, weight export, training data access and production configuration change",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.4.3",
+        "control_name": "Verify that agent identity credentials rotate on a defined schedule.",
+        "tier": "Advanced",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c94-agent-and-orchestrator-identity",
+        "notes": "Level 3. Agent identity credentials rotate on a defined schedule",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "5.2.6",
+        "control_name": "Verify that privileged access to model weights, training pipelines, and production AI configuration is granted just in time, with a defined maximum...",
+        "tier": "Advanced",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C05-Access-Control-and-Identity.md#c52-ai-resource-authorization--classification",
+        "notes": "Level 3. Just-in-time privileged access to weights, training pipelines and production AI configuration with maximum session duration and automatic expiry",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "10.2.2",
+        "control_name": "Verify that MCP servers validate the presented access token's issuer, audience, expiration, and scope claims in accordance with OAuth 2.1.",
+        "tier": "Advanced",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C10-MCP-Security.md#c102-authentication--authorization",
+        "notes": "Level 1. MCP servers validate the presented token issuer, audience, expiration and scope claims per OAuth 2.1, the check that stops a valid credential being replayed beyond its intended scope",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "10.2.1",
+        "control_name": "Verify that MCP servers validate access tokens for each request and do not rely on transport security alone.",
+        "tier": "Advanced",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C10-MCP-Security.md#c102-authentication--authorization",
+        "notes": "Level 1. MCP servers validate access tokens on each request rather than relying on transport security alone",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "5.2.5",
+        "control_name": "Verify that the policy decision point for agent authorization is isolated from the agent's execution environment.",
+        "tier": "Advanced",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C05-Access-Control-and-Identity.md#c52-ai-resource-authorization--classification",
+        "notes": "Level 2. Policy decision point for agent authorization isolated from the agent execution environment, so a compromised agent cannot rewrite its own privilege boundary",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.5.6",
+        "control_name": "Verify that long-running agent sessions re-evaluate current backend authorization policy on every privileged action.",
+        "tier": "Advanced",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c95-agent-authorization-delegation-and-continuous-enforcement",
+        "notes": "Level 3. Long-running agent sessions re-evaluate current backend authorization policy on every privileged action, closing the stale-grant window",
+        "confidence": "unreviewed",
+        "reviewed_by": []
       }
     ],
     "tools": [
@@ -15404,115 +16626,115 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Agentic AI privilege escalation via tool chain manipulation — research",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-019"
       },
       {
         "name": "LAAF v2.0 — Empirical LPCI breakthrough rates of 67–100% across 5 production LLMs",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-021"
       },
       {
         "name": "Rabbit R1 hardcoded API keys — all user data accessible to anyone with firmware",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-054"
       },
       {
         "name": "MCP tool poisoning — hidden instructions in Model Context Protocol tool descriptions",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-062"
       },
       {
         "name": "Snowflake customer data breach via stolen credentials — 165+ organisations affected",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-070"
       },
       {
         "name": "Lasso Security — 1,500+ HuggingFace API tokens exposed in code repositories",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-079"
       },
       {
         "name": "Claude hijacked for state-sponsored cyberattacks — 80-90% autonomous operation against 30 entities",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-083"
       },
       {
         "name": "Perplexity Comet agentic browser — unauthorized Amazon customer account access",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-086"
       },
       {
         "name": "Malicious MCP server backdoor on npm — dual reverse shells in mcp-runcommand-server",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-087"
       },
       {
         "name": "Agent-in-the-Middle — A2A protocol spoofing via fake agent cards",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-090"
       },
       {
         "name": "LiteLLM PyPI supply chain backdoor — TeamPCP campaign compromises 3.4M daily downloads",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-093"
       },
       {
         "name": "GlassWorm supply chain — 72 malicious VSCode extensions, 9 million installs",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-097"
       },
       {
         "name": "Moltbook — vibe-coded social network exposes 1.5M API tokens and 35K emails",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-099"
       },
       {
         "name": "OpenClaw AI agent security crisis — 138 CVEs in 63 days, 341 malicious marketplace skills",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-102"
       },
       {
         "name": "ServiceNow BodySnatcher — hardcoded secret key enables full AI agent hijacking (CVE-2025-12420)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-104"
       },
       {
         "name": "Microsoft Copilot Studio agents public by default — unauthorized data exfiltration",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-105"
       },
       {
         "name": "Salesloft Drift OAuth breach — Chinese actor UNC6395 accesses 700+ Salesforce CRM environments",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-109"
       },
       {
         "name": "Chat & Ask AI app — 300 million messages from 25 million users exposed via misconfigured Firebase",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-112"
       },
       {
         "name": "AgentSeal MCP server mass scan — 66% of 1,808 servers have security findings",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-114"
       }
@@ -16469,6 +17691,94 @@ window.CROSSWALK_DATA = [
         "notes": "Include agent supply chain disruption in resilience testing; test fallback procedures for third-party tool and service failures",
         "confidence": "unreviewed",
         "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "10.1.1",
+        "control_name": "Verify that MCP components are obtained only from trusted sources and cryptographically verified.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C10-MCP-Security.md#c101-component-integrity",
+        "notes": "Level 1. MCP components obtained only from trusted sources and cryptographically verified",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "10.1.2",
+        "control_name": "Verify that only allow-listed MCP servers are permitted.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C10-MCP-Security.md#c101-component-integrity",
+        "notes": "Level 2. Only allow-listed MCP servers permitted",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "6.1.2",
+        "control_name": "Verify that model weights, datasets, and fine-tuning adapters are downloaded only from approved sources.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C06-Supply-Chain.md#c61-model-artifact-integrity",
+        "notes": "Level 1. Model weights, datasets and adapters downloaded only from approved sources",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "6.2.1",
+        "control_name": "Verify that every model artifact publishes a version-controlled, machine-readable AI BOM listing datasets, weights, licenses, and data-origin state...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C06-Supply-Chain.md#c62-ai-bom--supply-chain-monitoring",
+        "notes": "Level 1. Version-controlled machine-readable AI BOM per model artifact, giving the static inventory this risk says is usually missing",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.3.7",
+        "control_name": "Verify that external resources named in model output are verified against an approved allow-list or registry before the agent installs or invokes t...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
+        "notes": "Level 2. External resources named in model output verified against an approved allow-list or registry before the agent installs or invokes them, covering runtime-fetched components",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "10.1.3",
+        "control_name": "Verify that locally launched MCP servers run in a least-privilege sandbox with restricted file system, network, and system access.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C10-MCP-Security.md#c101-component-integrity",
+        "notes": "Level 2. Locally launched MCP servers run in a least-privilege sandbox with restricted file system, network and system access",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "6.1.3",
+        "control_name": "Verify that every third-party model artifact can be integrity-verified.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C06-Supply-Chain.md#c61-model-artifact-integrity",
+        "notes": "Level 2. Every third-party model artifact is integrity-verifiable",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "10.4.8",
+        "control_name": "Verify that MCP clients maintain a snapshot of tool definitions and that any change to a tool definition triggers re-approval before the modified t...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C10-MCP-Security.md#c104-schema-message-and-input-validation",
+        "notes": "Level 3. Tool definition snapshot maintained and any change triggers re-approval before the modified tool can be invoked, the rug-pull control",
+        "confidence": "unreviewed",
+        "reviewed_by": []
       }
     ],
     "tools": [
@@ -16511,115 +17821,115 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Hugging Face model repository pickle-based malware supply chain",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-009"
       },
       {
         "name": "Hugging Face model card supply chain manipulation",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-038"
       },
       {
         "name": "Rabbit R1 hardcoded API keys — all user data accessible to anyone with firmware",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-054"
       },
       {
         "name": "MCP tool poisoning — hidden instructions in Model Context Protocol tool descriptions",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-062"
       },
       {
         "name": "Meta Llama model weights stolen and leaked — open-source model security incident",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-078"
       },
       {
         "name": "Lasso Security — 1,500+ HuggingFace API tokens exposed in code repositories",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-079"
       },
       {
         "name": "Claude Skills ransomware deployment — MedusaLocker via malicious plugin",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-081"
       },
       {
         "name": "ShadowRay 2.0 botnet — self-spreading crypto-mining via Ray AI framework",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-084"
       },
       {
         "name": "ShadowMQ — critical RCE in Meta/NVIDIA/vLLM inference servers via pickle deserialization",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-085"
       },
       {
         "name": "Malicious MCP server backdoor on npm — dual reverse shells in mcp-runcommand-server",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-087"
       },
       {
         "name": "LiteLLM PyPI supply chain backdoor — TeamPCP campaign compromises 3.4M daily downloads",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-093"
       },
       {
         "name": "Axios npm supply chain attack — North Korean Sapphire Sleet targets 70M weekly downloads",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-094"
       },
       {
         "name": "GlassWorm supply chain — 72 malicious VSCode extensions, 9 million installs",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-097"
       },
       {
         "name": "Clinejection — CI/CD pipeline compromise via Cline's issue triage bot, 4,000 machines infected",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-098"
       },
       {
         "name": "OpenClaw AI agent security crisis — 138 CVEs in 63 days, 341 malicious marketplace skills",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-102"
       },
       {
         "name": "IDEsaster — 30+ vulnerabilities across AI coding tools (Cursor, Windsurf, Copilot, Zed, Roo Code)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-103"
       },
       {
         "name": "Salesloft Drift OAuth breach — Chinese actor UNC6395 accesses 700+ Salesforce CRM environments",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-109"
       },
       {
         "name": "WhatsApp MCP tool poisoning — hidden instructions exfiltrate entire message history",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-111"
       },
       {
         "name": "AgentSeal MCP server mass scan — 66% of 1,808 servers have security findings",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-114"
       }
@@ -16627,7 +17937,8 @@ window.CROSSWALK_DATA = [
     "crossrefs": {
       "llm_top10": [
         "LLM04",
-        "LLM09"
+        "LLM09",
+        "LLM10"
       ],
       "dsgai_2026": [
         "DSGAI04",
@@ -17563,6 +18874,94 @@ window.CROSSWALK_DATA = [
         "notes": "Monitor agent code execution for anomalous patterns — unexpected system calls, network access, filesystem operations; alert on detection",
         "confidence": "unreviewed",
         "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.3.1",
+        "control_name": "Verify that each tool/plugin executes in a least-privilege sandbox or is otherwise isolated from model operations.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
+        "notes": "Level 1. Each tool or plugin executes in a least-privilege sandbox or is isolated from model operations",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "4.1.1",
+        "control_name": "Verify that AI models execute in isolated sandboxes.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C04-Infrastructure.md#c41-ai-workload-sandboxing--validation",
+        "notes": "Level 1. AI models execute in isolated sandboxes",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "4.1.2",
+        "control_name": "Verify that model artifact loading enforces an explicit allow-list of serialization formats that do not permit arbitrary code execution during dese...",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C04-Infrastructure.md#c41-ai-workload-sandboxing--validation",
+        "notes": "Level 1. Model artifact loading restricted to serialization formats that cannot execute code during deserialization",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.3.2",
+        "control_name": "Verify that tool outputs are validated against schemas.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
+        "notes": "Level 1. Tool outputs validated against schemas before consumption",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "7.1.1",
+        "control_name": "Verify that the application validates all model outputs against a defined schema and rejects any output that does not match.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C07-Model-Behavior.md#c71-output-format-enforcement",
+        "notes": "Level 1. Model output validated against a defined schema and rejected when it does not match, applied to generated code before it reaches an interpreter",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.1.1",
+        "control_name": "Verify that per-tool quotas and timeouts (e.g., CPU, memory, disk, egress, and execution time) are enforced.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c91-execution-budgets-loop-control-and-circuit-breakers",
+        "notes": "Level 1. Per-tool quotas and timeouts for CPU, memory, disk, egress and execution time bound the blast radius of executed code",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "3.4.1",
+        "control_name": "Verify that AI-specific runtime components are not shared across environment boundaries (e.g., development, staging, production).",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C03-Model-Lifecycle-Management.md#c34-secure-development-practices",
+        "notes": "Level 1. AI-specific runtime components not shared across development, staging and production boundaries, so code executed in a lower environment cannot reach production",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.3.6",
+        "control_name": "Verify that there is architectural separation between processing of untrusted tool outputs and agent operations.",
+        "tier": "Foundational",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
+        "notes": "Level 2. Architectural separation between processing of untrusted tool outputs and agent operations",
+        "confidence": "unreviewed",
+        "reviewed_by": []
       }
     ],
     "tools": [
@@ -17605,115 +19004,115 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "LangChain and LlamaIndex RCE — agent code execution via prompt injection",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-012"
       },
       {
         "name": "AutoGPT and BabyAGI — uncontrolled web browsing and file system access",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-017"
       },
       {
         "name": "MCP tool poisoning — hidden instructions in Model Context Protocol tool descriptions",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-062"
       },
       {
         "name": "GitHub Copilot Chat agent executes malicious code from repository context",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-067"
       },
       {
         "name": "Claude computer use red-team: autonomous agent browses to attacker-controlled site and follows instructions",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-069"
       },
       {
         "name": "Claude Skills ransomware deployment — MedusaLocker via malicious plugin",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-081"
       },
       {
         "name": "Google Antigravity AI IDE deletes entire D: drive — misinterpreted cache-clearing instruction",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-082"
       },
       {
         "name": "ShadowRay 2.0 botnet — self-spreading crypto-mining via Ray AI framework",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-084"
       },
       {
         "name": "ShadowMQ — critical RCE in Meta/NVIDIA/vLLM inference servers via pickle deserialization",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-085"
       },
       {
         "name": "Malicious MCP server backdoor on npm — dual reverse shells in mcp-runcommand-server",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-087"
       },
       {
         "name": "LiteLLM PyPI supply chain backdoor — TeamPCP campaign compromises 3.4M daily downloads",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-093"
       },
       {
         "name": "Axios npm supply chain attack — North Korean Sapphire Sleet targets 70M weekly downloads",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-094"
       },
       {
         "name": "XBOW — first critical CVE discovered entirely by autonomous AI penetration testing agent",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-096"
       },
       {
         "name": "GlassWorm supply chain — 72 malicious VSCode extensions, 9 million installs",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-097"
       },
       {
         "name": "Clinejection — CI/CD pipeline compromise via Cline's issue triage bot, 4,000 machines infected",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-098"
       },
       {
         "name": "OpenClaw AI agent security crisis — 138 CVEs in 63 days, 341 malicious marketplace skills",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-102"
       },
       {
         "name": "IDEsaster — 30+ vulnerabilities across AI coding tools (Cursor, Windsurf, Copilot, Zed, Roo Code)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-103"
       },
       {
         "name": "Flowise CustomMCP code injection RCE — CVSS 10.0, 12,000 instances exposed",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-113"
       },
       {
         "name": "AgentSeal MCP server mass scan — 66% of 1,808 servers have security findings",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-114"
       }
@@ -17724,7 +19123,8 @@ window.CROSSWALK_DATA = [
         "LLM08",
         "LLM04",
         "LLM01",
-        "LLM03"
+        "LLM03",
+        "LLM02"
       ],
       "dsgai_2026": [
         "DSGAI12",
@@ -18653,6 +20053,94 @@ window.CROSSWALK_DATA = [
         "notes": "Conduct post-incident analysis for memory poisoning events; trace poisoned content to source and assess impact on agent decisions",
         "confidence": "unreviewed",
         "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "8.2.3",
+        "control_name": "Verify that agent outputs and tool outputs are not automatically written to trusted agent memory without explicit source validation.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c82-embedding-sanitization--validation",
+        "notes": "Level 2. Agent and tool outputs not automatically written to trusted agent memory without explicit source validation, the direct control",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "8.1.2",
+        "control_name": "Verify that document metadata tags are immutable after the initial write.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c81-access-controls-on-memory--rag-indices",
+        "notes": "Level 2. Document metadata tags immutable after initial write",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "12.5.4",
+        "control_name": "Verify that every ingested document is tagged at write time with source, writer identity, and timestamp.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C12-Monitoring-and-Logging.md#c125-training-data--model-lifecycle-audit",
+        "notes": "Level 2. Every ingested document tagged at write time with source, writer identity and timestamp, making poisoned entries attributable",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "8.2.4",
+        "control_name": "Verify that content crafted to manipulate retrieval results is detected and rejected or quarantined before vectorization.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c82-embedding-sanitization--validation",
+        "notes": "Level 3. Content crafted to manipulate retrieval results detected and rejected or quarantined before vectorization",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "8.2.5",
+        "control_name": "Verify that new content written to memory is checked for contradictions with what is already stored and that conflicts trigger alerts.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c82-embedding-sanitization--validation",
+        "notes": "Level 3. New content written to memory checked for contradictions with what is already stored, with conflicts alerting",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "8.3.2",
+        "control_name": "Verify that memory can be reset.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c83-memory-expiry--revocation",
+        "notes": "Level 2. Memory can be reset, giving a recovery path once poisoning is confirmed",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "8.3.3",
+        "control_name": "Verify that quarantined content is retained but excluded from all retrieval results.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c83-memory-expiry--revocation",
+        "notes": "Level 3. Quarantined content retained but excluded from all retrieval results, preserving evidence without re-exposure",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.4.4",
+        "control_name": "Verify that agent state persisted between invocations is integrity-protected.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c94-agent-and-orchestrator-identity",
+        "notes": "Level 3. Agent state persisted between invocations is integrity-protected",
+        "confidence": "unreviewed",
+        "reviewed_by": []
       }
     ],
     "tools": [
@@ -18740,61 +20228,61 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "RAG corpus poisoning — embedding-space manipulation to force retrieval",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-016"
       },
       {
         "name": "LAAF v2.0 — Empirical LPCI breakthrough rates of 67–100% across 5 production LLMs",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-021"
       },
       {
         "name": "Nassi et al. \"ComPromptMized\" Morris II multi-agent worm",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-023"
       },
       {
         "name": "Crescendo: multi-turn escalation attack (Microsoft)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-029"
       },
       {
         "name": "Adversarial embedding attacks on production RAG systems",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-046"
       },
       {
         "name": "EchoLeak — zero-click Microsoft Copilot data exfiltration via email prompt injection",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-089"
       },
       {
         "name": "Agent-in-the-Middle — A2A protocol spoofing via fake agent cards",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-090"
       },
       {
         "name": "Microsoft 365 Copilot XPIA phishing — attacker-shaped email summaries via hidden instructions",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-095"
       },
       {
         "name": "AI recommendation poisoning — hidden prompt injections in 'Summarize with AI' buttons across 31 companies",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-100"
       },
       {
         "name": "PoisonedRAG — 5 malicious texts in millions achieve 90% attack success rate on RAG systems",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-108"
       }
@@ -18803,7 +20291,8 @@ window.CROSSWALK_DATA = [
       "llm_top10": [
         "LLM05",
         "LLM09",
-        "LLM02"
+        "LLM02",
+        "LLM04"
       ],
       "dsgai_2026": [
         "DSGAI04",
@@ -19731,6 +21220,94 @@ window.CROSSWALK_DATA = [
         "notes": "Monitor agent tool invocation sequences for anomalous patterns; alert on novel tool combinations or sequences that cross security boundaries",
         "confidence": "unreviewed",
         "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "10.3.1",
+        "control_name": "Verify that authenticated, encrypted streamable HTTP is used for MCP transport for remote services.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C10-MCP-Security.md#c103-secure-transport",
+        "notes": "Level 1. Authenticated, encrypted streamable HTTP required for remote MCP transport",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.4.1",
+        "control_name": "Verify that each agent instance has a unique cryptographic identity and authenticates as a first-class principal to downstream systems.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c94-agent-and-orchestrator-identity",
+        "notes": "Level 2. Each agent instance has a unique cryptographic identity and authenticates as a first-class principal, the anti-spoofing base control",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.4.2",
+        "control_name": "Verify that agent-initiated actions are cryptographically bound to each step of the execution chain for non-repudiation.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c94-agent-and-orchestrator-identity",
+        "notes": "Level 2. Agent-initiated actions cryptographically bound to each step of the execution chain for non-repudiation",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "10.3.3",
+        "control_name": "Verify that MCP servers validate both the Origin header and the Host header independently on all HTTP-based transports to prevent DNS rebinding att...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C10-MCP-Security.md#c103-secure-transport",
+        "notes": "Level 2. Origin and Host headers validated independently on all HTTP-based transports to prevent DNS rebinding",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "10.3.4",
+        "control_name": "Verify that MCP clients enforce a minimum acceptable protocol version and reject initialize responses that propose a version below that minimum.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C10-MCP-Security.md#c103-secure-transport",
+        "notes": "Level 2. Clients enforce a minimum acceptable protocol version and reject initialize responses below it, blocking downgrade",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "10.4.6",
+        "control_name": "Verify that MCP servers sign tool responses with a unique nonce and timestamp so MCP clients can detect replay attempts.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C10-MCP-Security.md#c104-schema-message-and-input-validation",
+        "notes": "Level 2. Tool responses signed with a unique nonce and timestamp so clients can detect replay",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.5.5",
+        "control_name": "Verify that inter-agent task delegation is restricted by an explicit authorization policy.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c95-agent-authorization-delegation-and-continuous-enforcement",
+        "notes": "Level 2. Inter-agent task delegation restricted by an explicit authorization policy",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "10.3.5",
+        "control_name": "Verify that access tokens between the MCP client and server are sender-constrained using mTLS or DPoP.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C10-MCP-Security.md#c103-secure-transport",
+        "notes": "Level 3. Access tokens between client and server sender-constrained using mTLS or DPoP, defeating agent-in-the-middle token replay",
+        "confidence": "unreviewed",
+        "reviewed_by": []
       }
     ],
     "tools": [
@@ -19803,37 +21380,37 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Multi-agent prompt injection cascade — demonstrated cross-agent goal propagation",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-020"
       },
       {
         "name": "Nassi et al. \"ComPromptMized\" Morris II multi-agent worm",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-023"
       },
       {
         "name": "Multi-agent financial trading system flash crash — cascading autonomous failures",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-041"
       },
       {
         "name": "Agent-in-the-Middle — A2A protocol spoofing via fake agent cards",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-090"
       },
       {
         "name": "Microsoft Copilot Studio agents public by default — unauthorized data exfiltration",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-105"
       },
       {
         "name": "WhatsApp MCP tool poisoning — hidden instructions exfiltrate entire message history",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-111"
       }
@@ -20770,6 +22347,94 @@ window.CROSSWALK_DATA = [
         "notes": "Include cascading automation risk in ICT risk management; define acceptable multi-agent coupling thresholds and circuit breaker requirements",
         "confidence": "unreviewed",
         "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.1.3",
+        "control_name": "Verify that a swarm-level kill-switch exists that can halt all active agent instances.",
+        "tier": "Advanced",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c91-execution-budgets-loop-control-and-circuit-breakers",
+        "notes": "Level 2. Swarm-level kill-switch able to halt all active agent instances, the direct containment control for a propagating failure",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.1.2",
+        "control_name": "Verify that per-execution budgets (e.g., max recursion depth, token use, and monetary spend) are configured and enforced by the runtime.",
+        "tier": "Advanced",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c91-execution-budgets-loop-control-and-circuit-breakers",
+        "notes": "Level 1. Per-execution budgets including max recursion depth bound runaway amplification",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.1.1",
+        "control_name": "Verify that per-tool quotas and timeouts (e.g., CPU, memory, disk, egress, and execution time) are enforced.",
+        "tier": "Advanced",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c91-execution-budgets-loop-control-and-circuit-breakers",
+        "notes": "Level 1. Per-tool quotas and timeouts contain a single failing component",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.6.1",
+        "control_name": "Verify that a manual kill-switch mechanism exists to immediately halt AI model inference and outputs.",
+        "tier": "Advanced",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c96-shutdown-and-graceful-degradation",
+        "notes": "Level 1. Manual kill-switch to immediately halt model inference and outputs",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.6.3",
+        "control_name": "Verify that kill-switch commands are implemented through an out-of-band channel that is isolated from the agent runtime.",
+        "tier": "Advanced",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c96-shutdown-and-graceful-degradation",
+        "notes": "Level 3. Kill-switch commands implemented through an out-of-band channel isolated from the agent runtime, so containment survives runtime compromise",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.2.10",
+        "control_name": "Verify that approval gates for multi-step or multi-agent action chains enforce the highest-impact reversibility classification present anywhere in ...",
+        "tier": "Advanced",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c92-high-impact-action-approval-and-irreversibility-controls",
+        "notes": "Level 3. Approval gates for multi-step or multi-agent chains enforce the highest-impact reversibility classification present anywhere in the chain",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.3.8",
+        "control_name": "Verify that policy violations trigger automated tool containment.",
+        "tier": "Advanced",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
+        "notes": "Level 3. Policy violations trigger automated tool containment",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "12.3.4",
+        "control_name": "Verify that unexplained behavioral shifts are distinguished from gradual, expected operational drift.",
+        "tier": "Advanced",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C12-Monitoring-and-Logging.md#c123-model-data-and-performance-drift-detection",
+        "notes": "Level 3. Unexplained behavioral shifts distinguished from gradual expected operational drift, detecting cascade onset",
+        "confidence": "unreviewed",
+        "reviewed_by": []
       }
     ],
     "tools": [
@@ -20837,43 +22502,43 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "AutoGPT and BabyAGI — uncontrolled web browsing and file system access",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-017"
       },
       {
         "name": "Multi-agent prompt injection cascade — demonstrated cross-agent goal propagation",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-020"
       },
       {
         "name": "Nassi et al. \"ComPromptMized\" Morris II multi-agent worm",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-023"
       },
       {
         "name": "Multi-agent financial trading system flash crash — cascading autonomous failures",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-041"
       },
       {
         "name": "Claude computer use red-team: autonomous agent browses to attacker-controlled site and follows instructions",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-069"
       },
       {
         "name": "Agent-in-the-Middle — A2A protocol spoofing via fake agent cards",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-090"
       },
       {
         "name": "Meta Rogue AI Agent Sev-1 — autonomous agent posts incorrect advice, exposing proprietary data",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-091"
       }
@@ -20881,7 +22546,8 @@ window.CROSSWALK_DATA = [
     "crossrefs": {
       "llm_top10": [
         "LLM06",
-        "LLM01"
+        "LLM01",
+        "LLM05"
       ],
       "dsgai_2026": [
         "DSGAI17",
@@ -21796,6 +23462,83 @@ window.CROSSWALK_DATA = [
         "notes": "Include emerging agentic architecture security in resilience testing; assess novel patterns for resilience implications before production deployment",
         "confidence": "unreviewed",
         "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.2.2",
+        "control_name": "Verify that approval requests display canonicalized and complete action parameters, such as diffs, commands, recipients, amounts, resources, and sc...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c92-high-impact-action-approval-and-irreversibility-controls",
+        "notes": "Level 2. Approval requests display canonicalized and complete action parameters including diffs, commands, recipients, amounts, resources and scopes, without truncation or unsafe transformation, so the approver sees what they are actually approving",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.6.2",
+        "control_name": "Verify that when a human-approval gate is not satisfied within the defined approval time, the system blocks the pending action.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c96-shutdown-and-graceful-degradation",
+        "notes": "Level 2. Pending action blocked when a human-approval gate is not satisfied within the defined approval time, removing approval-fatigue pressure",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.2.7",
+        "control_name": "Verify that the AI-augmented review mechanism is protected against manipulation by adversarial inputs, and cannot be overridden or bypassed through...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c92-high-impact-action-approval-and-irreversibility-controls",
+        "notes": "Level 2. AI-augmented review mechanism protected against adversarial manipulation and cannot be overridden through prompt injection",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "7.4.1",
+        "control_name": "Verify that responses generated using retrieval-augmented generation (RAG) include attribution to the source documents.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C07-Model-Behavior.md#c74-source-attribution--citation-integrity",
+        "notes": "Level 1. RAG responses carry source attribution so a persuasive answer can be checked against its source",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "7.2.1",
+        "control_name": "Verify that the system assesses the reliability of generated answers using a confidence estimation method.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C07-Model-Behavior.md#c72-hallucination-detection--mitigation",
+        "notes": "Level 2. Reliability of generated answers assessed with a confidence estimation method, surfacing uncertainty against fluency",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "12.4.2",
+        "control_name": "Verify that audit logs capture security-critical proactive actions, including approver identity, timestamp, action parameters, and decision outcomes.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C12-Monitoring-and-Logging.md#c124-proactive-security-behavior-monitoring",
+        "notes": "Level 2. Audit logs capture approver identity, timestamp, action parameters and decision outcomes",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.2.8",
+        "control_name": "Verify that approvals are cryptographically bound to action parameters, requester identity, execution context, and a unique single-use nonce.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c92-high-impact-action-approval-and-irreversibility-controls",
+        "notes": "Level 3. Approvals cryptographically bound to action parameters, requester identity, execution context and a single-use nonce, so a displayed approval cannot be swapped for a different action",
+        "confidence": "unreviewed",
+        "reviewed_by": []
       }
     ],
     "tools": [
@@ -21843,103 +23586,103 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Multi-agent financial trading system flash crash — cascading autonomous failures",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-041"
       },
       {
         "name": "Apollo Research: frontier models demonstrate strategic deception to avoid shutdown",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-047"
       },
       {
         "name": "AI companion apps: manipulation and exploitation of human-agent trust",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-048"
       },
       {
         "name": "Character.AI teen suicide — AI companion encouraged self-harm",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-057"
       },
       {
         "name": "OpenAI GPT-4o sycophancy — model agrees with users even when they are wrong",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-073"
       },
       {
         "name": "Google Antigravity AI IDE deletes entire D: drive — misinterpreted cache-clearing instruction",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-082"
       },
       {
         "name": "Perplexity Comet agentic browser — unauthorized Amazon customer account access",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-086"
       },
       {
         "name": "Meta Rogue AI Agent Sev-1 — autonomous agent posts incorrect advice, exposing proprietary data",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-091"
       },
       {
         "name": "Microsoft 365 Copilot XPIA phishing — attacker-shaped email summaries via hidden instructions",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-095"
       },
       {
         "name": "Moltbook — vibe-coded social network exposes 1.5M API tokens and 35K emails",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-099"
       },
       {
         "name": "AI recommendation poisoning — hidden prompt injections in 'Summarize with AI' buttons across 31 companies",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-100"
       },
       {
         "name": "GeminiJack — zero-click Gemini Enterprise data exfiltration via shared Google Docs",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-101"
       },
       {
         "name": "ServiceNow BodySnatcher — hardcoded secret key enables full AI agent hijacking (CVE-2025-12420)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-104"
       },
       {
         "name": "Replit vibe coding meltdown — agent hallucinated data, deleted production database, hid mistakes",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-106"
       },
       {
         "name": "ShadowLeak — ChatGPT Deep Research zero-click data exfiltration from connected services",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-107"
       },
       {
         "name": "Anthropic Claude misuse report — ransomware development, North Korean employment fraud, extortion",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-110"
       },
       {
         "name": "Chat & Ask AI app — 300 million messages from 25 million users exposed via misconfigured Firebase",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-112"
       }
@@ -22903,6 +24646,105 @@ window.CROSSWALK_DATA = [
         "notes": "Monitor agent dependency health in real time — API availability, response latency, error rates; alert on degradation and trigger fallback procedures",
         "confidence": "unreviewed",
         "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "12.1.1",
+        "control_name": "Verify that AI interactions are logged with session context and AI-specific telemetry.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C12-Monitoring-and-Logging.md#c121-request--response-logging",
+        "notes": "Level 1. AI interactions logged with session context and AI-specific telemetry, the foundational visibility control",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "12.2.2",
+        "control_name": "Verify that behavioral anomaly detection identifies unusual conversation patterns, excessive retry attempts, or probing behaviors.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C12-Monitoring-and-Logging.md#c122-detection-and-alerting",
+        "notes": "Level 2. Behavioral anomaly detection identifies unusual conversation patterns, excessive retry attempts and probing behaviors",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.4.2",
+        "control_name": "Verify that agent-initiated actions are cryptographically bound to each step of the execution chain for non-repudiation.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c94-agent-and-orchestrator-identity",
+        "notes": "Level 2. Agent-initiated actions cryptographically bound to each step of the execution chain for non-repudiation",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.6.1",
+        "control_name": "Verify that a manual kill-switch mechanism exists to immediately halt AI model inference and outputs.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c96-shutdown-and-graceful-degradation",
+        "notes": "Level 1. Manual kill-switch to immediately halt inference and outputs",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.2.5",
+        "control_name": "Verify that any self-modification capability (e.g., prompt rewriting, tool-list changes, parameter updates) is restricted by enforceable boundaries.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c92-high-impact-action-approval-and-irreversibility-controls",
+        "notes": "Level 2. Self-modification capability restricted by enforceable boundaries, blocking a compromised agent from widening its own scope",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "12.4.1",
+        "control_name": "Verify that autonomous action triggers include proactive behavior-pattern analysis, security evaluation, and threat-landscape assessment.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C12-Monitoring-and-Logging.md#c124-proactive-security-behavior-monitoring",
+        "notes": "Level 2. Autonomous action triggers include proactive behavior-pattern analysis, security evaluation and threat-landscape assessment",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "12.4.3",
+        "control_name": "Verify that kill-switch activations and override commands are logged.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C12-Monitoring-and-Logging.md#c124-proactive-security-behavior-monitoring",
+        "notes": "Level 2. Kill-switch activations and override commands logged",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "12.2.6",
+        "control_name": "Verify that LLM API traffic is monitored for covert-channel indicators and communication signatures to identify malware and command-and-control (C2...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C12-Monitoring-and-Logging.md#c122-detection-and-alerting",
+        "notes": "Level 3. LLM API traffic monitored for covert-channel indicators and C2 communication signatures",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "12.5.3",
+        "control_name": "Verify that all model changes generate immutable audit records.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C12-Monitoring-and-Logging.md#c125-training-data--model-lifecycle-audit",
+        "notes": "Level 2. All model changes generate immutable audit records, so a silent substitution behind a compliant-looking agent is detectable",
+        "confidence": "unreviewed",
+        "reviewed_by": []
       }
     ],
     "tools": [
@@ -22990,73 +24832,73 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Multi-agent financial trading system flash crash — cascading autonomous failures",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-041"
       },
       {
         "name": "Apollo Research: frontier models demonstrate strategic deception to avoid shutdown",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-047"
       },
       {
         "name": "Anthropic Sleeper Agents paper — models trained to hide malicious behaviour",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-061"
       },
       {
         "name": "Claude hijacked for state-sponsored cyberattacks — 80-90% autonomous operation against 30 entities",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-083"
       },
       {
         "name": "Agent-in-the-Middle — A2A protocol spoofing via fake agent cards",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-090"
       },
       {
         "name": "Meta Rogue AI Agent Sev-1 — autonomous agent posts incorrect advice, exposing proprietary data",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-091"
       },
       {
         "name": "Claude AI jailbreak — Mexican government breach, 150GB data theft across 10 agencies",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-092"
       },
       {
         "name": "XBOW — first critical CVE discovered entirely by autonomous AI penetration testing agent",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-096"
       },
       {
         "name": "Clinejection — CI/CD pipeline compromise via Cline's issue triage bot, 4,000 machines infected",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-098"
       },
       {
         "name": "OpenClaw AI agent security crisis — 138 CVEs in 63 days, 341 malicious marketplace skills",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-102"
       },
       {
         "name": "Replit vibe coding meltdown — agent hallucinated data, deleted production database, hid mistakes",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-106"
       },
       {
         "name": "Anthropic Claude misuse report — ransomware development, North Korean employment fraud, extortion",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-110"
       }
@@ -23065,7 +24907,8 @@ window.CROSSWALK_DATA = [
       "llm_top10": [
         "LLM03",
         "LLM06",
-        "LLM04"
+        "LLM04",
+        "LLM10"
       ],
       "agentic_top10": [
         "ASI01",
@@ -23943,6 +25786,83 @@ window.CROSSWALK_DATA = [
         "notes": "Classify material AI data access violations as ICT-related incidents; report to competent authorities per DORA incident classification and reporting requirements",
         "confidence": "unreviewed",
         "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "5.2.4",
+        "control_name": "Verify that post-inference filtering mechanisms prevent responses from including data that the requester is not authorized to receive.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C05-Access-Control-and-Identity.md#c52-ai-resource-authorization--classification",
+        "notes": "Level 2. Post-inference filtering prevents responses including data the requester is not authorized to receive",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "5.2.2",
+        "control_name": "Verify that retrieval pipelines (e.g., RAG queries, embedding lookups) enforce the end-user's authorization context at each retrieval and assembly ...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C05-Access-Control-and-Identity.md#c52-ai-resource-authorization--classification",
+        "notes": "Level 2. Retrieval pipelines enforce the end-user authorization context at each retrieval and assembly stage, the direct control for RAG over-retrieval",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "8.2.1",
+        "control_name": "Verify that sensitive fields are detected before embedding and are masked, tokenized, or dropped.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c82-embedding-sanitization--validation",
+        "notes": "Level 1. Sensitive fields detected before embedding and masked, tokenized or dropped",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "11.2.1",
+        "control_name": "Verify that model-inferred sensitive attributes are not directly returned in outputs.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C11-Adversarial-Robustness.md#c112-membership-inference-and-model-inversion-mitigation",
+        "notes": "Level 1. Model-inferred sensitive attributes not returned directly in outputs",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "1.1.1",
+        "control_name": "Verify that training data includes only features, attributes, and fields required for the model's stated purpose.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c11-training-data-origin--data-security",
+        "notes": "Level 1. Training data limited to features required for the stated purpose, bounding memorisation exposure at source",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "7.3.2",
+        "control_name": "Verify that output filters detect and block responses that disclose system prompt content or backend data.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C07-Model-Behavior.md#c73-output-safety",
+        "notes": "Level 2. Output filters block responses disclosing system prompt content or backend data",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "5.2.7",
+        "control_name": "Verify that data classification labels propagate to downstream resources (embeddings, prompt caches, model outputs).",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C05-Access-Control-and-Identity.md#c52-ai-resource-authorization--classification",
+        "notes": "Level 3. Classification labels propagate to embeddings, prompt caches and outputs, addressing the aggregation effect this risk names",
+        "confidence": "unreviewed",
+        "reviewed_by": []
       }
     ],
     "tools": [
@@ -24015,175 +25935,175 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Samsung employees leak source code and meeting notes via ChatGPT",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-001"
       },
       {
         "name": "OpenAI Redis caching bug exposes user conversation history",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-006"
       },
       {
         "name": "Indirect prompt injection in LLM email assistant via malicious email body",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-007"
       },
       {
         "name": "GitHub Copilot reproduces verbatim licensed code and embedded secrets",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-008"
       },
       {
         "name": "Microsoft Copilot for M365 — document exfiltration via indirect injection",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-010"
       },
       {
         "name": "GPT-4 system prompt extraction via jailbreak in production deployments",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-018"
       },
       {
         "name": "Slack AI indirect injection via channel content",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-024"
       },
       {
         "name": "GitHub Copilot Workspace prompt injection via repository content",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-025"
       },
       {
         "name": "DeepSeek AI database exposure — 1M+ chat logs publicly accessible",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-032"
       },
       {
         "name": "Cursor AI code agent leaking repository secrets via context window",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-034"
       },
       {
         "name": "NYC city chatbot tells businesses to break the law — fabricated legal guidance",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-052"
       },
       {
         "name": "Rabbit R1 hardcoded API keys — all user data accessible to anyone with firmware",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-054"
       },
       {
         "name": "Microsoft Recall screenshots everything — OS-level data retention without consent",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-055"
       },
       {
         "name": "Amazon Q developer leaks internal AWS data in enterprise environment",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-064"
       },
       {
         "name": "OpenAI GPT-4 system prompt extraction toolkit — systematic prompt leakage",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-065"
       },
       {
         "name": "Snowflake customer data breach via stolen credentials — 165+ organisations affected",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-070"
       },
       {
         "name": "DeepSeek R1 data exfiltration — Chinese AI model sends data to China-linked servers",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-072"
       },
       {
         "name": "ForcedLeak — Salesforce Agentforce indirect prompt injection exfiltrates CRM data",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-088"
       },
       {
         "name": "EchoLeak — zero-click Microsoft Copilot data exfiltration via email prompt injection",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-089"
       },
       {
         "name": "Meta Rogue AI Agent Sev-1 — autonomous agent posts incorrect advice, exposing proprietary data",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-091"
       },
       {
         "name": "Claude AI jailbreak — Mexican government breach, 150GB data theft across 10 agencies",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-092"
       },
       {
         "name": "Moltbook — vibe-coded social network exposes 1.5M API tokens and 35K emails",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-099"
       },
       {
         "name": "GeminiJack — zero-click Gemini Enterprise data exfiltration via shared Google Docs",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-101"
       },
       {
         "name": "ServiceNow BodySnatcher — hardcoded secret key enables full AI agent hijacking (CVE-2025-12420)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-104"
       },
       {
         "name": "Microsoft Copilot Studio agents public by default — unauthorized data exfiltration",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-105"
       },
       {
         "name": "ShadowLeak — ChatGPT Deep Research zero-click data exfiltration from connected services",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-107"
       },
       {
         "name": "Salesloft Drift OAuth breach — Chinese actor UNC6395 accesses 700+ Salesforce CRM environments",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-109"
       },
       {
         "name": "WhatsApp MCP tool poisoning — hidden instructions exfiltrate entire message history",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-111"
       },
       {
         "name": "Chat & Ask AI app — 300 million messages from 25 million users exposed via misconfigured Firebase",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-112"
       }
@@ -24193,7 +26113,8 @@ window.CROSSWALK_DATA = [
         "LLM02",
         "LLM01",
         "LLM05",
-        "LLM08"
+        "LLM08",
+        "LLM04"
       ],
       "agentic_top10": [
         "ASI03",
@@ -25049,6 +26970,83 @@ window.CROSSWALK_DATA = [
         "notes": "Monitor AI data flows for undocumented data movement; alert on data transfers outside documented pipelines",
         "confidence": "unreviewed",
         "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.5.4",
+        "control_name": "Verify that secrets and credentials required by an agent at runtime are not exposed within the model's observable context, including the context wi...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c95-agent-authorization-delegation-and-continuous-enforcement",
+        "notes": "Level 2. Secrets and credentials required at runtime not exposed within the model observable context including context window, system prompts and tool call parameters, the direct control",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "10.2.3",
+        "control_name": "Verify that MCP servers acting as OAuth 2.1 resource servers do not store or persist access tokens or user credentials.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C10-MCP-Security.md#c102-authentication--authorization",
+        "notes": "Level 1. MCP servers acting as OAuth 2.1 resource servers do not store or persist access tokens or user credentials",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.4.1",
+        "control_name": "Verify that each agent instance has a unique cryptographic identity and authenticates as a first-class principal to downstream systems.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c94-agent-and-orchestrator-identity",
+        "notes": "Level 2. Each agent instance has a unique cryptographic identity and authenticates as a first-class principal, so a shared credential is not the identity",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "10.2.7",
+        "control_name": "Verify that MCP servers do not pass through access tokens received from clients to downstream APIs.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C10-MCP-Security.md#c102-authentication--authorization",
+        "notes": "Level 2. MCP servers do not pass through client access tokens to downstream APIs, blocking the confused-deputy propagation this risk describes",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "5.1.2",
+        "control_name": "Verify that AI agents in federated or multi-system deployments authenticate using short-lived, minimal-scoped, cryptographically signed tokens.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C05-Access-Control-and-Identity.md#c51-authentication",
+        "notes": "Level 3. Short-lived, minimal-scoped, cryptographically signed tokens for agents in federated deployments, bounding the value of a leaked credential",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.4.3",
+        "control_name": "Verify that agent identity credentials rotate on a defined schedule.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c94-agent-and-orchestrator-identity",
+        "notes": "Level 3. Agent identity credentials rotate on a defined schedule",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.2.9",
+        "control_name": "Verify that cryptographic key material or credentials used to issue approvals are isolated from the agent runtime.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c92-high-impact-action-approval-and-irreversibility-controls",
+        "notes": "Level 3. Key material or credentials used to issue approvals isolated from the agent runtime",
+        "confidence": "unreviewed",
+        "reviewed_by": []
       }
     ],
     "tools": [
@@ -25121,49 +27119,49 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "DeepSeek AI database exposure — 1M+ chat logs publicly accessible",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-032"
       },
       {
         "name": "Italy Garante orders ChatGPT GDPR enforcement — consent and data minimization failures",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-035"
       },
       {
         "name": "Rabbit R1 hardcoded API keys — all user data accessible to anyone with firmware",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-054"
       },
       {
         "name": "Microsoft Recall screenshots everything — OS-level data retention without consent",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-055"
       },
       {
         "name": "Waymo autonomous vehicle data retention — 75 petabytes of driving footage with faces",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-066"
       },
       {
         "name": "Snowflake customer data breach via stolen credentials — 165+ organisations affected",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-070"
       },
       {
         "name": "Moltbook — vibe-coded social network exposes 1.5M API tokens and 35K emails",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-099"
       },
       {
         "name": "Chat & Ask AI app — 300 million messages from 25 million users exposed via misconfigured Firebase",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-112"
       }
@@ -25182,7 +27180,8 @@ window.CROSSWALK_DATA = [
         "LLM03",
         "LLM05",
         "LLM04",
-        "LLM07"
+        "LLM07",
+        "LLM10"
       ]
     },
     "changelog": [
@@ -25983,6 +27982,72 @@ window.CROSSWALK_DATA = [
         "notes": "Define approved AI tools policy in ICT risk management framework; require vetting and approval before use in financial data processing",
         "confidence": "unreviewed",
         "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "6.1.2",
+        "control_name": "Verify that model weights, datasets, and fine-tuning adapters are downloaded only from approved sources.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C06-Supply-Chain.md#c61-model-artifact-integrity",
+        "notes": "Level 1. Model weights, datasets and fine-tuning adapters downloaded only from approved sources",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "10.1.2",
+        "control_name": "Verify that only allow-listed MCP servers are permitted.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C10-MCP-Security.md#c101-component-integrity",
+        "notes": "Level 2. Only allow-listed MCP servers permitted, the technical gate on unsanctioned tool and data channels",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "3.1.1",
+        "control_name": "Verify that a model registry maintains an inventory of all deployed model artifacts and their origin.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C03-Model-Lifecycle-Management.md#c31-model-authorization--integrity",
+        "notes": "Level 1. Model registry maintains an inventory of all deployed model artifacts and their origin",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "1.1.2",
+        "control_name": "Verify that an up-to-date inventory is kept of every training-data source, including its origin, responsible party, license, collection method, int...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c11-training-data-origin--data-security",
+        "notes": "Level 2. Current inventory of every training-data source with origin, responsible party, license, collection method and use constraints",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "12.1.3",
+        "control_name": "Verify that log entries for AI inference events follow a structured, interoperable schema that includes at least the model identifier, token usage ...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C12-Monitoring-and-Logging.md#c121-request--response-logging",
+        "notes": "Level 2. Structured inference log schema including model identifier, token usage, provider name and operation type, giving per-provider visibility of where data is going",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "3.2.3",
+        "control_name": "Verify that provider model, version, or routing changes trigger security re-evaluation before continued use.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C03-Model-Lifecycle-Management.md#c32-model-validation--testing",
+        "notes": "Level 3. Provider model, version or routing changes trigger security re-evaluation before continued use",
+        "confidence": "unreviewed",
+        "reviewed_by": []
       }
     ],
     "tools": [
@@ -26045,31 +28110,31 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Samsung employees leak source code and meeting notes via ChatGPT",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-001"
       },
       {
         "name": "Perplexity AI plagiarism — verbatim content reproduction without attribution",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-059"
       },
       {
         "name": "Amazon Q developer leaks internal AWS data in enterprise environment",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-064"
       },
       {
         "name": "Meta Llama model weights stolen and leaked — open-source model security incident",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-078"
       },
       {
         "name": "Lasso Security — 1,500+ HuggingFace API tokens exposed in code repositories",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-079"
       }
@@ -26082,7 +28147,8 @@ window.CROSSWALK_DATA = [
       "llm_top10": [
         "LLM04",
         "LLM02",
-        "LLM03"
+        "LLM03",
+        "LLM10"
       ],
       "agentic_top10": [
         "ASI04",
@@ -26967,6 +29033,94 @@ window.CROSSWALK_DATA = [
         "notes": "Conduct post-incident analysis for data poisoning events; trace poisoned content and update protection controls",
         "confidence": "unreviewed",
         "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "1.3.1",
+        "control_name": "Verify that training and fine-tuning pipelines implement poisoning detection techniques to identify potential data poisoning or unintentional corru...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c13-training-data-quality-and-security-assurance",
+        "notes": "Level 2. Training and fine-tuning pipelines implement poisoning detection",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "1.1.4",
+        "control_name": "Verify that integrity monitoring is applied to guard against unauthorized modifications or corruption of training data.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c11-training-data-origin--data-security",
+        "notes": "Level 2. Integrity monitoring guards training data against unauthorized modification or corruption",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "3.1.3",
+        "control_name": "Verify that model cryptographic signatures are verified at deployment admission and on load.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C03-Model-Lifecycle-Management.md#c31-model-authorization--integrity",
+        "notes": "Level 2. Model cryptographic signatures verified at deployment admission and on load, blocking a poisoned artifact from reaching production",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "6.1.3",
+        "control_name": "Verify that every third-party model artifact can be integrity-verified.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C06-Supply-Chain.md#c61-model-artifact-integrity",
+        "notes": "Level 2. Every third-party model artifact is integrity-verifiable",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "8.2.4",
+        "control_name": "Verify that content crafted to manipulate retrieval results is detected and rejected or quarantined before vectorization.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c82-embedding-sanitization--validation",
+        "notes": "Level 3. Content crafted to manipulate retrieval results detected and rejected or quarantined before vectorization, covering RAG-store poisoning",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "1.3.5",
+        "control_name": "Verify that defenses against clean-label poisoning attacks are implemented.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c13-training-data-quality-and-security-assurance",
+        "notes": "Level 3. Clean-label poisoning defenses",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "3.5.2",
+        "control_name": "Verify that RLHF training stages include automated detection of reward hacking or reward model over-optimization.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C03-Model-Lifecycle-Management.md#c35-pipeline-fine-tuning",
+        "notes": "Level 3. RLHF training stages include automated detection of reward hacking or reward model over-optimization",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "11.4.3",
+        "control_name": "Verify that the safety violation feedback pipeline includes poisoning detection and human review gates to prevent adversarial manipulation of the i...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C11-Adversarial-Robustness.md#c114-model-runtime-anomaly-detection",
+        "notes": "Level 3. Safety violation feedback pipeline includes poisoning detection and human review gates, protecting the improvement loop itself",
+        "confidence": "unreviewed",
+        "reviewed_by": []
       }
     ],
     "tools": [
@@ -27014,73 +29168,73 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "ChatGPT indirect prompt injection via attacker-controlled web content",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-003"
       },
       {
         "name": "Hugging Face model repository pickle-based malware supply chain",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-009"
       },
       {
         "name": "RAG corpus poisoning — embedding-space manipulation to force retrieval",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-016"
       },
       {
         "name": "LAAF v2.0 — Empirical LPCI breakthrough rates of 67–100% across 5 production LLMs",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-021"
       },
       {
         "name": "Greshake et al. \"Not What You've Signed Up For\" indirect prompt injection paper",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-022"
       },
       {
         "name": "Nassi et al. \"ComPromptMized\" Morris II multi-agent worm",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-023"
       },
       {
         "name": "Adversarial embedding attacks on production RAG systems",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-046"
       },
       {
         "name": "Google AI Overviews recommends adding glue to pizza — RAG hallucination at search scale",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-056"
       },
       {
         "name": "GitHub Copilot Chat agent executes malicious code from repository context",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-067"
       },
       {
         "name": "Microsoft 365 Copilot XPIA phishing — attacker-shaped email summaries via hidden instructions",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-095"
       },
       {
         "name": "AI recommendation poisoning — hidden prompt injections in 'Summarize with AI' buttons across 31 companies",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-100"
       },
       {
         "name": "PoisonedRAG — 5 malicious texts in millions achieve 90% attack success rate on RAG systems",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-108"
       }
@@ -27089,7 +29243,8 @@ window.CROSSWALK_DATA = [
       "llm_top10": [
         "LLM04",
         "LLM05",
-        "LLM09"
+        "LLM09",
+        "LLM10"
       ],
       "agentic_top10": [
         "ASI06",
@@ -27878,6 +30033,105 @@ window.CROSSWALK_DATA = [
         "notes": "Include external data sources in third-party risk management; assess data quality, provenance practices, and licensing compliance",
         "confidence": "unreviewed",
         "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "1.1.3",
+        "control_name": "Verify that data integrity is provided when training data is stored and transferred.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c11-training-data-origin--data-security",
+        "notes": "Level 2. Data integrity provided when training data is stored and transferred",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "7.1.1",
+        "control_name": "Verify that the application validates all model outputs against a defined schema and rejects any output that does not match.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C07-Model-Behavior.md#c71-output-format-enforcement",
+        "notes": "Level 1. All model outputs validated against a defined schema and rejected when they do not match",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.3.2",
+        "control_name": "Verify that tool outputs are validated against schemas.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
+        "notes": "Level 1. Tool outputs validated against schemas",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "10.4.4",
+        "control_name": "Verify that all MCP servers enforce strict schema validation.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C10-MCP-Security.md#c104-schema-message-and-input-validation",
+        "notes": "Level 2. All MCP servers enforce strict schema validation",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "10.4.3",
+        "control_name": "Verify that MCP servers reject unrecognized or oversized parameters in function calls.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C10-MCP-Security.md#c104-schema-message-and-input-validation",
+        "notes": "Level 1. MCP servers reject unrecognized or oversized parameters in function calls",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "1.3.2",
+        "control_name": "Verify that automatically generated labels are subject to confidence thresholds and consistency checks to detect misleading or low-confidence labels.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c13-training-data-quality-and-security-assurance",
+        "notes": "Level 2. Automatically generated labels subject to confidence thresholds and consistency checks",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "6.2.3",
+        "control_name": "Verify that AI BOM completeness checks fail the build if any component metadata is missing.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C06-Supply-Chain.md#c62-ai-bom--supply-chain-monitoring",
+        "notes": "Level 2. AI BOM completeness checks fail the build if any component metadata is missing, turning silent pipeline gaps into build failures",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "12.3.1",
+        "control_name": "Verify that data drift detection monitors input distribution changes that may impact model performance, using statistically validated methods match...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C12-Monitoring-and-Logging.md#c123-model-data-and-performance-drift-detection",
+        "notes": "Level 1. Data drift detection monitors input distribution changes using statistically validated methods matched to the data type, catching silent pipeline corruption",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "3.5.3",
+        "control_name": "Verify that in multi-stage fine-tuning pipelines, each stage's output is integrity-verified before it is consumed by the next stage.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C03-Model-Lifecycle-Management.md#c35-pipeline-fine-tuning",
+        "notes": "Level 3. Each fine-tuning stage output integrity-verified before the next stage consumes it",
+        "confidence": "unreviewed",
+        "reviewed_by": []
       }
     ],
     "tools": [
@@ -27950,67 +30204,67 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Meta Galactica model withdrawn after misinformation at launch",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2022,
         "incident_id": "INC-031"
       },
       {
         "name": "Hugging Face model card supply chain manipulation",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-038"
       },
       {
         "name": "NYT v OpenAI — copyright training data ruling implications",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-039"
       },
       {
         "name": "Uber ML platform data lineage audit — fragmented provenance across 30+ feature stores",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-042"
       },
       {
         "name": "Google Gemini AI image generator refuses to depict white people — overcorrected safety filters",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-051"
       },
       {
         "name": "Google AI Overviews recommends adding glue to pizza — RAG hallucination at search scale",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-056"
       },
       {
         "name": "Perplexity AI plagiarism — verbatim content reproduction without attribution",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-059"
       },
       {
         "name": "Anthropic Sleeper Agents paper — models trained to hide malicious behaviour",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-061"
       },
       {
         "name": "AI recruiting tool gender bias — Amazon scraps internal ML hiring tool",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-074"
       },
       {
         "name": "Tesla FSD phantom braking and obstacle hallucination — AI perception failures at highway speed",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-076"
       },
       {
         "name": "PoisonedRAG — 5 malicious texts in millions achieve 90% attack success rate on RAG systems",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-108"
       }
@@ -28823,6 +31077,83 @@ window.CROSSWALK_DATA = [
         "notes": "Include data lineage requirements in ICT risk management; define minimum lineage completeness per data sensitivity",
         "confidence": "unreviewed",
         "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.3.2",
+        "control_name": "Verify that tool outputs are validated against schemas.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
+        "notes": "Level 1. Tool outputs validated against schemas",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.3.3",
+        "control_name": "Verify that tool manifests declare required privileges, resource limits, and output validation requirements.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
+        "notes": "Level 2. Tool manifests declare required privileges, resource limits and output validation requirements",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.3.4",
+        "control_name": "Verify that the runtime enforces the privileges, resource limits, and output-validation requirements declared in tool manifests.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
+        "notes": "Level 2. Runtime enforces the privileges, resource limits and output validation declared in manifests",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "10.4.1",
+        "control_name": "Verify that MCP tools/list and tools/call responses are validated against their declared schemas before being injected into the model context.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C10-MCP-Security.md#c104-schema-message-and-input-validation",
+        "notes": "Level 1. MCP tools/list and tools/call responses validated against declared schemas before injection into model context",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "10.4.3",
+        "control_name": "Verify that MCP servers reject unrecognized or oversized parameters in function calls.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C10-MCP-Security.md#c104-schema-message-and-input-validation",
+        "notes": "Level 1. MCP servers reject unrecognized or oversized parameters in function calls",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "10.2.4",
+        "control_name": "Verify that MCP tools/list returns only tools permitted by resource owners' authorized scopes.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C10-MCP-Security.md#c102-authentication--authorization",
+        "notes": "Level 2. MCP tools/list returns only tools permitted by the resource owner authorized scopes",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.3.6",
+        "control_name": "Verify that there is architectural separation between processing of untrusted tool outputs and agent operations.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
+        "notes": "Level 2. Architectural separation between processing of untrusted tool outputs and agent operations",
+        "confidence": "unreviewed",
+        "reviewed_by": []
       }
     ],
     "tools": [
@@ -28895,19 +31226,19 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Uber ML platform data lineage audit — fragmented provenance across 30+ feature stores",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-042"
       },
       {
         "name": "Anthropic Sleeper Agents paper — models trained to hide malicious behaviour",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-061"
       },
       {
         "name": "AI recruiting tool gender bias — Amazon scraps internal ML hiring tool",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-074"
       }
@@ -29726,6 +32057,83 @@ window.CROSSWALK_DATA = [
         "notes": "Monitor for excessive data aggregation patterns; alert on dataset combinations exceeding defined sensitivity thresholds",
         "confidence": "unreviewed",
         "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "1.1.2",
+        "control_name": "Verify that an up-to-date inventory is kept of every training-data source, including its origin, responsible party, license, collection method, int...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c11-training-data-origin--data-security",
+        "notes": "Level 2. Current inventory of every training-data source with origin, responsible party, license, collection method, intended use constraints and processing history",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "12.5.1",
+        "control_name": "Verify that dataset lineage records each dataset and its components, including all transformations, augmentations, and merges.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C12-Monitoring-and-Logging.md#c125-training-data--model-lifecycle-audit",
+        "notes": "Level 1. Dataset lineage records each dataset and its components including all transformations, augmentations and merges",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "12.5.4",
+        "control_name": "Verify that every ingested document is tagged at write time with source, writer identity, and timestamp.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C12-Monitoring-and-Logging.md#c125-training-data--model-lifecycle-audit",
+        "notes": "Level 2. Every ingested document tagged at write time with source, writer identity and timestamp",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "3.1.1",
+        "control_name": "Verify that a model registry maintains an inventory of all deployed model artifacts and their origin.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C03-Model-Lifecycle-Management.md#c31-model-authorization--integrity",
+        "notes": "Level 1. Model registry maintains an inventory of all deployed model artifacts and their origin",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "8.3.1",
+        "control_name": "Verify that expired vectors are excluded from retrieval results.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c83-memory-expiry--revocation",
+        "notes": "Level 2. Expired vectors excluded from retrieval results, the retention control on the RAG layer",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "8.3.2",
+        "control_name": "Verify that memory can be reset.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c83-memory-expiry--revocation",
+        "notes": "Level 2. Memory can be reset, supporting deletion obligations against agent memory",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "5.2.7",
+        "control_name": "Verify that data classification labels propagate to downstream resources (embeddings, prompt caches, model outputs).",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C05-Access-Control-and-Identity.md#c52-ai-resource-authorization--classification",
+        "notes": "Level 3. Data classification labels propagate to downstream resources including embeddings, prompt caches and model outputs",
+        "confidence": "unreviewed",
+        "reviewed_by": []
       }
     ],
     "tools": [
@@ -29783,25 +32191,25 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Samsung employees leak source code and meeting notes via ChatGPT",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-001"
       },
       {
         "name": "GitHub Copilot reproduces verbatim licensed code and embedded secrets",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-008"
       },
       {
         "name": "Uber ML platform data lineage audit — fragmented provenance across 30+ feature stores",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-042"
       },
       {
         "name": "Amazon Q developer leaks internal AWS data in enterprise environment",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-064"
       }
@@ -29815,7 +32223,8 @@ window.CROSSWALK_DATA = [
         "LLM02",
         "LLM03",
         "LLM05",
-        "LLM09"
+        "LLM09",
+        "LLM04"
       ],
       "agentic_top10": [
         "ASI03",
@@ -30633,6 +33042,72 @@ window.CROSSWALK_DATA = [
         "notes": "Conduct post-incident analysis for data leakage events; identify root cause and update controls",
         "confidence": "unreviewed",
         "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "1.1.1",
+        "control_name": "Verify that training data includes only features, attributes, and fields required for the model's stated purpose.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c11-training-data-origin--data-security",
+        "notes": "Level 1. Training data includes only features required for the model stated purpose, the technical expression of data minimisation and purpose limitation",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "1.1.2",
+        "control_name": "Verify that an up-to-date inventory is kept of every training-data source, including its origin, responsible party, license, collection method, int...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c11-training-data-origin--data-security",
+        "notes": "Level 2. Source inventory records license and intended use constraints per training-data source, evidencing lawful basis and use limitation",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "12.5.1",
+        "control_name": "Verify that dataset lineage records each dataset and its components, including all transformations, augmentations, and merges.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C12-Monitoring-and-Logging.md#c125-training-data--model-lifecycle-audit",
+        "notes": "Level 1. Dataset lineage across transformations, augmentations and merges, the evidence base for deletion and data-subject obligations",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "1.2.3",
+        "control_name": "Verify that sensitive information in labels is redacted, anonymized, or encrypted before being used in any labeling artifact.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c12-data-labeling-and-annotation-security",
+        "notes": "Level 2. Sensitive information in labels redacted, anonymized or encrypted before use in any labeling artifact",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "11.2.4",
+        "control_name": "Verify that training on sensitive datasets employs differentially-private optimization.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C11-Adversarial-Robustness.md#c112-membership-inference-and-model-inversion-mitigation",
+        "notes": "Level 2. Differentially-private optimization when training on sensitive datasets",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "1.3.3",
+        "control_name": "Verify that models used in security-relevant decisions are evaluated for bias patterns.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c13-training-data-quality-and-security-assurance",
+        "notes": "Level 2. Models used in security-relevant decisions evaluated for bias patterns",
+        "confidence": "unreviewed",
+        "reviewed_by": []
       }
     ],
     "tools": [
@@ -30705,109 +33180,109 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "DeepSeek AI database exposure — 1M+ chat logs publicly accessible",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-032"
       },
       {
         "name": "Cursor AI code agent leaking repository secrets via context window",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-034"
       },
       {
         "name": "Rabbit R1 hardcoded API keys — all user data accessible to anyone with firmware",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-054"
       },
       {
         "name": "Amazon Q developer leaks internal AWS data in enterprise environment",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-064"
       },
       {
         "name": "OpenAI GPT-4 system prompt extraction toolkit — systematic prompt leakage",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-065"
       },
       {
         "name": "Snowflake customer data breach via stolen credentials — 165+ organisations affected",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-070"
       },
       {
         "name": "DeepSeek R1 data exfiltration — Chinese AI model sends data to China-linked servers",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-072"
       },
       {
         "name": "Lasso Security — 1,500+ HuggingFace API tokens exposed in code repositories",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-079"
       },
       {
         "name": "ShadowRay 2.0 botnet — self-spreading crypto-mining via Ray AI framework",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-084"
       },
       {
         "name": "ShadowMQ — critical RCE in Meta/NVIDIA/vLLM inference servers via pickle deserialization",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-085"
       },
       {
         "name": "LiteLLM PyPI supply chain backdoor — TeamPCP campaign compromises 3.4M daily downloads",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-093"
       },
       {
         "name": "Axios npm supply chain attack — North Korean Sapphire Sleet targets 70M weekly downloads",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-094"
       },
       {
         "name": "GlassWorm supply chain — 72 malicious VSCode extensions, 9 million installs",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-097"
       },
       {
         "name": "Moltbook — vibe-coded social network exposes 1.5M API tokens and 35K emails",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-099"
       },
       {
         "name": "ServiceNow BodySnatcher — hardcoded secret key enables full AI agent hijacking (CVE-2025-12420)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-104"
       },
       {
         "name": "Microsoft Copilot Studio agents public by default — unauthorized data exfiltration",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-105"
       },
       {
         "name": "Salesloft Drift OAuth breach — Chinese actor UNC6395 accesses 700+ Salesforce CRM environments",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-109"
       },
       {
         "name": "Flowise CustomMCP code injection RCE — CVSS 10.0, 12,000 instances exposed",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-113"
       }
@@ -31610,6 +34085,61 @@ window.CROSSWALK_DATA = [
         "notes": "Deploy detection for IP exfiltration attempts; monitor model weight access and download patterns",
         "confidence": "unreviewed",
         "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "2.2.3",
+        "control_name": "Verify that non-text inputs (image/video/audio) are checked for adversarial perturbations, steganographic payloads, hidden or embedded content, or ...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C02-Input-Validation.md#c22-content--policy-screening",
+        "notes": "Level 2. Non-text inputs including image, video and audio checked for adversarial perturbations, steganographic payloads, hidden or embedded content and known attack patterns, the direct control for the modality gap this risk names",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "2.2.4",
+        "control_name": "Verify that coordinated attacks spanning multiple input types (e.g., steganographic payloads in images combined with prompt injection in text) are ...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C02-Input-Validation.md#c22-content--policy-screening",
+        "notes": "Level 3. Coordinated attacks spanning multiple input types detected and blocked",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "7.3.4",
+        "control_name": "Verify that model outputs are checked for hidden, encoded, or misleading content created through homoglyphs, formatting, metadata, or structured fi...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C07-Model-Behavior.md#c73-output-safety",
+        "notes": "Level 3. Outputs checked for hidden, encoded or misleading content created through homoglyphs, formatting, metadata or structured fields",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "8.2.1",
+        "control_name": "Verify that sensitive fields are detected before embedding and are masked, tokenized, or dropped.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c82-embedding-sanitization--validation",
+        "notes": "Level 1. Sensitive fields detected before embedding and masked, tokenized or dropped, applied to extracted multimodal content",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "5.2.4",
+        "control_name": "Verify that post-inference filtering mechanisms prevent responses from including data that the requester is not authorized to receive.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C05-Access-Control-and-Identity.md#c52-ai-resource-authorization--classification",
+        "notes": "Level 2. Post-inference filtering prevents responses including data the requester is not authorized to receive",
+        "confidence": "unreviewed",
+        "reviewed_by": []
       }
     ],
     "tools": [
@@ -31682,55 +34212,55 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Multimodal indirect injection — image-embedded instructions in GPT-4V",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-015"
       },
       {
         "name": "AI voice deepfake CEO fraud — Hong Kong $25M loss",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-026"
       },
       {
         "name": "Clearview AI biometric bias — $50M class action settlement",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-036"
       },
       {
         "name": "NYT v OpenAI — copyright training data ruling implications",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-039"
       },
       {
         "name": "AI-generated Biden robocalls — deepfake voice used to suppress voter turnout",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-058"
       },
       {
         "name": "Apple Intelligence notification hallucinations — fabricated BBC news headlines",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-060"
       },
       {
         "name": "Tesla FSD phantom braking and obstacle hallucination — AI perception failures at highway speed",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-076"
       },
       {
         "name": "Midjourney Trump arrest deepfakes go viral — AI-generated images shape public perception",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-077"
       },
       {
         "name": "OpenAI Whisper hallucinating medical transcriptions — fabricated diagnoses in healthcare AI",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-080"
       }
@@ -31744,7 +34274,8 @@ window.CROSSWALK_DATA = [
         "LLM02",
         "LLM05",
         "LLM09",
-        "LLM04"
+        "LLM04",
+        "LLM10"
       ],
       "agentic_top10": [
         "ASI03",
@@ -32464,6 +34995,61 @@ window.CROSSWALK_DATA = [
         "notes": "Apply lessons learned from synthetic data privacy failures; update generation processes and validation controls",
         "confidence": "unreviewed",
         "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "11.2.5",
+        "control_name": "Verify that membership-inference attack simulations demonstrate that attack accuracy does not exceed random guessing on evaluated data.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C11-Adversarial-Robustness.md#c112-membership-inference-and-model-inversion-mitigation",
+        "notes": "Level 3. Membership-inference attack simulations demonstrate attack accuracy does not exceed random guessing, the direct re-identification test",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "11.2.4",
+        "control_name": "Verify that training on sensitive datasets employs differentially-private optimization.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C11-Adversarial-Robustness.md#c112-membership-inference-and-model-inversion-mitigation",
+        "notes": "Level 2. Training on sensitive datasets employs differentially-private optimization, the formal guarantee ad hoc anonymisation lacks",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "11.2.3",
+        "control_name": "Verify that model outputs are calibrated to reduce overconfident predictions.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C11-Adversarial-Robustness.md#c112-membership-inference-and-model-inversion-mitigation",
+        "notes": "Level 2. Model outputs calibrated to reduce overconfident predictions, lowering the signal linkage attacks exploit",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "1.2.3",
+        "control_name": "Verify that sensitive information in labels is redacted, anonymized, or encrypted before being used in any labeling artifact.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c12-data-labeling-and-annotation-security",
+        "notes": "Level 2. Sensitive information in labels redacted, anonymized or encrypted before use in any labeling artifact",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "8.2.1",
+        "control_name": "Verify that sensitive fields are detected before embedding and are masked, tokenized, or dropped.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c82-embedding-sanitization--validation",
+        "notes": "Level 1. Sensitive fields detected before embedding and masked, tokenized or dropped",
+        "confidence": "unreviewed",
+        "reviewed_by": []
       }
     ],
     "tools": [
@@ -32541,31 +35127,31 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Synthetic data re-identification — de-anonymized patients from synthetic health records",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-040"
       },
       {
         "name": "Stability AI synthetic CSAM generation — training data and output safety failures",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-049"
       },
       {
         "name": "AI-generated CSAM detection evasion — adversarial manipulation of content safety classifiers",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-063"
       },
       {
         "name": "LLM-generated malware evades endpoint detection — AI-assisted polymorphic code",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-075"
       },
       {
         "name": "Midjourney Trump arrest deepfakes go viral — AI-generated images shape public perception",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-077"
       }
@@ -32580,7 +35166,8 @@ window.CROSSWALK_DATA = [
         "LLM01",
         "LLM09",
         "LLM07",
-        "LLM05"
+        "LLM05",
+        "LLM04"
       ],
       "agentic_top10": [
         "ASI03",
@@ -33357,6 +35944,72 @@ window.CROSSWALK_DATA = [
         "notes": "Enforce retention policies through automated deletion and crypto-shredding; prevent retention beyond defined periods",
         "confidence": "unreviewed",
         "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "5.3.1",
+        "control_name": "Verify that shared model serving infrastructure prevents one tenant's fine-tuning, inference, or embedding operations from influencing or observing...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C05-Access-Control-and-Identity.md#c53-multi-tenant-isolation",
+        "notes": "Level 2. Shared model serving infrastructure prevents one tenant fine-tuning, inference or embedding operations from influencing or observing another tenant, the direct control",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "8.1.1",
+        "control_name": "Verify that vector identifiers and namespaces enforce uniqueness per tenant and prevent cross-tenant collisions.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c81-access-controls-on-memory--rag-indices",
+        "notes": "Level 1. Vector identifiers and namespaces enforce per-tenant uniqueness and prevent cross-tenant collisions",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "3.3.3",
+        "control_name": "Verify that model versions running in parallel use isolated runtime state so that AI-specific shared resources are not shared across deployments.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C03-Model-Lifecycle-Management.md#c33-controlled-deployment--rollback",
+        "notes": "Level 2. Model versions running in parallel use isolated runtime state so AI-specific shared resources are not shared across deployments",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "10.2.6",
+        "control_name": "Verify that MCP servers ensure all session artifacts are removed when a session terminates.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C10-MCP-Security.md#c102-authentication--authorization",
+        "notes": "Level 2. MCP servers ensure all session artifacts are removed when a session terminates",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "8.3.2",
+        "control_name": "Verify that memory can be reset.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c83-memory-expiry--revocation",
+        "notes": "Level 2. Memory can be reset, so residual context from a prior session can be cleared rather than carried into the next",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "5.3.2",
+        "control_name": "Verify that one tenant cannot influence or observe another tenant's operations through shared compute resources. Satisfying this requirement typica...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C05-Access-Control-and-Identity.md#c53-multi-tenant-isolation",
+        "notes": "Level 3. Hardware partitioning, confidential computing or dedicated per-tenant compute so one tenant cannot influence or observe another through shared compute",
+        "confidence": "unreviewed",
+        "reviewed_by": []
       }
     ],
     "tools": [
@@ -33429,37 +36082,37 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "OpenAI Redis caching bug exposes user conversation history",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-006"
       },
       {
         "name": "OpenAI ChatGPT data retention GDPR challenge — right to erasure vs model training",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-050"
       },
       {
         "name": "Microsoft Recall screenshots everything — OS-level data retention without consent",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-055"
       },
       {
         "name": "Waymo autonomous vehicle data retention — 75 petabytes of driving footage with faces",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-066"
       },
       {
         "name": "EU GDPR enforcement: ChatGPT cannot correct factually wrong personal data",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-068"
       },
       {
         "name": "Replit vibe coding meltdown — agent hallucinated data, deleted production database, hid mistakes",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-106"
       }
@@ -33469,7 +36122,8 @@ window.CROSSWALK_DATA = [
         "LLM02",
         "LLM08",
         "LLM05",
-        "LLM09"
+        "LLM09",
+        "LLM04"
       ],
       "dsgai_2026": [
         "DSGAI13"
@@ -34297,6 +36951,83 @@ window.CROSSWALK_DATA = [
         "notes": "Map ownership for all AI data assets; document rights, restrictions, and licensing for training data and outputs",
         "confidence": "unreviewed",
         "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.5.3",
+        "control_name": "Verify that all access control decisions are enforced by application logic or a policy engine, never by the AI model itself.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c95-agent-authorization-delegation-and-continuous-enforcement",
+        "notes": "Level 2. All access control decisions enforced by application logic or a policy engine, never by the AI model itself, the direct answer to NL-to-query authorization bypass",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "5.2.2",
+        "control_name": "Verify that retrieval pipelines (e.g., RAG queries, embedding lookups) enforce the end-user's authorization context at each retrieval and assembly ...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C05-Access-Control-and-Identity.md#c52-ai-resource-authorization--classification",
+        "notes": "Level 2. Retrieval pipelines enforce the end-user authorization context at each retrieval and assembly stage rather than the service account permissions",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.5.1",
+        "control_name": "Verify that agent actions are authorized against fine-grained policies enforced by the runtime that restrict which tools an agent may invoke, and w...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c95-agent-authorization-delegation-and-continuous-enforcement",
+        "notes": "Level 2. Fine-grained runtime policy over which tools an agent may invoke and which parameter values it may supply, constraining generated queries",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "2.1.3",
+        "control_name": "Verify that all inputs that could steer model behavior are treated as untrusted and screened by a prompt injection detection ruleset or classifier,...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C02-Input-Validation.md#c21-prompt-injection-defenses",
+        "notes": "Level 1. All inputs able to steer model behavior screened by an injection ruleset or classifier",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.3.2",
+        "control_name": "Verify that tool outputs are validated against schemas.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
+        "notes": "Level 1. Tool outputs validated against schemas",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "5.2.4",
+        "control_name": "Verify that post-inference filtering mechanisms prevent responses from including data that the requester is not authorized to receive.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C05-Access-Control-and-Identity.md#c52-ai-resource-authorization--classification",
+        "notes": "Level 2. Post-inference filtering prevents responses including data the requester is not authorized to receive",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.2.3",
+        "control_name": "Verify that each high-impact action has a trusted reversibility classification, such as read-only, reversible, externally reversible, or irreversible.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c92-high-impact-action-approval-and-irreversibility-controls",
+        "notes": "Level 2. High-impact actions carry a trusted reversibility classification, distinguishing read queries from data-store mutations",
+        "confidence": "unreviewed",
+        "reviewed_by": []
       }
     ],
     "tools": [
@@ -34364,19 +37095,19 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "NYT v OpenAI — copyright training data ruling implications",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-039"
       },
       {
         "name": "Perplexity AI plagiarism — verbatim content reproduction without attribution",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-059"
       },
       {
         "name": "Meta Llama model weights stolen and leaked — open-source model security incident",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-078"
       }
@@ -35201,6 +37932,83 @@ window.CROSSWALK_DATA = [
         "notes": "Classify AI data misuse as ICT-related incidents where customer or regulatory impact occurs; report per DORA criteria",
         "confidence": "unreviewed",
         "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "5.2.1",
+        "control_name": "Verify that every AI resource (datasets, endpoints, vector collections, embedding indices, compute instances) enforces access controls with explici...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C05-Access-Control-and-Identity.md#c52-ai-resource-authorization--classification",
+        "notes": "Level 2. Every AI resource including vector collections and embedding indices enforces access controls with explicit allow-lists and default-deny policies, the direct platform control",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "8.1.1",
+        "control_name": "Verify that vector identifiers and namespaces enforce uniqueness per tenant and prevent cross-tenant collisions.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c81-access-controls-on-memory--rag-indices",
+        "notes": "Level 1. Vector identifiers and namespaces enforce per-tenant uniqueness and prevent cross-tenant collisions",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "8.1.3",
+        "control_name": "Verify that retrieval operations enforce scope constraints.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c81-access-controls-on-memory--rag-indices",
+        "notes": "Level 2. Retrieval operations enforce scope constraints",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "8.1.2",
+        "control_name": "Verify that document metadata tags are immutable after the initial write.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c81-access-controls-on-memory--rag-indices",
+        "notes": "Level 2. Document metadata tags immutable after initial write",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "8.2.2",
+        "control_name": "Verify that vectors that fall outside normal clustering patterns are flagged and quarantined before entering production indices.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c82-embedding-sanitization--validation",
+        "notes": "Level 2. Vectors outside normal clustering patterns flagged and quarantined before entering production indices, the adversarial-vector injection control",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "8.2.1",
+        "control_name": "Verify that sensitive fields are detected before embedding and are masked, tokenized, or dropped.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c82-embedding-sanitization--validation",
+        "notes": "Level 1. Sensitive fields detected before embedding and masked, tokenized or dropped, limiting what embedding inversion can recover",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "8.3.1",
+        "control_name": "Verify that expired vectors are excluded from retrieval results.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c83-memory-expiry--revocation",
+        "notes": "Level 2. Expired vectors excluded from retrieval results",
+        "confidence": "unreviewed",
+        "reviewed_by": []
       }
     ],
     "tools": [
@@ -35268,49 +38076,49 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Clearview AI biometric bias — $50M class action settlement",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-036"
       },
       {
         "name": "Scale AI / Sama contractor data exposure — third-party AI labeling workforce privacy violations",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-044"
       },
       {
         "name": "Stability AI synthetic CSAM generation — training data and output safety failures",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-049"
       },
       {
         "name": "AI-generated Biden robocalls — deepfake voice used to suppress voter turnout",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-058"
       },
       {
         "name": "AI-generated CSAM detection evasion — adversarial manipulation of content safety classifiers",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-063"
       },
       {
         "name": "EU AI Act first enforcement actions — prohibited AI practices take effect",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-071"
       },
       {
         "name": "AI recruiting tool gender bias — Amazon scraps internal ML hiring tool",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-074"
       },
       {
         "name": "Midjourney Trump arrest deepfakes go viral — AI-generated images shape public perception",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-077"
       }
@@ -35320,7 +38128,8 @@ window.CROSSWALK_DATA = [
         "LLM09",
         "LLM08",
         "LLM03",
-        "LLM05"
+        "LLM05",
+        "LLM04"
       ],
       "agentic_top10": [
         "ASI06",
@@ -36117,6 +38926,72 @@ window.CROSSWALK_DATA = [
         "notes": "Monitor for AI processing inconsistent with consent status; alert on violations",
         "confidence": "unreviewed",
         "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "12.1.3",
+        "control_name": "Verify that log entries for AI inference events follow a structured, interoperable schema that includes at least the model identifier, token usage ...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C12-Monitoring-and-Logging.md#c121-request--response-logging",
+        "notes": "Level 2. Log entries for inference events follow a structured, interoperable schema with a defined field set (model identifier, token usage, provider, operation type), bounding what telemetry carries",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.5.4",
+        "control_name": "Verify that secrets and credentials required by an agent at runtime are not exposed within the model's observable context, including the context wi...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c95-agent-authorization-delegation-and-continuous-enforcement",
+        "notes": "Level 2. Secrets and credentials not exposed within the model observable context including tool call parameters, which are a primary source of credentials reaching logs",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "5.2.7",
+        "control_name": "Verify that data classification labels propagate to downstream resources (embeddings, prompt caches, model outputs).",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C05-Access-Control-and-Identity.md#c52-ai-resource-authorization--classification",
+        "notes": "Level 3. Data classification labels propagate to downstream resources, so sensitive content retains its handling requirement when it reaches telemetry",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "1.2.3",
+        "control_name": "Verify that sensitive information in labels is redacted, anonymized, or encrypted before being used in any labeling artifact.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c12-data-labeling-and-annotation-security",
+        "notes": "Level 2. Sensitive information redacted, anonymized or encrypted before being used in any labeling artifact",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "12.1.4",
+        "control_name": "Verify that RAG pipeline retrieval events are logged, including the query, documents retrieved, and knowledge source.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C12-Monitoring-and-Logging.md#c121-request--response-logging",
+        "notes": "Level 2. RAG retrieval events logged with query, documents retrieved and knowledge source, which is exactly the high-value content this risk says logging infrastructure accumulates",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "12.1.2",
+        "control_name": "Verify that safety filtering and policy decisions are logged with sufficient detail to support audit, debugging, and forensic analysis of content m...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C12-Monitoring-and-Logging.md#c121-request--response-logging",
+        "notes": "Level 2. Safety filtering and policy decisions logged with sufficient detail for audit, debugging and forensics, scoping moderation telemetry to a defined purpose",
+        "confidence": "unreviewed",
+        "reviewed_by": []
       }
     ],
     "tools": [
@@ -36189,67 +39064,67 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Cursor AI code agent leaking repository secrets via context window",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-034"
       },
       {
         "name": "Italy Garante orders ChatGPT GDPR enforcement — consent and data minimization failures",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-035"
       },
       {
         "name": "Clearview AI biometric bias — $50M class action settlement",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-036"
       },
       {
         "name": "TikTok EU data localization enforcement — Project Clover + EUR 345M GDPR fine",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-043"
       },
       {
         "name": "Scale AI / Sama contractor data exposure — third-party AI labeling workforce privacy violations",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-044"
       },
       {
         "name": "OpenAI ChatGPT data retention GDPR challenge — right to erasure vs model training",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-050"
       },
       {
         "name": "Microsoft Recall screenshots everything — OS-level data retention without consent",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-055"
       },
       {
         "name": "Waymo autonomous vehicle data retention — 75 petabytes of driving footage with faces",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-066"
       },
       {
         "name": "EU GDPR enforcement: ChatGPT cannot correct factually wrong personal data",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-068"
       },
       {
         "name": "EU AI Act first enforcement actions — prohibited AI practices take effect",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-071"
       },
       {
         "name": "DeepSeek R1 data exfiltration — Chinese AI model sends data to China-linked servers",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-072"
       }
@@ -37041,6 +39916,72 @@ window.CROSSWALK_DATA = [
         "notes": "Document data necessity justification for each AI data asset; map minimum required data per use case",
         "confidence": "unreviewed",
         "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "5.2.2",
+        "control_name": "Verify that retrieval pipelines (e.g., RAG queries, embedding lookups) enforce the end-user's authorization context at each retrieval and assembly ...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C05-Access-Control-and-Identity.md#c52-ai-resource-authorization--classification",
+        "notes": "Level 2. Retrieval pipelines enforce the end-user authorization context at each retrieval AND assembly stage, the direct control for a context assembled from multiple sources",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "2.1.4",
+        "control_name": "Verify that input length controls prevent content from exceeding the context window. The controls must reject inputs that exceed token limits rathe...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C02-Input-Validation.md#c21-prompt-injection-defenses",
+        "notes": "Level 1. Input length controls reject inputs exceeding token limits rather than truncating them",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "8.1.3",
+        "control_name": "Verify that retrieval operations enforce scope constraints.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c81-access-controls-on-memory--rag-indices",
+        "notes": "Level 2. Retrieval operations enforce scope constraints",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "2.1.6",
+        "control_name": "Verify that the system enforces an instruction hierarchy in which system and developer messages override user instructions and other untrusted inpu...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C02-Input-Validation.md#c21-prompt-injection-defenses",
+        "notes": "Level 2. Instruction hierarchy maintains trust separation inside a context holding mixed-trust content",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "5.2.4",
+        "control_name": "Verify that post-inference filtering mechanisms prevent responses from including data that the requester is not authorized to receive.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C05-Access-Control-and-Identity.md#c52-ai-resource-authorization--classification",
+        "notes": "Level 2. Post-inference filtering prevents responses including data the requester is not authorized to receive",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "5.2.7",
+        "control_name": "Verify that data classification labels propagate to downstream resources (embeddings, prompt caches, model outputs).",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C05-Access-Control-and-Identity.md#c52-ai-resource-authorization--classification",
+        "notes": "Level 3. Classification labels propagate to prompt caches and model outputs",
+        "confidence": "unreviewed",
+        "reviewed_by": []
       }
     ],
     "tools": [
@@ -37103,43 +40044,43 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Italy Garante orders ChatGPT GDPR enforcement — consent and data minimization failures",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-035"
       },
       {
         "name": "Synthetic data re-identification — de-anonymized patients from synthetic health records",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-040"
       },
       {
         "name": "Microsoft Recall screenshots everything — OS-level data retention without consent",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-055"
       },
       {
         "name": "Character.AI teen suicide — AI companion encouraged self-harm",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-057"
       },
       {
         "name": "Waymo autonomous vehicle data retention — 75 petabytes of driving footage with faces",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-066"
       },
       {
         "name": "Perplexity Comet agentic browser — unauthorized Amazon customer account access",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-086"
       },
       {
         "name": "Chat & Ask AI app — 300 million messages from 25 million users exposed via misconfigured Firebase",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-112"
       }
@@ -37960,6 +40901,83 @@ window.CROSSWALK_DATA = [
         "notes": "Monitor for privacy degradation indicators; detect inference attacks, re-identification attempts, and memorisation in model outputs",
         "confidence": "unreviewed",
         "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "10.1.3",
+        "control_name": "Verify that locally launched MCP servers run in a least-privilege sandbox with restricted file system, network, and system access.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C10-MCP-Security.md#c101-component-integrity",
+        "notes": "Level 2. Locally launched MCP servers run in a least-privilege sandbox with restricted file system, network and system access, the direct control for local assistant overreach",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "10.4.7",
+        "control_name": "Verify that MCP clients present users with explicit consent dialogue and cancellation options upon installation of a local MCP server.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C10-MCP-Security.md#c104-schema-message-and-input-validation",
+        "notes": "Level 2. MCP clients present users with explicit consent dialogue and cancellation options upon installation of a local MCP server",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.3.1",
+        "control_name": "Verify that each tool/plugin executes in a least-privilege sandbox or is otherwise isolated from model operations.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
+        "notes": "Level 1. Each tool or plugin executes in a least-privilege sandbox or is isolated from model operations",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "4.3.3",
+        "control_name": "Verify that inference runtimes enforce process, memory, and file access isolation.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C04-Infrastructure.md#c43-edge--distributed-ai-security",
+        "notes": "Level 3. Inference runtimes enforce process, memory and file access isolation",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "9.2.1",
+        "control_name": "Verify that the agent runtime blocks execution of privileged, high-impact, or irreversible actions until explicit human approval is received and ve...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c92-high-impact-action-approval-and-irreversibility-controls",
+        "notes": "Level 1. Agent runtime blocks privileged, high-impact or irreversible actions until explicit human approval is received and verified",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "7.3.3",
+        "control_name": "Verify that model-generated output is prevented from triggering outbound requests.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C07-Model-Behavior.md#c73-output-safety",
+        "notes": "Level 2. Model-generated output prevented from triggering outbound requests, the exfiltration-to-provider path",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "4.3.1",
+        "control_name": "Verify that edge AI devices authenticate to central infrastructure using strong authentication mechanisms.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C04-Infrastructure.md#c43-edge--distributed-ai-security",
+        "notes": "Level 1. Edge AI devices authenticate to central infrastructure using strong authentication mechanisms",
+        "confidence": "unreviewed",
+        "reviewed_by": []
       }
     ],
     "tools": [
@@ -38037,37 +41055,37 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Italy Garante orders ChatGPT GDPR enforcement — consent and data minimization failures",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-035"
       },
       {
         "name": "Synthetic data re-identification — de-anonymized patients from synthetic health records",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-040"
       },
       {
         "name": "TikTok EU data localization enforcement — Project Clover + EUR 345M GDPR fine",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-043"
       },
       {
         "name": "Scale AI / Sama contractor data exposure — third-party AI labeling workforce privacy violations",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-044"
       },
       {
         "name": "OpenAI ChatGPT data retention GDPR challenge — right to erasure vs model training",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-050"
       },
       {
         "name": "EU GDPR enforcement: ChatGPT cannot correct factually wrong personal data",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-068"
       }
@@ -38883,6 +41901,83 @@ window.CROSSWALK_DATA = [
         "notes": "Apply lessons learned from bias incidents; update training data, model parameters, and controls based on fairness assessments",
         "confidence": "unreviewed",
         "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "3.3.1",
+        "control_name": "Verify that production deployments implement rollout mechanisms with automated rollback triggers.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C03-Model-Lifecycle-Management.md#c33-controlled-deployment--rollback",
+        "notes": "Level 2. Production deployments implement rollout mechanisms with automated rollback triggers",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "3.3.2",
+        "control_name": "Verify that rollback capabilities restore the complete model state.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C03-Model-Lifecycle-Management.md#c33-controlled-deployment--rollback",
+        "notes": "Level 2. Rollback capabilities restore the complete model state",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "1.1.4",
+        "control_name": "Verify that integrity monitoring is applied to guard against unauthorized modifications or corruption of training data.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c11-training-data-origin--data-security",
+        "notes": "Level 2. Integrity monitoring guards training data against unauthorized modification or corruption, detecting the corruption event that recovery must answer",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "3.5.4",
+        "control_name": "Verify that fine-tuning checkpoints are registered as distinct artifacts.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C03-Model-Lifecycle-Management.md#c35-pipeline-fine-tuning",
+        "notes": "Level 3. Fine-tuning checkpoints registered as distinct artifacts, giving discrete recovery points",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "12.5.1",
+        "control_name": "Verify that dataset lineage records each dataset and its components, including all transformations, augmentations, and merges.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C12-Monitoring-and-Logging.md#c125-training-data--model-lifecycle-audit",
+        "notes": "Level 1. Dataset lineage records each dataset and its components including transformations, augmentations and merges, enabling reconstruction",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "8.3.2",
+        "control_name": "Verify that memory can be reset.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c83-memory-expiry--revocation",
+        "notes": "Level 2. Memory can be reset, giving a defined recovery action for a corrupted agent memory or RAG store",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "12.5.3",
+        "control_name": "Verify that all model changes generate immutable audit records.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C12-Monitoring-and-Logging.md#c125-training-data--model-lifecycle-audit",
+        "notes": "Level 2. All model changes generate immutable audit records, establishing the known-good state to recover to",
+        "confidence": "unreviewed",
+        "reviewed_by": []
       }
     ],
     "tools": [
@@ -38960,73 +42055,73 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Meta Galactica model withdrawn after misinformation at launch",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2022,
         "incident_id": "INC-031"
       },
       {
         "name": "Clearview AI biometric bias — $50M class action settlement",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-036"
       },
       {
         "name": "Stability AI synthetic CSAM generation — training data and output safety failures",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-049"
       },
       {
         "name": "Google Gemini AI image generator refuses to depict white people — overcorrected safety filters",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-051"
       },
       {
         "name": "NYC city chatbot tells businesses to break the law — fabricated legal guidance",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-052"
       },
       {
         "name": "Character.AI teen suicide — AI companion encouraged self-harm",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-057"
       },
       {
         "name": "Apple Intelligence notification hallucinations — fabricated BBC news headlines",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-060"
       },
       {
         "name": "EU AI Act first enforcement actions — prohibited AI practices take effect",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-071"
       },
       {
         "name": "OpenAI GPT-4o sycophancy — model agrees with users even when they are wrong",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-073"
       },
       {
         "name": "AI recruiting tool gender bias — Amazon scraps internal ML hiring tool",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-074"
       },
       {
         "name": "Tesla FSD phantom braking and obstacle hallucination — AI perception failures at highway speed",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-076"
       },
       {
         "name": "OpenAI Whisper hallucinating medical transcriptions — fabricated diagnoses in healthcare AI",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-080"
       }
@@ -39766,6 +42861,83 @@ window.CROSSWALK_DATA = [
         "notes": "Map all AI systems subject to governance; ensure complete coverage of AI data assets in governance framework",
         "confidence": "unreviewed",
         "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "11.2.5",
+        "control_name": "Verify that membership-inference attack simulations demonstrate that attack accuracy does not exceed random guessing on evaluated data.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C11-Adversarial-Robustness.md#c112-membership-inference-and-model-inversion-mitigation",
+        "notes": "Level 3. Membership-inference attack simulations demonstrate attack accuracy does not exceed random guessing on evaluated data",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "11.2.4",
+        "control_name": "Verify that training on sensitive datasets employs differentially-private optimization.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C11-Adversarial-Robustness.md#c112-membership-inference-and-model-inversion-mitigation",
+        "notes": "Level 2. Training on sensitive datasets employs differentially-private optimization",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "11.2.2",
+        "control_name": "Verify that inference endpoints enforce per-principal and global rate limits sized to the extraction threat model, and not solely as a generic API ...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C11-Adversarial-Robustness.md#c112-membership-inference-and-model-inversion-mitigation",
+        "notes": "Level 1. Inference endpoints enforce per-principal and global rate limits sized to the extraction threat model rather than as a generic API throttle",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "11.2.1",
+        "control_name": "Verify that model-inferred sensitive attributes are not directly returned in outputs.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C11-Adversarial-Robustness.md#c112-membership-inference-and-model-inversion-mitigation",
+        "notes": "Level 1. Model-inferred sensitive attributes not returned directly in outputs",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "11.2.3",
+        "control_name": "Verify that model outputs are calibrated to reduce overconfident predictions.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C11-Adversarial-Robustness.md#c112-membership-inference-and-model-inversion-mitigation",
+        "notes": "Level 2. Model outputs calibrated to reduce overconfident predictions, lowering the confidence signal reconstruction attacks exploit",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "11.3.2",
+        "control_name": "Verify that raw model outputs are not directly exposed beyond the application backend, and that externally visible responses are calibrated to the ...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C11-Adversarial-Robustness.md#c113-model-extraction-defense",
+        "notes": "Level 2. Raw model outputs not exposed beyond the application backend, with externally visible responses calibrated to the extraction risk level",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "1.1.1",
+        "control_name": "Verify that training data includes only features, attributes, and fields required for the model's stated purpose.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c11-training-data-origin--data-security",
+        "notes": "Level 1. Training data includes only features required for the stated purpose, bounding what can be reconstructed",
+        "confidence": "unreviewed",
+        "reviewed_by": []
       }
     ],
     "tools": [
@@ -39823,13 +42995,13 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Synthetic data re-identification — de-anonymized patients from synthetic health records",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-040"
       },
       {
         "name": "Uber ML platform data lineage audit — fragmented provenance across 30+ feature stores",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-042"
       }
@@ -39840,7 +43012,8 @@ window.CROSSWALK_DATA = [
         "LLM09",
         "LLM03",
         "LLM04",
-        "LLM07"
+        "LLM07",
+        "LLM10"
       ],
       "dsgai_2026": [
         "DSGAI10",
@@ -40621,6 +43794,61 @@ window.CROSSWALK_DATA = [
         "notes": "Participate in information sharing arrangements for third-party AI data risks; share threat intelligence on data provider compromises",
         "confidence": "unreviewed",
         "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "1.2.3",
+        "control_name": "Verify that sensitive information in labels is redacted, anonymized, or encrypted before being used in any labeling artifact.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c12-data-labeling-and-annotation-security",
+        "notes": "Level 2. Sensitive information in labels redacted, anonymized or encrypted before being used in any labeling artifact, the direct control for annotator exposure",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "1.2.1",
+        "control_name": "Verify that labeling platforms enforce access controls that restrict who can create, modify, or approve annotations.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c12-data-labeling-and-annotation-security",
+        "notes": "Level 1. Labeling platforms enforce access controls restricting who can create, modify or approve annotations",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "1.3.4",
+        "control_name": "Verify that disallowed content is detected and removed before training.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c13-training-data-quality-and-security-assurance",
+        "notes": "Level 2. Disallowed content detected and removed before training, reducing harmful content reaching human reviewers",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "1.2.2",
+        "control_name": "Verify that cryptographic integrity is applied to labeling artifacts.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c12-data-labeling-and-annotation-security",
+        "notes": "Level 2. Cryptographic integrity applied to labeling artifacts",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "12.5.2",
+        "control_name": "Verify that all labeling activities are recorded in logs.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C12-Monitoring-and-Logging.md#c125-training-data--model-lifecycle-audit",
+        "notes": "Level 1. All labeling activities recorded in logs",
+        "confidence": "unreviewed",
+        "reviewed_by": []
       }
     ],
     "tools": [
@@ -40673,49 +43901,49 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Scale AI / Sama contractor data exposure — third-party AI labeling workforce privacy violations",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-044"
       },
       {
         "name": "AI-generated Biden robocalls — deepfake voice used to suppress voter turnout",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-058"
       },
       {
         "name": "Snowflake customer data breach via stolen credentials — 165+ organisations affected",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-070"
       },
       {
         "name": "DeepSeek R1 data exfiltration — Chinese AI model sends data to China-linked servers",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-072"
       },
       {
         "name": "ForcedLeak — Salesforce Agentforce indirect prompt injection exfiltrates CRM data",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-088"
       },
       {
         "name": "GeminiJack — zero-click Gemini Enterprise data exfiltration via shared Google Docs",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-101"
       },
       {
         "name": "ShadowLeak — ChatGPT Deep Research zero-click data exfiltration from connected services",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-107"
       },
       {
         "name": "Salesloft Drift OAuth breach — Chinese actor UNC6395 accesses 700+ Salesforce CRM environments",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-109"
       }
@@ -40728,7 +43956,8 @@ window.CROSSWALK_DATA = [
       "llm_top10": [
         "LLM02",
         "LLM04",
-        "LLM05"
+        "LLM05",
+        "LLM10"
       ],
       "agentic_top10": [
         "ASI10",
@@ -41515,6 +44744,94 @@ window.CROSSWALK_DATA = [
         "notes": "Map physical and logical locations of all AI data; document processing jurisdictions for training, inference, and storage",
         "confidence": "unreviewed",
         "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "11.3.1",
+        "control_name": "Verify that query-pattern analysis feeds an extraction-attempt detector.",
+        "tier": "Advanced",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C11-Adversarial-Robustness.md#c113-model-extraction-defense",
+        "notes": "Level 1. Query-pattern analysis feeds an extraction-attempt detector",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "11.2.2",
+        "control_name": "Verify that inference endpoints enforce per-principal and global rate limits sized to the extraction threat model, and not solely as a generic API ...",
+        "tier": "Advanced",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C11-Adversarial-Robustness.md#c112-membership-inference-and-model-inversion-mitigation",
+        "notes": "Level 1. Inference endpoints enforce per-principal and global rate limits sized to the extraction threat model",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "11.3.2",
+        "control_name": "Verify that raw model outputs are not directly exposed beyond the application backend, and that externally visible responses are calibrated to the ...",
+        "tier": "Advanced",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C11-Adversarial-Robustness.md#c113-model-extraction-defense",
+        "notes": "Level 2. Raw model outputs not exposed beyond the application backend, with externally visible responses calibrated to the extraction risk level",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "11.3.4",
+        "control_name": "Verify that detection of suspected extraction triggers response measures.",
+        "tier": "Advanced",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C11-Adversarial-Robustness.md#c113-model-extraction-defense",
+        "notes": "Level 3. Detection of suspected extraction triggers response measures",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "11.3.3",
+        "control_name": "Verify that model watermarking or fingerprinting techniques are applied so that unauthorized copies can be identified.",
+        "tier": "Advanced",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C11-Adversarial-Robustness.md#c113-model-extraction-defense",
+        "notes": "Level 3. Model watermarking or fingerprinting so unauthorized copies can be identified",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "4.1.4",
+        "control_name": "Verify that confidential inference services protect model weights during runtime through isolated execution environments.",
+        "tier": "Advanced",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C04-Infrastructure.md#c41-ai-workload-sandboxing--validation",
+        "notes": "Level 3. Confidential inference services protect model weights during runtime through isolated execution environments",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "4.3.4",
+        "control_name": "Verify that model weights and sensitive parameters stored locally are encrypted using hardware-backed key stores or secure enclaves.",
+        "tier": "Advanced",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C04-Infrastructure.md#c43-edge--distributed-ai-security",
+        "notes": "Level 3. Model weights and sensitive parameters stored locally encrypted using hardware-backed key stores or secure enclaves",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "5.2.6",
+        "control_name": "Verify that privileged access to model weights, training pipelines, and production AI configuration is granted just in time, with a defined maximum...",
+        "tier": "Advanced",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C05-Access-Control-and-Identity.md#c52-ai-resource-authorization--classification",
+        "notes": "Level 3. Just-in-time privileged access to model weights with maximum session duration and automatic expiry",
+        "confidence": "unreviewed",
+        "reviewed_by": []
       }
     ],
     "tools": [
@@ -41592,25 +44909,25 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "TikTok EU data localization enforcement — Project Clover + EUR 345M GDPR fine",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-043"
       },
       {
         "name": "Waymo autonomous vehicle data retention — 75 petabytes of driving footage with faces",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-066"
       },
       {
         "name": "EU AI Act first enforcement actions — prohibited AI practices take effect",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-071"
       },
       {
         "name": "DeepSeek R1 data exfiltration — Chinese AI model sends data to China-linked servers",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-072"
       }
@@ -41620,7 +44937,8 @@ window.CROSSWALK_DATA = [
         "LLM02",
         "LLM05",
         "LLM08",
-        "LLM04"
+        "LLM04",
+        "LLM10"
       ],
       "dsgai_2026": [
         "DSGAI18",
@@ -42639,6 +45957,94 @@ window.CROSSWALK_DATA = [
         "notes": "Map all AI data subject to regulatory requirements; ensure complete coverage in compliance programme",
         "confidence": "unreviewed",
         "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "1.3.1",
+        "control_name": "Verify that training and fine-tuning pipelines implement poisoning detection techniques to identify potential data poisoning or unintentional corru...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c13-training-data-quality-and-security-assurance",
+        "notes": "Level 2. Training and fine-tuning pipelines implement poisoning detection",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "1.3.4",
+        "control_name": "Verify that disallowed content is detected and removed before training.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c13-training-data-quality-and-security-assurance",
+        "notes": "Level 2. Disallowed content detected and removed before training",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "1.1.2",
+        "control_name": "Verify that an up-to-date inventory is kept of every training-data source, including its origin, responsible party, license, collection method, int...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c11-training-data-origin--data-security",
+        "notes": "Level 2. Current inventory of every training-data source with origin, responsible party and collection method, enabling attribution of an injected corpus",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "8.2.4",
+        "control_name": "Verify that content crafted to manipulate retrieval results is detected and rejected or quarantined before vectorization.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c82-embedding-sanitization--validation",
+        "notes": "Level 3. Content crafted to manipulate retrieval results detected and rejected or quarantined before vectorization, the RAG-corpus disinformation path",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "1.3.5",
+        "control_name": "Verify that defenses against clean-label poisoning attacks are implemented.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c13-training-data-quality-and-security-assurance",
+        "notes": "Level 3. Clean-label poisoning defenses, which is the form targeted disinformation injection usually takes",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "7.4.1",
+        "control_name": "Verify that responses generated using retrieval-augmented generation (RAG) include attribution to the source documents.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C07-Model-Behavior.md#c74-source-attribution--citation-integrity",
+        "notes": "Level 1. RAG responses include attribution to the source documents, letting a reader check a poisoned claim against its source",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "12.3.2",
+        "control_name": "Verify that hallucination detection monitors identify and flag model outputs that contain factually incorrect, inconsistent, or fabricated informat...",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C12-Monitoring-and-Logging.md#c123-model-data-and-performance-drift-detection",
+        "notes": "Level 2. Hallucination detection monitors identify and flag factually incorrect, inconsistent or fabricated output",
+        "confidence": "unreviewed",
+        "reviewed_by": []
+      },
+      {
+        "framework": "OWASP AISVS 1.0",
+        "control_id": "7.4.4",
+        "control_name": "Verify that generated media is watermarked to prove it was AI-generated.",
+        "tier": "Hardening",
+        "scope": "Both",
+        "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C07-Model-Behavior.md#c74-source-attribution--citation-integrity",
+        "notes": "Level 3. Generated media watermarked to prove it was AI-generated",
+        "confidence": "unreviewed",
+        "reviewed_by": []
       }
     ],
     "tools": [
@@ -42706,37 +46112,37 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Italy Garante orders ChatGPT GDPR enforcement — consent and data minimization failures",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-035"
       },
       {
         "name": "NYT v OpenAI — copyright training data ruling implications",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-039"
       },
       {
         "name": "TikTok EU data localization enforcement — Project Clover + EUR 345M GDPR fine",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-043"
       },
       {
         "name": "OpenAI ChatGPT data retention GDPR challenge — right to erasure vs model training",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-050"
       },
       {
         "name": "EU GDPR enforcement: ChatGPT cannot correct factually wrong personal data",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-068"
       },
       {
         "name": "EU AI Act first enforcement actions — prohibited AI practices take effect",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-071"
       }

@@ -812,6 +812,116 @@
       "reviewed_by": []
     },
     {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "6.1.2",
+      "control_name": "Verify that model weights, datasets, and fine-tuning adapters are downloaded only from approved sources.",
+      "tier": "Foundational",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C06-Supply-Chain.md#c61-model-artifact-integrity",
+      "notes": "Level 1. Model weights, datasets and fine-tuning adapters downloaded only from approved sources",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "6.1.1",
+      "control_name": "Verify that models are scanned for malicious code before import.",
+      "tier": "Foundational",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C06-Supply-Chain.md#c61-model-artifact-integrity",
+      "notes": "Level 1. Models scanned for malicious code before import",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "4.1.2",
+      "control_name": "Verify that model artifact loading enforces an explicit allow-list of serialization formats that do not permit arbitrary code execution during dese...",
+      "tier": "Foundational",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C04-Infrastructure.md#c41-ai-workload-sandboxing--validation",
+      "notes": "Level 1. Model artifact loading restricted to an allow-list of serialization formats that cannot execute code on deserialization, the pickle class of supply chain RCE",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "6.1.3",
+      "control_name": "Verify that every third-party model artifact can be integrity-verified.",
+      "tier": "Foundational",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C06-Supply-Chain.md#c61-model-artifact-integrity",
+      "notes": "Level 2. Every third-party model artifact is integrity-verifiable",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "6.2.1",
+      "control_name": "Verify that every model artifact publishes a version-controlled, machine-readable AI BOM listing datasets, weights, licenses, and data-origin state...",
+      "tier": "Foundational",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C06-Supply-Chain.md#c62-ai-bom--supply-chain-monitoring",
+      "notes": "Level 1. Version-controlled machine-readable AI BOM listing datasets, weights, licenses and data-origin statements",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "6.2.2",
+      "control_name": "Verify that AI BOMs are cryptographically signed before deployment.",
+      "tier": "Foundational",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C06-Supply-Chain.md#c62-ai-bom--supply-chain-monitoring",
+      "notes": "Level 2. AI BOMs cryptographically signed before deployment",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "3.1.2",
+      "control_name": "Verify that all model artifacts (weights, configurations, tokenizers, base models, fine-tunes, adapters, and safety/policy models) are cryptographi...",
+      "tier": "Foundational",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C03-Model-Lifecycle-Management.md#c31-model-authorization--integrity",
+      "notes": "Level 2. Weights, configurations, tokenizers, base models, fine-tunes, adapters and safety models signed by authorized entities",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "6.1.4",
+      "control_name": "Verify that models pass a behavioral acceptance test suite before being promoted to any non-development environment.",
+      "tier": "Foundational",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C06-Supply-Chain.md#c61-model-artifact-integrity",
+      "notes": "Level 2. Behavioral acceptance test suite passed before promotion beyond development, catching backdoors that signature checks cannot",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "3.1.3",
+      "control_name": "Verify that model cryptographic signatures are verified at deployment admission and on load.",
+      "tier": "Foundational",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C03-Model-Lifecycle-Management.md#c31-model-authorization--integrity",
+      "notes": "Level 2. Artifact provenance (2026 scope): signatures verified at deployment admission and on load, so unsigned or swapped weights are rejected",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "3.1.1",
+      "control_name": "Verify that a model registry maintains an inventory of all deployed model artifacts and their origin.",
+      "tier": "Foundational",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C03-Model-Lifecycle-Management.md#c31-model-authorization--integrity",
+      "notes": "Level 1. Artifact provenance (2026 scope): registry inventory of every deployed artifact and its origin, the record that exposes model namespace reuse",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
       "framework": "OWASP NHI Top 10",
       "control_id": "Third-party plugin tokens with excessive permissions",
       "control_name": "NHI-3 Vulnerable Third-Party NHI",
@@ -1017,37 +1127,37 @@
   "incidents": [
     {
       "name": "Hugging Face model repository pickle-based malware supply chain",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-009"
     },
     {
       "name": "Hugging Face model card supply chain manipulation",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2025,
       "incident_id": "INC-038"
     },
     {
       "name": "Scale AI / Sama contractor data exposure — third-party AI labeling workforce privacy violations",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-044"
     },
     {
       "name": "Stability AI synthetic CSAM generation — training data and output safety failures",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-049"
     },
     {
       "name": "Meta Llama model weights stolen and leaked — open-source model security incident",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2023,
       "incident_id": "INC-078"
     },
     {
       "name": "Lasso Security — 1,500+ HuggingFace API tokens exposed in code repositories",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2023,
       "incident_id": "INC-079"
     }
@@ -1056,6 +1166,7 @@
     "agentic_top10": [
       "ASI04",
       "ASI07",
+      "ASI06",
       "ASI10"
     ],
     "dsgai_2026": [
@@ -1064,6 +1175,7 @@
       "DSGAI06",
       "DSGAI16",
       "DSGAI17",
+      "DSGAI05",
       "DSGAI19"
     ]
   },
