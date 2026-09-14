@@ -808,6 +808,6 @@ To integrate this mapping into a DFD-based threat model:
 ---
 
 *Part of the
-[OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk)
+[OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/crosswalk)
 —
 maintained by the [OWASP GenAI Data Security Initiative](https://genai.owasp.org)*

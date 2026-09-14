@@ -787,6 +787,72 @@
       "notes": "Define approved AI tools policy in ICT risk management framework; require vetting and approval before use in financial data processing",
       "confidence": "unreviewed",
       "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "6.1.2",
+      "control_name": "Verify that model weights, datasets, and fine-tuning adapters are downloaded only from approved sources.",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C06-Supply-Chain.md#c61-model-artifact-integrity",
+      "notes": "Level 1. Model weights, datasets and fine-tuning adapters downloaded only from approved sources",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "10.1.2",
+      "control_name": "Verify that only allow-listed MCP servers are permitted.",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C10-MCP-Security.md#c101-component-integrity",
+      "notes": "Level 2. Only allow-listed MCP servers permitted, the technical gate on unsanctioned tool and data channels",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "3.1.1",
+      "control_name": "Verify that a model registry maintains an inventory of all deployed model artifacts and their origin.",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C03-Model-Lifecycle-Management.md#c31-model-authorization--integrity",
+      "notes": "Level 1. Model registry maintains an inventory of all deployed model artifacts and their origin",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "1.1.2",
+      "control_name": "Verify that an up-to-date inventory is kept of every training-data source, including its origin, responsible party, license, collection method, int...",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c11-training-data-origin--data-security",
+      "notes": "Level 2. Current inventory of every training-data source with origin, responsible party, license, collection method and use constraints",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "12.1.3",
+      "control_name": "Verify that log entries for AI inference events follow a structured, interoperable schema that includes at least the model identifier, token usage ...",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C12-Monitoring-and-Logging.md#c121-request--response-logging",
+      "notes": "Level 2. Structured inference log schema including model identifier, token usage, provider name and operation type, giving per-provider visibility of where data is going",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "3.2.3",
+      "control_name": "Verify that provider model, version, or routing changes trigger security re-evaluation before continued use.",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C03-Model-Lifecycle-Management.md#c32-model-validation--testing",
+      "notes": "Level 3. Provider model, version or routing changes trigger security re-evaluation before continued use",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     }
   ],
   "tools": [
@@ -849,31 +915,31 @@
   "incidents": [
     {
       "name": "Samsung employees leak source code and meeting notes via ChatGPT",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2023,
       "incident_id": "INC-001"
     },
     {
       "name": "Perplexity AI plagiarism — verbatim content reproduction without attribution",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-059"
     },
     {
       "name": "Amazon Q developer leaks internal AWS data in enterprise environment",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-064"
     },
     {
       "name": "Meta Llama model weights stolen and leaked — open-source model security incident",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2023,
       "incident_id": "INC-078"
     },
     {
       "name": "Lasso Security — 1,500+ HuggingFace API tokens exposed in code repositories",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2023,
       "incident_id": "INC-079"
     }
@@ -886,7 +952,8 @@
     "llm_top10": [
       "LLM04",
       "LLM02",
-      "LLM03"
+      "LLM03",
+      "LLM10"
     ],
     "agentic_top10": [
       "ASI04",
