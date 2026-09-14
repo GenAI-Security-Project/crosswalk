@@ -10952,7 +10952,7 @@ window.CROSSWALK_DATA = [
         "incident_id": "INC-116"
       },
       {
-        "name": "Actively malicious OpenClaw skills in use by 6,000+ users, found by behavioural analysis",
+        "name": "Actively malicious OpenClaw skills in use by 6,000+ users, flagged by a skill scanner",
         "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-117"
@@ -10970,7 +10970,7 @@ window.CROSSWALK_DATA = [
         "incident_id": "INC-120"
       },
       {
-        "name": "Vidar infostealer variants targeting OpenClaw agent identity files",
+        "name": "Infostealer infection exfiltrates OpenClaw agent identity and memory files",
         "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-125"
@@ -11185,7 +11185,7 @@ window.CROSSWALK_DATA = [
         "incident_id": "INC-118"
       },
       {
-        "name": "280+ leaky skills exposing API keys and PII through over-permissioning",
+        "name": "283 leaky skills pass API keys and PII through the LLM context in plaintext",
         "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-119"
@@ -11506,13 +11506,13 @@ window.CROSSWALK_DATA = [
     "tools": [],
     "incidents": [
       {
-        "name": "ClawJacked — localhost WebSocket hijack of OpenClaw instances (CVE-2026-28363, CVSS 9.9)",
+        "name": "ClawJacked — any website could take over a local OpenClaw agent via its localhost WebSocket",
         "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-124"
       },
       {
-        "name": "Vidar infostealer variants targeting OpenClaw agent identity files",
+        "name": "Infostealer infection exfiltrates OpenClaw agent identity and memory files",
         "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-125"
@@ -11611,7 +11611,7 @@ window.CROSSWALK_DATA = [
     "tools": [],
     "incidents": [
       {
-        "name": "ClawJacked — localhost WebSocket hijack of OpenClaw instances (CVE-2026-28363, CVSS 9.9)",
+        "name": "ClawJacked — any website could take over a local OpenClaw agent via its localhost WebSocket",
         "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-124"
@@ -11699,7 +11699,7 @@ window.CROSSWALK_DATA = [
     "tools": [],
     "incidents": [
       {
-        "name": "Actively malicious OpenClaw skills in use by 6,000+ users, found by behavioural analysis",
+        "name": "Actively malicious OpenClaw skills in use by 6,000+ users, flagged by a skill scanner",
         "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-117"

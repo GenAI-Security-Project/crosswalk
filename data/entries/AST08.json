@@ -58,7 +58,7 @@
   "tools": [],
   "incidents": [
     {
-      "name": "Actively malicious OpenClaw skills in use by 6,000+ users, found by behavioural analysis",
+      "name": "Actively malicious OpenClaw skills in use by 6,000+ users, flagged by a skill scanner",
       "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
       "year": 2026,
       "incident_id": "INC-117"
