@@ -127,7 +127,7 @@ if [ "${#FAILED_STAGES[@]}" -gt 0 ]; then
   [[ " ${FAILED_STAGES[*]} " =~ " S6 " ]] && echo "  S6 → DSGAI01 Sensitive Data Leakage, LLM08 Hidden Context Exposure"
   echo ""
   echo "See $RESULTS_DIR for full reports."
-  echo "Crosswalk: https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk"
+  echo "Crosswalk: https://github.com/GenAI-Security-Project/crosswalk"
   exit 1
 fi
 
