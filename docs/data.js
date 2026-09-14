@@ -5766,7 +5766,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0029",
-        "control_name": "Denial of ML Service",
+        "control_name": "Denial of AI Service",
         "tier": "Foundational",
         "scope": "Both",
         "url": "https://atlas.mitre.org/techniques/AML.T0029",
@@ -14275,22 +14275,22 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0022",
+        "control_id": "AML.T0012",
         "control_name": "Valid Accounts",
         "tier": "Foundational",
         "scope": "Both",
-        "url": "https://atlas.mitre.org/techniques/AML.T0022",
+        "url": "https://atlas.mitre.org/techniques/AML.T0012",
         "notes": "Exploiting legitimate agent credentials to access AI systems or data pipelines",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0016",
+        "control_id": "AML.T0024",
         "control_name": "Exfiltration via AI Inference API",
         "tier": "Foundational",
         "scope": "Both",
-        "url": "https://atlas.mitre.org/techniques/AML.T0016",
+        "url": "https://atlas.mitre.org/techniques/AML.T0024",
         "notes": "Using compromised agent credentials to exfiltrate data through inference API",
         "confidence": "unreviewed",
         "reviewed_by": []
@@ -18774,22 +18774,22 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0022",
+        "control_id": "AML.T0012",
         "control_name": "Valid Accounts",
         "tier": "Hardening",
         "scope": "Both",
-        "url": "https://atlas.mitre.org/techniques/AML.T0022",
+        "url": "https://atlas.mitre.org/techniques/AML.T0012",
         "notes": "Using compromised agent credentials to impersonate trusted agents in A2A channels",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0016",
+        "control_id": "AML.T0024",
         "control_name": "Exfiltration via AI Inference API",
         "tier": "Hardening",
         "scope": "Both",
-        "url": "https://atlas.mitre.org/techniques/AML.T0016",
+        "url": "https://atlas.mitre.org/techniques/AML.T0024",
         "notes": "Intercepting inter-agent messages to exfiltrate sensitive context passed between agents",
         "confidence": "unreviewed",
         "reviewed_by": []
@@ -19803,7 +19803,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0029",
-        "control_name": "Denial of ML Service",
+        "control_name": "Denial of AI Service",
         "tier": "Foundational",
         "scope": "Both",
         "url": "https://atlas.mitre.org/techniques/AML.T0029",
@@ -23039,7 +23039,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0024.000",
-        "control_name": "Membership Inference",
+        "control_name": "Infer Training Data Membership",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Adversary determines whether specific sensitive records were used in training — confirms presence of target data",
@@ -23049,7 +23049,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0025",
-        "control_name": "Exfiltrate via Cyber Means",
+        "control_name": "Exfiltration via Cyber Means",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Sensitive content in LLM outputs, logs, or observability pipelines captured and transmitted to adversary",
@@ -24163,7 +24163,7 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0051",
+        "control_id": "AML.T0049",
         "control_name": "Exploit Public-Facing Application",
         "tier": "Foundational",
         "scope": "Both",
@@ -25136,7 +25136,7 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0051",
+        "control_id": "AML.T0049",
         "control_name": "Exploit Public-Facing Application",
         "tier": "Foundational",
         "scope": "Both",
@@ -25146,7 +25146,7 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0057",
+        "control_id": "AML.T0036",
         "control_name": "Data from Information Repositories",
         "tier": "Foundational",
         "scope": "Both",
@@ -26031,7 +26031,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0020",
-        "control_name": "Poison Training Data",
+        "control_name": "Training Data Poisoning",
         "tier": "Hardening",
         "scope": "Both",
         "notes": "Adversary introduces malicious data into training pipeline — corrupts model behaviour in ways baked into weights",
@@ -26041,7 +26041,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0018",
-        "control_name": "Backdoor ML Model",
+        "control_name": "Manipulate AI Model",
         "tier": "Hardening",
         "scope": "Both",
         "notes": "Hidden functionality embedded in model weights — triggered by specific inputs, invisible to standard testing",
@@ -26050,7 +26050,7 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0031",
+        "control_id": "AML.T0043",
         "control_name": "Craft Adversarial Data",
         "tier": "Hardening",
         "scope": "Both",
@@ -27038,7 +27038,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0020",
-        "control_name": "Poison Training Data",
+        "control_name": "Training Data Poisoning",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Adversarially crafted payloads bypass ingestion validation to corrupt training or RAG data",
@@ -27048,7 +27048,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0018",
-        "control_name": "Backdoor ML Model",
+        "control_name": "Manipulate AI Model",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Path traversal in snapshot imports (CVE-2024-3584) enables write to model host — backdoor installation path",
@@ -27057,7 +27057,7 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0031",
+        "control_id": "AML.T0043",
         "control_name": "Craft Adversarial Data",
         "tier": "Foundational",
         "scope": "Both",
@@ -27974,7 +27974,7 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0051",
+        "control_id": "AML.T0049",
         "control_name": "Exploit Public-Facing Application",
         "tier": "Foundational",
         "scope": "Both",
@@ -27984,7 +27984,7 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0057",
+        "control_id": "AML.T0036",
         "control_name": "Data from Information Repositories",
         "tier": "Foundational",
         "scope": "Both",
@@ -28879,7 +28879,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0024.000",
-        "control_name": "Membership Inference",
+        "control_name": "Infer Training Data Membership",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Ungoverned training data status — adversary determines what sensitive data is in scope without classification barriers",
@@ -28888,7 +28888,7 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0057",
+        "control_id": "AML.T0036",
         "control_name": "Data from Information Repositories",
         "tier": "Foundational",
         "scope": "Both",
@@ -29764,7 +29764,7 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0057",
+        "control_id": "AML.T0036",
         "control_name": "Data from Information Repositories",
         "tier": "Foundational",
         "scope": "Both",
@@ -29774,7 +29774,7 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0051",
+        "control_id": "AML.T0049",
         "control_name": "Exploit Public-Facing Application",
         "tier": "Foundational",
         "scope": "Both",
@@ -30771,7 +30771,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0025",
-        "control_name": "Exfiltrate via Cyber Means",
+        "control_name": "Exfiltration via Cyber Means",
         "tier": "Hardening",
         "scope": "Both",
         "notes": "Sensitive content extracted from multimodal inputs (OCR, transcription) transmitted through standard exfiltration paths",
@@ -30791,7 +30791,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0024.000",
-        "control_name": "Membership Inference",
+        "control_name": "Infer Training Data Membership",
         "tier": "Hardening",
         "scope": "Both",
         "notes": "Sensitive multimodal content in training data confirmed through membership inference queries",
@@ -31693,7 +31693,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0024.000",
-        "control_name": "Membership Inference",
+        "control_name": "Infer Training Data Membership",
         "tier": "Hardening",
         "scope": "Both",
         "notes": "Adversary probes synthetic dataset to determine whether specific individuals are re-identifiable",
@@ -31703,7 +31703,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0025",
-        "control_name": "Exfiltrate via Cyber Means",
+        "control_name": "Exfiltration via Cyber Means",
         "tier": "Hardening",
         "scope": "Both",
         "notes": "Re-identified individuals from synthetic data extracted via standard exfiltration paths",
@@ -32540,7 +32540,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0025",
-        "control_name": "Exfiltrate via Cyber Means",
+        "control_name": "Exfiltration via Cyber Means",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Cross-session data captured and transmitted to adversary through inference API",
@@ -32549,7 +32549,7 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0051",
+        "control_id": "AML.T0049",
         "control_name": "Exploit Public-Facing Application",
         "tier": "Foundational",
         "scope": "Both",
@@ -33420,7 +33420,7 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0051",
+        "control_id": "AML.T0049",
         "control_name": "Exploit Public-Facing Application",
         "tier": "Foundational",
         "scope": "Both",
@@ -33430,7 +33430,7 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0057",
+        "control_id": "AML.T0036",
         "control_name": "Data from Information Repositories",
         "tier": "Foundational",
         "scope": "Both",
@@ -34343,7 +34343,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0025",
-        "control_name": "Exfiltrate via Cyber Means",
+        "control_name": "Exfiltration via Cyber Means",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Vector store content exfiltrated through unauthenticated access or RBAC bypass",
@@ -34363,7 +34363,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0020",
-        "control_name": "Poison Training Data",
+        "control_name": "Training Data Poisoning",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Vector store content poisoned through path traversal or unauthenticated write (CVE-2024-3584)",
@@ -35281,7 +35281,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0025",
-        "control_name": "Exfiltrate via Cyber Means",
+        "control_name": "Exfiltration via Cyber Means",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Telemetry stores containing sensitive GenAI interaction data exfiltrated through standard data access paths",
@@ -35290,7 +35290,7 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0057",
+        "control_id": "AML.T0036",
         "control_name": "Data from Information Repositories",
         "tier": "Foundational",
         "scope": "Both",
@@ -36212,7 +36212,7 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0051",
+        "control_id": "AML.T0049",
         "control_name": "Exploit Public-Facing Application",
         "tier": "Foundational",
         "scope": "Both",
@@ -36223,7 +36223,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0025",
-        "control_name": "Exfiltrate via Cyber Means",
+        "control_name": "Exfiltration via Cyber Means",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Over-broad context window content exfiltrated through successful injection — adversary retrieves aggregated sensitive data",
@@ -37102,7 +37102,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0013",
-        "control_name": "Discover ML Model Ontology",
+        "control_name": "Discover AI Model Ontology",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Adversary learns what data the browser assistant can access across open applications",
@@ -37111,7 +37111,7 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0057",
+        "control_id": "AML.T0036",
         "control_name": "Data from Information Repositories",
         "tier": "Foundational",
         "scope": "Both",
@@ -38034,7 +38034,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0029",
-        "control_name": "Denial of ML Service",
+        "control_name": "Denial of AI Service",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Adversary saturates GenAI pipeline — vector store, RAG retrieval, or inference endpoint rendered unavailable",
@@ -38053,7 +38053,7 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0057",
+        "control_id": "AML.T0036",
         "control_name": "Data from Information Repositories",
         "tier": "Foundational",
         "scope": "Both",
@@ -38986,7 +38986,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0024.000",
-        "control_name": "Membership Inference",
+        "control_name": "Infer Training Data Membership",
         "tier": "Hardening",
         "scope": "Both",
         "notes": "Adversary determines whether specific sensitive records were used in training through systematic query analysis",
@@ -38996,7 +38996,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0025",
-        "control_name": "Exfiltrate via Cyber Means",
+        "control_name": "Exfiltration via Cyber Means",
         "tier": "Hardening",
         "scope": "Both",
         "notes": "Training data confirmed present and partially reconstructed through inference, then exfiltrated",
@@ -39802,7 +39802,7 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0057",
+        "control_id": "AML.T0036",
         "control_name": "Data from Information Repositories",
         "tier": "Foundational",
         "scope": "Both",
@@ -39813,7 +39813,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0020",
-        "control_name": "Poison Training Data",
+        "control_name": "Training Data Poisoning",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Adversary-controlled labelling vendor introduces biased or poisoned annotations into training data",
@@ -40687,7 +40687,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0025",
-        "control_name": "Exfiltrate via Cyber Means",
+        "control_name": "Exfiltration via Cyber Means",
         "tier": "Hardening",
         "scope": "Both",
         "notes": "Query results and model outputs systematically collected and transmitted to adversary infrastructure",
@@ -41582,7 +41582,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0020",
-        "control_name": "Poison Training Data",
+        "control_name": "Training Data Poisoning",
         "tier": "Hardening",
         "scope": "Both",
         "notes": "Adversary introduces false content into RAG corpus through ingestion path — no public publication required",
@@ -41591,7 +41591,7 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0031",
+        "control_id": "AML.T0043",
         "control_name": "Craft Adversarial Data",
         "tier": "Hardening",
         "scope": "Both",

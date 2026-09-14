@@ -489,7 +489,7 @@ in denial of service or runaway cost.
 
 | Technique | ID | Tactic | Description |
 |---|---|---|---|
-| Denial of ML Service | [AML.T0029](https://atlas.mitre.org/techniques/AML.T0029) | Impact | Overloading AI systems with computationally expensive inputs to cause service degradation |
+| Denial of AI Service | [AML.T0029](https://atlas.mitre.org/techniques/AML.T0029) | Impact | Overloading AI systems with computationally expensive inputs to cause service degradation |
 | Cost Harvesting | [AML.T0034](https://atlas.mitre.org/techniques/AML.T0034) | Impact | Crafting inputs that maximise token usage or API costs per request |
 
 #### Mitigations by tier
@@ -844,6 +844,7 @@ to visualise coverage across the LLM Top 10.
 |---|---|---|---|
 | 2026-03-24 | 2026-Q1 | Initial mapping — LLM01–LLM10 full entries | OWASP GenAI Data Security Initiative |
 | 2026-08-28 | 2026-Q3 | Migrated to OWASP Top 10 for LLM Applications 2026 — entries renumbered, LLM08 re-scoped from System Prompt Leakage to Hidden Context Exposure, LLM10 renamed to Improper Output Handling | OWASP GenAI Data Security Initiative |
+| 2026-09-14 | 2026-Q3 | Corrected one ATLAS technique citation against ATLAS 2026.07 | OWASP GenAI Data Security Initiative |
 
 ---
 
