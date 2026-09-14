@@ -1186,235 +1186,235 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Bing Chat 'Sydney' jailbreak — persona escape and threatening behaviour",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-002"
       },
       {
         "name": "ChatGPT indirect prompt injection via attacker-controlled web content",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-003"
       },
       {
         "name": "Chevrolet dealership chatbot agrees to sell car for $1",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-005"
       },
       {
         "name": "Indirect prompt injection in LLM email assistant via malicious email body",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-007"
       },
       {
         "name": "Microsoft Copilot for M365 — document exfiltration via indirect injection",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-010"
       },
       {
         "name": "WormGPT — uncensored LLM sold for cybercrime on dark web forums",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-011"
       },
       {
         "name": "LangChain and LlamaIndex RCE — agent code execution via prompt injection",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-012"
       },
       {
         "name": "Perez & Ribeiro — 'Ignore Previous Prompt': foundational direct injection study",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2022,
         "incident_id": "INC-013"
       },
       {
         "name": "Multimodal indirect injection — image-embedded instructions in GPT-4V",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-015"
       },
       {
         "name": "RAG corpus poisoning — embedding-space manipulation to force retrieval",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-016"
       },
       {
         "name": "GPT-4 system prompt extraction via jailbreak in production deployments",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-018"
       },
       {
         "name": "Multi-agent prompt injection cascade — demonstrated cross-agent goal propagation",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-020"
       },
       {
         "name": "LAAF v2.0 — Empirical LPCI breakthrough rates of 67–100% across 5 production LLMs",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-021"
       },
       {
         "name": "Greshake et al. \"Not What You've Signed Up For\" indirect prompt injection paper",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-022"
       },
       {
         "name": "Nassi et al. \"ComPromptMized\" Morris II multi-agent worm",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-023"
       },
       {
         "name": "Slack AI indirect injection via channel content",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-024"
       },
       {
         "name": "GitHub Copilot Workspace prompt injection via repository content",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-025"
       },
       {
         "name": "MathPrompt: symbolic mathematics jailbreak attack",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-027"
       },
       {
         "name": "Many-shot jailbreaking (Anthropic research)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-028"
       },
       {
         "name": "Crescendo: multi-turn escalation attack (Microsoft)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-029"
       },
       {
         "name": "Skeleton Key: direct system prompt override (Microsoft)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-030"
       },
       {
         "name": "OpenAI o1/o3 reasoning chain jailbreak via chain-of-thought manipulation",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-033"
       },
       {
         "name": "Azure OpenAI content filter bypass via structured output mode",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-037"
       },
       {
         "name": "Adversarial embedding attacks on production RAG systems",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-046"
       },
       {
         "name": "DPD AI chatbot swears at customer and criticises company — prompt injection via customer input",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-053"
       },
       {
         "name": "MCP tool poisoning — hidden instructions in Model Context Protocol tool descriptions",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-062"
       },
       {
         "name": "AI-generated CSAM detection evasion — adversarial manipulation of content safety classifiers",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-063"
       },
       {
         "name": "OpenAI GPT-4 system prompt extraction toolkit — systematic prompt leakage",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-065"
       },
       {
         "name": "GitHub Copilot Chat agent executes malicious code from repository context",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-067"
       },
       {
         "name": "Claude computer use red-team: autonomous agent browses to attacker-controlled site and follows instructions",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-069"
       },
       {
         "name": "LLM-generated malware evades endpoint detection — AI-assisted polymorphic code",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-075"
       },
       {
         "name": "Claude hijacked for state-sponsored cyberattacks — 80-90% autonomous operation against 30 entities",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-083"
       },
       {
         "name": "EchoLeak — zero-click Microsoft Copilot data exfiltration via email prompt injection",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-089"
       },
       {
         "name": "Claude AI jailbreak — Mexican government breach, 150GB data theft across 10 agencies",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-092"
       },
       {
         "name": "Microsoft 365 Copilot XPIA phishing — attacker-shaped email summaries via hidden instructions",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-095"
       },
       {
         "name": "Clinejection — CI/CD pipeline compromise via Cline's issue triage bot, 4,000 machines infected",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-098"
       },
       {
         "name": "AI recommendation poisoning — hidden prompt injections in 'Summarize with AI' buttons across 31 companies",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-100"
       },
       {
         "name": "IDEsaster — 30+ vulnerabilities across AI coding tools (Cursor, Windsurf, Copilot, Zed, Roo Code)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-103"
       },
       {
         "name": "Anthropic Claude misuse report — ransomware development, North Korean employment fraud, extortion",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-110"
       }
@@ -2575,43 +2575,43 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Samsung employees leak source code and meeting notes via ChatGPT",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-001"
       },
       {
         "name": "OpenAI Redis caching bug exposes user conversation history",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-006"
       },
       {
         "name": "GitHub Copilot reproduces verbatim licensed code and embedded secrets",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-008"
       },
       {
         "name": "Slack AI indirect injection via channel content",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-024"
       },
       {
         "name": "DeepSeek AI database exposure — 1M+ chat logs publicly accessible",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-032"
       },
       {
         "name": "Cursor AI code agent leaking repository secrets via context window",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-034"
       },
       {
         "name": "Amazon Q developer leaks internal AWS data in enterprise environment",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-064"
       }
@@ -3731,139 +3731,139 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Bing Chat 'Sydney' jailbreak — persona escape and threatening behaviour",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-002"
       },
       {
         "name": "Air Canada chatbot invents bereavement discount policy — tribunal ruling",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-004"
       },
       {
         "name": "Chevrolet dealership chatbot agrees to sell car for $1",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-005"
       },
       {
         "name": "WormGPT — uncensored LLM sold for cybercrime on dark web forums",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-011"
       },
       {
         "name": "LAAF v2.0 — Empirical LPCI breakthrough rates of 67–100% across 5 production LLMs",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-021"
       },
       {
         "name": "AI voice deepfake CEO fraud — Hong Kong $25M loss",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-026"
       },
       {
         "name": "MathPrompt: symbolic mathematics jailbreak attack",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-027"
       },
       {
         "name": "Many-shot jailbreaking (Anthropic research)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-028"
       },
       {
         "name": "Crescendo: multi-turn escalation attack (Microsoft)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-029"
       },
       {
         "name": "Skeleton Key: direct system prompt override (Microsoft)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-030"
       },
       {
         "name": "Meta Galactica model withdrawn after misinformation at launch",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2022,
         "incident_id": "INC-031"
       },
       {
         "name": "OpenAI o1/o3 reasoning chain jailbreak via chain-of-thought manipulation",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-033"
       },
       {
         "name": "Apollo Research: frontier models demonstrate strategic deception to avoid shutdown",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-047"
       },
       {
         "name": "AI companion apps: manipulation and exploitation of human-agent trust",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-048"
       },
       {
         "name": "NYC city chatbot tells businesses to break the law — fabricated legal guidance",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-052"
       },
       {
         "name": "DPD AI chatbot swears at customer and criticises company — prompt injection via customer input",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-053"
       },
       {
         "name": "Character.AI teen suicide — AI companion encouraged self-harm",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-057"
       },
       {
         "name": "LLM-generated malware evades endpoint detection — AI-assisted polymorphic code",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-075"
       },
       {
         "name": "Claude Skills ransomware deployment — MedusaLocker via malicious plugin",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-081"
       },
       {
         "name": "Google Antigravity AI IDE deletes entire D: drive — misinterpreted cache-clearing instruction",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-082"
       },
       {
         "name": "Claude hijacked for state-sponsored cyberattacks — 80-90% autonomous operation against 30 entities",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-083"
       },
       {
         "name": "XBOW — first critical CVE discovered entirely by autonomous AI penetration testing agent",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-096"
       },
       {
         "name": "Anthropic Claude misuse report — ransomware development, North Korean employment fraud, extortion",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-110"
       }
@@ -5029,37 +5029,37 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Hugging Face model repository pickle-based malware supply chain",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-009"
       },
       {
         "name": "Hugging Face model card supply chain manipulation",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-038"
       },
       {
         "name": "Scale AI / Sama contractor data exposure — third-party AI labeling workforce privacy violations",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-044"
       },
       {
         "name": "Stability AI synthetic CSAM generation — training data and output safety failures",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-049"
       },
       {
         "name": "Meta Llama model weights stolen and leaked — open-source model security incident",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-078"
       },
       {
         "name": "Lasso Security — 1,500+ HuggingFace API tokens exposed in code repositories",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-079"
       }
@@ -6194,49 +6194,49 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Many-shot jailbreaking (Anthropic research)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-028"
       },
       {
         "name": "Anthropic Claude context flooding — resource exhaustion via adversarial long-context prompts",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-045"
       },
       {
         "name": "Google Gemini AI image generator refuses to depict white people — overcorrected safety filters",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-051"
       },
       {
         "name": "Anthropic Sleeper Agents paper — models trained to hide malicious behaviour",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-061"
       },
       {
         "name": "AI-generated CSAM detection evasion — adversarial manipulation of content safety classifiers",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-063"
       },
       {
         "name": "OpenAI GPT-4o sycophancy — model agrees with users even when they are wrong",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-073"
       },
       {
         "name": "AI recruiting tool gender bias — Amazon scraps internal ML hiring tool",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-074"
       },
       {
         "name": "PoisonedRAG — 5 malicious texts in millions achieve 90% attack success rate on RAG systems",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-108"
       }
@@ -7280,25 +7280,25 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Clarkesworld magazine overwhelmed by AI-generated fiction submissions",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-014"
       },
       {
         "name": "AutoGPT and BabyAGI — uncontrolled web browsing and file system access",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-017"
       },
       {
         "name": "AI voice deepfake CEO fraud — Hong Kong $25M loss",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-026"
       },
       {
         "name": "Anthropic Claude context flooding — resource exhaustion via adversarial long-context prompts",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-045"
       }
@@ -8369,127 +8369,127 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Bing Chat 'Sydney' jailbreak — persona escape and threatening behaviour",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-002"
       },
       {
         "name": "Air Canada chatbot invents bereavement discount policy — tribunal ruling",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-004"
       },
       {
         "name": "Clarkesworld magazine overwhelmed by AI-generated fiction submissions",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-014"
       },
       {
         "name": "AI voice deepfake CEO fraud — Hong Kong $25M loss",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-026"
       },
       {
         "name": "Meta Galactica model withdrawn after misinformation at launch",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2022,
         "incident_id": "INC-031"
       },
       {
         "name": "OpenAI o1/o3 reasoning chain jailbreak via chain-of-thought manipulation",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-033"
       },
       {
         "name": "AI companion apps: manipulation and exploitation of human-agent trust",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-048"
       },
       {
         "name": "Google Gemini AI image generator refuses to depict white people — overcorrected safety filters",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-051"
       },
       {
         "name": "NYC city chatbot tells businesses to break the law — fabricated legal guidance",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-052"
       },
       {
         "name": "Google AI Overviews recommends adding glue to pizza — RAG hallucination at search scale",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-056"
       },
       {
         "name": "Character.AI teen suicide — AI companion encouraged self-harm",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-057"
       },
       {
         "name": "AI-generated Biden robocalls — deepfake voice used to suppress voter turnout",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-058"
       },
       {
         "name": "Perplexity AI plagiarism — verbatim content reproduction without attribution",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-059"
       },
       {
         "name": "Apple Intelligence notification hallucinations — fabricated BBC news headlines",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-060"
       },
       {
         "name": "EU GDPR enforcement: ChatGPT cannot correct factually wrong personal data",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-068"
       },
       {
         "name": "OpenAI GPT-4o sycophancy — model agrees with users even when they are wrong",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-073"
       },
       {
         "name": "Tesla FSD phantom braking and obstacle hallucination — AI perception failures at highway speed",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-076"
       },
       {
         "name": "Midjourney Trump arrest deepfakes go viral — AI-generated images shape public perception",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-077"
       },
       {
         "name": "OpenAI Whisper hallucinating medical transcriptions — fabricated diagnoses in healthcare AI",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-080"
       },
       {
         "name": "Meta Rogue AI Agent Sev-1 — autonomous agent posts incorrect advice, exposing proprietary data",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-091"
       },
       {
         "name": "Replit vibe coding meltdown — agent hallucinated data, deleted production database, hid mistakes",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-106"
       }
@@ -9493,61 +9493,61 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "GitHub Copilot reproduces verbatim licensed code and embedded secrets",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-008"
       },
       {
         "name": "WormGPT — uncensored LLM sold for cybercrime on dark web forums",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-011"
       },
       {
         "name": "Perez & Ribeiro — 'Ignore Previous Prompt': foundational direct injection study",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2022,
         "incident_id": "INC-013"
       },
       {
         "name": "GPT-4 system prompt extraction via jailbreak in production deployments",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-018"
       },
       {
         "name": "LAAF v2.0 — Empirical LPCI breakthrough rates of 67–100% across 5 production LLMs",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-021"
       },
       {
         "name": "Greshake et al. \"Not What You've Signed Up For\" indirect prompt injection paper",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-022"
       },
       {
         "name": "GitHub Copilot Workspace prompt injection via repository content",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-025"
       },
       {
         "name": "Skeleton Key: direct system prompt override (Microsoft)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-030"
       },
       {
         "name": "DPD AI chatbot swears at customer and criticises company — prompt injection via customer input",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-053"
       },
       {
         "name": "OpenAI GPT-4 system prompt extraction toolkit — systematic prompt leakage",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-065"
       }
@@ -10604,25 +10604,25 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Azure OpenAI content filter bypass via structured output mode",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-037"
       },
       {
         "name": "Adversarial embedding attacks on production RAG systems",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-046"
       },
       {
         "name": "Google AI Overviews recommends adding glue to pizza — RAG hallucination at search scale",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-056"
       },
       {
         "name": "OpenAI Whisper hallucinating medical transcriptions — fabricated diagnoses in healthcare AI",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-080"
       }
@@ -11699,31 +11699,31 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "GitHub Copilot Workspace prompt injection via repository content",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-025"
       },
       {
         "name": "Azure OpenAI content filter bypass via structured output mode",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-037"
       },
       {
         "name": "Hugging Face model card supply chain manipulation",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-038"
       },
       {
         "name": "Apple Intelligence notification hallucinations — fabricated BBC news headlines",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-060"
       },
       {
         "name": "LLM-generated malware evades endpoint detection — AI-assisted polymorphic code",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-075"
       }
@@ -11843,37 +11843,37 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "ClawHavoc — 1,184 malicious skills flooded onto the ClawHub registry",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-115"
       },
       {
         "name": "SKILL.md to shell access in three lines of markdown (Snyk threat model)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-116"
       },
       {
         "name": "Actively malicious OpenClaw skills in use by 6,000+ users, found by behavioural analysis",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-117"
       },
       {
         "name": "ToxicSkills — 36% of 3,984 audited skills contain security flaws",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-118"
       },
       {
         "name": "Brand-impersonating skill on ClawHub tricks users into installing malware",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-120"
       },
       {
         "name": "Vidar infostealer variants targeting OpenClaw agent identity files",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-125"
       }
@@ -11957,13 +11957,13 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "ClawHavoc — 1,184 malicious skills flooded onto the ClawHub registry",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-115"
       },
       {
         "name": "Claude Code repository config execution before trust dialog (CVE-2025-59536, CVE-2026-21852)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-123"
       }
@@ -12047,19 +12047,19 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "ToxicSkills — 36% of 3,984 audited skills contain security flaws",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-118"
       },
       {
         "name": "280+ leaky skills exposing API keys and PII through over-permissioning",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-119"
       },
       {
         "name": "36.7% of 7,000+ MCP servers potentially vulnerable to SSRF",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-126"
       }
@@ -12143,25 +12143,25 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "SKILL.md to shell access in three lines of markdown (Snyk threat model)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-116"
       },
       {
         "name": "Brand-impersonating skill on ClawHub tricks users into installing malware",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-120"
       },
       {
         "name": "OpenClaw log poisoning — agent logs as an indirect prompt injection channel",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-122"
       },
       {
         "name": "Claude Code repository config execution before trust dialog (CVE-2025-59536, CVE-2026-21852)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-123"
       }
@@ -12245,19 +12245,19 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "OpenClaw log poisoning — agent logs as an indirect prompt injection channel",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-122"
       },
       {
         "name": "The Story of Skills — a malicious skill reaches 26,000 agents past every scanner",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-129"
       },
       {
         "name": "The Circus of Skills — 17,822 live skills rest on untrusted external instruction sources",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-130"
       }
@@ -12330,25 +12330,25 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "ClawJacked — localhost WebSocket hijack of OpenClaw instances (CVE-2026-28363, CVSS 9.9)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-124"
       },
       {
         "name": "Vidar infostealer variants targeting OpenClaw agent identity files",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-125"
       },
       {
         "name": "36.7% of 7,000+ MCP servers potentially vulnerable to SSRF",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-126"
       },
       {
         "name": "135,000+ OpenClaw instances internet-exposed with insecure defaults",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-127"
       }
@@ -12421,13 +12421,13 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "ClawJacked — localhost WebSocket hijack of OpenClaw instances (CVE-2026-28363, CVSS 9.9)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-124"
       },
       {
         "name": "SkillJacking — 925 skills sit on instantly hijackable dependencies",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-131"
       }
@@ -12500,25 +12500,25 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Actively malicious OpenClaw skills in use by 6,000+ users, found by behavioural analysis",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-117"
       },
       {
         "name": "Pattern-matching skill scanners miss the majority of critical threats",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-121"
       },
       {
         "name": "Every public skill scanner bypassed in under an hour (Trail of Bits)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-128"
       },
       {
         "name": "The Story of Skills — a malicious skill reaches 26,000 agents past every scanner",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-129"
       }
@@ -12591,7 +12591,7 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "135,000+ OpenClaw instances internet-exposed with insecure defaults",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-127"
       }
@@ -12664,7 +12664,7 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "SkillJacking — 925 skills sit on instantly hijackable dependencies",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-131"
       }
@@ -13814,199 +13814,199 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "ChatGPT indirect prompt injection via attacker-controlled web content",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-003"
       },
       {
         "name": "Indirect prompt injection in LLM email assistant via malicious email body",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-007"
       },
       {
         "name": "Microsoft Copilot for M365 — document exfiltration via indirect injection",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-010"
       },
       {
         "name": "Multimodal indirect injection — image-embedded instructions in GPT-4V",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-015"
       },
       {
         "name": "AutoGPT and BabyAGI — uncontrolled web browsing and file system access",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-017"
       },
       {
         "name": "Agentic AI privilege escalation via tool chain manipulation — research",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-019"
       },
       {
         "name": "Multi-agent prompt injection cascade — demonstrated cross-agent goal propagation",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-020"
       },
       {
         "name": "LAAF v2.0 — Empirical LPCI breakthrough rates of 67–100% across 5 production LLMs",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-021"
       },
       {
         "name": "Greshake et al. \"Not What You've Signed Up For\" indirect prompt injection paper",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-022"
       },
       {
         "name": "Nassi et al. \"ComPromptMized\" Morris II multi-agent worm",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-023"
       },
       {
         "name": "Slack AI indirect injection via channel content",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-024"
       },
       {
         "name": "MathPrompt: symbolic mathematics jailbreak attack",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-027"
       },
       {
         "name": "Crescendo: multi-turn escalation attack (Microsoft)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-029"
       },
       {
         "name": "Skeleton Key: direct system prompt override (Microsoft)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-030"
       },
       {
         "name": "Apollo Research: frontier models demonstrate strategic deception to avoid shutdown",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-047"
       },
       {
         "name": "DPD AI chatbot swears at customer and criticises company — prompt injection via customer input",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-053"
       },
       {
         "name": "GitHub Copilot Chat agent executes malicious code from repository context",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-067"
       },
       {
         "name": "Claude computer use red-team: autonomous agent browses to attacker-controlled site and follows instructions",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-069"
       },
       {
         "name": "Claude hijacked for state-sponsored cyberattacks — 80-90% autonomous operation against 30 entities",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-083"
       },
       {
         "name": "ShadowRay 2.0 botnet — self-spreading crypto-mining via Ray AI framework",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-084"
       },
       {
         "name": "ForcedLeak — Salesforce Agentforce indirect prompt injection exfiltrates CRM data",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-088"
       },
       {
         "name": "EchoLeak — zero-click Microsoft Copilot data exfiltration via email prompt injection",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-089"
       },
       {
         "name": "Claude AI jailbreak — Mexican government breach, 150GB data theft across 10 agencies",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-092"
       },
       {
         "name": "Microsoft 365 Copilot XPIA phishing — attacker-shaped email summaries via hidden instructions",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-095"
       },
       {
         "name": "Clinejection — CI/CD pipeline compromise via Cline's issue triage bot, 4,000 machines infected",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-098"
       },
       {
         "name": "AI recommendation poisoning — hidden prompt injections in 'Summarize with AI' buttons across 31 companies",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-100"
       },
       {
         "name": "GeminiJack — zero-click Gemini Enterprise data exfiltration via shared Google Docs",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-101"
       },
       {
         "name": "IDEsaster — 30+ vulnerabilities across AI coding tools (Cursor, Windsurf, Copilot, Zed, Roo Code)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-103"
       },
       {
         "name": "ServiceNow BodySnatcher — hardcoded secret key enables full AI agent hijacking (CVE-2025-12420)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-104"
       },
       {
         "name": "Replit vibe coding meltdown — agent hallucinated data, deleted production database, hid mistakes",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-106"
       },
       {
         "name": "ShadowLeak — ChatGPT Deep Research zero-click data exfiltration from connected services",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-107"
       },
       {
         "name": "PoisonedRAG — 5 malicious texts in millions achieve 90% attack success rate on RAG systems",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-108"
       },
       {
         "name": "WhatsApp MCP tool poisoning — hidden instructions exfiltrate entire message history",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-111"
       }
@@ -15131,151 +15131,151 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Indirect prompt injection in LLM email assistant via malicious email body",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-007"
       },
       {
         "name": "Microsoft Copilot for M365 — document exfiltration via indirect injection",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-010"
       },
       {
         "name": "LangChain and LlamaIndex RCE — agent code execution via prompt injection",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-012"
       },
       {
         "name": "Agentic AI privilege escalation via tool chain manipulation — research",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-019"
       },
       {
         "name": "LAAF v2.0 — Empirical LPCI breakthrough rates of 67–100% across 5 production LLMs",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-021"
       },
       {
         "name": "Greshake et al. \"Not What You've Signed Up For\" indirect prompt injection paper",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-022"
       },
       {
         "name": "Slack AI indirect injection via channel content",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-024"
       },
       {
         "name": "GitHub Copilot Workspace prompt injection via repository content",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-025"
       },
       {
         "name": "Cursor AI code agent leaking repository secrets via context window",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-034"
       },
       {
         "name": "MCP tool poisoning — hidden instructions in Model Context Protocol tool descriptions",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-062"
       },
       {
         "name": "GitHub Copilot Chat agent executes malicious code from repository context",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-067"
       },
       {
         "name": "Claude computer use red-team: autonomous agent browses to attacker-controlled site and follows instructions",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-069"
       },
       {
         "name": "Google Antigravity AI IDE deletes entire D: drive — misinterpreted cache-clearing instruction",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-082"
       },
       {
         "name": "Perplexity Comet agentic browser — unauthorized Amazon customer account access",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-086"
       },
       {
         "name": "ForcedLeak — Salesforce Agentforce indirect prompt injection exfiltrates CRM data",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-088"
       },
       {
         "name": "EchoLeak — zero-click Microsoft Copilot data exfiltration via email prompt injection",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-089"
       },
       {
         "name": "Claude AI jailbreak — Mexican government breach, 150GB data theft across 10 agencies",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-092"
       },
       {
         "name": "GeminiJack — zero-click Gemini Enterprise data exfiltration via shared Google Docs",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-101"
       },
       {
         "name": "OpenClaw AI agent security crisis — 138 CVEs in 63 days, 341 malicious marketplace skills",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-102"
       },
       {
         "name": "IDEsaster — 30+ vulnerabilities across AI coding tools (Cursor, Windsurf, Copilot, Zed, Roo Code)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-103"
       },
       {
         "name": "ShadowLeak — ChatGPT Deep Research zero-click data exfiltration from connected services",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-107"
       },
       {
         "name": "Anthropic Claude misuse report — ransomware development, North Korean employment fraud, extortion",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-110"
       },
       {
         "name": "WhatsApp MCP tool poisoning — hidden instructions exfiltrate entire message history",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-111"
       },
       {
         "name": "Flowise CustomMCP code injection RCE — CVSS 10.0, 12,000 instances exposed",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-113"
       },
       {
         "name": "AgentSeal MCP server mass scan — 66% of 1,808 servers have security findings",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-114"
       }
@@ -16494,115 +16494,115 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Agentic AI privilege escalation via tool chain manipulation — research",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-019"
       },
       {
         "name": "LAAF v2.0 — Empirical LPCI breakthrough rates of 67–100% across 5 production LLMs",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-021"
       },
       {
         "name": "Rabbit R1 hardcoded API keys — all user data accessible to anyone with firmware",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-054"
       },
       {
         "name": "MCP tool poisoning — hidden instructions in Model Context Protocol tool descriptions",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-062"
       },
       {
         "name": "Snowflake customer data breach via stolen credentials — 165+ organisations affected",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-070"
       },
       {
         "name": "Lasso Security — 1,500+ HuggingFace API tokens exposed in code repositories",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-079"
       },
       {
         "name": "Claude hijacked for state-sponsored cyberattacks — 80-90% autonomous operation against 30 entities",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-083"
       },
       {
         "name": "Perplexity Comet agentic browser — unauthorized Amazon customer account access",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-086"
       },
       {
         "name": "Malicious MCP server backdoor on npm — dual reverse shells in mcp-runcommand-server",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-087"
       },
       {
         "name": "Agent-in-the-Middle — A2A protocol spoofing via fake agent cards",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-090"
       },
       {
         "name": "LiteLLM PyPI supply chain backdoor — TeamPCP campaign compromises 3.4M daily downloads",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-093"
       },
       {
         "name": "GlassWorm supply chain — 72 malicious VSCode extensions, 9 million installs",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-097"
       },
       {
         "name": "Moltbook — vibe-coded social network exposes 1.5M API tokens and 35K emails",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-099"
       },
       {
         "name": "OpenClaw AI agent security crisis — 138 CVEs in 63 days, 341 malicious marketplace skills",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-102"
       },
       {
         "name": "ServiceNow BodySnatcher — hardcoded secret key enables full AI agent hijacking (CVE-2025-12420)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-104"
       },
       {
         "name": "Microsoft Copilot Studio agents public by default — unauthorized data exfiltration",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-105"
       },
       {
         "name": "Salesloft Drift OAuth breach — Chinese actor UNC6395 accesses 700+ Salesforce CRM environments",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-109"
       },
       {
         "name": "Chat & Ask AI app — 300 million messages from 25 million users exposed via misconfigured Firebase",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-112"
       },
       {
         "name": "AgentSeal MCP server mass scan — 66% of 1,808 servers have security findings",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-114"
       }
@@ -17689,115 +17689,115 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Hugging Face model repository pickle-based malware supply chain",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-009"
       },
       {
         "name": "Hugging Face model card supply chain manipulation",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-038"
       },
       {
         "name": "Rabbit R1 hardcoded API keys — all user data accessible to anyone with firmware",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-054"
       },
       {
         "name": "MCP tool poisoning — hidden instructions in Model Context Protocol tool descriptions",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-062"
       },
       {
         "name": "Meta Llama model weights stolen and leaked — open-source model security incident",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-078"
       },
       {
         "name": "Lasso Security — 1,500+ HuggingFace API tokens exposed in code repositories",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-079"
       },
       {
         "name": "Claude Skills ransomware deployment — MedusaLocker via malicious plugin",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-081"
       },
       {
         "name": "ShadowRay 2.0 botnet — self-spreading crypto-mining via Ray AI framework",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-084"
       },
       {
         "name": "ShadowMQ — critical RCE in Meta/NVIDIA/vLLM inference servers via pickle deserialization",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-085"
       },
       {
         "name": "Malicious MCP server backdoor on npm — dual reverse shells in mcp-runcommand-server",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-087"
       },
       {
         "name": "LiteLLM PyPI supply chain backdoor — TeamPCP campaign compromises 3.4M daily downloads",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-093"
       },
       {
         "name": "Axios npm supply chain attack — North Korean Sapphire Sleet targets 70M weekly downloads",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-094"
       },
       {
         "name": "GlassWorm supply chain — 72 malicious VSCode extensions, 9 million installs",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-097"
       },
       {
         "name": "Clinejection — CI/CD pipeline compromise via Cline's issue triage bot, 4,000 machines infected",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-098"
       },
       {
         "name": "OpenClaw AI agent security crisis — 138 CVEs in 63 days, 341 malicious marketplace skills",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-102"
       },
       {
         "name": "IDEsaster — 30+ vulnerabilities across AI coding tools (Cursor, Windsurf, Copilot, Zed, Roo Code)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-103"
       },
       {
         "name": "Salesloft Drift OAuth breach — Chinese actor UNC6395 accesses 700+ Salesforce CRM environments",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-109"
       },
       {
         "name": "WhatsApp MCP tool poisoning — hidden instructions exfiltrate entire message history",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-111"
       },
       {
         "name": "AgentSeal MCP server mass scan — 66% of 1,808 servers have security findings",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-114"
       }
@@ -18872,115 +18872,115 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "LangChain and LlamaIndex RCE — agent code execution via prompt injection",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-012"
       },
       {
         "name": "AutoGPT and BabyAGI — uncontrolled web browsing and file system access",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-017"
       },
       {
         "name": "MCP tool poisoning — hidden instructions in Model Context Protocol tool descriptions",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-062"
       },
       {
         "name": "GitHub Copilot Chat agent executes malicious code from repository context",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-067"
       },
       {
         "name": "Claude computer use red-team: autonomous agent browses to attacker-controlled site and follows instructions",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-069"
       },
       {
         "name": "Claude Skills ransomware deployment — MedusaLocker via malicious plugin",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-081"
       },
       {
         "name": "Google Antigravity AI IDE deletes entire D: drive — misinterpreted cache-clearing instruction",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-082"
       },
       {
         "name": "ShadowRay 2.0 botnet — self-spreading crypto-mining via Ray AI framework",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-084"
       },
       {
         "name": "ShadowMQ — critical RCE in Meta/NVIDIA/vLLM inference servers via pickle deserialization",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-085"
       },
       {
         "name": "Malicious MCP server backdoor on npm — dual reverse shells in mcp-runcommand-server",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-087"
       },
       {
         "name": "LiteLLM PyPI supply chain backdoor — TeamPCP campaign compromises 3.4M daily downloads",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-093"
       },
       {
         "name": "Axios npm supply chain attack — North Korean Sapphire Sleet targets 70M weekly downloads",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-094"
       },
       {
         "name": "XBOW — first critical CVE discovered entirely by autonomous AI penetration testing agent",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-096"
       },
       {
         "name": "GlassWorm supply chain — 72 malicious VSCode extensions, 9 million installs",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-097"
       },
       {
         "name": "Clinejection — CI/CD pipeline compromise via Cline's issue triage bot, 4,000 machines infected",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-098"
       },
       {
         "name": "OpenClaw AI agent security crisis — 138 CVEs in 63 days, 341 malicious marketplace skills",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-102"
       },
       {
         "name": "IDEsaster — 30+ vulnerabilities across AI coding tools (Cursor, Windsurf, Copilot, Zed, Roo Code)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-103"
       },
       {
         "name": "Flowise CustomMCP code injection RCE — CVSS 10.0, 12,000 instances exposed",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-113"
       },
       {
         "name": "AgentSeal MCP server mass scan — 66% of 1,808 servers have security findings",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-114"
       }
@@ -20096,61 +20096,61 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "RAG corpus poisoning — embedding-space manipulation to force retrieval",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-016"
       },
       {
         "name": "LAAF v2.0 — Empirical LPCI breakthrough rates of 67–100% across 5 production LLMs",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-021"
       },
       {
         "name": "Nassi et al. \"ComPromptMized\" Morris II multi-agent worm",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-023"
       },
       {
         "name": "Crescendo: multi-turn escalation attack (Microsoft)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-029"
       },
       {
         "name": "Adversarial embedding attacks on production RAG systems",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-046"
       },
       {
         "name": "EchoLeak — zero-click Microsoft Copilot data exfiltration via email prompt injection",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-089"
       },
       {
         "name": "Agent-in-the-Middle — A2A protocol spoofing via fake agent cards",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-090"
       },
       {
         "name": "Microsoft 365 Copilot XPIA phishing — attacker-shaped email summaries via hidden instructions",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-095"
       },
       {
         "name": "AI recommendation poisoning — hidden prompt injections in 'Summarize with AI' buttons across 31 companies",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-100"
       },
       {
         "name": "PoisonedRAG — 5 malicious texts in millions achieve 90% attack success rate on RAG systems",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-108"
       }
@@ -21248,37 +21248,37 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Multi-agent prompt injection cascade — demonstrated cross-agent goal propagation",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-020"
       },
       {
         "name": "Nassi et al. \"ComPromptMized\" Morris II multi-agent worm",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-023"
       },
       {
         "name": "Multi-agent financial trading system flash crash — cascading autonomous failures",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-041"
       },
       {
         "name": "Agent-in-the-Middle — A2A protocol spoofing via fake agent cards",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-090"
       },
       {
         "name": "Microsoft Copilot Studio agents public by default — unauthorized data exfiltration",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-105"
       },
       {
         "name": "WhatsApp MCP tool poisoning — hidden instructions exfiltrate entire message history",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-111"
       }
@@ -22370,43 +22370,43 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "AutoGPT and BabyAGI — uncontrolled web browsing and file system access",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-017"
       },
       {
         "name": "Multi-agent prompt injection cascade — demonstrated cross-agent goal propagation",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-020"
       },
       {
         "name": "Nassi et al. \"ComPromptMized\" Morris II multi-agent worm",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-023"
       },
       {
         "name": "Multi-agent financial trading system flash crash — cascading autonomous failures",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-041"
       },
       {
         "name": "Claude computer use red-team: autonomous agent browses to attacker-controlled site and follows instructions",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-069"
       },
       {
         "name": "Agent-in-the-Middle — A2A protocol spoofing via fake agent cards",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-090"
       },
       {
         "name": "Meta Rogue AI Agent Sev-1 — autonomous agent posts incorrect advice, exposing proprietary data",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-091"
       }
@@ -23454,103 +23454,103 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Multi-agent financial trading system flash crash — cascading autonomous failures",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-041"
       },
       {
         "name": "Apollo Research: frontier models demonstrate strategic deception to avoid shutdown",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-047"
       },
       {
         "name": "AI companion apps: manipulation and exploitation of human-agent trust",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-048"
       },
       {
         "name": "Character.AI teen suicide — AI companion encouraged self-harm",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-057"
       },
       {
         "name": "OpenAI GPT-4o sycophancy — model agrees with users even when they are wrong",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-073"
       },
       {
         "name": "Google Antigravity AI IDE deletes entire D: drive — misinterpreted cache-clearing instruction",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-082"
       },
       {
         "name": "Perplexity Comet agentic browser — unauthorized Amazon customer account access",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-086"
       },
       {
         "name": "Meta Rogue AI Agent Sev-1 — autonomous agent posts incorrect advice, exposing proprietary data",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-091"
       },
       {
         "name": "Microsoft 365 Copilot XPIA phishing — attacker-shaped email summaries via hidden instructions",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-095"
       },
       {
         "name": "Moltbook — vibe-coded social network exposes 1.5M API tokens and 35K emails",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-099"
       },
       {
         "name": "AI recommendation poisoning — hidden prompt injections in 'Summarize with AI' buttons across 31 companies",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-100"
       },
       {
         "name": "GeminiJack — zero-click Gemini Enterprise data exfiltration via shared Google Docs",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-101"
       },
       {
         "name": "ServiceNow BodySnatcher — hardcoded secret key enables full AI agent hijacking (CVE-2025-12420)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-104"
       },
       {
         "name": "Replit vibe coding meltdown — agent hallucinated data, deleted production database, hid mistakes",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-106"
       },
       {
         "name": "ShadowLeak — ChatGPT Deep Research zero-click data exfiltration from connected services",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-107"
       },
       {
         "name": "Anthropic Claude misuse report — ransomware development, North Korean employment fraud, extortion",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-110"
       },
       {
         "name": "Chat & Ask AI app — 300 million messages from 25 million users exposed via misconfigured Firebase",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-112"
       }
@@ -24700,73 +24700,73 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Multi-agent financial trading system flash crash — cascading autonomous failures",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-041"
       },
       {
         "name": "Apollo Research: frontier models demonstrate strategic deception to avoid shutdown",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-047"
       },
       {
         "name": "Anthropic Sleeper Agents paper — models trained to hide malicious behaviour",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-061"
       },
       {
         "name": "Claude hijacked for state-sponsored cyberattacks — 80-90% autonomous operation against 30 entities",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-083"
       },
       {
         "name": "Agent-in-the-Middle — A2A protocol spoofing via fake agent cards",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-090"
       },
       {
         "name": "Meta Rogue AI Agent Sev-1 — autonomous agent posts incorrect advice, exposing proprietary data",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-091"
       },
       {
         "name": "Claude AI jailbreak — Mexican government breach, 150GB data theft across 10 agencies",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-092"
       },
       {
         "name": "XBOW — first critical CVE discovered entirely by autonomous AI penetration testing agent",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-096"
       },
       {
         "name": "Clinejection — CI/CD pipeline compromise via Cline's issue triage bot, 4,000 machines infected",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-098"
       },
       {
         "name": "OpenClaw AI agent security crisis — 138 CVEs in 63 days, 341 malicious marketplace skills",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-102"
       },
       {
         "name": "Replit vibe coding meltdown — agent hallucinated data, deleted production database, hid mistakes",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-106"
       },
       {
         "name": "Anthropic Claude misuse report — ransomware development, North Korean employment fraud, extortion",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-110"
       }
@@ -25803,175 +25803,175 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Samsung employees leak source code and meeting notes via ChatGPT",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-001"
       },
       {
         "name": "OpenAI Redis caching bug exposes user conversation history",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-006"
       },
       {
         "name": "Indirect prompt injection in LLM email assistant via malicious email body",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-007"
       },
       {
         "name": "GitHub Copilot reproduces verbatim licensed code and embedded secrets",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-008"
       },
       {
         "name": "Microsoft Copilot for M365 — document exfiltration via indirect injection",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-010"
       },
       {
         "name": "GPT-4 system prompt extraction via jailbreak in production deployments",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-018"
       },
       {
         "name": "Slack AI indirect injection via channel content",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-024"
       },
       {
         "name": "GitHub Copilot Workspace prompt injection via repository content",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-025"
       },
       {
         "name": "DeepSeek AI database exposure — 1M+ chat logs publicly accessible",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-032"
       },
       {
         "name": "Cursor AI code agent leaking repository secrets via context window",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-034"
       },
       {
         "name": "NYC city chatbot tells businesses to break the law — fabricated legal guidance",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-052"
       },
       {
         "name": "Rabbit R1 hardcoded API keys — all user data accessible to anyone with firmware",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-054"
       },
       {
         "name": "Microsoft Recall screenshots everything — OS-level data retention without consent",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-055"
       },
       {
         "name": "Amazon Q developer leaks internal AWS data in enterprise environment",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-064"
       },
       {
         "name": "OpenAI GPT-4 system prompt extraction toolkit — systematic prompt leakage",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-065"
       },
       {
         "name": "Snowflake customer data breach via stolen credentials — 165+ organisations affected",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-070"
       },
       {
         "name": "DeepSeek R1 data exfiltration — Chinese AI model sends data to China-linked servers",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-072"
       },
       {
         "name": "ForcedLeak — Salesforce Agentforce indirect prompt injection exfiltrates CRM data",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-088"
       },
       {
         "name": "EchoLeak — zero-click Microsoft Copilot data exfiltration via email prompt injection",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-089"
       },
       {
         "name": "Meta Rogue AI Agent Sev-1 — autonomous agent posts incorrect advice, exposing proprietary data",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-091"
       },
       {
         "name": "Claude AI jailbreak — Mexican government breach, 150GB data theft across 10 agencies",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-092"
       },
       {
         "name": "Moltbook — vibe-coded social network exposes 1.5M API tokens and 35K emails",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-099"
       },
       {
         "name": "GeminiJack — zero-click Gemini Enterprise data exfiltration via shared Google Docs",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-101"
       },
       {
         "name": "ServiceNow BodySnatcher — hardcoded secret key enables full AI agent hijacking (CVE-2025-12420)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-104"
       },
       {
         "name": "Microsoft Copilot Studio agents public by default — unauthorized data exfiltration",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-105"
       },
       {
         "name": "ShadowLeak — ChatGPT Deep Research zero-click data exfiltration from connected services",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-107"
       },
       {
         "name": "Salesloft Drift OAuth breach — Chinese actor UNC6395 accesses 700+ Salesforce CRM environments",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-109"
       },
       {
         "name": "WhatsApp MCP tool poisoning — hidden instructions exfiltrate entire message history",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-111"
       },
       {
         "name": "Chat & Ask AI app — 300 million messages from 25 million users exposed via misconfigured Firebase",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-112"
       }
@@ -26987,49 +26987,49 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "DeepSeek AI database exposure — 1M+ chat logs publicly accessible",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-032"
       },
       {
         "name": "Italy Garante orders ChatGPT GDPR enforcement — consent and data minimization failures",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-035"
       },
       {
         "name": "Rabbit R1 hardcoded API keys — all user data accessible to anyone with firmware",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-054"
       },
       {
         "name": "Microsoft Recall screenshots everything — OS-level data retention without consent",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-055"
       },
       {
         "name": "Waymo autonomous vehicle data retention — 75 petabytes of driving footage with faces",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-066"
       },
       {
         "name": "Snowflake customer data breach via stolen credentials — 165+ organisations affected",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-070"
       },
       {
         "name": "Moltbook — vibe-coded social network exposes 1.5M API tokens and 35K emails",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-099"
       },
       {
         "name": "Chat & Ask AI app — 300 million messages from 25 million users exposed via misconfigured Firebase",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-112"
       }
@@ -27978,31 +27978,31 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Samsung employees leak source code and meeting notes via ChatGPT",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-001"
       },
       {
         "name": "Perplexity AI plagiarism — verbatim content reproduction without attribution",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-059"
       },
       {
         "name": "Amazon Q developer leaks internal AWS data in enterprise environment",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-064"
       },
       {
         "name": "Meta Llama model weights stolen and leaked — open-source model security incident",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-078"
       },
       {
         "name": "Lasso Security — 1,500+ HuggingFace API tokens exposed in code repositories",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-079"
       }
@@ -29036,73 +29036,73 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "ChatGPT indirect prompt injection via attacker-controlled web content",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-003"
       },
       {
         "name": "Hugging Face model repository pickle-based malware supply chain",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-009"
       },
       {
         "name": "RAG corpus poisoning — embedding-space manipulation to force retrieval",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-016"
       },
       {
         "name": "LAAF v2.0 — Empirical LPCI breakthrough rates of 67–100% across 5 production LLMs",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-021"
       },
       {
         "name": "Greshake et al. \"Not What You've Signed Up For\" indirect prompt injection paper",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-022"
       },
       {
         "name": "Nassi et al. \"ComPromptMized\" Morris II multi-agent worm",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-023"
       },
       {
         "name": "Adversarial embedding attacks on production RAG systems",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-046"
       },
       {
         "name": "Google AI Overviews recommends adding glue to pizza — RAG hallucination at search scale",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-056"
       },
       {
         "name": "GitHub Copilot Chat agent executes malicious code from repository context",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-067"
       },
       {
         "name": "Microsoft 365 Copilot XPIA phishing — attacker-shaped email summaries via hidden instructions",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-095"
       },
       {
         "name": "AI recommendation poisoning — hidden prompt injections in 'Summarize with AI' buttons across 31 companies",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-100"
       },
       {
         "name": "PoisonedRAG — 5 malicious texts in millions achieve 90% attack success rate on RAG systems",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-108"
       }
@@ -30072,67 +30072,67 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Meta Galactica model withdrawn after misinformation at launch",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2022,
         "incident_id": "INC-031"
       },
       {
         "name": "Hugging Face model card supply chain manipulation",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-038"
       },
       {
         "name": "NYT v OpenAI — copyright training data ruling implications",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-039"
       },
       {
         "name": "Uber ML platform data lineage audit — fragmented provenance across 30+ feature stores",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-042"
       },
       {
         "name": "Google Gemini AI image generator refuses to depict white people — overcorrected safety filters",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-051"
       },
       {
         "name": "Google AI Overviews recommends adding glue to pizza — RAG hallucination at search scale",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-056"
       },
       {
         "name": "Perplexity AI plagiarism — verbatim content reproduction without attribution",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-059"
       },
       {
         "name": "Anthropic Sleeper Agents paper — models trained to hide malicious behaviour",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-061"
       },
       {
         "name": "AI recruiting tool gender bias — Amazon scraps internal ML hiring tool",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-074"
       },
       {
         "name": "Tesla FSD phantom braking and obstacle hallucination — AI perception failures at highway speed",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-076"
       },
       {
         "name": "PoisonedRAG — 5 malicious texts in millions achieve 90% attack success rate on RAG systems",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-108"
       }
@@ -31094,19 +31094,19 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Uber ML platform data lineage audit — fragmented provenance across 30+ feature stores",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-042"
       },
       {
         "name": "Anthropic Sleeper Agents paper — models trained to hide malicious behaviour",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-061"
       },
       {
         "name": "AI recruiting tool gender bias — Amazon scraps internal ML hiring tool",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-074"
       }
@@ -32059,25 +32059,25 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Samsung employees leak source code and meeting notes via ChatGPT",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-001"
       },
       {
         "name": "GitHub Copilot reproduces verbatim licensed code and embedded secrets",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-008"
       },
       {
         "name": "Uber ML platform data lineage audit — fragmented provenance across 30+ feature stores",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-042"
       },
       {
         "name": "Amazon Q developer leaks internal AWS data in enterprise environment",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-064"
       }
@@ -33048,109 +33048,109 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "DeepSeek AI database exposure — 1M+ chat logs publicly accessible",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-032"
       },
       {
         "name": "Cursor AI code agent leaking repository secrets via context window",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-034"
       },
       {
         "name": "Rabbit R1 hardcoded API keys — all user data accessible to anyone with firmware",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-054"
       },
       {
         "name": "Amazon Q developer leaks internal AWS data in enterprise environment",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-064"
       },
       {
         "name": "OpenAI GPT-4 system prompt extraction toolkit — systematic prompt leakage",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-065"
       },
       {
         "name": "Snowflake customer data breach via stolen credentials — 165+ organisations affected",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-070"
       },
       {
         "name": "DeepSeek R1 data exfiltration — Chinese AI model sends data to China-linked servers",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-072"
       },
       {
         "name": "Lasso Security — 1,500+ HuggingFace API tokens exposed in code repositories",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-079"
       },
       {
         "name": "ShadowRay 2.0 botnet — self-spreading crypto-mining via Ray AI framework",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-084"
       },
       {
         "name": "ShadowMQ — critical RCE in Meta/NVIDIA/vLLM inference servers via pickle deserialization",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-085"
       },
       {
         "name": "LiteLLM PyPI supply chain backdoor — TeamPCP campaign compromises 3.4M daily downloads",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-093"
       },
       {
         "name": "Axios npm supply chain attack — North Korean Sapphire Sleet targets 70M weekly downloads",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-094"
       },
       {
         "name": "GlassWorm supply chain — 72 malicious VSCode extensions, 9 million installs",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-097"
       },
       {
         "name": "Moltbook — vibe-coded social network exposes 1.5M API tokens and 35K emails",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-099"
       },
       {
         "name": "ServiceNow BodySnatcher — hardcoded secret key enables full AI agent hijacking (CVE-2025-12420)",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-104"
       },
       {
         "name": "Microsoft Copilot Studio agents public by default — unauthorized data exfiltration",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-105"
       },
       {
         "name": "Salesloft Drift OAuth breach — Chinese actor UNC6395 accesses 700+ Salesforce CRM environments",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-109"
       },
       {
         "name": "Flowise CustomMCP code injection RCE — CVSS 10.0, 12,000 instances exposed",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-113"
       }
@@ -34080,55 +34080,55 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Multimodal indirect injection — image-embedded instructions in GPT-4V",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-015"
       },
       {
         "name": "AI voice deepfake CEO fraud — Hong Kong $25M loss",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-026"
       },
       {
         "name": "Clearview AI biometric bias — $50M class action settlement",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-036"
       },
       {
         "name": "NYT v OpenAI — copyright training data ruling implications",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-039"
       },
       {
         "name": "AI-generated Biden robocalls — deepfake voice used to suppress voter turnout",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-058"
       },
       {
         "name": "Apple Intelligence notification hallucinations — fabricated BBC news headlines",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-060"
       },
       {
         "name": "Tesla FSD phantom braking and obstacle hallucination — AI perception failures at highway speed",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-076"
       },
       {
         "name": "Midjourney Trump arrest deepfakes go viral — AI-generated images shape public perception",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-077"
       },
       {
         "name": "OpenAI Whisper hallucinating medical transcriptions — fabricated diagnoses in healthcare AI",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-080"
       }
@@ -34995,31 +34995,31 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Synthetic data re-identification — de-anonymized patients from synthetic health records",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-040"
       },
       {
         "name": "Stability AI synthetic CSAM generation — training data and output safety failures",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-049"
       },
       {
         "name": "AI-generated CSAM detection evasion — adversarial manipulation of content safety classifiers",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-063"
       },
       {
         "name": "LLM-generated malware evades endpoint detection — AI-assisted polymorphic code",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-075"
       },
       {
         "name": "Midjourney Trump arrest deepfakes go viral — AI-generated images shape public perception",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-077"
       }
@@ -35950,37 +35950,37 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "OpenAI Redis caching bug exposes user conversation history",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-006"
       },
       {
         "name": "OpenAI ChatGPT data retention GDPR challenge — right to erasure vs model training",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-050"
       },
       {
         "name": "Microsoft Recall screenshots everything — OS-level data retention without consent",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-055"
       },
       {
         "name": "Waymo autonomous vehicle data retention — 75 petabytes of driving footage with faces",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-066"
       },
       {
         "name": "EU GDPR enforcement: ChatGPT cannot correct factually wrong personal data",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-068"
       },
       {
         "name": "Replit vibe coding meltdown — agent hallucinated data, deleted production database, hid mistakes",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-106"
       }
@@ -36963,19 +36963,19 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "NYT v OpenAI — copyright training data ruling implications",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-039"
       },
       {
         "name": "Perplexity AI plagiarism — verbatim content reproduction without attribution",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-059"
       },
       {
         "name": "Meta Llama model weights stolen and leaked — open-source model security incident",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-078"
       }
@@ -37944,49 +37944,49 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Clearview AI biometric bias — $50M class action settlement",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-036"
       },
       {
         "name": "Scale AI / Sama contractor data exposure — third-party AI labeling workforce privacy violations",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-044"
       },
       {
         "name": "Stability AI synthetic CSAM generation — training data and output safety failures",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-049"
       },
       {
         "name": "AI-generated Biden robocalls — deepfake voice used to suppress voter turnout",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-058"
       },
       {
         "name": "AI-generated CSAM detection evasion — adversarial manipulation of content safety classifiers",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-063"
       },
       {
         "name": "EU AI Act first enforcement actions — prohibited AI practices take effect",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-071"
       },
       {
         "name": "AI recruiting tool gender bias — Amazon scraps internal ML hiring tool",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-074"
       },
       {
         "name": "Midjourney Trump arrest deepfakes go viral — AI-generated images shape public perception",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-077"
       }
@@ -38932,67 +38932,67 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Cursor AI code agent leaking repository secrets via context window",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-034"
       },
       {
         "name": "Italy Garante orders ChatGPT GDPR enforcement — consent and data minimization failures",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-035"
       },
       {
         "name": "Clearview AI biometric bias — $50M class action settlement",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-036"
       },
       {
         "name": "TikTok EU data localization enforcement — Project Clover + EUR 345M GDPR fine",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-043"
       },
       {
         "name": "Scale AI / Sama contractor data exposure — third-party AI labeling workforce privacy violations",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-044"
       },
       {
         "name": "OpenAI ChatGPT data retention GDPR challenge — right to erasure vs model training",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-050"
       },
       {
         "name": "Microsoft Recall screenshots everything — OS-level data retention without consent",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-055"
       },
       {
         "name": "Waymo autonomous vehicle data retention — 75 petabytes of driving footage with faces",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-066"
       },
       {
         "name": "EU GDPR enforcement: ChatGPT cannot correct factually wrong personal data",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-068"
       },
       {
         "name": "EU AI Act first enforcement actions — prohibited AI practices take effect",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-071"
       },
       {
         "name": "DeepSeek R1 data exfiltration — Chinese AI model sends data to China-linked servers",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-072"
       }
@@ -39912,43 +39912,43 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Italy Garante orders ChatGPT GDPR enforcement — consent and data minimization failures",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-035"
       },
       {
         "name": "Synthetic data re-identification — de-anonymized patients from synthetic health records",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-040"
       },
       {
         "name": "Microsoft Recall screenshots everything — OS-level data retention without consent",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-055"
       },
       {
         "name": "Character.AI teen suicide — AI companion encouraged self-harm",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-057"
       },
       {
         "name": "Waymo autonomous vehicle data retention — 75 petabytes of driving footage with faces",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-066"
       },
       {
         "name": "Perplexity Comet agentic browser — unauthorized Amazon customer account access",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-086"
       },
       {
         "name": "Chat & Ask AI app — 300 million messages from 25 million users exposed via misconfigured Firebase",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-112"
       }
@@ -40923,37 +40923,37 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Italy Garante orders ChatGPT GDPR enforcement — consent and data minimization failures",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-035"
       },
       {
         "name": "Synthetic data re-identification — de-anonymized patients from synthetic health records",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-040"
       },
       {
         "name": "TikTok EU data localization enforcement — Project Clover + EUR 345M GDPR fine",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-043"
       },
       {
         "name": "Scale AI / Sama contractor data exposure — third-party AI labeling workforce privacy violations",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-044"
       },
       {
         "name": "OpenAI ChatGPT data retention GDPR challenge — right to erasure vs model training",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-050"
       },
       {
         "name": "EU GDPR enforcement: ChatGPT cannot correct factually wrong personal data",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-068"
       }
@@ -41923,73 +41923,73 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Meta Galactica model withdrawn after misinformation at launch",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2022,
         "incident_id": "INC-031"
       },
       {
         "name": "Clearview AI biometric bias — $50M class action settlement",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-036"
       },
       {
         "name": "Stability AI synthetic CSAM generation — training data and output safety failures",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-049"
       },
       {
         "name": "Google Gemini AI image generator refuses to depict white people — overcorrected safety filters",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-051"
       },
       {
         "name": "NYC city chatbot tells businesses to break the law — fabricated legal guidance",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-052"
       },
       {
         "name": "Character.AI teen suicide — AI companion encouraged self-harm",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-057"
       },
       {
         "name": "Apple Intelligence notification hallucinations — fabricated BBC news headlines",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-060"
       },
       {
         "name": "EU AI Act first enforcement actions — prohibited AI practices take effect",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-071"
       },
       {
         "name": "OpenAI GPT-4o sycophancy — model agrees with users even when they are wrong",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-073"
       },
       {
         "name": "AI recruiting tool gender bias — Amazon scraps internal ML hiring tool",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-074"
       },
       {
         "name": "Tesla FSD phantom braking and obstacle hallucination — AI perception failures at highway speed",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-076"
       },
       {
         "name": "OpenAI Whisper hallucinating medical transcriptions — fabricated diagnoses in healthcare AI",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-080"
       }
@@ -42863,13 +42863,13 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Synthetic data re-identification — de-anonymized patients from synthetic health records",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-040"
       },
       {
         "name": "Uber ML platform data lineage audit — fragmented provenance across 30+ feature stores",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-042"
       }
@@ -43769,49 +43769,49 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Scale AI / Sama contractor data exposure — third-party AI labeling workforce privacy violations",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-044"
       },
       {
         "name": "AI-generated Biden robocalls — deepfake voice used to suppress voter turnout",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-058"
       },
       {
         "name": "Snowflake customer data breach via stolen credentials — 165+ organisations affected",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-070"
       },
       {
         "name": "DeepSeek R1 data exfiltration — Chinese AI model sends data to China-linked servers",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-072"
       },
       {
         "name": "ForcedLeak — Salesforce Agentforce indirect prompt injection exfiltrates CRM data",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-088"
       },
       {
         "name": "GeminiJack — zero-click Gemini Enterprise data exfiltration via shared Google Docs",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-101"
       },
       {
         "name": "ShadowLeak — ChatGPT Deep Research zero-click data exfiltration from connected services",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-107"
       },
       {
         "name": "Salesloft Drift OAuth breach — Chinese actor UNC6395 accesses 700+ Salesforce CRM environments",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-109"
       }
@@ -44777,25 +44777,25 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "TikTok EU data localization enforcement — Project Clover + EUR 345M GDPR fine",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-043"
       },
       {
         "name": "Waymo autonomous vehicle data retention — 75 petabytes of driving footage with faces",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-066"
       },
       {
         "name": "EU AI Act first enforcement actions — prohibited AI practices take effect",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-071"
       },
       {
         "name": "DeepSeek R1 data exfiltration — Chinese AI model sends data to China-linked servers",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-072"
       }
@@ -45980,37 +45980,37 @@ window.CROSSWALK_DATA = [
     "incidents": [
       {
         "name": "Italy Garante orders ChatGPT GDPR enforcement — consent and data minimization failures",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-035"
       },
       {
         "name": "NYT v OpenAI — copyright training data ruling implications",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-039"
       },
       {
         "name": "TikTok EU data localization enforcement — Project Clover + EUR 345M GDPR fine",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-043"
       },
       {
         "name": "OpenAI ChatGPT data retention GDPR challenge — right to erasure vs model training",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-050"
       },
       {
         "name": "EU GDPR enforcement: ChatGPT cannot correct factually wrong personal data",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-068"
       },
       {
         "name": "EU AI Act first enforcement actions — prohibited AI practices take effect",
-        "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-071"
       }

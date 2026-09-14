@@ -50,7 +50,7 @@
   "incidents": [
     {
       "name": "135,000+ OpenClaw instances internet-exposed with insecure defaults",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2026,
       "incident_id": "INC-127"
     }
