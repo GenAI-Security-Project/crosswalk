@@ -669,8 +669,8 @@ See:
 
 - [OWASP Top 10 for Agentic Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
 - [AIUC-1 Standard](https://www.aiuc-1.com)
-- [AIUC-1 Security Domain](https://www.aiuc-1.com/security)
-- [AIUC-1 Data & Privacy Domain](https://www.aiuc-1.com/data-and-privacy)
+- [AIUC-1 Security Domain](https://standard.aiuc-1.com/security)
+- [AIUC-1 Data & Privacy Domain](https://standard.aiuc-1.com/data-and-privacy)
 - [OWASP AIVSS](https://aivss.owasp.org)
 - [OWASP AI Testing Guide](https://owasp.org/www-project-ai-testing-guide/)
 - [OWASP NHI Top 10](https://owasp.org/www-project-non-human-identities-top-10/)
