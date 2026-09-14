@@ -829,4 +829,4 @@ reaches a shell, a browser, or a database.
 
 Maintained by the OWASP GenAI Data Security Initiative.
 Part of the OWASP GenAI Crosswalk:
-<https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk>
+<https://github.com/GenAI-Security-Project/crosswalk>
