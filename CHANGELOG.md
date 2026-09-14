@@ -9,6 +9,16 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Added
+
+- **OWASP AISVS 1.0** mapped to the Agentic Top 10 and DSGAI 2026 — 25 → 26 frameworks.
+  `agentic-top10/Agentic_AISVS.md` (83 rows, ASI01–ASI10) and `dsgai-2026/DSGAI_AISVS.md` (141 rows, DSGAI01–DSGAI21),
+  plus `data/frameworks/owasp-aisvs.json` holding all 191 AISVS 1.0 requirements (inventory `complete`, verified
+  against upstream `1.0/en`). Authored by Otto Sulin (AISVS co-lead) in
+  GenAI-Security-Project/GenAI-Data-Security-Initiative#64 and ported here.
+- LLM Top 10 × AISVS is **not** included: the source mapping targeted the 2025 list. Re-keying it to the 2026
+  entries (LLM08 and LLM10 were re-scoped) needs AISVS SME review and is left as follow-up.
+
 Next: npm publish to npmjs.com, custom domain (crosswalk.owasp.org), vendor integration packs, NeMo Guardrails configs.
 
 ---
