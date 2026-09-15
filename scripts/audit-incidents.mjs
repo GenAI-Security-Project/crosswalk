@@ -72,7 +72,7 @@ const rows = incidents.map((inc) => {
   const idInRefs = (inc.references || []).some((r) => /CVE-\d{4}-\d+|incidentdatabase|atlas\.mitre/i.test(r.url || ''));
   const pasted =
     /^(A |An )?(vulnerability|flaw|issue) (was )?(discovered|found|identified)/i.test(inc.description || '') ||
-    /allows? (an )?(unauthenticated |remote )?attackers? to/i.test(inc.description || '');
+    /\ballows? (an )?(unauthenticated |remote )?attackers? to\b/i.test(inc.description || '');
 
   return {
     id: inc.id,
