@@ -328,6 +328,6 @@
     "included": 52,
     "total": null,
     "note": "Every item in this registry is referenced by a mapping, so the registry was derived from the mappings rather than from the framework. It cannot contain controls this crosswalk has not mapped. Authoritative total not yet established.",
-    "source": "https://csrc.nist.gov/pubs/sp/800/218/a/final"
+    "source": "https://doi.org/10.6028/NIST.SP.800-218A"
   }
 }

@@ -275,7 +275,14 @@ function parseQuickRef(content) {
 }
 
 /**
- * Extract the body of a vulnerability section (### IDxx … until next ### or end).
+ * Extract the body of a vulnerability section (### IDxx … until the next ###,
+ * the next ## section, or end).
+ *
+ * Stopping at `## ` matters for the LAST entry in a file. Stopping only at
+ * `### ` let it run on through the file's closing sections, so trailing tables
+ * — a summary matrix, the changelog's `| Version | Date |` — were parsed as
+ * that entry's control mappings and then extracted into the registries as
+ * "controls" (DSGAI21 carried 19 such rows).
  */
 function extractSection(content, id) {
   const lines = content.split('\n');
@@ -285,7 +292,7 @@ function extractSection(content, id) {
   for (let i = 0; i < lines.length; i++) {
     if (idRegex.test(lines[i])) {
       start = i + 1;
-    } else if (start !== -1 && /^###\s/.test(lines[i])) {
+    } else if (start !== -1 && /^#{2,3}\s/.test(lines[i])) {
       return lines.slice(start, i).join('\n');
     }
   }

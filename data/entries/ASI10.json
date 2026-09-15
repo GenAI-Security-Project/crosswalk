@@ -1200,6 +1200,14 @@
       "LLM04",
       "LLM10"
     ],
+    "dsgai_2026": [
+      "DSGAI16",
+      "DSGAI03",
+      "DSGAI19",
+      "DSGAI02",
+      "DSGAI17",
+      "DSGAI06"
+    ],
     "agentic_top10": [
       "ASI01",
       "ASI02",
@@ -1210,14 +1218,6 @@
       "ASI07",
       "ASI08",
       "ASI09"
-    ],
-    "dsgai_2026": [
-      "DSGAI16",
-      "DSGAI03",
-      "DSGAI19",
-      "DSGAI02",
-      "DSGAI17",
-      "DSGAI06"
     ]
   },
   "changelog": [

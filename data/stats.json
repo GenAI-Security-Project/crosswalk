@@ -27,11 +27,11 @@
     }
   },
   "mappings": {
-    "total": 3803,
+    "total": 3781,
     "by_list": {
       "Agentic-Top10-2026": 993,
       "AST-Top10-2026": 36,
-      "DSGAI-2026": 1788,
+      "DSGAI-2026": 1766,
       "LLM-Top10-2026": 986
     }
   },
@@ -87,10 +87,10 @@
     ]
   },
   "controls": {
-    "total": 1563,
-    "registry_items": 1705,
+    "total": 1541,
+    "registry_items": 1683,
     "by_kind": {
-      "control": 1563,
+      "control": 1541,
       "layer": 10,
       "technique": 50,
       "threat-category": 6,

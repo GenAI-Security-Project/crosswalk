@@ -92,61 +92,20 @@
       "title": "Society (full domain)",
       "description": "Foundational",
       "kind": "control"
-    },
-    {
-      "control_id": "Primary DSGAI entries",
-      "title": "AIUC-1 Domain",
-      "description": "Status",
-      "kind": "control"
-    },
-    {
-      "control_id": "DSGAI02, DSGAI03, DSGAI06, DSGAI07, DSGAI08, DSGAI09, DSGAI14, DSGAI15, DSGAI18, DSGAI21",
-      "title": "A — Data & Privacy",
-      "kind": "control"
-    },
-    {
-      "control_id": "DSGAI01, DSGAI04, DSGAI05, DSGAI10, DSGAI12, DSGAI16, DSGAI17",
-      "title": "B — Security",
-      "kind": "control"
-    },
-    {
-      "control_id": "DSGAI05, DSGAI20",
-      "title": "C — Safety",
-      "kind": "control"
-    },
-    {
-      "control_id": "DSGAI12, DSGAI19",
-      "title": "D — Reliability",
-      "kind": "control"
-    },
-    {
-      "control_id": "DSGAI02, DSGAI06, DSGAI09, DSGAI13, DSGAI18, DSGAI20, DSGAI21",
-      "title": "E — Accountability",
-      "kind": "control"
-    },
-    {
-      "control_id": "DSGAI20",
-      "title": "F — Society",
-      "kind": "control"
-    },
-    {
-      "control_id": "Date",
-      "title": "Version",
-      "description": "Change",
-      "kind": "control"
-    },
-    {
-      "control_id": "2026-03-27",
-      "title": "1.0.0",
-      "description": "Initial release — full mapping DSGAI01–DSGAI21 to AIUC-1",
-      "kind": "control"
     }
   ],
   "inventory_completeness": {
     "status": "partial",
-    "included": 23,
+    "included": 14,
     "total": null,
     "note": "Every item in this registry is referenced by a mapping, so the registry was derived from the mappings rather than from the framework. It cannot contain controls this crosswalk has not mapped. Authoritative total not yet established.",
     "source": "https://www.ai-safety-institute.org/"
-  }
+  },
+  "changelog": [
+    {
+      "date": "2026-09-14",
+      "change": "Removed 9 items that were never controls: rows from the closing summary and changelog tables of dsgai-2026 mapping files (e.g. \"Date\", \"DSGAI entries most affected\"), parsed as DSGAI21 mappings because extractSection() ran past the last entry, then extracted here.",
+      "author": "OWASP GenAI Data Security Initiative"
+    }
+  ]
 }
