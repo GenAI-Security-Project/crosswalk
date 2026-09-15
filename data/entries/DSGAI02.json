@@ -836,6 +836,83 @@
       "notes": "Monitor AI data flows for undocumented data movement; alert on data transfers outside documented pipelines",
       "confidence": "unreviewed",
       "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "9.5.4",
+      "control_name": "Verify that secrets and credentials required by an agent at runtime are not exposed within the model's observable context, including the context wi...",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c95-agent-authorization-delegation-and-continuous-enforcement",
+      "notes": "Level 2. Secrets and credentials required at runtime not exposed within the model observable context including context window, system prompts and tool call parameters, the direct control",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "10.2.3",
+      "control_name": "Verify that MCP servers acting as OAuth 2.1 resource servers do not store or persist access tokens or user credentials.",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C10-MCP-Security.md#c102-authentication--authorization",
+      "notes": "Level 1. MCP servers acting as OAuth 2.1 resource servers do not store or persist access tokens or user credentials",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "9.4.1",
+      "control_name": "Verify that each agent instance has a unique cryptographic identity and authenticates as a first-class principal to downstream systems.",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c94-agent-and-orchestrator-identity",
+      "notes": "Level 2. Each agent instance has a unique cryptographic identity and authenticates as a first-class principal, so a shared credential is not the identity",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "10.2.7",
+      "control_name": "Verify that MCP servers do not pass through access tokens received from clients to downstream APIs.",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C10-MCP-Security.md#c102-authentication--authorization",
+      "notes": "Level 2. MCP servers do not pass through client access tokens to downstream APIs, blocking the confused-deputy propagation this risk describes",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "5.1.2",
+      "control_name": "Verify that AI agents in federated or multi-system deployments authenticate using short-lived, minimal-scoped, cryptographically signed tokens.",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C05-Access-Control-and-Identity.md#c51-authentication",
+      "notes": "Level 3. Short-lived, minimal-scoped, cryptographically signed tokens for agents in federated deployments, bounding the value of a leaked credential",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "9.4.3",
+      "control_name": "Verify that agent identity credentials rotate on a defined schedule.",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c94-agent-and-orchestrator-identity",
+      "notes": "Level 3. Agent identity credentials rotate on a defined schedule",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "9.2.9",
+      "control_name": "Verify that cryptographic key material or credentials used to issue approvals are isolated from the agent runtime.",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c92-high-impact-action-approval-and-irreversibility-controls",
+      "notes": "Level 3. Key material or credentials used to issue approvals isolated from the agent runtime",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     }
   ],
   "tools": [
@@ -908,49 +985,49 @@
   "incidents": [
     {
       "name": "DeepSeek AI database exposure — 1M+ chat logs publicly accessible",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2025,
       "incident_id": "INC-032"
     },
     {
       "name": "Italy Garante orders ChatGPT GDPR enforcement — consent and data minimization failures",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2025,
       "incident_id": "INC-035"
     },
     {
       "name": "Rabbit R1 hardcoded API keys — all user data accessible to anyone with firmware",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-054"
     },
     {
       "name": "Microsoft Recall screenshots everything — OS-level data retention without consent",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-055"
     },
     {
       "name": "Waymo autonomous vehicle data retention — 75 petabytes of driving footage with faces",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-066"
     },
     {
       "name": "Snowflake customer data breach via stolen credentials — 165+ organisations affected",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-070"
     },
     {
       "name": "Moltbook — vibe-coded social network exposes 1.5M API tokens and 35K emails",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2026,
       "incident_id": "INC-099"
     },
     {
       "name": "Chat & Ask AI app — 300 million messages from 25 million users exposed via misconfigured Firebase",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2026,
       "incident_id": "INC-112"
     }
@@ -969,7 +1046,8 @@
       "LLM03",
       "LLM05",
       "LLM04",
-      "LLM07"
+      "LLM07",
+      "LLM10"
     ]
   },
   "changelog": [

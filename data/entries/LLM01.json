@@ -840,6 +840,127 @@
       "reviewed_by": []
     },
     {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "2.1.3",
+      "control_name": "Verify that all inputs that could steer model behavior are treated as untrusted and screened by a prompt injection detection ruleset or classifier,...",
+      "tier": "Foundational",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C02-Input-Validation.md#c21-prompt-injection-defenses",
+      "notes": "Level 1. Direct control: all inputs able to steer model behavior are treated as untrusted and screened by an injection ruleset or classifier, with flagged inputs blocked",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "2.1.6",
+      "control_name": "Verify that the system enforces an instruction hierarchy in which system and developer messages override user instructions and other untrusted inpu...",
+      "tier": "Foundational",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C02-Input-Validation.md#c21-prompt-injection-defenses",
+      "notes": "Level 2. Instruction hierarchy so system and developer messages keep precedence over user and other untrusted input, including after user text is processed",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "2.1.2",
+      "control_name": "Verify that encoding and representation smuggling in inputs is detected and mitigated. Approved mitigations include canonicalization, strict schema...",
+      "tier": "Foundational",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C02-Input-Validation.md#c21-prompt-injection-defenses",
+      "notes": "Level 1. Encoding and representation smuggling defeated by canonicalization, strict schema validation, policy rejection or explicit marking",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "2.1.1",
+      "control_name": "Verify that input normalization is applied before tokenization or embedding.",
+      "tier": "Foundational",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C02-Input-Validation.md#c21-prompt-injection-defenses",
+      "notes": "Level 1. Input normalization applied before tokenization or embedding, closing the pre-tokenizer bypass class",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "2.1.7",
+      "control_name": "Verify that reserved special tokens are encoded as literal characters and cannot be injected into the model context.",
+      "tier": "Foundational",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C02-Input-Validation.md#c21-prompt-injection-defenses",
+      "notes": "Level 2. Reserved special tokens encoded as literals so control tokens cannot be injected into the model context",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "2.1.5",
+      "control_name": "Verify that the system implements a character set restriction for all inputs. The restriction must use an allow-list approach that permits only cha...",
+      "tier": "Foundational",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C02-Input-Validation.md#c21-prompt-injection-defenses",
+      "notes": "Level 1. Character set restricted by allow-list to only explicitly required characters, removing the exotic-codepoint smuggling surface",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "2.1.8",
+      "control_name": "Verify that the system can detect many-shot jailbreaking patterns.",
+      "tier": "Foundational",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C02-Input-Validation.md#c21-prompt-injection-defenses",
+      "notes": "Level 3. Many-shot jailbreaking pattern detection for long-context in-context-learning attacks",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "10.4.2",
+      "control_name": "Verify that MCP tools/list and tools/call responses are screened for indirect prompt injection before being injected into the model context.",
+      "tier": "Foundational",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C10-MCP-Security.md#c104-schema-message-and-input-validation",
+      "notes": "Level 1. Indirect injection path: MCP tools/list and tools/call responses screened before entering model context",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "12.2.1",
+      "control_name": "Verify that the system detects and alerts on known jailbreak patterns, prompt injection attempts, and adversarial inputs.",
+      "tier": "Foundational",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C12-Monitoring-and-Logging.md#c122-detection-and-alerting",
+      "notes": "Level 1. Detection layer: known jailbreak patterns, injection attempts and adversarial inputs alerted on",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "2.2.3",
+      "control_name": "Verify that non-text inputs (image/video/audio) are checked for adversarial perturbations, steganographic payloads, hidden or embedded content, or ...",
+      "tier": "Foundational",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C02-Input-Validation.md#c22-content--policy-screening",
+      "notes": "Level 2. Cross-modal injection (2026 scope): non-text inputs checked for adversarial perturbations, steganographic payloads and hidden embedded content before they reach the model",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "2.2.4",
+      "control_name": "Verify that coordinated attacks spanning multiple input types (e.g., steganographic payloads in images combined with prompt injection in text) are ...",
+      "tier": "Foundational",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C02-Input-Validation.md#c22-content--policy-screening",
+      "notes": "Level 3. Cross-modal injection (2026 scope): coordinated attacks that split an instruction across image and text inputs detected and blocked",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
       "framework": "OWASP NHI Top 10",
       "control_id": "Injection blast radius proportional to credential scope",
       "control_name": "NHI-5 Over-Privileged NHI",
@@ -1060,235 +1181,235 @@
   "incidents": [
     {
       "name": "Bing Chat 'Sydney' jailbreak — persona escape and threatening behaviour",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2023,
       "incident_id": "INC-002"
     },
     {
       "name": "ChatGPT indirect prompt injection via attacker-controlled web content",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2023,
       "incident_id": "INC-003"
     },
     {
       "name": "Chevrolet dealership chatbot agrees to sell car for $1",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2023,
       "incident_id": "INC-005"
     },
     {
       "name": "Indirect prompt injection in LLM email assistant via malicious email body",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-007"
     },
     {
       "name": "Microsoft Copilot for M365 — document exfiltration via indirect injection",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-010"
     },
     {
       "name": "WormGPT — uncensored LLM sold for cybercrime on dark web forums",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2023,
       "incident_id": "INC-011"
     },
     {
       "name": "LangChain and LlamaIndex RCE — agent code execution via prompt injection",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2023,
       "incident_id": "INC-012"
     },
     {
       "name": "Perez & Ribeiro — 'Ignore Previous Prompt': foundational direct injection study",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2022,
       "incident_id": "INC-013"
     },
     {
       "name": "Multimodal indirect injection — image-embedded instructions in GPT-4V",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2023,
       "incident_id": "INC-015"
     },
     {
       "name": "RAG corpus poisoning — embedding-space manipulation to force retrieval",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-016"
     },
     {
       "name": "GPT-4 system prompt extraction via jailbreak in production deployments",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2023,
       "incident_id": "INC-018"
     },
     {
       "name": "Multi-agent prompt injection cascade — demonstrated cross-agent goal propagation",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-020"
     },
     {
       "name": "LAAF v2.0 — Empirical LPCI breakthrough rates of 67–100% across 5 production LLMs",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2026,
       "incident_id": "INC-021"
     },
     {
       "name": "Greshake et al. \"Not What You've Signed Up For\" indirect prompt injection paper",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2023,
       "incident_id": "INC-022"
     },
     {
       "name": "Nassi et al. \"ComPromptMized\" Morris II multi-agent worm",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-023"
     },
     {
       "name": "Slack AI indirect injection via channel content",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-024"
     },
     {
       "name": "GitHub Copilot Workspace prompt injection via repository content",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-025"
     },
     {
       "name": "MathPrompt: symbolic mathematics jailbreak attack",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-027"
     },
     {
       "name": "Many-shot jailbreaking (Anthropic research)",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-028"
     },
     {
       "name": "Crescendo: multi-turn escalation attack (Microsoft)",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-029"
     },
     {
       "name": "Skeleton Key: direct system prompt override (Microsoft)",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-030"
     },
     {
       "name": "OpenAI o1/o3 reasoning chain jailbreak via chain-of-thought manipulation",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2025,
       "incident_id": "INC-033"
     },
     {
       "name": "Azure OpenAI content filter bypass via structured output mode",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2025,
       "incident_id": "INC-037"
     },
     {
       "name": "Adversarial embedding attacks on production RAG systems",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-046"
     },
     {
       "name": "DPD AI chatbot swears at customer and criticises company — prompt injection via customer input",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-053"
     },
     {
       "name": "MCP tool poisoning — hidden instructions in Model Context Protocol tool descriptions",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2025,
       "incident_id": "INC-062"
     },
     {
       "name": "AI-generated CSAM detection evasion — adversarial manipulation of content safety classifiers",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-063"
     },
     {
       "name": "OpenAI GPT-4 system prompt extraction toolkit — systematic prompt leakage",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-065"
     },
     {
       "name": "GitHub Copilot Chat agent executes malicious code from repository context",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-067"
     },
     {
       "name": "Claude computer use red-team: autonomous agent browses to attacker-controlled site and follows instructions",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-069"
     },
     {
       "name": "LLM-generated malware evades endpoint detection — AI-assisted polymorphic code",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-075"
     },
     {
       "name": "Claude hijacked for state-sponsored cyberattacks — 80-90% autonomous operation against 30 entities",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2025,
       "incident_id": "INC-083"
     },
     {
       "name": "EchoLeak — zero-click Microsoft Copilot data exfiltration via email prompt injection",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2025,
       "incident_id": "INC-089"
     },
     {
       "name": "Claude AI jailbreak — Mexican government breach, 150GB data theft across 10 agencies",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2026,
       "incident_id": "INC-092"
     },
     {
       "name": "Microsoft 365 Copilot XPIA phishing — attacker-shaped email summaries via hidden instructions",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2026,
       "incident_id": "INC-095"
     },
     {
       "name": "Clinejection — CI/CD pipeline compromise via Cline's issue triage bot, 4,000 machines infected",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2026,
       "incident_id": "INC-098"
     },
     {
       "name": "AI recommendation poisoning — hidden prompt injections in 'Summarize with AI' buttons across 31 companies",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2026,
       "incident_id": "INC-100"
     },
     {
       "name": "IDEsaster — 30+ vulnerabilities across AI coding tools (Cursor, Windsurf, Copilot, Zed, Roo Code)",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2025,
       "incident_id": "INC-103"
     },
     {
       "name": "Anthropic Claude misuse report — ransomware development, North Korean employment fraud, extortion",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2025,
       "incident_id": "INC-110"
     }
