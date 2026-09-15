@@ -744,4 +744,4 @@ can use AIMS documented information as evidence of EU AI Act compliance
 ---
 
 Maintained by the OWASP GenAI Data Security Initiative.
-Part of the OWASP GenAI Crosswalk: <https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk>
+Part of the OWASP GenAI Crosswalk: <https://github.com/GenAI-Security-Project/crosswalk>

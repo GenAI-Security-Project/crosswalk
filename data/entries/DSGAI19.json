@@ -759,6 +759,61 @@
       "notes": "Participate in information sharing arrangements for third-party AI data risks; share threat intelligence on data provider compromises",
       "confidence": "unreviewed",
       "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "1.2.3",
+      "control_name": "Verify that sensitive information in labels is redacted, anonymized, or encrypted before being used in any labeling artifact.",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c12-data-labeling-and-annotation-security",
+      "notes": "Level 2. Sensitive information in labels redacted, anonymized or encrypted before being used in any labeling artifact, the direct control for annotator exposure",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "1.2.1",
+      "control_name": "Verify that labeling platforms enforce access controls that restrict who can create, modify, or approve annotations.",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c12-data-labeling-and-annotation-security",
+      "notes": "Level 1. Labeling platforms enforce access controls restricting who can create, modify or approve annotations",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "1.3.4",
+      "control_name": "Verify that disallowed content is detected and removed before training.",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c13-training-data-quality-and-security-assurance",
+      "notes": "Level 2. Disallowed content detected and removed before training, reducing harmful content reaching human reviewers",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "1.2.2",
+      "control_name": "Verify that cryptographic integrity is applied to labeling artifacts.",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c12-data-labeling-and-annotation-security",
+      "notes": "Level 2. Cryptographic integrity applied to labeling artifacts",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "12.5.2",
+      "control_name": "Verify that all labeling activities are recorded in logs.",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C12-Monitoring-and-Logging.md#c125-training-data--model-lifecycle-audit",
+      "notes": "Level 1. All labeling activities recorded in logs",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     }
   ],
   "tools": [
@@ -811,49 +866,49 @@
   "incidents": [
     {
       "name": "Scale AI / Sama contractor data exposure — third-party AI labeling workforce privacy violations",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-044"
     },
     {
       "name": "AI-generated Biden robocalls — deepfake voice used to suppress voter turnout",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-058"
     },
     {
       "name": "Snowflake customer data breach via stolen credentials — 165+ organisations affected",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-070"
     },
     {
       "name": "DeepSeek R1 data exfiltration — Chinese AI model sends data to China-linked servers",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2025,
       "incident_id": "INC-072"
     },
     {
       "name": "ForcedLeak — Salesforce Agentforce indirect prompt injection exfiltrates CRM data",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2025,
       "incident_id": "INC-088"
     },
     {
       "name": "GeminiJack — zero-click Gemini Enterprise data exfiltration via shared Google Docs",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2026,
       "incident_id": "INC-101"
     },
     {
       "name": "ShadowLeak — ChatGPT Deep Research zero-click data exfiltration from connected services",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2025,
       "incident_id": "INC-107"
     },
     {
       "name": "Salesloft Drift OAuth breach — Chinese actor UNC6395 accesses 700+ Salesforce CRM environments",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2025,
       "incident_id": "INC-109"
     }
@@ -866,7 +921,8 @@
     "llm_top10": [
       "LLM02",
       "LLM04",
-      "LLM05"
+      "LLM05",
+      "LLM10"
     ],
     "agentic_top10": [
       "ASI10",
