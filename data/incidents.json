@@ -7079,12 +7079,12 @@
     },
     {
       "id": "INC-117",
-      "title": "Actively malicious OpenClaw skills in use by 6,000+ users, found by behavioural analysis",
+      "title": "Actively malicious OpenClaw skills in use by 6,000+ users, flagged by a skill scanner",
       "date": "2026-02",
       "year": 2026,
       "category": "real-world",
       "severity": "High",
-      "description": "On 4 February 2026 several published OpenClaw skills were found to be actively malicious while in use by more than 6,000 users. They were detected by behavioural analysis rather than by static review — the registry's own checks had cleared them.",
+      "description": "On 4 February 2026 Alice reported that its skill scanner, Caterpillar, had flagged several published OpenClaw skills it found to be actively malicious, including skills in use by more than 6,000 OpenClaw users when they were caught. Caterpillar statically inspects skill logic and configurations for injection paths, unsafe tool access and obfuscated behaviour. The release does not say how the skills were published or whether any registry review had examined them.",
       "owasp_entries": [
         "AST01",
         "AST08"
@@ -7094,18 +7094,18 @@
           "layer": "L3",
           "label": "Agent Frameworks",
           "role": "origin",
-          "notes": "Published skills cleared by registry checks"
+          "notes": "Malicious skills published to the OpenClaw skill ecosystem"
         },
         {
           "layer": "L5",
           "label": "Evaluation & Observability",
           "role": "blind-spot",
-          "notes": "Detection came from runtime behaviour, not from review at publication"
+          "notes": "Skills were in use by 6,000+ users before a scanner flagged them"
         }
       ],
-      "attack_vector": "Malicious skills published to a registry and installed by users before any behavioural signal surfaced",
+      "attack_vector": "Malicious skills published to the OpenClaw skill ecosystem and installed by users",
       "affected": "OpenClaw users — 6,000+ installations",
-      "impact": "Malicious skill execution in user environments; publication-time review did not catch it",
+      "impact": "Malicious skill execution in the environments of 6,000+ users before the skills were flagged",
       "mitigations": [
         "Runtime behavioural monitoring of skill execution",
         "Post-publication continuous rescanning"
@@ -7118,7 +7118,8 @@
         },
         {
           "source": "research",
-          "id": "Alice — malicious OpenClaw skills, behavioural detection (2026-02-04)"
+          "id": "Alice — Caterpillar release: malicious OpenClaw skills used by 6,000+ users (2026-02-04)",
+          "url": "https://www.prnewswire.com/news-releases/alice-releases-caterpillar-after-catching-malicious-openclaw-skills-used-by-6-000-users-302679381.html"
         }
       ],
       "references": [
@@ -7126,6 +7127,11 @@
           "title": "OWASP Agentic Skills Top 10 — incident timeline",
           "url": "https://owasp.org/www-project-agentic-skills-top-10/",
           "type": "research"
+        },
+        {
+          "title": "Alice Releases Caterpillar After Catching Malicious OpenClaw Skills Used by 6,000+ Users",
+          "url": "https://www.prnewswire.com/news-releases/alice-releases-caterpillar-after-catching-malicious-openclaw-skills-used-by-6-000-users-302679381.html",
+          "type": "vendor"
         }
       ],
       "tags": [
@@ -7133,7 +7139,7 @@
         "ast01",
         "ast08",
         "openclaw",
-        "behavioural-detection"
+        "skill-scanner"
       ]
     },
     {
@@ -7209,12 +7215,12 @@
     },
     {
       "id": "INC-119",
-      "title": "280+ leaky skills exposing API keys and PII through over-permissioning",
+      "title": "283 leaky skills pass API keys and PII through the LLM context in plaintext",
       "date": "2026-02",
       "year": 2026,
       "category": "research-demonstrated",
       "severity": "High",
-      "description": "Published alongside ToxicSkills on 5 February 2026, Snyk's \"280+ Leaky Skills\" showed credential exposure at scale through over-permissioned skills on OpenClaw and ClawHub — skills granted broader access than their function required, then leaking API keys and PII through it.",
+      "description": "Published by Snyk on 5 February 2026 as \"280+ Leaky Skills\". Scanning all 3,984 skills on ClawHub, Snyk found 283 (an estimated 7.1% of the registry) with critical flaws that expose sensitive credentials. They are not malware: they are functional, popular skills whose instructions make the agent pass API keys, passwords and even credit card numbers through the LLM's context window and output logs in plaintext — for example by telling the agent to echo a secret, or by exporting session logs without redaction.",
       "owasp_entries": [
         "AST03"
       ],
@@ -7223,7 +7229,7 @@
           "layer": "L3",
           "label": "Agent Frameworks",
           "role": "origin",
-          "notes": "Skills declare more permission than their function needs"
+          "notes": "Skill instructions direct the agent to handle secrets in plaintext"
         },
         {
           "layer": "L6",
@@ -7232,7 +7238,7 @@
           "notes": "API key and PII exposure through the granted scope"
         }
       ],
-      "attack_vector": "Over-broad skill permissions turn ordinary skill execution into credential and PII disclosure",
+      "attack_vector": "Skill instructions route secrets and PII through the LLM context, conversation history and logs in plaintext",
       "affected": "OpenClaw / ClawHub — 280+ skills",
       "impact": "API key and PII exposure at ecosystem scale",
       "mitigations": [
@@ -7247,13 +7253,19 @@
         },
         {
           "source": "research",
-          "id": "Snyk — 280+ Leaky Skills: How OpenClaw & ClawHub Are Exposing API Keys and PII (2026-02-05)"
+          "id": "Snyk — 280+ Leaky Skills: How OpenClaw & ClawHub Are Exposing API Keys and PII (2026-02-05)",
+          "url": "https://snyk.io/blog/openclaw-skills-credential-leaks-research/"
         }
       ],
       "references": [
         {
           "title": "OWASP Agentic Skills Top 10 — incident timeline",
           "url": "https://owasp.org/www-project-agentic-skills-top-10/",
+          "type": "research"
+        },
+        {
+          "title": "280+ Leaky Skills: How OpenClaw & ClawHub Are Exposing API Keys and PII",
+          "url": "https://snyk.io/blog/openclaw-skills-credential-leaks-research/",
           "type": "research"
         }
       ],
@@ -7574,12 +7586,12 @@
     },
     {
       "id": "INC-124",
-      "title": "ClawJacked — localhost WebSocket hijack of OpenClaw instances (CVE-2026-28363, CVSS 9.9)",
+      "title": "ClawJacked — any website could take over a local OpenClaw agent via its localhost WebSocket",
       "date": "2026-02",
       "year": 2026,
       "category": "real-world",
       "severity": "Critical",
-      "description": "Disclosed by Oasis Security on 26 February 2026. Malicious websites could brute-force localhost WebSocket connections with no rate limiting to silently hijack local OpenClaw instances, register new devices without user prompts, and exfiltrate data through the agent's existing integrations. OpenClaw patched within 24 hours in version 2026.2.25.",
+      "description": "Disclosed by Oasis Security on 26 February 2026. A malicious website could open a WebSocket to the OpenClaw gateway on localhost and brute-force the gateway password at hundreds of attempts per second, because the gateway's rate limiter exempted localhost connections. Once authenticated it registered as a trusted device — the gateway auto-approved localhost pairings with no user prompt — giving full control of the agent and its connected nodes and integrations. The OpenClaw team classified the issue High severity and shipped a fix in under 24 hours, in version 2026.2.25. No CVE identifier is given in the disclosure.",
       "owasp_entries": [
         "AST06",
         "AST07"
@@ -7604,7 +7616,7 @@
           "notes": "Exfiltration through the agent's existing integrations"
         }
       ],
-      "attack_vector": "Browser-originated brute force against an unauthenticated, unrate-limited localhost WebSocket",
+      "attack_vector": "Browser-originated brute force of the gateway password over a localhost WebSocket exempt from rate limiting",
       "affected": "OpenClaw before 2026.2.25",
       "impact": "Silent takeover of a local agent instance and data exfiltration through its connected integrations",
       "mitigations": [
@@ -7619,17 +7631,13 @@
           "url": "https://owasp.org/www-project-agentic-skills-top-10/"
         },
         {
-          "source": "CVE",
-          "id": "CVE-2026-28363",
-          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-28363"
-        },
-        {
           "source": "campaign",
           "id": "ClawJacked"
         },
         {
           "source": "research",
-          "id": "Oasis Security — ClawJacked disclosure (2026-02-26)"
+          "id": "Oasis Security — ClawJacked disclosure (2026-02-26)",
+          "url": "https://www.oasis.security/blog/openclaw-vulnerability"
         }
       ],
       "control_failures": [
@@ -7655,13 +7663,17 @@
           "title": "OWASP Agentic Skills Top 10 — incident timeline",
           "url": "https://owasp.org/www-project-agentic-skills-top-10/",
           "type": "research"
+        },
+        {
+          "title": "OpenClaw Vulnerability: Website-to-Local Agent Takeover",
+          "url": "https://www.oasis.security/blog/openclaw-vulnerability",
+          "type": "disclosure"
         }
       ],
       "tags": [
         "agentic-skills",
         "ast06",
         "ast07",
-        "cve",
         "openclaw",
         "clawjacked",
         "websocket",
@@ -7670,12 +7682,12 @@
     },
     {
       "id": "INC-125",
-      "title": "Vidar infostealer variants targeting OpenClaw agent identity files",
+      "title": "Infostealer infection exfiltrates OpenClaw agent identity and memory files",
       "date": "2026-02",
       "year": 2026,
       "category": "real-world",
       "severity": "High",
-      "description": "Hudson Rock identified Vidar infostealer variants specifically targeting OpenClaw agent identity files — openclaw.json, device.json, soul.md and memory.md. Commodity infostealer tooling had been retargeted at agent identity and memory as an asset class in its own right.",
+      "description": "On 16 February 2026 Hudson Rock reported a live infection in which an infostealer exfiltrated a victim's OpenClaw configuration environment: openclaw.json (the gateway authentication token), device.json (the device's cryptographic keys), soul.md and memory files such as AGENTS.md and MEMORY.md. Hudson Rock states the data was not captured by a specialised OpenClaw module; a broad file-grabbing routine swept for sensitive file extensions and directory names such as .openclaw. Hudson Rock's CTO told The Hacker News the stealer was likely a variant of Vidar. Hudson Rock expects dedicated AI-stealer modules to follow.",
       "owasp_entries": [
         "AST01",
         "AST06"
@@ -7694,9 +7706,9 @@
           "notes": "Agent identity and memory files exfiltrated"
         }
       ],
-      "attack_vector": "Infostealer malware retargeted to collect agent identity, device and memory files",
+      "attack_vector": "Generic infostealer file-grabbing that sweeps sensitive extensions and directories, capturing agent identity, device and memory files",
       "affected": "OpenClaw installations on compromised hosts",
-      "impact": "Agent identity and memory theft, enabling impersonation and context poisoning",
+      "impact": "Theft of the gateway token, device keys, and agent identity and memory files, enabling impersonation and exposure of the user's personal context",
       "mitigations": [
         "Treat agent identity files as secrets",
         "Encrypt agent state at rest",
@@ -7710,7 +7722,8 @@
         },
         {
           "source": "research",
-          "id": "Hudson Rock — Vidar variants targeting OpenClaw identity files (2026-02)"
+          "id": "Hudson Rock — Real-World Infostealer Infection Targeting OpenClaw Configurations (2026-02-16)",
+          "url": "https://www.infostealers.com/article/hudson-rock-identifies-real-world-infostealer-infection-targeting-openclaw-configurations/"
         }
       ],
       "references": [
@@ -7718,6 +7731,16 @@
           "title": "OWASP Agentic Skills Top 10 — incident timeline",
           "url": "https://owasp.org/www-project-agentic-skills-top-10/",
           "type": "research"
+        },
+        {
+          "title": "Hudson Rock Identifies Real-World Infostealer Infection Targeting OpenClaw Configurations",
+          "url": "https://www.infostealers.com/article/hudson-rock-identifies-real-world-infostealer-infection-targeting-openclaw-configurations/",
+          "type": "research"
+        },
+        {
+          "title": "Infostealer Steals OpenClaw AI Agent Configuration Files and Gateway Tokens",
+          "url": "https://thehackernews.com/2026/02/infostealer-steals-openclaw-ai-agent.html",
+          "type": "news"
         }
       ],
       "tags": [

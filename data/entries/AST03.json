@@ -87,7 +87,7 @@
       "incident_id": "INC-118"
     },
     {
-      "name": "280+ leaky skills exposing API keys and PII through over-permissioning",
+      "name": "283 leaky skills pass API keys and PII through the LLM context in plaintext",
       "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2026,
       "incident_id": "INC-119"
