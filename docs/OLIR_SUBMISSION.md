@@ -13,7 +13,11 @@ machine-readable mappings between a NIST Focal Document and someone else's
 Reference Document. An accepted entry sits in a government-referenced registry
 that other projects then cite.
 
-No competing GenAI crosswalk currently appears there. That is the opportunity.
+OWASP GenAI material is already there, submitted by developers who are not the document owner: entry 198
+maps the OWASP Top 10 for LLM Applications (2025) to CSF 2.0 (Final, posted 2026-05-08), and entry 229 maps
+OWASP AISVS 1.0 to SP 800-53 Rev. 5.2.0 (Final, posted 2026-08-14), both checked on 2026-09-14 against the
+NIST OLIR catalogue. A submission from this project would be a later, owner-side entry, not the first; see
+`docs/COMPETITIVE_ANALYSIS.md` (NIST OLIR section).
 
 > NIST IR 8278A Rev. 1, *National Online Informative References (OLIR) Program:
 > Submission Guidance for OLIR Developers*, February 2024.
