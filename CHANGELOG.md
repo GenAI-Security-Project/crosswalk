@@ -9,6 +9,19 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Added
+
+- **OWASP AISVS 1.0** mapped to all three source lists — 25 → 26 frameworks.
+  `llm-top10/LLM_AISVS.md` (82 rows, LLM01–LLM10), `agentic-top10/Agentic_AISVS.md` (83 rows, ASI01–ASI10) and
+  `dsgai-2026/DSGAI_AISVS.md` (141 rows, DSGAI01–DSGAI21), plus `data/frameworks/owasp-aisvs.json` holding all 191
+  AISVS 1.0 requirements (inventory `complete`, verified against upstream `1.0/en`). Authored by Otto Sulin (AISVS
+  co-lead) in GenAI-Security-Project/GenAI-Data-Security-Initiative#64 and ported here.
+- The LLM file was authored against the 2025 list and re-keyed to the LLM Top 10 2026 per `MIGRATION.md`: sections
+  renumbered and renamed, cross-references renumbered, severities re-baselined, and 8 requirements added for the 2026
+  scope changes (LLM01 cross-modal 2.2.3/2.2.4, LLM04 artifact provenance 3.1.1/3.1.3, LLM05 fine-tuning subversion
+  6.1.2/3.5.1, LLM08 hidden context 10.2.4, LLM10 generated code 9.3.7). AISVS has no requirement for scanning
+  generated code itself; the LLM10 section says so.
+
 Next: npm publish to npmjs.com, custom domain (crosswalk.owasp.org), vendor integration packs, NeMo Guardrails configs.
 
 ---
@@ -983,6 +996,6 @@ Quick reference:
 ---
 
 *Part of the
-[OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk)
+[OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/crosswalk)
 —
 maintained by the [OWASP GenAI Data Security Initiative](https://genai.owasp.org)*

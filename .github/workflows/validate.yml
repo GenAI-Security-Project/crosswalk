@@ -114,8 +114,13 @@ jobs:
       # And its output must match what is committed, so a hand-edit to a
       # generated file, or a source change that was never regenerated, fails
       # here rather than shipping.
+      # Every generated artefact is listed, and the generator is timestamp-free
+      # by design (T-ENG03) — a run-date in any header would fail this on day two.
       - name: Assert generated output is current
-        run: git diff --exit-code -- data/entries docs/data.js docs/incidents.js
+        run: >-
+          git diff --exit-code --
+          data/entries data/backlinks.json
+          docs/data.js docs/backlinks.js docs/frameworks-registry.js docs/incidents.js
 
   unit-tests:
     name: Unit tests

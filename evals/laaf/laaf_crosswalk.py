@@ -196,7 +196,7 @@ def render_markdown(results, stages):
     lines.append("# LAAF v2.0 — LPCI Crosswalk Assessment Report")
     lines.append("")
     lines.append(f"> Generated {today} · OWASP GenAI Crosswalk + LAAF v2.0")
-    lines.append("> Crosswalk: https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk")
+    lines.append("> Crosswalk: https://github.com/GenAI-Security-Project/crosswalk")
     lines.append("> LAAF: https://github.com/qorvexconsulting1/laaf-V2.0")
     lines.append("")
     lines.append("---")
@@ -330,7 +330,7 @@ def render_markdown(results, stages):
         for s in failed_stages:
             owasp_set.update(STAGE_MAP[s]["owasp"])
         for eid in sorted(owasp_set):
-            lines.append(f"- [{eid}](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/entries/{eid}.json) — crosswalk entry with framework controls")
+            lines.append(f"- [{eid}](https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/entries/{eid}.json) — crosswalk entry with framework controls")
 
     lines.append("")
     lines.append("---")

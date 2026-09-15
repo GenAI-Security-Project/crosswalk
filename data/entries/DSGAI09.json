@@ -86,7 +86,7 @@
     {
       "framework": "MITRE ATLAS",
       "control_id": "AML.T0025",
-      "control_name": "Exfiltrate via Cyber Means",
+      "control_name": "Exfiltration via Cyber Means",
       "tier": "Hardening",
       "scope": "Both",
       "notes": "Sensitive content extracted from multimodal inputs (OCR, transcription) transmitted through standard exfiltration paths",
@@ -106,7 +106,7 @@
     {
       "framework": "MITRE ATLAS",
       "control_id": "AML.T0024.000",
-      "control_name": "Membership Inference",
+      "control_name": "Infer Training Data Membership",
       "tier": "Hardening",
       "scope": "Both",
       "notes": "Sensitive multimodal content in training data confirmed through membership inference queries",
@@ -770,6 +770,61 @@
       "notes": "Deploy detection for IP exfiltration attempts; monitor model weight access and download patterns",
       "confidence": "unreviewed",
       "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "2.2.3",
+      "control_name": "Verify that non-text inputs (image/video/audio) are checked for adversarial perturbations, steganographic payloads, hidden or embedded content, or ...",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C02-Input-Validation.md#c22-content--policy-screening",
+      "notes": "Level 2. Non-text inputs including image, video and audio checked for adversarial perturbations, steganographic payloads, hidden or embedded content and known attack patterns, the direct control for the modality gap this risk names",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "2.2.4",
+      "control_name": "Verify that coordinated attacks spanning multiple input types (e.g., steganographic payloads in images combined with prompt injection in text) are ...",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C02-Input-Validation.md#c22-content--policy-screening",
+      "notes": "Level 3. Coordinated attacks spanning multiple input types detected and blocked",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "7.3.4",
+      "control_name": "Verify that model outputs are checked for hidden, encoded, or misleading content created through homoglyphs, formatting, metadata, or structured fi...",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C07-Model-Behavior.md#c73-output-safety",
+      "notes": "Level 3. Outputs checked for hidden, encoded or misleading content created through homoglyphs, formatting, metadata or structured fields",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "8.2.1",
+      "control_name": "Verify that sensitive fields are detected before embedding and are masked, tokenized, or dropped.",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c82-embedding-sanitization--validation",
+      "notes": "Level 1. Sensitive fields detected before embedding and masked, tokenized or dropped, applied to extracted multimodal content",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "5.2.4",
+      "control_name": "Verify that post-inference filtering mechanisms prevent responses from including data that the requester is not authorized to receive.",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C05-Access-Control-and-Identity.md#c52-ai-resource-authorization--classification",
+      "notes": "Level 2. Post-inference filtering prevents responses including data the requester is not authorized to receive",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     }
   ],
   "tools": [
@@ -842,55 +897,55 @@
   "incidents": [
     {
       "name": "Multimodal indirect injection — image-embedded instructions in GPT-4V",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2023,
       "incident_id": "INC-015"
     },
     {
       "name": "AI voice deepfake CEO fraud — Hong Kong $25M loss",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-026"
     },
     {
       "name": "Clearview AI biometric bias — $50M class action settlement",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2025,
       "incident_id": "INC-036"
     },
     {
       "name": "NYT v OpenAI — copyright training data ruling implications",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2025,
       "incident_id": "INC-039"
     },
     {
       "name": "AI-generated Biden robocalls — deepfake voice used to suppress voter turnout",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-058"
     },
     {
       "name": "Apple Intelligence notification hallucinations — fabricated BBC news headlines",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-060"
     },
     {
       "name": "Tesla FSD phantom braking and obstacle hallucination — AI perception failures at highway speed",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-076"
     },
     {
       "name": "Midjourney Trump arrest deepfakes go viral — AI-generated images shape public perception",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2023,
       "incident_id": "INC-077"
     },
     {
       "name": "OpenAI Whisper hallucinating medical transcriptions — fabricated diagnoses in healthcare AI",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-080"
     }
@@ -904,7 +959,8 @@
       "LLM02",
       "LLM05",
       "LLM09",
-      "LLM04"
+      "LLM04",
+      "LLM10"
     ],
     "agentic_top10": [
       "ASI03",

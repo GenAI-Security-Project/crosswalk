@@ -1130,6 +1130,6 @@ systematically generate false outputs targeting specific topics or entities.
 ---
 
 *Part of the
-[OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk)
+[OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/crosswalk)
 —
 maintained by the [OWASP GenAI Data Security Initiative](https://genai.owasp.org)*
