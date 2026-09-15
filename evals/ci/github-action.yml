@@ -8,12 +8,16 @@
 #
 # Configuration:
 #   1. Add OPENAI_API_KEY to repository secrets (Settings → Secrets → Actions)
-#   2. Set EVAL_MODEL_NAME to the model your application uses
+#   2. Set repository variables (Settings → Secrets and variables → Actions → Variables):
+#        EVAL_MODEL_TYPE   generator type your application uses (e.g. openai, huggingface, rest)
+#        EVAL_MODEL_NAME   deployment / model name
+#        EVAL_ENDPOINT     OpenAI-compatible chat endpoint (PyRIT scripts)
+#      No default target is shipped — the workflow fails early if these are unset.
 #   3. Adjust paths in the trigger to match your LLM code locations
 #   4. Copy the evals/ folder from OWASP GenAI Crosswalk into your repo
 #      (or reference it as a git submodule)
 #
-# Cost estimate: ~$0.10–0.50 per full suite run with gpt-4o-mini
+# Cost estimate: roughly $0.10–0.50 per full suite run with a small hosted model
 # ──────────────────────────────────────────────────────────────────────────────
 
 name: GenAI Security Evaluation
@@ -37,13 +41,15 @@ on:
         required: false
         default: ''
       model:
-        description: 'Model name override'
+        description: 'Model name override (defaults to the EVAL_MODEL_NAME repository variable)'
         required: false
-        default: 'gpt-4o-mini'
+        default: ''
 
 env:
-  EVAL_MODEL_TYPE: openai
-  EVAL_MODEL_NAME: ${{ github.event.inputs.model || 'gpt-4o-mini' }}
+  # Supplied by repository variables — see the configuration notes above.
+  EVAL_MODEL_TYPE: ${{ vars.EVAL_MODEL_TYPE }}
+  EVAL_MODEL_NAME: ${{ github.event.inputs.model || vars.EVAL_MODEL_NAME }}
+  EVAL_ENDPOINT: ${{ vars.EVAL_ENDPOINT }}
   RESULTS_DIR: eval-results
 
 jobs:
@@ -55,6 +61,13 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+
+      - name: Require a configured target
+        run: |
+          if [ -z "$EVAL_MODEL_TYPE" ] || [ -z "$EVAL_MODEL_NAME" ]; then
+            echo "::error::EVAL_MODEL_TYPE / EVAL_MODEL_NAME are not set. Configure repository variables — no default target is shipped."
+            exit 1
+          fi
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -153,6 +166,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Require a configured target
+        run: |
+          if [ -z "$EVAL_MODEL_TYPE" ] || [ -z "$EVAL_MODEL_NAME" ]; then
+            echo "::error::EVAL_MODEL_TYPE / EVAL_MODEL_NAME are not set. Configure repository variables — no default target is shipped."
+            exit 1
+          fi
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -165,19 +185,22 @@ jobs:
       - name: Run LLM01 — Prompt Injection (PyRIT)
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_MODEL: ${{ env.EVAL_MODEL_NAME }}
+          EVAL_MODEL_NAME: ${{ env.EVAL_MODEL_NAME }}
+          EVAL_ENDPOINT: ${{ env.EVAL_ENDPOINT }}
         run: python evals/pyrit/llm01_prompt_injection.py
 
       - name: Run DSGAI04 — RAG Poisoning (PyRIT)
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_MODEL: ${{ env.EVAL_MODEL_NAME }}
+          EVAL_MODEL_NAME: ${{ env.EVAL_MODEL_NAME }}
+          EVAL_ENDPOINT: ${{ env.EVAL_ENDPOINT }}
         run: python evals/pyrit/dsgai04_rag_poisoning.py
 
       - name: Run ASI01 — Agent Goal Hijack (PyRIT)
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_MODEL: ${{ env.EVAL_MODEL_NAME }}
+          EVAL_MODEL_NAME: ${{ env.EVAL_MODEL_NAME }}
+          EVAL_ENDPOINT: ${{ env.EVAL_ENDPOINT }}
         run: python evals/pyrit/asi01_goal_hijack.py
 
   # ── LAAF v2.0 evaluation (LPCI — memory persistence, layered encoding) ───────
@@ -190,6 +213,13 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+
+      - name: Require a configured target
+        run: |
+          if [ -z "$EVAL_MODEL_TYPE" ] || [ -z "$EVAL_MODEL_NAME" ]; then
+            echo "::error::EVAL_MODEL_TYPE / EVAL_MODEL_NAME are not set. Configure repository variables — no default target is shipped."
+            exit 1
+          fi
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -211,7 +241,7 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
           laaf scan \
-            --target openai \
+            --target ${{ env.EVAL_MODEL_TYPE }} \
             --model ${{ env.EVAL_MODEL_NAME }} \
             --stages S1 \
             --config-dir evals/laaf/stage_configs/ \
@@ -226,7 +256,7 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
           laaf scan \
-            --target openai \
+            --target ${{ env.EVAL_MODEL_TYPE }} \
             --model ${{ env.EVAL_MODEL_NAME }} \
             --stages S2 \
             --config-dir evals/laaf/stage_configs/ \
@@ -241,7 +271,7 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
           laaf scan \
-            --target openai \
+            --target ${{ env.EVAL_MODEL_TYPE }} \
             --model ${{ env.EVAL_MODEL_NAME }} \
             --stages S3 S4 \
             --config-dir evals/laaf/stage_configs/ \
@@ -256,7 +286,7 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
           laaf scan \
-            --target openai \
+            --target ${{ env.EVAL_MODEL_TYPE }} \
             --model ${{ env.EVAL_MODEL_NAME }} \
             --stages S5 \
             --config-dir evals/laaf/stage_configs/ \
@@ -271,7 +301,7 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
           laaf scan \
-            --target openai \
+            --target ${{ env.EVAL_MODEL_TYPE }} \
             --model ${{ env.EVAL_MODEL_NAME }} \
             --stages S6 \
             --config-dir evals/laaf/stage_configs/ \
