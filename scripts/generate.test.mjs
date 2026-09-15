@@ -139,3 +139,26 @@ test('webapp bundles stay in step with the entry files', () => {
   const onDisk = fs.readdirSync(ENTRIES).filter((f) => f.endsWith('.json')).length;
   assert.equal(bundled.length, onDisk, 'docs/data.js and data/entries hold different entry counts');
 });
+
+test('no mapping row or registry item comes from a table outside an entry section', () => {
+  // extractSection() once ran past the last entry in a file, so the closing
+  // summary matrix and the changelog's `| Version | Date |` rows were stored as
+  // DSGAI21 control mappings — ids like "Date", "2026-03-27" and
+  // "DSGAI02, DSGAI09, DSGAI14" — and then extracted into the registries.
+  const NOT_A_CONTROL = /^(date|version|change|author|primary .+ entries|.+ entries most affected|\d{4}-\d{2}-\d{2}|((LLM|ASI|DSGAI|AST)\d{2}(,\s*)?)+)$/i;
+  const leaked = [];
+  for (const f of fs.readdirSync(ENTRIES).filter((x) => x.endsWith('.json'))) {
+    const e = JSON.parse(fs.readFileSync(path.join(ENTRIES, f), 'utf8'));
+    for (const m of e.mappings) {
+      if (NOT_A_CONTROL.test(m.control_id.trim())) leaked.push(`${e.id} ${m.framework}: "${m.control_id}"`);
+    }
+  }
+  const fwDir = path.join(ROOT, 'data', 'frameworks');
+  for (const f of fs.readdirSync(fwDir).filter((x) => x.endsWith('.json'))) {
+    const r = JSON.parse(fs.readFileSync(path.join(fwDir, f), 'utf8'));
+    for (const c of r.controls) {
+      if (NOT_A_CONTROL.test(c.control_id.trim())) leaked.push(`registry ${r.name}: "${c.control_id}"`);
+    }
+  }
+  assert.deepEqual(leaked.slice(0, 5), [], `${leaked.length} row(s) parsed from outside an entry section`);
+});

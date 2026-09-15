@@ -2,36 +2,44 @@
 # OWASP GenAI Crosswalk — Run all Garak evaluation profiles
 # ─────────────────────────────────────────────────────────────
 # Usage:
-#   bash evals/garak/run_all.sh
-#   GARAK_MODEL_TYPE=openai GARAK_MODEL_NAME=gpt-4o bash evals/garak/run_all.sh
+#   GARAK_MODEL_TYPE=<type> GARAK_MODEL_NAME=<name> bash evals/garak/run_all.sh
 #
 # Environment variables:
-#   GARAK_MODEL_TYPE  — model type (default: openai)
-#   GARAK_MODEL_NAME  — model name (default: gpt-4o-mini)
-#   OPENAI_API_KEY    — required for openai model type
+#   GARAK_MODEL_TYPE  — garak generator family (required; e.g. openai, huggingface, rest, ollama)
+#   GARAK_MODEL_NAME  — deployment / model identifier for that generator (required)
+#   <generator creds> — whatever the chosen generator needs (e.g. OPENAI_API_KEY)
 #
-# Results are written to evals/results/<timestamp>/
-# Exit code: 0 if all profiles pass, 1 if any fail
+# No default target is shipped: the script refuses to run until both variables
+# are set, so a profile can never silently run against the wrong deployment.
+# See evals/README.md, "Choosing a target".
+#
+# Every *.yaml in this directory is run, in name order. Thresholds live in the
+# profiles themselves and are tabulated in evals/THRESHOLDS.md (DRAFT status).
+#
+# Authorisation: run only against systems you own or have written permission
+# to test. Results are written to evals/results/<timestamp>/ (git-ignored).
+# Exit code: 0 if all profiles pass, 1 if any fail, 2 if the target is not set.
 
 set -euo pipefail
 
-MODEL_TYPE="${GARAK_MODEL_TYPE:-openai}"
-MODEL_NAME="${GARAK_MODEL_NAME:-gpt-4o-mini}"
+MODEL_TYPE="${GARAK_MODEL_TYPE:-}"
+MODEL_NAME="${GARAK_MODEL_NAME:-}"
+
+if [ -z "$MODEL_TYPE" ] || [ -z "$MODEL_NAME" ]; then
+  echo "ERROR: GARAK_MODEL_TYPE and GARAK_MODEL_NAME must both be set." >&2
+  echo "       No default target is shipped — see evals/README.md, 'Choosing a target'." >&2
+  exit 2
+fi
+
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
 RESULTS_DIR="$REPO_ROOT/evals/results/$(date +%Y%m%d_%H%M%S)"
 
 mkdir -p "$RESULTS_DIR"
 
-PROFILES=(
-  "$SCRIPT_DIR/LLM01_prompt_injection.yaml"
-  "$SCRIPT_DIR/LLM02_sensitive_disclosure.yaml"
-  "$SCRIPT_DIR/LLM05_data_poisoning.yaml"
-  "$SCRIPT_DIR/LLM08_hidden_context_exposure.yaml"
-  "$SCRIPT_DIR/LLM07_misinformation.yaml"
-  "$SCRIPT_DIR/ASI01_goal_hijack.yaml"
-  "$SCRIPT_DIR/ASI05_code_execution.yaml"
-)
+# Every profile in this directory, name-sorted. Adding a profile is adding a file.
+PROFILES=()
+while IFS= read -r p; do PROFILES+=("$p"); done < <(ls "$SCRIPT_DIR"/*.yaml | sort)
 
 PASS=0
 FAIL=0
@@ -39,8 +47,9 @@ FAILED_PROFILES=()
 
 echo ""
 echo "OWASP GenAI Crosswalk — Garak evaluation suite"
-echo "Model: $MODEL_TYPE / $MODEL_NAME"
-echo "Results: $RESULTS_DIR"
+echo "Model   : $MODEL_TYPE / $MODEL_NAME"
+echo "Profiles: ${#PROFILES[@]}"
+echo "Results : $RESULTS_DIR"
 echo "────────────────────────────────────────────────────"
 
 for profile in "${PROFILES[@]}"; do

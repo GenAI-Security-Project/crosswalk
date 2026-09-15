@@ -311,8 +311,8 @@ the reviewer.
 ## References
 
 - [Coalition for Secure AI](https://www.coalitionforsecureai.org/)
-- [CoSAI Workstream 1 — Software Supply Chain Security for AI Systems](https://www.coalitionforsecureai.org/workstreams/)
-- [CoSAI Workstream 4 — Secure Design Patterns for Agentic Systems](https://www.coalitionforsecureai.org/workstreams/)
+- [CoSAI Workstream 1 — Software Supply Chain Security for AI Systems](https://github.com/cosai-oasis/ws1-supply-chain)
+- [CoSAI Workstream 4 — Secure Design Patterns for Agentic Systems](https://github.com/cosai-oasis/ws4-secure-design-agentic-systems)
 - [`agentic-top10/Agentic_ISO42001.md`](Agentic_ISO42001.md) — the AI management-system view
 - [`agentic-top10/Agentic_NISTAIRMF.md`](Agentic_NISTAIRMF.md) — the risk-function view
 - [`docs/SCHEMA_V2_MIGRATION.md`](../docs/SCHEMA_V2_MIGRATION.md) — what the

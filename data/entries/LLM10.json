@@ -1072,17 +1072,6 @@
     }
   ],
   "crossrefs": {
-    "llm_top10": [
-      "LLM01",
-      "LLM03",
-      "LLM08",
-      "LLM02",
-      "LLM04",
-      "LLM05",
-      "LLM09",
-      "LLM07",
-      "LLM06"
-    ],
     "agentic_top10": [
       "ASI02",
       "ASI05",

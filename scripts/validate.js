@@ -766,11 +766,15 @@ function checkMaestroLayers() {
   const regPath = path.join(ROOT, 'data', 'frameworks', 'maestro.json');
   if (!fs.existsSync(mdPath) || !fs.existsSync(regPath)) return true;
 
-  // The architecture table: | <name> | L<n> | ... |
+  // The architecture table: | <name> | L<n> | <description> | <threat theme> |
   const canon = {};
+  const canonDesc = {};
   for (const line of fs.readFileSync(mdPath, 'utf8').split('\n')) {
-    const m = line.match(/^\|\s*([^|]+?)\s*\|\s*(L[1-7])\s*\|/);
-    if (m) canon[m[2]] = m[1].trim();
+    const m = line.match(/^\|\s*([^|]+?)\s*\|\s*(L[1-7])\s*\|\s*([^|]+?)\s*\|/);
+    if (m) {
+      canon[m[2]] = m[1].trim();
+      canonDesc[m[2]] = m[3].trim();
+    }
   }
   if (Object.keys(canon).length !== 7) {
     warn('MAESTRO layers', `Could not read all seven layers from LLM_MAESTRO.md (found ${Object.keys(canon).length})`);
@@ -782,6 +786,14 @@ function checkMaestroLayers() {
     if (canon[c.control_id] && c.title !== canon[c.control_id]) {
       fail('MAESTRO layers',
         `maestro.json ${c.control_id} is "${c.title}", but LLM_MAESTRO.md calls it "${canon[c.control_id]}"`);
+      bad++;
+    }
+    // #32 fixed the titles but left the superseded model's descriptions, so
+    // L4–L7 each had the right name and another layer's definition. A title
+    // check alone cannot see that.
+    if (c.kind === 'layer' && canonDesc[c.control_id] && c.description !== canonDesc[c.control_id]) {
+      fail('MAESTRO layers',
+        `maestro.json ${c.control_id} description "${c.description}" does not match LLM_MAESTRO.md: "${canonDesc[c.control_id]}"`);
       bad++;
     }
   }
@@ -803,7 +815,71 @@ function checkMaestroLayers() {
     }
   }
 
-  if (!bad) pass('MAESTRO layers', 'Registry and incident labels match all seven canonical layer names');
+  if (!bad) pass('MAESTRO layers', 'Registry titles, layer descriptions and incident labels match the canonical architecture table');
+  return bad === 0;
+}
+
+/**
+ * Evidence guard (T-STRAT03).
+ *
+ * `control_failures[]` feed `evidence_count` on mapping rows, so a bad record
+ * does not stay in incidents.json — it becomes a number beside a mapping. Each
+ * record must point at a real registry control, carry a basis long enough to be
+ * a quotation, and, once confirmed, a source a reader can open.
+ *
+ * A failure that no mapping absorbs is only a warning: it may mean a mapping is
+ * missing, and deciding that is expert work (C4), not a validator's.
+ */
+function checkEvidence() {
+  const incPath = path.join(ROOT, 'data', 'incidents.json');
+  const fwDir = path.join(ROOT, 'data', 'frameworks');
+  if (!fs.existsSync(incPath) || !fs.existsSync(fwDir)) return true;
+
+  const { deriveEvidence, isConfirmed, readEntries, readIncidents } = require('./evidence');
+  const registries = new Map();
+  for (const f of fs.readdirSync(fwDir).filter((f) => f.endsWith('.json'))) {
+    const r = JSON.parse(fs.readFileSync(path.join(fwDir, f), 'utf8'));
+    registries.set(r.name, new Set((r.controls || []).map((c) => c.control_id)));
+  }
+
+  const incidents = readIncidents(ROOT);
+  let bad = 0;
+  let total = 0;
+  for (const inc of incidents) {
+    (inc.control_failures || []).forEach((cf, i) => {
+      total++;
+      const at = `${inc.id} control_failures[${i}]`;
+      const ids = registries.get(cf.framework);
+      if (!ids) {
+        fail('Evidence', `${at}: framework "${cf.framework}" is not a registry name in data/frameworks/`);
+        bad++;
+      } else if (!ids.has(cf.control_id)) {
+        fail('Evidence', `${at}: "${cf.control_id}" is not a control in the ${cf.framework} registry`);
+        bad++;
+      }
+      if (typeof cf.basis !== 'string' || cf.basis.trim().length < 20) {
+        fail('Evidence', `${at}: no quotable basis — a failure without a source quote is not evidence`);
+        bad++;
+      }
+      if (!cf.source_url) {
+        if (isConfirmed(cf)) {
+          fail('Evidence', `${at}: confirmed, but no source_url — a reader cannot check the quote`);
+          bad++;
+        } else {
+          warn('Evidence', `${at}: drafted without a source_url — add one before confirmation`);
+        }
+      }
+    });
+  }
+
+  const { orphans, summary } = deriveEvidence(readEntries(ROOT), incidents);
+  for (const o of orphans) {
+    warn('Evidence', `${o.incident}: ${o.framework} ${o.control_id} failed, but none of ${o.entries.join(', ')} maps it — missing mapping? (human call, C4)`);
+  }
+
+  if (!bad) {
+    pass('Evidence', `${total} control failure(s) resolve to registry controls with a basis — ${summary.confirmed} confirmed, ${summary.drafted} drafted`);
+  }
   return bad === 0;
 }
 

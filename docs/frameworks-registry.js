@@ -95,63 +95,22 @@ window.CROSSWALK_FRAMEWORKS = [
         "title": "Society (full domain)",
         "description": "Foundational",
         "kind": "control"
-      },
-      {
-        "control_id": "Primary DSGAI entries",
-        "title": "AIUC-1 Domain",
-        "description": "Status",
-        "kind": "control"
-      },
-      {
-        "control_id": "DSGAI02, DSGAI03, DSGAI06, DSGAI07, DSGAI08, DSGAI09, DSGAI14, DSGAI15, DSGAI18, DSGAI21",
-        "title": "A — Data & Privacy",
-        "kind": "control"
-      },
-      {
-        "control_id": "DSGAI01, DSGAI04, DSGAI05, DSGAI10, DSGAI12, DSGAI16, DSGAI17",
-        "title": "B — Security",
-        "kind": "control"
-      },
-      {
-        "control_id": "DSGAI05, DSGAI20",
-        "title": "C — Safety",
-        "kind": "control"
-      },
-      {
-        "control_id": "DSGAI12, DSGAI19",
-        "title": "D — Reliability",
-        "kind": "control"
-      },
-      {
-        "control_id": "DSGAI02, DSGAI06, DSGAI09, DSGAI13, DSGAI18, DSGAI20, DSGAI21",
-        "title": "E — Accountability",
-        "kind": "control"
-      },
-      {
-        "control_id": "DSGAI20",
-        "title": "F — Society",
-        "kind": "control"
-      },
-      {
-        "control_id": "Date",
-        "title": "Version",
-        "description": "Change",
-        "kind": "control"
-      },
-      {
-        "control_id": "2026-03-27",
-        "title": "1.0.0",
-        "description": "Initial release — full mapping DSGAI01–DSGAI21 to AIUC-1",
-        "kind": "control"
       }
     ],
     "inventory_completeness": {
       "status": "partial",
-      "included": 23,
+      "included": 14,
       "total": null,
       "note": "Every item in this registry is referenced by a mapping, so the registry was derived from the mappings rather than from the framework. It cannot contain controls this crosswalk has not mapped. Authoritative total not yet established.",
       "source": "https://www.ai-safety-institute.org/"
-    }
+    },
+    "changelog": [
+      {
+        "date": "2026-09-14",
+        "change": "Removed 9 items that were never controls: rows from the closing summary and changelog tables of dsgai-2026 mapping files (e.g. \"Date\", \"DSGAI entries most affected\"), parsed as DSGAI21 mappings because extractSection() ran past the last entry, then extracted here.",
+        "author": "OWASP GenAI Data Security Initiative"
+      }
+    ]
   },
   {
     "id": "cis-controls",
@@ -4653,7 +4612,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "L1",
         "title": "Foundation Models",
-        "description": "Base model layer — covers model selection, provenance, fine-tuning security, and model integrity threats.",
+        "description": "Base LLMs providing core reasoning and generation",
         "parent": null,
         "function": "Architecture Layer",
         "kind": "layer"
@@ -4685,7 +4644,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "L2",
         "title": "Data Operations",
-        "description": "Data pipelines — covers RAG, vector stores, training data, embedding security, and data governance.",
+        "description": "Ingestion pipelines, storage, RAG, embeddings, vector stores",
         "parent": null,
         "function": "Architecture Layer",
         "kind": "layer"
@@ -4717,7 +4676,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "L3",
         "title": "Agent Frameworks",
-        "description": "Agent runtime — covers agent orchestration, goal management, memory, and planning security.",
+        "description": "Orchestration platforms, tool registries, MCP, plugin ecosystems",
         "parent": null,
         "function": "Architecture Layer",
         "kind": "layer"
@@ -4749,7 +4708,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "L4",
         "title": "Deployment & Infrastructure",
-        "description": "Tool access — covers MCP, API integrations, plugin security, and tool authorization.",
+        "description": "Servers, containers, networks, CI/CD, runtime environments",
         "parent": null,
         "function": "Architecture Layer",
         "kind": "layer"
@@ -4781,7 +4740,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "L5",
         "title": "Evaluation & Observability",
-        "description": "Infrastructure — covers containerization, networking, secrets management, and runtime isolation.",
+        "description": "Monitoring, logging, telemetry, behavioural baselines",
         "parent": null,
         "function": "Architecture Layer",
         "kind": "layer"
@@ -4813,7 +4772,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "L6",
         "title": "Security & Compliance",
-        "description": "Multi-agent coordination — covers inter-agent communication, delegation, consensus, and cascading failure prevention.",
+        "description": "Identity, access control, audit, governance, credential management",
         "parent": null,
         "function": "Architecture Layer",
         "kind": "layer"
@@ -4845,7 +4804,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "L7",
         "title": "Agent Ecosystem",
-        "description": "Human-agent interface — covers user authentication, output validation, human oversight, and trust management.",
+        "description": "Multi-agent interaction, A2A communication, cascade dynamics",
         "parent": null,
         "function": "Architecture Layer",
         "kind": "layer"
@@ -4879,6 +4838,11 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "date": "2026-04-09",
         "change": "Initial seed — 7 layers with 21 sub-controls from CSA MAESTRO framework",
+        "author": "OWASP GenAI Data Security Initiative"
+      },
+      {
+        "date": "2026-09-14",
+        "change": "Layer descriptions L1–L7 transcribed from the architecture table in llm-top10/LLM_MAESTRO.md. #32 corrected the titles to the CSA model but left the descriptions of the superseded one, so L4–L7 each carried the correct name and another layer's definition. Sub-controls unchanged (issue #31).",
         "author": "OWASP GenAI Data Security Initiative"
       }
     ],
@@ -6664,7 +6628,7 @@ window.CROSSWALK_FRAMEWORKS = [
       "included": 52,
       "total": null,
       "note": "Every item in this registry is referenced by a mapping, so the registry was derived from the mappings rather than from the framework. It cannot contain controls this crosswalk has not mapped. Authoritative total not yet established.",
-      "source": "https://csrc.nist.gov/pubs/sp/800/218/a/final"
+      "source": "https://doi.org/10.6028/NIST.SP.800-218A"
     }
   },
   {
@@ -10214,78 +10178,6 @@ window.CROSSWALK_FRAMEWORKS = [
         "kind": "control"
       },
       {
-        "control_id": "DSGAI entries most affected",
-        "title": "NHI Risk",
-        "kind": "control"
-      },
-      {
-        "control_id": "DSGAI21",
-        "title": "NHI-1 Improper Offboarding",
-        "kind": "control"
-      },
-      {
-        "control_id": "DSGAI03, DSGAI06, DSGAI16",
-        "title": "NHI-2 Secret Leakage",
-        "description": "DevSecOps",
-        "kind": "control"
-      },
-      {
-        "control_id": "DSGAI13, DSGAI16, DSGAI17",
-        "title": "NHI-3 Third-Party NHI",
-        "description": "Security",
-        "kind": "control"
-      },
-      {
-        "control_id": "DSGAI04, DSGAI08",
-        "title": "NHI-4 Insecure Authentication",
-        "description": "Platform",
-        "kind": "control"
-      },
-      {
-        "control_id": "DSGAI02, DSGAI07, DSGAI08, DSGAI09",
-        "title": "NHI-5 Over-Privileged NHI",
-        "kind": "control"
-      },
-      {
-        "control_id": "DSGAI02, DSGAI09, DSGAI14",
-        "title": "NHI-6 Insecure Storage",
-        "description": "Platform",
-        "kind": "control"
-      },
-      {
-        "control_id": "DSGAI02, DSGAI07, DSGAI09, DSGAI12",
-        "title": "NHI-7 Long-Lived",
-        "kind": "control"
-      },
-      {
-        "control_id": "DSGAI16, DSGAI17",
-        "title": "NHI-8 Env Isolation",
-        "description": "DevSecOps",
-        "kind": "control"
-      },
-      {
-        "control_id": "DSGAI04, DSGAI07, DSGAI08, DSGAI19",
-        "title": "NHI-9 NHI Reuse",
-        "kind": "control"
-      },
-      {
-        "control_id": "DSGAI18, DSGAI20, DSGAI21",
-        "title": "NHI-10 Human Use",
-        "kind": "control"
-      },
-      {
-        "control_id": "Date",
-        "title": "Version",
-        "description": "Change",
-        "kind": "control"
-      },
-      {
-        "control_id": "2026-03-27",
-        "title": "1.0.0",
-        "description": "Initial release — full mapping DSGAI01–DSGAI21 to NHI Top 10",
-        "kind": "control"
-      },
-      {
         "control_id": "Injection blast radius proportional to credential scope",
         "title": "NHI-5 Over-Privileged NHI",
         "description": "Apply least-privilege to all LLM application credentials",
@@ -10402,11 +10294,18 @@ window.CROSSWALK_FRAMEWORKS = [
     ],
     "inventory_completeness": {
       "status": "unknown",
-      "included": 117,
+      "included": 104,
       "total": null,
       "note": "Authoritative control count not established. Needs a count from the published framework.",
       "source": "https://owasp.org/www-project-non-human-identities-top-10/"
-    }
+    },
+    "changelog": [
+      {
+        "date": "2026-09-14",
+        "change": "Removed 13 items that were never controls: rows from the closing summary and changelog tables of dsgai-2026 mapping files (e.g. \"Date\", \"DSGAI entries most affected\"), parsed as DSGAI21 mappings because extractSection() ran past the last entry, then extracted here.",
+        "author": "OWASP GenAI Data Security Initiative"
+      }
+    ]
   },
   {
     "id": "owasp-samm",
