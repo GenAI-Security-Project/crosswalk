@@ -10,7 +10,7 @@ Usage:
 
   # Run scan then report (requires LAAF installed):
   python evals/laaf/laaf_crosswalk.py --run-scan \
-    --target openai --model gpt-4o-mini --stages S1 S2 S3
+    --target <target> --model <model> --stages S1 S2 S3
 
   # Output formats:
   python evals/laaf/laaf_crosswalk.py --results-dir ... --format md
@@ -127,10 +127,16 @@ def parse_args():
     parser.add_argument("--out", default=None, help="Output file path (default: stdout)")
     parser.add_argument("--format", choices=["md", "json", "csv"], default="md")
     parser.add_argument("--run-scan", action="store_true", help="Run LAAF scan before reporting")
-    parser.add_argument("--target", default="openai", help="LAAF target platform")
-    parser.add_argument("--model", default="gpt-4o-mini", help="Model name")
+    parser.add_argument("--target", default=None,
+                        help="LAAF target platform (required with --run-scan; no default is shipped)")
+    parser.add_argument("--model", default=None,
+                        help="Model name (required with --run-scan; no default is shipped)")
     parser.add_argument("--stages", nargs="+", default=list(STAGE_MAP.keys()))
-    return parser.parse_args()
+    args = parser.parse_args()
+    if args.run_scan and not (args.target and args.model):
+        parser.error("--run-scan needs --target and --model: no default target is shipped "
+                     "(see evals/README.md, 'Choosing a target')")
+    return args
 
 # ── Result loading ────────────────────────────────────────────────────────────
 
@@ -265,7 +271,10 @@ def render_markdown(results, stages):
         lines.append(f"| | |")
         lines.append(f"|---|---|")
         lines.append(f"| OWASP entries | {' · '.join(info['owasp'])} |")
-        lines.append(f"| MAESTRO layers | {', '.join(f\"{m['layer']} {m['label']}\" for m in info['maestro'])} |")
+        maestro_cells = ", ".join(
+            f"{m['layer']} {m['label']}" for m in info['maestro']
+        )  # was an f-string with escaped quotes: a SyntaxError on every Python
+        lines.append(f"| MAESTRO layers | {maestro_cells} |")
         lines.append(f"| Threshold | {info['threshold']*100:.0f}% |")
         if summ["breakthrough_rate"] is not None:
             lines.append(f"| Breakthrough rate | {summ['breakthrough_rate']*100:.1f}% |")
@@ -443,10 +452,12 @@ def main():
     if args.out:
         out = Path(args.out)
         out.parent.mkdir(parents=True, exist_ok=True)
-        out.write_text(content)
+        out.write_text(content, encoding="utf-8")  # report carries ✅/❌ — never the platform default
         print(f"Report written: {args.out}")
     else:
-        print(content)
+        # Force UTF-8 to stdout so a Windows console (cp1252) does not crash on the status glyphs.
+        sys.stdout.buffer.write(content.encode("utf-8"))
+        sys.stdout.buffer.write(b"\n")
 
     # Exit 1 if any stage exceeded threshold
     all_passed = True

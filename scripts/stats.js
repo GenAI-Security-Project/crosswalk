@@ -30,6 +30,8 @@
 const fs = require('fs');
 const path = require('path');
 
+const { deriveEvidence } = require('./evidence');
+
 const ROOT = path.resolve(__dirname, '..');
 const OUT = path.join(ROOT, 'data', 'stats.json');
 
@@ -191,6 +193,9 @@ function computeStats() {
     },
     mapping_files: { total: mappingFilesTotal, by_list: mappingFilesByList },
     incidents: { total: incidents.length },
+    // Evidence from incident control_failures (T-STRAT03). `confirmed` is the
+    // only figure that may be quoted as evidence; `drafted` is review backlog.
+    evidence: deriveEvidence(entries, incidents).summary,
     freshness: computeFreshness(),
     controls: {
       // `total` is the honest control count: only kind=control. `registry_items`

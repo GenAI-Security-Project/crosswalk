@@ -12,6 +12,14 @@ export interface Mapping {
   control_name: string;
   tier?: string;
   notes?: string;
+  /**
+   * Distinct incidents that exemplify this entry and record a CONFIRMED failure
+   * of this control. Generated; present only on rows with linked failures.
+   * Drafted failures are never counted — see `evidence.drafted`.
+   */
+  evidence_count?: number;
+  /** Incident ids behind `evidence_count`, and drafts awaiting confirmation. */
+  evidence?: { confirmed: string[]; drafted: string[] };
 }
 
 export interface Tool {
@@ -69,6 +77,27 @@ export interface Incident {
   mitigations: string[];
   references: Reference[];
   tags: string[];
+  external_refs?: ExternalRef[];
+  control_failures?: ControlFailure[];
+}
+
+/** A stable identifier that lets a reader check an incident independently. */
+export interface ExternalRef {
+  source: 'CVE' | 'AIID' | 'AIAAIC' | 'MITRE-ATLAS' | 'GHSA' | 'campaign' | 'vendor-advisory' | 'research';
+  id: string;
+  url?: string;
+}
+
+/** A control that was absent, bypassed, misconfigured or failed in an incident. */
+export interface ControlFailure {
+  framework: string;
+  control_id: string;
+  outcome: 'absent' | 'present-but-bypassed' | 'present-but-misconfigured' | 'failed';
+  /** Quotation from the cited source. */
+  basis: string;
+  source_url?: string;
+  /** Who confirmed the claim. Empty means drafted, not evidence. */
+  confirmed_by?: string[];
 }
 
 export interface CrosswalkDB {
@@ -237,6 +266,15 @@ export interface Stats {
   };
   mapping_files: { total: number; by_list: Record<string, number> };
   incidents: { total: number };
+  evidence: {
+    incidents_annotated: number;
+    control_failures: number;
+    confirmed: number;
+    drafted: number;
+    mappings_with_confirmed_evidence: number;
+    mappings_with_drafted_evidence_only: number;
+    orphan_failures: number;
+  };
   controls: { total: number; registry_items: number; by_kind: Record<string, number> };
 }
 
@@ -345,4 +383,55 @@ export function coverage(framework: string): {
     layers: reg.controls.length - coverable.length,
     unresolved: [...cited].filter((id) => !known.has(id)).length,
   };
+}
+
+// ── Incident evidence ───────────────────────────────────────────────────────
+//
+// Which controls failed in real incidents, and how much that supports each
+// mapping. The counting rules live in the generator (scripts/evidence.js); the
+// package reads the generated fields rather than re-deriving them, so the npm
+// API cannot disagree with the data files it ships.
+
+/**
+ * Incident evidence for one mapping row.
+ *
+ * `evidence_count` counts confirmed failures only. `drafted` lists failures
+ * still awaiting human confirmation — useful to see, not to cite.
+ * Returns undefined when the entry does not map that control.
+ */
+export function evidenceFor(
+  entryId: string,
+  framework: string,
+  controlId: string,
+): { evidence_count: number; confirmed: string[]; drafted: string[] } | undefined {
+  const row = getEntry(entryId)?.mappings.find((m) => m.framework === framework && m.control_id === controlId);
+  if (!row) return undefined;
+  return {
+    evidence_count: row.evidence_count ?? 0,
+    confirmed: row.evidence?.confirmed ?? [],
+    drafted: row.evidence?.drafted ?? [],
+  };
+}
+
+/**
+ * Every recorded control failure, flattened with its incident id.
+ *
+ * Filter by framework, and optionally control. Pass `{ confirmedOnly: true }`
+ * to exclude drafts — do this for anything presented as evidence.
+ */
+export function controlFailures(
+  framework?: string,
+  controlId?: string,
+  opts: { confirmedOnly?: boolean } = {},
+): Array<ControlFailure & { incident_id: string; confirmed: boolean }> {
+  return incidents.flatMap((inc) =>
+    (inc.control_failures ?? [])
+      .filter((f) => (!framework || f.framework === framework) && (!controlId || f.control_id === controlId))
+      .map((f) => ({
+        ...f,
+        incident_id: inc.id,
+        confirmed: (f.confirmed_by ?? []).some((n) => n.trim() !== ''),
+      }))
+      .filter((f) => !opts.confirmedOnly || f.confirmed),
+  );
 }

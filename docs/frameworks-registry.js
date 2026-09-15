@@ -4612,7 +4612,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "L1",
         "title": "Foundation Models",
-        "description": "Base model layer — covers model selection, provenance, fine-tuning security, and model integrity threats.",
+        "description": "Base LLMs providing core reasoning and generation",
         "parent": null,
         "function": "Architecture Layer",
         "kind": "layer"
@@ -4644,7 +4644,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "L2",
         "title": "Data Operations",
-        "description": "Data pipelines — covers RAG, vector stores, training data, embedding security, and data governance.",
+        "description": "Ingestion pipelines, storage, RAG, embeddings, vector stores",
         "parent": null,
         "function": "Architecture Layer",
         "kind": "layer"
@@ -4676,7 +4676,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "L3",
         "title": "Agent Frameworks",
-        "description": "Agent runtime — covers agent orchestration, goal management, memory, and planning security.",
+        "description": "Orchestration platforms, tool registries, MCP, plugin ecosystems",
         "parent": null,
         "function": "Architecture Layer",
         "kind": "layer"
@@ -4708,7 +4708,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "L4",
         "title": "Deployment & Infrastructure",
-        "description": "Tool access — covers MCP, API integrations, plugin security, and tool authorization.",
+        "description": "Servers, containers, networks, CI/CD, runtime environments",
         "parent": null,
         "function": "Architecture Layer",
         "kind": "layer"
@@ -4740,7 +4740,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "L5",
         "title": "Evaluation & Observability",
-        "description": "Infrastructure — covers containerization, networking, secrets management, and runtime isolation.",
+        "description": "Monitoring, logging, telemetry, behavioural baselines",
         "parent": null,
         "function": "Architecture Layer",
         "kind": "layer"
@@ -4772,7 +4772,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "L6",
         "title": "Security & Compliance",
-        "description": "Multi-agent coordination — covers inter-agent communication, delegation, consensus, and cascading failure prevention.",
+        "description": "Identity, access control, audit, governance, credential management",
         "parent": null,
         "function": "Architecture Layer",
         "kind": "layer"
@@ -4804,7 +4804,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "L7",
         "title": "Agent Ecosystem",
-        "description": "Human-agent interface — covers user authentication, output validation, human oversight, and trust management.",
+        "description": "Multi-agent interaction, A2A communication, cascade dynamics",
         "parent": null,
         "function": "Architecture Layer",
         "kind": "layer"
@@ -4838,6 +4838,11 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "date": "2026-04-09",
         "change": "Initial seed — 7 layers with 21 sub-controls from CSA MAESTRO framework",
+        "author": "OWASP GenAI Data Security Initiative"
+      },
+      {
+        "date": "2026-09-14",
+        "change": "Layer descriptions L1–L7 transcribed from the architecture table in llm-top10/LLM_MAESTRO.md. #32 corrected the titles to the CSA model but left the descriptions of the superseded one, so L4–L7 each carried the correct name and another layer's definition. Sub-controls unchanged (issue #31).",
         "author": "OWASP GenAI Data Security Initiative"
       }
     ],

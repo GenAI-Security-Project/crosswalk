@@ -34,6 +34,7 @@
 
 const fs   = require('fs');
 const path = require('path');
+const { deriveEvidence, readEntries, readIncidents } = require('./evidence');
 
 // ── Configuration ────────────────────────────────────────────────────────────
 
@@ -279,6 +280,38 @@ function getFrameworkNames(entries) {
   return [...set].sort();
 }
 
+// ── Incident evidence (T-STRAT03) ───────────────────────────────────────────
+
+let _failedControls;
+/**
+ * Controls that failed in the wild, derived once from data/incidents.json by
+ * the shared evidence module. Always derived over every entry, not the
+ * --severity subset: which controls failed is a fact about the incidents, and a
+ * severity filter must not make a failure disappear from the record.
+ */
+function failedControls() {
+  if (!_failedControls) {
+    _failedControls = deriveEvidence(readEntries(REPO_ROOT), readIncidents(REPO_ROOT)).failedControls;
+  }
+  return _failedControls;
+}
+
+/** Failed controls for one framework, keyed by the report's normalised control id. */
+function failuresFor(framework) {
+  const out = new Map();
+  for (const fc of failedControls()) {
+    if (fc.framework === framework) out.set(normalise(fc.control_id), fc);
+  }
+  return out;
+}
+
+/** The evidence block for one control; empty lists when nothing failed. */
+function evidenceOf(fc) {
+  return fc
+    ? { confirmed: fc.confirmed, drafted: fc.drafted, outcomes: fc.outcomes }
+    : { confirmed: [], drafted: [], outcomes: [] };
+}
+
 // ── Framework data extraction ─────────────────────────────────────────────────
 
 /**
@@ -416,6 +449,9 @@ function renderMarkdown(fw, allEntries, opts) {
   lines.push(`| Coverage rate | ${(r.coverageRate * 100).toFixed(0)}% |`);
   lines.push(`| Unique controls referenced | ${r.controls.size} |`);
   lines.push(`| Registry inventory | ${inventoryLabel(fw)} |`);
+  const failures = failuresFor(fw);
+  const confirmedCtl = [...failures.values()].filter(fc => fc.confirmed.length).length;
+  lines.push(`| Controls with a confirmed in-the-wild failure | ${confirmedCtl} (${failures.size - confirmedCtl} more drafted, unconfirmed) |`);
   lines.push(`| Critical-severity gaps | ${criticalUncovered.length} |`);
   lines.push(`| High-severity gaps | ${highUncovered.length} |`);
   lines.push('');
@@ -513,6 +549,12 @@ function renderMarkdown(fw, allEntries, opts) {
     if (ctrl.tier) lines.push(`_Tier: ${ctrl.tier}_`);
     lines.push('');
     lines.push(`Addresses: ${entryIds.join(' · ')}`);
+    const fc = failures.get(ctrl.control_id);
+    if (fc) {
+      lines.push('');
+      lines.push(`Evidence: **${fc.confirmed.length}** confirmed incident(s)`
+        + (fc.drafted.length ? ` · ${fc.drafted.length} drafted, awaiting confirmation (${fc.drafted.join(', ')})` : ''));
+    }
     if (ctrl.notes.length > 0) {
       lines.push('');
       // Show first two distinct notes
@@ -521,6 +563,27 @@ function renderMarkdown(fw, allEntries, opts) {
     lines.push('');
   }
 
+  lines.push('---');
+  lines.push('');
+
+  // Controls that failed in the wild
+  lines.push('## Controls that failed in the wild');
+  lines.push('');
+  lines.push('Controls recorded in `data/incidents.json` as absent, bypassed, misconfigured or failed during a real incident. '
+    + 'Only **confirmed** failures are evidence; drafted ones are listed so the review backlog is visible, and are not counted. '
+    + 'Method: [`docs/EVIDENCE_METHODOLOGY.md`](../docs/EVIDENCE_METHODOLOGY.md).');
+  lines.push('');
+  if (failures.size === 0) {
+    lines.push(`No incident yet records a failure of a ${fw} control.`);
+  } else {
+    lines.push('| Control | Confirmed incidents | Drafted — not counted | How it failed | Risks |');
+    lines.push('|---|---|---|---|---|');
+    for (const [cid, f] of failures) {
+      lines.push(`| **${cid}** | ${f.confirmed.length ? f.confirmed.join(', ') : '0'} | ${f.drafted.length ? f.drafted.join(', ') : '—'} `
+        + `| ${f.outcomes.join(', ')} | ${f.entries.join(', ')} |`);
+    }
+  }
+  lines.push('');
   lines.push('---');
   lines.push('');
 
@@ -647,6 +710,10 @@ function renderJSON(fw, allEntries) {
       unique_controls:    r.controls.size,
       critical_gaps:      r.uncovered.filter(e => e.severity === 'Critical').length,
       high_gaps:          r.uncovered.filter(e => e.severity === 'High').length,
+      controls_failed_in_wild: {
+        confirmed: [...failuresFor(fw).values()].filter(fc => fc.confirmed.length).length,
+        drafted_only: [...failuresFor(fw).values()].filter(fc => !fc.confirmed.length).length,
+      },
     },
     coverage: allEntries.map(e => {
       const fwMappings = e.mappings.filter(m => m.framework === fw);
@@ -662,6 +729,7 @@ function renderJSON(fw, allEntries) {
           control_name: normalise(m.control_name),
           tier:         m.tier || null,
           notes:        normalise(m.notes),
+          evidence_count: m.evidence_count || 0,
         })),
       };
     }),
@@ -670,6 +738,7 @@ function renderJSON(fw, allEntries) {
       control_name: ctrl.control_name,
       tier:         ctrl.tier,
       entry_ids:    ctrl.entries.map(e => e.id),
+      evidence:     evidenceOf(failuresFor(fw).get(ctrl.control_id)),
     })),
   };
 
@@ -718,6 +787,24 @@ function renderSummaryMarkdown(frameworks, allEntries, opts) {
   lines.push('');
   lines.push('Run `node scripts/compliance-report.js --framework "<name>"` for a full gap assessment of any framework.');
   lines.push('');
+  lines.push('---');
+  lines.push('');
+  lines.push('## Controls that failed in the wild');
+  lines.push('');
+  const inWild = failedControls().filter(fc => frameworks.includes(fc.framework));
+  const confirmedN = inWild.filter(fc => fc.confirmed.length).length;
+  lines.push(`**${confirmedN}** control(s) carry a confirmed in-the-wild failure; ${inWild.length - confirmedN} more are drafted and await human confirmation. `
+    + 'Drafts are shown so the backlog is visible — they are not evidence until confirmed. '
+    + 'Method: [`docs/EVIDENCE_METHODOLOGY.md`](../docs/EVIDENCE_METHODOLOGY.md).');
+  lines.push('');
+  if (inWild.length) {
+    lines.push('| Framework | Control | Confirmed | Drafted — not counted | Risks |');
+    lines.push('|---|---|---|---|---|');
+    for (const fc of inWild) {
+      lines.push(`| ${fc.framework} | **${fc.control_id}** | ${fc.confirmed.length} | ${fc.drafted.length} | ${fc.entries.join(', ')} |`);
+    }
+    lines.push('');
+  }
   lines.push('---');
   lines.push('');
   lines.push('## Eval coverage');

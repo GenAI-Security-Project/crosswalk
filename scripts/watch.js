@@ -36,9 +36,15 @@ const OWASP_REPOS = [
   'OWASP/www-project-top-10-for-genai-data-security',
 ];
 
+// Multi-word terms MUST be quoted (%22…%22). Unquoted, `ti:LLM+security` is
+// `ti:LLM` plus a bare `security` matched in any field, so the query admitted
+// nearly every cs.CR paper: a live check on 2026-09-14 returned 3 AI-related
+// titles in 30, and 27 of 39 watcher issues opened since 2026-08-31 were off
+// topic. Quoted and title-scoped, the same check returned 30 in 30.
 const ARXIV_URL =
   'https://export.arxiv.org/api/query?' +
-  'search_query=cat:cs.CR+AND+(ti:prompt+injection+OR+ti:jailbreak+OR+ti:LLM+security+OR+ti:agentic+AI+OR+ti:RAG+poisoning)' +
+  'search_query=cat:cs.CR+AND+(ti:%22prompt+injection%22+OR+ti:jailbreak+OR+ti:LLM+OR+ti:%22large+language+model%22' +
+  '+OR+ti:agentic+OR+ti:%22AI+agent%22+OR+ti:RAG+OR+ti:%22retrieval-augmented%22+OR+ti:MCP)' +
   '&sortBy=submittedDate&sortOrder=descending&max_results=20';
 
 const NVD_KEYWORDS = [
@@ -253,18 +259,31 @@ async function watchOwasp(state, sinceOverride) {
 /**
  * Map keywords in title/abstract to OWASP entry identifiers.
  */
+//
+// These are triage hints on a watcher issue, not mappings. Two defects fixed:
+// patterns lacked word boundaries (`rag` matched "storage" and "average"), and
+// the ids predated the 2026 renumbering (supply chain pointed at LLM10, now
+// Improper Output Handling). Each rule names the entry title it targets, and
+// scripts/watch.test.mjs checks that the id still carries that title.
+const ARXIV_HINT_RULES = [
+  { re: /\bprompt injection\b|\bjailbreak/,            ids: { LLM01: 'Prompt Injection' } },
+  { re: /\b(data|model|training|rag|knowledge) poisoning\b|\bpoisoning attack/,
+    ids: { LLM05: 'Data and Model Poisoning', DSGAI04: 'Data Model and Artifact Poisoning' } },
+  { re: /\bmemory\b.*\bagent|\bagent\b.*\bmemory\b|\bcontext poisoning\b/,
+    ids: { ASI06: 'Memory and Context Poisoning' } },
+  { re: /\btool (misuse|abuse|call)|\bagentic\b|\bllm agents?\b|\bai agents?\b/,
+    ids: { ASI01: 'Agent Goal Hijack', ASI02: 'Tool Misuse and Exploitation' } },
+  { re: /\bexfiltrat|\bdata leak|\bleakage\b/,         ids: { LLM02: 'Sensitive Information Disclosure', DSGAI01: 'Sensitive Data Leakage' } },
+  { re: /\bhallucinat|\bmisinformation\b/,             ids: { LLM07: 'Misinformation' } },
+  { re: /\bsupply chain\b/,                            ids: { LLM04: 'Supply Chain', ASI04: 'Agentic Supply Chain' } },
+];
+
 function mapArxivToOwasp(text) {
   const lower = text.toLowerCase();
   const mappings = [];
-
-  if (/prompt injection|jailbreak/.test(lower))            mappings.push('LLM01');
-  if (/data poisoning|rag/.test(lower))                    mappings.push('DSGAI04', 'LLM04');
-  if (/\bmemory\b|persistence/.test(lower))                mappings.push('ASI06');
-  if (/\btool\b|\bagent\b|agentic/.test(lower))            mappings.push('ASI01', 'ASI02');
-  if (/exfiltration|\bleak\b/.test(lower))                 mappings.push('LLM02', 'DSGAI01');
-  if (/hallucination|misinformation/.test(lower))          mappings.push('LLM07');
-  if (/supply chain/.test(lower))                          mappings.push('LLM10', 'ASI04');
-
+  for (const rule of ARXIV_HINT_RULES) {
+    if (rule.re.test(lower)) mappings.push(...Object.keys(rule.ids));
+  }
   return [...new Set(mappings)];
 }
 
@@ -783,7 +802,11 @@ async function main() {
   process.exit(0);
 }
 
-main().catch(err => {
-  console.error('Fatal error:', err);
-  process.exit(0);
-});
+if (require.main === module) {
+  main().catch(err => {
+    console.error('Fatal error:', err);
+    process.exit(0);
+  });
+}
+
+module.exports = { ARXIV_URL, ARXIV_HINT_RULES, mapArxivToOwasp };

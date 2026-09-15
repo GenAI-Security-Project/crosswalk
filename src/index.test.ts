@@ -2,7 +2,7 @@ import { describe, it } from 'node:test';
 import * as assert from 'node:assert/strict';
 import { entries, incidents, getEntry, getFramework, searchEntries, frameworks, getBySeverity,
   getIncidentsForEntry, registries, stats, version, getControl, controlsFor, entriesFor,
-  coverage } from './index';
+  coverage, evidenceFor, controlFailures } from './index';
 
 describe('@owasp/genai-crosswalk', () => {
   // Asserted against the generated count rather than a literal. This test said
@@ -161,5 +161,41 @@ describe('@owasp/genai-crosswalk', () => {
       unresolved / total < 0.5,
       `${unresolved}/${total} mappings unresolvable — worse than the known baseline`,
     );
+  });
+
+  // ── Incident evidence ─────────────────────────────────────────────────────
+  it('evidenceFor never counts a draft', () => {
+    // Every incident counted for a mapping must hold a confirmed failure of that control.
+    for (const e of entries) {
+      for (const m of e.mappings) {
+        const confirmedHere = new Set(
+          controlFailures(m.framework, m.control_id, { confirmedOnly: true }).map((f) => f.incident_id),
+        );
+        for (const id of evidenceFor(e.id, m.framework, m.control_id)!.confirmed) {
+          assert.ok(confirmedHere.has(id), `${e.id} ${m.framework} ${m.control_id} counts ${id}, which is not confirmed`);
+        }
+      }
+    }
+  });
+
+  it('evidence_count equals the confirmed incidents it names, and agrees with stats', () => {
+    let withConfirmed = 0;
+    for (const e of entries) {
+      for (const m of e.mappings) {
+        const ev = evidenceFor(e.id, m.framework, m.control_id)!;
+        assert.equal(ev.evidence_count, ev.confirmed.length);
+        if (ev.evidence_count > 0) withConfirmed++;
+      }
+    }
+    assert.equal(withConfirmed, stats.evidence.mappings_with_confirmed_evidence);
+  });
+
+  it('evidenceFor is undefined for a control the entry does not map', () => {
+    assert.equal(evidenceFor('LLM01', 'MAESTRO', 'L99'), undefined);
+  });
+
+  it('controlFailures confirmedOnly returns only confirmed records', () => {
+    assert.ok(controlFailures(undefined, undefined, { confirmedOnly: true }).every((f) => f.confirmed));
+    assert.equal(controlFailures().length, stats.evidence.control_failures);
   });
 });
