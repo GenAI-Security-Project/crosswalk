@@ -63,6 +63,15 @@
   "incidents": {
     "total": 131
   },
+  "evidence": {
+    "incidents_annotated": 13,
+    "control_failures": 18,
+    "confirmed": 0,
+    "drafted": 18,
+    "mappings_with_confirmed_evidence": 0,
+    "mappings_with_drafted_evidence_only": 18,
+    "orphan_failures": 0
+  },
   "freshness": {
     "checked": 4,
     "current": 3,

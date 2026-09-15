@@ -14,6 +14,7 @@
 
 const fs   = require('fs');
 const path = require('path');
+const { indexFailures, evidenceForMapping } = require('./evidence');
 
 const ROOT        = path.resolve(__dirname, '..');
 const ENTRIES_DIR = path.join(ROOT, 'data', 'entries');
@@ -664,6 +665,39 @@ function mergeAudiences(existing, incoming) {
   return [...s];
 }
 
+/**
+ * Write a generated file only when its content changed.
+ *
+ * Regenerating an unchanged corpus used to truncate and rewrite every output,
+ * so anything reading data/entries at the same moment — the parallel test
+ * suites, a report script — could read an empty file and fail with
+ * "Unexpected end of JSON input". Skipping identical writes removes that
+ * window for the common case and leaves mtimes meaningful. Compared
+ * EOL-normalised: a CRLF checkout of identical content is not a change.
+ */
+function writeIfChanged(file, text) {
+  const norm = (t) => t.replace(/\r\n/g, '\n');
+  if (fs.existsSync(file) && norm(fs.readFileSync(file, 'utf8')) === norm(text)) return false;
+  fs.writeFileSync(file, text, 'utf8');
+  return true;
+}
+
+/**
+ * Attach incident evidence to the mapping rows that have any (T-STRAT03).
+ *
+ * Sparse on purpose: a row with no linked control failure is left exactly as
+ * parsed, so an absent field means "no incident evidence", not "not computed".
+ * `evidence_count` counts confirmed failures only; drafted ones are listed so
+ * a reader can see the review backlog without it inflating the count.
+ */
+function withEvidence(entryId, mappings, failureIndex) {
+  return mappings.map((m) => {
+    const ev = evidenceForMapping(failureIndex, entryId, m.framework, m.control_id);
+    if (!ev.confirmed.length && !ev.drafted.length) return m;
+    return { ...m, evidence_count: ev.evidence_count, evidence: { confirmed: ev.confirmed, drafted: ev.drafted } };
+  });
+}
+
 // ─── Main ─────────────────────────────────────────────────────────────────────
 
 function main() {
@@ -673,8 +707,10 @@ function main() {
   // Load incidents index from data/incidents.json if available
   const incidentsFile = path.join(ROOT, 'data', 'incidents.json');
   const incidentsByEntry = {};   // entryId -> [{name, url, year, incident_id}]
+  let failureIndex = new Map();  // framework+control -> incidents whose control failed
   if (fs.existsSync(incidentsFile)) {
     const incDb = JSON.parse(fs.readFileSync(incidentsFile, 'utf8'));
+    failureIndex = indexFailures(incDb.incidents);
     for (const inc of incDb.incidents) {
       for (const eid of (inc.owasp_entries || [])) {
         if (!incidentsByEntry[eid]) incidentsByEntry[eid] = [];
@@ -790,7 +826,7 @@ function main() {
       severity:    vuln.severity,
       aivss_score: AIVSS_SCORES[id] ?? null,
       audience:    data.audiences.length ? data.audiences : defaultAudience(vuln.source_list),
-      mappings:    data.mappings,
+      mappings:    withEvidence(id, data.mappings, failureIndex),
       tools:       mergeTools(data.tools, toolsSupplement[id] || []),
       incidents:   incidentsByEntry[id] || [],
       crossrefs:   data.crossrefs,
@@ -837,7 +873,7 @@ function main() {
     if (DRY_RUN) {
       console.log(`  [dry-run] Would write ${outPath} (${data.mappings.length} mappings, ${data.tools.length} tools)`);
     } else {
-      fs.writeFileSync(outPath, json, 'utf8');
+      writeIfChanged(outPath, json);
       written++;
     }
 
@@ -859,7 +895,7 @@ function main() {
       `// Entries: ${allEntries.length}`,
       `window.CROSSWALK_DATA = ${JSON.stringify(allEntries, null, 2)};`,
     ].join('\n');
-    fs.writeFileSync(siteDataPath, siteData, 'utf8');
+    writeIfChanged(siteDataPath, siteData);
     console.log(`Written docs/data.js (${allEntries.length} entries bundled for site)`);
 
     // ── Build backlink index: framework control_id → OWASP entries ──
@@ -894,7 +930,7 @@ function main() {
       return a.control_id.localeCompare(b.control_id);
     });
     const backlinksPath = path.join(ROOT, 'data', 'backlinks.json');
-    fs.writeFileSync(backlinksPath, JSON.stringify(backlinksArray, null, 2), 'utf8');
+    writeIfChanged(backlinksPath, JSON.stringify(backlinksArray, null, 2));
     console.log(`Written data/backlinks.json (${backlinksArray.length} control backlinks)`);
 
     // ── Bundle backlinks for site ──
@@ -904,7 +940,7 @@ function main() {
       `// Backlinks: ${backlinksArray.length}`,
       `window.CROSSWALK_BACKLINKS = ${JSON.stringify(backlinksArray, null, 2)};`,
     ].join('\n');
-    fs.writeFileSync(siteBacklinksPath, siteBacklinks, 'utf8');
+    writeIfChanged(siteBacklinksPath, siteBacklinks);
     console.log(`Written docs/backlinks.js (${backlinksArray.length} backlinks bundled for site)`);
 
     // ── Bundle framework registry for site ──
@@ -928,7 +964,7 @@ function main() {
         `// Frameworks: ${fwRegistry.length}`,
         `window.CROSSWALK_FRAMEWORKS = ${JSON.stringify(fwRegistry, null, 2)};`,
       ].join('\n');
-      fs.writeFileSync(fwRegistryPath, fwRegistryData, 'utf8');
+      writeIfChanged(fwRegistryPath, fwRegistryData);
       console.log(`Written docs/frameworks-registry.js (${fwRegistry.length} frameworks)`);
     }
 
@@ -941,7 +977,7 @@ function main() {
         `// Incidents: ${incDb.incidents.length}`,
         `window.CROSSWALK_INCIDENTS = ${JSON.stringify(incDb.incidents, null, 2)};`,
       ].join('\n');
-      fs.writeFileSync(incPath, incData, 'utf8');
+      writeIfChanged(incPath, incData);
       console.log(`Written docs/incidents.js (${incDb.incidents.length} incidents)`);
     }
   }

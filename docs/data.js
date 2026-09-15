@@ -11791,7 +11791,17 @@ window.CROSSWALK_DATA = [
         "notes": "DRAFT — SME review required",
         "framework_version": "MAESTRO 1.0",
         "confidence": "unreviewed",
-        "reviewed_by": []
+        "reviewed_by": [],
+        "evidence_count": 0,
+        "evidence": {
+          "confirmed": [],
+          "drafted": [
+            "INC-115",
+            "INC-116",
+            "INC-118",
+            "INC-120"
+          ]
+        }
       },
       {
         "framework": "MAESTRO",
@@ -11824,7 +11834,14 @@ window.CROSSWALK_DATA = [
         "notes": "DRAFT — SME review required",
         "framework_version": "MAESTRO 1.0",
         "confidence": "unreviewed",
-        "reviewed_by": []
+        "reviewed_by": [],
+        "evidence_count": 0,
+        "evidence": {
+          "confirmed": [],
+          "drafted": [
+            "INC-116"
+          ]
+        }
       },
       {
         "framework": "MAESTRO",
@@ -11835,7 +11852,14 @@ window.CROSSWALK_DATA = [
         "notes": "DRAFT — SME review required",
         "framework_version": "MAESTRO 1.0",
         "confidence": "unreviewed",
-        "reviewed_by": []
+        "reviewed_by": [],
+        "evidence_count": 0,
+        "evidence": {
+          "confirmed": [],
+          "drafted": [
+            "INC-115"
+          ]
+        }
       }
     ],
     "tools": [],
@@ -11916,7 +11940,14 @@ window.CROSSWALK_DATA = [
         "notes": "DRAFT — SME review required",
         "framework_version": "MAESTRO 1.0",
         "confidence": "unreviewed",
-        "reviewed_by": []
+        "reviewed_by": [],
+        "evidence_count": 0,
+        "evidence": {
+          "confirmed": [],
+          "drafted": [
+            "INC-115"
+          ]
+        }
       },
       {
         "framework": "MAESTRO",
@@ -11938,7 +11969,14 @@ window.CROSSWALK_DATA = [
         "notes": "DRAFT — SME review required",
         "framework_version": "MAESTRO 1.0",
         "confidence": "unreviewed",
-        "reviewed_by": []
+        "reviewed_by": [],
+        "evidence_count": 0,
+        "evidence": {
+          "confirmed": [],
+          "drafted": [
+            "INC-123"
+          ]
+        }
       },
       {
         "framework": "MAESTRO",
@@ -12006,7 +12044,14 @@ window.CROSSWALK_DATA = [
         "notes": "DRAFT — SME review required",
         "framework_version": "MAESTRO 1.0",
         "confidence": "unreviewed",
-        "reviewed_by": []
+        "reviewed_by": [],
+        "evidence_count": 0,
+        "evidence": {
+          "confirmed": [],
+          "drafted": [
+            "INC-119"
+          ]
+        }
       },
       {
         "framework": "MAESTRO",
@@ -12017,7 +12062,14 @@ window.CROSSWALK_DATA = [
         "notes": "DRAFT — SME review required",
         "framework_version": "MAESTRO 1.0",
         "confidence": "unreviewed",
-        "reviewed_by": []
+        "reviewed_by": [],
+        "evidence_count": 0,
+        "evidence": {
+          "confirmed": [],
+          "drafted": [
+            "INC-126"
+          ]
+        }
       },
       {
         "framework": "MAESTRO",
@@ -12039,7 +12091,14 @@ window.CROSSWALK_DATA = [
         "notes": "DRAFT — SME review required",
         "framework_version": "MAESTRO 1.0",
         "confidence": "unreviewed",
-        "reviewed_by": []
+        "reviewed_by": [],
+        "evidence_count": 0,
+        "evidence": {
+          "confirmed": [],
+          "drafted": [
+            "INC-118"
+          ]
+        }
       }
     ],
     "tools": [],
@@ -12102,7 +12161,15 @@ window.CROSSWALK_DATA = [
         "notes": "DRAFT — SME review required",
         "framework_version": "MAESTRO 1.0",
         "confidence": "unreviewed",
-        "reviewed_by": []
+        "reviewed_by": [],
+        "evidence_count": 0,
+        "evidence": {
+          "confirmed": [],
+          "drafted": [
+            "INC-116",
+            "INC-120"
+          ]
+        }
       },
       {
         "framework": "MAESTRO",
@@ -12124,7 +12191,14 @@ window.CROSSWALK_DATA = [
         "notes": "DRAFT — SME review required",
         "framework_version": "MAESTRO 1.0",
         "confidence": "unreviewed",
-        "reviewed_by": []
+        "reviewed_by": [],
+        "evidence_count": 0,
+        "evidence": {
+          "confirmed": [],
+          "drafted": [
+            "INC-116"
+          ]
+        }
       },
       {
         "framework": "MAESTRO",
@@ -12135,7 +12209,14 @@ window.CROSSWALK_DATA = [
         "notes": "DRAFT — SME review required",
         "framework_version": "MAESTRO 1.0",
         "confidence": "unreviewed",
-        "reviewed_by": []
+        "reviewed_by": [],
+        "evidence_count": 0,
+        "evidence": {
+          "confirmed": [],
+          "drafted": [
+            "INC-123"
+          ]
+        }
       }
     ],
     "tools": [],
@@ -12226,7 +12307,14 @@ window.CROSSWALK_DATA = [
         "notes": "DRAFT — SME review required",
         "framework_version": "MAESTRO 1.0",
         "confidence": "unreviewed",
-        "reviewed_by": []
+        "reviewed_by": [],
+        "evidence_count": 0,
+        "evidence": {
+          "confirmed": [],
+          "drafted": [
+            "INC-129"
+          ]
+        }
       },
       {
         "framework": "MAESTRO",
@@ -12300,7 +12388,15 @@ window.CROSSWALK_DATA = [
         "notes": "DRAFT — SME review required",
         "framework_version": "MAESTRO 1.0",
         "confidence": "unreviewed",
-        "reviewed_by": []
+        "reviewed_by": [],
+        "evidence_count": 0,
+        "evidence": {
+          "confirmed": [],
+          "drafted": [
+            "INC-126",
+            "INC-127"
+          ]
+        }
       },
       {
         "framework": "MAESTRO",
@@ -12311,7 +12407,14 @@ window.CROSSWALK_DATA = [
         "notes": "DRAFT — SME review required",
         "framework_version": "MAESTRO 1.0",
         "confidence": "unreviewed",
-        "reviewed_by": []
+        "reviewed_by": [],
+        "evidence_count": 0,
+        "evidence": {
+          "confirmed": [],
+          "drafted": [
+            "INC-124"
+          ]
+        }
       },
       {
         "framework": "MAESTRO",
@@ -12402,7 +12505,14 @@ window.CROSSWALK_DATA = [
         "notes": "DRAFT — SME review required",
         "framework_version": "MAESTRO 1.0",
         "confidence": "unreviewed",
-        "reviewed_by": []
+        "reviewed_by": [],
+        "evidence_count": 0,
+        "evidence": {
+          "confirmed": [],
+          "drafted": [
+            "INC-124"
+          ]
+        }
       },
       {
         "framework": "MAESTRO",
@@ -12413,7 +12523,14 @@ window.CROSSWALK_DATA = [
         "notes": "DRAFT — SME review required",
         "framework_version": "MAESTRO 1.0",
         "confidence": "unreviewed",
-        "reviewed_by": []
+        "reviewed_by": [],
+        "evidence_count": 0,
+        "evidence": {
+          "confirmed": [],
+          "drafted": [
+            "INC-131"
+          ]
+        }
       }
     ],
     "tools": [],
@@ -12470,7 +12587,16 @@ window.CROSSWALK_DATA = [
         "notes": "DRAFT — SME review required",
         "framework_version": "MAESTRO 1.0",
         "confidence": "unreviewed",
-        "reviewed_by": []
+        "reviewed_by": [],
+        "evidence_count": 0,
+        "evidence": {
+          "confirmed": [],
+          "drafted": [
+            "INC-121",
+            "INC-128",
+            "INC-129"
+          ]
+        }
       },
       {
         "framework": "MAESTRO",
@@ -12634,7 +12760,14 @@ window.CROSSWALK_DATA = [
         "notes": "DRAFT — SME review required",
         "framework_version": "MAESTRO 1.0",
         "confidence": "unreviewed",
-        "reviewed_by": []
+        "reviewed_by": [],
+        "evidence_count": 0,
+        "evidence": {
+          "confirmed": [],
+          "drafted": [
+            "INC-131"
+          ]
+        }
       },
       {
         "framework": "MAESTRO",

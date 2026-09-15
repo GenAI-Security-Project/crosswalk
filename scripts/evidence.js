@@ -1,0 +1,206 @@
+#!/usr/bin/env node
+/**
+ * evidence.js — Derive mapping evidence from incident control failures (T-STRAT03).
+ *
+ * A mapping says "control C addresses risk R". An incident's `control_failures[]`
+ * says "in this incident, control C was absent, bypassed, misconfigured or
+ * failed". Where the incident exemplifies R, that failure is evidence the
+ * mapping describes a control that matters in the wild.
+ *
+ * This module is the ONE place that join is defined. stats.js, generate.js,
+ * compliance-report.js and the npm package all call it, so the counts cannot
+ * drift apart the way the hand-maintained headline numbers did.
+ *
+ * Counting rules — the method is written up in docs/EVIDENCE_METHODOLOGY.md,
+ * and every rule here is a DRAFT for maintainer ratification:
+ *
+ *   1. A failure supports a mapping only if the incident lists the mapping's
+ *      entry in `owasp_entries` AND names the same framework + control_id.
+ *      A control failing in an unrelated incident is not evidence for this risk.
+ *   2. Only a CONFIRMED failure (non-empty `confirmed_by`) counts toward
+ *      `evidence_count`. Drafted failures are reported, never counted — a
+ *      draft is a claim awaiting review, not evidence.
+ *   3. The unit is the incident, not the failure record: one incident naming
+ *      the same control twice is one piece of evidence.
+ *
+ * A failure that no mapping absorbs is an "orphan". It is not an error: it may
+ * mean a mapping is missing, which is a question for a human (C4), not a row
+ * for an agent to add.
+ */
+
+'use strict';
+
+const fs = require('fs');
+const path = require('path');
+
+const ROOT = path.resolve(__dirname, '..');
+
+/** Composite key as JSON text — no separator that a framework name could contain. */
+const tupleKey = (...parts) => JSON.stringify(parts);
+const controlKey = (framework, controlId) => tupleKey(framework, controlId);
+
+/** A failure is confirmed only when at least one named human signed it off. */
+function isConfirmed(failure) {
+  return Array.isArray(failure.confirmed_by) &&
+    failure.confirmed_by.some((name) => typeof name === 'string' && name.trim() !== '');
+}
+
+function readIncidents(root = ROOT) {
+  const doc = JSON.parse(fs.readFileSync(path.join(root, 'data', 'incidents.json'), 'utf8'));
+  // Object-form ({version, generated, description, incidents[]}); tolerate a bare array.
+  return Array.isArray(doc) ? doc : doc.incidents || [];
+}
+
+function readEntries(root = ROOT) {
+  const dir = path.join(root, 'data', 'entries');
+  return fs.readdirSync(dir)
+    .filter((f) => f.endsWith('.json'))
+    .sort()
+    .map((f) => JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')));
+}
+
+const byId = (a, b) => a.localeCompare(b);
+
+/**
+ * Index every control failure by framework + control.
+ *
+ * @returns {Map<string, {framework, control_id, incidents: Map<string, {entries, confirmed, outcomes}>}>}
+ */
+function indexFailures(incidents) {
+  const index = new Map();
+  for (const inc of incidents) {
+    for (const f of inc.control_failures || []) {
+      const key = controlKey(f.framework, f.control_id);
+      if (!index.has(key)) {
+        index.set(key, { framework: f.framework, control_id: f.control_id, incidents: new Map() });
+      }
+      const slot = index.get(key).incidents;
+      const rec = slot.get(inc.id) || {
+        entries: [...(inc.owasp_entries || [])],
+        confirmed: false,
+        outcomes: new Set(),
+      };
+      // Rule 3: several records for one incident collapse to one. If any of
+      // them is confirmed, the incident is confirmed evidence for this control.
+      rec.confirmed = rec.confirmed || isConfirmed(f);
+      rec.outcomes.add(f.outcome);
+      slot.set(inc.id, rec);
+    }
+  }
+  return index;
+}
+
+/**
+ * Evidence for one mapping row.
+ *
+ * @returns {{evidence_count: number, confirmed: string[], drafted: string[]}}
+ */
+function evidenceForMapping(index, entryId, framework, controlId) {
+  const hit = index.get(controlKey(framework, controlId));
+  const confirmed = [];
+  const drafted = [];
+  if (hit) {
+    for (const [incId, rec] of hit.incidents) {
+      if (!rec.entries.includes(entryId)) continue; // rule 1
+      (rec.confirmed ? confirmed : drafted).push(incId);
+    }
+  }
+  confirmed.sort(byId);
+  drafted.sort(byId);
+  return { evidence_count: confirmed.length, confirmed, drafted };
+}
+
+/**
+ * Derive evidence across the whole corpus.
+ *
+ * Returns per-mapping evidence (only rows that carry any), the controls that
+ * failed in the wild, orphan failures, and summary counts.
+ */
+function deriveEvidence(entries, incidents) {
+  const index = indexFailures(incidents);
+
+  // Which (entry, framework, control) triples exist as mappings.
+  const mapped = new Set();
+  const rows = [];
+  for (const e of entries) {
+    for (const m of e.mappings || []) {
+      const ev = evidenceForMapping(index, e.id, m.framework, m.control_id);
+      mapped.add(tupleKey(e.id, m.framework, m.control_id));
+      if (ev.confirmed.length || ev.drafted.length) {
+        rows.push({ entry: e.id, framework: m.framework, control_id: m.control_id, ...ev });
+      }
+    }
+  }
+
+  // Controls that failed in the wild, and failures no mapping absorbs.
+  const failedControls = [];
+  const orphans = [];
+  for (const { framework, control_id, incidents: incs } of index.values()) {
+    const confirmed = [];
+    const drafted = [];
+    const outcomes = new Set();
+    const entriesSeen = new Set();
+    for (const [incId, rec] of incs) {
+      (rec.confirmed ? confirmed : drafted).push(incId);
+      rec.outcomes.forEach((o) => outcomes.add(o));
+      rec.entries.forEach((id) => entriesSeen.add(id));
+      const absorbed = rec.entries.some((id) => mapped.has(tupleKey(id, framework, control_id)));
+      if (!absorbed) orphans.push({ incident: incId, framework, control_id, entries: [...rec.entries].sort(byId) });
+    }
+    failedControls.push({
+      framework,
+      control_id,
+      confirmed: confirmed.sort(byId),
+      drafted: drafted.sort(byId),
+      outcomes: [...outcomes].sort(byId),
+      entries: [...entriesSeen].sort(byId),
+    });
+  }
+
+  failedControls.sort((a, b) =>
+    b.confirmed.length - a.confirmed.length ||
+    b.drafted.length - a.drafted.length ||
+    a.framework.localeCompare(b.framework) ||
+    a.control_id.localeCompare(b.control_id, undefined, { numeric: true }));
+  orphans.sort((a, b) => a.incident.localeCompare(b.incident) || a.control_id.localeCompare(b.control_id));
+
+  let failures = 0;
+  let confirmedFailures = 0;
+  let annotated = 0;
+  for (const inc of incidents) {
+    const cf = inc.control_failures || [];
+    if (cf.length) annotated++;
+    failures += cf.length;
+    confirmedFailures += cf.filter(isConfirmed).length;
+  }
+
+  return {
+    rows,
+    failedControls,
+    orphans,
+    summary: {
+      incidents_annotated: annotated,
+      control_failures: failures,
+      confirmed: confirmedFailures,
+      drafted: failures - confirmedFailures,
+      mappings_with_confirmed_evidence: rows.filter((r) => r.evidence_count > 0).length,
+      mappings_with_drafted_evidence_only: rows.filter((r) => r.evidence_count === 0).length,
+      orphan_failures: orphans.length,
+    },
+  };
+}
+
+module.exports = {
+  controlKey,
+  isConfirmed,
+  indexFailures,
+  evidenceForMapping,
+  deriveEvidence,
+  readEntries,
+  readIncidents,
+};
+
+if (require.main === module) {
+  const { summary, failedControls, orphans } = deriveEvidence(readEntries(), readIncidents());
+  console.log(JSON.stringify({ summary, failedControls, orphans }, null, 2));
+}
