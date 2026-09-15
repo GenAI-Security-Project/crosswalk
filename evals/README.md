@@ -210,6 +210,6 @@ system the runner is authorised to test — never synthesised.
 ---
 
 *Part of the
-[OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk)
+[OWASP GenAI Crosswalk](https://github.com/GenAI-Security-Project/crosswalk)
 *
 *License: CC BY-SA 4.0*

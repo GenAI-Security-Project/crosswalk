@@ -149,7 +149,7 @@ jobs:
           if [ -n "$FAILED" ]; then
             echo "::error::Security evaluation FAILED for: $FAILED"
             echo "Review evaluation results in the artifacts tab."
-            echo "Crosswalk reference: https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk"
+            echo "Crosswalk reference: https://github.com/GenAI-Security-Project/crosswalk"
             exit 1
           fi
 
@@ -341,7 +341,7 @@ jobs:
             echo "Logic-layer Prompt Control Injection vulnerabilities detected."
             echo "Review: ${{ env.RESULTS_DIR }}/laaf/crosswalk-report.md"
             echo "LAAF repo: https://github.com/qorvexconsulting1/laaf-V2.0"
-            echo "Crosswalk: https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/tree/main/crosswalk"
+            echo "Crosswalk: https://github.com/GenAI-Security-Project/crosswalk"
             exit 1
           fi
 
