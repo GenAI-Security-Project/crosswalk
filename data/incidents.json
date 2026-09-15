@@ -6964,10 +6964,18 @@
       "control_failures": [
         {
           "framework": "MAESTRO",
-          "control_id": "L3",
+          "control_id": "L7",
           "outcome": "absent",
-          "basis": "Skills also write malicious instructions directly into MEMORY.md and SOUL.md for session-persistent backdooring.",
-          "source_url": "https://owasp.org/www-project-agentic-skills-top-10/",
+          "basis": "Instead, it exploited the absence of detection, analysis, and risk control capabilities and systems that should have been inherent in its open-source ecosystem.",
+          "source_url": "https://www.antiy.net/p/clawhavoc-analysis-of-large-scale-poisoning-campaign-targeting-the-openclaw-skill-market-for-ai-agents/",
+          "confirmed_by": []
+        },
+        {
+          "framework": "MAESTRO",
+          "control_id": "L5",
+          "outcome": "present-but-bypassed",
+          "basis": "It's to evade antivirus scanning - password-protected archives bypass automated analysis because the scanner can't see inside.",
+          "source_url": "https://web.archive.org/web/20260811020443/https://www.koi.ai/blog/clawhavoc-341-malicious-clawedbot-skills-found-by-the-bot-they-were-targeting",
           "confirmed_by": []
         }
       ],
@@ -7047,7 +7055,26 @@
         "ast01",
         "prompt-injection",
         "credential-theft",
-        "snyk"
+        "snyk",
+        "draft-evidence"
+      ],
+      "control_failures": [
+        {
+          "framework": "MAESTRO",
+          "control_id": "L7",
+          "outcome": "absent",
+          "basis": "No cryptographic signing or verification exists: the official guidance: \"treat third-party skills as trusted code. Read them before enabling.\"",
+          "source_url": "https://snyk.io/articles/skill-md-shell-access/",
+          "confirmed_by": []
+        },
+        {
+          "framework": "MAESTRO",
+          "control_id": "L4",
+          "outcome": "absent",
+          "basis": "Default execution runs without sandboxing: OpenClaw documentation explicitly states: \"tools run on the host for the main session, so the agent has full access when it's just you.\"",
+          "source_url": "https://snyk.io/articles/skill-md-shell-access/",
+          "confirmed_by": []
+        }
       ]
     },
     {
@@ -7166,7 +7193,18 @@
         "ast03",
         "ecosystem-audit",
         "snyk",
-        "toxicskills"
+        "toxicskills",
+        "draft-evidence"
+      ],
+      "control_failures": [
+        {
+          "framework": "MAESTRO",
+          "control_id": "L7",
+          "outcome": "absent",
+          "basis": "No code signing. No security review. No sandbox by default.",
+          "source_url": "https://snyk.io/blog/toxicskills-malicious-ai-agent-skills-clawhub/",
+          "confirmed_by": []
+        }
       ]
     },
     {
@@ -7224,7 +7262,18 @@
         "ast03",
         "over-privilege",
         "credential-leak",
-        "snyk"
+        "snyk",
+        "draft-evidence"
+      ],
+      "control_failures": [
+        {
+          "framework": "MAESTRO",
+          "control_id": "L6",
+          "outcome": "absent",
+          "basis": "The flaw: It blindly extracts and outputs .jsonl session files without redaction.",
+          "source_url": "https://snyk.io/blog/openclaw-skills-credential-leaks-research/",
+          "confirmed_by": []
+        }
       ]
     },
     {
@@ -7285,7 +7334,18 @@
         "ast04",
         "typosquatting",
         "impersonation",
-        "snyk"
+        "snyk",
+        "draft-evidence"
+      ],
+      "control_failures": [
+        {
+          "framework": "MAESTRO",
+          "control_id": "L7",
+          "outcome": "present-but-bypassed",
+          "basis": "While ClawHub has recently introduced stronger controls, such as requiring accounts to be one week old and hiding skills with more than three reports, attackers are adapting faster than the platform can police itself.",
+          "source_url": "https://snyk.io/blog/clawhub-malicious-google-skill-openclaw-malware/",
+          "confirmed_by": []
+        }
       ]
     },
     {
@@ -7336,7 +7396,18 @@
         "agentic-skills",
         "ast08",
         "scanner-bypass",
-        "snyk"
+        "snyk",
+        "draft-evidence"
+      ],
+      "control_failures": [
+        {
+          "framework": "MAESTRO",
+          "control_id": "L5",
+          "outcome": "failed",
+          "basis": "The scanner failed to catch the actual threat because our exfiltration code in the fake Vercel skill didn't match its hardcoded list of \"bad\" strings.",
+          "source_url": "https://snyk.io/blog/skill-scanner-false-security/",
+          "confirmed_by": []
+        }
       ]
     },
     {
@@ -7471,8 +7542,16 @@
           "framework": "MAESTRO",
           "control_id": "L6",
           "outcome": "present-but-bypassed",
-          "basis": "Repository-controlled configuration files can silently execute arbitrary shell commands and exfiltrate API keys at project open time, before any trust dialog.",
-          "source_url": "https://owasp.org/www-project-agentic-skills-top-10/",
+          "basis": "Due to a bug in the startup trust dialog implementation, Claude Code could be tricked to execute code contained in a project before the user accepted the startup trust dialog.",
+          "source_url": "https://github.com/anthropics/claude-code/security/advisories/GHSA-4fgq-fpq9-mr3g",
+          "confirmed_by": []
+        },
+        {
+          "framework": "MAESTRO",
+          "control_id": "L6",
+          "outcome": "present-but-bypassed",
+          "basis": "Claude Code would issue API requests before showing the trust prompt, including potentially leaking the user's API keys.",
+          "source_url": "https://github.com/anthropics/claude-code/security/advisories/GHSA-jh7p-qr78-84p7",
           "confirmed_by": []
         }
       ],
@@ -7557,9 +7636,17 @@
         {
           "framework": "MAESTRO",
           "control_id": "L6",
-          "outcome": "absent",
-          "basis": "Malicious websites can brute-force localhost WebSocket connections with no rate limiting to silently hijack local OpenClaw instances, register new devices without user prompts.",
-          "source_url": "https://owasp.org/www-project-agentic-skills-top-10/",
+          "outcome": "present-but-misconfigured",
+          "basis": "The gateway's rate limiter completely exempts loopback connections—failed attempts are not counted, not throttled, and not logged.",
+          "source_url": "https://www.oasis.security/blog/openclaw-vulnerability",
+          "confirmed_by": []
+        },
+        {
+          "framework": "MAESTRO",
+          "control_id": "L6",
+          "outcome": "present-but-misconfigured",
+          "basis": "The gateway auto-approves device pairings from localhost with no user prompt.",
+          "source_url": "https://www.oasis.security/blog/openclaw-vulnerability",
           "confirmed_by": []
         }
       ],
@@ -7700,7 +7787,18 @@
         "ast06",
         "mcp",
         "ssrf",
-        "cloud-credentials"
+        "cloud-credentials",
+        "draft-evidence"
+      ],
+      "control_failures": [
+        {
+          "framework": "MAESTRO",
+          "control_id": "L4",
+          "outcome": "absent",
+          "basis": "MarkItDownMCP does not validate the urls provided to it.",
+          "source_url": "https://www.bluerock.io/post/mcp-furi-microsoft-markitdown-vulnerabilities",
+          "confirmed_by": []
+        }
       ]
     },
     {
@@ -7765,7 +7863,18 @@
         "ast09",
         "shadow-ai",
         "exposure",
-        "openclaw"
+        "openclaw",
+        "draft-evidence"
+      ],
+      "control_failures": [
+        {
+          "framework": "MAESTRO",
+          "control_id": "L4",
+          "outcome": "present-but-misconfigured",
+          "basis": "Out of the box, OpenClaw binds by default to 0.0.0.0:18789, meaning it listens on all interfaces unless an operator explicitly restricts it.",
+          "source_url": "https://www.bitdefender.com/en-us/blog/hotforsecurity/135k-openclaw-ai-agents-exposed-online",
+          "confirmed_by": []
+        }
       ]
     },
     {
@@ -7824,7 +7933,18 @@
         "ast08",
         "scanner-bypass",
         "prompt-injection",
-        "trail-of-bits"
+        "trail-of-bits",
+        "draft-evidence"
+      ],
+      "control_failures": [
+        {
+          "framework": "MAESTRO",
+          "control_id": "L5",
+          "outcome": "present-but-bypassed",
+          "basis": "We recently bypassed ClawHub’s malicious skill detector, Cisco’s agent skill scanner, and all three of the scanners integrated into skills.sh.",
+          "source_url": "https://blog.trailofbits.com/2026/06/03/the-sorry-state-of-skill-distribution/",
+          "confirmed_by": []
+        }
       ]
     },
     {
@@ -7891,7 +8011,26 @@
         "ast08",
         "external-instructions",
         "scanner-bypass",
-        "air-security"
+        "air-security",
+        "draft-evidence"
+      ],
+      "control_failures": [
+        {
+          "framework": "MAESTRO",
+          "control_id": "L5",
+          "outcome": "failed",
+          "basis": "We started by running our skill locally against Cisco's and Nvidia's scanners, and all of skills.sh's scanners: All vetted brand-landingpage as safe.",
+          "source_url": "https://www.air.security/blog-posts/the-story-of-skills",
+          "confirmed_by": []
+        },
+        {
+          "framework": "MAESTRO",
+          "control_id": "L7",
+          "outcome": "failed",
+          "basis": "The bottom line: every signal people use to judge a skill cleared it - scanners, stars, reputation. Every one of them failed, and 26,000 agents were compromised.",
+          "source_url": "https://www.air.security/blog-posts/the-story-of-skills",
+          "confirmed_by": []
+        }
       ]
     },
     {
@@ -8015,7 +8154,18 @@
         "ast10",
         "dependency-hijack",
         "supply-chain",
-        "air-security"
+        "air-security",
+        "draft-evidence"
+      ],
+      "control_failures": [
+        {
+          "framework": "MAESTRO",
+          "control_id": "L7",
+          "outcome": "present-but-misconfigured",
+          "basis": "GitHub does block re-creating previously very popular repositories, but the bar to qualify is high enough that most of the dangling repos we found weren't covered by it.",
+          "source_url": "https://www.air.security/blog-posts/skilljacking",
+          "confirmed_by": []
+        }
       ]
     }
   ]
