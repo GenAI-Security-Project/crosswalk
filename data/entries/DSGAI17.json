@@ -780,6 +780,83 @@
       "notes": "Apply lessons learned from bias incidents; update training data, model parameters, and controls based on fairness assessments",
       "confidence": "unreviewed",
       "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "3.3.1",
+      "control_name": "Verify that production deployments implement rollout mechanisms with automated rollback triggers.",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C03-Model-Lifecycle-Management.md#c33-controlled-deployment--rollback",
+      "notes": "Level 2. Production deployments implement rollout mechanisms with automated rollback triggers",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "3.3.2",
+      "control_name": "Verify that rollback capabilities restore the complete model state.",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C03-Model-Lifecycle-Management.md#c33-controlled-deployment--rollback",
+      "notes": "Level 2. Rollback capabilities restore the complete model state",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "1.1.4",
+      "control_name": "Verify that integrity monitoring is applied to guard against unauthorized modifications or corruption of training data.",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c11-training-data-origin--data-security",
+      "notes": "Level 2. Integrity monitoring guards training data against unauthorized modification or corruption, detecting the corruption event that recovery must answer",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "3.5.4",
+      "control_name": "Verify that fine-tuning checkpoints are registered as distinct artifacts.",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C03-Model-Lifecycle-Management.md#c35-pipeline-fine-tuning",
+      "notes": "Level 3. Fine-tuning checkpoints registered as distinct artifacts, giving discrete recovery points",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "12.5.1",
+      "control_name": "Verify that dataset lineage records each dataset and its components, including all transformations, augmentations, and merges.",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C12-Monitoring-and-Logging.md#c125-training-data--model-lifecycle-audit",
+      "notes": "Level 1. Dataset lineage records each dataset and its components including transformations, augmentations and merges, enabling reconstruction",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "8.3.2",
+      "control_name": "Verify that memory can be reset.",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c83-memory-expiry--revocation",
+      "notes": "Level 2. Memory can be reset, giving a defined recovery action for a corrupted agent memory or RAG store",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP AISVS 1.0",
+      "control_id": "12.5.3",
+      "control_name": "Verify that all model changes generate immutable audit records.",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C12-Monitoring-and-Logging.md#c125-training-data--model-lifecycle-audit",
+      "notes": "Level 2. All model changes generate immutable audit records, establishing the known-good state to recover to",
+      "confidence": "unreviewed",
+      "reviewed_by": []
     }
   ],
   "tools": [
@@ -857,73 +934,73 @@
   "incidents": [
     {
       "name": "Meta Galactica model withdrawn after misinformation at launch",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2022,
       "incident_id": "INC-031"
     },
     {
       "name": "Clearview AI biometric bias — $50M class action settlement",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2025,
       "incident_id": "INC-036"
     },
     {
       "name": "Stability AI synthetic CSAM generation — training data and output safety failures",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-049"
     },
     {
       "name": "Google Gemini AI image generator refuses to depict white people — overcorrected safety filters",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-051"
     },
     {
       "name": "NYC city chatbot tells businesses to break the law — fabricated legal guidance",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-052"
     },
     {
       "name": "Character.AI teen suicide — AI companion encouraged self-harm",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-057"
     },
     {
       "name": "Apple Intelligence notification hallucinations — fabricated BBC news headlines",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-060"
     },
     {
       "name": "EU AI Act first enforcement actions — prohibited AI practices take effect",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2025,
       "incident_id": "INC-071"
     },
     {
       "name": "OpenAI GPT-4o sycophancy — model agrees with users even when they are wrong",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2025,
       "incident_id": "INC-073"
     },
     {
       "name": "AI recruiting tool gender bias — Amazon scraps internal ML hiring tool",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-074"
     },
     {
       "name": "Tesla FSD phantom braking and obstacle hallucination — AI perception failures at highway speed",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-076"
     },
     {
       "name": "OpenAI Whisper hallucinating medical transcriptions — fabricated diagnoses in healthcare AI",
-      "url": "https://github.com/GenAI-Security-Project/GenAI-Data-Security-Initiative/blob/main/crosswalk/data/incidents.json",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-080"
     }

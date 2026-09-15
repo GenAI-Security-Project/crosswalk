@@ -154,6 +154,14 @@
       "source_url": "https://owasp.org/www-project-ai-security-and-privacy-guide/",
       "notes": ""
     },
+    "owasp-aisvs": {
+      "name": "OWASP AISVS 1.0",
+      "mapped_version": "1.0",
+      "current_version": "1.0",
+      "checked": "2026-09-14",
+      "source_url": "https://github.com/OWASP/AISVS/tree/main/1.0/en",
+      "notes": "Verified against the frozen OWASP/AISVS 1.0/en chapter files: 191 requirements, ids, text and levels identical to the registry. No tagged release upstream; 1.01-dev is in development and not yet released."
+    },
     "owasp-asvs": {
       "name": "OWASP ASVS 4.0.3",
       "mapped_version": "4.0.3",
