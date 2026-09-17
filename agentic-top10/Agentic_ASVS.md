@@ -12,7 +12,7 @@
 Mapping the
 [OWASP Top 10 for Agentic Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
 to the
-[OWASP Application Security Verification Standard (ASVS) 4.0.3](https://owasp.org/www-project-application-security-verification-standard/)
+[OWASP Application Security Verification Standard (ASVS) 4.0.3](https://owasp.org/projects/asvs)
 —
 the framework for testing and verifying web application and API
 security, organised into 14 chapters with three verification levels.
@@ -721,7 +721,7 @@ Without complete audit trails, rogue behaviour cannot be detected.
 
 ## References
 
-- [OWASP ASVS 4.0.3](https://owasp.org/www-project-application-security-verification-standard/)
+- [OWASP ASVS 4.0.3](https://owasp.org/projects/asvs)
 - [OWASP ASVS GitHub](https://github.com/OWASP/ASVS)
 - [OWASP Agentic Top 10 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
 - [OWASP AI Testing Guide](https://owasp.org/www-project-ai-testing-guide/)

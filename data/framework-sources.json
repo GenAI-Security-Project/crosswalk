@@ -167,7 +167,7 @@
       "mapped_version": "4.0.3",
       "current_version": "5.0.0",
       "checked": "2026-08-28",
-      "source_url": "https://owasp.org/www-project-application-security-verification-standard/",
+      "source_url": "https://owasp.org/projects/asvs",
       "notes": "Verified via the OWASP/ASVS releases API (tag v5.0.0_release). Renumbered — re-map tracked in issue #22, NOT a version bump."
     },
     "owasp-nhi": {

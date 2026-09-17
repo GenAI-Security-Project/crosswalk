@@ -12,7 +12,7 @@
 Mapping the
 [OWASP GenAI Data Security Risks & Mitigations 2026](https://genai.owasp.org/resource/owasp-genai-data-security-risks-mitigations-2026/)
 (DSGAI01–DSGAI21) to the
-[OWASP Application Security Verification Standard (ASVS) 4.0.3](https://owasp.org/www-project-application-security-verification-standard/)
+[OWASP Application Security Verification Standard (ASVS) 4.0.3](https://owasp.org/projects/asvs)
 — the framework for verifying the security of web applications and APIs, organised
 into 14 chapters with three verification levels (L1/L2/L3).
 
@@ -1180,7 +1180,7 @@ targeting specific topics, entities, or user segments with malicious intent.
 
 ## References
 
-- [OWASP ASVS 4.0.3](https://owasp.org/www-project-application-security-verification-standard/)
+- [OWASP ASVS 4.0.3](https://owasp.org/projects/asvs)
 - [OWASP GenAI Data Security Risks 2026](https://genai.owasp.org/resource/owasp-genai-data-security-risks-mitigations-2026/)
 - [OWASP AIVSS](https://aivss.owasp.org)
 
