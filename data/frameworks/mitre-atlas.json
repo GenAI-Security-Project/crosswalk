@@ -2,58 +2,58 @@
   "id": "mitre-atlas",
   "name": "MITRE ATLAS",
   "short_name": "ATLAS",
-  "version": "4.0",
+  "version": "2026.09",
   "url": "https://atlas.mitre.org",
   "license": "Public",
   "publisher": "MITRE Corporation",
   "category": "threat-model",
-  "last_synced": "2026-04-10",
-  "source_sha": null,
+  "last_synced": "2026-09-17",
+  "source_sha": "06842b2b9f9048ed09e3c257138cc4e4aeb7d27c",
   "controls": [
     {
       "control_id": "AML.T0000",
-      "title": "ML Model Access",
-      "description": "Adversary gains some level of access to an ML model.",
+      "title": "Search Open Technical Databases",
+      "description": "Adversaries may search for publicly available research and technical documentation to learn how and where AI is used within a victim organization.",
       "parent": null,
       "function": "Reconnaissance",
       "kind": "technique"
     },
     {
       "control_id": "AML.T0001",
-      "title": "ML Attack Staging",
-      "description": "Adversary prepares resources for an attack against an ML system.",
-      "parent": null,
-      "function": "Resource Development",
-      "kind": "technique"
-    },
-    {
-      "control_id": "AML.T0002",
-      "title": "Active Scanning",
-      "description": "Adversary probes an ML system to gather information for targeting.",
+      "title": "Search Open AI Vulnerability Analysis",
+      "description": "Much like the Search Open Technical Databases, there is often ample research available on the vulnerabilities of common AI models.",
       "parent": null,
       "function": "Reconnaissance",
       "kind": "technique"
     },
     {
+      "control_id": "AML.T0002",
+      "title": "Acquire Public AI Artifacts",
+      "description": "Adversaries may search public sources, including cloud storage, public-facing services, and software or data repositories, to identify AI artifacts.",
+      "parent": null,
+      "function": "Resource Development",
+      "kind": "technique"
+    },
+    {
       "control_id": "AML.T0003",
-      "title": "Search for ML Artifacts",
-      "description": "Adversary searches for publicly available ML artifacts to use in attacks.",
+      "title": "Search Victim-Owned Websites",
+      "description": "Adversaries may search websites owned by the victim for information that can be used during targeting.",
       "parent": null,
       "function": "Reconnaissance",
       "kind": "technique"
     },
     {
       "control_id": "AML.T0004",
-      "title": "Search for Victim's Publicly Available ML Information",
-      "description": "Adversary searches for public information about victim's ML systems.",
+      "title": "Search Application Repositories",
+      "description": "Adversaries may search open application repositories during targeting.",
       "parent": null,
       "function": "Reconnaissance",
       "kind": "technique"
     },
     {
       "control_id": "AML.T0010",
-      "title": "ML Supply Chain Compromise",
-      "description": "Adversary compromises ML supply chain to insert malicious components.",
+      "title": "AI Supply Chain Compromise",
+      "description": "Adversaries may gain initial access to a system by compromising the unique portions of the AI supply chain.",
       "parent": null,
       "function": "Initial Access",
       "kind": "technique"
@@ -61,7 +61,7 @@
     {
       "control_id": "AML.T0011",
       "title": "User Execution",
-      "description": "Adversary relies on user to execute malicious ML content.",
+      "description": "An adversary may rely upon a user to load, execute, interpret, or otherwise use a malicious or unsafe artifact.",
       "parent": null,
       "function": "Execution",
       "kind": "technique"
@@ -69,23 +69,23 @@
     {
       "control_id": "AML.T0012",
       "title": "Valid Accounts",
-      "description": "Adversary uses compromised credentials to access ML systems.",
+      "description": "Adversaries may obtain and abuse credentials of existing accounts as a means of gaining Initial Access.",
       "parent": null,
       "function": "Initial Access",
       "kind": "technique"
     },
     {
       "control_id": "AML.T0015",
-      "title": "Evade ML Model",
-      "description": "Adversary crafts inputs to evade ML model detection.",
+      "title": "Evade AI Model",
+      "description": "Adversaries can Craft Adversarial Data that prevents an AI model from correctly identifying the contents of the data or Generate Deepfakes that fools an AI model expecting authentic data.",
       "parent": null,
-      "function": "ML Attack",
+      "function": "Initial Access",
       "kind": "technique"
     },
     {
       "control_id": "AML.T0016",
       "title": "Obtain Capabilities",
-      "description": "Adversary obtains ML-specific tools and resources.",
+      "description": "Adversaries may search for and obtain software capabilities for use in their operations.",
       "parent": null,
       "function": "Resource Development",
       "kind": "technique"
@@ -93,17 +93,17 @@
     {
       "control_id": "AML.T0017",
       "title": "Develop Capabilities",
-      "description": "Adversary develops ML-specific attack tools and techniques.",
+      "description": "Adversaries may develop their own capabilities to support operations.",
       "parent": null,
       "function": "Resource Development",
       "kind": "technique"
     },
     {
       "control_id": "AML.T0018",
-      "title": "Backdoor ML Model",
-      "description": "Adversary embeds hidden functionality in ML models.",
+      "title": "Manipulate AI Model",
+      "description": "\"Adversaries may manipulate an AI model artifact or its bundled components\\ \\ to change AI system behavior, introduce malicious code, or establish persistent\\ \\ malicious functionality.",
       "parent": null,
-      "function": "Persistence",
+      "function": "AI Attack Adaptation",
       "kind": "technique"
     },
     {
@@ -112,20 +112,21 @@
       "description": "Adversary publishes poisoned datasets for victim consumption.",
       "parent": null,
       "function": "Resource Development",
-      "kind": "technique"
+      "kind": "technique",
+      "source_status": "absent-from-atlas-2026.09"
     },
     {
       "control_id": "AML.T0020",
-      "title": "Poison Training Data",
-      "description": "Adversary manipulates training data to corrupt model behavior.",
+      "title": "Training Data Poisoning",
+      "description": "Adversaries may manipulate data used for training or fine-tuning an AI model to influence the resulting model's behavior.",
       "parent": null,
-      "function": "ML Attack",
+      "function": "Persistence",
       "kind": "technique"
     },
     {
       "control_id": "AML.T0024",
-      "title": "Exfiltration via ML Inference API",
-      "description": "Adversary exfiltrates training data or model information via inference API.",
+      "title": "Exfiltration via AI Inference API",
+      "description": "Adversaries may exfiltrate private information via AI Model Inference API Access.",
       "parent": null,
       "function": "Exfiltration",
       "kind": "technique"
@@ -133,15 +134,15 @@
     {
       "control_id": "AML.T0025",
       "title": "Exfiltration via Cyber Means",
-      "description": "Adversary exfiltrates ML artifacts through traditional cyber channels.",
+      "description": "Adversaries may exfiltrate AI artifacts or other information relevant to their goals via traditional cyber means.",
       "parent": null,
       "function": "Exfiltration",
       "kind": "technique"
     },
     {
       "control_id": "AML.T0031",
-      "title": "Erode ML Model Integrity",
-      "description": "Adversary degrades model performance or trustworthiness.",
+      "title": "Erode AI Model Integrity",
+      "description": "Adversaries may degrade the target model's performance with adversarial data inputs to erode confidence in the system over time.",
       "parent": null,
       "function": "Impact",
       "kind": "technique"
@@ -149,79 +150,79 @@
     {
       "control_id": "AML.T0034",
       "title": "Cost Harvesting",
-      "description": "Adversary abuses ML inference to impose financial costs on victim.",
+      "description": "Adversaries may deliberately drive a victim's AI services beyond normal operating capacity with the intent of increasing the cost of services.",
       "parent": null,
       "function": "Impact",
       "kind": "technique"
     },
     {
       "control_id": "AML.T0035",
-      "title": "Denial of ML Service",
-      "description": "Adversary disrupts availability of ML system.",
+      "title": "AI Artifact Collection",
+      "description": "Adversaries may collect AI artifacts for Exfiltration or for use in AI Attack Staging.",
       "parent": null,
-      "function": "Impact",
+      "function": "Collection",
       "kind": "technique"
     },
     {
       "control_id": "AML.T0036",
       "title": "Data from Information Repositories",
-      "description": "Adversary collects data from ML-related information repositories.",
+      "description": "Adversaries may leverage information repositories to mine valuable information.",
       "parent": null,
       "function": "Collection",
       "kind": "technique"
     },
     {
       "control_id": "AML.T0040",
-      "title": "ML Model Inference API Access",
-      "description": "Adversary obtains access to ML model inference API.",
+      "title": "AI Model Inference API Access",
+      "description": "Adversaries may gain access to a model via legitimate access to the inference API.",
       "parent": null,
-      "function": "Initial Access",
+      "function": "AI Model Access",
       "kind": "technique"
     },
     {
       "control_id": "AML.T0042",
       "title": "Verify Attack",
-      "description": "Adversary verifies that an attack achieved its intended effect.",
+      "description": "Adversaries can verify the efficacy of their attack via an inference API or access to an offline copy of the target model.",
       "parent": null,
-      "function": "ML Attack",
+      "function": "AI Attack Adaptation",
       "kind": "technique"
     },
     {
       "control_id": "AML.T0043",
       "title": "Craft Adversarial Data",
-      "description": "Adversary crafts data specifically designed to exploit ML model vulnerabilities.",
+      "description": "Adversarial data are inputs to an AI model that have been modified such that they cause the adversary's desired effect in the target model.",
       "parent": null,
-      "function": "ML Attack",
+      "function": "AI Attack Adaptation",
       "kind": "technique"
     },
     {
       "control_id": "AML.T0044",
-      "title": "Full ML Model Access",
-      "description": "Adversary gains full access to ML model internals (white-box).",
+      "title": "Full AI Model Access",
+      "description": "Adversaries may gain full \"white-box\" access to an AI model.",
       "parent": null,
-      "function": "Credential Access",
+      "function": "AI Model Access",
       "kind": "technique"
     },
     {
       "control_id": "AML.T0047",
-      "title": "ML-Enabled Product or Service",
-      "description": "Adversary exploits ML-enabled product or service.",
+      "title": "AI-Enabled Product or Service",
+      "description": "Adversaries may use a product or service that uses artificial intelligence under the hood to gain access to the underlying AI model.",
       "parent": null,
-      "function": "Initial Access",
+      "function": "AI Model Access",
       "kind": "technique"
     },
     {
       "control_id": "AML.T0048",
-      "title": "Discover ML Model Family",
-      "description": "Adversary identifies the model architecture or family.",
+      "title": "External Harms",
+      "description": "Adversaries may abuse their access to a victim system and use its resources or capabilities to further their goals by causing harms external to that system.",
       "parent": null,
-      "function": "Discovery",
+      "function": "Impact",
       "kind": "technique"
     },
     {
       "control_id": "AML.T0049",
       "title": "Exploit Public-Facing Application",
-      "description": "Adversary exploits public-facing ML application.",
+      "description": "Adversaries may attempt to take advantage of a weakness in an Internet-facing computer or program using software, data, or commands in order to cause unintended or unanticipated behavior.",
       "parent": null,
       "function": "Initial Access",
       "kind": "technique"
@@ -229,7 +230,7 @@
     {
       "control_id": "AML.T0050",
       "title": "Command and Scripting Interpreter",
-      "description": "Adversary uses code execution to interact with ML systems.",
+      "description": "Adversaries may abuse command and script interpreters to execute commands, scripts, or binaries.",
       "parent": null,
       "function": "Execution",
       "kind": "technique"
@@ -237,152 +238,166 @@
     {
       "control_id": "AML.T0051",
       "title": "LLM Prompt Injection",
-      "description": "Adversary crafts prompts to manipulate LLM behavior.",
+      "description": "An adversary may craft malicious prompts as inputs to an LLM that cause the LLM to act in unintended ways.",
       "parent": null,
-      "function": "ML Attack",
+      "function": "Execution",
       "kind": "technique"
     },
     {
       "control_id": "AML.T0051.000",
-      "title": "Direct Prompt Injection",
-      "description": "Attacker directly manipulates user-facing prompt to alter model behaviour.",
+      "title": "LLM Prompt Injection: Direct",
+      "description": "An adversary may inject prompts directly as a user of the LLM.",
       "parent": "AML.T0051",
-      "function": "ML Attack",
+      "function": "Execution",
       "kind": "technique"
     },
     {
       "control_id": "AML.T0051.001",
-      "title": "Indirect Prompt Injection",
-      "description": "Hidden instructions in content the model processes (documents, web, RAG).",
+      "title": "LLM Prompt Injection: Indirect",
+      "description": "An adversary may inject prompts indirectly via a separate data channel that the LLM or AI agent ingests, such as text or multimedia pulled from documents, emails, databases or websites.",
       "parent": "AML.T0051",
-      "function": "ML Attack",
+      "function": "Execution",
       "kind": "technique"
     },
     {
       "control_id": "AML.T0052",
       "title": "Phishing",
-      "description": "Adversary uses social engineering to gain access to ML systems.",
+      "description": "Adversaries may send phishing messages to gain access to victim systems.",
       "parent": null,
       "function": "Initial Access",
       "kind": "technique"
     },
     {
       "control_id": "AML.T0053",
-      "title": "Discover ML Model Ontology",
-      "description": "Adversary discovers the ontology or label space of a model.",
+      "title": "AI Agent Tool Invocation",
+      "description": "Adversaries may use their access to an AI agent to invoke tools the agent has access to.",
       "parent": null,
-      "function": "Discovery",
+      "function": "Execution",
       "kind": "technique"
     },
     {
       "control_id": "AML.T0054",
       "title": "LLM Jailbreak",
-      "description": "Adversary circumvents model safety guardrails via crafted prompt sequences.",
+      "description": "Adversaries may induce a large language model (LLM) to ignore, circumvent, or override its safety/alignment behaviors and/or guardrails to elicit outputs the model is intended to withhold.",
       "parent": null,
-      "function": "ML Attack",
+      "function": "Defense Evasion",
       "kind": "technique"
     },
     {
       "control_id": "AML.T0055",
-      "title": "Unsafe Model Output",
-      "description": "ML model produces unsafe, harmful, or unintended outputs.",
+      "title": "Unsecured Credentials",
+      "description": "Adversaries may search compromised systems to find and obtain insecurely stored credentials.",
       "parent": null,
-      "function": "Impact",
+      "function": "Credential Access",
       "kind": "technique"
     },
     {
       "control_id": "AML.T0056",
-      "title": "LLM Data Leakage",
-      "description": "Adversary extracts sensitive training data from LLM responses.",
+      "title": "Extract LLM System Prompt",
+      "description": "Adversaries may attempt to extract a large language model's (LLM) system prompt.",
       "parent": null,
       "function": "Exfiltration",
       "kind": "technique"
     },
     {
       "control_id": "AML.T0057",
-      "title": "LLM Plugin Compromise",
-      "description": "Adversary compromises or exploits LLM plugins and tool integrations.",
+      "title": "LLM Data Leakage",
+      "description": "Adversaries may craft prompts that induce the LLM to leak sensitive information.",
       "parent": null,
-      "function": "Lateral Movement",
+      "function": "Exfiltration",
       "kind": "technique"
     },
     {
       "control_id": "AML.T0037",
-      "title": "Output Manipulation",
-      "description": "Crafting inputs that produce tool calls with destructive parameters; Crafting inputs that produce malicious executable code in agent output; Crafting inputs that produce dangerous outputs consumed by downstream systems",
-      "kind": "technique"
+      "title": "Data from Local System",
+      "description": "Adversaries may search local system sources, such as file systems and configuration files or local databases, to find files of interest and sensitive data prior to Exfiltration.",
+      "kind": "technique",
+      "function": "Collection"
     },
     {
       "control_id": "AML.T0068",
-      "title": "Automated Collection",
-      "description": "Agent autonomously harvesting data through tool chains beyond authorised scope; LLM autonomously collecting data beyond its intended access scope",
-      "kind": "technique"
+      "title": "LLM Prompt Obfuscation",
+      "description": "Adversaries may hide or otherwise obfuscate prompt injections or retrieval content to avoid detection from humans, large language model (LLM) guardrails, or other detection mechanisms.",
+      "kind": "technique",
+      "function": "Defense Evasion"
     },
     {
       "control_id": "AML.T0022",
       "title": "Valid Accounts",
       "description": "Exploiting legitimate agent credentials to access AI systems or data pipelines; Using compromised agent credentials to impersonate trusted agents in A2A channels",
-      "kind": "technique"
+      "kind": "technique",
+      "source_status": "absent-from-atlas-2026.09"
     },
     {
       "control_id": "AML.T0032",
       "title": "Data Poisoning",
       "description": "Injecting malicious content into agent persistent memory or RAG stores; Injecting malicious data into training pipelines to corrupt model behaviour",
-      "kind": "technique"
+      "kind": "technique",
+      "source_status": "absent-from-atlas-2026.09"
     },
     {
       "control_id": "AML.T0063",
-      "title": "Embedding Manipulation",
-      "description": "Crafting content whose embeddings bias future retrieval results in attacker's favour; Crafting inputs whose embeddings manipulate similarity search results",
-      "kind": "technique"
+      "title": "Discover AI Model Outputs",
+      "description": "Adversaries may discover model outputs, such as class scores, whose presence is not required for the system to function and are not intended for use by the end user.",
+      "kind": "technique",
+      "function": "Discovery"
     },
     {
       "control_id": "AML.T0029",
-      "title": "Denial of ML Service",
-      "description": "Triggering cascading failure propagation to exhaust system resources or degrade service; Adversary saturates GenAI pipeline � vector store, RAG retrieval, or inference endpoint rendered unavailable; Overloading AI systems with computationally expensive inputs to cause service degradation",
-      "kind": "technique"
+      "title": "Denial of AI Service",
+      "description": "Adversaries may target AI-enabled systems with a flood of requests for the purpose of degrading or shutting down the service.",
+      "kind": "technique",
+      "function": "Impact"
     },
     {
       "control_id": "AML.T0045",
       "title": "Disinformation",
       "description": "Agent generates persuasive false information to manipulate human approvals; Adversary publishes false content in public repositories, documentation sites, or knowledge bases indexed by RAG systems; Using AI-generated content to deliberately spread false information",
-      "kind": "technique"
+      "kind": "technique",
+      "source_status": "absent-from-atlas-2026.09"
     },
     {
       "control_id": "AML.T0024.000",
-      "title": "Membership Inference",
-      "description": "Adversary determines whether specific sensitive records were used in training � confirms presence of target data; Ungoverned training data status � adversary determines what sensitive data is in scope without classification barriers; Sensitive multimodal content in training data confirmed through membership inference queries",
-      "kind": "technique"
+      "title": "Exfiltration via AI Inference API: Infer Training Data Membership",
+      "description": "Adversaries may infer the membership of a data sample or global characteristics of the data in its training set, which raises privacy concerns.",
+      "kind": "technique",
+      "function": "Exfiltration",
+      "parent": "AML.T0024"
     },
     {
       "control_id": "AML.T0013",
-      "title": "Discover ML Model Ontology",
-      "description": "Adversary learns what data the browser assistant can access across open applications",
-      "kind": "technique"
+      "title": "Discover AI Model Ontology",
+      "description": "Adversaries may discover the ontology of an AI model's output space, for example, the types of objects a model can detect.",
+      "kind": "technique",
+      "function": "Discovery"
     },
     {
       "control_id": "AML.T0027",
       "title": "Model Inversion",
       "description": "Adversary reconstructs sensitive training examples from model outputs through systematic query campaigns; Reconstructing sensitive training data from model outputs",
-      "kind": "technique"
+      "kind": "technique",
+      "source_status": "absent-from-atlas-2026.09"
     },
     {
       "control_id": "AML.T0021",
-      "title": "Data Leakage",
-      "description": "Unintended exposure of training data or sensitive context through model outputs",
-      "kind": "technique"
+      "title": "Establish Accounts",
+      "description": "Adversaries may create accounts with various services for use in targeting, to gain access to resources needed in AI Attack Staging, or for victim impersonation.",
+      "kind": "technique",
+      "function": "Resource Development"
     },
     {
       "control_id": "AML.T0030",
       "title": "Information Disclosure",
       "description": "Extraction of confidential information via targeted model queries",
-      "kind": "technique"
+      "kind": "technique",
+      "source_status": "absent-from-atlas-2026.09"
     },
     {
       "control_id": "AML.T0041",
-      "title": "Configuration Exposure",
-      "description": "Extraction of internal model configuration, instructions, or system prompts",
-      "kind": "technique"
+      "title": "Physical Environment Access",
+      "description": "In addition to the attacks that take place purely in the digital domain, adversaries may also exploit the physical environment for their attacks.",
+      "kind": "technique",
+      "function": "AI Model Access"
     }
   ],
   "changelog": [
@@ -390,13 +405,18 @@
       "date": "2026-04-09",
       "change": "Initial seed — 37 ATLAS techniques from v4.0",
       "author": "OWASP GenAI Data Security Initiative"
+    },
+    {
+      "date": "2026-09-17",
+      "change": "Re-transcribed titles, descriptions and tactics from ATLAS 2026.09 (dist/v6/ATLAS-2026.09.yaml, blob 06842b2b9f90): 44 items corrected, 6 ids left unresolved for SME review (#93)",
+      "author": "OWASP GenAI Data Security Initiative"
     }
   ],
   "inventory_completeness": {
-    "status": "unknown",
-    "included": 50,
-    "total": null,
-    "note": "Authoritative control count not established. Needs a count from the published framework.",
-    "source": "https://atlas.mitre.org"
+    "status": "partial",
+    "included": 44,
+    "total": 208,
+    "note": "Transcribed from ATLAS 2026.09. 6 further ids in this registry (AML.T0019, AML.T0022, AML.T0032, AML.T0045, AML.T0027, AML.T0030) are not techniques in 2026.09 and are left for review — see issue #93.",
+    "source": "https://github.com/mitre-atlas/atlas-data/blob/v2026.09/dist/v6/ATLAS-2026.09.yaml"
   }
 }

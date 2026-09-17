@@ -109,10 +109,10 @@
     "mitre-atlas": {
       "name": "MITRE ATLAS",
       "mapped_version": "4.0",
-      "current_version": null,
-      "checked": null,
+      "current_version": "2026.09",
+      "checked": "2026-09-17",
       "source_url": "https://atlas.mitre.org",
-      "notes": ""
+      "notes": "ATLAS now ships monthly data releases (format 6.0.0) at github.com/mitre-atlas/atlas-data, dist/v6/ATLAS-<version>.yaml. data/frameworks/mitre-atlas.json is transcribed from 2026.09; the mapping rows still carry 4.0-era names and are under review in issue #93."
     },
     "nist-ai-rmf": {
       "name": "NIST AI RMF 1.0",
