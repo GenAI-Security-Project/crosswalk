@@ -505,7 +505,7 @@ All accessed 2026-09-14. Fetch status for each is in `SOURCES_CHECK.json`.
 28. SCF, Download — <https://securecontrolsframework.com/free-content/scf-download>
 29. SCF, NIST OLIR participation — <https://securecontrolsframework.com/start-here/nist-olir-participation>
 30. SCF, Conformity Assessment Program —
-    <https://securecontrolsframework.com/scf-certified/organization-level-scf-certifications/scf-conformity-assessment-program-cap>
+    <https://securecontrolsframework.com/scr-certified/organization-level-scr-certifications/scr-conformity-assessment-program-cap>
 31. GitHub API, SCF repository metadata —
     <https://api.github.com/repos/securecontrolsframework/securecontrolsframework>
 32. CSA, AI Controls Matrix v1.1 — <https://cloudsecurityalliance.org/artifacts/ai-controls-matrix-v1-1>

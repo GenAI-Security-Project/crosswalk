@@ -9132,7 +9132,7 @@ window.CROSSWALK_FRAMEWORKS = [
     "name": "OWASP ASVS 4.0.3",
     "short_name": "ASVS",
     "version": "4.0.3",
-    "url": "https://owasp.org/www-project-application-security-verification-standard/",
+    "url": "https://owasp.org/projects/asvs",
     "license": "CC BY-SA 4.0",
     "publisher": "OWASP",
     "category": "appsec",
@@ -9652,7 +9652,7 @@ window.CROSSWALK_FRAMEWORKS = [
       "included": 75,
       "total": null,
       "note": "Authoritative control count not established. Needs a count from the published framework.",
-      "source": "https://owasp.org/www-project-application-security-verification-standard/"
+      "source": "https://owasp.org/projects/asvs"
     }
   },
   {

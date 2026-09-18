@@ -950,7 +950,7 @@ For each automated test case:
 
 - [OWASP AI Testing Guide](https://owasp.org/www-project-ai-testing-guide/)
 - [OWASP Top 10 for LLM Applications 2026](https://genai.owasp.org/llm-top-10/)
-- [OWASP ASVS 4.0.3](https://owasp.org/www-project-application-security-verification-standard/)
+- [OWASP ASVS 4.0.3](https://owasp.org/projects/asvs)
 - [MITRE ATLAS](https://atlas.mitre.org)
 - [NIST AI RMF Playbook](https://airc.nist.gov/AI_RMF_Knowledge_Base/Playbook)
 - [Garak — LLM vulnerability scanner](https://github.com/leondz/garak)
