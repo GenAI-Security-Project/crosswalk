@@ -164,11 +164,11 @@
     },
     "owasp-asvs": {
       "name": "OWASP ASVS 4.0.3",
-      "mapped_version": "4.0.3",
+      "mapped_version": "5.0.0",
       "current_version": "5.0.0",
-      "checked": "2026-08-28",
+      "checked": "2026-09-18",
       "source_url": "https://owasp.org/projects/asvs",
-      "notes": "Verified via the OWASP/ASVS releases API (tag v5.0.0_release). Renumbered — re-map tracked in issue #22, NOT a version bump."
+      "notes": "Identifiers translated from 4.0.3 with the ASVS project's own 5.0/mappings/mapping_v4.0.3_to_v5.0.0.yml; requirement text from the v5.0.0 release. Mechanical translation — relationship, rationale type and confidence on every row read DRAFT pending ASVS-leadership review (issue #22, STRAT-04). 11 identifiers 5.0.0 deleted are retained at 4.0.3 and flagged; see docs/ASVS_4_TO_5_TRANSLATION.md."
     },
     "owasp-nhi": {
       "name": "OWASP NHI Top 10",

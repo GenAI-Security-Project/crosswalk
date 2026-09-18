@@ -252,7 +252,8 @@
       "control_name": "Verify third-party components are current and free from vulnerabilities",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All LLM component libraries and dependencies scanned for CVEs — ML SBOM maintained",
+      "notes": "All LLM component libraries and dependencies scanned for CVEs — ML SBOM maintained — **DRAFT — ASVS 5.0.0: DELETED, NOT PRACTICAL; retarget or drop pending SME review (#22)**",
+      "framework_version": "ASVS 4.0.3",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
@@ -262,17 +263,19 @@
       "control_name": "Verify only minimal approved external libraries are used",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Approved component list for LLM deployments — unsigned or unverified components rejected",
+      "notes": "Approved component list for LLM deployments — unsigned or unverified components rejected — **DRAFT — ASVS 5.0.0: DELETED, NOT PRACTICAL; retarget or drop pending SME review (#22)**",
+      "framework_version": "ASVS 4.0.3",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
-      "control_id": "V14.2.2",
-      "control_name": "Verify build pipelines include security checks",
+      "control_id": "V13.4.5",
+      "control_name": "Verify that documentation (such as for internal APIs) and monitoring endpoints are not exposed unless explicitly intended.",
       "tier": "Foundational",
       "scope": "Both",
       "notes": "CI/CD pipeline for LLM components includes integrity verification and vulnerability scanning",
+      "framework_version": "ASVS 5.0.0",
       "confidence": "unreviewed",
       "reviewed_by": []
     },

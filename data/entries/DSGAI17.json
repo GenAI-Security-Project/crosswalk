@@ -290,6 +290,8 @@
       "tier": "Foundational",
       "scope": "Both",
       "parent": "V11",
+      "notes": "Both — **DRAFT — ASVS 5.0.0: DELETED, NOT IN SCOPE; retarget or drop pending SME review (#22)**",
+      "framework_version": "ASVS 4.0.3",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
@@ -300,6 +302,8 @@
       "tier": "Foundational",
       "scope": "Both",
       "parent": "V13",
+      "notes": "Both — **DRAFT — ASVS 5.0.0: (id absent from the official 4.0.3 mapping); retarget or drop pending SME review (#22)**",
+      "framework_version": "ASVS 4.0.3",
       "confidence": "unreviewed",
       "reviewed_by": []
     },

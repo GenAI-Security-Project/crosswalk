@@ -77,7 +77,7 @@ Every file answers one question: **which controls from framework X address vulne
 | **<!-- stats:frameworks-mapped -->26<!-- /stats -->** frameworks | Compliance · Governance · Threat modeling · Testing · OT/ICS · Identity · Secure SDLC · Financial |
 | **<!-- stats:mapping-files -->77<!-- /stats -->** mapping files | Every source list entry × every applicable framework |
 | **Mapping review state** | <!-- stats:frameworks-draft -->2 of 26 carry candidate DRAFT rows only — CoSAI · EU AI Act Code of Practice<!-- /stats --> — see [docs/SCHEMA_V2_MIGRATION.md](docs/SCHEMA_V2_MIGRATION.md) |
-| **Framework freshness** | <!-- stats:freshness -->3 current · 2 behind upstream · 21 unchecked<!-- /stats --> — see [docs/FRESHNESS_SLA.md](docs/FRESHNESS_SLA.md) |
+| **Framework freshness** | <!-- stats:freshness -->4 current · 1 behind upstream · 21 unchecked<!-- /stats --> — see [docs/FRESHNESS_SLA.md](docs/FRESHNESS_SLA.md) |
 | **21** implementation recipes | Production-ready Python patterns |
 | **70+** open-source tools | Catalogued and organised by function |
 | **25** eval profiles | Runnable Garak (13) + PyRIT (6) + LAAF (6) tests mapped to OWASP entries |

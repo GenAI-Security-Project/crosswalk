@@ -295,11 +295,12 @@
     },
     {
       "framework": "OWASP ASVS 4.0.3",
-      "control_id": "V4.1.1",
+      "control_id": "V8.3.1",
       "control_name": "Access control per request",
       "tier": "Hardening",
       "scope": "Both",
       "parent": "V4",
+      "framework_version": "ASVS 5.0.0",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
@@ -310,6 +311,8 @@
       "tier": "Hardening",
       "scope": "Both",
       "parent": "V8",
+      "notes": "Both — **DRAFT — ASVS 5.0.0: DELETED, NOT IN SCOPE; retarget or drop pending SME review (#22)**",
+      "framework_version": "ASVS 4.0.3",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
@@ -320,6 +323,8 @@
       "tier": "Hardening",
       "scope": "Both",
       "parent": "V10",
+      "notes": "Both — **DRAFT — ASVS 5.0.0: DELETED, NOT PRACTICAL; retarget or drop pending SME review (#22)**",
+      "framework_version": "ASVS 4.0.3",
       "confidence": "unreviewed",
       "reviewed_by": []
     },

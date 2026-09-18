@@ -285,11 +285,12 @@
     },
     {
       "framework": "OWASP ASVS 4.0.3",
-      "control_id": "V4.1.2",
+      "control_id": "V8.2.1",
       "control_name": "Least privilege",
       "tier": "Foundational",
       "scope": "Both",
       "parent": "V4",
+      "framework_version": "ASVS 5.0.0",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
@@ -300,16 +301,19 @@
       "tier": "Foundational",
       "scope": "Both",
       "parent": "V8",
+      "notes": "Both — **DRAFT — ASVS 5.0.0: DELETED, NOT IN SCOPE; retarget or drop pending SME review (#22)**",
+      "framework_version": "ASVS 4.0.3",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
-      "control_id": "V2.1.1",
+      "control_id": "V6.2.1",
       "control_name": "Strong authentication",
       "tier": "Foundational",
       "scope": "Both",
       "parent": "V2",
+      "framework_version": "ASVS 5.0.0",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
