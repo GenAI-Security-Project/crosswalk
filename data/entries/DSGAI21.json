@@ -89,7 +89,7 @@
       "control_name": "Publish Poisoned Datasets",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Adversary publishes false content in public repositories, documentation sites, or knowledge bases indexed by RAG systems",
+      "notes": "Adversary publishes false content in public repositories, documentation sites, or knowledge bases indexed by RAG systems — **DRAFT — AML.T0045 is not an ATLAS technique id; retarget pending SME review (#93)**",
       "confidence": "unreviewed",
       "reviewed_by": []
     },

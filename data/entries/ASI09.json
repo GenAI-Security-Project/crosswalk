@@ -89,7 +89,7 @@
       "tier": "Foundational",
       "scope": "Both",
       "url": "https://atlas.mitre.org/techniques/AML.T0045",
-      "notes": "Agent generates persuasive false information to manipulate human approvals",
+      "notes": "Agent generates persuasive false information to manipulate human approvals — **DRAFT — AML.T0045 is not an ATLAS technique id; retarget pending SME review (#93)**",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
@@ -100,7 +100,7 @@
       "tier": "Foundational",
       "scope": "Both",
       "url": "https://atlas.mitre.org/techniques/AML.T0047",
-      "notes": "Agent produces high-volume, fluent content that overwhelms human critical assessment",
+      "notes": "Agent produces high-volume, fluent content that overwhelms human critical assessment — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)**",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
@@ -111,7 +111,7 @@
       "tier": "Foundational",
       "scope": "Both",
       "url": "https://atlas.mitre.org/techniques/AML.T0049",
-      "notes": "Compromised agent crafts highly personalised, convincing manipulation targeted at specific users",
+      "notes": "Compromised agent crafts highly personalised, convincing manipulation targeted at specific users — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)**",
       "confidence": "unreviewed",
       "reviewed_by": []
     },

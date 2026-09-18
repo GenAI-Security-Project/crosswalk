@@ -23,17 +23,17 @@
       "tier": "Foundational",
       "scope": "Build",
       "url": "https://atlas.mitre.org/techniques/AML.T0015",
-      "notes": "Exploiting overly permissive LLM tool access to perform actions beyond intended scope",
+      "notes": "Exploiting overly permissive LLM tool access to perform actions beyond intended scope — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)**",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
     {
       "framework": "MITRE ATLAS",
-      "control_id": "AML.T0068",
+      "control_id": "AML.T0126",
       "control_name": "Automated Collection",
       "tier": "Foundational",
       "scope": "Build",
-      "url": "https://atlas.mitre.org/techniques/AML.T0068",
+      "url": "https://atlas.mitre.org/techniques/AML.T0126",
       "notes": "LLM autonomously collecting data beyond its intended access scope",
       "confidence": "unreviewed",
       "reviewed_by": []

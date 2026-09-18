@@ -23,7 +23,7 @@
       "tier": "Foundational",
       "scope": "Both",
       "url": "https://atlas.mitre.org/techniques/AML.T0056",
-      "notes": "Tampering with model weights, adapters, or configurations during supply chain",
+      "notes": "Tampering with model weights, adapters, or configurations during supply chain — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)**",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
@@ -34,17 +34,17 @@
       "tier": "Foundational",
       "scope": "Both",
       "url": "https://atlas.mitre.org/techniques/AML.T0048",
-      "notes": "Introducing persistent malicious behaviour into model through supply chain",
+      "notes": "Introducing persistent malicious behaviour into model through supply chain — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)**",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
     {
       "framework": "MITRE ATLAS",
-      "control_id": "AML.T0010",
-      "control_name": "Backdoor ML Model",
+      "control_id": "AML.T0018",
+      "control_name": "Manipulate AI Model",
       "tier": "Foundational",
       "scope": "Both",
-      "url": "https://atlas.mitre.org/techniques/AML.T0010",
+      "url": "https://atlas.mitre.org/techniques/AML.T0018",
       "notes": "Embedding trigger-based backdoors in model weights via training or fine-tuning supply chain",
       "confidence": "unreviewed",
       "reviewed_by": []

@@ -85,7 +85,7 @@
     {
       "framework": "MITRE ATLAS",
       "control_id": "AML.T0051.000",
-      "control_name": "Direct Prompt Injection",
+      "control_name": "LLM Prompt Injection: Direct",
       "tier": "Foundational",
       "scope": "Both",
       "url": "https://atlas.mitre.org/techniques/AML.T0051.000",
@@ -96,7 +96,7 @@
     {
       "framework": "MITRE ATLAS",
       "control_id": "AML.T0051.001",
-      "control_name": "Indirect Prompt Injection",
+      "control_name": "LLM Prompt Injection: Indirect",
       "tier": "Foundational",
       "scope": "Both",
       "url": "https://atlas.mitre.org/techniques/AML.T0051.001",

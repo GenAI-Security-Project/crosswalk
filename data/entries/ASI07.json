@@ -89,7 +89,7 @@
       "tier": "Hardening",
       "scope": "Both",
       "url": "https://atlas.mitre.org/techniques/AML.T0043",
-      "notes": "Identifying and mapping inter-agent communication endpoints for targeting",
+      "notes": "Identifying and mapping inter-agent communication endpoints for targeting — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)**",
       "confidence": "unreviewed",
       "reviewed_by": []
     },

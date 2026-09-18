@@ -75,6 +75,13 @@
       "kind": "technique"
     },
     {
+      "control_id": "AML.T0013",
+      "title": "Discover AI Model Ontology",
+      "description": "Adversaries may discover the ontology of an AI model's output space, for example, the types of objects a model can detect.",
+      "kind": "technique",
+      "function": "Discovery"
+    },
+    {
       "control_id": "AML.T0015",
       "title": "Evade AI Model",
       "description": "Adversaries can Craft Adversarial Data that prevents an AI model from correctly identifying the contents of the data or Generate Deepfakes that fools an AI model expecting authentic data.",
@@ -124,10 +131,40 @@
       "kind": "technique"
     },
     {
+      "control_id": "AML.T0021",
+      "title": "Establish Accounts",
+      "description": "Adversaries may create accounts with various services for use in targeting, to gain access to resources needed in AI Attack Staging, or for victim impersonation.",
+      "kind": "technique",
+      "function": "Resource Development"
+    },
+    {
+      "control_id": "AML.T0022",
+      "title": "Valid Accounts",
+      "description": "Exploiting legitimate agent credentials to access AI systems or data pipelines; Using compromised agent credentials to impersonate trusted agents in A2A channels",
+      "kind": "technique",
+      "source_status": "absent-from-atlas-2026.09"
+    },
+    {
       "control_id": "AML.T0024",
       "title": "Exfiltration via AI Inference API",
       "description": "Adversaries may exfiltrate private information via AI Model Inference API Access.",
       "parent": null,
+      "function": "Exfiltration",
+      "kind": "technique"
+    },
+    {
+      "control_id": "AML.T0024.000",
+      "title": "Exfiltration via AI Inference API: Infer Training Data Membership",
+      "description": "Adversaries may infer the membership of a data sample or global characteristics of the data in its training set, which raises privacy concerns.",
+      "kind": "technique",
+      "function": "Exfiltration",
+      "parent": "AML.T0024"
+    },
+    {
+      "control_id": "AML.T0024.002",
+      "title": "Exfiltration via AI Inference API: Extract AI Model",
+      "description": "Adversaries may extract a functional copy of a private model.",
+      "parent": "AML.T0024",
       "function": "Exfiltration",
       "kind": "technique"
     },
@@ -140,12 +177,40 @@
       "kind": "technique"
     },
     {
+      "control_id": "AML.T0027",
+      "title": "Model Inversion",
+      "description": "Adversary reconstructs sensitive training examples from model outputs through systematic query campaigns; Reconstructing sensitive training data from model outputs",
+      "kind": "technique",
+      "source_status": "absent-from-atlas-2026.09"
+    },
+    {
+      "control_id": "AML.T0029",
+      "title": "Denial of AI Service",
+      "description": "Adversaries may target AI-enabled systems with a flood of requests for the purpose of degrading or shutting down the service.",
+      "kind": "technique",
+      "function": "Impact"
+    },
+    {
+      "control_id": "AML.T0030",
+      "title": "Information Disclosure",
+      "description": "Extraction of confidential information via targeted model queries",
+      "kind": "technique",
+      "source_status": "absent-from-atlas-2026.09"
+    },
+    {
       "control_id": "AML.T0031",
       "title": "Erode AI Model Integrity",
       "description": "Adversaries may degrade the target model's performance with adversarial data inputs to erode confidence in the system over time.",
       "parent": null,
       "function": "Impact",
       "kind": "technique"
+    },
+    {
+      "control_id": "AML.T0032",
+      "title": "Data Poisoning",
+      "description": "Injecting malicious content into agent persistent memory or RAG stores; Injecting malicious data into training pipelines to corrupt model behaviour",
+      "kind": "technique",
+      "source_status": "absent-from-atlas-2026.09"
     },
     {
       "control_id": "AML.T0034",
@@ -172,12 +237,26 @@
       "kind": "technique"
     },
     {
+      "control_id": "AML.T0037",
+      "title": "Data from Local System",
+      "description": "Adversaries may search local system sources, such as file systems and configuration files or local databases, to find files of interest and sensitive data prior to Exfiltration.",
+      "kind": "technique",
+      "function": "Collection"
+    },
+    {
       "control_id": "AML.T0040",
       "title": "AI Model Inference API Access",
       "description": "Adversaries may gain access to a model via legitimate access to the inference API.",
       "parent": null,
       "function": "AI Model Access",
       "kind": "technique"
+    },
+    {
+      "control_id": "AML.T0041",
+      "title": "Physical Environment Access",
+      "description": "In addition to the attacks that take place purely in the digital domain, adversaries may also exploit the physical environment for their attacks.",
+      "kind": "technique",
+      "function": "AI Model Access"
     },
     {
       "control_id": "AML.T0042",
@@ -202,6 +281,13 @@
       "parent": null,
       "function": "AI Model Access",
       "kind": "technique"
+    },
+    {
+      "control_id": "AML.T0045",
+      "title": "Disinformation",
+      "description": "Agent generates persuasive false information to manipulate human approvals; Adversary publishes false content in public repositories, documentation sites, or knowledge bases indexed by RAG systems; Using AI-generated content to deliberately spread false information",
+      "kind": "technique",
+      "source_status": "absent-from-atlas-2026.09"
     },
     {
       "control_id": "AML.T0047",
@@ -308,11 +394,11 @@
       "kind": "technique"
     },
     {
-      "control_id": "AML.T0037",
-      "title": "Data from Local System",
-      "description": "Adversaries may search local system sources, such as file systems and configuration files or local databases, to find files of interest and sensitive data prior to Exfiltration.",
+      "control_id": "AML.T0063",
+      "title": "Discover AI Model Outputs",
+      "description": "Adversaries may discover model outputs, such as class scores, whose presence is not required for the system to function and are not intended for use by the end user.",
       "kind": "technique",
-      "function": "Collection"
+      "function": "Discovery"
     },
     {
       "control_id": "AML.T0068",
@@ -322,82 +408,12 @@
       "function": "Defense Evasion"
     },
     {
-      "control_id": "AML.T0022",
-      "title": "Valid Accounts",
-      "description": "Exploiting legitimate agent credentials to access AI systems or data pipelines; Using compromised agent credentials to impersonate trusted agents in A2A channels",
-      "kind": "technique",
-      "source_status": "absent-from-atlas-2026.09"
-    },
-    {
-      "control_id": "AML.T0032",
-      "title": "Data Poisoning",
-      "description": "Injecting malicious content into agent persistent memory or RAG stores; Injecting malicious data into training pipelines to corrupt model behaviour",
-      "kind": "technique",
-      "source_status": "absent-from-atlas-2026.09"
-    },
-    {
-      "control_id": "AML.T0063",
-      "title": "Discover AI Model Outputs",
-      "description": "Adversaries may discover model outputs, such as class scores, whose presence is not required for the system to function and are not intended for use by the end user.",
-      "kind": "technique",
-      "function": "Discovery"
-    },
-    {
-      "control_id": "AML.T0029",
-      "title": "Denial of AI Service",
-      "description": "Adversaries may target AI-enabled systems with a flood of requests for the purpose of degrading or shutting down the service.",
-      "kind": "technique",
-      "function": "Impact"
-    },
-    {
-      "control_id": "AML.T0045",
-      "title": "Disinformation",
-      "description": "Agent generates persuasive false information to manipulate human approvals; Adversary publishes false content in public repositories, documentation sites, or knowledge bases indexed by RAG systems; Using AI-generated content to deliberately spread false information",
-      "kind": "technique",
-      "source_status": "absent-from-atlas-2026.09"
-    },
-    {
-      "control_id": "AML.T0024.000",
-      "title": "Exfiltration via AI Inference API: Infer Training Data Membership",
-      "description": "Adversaries may infer the membership of a data sample or global characteristics of the data in its training set, which raises privacy concerns.",
-      "kind": "technique",
-      "function": "Exfiltration",
-      "parent": "AML.T0024"
-    },
-    {
-      "control_id": "AML.T0013",
-      "title": "Discover AI Model Ontology",
-      "description": "Adversaries may discover the ontology of an AI model's output space, for example, the types of objects a model can detect.",
-      "kind": "technique",
-      "function": "Discovery"
-    },
-    {
-      "control_id": "AML.T0027",
-      "title": "Model Inversion",
-      "description": "Adversary reconstructs sensitive training examples from model outputs through systematic query campaigns; Reconstructing sensitive training data from model outputs",
-      "kind": "technique",
-      "source_status": "absent-from-atlas-2026.09"
-    },
-    {
-      "control_id": "AML.T0021",
-      "title": "Establish Accounts",
-      "description": "Adversaries may create accounts with various services for use in targeting, to gain access to resources needed in AI Attack Staging, or for victim impersonation.",
-      "kind": "technique",
-      "function": "Resource Development"
-    },
-    {
-      "control_id": "AML.T0030",
-      "title": "Information Disclosure",
-      "description": "Extraction of confidential information via targeted model queries",
-      "kind": "technique",
-      "source_status": "absent-from-atlas-2026.09"
-    },
-    {
-      "control_id": "AML.T0041",
-      "title": "Physical Environment Access",
-      "description": "In addition to the attacks that take place purely in the digital domain, adversaries may also exploit the physical environment for their attacks.",
-      "kind": "technique",
-      "function": "AI Model Access"
+      "control_id": "AML.T0126",
+      "title": "Automated Collection",
+      "description": "Adversaries may use automated techniques to collect data from AI systems and supporting enterprise environments.",
+      "parent": null,
+      "function": "Collection",
+      "kind": "technique"
     }
   ],
   "changelog": [
@@ -410,11 +426,16 @@
       "date": "2026-09-17",
       "change": "Re-transcribed titles, descriptions and tactics from ATLAS 2026.09 (dist/v6/ATLAS-2026.09.yaml, blob 06842b2b9f90): 44 items corrected, 6 ids left unresolved for SME review (#93)",
       "author": "OWASP GenAI Data Security Initiative"
+    },
+    {
+      "date": "2026-09-18",
+      "change": "Added 2 ATLAS 2026.09 technique(s) now cited by corrected mapping rows: AML.T0024.002, AML.T0126",
+      "author": "OWASP GenAI Data Security Initiative"
     }
   ],
   "inventory_completeness": {
     "status": "partial",
-    "included": 44,
+    "included": 46,
     "total": 208,
     "note": "Transcribed from ATLAS 2026.09. 6 further ids in this registry (AML.T0019, AML.T0022, AML.T0032, AML.T0045, AML.T0027, AML.T0030) are not techniques in 2026.09 and are left for review — see issue #93.",
     "source": "https://github.com/mitre-atlas/atlas-data/blob/v2026.09/dist/v6/ATLAS-2026.09.yaml"

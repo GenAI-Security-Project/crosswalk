@@ -105,8 +105,8 @@
     },
     {
       "framework": "MITRE ATLAS",
-      "control_id": "AML.T0035",
-      "control_name": "Exfiltrate via ML Inference API",
+      "control_id": "AML.T0024",
+      "control_name": "Exfiltration via AI Inference API",
       "tier": "Foundational",
       "scope": "Both",
       "notes": "Tool API acts as exfiltration channel — sensitive context content captured in tool call payloads",

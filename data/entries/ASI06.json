@@ -89,7 +89,7 @@
       "tier": "Hardening",
       "scope": "Both",
       "url": "https://atlas.mitre.org/techniques/AML.T0032",
-      "notes": "Injecting malicious content into agent persistent memory or RAG stores",
+      "notes": "Injecting malicious content into agent persistent memory or RAG stores — **DRAFT — AML.T0032 is not an ATLAS technique id; retarget pending SME review (#93)**",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
@@ -100,7 +100,7 @@
       "tier": "Hardening",
       "scope": "Both",
       "url": "https://atlas.mitre.org/techniques/AML.T0063",
-      "notes": "Crafting content whose embeddings bias future retrieval results in attacker's favour",
+      "notes": "Crafting content whose embeddings bias future retrieval results in attacker's favour — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)**",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
@@ -111,7 +111,7 @@
       "tier": "Hardening",
       "scope": "Both",
       "url": "https://atlas.mitre.org/techniques/AML.T0020",
-      "notes": "Establishing persistent trigger-response patterns in agent memory stores",
+      "notes": "Establishing persistent trigger-response patterns in agent memory stores — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)**",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
