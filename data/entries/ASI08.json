@@ -106,12 +106,12 @@
     },
     {
       "framework": "MITRE ATLAS",
-      "control_id": "AML.T0057",
-      "control_name": "Exploit Public-Facing ML Application",
+      "control_id": "AML.T0049",
+      "control_name": "Exploit Public-Facing Application",
       "tier": "Foundational",
       "scope": "Both",
-      "url": "https://atlas.mitre.org/techniques/AML.T0057",
-      "notes": "Exploiting an exposed agent endpoint to introduce a fault that cascades internally — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)**",
+      "url": "https://atlas.mitre.org/techniques/AML.T0049",
+      "notes": "Exploiting an exposed agent endpoint to introduce a fault that cascades internally",
       "confidence": "unreviewed",
       "reviewed_by": []
     },

@@ -84,12 +84,12 @@
     },
     {
       "framework": "MITRE ATLAS",
-      "control_id": "AML.T0043",
-      "control_name": "Network Service Scanning",
+      "control_id": "AML.T0006.002",
+      "control_name": "Active Scanning: Scan for Exposed AI Infrastructure",
       "tier": "Hardening",
       "scope": "Both",
-      "url": "https://atlas.mitre.org/techniques/AML.T0043",
-      "notes": "Identifying and mapping inter-agent communication endpoints for targeting — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)**",
+      "url": "https://atlas.mitre.org/techniques/AML.T0006.002",
+      "notes": "Identifying and mapping inter-agent communication endpoints for targeting",
       "confidence": "unreviewed",
       "reviewed_by": []
     },

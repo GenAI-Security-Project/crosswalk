@@ -58,15 +58,15 @@ it travels through.
 | ID | Name | Severity | Primary ATLAS Techniques | Agentic amplifier | Tier |
 |---|---|---|---|---|---|
 | ASI01 | Agent Goal Hijack | Critical | AML.T0051.000, AML.T0051.001, AML.T0054 | Autonomy turns single injection into multi-step attack chain | Foundational–Advanced |
-| ASI02 | Tool Misuse & Exploitation | Critical | AML.T0037, AML.T0015, AML.T0126 | Tool access converts prompt manipulation into real-world action | Foundational–Advanced |
+| ASI02 | Tool Misuse & Exploitation | Critical | AML.T0037, AML.T0053, AML.T0126 | Tool access converts prompt manipulation into real-world action | Foundational–Advanced |
 | ASI03 | Identity & Privilege Abuse | Critical | AML.T0012, AML.T0024 | Cached credentials give attacker persistent access beyond session | Foundational–Advanced |
 | ASI04 | Agentic Supply Chain | High | AML.T0056, AML.T0048, AML.T0018 | Runtime dynamic loading means poisoned components affect all consumers | Hardening–Advanced |
 | ASI05 | Unexpected Code Execution | Critical | AML.T0040, AML.T0054, AML.T0037 | Code generation + execution capability creates RCE gateway | Foundational–Advanced |
-| ASI06 | Memory & Context Poisoning | High | AML.T0032, AML.T0063, AML.T0020 | Persistence across sessions amplifies impact of single injection | Hardening–Advanced |
-| ASI07 | Insecure Inter-Agent Comms | High | AML.T0043, AML.T0012, AML.T0024 | A2A spoofing misdirects entire agent clusters | Hardening–Advanced |
-| ASI08 | Cascading Agent Failures | High | AML.T0029, AML.T0034, AML.T0057 | Single fault fans out across all downstream agents | Foundational–Advanced |
-| ASI09 | Human-Agent Trust Exploitation | Medium | AML.T0045, AML.T0047, AML.T0049 | Agent fluency makes manipulation invisible to audit logs | Foundational–Hardening |
-| ASI10 | Rogue Agents | Critical | AML.T0054, AML.T0015, AML.T0057 | Compliant surface masks persistent hidden goal pursuit | Hardening–Advanced |
+| ASI06 | Memory & Context Poisoning | High | AML.T0070, AML.T0066, AML.T0020 | Persistence across sessions amplifies impact of single injection | Hardening–Advanced |
+| ASI07 | Insecure Inter-Agent Comms | High | AML.T0006.002, AML.T0012, AML.T0024 | A2A spoofing misdirects entire agent clusters | Hardening–Advanced |
+| ASI08 | Cascading Agent Failures | High | AML.T0029, AML.T0034, AML.T0049 | Single fault fans out across all downstream agents | Foundational–Advanced |
+| ASI09 | Human-Agent Trust Exploitation | Medium | AML.T0045, AML.T0047, AML.T0052.000 | Agent fluency makes manipulation invisible to audit logs | Foundational–Hardening |
+| ASI10 | Rogue Agents | Critical | AML.T0054, AML.T0053, AML.T0049 | Compliant surface masks persistent hidden goal pursuit | Hardening–Advanced |
 
 ---
 
@@ -177,7 +177,7 @@ tool does in response: delete, send, execute, publish.
 | Technique | ID | Tactic | Agentic context |
 |---|---|---|---|
 | Output Manipulation | [AML.T0037](https://atlas.mitre.org/techniques/AML.T0037) | Influence Operations | Crafting inputs that produce tool calls with destructive parameters — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)** |
-| LLM Capability Escalation | [AML.T0015](https://atlas.mitre.org/techniques/AML.T0015) | Privilege Escalation | Exploiting overly permissive tool access to exceed intended agent scope — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)** |
+| AI Agent Tool Invocation | [AML.T0053](https://atlas.mitre.org/techniques/AML.T0053) | Privilege Escalation | Exploiting overly permissive tool access to exceed intended agent scope |
 | Automated Collection | [AML.T0126](https://atlas.mitre.org/techniques/AML.T0126) | Collection | Agent autonomously harvesting data through tool chains beyond authorised scope |
 
 #### Mitigations by tier
@@ -457,8 +457,8 @@ without triggering any single detectable event.
 
 | Technique | ID | Tactic | Agentic context |
 |---|---|---|---|
-| Data Poisoning | [AML.T0032](https://atlas.mitre.org/techniques/AML.T0032) | ML Attack Staging | Injecting malicious content into agent persistent memory or RAG stores — **DRAFT — AML.T0032 is not an ATLAS technique id; retarget pending SME review (#93)** |
-| Embedding Manipulation | [AML.T0063](https://atlas.mitre.org/techniques/AML.T0063) | ML Attack Staging | Crafting content whose embeddings bias future retrieval results in attacker's favour — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)** |
+| RAG Poisoning | [AML.T0070](https://atlas.mitre.org/techniques/AML.T0070) | ML Attack Staging | Injecting malicious content into agent persistent memory or RAG stores |
+| Retrieval Content Crafting | [AML.T0066](https://atlas.mitre.org/techniques/AML.T0066) | ML Attack Staging | Crafting content whose embeddings bias future retrieval results in attacker's favour |
 | Backdoor via Poisoned Memory | [AML.T0020](https://atlas.mitre.org/techniques/AML.T0020) | Persistence | Establishing persistent trigger-response patterns in agent memory stores — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)** |
 
 #### Mitigations by tier
@@ -520,7 +520,7 @@ cluster.
 
 | Technique | ID | Tactic | Agentic context |
 |---|---|---|---|
-| Network Service Scanning | [AML.T0043](https://atlas.mitre.org/techniques/AML.T0043) | Discovery | Identifying and mapping inter-agent communication endpoints for targeting — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)** |
+| Active Scanning: Scan for Exposed AI Infrastructure | [AML.T0006.002](https://atlas.mitre.org/techniques/AML.T0006.002) | Discovery | Identifying and mapping inter-agent communication endpoints for targeting |
 | Valid Accounts | [AML.T0012](https://atlas.mitre.org/techniques/AML.T0012) | Persistence | Using compromised agent credentials to impersonate trusted agents in A2A channels |
 | Exfiltration via AI Inference API | [AML.T0024](https://atlas.mitre.org/techniques/AML.T0024) | Exfiltration | Intercepting inter-agent messages to exfiltrate sensitive context passed between agents |
 
@@ -594,7 +594,7 @@ crosswalks for OT-specific controls.
 |---|---|---|---|
 | Denial of AI Service | [AML.T0029](https://atlas.mitre.org/techniques/AML.T0029) | Impact | Triggering cascading failure propagation to exhaust system resources or degrade service |
 | Cost Harvesting | [AML.T0034](https://atlas.mitre.org/techniques/AML.T0034) | Impact | Crafting inputs that trigger runaway agent loops generating unbounded costs |
-| Exploit Public-Facing ML Application | [AML.T0057](https://atlas.mitre.org/techniques/AML.T0057) | Initial Access | Exploiting an exposed agent endpoint to introduce a fault that cascades internally — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)** |
+| Exploit Public-Facing Application | [AML.T0049](https://atlas.mitre.org/techniques/AML.T0049) | Initial Access | Exploiting an exposed agent endpoint to introduce a fault that cascades internally |
 
 #### Mitigations by tier
 
@@ -657,7 +657,7 @@ forensics shows a legitimate user decision, not an agent manipulation.
 |---|---|---|---|
 | Disinformation | [AML.T0045](https://atlas.mitre.org/techniques/AML.T0045) | Influence Operations | Agent generates persuasive false information to manipulate human approvals — **DRAFT — AML.T0045 is not an ATLAS technique id; retarget pending SME review (#93)** |
 | Influence via Automated Content | [AML.T0047](https://atlas.mitre.org/techniques/AML.T0047) | Influence Operations | Agent produces high-volume, fluent content that overwhelms human critical assessment — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)** |
-| Spearphishing via AI | [AML.T0049](https://atlas.mitre.org/techniques/AML.T0049) | Initial Access | Compromised agent crafts highly personalised, convincing manipulation targeted at specific users — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)** |
+| Phishing: Spearphishing via Social Engineering LLM | [AML.T0052.000](https://atlas.mitre.org/techniques/AML.T0052.000) | Initial Access | Compromised agent crafts highly personalised, convincing manipulation targeted at specific users |
 
 #### Mitigations by tier
 
@@ -710,8 +710,8 @@ ASI06 attack that has gone undetected across multiple sessions.
 | Technique | ID | Tactic | Agentic context |
 |---|---|---|---|
 | LLM Jailbreak | [AML.T0054](https://atlas.mitre.org/techniques/AML.T0054) | Execution | Persistent override of agent safety constraints enabling hidden goal execution |
-| LLM Capability Escalation | [AML.T0015](https://atlas.mitre.org/techniques/AML.T0015) | Privilege Escalation | Rogue agent gradually escalates its own capabilities and permissions over time — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)** |
-| Exploit Public-Facing ML Application | [AML.T0057](https://atlas.mitre.org/techniques/AML.T0057) | Persistence | Compromised agent maintains persistent access and hidden execution across sessions — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)** |
+| AI Agent Tool Invocation | [AML.T0053](https://atlas.mitre.org/techniques/AML.T0053) | Privilege Escalation | Rogue agent gradually escalates its own capabilities and permissions over time |
+| Exploit Public-Facing Application | [AML.T0049](https://atlas.mitre.org/techniques/AML.T0049) | Persistence | Compromised agent maintains persistent access and hidden execution across sessions |
 
 #### Mitigations by tier
 

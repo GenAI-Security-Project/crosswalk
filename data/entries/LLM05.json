@@ -18,12 +18,12 @@
   "mappings": [
     {
       "framework": "MITRE ATLAS",
-      "control_id": "AML.T0032",
-      "control_name": "Data Poisoning",
+      "control_id": "AML.T0070",
+      "control_name": "RAG Poisoning",
       "tier": "Hardening",
       "scope": "Both",
-      "url": "https://atlas.mitre.org/techniques/AML.T0032",
-      "notes": "Injecting malicious data into training pipelines to corrupt model behaviour — **DRAFT — AML.T0032 is not an ATLAS technique id; retarget pending SME review (#93)**",
+      "url": "https://atlas.mitre.org/techniques/AML.T0070",
+      "notes": "Injecting malicious data into training pipelines to corrupt model behaviour",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
@@ -40,12 +40,12 @@
     },
     {
       "framework": "MITRE ATLAS",
-      "control_id": "AML.T0027",
-      "control_name": "Model Inversion",
+      "control_id": "AML.T0024.001",
+      "control_name": "Exfiltration via AI Inference API: Invert AI Model",
       "tier": "Hardening",
       "scope": "Both",
-      "url": "https://atlas.mitre.org/techniques/AML.T0027",
-      "notes": "Reconstructing sensitive training data from model outputs — **DRAFT — AML.T0027 is not an ATLAS technique id; retarget pending SME review (#93)**",
+      "url": "https://atlas.mitre.org/techniques/AML.T0024.001",
+      "notes": "Reconstructing sensitive training data from model outputs",
       "confidence": "unreviewed",
       "reviewed_by": []
     },

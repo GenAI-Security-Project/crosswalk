@@ -4065,6 +4065,14 @@ window.CROSSWALK_FRAMEWORKS = [
         "kind": "technique"
       },
       {
+        "control_id": "AML.T0006.002",
+        "title": "Active Scanning: Scan for Exposed AI Infrastructure",
+        "description": "\"Adversaries may scan network ports and services to identify deployed\\ \\ AI backends, model-serving endpoints, and AI agent infrastructure reachable\\ \\ over the internet.",
+        "parent": "AML.T0006",
+        "function": "Reconnaissance",
+        "kind": "technique"
+      },
+      {
         "control_id": "AML.T0010",
         "title": "AI Supply Chain Compromise",
         "description": "Adversaries may gain initial access to a system by compromising the unique portions of the AI supply chain.",
@@ -4173,6 +4181,14 @@ window.CROSSWALK_FRAMEWORKS = [
         "kind": "technique",
         "function": "Exfiltration",
         "parent": "AML.T0024"
+      },
+      {
+        "control_id": "AML.T0024.001",
+        "title": "Exfiltration via AI Inference API: Invert AI Model",
+        "description": "AI models' training data could be reconstructed by exploiting the confidence scores that are available via an inference API.",
+        "parent": "AML.T0024",
+        "function": "Exfiltration",
+        "kind": "technique"
       },
       {
         "control_id": "AML.T0024.002",
@@ -4368,6 +4384,14 @@ window.CROSSWALK_FRAMEWORKS = [
         "kind": "technique"
       },
       {
+        "control_id": "AML.T0052.000",
+        "title": "Phishing: Spearphishing via Social Engineering LLM",
+        "description": "Adversaries may turn LLMs into targeted social engineers.",
+        "parent": "AML.T0052",
+        "function": "Initial Access",
+        "kind": "technique"
+      },
+      {
         "control_id": "AML.T0053",
         "title": "AI Agent Tool Invocation",
         "description": "Adversaries may use their access to an AI agent to invoke tools the agent has access to.",
@@ -4415,11 +4439,27 @@ window.CROSSWALK_FRAMEWORKS = [
         "function": "Discovery"
       },
       {
+        "control_id": "AML.T0066",
+        "title": "Retrieval Content Crafting",
+        "description": "Adversaries may write content designed to be retrieved by user queries and influence a user of the system in some way.",
+        "parent": null,
+        "function": "AI Attack Adaptation",
+        "kind": "technique"
+      },
+      {
         "control_id": "AML.T0068",
         "title": "LLM Prompt Obfuscation",
         "description": "Adversaries may hide or otherwise obfuscate prompt injections or retrieval content to avoid detection from humans, large language model (LLM) guardrails, or other detection mechanisms.",
         "kind": "technique",
         "function": "Defense Evasion"
+      },
+      {
+        "control_id": "AML.T0070",
+        "title": "RAG Poisoning",
+        "description": "Adversaries may inject malicious content into data indexed by a retrieval augmented generation (RAG) system to contaminate a future thread through RAG-based search results.",
+        "parent": null,
+        "function": "Persistence",
+        "kind": "technique"
       },
       {
         "control_id": "AML.T0126",
@@ -4445,11 +4485,16 @@ window.CROSSWALK_FRAMEWORKS = [
         "date": "2026-09-18",
         "change": "Added 2 ATLAS 2026.09 technique(s) now cited by corrected mapping rows: AML.T0024.002, AML.T0126",
         "author": "OWASP GenAI Data Security Initiative"
+      },
+      {
+        "date": "2026-09-18",
+        "change": "Added 5 ATLAS 2026.09 technique(s) now cited by corrected mapping rows: AML.T0006.002, AML.T0024.001, AML.T0052.000, AML.T0066, AML.T0070",
+        "author": "OWASP GenAI Data Security Initiative"
       }
     ],
     "inventory_completeness": {
       "status": "partial",
-      "included": 46,
+      "included": 51,
       "total": 208,
       "note": "Transcribed from ATLAS 2026.09. 6 further ids in this registry (AML.T0019, AML.T0022, AML.T0032, AML.T0045, AML.T0027, AML.T0030) are not techniques in 2026.09 and are left for review — see issue #93.",
       "source": "https://github.com/mitre-atlas/atlas-data/blob/v2026.09/dist/v6/ATLAS-2026.09.yaml"

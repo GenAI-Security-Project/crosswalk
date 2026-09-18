@@ -95,12 +95,12 @@
     },
     {
       "framework": "MITRE ATLAS",
-      "control_id": "AML.T0015",
-      "control_name": "LLM Capability Escalation",
+      "control_id": "AML.T0053",
+      "control_name": "AI Agent Tool Invocation",
       "tier": "Foundational",
       "scope": "Both",
-      "url": "https://atlas.mitre.org/techniques/AML.T0015",
-      "notes": "Exploiting overly permissive tool access to exceed intended agent scope — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)**",
+      "url": "https://atlas.mitre.org/techniques/AML.T0053",
+      "notes": "Exploiting overly permissive tool access to exceed intended agent scope",
       "confidence": "unreviewed",
       "reviewed_by": []
     },

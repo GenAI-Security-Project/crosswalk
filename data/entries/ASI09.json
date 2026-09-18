@@ -106,12 +106,12 @@
     },
     {
       "framework": "MITRE ATLAS",
-      "control_id": "AML.T0049",
-      "control_name": "Spearphishing via AI",
+      "control_id": "AML.T0052.000",
+      "control_name": "Phishing: Spearphishing via Social Engineering LLM",
       "tier": "Foundational",
       "scope": "Both",
-      "url": "https://atlas.mitre.org/techniques/AML.T0049",
-      "notes": "Compromised agent crafts highly personalised, convincing manipulation targeted at specific users — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)**",
+      "url": "https://atlas.mitre.org/techniques/AML.T0052.000",
+      "notes": "Compromised agent crafts highly personalised, convincing manipulation targeted at specific users",
       "confidence": "unreviewed",
       "reviewed_by": []
     },

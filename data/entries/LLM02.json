@@ -18,23 +18,23 @@
   "mappings": [
     {
       "framework": "MITRE ATLAS",
-      "control_id": "AML.T0021",
-      "control_name": "Data Leakage",
+      "control_id": "AML.T0057",
+      "control_name": "LLM Data Leakage",
       "tier": "Foundational",
       "scope": "Both",
-      "url": "https://atlas.mitre.org/techniques/AML.T0021",
-      "notes": "Unintended exposure of training data or sensitive context through model outputs — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)**",
+      "url": "https://atlas.mitre.org/techniques/AML.T0057",
+      "notes": "Unintended exposure of training data or sensitive context through model outputs",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
     {
       "framework": "MITRE ATLAS",
-      "control_id": "AML.T0030",
-      "control_name": "Information Disclosure",
+      "control_id": "AML.T0057",
+      "control_name": "LLM Data Leakage",
       "tier": "Foundational",
       "scope": "Both",
-      "url": "https://atlas.mitre.org/techniques/AML.T0030",
-      "notes": "Extraction of confidential information via targeted model queries — **DRAFT — AML.T0030 is not an ATLAS technique id; retarget pending SME review (#93)**",
+      "url": "https://atlas.mitre.org/techniques/AML.T0057",
+      "notes": "Extraction of confidential information via targeted model queries",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
