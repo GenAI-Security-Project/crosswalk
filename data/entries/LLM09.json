@@ -18,12 +18,12 @@
   "mappings": [
     {
       "framework": "MITRE ATLAS",
-      "control_id": "AML.T0063",
-      "control_name": "Embedding Manipulation",
+      "control_id": "AML.T0066",
+      "control_name": "Retrieval Content Crafting",
       "tier": "Hardening",
       "scope": "Build",
-      "url": "https://atlas.mitre.org/techniques/AML.T0063",
-      "notes": "Crafting inputs whose embeddings manipulate similarity search results — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)**",
+      "url": "https://atlas.mitre.org/techniques/AML.T0066",
+      "notes": "Crafting inputs whose embeddings manipulate similarity search results",
       "confidence": "unreviewed",
       "reviewed_by": []
     },

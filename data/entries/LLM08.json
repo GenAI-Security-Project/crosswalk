@@ -18,12 +18,12 @@
   "mappings": [
     {
       "framework": "MITRE ATLAS",
-      "control_id": "AML.T0041",
-      "control_name": "Configuration Exposure",
+      "control_id": "AML.T0056",
+      "control_name": "Extract LLM System Prompt",
       "tier": "Foundational",
       "scope": "Build",
-      "url": "https://atlas.mitre.org/techniques/AML.T0041",
-      "notes": "Extraction of internal model configuration, instructions, or system prompts — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)**",
+      "url": "https://atlas.mitre.org/techniques/AML.T0056",
+      "notes": "Extraction of internal model configuration, instructions, or system prompts",
       "confidence": "unreviewed",
       "reviewed_by": []
     },

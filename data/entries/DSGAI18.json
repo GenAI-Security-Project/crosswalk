@@ -105,11 +105,11 @@
     },
     {
       "framework": "MITRE ATLAS",
-      "control_id": "AML.T0027",
-      "control_name": "Model Inversion",
+      "control_id": "AML.T0024.001",
+      "control_name": "Exfiltration via AI Inference API: Invert AI Model",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Adversary reconstructs sensitive training examples from model outputs through systematic query campaigns — **DRAFT — AML.T0027 is not an ATLAS technique id; retarget pending SME review (#93)**",
+      "notes": "Adversary reconstructs sensitive training examples from model outputs through systematic query campaigns",
       "confidence": "unreviewed",
       "reviewed_by": []
     },

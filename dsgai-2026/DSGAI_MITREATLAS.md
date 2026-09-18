@@ -84,7 +84,7 @@ goal) and techniques (how they achieve it):
 | DSGAI15 | Over-Broad Context Windows | High | AML.T0049, AML.T0025, AML.T0024 | Foundational–Hardening |
 | DSGAI16 | Endpoint & Browser Assistant Overreach | High | AML.T0013, AML.T0036, AML.T0024 | Foundational–Hardening |
 | DSGAI17 | Data Availability & Resilience Failures | High | AML.T0029, AML.T0034, AML.T0036 | Foundational–Advanced |
-| DSGAI18 | Inference & Data Reconstruction | High | AML.T0024.000, AML.T0025, AML.T0027 | Hardening–Advanced |
+| DSGAI18 | Inference & Data Reconstruction | High | AML.T0024.000, AML.T0025, AML.T0024.001 | Hardening–Advanced |
 | DSGAI19 | Human-in-Loop & Labeler Overexposure | Medium | AML.T0024, AML.T0036, AML.T0020 | Foundational–Hardening |
 | DSGAI20 | Model Exfiltration & IP Replication | High | AML.T0024.002, AML.T0025, AML.T0034 | Hardening–Advanced |
 | DSGAI21 | Disinformation via Data Poisoning | High | AML.T0045, AML.T0020, AML.T0043 | Hardening–Advanced |
@@ -114,7 +114,7 @@ Key techniques cited throughout this mapping:
 | Manipulate AI Model | AML.T0018 | Embed hidden functionality triggered by specific inputs |
 | Craft Adversarial Data | AML.T0043 | Create inputs specifically designed to manipulate model outputs |
 | Infer Training Data Membership | AML.T0024.000 | Determine whether a specific data point was used in training |
-| Model Inversion | AML.T0027 | Reconstruct training data from model outputs — **DRAFT — AML.T0027 is not an ATLAS technique id; retarget pending SME review (#93)** |
+| Exfiltration via AI Inference API: Invert AI Model | AML.T0024.001 | Reconstruct training data from model outputs |
 | Exfiltration via AI Inference API: Extract AI Model | AML.T0024.002 | Steal model functionality through systematic querying |
 | Exfiltration via Cyber Means | AML.T0025 | Steal data using standard cyber exfiltration techniques |
 | Exploit Public-Facing Application | AML.T0049 | Exploit vulnerabilities in AI APIs or web interfaces |
@@ -910,7 +910,7 @@ are the primary techniques.
 |---|---|---|---|
 | Infer Training Data Membership | AML.T0024.000 | Exfiltration | Adversary determines whether specific sensitive records were used in training through systematic query analysis |
 | Exfiltration via Cyber Means | AML.T0025 | Exfiltration | Training data confirmed present and partially reconstructed through inference, then exfiltrated |
-| Model Inversion | AML.T0027 | Exfiltration | Adversary reconstructs sensitive training examples from model outputs through systematic query campaigns — **DRAFT — AML.T0027 is not an ATLAS technique id; retarget pending SME review (#93)** |
+| Exfiltration via AI Inference API: Invert AI Model | AML.T0024.001 | Exfiltration | Adversary reconstructs sensitive training examples from model outputs through systematic query campaigns |
 
 #### Mitigations mapped to ATLAS
 
