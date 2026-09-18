@@ -25,6 +25,7 @@ Runnable security test profiles mapped to OWASP GenAI vulnerability entries.
 | `laaf/` | [LAAF v2.0](https://github.com/qorvexconsulting1/laaf-V2.0) | 6 LPCI stage configs (S1–S6) + crosswalk reporter — see [`laaf/README.md`](laaf/README.md) |
 | `ci/` | GitHub Actions | 1 workflow template for CI/CD integration |
 | `samples/` | — | Runbook for committing sanitised run evidence. **No runs are committed yet** — see [`samples/README.md`](samples/README.md). |
+| — | published elsewhere | [`EXTERNAL_BENCHMARKS.md`](EXTERNAL_BENCHMARKS.md) — benchmarks worth knowing about that this repository does **not** ship or run. |
 
 Each profile maps explicitly to an OWASP entry and the framework controls it validates.
 Pass/fail thresholds are listed in one place, [`THRESHOLDS.md`](THRESHOLDS.md), and are
