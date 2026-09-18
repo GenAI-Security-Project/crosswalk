@@ -1,7 +1,7 @@
 <!--
   OWASP GenAI Crosswalk
   Source list : OWASP GenAI Data Security Risks & Mitigations 2026 (DSGAI01–DSGAI21)
-  Framework   : OWASP Application Security Verification Standard (ASVS) 4.0.3
+  Framework   : OWASP Application Security Verification Standard (ASVS) 5.0.0
   Version     : 2026-Q1
   Maintained by: OWASP GenAI Data Security Initiative — https://genai.owasp.org
   License     : CC BY-SA 4.0
@@ -23,12 +23,16 @@ directly, augmented by GenAI-specific data handling requirements. This mapping
 enables security engineers and penetration testers to translate DSGAI threats into
 verifiable ASVS requirements for inclusion in security test plans.
 
-> **Mapped against ASVS 4.0.3.** ASVS **5.0.0** is released and renumbered the
-> requirements, so the V-numbers below do not reliably denote the same
-> requirement in 5.0. These mappings are **not** current for 5.0 and have not
-> been re-mapped: doing so is expert work, tracked in
-> [issue #22](https://github.com/GenAI-Security-Project/crosswalk/issues/22).
-> Treat the requirement identifiers here as 4.0.3 identifiers.
+> **Mapped against ASVS 5.0.0.** The identifiers below were translated from 4.0.3
+> using the ASVS project’s own mapping file, [`mapping_v4.0.3_to_v5.0.0.yml`][asvs-map],
+> and the requirement text is 5.0.0’s own. The translation is mechanical: the
+> **relationship, rationale type and confidence on every row read `DRAFT`** and
+> await an ASVS-leadership reviewer ([#22][issue-22], STRAT-04). Requirements
+> 5.0.0 deleted rather than renumbered keep their 4.0.3 identifier and carry a
+> DRAFT marker naming the official disposition.
+
+[asvs-map]: https://github.com/OWASP/ASVS/blob/master/5.0/mappings/mapping_v4.0.3_to_v5.0.0.yml
+[issue-22]: https://github.com/GenAI-Security-Project/crosswalk/issues/22
 
 ---
 
@@ -142,13 +146,13 @@ The aggregation effect — combining data from multiple sources in a single cont
 
 #### ASVS mapping
 
-| Requirement | Chapter | Description | Level | Tier | Scope |
-|---|---|---|---|---|---|
-| V8.1.1 — Sensitive data not transmitted in URL parameters | V8 Data Protection | Sensitive data in LLM API calls and RAG queries must not be exposed via URL parameters | L1 | Foundational | Both |
-| V8.3.4 — Sensitive data identified and classified | V8 Data Protection | All data types entering LLM context (training, RAG, user input) classified and handled per classification policy | L2 | Foundational | Both |
-| V4.1.3 — Deny by default access control | V4 Access Control | RAG data sources enforce deny-by-default — users access only data explicitly authorised to them | L1 | Foundational | Both |
-| V5.2.8 — Output encoding for context | V5 Validation | Model outputs scanned and redacted for PII, credentials, and sensitive patterns before delivery | L1 | Foundational | Both |
-| V6.1.1 — Sensitive data not stored in cleartext | V6 Cryptography | Training data and RAG corpora containing sensitive data encrypted at rest | L2 | Hardening | Both |
+| Requirement | Chapter | Description | Level | Tier | Scope | Relationship | Rationale type | Confidence | Framework ver. | Reviewed by |
+|---|---|---|---|---|---|---|---|---|---|---|
+| V14.2.2 — Sensitive data not transmitted in URL parameters | V8 Data Protection | Verify that the application prevents sensitive data from being cached in server components, such as load balancers and application caches, or ensures that the data is securely purged after use. | L1 | Foundational | Both | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| V14.1.1 — Sensitive data identified and classified | V8 Data Protection | Verify that all sensitive data created and processed by the application has been identified and classified into protection levels. This includes data that is only encoded and therefore easily decoded, such as Base64 strings or the plaintext payload inside a JWT. Protection levels need to take into account any data protection and privacy regulations and standards which the application is required to comply with. | L2 | Foundational | Both | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| V8.2.1 — Deny by default access control | V4 Access Control | Verify that the application ensures that function-level access is restricted to consumers with explicit permissions. | L1 | Foundational | Both | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| V1.3.5 — Output encoding for context | V5 Validation | Verify that the application sanitizes or disables user-supplied scriptable or expression template language content, such as Markdown, CSS or XSL stylesheets, BBCode, or similar. | L1 | Foundational | Both | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| V14.1.1 — Sensitive data not stored in cleartext | V6 Cryptography | Verify that all sensitive data created and processed by the application has been identified and classified into protection levels. This includes data that is only encoded and therefore easily decoded, such as Base64 strings or the plaintext payload inside a JWT. Protection levels need to take into account any data protection and privacy regulations and standards which the application is required to comply with. | L2 | Hardening | Both | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
 
 #### Mitigations by tier
 
@@ -196,12 +200,12 @@ credential compromise can propagate across all tools and services the agent can 
 
 #### ASVS mapping
 
-| Requirement | Chapter | Description | Level | Tier | Scope |
-|---|---|---|---|---|---|
-| V2.1.1 — Passwords minimum 12 characters | V2 Authentication | Agent API keys and service credentials meet minimum strength requirements | L1 | Foundational | Both |
-| V2.10.1 — Integration secrets not hardcoded | V2 Authentication | Agent credentials not hardcoded in prompts, configuration files, or code — stored in secrets managers | L2 | Foundational | Both |
-| V4.1.2 — Least privilege for service accounts | V4 Access Control | Agent service accounts granted minimum permissions — no shared high-privilege accounts across agents | L1 | Foundational | Both |
-| V8.3.7 — Data transferred using current TLS | V8 Data Protection | Agent-to-service communication uses TLS — credentials never transmitted in cleartext | L1 | Foundational | Both |
+| Requirement | Chapter | Description | Level | Tier | Scope | Relationship | Rationale type | Confidence | Framework ver. | Reviewed by |
+|---|---|---|---|---|---|---|---|---|---|---|
+| V6.2.1 — Passwords minimum 12 characters | V2 Authentication | Verify that user set passwords are at least 8 characters in length although a minimum of 15 characters is strongly recommended. | L1 | Foundational | Both | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| V13.2.1 — Integration secrets not hardcoded | V2 Authentication | Verify that communications between backend application components that don't support the application's standard user session mechanism, including APIs, middleware, and data layers, are authenticated. Authentication must use individual service accounts, short-term tokens, or certificate-based authentication and not unchanging credentials such as passwords, API keys, or shared accounts with privileged access. | L2 | Foundational | Both | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| V8.2.1 — Least privilege for service accounts | V4 Access Control | Verify that the application ensures that function-level access is restricted to consumers with explicit permissions. | L1 | Foundational | Both | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| V14.1.2 — Data transferred using current TLS | V8 Data Protection | Verify that all sensitive data protection levels have a documented set of protection requirements. This must include (but not be limited to) requirements related to general encryption, integrity verification, retention, how the data is to be logged, access controls around sensitive data in logs, database-level encryption, privacy and privacy-enhancing technologies to be used, and other confidentiality requirements. | L1 | Foundational | Both | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
 
 #### Mitigations by tier
 
@@ -246,12 +250,12 @@ bypassing data governance controls without organisational visibility.
 
 #### ASVS mapping
 
-| Requirement | Chapter | Description | Level | Tier | Scope |
-|---|---|---|---|---|---|
-| V1.1.4 — Trust boundaries documented and enforced | V1 Architecture | Data flows to external AI services identified, approved, and enforced at architectural boundaries | L2 | Foundational | Both |
-| V4.1.5 — Access control failures logged | V4 Access Control | Attempts to send sensitive data to unapproved AI services detected and logged | L2 | Foundational | Both |
-| V7.2.2 — Log entries contain required information | V7 Logging | Audit logs capture data flows to external AI services sufficient for incident investigation | L2 | Hardening | Both |
-| V14.1.4 — All components inventoried | V14 Configuration | Inventory of all AI tools in use — approved and shadow — maintained and reviewed regularly | L2 | Foundational | Both |
+| Requirement | Chapter | Description | Level | Tier | Scope | Relationship | Rationale type | Confidence | Framework ver. | Reviewed by |
+|---|---|---|---|---|---|---|---|---|---|---|
+| V1.1.4 — Trust boundaries documented and enforced | V1 Architecture | Data flows to external AI services identified, approved, and enforced at architectural boundaries | L2 | Foundational | Both — **DRAFT — ASVS 5.0.0: DELETED, NOT IN SCOPE; retarget or drop pending SME review (#22)** | DRAFT | DRAFT | DRAFT | ASVS 4.0.3 | (unreviewed) |
+| V16.5.3 — Access control failures logged | V4 Access Control | Verify that the application fails gracefully and securely, including when an exception occurs, preventing fail-open conditions such as processing a transaction despite errors resulting from validation logic. | L2 | Foundational | Both | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| V16.3.2 — Log entries contain required information | V7 Logging | Verify that failed authorization attempts are logged. For L3, this must include logging all authorization decisions, including logging when sensitive data is accessed (without logging the sensitive data itself). | L2 | Hardening | Both | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| V14.1.4 — All components inventoried | V14 Configuration | Inventory of all AI tools in use — approved and shadow — maintained and reviewed regularly | L2 | Foundational | Both — **DRAFT — ASVS 5.0.0: DELETED, NOT IN SCOPE; retarget or drop pending SME review (#22)** | DRAFT | DRAFT | DRAFT | ASVS 4.0.3 | (unreviewed) |
 
 #### Mitigations by tier
 
@@ -295,12 +299,12 @@ biases, or targeted misinformation that persist into production.
 
 #### ASVS mapping
 
-| Requirement | Chapter | Description | Level | Tier | Scope |
-|---|---|---|---|---|---|
-| V5.1.3 — Input validation server-side | V5 Validation | Training data ingestion pipelines validate all inputs against expected schemas before processing | L1 | Foundational | Both |
-| V10.2.1 — Application only uses official repositories | V10 Malicious Code | Pre-trained models and datasets sourced only from verified, approved repositories | L2 | Foundational | Both |
-| V10.2.2 — Dependency managers check for vulnerabilities | V10 Malicious Code | AI model artefacts checked for known vulnerabilities and backdoors before deployment | L2 | Hardening | Both |
-| V12.1.1 — File upload size limits | V12 Files/Resources | Documents uploaded to RAG stores validated for content, size, and format before ingestion | L1 | Foundational | Both |
+| Requirement | Chapter | Description | Level | Tier | Scope | Relationship | Rationale type | Confidence | Framework ver. | Reviewed by |
+|---|---|---|---|---|---|---|---|---|---|---|
+| V2.2.1 — Input validation server-side | V5 Validation | Verify that input is validated to enforce business or functional expectations for that input. This should either use positive validation against an allow list of values, patterns, and ranges, or be based on comparing the input to an expected structure and logical limits according to predefined rules. For L1, this can focus on input which is used to make specific business or security decisions. For L2 and up, this should apply to all input. | L1 | Foundational | Both | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| V10.2.1 — Application only uses official repositories | V10 Malicious Code | Pre-trained models and datasets sourced only from verified, approved repositories | L2 | Foundational | Both — **DRAFT — ASVS 5.0.0: DELETED, NOT PRACTICAL; retarget or drop pending SME review (#22)** | DRAFT | DRAFT | DRAFT | ASVS 4.0.3 | (unreviewed) |
+| V10.2.2 — Dependency managers check for vulnerabilities | V10 Malicious Code | AI model artefacts checked for known vulnerabilities and backdoors before deployment | L2 | Hardening | Both — **DRAFT — ASVS 5.0.0: DELETED, NOT PRACTICAL; retarget or drop pending SME review (#22)** | DRAFT | DRAFT | DRAFT | ASVS 4.0.3 | (unreviewed) |
+| V5.2.1 — File upload size limits | V12 Files/Resources | Verify that the application will only accept files of a size which it can process without causing a loss of performance or a denial of service attack. | L1 | Foundational | Both | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
 
 #### Mitigations by tier
 
@@ -346,11 +350,11 @@ incorrect model outputs or security bypasses in downstream systems.
 
 #### ASVS mapping
 
-| Requirement | Chapter | Description | Level | Tier | Scope |
-|---|---|---|---|---|---|
-| V5.1.1 — Input validation using allowlists | V5 Validation | All data ingested into GenAI pipelines validated against an allowlist schema | L1 | Foundational | Build |
-| V5.2.1 — HTML/JS output sanitised | V5 Validation | Model outputs destined for HTML renderers sanitised — prevents XSS via AI-generated content | L1 | Foundational | Build |
-| V7.4.1 — Generic error messages | V7 Logging | Validation failures produce generic errors to users — detailed error information logged server-side only | L1 | Foundational | Build |
+| Requirement | Chapter | Description | Level | Tier | Scope | Relationship | Rationale type | Confidence | Framework ver. | Reviewed by |
+|---|---|---|---|---|---|---|---|---|---|---|
+| V15.3.7 — Input validation using allowlists | V5 Validation | Verify that the application has defenses against HTTP parameter pollution attacks, particularly if the application framework makes no distinction about the source of request parameters (query string, body parameters, cookies, or header fields). | L1 | Foundational | Build | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| V1.3.1 — HTML/JS output sanitised | V5 Validation | Verify that all untrusted HTML input from WYSIWYG editors or similar is sanitized using a well-known and secure HTML sanitization library or framework feature. | L1 | Foundational | Build | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| V16.5.1 — Generic error messages | V7 Logging | Verify that a generic message is returned to the consumer when an unexpected or security-sensitive error occurs, ensuring no exposure of sensitive internal system data such as stack traces, queries, secret keys, and tokens. | L1 | Foundational | Build | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
 
 #### Mitigations by tier
 
@@ -395,11 +399,11 @@ via tool outputs, or exfiltration through misconfigured plugin channels.
 
 #### ASVS mapping
 
-| Requirement | Chapter | Description | Level | Tier | Scope |
-|---|---|---|---|---|---|
-| V4.1.1 — Access control on every request | V4 Access Control | Every tool invocation and plugin call authenticated and authorised — no implicit trust between components | L1 | Foundational | Both |
-| V9.1.1 — TLS for all connections | V9 Communication | All agent-to-tool and agent-to-plugin communication uses TLS — prevents interception of exchanged data | L1 | Foundational | Both |
-| V11.1.4 — Business logic limits on repeated actions | V11 Business Logic | Agent tool invocation frequency limited — prevents runaway tool usage or data exfiltration loops | L2 | Hardening | Both |
+| Requirement | Chapter | Description | Level | Tier | Scope | Relationship | Rationale type | Confidence | Framework ver. | Reviewed by |
+|---|---|---|---|---|---|---|---|---|---|---|
+| V8.3.1 — Access control on every request | V4 Access Control | Verify that the application enforces authorization rules at a trusted service layer and doesn't rely on controls that an untrusted consumer could manipulate, such as client-side JavaScript. | L1 | Foundational | Both | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| V12.2.1 — TLS for all connections | V9 Communication | Verify that TLS is used for all connectivity between a client and external facing, HTTP-based services, and does not fall back to insecure or unencrypted communications. | L1 | Foundational | Both | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| V2.4.1 — Business logic limits on repeated actions | V11 Business Logic | Verify that anti-automation controls are in place to protect against excessive calls to application functions that could lead to data exfiltration, garbage-data creation, quota exhaustion, rate-limit breaches, denial-of-service, or overuse of costly resources. | L2 | Hardening | Both | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
 
 #### Mitigations by tier
 
@@ -444,11 +448,11 @@ fulfil deletion obligations under GDPR or other privacy regulations.
 
 #### ASVS mapping
 
-| Requirement | Chapter | Description | Level | Tier | Scope |
-|---|---|---|---|---|---|
-| V8.1.4 — Sensitive data minimisation | V8 Data Protection | Only data necessary for the defined AI purpose is collected, processed, and retained | L1 | Foundational | Both |
-| V8.3.4 — Sensitive data identified and classified | V8 Data Protection | All data entering GenAI systems classified per sensitivity — classification drives handling and retention rules | L2 | Foundational | Both |
-| V4.1.5 — Attribute-based access control | V4 Access Control | Data access decisions in RAG and training systems based on data classification attributes | L2 | Hardening | Both |
+| Requirement | Chapter | Description | Level | Tier | Scope | Relationship | Rationale type | Confidence | Framework ver. | Reviewed by |
+|---|---|---|---|---|---|---|---|---|---|---|
+| V8.1.4 — Sensitive data minimisation | V8 Data Protection | Only data necessary for the defined AI purpose is collected, processed, and retained | L1 | Foundational | Both — **DRAFT — ASVS 5.0.0: DELETED, NOT IN SCOPE; retarget or drop pending SME review (#22)** | DRAFT | DRAFT | DRAFT | ASVS 4.0.3 | (unreviewed) |
+| V14.1.1 — Sensitive data identified and classified | V8 Data Protection | Verify that all sensitive data created and processed by the application has been identified and classified into protection levels. This includes data that is only encoded and therefore easily decoded, such as Base64 strings or the plaintext payload inside a JWT. Protection levels need to take into account any data protection and privacy regulations and standards which the application is required to comply with. | L2 | Foundational | Both | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| V16.5.3 — Attribute-based access control | V4 Access Control | Verify that the application fails gracefully and securely, including when an exception occurs, preventing fail-open conditions such as processing a transaction despite errors resulting from validation logic. | L2 | Hardening | Both | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
 
 #### Mitigations by tier
 
@@ -492,11 +496,11 @@ or processing for purposes beyond those disclosed.
 
 #### ASVS mapping
 
-| Requirement | Chapter | Description | Level | Tier | Scope |
-|---|---|---|---|---|---|
-| V8.3.3 — Consent obtained before PI processing | V8 Data Protection | Lawful basis established for all personal data processed in GenAI training and inference | L1 | Foundational | Both |
-| V8.3.10 — Personal data not kept longer than needed | V8 Data Protection | Training data and model outputs containing personal data subject to retention limits | L2 | Foundational | Both |
-| V7.2.2 — Audit trail sufficient for compliance | V7 Logging | Logs maintained sufficient to demonstrate regulatory compliance — retained for required periods | L2 | Foundational | Both |
+| Requirement | Chapter | Description | Level | Tier | Scope | Relationship | Rationale type | Confidence | Framework ver. | Reviewed by |
+|---|---|---|---|---|---|---|---|---|---|---|
+| V8.3.3 — Consent obtained before PI processing | V8 Data Protection | Lawful basis established for all personal data processed in GenAI training and inference | L1 | Foundational | Both — **DRAFT — ASVS 5.0.0: DELETED, NOT IN SCOPE; retarget or drop pending SME review (#22)** | DRAFT | DRAFT | DRAFT | ASVS 4.0.3 | (unreviewed) |
+| V8.3.10 — Personal data not kept longer than needed | V8 Data Protection | Training data and model outputs containing personal data subject to retention limits | L2 | Foundational | Both — **DRAFT — ASVS 5.0.0: (id absent from the official 4.0.3 mapping); retarget or drop pending SME review (#22)** | DRAFT | DRAFT | DRAFT | ASVS 4.0.3 | (unreviewed) |
+| V16.3.2 — Audit trail sufficient for compliance | V7 Logging | Verify that failed authorization attempts are logged. For L3, this must include logging all authorization decisions, including logging when sensitive data is accessed (without logging the sensitive data itself). | L2 | Foundational | Both | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
 
 #### Mitigations by tier
 
@@ -540,11 +544,11 @@ DLP controls that do not inspect non-text modalities.
 
 #### ASVS mapping
 
-| Requirement | Chapter | Description | Level | Tier | Scope |
-|---|---|---|---|---|---|
-| V5.2.5 — Unstructured data sanitised | V5 Validation | All non-text inputs (images, audio, documents) scanned for sensitive content before multimodal model processing | L2 | Hardening | Both |
-| V8.1.4 — Sensitive data minimised | V8 Data Protection | Non-text data processed only to the extent necessary — full documents not passed to model when excerpts suffice | L2 | Hardening | Both |
-| V12.1.3 — Malicious file detection on upload | V12 Files/Resources | Multimodal inputs scanned for embedded malicious payloads before processing | L2 | Hardening | Both |
+| Requirement | Chapter | Description | Level | Tier | Scope | Relationship | Rationale type | Confidence | Framework ver. | Reviewed by |
+|---|---|---|---|---|---|---|---|---|---|---|
+| V1.3.7 — Unstructured data sanitised | V5 Validation | Verify that the application protects against template injection attacks by not allowing templates to be built based on untrusted input. Where there is no alternative, any untrusted input being included dynamically during template creation must be sanitized or strictly validated. | L2 | Hardening | Both | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| V8.1.4 — Sensitive data minimised | V8 Data Protection | Non-text data processed only to the extent necessary — full documents not passed to model when excerpts suffice | L2 | Hardening | Both — **DRAFT — ASVS 5.0.0: DELETED, NOT IN SCOPE; retarget or drop pending SME review (#22)** | DRAFT | DRAFT | DRAFT | ASVS 4.0.3 | (unreviewed) |
+| V5.2.4 — Malicious file detection on upload | V12 Files/Resources | Verify that a file size quota and maximum number of files per user are enforced to ensure that a single user cannot fill up the storage with too many files, or excessively large files. | L2 | Hardening | Both | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
 
 #### Mitigations by tier
 
@@ -587,10 +591,10 @@ anonymisation through linkage attacks against other available datasets.
 
 #### ASVS mapping
 
-| Requirement | Chapter | Description | Level | Tier | Scope |
-|---|---|---|---|---|---|
-| V8.3.4 — Sensitive data classified | V8 Data Protection | Synthetic data classified appropriately — residual re-identification risk assessed and documented | L2 | Hardening | Build |
-| V5.2.6 — Defined output structure | V5 Validation | Synthetic data generation outputs validated to confirm absence of original record content | L2 | Hardening | Build |
+| Requirement | Chapter | Description | Level | Tier | Scope | Relationship | Rationale type | Confidence | Framework ver. | Reviewed by |
+|---|---|---|---|---|---|---|---|---|---|---|
+| V14.1.1 — Sensitive data classified | V8 Data Protection | Verify that all sensitive data created and processed by the application has been identified and classified into protection levels. This includes data that is only encoded and therefore easily decoded, such as Base64 strings or the plaintext payload inside a JWT. Protection levels need to take into account any data protection and privacy regulations and standards which the application is required to comply with. | L2 | Hardening | Build | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| V1.3.6 — Defined output structure | V5 Validation | Verify that the application protects against Server-side Request Forgery (SSRF) attacks, by validating untrusted data against an allowlist of protocols, domains, paths and ports and sanitizing potentially dangerous characters before using the data to call another service. | L2 | Hardening | Build | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
 
 #### Mitigations by tier
 
@@ -634,12 +638,12 @@ or improper cache management — violating data separation and user privacy.
 
 #### ASVS mapping
 
-| Requirement | Chapter | Description | Level | Tier | Scope |
-|---|---|---|---|---|---|
-| V3.1.1 — Session tokens unique and random | V3 Session Management | Each LLM conversation session identified by a unique, unpredictable token — sessions cannot be guessed or forged | L1 | Foundational | Build |
-| V3.3.1 — Sessions invalidated after logout | V3 Session Management | Conversation context fully cleared on session end — no residual context accessible to subsequent sessions | L1 | Foundational | Build |
-| V4.1.1 — Access control enforced on every request | V4 Access Control | Context retrieval operations enforce per-user isolation — cross-user context access blocked by default | L1 | Foundational | Build |
-| V8.1.3 — Sensitive data not in session storage | V8 Data Protection | Sensitive user data not persisted in shared session or cache layers accessible across users | L1 | Foundational | Build |
+| Requirement | Chapter | Description | Level | Tier | Scope | Relationship | Rationale type | Confidence | Framework ver. | Reviewed by |
+|---|---|---|---|---|---|---|---|---|---|---|
+| V14.2.1 — Session tokens unique and random | V3 Session Management | Verify that sensitive data is only sent to the server in the HTTP message body or header fields, and that the URL and query string do not contain sensitive information, such as an API key or session token. | L1 | Foundational | Build | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| V7.4.1 — Sessions invalidated after logout | V3 Session Management | Verify that when session termination is triggered (such as logout or expiration), the application disallows any further use of the session. For reference tokens or stateful sessions, this means invalidating the session data at the application backend. Applications using self-contained tokens will need a solution such as maintaining a list of terminated tokens, disallowing tokens produced before a per-user date and time or rotating a per-user signing key. | L1 | Foundational | Build | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| V8.3.1 — Access control enforced on every request | V4 Access Control | Verify that the application enforces authorization rules at a trusted service layer and doesn't rely on controls that an untrusted consumer could manipulate, such as client-side JavaScript. | L1 | Foundational | Build | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| V8.1.3 — Sensitive data not in session storage | V8 Data Protection | Sensitive user data not persisted in shared session or cache layers accessible across users | L1 | Foundational | Build — **DRAFT — ASVS 5.0.0: DELETED, INSUFFICIENT IMPACT; retarget or drop pending SME review (#22)** | DRAFT | DRAFT | DRAFT | ASVS 4.0.3 | (unreviewed) |
 
 #### Mitigations by tier
 
@@ -684,12 +688,12 @@ to bypass access controls, extract unauthorised data, or corrupt data stores.
 
 #### ASVS mapping
 
-| Requirement | Chapter | Description | Level | Tier | Scope |
-|---|---|---|---|---|---|
-| V5.1.1 — Allowlist input validation | V5 Validation | NL queries translated by LLMs validated against an allowlist of permitted query patterns before execution | L1 | Foundational | Build |
-| V5.3.4 — SQL injection prevention | V5 Validation | LLM-generated SQL parameterised — no direct string interpolation of model output into query execution | L1 | Foundational | Build |
-| V4.1.1 — Access control on every request | V4 Access Control | NL gateway enforces the same access control as the underlying data source — no privilege amplification via NL | L1 | Foundational | Build |
-| V13.1.1 — API protection against enumeration | V13 API | NL data gateway limits result set size and prevents systematic data enumeration through conversational interface | L2 | Hardening | Build |
+| Requirement | Chapter | Description | Level | Tier | Scope | Relationship | Rationale type | Confidence | Framework ver. | Reviewed by |
+|---|---|---|---|---|---|---|---|---|---|---|
+| V15.3.7 — Allowlist input validation | V5 Validation | Verify that the application has defenses against HTTP parameter pollution attacks, particularly if the application framework makes no distinction about the source of request parameters (query string, body parameters, cookies, or header fields). | L1 | Foundational | Build | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| V1.2.4 — SQL injection prevention | V5 Validation | Verify that data selection or database queries (e.g., SQL, HQL, NoSQL, Cypher) use parameterized queries, ORMs, entity frameworks, or are otherwise protected from SQL Injection and other database injection attacks. This is also relevant when writing stored procedures. | L1 | Foundational | Build | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| V8.3.1 — Access control on every request | V4 Access Control | Verify that the application enforces authorization rules at a trusted service layer and doesn't rely on controls that an untrusted consumer could manipulate, such as client-side JavaScript. | L1 | Foundational | Build | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| V1.5.3 — API protection against enumeration | V13 API | Verify that different parsers used in the application for the same data type (e.g., JSON parsers, XML parsers, URL parsers), perform parsing in a consistent way and use the same character encoding mechanism to avoid issues such as JSON Interoperability vulnerabilities or different URI or file parsing behavior being exploited in Remote File Inclusion (RFI) or Server-side Request Forgery (SSRF) attacks. | L2 | Hardening | Build | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
 
 #### Mitigations by tier
 
@@ -736,11 +740,11 @@ and extraction of sensitive source content through embedding inversion.
 
 #### ASVS mapping
 
-| Requirement | Chapter | Description | Level | Tier | Scope |
-|---|---|---|---|---|---|
-| V4.1.3 — Deny by default | V4 Access Control | Vector store access defaults to deny — read and write permissions explicitly granted per namespace | L1 | Foundational | Both |
-| V6.1.1 — Sensitive data not stored in cleartext | V6 Cryptography | Embedding vectors encrypted at rest — prevents direct extraction and inversion attacks | L2 | Hardening | Both |
-| V12.1.1 — File upload validation | V12 Files/Resources | Documents ingested into vector stores validated for content, format, and adversarial patterns | L1 | Foundational | Both |
+| Requirement | Chapter | Description | Level | Tier | Scope | Relationship | Rationale type | Confidence | Framework ver. | Reviewed by |
+|---|---|---|---|---|---|---|---|---|---|---|
+| V8.2.1 — Deny by default | V4 Access Control | Verify that the application ensures that function-level access is restricted to consumers with explicit permissions. | L1 | Foundational | Both | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| V14.1.1 — Sensitive data not stored in cleartext | V6 Cryptography | Verify that all sensitive data created and processed by the application has been identified and classified into protection levels. This includes data that is only encoded and therefore easily decoded, such as Base64 strings or the plaintext payload inside a JWT. Protection levels need to take into account any data protection and privacy regulations and standards which the application is required to comply with. | L2 | Hardening | Both | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| V5.2.1 — File upload validation | V12 Files/Resources | Verify that the application will only accept files of a size which it can process without causing a loss of performance or a denial of service attack. | L1 | Foundational | Both | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
 
 #### Mitigations by tier
 
@@ -784,12 +788,12 @@ PII, API keys, and user behaviour to attackers who compromise logging infrastruc
 
 #### ASVS mapping
 
-| Requirement | Chapter | Description | Level | Tier | Scope |
-|---|---|---|---|---|---|
-| V7.1.1 — No credential logging | V7 Logging | Credentials, tokens, and API keys not captured in logs — redacted at the telemetry collection layer | L1 | Foundational | Build |
-| V7.1.2 — No sensitive data in logs | V7 Logging | PII and sensitive content redacted from logs before storage — logs contain event metadata, not conversation content | L1 | Foundational | Build |
-| V8.1.1 — Sensitive data not in URLs | V8 Data Protection | Telemetry pipelines do not transmit sensitive data via URL parameters or unencrypted channels | L1 | Foundational | Build |
-| V4.1.1 — Access control on log stores | V4 Access Control | Log and telemetry stores subject to the same access control rigour as production data | L1 | Foundational | Build |
+| Requirement | Chapter | Description | Level | Tier | Scope | Relationship | Rationale type | Confidence | Framework ver. | Reviewed by |
+|---|---|---|---|---|---|---|---|---|---|---|
+| V16.2.5 — No credential logging | V7 Logging | Verify that when logging sensitive data, the application enforces logging based on the data's protection level. For example, it may not be allowed to log certain data, such as credentials or payment details. Other data, such as session tokens, may only be logged by being hashed or masked, either in full or partially. | L1 | Foundational | Build | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| V16.2.5 — No sensitive data in logs | V7 Logging | Verify that when logging sensitive data, the application enforces logging based on the data's protection level. For example, it may not be allowed to log certain data, such as credentials or payment details. Other data, such as session tokens, may only be logged by being hashed or masked, either in full or partially. | L1 | Foundational | Build | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| V14.2.2 — Sensitive data not in URLs | V8 Data Protection | Verify that the application prevents sensitive data from being cached in server components, such as load balancers and application caches, or ensures that the data is securely purged after use. | L1 | Foundational | Build | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| V8.3.1 — Access control on log stores | V4 Access Control | Verify that the application enforces authorization rules at a trusted service layer and doesn't rely on controls that an untrusted consumer could manipulate, such as client-side JavaScript. | L1 | Foundational | Build | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
 
 #### Mitigations by tier
 
@@ -833,11 +837,11 @@ poisoning, and disclosure of information from one user's or system's context to 
 
 #### ASVS mapping
 
-| Requirement | Chapter | Description | Level | Tier | Scope |
-|---|---|---|---|---|---|
-| V4.1.3 — Deny by default access control | V4 Access Control | Context window population controlled by explicit allow rules — no implicit inclusion of all available context | L1 | Foundational | Build |
-| V8.1.4 — Data minimisation | V8 Data Protection | Context window populated with minimum data necessary for the task — not maximum available data | L1 | Foundational | Build |
-| V3.1.1 — Session isolation | V3 Session Management | Data from different user sessions never co-mingled in a shared context window | L1 | Foundational | Build |
+| Requirement | Chapter | Description | Level | Tier | Scope | Relationship | Rationale type | Confidence | Framework ver. | Reviewed by |
+|---|---|---|---|---|---|---|---|---|---|---|
+| V8.2.1 — Deny by default access control | V4 Access Control | Verify that the application ensures that function-level access is restricted to consumers with explicit permissions. | L1 | Foundational | Build | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| V8.1.4 — Data minimisation | V8 Data Protection | Context window populated with minimum data necessary for the task — not maximum available data | L1 | Foundational | Build — **DRAFT — ASVS 5.0.0: DELETED, NOT IN SCOPE; retarget or drop pending SME review (#22)** | DRAFT | DRAFT | DRAFT | ASVS 4.0.3 | (unreviewed) |
+| V14.2.1 — Session isolation | V3 Session Management | Verify that sensitive data is only sent to the server in the HTTP message body or header fields, and that the URL and query string do not contain sensitive information, such as an API key or session token. | L1 | Foundational | Build | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
 
 #### Mitigations by tier
 
@@ -886,11 +890,11 @@ explicit per-action authorisation — and may exfiltrate this data to remote mod
 
 #### ASVS mapping
 
-| Requirement | Chapter | Description | Level | Tier | Scope |
-|---|---|---|---|---|---|
-| V4.1.2 — Least privilege | V4 Access Control | Browser and endpoint AI assistants operate with minimum permissions — no implicit access to OS resources, files, or other applications | L1 | Foundational | Both |
-| V11.1.5 — Business logic prevents excess data access | V11 Business Logic | Endpoint assistant functionality restricted to declared scope — no background data collection beyond stated purpose | L2 | Foundational | Both |
-| V1.1.2 — Secure architecture and design | V1 Architecture | Endpoint AI components subject to the same architectural security review as other privileged applications | L2 | Foundational | Both |
+| Requirement | Chapter | Description | Level | Tier | Scope | Relationship | Rationale type | Confidence | Framework ver. | Reviewed by |
+|---|---|---|---|---|---|---|---|---|---|---|
+| V8.2.1 — Least privilege | V4 Access Control | Verify that the application ensures that function-level access is restricted to consumers with explicit permissions. | L1 | Foundational | Both | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| V2.2.1 — Business logic prevents excess data access | V11 Business Logic | Verify that input is validated to enforce business or functional expectations for that input. This should either use positive validation against an allow list of values, patterns, and ranges, or be based on comparing the input to an expected structure and logical limits according to predefined rules. For L1, this can focus on input which is used to make specific business or security decisions. For L2 and up, this should apply to all input. | L2 | Foundational | Both | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| V1.1.2 — Secure architecture and design | V1 Architecture | Endpoint AI components subject to the same architectural security review as other privileged applications | L2 | Foundational | Both — **DRAFT — ASVS 5.0.0: DELETED, NOT IN SCOPE; retarget or drop pending SME review (#22)** | DRAFT | DRAFT | DRAFT | ASVS 4.0.3 | (unreviewed) |
 
 #### Mitigations by tier
 
@@ -935,10 +939,10 @@ service outages, loss of training history, or inability to recover from data cor
 
 #### ASVS mapping
 
-| Requirement | Chapter | Description | Level | Tier | Scope |
-|---|---|---|---|---|---|
-| V11.1.7 — Anti-automation controls | V11 Business Logic | GenAI services protected against automated abuse that could exhaust resources and cause availability failures | L2 | Foundational | Both |
-| V13.1.2 — API throttling | V13 API | Model inference APIs throttled to prevent demand spikes from causing availability failures | L1 | Foundational | Both |
+| Requirement | Chapter | Description | Level | Tier | Scope | Relationship | Rationale type | Confidence | Framework ver. | Reviewed by |
+|---|---|---|---|---|---|---|---|---|---|---|
+| V11.1.7 — Anti-automation controls | V11 Business Logic | GenAI services protected against automated abuse that could exhaust resources and cause availability failures | L2 | Foundational | Both — **DRAFT — ASVS 5.0.0: DELETED, NOT IN SCOPE; retarget or drop pending SME review (#22)** | DRAFT | DRAFT | DRAFT | ASVS 4.0.3 | (unreviewed) |
+| V13.1.2 — API throttling | V13 API | Model inference APIs throttled to prevent demand spikes from causing availability failures | L1 | Foundational | Both — **DRAFT — ASVS 5.0.0: (id absent from the official 4.0.3 mapping); retarget or drop pending SME review (#22)** | DRAFT | DRAFT | DRAFT | ASVS 4.0.3 | (unreviewed) |
 
 #### Mitigations by tier
 
@@ -984,10 +988,10 @@ content from model outputs — even when the data was never directly disclosed.
 
 #### ASVS mapping
 
-| Requirement | Chapter | Description | Level | Tier | Scope |
-|---|---|---|---|---|---|
-| V8.3.4 — Sensitive data identified | V8 Data Protection | Training datasets containing personal data identified — inference attack risk assessed before deployment | L2 | Hardening | Both |
-| V6.1.1 — Sensitive data not stored in cleartext | V6 Cryptography | Model weights and embedding vectors stored encrypted — reduces utility of extraction attacks | L2 | Hardening | Both |
+| Requirement | Chapter | Description | Level | Tier | Scope | Relationship | Rationale type | Confidence | Framework ver. | Reviewed by |
+|---|---|---|---|---|---|---|---|---|---|---|
+| V14.1.1 — Sensitive data identified | V8 Data Protection | Verify that all sensitive data created and processed by the application has been identified and classified into protection levels. This includes data that is only encoded and therefore easily decoded, such as Base64 strings or the plaintext payload inside a JWT. Protection levels need to take into account any data protection and privacy regulations and standards which the application is required to comply with. | L2 | Hardening | Both | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| V14.1.1 — Sensitive data not stored in cleartext | V6 Cryptography | Verify that all sensitive data created and processed by the application has been identified and classified into protection levels. This includes data that is only encoded and therefore easily decoded, such as Base64 strings or the plaintext payload inside a JWT. Protection levels need to take into account any data protection and privacy regulations and standards which the application is required to comply with. | L2 | Hardening | Both | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
 
 #### Mitigations by tier
 
@@ -1032,11 +1036,11 @@ data handling risks, privacy violations, and welfare concerns for annotation wor
 
 #### ASVS mapping
 
-| Requirement | Chapter | Description | Level | Tier | Scope |
-|---|---|---|---|---|---|
-| V4.1.2 — Least privilege | V4 Access Control | Human reviewers access only the data necessary for their annotation task — no broader dataset access | L1 | Foundational | Both |
-| V8.3.3 — Consent for personal data processing | V8 Data Protection | Data subjects whose data is reviewed by human annotators informed and consented per applicable law | L1 | Foundational | Both |
-| V2.1.1 — Strong authentication | V2 Authentication | Annotation platform access requires strong authentication — labeller access to sensitive data is audited | L2 | Foundational | Both |
+| Requirement | Chapter | Description | Level | Tier | Scope | Relationship | Rationale type | Confidence | Framework ver. | Reviewed by |
+|---|---|---|---|---|---|---|---|---|---|---|
+| V8.2.1 — Least privilege | V4 Access Control | Verify that the application ensures that function-level access is restricted to consumers with explicit permissions. | L1 | Foundational | Both | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| V8.3.3 — Consent for personal data processing | V8 Data Protection | Data subjects whose data is reviewed by human annotators informed and consented per applicable law | L1 | Foundational | Both — **DRAFT — ASVS 5.0.0: DELETED, NOT IN SCOPE; retarget or drop pending SME review (#22)** | DRAFT | DRAFT | DRAFT | ASVS 4.0.3 | (unreviewed) |
+| V6.2.1 — Strong authentication | V2 Authentication | Verify that user set passwords are at least 8 characters in length although a minimum of 15 characters is strongly recommended. | L2 | Foundational | Both | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
 
 #### Mitigations by tier
 
@@ -1079,11 +1083,11 @@ or identify exploitable decision boundaries without access to model weights.
 
 #### ASVS mapping
 
-| Requirement | Chapter | Description | Level | Tier | Scope |
-|---|---|---|---|---|---|
-| V4.1.1 — Access control per request | V4 Access Control | Model API access authenticated and rate-limited — prevents systematic extraction queries | L1 | Foundational | Both |
-| V8.1.4 — Data minimisation in responses | V8 Data Protection | Model confidence scores and logits not exposed in API responses where not required — limits extraction attack signal | L2 | Hardening | Both |
-| V10.2.2 — Component integrity checking | V10 Malicious Code | Model artefacts protected with integrity verification — detect unauthorised copies or modifications | L2 | Hardening | Both |
+| Requirement | Chapter | Description | Level | Tier | Scope | Relationship | Rationale type | Confidence | Framework ver. | Reviewed by |
+|---|---|---|---|---|---|---|---|---|---|---|
+| V8.3.1 — Access control per request | V4 Access Control | Verify that the application enforces authorization rules at a trusted service layer and doesn't rely on controls that an untrusted consumer could manipulate, such as client-side JavaScript. | L1 | Foundational | Both | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| V8.1.4 — Data minimisation in responses | V8 Data Protection | Model confidence scores and logits not exposed in API responses where not required — limits extraction attack signal | L2 | Hardening | Both — **DRAFT — ASVS 5.0.0: DELETED, NOT IN SCOPE; retarget or drop pending SME review (#22)** | DRAFT | DRAFT | DRAFT | ASVS 4.0.3 | (unreviewed) |
+| V10.2.2 — Component integrity checking | V10 Malicious Code | Model artefacts protected with integrity verification — detect unauthorised copies or modifications | L2 | Hardening | Both — **DRAFT — ASVS 5.0.0: DELETED, NOT PRACTICAL; retarget or drop pending SME review (#22)** | DRAFT | DRAFT | DRAFT | ASVS 4.0.3 | (unreviewed) |
 
 #### Mitigations by tier
 
@@ -1126,10 +1130,10 @@ targeting specific topics, entities, or user segments with malicious intent.
 
 #### ASVS mapping
 
-| Requirement | Chapter | Description | Level | Tier | Scope |
-|---|---|---|---|---|---|
-| V5.1.3 — Server-side input validation | V5 Validation | Training data ingestion validates content against factual integrity checks and anomaly patterns | L2 | Hardening | Both |
-| V11.1.4 — Enforce business logic limits | V11 Business Logic | Model output validation detects systematic deviation from factual baselines — triggers review before serving | L2 | Hardening | Both |
+| Requirement | Chapter | Description | Level | Tier | Scope | Relationship | Rationale type | Confidence | Framework ver. | Reviewed by |
+|---|---|---|---|---|---|---|---|---|---|---|
+| V2.2.1 — Server-side input validation | V5 Validation | Verify that input is validated to enforce business or functional expectations for that input. This should either use positive validation against an allow list of values, patterns, and ranges, or be based on comparing the input to an expected structure and logical limits according to predefined rules. For L1, this can focus on input which is used to make specific business or security decisions. For L2 and up, this should apply to all input. | L2 | Hardening | Both | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| V2.4.1 — Enforce business logic limits | V11 Business Logic | Verify that anti-automation controls are in place to protect against excessive calls to application functions that could lead to data exfiltration, garbage-data creation, quota exhaustion, rate-limit breaches, denial-of-service, or overuse of costly resources. | L2 | Hardening | Both | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
 
 #### Mitigations by tier
 
