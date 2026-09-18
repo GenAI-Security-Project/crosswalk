@@ -85,7 +85,7 @@
     },
     {
       "framework": "MITRE ATLAS",
-      "control_id": "AML.T0012",
+      "control_id": "AML.T0016",
       "control_name": "Obtain Capabilities",
       "tier": "Foundational",
       "scope": "Both",
@@ -95,8 +95,8 @@
     },
     {
       "framework": "MITRE ATLAS",
-      "control_id": "AML.T0035",
-      "control_name": "Exfiltrate via ML Inference API",
+      "control_id": "AML.T0024",
+      "control_name": "Exfiltration via AI Inference API",
       "tier": "Foundational",
       "scope": "Both",
       "notes": "Agent credentials embedded in inference requests or responses extracted by adversary",

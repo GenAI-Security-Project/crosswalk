@@ -23,7 +23,7 @@
       "tier": "Hardening",
       "scope": "Build",
       "url": "https://atlas.mitre.org/techniques/AML.T0063",
-      "notes": "Crafting inputs whose embeddings manipulate similarity search results",
+      "notes": "Crafting inputs whose embeddings manipulate similarity search results — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)**",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
@@ -34,7 +34,7 @@
       "tier": "Hardening",
       "scope": "Build",
       "url": "https://atlas.mitre.org/techniques/AML.T0025",
-      "notes": "Flooding vector stores with adversarial embeddings to degrade retrieval quality",
+      "notes": "Flooding vector stores with adversarial embeddings to degrade retrieval quality — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)**",
       "confidence": "unreviewed",
       "reviewed_by": []
     },

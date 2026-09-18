@@ -111,7 +111,7 @@
       "tier": "Foundational",
       "scope": "Both",
       "url": "https://atlas.mitre.org/techniques/AML.T0024",
-      "notes": "Reconstructing sensitive data accessible to the agent through credential abuse",
+      "notes": "Reconstructing sensitive data accessible to the agent through credential abuse — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)**",
       "confidence": "unreviewed",
       "reviewed_by": []
     },

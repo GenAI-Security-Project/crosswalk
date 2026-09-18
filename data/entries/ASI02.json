@@ -89,7 +89,7 @@
       "tier": "Foundational",
       "scope": "Both",
       "url": "https://atlas.mitre.org/techniques/AML.T0037",
-      "notes": "Crafting inputs that produce tool calls with destructive parameters",
+      "notes": "Crafting inputs that produce tool calls with destructive parameters — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)**",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
@@ -100,17 +100,17 @@
       "tier": "Foundational",
       "scope": "Both",
       "url": "https://atlas.mitre.org/techniques/AML.T0015",
-      "notes": "Exploiting overly permissive tool access to exceed intended agent scope",
+      "notes": "Exploiting overly permissive tool access to exceed intended agent scope — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)**",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
     {
       "framework": "MITRE ATLAS",
-      "control_id": "AML.T0068",
+      "control_id": "AML.T0126",
       "control_name": "Automated Collection",
       "tier": "Foundational",
       "scope": "Both",
-      "url": "https://atlas.mitre.org/techniques/AML.T0068",
+      "url": "https://atlas.mitre.org/techniques/AML.T0126",
       "notes": "Agent autonomously harvesting data through tool chains beyond authorised scope",
       "confidence": "unreviewed",
       "reviewed_by": []

@@ -23,7 +23,7 @@
       "tier": "Foundational",
       "scope": "Both",
       "url": "https://atlas.mitre.org/techniques/AML.T0021",
-      "notes": "Unintended exposure of training data or sensitive context through model outputs",
+      "notes": "Unintended exposure of training data or sensitive context through model outputs — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)**",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
@@ -34,7 +34,7 @@
       "tier": "Foundational",
       "scope": "Both",
       "url": "https://atlas.mitre.org/techniques/AML.T0030",
-      "notes": "Extraction of confidential information via targeted model queries",
+      "notes": "Extraction of confidential information via targeted model queries — **DRAFT — AML.T0030 is not an ATLAS technique id; retarget pending SME review (#93)**",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
@@ -45,7 +45,7 @@
       "tier": "Foundational",
       "scope": "Both",
       "url": "https://atlas.mitre.org/techniques/AML.T0024",
-      "notes": "Reconstructing training data from model outputs or confidence scores",
+      "notes": "Reconstructing training data from model outputs or confidence scores — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)**",
       "confidence": "unreviewed",
       "reviewed_by": []
     },

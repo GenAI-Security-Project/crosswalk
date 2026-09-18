@@ -89,7 +89,7 @@
       "tier": "Foundational",
       "scope": "Both",
       "url": "https://atlas.mitre.org/techniques/AML.T0040",
-      "notes": "Agent-generated code or payloads executed by downstream components",
+      "notes": "Agent-generated code or payloads executed by downstream components — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)**",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
@@ -111,7 +111,7 @@
       "tier": "Foundational",
       "scope": "Both",
       "url": "https://atlas.mitre.org/techniques/AML.T0037",
-      "notes": "Crafting inputs that produce malicious executable code in agent output",
+      "notes": "Crafting inputs that produce malicious executable code in agent output — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)**",
       "confidence": "unreviewed",
       "reviewed_by": []
     },

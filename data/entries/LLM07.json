@@ -23,7 +23,7 @@
       "tier": "Foundational",
       "scope": "Both",
       "url": "https://atlas.mitre.org/techniques/AML.T0045",
-      "notes": "Using AI-generated content to deliberately spread false information",
+      "notes": "Using AI-generated content to deliberately spread false information — **DRAFT — AML.T0045 is not an ATLAS technique id; retarget pending SME review (#93)**",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
@@ -34,7 +34,7 @@
       "tier": "Foundational",
       "scope": "Both",
       "url": "https://atlas.mitre.org/techniques/AML.T0047",
-      "notes": "Generating high-volume automated content to shape perception or overwhelm fact-checking",
+      "notes": "Generating high-volume automated content to shape perception or overwhelm fact-checking — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)**",
       "confidence": "unreviewed",
       "reviewed_by": []
     },

@@ -95,8 +95,8 @@
     },
     {
       "framework": "MITRE ATLAS",
-      "control_id": "AML.T0035",
-      "control_name": "Exfiltrate via ML Inference API",
+      "control_id": "AML.T0024",
+      "control_name": "Exfiltration via AI Inference API",
       "tier": "Hardening",
       "scope": "Both",
       "notes": "Multimodal content processed by AI system extracted through inference API queries referencing extracted content",

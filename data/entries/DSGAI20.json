@@ -85,8 +85,8 @@
     },
     {
       "framework": "MITRE ATLAS",
-      "control_id": "AML.T0016",
-      "control_name": "Extract ML Model",
+      "control_id": "AML.T0024.002",
+      "control_name": "Exfiltration via AI Inference API: Extract AI Model",
       "tier": "Hardening",
       "scope": "Both",
       "notes": "Adversary systematically queries model to extract sufficient information to replicate its functionality",

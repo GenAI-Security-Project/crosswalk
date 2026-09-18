@@ -85,8 +85,8 @@
     },
     {
       "framework": "MITRE ATLAS",
-      "control_id": "AML.T0035",
-      "control_name": "Exfiltrate via ML Inference API",
+      "control_id": "AML.T0024",
+      "control_name": "Exfiltration via AI Inference API",
       "tier": "Foundational",
       "scope": "Both",
       "notes": "Adversary queries LLM to extract sensitive data from training corpus, RAG store, or prompt cache through crafted inference queries",

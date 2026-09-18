@@ -85,7 +85,7 @@
     },
     {
       "framework": "MITRE ATLAS",
-      "control_id": "AML.T0012",
+      "control_id": "AML.T0016",
       "control_name": "Obtain Capabilities",
       "tier": "Foundational",
       "scope": "Both",

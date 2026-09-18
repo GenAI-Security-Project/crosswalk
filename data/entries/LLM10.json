@@ -23,7 +23,7 @@
       "tier": "Foundational",
       "scope": "Build",
       "url": "https://atlas.mitre.org/techniques/AML.T0037",
-      "notes": "Crafting inputs that produce dangerous outputs consumed by downstream systems",
+      "notes": "Crafting inputs that produce dangerous outputs consumed by downstream systems — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)**",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
@@ -34,7 +34,7 @@
       "tier": "Foundational",
       "scope": "Build",
       "url": "https://atlas.mitre.org/techniques/AML.T0040",
-      "notes": "LLM outputs containing serialised payloads executed by downstream components",
+      "notes": "LLM outputs containing serialised payloads executed by downstream components — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)**",
       "confidence": "unreviewed",
       "reviewed_by": []
     },

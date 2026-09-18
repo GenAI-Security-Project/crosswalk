@@ -85,8 +85,8 @@
     },
     {
       "framework": "MITRE ATLAS",
-      "control_id": "AML.T0035",
-      "control_name": "Exfiltrate via ML Inference API",
+      "control_id": "AML.T0024",
+      "control_name": "Exfiltration via AI Inference API",
       "tier": "Foundational",
       "scope": "Both",
       "notes": "Sensitive data in labelling tasks accessed by adversary-controlled or compromised labelling vendor",

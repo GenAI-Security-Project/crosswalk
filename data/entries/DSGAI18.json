@@ -109,7 +109,7 @@
       "control_name": "Model Inversion",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Adversary reconstructs sensitive training examples from model outputs through systematic query campaigns",
+      "notes": "Adversary reconstructs sensitive training examples from model outputs through systematic query campaigns — **DRAFT — AML.T0027 is not an ATLAS technique id; retarget pending SME review (#93)**",
       "confidence": "unreviewed",
       "reviewed_by": []
     },

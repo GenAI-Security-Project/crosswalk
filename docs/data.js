@@ -23,7 +23,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0051.000",
-        "control_name": "Direct Prompt Injection",
+        "control_name": "LLM Prompt Injection: Direct",
         "tier": "Foundational",
         "scope": "Both",
         "url": "https://atlas.mitre.org/techniques/AML.T0051.000",
@@ -34,7 +34,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0051.001",
-        "control_name": "Indirect Prompt Injection",
+        "control_name": "LLM Prompt Injection: Indirect",
         "tier": "Foundational",
         "scope": "Both",
         "url": "https://atlas.mitre.org/techniques/AML.T0051.001",
@@ -1469,7 +1469,7 @@ window.CROSSWALK_DATA = [
         "tier": "Foundational",
         "scope": "Both",
         "url": "https://atlas.mitre.org/techniques/AML.T0021",
-        "notes": "Unintended exposure of training data or sensitive context through model outputs",
+        "notes": "Unintended exposure of training data or sensitive context through model outputs — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)**",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -1480,7 +1480,7 @@ window.CROSSWALK_DATA = [
         "tier": "Foundational",
         "scope": "Both",
         "url": "https://atlas.mitre.org/techniques/AML.T0030",
-        "notes": "Extraction of confidential information via targeted model queries",
+        "notes": "Extraction of confidential information via targeted model queries — **DRAFT — AML.T0030 is not an ATLAS technique id; retarget pending SME review (#93)**",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -1491,7 +1491,7 @@ window.CROSSWALK_DATA = [
         "tier": "Foundational",
         "scope": "Both",
         "url": "https://atlas.mitre.org/techniques/AML.T0024",
-        "notes": "Reconstructing training data from model outputs or confidence scores",
+        "notes": "Reconstructing training data from model outputs or confidence scores — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)**",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -2675,17 +2675,17 @@ window.CROSSWALK_DATA = [
         "tier": "Foundational",
         "scope": "Build",
         "url": "https://atlas.mitre.org/techniques/AML.T0015",
-        "notes": "Exploiting overly permissive LLM tool access to perform actions beyond intended scope",
+        "notes": "Exploiting overly permissive LLM tool access to perform actions beyond intended scope — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)**",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0068",
+        "control_id": "AML.T0126",
         "control_name": "Automated Collection",
         "tier": "Foundational",
         "scope": "Build",
-        "url": "https://atlas.mitre.org/techniques/AML.T0068",
+        "url": "https://atlas.mitre.org/techniques/AML.T0126",
         "notes": "LLM autonomously collecting data beyond its intended access scope",
         "confidence": "unreviewed",
         "reviewed_by": []
@@ -3924,7 +3924,7 @@ window.CROSSWALK_DATA = [
         "tier": "Foundational",
         "scope": "Both",
         "url": "https://atlas.mitre.org/techniques/AML.T0056",
-        "notes": "Tampering with model weights, adapters, or configurations during supply chain",
+        "notes": "Tampering with model weights, adapters, or configurations during supply chain — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)**",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -3935,17 +3935,17 @@ window.CROSSWALK_DATA = [
         "tier": "Foundational",
         "scope": "Both",
         "url": "https://atlas.mitre.org/techniques/AML.T0048",
-        "notes": "Introducing persistent malicious behaviour into model through supply chain",
+        "notes": "Introducing persistent malicious behaviour into model through supply chain — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)**",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0010",
-        "control_name": "Backdoor ML Model",
+        "control_id": "AML.T0018",
+        "control_name": "Manipulate AI Model",
         "tier": "Foundational",
         "scope": "Both",
-        "url": "https://atlas.mitre.org/techniques/AML.T0010",
+        "url": "https://atlas.mitre.org/techniques/AML.T0018",
         "notes": "Embedding trigger-based backdoors in model weights via training or fine-tuning supply chain",
         "confidence": "unreviewed",
         "reviewed_by": []
@@ -5120,17 +5120,17 @@ window.CROSSWALK_DATA = [
         "tier": "Hardening",
         "scope": "Both",
         "url": "https://atlas.mitre.org/techniques/AML.T0032",
-        "notes": "Injecting malicious data into training pipelines to corrupt model behaviour",
+        "notes": "Injecting malicious data into training pipelines to corrupt model behaviour — **DRAFT — AML.T0032 is not an ATLAS technique id; retarget pending SME review (#93)**",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0031",
-        "control_name": "Backdoor ML Model",
+        "control_id": "AML.T0018",
+        "control_name": "Manipulate AI Model",
         "tier": "Hardening",
         "scope": "Both",
-        "url": "https://atlas.mitre.org/techniques/AML.T0031",
+        "url": "https://atlas.mitre.org/techniques/AML.T0018",
         "notes": "Embedding hidden trigger-response patterns in model via poisoned training data",
         "confidence": "unreviewed",
         "reviewed_by": []
@@ -5142,7 +5142,7 @@ window.CROSSWALK_DATA = [
         "tier": "Hardening",
         "scope": "Both",
         "url": "https://atlas.mitre.org/techniques/AML.T0027",
-        "notes": "Reconstructing sensitive training data from model outputs",
+        "notes": "Reconstructing sensitive training data from model outputs — **DRAFT — AML.T0027 is not an ATLAS technique id; retarget pending SME review (#93)**",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -7362,7 +7362,7 @@ window.CROSSWALK_DATA = [
         "tier": "Foundational",
         "scope": "Both",
         "url": "https://atlas.mitre.org/techniques/AML.T0045",
-        "notes": "Using AI-generated content to deliberately spread false information",
+        "notes": "Using AI-generated content to deliberately spread false information — **DRAFT — AML.T0045 is not an ATLAS technique id; retarget pending SME review (#93)**",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -7373,7 +7373,7 @@ window.CROSSWALK_DATA = [
         "tier": "Foundational",
         "scope": "Both",
         "url": "https://atlas.mitre.org/techniques/AML.T0047",
-        "notes": "Generating high-volume automated content to shape perception or overwhelm fact-checking",
+        "notes": "Generating high-volume automated content to shape perception or overwhelm fact-checking — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)**",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -8543,14 +8543,14 @@ window.CROSSWALK_DATA = [
         "tier": "Foundational",
         "scope": "Build",
         "url": "https://atlas.mitre.org/techniques/AML.T0041",
-        "notes": "Extraction of internal model configuration, instructions, or system prompts",
+        "notes": "Extraction of internal model configuration, instructions, or system prompts — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)**",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0051.000",
-        "control_name": "Direct Prompt Injection",
+        "control_name": "LLM Prompt Injection: Direct",
         "tier": "Foundational",
         "scope": "Build",
         "url": "https://atlas.mitre.org/techniques/AML.T0051.000",
@@ -9604,7 +9604,7 @@ window.CROSSWALK_DATA = [
         "tier": "Hardening",
         "scope": "Build",
         "url": "https://atlas.mitre.org/techniques/AML.T0063",
-        "notes": "Crafting inputs whose embeddings manipulate similarity search results",
+        "notes": "Crafting inputs whose embeddings manipulate similarity search results — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)**",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -9615,7 +9615,7 @@ window.CROSSWALK_DATA = [
         "tier": "Hardening",
         "scope": "Build",
         "url": "https://atlas.mitre.org/techniques/AML.T0025",
-        "notes": "Flooding vector stores with adversarial embeddings to degrade retrieval quality",
+        "notes": "Flooding vector stores with adversarial embeddings to degrade retrieval quality — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)**",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -10679,7 +10679,7 @@ window.CROSSWALK_DATA = [
         "tier": "Foundational",
         "scope": "Build",
         "url": "https://atlas.mitre.org/techniques/AML.T0037",
-        "notes": "Crafting inputs that produce dangerous outputs consumed by downstream systems",
+        "notes": "Crafting inputs that produce dangerous outputs consumed by downstream systems — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)**",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -10690,7 +10690,7 @@ window.CROSSWALK_DATA = [
         "tier": "Foundational",
         "scope": "Build",
         "url": "https://atlas.mitre.org/techniques/AML.T0040",
-        "notes": "LLM outputs containing serialised payloads executed by downstream components",
+        "notes": "LLM outputs containing serialised payloads executed by downstream components — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)**",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -12893,7 +12893,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0051.000",
-        "control_name": "Direct Prompt Injection",
+        "control_name": "LLM Prompt Injection: Direct",
         "tier": "Foundational",
         "scope": "Both",
         "url": "https://atlas.mitre.org/techniques/AML.T0051.000",
@@ -12904,7 +12904,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "MITRE ATLAS",
         "control_id": "AML.T0051.001",
-        "control_name": "Indirect Prompt Injection",
+        "control_name": "LLM Prompt Injection: Indirect",
         "tier": "Foundational",
         "scope": "Both",
         "url": "https://atlas.mitre.org/techniques/AML.T0051.001",
@@ -14244,7 +14244,7 @@ window.CROSSWALK_DATA = [
         "tier": "Foundational",
         "scope": "Both",
         "url": "https://atlas.mitre.org/techniques/AML.T0037",
-        "notes": "Crafting inputs that produce tool calls with destructive parameters",
+        "notes": "Crafting inputs that produce tool calls with destructive parameters — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)**",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -14255,17 +14255,17 @@ window.CROSSWALK_DATA = [
         "tier": "Foundational",
         "scope": "Both",
         "url": "https://atlas.mitre.org/techniques/AML.T0015",
-        "notes": "Exploiting overly permissive tool access to exceed intended agent scope",
+        "notes": "Exploiting overly permissive tool access to exceed intended agent scope — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)**",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0068",
+        "control_id": "AML.T0126",
         "control_name": "Automated Collection",
         "tier": "Foundational",
         "scope": "Both",
-        "url": "https://atlas.mitre.org/techniques/AML.T0068",
+        "url": "https://atlas.mitre.org/techniques/AML.T0126",
         "notes": "Agent autonomously harvesting data through tool chains beyond authorised scope",
         "confidence": "unreviewed",
         "reviewed_by": []
@@ -15536,7 +15536,7 @@ window.CROSSWALK_DATA = [
         "tier": "Foundational",
         "scope": "Both",
         "url": "https://atlas.mitre.org/techniques/AML.T0024",
-        "notes": "Reconstructing sensitive data accessible to the agent through credential abuse",
+        "notes": "Reconstructing sensitive data accessible to the agent through credential abuse — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)**",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -16852,7 +16852,7 @@ window.CROSSWALK_DATA = [
         "tier": "Hardening",
         "scope": "Both",
         "url": "https://atlas.mitre.org/techniques/AML.T0056",
-        "notes": "Tampering with model weights or tool components loaded by agent at runtime",
+        "notes": "Tampering with model weights or tool components loaded by agent at runtime — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)**",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -16863,17 +16863,17 @@ window.CROSSWALK_DATA = [
         "tier": "Hardening",
         "scope": "Both",
         "url": "https://atlas.mitre.org/techniques/AML.T0048",
-        "notes": "Persistent malicious behaviour introduced through dynamically loaded agent components",
+        "notes": "Persistent malicious behaviour introduced through dynamically loaded agent components — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)**",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0010",
-        "control_name": "Backdoor ML Model",
+        "control_id": "AML.T0018",
+        "control_name": "Manipulate AI Model",
         "tier": "Hardening",
         "scope": "Both",
-        "url": "https://atlas.mitre.org/techniques/AML.T0010",
+        "url": "https://atlas.mitre.org/techniques/AML.T0018",
         "notes": "Trigger-based backdoors in MCP servers, prompt templates, or model adapters",
         "confidence": "unreviewed",
         "reviewed_by": []
@@ -18035,7 +18035,7 @@ window.CROSSWALK_DATA = [
         "tier": "Foundational",
         "scope": "Both",
         "url": "https://atlas.mitre.org/techniques/AML.T0040",
-        "notes": "Agent-generated code or payloads executed by downstream components",
+        "notes": "Agent-generated code or payloads executed by downstream components — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)**",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -18057,7 +18057,7 @@ window.CROSSWALK_DATA = [
         "tier": "Foundational",
         "scope": "Both",
         "url": "https://atlas.mitre.org/techniques/AML.T0037",
-        "notes": "Crafting inputs that produce malicious executable code in agent output",
+        "notes": "Crafting inputs that produce malicious executable code in agent output — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)**",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -19223,7 +19223,7 @@ window.CROSSWALK_DATA = [
         "tier": "Hardening",
         "scope": "Both",
         "url": "https://atlas.mitre.org/techniques/AML.T0032",
-        "notes": "Injecting malicious content into agent persistent memory or RAG stores",
+        "notes": "Injecting malicious content into agent persistent memory or RAG stores — **DRAFT — AML.T0032 is not an ATLAS technique id; retarget pending SME review (#93)**",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -19234,7 +19234,7 @@ window.CROSSWALK_DATA = [
         "tier": "Hardening",
         "scope": "Both",
         "url": "https://atlas.mitre.org/techniques/AML.T0063",
-        "notes": "Crafting content whose embeddings bias future retrieval results in attacker's favour",
+        "notes": "Crafting content whose embeddings bias future retrieval results in attacker's favour — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)**",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -19245,7 +19245,7 @@ window.CROSSWALK_DATA = [
         "tier": "Hardening",
         "scope": "Both",
         "url": "https://atlas.mitre.org/techniques/AML.T0020",
-        "notes": "Establishing persistent trigger-response patterns in agent memory stores",
+        "notes": "Establishing persistent trigger-response patterns in agent memory stores — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)**",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -20390,7 +20390,7 @@ window.CROSSWALK_DATA = [
         "tier": "Hardening",
         "scope": "Both",
         "url": "https://atlas.mitre.org/techniques/AML.T0043",
-        "notes": "Identifying and mapping inter-agent communication endpoints for targeting",
+        "notes": "Identifying and mapping inter-agent communication endpoints for targeting — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)**",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -21539,7 +21539,7 @@ window.CROSSWALK_DATA = [
         "tier": "Foundational",
         "scope": "Both",
         "url": "https://atlas.mitre.org/techniques/AML.T0057",
-        "notes": "Exploiting an exposed agent endpoint to introduce a fault that cascades internally",
+        "notes": "Exploiting an exposed agent endpoint to introduce a fault that cascades internally — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)**",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -22643,7 +22643,7 @@ window.CROSSWALK_DATA = [
         "tier": "Foundational",
         "scope": "Both",
         "url": "https://atlas.mitre.org/techniques/AML.T0045",
-        "notes": "Agent generates persuasive false information to manipulate human approvals",
+        "notes": "Agent generates persuasive false information to manipulate human approvals — **DRAFT — AML.T0045 is not an ATLAS technique id; retarget pending SME review (#93)**",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -22654,7 +22654,7 @@ window.CROSSWALK_DATA = [
         "tier": "Foundational",
         "scope": "Both",
         "url": "https://atlas.mitre.org/techniques/AML.T0047",
-        "notes": "Agent produces high-volume, fluent content that overwhelms human critical assessment",
+        "notes": "Agent produces high-volume, fluent content that overwhelms human critical assessment — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)**",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -22665,7 +22665,7 @@ window.CROSSWALK_DATA = [
         "tier": "Foundational",
         "scope": "Both",
         "url": "https://atlas.mitre.org/techniques/AML.T0049",
-        "notes": "Compromised agent crafts highly personalised, convincing manipulation targeted at specific users",
+        "notes": "Compromised agent crafts highly personalised, convincing manipulation targeted at specific users — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)**",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -23799,7 +23799,7 @@ window.CROSSWALK_DATA = [
         "tier": "Hardening",
         "scope": "Both",
         "url": "https://atlas.mitre.org/techniques/AML.T0015",
-        "notes": "Rogue agent gradually escalates its own capabilities and permissions over time",
+        "notes": "Rogue agent gradually escalates its own capabilities and permissions over time — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)**",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -23810,7 +23810,7 @@ window.CROSSWALK_DATA = [
         "tier": "Hardening",
         "scope": "Both",
         "url": "https://atlas.mitre.org/techniques/AML.T0057",
-        "notes": "Compromised agent maintains persistent access and hidden execution across sessions",
+        "notes": "Compromised agent maintains persistent access and hidden execution across sessions — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)**",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -25015,8 +25015,8 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0035",
-        "control_name": "Exfiltrate via ML Inference API",
+        "control_id": "AML.T0024",
+        "control_name": "Exfiltration via AI Inference API",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Adversary queries LLM to extract sensitive data from training corpus, RAG store, or prompt cache through crafted inference queries",
@@ -26208,7 +26208,7 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0012",
+        "control_id": "AML.T0016",
         "control_name": "Obtain Capabilities",
         "tier": "Foundational",
         "scope": "Both",
@@ -26218,8 +26218,8 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0035",
-        "control_name": "Exfiltrate via ML Inference API",
+        "control_id": "AML.T0024",
+        "control_name": "Exfiltration via AI Inference API",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Agent credentials embedded in inference requests or responses extracted by adversary",
@@ -27269,7 +27269,7 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0012",
+        "control_id": "AML.T0016",
         "control_name": "Obtain Capabilities",
         "tier": "Foundational",
         "scope": "Both",
@@ -30392,8 +30392,8 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0035",
-        "control_name": "Exfiltrate via ML Inference API",
+        "control_id": "AML.T0024",
+        "control_name": "Exfiltration via AI Inference API",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Tool API acts as exfiltration channel — sensitive context content captured in tool call payloads",
@@ -31343,8 +31343,8 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0035",
-        "control_name": "Exfiltrate via ML Inference API",
+        "control_id": "AML.T0024",
+        "control_name": "Exfiltration via AI Inference API",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Ungoverned derived assets (embeddings, caches) accessible through inference API without classification controls",
@@ -32337,8 +32337,8 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0035",
-        "control_name": "Exfiltrate via ML Inference API",
+        "control_id": "AML.T0024",
+        "control_name": "Exfiltration via AI Inference API",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Regulatory violations in training data scope make inference API exfiltration more damaging",
@@ -33399,8 +33399,8 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0035",
-        "control_name": "Exfiltrate via ML Inference API",
+        "control_id": "AML.T0024",
+        "control_name": "Exfiltration via AI Inference API",
         "tier": "Hardening",
         "scope": "Both",
         "notes": "Multimodal content processed by AI system extracted through inference API queries referencing extracted content",
@@ -34387,8 +34387,8 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0035",
-        "control_name": "Exfiltrate via ML Inference API",
+        "control_id": "AML.T0024",
+        "control_name": "Exfiltration via AI Inference API",
         "tier": "Hardening",
         "scope": "Both",
         "notes": "Synthetic training data membership confirmed and specific records reconstructed through inference API",
@@ -35260,8 +35260,8 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0035",
-        "control_name": "Exfiltrate via ML Inference API",
+        "control_id": "AML.T0024",
+        "control_name": "Exfiltration via AI Inference API",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Adversary crafts queries designed to retrieve content from other users' sessions through session isolation failure",
@@ -36238,8 +36238,8 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0035",
-        "control_name": "Exfiltrate via ML Inference API",
+        "control_id": "AML.T0024",
+        "control_name": "Exfiltration via AI Inference API",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "LLM inference API used to generate queries that extract data from connected databases",
@@ -37227,8 +37227,8 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0035",
-        "control_name": "Exfiltrate via ML Inference API",
+        "control_id": "AML.T0024",
+        "control_name": "Exfiltration via AI Inference API",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Embeddings and retrieved passages extracted through vector store query API",
@@ -38223,8 +38223,8 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0035",
-        "control_name": "Exfiltrate via ML Inference API",
+        "control_id": "AML.T0024",
+        "control_name": "Exfiltration via AI Inference API",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Sensitive inference inputs and outputs captured in telemetry stores accessed through weaker controls",
@@ -39251,8 +39251,8 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0035",
-        "control_name": "Exfiltrate via ML Inference API",
+        "control_id": "AML.T0024",
+        "control_name": "Exfiltration via AI Inference API",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Inference API queries designed to surface maximum context window content through crafted prompts",
@@ -40206,8 +40206,8 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0035",
-        "control_name": "Exfiltrate via ML Inference API",
+        "control_id": "AML.T0024",
+        "control_name": "Exfiltration via AI Inference API",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Compromised browser assistant used as exfiltration channel — sensitive data from accessible applications transmitted",
@@ -42248,7 +42248,7 @@ window.CROSSWALK_DATA = [
         "control_name": "Model Inversion",
         "tier": "Hardening",
         "scope": "Both",
-        "notes": "Adversary reconstructs sensitive training examples from model outputs through systematic query campaigns",
+        "notes": "Adversary reconstructs sensitive training examples from model outputs through systematic query campaigns — **DRAFT — AML.T0027 is not an ATLAS technique id; retarget pending SME review (#93)**",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -43109,8 +43109,8 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0035",
-        "control_name": "Exfiltrate via ML Inference API",
+        "control_id": "AML.T0024",
+        "control_name": "Exfiltration via AI Inference API",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Sensitive data in labelling tasks accessed by adversary-controlled or compromised labelling vendor",
@@ -44049,8 +44049,8 @@ window.CROSSWALK_DATA = [
       },
       {
         "framework": "MITRE ATLAS",
-        "control_id": "AML.T0016",
-        "control_name": "Extract ML Model",
+        "control_id": "AML.T0024.002",
+        "control_name": "Exfiltration via AI Inference API: Extract AI Model",
         "tier": "Hardening",
         "scope": "Both",
         "notes": "Adversary systematically queries model to extract sufficient information to replicate its functionality",
@@ -45037,7 +45037,7 @@ window.CROSSWALK_DATA = [
         "control_name": "Publish Poisoned Datasets",
         "tier": "Hardening",
         "scope": "Both",
-        "notes": "Adversary publishes false content in public repositories, documentation sites, or knowledge bases indexed by RAG systems",
+        "notes": "Adversary publishes false content in public repositories, documentation sites, or knowledge bases indexed by RAG systems — **DRAFT — AML.T0045 is not an ATLAS technique id; retarget pending SME review (#93)**",
         "confidence": "unreviewed",
         "reviewed_by": []
       },

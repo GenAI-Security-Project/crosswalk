@@ -23,14 +23,14 @@
       "tier": "Foundational",
       "scope": "Build",
       "url": "https://atlas.mitre.org/techniques/AML.T0041",
-      "notes": "Extraction of internal model configuration, instructions, or system prompts",
+      "notes": "Extraction of internal model configuration, instructions, or system prompts — **DRAFT — not an ATLAS technique name; retarget pending SME review (#93)**",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
     {
       "framework": "MITRE ATLAS",
       "control_id": "AML.T0051.000",
-      "control_name": "Direct Prompt Injection",
+      "control_name": "LLM Prompt Injection: Direct",
       "tier": "Foundational",
       "scope": "Build",
       "url": "https://atlas.mitre.org/techniques/AML.T0051.000",

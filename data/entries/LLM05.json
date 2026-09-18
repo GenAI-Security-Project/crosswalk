@@ -23,17 +23,17 @@
       "tier": "Hardening",
       "scope": "Both",
       "url": "https://atlas.mitre.org/techniques/AML.T0032",
-      "notes": "Injecting malicious data into training pipelines to corrupt model behaviour",
+      "notes": "Injecting malicious data into training pipelines to corrupt model behaviour — **DRAFT — AML.T0032 is not an ATLAS technique id; retarget pending SME review (#93)**",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
     {
       "framework": "MITRE ATLAS",
-      "control_id": "AML.T0031",
-      "control_name": "Backdoor ML Model",
+      "control_id": "AML.T0018",
+      "control_name": "Manipulate AI Model",
       "tier": "Hardening",
       "scope": "Both",
-      "url": "https://atlas.mitre.org/techniques/AML.T0031",
+      "url": "https://atlas.mitre.org/techniques/AML.T0018",
       "notes": "Embedding hidden trigger-response patterns in model via poisoned training data",
       "confidence": "unreviewed",
       "reviewed_by": []
@@ -45,7 +45,7 @@
       "tier": "Hardening",
       "scope": "Both",
       "url": "https://atlas.mitre.org/techniques/AML.T0027",
-      "notes": "Reconstructing sensitive training data from model outputs",
+      "notes": "Reconstructing sensitive training data from model outputs — **DRAFT — AML.T0027 is not an ATLAS technique id; retarget pending SME review (#93)**",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
