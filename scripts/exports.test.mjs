@@ -149,32 +149,17 @@ test('STIX bundle covers every incident in the database', () => {
 // ── regression fence for the swapped control_id / control_name rows ──────────
 
 /**
- * A known, tracked defect: in some mapping files the control identifier and the
- * requirement prose are in the wrong columns, so `control_id` holds a sentence.
- * The OSCAL exports no longer *break* on it — `oscalToken()` coerces the id and
- * preserves the original in a `source-control-id` prop — but the underlying data
- * is still wrong, and a reader following an id back to the framework cannot.
+ * Issue #35 is fixed, so this table is empty and any prose id anywhere fails.
  *
- * This is the count as of 2026-08-28, per framework registry. It is a ceiling,
- * not a target: the test fails if any framework gains prose ids, or if a
- * framework not listed here starts producing them. When the parser is fixed,
- * these numbers come down and this table shrinks with them.
+ * It used to list 576 prose-shaped ids across eleven frameworks, produced by a
+ * parser that fell through to "column 0 is the id" whenever a row was not
+ * positional. The per-framework grammar in scripts/control-ids.js replaced that
+ * guess, and the registries were migrated off the ids it had produced.
  *
- * Tracked as issue #35.
+ * The empty object is deliberate: it keeps the check that the OSCAL exports
+ * carry no sentence-shaped identifiers, with no framework exempted.
  */
-const PROSE_ID_BASELINE = Object.freeze({
-  'AIUC-1': 3,
-  'CIS Controls v8.1': 31,
-  'CWE/CVE': 25,
-  'EU AI Act': 118,
-  'ISO/IEC 42001:2023': 3,
-  'NIST SP 800-218A': 40,
-  'NIST SP 800-82 Rev 3': 29,
-  'OWASP AI Testing Guide': 16,
-  'OWASP NHI Top 10': 103,
-  'PCI DSS v4.0': 40,
-  'SOC 2': 168,
-});
+const PROSE_ID_BASELINE = Object.freeze({});
 
 /** A control id is "prose" when it reads as a sentence rather than an identifier. */
 const isProse = (raw) => String(raw).trim().split(/\s+/).length >= 5;

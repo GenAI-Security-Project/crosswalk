@@ -58,11 +58,14 @@ const GRAMMARS = {
     canonical: (m) => m[1].toUpperCase(),
   },
   'OWASP AI Testing Guide': {
-    // Category codes, always written "IHT — Input Handling".
-    re: /\b([A-Z]{3})\b(?=\s*[—–-])/,
+    // Category codes, written "IHT — Input Handling". The separator is matched
+    // as "any punctuation" because some registry titles carry a U+FFFD where
+    // the em dash should be.
+    re: /\b([A-Z]{3})\b(?=\s*[^\sA-Za-z0-9])/,
   },
   'ISO/IEC 42001:2023': {
-    re: /\b(A\.\d{1,2}(?:\.\d{1,2}){0,2})\b|\bCl(?:ause)?\.?\s*(\d{1,2}(?:\.\d{1,2}){0,2})\b/,
+    // Annex A controls, Annex B guidance, and management-system clauses.
+    re: /\b([AB]\.\d{1,2}(?:\.\d{1,2}){0,2})\b|\bCl(?:ause)?\.?\s*(\d{1,2}(?:\.\d{1,2}){0,2})\b/,
     canonical: (m) => m[1] || m[2],
   },
 };
@@ -71,7 +74,9 @@ const GRAMMARS = {
 function remainder(cell, matchText) {
   return cell
     .replace(matchText, ' ')
-    .replace(/^[\s—–\-–:.)\]]+/, '')
+    // Leading separator: a dash, punctuation, or the U+FFFD some registry
+    // titles carry where an em dash was lost.
+    .replace(/^[\s—–\-:.)\]�]+/, '')
     .replace(/\s{2,}/g, ' ')
     .trim();
 }
@@ -151,8 +156,24 @@ const ID_SHAPES = {
   'NIST SP 800-82 Rev 3': /^(?:§\d{1,2}(?:\.\d{1,2}){0,2}|[A-Z]{2}-\d{1,2})$/,
   'CWE/CVE': /^(?:CWE-\d{1,4}|CVE-\d{4}-\d{4,7})$/,
   'OWASP AI Testing Guide': /^[A-Z]{3}$/,
-  'ISO/IEC 42001:2023': /^(?:A\.\d{1,2}(?:\.\d{1,2}){0,2}|\d{1,2}(?:\.\d{1,2}){0,2})$/,
+  'ISO/IEC 42001:2023': /^(?:[AB]\.\d{1,2}(?:\.\d{1,2}){0,2}|\d{1,2}(?:\.\d{1,2}){0,2})$/,
 };
+
+/**
+ * Identifiers a *registry* may hold that a mapping row would not.
+ *
+ * A CIS mapping row cites the safeguard (`16.1`, ruling A on #35), but the
+ * registry also carries the parent controls those safeguards belong to.
+ */
+const REGISTRY_EXTRA_SHAPES = {
+  'CIS Controls v8.1': /^CIS-\d{1,2}$/,
+};
+
+/** True when `id` is well-formed for `framework` in a registry file. */
+function isValidRegistryId(framework, id) {
+  const extra = REGISTRY_EXTRA_SHAPES[framework];
+  return isValidControlId(framework, id) || (extra ? extra.test(String(id).trim()) : false);
+}
 
 /** True when `id` is a well-formed identifier for `framework`. */
 function isValidControlId(framework, id) {
@@ -160,4 +181,4 @@ function isValidControlId(framework, id) {
   return shape ? shape.test(String(id).trim()) : true;
 }
 
-module.exports = { resolveControlId, isValidControlId, GRAMMARS, ID_SHAPES, NAME_MAX };
+module.exports = { resolveControlId, isValidControlId, isValidRegistryId, GRAMMARS, ID_SHAPES, REGISTRY_EXTRA_SHAPES, NAME_MAX };
