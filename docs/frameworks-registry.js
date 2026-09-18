@@ -8406,7 +8406,7 @@ window.CROSSWALK_FRAMEWORKS = [
     "controls": [
       {
         "control_id": "Req 1.3",
-        "title": "Req 1.3",
+        "title": "Network access to and from the cardholder data environment is restricted.",
         "description": "Network diagram, segmentation evidence",
         "kind": "control",
         "parent": null
@@ -8419,7 +8419,7 @@ window.CROSSWALK_FRAMEWORKS = [
       },
       {
         "control_id": "Req 2.2",
-        "title": "Req 2.2",
+        "title": "System components are configured and managed securely.",
         "description": "Hardening baseline documentation",
         "kind": "control",
         "parent": null
@@ -8444,7 +8444,7 @@ window.CROSSWALK_FRAMEWORKS = [
       },
       {
         "control_id": "Req 3.4",
-        "title": "Req 3.4",
+        "title": "Access to displays of full PAN and ability to copy PAN is restricted.",
         "description": "Memory store review, PAN protection evidence",
         "kind": "control",
         "parent": null
@@ -8457,7 +8457,7 @@ window.CROSSWALK_FRAMEWORKS = [
       },
       {
         "control_id": "Req 3.5",
-        "title": "Req 3.5",
+        "title": "Primary account number (PAN) is secured wherever it is stored.",
         "description": "Encryption configuration, key management records",
         "kind": "control",
         "parent": null
@@ -8470,7 +8470,7 @@ window.CROSSWALK_FRAMEWORKS = [
       },
       {
         "control_id": "Req 4.2",
-        "title": "Req 4.2",
+        "title": "PAN is protected with strong cryptography during transmission.",
         "description": "TLS configuration, protocol verification",
         "kind": "control",
         "parent": null
@@ -8483,7 +8483,7 @@ window.CROSSWALK_FRAMEWORKS = [
       },
       {
         "control_id": "Req 5.2",
-        "title": "Req 5.2",
+        "title": "Malicious software (malware) is prevented, or detected and addressed.",
         "description": "Integrity check configuration, verification records",
         "kind": "control",
         "parent": null
@@ -8502,7 +8502,7 @@ window.CROSSWALK_FRAMEWORKS = [
       },
       {
         "control_id": "Req 6.3",
-        "title": "Req 6.3",
+        "title": "Security vulnerabilities are identified and addressed.",
         "description": "Vulnerability scan results, patch records",
         "kind": "control",
         "parent": null
@@ -8515,7 +8515,7 @@ window.CROSSWALK_FRAMEWORKS = [
       },
       {
         "control_id": "Req 6.4",
-        "title": "Req 6.4",
+        "title": "Public-facing web applications are protected against attacks.",
         "description": "WAF configuration, protection evidence",
         "kind": "control",
         "parent": null
@@ -8546,7 +8546,7 @@ window.CROSSWALK_FRAMEWORKS = [
       },
       {
         "control_id": "Req 7.2",
-        "title": "Req 7.2",
+        "title": "Access to system components and data is appropriately defined and assigned.",
         "description": "Access control matrix for agent tools, privilege review records",
         "kind": "control",
         "parent": null
@@ -8559,7 +8559,7 @@ window.CROSSWALK_FRAMEWORKS = [
       },
       {
         "control_id": "Req 7.3",
-        "title": "Req 7.3",
+        "title": "Access to system components and data is managed via an access control system(s).",
         "description": "Periodic access review records",
         "kind": "control",
         "parent": null
@@ -8572,7 +8572,7 @@ window.CROSSWALK_FRAMEWORKS = [
       },
       {
         "control_id": "Req 8.2",
-        "title": "Req 8.2",
+        "title": "User identification and related accounts for users and administrators are strictly managed throughout an account's lifecycle.",
         "description": "Account inventory, unique account evidence",
         "kind": "control",
         "parent": null
@@ -8585,7 +8585,7 @@ window.CROSSWALK_FRAMEWORKS = [
       },
       {
         "control_id": "Req 8.3",
-        "title": "Req 8.3",
+        "title": "Strong authentication for users and administrators is established and managed.",
         "description": "Credential management policy, rotation records",
         "kind": "control",
         "parent": null
@@ -8598,7 +8598,7 @@ window.CROSSWALK_FRAMEWORKS = [
       },
       {
         "control_id": "Req 10.2",
-        "title": "Req 10.2",
+        "title": "Audit logs are implemented to support the detection of anomalies and suspicious activity, and the forensic analysis of events.",
         "description": "Audit log configuration, sample log entries",
         "kind": "control",
         "parent": null
@@ -8617,14 +8617,14 @@ window.CROSSWALK_FRAMEWORKS = [
       },
       {
         "control_id": "Req 10.7",
-        "title": "Req 10.7",
+        "title": "Failures of critical security control systems are detected, reported, and responded to promptly.",
         "description": "Monitoring configuration, alert records, detection evidence",
         "kind": "control",
         "parent": null
       },
       {
         "control_id": "Req 11.3",
-        "title": "Req 11.3",
+        "title": "External and internal vulnerabilities are regularly identified, prioritized, and addressed.",
         "description": "Pen test report with goal hijack test cases",
         "kind": "control",
         "parent": null
@@ -8643,7 +8643,7 @@ window.CROSSWALK_FRAMEWORKS = [
       },
       {
         "control_id": "Req 12.3",
-        "title": "Req 12.3",
+        "title": "Risks to the cardholder data environment are formally identified, evaluated, and managed.",
         "description": "Risk analysis for agentic AI in PCI scope",
         "kind": "control",
         "parent": null
@@ -8674,7 +8674,7 @@ window.CROSSWALK_FRAMEWORKS = [
       },
       {
         "control_id": "Req 12.6",
-        "title": "Req 12.6",
+        "title": "Security awareness education is an ongoing activity.",
         "description": "Training curriculum, completion records",
         "kind": "control",
         "parent": null
@@ -8727,6 +8727,11 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "date": "2026-09-18",
         "change": "Migrated off the swapped-column ids of issue #35: 72 items -> 49",
+        "author": "OWASP GenAI Data Security Initiative"
+      },
+      {
+        "date": "2026-09-18",
+        "change": "Titled 17 entries that had carried only their identifier, from the published text: PCI DSS v4.0 requirement headings, transcribed from PCI SSC \"PCI DSS v4.0 SAQ D for Merchants\" — Req 1.3, Req 2.2, Req 3.4, Req 3.5, Req 4.2, Req 5.2, Req 6.3, Req 6.4, Req 7.2, Req 7.3, Req 8.2, Req 8.3, Req 10.2, Req 10.7, Req 11.3, Req 12.3, Req 12.6",
         "author": "OWASP GenAI Data Security Initiative"
       }
     ]
@@ -9075,7 +9080,7 @@ window.CROSSWALK_FRAMEWORKS = [
       },
       {
         "control_id": "P7.1",
-        "title": "P7.1",
+        "title": "The entity collects and maintains accurate, up-to-date, complete, and relevant personal information to meet the entity's objectives related to privacy.",
         "description": "Accuracy review procedures",
         "kind": "control",
         "parent": null
@@ -9098,7 +9103,7 @@ window.CROSSWALK_FRAMEWORKS = [
       },
       {
         "control_id": "PI1.3",
-        "title": "PI1.3",
+        "title": "The entity implements policies and procedures over system processing to result in products, services, and reporting to meet the entity's objectives.",
         "description": "Output quality controls, factual accuracy testing",
         "kind": "control",
         "parent": null
@@ -9113,6 +9118,11 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "date": "2026-09-18",
         "change": "Migrated off the swapped-column ids of issue #35: 209 items -> 46",
+        "author": "OWASP GenAI Data Security Initiative"
+      },
+      {
+        "date": "2026-09-18",
+        "change": "Titled 2 entries that had carried only their identifier, from the published text: TSP section 100, 2017 Trust Services Criteria (with Revised Points of Focus — 2022) — P7.1, PI1.3",
         "author": "OWASP GenAI Data Security Initiative"
       }
     ],

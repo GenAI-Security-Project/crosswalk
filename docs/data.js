@@ -13344,7 +13344,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "PCI DSS v4.0",
         "control_id": "Req 11.3",
-        "control_name": "Req 11.3",
+        "control_name": "External and internal vulnerabilities are regularly identified, prioritized, and addressed.",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Pen test report with goal hijack test cases",
@@ -13354,7 +13354,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "PCI DSS v4.0",
         "control_id": "Req 10.2",
-        "control_name": "Req 10.2",
+        "control_name": "Audit logs are implemented to support the detection of anomalies and suspicious activity, and the forensic analysis of events.",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Audit log configuration, sample log entries",
@@ -13364,7 +13364,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "PCI DSS v4.0",
         "control_id": "Req 12.3",
-        "control_name": "Req 12.3",
+        "control_name": "Risks to the cardholder data environment are formally identified, evaluated, and managed.",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Risk analysis for agentic AI in PCI scope",
@@ -14675,7 +14675,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "PCI DSS v4.0",
         "control_id": "Req 7.2",
-        "control_name": "Req 7.2",
+        "control_name": "Access to system components and data is appropriately defined and assigned.",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Access control matrix for agent tools, privilege review records",
@@ -14685,7 +14685,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "PCI DSS v4.0",
         "control_id": "Req 7.3",
-        "control_name": "Req 7.3",
+        "control_name": "Access to system components and data is managed via an access control system(s).",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Periodic access review records",
@@ -14695,7 +14695,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "PCI DSS v4.0",
         "control_id": "Req 10.2",
-        "control_name": "Req 10.2",
+        "control_name": "Audit logs are implemented to support the detection of anomalies and suspicious activity, and the forensic analysis of events.",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Tool invocation audit log",
@@ -15949,7 +15949,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "PCI DSS v4.0",
         "control_id": "Req 8.2",
-        "control_name": "Req 8.2",
+        "control_name": "User identification and related accounts for users and administrators are strictly managed throughout an account's lifecycle.",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Account inventory, unique account evidence",
@@ -15959,7 +15959,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "PCI DSS v4.0",
         "control_id": "Req 8.3",
-        "control_name": "Req 8.3",
+        "control_name": "Strong authentication for users and administrators is established and managed.",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Credential management policy, rotation records",
@@ -15969,7 +15969,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "PCI DSS v4.0",
         "control_id": "Req 7.2",
-        "control_name": "Req 7.2",
+        "control_name": "Access to system components and data is appropriately defined and assigned.",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Access control matrix, need-to-know justification",
@@ -15979,7 +15979,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "PCI DSS v4.0",
         "control_id": "Req 10.2",
-        "control_name": "Req 10.2",
+        "control_name": "Audit logs are implemented to support the detection of anomalies and suspicious activity, and the forensic analysis of events.",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Authentication audit log",
@@ -17291,7 +17291,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "PCI DSS v4.0",
         "control_id": "Req 6.3",
-        "control_name": "Req 6.3",
+        "control_name": "Security vulnerabilities are identified and addressed.",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Vulnerability scan results, patch records",
@@ -17301,7 +17301,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "PCI DSS v4.0",
         "control_id": "Req 5.2",
-        "control_name": "Req 5.2",
+        "control_name": "Malicious software (malware) is prevented, or detected and addressed.",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Integrity check configuration, verification records",
@@ -17311,7 +17311,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "PCI DSS v4.0",
         "control_id": "Req 2.2",
-        "control_name": "Req 2.2",
+        "control_name": "System components are configured and managed securely.",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Hardening baseline documentation",
@@ -18478,7 +18478,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "PCI DSS v4.0",
         "control_id": "Req 6.4",
-        "control_name": "Req 6.4",
+        "control_name": "Public-facing web applications are protected against attacks.",
         "tier": "Hardening",
         "scope": "Both",
         "notes": "WAF configuration, protection evidence",
@@ -18488,7 +18488,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "PCI DSS v4.0",
         "control_id": "Req 11.3",
-        "control_name": "Req 11.3",
+        "control_name": "External and internal vulnerabilities are regularly identified, prioritized, and addressed.",
         "tier": "Hardening",
         "scope": "Both",
         "notes": "Pen test report with code execution test cases",
@@ -18498,7 +18498,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "PCI DSS v4.0",
         "control_id": "Req 10.2",
-        "control_name": "Req 10.2",
+        "control_name": "Audit logs are implemented to support the detection of anomalies and suspicious activity, and the forensic analysis of events.",
         "tier": "Hardening",
         "scope": "Both",
         "notes": "Code execution audit log",
@@ -19660,7 +19660,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "PCI DSS v4.0",
         "control_id": "Req 3.4",
-        "control_name": "Req 3.4",
+        "control_name": "Access to displays of full PAN and ability to copy PAN is restricted.",
         "tier": "Hardening",
         "scope": "Both",
         "notes": "Memory store review, PAN protection evidence",
@@ -19670,7 +19670,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "PCI DSS v4.0",
         "control_id": "Req 3.5",
-        "control_name": "Req 3.5",
+        "control_name": "Primary account number (PAN) is secured wherever it is stored.",
         "tier": "Hardening",
         "scope": "Both",
         "notes": "Encryption configuration, key management records",
@@ -19690,7 +19690,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "PCI DSS v4.0",
         "control_id": "Req 11.3",
-        "control_name": "Req 11.3",
+        "control_name": "External and internal vulnerabilities are regularly identified, prioritized, and addressed.",
         "tier": "Hardening",
         "scope": "Both",
         "notes": "Pen test report",
@@ -20831,7 +20831,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "PCI DSS v4.0",
         "control_id": "Req 4.2",
-        "control_name": "Req 4.2",
+        "control_name": "PAN is protected with strong cryptography during transmission.",
         "tier": "Hardening",
         "scope": "Both",
         "notes": "TLS configuration, protocol verification",
@@ -20841,7 +20841,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "PCI DSS v4.0",
         "control_id": "Req 8.2",
-        "control_name": "Req 8.2",
+        "control_name": "User identification and related accounts for users and administrators are strictly managed throughout an account's lifecycle.",
         "tier": "Hardening",
         "scope": "Both",
         "notes": "Certificate configuration, authentication evidence",
@@ -20851,7 +20851,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "PCI DSS v4.0",
         "control_id": "Req 10.2",
-        "control_name": "Req 10.2",
+        "control_name": "Audit logs are implemented to support the detection of anomalies and suspicious activity, and the forensic analysis of events.",
         "tier": "Hardening",
         "scope": "Both",
         "notes": "Inter-agent communication audit log",
@@ -21962,7 +21962,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "PCI DSS v4.0",
         "control_id": "Req 10.7",
-        "control_name": "Req 10.7",
+        "control_name": "Failures of critical security control systems are detected, reported, and responded to promptly.",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Monitoring configuration, alert records, detection evidence",
@@ -21972,7 +21972,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "PCI DSS v4.0",
         "control_id": "Req 12.3",
-        "control_name": "Req 12.3",
+        "control_name": "Risks to the cardholder data environment are formally identified, evaluated, and managed.",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Risk analysis documentation",
@@ -21982,7 +21982,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "PCI DSS v4.0",
         "control_id": "Req 1.3",
-        "control_name": "Req 1.3",
+        "control_name": "Network access to and from the cardholder data environment is restricted.",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Network diagram, segmentation evidence",
@@ -21992,7 +21992,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "PCI DSS v4.0",
         "control_id": "Req 2.2",
-        "control_name": "Req 2.2",
+        "control_name": "System components are configured and managed securely.",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Hardening baseline documentation",
@@ -23062,7 +23062,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "SOC 2",
         "control_id": "PI1.3",
-        "control_name": "PI1.3",
+        "control_name": "The entity implements policies and procedures over system processing to result in products, services, and reporting to meet the entity's objectives.",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Output quality controls, factual accuracy testing",
@@ -23072,7 +23072,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "SOC 2",
         "control_id": "P7.1",
-        "control_name": "P7.1",
+        "control_name": "The entity collects and maintains accurate, up-to-date, complete, and relevant personal information to meet the entity's objectives related to privacy.",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Accuracy review procedures",
@@ -23082,7 +23082,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "PCI DSS v4.0",
         "control_id": "Req 12.6",
-        "control_name": "Req 12.6",
+        "control_name": "Security awareness education is an ongoing activity.",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Training curriculum, completion records",
@@ -23102,7 +23102,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "PCI DSS v4.0",
         "control_id": "Req 10.2",
-        "control_name": "Req 10.2",
+        "control_name": "Audit logs are implemented to support the detection of anomalies and suspicious activity, and the forensic analysis of events.",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Interaction audit log",
@@ -23112,7 +23112,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "PCI DSS v4.0",
         "control_id": "Req 12.3",
-        "control_name": "Req 12.3",
+        "control_name": "Risks to the cardholder data environment are formally identified, evaluated, and managed.",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Risk analysis documentation",
@@ -24251,7 +24251,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "PCI DSS v4.0",
         "control_id": "Req 7.2",
-        "control_name": "Req 7.2",
+        "control_name": "Access to system components and data is appropriately defined and assigned.",
         "tier": "Hardening",
         "scope": "Both",
         "notes": "Access control matrix, technical enforcement evidence",
@@ -24261,7 +24261,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "PCI DSS v4.0",
         "control_id": "Req 10.2",
-        "control_name": "Req 10.2",
+        "control_name": "Audit logs are implemented to support the detection of anomalies and suspicious activity, and the forensic analysis of events.",
         "tier": "Hardening",
         "scope": "Both",
         "notes": "Action audit log, out-of-scope alert records",
@@ -24271,7 +24271,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "PCI DSS v4.0",
         "control_id": "Req 11.3",
-        "control_name": "Req 11.3",
+        "control_name": "External and internal vulnerabilities are regularly identified, prioritized, and addressed.",
         "tier": "Hardening",
         "scope": "Both",
         "notes": "Pen test report with rogue agent test cases",
@@ -24281,7 +24281,7 @@ window.CROSSWALK_DATA = [
       {
         "framework": "PCI DSS v4.0",
         "control_id": "Req 12.3",
-        "control_name": "Req 12.3",
+        "control_name": "Risks to the cardholder data environment are formally identified, evaluated, and managed.",
         "tier": "Hardening",
         "scope": "Both",
         "notes": "Risk analysis documentation",

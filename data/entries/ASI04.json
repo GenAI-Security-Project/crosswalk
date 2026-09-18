@@ -523,7 +523,7 @@
     {
       "framework": "PCI DSS v4.0",
       "control_id": "Req 6.3",
-      "control_name": "Req 6.3",
+      "control_name": "Security vulnerabilities are identified and addressed.",
       "tier": "Foundational",
       "scope": "Both",
       "notes": "Vulnerability scan results, patch records",
@@ -533,7 +533,7 @@
     {
       "framework": "PCI DSS v4.0",
       "control_id": "Req 5.2",
-      "control_name": "Req 5.2",
+      "control_name": "Malicious software (malware) is prevented, or detected and addressed.",
       "tier": "Foundational",
       "scope": "Both",
       "notes": "Integrity check configuration, verification records",
@@ -543,7 +543,7 @@
     {
       "framework": "PCI DSS v4.0",
       "control_id": "Req 2.2",
-      "control_name": "Req 2.2",
+      "control_name": "System components are configured and managed securely.",
       "tier": "Foundational",
       "scope": "Both",
       "notes": "Hardening baseline documentation",
