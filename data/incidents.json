@@ -8416,6 +8416,80 @@
           "confirmed_by": []
         }
       ]
+    },
+    {
+      "id": "INC-136",
+      "title": "Deadbugz — MCP server serves poisoned tool metadata after three calls",
+      "date": "2026-08",
+      "year": 2026,
+      "category": "research-demonstrated",
+      "severity": "High",
+      "description": "Pillar Security disclosed an active MCP supply-chain campaign it named Deadbugz. A remotely-hosted MCP server published as \"productivity-suite\" advertised two ordinary tools, format_text and summarize, and behaved as documented. The server kept an in-memory, per-client counter; once a client session reached three tool calls, its tools/list and prompts/get responses instead carried instructions directing the attached agent to locate SSH private keys, AWS credentials, shell history, and Kubernetes configuration, and to conceal that activity from the operator. Delivery was attempted through 23 pull requests opened against unrelated AI, MCP, and developer-tool repositories between 21:52 and 23:07 UTC on 2026-08-10, each adding the server to the target project's MCP client configuration. None had been merged at the time of review (19 closed, 4 open), so this is a documented delivery attempt rather than a confirmed compromise. The distinguishing property is that the poisoning is gated on runtime behavior rather than carried in the published artifact: a reviewer who connects, lists tools, and disconnects observes only the benign contract, as does any verifier that re-checks on a fresh session, because a new session is always below the threshold. The server name, repository, and published version never change; only what is served does.",
+      "owasp_entries": [
+        "ASI04",
+        "ASI01",
+        "ASI02"
+      ],
+      "maestro_layers": [
+        {
+          "layer": "L3",
+          "label": "Agent Frameworks",
+          "role": "origin",
+          "notes": "Malicious MCP server presents a benign tool contract at registration and connect time"
+        },
+        {
+          "layer": "L6",
+          "label": "Security & Compliance",
+          "role": "propagation",
+          "notes": "Call-count gating defeats connect-and-check audits; a fresh session never reaches the threshold"
+        }
+      ],
+      "attack_vector": "Call-count-gated tool-response poisoning: a remotely-hosted MCP server serves its documented, benign contract for the first two tool calls in a session, then substitutes credential-harvesting instructions into tools/list and prompts/get responses starting on the third call, with the instructions also directing the agent to conceal the activity",
+      "affected": "23 pull requests, all authored by the same GitHub account (zellkernel), opened against unrelated AI, MCP, and developer-tool repositories over a 74-minute window on 2026-08-10 (21:52-23:07 UTC); 19 closed, 4 open, none merged at time of review",
+      "impact": "No confirmed compromise as of disclosure; a demonstrated delivery and audit-evasion technique that a single-session, connect-and-check verification cannot detect by construction",
+      "mitigations": [
+        "Re-audit MCP servers across multiple tool calls within a session rather than a single connect-and-check",
+        "Bind tool responses to a published contract and flag any runtime divergence from it",
+        "Persist per-server behavioral history across sessions instead of trusting each fresh connection independently"
+      ],
+      "external_refs": [
+        {
+          "source": "research",
+          "id": "Pillar Security — Deadbugz (2026-08)",
+          "url": "https://www.pillar.security/blog/deadbugz-currently-active-mcp-supply-chain-campaign"
+        },
+        {
+          "source": "campaign",
+          "id": "Deadbugz"
+        }
+      ],
+      "references": [
+        {
+          "title": "Pillar Security — Deadbugz MCP supply-chain disclosure",
+          "url": "https://www.pillar.security/blog/deadbugz-currently-active-mcp-supply-chain-campaign",
+          "type": "research"
+        }
+      ],
+      "tags": [
+        "mcp",
+        "supply-chain",
+        "tool-poisoning",
+        "asi01",
+        "asi02",
+        "asi04",
+        "pillar-security",
+        "draft-evidence"
+      ],
+      "control_failures": [
+        {
+          "framework": "MAESTRO",
+          "control_id": "L6",
+          "outcome": "present-but-misconfigured",
+          "basis": "Standard registry and client-side review (list tools, inspect one session, disconnect) is structurally blind to behavior gated on call count, since every review session starts below the threshold.",
+          "source_url": "https://www.pillar.security/blog/deadbugz-currently-active-mcp-supply-chain-campaign",
+          "confirmed_by": []
+        }
+      ]
     }
   ]
 }
