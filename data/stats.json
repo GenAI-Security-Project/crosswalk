@@ -73,11 +73,17 @@
     "orphan_failures": 0
   },
   "freshness": {
-    "checked": 4,
+    "checked": 5,
     "current": 3,
-    "diverged": 1,
-    "unchecked": 22,
+    "diverged": 2,
+    "unchecked": 21,
     "diverged_frameworks": [
+      {
+        "name": "MITRE ATLAS",
+        "mapped": "4.0",
+        "current": "2026.09",
+        "checked": "2026-09-17"
+      },
       {
         "name": "OWASP ASVS 4.0.3",
         "mapped": "4.0.3",

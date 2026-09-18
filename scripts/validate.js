@@ -820,6 +820,72 @@ function checkMaestroLayers() {
 }
 
 /**
+ * 20. MITRE ATLAS mapping rows must agree with the ATLAS registry.
+ *
+ * The registry is transcribed from the published ATLAS data release, so it is
+ * the side that is known to be right. The mapping rows were authored by hand,
+ * and issue #93 found that most of them pair an id with the name ATLAS gives
+ * to a *different* technique — `AML.T0035` labelled "Exfiltrate via ML
+ * Inference API" when ATLAS calls that id "AI Artifact Collection".
+ *
+ * Which technique each row meant is a mapping judgment, so this reports rather
+ * than fails: it cannot be settled without an SME ruling (#93), and a hard
+ * error would only block unrelated work. The counts move when a ruling lands.
+ */
+function checkAtlasMappings() {
+  const regPath = path.join(ROOT, 'data', 'frameworks', 'mitre-atlas.json');
+  const dir = path.join(ROOT, 'data', 'entries');
+  if (!fs.existsSync(regPath) || !fs.existsSync(dir)) return true;
+
+  const titles = new Map();
+  const absent = new Map();
+  for (const c of JSON.parse(fs.readFileSync(regPath, 'utf8')).controls || []) {
+    titles.set(c.control_id, c.title);
+    // Ids the registry still carries but the published ATLAS release does not.
+    if (c.source_status) absent.set(c.control_id, c.source_status);
+  }
+
+  // ATLAS renamed "ML" to "AI" across its catalogue, and sub-techniques are
+  // held as "<parent>: <sub>" — a row naming either half is not a mispairing.
+  const norm = (s) => String(s).toLowerCase().replace(/\bml\b/g, 'ai').replace(/[^a-z0-9]+/g, ' ').trim();
+  const agrees = (rowName, title) => {
+    const want = norm(rowName);
+    return norm(title) === want || title.split(':').some((part) => norm(part) === want);
+  };
+
+  const unknownIds = new Map();
+  const mismatched = new Map();
+  let rows = 0;
+
+  for (const f of fs.readdirSync(dir).filter((n) => n.endsWith('.json'))) {
+    const entry = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'));
+    for (const m of entry.mappings || []) {
+      if (m.framework !== 'MITRE ATLAS') continue;
+      rows++;
+      if (!titles.has(m.control_id) || absent.has(m.control_id)) {
+        unknownIds.set(m.control_id, (unknownIds.get(m.control_id) || 0) + 1);
+      } else if (!agrees(m.control_name, titles.get(m.control_id))) {
+        const key = `${m.control_id} is "${m.control_name}" here, "${titles.get(m.control_id)}" in ATLAS`;
+        mismatched.set(key, (mismatched.get(key) || 0) + 1);
+      }
+    }
+  }
+
+  const sum = (map) => [...map.values()].reduce((a, b) => a + b, 0);
+  if (unknownIds.size) {
+    warn('MITRE ATLAS', `${sum(unknownIds)} of ${rows} mapping rows cite an id that the published ATLAS release does not define ` +
+      `(${[...unknownIds.keys()].join(', ')}) — SME ruling needed, see issue #93`);
+  }
+  if (mismatched.size) {
+    const worst = [...mismatched.entries()].sort((a, b) => b[1] - a[1]).slice(0, 3).map(([k, n]) => `${k} (${n} rows)`);
+    warn('MITRE ATLAS', `${sum(mismatched)} of ${rows} mapping rows name a different technique than the id they cite — ` +
+      `${mismatched.size} distinct pairs, worst: ${worst.join('; ')} — SME ruling needed, see issue #93`);
+  }
+  if (!unknownIds.size && !mismatched.size) pass('MITRE ATLAS', `All ${rows} ATLAS mapping rows agree with the registry`);
+  return true;
+}
+
+/**
  * Evidence guard (T-STRAT03).
  *
  * `control_failures[]` feed `evidence_count` on mapping rows, so a bad record
@@ -996,6 +1062,7 @@ function run() {
     checkCrossRefFrameworks();
     checkFrameworkVersions();
     checkMaestroLayers();
+    checkAtlasMappings();
     checkEvidence();
   }
 
