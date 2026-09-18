@@ -39,11 +39,7 @@ as a profile in this repository.**
 
 ## Why these three and not others
 
-The weekly watcher surfaces new research continuously. A paper earns a row here only if
-it publishes a **benchmark or evaluation corpus meant for testing systems** — not if it
-demonstrates a technique, proposes a framework, or analyses a vulnerability class. Those
-are literature, and they are noted and closed rather than catalogued. Nor do they belong
-in `data/incidents.json`, which is reserved for real-world deployment failures.
+Routing — incident, catalogue, or noted and closed — is defined once in [`../docs/TRIAGE_RULES.md`](../docs/TRIAGE_RULES.md).
 
 ## Changelog
 
