@@ -973,7 +973,14 @@ window.CROSSWALK_DATA = [
         "scope": "Both",
         "notes": "Apply least-privilege to all LLM application credentials",
         "confidence": "unreviewed",
-        "reviewed_by": []
+        "reviewed_by": [],
+        "evidence_count": 0,
+        "evidence": {
+          "confirmed": [],
+          "drafted": [
+            "INC-133"
+          ]
+        }
       },
       {
         "framework": "OWASP NHI Top 10",
@@ -1417,6 +1424,18 @@ window.CROSSWALK_DATA = [
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-110"
+      },
+      {
+        "name": "Agno agent framework: prompt injection to remote code execution via PythonTools and ShellTools",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-132"
+      },
+      {
+        "name": "MCPHub: missing authorisation let any user overwrite the prompts and resources served to everyone",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-133"
       }
     ],
     "crossrefs": {
@@ -7304,6 +7323,12 @@ window.CROSSWALK_DATA = [
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-045"
+      },
+      {
+        "name": "Headroom: cross-site WebSocket hijacking gave any browser page unauthenticated use of the LLM proxy",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-134"
       }
     ],
     "crossrefs": {
@@ -14265,7 +14290,14 @@ window.CROSSWALK_DATA = [
         "url": "https://atlas.mitre.org/techniques/AML.T0053",
         "notes": "Exploiting overly permissive tool access to exceed intended agent scope",
         "confidence": "unreviewed",
-        "reviewed_by": []
+        "reviewed_by": [],
+        "evidence_count": 0,
+        "evidence": {
+          "confirmed": [],
+          "drafted": [
+            "INC-132"
+          ]
+        }
       },
       {
         "framework": "MITRE ATLAS",
@@ -15411,6 +15443,12 @@ window.CROSSWALK_DATA = [
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-114"
+      },
+      {
+        "name": "Agno agent framework: prompt injection to remote code execution via PythonTools and ShellTools",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-132"
       }
     ],
     "crossrefs": {
@@ -16267,7 +16305,14 @@ window.CROSSWALK_DATA = [
         "scope": "Both",
         "notes": "Least privilege per agent role — scope enforced, reviewed quarterly",
         "confidence": "unreviewed",
-        "reviewed_by": []
+        "reviewed_by": [],
+        "evidence_count": 0,
+        "evidence": {
+          "confirmed": [],
+          "drafted": [
+            "INC-133"
+          ]
+        }
       },
       {
         "framework": "OWASP NHI Top 10",
@@ -16742,6 +16787,12 @@ window.CROSSWALK_DATA = [
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-114"
+      },
+      {
+        "name": "MCPHub: missing authorisation let any user overwrite the prompts and resources served to everyone",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-133"
       }
     ],
     "crossrefs": {
@@ -19128,6 +19179,12 @@ window.CROSSWALK_DATA = [
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-114"
+      },
+      {
+        "name": "Agno agent framework: prompt injection to remote code execution via PythonTools and ShellTools",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-132"
       }
     ],
     "crossrefs": {
@@ -20302,6 +20359,12 @@ window.CROSSWALK_DATA = [
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-108"
+      },
+      {
+        "name": "MCPHub: missing authorisation let any user overwrite the prompts and resources served to everyone",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-133"
       }
     ],
     "crossrefs": {
@@ -27215,6 +27278,12 @@ window.CROSSWALK_DATA = [
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-112"
+      },
+      {
+        "name": "Headroom: cross-site WebSocket hijacking gave any browser page unauthenticated use of the LLM proxy",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-134"
       }
     ],
     "crossrefs": {

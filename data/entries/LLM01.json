@@ -969,7 +969,14 @@
       "scope": "Both",
       "notes": "Apply least-privilege to all LLM application credentials",
       "confidence": "unreviewed",
-      "reviewed_by": []
+      "reviewed_by": [],
+      "evidence_count": 0,
+      "evidence": {
+        "confirmed": [],
+        "drafted": [
+          "INC-133"
+        ]
+      }
     },
     {
       "framework": "OWASP NHI Top 10",
@@ -1413,6 +1420,18 @@
       "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2025,
       "incident_id": "INC-110"
+    },
+    {
+      "name": "Agno agent framework: prompt injection to remote code execution via PythonTools and ShellTools",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-132"
+    },
+    {
+      "name": "MCPHub: missing authorisation let any user overwrite the prompts and resources served to everyone",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-133"
     }
   ],
   "crossrefs": {

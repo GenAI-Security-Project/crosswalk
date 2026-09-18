@@ -1144,6 +1144,12 @@
       "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2025,
       "incident_id": "INC-108"
+    },
+    {
+      "name": "MCPHub: missing authorisation let any user overwrite the prompts and resources served to everyone",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-133"
     }
   ],
   "crossrefs": {
