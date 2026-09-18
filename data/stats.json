@@ -27,12 +27,12 @@
     }
   },
   "mappings": {
-    "total": 3781,
+    "total": 3771,
     "by_list": {
       "Agentic-Top10-2026": 993,
       "AST-Top10-2026": 36,
       "DSGAI-2026": 1766,
-      "LLM-Top10-2026": 986
+      "LLM-Top10-2026": 976
     }
   },
   "frameworks": {

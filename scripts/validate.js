@@ -820,6 +820,45 @@ function checkMaestroLayers() {
 }
 
 /**
+ * 21. Every mapping row's `control_id` must be an identifier, not prose.
+ *
+ * `parseControlTable()` used to fall through to "column 0 is the id" whenever
+ * a row did not look positional, which put the requirement text in
+ * `control_id` on 612 rows — a reader could not follow an id back to the
+ * framework, and the control-level join resolved by luck (issue #35). The
+ * per-framework grammar in scripts/control-ids.js fixed that; this keeps it
+ * fixed for the ten frameworks whose identifier shape is known.
+ */
+function checkControlIdShapes() {
+  const { isValidControlId, ID_SHAPES } = require('./control-ids.js');
+  const dir = path.join(ROOT, 'data', 'entries');
+  if (!fs.existsSync(dir)) return true;
+
+  const offenders = new Map();
+  let checked = 0;
+
+  for (const f of fs.readdirSync(dir).filter((n) => n.endsWith('.json'))) {
+    const entry = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'));
+    for (const m of entry.mappings || []) {
+      if (!ID_SHAPES[m.framework]) continue;
+      checked++;
+      if (!isValidControlId(m.framework, m.control_id)) {
+        const key = `${m.framework}: "${String(m.control_id).slice(0, 60)}"`;
+        offenders.set(key, (offenders.get(key) || 0) + 1);
+      }
+    }
+  }
+
+  for (const [what, n] of offenders) {
+    fail('Control ids', `${what} is not a ${what.split(':')[0]} identifier (${n} row(s)) — see issue #35`);
+  }
+  if (!offenders.size) {
+    pass('Control ids', `All ${checked} rows in the ${Object.keys(ID_SHAPES).length} frameworks with a known id grammar carry a well-formed identifier`);
+  }
+  return offenders.size === 0;
+}
+
+/**
  * 20. MITRE ATLAS mapping rows must agree with the ATLAS registry.
  *
  * The registry is transcribed from the published ATLAS data release, so it is
@@ -1063,6 +1102,7 @@ function run() {
     checkFrameworkVersions();
     checkMaestroLayers();
     checkAtlasMappings();
+    checkControlIdShapes();
     checkEvidence();
   }
 

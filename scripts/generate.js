@@ -15,9 +15,35 @@
 const fs   = require('fs');
 const path = require('path');
 const { indexFailures, evidenceForMapping } = require('./evidence');
+const { resolveControlId } = require('./control-ids.js');
 
 const ROOT        = path.resolve(__dirname, '..');
 const ENTRIES_DIR = path.join(ROOT, 'data', 'entries');
+
+/**
+ * Registry titles, keyed by framework then control id.
+ *
+ * Some mapping tables carry the identifier and the requirement but no control
+ * name — "CC3.2 | prose | evidence". The framework registry already holds the
+ * official title for that id, so the row takes it from there rather than
+ * repeating the id as its own name.
+ */
+let REGISTRY_TITLES = null;
+function registryTitle(framework, controlId) {
+  if (!REGISTRY_TITLES) {
+    REGISTRY_TITLES = new Map();
+    const dir = path.join(ROOT, 'data', 'frameworks');
+    if (fs.existsSync(dir)) {
+      for (const f of fs.readdirSync(dir).filter((n) => n.endsWith('.json'))) {
+        const reg = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'));
+        const byId = new Map();
+        for (const c of reg.controls || []) if (c.control_id && c.title) byId.set(c.control_id, c.title);
+        REGISTRY_TITLES.set(reg.name, byId);
+      }
+    }
+  }
+  return REGISTRY_TITLES.get(framework)?.get(controlId) ?? null;
+}
 
 const DRY_RUN    = process.argv.includes('--dry-run');
 const SINGLE_ID  = (() => { const i = process.argv.indexOf('--id'); return i !== -1 ? process.argv[i + 1] : null; })();
@@ -466,9 +492,26 @@ function parseControlTable(sectionBody, frameworkName, qr) {
   if (!rows.length) return [];
 
   const header = v2HeaderIndex(mappingSection.body);
+  const headerLine = mappingSection.body.split('\n').find((l) => l.trim().startsWith('|'));
+  const headerCells = headerLine ? splitRow(headerLine) : [];
   const mappings = [];
 
+  // A section can hold more than one table — LLM_NISTSP80082.md follows its
+  // SP 800-82 sections with an SP 800-53 table. The second table's header row
+  // reaches us as data, preceded by its own |---|---| separator. Splitting on
+  // those separators drops the header rows and gives each table the headers
+  // that actually describe its columns.
+  const tableRows = [];
+  let currentHeader = headerCells;
   for (const cols of rows) {
+    if (cols.length && cols.every((c) => /^[-:\s]*$/.test(c))) {
+      if (tableRows.length) currentHeader = tableRows.pop().cols;
+      continue;
+    }
+    tableRows.push({ cols, headers: currentHeader });
+  }
+
+  for (const { cols, headers: rowHeaders } of tableRows) {
     if (cols.length < 2) continue;
 
     const col0 = cols[0];
@@ -490,7 +533,17 @@ function parseControlTable(sectionBody, frameworkName, qr) {
     const id1 = extractIdAndUrl(col1);
     const id0 = extractIdAndUrl(col0);
 
-    if (id1.url) {
+    // The framework's own identifier shape decides first (#35). Only when the
+    // row carries no such identifier do the positional rules below apply.
+    const byGrammar = resolveControlId(frameworkName, cols.map((c) => extractIdAndUrl(c).text), rowHeaders);
+    let grammarParent = null;
+
+    if (byGrammar) {
+      controlId = byGrammar.id;
+      controlName = byGrammar.name || registryTitle(frameworkName, byGrammar.id) || '';
+      grammarParent = byGrammar.parent;
+      controlUrl = (id1.url || id0.url) ?? null;
+    } else if (id1.url) {
       // col1 is a link — ID is the link text, name is col0 text
       controlId   = id1.text;
       controlName = id0.text;
@@ -520,7 +573,7 @@ function parseControlTable(sectionBody, frameworkName, qr) {
     // Skip separator / header rows that leaked through
     if (!controlId || /^[-:=]+$/.test(controlId) || controlId === controlName && !controlId) continue;
     // Skip rows where the ID is clearly a column heading word
-    if (/^(technique|control|practice|category|domain|function|id|name|risk|measure)$/i.test(controlId)) continue;
+    if (/^(technique|control|practice|category|domain|function|id|name|risk|measure|title|criteria|safeguard|requirement|article|clause|section|code|abbreviation)$/i.test(controlId)) continue;
 
     const mapping = {
       framework:    frameworkName,
@@ -531,10 +584,26 @@ function parseControlTable(sectionBody, frameworkName, qr) {
     };
 
     if (controlUrl) mapping.url = controlUrl;
+    // CIS rows name both the safeguard and the control it belongs to (#35 A).
+    if (grammarParent) mapping.parent = grammarParent;
+    // The SP 800-82 files also map the SP 800-53 controls the overlay cites.
+    // Those ids are kept, and labelled, so they are not read as 800-82
+    // section numbers (#35 B).
+    if (frameworkName === 'NIST SP 800-82 Rev 3' && /^[A-Z]{2}-\d{1,2}$/.test(controlId)) {
+      mapping.id_source = 'NIST SP 800-53 control cited by the SP 800-82 overlay';
+    }
 
     // Notes: last column if it differs from the ID/name columns and has useful length
     if (cols.length >= 3 && lastCol && lastCol !== controlId && lastCol !== controlName && lastCol.length > 5) {
       mapping.notes = lastCol.replace(/\s+/g, ' ').trim().substring(0, 350);
+    } else if (byGrammar && cols.length === 2 && lastIdx !== byGrammar.cellIndex) {
+      // Two-column tables ("CC3.2 — Name | requirement") used to keep the
+      // requirement by mis-filing it as the control id. Now that the id comes
+      // from the grammar, the requirement belongs in notes rather than nowhere.
+      const other = extractIdAndUrl(cols[lastIdx]).text;
+      if (other && other !== controlName && other.length > 5) {
+        mapping.notes = other.replace(/\s+/g, ' ').trim().substring(0, 350);
+      }
     }
 
     // Schema v2: read the columns when a file has been migrated, and tag the
