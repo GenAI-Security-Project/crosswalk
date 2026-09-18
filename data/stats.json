@@ -93,14 +93,14 @@
     ]
   },
   "controls": {
-    "total": 1541,
-    "registry_items": 1685,
+    "total": 991,
+    "registry_items": 1120,
     "by_kind": {
-      "control": 1541,
+      "control": 991,
       "layer": 10,
       "technique": 52,
       "threat-category": 6,
-      "weakness": 76
+      "weakness": 61
     }
   }
 }

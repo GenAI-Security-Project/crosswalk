@@ -830,9 +830,27 @@ function checkMaestroLayers() {
  * fixed for the ten frameworks whose identifier shape is known.
  */
 function checkControlIdShapes() {
-  const { isValidControlId, ID_SHAPES } = require('./control-ids.js');
+  const { isValidControlId, isValidRegistryId, ID_SHAPES } = require('./control-ids.js');
   const dir = path.join(ROOT, 'data', 'entries');
+  const fwDir = path.join(ROOT, 'data', 'frameworks');
   if (!fs.existsSync(dir)) return true;
+
+  // The registries were seeded from the mapping rows, so they carried the same
+  // swapped ids and are checked the same way. A registry may also hold the
+  // parent controls that its mapping rows never cite (CIS-16 beside 16.1).
+  let regChecked = 0;
+  if (fs.existsSync(fwDir)) {
+    for (const f of fs.readdirSync(fwDir).filter((n) => n.endsWith('.json'))) {
+      const reg = JSON.parse(fs.readFileSync(path.join(fwDir, f), 'utf8'));
+      if (!ID_SHAPES[reg.name]) continue;
+      for (const c of reg.controls || []) {
+        regChecked++;
+        if (!isValidRegistryId(reg.name, c.control_id)) {
+          fail('Control ids', `${reg.name} registry: "${String(c.control_id).slice(0, 60)}" is not an identifier — see issue #35`);
+        }
+      }
+    }
+  }
 
   const offenders = new Map();
   let checked = 0;
@@ -853,7 +871,7 @@ function checkControlIdShapes() {
     fail('Control ids', `${what} is not a ${what.split(':')[0]} identifier (${n} row(s)) — see issue #35`);
   }
   if (!offenders.size) {
-    pass('Control ids', `All ${checked} rows in the ${Object.keys(ID_SHAPES).length} frameworks with a known id grammar carry a well-formed identifier`);
+    pass('Control ids', `All ${checked} mapping rows and ${regChecked} registry items in the ${Object.keys(ID_SHAPES).length} frameworks with a known id grammar carry a well-formed identifier`);
   }
   return offenders.size === 0;
 }
