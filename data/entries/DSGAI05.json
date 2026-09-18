@@ -285,28 +285,31 @@
     },
     {
       "framework": "OWASP ASVS 4.0.3",
-      "control_id": "V5 Validation",
-      "control_name": "V5.1.1 — Input validation using allowlists",
+      "control_id": "V5.1.1",
+      "control_name": "Input validation using allowlists",
       "tier": "Foundational",
       "scope": "Build",
+      "parent": "V5",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
-      "control_id": "V5 Validation",
-      "control_name": "V5.2.1 — HTML/JS output sanitised",
+      "control_id": "V5.2.1",
+      "control_name": "HTML/JS output sanitised",
       "tier": "Foundational",
       "scope": "Build",
+      "parent": "V5",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
-      "control_id": "V7 Logging",
-      "control_name": "V7.4.1 — Generic error messages",
+      "control_id": "V7.4.1",
+      "control_name": "Generic error messages",
       "tier": "Foundational",
       "scope": "Build",
+      "parent": "V7",
       "confidence": "unreviewed",
       "reviewed_by": []
     },

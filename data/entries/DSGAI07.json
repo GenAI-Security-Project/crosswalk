@@ -305,28 +305,31 @@
     },
     {
       "framework": "OWASP ASVS 4.0.3",
-      "control_id": "V8 Data Protection",
-      "control_name": "V8.1.4 — Sensitive data minimisation",
+      "control_id": "V8.1.4",
+      "control_name": "Sensitive data minimisation",
       "tier": "Foundational",
       "scope": "Both",
+      "parent": "V8",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
-      "control_id": "V8 Data Protection",
-      "control_name": "V8.3.4 — Sensitive data identified and classified",
+      "control_id": "V8.3.4",
+      "control_name": "Sensitive data identified and classified",
       "tier": "Foundational",
       "scope": "Both",
+      "parent": "V8",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
-      "control_id": "V4 Access Control",
-      "control_name": "V4.1.5 — Attribute-based access control",
+      "control_id": "V4.1.5",
+      "control_name": "Attribute-based access control",
       "tier": "Foundational",
       "scope": "Both",
+      "parent": "V4",
       "confidence": "unreviewed",
       "reviewed_by": []
     },

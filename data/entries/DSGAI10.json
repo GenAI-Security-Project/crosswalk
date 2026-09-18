@@ -275,19 +275,21 @@
     },
     {
       "framework": "OWASP ASVS 4.0.3",
-      "control_id": "V8 Data Protection",
-      "control_name": "V8.3.4 — Sensitive data classified",
+      "control_id": "V8.3.4",
+      "control_name": "Sensitive data classified",
       "tier": "Hardening",
       "scope": "Build",
+      "parent": "V8",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
-      "control_id": "V5 Validation",
-      "control_name": "V5.2.6 — Defined output structure",
+      "control_id": "V5.2.6",
+      "control_name": "Defined output structure",
       "tier": "Hardening",
       "scope": "Build",
+      "parent": "V5",
       "confidence": "unreviewed",
       "reviewed_by": []
     },

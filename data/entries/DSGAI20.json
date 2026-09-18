@@ -295,28 +295,31 @@
     },
     {
       "framework": "OWASP ASVS 4.0.3",
-      "control_id": "V4 Access Control",
-      "control_name": "V4.1.1 — Access control per request",
+      "control_id": "V4.1.1",
+      "control_name": "Access control per request",
       "tier": "Hardening",
       "scope": "Both",
+      "parent": "V4",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
-      "control_id": "V8 Data Protection",
-      "control_name": "V8.1.4 — Data minimisation in responses",
+      "control_id": "V8.1.4",
+      "control_name": "Data minimisation in responses",
       "tier": "Hardening",
       "scope": "Both",
+      "parent": "V8",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
-      "control_id": "V10 Malicious Code",
-      "control_name": "V10.2.2 — Component integrity checking",
+      "control_id": "V10.2.2",
+      "control_name": "Component integrity checking",
       "tier": "Hardening",
       "scope": "Both",
+      "parent": "V10",
       "confidence": "unreviewed",
       "reviewed_by": []
     },

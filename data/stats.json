@@ -93,10 +93,10 @@
     ]
   },
   "controls": {
-    "total": 991,
-    "registry_items": 1125,
+    "total": 998,
+    "registry_items": 1132,
     "by_kind": {
-      "control": 991,
+      "control": 998,
       "layer": 10,
       "technique": 57,
       "threat-category": 6,

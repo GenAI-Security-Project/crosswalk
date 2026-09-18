@@ -30528,31 +30528,6 @@
   },
   {
     "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V1 Architecture",
-    "control_name": "V1.1.4 — Trust boundaries documented and enforced",
-    "entries": [
-      {
-        "id": "DSGAI03",
-        "name": "Shadow AI and Unsanctioned Data Flows",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": null
-      },
-      {
-        "id": "DSGAI16",
-        "name": "Endpoint and Browser Overreach",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": null
-      }
-    ]
-  },
-  {
-    "framework": "OWASP ASVS 4.0.3",
     "control_id": "V1.1.2",
     "control_name": "Threat modelling of all data flows",
     "entries": [
@@ -30582,29 +30557,29 @@
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Supply chain threat model documents all agent component sources and trust levels"
+      },
+      {
+        "id": "DSGAI16",
+        "name": "Endpoint and Browser Overreach",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": null
       }
     ]
   },
   {
     "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V10 Malicious Code",
-    "control_name": "V10.2.1 — Application only uses official repositories",
+    "control_id": "V1.1.4",
+    "control_name": "Trust boundaries documented and enforced",
     "entries": [
       {
-        "id": "DSGAI04",
-        "name": "Data Model and Artifact Poisoning",
-        "source_list": "DSGAI-2026",
-        "severity": "Critical",
-        "tier": "Hardening",
-        "scope": "Both",
-        "notes": null
-      },
-      {
-        "id": "DSGAI20",
-        "name": "Model Exfiltration and IP Replication",
+        "id": "DSGAI03",
+        "name": "Shadow AI and Unsanctioned Data Flows",
         "source_list": "DSGAI-2026",
         "severity": "High",
-        "tier": "Hardening",
+        "tier": "Foundational",
         "scope": "Both",
         "notes": null
       }
@@ -30641,6 +30616,15 @@
         "tier": "Foundational",
         "scope": "Both",
         "notes": "All agent component libraries scanned for CVEs — ML SBOM maintained and monitored"
+      },
+      {
+        "id": "DSGAI04",
+        "name": "Data Model and Artifact Poisoning",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": null
       }
     ]
   },
@@ -30666,44 +30650,19 @@
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Approved component list — unsigned or unverified agent components rejected"
-      }
-    ]
-  },
-  {
-    "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V11 Business Logic",
-    "control_name": "V11.1.4 — Business logic limits on repeated actions",
-    "entries": [
+      },
       {
-        "id": "DSGAI06",
-        "name": "Tool Plugin and Agent Data Exchange",
+        "id": "DSGAI04",
+        "name": "Data Model and Artifact Poisoning",
         "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Foundational",
+        "severity": "Critical",
+        "tier": "Hardening",
         "scope": "Both",
         "notes": null
       },
       {
-        "id": "DSGAI16",
-        "name": "Endpoint and Browser Overreach",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": null
-      },
-      {
-        "id": "DSGAI17",
-        "name": "Data Availability and Resilience Failures",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": null
-      },
-      {
-        "id": "DSGAI21",
-        "name": "Disinformation via Data Poisoning",
+        "id": "DSGAI20",
+        "name": "Model Exfiltration and IP Replication",
         "source_list": "DSGAI-2026",
         "severity": "High",
         "tier": "Hardening",
@@ -30829,35 +30788,51 @@
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Business logic controls on LLM usage — per-tenant cost budgets, rate limit policies"
-      }
-    ]
-  },
-  {
-    "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V12 Files/Resources",
-    "control_name": "V12.1.1 — File upload size limits",
-    "entries": [
+      },
       {
-        "id": "DSGAI04",
-        "name": "Data Model and Artifact Poisoning",
+        "id": "DSGAI06",
+        "name": "Tool Plugin and Agent Data Exchange",
         "source_list": "DSGAI-2026",
-        "severity": "Critical",
-        "tier": "Hardening",
+        "severity": "High",
+        "tier": "Foundational",
         "scope": "Both",
         "notes": null
       },
       {
-        "id": "DSGAI09",
-        "name": "Multimodal Cross-Channel Leakage",
+        "id": "DSGAI21",
+        "name": "Disinformation via Data Poisoning",
         "source_list": "DSGAI-2026",
         "severity": "High",
         "tier": "Hardening",
         "scope": "Both",
         "notes": null
-      },
+      }
+    ]
+  },
+  {
+    "framework": "OWASP ASVS 4.0.3",
+    "control_id": "V11.1.5",
+    "control_name": "Business logic prevents excess data access",
+    "entries": [
       {
-        "id": "DSGAI13",
-        "name": "Vector Store Platform Security",
+        "id": "DSGAI16",
+        "name": "Endpoint and Browser Overreach",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": null
+      }
+    ]
+  },
+  {
+    "framework": "OWASP ASVS 4.0.3",
+    "control_id": "V11.1.7",
+    "control_name": "Anti-automation controls",
+    "entries": [
+      {
+        "id": "DSGAI17",
+        "name": "Data Availability and Resilience Failures",
         "source_list": "DSGAI-2026",
         "severity": "High",
         "tier": "Foundational",
@@ -30897,29 +30872,38 @@
         "tier": "Hardening",
         "scope": "Both",
         "notes": "Content entering agent memory scanned — adversarial content, injection patterns detected before write"
+      },
+      {
+        "id": "DSGAI04",
+        "name": "Data Model and Artifact Poisoning",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": null
+      },
+      {
+        "id": "DSGAI13",
+        "name": "Vector Store Platform Security",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": null
       }
     ]
   },
   {
     "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V13 API",
-    "control_name": "V13.1.1 — API protection against enumeration",
+    "control_id": "V12.1.3",
+    "control_name": "Malicious file detection on upload",
     "entries": [
       {
-        "id": "DSGAI12",
-        "name": "Unsafe Natural Language Data Gateways",
-        "source_list": "DSGAI-2026",
-        "severity": "Critical",
-        "tier": "Foundational",
-        "scope": "Build",
-        "notes": null
-      },
-      {
-        "id": "DSGAI17",
-        "name": "Data Availability and Resilience Failures",
+        "id": "DSGAI09",
+        "name": "Multimodal Cross-Channel Leakage",
         "source_list": "DSGAI-2026",
         "severity": "High",
-        "tier": "Foundational",
+        "tier": "Hardening",
         "scope": "Both",
         "notes": null
       }
@@ -30965,6 +30949,31 @@
         "tier": "Hardening",
         "scope": "Both",
         "notes": "Rate limiting prevents rogue agent from amplifying impact through API exhaustion"
+      },
+      {
+        "id": "DSGAI12",
+        "name": "Unsafe Natural Language Data Gateways",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Build",
+        "notes": null
+      }
+    ]
+  },
+  {
+    "framework": "OWASP ASVS 4.0.3",
+    "control_id": "V13.1.2",
+    "control_name": "API throttling",
+    "entries": [
+      {
+        "id": "DSGAI17",
+        "name": "Data Availability and Resilience Failures",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": null
       }
     ]
   },
@@ -30995,8 +31004,8 @@
   },
   {
     "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V14 Configuration",
-    "control_name": "V14.1.4 — All components inventoried",
+    "control_id": "V14.1.4",
+    "control_name": "All components inventoried",
     "entries": [
       {
         "id": "DSGAI03",
@@ -31061,9 +31070,18 @@
   },
   {
     "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V2 Authentication",
-    "control_name": "V2.1.1 — Passwords minimum 12 characters",
+    "control_id": "V2.1.1",
+    "control_name": "Verify credentials not in source code",
     "entries": [
+      {
+        "id": "ASI03",
+        "name": "Identity and Privilege Abuse",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Agent credentials not hardcoded — secret manager required"
+      },
       {
         "id": "DSGAI02",
         "name": "Agent Identity and Credential Exposure",
@@ -31086,24 +31104,24 @@
   },
   {
     "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V2.1.1",
-    "control_name": "Verify credentials not in source code",
+    "control_id": "V2.10.1",
+    "control_name": "Integration secrets not hardcoded",
     "entries": [
       {
-        "id": "ASI03",
-        "name": "Identity and Privilege Abuse",
-        "source_list": "Agentic-Top10-2026",
+        "id": "DSGAI02",
+        "name": "Agent Identity and Credential Exposure",
+        "source_list": "DSGAI-2026",
         "severity": "Critical",
         "tier": "Foundational",
         "scope": "Both",
-        "notes": "Agent credentials not hardcoded — secret manager required"
+        "notes": null
       }
     ]
   },
   {
     "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V3 Session Management",
-    "control_name": "V3.1.1 — Session tokens unique and random",
+    "control_id": "V3.1.1",
+    "control_name": "Session tokens unique and random",
     "entries": [
       {
         "id": "DSGAI11",
@@ -31138,58 +31156,6 @@
         "tier": "Hardening",
         "scope": "Both",
         "notes": "Replay protection on all A2A messages — nonces, timestamps, sequence numbers"
-      }
-    ]
-  },
-  {
-    "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V4 Access Control",
-    "control_name": "V4.1.3 — Deny by default access control",
-    "entries": [
-      {
-        "id": "DSGAI01",
-        "name": "Sensitive Data Leakage",
-        "source_list": "DSGAI-2026",
-        "severity": "Critical",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": null
-      },
-      {
-        "id": "DSGAI02",
-        "name": "Agent Identity and Credential Exposure",
-        "source_list": "DSGAI-2026",
-        "severity": "Critical",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": null
-      },
-      {
-        "id": "DSGAI03",
-        "name": "Shadow AI and Unsanctioned Data Flows",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": null
-      },
-      {
-        "id": "DSGAI06",
-        "name": "Tool Plugin and Agent Data Exchange",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": null
-      },
-      {
-        "id": "DSGAI07",
-        "name": "Data Governance and Lifecycle",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": null
       },
       {
         "id": "DSGAI11",
@@ -31198,69 +31164,6 @@
         "severity": "High",
         "tier": "Foundational",
         "scope": "Build",
-        "notes": null
-      },
-      {
-        "id": "DSGAI12",
-        "name": "Unsafe Natural Language Data Gateways",
-        "source_list": "DSGAI-2026",
-        "severity": "Critical",
-        "tier": "Foundational",
-        "scope": "Build",
-        "notes": null
-      },
-      {
-        "id": "DSGAI13",
-        "name": "Vector Store Platform Security",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": null
-      },
-      {
-        "id": "DSGAI14",
-        "name": "Excessive Telemetry and Monitoring Leakage",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Build",
-        "notes": null
-      },
-      {
-        "id": "DSGAI15",
-        "name": "Over-Broad Context Windows",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Build",
-        "notes": null
-      },
-      {
-        "id": "DSGAI16",
-        "name": "Endpoint and Browser Overreach",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": null
-      },
-      {
-        "id": "DSGAI19",
-        "name": "Human-in-Loop and Labeler Overexposure",
-        "source_list": "DSGAI-2026",
-        "severity": "Medium",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": null
-      },
-      {
-        "id": "DSGAI20",
-        "name": "Model Exfiltration and IP Replication",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Hardening",
-        "scope": "Both",
         "notes": null
       }
     ]
@@ -31287,6 +31190,85 @@
         "tier": "Foundational",
         "scope": "Both",
         "notes": "All destructive tool operations require explicit authorisation — not inheritable from agent session"
+      },
+      {
+        "id": "DSGAI06",
+        "name": "Tool Plugin and Agent Data Exchange",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": null
+      },
+      {
+        "id": "DSGAI11",
+        "name": "Cross-Context Conversation Bleed",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Build",
+        "notes": null
+      },
+      {
+        "id": "DSGAI12",
+        "name": "Unsafe Natural Language Data Gateways",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Build",
+        "notes": null
+      },
+      {
+        "id": "DSGAI14",
+        "name": "Excessive Telemetry and Monitoring Leakage",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Build",
+        "notes": null
+      },
+      {
+        "id": "DSGAI20",
+        "name": "Model Exfiltration and IP Replication",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": null
+      }
+    ]
+  },
+  {
+    "framework": "OWASP ASVS 4.0.3",
+    "control_id": "V4.1.2",
+    "control_name": "Least privilege for service accounts",
+    "entries": [
+      {
+        "id": "DSGAI02",
+        "name": "Agent Identity and Credential Exposure",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": null
+      },
+      {
+        "id": "DSGAI16",
+        "name": "Endpoint and Browser Overreach",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": null
+      },
+      {
+        "id": "DSGAI19",
+        "name": "Human-in-Loop and Labeler Overexposure",
+        "source_list": "DSGAI-2026",
+        "severity": "Medium",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": null
       }
     ]
   },
@@ -31366,6 +31348,58 @@
         "tier": "Hardening",
         "scope": "Both",
         "notes": "A2A channels enforce sender identity — unauthenticated messages rejected"
+      },
+      {
+        "id": "DSGAI01",
+        "name": "Sensitive Data Leakage",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": null
+      },
+      {
+        "id": "DSGAI13",
+        "name": "Vector Store Platform Security",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": null
+      },
+      {
+        "id": "DSGAI15",
+        "name": "Over-Broad Context Windows",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Build",
+        "notes": null
+      }
+    ]
+  },
+  {
+    "framework": "OWASP ASVS 4.0.3",
+    "control_id": "V4.1.5",
+    "control_name": "Access control failures logged",
+    "entries": [
+      {
+        "id": "DSGAI03",
+        "name": "Shadow AI and Unsanctioned Data Flows",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": null
+      },
+      {
+        "id": "DSGAI07",
+        "name": "Data Governance and Lifecycle",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": null
       }
     ]
   },
@@ -31382,76 +31416,6 @@
         "tier": "Foundational",
         "scope": "Both",
         "notes": "CSRF protection on endpoints where LLM output triggers state changes"
-      }
-    ]
-  },
-  {
-    "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V5 Validation",
-    "control_name": "V5.2.8 — Output encoding for context",
-    "entries": [
-      {
-        "id": "DSGAI01",
-        "name": "Sensitive Data Leakage",
-        "source_list": "DSGAI-2026",
-        "severity": "Critical",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": null
-      },
-      {
-        "id": "DSGAI04",
-        "name": "Data Model and Artifact Poisoning",
-        "source_list": "DSGAI-2026",
-        "severity": "Critical",
-        "tier": "Hardening",
-        "scope": "Both",
-        "notes": null
-      },
-      {
-        "id": "DSGAI05",
-        "name": "Data Integrity and Validation Failures",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Build",
-        "notes": null
-      },
-      {
-        "id": "DSGAI09",
-        "name": "Multimodal Cross-Channel Leakage",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Hardening",
-        "scope": "Both",
-        "notes": null
-      },
-      {
-        "id": "DSGAI10",
-        "name": "Synthetic Data and Anonymization Pitfalls",
-        "source_list": "DSGAI-2026",
-        "severity": "Medium",
-        "tier": "Hardening",
-        "scope": "Build",
-        "notes": null
-      },
-      {
-        "id": "DSGAI12",
-        "name": "Unsafe Natural Language Data Gateways",
-        "source_list": "DSGAI-2026",
-        "severity": "Critical",
-        "tier": "Foundational",
-        "scope": "Build",
-        "notes": null
-      },
-      {
-        "id": "DSGAI21",
-        "name": "Disinformation via Data Poisoning",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Hardening",
-        "scope": "Both",
-        "notes": null
       }
     ]
   },
@@ -31495,6 +31459,24 @@
         "tier": "Hardening",
         "scope": "Both",
         "notes": "All content entering agent memory validated — injection patterns rejected at write boundary"
+      },
+      {
+        "id": "DSGAI05",
+        "name": "Data Integrity and Validation Failures",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Build",
+        "notes": null
+      },
+      {
+        "id": "DSGAI12",
+        "name": "Unsafe Natural Language Data Gateways",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Build",
+        "notes": null
       }
     ]
   },
@@ -31511,6 +31493,31 @@
         "tier": "Foundational",
         "scope": "Both",
         "notes": "LLM API request validation — prompt structure, content type, and character set enforced"
+      }
+    ]
+  },
+  {
+    "framework": "OWASP ASVS 4.0.3",
+    "control_id": "V5.1.3",
+    "control_name": "Input validation server-side",
+    "entries": [
+      {
+        "id": "DSGAI04",
+        "name": "Data Model and Artifact Poisoning",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": null
+      },
+      {
+        "id": "DSGAI21",
+        "name": "Disinformation via Data Poisoning",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": null
       }
     ]
   },
@@ -31572,6 +31579,15 @@
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Agent advisory outputs clearly labelled — users cannot mistake AI output for authoritative content"
+      },
+      {
+        "id": "DSGAI05",
+        "name": "Data Integrity and Validation Failures",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Build",
+        "notes": null
       }
     ]
   },
@@ -31640,6 +31656,63 @@
         "tier": "Hardening",
         "scope": "Both",
         "notes": "Agent-generated commands validated before any shell execution"
+      },
+      {
+        "id": "DSGAI09",
+        "name": "Multimodal Cross-Channel Leakage",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": null
+      }
+    ]
+  },
+  {
+    "framework": "OWASP ASVS 4.0.3",
+    "control_id": "V5.2.6",
+    "control_name": "Defined output structure",
+    "entries": [
+      {
+        "id": "DSGAI10",
+        "name": "Synthetic Data and Anonymization Pitfalls",
+        "source_list": "DSGAI-2026",
+        "severity": "Medium",
+        "tier": "Hardening",
+        "scope": "Build",
+        "notes": null
+      }
+    ]
+  },
+  {
+    "framework": "OWASP ASVS 4.0.3",
+    "control_id": "V5.2.8",
+    "control_name": "Output encoding for context",
+    "entries": [
+      {
+        "id": "DSGAI01",
+        "name": "Sensitive Data Leakage",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": null
+      }
+    ]
+  },
+  {
+    "framework": "OWASP ASVS 4.0.3",
+    "control_id": "V5.3.4",
+    "control_name": "SQL injection prevention",
+    "entries": [
+      {
+        "id": "DSGAI12",
+        "name": "Unsafe Natural Language Data Gateways",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Build",
+        "notes": null
       }
     ]
   },
@@ -31665,40 +31738,6 @@
         "tier": "Hardening",
         "scope": "Both",
         "notes": "No raw agent output in SQL context — parameterised execution only"
-      }
-    ]
-  },
-  {
-    "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V6 Cryptography",
-    "control_name": "V6.1.1 — Sensitive data not stored in cleartext",
-    "entries": [
-      {
-        "id": "DSGAI01",
-        "name": "Sensitive Data Leakage",
-        "source_list": "DSGAI-2026",
-        "severity": "Critical",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": null
-      },
-      {
-        "id": "DSGAI13",
-        "name": "Vector Store Platform Security",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": null
-      },
-      {
-        "id": "DSGAI18",
-        "name": "Inference and Data Reconstruction",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Hardening",
-        "scope": "Both",
-        "notes": null
       }
     ]
   },
@@ -31742,41 +31781,57 @@
         "tier": "Hardening",
         "scope": "Both",
         "notes": "Agent memory stores encrypted at rest — embeddings, long-term memory"
+      },
+      {
+        "id": "DSGAI01",
+        "name": "Sensitive Data Leakage",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": null
+      },
+      {
+        "id": "DSGAI13",
+        "name": "Vector Store Platform Security",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": null
+      },
+      {
+        "id": "DSGAI18",
+        "name": "Inference and Data Reconstruction",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": null
       }
     ]
   },
   {
     "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V7 Logging",
-    "control_name": "V7.2.2 — Log entries contain required information",
+    "control_id": "V7.1.1",
+    "control_name": "No credential logging",
     "entries": [
       {
-        "id": "DSGAI03",
-        "name": "Shadow AI and Unsanctioned Data Flows",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": null
-      },
-      {
-        "id": "DSGAI05",
-        "name": "Data Integrity and Validation Failures",
+        "id": "DSGAI14",
+        "name": "Excessive Telemetry and Monitoring Leakage",
         "source_list": "DSGAI-2026",
         "severity": "High",
         "tier": "Foundational",
         "scope": "Build",
         "notes": null
-      },
-      {
-        "id": "DSGAI08",
-        "name": "Non-Compliance and Regulatory Violations",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": null
-      },
+      }
+    ]
+  },
+  {
+    "framework": "OWASP ASVS 4.0.3",
+    "control_id": "V7.1.2",
+    "control_name": "No sensitive data in logs",
+    "entries": [
       {
         "id": "DSGAI14",
         "name": "Excessive Telemetry and Monitoring Leakage",
@@ -31862,6 +31917,24 @@
         "tier": "Hardening",
         "scope": "Both",
         "notes": "All agent tool invocations and recommendations logged — systematic bias detectable through aggregate analysis"
+      },
+      {
+        "id": "DSGAI03",
+        "name": "Shadow AI and Unsanctioned Data Flows",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": null
+      },
+      {
+        "id": "DSGAI08",
+        "name": "Non-Compliance and Regulatory Violations",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": null
       }
     ]
   },
@@ -31905,120 +31978,14 @@
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Agent-influenced operator decisions logged — aggregate patterns detectable"
-      }
-    ]
-  },
-  {
-    "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V8 Data Protection",
-    "control_name": "V8.1.1 — Sensitive data not transmitted in URL parameters",
-    "entries": [
-      {
-        "id": "DSGAI01",
-        "name": "Sensitive Data Leakage",
-        "source_list": "DSGAI-2026",
-        "severity": "Critical",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": null
       },
       {
-        "id": "DSGAI02",
-        "name": "Agent Identity and Credential Exposure",
-        "source_list": "DSGAI-2026",
-        "severity": "Critical",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": null
-      },
-      {
-        "id": "DSGAI07",
-        "name": "Data Governance and Lifecycle",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": null
-      },
-      {
-        "id": "DSGAI08",
-        "name": "Non-Compliance and Regulatory Violations",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": null
-      },
-      {
-        "id": "DSGAI09",
-        "name": "Multimodal Cross-Channel Leakage",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Hardening",
-        "scope": "Both",
-        "notes": null
-      },
-      {
-        "id": "DSGAI10",
-        "name": "Synthetic Data and Anonymization Pitfalls",
-        "source_list": "DSGAI-2026",
-        "severity": "Medium",
-        "tier": "Hardening",
-        "scope": "Build",
-        "notes": null
-      },
-      {
-        "id": "DSGAI11",
-        "name": "Cross-Context Conversation Bleed",
+        "id": "DSGAI05",
+        "name": "Data Integrity and Validation Failures",
         "source_list": "DSGAI-2026",
         "severity": "High",
         "tier": "Foundational",
         "scope": "Build",
-        "notes": null
-      },
-      {
-        "id": "DSGAI14",
-        "name": "Excessive Telemetry and Monitoring Leakage",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Build",
-        "notes": null
-      },
-      {
-        "id": "DSGAI15",
-        "name": "Over-Broad Context Windows",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Build",
-        "notes": null
-      },
-      {
-        "id": "DSGAI18",
-        "name": "Inference and Data Reconstruction",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Hardening",
-        "scope": "Both",
-        "notes": null
-      },
-      {
-        "id": "DSGAI19",
-        "name": "Human-in-Loop and Labeler Overexposure",
-        "source_list": "DSGAI-2026",
-        "severity": "Medium",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": null
-      },
-      {
-        "id": "DSGAI20",
-        "name": "Model Exfiltration and IP Replication",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Hardening",
-        "scope": "Both",
         "notes": null
       }
     ]
@@ -32045,6 +32012,124 @@
         "tier": "Foundational",
         "scope": "Both",
         "notes": "System prompts not stored in cleartext application configuration or source code"
+      },
+      {
+        "id": "DSGAI01",
+        "name": "Sensitive Data Leakage",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": null
+      },
+      {
+        "id": "DSGAI14",
+        "name": "Excessive Telemetry and Monitoring Leakage",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Build",
+        "notes": null
+      }
+    ]
+  },
+  {
+    "framework": "OWASP ASVS 4.0.3",
+    "control_id": "V8.1.3",
+    "control_name": "Sensitive data not in session storage",
+    "entries": [
+      {
+        "id": "DSGAI11",
+        "name": "Cross-Context Conversation Bleed",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Build",
+        "notes": null
+      }
+    ]
+  },
+  {
+    "framework": "OWASP ASVS 4.0.3",
+    "control_id": "V8.1.4",
+    "control_name": "Sensitive data minimisation",
+    "entries": [
+      {
+        "id": "DSGAI07",
+        "name": "Data Governance and Lifecycle",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": null
+      },
+      {
+        "id": "DSGAI09",
+        "name": "Multimodal Cross-Channel Leakage",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": null
+      },
+      {
+        "id": "DSGAI15",
+        "name": "Over-Broad Context Windows",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Build",
+        "notes": null
+      },
+      {
+        "id": "DSGAI20",
+        "name": "Model Exfiltration and IP Replication",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": null
+      }
+    ]
+  },
+  {
+    "framework": "OWASP ASVS 4.0.3",
+    "control_id": "V8.3.10",
+    "control_name": "Personal data not kept longer than needed",
+    "entries": [
+      {
+        "id": "DSGAI08",
+        "name": "Non-Compliance and Regulatory Violations",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": null
+      }
+    ]
+  },
+  {
+    "framework": "OWASP ASVS 4.0.3",
+    "control_id": "V8.3.3",
+    "control_name": "Consent obtained before PI processing",
+    "entries": [
+      {
+        "id": "DSGAI08",
+        "name": "Non-Compliance and Regulatory Violations",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": null
+      },
+      {
+        "id": "DSGAI19",
+        "name": "Human-in-Loop and Labeler Overexposure",
+        "source_list": "DSGAI-2026",
+        "severity": "Medium",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": null
       }
     ]
   },
@@ -32061,19 +32146,55 @@
         "tier": "Foundational",
         "scope": "Both",
         "notes": "PII in LLM training data, RAG sources, and outputs identified and handled per policy"
+      },
+      {
+        "id": "DSGAI01",
+        "name": "Sensitive Data Leakage",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": null
+      },
+      {
+        "id": "DSGAI07",
+        "name": "Data Governance and Lifecycle",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": null
+      },
+      {
+        "id": "DSGAI10",
+        "name": "Synthetic Data and Anonymization Pitfalls",
+        "source_list": "DSGAI-2026",
+        "severity": "Medium",
+        "tier": "Hardening",
+        "scope": "Build",
+        "notes": null
+      },
+      {
+        "id": "DSGAI18",
+        "name": "Inference and Data Reconstruction",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": null
       }
     ]
   },
   {
     "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V9 Communication",
-    "control_name": "V9.1.1 — TLS for all connections",
+    "control_id": "V8.3.7",
+    "control_name": "Data transferred using current TLS",
     "entries": [
       {
-        "id": "DSGAI06",
-        "name": "Tool Plugin and Agent Data Exchange",
+        "id": "DSGAI02",
+        "name": "Agent Identity and Credential Exposure",
         "source_list": "DSGAI-2026",
-        "severity": "High",
+        "severity": "Critical",
         "tier": "Foundational",
         "scope": "Both",
         "notes": null
@@ -32102,6 +32223,15 @@
         "tier": "Hardening",
         "scope": "Both",
         "notes": "All A2A communication encrypted — mutual TLS, no cleartext inter-agent messages"
+      },
+      {
+        "id": "DSGAI06",
+        "name": "Tool Plugin and Agent Data Exchange",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": null
       }
     ]
   },

@@ -295,28 +295,31 @@
     },
     {
       "framework": "OWASP ASVS 4.0.3",
-      "control_id": "V8 Data Protection",
-      "control_name": "V8.3.3 — Consent obtained before PI processing",
+      "control_id": "V8.3.3",
+      "control_name": "Consent obtained before PI processing",
       "tier": "Foundational",
       "scope": "Both",
+      "parent": "V8",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
-      "control_id": "V8 Data Protection",
-      "control_name": "V8.3.10 — Personal data not kept longer than needed",
+      "control_id": "V8.3.10",
+      "control_name": "Personal data not kept longer than needed",
       "tier": "Foundational",
       "scope": "Both",
+      "parent": "V8",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
-      "control_id": "V7 Logging",
-      "control_name": "V7.2.2 — Audit trail sufficient for compliance",
+      "control_id": "V7.2.2",
+      "control_name": "Audit trail sufficient for compliance",
       "tier": "Foundational",
       "scope": "Both",
+      "parent": "V7",
       "confidence": "unreviewed",
       "reviewed_by": []
     },

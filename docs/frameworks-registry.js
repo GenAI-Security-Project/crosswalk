@@ -622,6 +622,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "date": "2026-09-18",
         "change": "Migrated off the swapped-column ids of issue #35: 70 items -> 68, including 14 referenced by mappings but absent from the registry",
         "author": "OWASP GenAI Data Security Initiative"
+      },
+      {
+        "date": "2026-09-18",
+        "change": "Migrated off the swapped-column ids of issue #35: 68 items -> 68",
+        "author": "OWASP GenAI Data Security Initiative"
       }
     ],
     "inventory_completeness": {
@@ -1314,6 +1319,11 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "date": "2026-09-18",
         "change": "Migrated off the swapped-column ids of issue #35: 76 items -> 61",
+        "author": "OWASP GenAI Data Security Initiative"
+      },
+      {
+        "date": "2026-09-18",
+        "change": "Migrated off the swapped-column ids of issue #35: 61 items -> 61",
         "author": "OWASP GenAI Data Security Initiative"
       }
     ]
@@ -2332,6 +2342,11 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "date": "2026-09-18",
         "change": "Migrated off the swapped-column ids of issue #35: 145 items -> 30",
+        "author": "OWASP GenAI Data Security Initiative"
+      },
+      {
+        "date": "2026-09-18",
+        "change": "Migrated off the swapped-column ids of issue #35: 30 items -> 30",
         "author": "OWASP GenAI Data Security Initiative"
       }
     ],
@@ -3744,6 +3759,11 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "date": "2026-09-18",
         "change": "Migrated off the swapped-column ids of issue #35: 87 items -> 56",
+        "author": "OWASP GenAI Data Security Initiative"
+      },
+      {
+        "date": "2026-09-18",
+        "change": "Migrated off the swapped-column ids of issue #35: 56 items -> 56",
         "author": "OWASP GenAI Data Security Initiative"
       }
     ],
@@ -5639,6 +5659,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "date": "2026-09-18",
         "change": "Migrated off the swapped-column ids of issue #35: 52 items -> 12",
         "author": "OWASP GenAI Data Security Initiative"
+      },
+      {
+        "date": "2026-09-18",
+        "change": "Migrated off the swapped-column ids of issue #35: 12 items -> 12",
+        "author": "OWASP GenAI Data Security Initiative"
       }
     ]
   },
@@ -5849,6 +5874,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "date": "2026-09-18",
         "change": "Migrated off the swapped-column ids of issue #35: 59 items -> 26",
         "author": "OWASP GenAI Data Security Initiative"
+      },
+      {
+        "date": "2026-09-18",
+        "change": "Migrated off the swapped-column ids of issue #35: 26 items -> 26",
+        "author": "OWASP GenAI Data Security Initiative"
       }
     ]
   },
@@ -5939,6 +5969,11 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "date": "2026-09-18",
         "change": "Migrated off the swapped-column ids of issue #35: 58 items -> 9",
+        "author": "OWASP GenAI Data Security Initiative"
+      },
+      {
+        "date": "2026-09-18",
+        "change": "Migrated off the swapped-column ids of issue #35: 9 items -> 9",
         "author": "OWASP GenAI Data Security Initiative"
       }
     ]
@@ -7724,6 +7759,18 @@ window.CROSSWALK_FRAMEWORKS = [
         "kind": "control"
       },
       {
+        "control_id": "V1.1.2",
+        "title": "Threat modelling of all data flows",
+        "description": "All agent input sources threat-modelled — every indirect injection path documented; Supply chain threat model documents all agent component sources and trust levels; LLM data flows threat-modelled — all injection paths identified and documented",
+        "kind": "control"
+      },
+      {
+        "control_id": "V1.1.4",
+        "title": "Trust boundaries documented and enforced",
+        "kind": "control",
+        "parent": "V1"
+      },
+      {
         "control_id": "V1.2",
         "title": "Authentication Architecture",
         "description": "Verify that authentication is addressed in the architecture.",
@@ -7764,6 +7811,12 @@ window.CROSSWALK_FRAMEWORKS = [
         "kind": "control"
       },
       {
+        "control_id": "V2.1.1",
+        "title": "Verify credentials not in source code",
+        "description": "Agent credentials not hardcoded — secret manager required",
+        "kind": "control"
+      },
+      {
         "control_id": "V2.5",
         "title": "Credential Recovery",
         "description": "Verify credential recovery mechanisms are secure.",
@@ -7780,11 +7833,30 @@ window.CROSSWALK_FRAMEWORKS = [
         "kind": "control"
       },
       {
+        "control_id": "V2.10.1",
+        "title": "Integration secrets not hardcoded",
+        "description": "",
+        "parent": "V2",
+        "kind": "control"
+      },
+      {
         "control_id": "V3",
         "title": "Session Management",
         "description": "Verify the application has adequate session management controls.",
         "parent": null,
         "function": "Verification",
+        "kind": "control"
+      },
+      {
+        "control_id": "V3.1.1",
+        "title": "Session tokens unique and random",
+        "kind": "control",
+        "parent": "V3"
+      },
+      {
+        "control_id": "V3.3.1",
+        "title": "Verify anti-replay tokens in state-changing operations",
+        "description": "Replay protection on all A2A messages — nonces, timestamps, sequence numbers",
         "kind": "control"
       },
       {
@@ -7804,11 +7876,43 @@ window.CROSSWALK_FRAMEWORKS = [
         "kind": "control"
       },
       {
+        "control_id": "V4.1.1",
+        "title": "Verify all sensitive functions have access control",
+        "description": "All destructive tool operations require explicit authorisation — not inheritable from agent session; LLM cannot access sensitive functions (write, delete, execute) without explicit authorisation",
+        "kind": "control"
+      },
+      {
+        "control_id": "V4.1.2",
+        "title": "Least privilege for service accounts",
+        "description": "",
+        "parent": "V4",
+        "kind": "control"
+      },
+      {
+        "control_id": "V4.1.3",
+        "title": "Verify access control enforces least privilege",
+        "description": "Agent tool access scoped to minimum required operations — read-only by default, write access formally approved; Agent credential scope minimum required — no over-privileged NHIs; Memory write access restricted to minimum required sources — only agent and authorised administrators can write",
+        "kind": "control"
+      },
+      {
+        "control_id": "V4.1.5",
+        "title": "Access control failures logged",
+        "description": "",
+        "parent": "V4",
+        "kind": "control"
+      },
+      {
         "control_id": "V4.2",
         "title": "Operation Level Access Control",
         "description": "Verify access controls at the operation and function level.",
         "parent": "V4",
         "function": "Verification",
+        "kind": "control"
+      },
+      {
+        "control_id": "V4.2.2",
+        "title": "Verify anti-CSRF tokens in state-changing operations",
+        "description": "CSRF protection on endpoints where LLM output triggers state changes",
         "kind": "control"
       },
       {
@@ -7828,6 +7932,25 @@ window.CROSSWALK_FRAMEWORKS = [
         "kind": "control"
       },
       {
+        "control_id": "V5.1.1",
+        "title": "Verify all user input validated against allowlist",
+        "description": "All inputs to agents validated — indirect injection through processed content equally in scope; All content entering agent memory validated — injection patterns rejected at write boundary; All inputs to LLMs validated — indirect injection through processed content equally in scope",
+        "kind": "control"
+      },
+      {
+        "control_id": "V5.1.2",
+        "title": "Verify that HTTP request parts are validated, sanitised, or rejected",
+        "description": "LLM API request validation — prompt structure, content type, and character set enforced",
+        "kind": "control"
+      },
+      {
+        "control_id": "V5.1.3",
+        "title": "Input validation server-side",
+        "description": "",
+        "parent": "V5",
+        "kind": "control"
+      },
+      {
         "control_id": "V5.2",
         "title": "Sanitization and Sandboxing",
         "description": "Verify that sanitization and sandboxing are used to prevent injection.",
@@ -7836,11 +7959,55 @@ window.CROSSWALK_FRAMEWORKS = [
         "kind": "control"
       },
       {
+        "control_id": "V5.2.1",
+        "title": "Verify output encoding prevents injection",
+        "description": "Agent responses encoded before passing to downstream renderers — outputs treated as untrusted; Agent code output encoded before rendering in any context; Agent advisory outputs clearly labelled — users cannot mistake AI output for authoritative content",
+        "kind": "control"
+      },
+      {
+        "control_id": "V5.2.4",
+        "title": "Verify application does not use eval or dynamic code",
+        "description": "No eval or exec of agent-generated code — absolute prohibition enforced in code review; No eval or dynamic code execution of LLM-generated content",
+        "kind": "control"
+      },
+      {
+        "control_id": "V5.2.5",
+        "title": "Verify application protects against OS command injection",
+        "description": "Agent-generated instructions not executed in system context without validation; Agent-generated commands validated before any shell execution; LLM-generated content validated before execution in any shell or interpreter context",
+        "kind": "control"
+      },
+      {
+        "control_id": "V5.2.6",
+        "title": "Defined output structure",
+        "description": "",
+        "parent": "V5",
+        "kind": "control"
+      },
+      {
+        "control_id": "V5.2.8",
+        "title": "Output encoding for context",
+        "kind": "control",
+        "parent": "V5"
+      },
+      {
         "control_id": "V5.3",
         "title": "Output Encoding and Injection Prevention",
         "description": "Verify that output encoding prevents injection attacks.",
         "parent": "V5",
         "function": "Verification",
+        "kind": "control"
+      },
+      {
+        "control_id": "V5.3.4",
+        "title": "SQL injection prevention",
+        "description": "",
+        "parent": "V5",
+        "kind": "control"
+      },
+      {
+        "control_id": "V5.3.5",
+        "title": "Verify output encoding in SQL context",
+        "description": "No raw agent output in SQL context — parameterised execution only; LLM-generated SQL parameterised — never raw LLM output in SQL context",
         "kind": "control"
       },
       {
@@ -7860,6 +8027,12 @@ window.CROSSWALK_FRAMEWORKS = [
         "kind": "control"
       },
       {
+        "control_id": "V6.1.1",
+        "title": "Verify sensitive data encrypted at rest",
+        "description": "Agent credentials encrypted at rest — no cleartext in config or agent memory; Agent memory stores encrypted at rest — embeddings, long-term memory; Training data, embeddings, RAG document stores, and prompt caches encrypted at rest",
+        "kind": "control"
+      },
+      {
         "control_id": "V7",
         "title": "Error Handling and Logging",
         "description": "Verify that errors are handled safely and logs contain sufficient information.",
@@ -7876,11 +8049,43 @@ window.CROSSWALK_FRAMEWORKS = [
         "kind": "control"
       },
       {
+        "control_id": "V7.1.1",
+        "title": "No credential logging",
+        "description": "",
+        "parent": "V7",
+        "kind": "control"
+      },
+      {
+        "control_id": "V7.1.2",
+        "title": "No sensitive data in logs",
+        "description": "",
+        "parent": "V7",
+        "kind": "control"
+      },
+      {
         "control_id": "V7.2",
         "title": "Log Processing",
         "description": "Verify that logs are processed securely.",
         "parent": "V7",
         "function": "Verification",
+        "kind": "control"
+      },
+      {
+        "control_id": "V7.2.1",
+        "title": "Verify access control decisions logged",
+        "description": "All credential usage logged — issuance, access, expiry detectable; All A2A messages logged — sender identity, content hash, schema validation results; All agent actions logged — no production deployment without complete observability",
+        "kind": "control"
+      },
+      {
+        "control_id": "V7.2.2",
+        "title": "Verify all business logic decisions logged",
+        "description": "All tool invocations logged — tool identity, parameters, agent session, timestamp; All agent tool invocations and recommendations logged — systematic bias detectable through aggregate analysis; All LLM tool invocations logged with full context — every tool call auditable",
+        "kind": "control"
+      },
+      {
+        "control_id": "V7.4.1",
+        "title": "Verify error handling does not expose sensitive data",
+        "description": "Cascade errors handled gracefully — no sensitive system information in error responses; Agent-influenced operator decisions logged — aggregate patterns detectable; LLM accuracy metrics and hallucination rate logged — production monitoring for output quality",
         "kind": "control"
       },
       {
@@ -7900,11 +8105,58 @@ window.CROSSWALK_FRAMEWORKS = [
         "kind": "control"
       },
       {
+        "control_id": "V8.1.1",
+        "title": "Verify sensitive data is not cached or exposed in logs",
+        "description": "LLM outputs containing sensitive data not logged in cleartext or cached without protection; System prompts not stored in cleartext application configuration or source code",
+        "kind": "control"
+      },
+      {
+        "control_id": "V8.1.3",
+        "title": "Sensitive data not in session storage",
+        "description": "",
+        "parent": "V8",
+        "kind": "control"
+      },
+      {
+        "control_id": "V8.1.4",
+        "title": "Sensitive data minimisation",
+        "description": "",
+        "parent": "V8",
+        "kind": "control"
+      },
+      {
         "control_id": "V8.3",
         "title": "Sensitive Private Data",
         "description": "Verify that sensitive data is protected from unauthorized access.",
         "parent": "V8",
         "function": "Verification",
+        "kind": "control"
+      },
+      {
+        "control_id": "V8.3.3",
+        "title": "Consent obtained before PI processing",
+        "description": "",
+        "parent": "V8",
+        "kind": "control"
+      },
+      {
+        "control_id": "V8.3.4",
+        "title": "Verify PII is identified and protected",
+        "description": "PII in LLM training data, RAG sources, and outputs identified and handled per policy",
+        "kind": "control"
+      },
+      {
+        "control_id": "V8.3.7",
+        "title": "Data transferred using current TLS",
+        "description": "",
+        "parent": "V8",
+        "kind": "control"
+      },
+      {
+        "control_id": "V8.3.10",
+        "title": "Personal data not kept longer than needed",
+        "description": "",
+        "parent": "V8",
         "kind": "control"
       },
       {
@@ -7916,11 +8168,29 @@ window.CROSSWALK_FRAMEWORKS = [
         "kind": "control"
       },
       {
+        "control_id": "V9.1.1",
+        "title": "Verify TLS used for all client connectivity",
+        "description": "All A2A communication encrypted — mutual TLS, no cleartext inter-agent messages; All LLM API communication and data flows encrypted in transit — TLS 1.2 minimum",
+        "kind": "control"
+      },
+      {
         "control_id": "V10",
         "title": "Malicious Code",
         "description": "Verify that code does not contain malicious logic.",
         "parent": null,
         "function": "Verification",
+        "kind": "control"
+      },
+      {
+        "control_id": "V10.2.1",
+        "title": "Verify third-party components current and free of vulnerabilities",
+        "description": "All agent component libraries scanned for CVEs — ML SBOM maintained and monitored; All LLM component libraries and dependencies scanned for CVEs — ML SBOM maintained; Training pipeline components scanned — compromised dependencies rejected",
+        "kind": "control"
+      },
+      {
+        "control_id": "V10.2.2",
+        "title": "Verify only minimal approved external libraries",
+        "description": "Approved component list — unsigned or unverified agent components rejected; Approved component list for LLM deployments — unsigned or unverified components rejected",
         "kind": "control"
       },
       {
@@ -7932,11 +8202,56 @@ window.CROSSWALK_FRAMEWORKS = [
         "kind": "control"
       },
       {
+        "control_id": "V11.1.1",
+        "title": "Verify business logic assumptions documented",
+        "description": "Cascade blast radius documented as business logic assumption — maximum affected systems formally accepted; AI advisory limitations documented as business logic assumptions — verification requirements per domain; LLM accuracy limitations documented as business logic assumptions — verification requirements defined",
+        "kind": "control"
+      },
+      {
+        "control_id": "V11.1.2",
+        "title": "Verify business logic limits prevent function abuse",
+        "description": "Business logic controls prevent injection from redirecting agent goal; Tool chain exploitation scenarios identified in threat model — mitigations implemented and verified; Code execution capability in agents subject to business logic controls — sandbox, allowlist, static analysis",
+        "kind": "control"
+      },
+      {
+        "control_id": "V11.1.4",
+        "title": "Verify business logic rate limits",
+        "description": "Business logic controls on LLM usage — per-tenant cost budgets, rate limit policies",
+        "kind": "control"
+      },
+      {
+        "control_id": "V11.1.5",
+        "title": "Business logic prevents excess data access",
+        "description": "",
+        "parent": "V11",
+        "kind": "control"
+      },
+      {
+        "control_id": "V11.1.7",
+        "title": "Anti-automation controls",
+        "description": "",
+        "parent": "V11",
+        "kind": "control"
+      },
+      {
         "control_id": "V12",
         "title": "Files and Resources",
         "description": "Verify that untrusted files and resources are handled safely.",
         "parent": null,
         "function": "Verification",
+        "kind": "control"
+      },
+      {
+        "control_id": "V12.1.1",
+        "title": "Verify file upload malware scanning",
+        "description": "Content entering agent memory scanned — adversarial content, injection patterns detected before write; Training data uploads scanned before ingestion — adversarial content detected; Content validation on all vector store ingestion — adversarial content detected",
+        "kind": "control"
+      },
+      {
+        "control_id": "V12.1.3",
+        "title": "Malicious file detection on upload",
+        "description": "",
+        "parent": "V12",
         "kind": "control"
       },
       {
@@ -7956,149 +8271,16 @@ window.CROSSWALK_FRAMEWORKS = [
         "kind": "control"
       },
       {
-        "control_id": "V14",
-        "title": "Configuration",
-        "description": "Verify that the application is securely configured.",
-        "parent": null,
-        "function": "Verification",
-        "kind": "control"
-      },
-      {
-        "control_id": "V5.1.1",
-        "title": "Verify all user input validated against allowlist",
-        "description": "All inputs to agents validated — indirect injection through processed content equally in scope; All content entering agent memory validated — injection patterns rejected at write boundary; All inputs to LLMs validated — indirect injection through processed content equally in scope",
-        "kind": "control"
-      },
-      {
-        "control_id": "V5.2.1",
-        "title": "Verify output encoding prevents injection",
-        "description": "Agent responses encoded before passing to downstream renderers — outputs treated as untrusted; Agent code output encoded before rendering in any context; Agent advisory outputs clearly labelled — users cannot mistake AI output for authoritative content",
-        "kind": "control"
-      },
-      {
-        "control_id": "V5.2.5",
-        "title": "Verify application protects against OS command injection",
-        "description": "Agent-generated instructions not executed in system context without validation; Agent-generated commands validated before any shell execution; LLM-generated content validated before execution in any shell or interpreter context",
-        "kind": "control"
-      },
-      {
-        "control_id": "V1.1.2",
-        "title": "Threat modelling of all data flows",
-        "description": "All agent input sources threat-modelled — every indirect injection path documented; Supply chain threat model documents all agent component sources and trust levels; LLM data flows threat-modelled — all injection paths identified and documented",
-        "kind": "control"
-      },
-      {
-        "control_id": "V11.1.2",
-        "title": "Verify business logic limits prevent function abuse",
-        "description": "Business logic controls prevent injection from redirecting agent goal; Tool chain exploitation scenarios identified in threat model — mitigations implemented and verified; Code execution capability in agents subject to business logic controls — sandbox, allowlist, static analysis",
-        "kind": "control"
-      },
-      {
-        "control_id": "V4.1.3",
-        "title": "Verify access control enforces least privilege",
-        "description": "Agent tool access scoped to minimum required operations — read-only by default, write access formally approved; Agent credential scope minimum required — no over-privileged NHIs; Memory write access restricted to minimum required sources — only agent and authorised administrators can write",
-        "kind": "control"
-      },
-      {
-        "control_id": "V4.1.1",
-        "title": "Verify all sensitive functions have access control",
-        "description": "All destructive tool operations require explicit authorisation — not inheritable from agent session; LLM cannot access sensitive functions (write, delete, execute) without explicit authorisation",
-        "kind": "control"
-      },
-      {
-        "control_id": "V7.2.2",
-        "title": "Verify all business logic decisions logged",
-        "description": "All tool invocations logged — tool identity, parameters, agent session, timestamp; All agent tool invocations and recommendations logged — systematic bias detectable through aggregate analysis; All LLM tool invocations logged with full context — every tool call auditable",
-        "kind": "control"
-      },
-      {
         "control_id": "V13.1.1",
         "title": "Verify API rate limiting",
         "description": "Tool API endpoints rate-limited — anomalous invocation frequency detected; Rate limiting on all agent API endpoints — cascade amplification through API exhaustion limited; Rate limiting prevents rogue agent from amplifying impact through API exhaustion",
         "kind": "control"
       },
       {
-        "control_id": "V2.1.1",
-        "title": "Verify credentials not in source code",
-        "description": "Agent credentials not hardcoded — secret manager required",
-        "kind": "control"
-      },
-      {
-        "control_id": "V6.1.1",
-        "title": "Verify sensitive data encrypted at rest",
-        "description": "Agent credentials encrypted at rest — no cleartext in config or agent memory; Agent memory stores encrypted at rest — embeddings, long-term memory; Training data, embeddings, RAG document stores, and prompt caches encrypted at rest",
-        "kind": "control"
-      },
-      {
-        "control_id": "V7.2.1",
-        "title": "Verify access control decisions logged",
-        "description": "All credential usage logged — issuance, access, expiry detectable; All A2A messages logged — sender identity, content hash, schema validation results; All agent actions logged — no production deployment without complete observability",
-        "kind": "control"
-      },
-      {
-        "control_id": "V14.2.3",
-        "title": "Verify secrets not in source code",
-        "description": "Agent credentials not committed to source control; System prompts not hardcoded in source code — stored in secret management system",
-        "kind": "control"
-      },
-      {
-        "control_id": "V10.2.1",
-        "title": "Verify third-party components current and free of vulnerabilities",
-        "description": "All agent component libraries scanned for CVEs — ML SBOM maintained and monitored; All LLM component libraries and dependencies scanned for CVEs — ML SBOM maintained; Training pipeline components scanned — compromised dependencies rejected",
-        "kind": "control"
-      },
-      {
-        "control_id": "V10.2.2",
-        "title": "Verify only minimal approved external libraries",
-        "description": "Approved component list — unsigned or unverified agent components rejected; Approved component list for LLM deployments — unsigned or unverified components rejected",
-        "kind": "control"
-      },
-      {
-        "control_id": "V14.2.2",
-        "title": "Verify build pipelines include security checks",
-        "description": "CI/CD pipeline for agent components includes integrity verification and CVE scanning; CI/CD pipeline for LLM components includes integrity verification and vulnerability scanning",
-        "kind": "control"
-      },
-      {
-        "control_id": "V5.2.4",
-        "title": "Verify application does not use eval or dynamic code",
-        "description": "No eval or exec of agent-generated code — absolute prohibition enforced in code review; No eval or dynamic code execution of LLM-generated content",
-        "kind": "control"
-      },
-      {
-        "control_id": "V5.3.5",
-        "title": "Verify output encoding in SQL context",
-        "description": "No raw agent output in SQL context — parameterised execution only; LLM-generated SQL parameterised — never raw LLM output in SQL context",
-        "kind": "control"
-      },
-      {
-        "control_id": "V12.1.1",
-        "title": "Verify file upload malware scanning",
-        "description": "Content entering agent memory scanned — adversarial content, injection patterns detected before write; Training data uploads scanned before ingestion — adversarial content detected; Content validation on all vector store ingestion — adversarial content detected",
-        "kind": "control"
-      },
-      {
-        "control_id": "V9.1.1",
-        "title": "Verify TLS used for all client connectivity",
-        "description": "All A2A communication encrypted — mutual TLS, no cleartext inter-agent messages; All LLM API communication and data flows encrypted in transit — TLS 1.2 minimum",
-        "kind": "control"
-      },
-      {
-        "control_id": "V3.3.1",
-        "title": "Verify anti-replay tokens in state-changing operations",
-        "description": "Replay protection on all A2A messages — nonces, timestamps, sequence numbers",
-        "kind": "control"
-      },
-      {
-        "control_id": "V11.1.1",
-        "title": "Verify business logic assumptions documented",
-        "description": "Cascade blast radius documented as business logic assumption — maximum affected systems formally accepted; AI advisory limitations documented as business logic assumptions — verification requirements per domain; LLM accuracy limitations documented as business logic assumptions — verification requirements defined",
-        "kind": "control"
-      },
-      {
-        "control_id": "V7.4.1",
-        "title": "Verify error handling does not expose sensitive data",
-        "description": "Cascade errors handled gracefully — no sensitive system information in error responses; Agent-influenced operator decisions logged — aggregate patterns detectable; LLM accuracy metrics and hallucination rate logged — production monitoring for output quality",
+        "control_id": "V13.1.2",
+        "title": "API throttling",
+        "description": "",
+        "parent": "V13",
         "kind": "control"
       },
       {
@@ -8108,103 +8290,29 @@ window.CROSSWALK_FRAMEWORKS = [
         "kind": "control"
       },
       {
-        "control_id": "V8 Data Protection",
-        "title": "V8.1.1 — Sensitive data not transmitted in URL parameters",
+        "control_id": "V14",
+        "title": "Configuration",
+        "description": "Verify that the application is securely configured.",
+        "parent": null,
+        "function": "Verification",
         "kind": "control"
       },
       {
-        "control_id": "V4 Access Control",
-        "title": "V4.1.3 — Deny by default access control",
+        "control_id": "V14.1.4",
+        "title": "All components inventoried",
+        "kind": "control",
+        "parent": "V14"
+      },
+      {
+        "control_id": "V14.2.2",
+        "title": "Verify build pipelines include security checks",
+        "description": "CI/CD pipeline for agent components includes integrity verification and CVE scanning; CI/CD pipeline for LLM components includes integrity verification and vulnerability scanning",
         "kind": "control"
       },
       {
-        "control_id": "V5 Validation",
-        "title": "V5.2.8 — Output encoding for context",
-        "kind": "control"
-      },
-      {
-        "control_id": "V6 Cryptography",
-        "title": "V6.1.1 — Sensitive data not stored in cleartext",
-        "kind": "control"
-      },
-      {
-        "control_id": "V2 Authentication",
-        "title": "V2.1.1 — Passwords minimum 12 characters",
-        "kind": "control"
-      },
-      {
-        "control_id": "V1 Architecture",
-        "title": "V1.1.4 — Trust boundaries documented and enforced",
-        "kind": "control"
-      },
-      {
-        "control_id": "V7 Logging",
-        "title": "V7.2.2 — Log entries contain required information",
-        "kind": "control"
-      },
-      {
-        "control_id": "V14 Configuration",
-        "title": "V14.1.4 — All components inventoried",
-        "kind": "control"
-      },
-      {
-        "control_id": "V10 Malicious Code",
-        "title": "V10.2.1 — Application only uses official repositories",
-        "kind": "control"
-      },
-      {
-        "control_id": "V12 Files/Resources",
-        "title": "V12.1.1 — File upload size limits",
-        "kind": "control"
-      },
-      {
-        "control_id": "V9 Communication",
-        "title": "V9.1.1 — TLS for all connections",
-        "kind": "control"
-      },
-      {
-        "control_id": "V11 Business Logic",
-        "title": "V11.1.4 — Business logic limits on repeated actions",
-        "kind": "control"
-      },
-      {
-        "control_id": "V3 Session Management",
-        "title": "V3.1.1 — Session tokens unique and random",
-        "kind": "control"
-      },
-      {
-        "control_id": "V13 API",
-        "title": "V13.1.1 — API protection against enumeration",
-        "kind": "control"
-      },
-      {
-        "control_id": "V5.1.2",
-        "title": "Verify that HTTP request parts are validated, sanitised, or rejected",
-        "description": "LLM API request validation — prompt structure, content type, and character set enforced",
-        "kind": "control"
-      },
-      {
-        "control_id": "V8.1.1",
-        "title": "Verify sensitive data is not cached or exposed in logs",
-        "description": "LLM outputs containing sensitive data not logged in cleartext or cached without protection; System prompts not stored in cleartext application configuration or source code",
-        "kind": "control"
-      },
-      {
-        "control_id": "V8.3.4",
-        "title": "Verify PII is identified and protected",
-        "description": "PII in LLM training data, RAG sources, and outputs identified and handled per policy",
-        "kind": "control"
-      },
-      {
-        "control_id": "V4.2.2",
-        "title": "Verify anti-CSRF tokens in state-changing operations",
-        "description": "CSRF protection on endpoints where LLM output triggers state changes",
-        "kind": "control"
-      },
-      {
-        "control_id": "V11.1.4",
-        "title": "Verify business logic rate limits",
-        "description": "Business logic controls on LLM usage — per-tenant cost budgets, rate limit policies",
+        "control_id": "V14.2.3",
+        "title": "Verify secrets not in source code",
+        "description": "Agent credentials not committed to source control; System prompts not hardcoded in source code — stored in secret management system",
         "kind": "control"
       }
     ],
@@ -8213,11 +8321,16 @@ window.CROSSWALK_FRAMEWORKS = [
         "date": "2026-04-09",
         "change": "Initial seed — 32 ASVS verification requirements and sub-requirements",
         "author": "OWASP GenAI Data Security Initiative"
+      },
+      {
+        "date": "2026-09-18",
+        "change": "Migrated off the swapped-column ids of issue #35: 75 items -> 82, including 17 referenced by mappings but absent from the registry",
+        "author": "OWASP GenAI Data Security Initiative"
       }
     ],
     "inventory_completeness": {
       "status": "unknown",
-      "included": 75,
+      "included": 82,
       "total": null,
       "note": "Authoritative control count not established. Needs a count from the published framework.",
       "source": "https://owasp.org/projects/asvs"
@@ -8322,6 +8435,11 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "date": "2026-09-18",
         "change": "Migrated off the swapped-column ids of issue #35: 104 items -> 10",
+        "author": "OWASP GenAI Data Security Initiative"
+      },
+      {
+        "date": "2026-09-18",
+        "change": "Migrated off the swapped-column ids of issue #35: 10 items -> 10",
         "author": "OWASP GenAI Data Security Initiative"
       }
     ]
@@ -8778,6 +8896,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "date": "2026-09-18",
         "change": "Titled 17 entries that had carried only their identifier, from the published text: PCI DSS v4.0 requirement headings, transcribed from PCI SSC \"PCI DSS v4.0 SAQ D for Merchants\" — Req 1.3, Req 2.2, Req 3.4, Req 3.5, Req 4.2, Req 5.2, Req 6.3, Req 6.4, Req 7.2, Req 7.3, Req 8.2, Req 8.3, Req 10.2, Req 10.7, Req 11.3, Req 12.3, Req 12.6",
         "author": "OWASP GenAI Data Security Initiative"
+      },
+      {
+        "date": "2026-09-18",
+        "change": "Migrated off the swapped-column ids of issue #35: 49 items -> 49",
+        "author": "OWASP GenAI Data Security Initiative"
       }
     ]
   },
@@ -9168,6 +9291,11 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "date": "2026-09-18",
         "change": "Titled 2 entries that had carried only their identifier, from the published text: TSP section 100, 2017 Trust Services Criteria (with Revised Points of Focus — 2022) — P7.1, PI1.3",
+        "author": "OWASP GenAI Data Security Initiative"
+      },
+      {
+        "date": "2026-09-18",
+        "change": "Migrated off the swapped-column ids of issue #35: 46 items -> 46",
         "author": "OWASP GenAI Data Security Initiative"
       }
     ],
