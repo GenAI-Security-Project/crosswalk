@@ -37,6 +37,9 @@ exclude = [
   "^https://deepchecks\\.com/",
   "^https://gdpr\\.eu/",
   "^https://flower\\.ai/",
+  # amundsen.io answers 200 to both HEAD and GET from an ordinary client,
+  # and 405 Method Not Allowed from GitHub runner IPs — twice in a row on main.
+  "^https://www\\.amundsen\\.io/",
 
   # This repository is private, so its own URL 404s for an anonymous checker.
   "^https://github\\.com/GenAI-Security-Project/crosswalk",
