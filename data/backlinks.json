@@ -30528,31 +30528,6 @@
   },
   {
     "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V1 Architecture",
-    "control_name": "V1.1.4 — Trust boundaries documented and enforced",
-    "entries": [
-      {
-        "id": "DSGAI03",
-        "name": "Shadow AI and Unsanctioned Data Flows",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": null
-      },
-      {
-        "id": "DSGAI16",
-        "name": "Endpoint and Browser Overreach",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": null
-      }
-    ]
-  },
-  {
-    "framework": "OWASP ASVS 4.0.3",
     "control_id": "V1.1.2",
     "control_name": "Threat modelling of all data flows",
     "entries": [
@@ -30563,7 +30538,7 @@
         "severity": "Critical",
         "tier": "Foundational",
         "scope": "Both",
-        "notes": "LLM data flows threat-modelled — all injection paths identified and documented"
+        "notes": "LLM data flows threat-modelled — all injection paths identified and documented — **DRAFT — ASVS 5.0.0: DELETED, NOT IN SCOPE; retarget or drop pending SME review (#22)**"
       },
       {
         "id": "ASI01",
@@ -30572,7 +30547,7 @@
         "severity": "Critical",
         "tier": "Foundational",
         "scope": "Both",
-        "notes": "All agent input sources threat-modelled — every indirect injection path documented"
+        "notes": "All agent input sources threat-modelled — every indirect injection path documented — **DRAFT — ASVS 5.0.0: DELETED, NOT IN SCOPE; retarget or drop pending SME review (#22)**"
       },
       {
         "id": "ASI04",
@@ -30581,31 +30556,296 @@
         "severity": "High",
         "tier": "Foundational",
         "scope": "Both",
-        "notes": "Supply chain threat model documents all agent component sources and trust levels"
+        "notes": "Supply chain threat model documents all agent component sources and trust levels — **DRAFT — ASVS 5.0.0: DELETED, NOT IN SCOPE; retarget or drop pending SME review (#22)**"
+      },
+      {
+        "id": "DSGAI16",
+        "name": "Endpoint and Browser Overreach",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Both — **DRAFT — ASVS 5.0.0: DELETED, NOT IN SCOPE; retarget or drop pending SME review (#22)**"
       }
     ]
   },
   {
     "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V10 Malicious Code",
-    "control_name": "V10.2.1 — Application only uses official repositories",
+    "control_id": "V1.1.4",
+    "control_name": "Trust boundaries documented and enforced",
     "entries": [
       {
-        "id": "DSGAI04",
-        "name": "Data Model and Artifact Poisoning",
+        "id": "DSGAI03",
+        "name": "Shadow AI and Unsanctioned Data Flows",
         "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Both — **DRAFT — ASVS 5.0.0: DELETED, NOT IN SCOPE; retarget or drop pending SME review (#22)**"
+      }
+    ]
+  },
+  {
+    "framework": "OWASP ASVS 4.0.3",
+    "control_id": "V1.2.4",
+    "control_name": "Verify that data selection or database queries (e.g., SQL, HQL, NoSQL, Cypher) use parameterized queries, ORMs, entity frameworks, or are otherwise protected from SQL Injection and other database injection attacks. This is also relevant when writing stored procedures.",
+    "entries": [
+      {
+        "id": "LLM10",
+        "name": "Improper Output Handling",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "LLM-generated SQL parameterised — never raw LLM output in SQL context"
+      },
+      {
+        "id": "ASI05",
+        "name": "Unexpected Code Execution",
+        "source_list": "Agentic-Top10-2026",
         "severity": "Critical",
         "tier": "Hardening",
         "scope": "Both",
-        "notes": null
+        "notes": "No raw agent output in SQL context — parameterised execution only"
       },
       {
-        "id": "DSGAI20",
-        "name": "Model Exfiltration and IP Replication",
+        "id": "DSGAI12",
+        "name": "Unsafe Natural Language Data Gateways",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Build",
+        "notes": null
+      }
+    ]
+  },
+  {
+    "framework": "OWASP ASVS 4.0.3",
+    "control_id": "V1.3.1",
+    "control_name": "Verify that all untrusted HTML input from WYSIWYG editors or similar is sanitized using a well-known and secure HTML sanitization library or framework feature.",
+    "entries": [
+      {
+        "id": "LLM01",
+        "name": "Prompt Injection",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "LLM output encoding before passing to downstream renderers or interpreters"
+      },
+      {
+        "id": "LLM07",
+        "name": "Misinformation",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "LLM advisory outputs clearly labelled — users cannot mistake model output for authoritative source"
+      },
+      {
+        "id": "LLM10",
+        "name": "Improper Output Handling",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "LLM responses rendered in browser contexts encoded against XSS"
+      },
+      {
+        "id": "ASI01",
+        "name": "Agent Goal Hijack",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Agent responses encoded before passing to downstream renderers — outputs treated as untrusted"
+      },
+      {
+        "id": "ASI05",
+        "name": "Unexpected Code Execution",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Agent code output encoded before rendering in any context"
+      },
+      {
+        "id": "ASI09",
+        "name": "Human-Agent Trust Exploitation",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Agent advisory outputs clearly labelled — users cannot mistake AI output for authoritative content"
+      },
+      {
+        "id": "DSGAI05",
+        "name": "Data Integrity and Validation Failures",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Build",
+        "notes": null
+      }
+    ]
+  },
+  {
+    "framework": "OWASP ASVS 4.0.3",
+    "control_id": "V1.3.2",
+    "control_name": "Verify that the application avoids the use of eval() or other dynamic code execution features such as Spring Expression Language (SpEL). Where there is no alternative, any user input being included must be sanitized before being executed.",
+    "entries": [
+      {
+        "id": "LLM10",
+        "name": "Improper Output Handling",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "No eval or dynamic code execution of LLM-generated content"
+      },
+      {
+        "id": "ASI05",
+        "name": "Unexpected Code Execution",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "No eval or exec of agent-generated code — absolute prohibition enforced in code review"
+      }
+    ]
+  },
+  {
+    "framework": "OWASP ASVS 4.0.3",
+    "control_id": "V1.3.5",
+    "control_name": "Output encoding for context",
+    "entries": [
+      {
+        "id": "DSGAI01",
+        "name": "Sensitive Data Leakage",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": null
+      }
+    ]
+  },
+  {
+    "framework": "OWASP ASVS 4.0.3",
+    "control_id": "V1.3.6",
+    "control_name": "Defined output structure",
+    "entries": [
+      {
+        "id": "DSGAI10",
+        "name": "Synthetic Data and Anonymization Pitfalls",
+        "source_list": "DSGAI-2026",
+        "severity": "Medium",
+        "tier": "Hardening",
+        "scope": "Build",
+        "notes": null
+      }
+    ]
+  },
+  {
+    "framework": "OWASP ASVS 4.0.3",
+    "control_id": "V1.3.7",
+    "control_name": "Verify that the application protects against template injection attacks by not allowing templates to be built based on untrusted input. Where there is no alternative, any untrusted input being included dynamically during template creation must be sanitized or strictly validated.",
+    "entries": [
+      {
+        "id": "LLM01",
+        "name": "Prompt Injection",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "LLM-generated content validated before execution in any shell or interpreter context"
+      },
+      {
+        "id": "LLM10",
+        "name": "Improper Output Handling",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "LLM-generated commands validated — never raw output in shell context"
+      },
+      {
+        "id": "ASI01",
+        "name": "Agent Goal Hijack",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Agent-generated instructions not executed in system context without validation"
+      },
+      {
+        "id": "ASI05",
+        "name": "Unexpected Code Execution",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Agent-generated commands validated before any shell execution"
+      },
+      {
+        "id": "DSGAI09",
+        "name": "Multimodal Cross-Channel Leakage",
         "source_list": "DSGAI-2026",
         "severity": "High",
         "tier": "Hardening",
         "scope": "Both",
+        "notes": null
+      }
+    ]
+  },
+  {
+    "framework": "OWASP ASVS 4.0.3",
+    "control_id": "V1.5.3",
+    "control_name": "Verify API rate limiting",
+    "entries": [
+      {
+        "id": "LLM06",
+        "name": "Unbounded Consumption",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Verify that different parsers used in the application for the same data type (e.g., JSON parsers, XML parsers, URL parsers), perform parsing in a consistent way and use the same character encoding mechanism to avoid issues such as JSON Interoperability vulnerabilities or different URI or file parsing behavior being exploited in Remote File Inclusio"
+      },
+      {
+        "id": "ASI02",
+        "name": "Tool Misuse and Exploitation",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Verify that different parsers used in the application for the same data type (e.g., JSON parsers, XML parsers, URL parsers), perform parsing in a consistent way and use the same character encoding mechanism to avoid issues such as JSON Interoperability vulnerabilities or different URI or file parsing behavior being exploited in Remote File Inclusio"
+      },
+      {
+        "id": "ASI08",
+        "name": "Cascading Agent Failures",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Verify that different parsers used in the application for the same data type (e.g., JSON parsers, XML parsers, URL parsers), perform parsing in a consistent way and use the same character encoding mechanism to avoid issues such as JSON Interoperability vulnerabilities or different URI or file parsing behavior being exploited in Remote File Inclusio"
+      },
+      {
+        "id": "ASI10",
+        "name": "Rogue Agents",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Verify that different parsers used in the application for the same data type (e.g., JSON parsers, XML parsers, URL parsers), perform parsing in a consistent way and use the same character encoding mechanism to avoid issues such as JSON Interoperability vulnerabilities or different URI or file parsing behavior being exploited in Remote File Inclusio"
+      },
+      {
+        "id": "DSGAI12",
+        "name": "Unsafe Natural Language Data Gateways",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Build",
         "notes": null
       }
     ]
@@ -30622,7 +30862,7 @@
         "severity": "High",
         "tier": "Foundational",
         "scope": "Both",
-        "notes": "All LLM component libraries and dependencies scanned for CVEs — ML SBOM maintained"
+        "notes": "All LLM component libraries and dependencies scanned for CVEs — ML SBOM maintained — **DRAFT — ASVS 5.0.0: DELETED, NOT PRACTICAL; retarget or drop pending SME review (#22)**"
       },
       {
         "id": "LLM05",
@@ -30631,7 +30871,7 @@
         "severity": "Critical",
         "tier": "Hardening",
         "scope": "Both",
-        "notes": "Training pipeline components scanned — compromised dependencies rejected"
+        "notes": "Training pipeline components scanned — compromised dependencies rejected — **DRAFT — ASVS 5.0.0: DELETED, NOT PRACTICAL; retarget or drop pending SME review (#22)**"
       },
       {
         "id": "ASI04",
@@ -30640,7 +30880,16 @@
         "severity": "High",
         "tier": "Foundational",
         "scope": "Both",
-        "notes": "All agent component libraries scanned for CVEs — ML SBOM maintained and monitored"
+        "notes": "All agent component libraries scanned for CVEs — ML SBOM maintained and monitored — **DRAFT — ASVS 5.0.0: DELETED, NOT PRACTICAL; retarget or drop pending SME review (#22)**"
+      },
+      {
+        "id": "DSGAI04",
+        "name": "Data Model and Artifact Poisoning",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Both — **DRAFT — ASVS 5.0.0: DELETED, NOT PRACTICAL; retarget or drop pending SME review (#22)**"
       }
     ]
   },
@@ -30656,7 +30905,7 @@
         "severity": "High",
         "tier": "Foundational",
         "scope": "Both",
-        "notes": "Approved component list for LLM deployments — unsigned or unverified components rejected"
+        "notes": "Approved component list for LLM deployments — unsigned or unverified components rejected — **DRAFT — ASVS 5.0.0: DELETED, NOT PRACTICAL; retarget or drop pending SME review (#22)**"
       },
       {
         "id": "ASI04",
@@ -30665,15 +30914,67 @@
         "severity": "High",
         "tier": "Foundational",
         "scope": "Both",
-        "notes": "Approved component list — unsigned or unverified agent components rejected"
+        "notes": "Approved component list — unsigned or unverified agent components rejected — **DRAFT — ASVS 5.0.0: DELETED, NOT PRACTICAL; retarget or drop pending SME review (#22)**"
+      },
+      {
+        "id": "DSGAI04",
+        "name": "Data Model and Artifact Poisoning",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Both — **DRAFT — ASVS 5.0.0: DELETED, NOT PRACTICAL; retarget or drop pending SME review (#22)**"
+      },
+      {
+        "id": "DSGAI20",
+        "name": "Model Exfiltration and IP Replication",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Both — **DRAFT — ASVS 5.0.0: DELETED, NOT PRACTICAL; retarget or drop pending SME review (#22)**"
       }
     ]
   },
   {
     "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V11 Business Logic",
-    "control_name": "V11.1.4 — Business logic limits on repeated actions",
+    "control_id": "V11.1.7",
+    "control_name": "Anti-automation controls",
     "entries": [
+      {
+        "id": "DSGAI17",
+        "name": "Data Availability and Resilience Failures",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Both — **DRAFT — ASVS 5.0.0: DELETED, NOT IN SCOPE; retarget or drop pending SME review (#22)**"
+      }
+    ]
+  },
+  {
+    "framework": "OWASP ASVS 4.0.3",
+    "control_id": "V12.2.1",
+    "control_name": "Verify that TLS is used for all connectivity between a client and external facing, HTTP-based services, and does not fall back to insecure or unencrypted communications.",
+    "entries": [
+      {
+        "id": "LLM02",
+        "name": "Sensitive Information Disclosure",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "All LLM API communication and data flows encrypted in transit — TLS 1.2 minimum"
+      },
+      {
+        "id": "ASI07",
+        "name": "Insecure Inter-Agent Communications",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "High",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "All A2A communication encrypted — mutual TLS, no cleartext inter-agent messages"
+      },
       {
         "id": "DSGAI06",
         "name": "Tool Plugin and Agent Data Exchange",
@@ -30682,10 +30983,119 @@
         "tier": "Foundational",
         "scope": "Both",
         "notes": null
+      }
+    ]
+  },
+  {
+    "framework": "OWASP ASVS 4.0.3",
+    "control_id": "V13.1.2",
+    "control_name": "API throttling",
+    "entries": [
+      {
+        "id": "DSGAI17",
+        "name": "Data Availability and Resilience Failures",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Both — **DRAFT — ASVS 5.0.0: (id absent from the official 4.0.3 mapping); retarget or drop pending SME review (#22)**"
+      }
+    ]
+  },
+  {
+    "framework": "OWASP ASVS 4.0.3",
+    "control_id": "V13.2.1",
+    "control_name": "Integration secrets not hardcoded",
+    "entries": [
+      {
+        "id": "DSGAI02",
+        "name": "Agent Identity and Credential Exposure",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": null
+      }
+    ]
+  },
+  {
+    "framework": "OWASP ASVS 4.0.3",
+    "control_id": "V13.4.5",
+    "control_name": "Verify that documentation (such as for internal APIs) and monitoring endpoints are not exposed unless explicitly intended.",
+    "entries": [
+      {
+        "id": "LLM04",
+        "name": "Supply Chain",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "CI/CD pipeline for LLM components includes integrity verification and vulnerability scanning"
       },
       {
-        "id": "DSGAI16",
-        "name": "Endpoint and Browser Overreach",
+        "id": "ASI04",
+        "name": "Agentic Supply Chain",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "CI/CD pipeline for agent components includes integrity verification and CVE scanning"
+      }
+    ]
+  },
+  {
+    "framework": "OWASP ASVS 4.0.3",
+    "control_id": "V14.1.1",
+    "control_name": "Verify that all sensitive data created and processed by the application has been identified and classified into protection levels. This includes data that is only encoded and therefore easily decoded, such as Base64 strings or the plaintext payload inside a JWT. Protection levels need to take into account any data protection and privacy regulations and standards which the application is required to comply with.",
+    "entries": [
+      {
+        "id": "LLM02",
+        "name": "Sensitive Information Disclosure",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "PII in LLM training data, RAG sources, and outputs identified and handled per policy"
+      },
+      {
+        "id": "LLM09",
+        "name": "Vector and Embedding Weaknesses",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Medium",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "All vector store content encrypted at rest"
+      },
+      {
+        "id": "ASI03",
+        "name": "Identity and Privilege Abuse",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Agent credentials encrypted at rest — no cleartext in config or agent memory"
+      },
+      {
+        "id": "ASI06",
+        "name": "Memory and Context Poisoning",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "High",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Agent memory stores encrypted at rest — embeddings, long-term memory"
+      },
+      {
+        "id": "DSGAI01",
+        "name": "Sensitive Data Leakage",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": null
+      },
+      {
+        "id": "DSGAI07",
+        "name": "Data Governance and Lifecycle",
         "source_list": "DSGAI-2026",
         "severity": "High",
         "tier": "Foundational",
@@ -30693,8 +31103,434 @@
         "notes": null
       },
       {
-        "id": "DSGAI17",
-        "name": "Data Availability and Resilience Failures",
+        "id": "DSGAI10",
+        "name": "Synthetic Data and Anonymization Pitfalls",
+        "source_list": "DSGAI-2026",
+        "severity": "Medium",
+        "tier": "Hardening",
+        "scope": "Build",
+        "notes": null
+      },
+      {
+        "id": "DSGAI13",
+        "name": "Vector Store Platform Security",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": null
+      },
+      {
+        "id": "DSGAI18",
+        "name": "Inference and Data Reconstruction",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": null
+      }
+    ]
+  },
+  {
+    "framework": "OWASP ASVS 4.0.3",
+    "control_id": "V14.1.2",
+    "control_name": "Data transferred using current TLS",
+    "entries": [
+      {
+        "id": "DSGAI02",
+        "name": "Agent Identity and Credential Exposure",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": null
+      }
+    ]
+  },
+  {
+    "framework": "OWASP ASVS 4.0.3",
+    "control_id": "V14.1.4",
+    "control_name": "All components inventoried",
+    "entries": [
+      {
+        "id": "DSGAI03",
+        "name": "Shadow AI and Unsanctioned Data Flows",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Both — **DRAFT — ASVS 5.0.0: DELETED, NOT IN SCOPE; retarget or drop pending SME review (#22)**"
+      }
+    ]
+  },
+  {
+    "framework": "OWASP ASVS 4.0.3",
+    "control_id": "V14.2.1",
+    "control_name": "Verify that sensitive data is only sent to the server in the HTTP message body or header fields, and that the URL and query string do not contain sensitive information, such as an API key or session token.",
+    "entries": [
+      {
+        "id": "LLM06",
+        "name": "Unbounded Consumption",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Token limits on LLM API inputs — requests exceeding limits rejected at the gateway"
+      },
+      {
+        "id": "ASI09",
+        "name": "Human-Agent Trust Exploitation",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Approval flows independent of agent interface — no state-changing approvals via agent chat"
+      },
+      {
+        "id": "DSGAI11",
+        "name": "Cross-Context Conversation Bleed",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Build",
+        "notes": null
+      },
+      {
+        "id": "DSGAI15",
+        "name": "Over-Broad Context Windows",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Build",
+        "notes": null
+      }
+    ]
+  },
+  {
+    "framework": "OWASP ASVS 4.0.3",
+    "control_id": "V14.2.2",
+    "control_name": "Verify that the application prevents sensitive data from being cached in server components, such as load balancers and application caches, or ensures that the data is securely purged after use.",
+    "entries": [
+      {
+        "id": "LLM02",
+        "name": "Sensitive Information Disclosure",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "LLM outputs containing sensitive data not logged in cleartext or cached without protection"
+      },
+      {
+        "id": "LLM08",
+        "name": "Hidden Context Exposure",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "System prompts not stored in cleartext application configuration or source code"
+      },
+      {
+        "id": "DSGAI01",
+        "name": "Sensitive Data Leakage",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": null
+      },
+      {
+        "id": "DSGAI14",
+        "name": "Excessive Telemetry and Monitoring Leakage",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Build",
+        "notes": null
+      }
+    ]
+  },
+  {
+    "framework": "OWASP ASVS 4.0.3",
+    "control_id": "V15.3.3",
+    "control_name": "Verify that the application has countermeasures to protect against mass assignment attacks by limiting allowed fields per controller and action, e.g., it is not possible to insert or update a field value when it was not intended to be part of that action.",
+    "entries": [
+      {
+        "id": "LLM01",
+        "name": "Prompt Injection",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "LLM API request validation — prompt structure, content type, and character set enforced"
+      }
+    ]
+  },
+  {
+    "framework": "OWASP ASVS 4.0.3",
+    "control_id": "V15.3.7",
+    "control_name": "Verify that the application has defenses against HTTP parameter pollution attacks, particularly if the application framework makes no distinction about the source of request parameters (query string, body parameters, cookies, or header fields).",
+    "entries": [
+      {
+        "id": "LLM01",
+        "name": "Prompt Injection",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "All inputs to LLMs validated — indirect injection through processed content equally in scope"
+      },
+      {
+        "id": "LLM05",
+        "name": "Data and Model Poisoning",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Training data pipeline input validation — anomalous data rejected before training"
+      },
+      {
+        "id": "ASI01",
+        "name": "Agent Goal Hijack",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "All inputs to agents validated — indirect injection through processed content equally in scope"
+      },
+      {
+        "id": "ASI06",
+        "name": "Memory and Context Poisoning",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "High",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "All content entering agent memory validated — injection patterns rejected at write boundary"
+      },
+      {
+        "id": "DSGAI05",
+        "name": "Data Integrity and Validation Failures",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Build",
+        "notes": null
+      },
+      {
+        "id": "DSGAI12",
+        "name": "Unsafe Natural Language Data Gateways",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Build",
+        "notes": null
+      }
+    ]
+  },
+  {
+    "framework": "OWASP ASVS 4.0.3",
+    "control_id": "V16.2.5",
+    "control_name": "No credential logging",
+    "entries": [
+      {
+        "id": "DSGAI14",
+        "name": "Excessive Telemetry and Monitoring Leakage",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Build",
+        "notes": null
+      }
+    ]
+  },
+  {
+    "framework": "OWASP ASVS 4.0.3",
+    "control_id": "V16.3.1",
+    "control_name": "Verify that all authentication operations are logged, including successful and unsuccessful attempts. Additional metadata, such as the type of authentication or factors used, should also be collected.",
+    "entries": [
+      {
+        "id": "LLM08",
+        "name": "Hidden Context Exposure",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "All access to system prompts logged — unauthorised access attempts detectable"
+      },
+      {
+        "id": "ASI03",
+        "name": "Identity and Privilege Abuse",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "All credential usage logged — issuance, access, expiry detectable"
+      },
+      {
+        "id": "ASI07",
+        "name": "Insecure Inter-Agent Communications",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "High",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "All A2A messages logged — sender identity, content hash, schema validation results"
+      },
+      {
+        "id": "ASI10",
+        "name": "Rogue Agents",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "All agent actions logged — no production deployment without complete observability"
+      }
+    ]
+  },
+  {
+    "framework": "OWASP ASVS 4.0.3",
+    "control_id": "V16.3.2",
+    "control_name": "Verify that failed authorization attempts are logged. For L3, this must include logging all authorization decisions, including logging when sensitive data is accessed (without logging the sensitive data itself).",
+    "entries": [
+      {
+        "id": "LLM03",
+        "name": "Excessive Agency",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "All LLM tool invocations logged with full context — every tool call auditable"
+      },
+      {
+        "id": "ASI02",
+        "name": "Tool Misuse and Exploitation",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "All tool invocations logged — tool identity, parameters, agent session, timestamp"
+      },
+      {
+        "id": "ASI10",
+        "name": "Rogue Agents",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "All agent tool invocations and recommendations logged — systematic bias detectable through aggregate analysis"
+      },
+      {
+        "id": "DSGAI03",
+        "name": "Shadow AI and Unsanctioned Data Flows",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": null
+      },
+      {
+        "id": "DSGAI08",
+        "name": "Non-Compliance and Regulatory Violations",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": null
+      }
+    ]
+  },
+  {
+    "framework": "OWASP ASVS 4.0.3",
+    "control_id": "V16.5.1",
+    "control_name": "Verify that a generic message is returned to the consumer when an unexpected or security-sensitive error occurs, ensuring no exposure of sensitive internal system data such as stack traces, queries, secret keys, and tokens.",
+    "entries": [
+      {
+        "id": "LLM06",
+        "name": "Unbounded Consumption",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "LLM resource exhaustion errors handled gracefully — no sensitive information in error responses"
+      },
+      {
+        "id": "LLM07",
+        "name": "Misinformation",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "LLM accuracy metrics and hallucination rate logged — production monitoring for output quality"
+      },
+      {
+        "id": "ASI08",
+        "name": "Cascading Agent Failures",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Cascade errors handled gracefully — no sensitive system information in error responses"
+      },
+      {
+        "id": "ASI09",
+        "name": "Human-Agent Trust Exploitation",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Agent-influenced operator decisions logged — aggregate patterns detectable"
+      },
+      {
+        "id": "DSGAI05",
+        "name": "Data Integrity and Validation Failures",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Build",
+        "notes": null
+      }
+    ]
+  },
+  {
+    "framework": "OWASP ASVS 4.0.3",
+    "control_id": "V16.5.3",
+    "control_name": "Access control failures logged",
+    "entries": [
+      {
+        "id": "DSGAI03",
+        "name": "Shadow AI and Unsanctioned Data Flows",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": null
+      },
+      {
+        "id": "DSGAI07",
+        "name": "Data Governance and Lifecycle",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": null
+      }
+    ]
+  },
+  {
+    "framework": "OWASP ASVS 4.0.3",
+    "control_id": "V2.2.1",
+    "control_name": "Input validation server-side",
+    "entries": [
+      {
+        "id": "DSGAI04",
+        "name": "Data Model and Artifact Poisoning",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": null
+      },
+      {
+        "id": "DSGAI16",
+        "name": "Endpoint and Browser Overreach",
         "source_list": "DSGAI-2026",
         "severity": "High",
         "tier": "Foundational",
@@ -30714,8 +31550,8 @@
   },
   {
     "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V11.1.1",
-    "control_name": "Verify business logic assumptions documented",
+    "control_id": "V2.3.1",
+    "control_name": "Verify that the application will only process business logic flows for the same user in the expected sequential step order and without skipping steps.",
     "entries": [
       {
         "id": "LLM07",
@@ -30748,8 +31584,42 @@
   },
   {
     "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V11.1.2",
-    "control_name": "Verify business logic limits prevent abuse of LLM functions",
+    "control_id": "V2.4.1",
+    "control_name": "Verify that anti-automation controls are in place to protect against excessive calls to application functions that could lead to data exfiltration, garbage-data creation, quota exhaustion, rate-limit breaches, denial-of-service, or overuse of costly resources.",
+    "entries": [
+      {
+        "id": "LLM06",
+        "name": "Unbounded Consumption",
+        "source_list": "LLM-Top10-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Business logic controls on LLM usage — per-tenant cost budgets, rate limit policies"
+      },
+      {
+        "id": "DSGAI06",
+        "name": "Tool Plugin and Agent Data Exchange",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": null
+      },
+      {
+        "id": "DSGAI21",
+        "name": "Disinformation via Data Poisoning",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": null
+      }
+    ]
+  },
+  {
+    "framework": "OWASP ASVS 4.0.3",
+    "control_id": "V2.4.2",
+    "control_name": "Verify that business logic flows require realistic human timing, preventing excessively rapid transaction submissions.",
     "entries": [
       {
         "id": "LLM01",
@@ -30818,58 +31688,49 @@
   },
   {
     "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V11.1.4",
-    "control_name": "Verify business logic rate limits",
+    "control_id": "V3.5.1",
+    "control_name": "Verify that, if the application does not rely on the CORS preflight mechanism to prevent disallowed cross-origin requests to use sensitive functionality, these requests are validated to ensure they originate from the application itself. This may be done by using and validating anti-forgery tokens or requiring extra HTTP header fields that are not CORS-safelisted request-header fields. This is to defend against browser-based request forgery attacks, commonly known as cross-site request forgery (CSRF).",
     "entries": [
       {
-        "id": "LLM06",
-        "name": "Unbounded Consumption",
+        "id": "LLM10",
+        "name": "Improper Output Handling",
         "source_list": "LLM-Top10-2026",
         "severity": "High",
         "tier": "Foundational",
         "scope": "Both",
-        "notes": "Business logic controls on LLM usage — per-tenant cost budgets, rate limit policies"
+        "notes": "CSRF protection on endpoints where LLM output triggers state changes"
       }
     ]
   },
   {
     "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V12 Files/Resources",
-    "control_name": "V12.1.1 — File upload size limits",
+    "control_id": "V3.6.1",
+    "control_name": "Verify that client-side assets, such as JavaScript libraries, CSS, or web fonts, are only hosted externally (e.g., on a Content Delivery Network) if the resource is static and versioned and Subresource Integrity (SRI) is used to validate the integrity of the asset. If this is not possible, there should be a documented security decision to justify this for each resource.",
     "entries": [
       {
-        "id": "DSGAI04",
-        "name": "Data Model and Artifact Poisoning",
-        "source_list": "DSGAI-2026",
-        "severity": "Critical",
-        "tier": "Hardening",
-        "scope": "Both",
-        "notes": null
-      },
-      {
-        "id": "DSGAI09",
-        "name": "Multimodal Cross-Channel Leakage",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Hardening",
-        "scope": "Both",
-        "notes": null
-      },
-      {
-        "id": "DSGAI13",
-        "name": "Vector Store Platform Security",
-        "source_list": "DSGAI-2026",
+        "id": "LLM08",
+        "name": "Hidden Context Exposure",
+        "source_list": "LLM-Top10-2026",
         "severity": "High",
         "tier": "Foundational",
         "scope": "Both",
-        "notes": null
+        "notes": "System prompts not hardcoded in source code — stored in secret management system"
+      },
+      {
+        "id": "ASI03",
+        "name": "Identity and Privilege Abuse",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Agent credentials not committed to source control"
       }
     ]
   },
   {
     "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V12.1.1",
-    "control_name": "Verify file uploads scanned for malware",
+    "control_id": "V5.2.1",
+    "control_name": "Verify that the application will only accept files of a size which it can process without causing a loss of performance or a denial of service attack.",
     "entries": [
       {
         "id": "LLM05",
@@ -30897,316 +31758,14 @@
         "tier": "Hardening",
         "scope": "Both",
         "notes": "Content entering agent memory scanned — adversarial content, injection patterns detected before write"
-      }
-    ]
-  },
-  {
-    "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V13 API",
-    "control_name": "V13.1.1 — API protection against enumeration",
-    "entries": [
+      },
       {
-        "id": "DSGAI12",
-        "name": "Unsafe Natural Language Data Gateways",
+        "id": "DSGAI04",
+        "name": "Data Model and Artifact Poisoning",
         "source_list": "DSGAI-2026",
-        "severity": "Critical",
-        "tier": "Foundational",
-        "scope": "Build",
-        "notes": null
-      },
-      {
-        "id": "DSGAI17",
-        "name": "Data Availability and Resilience Failures",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": null
-      }
-    ]
-  },
-  {
-    "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V13.1.1",
-    "control_name": "Verify API rate limiting",
-    "entries": [
-      {
-        "id": "LLM06",
-        "name": "Unbounded Consumption",
-        "source_list": "LLM-Top10-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "Rate limiting on all LLM API endpoints — per user, per session, per API key"
-      },
-      {
-        "id": "ASI02",
-        "name": "Tool Misuse and Exploitation",
-        "source_list": "Agentic-Top10-2026",
-        "severity": "Critical",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "Tool API endpoints rate-limited — anomalous invocation frequency detected"
-      },
-      {
-        "id": "ASI08",
-        "name": "Cascading Agent Failures",
-        "source_list": "Agentic-Top10-2026",
-        "severity": "Critical",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "Rate limiting on all agent API endpoints — cascade amplification through API exhaustion limited"
-      },
-      {
-        "id": "ASI10",
-        "name": "Rogue Agents",
-        "source_list": "Agentic-Top10-2026",
         "severity": "Critical",
         "tier": "Hardening",
         "scope": "Both",
-        "notes": "Rate limiting prevents rogue agent from amplifying impact through API exhaustion"
-      }
-    ]
-  },
-  {
-    "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V13.1.3",
-    "control_name": "Verify API rejects large unexpected payloads",
-    "entries": [
-      {
-        "id": "LLM06",
-        "name": "Unbounded Consumption",
-        "source_list": "LLM-Top10-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "Token limits on LLM API inputs — requests exceeding limits rejected at the gateway"
-      },
-      {
-        "id": "ASI09",
-        "name": "Human-Agent Trust Exploitation",
-        "source_list": "Agentic-Top10-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "Approval flows independent of agent interface — no state-changing approvals via agent chat"
-      }
-    ]
-  },
-  {
-    "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V14 Configuration",
-    "control_name": "V14.1.4 — All components inventoried",
-    "entries": [
-      {
-        "id": "DSGAI03",
-        "name": "Shadow AI and Unsanctioned Data Flows",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": null
-      }
-    ]
-  },
-  {
-    "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V14.2.2",
-    "control_name": "Verify build pipelines include security checks",
-    "entries": [
-      {
-        "id": "LLM04",
-        "name": "Supply Chain",
-        "source_list": "LLM-Top10-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "CI/CD pipeline for LLM components includes integrity verification and vulnerability scanning"
-      },
-      {
-        "id": "ASI04",
-        "name": "Agentic Supply Chain",
-        "source_list": "Agentic-Top10-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "CI/CD pipeline for agent components includes integrity verification and CVE scanning"
-      }
-    ]
-  },
-  {
-    "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V14.2.3",
-    "control_name": "Verify secrets not in source code",
-    "entries": [
-      {
-        "id": "LLM08",
-        "name": "Hidden Context Exposure",
-        "source_list": "LLM-Top10-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "System prompts not hardcoded in source code — stored in secret management system"
-      },
-      {
-        "id": "ASI03",
-        "name": "Identity and Privilege Abuse",
-        "source_list": "Agentic-Top10-2026",
-        "severity": "Critical",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "Agent credentials not committed to source control"
-      }
-    ]
-  },
-  {
-    "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V2 Authentication",
-    "control_name": "V2.1.1 — Passwords minimum 12 characters",
-    "entries": [
-      {
-        "id": "DSGAI02",
-        "name": "Agent Identity and Credential Exposure",
-        "source_list": "DSGAI-2026",
-        "severity": "Critical",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": null
-      },
-      {
-        "id": "DSGAI19",
-        "name": "Human-in-Loop and Labeler Overexposure",
-        "source_list": "DSGAI-2026",
-        "severity": "Medium",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": null
-      }
-    ]
-  },
-  {
-    "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V2.1.1",
-    "control_name": "Verify credentials not in source code",
-    "entries": [
-      {
-        "id": "ASI03",
-        "name": "Identity and Privilege Abuse",
-        "source_list": "Agentic-Top10-2026",
-        "severity": "Critical",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "Agent credentials not hardcoded — secret manager required"
-      }
-    ]
-  },
-  {
-    "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V3 Session Management",
-    "control_name": "V3.1.1 — Session tokens unique and random",
-    "entries": [
-      {
-        "id": "DSGAI11",
-        "name": "Cross-Context Conversation Bleed",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Build",
-        "notes": null
-      },
-      {
-        "id": "DSGAI15",
-        "name": "Over-Broad Context Windows",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Build",
-        "notes": null
-      }
-    ]
-  },
-  {
-    "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V3.3.1",
-    "control_name": "Verify anti-replay tokens in state-changing operations",
-    "entries": [
-      {
-        "id": "ASI07",
-        "name": "Insecure Inter-Agent Communications",
-        "source_list": "Agentic-Top10-2026",
-        "severity": "High",
-        "tier": "Hardening",
-        "scope": "Both",
-        "notes": "Replay protection on all A2A messages — nonces, timestamps, sequence numbers"
-      }
-    ]
-  },
-  {
-    "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V4 Access Control",
-    "control_name": "V4.1.3 — Deny by default access control",
-    "entries": [
-      {
-        "id": "DSGAI01",
-        "name": "Sensitive Data Leakage",
-        "source_list": "DSGAI-2026",
-        "severity": "Critical",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": null
-      },
-      {
-        "id": "DSGAI02",
-        "name": "Agent Identity and Credential Exposure",
-        "source_list": "DSGAI-2026",
-        "severity": "Critical",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": null
-      },
-      {
-        "id": "DSGAI03",
-        "name": "Shadow AI and Unsanctioned Data Flows",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": null
-      },
-      {
-        "id": "DSGAI06",
-        "name": "Tool Plugin and Agent Data Exchange",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": null
-      },
-      {
-        "id": "DSGAI07",
-        "name": "Data Governance and Lifecycle",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": null
-      },
-      {
-        "id": "DSGAI11",
-        "name": "Cross-Context Conversation Bleed",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Build",
-        "notes": null
-      },
-      {
-        "id": "DSGAI12",
-        "name": "Unsafe Natural Language Data Gateways",
-        "source_list": "DSGAI-2026",
-        "severity": "Critical",
-        "tier": "Foundational",
-        "scope": "Build",
         "notes": null
       },
       {
@@ -31217,30 +31776,44 @@
         "tier": "Foundational",
         "scope": "Both",
         "notes": null
-      },
+      }
+    ]
+  },
+  {
+    "framework": "OWASP ASVS 4.0.3",
+    "control_id": "V5.2.4",
+    "control_name": "Malicious file detection on upload",
+    "entries": [
       {
-        "id": "DSGAI14",
-        "name": "Excessive Telemetry and Monitoring Leakage",
+        "id": "DSGAI09",
+        "name": "Multimodal Cross-Channel Leakage",
         "source_list": "DSGAI-2026",
         "severity": "High",
-        "tier": "Foundational",
-        "scope": "Build",
+        "tier": "Hardening",
+        "scope": "Both",
         "notes": null
-      },
+      }
+    ]
+  },
+  {
+    "framework": "OWASP ASVS 4.0.3",
+    "control_id": "V6.2.1",
+    "control_name": "Verify that user set passwords are at least 8 characters in length although a minimum of 15 characters is strongly recommended.",
+    "entries": [
       {
-        "id": "DSGAI15",
-        "name": "Over-Broad Context Windows",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
+        "id": "ASI03",
+        "name": "Identity and Privilege Abuse",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
         "tier": "Foundational",
-        "scope": "Build",
-        "notes": null
+        "scope": "Both",
+        "notes": "Agent credentials not hardcoded — secret manager required"
       },
       {
-        "id": "DSGAI16",
-        "name": "Endpoint and Browser Overreach",
+        "id": "DSGAI02",
+        "name": "Agent Identity and Credential Exposure",
         "source_list": "DSGAI-2026",
-        "severity": "High",
+        "severity": "Critical",
         "tier": "Foundational",
         "scope": "Both",
         "notes": null
@@ -31253,6 +31826,81 @@
         "tier": "Foundational",
         "scope": "Both",
         "notes": null
+      }
+    ]
+  },
+  {
+    "framework": "OWASP ASVS 4.0.3",
+    "control_id": "V7.4.1",
+    "control_name": "Verify that when session termination is triggered (such as logout or expiration), the application disallows any further use of the session. For reference tokens or stateful sessions, this means invalidating the session data at the application backend. Applications using self-contained tokens will need a solution such as maintaining a list of terminated tokens, disallowing tokens produced before a per-user date and time or rotating a per-user signing key.",
+    "entries": [
+      {
+        "id": "ASI07",
+        "name": "Insecure Inter-Agent Communications",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "High",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Replay protection on all A2A messages — nonces, timestamps, sequence numbers"
+      },
+      {
+        "id": "DSGAI11",
+        "name": "Cross-Context Conversation Bleed",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Build",
+        "notes": null
+      }
+    ]
+  },
+  {
+    "framework": "OWASP ASVS 4.0.3",
+    "control_id": "V8.1.3",
+    "control_name": "Sensitive data not in session storage",
+    "entries": [
+      {
+        "id": "DSGAI11",
+        "name": "Cross-Context Conversation Bleed",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Build",
+        "notes": "Build — **DRAFT — ASVS 5.0.0: DELETED, INSUFFICIENT IMPACT; retarget or drop pending SME review (#22)**"
+      }
+    ]
+  },
+  {
+    "framework": "OWASP ASVS 4.0.3",
+    "control_id": "V8.1.4",
+    "control_name": "Sensitive data minimisation",
+    "entries": [
+      {
+        "id": "DSGAI07",
+        "name": "Data Governance and Lifecycle",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Both — **DRAFT — ASVS 5.0.0: DELETED, NOT IN SCOPE; retarget or drop pending SME review (#22)**"
+      },
+      {
+        "id": "DSGAI09",
+        "name": "Multimodal Cross-Channel Leakage",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Both — **DRAFT — ASVS 5.0.0: DELETED, NOT IN SCOPE; retarget or drop pending SME review (#22)**"
+      },
+      {
+        "id": "DSGAI15",
+        "name": "Over-Broad Context Windows",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Build",
+        "notes": "Build — **DRAFT — ASVS 5.0.0: DELETED, NOT IN SCOPE; retarget or drop pending SME review (#22)**"
       },
       {
         "id": "DSGAI20",
@@ -31261,39 +31909,14 @@
         "severity": "High",
         "tier": "Hardening",
         "scope": "Both",
-        "notes": null
+        "notes": "Both — **DRAFT — ASVS 5.0.0: DELETED, NOT IN SCOPE; retarget or drop pending SME review (#22)**"
       }
     ]
   },
   {
     "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V4.1.1",
-    "control_name": "Verify all sensitive functions have access control",
-    "entries": [
-      {
-        "id": "LLM03",
-        "name": "Excessive Agency",
-        "source_list": "LLM-Top10-2026",
-        "severity": "Critical",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "LLM cannot access sensitive functions (write, delete, execute) without explicit authorisation"
-      },
-      {
-        "id": "ASI02",
-        "name": "Tool Misuse and Exploitation",
-        "source_list": "Agentic-Top10-2026",
-        "severity": "Critical",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "All destructive tool operations require explicit authorisation — not inheritable from agent session"
-      }
-    ]
-  },
-  {
-    "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V4.1.3",
-    "control_name": "Verify access control decisions enforce least privilege",
+    "control_id": "V8.2.1",
+    "control_name": "Verify that the application ensures that function-level access is restricted to consumers with explicit permissions.",
     "entries": [
       {
         "id": "LLM02",
@@ -31366,553 +31989,7 @@
         "tier": "Hardening",
         "scope": "Both",
         "notes": "A2A channels enforce sender identity — unauthenticated messages rejected"
-      }
-    ]
-  },
-  {
-    "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V4.2.2",
-    "control_name": "Verify anti-CSRF tokens in state-changing operations",
-    "entries": [
-      {
-        "id": "LLM10",
-        "name": "Improper Output Handling",
-        "source_list": "LLM-Top10-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "CSRF protection on endpoints where LLM output triggers state changes"
-      }
-    ]
-  },
-  {
-    "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V5 Validation",
-    "control_name": "V5.2.8 — Output encoding for context",
-    "entries": [
-      {
-        "id": "DSGAI01",
-        "name": "Sensitive Data Leakage",
-        "source_list": "DSGAI-2026",
-        "severity": "Critical",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": null
       },
-      {
-        "id": "DSGAI04",
-        "name": "Data Model and Artifact Poisoning",
-        "source_list": "DSGAI-2026",
-        "severity": "Critical",
-        "tier": "Hardening",
-        "scope": "Both",
-        "notes": null
-      },
-      {
-        "id": "DSGAI05",
-        "name": "Data Integrity and Validation Failures",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Build",
-        "notes": null
-      },
-      {
-        "id": "DSGAI09",
-        "name": "Multimodal Cross-Channel Leakage",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Hardening",
-        "scope": "Both",
-        "notes": null
-      },
-      {
-        "id": "DSGAI10",
-        "name": "Synthetic Data and Anonymization Pitfalls",
-        "source_list": "DSGAI-2026",
-        "severity": "Medium",
-        "tier": "Hardening",
-        "scope": "Build",
-        "notes": null
-      },
-      {
-        "id": "DSGAI12",
-        "name": "Unsafe Natural Language Data Gateways",
-        "source_list": "DSGAI-2026",
-        "severity": "Critical",
-        "tier": "Foundational",
-        "scope": "Build",
-        "notes": null
-      },
-      {
-        "id": "DSGAI21",
-        "name": "Disinformation via Data Poisoning",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Hardening",
-        "scope": "Both",
-        "notes": null
-      }
-    ]
-  },
-  {
-    "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V5.1.1",
-    "control_name": "Verify all user input validated against an allowlist or rejected",
-    "entries": [
-      {
-        "id": "LLM01",
-        "name": "Prompt Injection",
-        "source_list": "LLM-Top10-2026",
-        "severity": "Critical",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "All inputs to LLMs validated — indirect injection through processed content equally in scope"
-      },
-      {
-        "id": "LLM05",
-        "name": "Data and Model Poisoning",
-        "source_list": "LLM-Top10-2026",
-        "severity": "Critical",
-        "tier": "Hardening",
-        "scope": "Both",
-        "notes": "Training data pipeline input validation — anomalous data rejected before training"
-      },
-      {
-        "id": "ASI01",
-        "name": "Agent Goal Hijack",
-        "source_list": "Agentic-Top10-2026",
-        "severity": "Critical",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "All inputs to agents validated — indirect injection through processed content equally in scope"
-      },
-      {
-        "id": "ASI06",
-        "name": "Memory and Context Poisoning",
-        "source_list": "Agentic-Top10-2026",
-        "severity": "High",
-        "tier": "Hardening",
-        "scope": "Both",
-        "notes": "All content entering agent memory validated — injection patterns rejected at write boundary"
-      }
-    ]
-  },
-  {
-    "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V5.1.2",
-    "control_name": "Verify that HTTP request parts are validated, sanitised, or rejected",
-    "entries": [
-      {
-        "id": "LLM01",
-        "name": "Prompt Injection",
-        "source_list": "LLM-Top10-2026",
-        "severity": "Critical",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "LLM API request validation — prompt structure, content type, and character set enforced"
-      }
-    ]
-  },
-  {
-    "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V5.2.1",
-    "control_name": "Verify output encoding prevents injection attacks",
-    "entries": [
-      {
-        "id": "LLM01",
-        "name": "Prompt Injection",
-        "source_list": "LLM-Top10-2026",
-        "severity": "Critical",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "LLM output encoding before passing to downstream renderers or interpreters"
-      },
-      {
-        "id": "LLM07",
-        "name": "Misinformation",
-        "source_list": "LLM-Top10-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "LLM advisory outputs clearly labelled — users cannot mistake model output for authoritative source"
-      },
-      {
-        "id": "LLM10",
-        "name": "Improper Output Handling",
-        "source_list": "LLM-Top10-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "LLM responses rendered in browser contexts encoded against XSS"
-      },
-      {
-        "id": "ASI01",
-        "name": "Agent Goal Hijack",
-        "source_list": "Agentic-Top10-2026",
-        "severity": "Critical",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "Agent responses encoded before passing to downstream renderers — outputs treated as untrusted"
-      },
-      {
-        "id": "ASI05",
-        "name": "Unexpected Code Execution",
-        "source_list": "Agentic-Top10-2026",
-        "severity": "Critical",
-        "tier": "Hardening",
-        "scope": "Both",
-        "notes": "Agent code output encoded before rendering in any context"
-      },
-      {
-        "id": "ASI09",
-        "name": "Human-Agent Trust Exploitation",
-        "source_list": "Agentic-Top10-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "Agent advisory outputs clearly labelled — users cannot mistake AI output for authoritative content"
-      }
-    ]
-  },
-  {
-    "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V5.2.4",
-    "control_name": "Verify application does not use eval or dynamic code",
-    "entries": [
-      {
-        "id": "LLM10",
-        "name": "Improper Output Handling",
-        "source_list": "LLM-Top10-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "No eval or dynamic code execution of LLM-generated content"
-      },
-      {
-        "id": "ASI05",
-        "name": "Unexpected Code Execution",
-        "source_list": "Agentic-Top10-2026",
-        "severity": "Critical",
-        "tier": "Hardening",
-        "scope": "Both",
-        "notes": "No eval or exec of agent-generated code — absolute prohibition enforced in code review"
-      }
-    ]
-  },
-  {
-    "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V5.2.5",
-    "control_name": "Verify application protects against OS command injection",
-    "entries": [
-      {
-        "id": "LLM01",
-        "name": "Prompt Injection",
-        "source_list": "LLM-Top10-2026",
-        "severity": "Critical",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "LLM-generated content validated before execution in any shell or interpreter context"
-      },
-      {
-        "id": "LLM10",
-        "name": "Improper Output Handling",
-        "source_list": "LLM-Top10-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "LLM-generated commands validated — never raw output in shell context"
-      },
-      {
-        "id": "ASI01",
-        "name": "Agent Goal Hijack",
-        "source_list": "Agentic-Top10-2026",
-        "severity": "Critical",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "Agent-generated instructions not executed in system context without validation"
-      },
-      {
-        "id": "ASI05",
-        "name": "Unexpected Code Execution",
-        "source_list": "Agentic-Top10-2026",
-        "severity": "Critical",
-        "tier": "Hardening",
-        "scope": "Both",
-        "notes": "Agent-generated commands validated before any shell execution"
-      }
-    ]
-  },
-  {
-    "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V5.3.5",
-    "control_name": "Verify output encoding in SQL query context",
-    "entries": [
-      {
-        "id": "LLM10",
-        "name": "Improper Output Handling",
-        "source_list": "LLM-Top10-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "LLM-generated SQL parameterised — never raw LLM output in SQL context"
-      },
-      {
-        "id": "ASI05",
-        "name": "Unexpected Code Execution",
-        "source_list": "Agentic-Top10-2026",
-        "severity": "Critical",
-        "tier": "Hardening",
-        "scope": "Both",
-        "notes": "No raw agent output in SQL context — parameterised execution only"
-      }
-    ]
-  },
-  {
-    "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V6 Cryptography",
-    "control_name": "V6.1.1 — Sensitive data not stored in cleartext",
-    "entries": [
-      {
-        "id": "DSGAI01",
-        "name": "Sensitive Data Leakage",
-        "source_list": "DSGAI-2026",
-        "severity": "Critical",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": null
-      },
-      {
-        "id": "DSGAI13",
-        "name": "Vector Store Platform Security",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": null
-      },
-      {
-        "id": "DSGAI18",
-        "name": "Inference and Data Reconstruction",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Hardening",
-        "scope": "Both",
-        "notes": null
-      }
-    ]
-  },
-  {
-    "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V6.1.1",
-    "control_name": "Verify all sensitive data encrypted at rest",
-    "entries": [
-      {
-        "id": "LLM02",
-        "name": "Sensitive Information Disclosure",
-        "source_list": "LLM-Top10-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "Training data, embeddings, RAG document stores, and prompt caches encrypted at rest"
-      },
-      {
-        "id": "LLM09",
-        "name": "Vector and Embedding Weaknesses",
-        "source_list": "LLM-Top10-2026",
-        "severity": "Medium",
-        "tier": "Hardening",
-        "scope": "Both",
-        "notes": "All vector store content encrypted at rest"
-      },
-      {
-        "id": "ASI03",
-        "name": "Identity and Privilege Abuse",
-        "source_list": "Agentic-Top10-2026",
-        "severity": "Critical",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "Agent credentials encrypted at rest — no cleartext in config or agent memory"
-      },
-      {
-        "id": "ASI06",
-        "name": "Memory and Context Poisoning",
-        "source_list": "Agentic-Top10-2026",
-        "severity": "High",
-        "tier": "Hardening",
-        "scope": "Both",
-        "notes": "Agent memory stores encrypted at rest — embeddings, long-term memory"
-      }
-    ]
-  },
-  {
-    "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V7 Logging",
-    "control_name": "V7.2.2 — Log entries contain required information",
-    "entries": [
-      {
-        "id": "DSGAI03",
-        "name": "Shadow AI and Unsanctioned Data Flows",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": null
-      },
-      {
-        "id": "DSGAI05",
-        "name": "Data Integrity and Validation Failures",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Build",
-        "notes": null
-      },
-      {
-        "id": "DSGAI08",
-        "name": "Non-Compliance and Regulatory Violations",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": null
-      },
-      {
-        "id": "DSGAI14",
-        "name": "Excessive Telemetry and Monitoring Leakage",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Build",
-        "notes": null
-      }
-    ]
-  },
-  {
-    "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V7.2.1",
-    "control_name": "Verify access control decisions logged",
-    "entries": [
-      {
-        "id": "LLM08",
-        "name": "Hidden Context Exposure",
-        "source_list": "LLM-Top10-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "All access to system prompts logged — unauthorised access attempts detectable"
-      },
-      {
-        "id": "ASI03",
-        "name": "Identity and Privilege Abuse",
-        "source_list": "Agentic-Top10-2026",
-        "severity": "Critical",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "All credential usage logged — issuance, access, expiry detectable"
-      },
-      {
-        "id": "ASI07",
-        "name": "Insecure Inter-Agent Communications",
-        "source_list": "Agentic-Top10-2026",
-        "severity": "High",
-        "tier": "Hardening",
-        "scope": "Both",
-        "notes": "All A2A messages logged — sender identity, content hash, schema validation results"
-      },
-      {
-        "id": "ASI10",
-        "name": "Rogue Agents",
-        "source_list": "Agentic-Top10-2026",
-        "severity": "Critical",
-        "tier": "Hardening",
-        "scope": "Both",
-        "notes": "All agent actions logged — no production deployment without complete observability"
-      }
-    ]
-  },
-  {
-    "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V7.2.2",
-    "control_name": "Verify all business logic decisions logged",
-    "entries": [
-      {
-        "id": "LLM03",
-        "name": "Excessive Agency",
-        "source_list": "LLM-Top10-2026",
-        "severity": "Critical",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "All LLM tool invocations logged with full context — every tool call auditable"
-      },
-      {
-        "id": "ASI02",
-        "name": "Tool Misuse and Exploitation",
-        "source_list": "Agentic-Top10-2026",
-        "severity": "Critical",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "All tool invocations logged — tool identity, parameters, agent session, timestamp"
-      },
-      {
-        "id": "ASI10",
-        "name": "Rogue Agents",
-        "source_list": "Agentic-Top10-2026",
-        "severity": "Critical",
-        "tier": "Hardening",
-        "scope": "Both",
-        "notes": "All agent tool invocations and recommendations logged — systematic bias detectable through aggregate analysis"
-      }
-    ]
-  },
-  {
-    "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V7.4.1",
-    "control_name": "Verify error handling does not expose sensitive data",
-    "entries": [
-      {
-        "id": "LLM06",
-        "name": "Unbounded Consumption",
-        "source_list": "LLM-Top10-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "LLM resource exhaustion errors handled gracefully — no sensitive information in error responses"
-      },
-      {
-        "id": "LLM07",
-        "name": "Misinformation",
-        "source_list": "LLM-Top10-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "LLM accuracy metrics and hallucination rate logged — production monitoring for output quality"
-      },
-      {
-        "id": "ASI08",
-        "name": "Cascading Agent Failures",
-        "source_list": "Agentic-Top10-2026",
-        "severity": "Critical",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "Cascade errors handled gracefully — no sensitive system information in error responses"
-      },
-      {
-        "id": "ASI09",
-        "name": "Human-Agent Trust Exploitation",
-        "source_list": "Agentic-Top10-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "Agent-influenced operator decisions logged — aggregate patterns detectable"
-      }
-    ]
-  },
-  {
-    "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V8 Data Protection",
-    "control_name": "V8.1.1 — Sensitive data not transmitted in URL parameters",
-    "entries": [
       {
         "id": "DSGAI01",
         "name": "Sensitive Data Leakage",
@@ -31932,57 +32009,12 @@
         "notes": null
       },
       {
-        "id": "DSGAI07",
-        "name": "Data Governance and Lifecycle",
+        "id": "DSGAI13",
+        "name": "Vector Store Platform Security",
         "source_list": "DSGAI-2026",
         "severity": "High",
         "tier": "Foundational",
         "scope": "Both",
-        "notes": null
-      },
-      {
-        "id": "DSGAI08",
-        "name": "Non-Compliance and Regulatory Violations",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": null
-      },
-      {
-        "id": "DSGAI09",
-        "name": "Multimodal Cross-Channel Leakage",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Hardening",
-        "scope": "Both",
-        "notes": null
-      },
-      {
-        "id": "DSGAI10",
-        "name": "Synthetic Data and Anonymization Pitfalls",
-        "source_list": "DSGAI-2026",
-        "severity": "Medium",
-        "tier": "Hardening",
-        "scope": "Build",
-        "notes": null
-      },
-      {
-        "id": "DSGAI11",
-        "name": "Cross-Context Conversation Bleed",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Build",
-        "notes": null
-      },
-      {
-        "id": "DSGAI14",
-        "name": "Excessive Telemetry and Monitoring Leakage",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Build",
         "notes": null
       },
       {
@@ -31995,11 +32027,11 @@
         "notes": null
       },
       {
-        "id": "DSGAI18",
-        "name": "Inference and Data Reconstruction",
+        "id": "DSGAI16",
+        "name": "Endpoint and Browser Overreach",
         "source_list": "DSGAI-2026",
         "severity": "High",
-        "tier": "Hardening",
+        "tier": "Foundational",
         "scope": "Both",
         "notes": null
       },
@@ -32010,6 +32042,67 @@
         "severity": "Medium",
         "tier": "Foundational",
         "scope": "Both",
+        "notes": null
+      }
+    ]
+  },
+  {
+    "framework": "OWASP ASVS 4.0.3",
+    "control_id": "V8.3.1",
+    "control_name": "Verify that the application enforces authorization rules at a trusted service layer and doesn't rely on controls that an untrusted consumer could manipulate, such as client-side JavaScript.",
+    "entries": [
+      {
+        "id": "LLM03",
+        "name": "Excessive Agency",
+        "source_list": "LLM-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "LLM cannot access sensitive functions (write, delete, execute) without explicit authorisation"
+      },
+      {
+        "id": "ASI02",
+        "name": "Tool Misuse and Exploitation",
+        "source_list": "Agentic-Top10-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "All destructive tool operations require explicit authorisation — not inheritable from agent session"
+      },
+      {
+        "id": "DSGAI06",
+        "name": "Tool Plugin and Agent Data Exchange",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": null
+      },
+      {
+        "id": "DSGAI11",
+        "name": "Cross-Context Conversation Bleed",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Build",
+        "notes": null
+      },
+      {
+        "id": "DSGAI12",
+        "name": "Unsafe Natural Language Data Gateways",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Build",
+        "notes": null
+      },
+      {
+        "id": "DSGAI14",
+        "name": "Excessive Telemetry and Monitoring Leakage",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Build",
         "notes": null
       },
       {
@@ -32025,83 +32118,42 @@
   },
   {
     "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V8.1.1",
-    "control_name": "Verify sensitive data is not cached or exposed in logs",
+    "control_id": "V8.3.10",
+    "control_name": "Personal data not kept longer than needed",
     "entries": [
       {
-        "id": "LLM02",
-        "name": "Sensitive Information Disclosure",
-        "source_list": "LLM-Top10-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "LLM outputs containing sensitive data not logged in cleartext or cached without protection"
-      },
-      {
-        "id": "LLM08",
-        "name": "Hidden Context Exposure",
-        "source_list": "LLM-Top10-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "System prompts not stored in cleartext application configuration or source code"
-      }
-    ]
-  },
-  {
-    "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V8.3.4",
-    "control_name": "Verify PII is identified and protected",
-    "entries": [
-      {
-        "id": "LLM02",
-        "name": "Sensitive Information Disclosure",
-        "source_list": "LLM-Top10-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "PII in LLM training data, RAG sources, and outputs identified and handled per policy"
-      }
-    ]
-  },
-  {
-    "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V9 Communication",
-    "control_name": "V9.1.1 — TLS for all connections",
-    "entries": [
-      {
-        "id": "DSGAI06",
-        "name": "Tool Plugin and Agent Data Exchange",
+        "id": "DSGAI08",
+        "name": "Non-Compliance and Regulatory Violations",
         "source_list": "DSGAI-2026",
         "severity": "High",
         "tier": "Foundational",
         "scope": "Both",
-        "notes": null
+        "notes": "Both — **DRAFT — ASVS 5.0.0: (id absent from the official 4.0.3 mapping); retarget or drop pending SME review (#22)**"
       }
     ]
   },
   {
     "framework": "OWASP ASVS 4.0.3",
-    "control_id": "V9.1.1",
-    "control_name": "Verify all sensitive data encrypted in transit",
+    "control_id": "V8.3.3",
+    "control_name": "Consent obtained before PI processing",
     "entries": [
       {
-        "id": "LLM02",
-        "name": "Sensitive Information Disclosure",
-        "source_list": "LLM-Top10-2026",
+        "id": "DSGAI08",
+        "name": "Non-Compliance and Regulatory Violations",
+        "source_list": "DSGAI-2026",
         "severity": "High",
         "tier": "Foundational",
         "scope": "Both",
-        "notes": "All LLM API communication and data flows encrypted in transit — TLS 1.2 minimum"
+        "notes": "Both — **DRAFT — ASVS 5.0.0: DELETED, NOT IN SCOPE; retarget or drop pending SME review (#22)**"
       },
       {
-        "id": "ASI07",
-        "name": "Insecure Inter-Agent Communications",
-        "source_list": "Agentic-Top10-2026",
-        "severity": "High",
-        "tier": "Hardening",
+        "id": "DSGAI19",
+        "name": "Human-in-Loop and Labeler Overexposure",
+        "source_list": "DSGAI-2026",
+        "severity": "Medium",
+        "tier": "Foundational",
         "scope": "Both",
-        "notes": "All A2A communication encrypted — mutual TLS, no cleartext inter-agent messages"
+        "notes": "Both — **DRAFT — ASVS 5.0.0: DELETED, NOT IN SCOPE; retarget or drop pending SME review (#22)**"
       }
     ]
   },

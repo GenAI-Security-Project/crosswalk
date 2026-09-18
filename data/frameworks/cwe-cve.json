@@ -397,6 +397,11 @@
       "date": "2026-09-18",
       "change": "Migrated off the swapped-column ids of issue #35: 76 items -> 61",
       "author": "OWASP GenAI Data Security Initiative"
+    },
+    {
+      "date": "2026-09-18",
+      "change": "Migrated off the swapped-column ids of issue #35: 61 items -> 61",
+      "author": "OWASP GenAI Data Security Initiative"
     }
   ]
 }
