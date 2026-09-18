@@ -34920,7 +34920,7 @@ window.CROSSWALK_BACKLINKS = [
   {
     "framework": "PCI DSS v4.0",
     "control_id": "Req 1.3",
-    "control_name": "Req 1.3",
+    "control_name": "Network access to and from the cardholder data environment is restricted.",
     "entries": [
       {
         "id": "ASI08",
@@ -34970,7 +34970,7 @@ window.CROSSWALK_BACKLINKS = [
   {
     "framework": "PCI DSS v4.0",
     "control_id": "Req 10.2",
-    "control_name": "Req 10.2",
+    "control_name": "Audit logs are implemented to support the detection of anomalies and suspicious activity, and the forensic analysis of events.",
     "entries": [
       {
         "id": "ASI01",
@@ -35225,7 +35225,7 @@ window.CROSSWALK_BACKLINKS = [
   {
     "framework": "PCI DSS v4.0",
     "control_id": "Req 10.7",
-    "control_name": "Req 10.7",
+    "control_name": "Failures of critical security control systems are detected, reported, and responded to promptly.",
     "entries": [
       {
         "id": "ASI08",
@@ -35241,7 +35241,7 @@ window.CROSSWALK_BACKLINKS = [
   {
     "framework": "PCI DSS v4.0",
     "control_id": "Req 11.3",
-    "control_name": "Req 11.3",
+    "control_name": "External and internal vulnerabilities are regularly identified, prioritized, and addressed.",
     "entries": [
       {
         "id": "ASI01",
@@ -35413,7 +35413,7 @@ window.CROSSWALK_BACKLINKS = [
   {
     "framework": "PCI DSS v4.0",
     "control_id": "Req 12.3",
-    "control_name": "Req 12.3",
+    "control_name": "Risks to the cardholder data environment are formally identified, evaluated, and managed.",
     "entries": [
       {
         "id": "ASI01",
@@ -35619,7 +35619,7 @@ window.CROSSWALK_BACKLINKS = [
   {
     "framework": "PCI DSS v4.0",
     "control_id": "Req 12.6",
-    "control_name": "Req 12.6",
+    "control_name": "Security awareness education is an ongoing activity.",
     "entries": [
       {
         "id": "ASI09",
@@ -35805,7 +35805,7 @@ window.CROSSWALK_BACKLINKS = [
   {
     "framework": "PCI DSS v4.0",
     "control_id": "Req 2.2",
-    "control_name": "Req 2.2",
+    "control_name": "System components are configured and managed securely.",
     "entries": [
       {
         "id": "ASI04",
@@ -35905,7 +35905,7 @@ window.CROSSWALK_BACKLINKS = [
   {
     "framework": "PCI DSS v4.0",
     "control_id": "Req 3.4",
-    "control_name": "Req 3.4",
+    "control_name": "Access to displays of full PAN and ability to copy PAN is restricted.",
     "entries": [
       {
         "id": "ASI06",
@@ -36000,7 +36000,7 @@ window.CROSSWALK_BACKLINKS = [
   {
     "framework": "PCI DSS v4.0",
     "control_id": "Req 3.5",
-    "control_name": "Req 3.5",
+    "control_name": "Primary account number (PAN) is secured wherever it is stored.",
     "entries": [
       {
         "id": "ASI06",
@@ -36104,7 +36104,7 @@ window.CROSSWALK_BACKLINKS = [
   {
     "framework": "PCI DSS v4.0",
     "control_id": "Req 4.2",
-    "control_name": "Req 4.2",
+    "control_name": "PAN is protected with strong cryptography during transmission.",
     "entries": [
       {
         "id": "ASI07",
@@ -36154,7 +36154,7 @@ window.CROSSWALK_BACKLINKS = [
   {
     "framework": "PCI DSS v4.0",
     "control_id": "Req 5.2",
-    "control_name": "Req 5.2",
+    "control_name": "Malicious software (malware) is prevented, or detected and addressed.",
     "entries": [
       {
         "id": "ASI04",
@@ -36283,7 +36283,7 @@ window.CROSSWALK_BACKLINKS = [
   {
     "framework": "PCI DSS v4.0",
     "control_id": "Req 6.3",
-    "control_name": "Req 6.3",
+    "control_name": "Security vulnerabilities are identified and addressed.",
     "entries": [
       {
         "id": "ASI04",
@@ -36342,7 +36342,7 @@ window.CROSSWALK_BACKLINKS = [
   {
     "framework": "PCI DSS v4.0",
     "control_id": "Req 6.4",
-    "control_name": "Req 6.4",
+    "control_name": "Public-facing web applications are protected against attacks.",
     "entries": [
       {
         "id": "ASI05",
@@ -36485,7 +36485,7 @@ window.CROSSWALK_BACKLINKS = [
   {
     "framework": "PCI DSS v4.0",
     "control_id": "Req 7.2",
-    "control_name": "Req 7.2",
+    "control_name": "Access to system components and data is appropriately defined and assigned.",
     "entries": [
       {
         "id": "ASI02",
@@ -36652,7 +36652,7 @@ window.CROSSWALK_BACKLINKS = [
   {
     "framework": "PCI DSS v4.0",
     "control_id": "Req 7.3",
-    "control_name": "Req 7.3",
+    "control_name": "Access to system components and data is managed via an access control system(s).",
     "entries": [
       {
         "id": "ASI02",
@@ -36684,7 +36684,7 @@ window.CROSSWALK_BACKLINKS = [
   {
     "framework": "PCI DSS v4.0",
     "control_id": "Req 8.2",
-    "control_name": "Req 8.2",
+    "control_name": "User identification and related accounts for users and administrators are strictly managed throughout an account's lifecycle.",
     "entries": [
       {
         "id": "ASI03",
@@ -36725,7 +36725,7 @@ window.CROSSWALK_BACKLINKS = [
   {
     "framework": "PCI DSS v4.0",
     "control_id": "Req 8.3",
-    "control_name": "Req 8.3",
+    "control_name": "Strong authentication for users and administrators is established and managed.",
     "entries": [
       {
         "id": "ASI03",
@@ -38297,7 +38297,7 @@ window.CROSSWALK_BACKLINKS = [
   {
     "framework": "SOC 2",
     "control_id": "P7.1",
-    "control_name": "P7.1",
+    "control_name": "The entity collects and maintains accurate, up-to-date, complete, and relevant personal information to meet the entity's objectives related to privacy.",
     "entries": [
       {
         "id": "ASI09",
@@ -38417,7 +38417,7 @@ window.CROSSWALK_BACKLINKS = [
   {
     "framework": "SOC 2",
     "control_id": "PI1.3",
-    "control_name": "PI1.3",
+    "control_name": "The entity implements policies and procedures over system processing to result in products, services, and reporting to meet the entity's objectives.",
     "entries": [
       {
         "id": "ASI09",

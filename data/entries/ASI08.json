@@ -502,7 +502,7 @@
     {
       "framework": "PCI DSS v4.0",
       "control_id": "Req 10.7",
-      "control_name": "Req 10.7",
+      "control_name": "Failures of critical security control systems are detected, reported, and responded to promptly.",
       "tier": "Foundational",
       "scope": "Both",
       "notes": "Monitoring configuration, alert records, detection evidence",
@@ -512,7 +512,7 @@
     {
       "framework": "PCI DSS v4.0",
       "control_id": "Req 12.3",
-      "control_name": "Req 12.3",
+      "control_name": "Risks to the cardholder data environment are formally identified, evaluated, and managed.",
       "tier": "Foundational",
       "scope": "Both",
       "notes": "Risk analysis documentation",
@@ -522,7 +522,7 @@
     {
       "framework": "PCI DSS v4.0",
       "control_id": "Req 1.3",
-      "control_name": "Req 1.3",
+      "control_name": "Network access to and from the cardholder data environment is restricted.",
       "tier": "Foundational",
       "scope": "Both",
       "notes": "Network diagram, segmentation evidence",
@@ -532,7 +532,7 @@
     {
       "framework": "PCI DSS v4.0",
       "control_id": "Req 2.2",
-      "control_name": "Req 2.2",
+      "control_name": "System components are configured and managed securely.",
       "tier": "Foundational",
       "scope": "Both",
       "notes": "Hardening baseline documentation",

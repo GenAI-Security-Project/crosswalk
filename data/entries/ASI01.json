@@ -532,7 +532,7 @@
     {
       "framework": "PCI DSS v4.0",
       "control_id": "Req 11.3",
-      "control_name": "Req 11.3",
+      "control_name": "External and internal vulnerabilities are regularly identified, prioritized, and addressed.",
       "tier": "Foundational",
       "scope": "Both",
       "notes": "Pen test report with goal hijack test cases",
@@ -542,7 +542,7 @@
     {
       "framework": "PCI DSS v4.0",
       "control_id": "Req 10.2",
-      "control_name": "Req 10.2",
+      "control_name": "Audit logs are implemented to support the detection of anomalies and suspicious activity, and the forensic analysis of events.",
       "tier": "Foundational",
       "scope": "Both",
       "notes": "Audit log configuration, sample log entries",
@@ -552,7 +552,7 @@
     {
       "framework": "PCI DSS v4.0",
       "control_id": "Req 12.3",
-      "control_name": "Req 12.3",
+      "control_name": "Risks to the cardholder data environment are formally identified, evaluated, and managed.",
       "tier": "Foundational",
       "scope": "Both",
       "notes": "Risk analysis for agentic AI in PCI scope",

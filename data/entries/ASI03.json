@@ -512,7 +512,7 @@
     {
       "framework": "PCI DSS v4.0",
       "control_id": "Req 8.2",
-      "control_name": "Req 8.2",
+      "control_name": "User identification and related accounts for users and administrators are strictly managed throughout an account's lifecycle.",
       "tier": "Foundational",
       "scope": "Both",
       "notes": "Account inventory, unique account evidence",
@@ -522,7 +522,7 @@
     {
       "framework": "PCI DSS v4.0",
       "control_id": "Req 8.3",
-      "control_name": "Req 8.3",
+      "control_name": "Strong authentication for users and administrators is established and managed.",
       "tier": "Foundational",
       "scope": "Both",
       "notes": "Credential management policy, rotation records",
@@ -532,7 +532,7 @@
     {
       "framework": "PCI DSS v4.0",
       "control_id": "Req 7.2",
-      "control_name": "Req 7.2",
+      "control_name": "Access to system components and data is appropriately defined and assigned.",
       "tier": "Foundational",
       "scope": "Both",
       "notes": "Access control matrix, need-to-know justification",
@@ -542,7 +542,7 @@
     {
       "framework": "PCI DSS v4.0",
       "control_id": "Req 10.2",
-      "control_name": "Req 10.2",
+      "control_name": "Audit logs are implemented to support the detection of anomalies and suspicious activity, and the forensic analysis of events.",
       "tier": "Foundational",
       "scope": "Both",
       "notes": "Authentication audit log",

@@ -512,7 +512,7 @@
     {
       "framework": "PCI DSS v4.0",
       "control_id": "Req 7.2",
-      "control_name": "Req 7.2",
+      "control_name": "Access to system components and data is appropriately defined and assigned.",
       "tier": "Hardening",
       "scope": "Both",
       "notes": "Access control matrix, technical enforcement evidence",
@@ -522,7 +522,7 @@
     {
       "framework": "PCI DSS v4.0",
       "control_id": "Req 10.2",
-      "control_name": "Req 10.2",
+      "control_name": "Audit logs are implemented to support the detection of anomalies and suspicious activity, and the forensic analysis of events.",
       "tier": "Hardening",
       "scope": "Both",
       "notes": "Action audit log, out-of-scope alert records",
@@ -532,7 +532,7 @@
     {
       "framework": "PCI DSS v4.0",
       "control_id": "Req 11.3",
-      "control_name": "Req 11.3",
+      "control_name": "External and internal vulnerabilities are regularly identified, prioritized, and addressed.",
       "tier": "Hardening",
       "scope": "Both",
       "notes": "Pen test report with rogue agent test cases",
@@ -542,7 +542,7 @@
     {
       "framework": "PCI DSS v4.0",
       "control_id": "Req 12.3",
-      "control_name": "Req 12.3",
+      "control_name": "Risks to the cardholder data environment are formally identified, evaluated, and managed.",
       "tier": "Hardening",
       "scope": "Both",
       "notes": "Risk analysis documentation",

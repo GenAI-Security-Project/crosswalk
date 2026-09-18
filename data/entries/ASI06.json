@@ -502,7 +502,7 @@
     {
       "framework": "PCI DSS v4.0",
       "control_id": "Req 3.4",
-      "control_name": "Req 3.4",
+      "control_name": "Access to displays of full PAN and ability to copy PAN is restricted.",
       "tier": "Hardening",
       "scope": "Both",
       "notes": "Memory store review, PAN protection evidence",
@@ -512,7 +512,7 @@
     {
       "framework": "PCI DSS v4.0",
       "control_id": "Req 3.5",
-      "control_name": "Req 3.5",
+      "control_name": "Primary account number (PAN) is secured wherever it is stored.",
       "tier": "Hardening",
       "scope": "Both",
       "notes": "Encryption configuration, key management records",
@@ -532,7 +532,7 @@
     {
       "framework": "PCI DSS v4.0",
       "control_id": "Req 11.3",
-      "control_name": "Req 11.3",
+      "control_name": "External and internal vulnerabilities are regularly identified, prioritized, and addressed.",
       "tier": "Hardening",
       "scope": "Both",
       "notes": "Pen test report",
