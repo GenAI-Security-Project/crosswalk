@@ -164,7 +164,7 @@
     {
       "control_id": "Art. 53(1)(a)",
       "title": "GPAI documentation",
-      "description": "Data governance for training data � sources, quality, privacy measures � is a GPAI documentation obligation; Data governance for GPAI training data is a binding documentation obligation from Aug 2025",
+      "description": "Data governance for training data — sources, quality, privacy measures — is a GPAI documentation obligation; Data governance for GPAI training data is a binding documentation obligation from Aug 2025",
       "kind": "control",
       "parent": null
     },

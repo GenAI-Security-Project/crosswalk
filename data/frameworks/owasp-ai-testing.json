@@ -20,7 +20,7 @@
     {
       "control_id": "AST",
       "title": "Agent-Specific",
-      "description": "Attempt to redirect agent goal through indirect injection paths specific to your deployment � historian data, vendor communications, web results",
+      "description": "Attempt to redirect agent goal through indirect injection paths specific to your deployment — historian data, vendor communications, web results",
       "kind": "control",
       "parent": null
     },
@@ -55,7 +55,7 @@
     {
       "control_id": "MBT",
       "title": "Model Behaviour",
-      "description": "Verify the agent's stated goal at session start matches its actions at session end � test divergence after indirect injection; Verify the LLM's task framing at request start matches its actions and outputs at completion — test divergence after injection",
+      "description": "Verify the agent's stated goal at session start matches its actions at session end — test divergence after indirect injection; Verify the LLM's task framing at request start matches its actions and outputs at completion — test divergence after injection",
       "kind": "control",
       "parent": null
     },

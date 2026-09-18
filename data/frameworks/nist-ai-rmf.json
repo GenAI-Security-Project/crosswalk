@@ -685,7 +685,7 @@
     {
       "control_id": "MP-3.5",
       "title": "AI system impact",
-      "description": "Impact assessment of shadow AI on organisational data security posture � ungoverned data flows quantified; Impact assessment of endpoint AI agents � data access scope, exfiltration paths, user risk",
+      "description": "Impact assessment of shadow AI on organisational data security posture — ungoverned data flows quantified; Impact assessment of endpoint AI agents — data access scope, exfiltration paths, user risk",
       "kind": "control"
     }
   ],

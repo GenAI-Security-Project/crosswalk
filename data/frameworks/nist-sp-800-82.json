@@ -90,35 +90,35 @@
     {
       "control_id": "AC-3",
       "title": "AC-3",
-      "description": "LLM access to OT systems enforced by policy � injection cannot escalate LLM access beyond defined scope; LLM access to OT data enforced by classification � sensitive process and network data requires elevated access tier; LLM access to OT systems enforced by policy � scope cannot be exceeded regardless of model instruction",
+      "description": "LLM access to OT systems enforced by policy — injection cannot escalate LLM access beyond defined scope; LLM access to OT data enforced by classification — sensitive process and network data requires elevated access tier; LLM access to OT systems enforced by policy — scope cannot be exceeded regardless of model instruction",
       "kind": "control",
       "parent": null
     },
     {
       "control_id": "AC-6",
       "title": "AC-6",
-      "description": "LLM granted minimum necessary OT access � read-only to historian, no write access without documented justification",
+      "description": "LLM granted minimum necessary OT access — read-only to historian, no write access without documented justification",
       "kind": "control",
       "parent": null
     },
     {
       "control_id": "AT-3",
       "title": "AT-3",
-      "description": "Operator training on LLM advisory limitations � mandatory for all operators using LLM decision-support tools",
+      "description": "Operator training on LLM advisory limitations — mandatory for all operators using LLM decision-support tools",
       "kind": "control",
       "parent": null
     },
     {
       "control_id": "AU-9",
       "title": "AU-9",
-      "description": "LLM access logs to OT data protected � audit trail of all OT data accessed by LLM; System prompt access logs protected � unauthorised access attempts detectable",
+      "description": "LLM access logs to OT data protected — audit trail of all OT data accessed by LLM; System prompt access logs protected — unauthorised access attempts detectable",
       "kind": "control",
       "parent": null
     },
     {
       "control_id": "AU-12",
       "title": "AU-12",
-      "description": "Full audit trail of LLM outputs � poisoning indicators detectable through output analysis; All LLM actions in OT context logged � full accountability for every OT data access and any recommended action; LLM resource consumption logged � patterns indicating exhaustion attacks detectable",
+      "description": "Full audit trail of LLM outputs — poisoning indicators detectable through output analysis; All LLM actions in OT context logged — full accountability for every OT data access and any recommended action; LLM resource consumption logged — patterns indicating exhaustion attacks detectable",
       "kind": "control",
       "parent": null
     },
@@ -132,7 +132,7 @@
     {
       "control_id": "SA-12",
       "title": "SA-12",
-      "description": "Security requirements applied to all LLM component vendors � provenance, integrity, vulnerability disclosure",
+      "description": "Security requirements applied to all LLM component vendors — provenance, integrity, vulnerability disclosure",
       "kind": "control",
       "parent": null
     },
@@ -146,35 +146,35 @@
     {
       "control_id": "SC-28",
       "title": "SC-28",
-      "description": "OT data used in LLM context encrypted at rest � historian exports, embedding stores, prompt caches; System prompts encrypted at rest � not stored in cleartext configuration files; OT vector store content encrypted at rest",
+      "description": "OT data used in LLM context encrypted at rest — historian exports, embedding stores, prompt caches; System prompts encrypted at rest — not stored in cleartext configuration files; OT vector store content encrypted at rest",
       "kind": "control",
       "parent": null
     },
     {
       "control_id": "SI-3",
       "title": "SI-3",
-      "description": "Treat prompt injection as a malicious code analog � detection and response controls required; LLM output scanning for malicious content before OT system ingestion; Analogy: LLM misinformation detection controls as an integrity assurance layer on advisory outputs",
+      "description": "Treat prompt injection as a malicious code analog — detection and response controls required; LLM output scanning for malicious content before OT system ingestion; Analogy: LLM misinformation detection controls as an integrity assurance layer on advisory outputs",
       "kind": "control",
       "parent": null
     },
     {
       "control_id": "SI-7",
       "title": "SI-7",
-      "description": "Model integrity verification before each OT deployment � hash-based integrity check; Vector store integrity monitoring � alert on anomalous content or unexpected modifications",
+      "description": "Model integrity verification before each OT deployment — hash-based integrity check; Vector store integrity monitoring — alert on anomalous content or unexpected modifications",
       "kind": "control",
       "parent": null
     },
     {
       "control_id": "SI-10",
       "title": "SI-10",
-      "description": "Validate all inputs to LLMs connected to OT systems � reject inputs containing injection indicators; Training data validation � adversarial content detected and rejected before training; LLM outputs validated before passing to OT systems � schema validation, allowlist enforcement",
+      "description": "Validate all inputs to LLMs connected to OT systems — reject inputs containing injection indicators; Training data validation — adversarial content detected and rejected before training; LLM outputs validated before passing to OT systems — schema validation, allowlist enforcement",
       "kind": "control",
       "parent": null
     },
     {
       "control_id": "SI-17",
       "title": "SI-17",
-      "description": "LLM service degradation has defined fail-safe behaviour � process control continues without LLM",
+      "description": "LLM service degradation has defined fail-safe behaviour — process control continues without LLM",
       "kind": "control",
       "parent": null
     },

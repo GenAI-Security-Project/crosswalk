@@ -13,7 +13,7 @@
     {
       "control_id": "2.1",
       "title": "Establish and maintain software inventory",
-      "description": "ML SBOM as software asset inventory � all agent components (tools, MCP servers, models, libraries)",
+      "description": "ML SBOM as software asset inventory — all agent components (tools, MCP servers, models, libraries)",
       "kind": "control",
       "parent": "CIS-2"
     },
@@ -55,14 +55,14 @@
     {
       "control_id": "3.10",
       "title": "Encrypt sensitive data in transit",
-      "description": "All A2A messages encrypted in transit � no cleartext inter-agent communication",
+      "description": "All A2A messages encrypted in transit — no cleartext inter-agent communication",
       "kind": "control",
       "parent": "CIS-3"
     },
     {
       "control_id": "3.11",
       "title": "Encrypt sensitive data at rest",
-      "description": "Agent credentials encrypted at rest � secret manager, no cleartext storage; Agent memory stores encrypted at rest � embeddings, long-term memory, operational knowledge; Embeddings, training data, and RAG caches containing sensitive data encrypted",
+      "description": "Agent credentials encrypted at rest — secret manager, no cleartext storage; Agent memory stores encrypted at rest — embeddings, long-term memory, operational knowledge; Embeddings, training data, and RAG caches containing sensitive data encrypted",
       "kind": "control",
       "parent": "CIS-3"
     },
@@ -76,7 +76,7 @@
     {
       "control_id": "4.1",
       "title": "Establish secure configuration process",
-      "description": "Secure configuration includes code execution sandbox � no defaults permitting unrestricted execution; Secure configuration includes circuit breakers and rate limits � cascade prevention as configuration requirement; Secure configuration for LLM deployments � system prompts not in cleartext config",
+      "description": "Secure configuration includes code execution sandbox — no defaults permitting unrestricted execution; Secure configuration includes circuit breakers and rate limits — cascade prevention as configuration requirement; Secure configuration for LLM deployments — system prompts not in cleartext config",
       "kind": "control",
       "parent": "CIS-4"
     },
@@ -97,21 +97,21 @@
     {
       "control_id": "5.4",
       "title": "Restrict administrator privileges",
-      "description": "Agent tool access managed as privileged access � minimum scope, regular review; Agent credentials managed as privileged accounts � minimum scope, regular review, JIT issuance; Approval flows independent of agent interface � sensitive approvals cannot be completed via agent chat",
+      "description": "Agent tool access managed as privileged access — minimum scope, regular review; Agent credentials managed as privileged accounts — minimum scope, regular review, JIT issuance; Approval flows independent of agent interface — sensitive approvals cannot be completed via agent chat",
       "kind": "control",
       "parent": "CIS-5"
     },
     {
       "control_id": "6.1",
       "title": "Establish access granting process",
-      "description": "Formal process for granting agent tool access � documented justification per tool; Formal process for granting LLM tool access � documented justification required",
+      "description": "Formal process for granting agent tool access — documented justification per tool; Formal process for granting LLM tool access — documented justification required",
       "kind": "control",
       "parent": "CIS-6"
     },
     {
       "control_id": "6.2",
       "title": "Establish an access revoking process",
-      "description": "Agent credential revocation process � immediate revocation on detection, decommission procedure",
+      "description": "Agent credential revocation process — immediate revocation on detection, decommission procedure",
       "kind": "control",
       "parent": "CIS-6"
     },
@@ -138,21 +138,21 @@
     {
       "control_id": "7.1",
       "title": "Establish vulnerability management process",
-      "description": "Agent component CVEs in vulnerability management � urgent patching for code execution risks; Vulnerability management process covers LLM component CVEs and dependency risks",
+      "description": "Agent component CVEs in vulnerability management — urgent patching for code execution risks; Vulnerability management process covers LLM component CVEs and dependency risks",
       "kind": "control",
       "parent": "CIS-7"
     },
     {
       "control_id": "7.5",
       "title": "Perform automated vulnerability scanning",
-      "description": "Automated scanning of training pipeline components � vulnerabilities in data processing libraries",
+      "description": "Automated scanning of training pipeline components — vulnerabilities in data processing libraries",
       "kind": "control",
       "parent": "CIS-7"
     },
     {
       "control_id": "8.2",
       "title": "Collect audit logs",
-      "description": "All agent inputs logged � injection attempts detectable through log analysis; Memory write operations logged � who or what wrote, when, content hash; Comprehensive audit logging of all agent actions � no production deployment without full observability",
+      "description": "All agent inputs logged — injection attempts detectable through log analysis; Memory write operations logged — who or what wrote, when, content hash; Comprehensive audit logging of all agent actions — no production deployment without full observability",
       "kind": "control",
       "parent": "CIS-8"
     },
@@ -166,14 +166,14 @@
     {
       "control_id": "8.5",
       "title": "Collect detailed audit logs",
-      "description": "All tool invocations logged � tool identity, parameters, agent identity, timestamp; All credential operations logged � issuance, use, anomalous patterns detectable; All A2A messages logged � sender identity, content hash, timestamp, schema validation results",
+      "description": "All tool invocations logged — tool identity, parameters, agent identity, timestamp; All credential operations logged — issuance, use, anomalous patterns detectable; All A2A messages logged — sender identity, content hash, timestamp, schema validation results",
       "kind": "control",
       "parent": "CIS-8"
     },
     {
       "control_id": "8.6",
       "title": "Collect DNS query audit logs",
-      "description": "Agent traffic monitored � cascade indicators detected before physical impact",
+      "description": "Agent traffic monitored — cascade indicators detected before physical impact",
       "kind": "control",
       "parent": "CIS-8"
     },
@@ -213,7 +213,7 @@
     {
       "control_id": "12.4",
       "title": "Establish and maintain architecture diagram",
-      "description": "A2A communication channels mapped in network architecture � authentication method, encryption status",
+      "description": "A2A communication channels mapped in network architecture — authentication method, encryption status",
       "kind": "control",
       "parent": "CIS-12"
     },
@@ -233,14 +233,14 @@
     {
       "control_id": "13.1",
       "title": "Centralise security event alerting",
-      "description": "Agent behavioural anomalies centralised and alerted � rogue agent patterns detected through SIEM",
+      "description": "Agent behavioural anomalies centralised and alerted — rogue agent patterns detected through SIEM",
       "kind": "control",
       "parent": "CIS-13"
     },
     {
       "control_id": "13.3",
       "title": "Deploy a network-based intrusion detection system",
-      "description": "Memory store access monitored � bulk read, anomalous write patterns detected",
+      "description": "Memory store access monitored — bulk read, anomalous write patterns detected",
       "kind": "control",
       "parent": "CIS-13"
     },
@@ -260,7 +260,7 @@
     {
       "control_id": "14.1",
       "title": "Establish security awareness programme",
-      "description": "All users of agentic tools trained on AI limitations � verification requirements, how to identify manipulation; User training on LLM data handling � what data should not be shared with LLMs; User training on LLM output limitations � verification requirements and critical evaluation",
+      "description": "All users of agentic tools trained on AI limitations — verification requirements, how to identify manipulation; User training on LLM data handling — what data should not be shared with LLMs; User training on LLM output limitations — verification requirements and critical evaluation",
       "kind": "control",
       "parent": "CIS-14"
     },
@@ -280,35 +280,35 @@
     {
       "control_id": "15.1",
       "title": "Establish service provider management process",
-      "description": "Agent tool and MCP providers managed as service providers � security assessment before onboarding",
+      "description": "Agent tool and MCP providers managed as service providers — security assessment before onboarding",
       "kind": "control",
       "parent": "CIS-15"
     },
     {
       "control_id": "16.1",
       "title": "Establish secure application development standards",
-      "description": "Secure development standards covering agentic integrations � input validation, goal-state verification; Secure development standards covering LLM integration � input validation, context separation",
+      "description": "Secure development standards covering agentic integrations — input validation, goal-state verification; Secure development standards covering LLM integration — input validation, context separation",
       "kind": "control",
       "parent": "CIS-16"
     },
     {
       "control_id": "16.2",
       "title": "Implement code review",
-      "description": "Code review for all LLM integration code � prompt injection patterns reviewed",
+      "description": "Code review for all LLM integration code — prompt injection patterns reviewed",
       "kind": "control",
       "parent": "CIS-16"
     },
     {
       "control_id": "16.6",
       "title": "Use only up-to-date and trusted third-party components",
-      "description": "Approved component list � only sourced from approved vendors, signatures verified; Only approved, verified LLM components used in production � unsigned components rejected",
+      "description": "Approved component list — only sourced from approved vendors, signatures verified; Only approved, verified LLM components used in production — unsigned components rejected",
       "kind": "control",
       "parent": "CIS-16"
     },
     {
       "control_id": "16.7",
       "title": "Use standard hardening configuration templates",
-      "description": "Hardened training pipeline configurations � immutable infrastructure, locked data sources",
+      "description": "Hardened training pipeline configurations — immutable infrastructure, locked data sources",
       "kind": "control",
       "parent": "CIS-16"
     },
@@ -328,28 +328,28 @@
     {
       "control_id": "17.1",
       "title": "Designate personnel for incident response",
-      "description": "Defined response for cascade events � kill switch activation, process control fallback, operations notification; Defined response for trust exploitation incidents � operator retraining, pattern audit, interface redesign; Defined response for LLM misinformation incidents � correction, notification, root cause",
+      "description": "Defined response for cascade events — kill switch activation, process control fallback, operations notification; Defined response for trust exploitation incidents — operator retraining, pattern audit, interface redesign; Defined response for LLM misinformation incidents — correction, notification, root cause",
       "kind": "control",
       "parent": "CIS-17"
     },
     {
       "control_id": "17.2",
       "title": "Establish incident response procedures",
-      "description": "Rogue agent containment as incident response procedure � kill switch, audit, state validation, forensic",
+      "description": "Rogue agent containment as incident response procedure — kill switch, audit, state validation, forensic",
       "kind": "control",
       "parent": "CIS-17"
     },
     {
       "control_id": "18.1",
       "title": "Establish penetration testing programme",
-      "description": "Adversarial testing covering goal hijack � direct, indirect, multi-turn injection scenarios; Adversarial testing programme covering prompt injection scenarios",
+      "description": "Adversarial testing covering goal hijack — direct, indirect, multi-turn injection scenarios; Adversarial testing programme covering prompt injection scenarios",
       "kind": "control",
       "parent": "CIS-18"
     },
     {
       "control_id": "18.3",
       "title": "Remediate penetration testing findings",
-      "description": "Poisoning scenarios in penetration testing � verify data integrity controls hold under attack",
+      "description": "Poisoning scenarios in penetration testing — verify data integrity controls hold under attack",
       "kind": "control",
       "parent": "CIS-18"
     },
