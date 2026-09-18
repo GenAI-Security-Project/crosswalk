@@ -602,7 +602,7 @@ function checkSchemaV2() {
  */
 const MOJIBAKE_FILES = ['**/*.md'];
 
-function checkEncoding(allFiles) {
+function checkEncoding(allFiles, { arrows = true, label = 'markdown content' } = {}) {
   let violations = 0;
 
   for (const fp of allFiles) {
@@ -617,6 +617,7 @@ function checkEncoding(allFiles) {
         violations++;
         return;
       }
+      if (!arrows) return;
       // An arrow flattened to '?': in a heading, at the start of a diagram
       // line, or between two terms.
       const arrowish =
@@ -630,7 +631,7 @@ function checkEncoding(allFiles) {
     });
   }
 
-  if (!violations) pass('Encoding', 'No mojibake found in markdown content');
+  if (!violations) pass('Encoding', `No mojibake found in ${label}`);
   return violations === 0;
 }
 
@@ -1136,6 +1137,21 @@ function run() {
       encodingFiles.push(path.join(ROOT, 'shared', f));
     }
     checkEncoding(encodingFiles);
+
+    // The registries and the entry files ship in the npm package, in
+    // docs/*.js and in the OSCAL/STIX exports, but this guard only ever read
+    // Markdown — so 328 replacement characters sat in data/frameworks
+    // unnoticed (issue #112). JSON is checked for U+FFFD only: the arrow
+    // heuristic is tuned for prose and diagrams.
+    const dataFiles = [];
+    for (const sub of ['frameworks', 'entries', '.']) {
+      const dir = path.join(ROOT, 'data', sub);
+      if (!fs.existsSync(dir)) continue;
+      for (const f of fs.readdirSync(dir).filter((n) => n.endsWith('.json'))) {
+        dataFiles.push(path.join(dir, f));
+      }
+    }
+    checkEncoding(dataFiles, { arrows: false, label: `${dataFiles.length} data files` });
   }
 
   // Attribution guard (C1) — repo-wide, so only in a full run

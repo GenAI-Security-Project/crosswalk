@@ -13,70 +13,70 @@
     {
       "control_id": "NHI-1",
       "title": "Improper Offboarding",
-      "description": "Formal agent offboarding � all credentials revoked, tokens invalidated, access removed",
+      "description": "Formal agent offboarding — all credentials revoked, tokens invalidated, access removed",
       "kind": "control",
       "parent": null
     },
     {
       "control_id": "NHI-2",
       "title": "Secret Leakage",
-      "description": "No credentials in agent context, logs, or tool payloads � secret manager only",
+      "description": "No credentials in agent context, logs, or tool payloads — secret manager only",
       "kind": "control",
       "parent": null
     },
     {
       "control_id": "NHI-3",
       "title": "Vulnerable Third-Party NHI",
-      "description": "Validate all third-party tool identities � reject tokens from unregistered issuers",
+      "description": "Validate all third-party tool identities — reject tokens from unregistered issuers",
       "kind": "control",
       "parent": null
     },
     {
       "control_id": "NHI-4",
       "title": "Insecure Authentication",
-      "description": "Strong authentication for all agent-to-system connections � mTLS, short-lived tokens",
+      "description": "Strong authentication for all agent-to-system connections — mTLS, short-lived tokens",
       "kind": "control",
       "parent": null
     },
     {
       "control_id": "NHI-5",
       "title": "Over-Privileged NHI",
-      "description": "Scope all agent credentials to minimum required � least privilege enforced",
+      "description": "Scope all agent credentials to minimum required — least privilege enforced",
       "kind": "control",
       "parent": null
     },
     {
       "control_id": "NHI-6",
       "title": "Insecure Credential Storage",
-      "description": "Secret manager for all agent credentials � no cleartext storage anywhere",
+      "description": "Secret manager for all agent credentials — no cleartext storage anywhere",
       "kind": "control",
       "parent": null
     },
     {
       "control_id": "NHI-7",
       "title": "Long-Lived Credentials",
-      "description": "Short-lived credentials � tokens expire at task completion, no long-lived agent tokens",
+      "description": "Short-lived credentials — tokens expire at task completion, no long-lived agent tokens",
       "kind": "control",
       "parent": null
     },
     {
       "control_id": "NHI-8",
       "title": "Environment Isolation Failure",
-      "description": "Strict environment isolation � separate credentials per environment, no cross-environment reuse",
+      "description": "Strict environment isolation — separate credentials per environment, no cross-environment reuse",
       "kind": "control",
       "parent": null
     },
     {
       "control_id": "NHI-9",
       "title": "NHI Reuse",
-      "description": "Unique identity per agent � no shared service accounts across agent deployments",
+      "description": "Unique identity per agent — no shared service accounts across agent deployments",
       "kind": "control",
       "parent": null
     },
     {
       "control_id": "NHI-10",
       "title": "Human Use of NHI",
-      "description": "Agent credentials machine-only � human use detected and blocked",
+      "description": "Agent credentials machine-only — human use detected and blocked",
       "kind": "control",
       "parent": null
     }

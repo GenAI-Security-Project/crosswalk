@@ -52,7 +52,7 @@
     {
       "control_id": "5",
       "title": "Policy",
-      "description": "Leadership commitment to AI transparency � AI disclosure and advisory labelling requirements in AI policy; Leadership commitment to human oversight � autonomous action scope defined in AI policy, signed off at executive level",
+      "description": "Leadership commitment to AI transparency — AI disclosure and advisory labelling requirements in AI policy; Leadership commitment to human oversight — autonomous action scope defined in AI policy, signed off at executive level",
       "kind": "control",
       "parent": null
     },
@@ -123,7 +123,7 @@
     {
       "control_id": "7",
       "title": "Support",
-      "description": "Resources for AI systems include NHIs � agent identities inventoried and managed as AIMS resources; Documented information controls � system prompts managed as AIMS documented information with appropriate access controls",
+      "description": "Resources for AI systems include NHIs — agent identities inventoried and managed as AIMS resources; Documented information controls — system prompts managed as AIMS documented information with appropriate access controls",
       "kind": "control",
       "parent": null
     },
@@ -162,7 +162,7 @@
     {
       "control_id": "8",
       "title": "Operation",
-      "description": "A2A communication documented as AIMS operational control � authentication requirements, encryption standards; Operational controls for LLM deployment � output handling requirements documented as AIMS operational procedures",
+      "description": "A2A communication documented as AIMS operational control — authentication requirements, encryption standards; Operational controls for LLM deployment — output handling requirements documented as AIMS operational procedures",
       "kind": "control",
       "parent": null
     },
@@ -201,7 +201,7 @@
     {
       "control_id": "9",
       "title": "Performance evaluation",
-      "description": "Cascade incidents in AIMS performance evaluation � circuit breaker effectiveness, recovery times in management review; Rogue agent detection rates and containment times in AIMS management review; Resource consumption metrics in AIMS performance evaluation � consumption trends in management review",
+      "description": "Cascade incidents in AIMS performance evaluation — circuit breaker effectiveness, recovery times in management review; Rogue agent detection rates and containment times in AIMS management review; Resource consumption metrics in AIMS performance evaluation — consumption trends in management review",
       "kind": "control",
       "parent": null
     },
@@ -301,7 +301,7 @@
     {
       "control_id": "A.5.2",
       "title": "Impact assessment",
-      "description": "Impact assessment covers goal hijack risk � what autonomous actions are possible if goal is redirected, who is affected; Tool misuse impact assessed � what harm is possible if each tool is misused autonomously; Impact of code execution capability formally assessed � RCE impact on persons and systems documented",
+      "description": "Impact assessment covers goal hijack risk — what autonomous actions are possible if goal is redirected, who is affected; Tool misuse impact assessed — what harm is possible if each tool is misused autonomously; Impact of code execution capability formally assessed — RCE impact on persons and systems documented",
       "kind": "control"
     },
     {
@@ -315,25 +315,25 @@
     {
       "control_id": "A.6.1.2",
       "title": "Responsible AI system management",
-      "description": "Tool access managed responsibly throughout agent lifecycle � permission review, irreversibility classification, human oversight requirements; Comprehensive audit logging and rogue agent containment as responsible lifecycle management obligation; LLM components managed responsibly through lifecycle � acquisition, testing, deployment, decommission",
+      "description": "Tool access managed responsibly throughout agent lifecycle — permission review, irreversibility classification, human oversight requirements; Comprehensive audit logging and rogue agent containment as responsible lifecycle management obligation; LLM components managed responsibly through lifecycle — acquisition, testing, deployment, decommission",
       "kind": "control"
     },
     {
       "control_id": "A.6.2.3",
       "title": "AI system security",
-      "description": "Goal-state verification and input validation as AIMS security design requirements � structural controls enforced at orchestration layer; Per-tool permission manifests and parameter validation as AIMS security controls; Credential security as AIMS design requirement � short-lived JIT credentials, no cleartext storage, least privilege",
+      "description": "Goal-state verification and input validation as AIMS security design requirements — structural controls enforced at orchestration layer; Per-tool permission manifests and parameter validation as AIMS security controls; Credential security as AIMS design requirement — short-lived JIT credentials, no cleartext storage, least privilege",
       "kind": "control"
     },
     {
       "control_id": "A.6.2.6",
       "title": "Testing of AI systems",
-      "description": "Goal hijack scenarios in AIMS testing � direct, indirect, multi-turn injection tested before each production release; Sandbox escape and code injection scenarios in AIMS testing � adversarial testing before each deployment; A2A security scenarios in AIMS testing � spoofing, replay, schema violations before deployment",
+      "description": "Goal hijack scenarios in AIMS testing — direct, indirect, multi-turn injection tested before each production release; Sandbox escape and code injection scenarios in AIMS testing — adversarial testing before each deployment; A2A security scenarios in AIMS testing — spoofing, replay, schema violations before deployment",
       "kind": "control"
     },
     {
       "control_id": "A.6.2.8",
       "title": "Monitoring of AI systems",
-      "description": "Memory integrity monitored in operation � anomalous write patterns, content integrity checks as AIMS monitoring; Cascade indicators monitored in operation � correlated failure patterns detected as AIMS monitoring; Behavioural monitoring as AIMS operational control � baseline deviation detection is the primary rogue agent control",
+      "description": "Memory integrity monitored in operation — anomalous write patterns, content integrity checks as AIMS monitoring; Cascade indicators monitored in operation — correlated failure patterns detected as AIMS monitoring; Behavioural monitoring as AIMS operational control — baseline deviation detection is the primary rogue agent control",
       "kind": "control"
     },
     {
@@ -347,13 +347,13 @@
     {
       "control_id": "A.7.2",
       "title": "Data quality",
-      "description": "Training data from third-party sources assessed � same data quality criteria as internal data; Agent memory content quality requirements � access controls, integrity verification, TTL as data quality controls; Training data and RAG content quality requirements � sensitivity, completeness, appropriateness assessed before use",
+      "description": "Training data from third-party sources assessed — same data quality criteria as internal data; Agent memory content quality requirements — access controls, integrity verification, TTL as data quality controls; Training data and RAG content quality requirements — sensitivity, completeness, appropriateness assessed before use",
       "kind": "control"
     },
     {
       "control_id": "A.7.3",
       "title": "Data provenance and characteristics",
-      "description": "Agent credentials tracked as AI system data � issuance, scope, expiry, rotation documented; Memory provenance tracked � source, write access controls, TTL, modification history in AIMS; Data provenance documented � source, classification, handling requirements tracked from ingestion through all derived forms",
+      "description": "Agent credentials tracked as AI system data — issuance, scope, expiry, rotation documented; Memory provenance tracked — source, write access controls, TTL, modification history in AIMS; Data provenance documented — source, classification, handling requirements tracked from ingestion through all derived forms",
       "kind": "control"
     },
     {
@@ -367,7 +367,7 @@
     {
       "control_id": "A.8.1",
       "title": "Information for interested parties",
-      "description": "AI system transparency obligations � users informed of AI nature, advisory status, limitations, EU AI Act Art. 50 alignment; Transparency obligations balanced with operational security � what must be disclosed vs what may be kept confidential; Transparency about AI system limitations � users informed of advisory status, accuracy limitations, verification requirements",
+      "description": "AI system transparency obligations — users informed of AI nature, advisory status, limitations, EU AI Act Art. 50 alignment; Transparency obligations balanced with operational security — what must be disclosed vs what may be kept confidential; Transparency about AI system limitations — users informed of advisory status, accuracy limitations, verification requirements",
       "kind": "control"
     },
     {
@@ -381,7 +381,7 @@
     {
       "control_id": "A.9.1",
       "title": "Use of AI systems",
-      "description": "Guidance on appropriate use � domains requiring human verification, how to distinguish AI advisory from authoritative content; Guidance on AI system use � downstream consumers informed that LLM output must be validated before use; Guidance on appropriate AI system use � domains requiring human verification documented as AIMS use guidance",
+      "description": "Guidance on appropriate use — domains requiring human verification, how to distinguish AI advisory from authoritative content; Guidance on AI system use — downstream consumers informed that LLM output must be validated before use; Guidance on appropriate AI system use — domains requiring human verification documented as AIMS use guidance",
       "kind": "control"
     },
     {
@@ -395,13 +395,13 @@
     {
       "control_id": "A.10.1",
       "title": "Third-party AI system acquisition",
-      "description": "Tool and MCP server providers assessed as third-party AI components � security obligations in contracts; Third-party services accessed via agent credentials assessed � security obligations in access arrangements; All agent tool and MCP server providers assessed � security obligations, integrity guarantees, disclosure SLA in contracts",
+      "description": "Tool and MCP server providers assessed as third-party AI components — security obligations in contracts; Third-party services accessed via agent credentials assessed — security obligations in access arrangements; All agent tool and MCP server providers assessed — security obligations, integrity guarantees, disclosure SLA in contracts",
       "kind": "control"
     },
     {
       "control_id": "A.10.2",
       "title": "Customer relationships",
-      "description": "Obligations to downstream consumers of agentic systems � what supply chain security is guaranteed; LLM deployment obligations to downstream customers � what security properties are guaranteed",
+      "description": "Obligations to downstream consumers of agentic systems — what supply chain security is guaranteed; LLM deployment obligations to downstream customers — what security properties are guaranteed",
       "kind": "control"
     },
     {

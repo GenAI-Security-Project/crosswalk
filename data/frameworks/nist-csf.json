@@ -189,133 +189,133 @@
     {
       "control_id": "GV.OC-01",
       "title": "Organisational Context",
-      "description": "Policy defines permissible agent autonomy � agents cannot change stated goals without human confirmation; Policy defines permissible tool invocations � which tools require human confirmation; Policy requires AI disclosure and advisory labelling � agent transparency as a governance requirement",
+      "description": "Policy defines permissible agent autonomy — agents cannot change stated goals without human confirmation; Policy defines permissible tool invocations — which tools require human confirmation; Policy requires AI disclosure and advisory labelling — agent transparency as a governance requirement",
       "kind": "control"
     },
     {
       "control_id": "PR.PS-04",
       "title": "Platform Security",
-      "description": "Secure software development � input validation and goal-state verification as platform security controls; Secure software development � static analysis, sandbox, allowlist as code execution platform security controls; Secure software development � multi-stage validation, path traversal prevention in ingestion code",
+      "description": "Secure software development — input validation and goal-state verification as platform security controls; Secure software development — static analysis, sandbox, allowlist as code execution platform security controls; Secure software development — multi-stage validation, path traversal prevention in ingestion code",
       "kind": "control"
     },
     {
       "control_id": "DE.CM-01",
       "title": "Continuous Monitoring",
-      "description": "Networks and assets monitored � injection indicators detected across all agent input channels; All tool invocations logged and monitored � anomalous parameters, unusual sequences, high frequency detected; Credential usage monitored � anomalous access patterns detected",
+      "description": "Networks and assets monitored — injection indicators detected across all agent input channels; All tool invocations logged and monitored — anomalous parameters, unusual sequences, high frequency detected; Credential usage monitored — anomalous access patterns detected",
       "kind": "control"
     },
     {
       "control_id": "RS.MI-01",
       "title": "Incident Mitigation",
-      "description": "Incidents contained � agent suspended, actions reversed, kill switch activated; Code execution incidents contained � sandbox isolated, forensic capture initiated; Incidents contained � kill switch activated, process control fallback initiated",
+      "description": "Incidents contained — agent suspended, actions reversed, kill switch activated; Code execution incidents contained — sandbox isolated, forensic capture initiated; Incidents contained — kill switch activated, process control fallback initiated",
       "kind": "control"
     },
     {
       "control_id": "PR.AA-05",
       "title": "Identity Management, Authentication & Access Control",
-      "description": "Access permissions managed � per-tool permission manifests, least privilege per tool, irreversibility classification; Access permissions managed � agent credential scope enforced, least privilege per agent role; Access permissions managed � rogue agent cannot exceed its permission envelope regardless of internal goal state",
+      "description": "Access permissions managed — per-tool permission manifests, least privilege per tool, irreversibility classification; Access permissions managed — agent credential scope enforced, least privilege per agent role; Access permissions managed — rogue agent cannot exceed its permission envelope regardless of internal goal state",
       "kind": "control"
     },
     {
       "control_id": "RS.AN-03",
       "title": "Incident Analysis",
-      "description": "Root cause analysis � which tool was misused, what downstream impact occurred, what parameters were used; Memory poisoning incidents analysed � affected sessions identified, operational decisions influenced reviewed; Root cause analysis � what caused rogue behaviour, which sessions were affected, what was the blast radius",
+      "description": "Root cause analysis — which tool was misused, what downstream impact occurred, what parameters were used; Memory poisoning incidents analysed — affected sessions identified, operational decisions influenced reviewed; Root cause analysis — what caused rogue behaviour, which sessions were affected, what was the blast radius",
       "kind": "control"
     },
     {
       "control_id": "PR.AA-01",
       "title": "Identity Management, Authentication & Access Control",
-      "description": "Identities and credentials managed � NHI inventory, lifecycle management, unique identity per agent; Agent identities managed � each agent has a unique, verifiable identity for A2A authentication; Identities and credentials managed � NHI inventory, lifecycle, short-lived JIT issuance",
+      "description": "Identities and credentials managed — NHI inventory, lifecycle management, unique identity per agent; Agent identities managed — each agent has a unique, verifiable identity for A2A authentication; Identities and credentials managed — NHI inventory, lifecycle, short-lived JIT issuance",
       "kind": "control"
     },
     {
       "control_id": "PR.DS-01",
       "title": "Data Security",
-      "description": "Sensitive data protected at rest � agent credentials encrypted, not stored in cleartext; Agent memory stores protected at rest � access controls, encryption, integrity verification; Sensitive data at rest protected � training data, embeddings, RAG stores, prompt caches encrypted",
+      "description": "Sensitive data protected at rest — agent credentials encrypted, not stored in cleartext; Agent memory stores protected at rest — access controls, encryption, integrity verification; Sensitive data at rest protected — training data, embeddings, RAG stores, prompt caches encrypted",
       "kind": "control"
     },
     {
       "control_id": "GV.SC-01",
       "title": "Supply Chain Risk Management",
-      "description": "Cybersecurity supply chain risk management programme � all agent component vendors in scope; Inter-agent communication infrastructure treated as internal supply chain � authentication requirements documented; All approved AI tools managed as suppliers � TPSP assessment, contractual obligations",
+      "description": "Cybersecurity supply chain risk management programme — all agent component vendors in scope; Inter-agent communication infrastructure treated as internal supply chain — authentication requirements documented; All approved AI tools managed as suppliers — TPSP assessment, contractual obligations",
       "kind": "control"
     },
     {
       "control_id": "GV.SC-06",
       "title": "Supply Chain Risk Management",
-      "description": "Cybersecurity requirements in supplier contracts � integrity guarantees, vulnerability disclosure SLA; Cybersecurity requirements included in contracts with suppliers � LLM model and data vendors",
+      "description": "Cybersecurity requirements in supplier contracts — integrity guarantees, vulnerability disclosure SLA; Cybersecurity requirements included in contracts with suppliers — LLM model and data vendors",
       "kind": "control"
     },
     {
       "control_id": "ID.AM-08",
       "title": "Asset Management",
-      "description": "Agent components inventoried � ML SBOM for all tools, MCP servers, model weights, libraries; Agent memory stores inventoried as data assets � content classification, access controls, TTL documented; All tool integrations inventoried � data received, retained, training use, security assessment status",
+      "description": "Agent components inventoried — ML SBOM for all tools, MCP servers, model weights, libraries; Agent memory stores inventoried as data assets — content classification, access controls, TTL documented; All tool integrations inventoried — data received, retained, training use, security assessment status",
       "kind": "control"
     },
     {
       "control_id": "PR.PS-02",
       "title": "Platform Security",
-      "description": "Software managed to reduce risk � component integrity verification, change management; Software managed to reduce risk � vector database CVEs patched promptly; Software managed to reduce risk � browser AI extensions version-controlled, patched, approved before deployment",
+      "description": "Software managed to reduce risk — component integrity verification, change management; Software managed to reduce risk — vector database CVEs patched promptly; Software managed to reduce risk — browser AI extensions version-controlled, patched, approved before deployment",
       "kind": "control"
     },
     {
       "control_id": "PR.IR-01",
       "title": "Infrastructure Resilience",
-      "description": "Networks and environments protected � sandbox isolated from production infrastructure; Networks and environments protected for resilience � circuit breakers, blast radius limits, fail-safe defaults; Networks and environments protected for resilience � circuit breakers, freshness monitoring, redundancy",
+      "description": "Networks and environments protected — sandbox isolated from production infrastructure; Networks and environments protected for resilience — circuit breakers, blast radius limits, fail-safe defaults; Networks and environments protected for resilience — circuit breakers, freshness monitoring, redundancy",
       "kind": "control"
     },
     {
       "control_id": "DE.CM-09",
       "title": "Continuous Monitoring",
-      "description": "Monitoring for anomalous data � memory content integrity checks, unusual write patterns detected; Monitoring for aggregate over-trust patterns � systematic operator acceptance without verification detected; Monitoring for anomalous data and software use � behavioural baseline deviation detected",
+      "description": "Monitoring for anomalous data — memory content integrity checks, unusual write patterns detected; Monitoring for aggregate over-trust patterns — systematic operator acceptance without verification detected; Monitoring for anomalous data and software use — behavioural baseline deviation detected",
       "kind": "control"
     },
     {
       "control_id": "PR.DS-02",
       "title": "Data Security",
-      "description": "Data in transit protected � all A2A communication encrypted, integrity verified; Sensitive data in transit protected � all GenAI API calls and RAG retrieval paths encrypted; Extracted sensitive content encrypted in transit � multimodal extraction pipelines covered",
+      "description": "Data in transit protected — all A2A communication encrypted, integrity verified; Sensitive data in transit protected — all GenAI API calls and RAG retrieval paths encrypted; Extracted sensitive content encrypted in transit — multimodal extraction pipelines covered",
       "kind": "control"
     },
     {
       "control_id": "RC.RP-01",
       "title": "Incident Recovery",
-      "description": "Recovery plan includes agent cluster failures � BCP covers AI system availability, RTO/RPO defined; Recovery plan includes GenAI pipeline failures � BCP covers AI availability, RTO/RPO defined",
+      "description": "Recovery plan includes agent cluster failures — BCP covers AI system availability, RTO/RPO defined; Recovery plan includes GenAI pipeline failures — BCP covers AI availability, RTO/RPO defined",
       "kind": "control"
     },
     {
       "control_id": "PR.AT-01",
       "title": "Awareness and Training",
-      "description": "Users trained on AI limitations � operators understand agent advisory status and verification requirements; Users trained on shadow AI risk � policy awareness, prohibited tool use, reporting obligations; Labelling staff trained on data handling � classification, prohibited use, incident reporting",
+      "description": "Users trained on AI limitations — operators understand agent advisory status and verification requirements; Users trained on shadow AI risk — policy awareness, prohibited tool use, reporting obligations; Labelling staff trained on data handling — classification, prohibited use, incident reporting",
       "kind": "control"
     },
     {
       "control_id": "RS.CO-03",
       "title": "Communication",
-      "description": "Information shared following incidents � trust exploitation incidents reported to affected users; Regulatory incident communication � breach notification, regulatory reporting, authority contact procedures",
+      "description": "Information shared following incidents — trust exploitation incidents reported to affected users; Regulatory incident communication — breach notification, regulatory reporting, authority contact procedures",
       "kind": "control"
     },
     {
       "control_id": "DE.AE-02",
       "title": "Adverse Event Analysis",
-      "description": "Detected events analysed to understand attack targets � rogue agent patterns correlated across sessions",
+      "description": "Detected events analysed to understand attack targets — rogue agent patterns correlated across sessions",
       "kind": "control"
     },
     {
       "control_id": "GV.RM-06",
       "title": "Risk Management Strategy",
-      "description": "Risk tolerance established � acceptable sensitive data disclosure risk defined per GenAI use case; Agent credential exposure in risk register � blast radius per deployment documented; Risk tolerance defined for re-identification risk in synthetic datasets � legal standard, not technical checkbox",
+      "description": "Risk tolerance established — acceptable sensitive data disclosure risk defined per GenAI use case; Agent credential exposure in risk register — blast radius per deployment documented; Risk tolerance defined for re-identification risk in synthetic datasets — legal standard, not technical checkbox",
       "kind": "control"
     },
     {
       "control_id": "ID.RA-01",
       "title": "Risk Assessment",
-      "description": "Ingestion interface vulnerabilities documented in risk assessment � CVE-2024-3584 class; Compliance risks identified per GenAI deployment � applicable regulations, triggered obligations, controls gaps; Re-identification risk assessed for all synthetic datasets before use or distribution",
+      "description": "Ingestion interface vulnerabilities documented in risk assessment — CVE-2024-3584 class; Compliance risks identified per GenAI deployment — applicable regulations, triggered obligations, controls gaps; Re-identification risk assessed for all synthetic datasets before use or distribution",
       "kind": "control"
     },
     {
       "control_id": "GV.RM-01",
       "title": "Risk Management Strategy",
-      "description": "Risk management strategy includes regulatory compliance risk � GenAI-specific obligations in risk programme; Risk management strategy established � LLM availability requirements and acceptable consumption risk defined",
+      "description": "Risk management strategy includes regulatory compliance risk — GenAI-specific obligations in risk programme; Risk management strategy established — LLM availability requirements and acceptable consumption risk defined",
       "kind": "control"
     }
   ],

@@ -269,79 +269,79 @@
     {
       "control_id": "SR 1.9",
       "title": "Session lock",
-      "description": "Operator-accessible agent kill switch � halt all agent activity immediately without affecting process control; Agent sessions terminated and credentials revoked immediately on compromise detection; Ability to terminate LLM sessions immediately on detection of suspicious behaviour",
+      "description": "Operator-accessible agent kill switch — halt all agent activity immediately without affecting process control; Agent sessions terminated and credentials revoked immediately on compromise detection; Ability to terminate LLM sessions immediately on detection of suspicious behaviour",
       "kind": "control"
     },
     {
       "control_id": "SR 6.6",
       "title": "Timely response to events",
-      "description": "Anomalous tool invocation patterns detected and responded to � alert, suspend, investigate; Cascade indicators detected and responded to before physical process impact; Shadow AI discovery triggers incident response � data impact assessment, vendor notification",
+      "description": "Anomalous tool invocation patterns detected and responded to — alert, suspend, investigate; Cascade indicators detected and responded to before physical process impact; Shadow AI discovery triggers incident response — data impact assessment, vendor notification",
       "kind": "control"
     },
     {
       "control_id": "SR 1.6",
       "title": "Authenticator management",
-      "description": "Agent credentials managed with defined lifecycle � issuance, rotation, revocation procedures; Agent credential lifecycle managed � issuance, rotation, revocation documented per agent; LLM interactions logged with user identity — injection attempts attributable to specific sessions",
+      "description": "Agent credentials managed with defined lifecycle — issuance, rotation, revocation procedures; Agent credential lifecycle managed — issuance, rotation, revocation documented per agent; LLM interactions logged with user identity — injection attempts attributable to specific sessions",
       "kind": "control"
     },
     {
       "control_id": "SR 2.6",
       "title": "Use control",
-      "description": "Only approved, verified agent components permitted in OT zones � no runtime loading of unapproved tools; Rogue agent cannot load additional tools or expand its own capability scope; Only approved, validated data sources permitted in Zone 3 GenAI ingestion � unapproved sources blocked",
+      "description": "Only approved, verified agent components permitted in OT zones — no runtime loading of unapproved tools; Rogue agent cannot load additional tools or expand its own capability scope; Only approved, validated data sources permitted in Zone 3 GenAI ingestion — unapproved sources blocked",
       "kind": "control"
     },
     {
       "control_id": "Supplier security requirements",
       "title": "62443-2-4",
-      "description": "Security requirements applied to all agent tool and MCP server vendors with OT access; GenAI vendors handling OT-derived assets subject to 62443-2-4 programme; GenAI vendors assessed under OT supplier security programme � same requirements as OT software vendors",
+      "description": "Security requirements applied to all agent tool and MCP server vendors with OT access; GenAI vendors handling OT-derived assets subject to 62443-2-4 programme; GenAI vendors assessed under OT supplier security programme — same requirements as OT software vendors",
       "kind": "control"
     },
     {
       "control_id": "SR 2.3",
       "title": "Use control",
-      "description": "Agent code execution restricted to specific, defined operations � no shell access, no network programming; LLM advisory outputs clearly distinguished from authoritative documentation � source always visible; LLM output restricted to authorised actions — no raw output directly to control interfaces",
+      "description": "Agent code execution restricted to specific, defined operations — no shell access, no network programming; LLM advisory outputs clearly distinguished from authoritative documentation — source always visible; LLM output restricted to authorised actions — no raw output directly to control interfaces",
       "kind": "control"
     },
     {
       "control_id": "SR 3.7",
       "title": "Software and information integrity (monitoring)",
-      "description": "Runtime monitoring of agent code execution � anomalous system calls detected and blocked; Continuous monitoring of agent memory for anomalous content patterns or unexpected modifications; Continuous behavioural monitoring of all OT agents � deviation from established baseline detected",
+      "description": "Runtime monitoring of agent code execution — anomalous system calls detected and blocked; Continuous monitoring of agent memory for anomalous content patterns or unexpected modifications; Continuous behavioural monitoring of all OT agents — deviation from established baseline detected",
       "kind": "control"
     },
     {
       "control_id": "SR 4.4",
       "title": "Communication integrity",
-      "description": "Message integrity enforced � replay protection, nonces, sequence numbers on A2A channels; GenAI outputs containing sensitive OT identifiers (tag names, IPs, device types) masked before leaving DMZ; OT-specific data masking before telemetry capture � tag IDs, equipment identifiers masked before logging",
+      "description": "Message integrity enforced — replay protection, nonces, sequence numbers on A2A channels; GenAI outputs containing sensitive OT identifiers (tag names, IPs, device types) masked before leaving DMZ; OT-specific data masking before telemetry capture — tag IDs, equipment identifiers masked before logging",
       "kind": "control"
     },
     {
       "control_id": "SR 7.6",
       "title": "Denial of service protection",
-      "description": "Circuit breakers preventing cascade propagation � agent failure contained within defined blast radius; Poisoned model availability impact contained � fallback procedure prevents physical process disruption; Circuit breakers preventing OT GenAI service degradation from affecting process control",
+      "description": "Circuit breakers preventing cascade propagation — agent failure contained within defined blast radius; Poisoned model availability impact contained — fallback procedure prevents physical process disruption; Circuit breakers preventing OT GenAI service degradation from affecting process control",
       "kind": "control"
     },
     {
       "control_id": "SR 7.7",
       "title": "Control system backup",
-      "description": "Agent system failures cannot affect backup and recovery of OT process control; OT GenAI failures cannot affect backup and recovery of process control � independence verified; LLM resource exhaustion cannot affect backup and recovery of OT control systems",
+      "description": "Agent system failures cannot affect backup and recovery of OT process control; OT GenAI failures cannot affect backup and recovery of process control — independence verified; LLM resource exhaustion cannot affect backup and recovery of OT control systems",
       "kind": "control"
     },
     {
       "control_id": "SR 5.3",
       "title": "Information flow restriction",
-      "description": "OT-sensitive context minimised before tool API calls � tools receive minimum required, not full OT context",
+      "description": "OT-sensitive context minimised before tool API calls — tools receive minimum required, not full OT context",
       "kind": "control"
     },
     {
       "control_id": "Security management system",
       "title": "62443-2-1",
-      "description": "OT security management system updated to cover GenAI deployments � policy, roles, assessment",
+      "description": "OT security management system updated to cover GenAI deployments — policy, roles, assessment",
       "kind": "control"
     },
     {
       "control_id": "Security management",
       "title": "62443-2-1",
-      "description": "OT synthetic data governance policy � when synthetic data removes OT classification obligation",
+      "description": "OT synthetic data governance policy — when synthetic data removes OT classification obligation",
       "kind": "control"
     },
     {

@@ -85,19 +85,19 @@
     {
       "control_id": "V-RT",
       "title": "Verification / Requirements-Driven Testing",
-      "description": "Automated tests verifying PII detection coverage; Tests verifying provenance metadata is preserved through pipeline; Data protection requirements verified in testing � PII patterns confirmed not to appear in LLM outputs",
+      "description": "Automated tests verifying PII detection coverage; Tests verifying provenance metadata is preserved through pipeline; Data protection requirements verified in testing — PII patterns confirmed not to appear in LLM outputs",
       "kind": "control"
     },
     {
       "control_id": "I-SD",
       "title": "Implementation / Secure Deployment",
-      "description": "Infrastructure-as-code with security controls applied at provisioning; Rate limiting and resource controls deployed with every LLM deployment � not optional post-deployment hardening",
+      "description": "Infrastructure-as-code with security controls applied at provisioning; Rate limiting and resource controls deployed with every LLM deployment — not optional post-deployment hardening",
       "kind": "control"
     },
     {
       "control_id": "Monitoring",
       "title": "Operational Management (O-OM)",
-      "description": "Production accuracy monitoring as operational management � drift detection, degradation alerted",
+      "description": "Production accuracy monitoring as operational management — drift detection, degradation alerted",
       "kind": "control"
     }
   ],
