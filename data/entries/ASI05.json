@@ -1162,6 +1162,12 @@
       "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2025,
       "incident_id": "INC-114"
+    },
+    {
+      "name": "Agno agent framework: prompt injection to remote code execution via PythonTools and ShellTools",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-132"
     }
   ],
   "crossrefs": {

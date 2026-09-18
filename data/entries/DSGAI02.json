@@ -1039,6 +1039,12 @@
       "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2026,
       "incident_id": "INC-112"
+    },
+    {
+      "name": "Headroom: cross-site WebSocket hijacking gave any browser page unauthenticated use of the LLM proxy",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-134"
     }
   ],
   "crossrefs": {
