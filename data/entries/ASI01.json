@@ -1326,6 +1326,12 @@
       "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2025,
       "incident_id": "INC-111"
+    },
+    {
+      "name": "Deadbugz — MCP server serves poisoned tool metadata after three calls",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-136"
     }
   ],
   "crossrefs": {
