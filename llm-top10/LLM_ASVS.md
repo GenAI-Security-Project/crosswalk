@@ -11,7 +11,7 @@
 
 Mapping the [OWASP Top 10 for LLM Applications 2026](https://genai.owasp.org/llm-top-10/)
 to the
-[OWASP Application Security Verification Standard (ASVS) 4.0.3](https://owasp.org/www-project-application-security-verification-standard/)
+[OWASP Application Security Verification Standard (ASVS) 4.0.3](https://owasp.org/projects/asvs)
 — the framework for testing and verifying the security of web
 applications and APIs, organised into 14 chapters with three
 verification levels (L1/L2/L3).
@@ -831,7 +831,7 @@ reaches a shell, a browser, or a database.
 
 ## References
 
-- [OWASP ASVS 4.0.3](https://owasp.org/www-project-application-security-verification-standard/)
+- [OWASP ASVS 4.0.3](https://owasp.org/projects/asvs)
 - [OWASP ASVS GitHub](https://github.com/OWASP/ASVS)
 - [OWASP LLM Top 10 2026](https://genai.owasp.org/llm-top-10/)
 - [OWASP AI Testing Guide](https://owasp.org/www-project-ai-testing-guide/)
