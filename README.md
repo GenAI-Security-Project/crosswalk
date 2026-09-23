@@ -63,7 +63,7 @@ node scripts/incidents-report.js --format stix              # SIEM/SOAR export
 | **Red teamer** | [LAAF guide](evals/laaf/README.md) → run S1–S6 attack stages, map results to OWASP |
 | **GRC / auditor** | `compliance-report.js --format oscal` → import into ServiceNow/Archer |
 | **Developer** | `npm install genai-security-crosswalk` → query risks + controls programmatically |
-| **Threat intel analyst** | `incidents-report.js --format stix` → ingest 50 AI incidents into Sentinel/Splunk |
+| **Threat intel analyst** | `incidents-report.js --format stix` → ingest <!-- stats:incidents -->134<!-- /stats --> AI incidents into Sentinel/Splunk |
 
 ---
 
@@ -333,7 +333,7 @@ crosswalk/
 │
 ├── data/
 │   ├── schema.json                  ← JSON Schema (Draft 7) for entry files
-│   ├── incidents.json               ← 50 incidents with MAESTRO layer attribution
+│   ├── incidents.json               ← <!-- stats:incidents -->134<!-- /stats --> incidents with MAESTRO layer attribution
 │   ├── incidents-schema.json        ← JSON Schema for incidents
 │   ├── tools-supplement.json        ← Supplemental tools merged at generation time
 │   ├── entries/                     ← <!-- stats:entries -->51<!-- /stats --> machine-readable entry JSON files
@@ -416,7 +416,7 @@ See `evals/laaf/README.md` for the full LPCI attack vector → OWASP → MAESTRO
 
 ## Incident tracker
 
-50 real-world and research-demonstrated incidents, each mapped to OWASP entries and MAESTRO architectural layers:
+<!-- stats:incidents -->134<!-- /stats --> real-world and research-demonstrated incidents, each mapped to OWASP entries and MAESTRO architectural layers:
 
 ```bash
 node scripts/incidents-report.js                      # all incidents → reports/incidents.md
@@ -441,7 +441,7 @@ No install required. Works on desktop and mobile.
 | [**Score**](https://genai-security-project.github.io/crosswalk/#/score) | Select your frameworks, see coverage gaps. Upload Garak/PyRIT/LAAF results to validate. Share your score card on LinkedIn. |
 | [**Explorer**](https://genai-security-project.github.io/crosswalk/#/explorer) | Search and filter all <!-- stats:entries -->51<!-- /stats --> entries. Click any entry to see controls across all <!-- stats:frameworks-mapped -->26<!-- /stats --> frameworks. |
 | [**Frameworks**](https://genai-security-project.github.io/crosswalk/#/frameworks) | Interactive <!-- stats:entries -->51<!-- /stats -->×<!-- stats:frameworks-mapped -->26<!-- /stats --> coverage matrix. Click any cell to see the specific controls mapped. |
-| [**Incidents**](https://genai-security-project.github.io/crosswalk/#/incidents) | Browse 50 AI security incidents. Filter by severity, year, MAESTRO layer. Full attribution details. |
+| [**Incidents**](https://genai-security-project.github.io/crosswalk/#/incidents) | Browse <!-- stats:incidents -->134<!-- /stats --> AI security incidents. Filter by severity, year, MAESTRO layer. Full attribution details. |
 
 **Evidence-based scoring** — three validation tiers:
 
