@@ -280,6 +280,22 @@
         "raw_description": {
           "type": "string",
           "description": "The original pasted text, retained until a human signs off on the cleaned `description`. Never deleted by tooling."
+        },
+        "incident_class": {
+          "type": "string",
+          "enum": [
+            "tooling-cve",
+            "ai-behaviour"
+          ],
+          "description": "What kind of failure this is. `tooling-cve` is a conventional software vulnerability in GenAI tooling — SQL injection, missing authorisation, CSWSH — that is AI-relevant because of what it exposes, not because the model behaved badly. `ai-behaviour` is a failure of the AI system's own behaviour: prompt injection, poisoning, agent goal deviation. Records without the field predate it."
+        },
+        "mapping_status": {
+          "type": "string",
+          "enum": [
+            "draft",
+            "sme-confirmed"
+          ],
+          "description": "Whether `owasp_entries` has been confirmed by a reviewer. `draft` means an agent proposed the entries from the source text and no SME has signed them off; it is not a claim about the incident, only about who decided the mapping."
         }
       }
     }

@@ -26211,6 +26211,12 @@ window.CROSSWALK_DATA = [
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-112"
+      },
+      {
+        "name": "llmware: SQL injection in the collection-database layer exposed documents the caller was scoped out of",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-135"
       }
     ],
     "crossrefs": {
@@ -38319,6 +38325,12 @@ window.CROSSWALK_DATA = [
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-077"
+      },
+      {
+        "name": "llmware: SQL injection in the collection-database layer exposed documents the caller was scoped out of",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-135"
       }
     ],
     "crossrefs": {
