@@ -1038,6 +1038,18 @@
       "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2026,
       "incident_id": "INC-134"
+    },
+    {
+      "name": "vLLM: chat audio path skipped the decode-duration guard, so a small upload could exhaust worker memory",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-141"
+    },
+    {
+      "name": "vLLM: request-selected GPU video decoder bypassed the engine's static GPU memory reservation",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-142"
     }
   ],
   "crossrefs": {

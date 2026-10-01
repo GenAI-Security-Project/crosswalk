@@ -61,16 +61,16 @@
     }
   },
   "incidents": {
-    "total": 137
+    "total": 147
   },
   "evidence": {
-    "incidents_annotated": 18,
-    "control_failures": 28,
+    "incidents_annotated": 24,
+    "control_failures": 34,
     "confirmed": 0,
-    "drafted": 28,
+    "drafted": 34,
     "mappings_with_confirmed_evidence": 0,
-    "mappings_with_drafted_evidence_only": 27,
-    "orphan_failures": 3
+    "mappings_with_drafted_evidence_only": 28,
+    "orphan_failures": 7
   },
   "freshness": {
     "checked": 5,

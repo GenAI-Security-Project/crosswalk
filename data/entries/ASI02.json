@@ -1279,6 +1279,12 @@
       "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2026,
       "incident_id": "INC-136"
+    },
+    {
+      "name": "Contentful MCP server: LLM-controlled host argument sent the management token to an attacker endpoint",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-147"
     }
   ],
   "crossrefs": {
