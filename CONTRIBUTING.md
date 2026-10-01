@@ -149,7 +149,7 @@ Pages source is deliberately switched to a workflow-based deploy.
 ## Code of conduct
 
 This project follows the
-[OWASP Code of Conduct](https://owasp.org/www-policy/operational/code-of-conduct.html).
+[OWASP Code of Conduct](https://policy.owasp.org/operational/code-of-conduct).
 All contributors are expected to engage respectfully and constructively.
 
 ---
