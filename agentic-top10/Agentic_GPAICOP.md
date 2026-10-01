@@ -9,8 +9,9 @@
 
 # Agentic Top 10 2026 × GPAI Code of Practice
 
-Mapping the [OWASP Top 10 for Agentic Applications 2026](https://genai.owasp.org/resource/agentic-ai-top-10/) to
-[EU AI Act General-Purpose AI Code of Practice](https://code-of-practice.ai/), published by European Commission / AI Office.
+Mapping the [OWASP Top 10 for Agentic Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
+to [EU AI Act General-Purpose AI Code of Practice](https://code-of-practice.ai/),
+published by European Commission / AI Office.
 
 > **Candidate mapping — SME review required.** Every row below is a `DRAFT`.
 > The control ids and titles are read from `data/frameworks/eu-ai-act-cop.json`, so they are

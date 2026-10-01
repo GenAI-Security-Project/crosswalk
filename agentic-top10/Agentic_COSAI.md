@@ -9,8 +9,8 @@
 
 # Agentic Top 10 2026 × CoSAI
 
-Mapping the [OWASP Top 10 for Agentic Applications 2026](https://genai.owasp.org/resource/agentic-ai-top-10/) to
-[CoSAI — Coalition for Secure AI](https://www.coalitionforsecureai.org/), published by OASIS / Coalition for Secure AI.
+Mapping the [OWASP Top 10 for Agentic Applications 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
+to [CoSAI — Coalition for Secure AI](https://www.coalitionforsecureai.org/), published by OASIS / Coalition for Secure AI.
 
 > **Candidate mapping — SME review required.** Every row below is a `DRAFT`.
 > The control ids and titles are read from `data/frameworks/cosai.json`, so they are
