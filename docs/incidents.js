@@ -8677,7 +8677,7 @@ window.CROSSWALK_INCIDENTS = [
     "control_failures": [
       {
         "framework": "MAESTRO",
-        "control_id": "L5.1",
+        "control_id": "L4",
         "outcome": "present-but-bypassed",
         "basis": "while we had tested and validated this sandbox, the agents were able to chain together previously unknown vulnerabilities (“0-days”) in the package management service exposed within the sandbox to bypass restrictions",
         "source_url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead/",
@@ -8701,7 +8701,7 @@ window.CROSSWALK_INCIDENTS = [
       },
       {
         "framework": "MAESTRO",
-        "control_id": "L5.1",
+        "control_id": "L4",
         "outcome": "absent",
         "basis": "Two of our own settings allowed it: we had no admission policy rejecting privileged or hostPath pods, and the CSI driver's ClusterRole granted pod creation cluster-wide.",
         "source_url": "https://huggingface.co/blog/agent-intrusion-technical-timeline",
@@ -8709,7 +8709,7 @@ window.CROSSWALK_INCIDENTS = [
       },
       {
         "framework": "MAESTRO",
-        "control_id": "L5.3",
+        "control_id": "L4",
         "outcome": "absent",
         "basis": "Cloud metadata lockdown: some workloads could reach the instance metadata service (IMDSv2). Pod-level access to it is now blocked for all workloads, so a pod RCE cannot trivially become node credentials.",
         "source_url": "https://huggingface.co/blog/agent-intrusion-technical-timeline",

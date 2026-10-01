@@ -19,60 +19,12 @@
       "kind": "layer"
     },
     {
-      "control_id": "L1.1",
-      "title": "Model provenance verification",
-      "description": "Verify source, training data lineage, and integrity of foundation models before deployment.",
-      "parent": "L1",
-      "function": "Architecture Layer",
-      "kind": "control"
-    },
-    {
-      "control_id": "L1.2",
-      "title": "Model integrity protection",
-      "description": "Protect model weights, parameters, and configuration from unauthorized modification.",
-      "parent": "L1",
-      "function": "Architecture Layer",
-      "kind": "control"
-    },
-    {
-      "control_id": "L1.3",
-      "title": "Fine-tuning security",
-      "description": "Secure fine-tuning pipelines against data poisoning and unauthorized modification.",
-      "parent": "L1",
-      "function": "Architecture Layer",
-      "kind": "control"
-    },
-    {
       "control_id": "L2",
       "title": "Data Operations",
       "description": "Ingestion pipelines, storage, RAG, embeddings, vector stores",
       "parent": null,
       "function": "Architecture Layer",
       "kind": "layer"
-    },
-    {
-      "control_id": "L2.1",
-      "title": "RAG pipeline security",
-      "description": "Secure retrieval-augmented generation pipelines against injection, poisoning, and data leakage.",
-      "parent": "L2",
-      "function": "Architecture Layer",
-      "kind": "control"
-    },
-    {
-      "control_id": "L2.2",
-      "title": "Vector store protection",
-      "description": "Protect vector databases and embedding stores from unauthorized access and manipulation.",
-      "parent": "L2",
-      "function": "Architecture Layer",
-      "kind": "control"
-    },
-    {
-      "control_id": "L2.3",
-      "title": "Training data governance",
-      "description": "Govern training data lifecycle including sourcing, validation, labeling, and retention.",
-      "parent": "L2",
-      "function": "Architecture Layer",
-      "kind": "control"
     },
     {
       "control_id": "L3",
@@ -83,60 +35,12 @@
       "kind": "layer"
     },
     {
-      "control_id": "L3.1",
-      "title": "Agent goal integrity",
-      "description": "Protect agent goals and objectives from hijacking or unauthorized modification.",
-      "parent": "L3",
-      "function": "Architecture Layer",
-      "kind": "control"
-    },
-    {
-      "control_id": "L3.2",
-      "title": "Agent memory security",
-      "description": "Secure agent persistent and session memory against poisoning and unauthorized access.",
-      "parent": "L3",
-      "function": "Architecture Layer",
-      "kind": "control"
-    },
-    {
-      "control_id": "L3.3",
-      "title": "Planning and reasoning validation",
-      "description": "Validate agent planning and reasoning processes to detect manipulation or drift.",
-      "parent": "L3",
-      "function": "Architecture Layer",
-      "kind": "control"
-    },
-    {
       "control_id": "L4",
       "title": "Deployment & Infrastructure",
       "description": "Servers, containers, networks, CI/CD, runtime environments",
       "parent": null,
       "function": "Architecture Layer",
       "kind": "layer"
-    },
-    {
-      "control_id": "L4.1",
-      "title": "Tool authorization and scoping",
-      "description": "Implement least-privilege tool access with explicit authorization for each tool action.",
-      "parent": "L4",
-      "function": "Architecture Layer",
-      "kind": "control"
-    },
-    {
-      "control_id": "L4.2",
-      "title": "MCP server security",
-      "description": "Secure Model Context Protocol servers against injection, spoofing, and unauthorized access.",
-      "parent": "L4",
-      "function": "Architecture Layer",
-      "kind": "control"
-    },
-    {
-      "control_id": "L4.3",
-      "title": "API integration security",
-      "description": "Secure API integrations with authentication, rate limiting, and input/output validation.",
-      "parent": "L4",
-      "function": "Architecture Layer",
-      "kind": "control"
     },
     {
       "control_id": "L5",
@@ -147,30 +51,6 @@
       "kind": "layer"
     },
     {
-      "control_id": "L5.1",
-      "title": "Runtime isolation",
-      "description": "Isolate agent execution environments using containers, sandboxes, or VMs.",
-      "parent": "L5",
-      "function": "Architecture Layer",
-      "kind": "control"
-    },
-    {
-      "control_id": "L5.2",
-      "title": "Secrets and credential management",
-      "description": "Manage secrets, API keys, and credentials used by agents with rotation and least-privilege access.",
-      "parent": "L5",
-      "function": "Architecture Layer",
-      "kind": "control"
-    },
-    {
-      "control_id": "L5.3",
-      "title": "Network segmentation",
-      "description": "Segment networks to limit agent lateral movement and contain blast radius.",
-      "parent": "L5",
-      "function": "Architecture Layer",
-      "kind": "control"
-    },
-    {
       "control_id": "L6",
       "title": "Security & Compliance",
       "description": "Identity, access control, audit, governance, credential management",
@@ -179,60 +59,12 @@
       "kind": "layer"
     },
     {
-      "control_id": "L6.1",
-      "title": "Inter-agent authentication",
-      "description": "Authenticate agents in multi-agent systems to prevent spoofing and impersonation.",
-      "parent": "L6",
-      "function": "Architecture Layer",
-      "kind": "control"
-    },
-    {
-      "control_id": "L6.2",
-      "title": "Delegation controls",
-      "description": "Control and audit task delegation between agents with authority boundaries.",
-      "parent": "L6",
-      "function": "Architecture Layer",
-      "kind": "control"
-    },
-    {
-      "control_id": "L6.3",
-      "title": "Cascading failure prevention",
-      "description": "Implement circuit breakers and isolation patterns to prevent cascading failures across agents.",
-      "parent": "L6",
-      "function": "Architecture Layer",
-      "kind": "control"
-    },
-    {
       "control_id": "L7",
       "title": "Agent Ecosystem",
       "description": "Multi-agent interaction, A2A communication, cascade dynamics",
       "parent": null,
       "function": "Architecture Layer",
       "kind": "layer"
-    },
-    {
-      "control_id": "L7.1",
-      "title": "Output validation and filtering",
-      "description": "Validate and filter agent outputs before presenting to users or executing actions.",
-      "parent": "L7",
-      "function": "Architecture Layer",
-      "kind": "control"
-    },
-    {
-      "control_id": "L7.2",
-      "title": "Human oversight integration",
-      "description": "Integrate human-in-the-loop controls for high-risk decisions and actions.",
-      "parent": "L7",
-      "function": "Architecture Layer",
-      "kind": "control"
-    },
-    {
-      "control_id": "L7.3",
-      "title": "Trust calibration",
-      "description": "Help users calibrate trust in agent outputs with confidence indicators and provenance.",
-      "parent": "L7",
-      "function": "Architecture Layer",
-      "kind": "control"
     }
   ],
   "changelog": [
@@ -245,13 +77,18 @@
       "date": "2026-09-14",
       "change": "Layer descriptions L1–L7 transcribed from the architecture table in llm-top10/LLM_MAESTRO.md. #32 corrected the titles to the CSA model but left the descriptions of the superseded one, so L4–L7 each carried the correct name and another layer's definition. Sub-controls unchanged (issue #31).",
       "author": "OWASP GenAI Data Security Initiative"
+    },
+    {
+      "date": "2026-10-01",
+      "change": "Removed the 21 sub-controls L1.1–L7.3 (issue #31). They were not from the CSA source, which defines seven layers and no numbered sub-controls, and were written against the superseded layer model, so several sat under a layer whose definition no longer described them. No mapping row cited them. INC-137’s three draft control_failures that cited L5.1/L5.3 were retargeted to the layer L4 in the same change. Ids removed: L1.1, L1.2, L1.3, L2.1, L2.2, L2.3, L3.1, L3.2, L3.3, L4.1, L4.2, L4.3, L5.1, L5.2, L5.3, L6.1, L6.2, L6.3, L7.1, L7.2, L7.3.",
+      "author": "OWASP GenAI Data Security Initiative"
     }
   ],
   "inventory_completeness": {
-    "status": "unknown",
-    "included": 21,
-    "total": null,
-    "note": "Authoritative control count not established. Needs a count from the published framework.",
+    "status": "complete",
+    "included": 7,
+    "total": 7,
+    "note": "MAESTRO defines seven layers and no numbered sub-controls (\"MAESTRO is built around a seven-layer reference architecture\"). All mappings cite the layers.",
     "source": "https://cloudsecurityalliance.org/blog/2025/02/06/agentic-ai-threat-modeling-framework-maestro"
   }
 }
