@@ -164,6 +164,10 @@
             "type": "string",
             "description": "The framework release this row was authored against, e.g. \"ISO 27001:2022\". Pinning it is what makes version rot detectable instead of silent."
           },
+          "verification_method": {
+            "type": "string",
+            "description": "How can we check that the control is implemented for this risk: the evidence, test or artefact to examine. Optional. Not exported to OLIR, which has no corresponding field."
+          },		  
           "reviewed_by": {
             "type": "array",
             "items": {

@@ -36,6 +36,7 @@ than a rewrite of it.
 | `framework_version` | string | crosswalk |
 | `reviewed_by` | string[] | crosswalk |
 | `review_date` | date | crosswalk |
+| `verification_method` | string | crosswalk |
 
 ### `relationship` — the logical comparison
 
@@ -102,6 +103,19 @@ against is what makes version rot **detectable** — without it, a mapping writt
 against ASVS 4.0.3 and a mapping written against 5.0 are indistinguishable.
 
 `reviewed_by` holds named humans. An agent never adds itself.
+
+### `verification_method` — how the control is checked
+
+`verification_method` says how an assessor confirms the control is actually in
+place: evidence, validation test(s), or artefacts to inspect.
+
+The field is optional and non-breaking. Rows without it are unchanged.
+
+- Method is a security judgment, so it lands as `DRAFT — <method>` pending SME
+  review, the same as `relationship` and `confidence`.
+- Where a method is adapted from an external source, cite the specific control
+  in the cell and attribute the source in the file header.
+- It is not exported to OLIR, which has no corresponding field.
 
 ---
 

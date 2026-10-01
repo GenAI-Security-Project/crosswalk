@@ -12,6 +12,8 @@ export interface Mapping {
   control_name: string;
   tier?: string;
   notes?: string;
+  /** How to verify the control is implemented for this risk. Optional. */
+  verification_method?: string;
   /**
    * Distinct incidents that exemplify this entry and record a CONFIRMED failure
    * of this control. Generated; present only on rows with linked failures.
