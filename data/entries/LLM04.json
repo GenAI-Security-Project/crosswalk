@@ -1163,6 +1163,30 @@
       "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2023,
       "incident_id": "INC-079"
+    },
+    {
+      "name": "LMDeploy: ZeroMQ RPC server deserialised network messages with pickle, giving remote code execution",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-138"
+    },
+    {
+      "name": "LMDeploy: DistServe control plane deserialised pickle from a peer address any caller could set",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-139"
+    },
+    {
+      "name": "LMDeploy: model config value passed to eval(), so loading a malicious Hugging Face model ran code",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-140"
+    },
+    {
+      "name": "vLLM: operator's model revision pin not applied to some processor, tokenizer and config loads",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-143"
     }
   ],
   "crossrefs": {

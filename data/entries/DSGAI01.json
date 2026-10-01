@@ -1190,6 +1190,12 @@
       "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2026,
       "incident_id": "INC-135"
+    },
+    {
+      "name": "SQLBot: SQL injection in table preview read server files through the internal PostgreSQL superuser",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-146"
     }
   ],
   "crossrefs": {

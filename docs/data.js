@@ -1442,6 +1442,12 @@ window.CROSSWALK_DATA = [
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-133"
+      },
+      {
+        "name": "Contentful MCP server: LLM-controlled host argument sent the management token to an attacker endpoint",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-148"
       }
     ],
     "crossrefs": {
@@ -5101,6 +5107,30 @@ window.CROSSWALK_DATA = [
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-079"
+      },
+      {
+        "name": "LMDeploy: ZeroMQ RPC server deserialised network messages with pickle, giving remote code execution",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-138"
+      },
+      {
+        "name": "LMDeploy: DistServe control plane deserialised pickle from a peer address any caller could set",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-139"
+      },
+      {
+        "name": "LMDeploy: model config value passed to eval(), so loading a malicious Hugging Face model ran code",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-140"
+      },
+      {
+        "name": "vLLM: operator's model revision pin not applied to some processor, tokenizer and config loads",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-143"
       }
     ],
     "crossrefs": {
@@ -7354,6 +7384,18 @@ window.CROSSWALK_DATA = [
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-134"
+      },
+      {
+        "name": "vLLM: chat audio path skipped the decode-duration guard, so a small upload could exhaust worker memory",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-141"
+      },
+      {
+        "name": "vLLM: request-selected GPU video decoder bypassed the engine's static GPU memory reservation",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-142"
       }
     ],
     "crossrefs": {
@@ -15518,6 +15560,12 @@ window.CROSSWALK_DATA = [
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-136"
+      },
+      {
+        "name": "Contentful MCP server: LLM-controlled host argument sent the management token to an attacker endpoint",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-148"
       }
     ],
     "crossrefs": {
@@ -26336,6 +26384,12 @@ window.CROSSWALK_DATA = [
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-135"
+      },
+      {
+        "name": "SQLBot: SQL injection in table preview read server files through the internal PostgreSQL superuser",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-146"
       }
     ],
     "crossrefs": {
@@ -27417,6 +27471,12 @@ window.CROSSWALK_DATA = [
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-134"
+      },
+      {
+        "name": "Contentful MCP server: LLM-controlled host argument sent the management token to an attacker endpoint",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-148"
       }
     ],
     "crossrefs": {
@@ -29525,6 +29585,12 @@ window.CROSSWALK_DATA = [
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-108"
+      },
+      {
+        "name": "LMDeploy: model config value passed to eval(), so loading a malicious Hugging Face model ran code",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-140"
       }
     ],
     "crossrefs": {
@@ -36850,7 +36916,15 @@ window.CROSSWALK_DATA = [
         "parent": "V5",
         "framework_version": "ASVS 5.0.0",
         "confidence": "unreviewed",
-        "reviewed_by": []
+        "reviewed_by": [],
+        "evidence_count": 0,
+        "evidence": {
+          "confirmed": [],
+          "drafted": [
+            "INC-146",
+            "INC-147"
+          ]
+        }
       },
       {
         "framework": "OWASP ASVS 4.0.3",
@@ -37509,6 +37583,30 @@ window.CROSSWALK_DATA = [
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2023,
         "incident_id": "INC-078"
+      },
+      {
+        "name": "SQLBot: spreadsheet upload wrote attacker-named files into the migration directory, run at next startup",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-144"
+      },
+      {
+        "name": "SQLBot: SVG logo upload stored and served unsanitised, giving stored XSS in the application origin",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-145"
+      },
+      {
+        "name": "SQLBot: SQL injection in table preview read server files through the internal PostgreSQL superuser",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-146"
+      },
+      {
+        "name": "SQLBot: second-order SQL injection in datasource cleanup ran OS commands via COPY TO PROGRAM",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-147"
       }
     ],
     "crossrefs": {
