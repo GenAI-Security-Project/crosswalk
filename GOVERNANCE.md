@@ -52,6 +52,11 @@ for the same vulnerability and framework:
 3. If no framework lead exists, the lead maintainer decides.
 4. The losing proposal's evidence is documented in a `<!-- DISPUTE -->` comment in the file.
 
+**Incoming items** — research, CVEs and framework-change alerts raised by the
+weekly watcher are routed by [docs/TRIAGE_RULES.md](docs/TRIAGE_RULES.md), which
+fixes what may enter the incident index, what is catalogued as an external
+benchmark, and what is noted and closed.
+
 ---
 
 ## Release process
