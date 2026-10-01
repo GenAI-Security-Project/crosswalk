@@ -41444,9 +41444,9 @@ window.CROSSWALK_DATA = [
     ],
     "tools": [
       {
-        "name": "LayerX Security",
+        "name": "Akamai Workforce Protector (formerly LayerX)",
         "type": "commercial",
-        "url": "https://layerxsecurity.com"
+        "url": "https://www.akamai.com/products/akamai-workforce-protector"
       },
       {
         "name": "Microsoft Intune",
