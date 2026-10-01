@@ -757,6 +757,7 @@
       "control_name": "Third-party testing of adversarial robustness",
       "tier": "Hardening",
       "scope": "Both",
+      "verification_method": "DRAFT — Confirm tools, connectors and MCP servers are in the scope of the current third-party adversarial test report",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
@@ -775,6 +776,7 @@
       "control_name": "Protect model deployment environment",
       "tier": "Hardening",
       "scope": "Both",
+      "verification_method": "DRAFT — Verification record for each deployed component + Verify signatures; reconcile the SBOM against deployed components (NPW E02, E09)",
       "confidence": "unreviewed",
       "reviewed_by": []
     },

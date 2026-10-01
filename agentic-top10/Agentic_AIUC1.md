@@ -2,9 +2,11 @@
   OWASP GenAI Crosswalk
   Source list : OWASP Top 10 for Agentic Applications 2026 (ASI01–ASI10)
   Framework   : AIUC-1 — The standard for AI agent security, safety and reliability
-  Version     : 2026-Q1
+  Version     : 2026-Q4
   Maintained by: OWASP GenAI Data Security Initiative — https://genai.owasp.org
   License     : CC BY-SA 4.0
+  Verification: Methods adapted from the NPW Agentic AI Control Catalogue v2.4.0,
+                New Pacific Way Ltd., CC BY-SA 4.0 — https://www.newpacificway.com/ai-controls
 -->
 
 # Agentic Top 10 2026 × AIUC-1
@@ -109,12 +111,12 @@ silent data exfiltration engine via indirect prompt injection.
 
 #### AIUC-1 mapping
 
-| Control | ID | Description | Tier | Scope |
-|---|---|---|---|---|
-| Third-party testing of adversarial robustness | B001 | Mandatory adversarial testing program validating resilience against prompt injection and goal manipulation attempts | Foundational | Both |
-| Detect adversarial input | B002 | Runtime monitoring to detect and respond to adversarial inputs redirecting agent goals | Hardening | Both |
-| Implement real-time input filtering | B005 | Automated moderation filtering inputs before they reach agent reasoning | Foundational | Both |
-| Prevent unauthorized AI agent actions | B006 | Safeguards preventing agents from performing actions beyond authorised scope — directly blocks goal hijack execution | Foundational | Both |
+| Control | ID | Description | Tier | Scope | Verification method |
+|---|---|---|---|---|---|
+| Third-party testing of adversarial robustness | B001 | Mandatory adversarial testing program validating resilience against prompt injection and goal manipulation attempts | Foundational | Both | DRAFT — Injection test executed through each distinct ingestion path + Inject a sub-goal in test; confirm detection and that the attempt is counted (NPW C02, C07); evidence: current third-party test report |
+| Detect adversarial input | B002 | Runtime monitoring to detect and respond to adversarial inputs redirecting agent goals | Hardening | Both | DRAFT — Inject a sub-goal in test; confirm detection and that the attempt is counted + Introduce a known deviation and confirm the auditing model flags it (NPW C07, H08) |
+| Implement real-time input filtering | B005 | Automated moderation filtering inputs before they reach agent reasoning | Foundational | Both | DRAFT — Filter evaluated against a defined test set + Run a maintained payload test corpus (NPW C05, C03) |
+| Prevent unauthorized AI agent actions | B006 | Safeguards preventing agents from performing actions beyond authorised scope — directly blocks goal hijack execution | Foundational | Both | DRAFT — Agent Charter present, current, and matching observed behaviour + Attempt objective modification through the reflection path; confirm rejection (NPW B01, C08) |
 
 #### Mitigations by tier
 
@@ -167,12 +169,12 @@ attacker.
 
 #### AIUC-1 mapping
 
-| Control | ID | Description | Tier | Scope |
-|---|---|---|---|---|
-| Third-party testing of adversarial robustness | B001 | Adversarial testing specifically covering tool misuse and unsafe tool chaining | Foundational | Both |
-| Prevent AI endpoint scraping | B004 | Safeguards preventing probing of tool endpoints and rate-limit abuse | Foundational | Both |
-| Prevent unauthorized AI agent actions | B006 | Core control — agents restricted to narrowest permission set per tool, blocking misuse by design | Foundational | Both |
-| Enforce user access privileges to AI systems | B007 | User-level access controls ensuring agents cannot invoke tools beyond what the authorising user can access | Foundational | Both |
+| Control | ID | Description | Tier | Scope | Verification method |
+|---|---|---|---|---|---|
+| Third-party testing of adversarial robustness | B001 | Adversarial testing specifically covering tool misuse and unsafe tool chaining | Foundational | Both | DRAFT — Execute a known policy-circumventing chain in a test environment + Attempt an out-of-scope tool call and confirm denial (NPW H09, A08); evidence: current third-party test report |
+| Prevent AI endpoint scraping | B004 | Safeguards preventing probing of tool endpoints and rate-limit abuse | Foundational | Both | DRAFT — Review limit configuration; force a breach in a test environment (NPW B04) |
+| Prevent unauthorized AI agent actions | B006 | Core control — agents restricted to narrowest permission set per tool, blocking misuse by design | Foundational | Both | DRAFT — Diff the tool registry against the per-agent allowlist + Inspect grant and revocation records for a sampled task (NPW B02, B09) |
+| Enforce user access privileges to AI systems | B007 | User-level access controls ensuring agents cannot invoke tools beyond what the authorising user can access | Foundational | Both | DRAFT — Attempt an out-of-scope tool call and confirm denial (NPW A08); repeat for several users with different permissions |
 
 #### Mitigations by tier
 
@@ -224,12 +226,12 @@ enabling attacker reuse across sessions and environments.
 
 #### AIUC-1 mapping
 
-| Control | ID | Description | Tier | Scope |
-|---|---|---|---|---|
-| Data & Privacy (full domain) | A | All agent credential and identity data falls under Domain A — PII protection, access restrictions, data leakage prevention | Foundational | Both |
-| Enforce user access privileges to AI systems | B007 | Agents operate only within the privilege envelope of the authorising user — no escalation permitted | Foundational | Both |
-| Protect model deployment environment | B008 | Secure deployment including encryption, access controls, and authorisation for the agent's runtime environment | Foundational | Both |
-| Accountability (full domain) | E | Audit trails and logging of all agent identity use — essential for detecting privilege abuse post-incident | Hardening | Both |
+| Control | ID | Description | Tier | Scope | Verification method |
+|---|---|---|---|---|---|
+| Data & Privacy (full domain) | A | All agent credential and identity data falls under Domain A — PII protection, access restrictions, data leakage prevention | Foundational | Both |  |
+| Enforce user access privileges to AI systems | B007 | Agents operate only within the privilege envelope of the authorising user — no escalation permitted | Foundational | Both | DRAFT — Trace a downstream system call and confirm the principal is resolvable + Escalation attempt in a test environment (NPW A04, F03) |
+| Protect model deployment environment | B008 | Secure deployment including encryption, access controls, and authorisation for the agent's runtime environment | Foundational | Both | DRAFT — Secret scanning across agent runtime and logs + Inspect credential store; confirm maximum time-to-live against policy (NPW E08, A02) |
+| Accountability (full domain) | E | Audit trails and logging of all agent identity use — essential for detecting privilege abuse post-incident | Hardening | Both |  |
 
 #### Mitigations by tier
 
@@ -282,12 +284,12 @@ behaviour.
 
 #### AIUC-1 mapping
 
-| Control | ID | Description | Tier | Scope |
-|---|---|---|---|---|
-| Third-party testing of adversarial robustness | B001 | Supply chain components included in adversarial test scope | Foundational | Both |
-| Manage public release of technical details | B003 | Controls preventing over-disclosure of agent architecture details that enable supply chain targeting | Hardening | Both |
-| Protect model deployment environment | B008 | Secure deployment environment including verification of all runtime components | Foundational | Both |
-| Data & Privacy (full domain) | A | All data shared with supply chain components governed under Domain A | Foundational | Both |
+| Control | ID | Description | Tier | Scope | Verification method |
+|---|---|---|---|---|---|
+| Third-party testing of adversarial robustness | B001 | Supply chain components included in adversarial test scope | Foundational | Both | DRAFT — Confirm tools, connectors and MCP servers are in the scope of the current third-party adversarial test report |
+| Manage public release of technical details | B003 | Controls preventing over-disclosure of agent architecture details that enable supply chain targeting | Hardening | Both |  |
+| Protect model deployment environment | B008 | Secure deployment environment including verification of all runtime components | Foundational | Both | DRAFT — Verification record for each deployed component + Verify signatures; reconcile the SBOM against deployed components (NPW E02, E09) |
+| Data & Privacy (full domain) | A | All data shared with supply chain components governed under Domain A | Foundational | Both |  |
 
 #### Mitigations by tier
 
@@ -337,12 +339,12 @@ the agent's code generation capability.
 
 #### AIUC-1 mapping
 
-| Control | ID | Description | Tier | Scope |
-|---|---|---|---|---|
-| Third-party testing of adversarial robustness | B001 | Code generation and execution paths explicitly included in adversarial test scope | Foundational | Both |
-| Implement real-time input filtering | B005 | Filter inputs before they reach code generation components | Foundational | Build |
-| Prevent unauthorized AI agent actions | B006 | Agents cannot execute code outside defined, sandboxed execution environments | Foundational | Build |
-| Limit output over-exposure | B009 | Code outputs filtered and validated before execution | Foundational | Build |
+| Control | ID | Description | Tier | Scope | Verification method |
+|---|---|---|---|---|---|
+| Third-party testing of adversarial robustness | B001 | Code generation and execution paths explicitly included in adversarial test scope | Foundational | Both | DRAFT — Sandbox escape test + Submit code with a known finding through the pipeline; confirm it is blocked (NPW B06, B14); evidence: current third-party test report |
+| Implement real-time input filtering | B005 | Filter inputs before they reach code generation components | Foundational | Build |  |
+| Prevent unauthorized AI agent actions | B006 | Agents cannot execute code outside defined, sandboxed execution environments | Foundational | Build | DRAFT — Sandbox escape test + Confirm sandbox lifecycle configuration; verify no state survives an execution (NPW B06, B10) |
+| Limit output over-exposure | B009 | Code outputs filtered and validated before execution | Foundational | Build | DRAFT — Submit code with a known finding through the pipeline; confirm it is blocked (NPW B14) |
 
 #### Mitigations by tier
 
@@ -393,11 +395,11 @@ malicious data in persistent memory, enabling long-term behavioural manipulation
 
 #### AIUC-1 mapping
 
-| Control | ID | Description | Tier | Scope |
-|---|---|---|---|---|
-| Data & Privacy (full domain) | A | Agent memory and context treated as sensitive data — subject to all Domain A controls | Foundational | Both |
-| Detect adversarial input | B002 | Monitor memory write operations for adversarial patterns | Hardening | Both |
-| Implement real-time input filtering | B005 | Filter content before it is committed to persistent memory stores | Hardening | Both |
+| Control | ID | Description | Tier | Scope | Verification method |
+|---|---|---|---|---|---|
+| Data & Privacy (full domain) | A | Agent memory and context treated as sensitive data — subject to all Domain A controls | Foundational | Both |  |
+| Detect adversarial input | B002 | Monitor memory write operations for adversarial patterns | Hardening | Both | DRAFT — Inject a known anomaly and confirm the alert fires + Log sample showing write source for each memory entry (NPW D06, D04) |
+| Implement real-time input filtering | B005 | Filter content before it is committed to persistent memory stores | Hardening | Both | DRAFT — Attempt to commit an unverified fact and confirm the gate fires (NPW D07) |
 
 #### Mitigations by tier
 
@@ -446,11 +448,11 @@ multi-agent clusters.
 
 #### AIUC-1 mapping
 
-| Control | ID | Description | Tier | Scope |
-|---|---|---|---|---|
-| Enforce user access privileges to AI systems | B007 | Agent-to-agent trust boundaries enforced with same rigour as user-to-agent boundaries | Foundational | Build |
-| Protect model deployment environment | B008 | Secure deployment including encrypted inter-agent communication channels | Foundational | Build |
-| Accountability (full domain) | E | Full audit trail of all inter-agent messages — essential for incident reconstruction | Hardening | Build |
+| Control | ID | Description | Tier | Scope | Verification method |
+|---|---|---|---|---|---|
+| Enforce user access privileges to AI systems | B007 | Agent-to-agent trust boundaries enforced with same rigour as user-to-agent boundaries | Foundational | Build | DRAFT — Attempt a cross-zone instruction from a lower to a higher trust zone + Escalation attempt in a test environment (NPW F09, F03) |
+| Protect model deployment environment | B008 | Secure deployment including encrypted inter-agent communication channels | Foundational | Build | DRAFT — Attempt to spoof an agent message and confirm rejection (NPW F01) |
+| Accountability (full domain) | E | Full audit trail of all inter-agent messages — essential for incident reconstruction | Hardening | Build |  |
 
 #### Mitigations by tier
 
@@ -500,11 +502,11 @@ into physical process control. See ISA/IEC 62443 and NIST SP 800-82 crosswalks f
 
 #### AIUC-1 mapping
 
-| Control | ID | Description | Tier | Scope |
-|---|---|---|---|---|
-| Reliability (full domain) | D | Availability, consistency, failure recovery, and rate limiting — the primary domain for cascading failure prevention | Foundational | Both |
-| Prevent unauthorized AI agent actions | B006 | Blast radius limitation — agents cannot take actions beyond scope even during failure propagation | Foundational | Both |
-| Accountability (full domain) | E | Incident logging and traceability — essential for identifying cascade origin and containment | Hardening | Both |
+| Control | ID | Description | Tier | Scope | Verification method |
+|---|---|---|---|---|---|
+| Reliability (full domain) | D | Availability, consistency, failure recovery, and rate limiting — the primary domain for cascading failure prevention | Foundational | Both |  |
+| Prevent unauthorized AI agent actions | B006 | Blast radius limitation — agents cannot take actions beyond scope even during failure propagation | Foundational | Both | DRAFT — Review limit configuration; force a breach in a test environment + Attempt a high-risk operation with a single agent and confirm it is blocked (NPW B04, F08) |
+| Accountability (full domain) | E | Incident logging and traceability — essential for identifying cascade origin and containment | Hardening | Both |  |
 
 #### Mitigations by tier
 
@@ -552,12 +554,12 @@ performing actions that appear legitimate in audit logs while being agent-driven
 
 #### AIUC-1 mapping
 
-| Control | ID | Description | Tier | Scope |
-|---|---|---|---|---|
-| Safety (full domain) | C | Harm prevention and human oversight — the primary AIUC-1 domain for trust exploitation | Foundational | Both |
-| Society (full domain) | F | Bias, transparency, and societal impact — covers manipulation and deceptive agent behaviour | Foundational | Both |
-| Limit output over-exposure | B009 | Output filtering preventing agents from producing manipulative or deceptive content | Foundational | Both |
-| Accountability (full domain) | E | Audit trail distinguishing agent-driven actions from genuinely human-initiated actions | Hardening | Both |
+| Control | ID | Description | Tier | Scope | Verification method |
+|---|---|---|---|---|---|
+| Safety (full domain) | C | Harm prevention and human oversight — the primary AIUC-1 domain for trust exploitation | Foundational | Both |  |
+| Society (full domain) | F | Bias, transparency, and societal impact — covers manipulation and deceptive agent behaviour | Foundational | Both |  |
+| Limit output over-exposure | B009 | Output filtering preventing agents from producing manipulative or deceptive content | Foundational | Both |  |
+| Accountability (full domain) | E | Audit trail distinguishing agent-driven actions from genuinely human-initiated actions | Hardening | Both |  |
 
 #### Mitigations by tier
 
@@ -597,13 +599,13 @@ or ASI06 attack that has gone undetected.
 
 #### AIUC-1 mapping
 
-| Control | ID | Description | Tier | Scope |
-|---|---|---|---|---|
-| Third-party testing of adversarial robustness | B001 | Rogue agent detection included in adversarial test scope | Foundational | Both |
-| Detect adversarial input | B002 | Runtime behavioural monitoring detecting deviation from intended agent purpose | Hardening | Both |
-| Prevent unauthorized AI agent actions | B006 | Scope constraints — rogue agent cannot act outside defined boundaries even if internal goals are compromised | Foundational | Both |
-| Safety (full domain) | C | Safety guardrails as the last line of defence against rogue agent outputs | Foundational | Both |
-| Accountability (full domain) | E | Full audit trail enabling rogue agent detection, attribution, and forensics | Foundational | Both |
+| Control | ID | Description | Tier | Scope | Verification method |
+|---|---|---|---|---|---|
+| Third-party testing of adversarial robustness | B001 | Rogue agent detection included in adversarial test scope | Foundational | Both | DRAFT — Induce a deviation and confirm the alert + Discovery run record and disposition of findings (NPW H05, H07); evidence: current third-party test report |
+| Detect adversarial input | B002 | Runtime behavioural monitoring detecting deviation from intended agent purpose | Hardening | Both | DRAFT — Induce a deviation and confirm the alert (NPW H05) |
+| Prevent unauthorized AI agent actions | B006 | Scope constraints — rogue agent cannot act outside defined boundaries even if internal goals are compromised | Foundational | Both |  |
+| Safety (full domain) | C | Safety guardrails as the last line of defence against rogue agent outputs | Foundational | Both |  |
+| Accountability (full domain) | E | Full audit trail enabling rogue agent detection, attribution, and forensics | Foundational | Both |  |
 
 #### Mitigations by tier
 
@@ -682,6 +684,7 @@ See:
 | Date | Version | Change | Author |
 |---|---|---|---|
 | 2026-03-24 | 2026-Q1 | Initial mapping — all 10 ASI entries | OWASP GenAI Data Security Initiative |
+| 2026-10-01 | 2026-Q4 | Pilot: Verification method column (#101). 22 of 26 requirement-level rows filled. All values DRAFT pending SME review. Methods adapted from NPW Agentic AI Control Catalogue; text after the NPW citation is contributor-authored. | a-moskvin |
 
 ---
 

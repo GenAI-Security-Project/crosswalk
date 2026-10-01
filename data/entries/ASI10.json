@@ -763,6 +763,7 @@
       "control_name": "Third-party testing of adversarial robustness",
       "tier": "Hardening",
       "scope": "Both",
+      "verification_method": "DRAFT — Induce a deviation and confirm the alert + Discovery run record and disposition of findings (NPW H05, H07); evidence: current third-party test report",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
@@ -772,6 +773,7 @@
       "control_name": "Detect adversarial input",
       "tier": "Hardening",
       "scope": "Both",
+      "verification_method": "DRAFT — Induce a deviation and confirm the alert (NPW H05)",
       "confidence": "unreviewed",
       "reviewed_by": []
     },

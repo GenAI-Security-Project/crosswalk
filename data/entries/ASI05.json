@@ -747,6 +747,7 @@
       "control_name": "Third-party testing of adversarial robustness",
       "tier": "Foundational",
       "scope": "Build",
+      "verification_method": "DRAFT — Sandbox escape test + Submit code with a known finding through the pipeline; confirm it is blocked (NPW B06, B14); evidence: current third-party test report",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
@@ -765,6 +766,7 @@
       "control_name": "Prevent unauthorized AI agent actions",
       "tier": "Foundational",
       "scope": "Build",
+      "verification_method": "DRAFT — Sandbox escape test + Confirm sandbox lifecycle configuration; verify no state survives an execution (NPW B06, B10)",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
@@ -774,6 +776,7 @@
       "control_name": "Limit output over-exposure",
       "tier": "Foundational",
       "scope": "Build",
+      "verification_method": "DRAFT — Submit code with a known finding through the pipeline; confirm it is blocked (NPW B14)",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
