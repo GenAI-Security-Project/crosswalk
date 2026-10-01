@@ -14208,6 +14208,12 @@ window.CROSSWALK_DATA = [
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-111"
+      },
+      {
+        "name": "Deadbugz — MCP server serves poisoned tool metadata after three calls",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-136"
       }
     ],
     "crossrefs": {
@@ -14980,7 +14986,14 @@ window.CROSSWALK_DATA = [
         "tier": "Foundational",
         "scope": "Both",
         "confidence": "unreviewed",
-        "reviewed_by": []
+        "reviewed_by": [],
+        "evidence_count": 0,
+        "evidence": {
+          "confirmed": [],
+          "drafted": [
+            "INC-136"
+          ]
+        }
       },
       {
         "framework": "MAESTRO",
@@ -15499,6 +15512,12 @@ window.CROSSWALK_DATA = [
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-132"
+      },
+      {
+        "name": "Deadbugz — MCP server serves poisoned tool metadata after three calls",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-136"
       }
     ],
     "crossrefs": {
@@ -18051,6 +18070,12 @@ window.CROSSWALK_DATA = [
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-114"
+      },
+      {
+        "name": "Deadbugz — MCP server serves poisoned tool metadata after three calls",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-136"
       }
     ],
     "crossrefs": {
