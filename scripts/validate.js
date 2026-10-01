@@ -944,6 +944,50 @@ function checkAtlasMappings() {
 }
 
 /**
+ * 22. Incident ids must be unique.
+ *
+ * Two contributors adding a record at the same time both read the end of
+ * data/incidents.json and both pick the same number. That is how INC-132 was
+ * allocated twice (#117 and #109), and the second one only found out when the
+ * merge conflicted. A duplicate id also silently breaks anything that resolves
+ * an incident by id — the webapp deep link, the evidence join, the reports.
+ *
+ * scripts/next-incident-id.mjs prints a free id, and --check-prs also accounts
+ * for ids claimed by open pull requests.
+ */
+function checkIncidentIds() {
+  const incPath = path.join(ROOT, 'data', 'incidents.json');
+  if (!fs.existsSync(incPath)) return true;
+  const doc = JSON.parse(fs.readFileSync(incPath, 'utf8'));
+  const incidents = doc.incidents || [];
+
+  const seen = new Map();
+  const duplicates = new Map();
+  for (const inc of incidents) {
+    const id = String(inc.id);
+    if (seen.has(id)) duplicates.set(id, (duplicates.get(id) || 1) + 1);
+    else seen.set(id, inc.title || '');
+  }
+
+  for (const [id, n] of duplicates) {
+    fail('Incident ids', `${id} is used by ${n} records — allocate a free id with scripts/next-incident-id.mjs`);
+  }
+
+  // A gap is not an error (a record may be withdrawn), but a silent gap plus a
+  // duplicate is how a renumbering goes wrong, so the count is reported.
+  const numbers = incidents.map((i) => Number(String(i.id).slice(4))).filter(Number.isFinite).sort((a, b) => a - b);
+  const gaps = [];
+  for (let i = 1; i < numbers.length; i++) {
+    for (let n = numbers[i - 1] + 1; n < numbers[i]; n++) gaps.push(n);
+  }
+
+  if (!duplicates.size) {
+    pass('Incident ids', `${incidents.length} incident ids are unique (highest INC-${String(numbers[numbers.length - 1] || 0).padStart(3, '0')}${gaps.length ? `, ${gaps.length} unused number(s)` : ''})`);
+  }
+  return duplicates.size === 0;
+}
+
+/**
  * Evidence guard (T-STRAT03).
  *
  * `control_failures[]` feed `evidence_count` on mapping rows, so a bad record
@@ -1122,6 +1166,7 @@ function run() {
     checkMaestroLayers();
     checkAtlasMappings();
     checkControlIdShapes();
+    checkIncidentIds();
     checkEvidence();
   }
 
