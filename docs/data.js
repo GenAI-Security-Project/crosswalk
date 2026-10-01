@@ -1447,7 +1447,7 @@ window.CROSSWALK_DATA = [
         "name": "Contentful MCP server: LLM-controlled host argument sent the management token to an attacker endpoint",
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
-        "incident_id": "INC-148"
+        "incident_id": "INC-147"
       }
     ],
     "crossrefs": {
@@ -15565,7 +15565,7 @@ window.CROSSWALK_DATA = [
         "name": "Contentful MCP server: LLM-controlled host argument sent the management token to an attacker endpoint",
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
-        "incident_id": "INC-148"
+        "incident_id": "INC-147"
       }
     ],
     "crossrefs": {
@@ -26442,7 +26442,7 @@ window.CROSSWALK_DATA = [
         "name": "SQLBot: SQL injection in table preview read server files through the internal PostgreSQL superuser",
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
-        "incident_id": "INC-146"
+        "incident_id": "INC-145"
       }
     ],
     "crossrefs": {
@@ -27542,7 +27542,7 @@ window.CROSSWALK_DATA = [
         "name": "Contentful MCP server: LLM-controlled host argument sent the management token to an attacker endpoint",
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
-        "incident_id": "INC-148"
+        "incident_id": "INC-147"
       }
     ],
     "crossrefs": {
@@ -36987,8 +36987,8 @@ window.CROSSWALK_DATA = [
         "evidence": {
           "confirmed": [],
           "drafted": [
-            "INC-146",
-            "INC-147"
+            "INC-145",
+            "INC-146"
           ]
         }
       },
@@ -37657,22 +37657,16 @@ window.CROSSWALK_DATA = [
         "incident_id": "INC-144"
       },
       {
-        "name": "SQLBot: SVG logo upload stored and served unsanitised, giving stored XSS in the application origin",
+        "name": "SQLBot: SQL injection in table preview read server files through the internal PostgreSQL superuser",
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-145"
       },
       {
-        "name": "SQLBot: SQL injection in table preview read server files through the internal PostgreSQL superuser",
-        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
-        "year": 2026,
-        "incident_id": "INC-146"
-      },
-      {
         "name": "SQLBot: second-order SQL injection in datasource cleanup ran OS commands via COPY TO PROGRAM",
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
-        "incident_id": "INC-147"
+        "incident_id": "INC-146"
       }
     ],
     "crossrefs": {

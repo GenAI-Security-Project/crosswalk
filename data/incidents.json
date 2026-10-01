@@ -9265,86 +9265,6 @@
     },
     {
       "id": "INC-145",
-      "title": "SQLBot: SVG logo upload stored and served unsanitised, giving stored XSS in the application origin",
-      "date": "2026-06",
-      "year": 2026,
-      "category": "research-demonstrated",
-      "incident_class": "tooling-cve",
-      "severity": "Medium",
-      "description": "GHSA-v23m-5pvq-xcgx / CVE-2026-53555, published by the SQLBot maintainers on 2026-06-09 with the 1.9.0 fix release, reports that an authenticated uploader can set an image/svg+xml assistant UI logo through PATCH /api/v1/system/assistant/ui, and that \"The application accepts image/svg+xml uploads and stores uploaded SVG files without sanitization or validation.\" The file is served inline from the same origin through GET /api/v1/system/assistant/picture/{filename}, so script embedded in the SVG runs in the SQLBot web application when another user loads it, with access to the data and actions available to that user's session. Provenance: the CNA is GitHub, acting on the maintainers' advisory; the CVSS 4.0 score of 5.1 (Medium) is that CNA's score, carried by NVD as a secondary metric, and NVD lists the record as Deferred with no score of its own. The repository advisory labels the issue High without a vector; this record transcribes the CNA's CVSS base severity.",
-      "owasp_entries": [
-        "DSGAI12"
-      ],
-      "mapping_status": "draft",
-      "maestro_layers": [
-        {
-          "layer": "L4",
-          "label": "Deployment & Infrastructure",
-          "role": "origin",
-          "notes": "Assistant UI asset upload stored and served from the application origin without sanitisation"
-        }
-      ],
-      "attack_vector": "Authenticated user uploads an SVG containing script as the assistant UI logo; it executes in the browser of any user who loads it",
-      "affected": "SQLBot before 1.9.0",
-      "impact": "Script execution in other users' SQLBot sessions, with access to the data and actions available to them",
-      "mitigations": [
-        "Upgrade to SQLBot 1.9.0 or later",
-        "Sanitise SVG uploads or convert them to raster images before storing",
-        "Serve user-uploaded files from a separate origin or with Content-Disposition: attachment and a restrictive CSP"
-      ],
-      "external_refs": [
-        {
-          "source": "CVE",
-          "id": "CVE-2026-53555",
-          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53555"
-        },
-        {
-          "source": "GHSA",
-          "id": "GHSA-v23m-5pvq-xcgx",
-          "url": "https://github.com/dataease/SQLBot/security/advisories/GHSA-v23m-5pvq-xcgx"
-        }
-      ],
-      "references": [
-        {
-          "title": "NVD — CVE-2026-53555",
-          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53555",
-          "type": "advisory"
-        },
-        {
-          "title": "SQLBot security advisory GHSA-v23m-5pvq-xcgx",
-          "url": "https://github.com/dataease/SQLBot/security/advisories/GHSA-v23m-5pvq-xcgx",
-          "type": "advisory"
-        },
-        {
-          "title": "SQLBot 1.9.0 release",
-          "url": "https://github.com/dataease/SQLBot/releases/tag/v1.9.0",
-          "type": "vendor"
-        }
-      ],
-      "tags": [
-        "cve",
-        "ghsa",
-        "tooling-cve",
-        "xss",
-        "file-upload",
-        "text-to-sql",
-        "sqlbot",
-        "draft-evidence",
-        "draft-mapping"
-      ],
-      "control_failures": [
-        {
-          "framework": "OWASP ASVS 4.0.3",
-          "control_id": "V1.3.5",
-          "outcome": "absent",
-          "basis": "The application accepts image/svg+xml uploads and stores uploaded SVG files without sanitization or validation.",
-          "source_url": "https://github.com/dataease/SQLBot/security/advisories/GHSA-v23m-5pvq-xcgx",
-          "confirmed_by": []
-        }
-      ]
-    },
-    {
-      "id": "INC-146",
       "title": "SQLBot: SQL injection in table preview read server files through the internal PostgreSQL superuser",
       "date": "2026-06",
       "year": 2026,
@@ -9431,7 +9351,7 @@
       ]
     },
     {
-      "id": "INC-147",
+      "id": "INC-146",
       "title": "SQLBot: second-order SQL injection in datasource cleanup ran OS commands via COPY TO PROGRAM",
       "date": "2026-06",
       "year": 2026,
@@ -9517,7 +9437,7 @@
       ]
     },
     {
-      "id": "INC-148",
+      "id": "INC-147",
       "title": "Contentful MCP server: LLM-controlled host argument sent the management token to an attacker endpoint",
       "date": "2026-06",
       "year": 2026,
