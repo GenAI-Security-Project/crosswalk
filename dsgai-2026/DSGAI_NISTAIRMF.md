@@ -1233,7 +1233,7 @@ exfiltration.
 
 | Tool | Type | Link |
 |---|---|---|
-| LayerX Security | Commercial | <https://layerxsecurity.com> |
+| Akamai Workforce Protector (formerly LayerX) | Commercial | <https://www.akamai.com/products/akamai-workforce-protector> |
 | Microsoft Intune | Commercial | <https://learn.microsoft.com/en-us/mem/intune/> |
 
 #### Cross-references

@@ -40,6 +40,9 @@ exclude = [
   # amundsen.io answers 200 to both HEAD and GET from an ordinary client,
   # and 405 Method Not Allowed from GitHub runner IPs — twice in a row on main.
   "^https://www\\.amundsen\\.io/",
+  # Akamai answers 403 "Access Denied" to non-browser clients regardless of
+  # user agent; the product pages load normally in a browser.
+  "^https://www\\.akamai\\.com/",
 
   # This repository is private, so its own URL 404s for an anonymous checker.
   "^https://github\\.com/GenAI-Security-Project/crosswalk",

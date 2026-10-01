@@ -494,7 +494,7 @@ All accessed 2026-09-14. Fetch status for each is in `SOURCES_CHECK.json`.
 20. GitHub API, crosswalk repository metadata — <https://api.github.com/repos/GenAI-Security-Project/crosswalk>
 21. SCF, GitHub releases — <https://github.com/securecontrolsframework/securecontrolsframework/releases>
 22. SCF 2026.2 spreadsheet —
-    <https://github.com/securecontrolsframework/securecontrolsframework/raw/main/secure-controls-framework-scf-2026-2.xlsx>
+    <https://github.com/securecontrolsframework/securecontrolsframework/raw/51528d2ab4a3d78d616a25f189de8c87ab64891c/secure-controls-framework-scf-2026-2.xlsx>
 23. SCF, Set Theory Relationship Mapping (STRM) —
     <https://securecontrolsframework.com/start-here/set-theory-relationship-mapping-strm>
 24. SCF, STRM: ISO/IEC 42001:2023 (PDF) —
