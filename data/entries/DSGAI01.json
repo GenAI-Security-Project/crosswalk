@@ -314,7 +314,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V14.2.2",
       "control_name": "Sensitive data not transmitted in URL parameters",
       "tier": "Foundational",
@@ -325,7 +325,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V14.1.1",
       "control_name": "Sensitive data identified and classified",
       "tier": "Foundational",
@@ -336,7 +336,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V8.2.1",
       "control_name": "Deny by default access control",
       "tier": "Foundational",
@@ -347,7 +347,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V1.3.5",
       "control_name": "Output encoding for context",
       "tier": "Foundational",
@@ -358,7 +358,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V14.1.1",
       "control_name": "Sensitive data not stored in cleartext",
       "tier": "Foundational",

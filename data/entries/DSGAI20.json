@@ -294,7 +294,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V8.3.1",
       "control_name": "Access control per request",
       "tier": "Hardening",
@@ -305,7 +305,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V8.1.4",
       "control_name": "Data minimisation in responses",
       "tier": "Hardening",
@@ -317,7 +317,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V10.2.2",
       "control_name": "Component integrity checking",
       "tier": "Hardening",

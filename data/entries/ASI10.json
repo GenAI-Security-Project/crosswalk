@@ -320,7 +320,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V16.3.1",
       "control_name": "Verify that all authentication operations are logged, including successful and unsuccessful attempts. Additional metadata, such as the type of authentication or factors used, should also be collected.",
       "tier": "Hardening",
@@ -331,7 +331,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V16.3.2",
       "control_name": "Verify that failed authorization attempts are logged. For L3, this must include logging all authorization decisions, including logging when sensitive data is accessed (without logging the sensitive data itself).",
       "tier": "Hardening",
@@ -342,7 +342,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V2.4.2",
       "control_name": "Verify that business logic flows require realistic human timing, preventing excessively rapid transaction submissions.",
       "tier": "Hardening",
@@ -353,7 +353,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V1.5.3",
       "control_name": "Verify API rate limiting",
       "tier": "Hardening",

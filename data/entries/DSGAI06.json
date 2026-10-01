@@ -294,7 +294,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V8.3.1",
       "control_name": "Access control on every request",
       "tier": "Foundational",
@@ -305,7 +305,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V12.2.1",
       "control_name": "TLS for all connections",
       "tier": "Foundational",
@@ -316,7 +316,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V2.4.1",
       "control_name": "Business logic limits on repeated actions",
       "tier": "Foundational",

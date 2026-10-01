@@ -66,7 +66,7 @@
 | [MAESTRO — CSA](https://cloudsecurityalliance.org/blog/2025/02/06/agentic-ai-threat-modeling-framework-maestro) | ✅ | ✅ | ✅ |
 | [ISO/IEC 42001:2023](https://www.iso.org/standard/81230.html) | ✅ | ✅ | ✅ |
 | [CIS Controls v8.1](https://www.cisecurity.org/controls) | ✅ | ✅ | ✅ |
-| [OWASP ASVS 4.0.3](https://owasp.org/projects/asvs) | ✅ | ✅ | ✅ |
+| [OWASP ASVS 5.0.0](https://owasp.org/projects/asvs) | ✅ | ✅ | ✅ |
 | [SOC 2 Trust Services Criteria](https://www.aicpa-cima.com/resources/landing/2017-trust-services-criteria) | ✅ | ✅ | ✅ |
 | [PCI DSS v4.0](https://www.pcisecuritystandards.org/document_library/) | ✅ | ✅ | ✅ |
 | [ENISA Multilayer Framework](https://www.enisa.europa.eu/publications/multilayer-framework-for-good-cybersecurity-practices-for-ai) | ✅ | ✅ | ✅ |
@@ -89,7 +89,7 @@
 | [LLM_ISO27001.md](../../llm-top10/LLM_ISO27001.md) | ISO/IEC 27001:2022 | ISMS拡張チェックリスト、LLMリスクにマッピングされた2022年新規コントロール |
 | [LLM_ISO42001.md](../../llm-top10/LLM_ISO42001.md) | ISO/IEC 42001:2023 | AIMS実装チェックリスト、ISO 27001統合ガイダンス |
 | [LLM_CISControls.md](../../llm-top10/LLM_CISControls.md) | CIS Controls v8.1 | 脆弱性ごとのIG1/IG2/IG3段階別セーフガード |
-| [LLM_ASVS.md](../../llm-top10/LLM_ASVS.md) | OWASP ASVS 4.0.3 | ASVSチェックリスト付きL1/L2/L3検証要件 |
+| [LLM_ASVS.md](../../llm-top10/LLM_ASVS.md) | OWASP ASVS 5.0.0 | ASVSチェックリスト付きL1/L2/L3検証要件 |
 | [LLM_ISA62443.md](../../llm-top10/LLM_ISA62443.md) | ISA/IEC 62443 — OT/ICS | ゾーンモデル、SLレーティング、FR/SR参照、OTデプロイメントチェックリスト |
 | [LLM_NISTSP80082.md](../../llm-top10/LLM_NISTSP80082.md) | NIST SP 800-82 Rev 3 | SP 800-53コントロール、米国規制クロスウォーク（NERC CIP、AWIA、CMMC） |
 | [LLM_NISTCSF2.md](../../llm-top10/LLM_NISTCSF2.md) | NIST CSF 2.0 | 新しいGOVERN機能を含む6機能マッピング、CSF 2.0プロファイル |
@@ -119,7 +119,7 @@
 | [Agentic_MAESTRO.md](../../agentic-top10/Agentic_MAESTRO.md) | MAESTRO — CSA | 7層アーキテクチャ脅威モデル、レイヤー対ASIマッピング、セッションガイド |
 | [Agentic_OWASP_NHI.md](../../agentic-top10/Agentic_OWASP_NHI.md) | OWASP NHI Top 10 | 完全なNHI対ASIクロスマッピング、NHIプログラム成熟度テーブル |
 | [Agentic_CISControls.md](../../agentic-top10/Agentic_CISControls.md) | CIS Controls v8.1 | IG1/IG2/IG3セーフガード、CIS 5特権アクセスとして扱われるエージェントNHI |
-| [Agentic_ASVS.md](../../agentic-top10/Agentic_ASVS.md) | OWASP ASVS 4.0.3 | エージェントデプロイメント向けL1/L2/L3検証チェックリスト |
+| [Agentic_ASVS.md](../../agentic-top10/Agentic_ASVS.md) | OWASP ASVS 5.0.0 | エージェントデプロイメント向けL1/L2/L3検証チェックリスト |
 | [Agentic_AITG.md](../../agentic-top10/Agentic_AITG.md) | OWASP AI Testing Guide | ASI01–ASI10にわたる50の構造化テストケースとデプロイメント前ゲート |
 | [Agentic_AIVSS.md](../../agentic-top10/Agentic_AIVSS.md) | OWASP AIVSS | デュアルシナリオスコアリング（監視下 vs 自律）、自律性プレミアム +1.79 |
 | [Agentic_ENISA.md](../../agentic-top10/Agentic_ENISA.md) | ENISA Multilayer Framework | L1/L2/L3レイヤーマッピング、EU AI Act Art. 14/15/52整合、NIS2 Article 23インシデント評価ガイダンス |
@@ -143,7 +143,7 @@
 | [DSGAI_MAESTRO.md](../../dsgai-2026/DSGAI_MAESTRO.md) | MAESTRO — CSA | 全21エントリのレイヤー起点分析、DSGAI脅威サーフェスの52%としてのL2データオペレーション |
 | [DSGAI_SOC2.md](../../dsgai-2026/DSGAI_SOC2.md) | SOC 2 Trust Services Criteria | SaaSおよびクラウドGenAIデプロイメント向けTSCマッピング |
 | [DSGAI_PCIDSS.md](../../dsgai-2026/DSGAI_PCIDSS.md) | PCI DSS v4.0 | CHDスコープガイダンス、GenAIデータ向けPCI監査チェックリスト |
-| [DSGAI_ASVS.md](../../dsgai-2026/DSGAI_ASVS.md) | OWASP ASVS 4.0.3 | 全21 DSGAIエントリのL1/L2/L3検証要件、4フェーズ実装優先度 |
+| [DSGAI_ASVS.md](../../dsgai-2026/DSGAI_ASVS.md) | OWASP ASVS 5.0.0 | 全21 DSGAIエントリのL1/L2/L3検証要件、4フェーズ実装優先度 |
 | [DSGAI_CISControls.md](../../dsgai-2026/DSGAI_CISControls.md) | CIS Controls v8.1 | 全21エントリのIG1/IG2/IG3セーフガード、GenAIデータセキュリティ実装グループ |
 | [DSGAI_CWE_CVE.md](../../dsgai-2026/DSGAI_CWE_CVE.md) | CWE / CVE | 全21 DSGAIエントリのCWE根本原因分類と確認済みCVEエビデンス |
 | [DSGAI_ENISA.md](../../dsgai-2026/DSGAI_ENISA.md) | ENISA Multilayer Framework | 全21 DSGAIエントリのL1/L2/L3レイヤーマッピング、EU AI ActおよびNIS2整合 |
@@ -232,7 +232,7 @@ crosswalk/
 │   ├── DSGAI_MAESTRO.md             ← 脅威モデリング — データオペレーション視点
 │   ├── DSGAI_SOC2.md
 │   ├── DSGAI_PCIDSS.md
-│   ├── DSGAI_ASVS.md                ← OWASP ASVS 4.0.3
+│   ├── DSGAI_ASVS.md                ← OWASP ASVS 5.0.0
 │   ├── DSGAI_CISControls.md         ← CIS Controls v8.1
 │   ├── DSGAI_CWE_CVE.md             ← 根本原因分類 + CVE
 │   ├── DSGAI_ENISA.md               ← EU / NIS2

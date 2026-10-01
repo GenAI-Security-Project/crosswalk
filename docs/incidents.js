@@ -8799,7 +8799,7 @@ window.CROSSWALK_INCIDENTS = [
     ],
     "control_failures": [
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V1.5",
         "outcome": "absent",
         "basis": "This advisory tracks remotely reachable arbitrary code execution caused by deserializing untrusted ZMQ RPC messages with `pickle.loads()`.",
@@ -8879,7 +8879,7 @@ window.CROSSWALK_INCIDENTS = [
     ],
     "control_failures": [
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V1.5",
         "outcome": "absent",
         "basis": "LMDeploy's PyTorch DistServe/PD-disaggregation control plane used `recv_pyobj()` to deserialize messages received through a ZeroMQ PULL socket. PyZMQ implements `recv_pyobj()` using Python pickle deserialization, which can execute arbitrary code while reconstructing an object.",
@@ -8965,7 +8965,7 @@ window.CROSSWALK_INCIDENTS = [
     ],
     "control_failures": [
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V1.3.2",
         "outcome": "absent",
         "basis": "When a user loads the model with lmdeploy, the `quant_dtype` is passed to `eval(f'torch.{quant_dtype}')` without any validation.",
@@ -9339,7 +9339,7 @@ window.CROSSWALK_INCIDENTS = [
     ],
     "control_failures": [
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V1.2.4",
         "outcome": "absent",
         "basis": "The supplied `table_name` is incorporated into the generated SQL query without sufficient validation or safe identifier handling, allowing attacker-controlled SQL fragments to become part of the executed query.",
@@ -9425,7 +9425,7 @@ window.CROSSWALK_INCIDENTS = [
     ],
     "control_failures": [
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V1.2.4",
         "outcome": "absent",
         "basis": "When the datasource is later deleted, this stored data is directly interpolated into SQL queries without parameterized query usage or proper escaping.",
@@ -9519,7 +9519,7 @@ window.CROSSWALK_INCIDENTS = [
     ],
     "control_failures": [
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V1.3.6",
         "outcome": "absent",
         "basis": "`export_space` and `import_space` tools in `@contentful/mcp-tools` accept LLM-controlled `host` and `proxy` parameters that are spread directly into the options object passed to `contentful-export` / `contentful-import`.",

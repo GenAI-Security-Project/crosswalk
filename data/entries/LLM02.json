@@ -258,7 +258,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V14.2.2",
       "control_name": "Verify that the application prevents sensitive data from being cached in server components, such as load balancers and application caches, or ensures that the data is securely purged after use.",
       "tier": "Foundational",
@@ -269,7 +269,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V14.1.1",
       "control_name": "Verify that all sensitive data created and processed by the application has been identified and classified into protection levels. This includes data that is only encoded and therefore easily decoded, such as Base64 strings or the plaintext payload inside a JWT. Protection levels need to take into account any data protection and privacy regulations and standards which the application is required to comply with.",
       "tier": "Foundational",
@@ -280,7 +280,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V8.2.1",
       "control_name": "Verify that the application ensures that function-level access is restricted to consumers with explicit permissions.",
       "tier": "Foundational",
@@ -291,7 +291,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V14.1.1",
       "control_name": "Verify that all sensitive data created and processed by the application has been identified and classified into protection levels. This includes data that is only encoded and therefore easily decoded, such as Base64 strings or the plaintext payload inside a JWT. Protection levels need to take into account any data protection and privacy regulations and standards which the application is required to comply with.",
       "tier": "Foundational",
@@ -302,7 +302,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V12.2.1",
       "control_name": "Verify that TLS is used for all connectivity between a client and external facing, HTTP-based services, and does not fall back to insecure or unencrypted communications.",
       "tier": "Foundational",

@@ -294,7 +294,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V1.3.7",
       "control_name": "Unstructured data sanitised",
       "tier": "Hardening",
@@ -305,7 +305,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V8.1.4",
       "control_name": "Sensitive data minimised",
       "tier": "Hardening",
@@ -317,7 +317,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V5.2.4",
       "control_name": "Malicious file detection on upload",
       "tier": "Hardening",

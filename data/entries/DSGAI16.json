@@ -294,7 +294,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V8.2.1",
       "control_name": "Least privilege",
       "tier": "Foundational",
@@ -305,7 +305,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V2.2.1",
       "control_name": "Business logic prevents excess data access",
       "tier": "Foundational",
@@ -316,7 +316,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V1.1.2",
       "control_name": "Secure architecture and design",
       "tier": "Foundational",

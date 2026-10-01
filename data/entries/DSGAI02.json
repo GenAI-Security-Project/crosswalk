@@ -314,7 +314,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V6.2.1",
       "control_name": "Passwords minimum 12 characters",
       "tier": "Foundational",
@@ -325,7 +325,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V13.2.1",
       "control_name": "Integration secrets not hardcoded",
       "tier": "Foundational",
@@ -336,7 +336,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V8.2.1",
       "control_name": "Least privilege for service accounts",
       "tier": "Foundational",
@@ -347,7 +347,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V14.1.2",
       "control_name": "Data transferred using current TLS",
       "tier": "Foundational",

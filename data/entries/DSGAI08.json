@@ -294,7 +294,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V8.3.3",
       "control_name": "Consent obtained before PI processing",
       "tier": "Foundational",
@@ -306,7 +306,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V8.3.10",
       "control_name": "Personal data not kept longer than needed",
       "tier": "Foundational",
@@ -318,7 +318,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V16.3.2",
       "control_name": "Audit trail sufficient for compliance",
       "tier": "Foundational",

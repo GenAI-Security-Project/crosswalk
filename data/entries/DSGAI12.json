@@ -304,7 +304,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V15.3.7",
       "control_name": "Allowlist input validation",
       "tier": "Foundational",
@@ -315,7 +315,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V1.2.4",
       "control_name": "SQL injection prevention",
       "tier": "Foundational",
@@ -334,7 +334,7 @@
       }
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V8.3.1",
       "control_name": "Access control on every request",
       "tier": "Foundational",
@@ -345,7 +345,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V1.5.3",
       "control_name": "API protection against enumeration",
       "tier": "Foundational",
