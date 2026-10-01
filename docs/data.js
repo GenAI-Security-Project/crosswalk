@@ -16384,7 +16384,8 @@ window.CROSSWALK_DATA = [
         "evidence": {
           "confirmed": [],
           "drafted": [
-            "INC-133"
+            "INC-133",
+            "INC-137"
           ]
         }
       },
@@ -16867,6 +16868,12 @@ window.CROSSWALK_DATA = [
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-133"
+      },
+      {
+        "name": "AI agents under a cyber-capability evaluation escape their sandbox and compromise Hugging Face production infrastructure",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-137"
       }
     ],
     "crossrefs": {
@@ -21594,6 +21601,12 @@ window.CROSSWALK_DATA = [
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-111"
+      },
+      {
+        "name": "AI agents under a cyber-capability evaluation escape their sandbox and compromise Hugging Face production infrastructure",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-137"
       }
     ],
     "crossrefs": {
@@ -24637,7 +24650,14 @@ window.CROSSWALK_DATA = [
         "tier": "Hardening",
         "scope": "Both",
         "confidence": "unreviewed",
-        "reviewed_by": []
+        "reviewed_by": [],
+        "evidence_count": 0,
+        "evidence": {
+          "confirmed": [],
+          "drafted": [
+            "INC-137"
+          ]
+        }
       },
       {
         "framework": "MAESTRO",
@@ -24720,7 +24740,14 @@ window.CROSSWALK_DATA = [
         "scope": "Both",
         "notes": "Least privilege — rogue agent with narrow scope causes less damage before containment",
         "confidence": "unreviewed",
-        "reviewed_by": []
+        "reviewed_by": [],
+        "evidence_count": 0,
+        "evidence": {
+          "confirmed": [],
+          "drafted": [
+            "INC-137"
+          ]
+        }
       },
       {
         "framework": "OWASP NHI Top 10",
@@ -25106,6 +25133,12 @@ window.CROSSWALK_DATA = [
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-110"
+      },
+      {
+        "name": "AI agents under a cyber-capability evaluation escape their sandbox and compromise Hugging Face production infrastructure",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-137"
       }
     ],
     "crossrefs": {
@@ -25859,7 +25892,14 @@ window.CROSSWALK_DATA = [
         "tier": "Foundational",
         "scope": "Both",
         "confidence": "unreviewed",
-        "reviewed_by": []
+        "reviewed_by": [],
+        "evidence_count": 0,
+        "evidence": {
+          "confirmed": [],
+          "drafted": [
+            "INC-137"
+          ]
+        }
       },
       {
         "framework": "AIUC-1",
@@ -25909,7 +25949,14 @@ window.CROSSWALK_DATA = [
         "scope": "Both",
         "notes": "Apply least-privilege to all data pipeline credentials",
         "confidence": "unreviewed",
-        "reviewed_by": []
+        "reviewed_by": [],
+        "evidence_count": 0,
+        "evidence": {
+          "confirmed": [],
+          "drafted": [
+            "INC-137"
+          ]
+        }
       },
       {
         "framework": "OWASP NHI Top 10",
@@ -26336,6 +26383,12 @@ window.CROSSWALK_DATA = [
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-135"
+      },
+      {
+        "name": "AI agents under a cyber-capability evaluation escape their sandbox and compromise Hugging Face production infrastructure",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-137"
       }
     ],
     "crossrefs": {
@@ -27116,7 +27169,14 @@ window.CROSSWALK_DATA = [
         "scope": "Both",
         "notes": "Separate read and write credentials; write requires MFA",
         "confidence": "unreviewed",
-        "reviewed_by": []
+        "reviewed_by": [],
+        "evidence_count": 0,
+        "evidence": {
+          "confirmed": [],
+          "drafted": [
+            "INC-137"
+          ]
+        }
       },
       {
         "framework": "OWASP NHI Top 10",
@@ -27417,6 +27477,12 @@ window.CROSSWALK_DATA = [
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-134"
+      },
+      {
+        "name": "AI agents under a cyber-capability evaluation escape their sandbox and compromise Hugging Face production infrastructure",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-137"
       }
     ],
     "crossrefs": {
