@@ -622,6 +622,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "date": "2026-09-18",
         "change": "Migrated off the swapped-column ids of issue #35: 70 items -> 68, including 14 referenced by mappings but absent from the registry",
         "author": "OWASP GenAI Data Security Initiative"
+      },
+      {
+        "date": "2026-09-18",
+        "change": "Migrated off the swapped-column ids of issue #35: 68 items -> 68",
+        "author": "OWASP GenAI Data Security Initiative"
       }
     ],
     "inventory_completeness": {
@@ -1314,6 +1319,11 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "date": "2026-09-18",
         "change": "Migrated off the swapped-column ids of issue #35: 76 items -> 61",
+        "author": "OWASP GenAI Data Security Initiative"
+      },
+      {
+        "date": "2026-09-18",
+        "change": "Migrated off the swapped-column ids of issue #35: 61 items -> 61",
         "author": "OWASP GenAI Data Security Initiative"
       }
     ]
@@ -2332,6 +2342,11 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "date": "2026-09-18",
         "change": "Migrated off the swapped-column ids of issue #35: 145 items -> 30",
+        "author": "OWASP GenAI Data Security Initiative"
+      },
+      {
+        "date": "2026-09-18",
+        "change": "Migrated off the swapped-column ids of issue #35: 30 items -> 30",
         "author": "OWASP GenAI Data Security Initiative"
       }
     ],
@@ -3744,6 +3759,11 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "date": "2026-09-18",
         "change": "Migrated off the swapped-column ids of issue #35: 87 items -> 56",
+        "author": "OWASP GenAI Data Security Initiative"
+      },
+      {
+        "date": "2026-09-18",
+        "change": "Migrated off the swapped-column ids of issue #35: 56 items -> 56",
         "author": "OWASP GenAI Data Security Initiative"
       }
     ],
@@ -5639,6 +5659,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "date": "2026-09-18",
         "change": "Migrated off the swapped-column ids of issue #35: 52 items -> 12",
         "author": "OWASP GenAI Data Security Initiative"
+      },
+      {
+        "date": "2026-09-18",
+        "change": "Migrated off the swapped-column ids of issue #35: 12 items -> 12",
+        "author": "OWASP GenAI Data Security Initiative"
       }
     ]
   },
@@ -5849,6 +5874,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "date": "2026-09-18",
         "change": "Migrated off the swapped-column ids of issue #35: 59 items -> 26",
         "author": "OWASP GenAI Data Security Initiative"
+      },
+      {
+        "date": "2026-09-18",
+        "change": "Migrated off the swapped-column ids of issue #35: 26 items -> 26",
+        "author": "OWASP GenAI Data Security Initiative"
       }
     ]
   },
@@ -5939,6 +5969,11 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "date": "2026-09-18",
         "change": "Migrated off the swapped-column ids of issue #35: 58 items -> 9",
+        "author": "OWASP GenAI Data Security Initiative"
+      },
+      {
+        "date": "2026-09-18",
+        "change": "Migrated off the swapped-column ids of issue #35: 9 items -> 9",
         "author": "OWASP GenAI Data Security Initiative"
       }
     ]
@@ -7699,512 +7734,647 @@ window.CROSSWALK_FRAMEWORKS = [
     "id": "owasp-asvs",
     "name": "OWASP ASVS 4.0.3",
     "short_name": "ASVS",
-    "version": "4.0.3",
+    "version": "5.0.0",
     "url": "https://owasp.org/projects/asvs",
     "license": "CC BY-SA 4.0",
     "publisher": "OWASP",
     "category": "appsec",
-    "last_synced": "2026-04-10",
+    "last_synced": "2026-09-18",
     "source_sha": null,
     "controls": [
       {
         "control_id": "V1",
-        "title": "Architecture, Design and Threat Modeling",
-        "description": "Ensure a verified application satisfies high-level security architecture requirements.",
+        "title": "Encoding and Sanitization",
+        "description": "",
         "parent": null,
-        "function": "Architecture",
-        "kind": "control"
-      },
-      {
-        "control_id": "V1.1",
-        "title": "Secure Software Development Lifecycle",
-        "description": "Ensure the use of a secure software development lifecycle that addresses security in all stages.",
-        "parent": "V1",
-        "function": "Architecture",
-        "kind": "control"
-      },
-      {
-        "control_id": "V1.2",
-        "title": "Authentication Architecture",
-        "description": "Verify that authentication is addressed in the architecture.",
-        "parent": "V1",
-        "function": "Architecture",
-        "kind": "control"
-      },
-      {
-        "control_id": "V1.4",
-        "title": "Access Control Architecture",
-        "description": "Verify that access controls are applied consistently.",
-        "parent": "V1",
-        "function": "Architecture",
-        "kind": "control"
-      },
-      {
-        "control_id": "V1.5",
-        "title": "Input and Output Architecture",
-        "description": "Verify that input and output requirements define handling of data based on type and content.",
-        "parent": "V1",
-        "function": "Architecture",
-        "kind": "control"
-      },
-      {
-        "control_id": "V2",
-        "title": "Authentication",
-        "description": "Verify that the application uses appropriate authentication mechanisms.",
-        "parent": null,
-        "function": "Verification",
-        "kind": "control"
-      },
-      {
-        "control_id": "V2.1",
-        "title": "Password Security",
-        "description": "Verify password requirements align with modern standards.",
-        "parent": "V2",
-        "function": "Verification",
-        "kind": "control"
-      },
-      {
-        "control_id": "V2.5",
-        "title": "Credential Recovery",
-        "description": "Verify credential recovery mechanisms are secure.",
-        "parent": "V2",
-        "function": "Verification",
-        "kind": "control"
-      },
-      {
-        "control_id": "V2.8",
-        "title": "One Time Verifier",
-        "description": "Verify one-time passwords and verifiers are secure.",
-        "parent": "V2",
-        "function": "Verification",
-        "kind": "control"
-      },
-      {
-        "control_id": "V3",
-        "title": "Session Management",
-        "description": "Verify the application has adequate session management controls.",
-        "parent": null,
-        "function": "Verification",
-        "kind": "control"
-      },
-      {
-        "control_id": "V4",
-        "title": "Access Control",
-        "description": "Verify that users can only access functions and data for which they possess specific authorization.",
-        "parent": null,
-        "function": "Verification",
-        "kind": "control"
-      },
-      {
-        "control_id": "V4.1",
-        "title": "General Access Control Design",
-        "description": "Verify access control is applied server-side and consistently.",
-        "parent": "V4",
-        "function": "Verification",
-        "kind": "control"
-      },
-      {
-        "control_id": "V4.2",
-        "title": "Operation Level Access Control",
-        "description": "Verify access controls at the operation and function level.",
-        "parent": "V4",
-        "function": "Verification",
-        "kind": "control"
-      },
-      {
-        "control_id": "V5",
-        "title": "Validation, Sanitization and Encoding",
-        "description": "Verify that the application sanitizes, validates, and encodes untrusted input.",
-        "parent": null,
-        "function": "Verification",
-        "kind": "control"
-      },
-      {
-        "control_id": "V5.1",
-        "title": "Input Validation",
-        "description": "Verify input validation controls are in place.",
-        "parent": "V5",
-        "function": "Verification",
-        "kind": "control"
-      },
-      {
-        "control_id": "V5.2",
-        "title": "Sanitization and Sandboxing",
-        "description": "Verify that sanitization and sandboxing are used to prevent injection.",
-        "parent": "V5",
-        "function": "Verification",
-        "kind": "control"
-      },
-      {
-        "control_id": "V5.3",
-        "title": "Output Encoding and Injection Prevention",
-        "description": "Verify that output encoding prevents injection attacks.",
-        "parent": "V5",
-        "function": "Verification",
-        "kind": "control"
-      },
-      {
-        "control_id": "V5.5",
-        "title": "Deserialization Prevention",
-        "description": "Verify that deserialization is done safely.",
-        "parent": "V5",
-        "function": "Verification",
-        "kind": "control"
-      },
-      {
-        "control_id": "V6",
-        "title": "Stored Cryptography",
-        "description": "Verify that cryptographic modules and algorithms are used correctly.",
-        "parent": null,
-        "function": "Verification",
-        "kind": "control"
-      },
-      {
-        "control_id": "V7",
-        "title": "Error Handling and Logging",
-        "description": "Verify that errors are handled safely and logs contain sufficient information.",
-        "parent": null,
-        "function": "Verification",
-        "kind": "control"
-      },
-      {
-        "control_id": "V7.1",
-        "title": "Log Content",
-        "description": "Verify that security-relevant events are logged.",
-        "parent": "V7",
-        "function": "Verification",
-        "kind": "control"
-      },
-      {
-        "control_id": "V7.2",
-        "title": "Log Processing",
-        "description": "Verify that logs are processed securely.",
-        "parent": "V7",
-        "function": "Verification",
-        "kind": "control"
-      },
-      {
-        "control_id": "V8",
-        "title": "Data Protection",
-        "description": "Verify that data is protected in transit and at rest.",
-        "parent": null,
-        "function": "Verification",
-        "kind": "control"
-      },
-      {
-        "control_id": "V8.1",
-        "title": "General Data Protection",
-        "description": "Verify sensitive data is identified and protected.",
-        "parent": "V8",
-        "function": "Verification",
-        "kind": "control"
-      },
-      {
-        "control_id": "V8.3",
-        "title": "Sensitive Private Data",
-        "description": "Verify that sensitive data is protected from unauthorized access.",
-        "parent": "V8",
-        "function": "Verification",
-        "kind": "control"
-      },
-      {
-        "control_id": "V9",
-        "title": "Communication",
-        "description": "Verify that communications are encrypted using TLS.",
-        "parent": null,
-        "function": "Verification",
-        "kind": "control"
-      },
-      {
-        "control_id": "V10",
-        "title": "Malicious Code",
-        "description": "Verify that code does not contain malicious logic.",
-        "parent": null,
-        "function": "Verification",
-        "kind": "control"
-      },
-      {
-        "control_id": "V11",
-        "title": "Business Logic",
-        "description": "Verify that business logic flows are sequential and audited.",
-        "parent": null,
-        "function": "Verification",
-        "kind": "control"
-      },
-      {
-        "control_id": "V12",
-        "title": "Files and Resources",
-        "description": "Verify that untrusted files and resources are handled safely.",
-        "parent": null,
-        "function": "Verification",
-        "kind": "control"
-      },
-      {
-        "control_id": "V13",
-        "title": "API and Web Service",
-        "description": "Verify that API and web service requests are validated.",
-        "parent": null,
-        "function": "Verification",
-        "kind": "control"
-      },
-      {
-        "control_id": "V13.1",
-        "title": "Generic Web Service Security",
-        "description": "Verify that all API and web service interactions are authenticated and authorized.",
-        "parent": "V13",
-        "function": "Verification",
-        "kind": "control"
-      },
-      {
-        "control_id": "V14",
-        "title": "Configuration",
-        "description": "Verify that the application is securely configured.",
-        "parent": null,
-        "function": "Verification",
-        "kind": "control"
-      },
-      {
-        "control_id": "V5.1.1",
-        "title": "Verify all user input validated against allowlist",
-        "description": "All inputs to agents validated — indirect injection through processed content equally in scope; All content entering agent memory validated — injection patterns rejected at write boundary; All inputs to LLMs validated — indirect injection through processed content equally in scope",
-        "kind": "control"
-      },
-      {
-        "control_id": "V5.2.1",
-        "title": "Verify output encoding prevents injection",
-        "description": "Agent responses encoded before passing to downstream renderers — outputs treated as untrusted; Agent code output encoded before rendering in any context; Agent advisory outputs clearly labelled — users cannot mistake AI output for authoritative content",
-        "kind": "control"
-      },
-      {
-        "control_id": "V5.2.5",
-        "title": "Verify application protects against OS command injection",
-        "description": "Agent-generated instructions not executed in system context without validation; Agent-generated commands validated before any shell execution; LLM-generated content validated before execution in any shell or interpreter context",
+        "function": "Encoding and Sanitization",
         "kind": "control"
       },
       {
         "control_id": "V1.1.2",
         "title": "Threat modelling of all data flows",
         "description": "All agent input sources threat-modelled — every indirect injection path documented; Supply chain threat model documents all agent component sources and trust levels; LLM data flows threat-modelled — all injection paths identified and documented",
+        "parent": null,
+        "function": null,
+        "kind": "control",
+        "source_status": "absent-from-asvs-5.0.0 (DELETED, NOT IN SCOPE)"
+      },
+      {
+        "control_id": "V1.1.4",
+        "title": "Trust boundaries documented and enforced",
+        "description": "",
+        "parent": "V1",
+        "function": null,
+        "kind": "control",
+        "source_status": "absent-from-asvs-5.0.0 (DELETED, NOT IN SCOPE)"
+      },
+      {
+        "control_id": "V1.2",
+        "title": "Injection Prevention",
+        "description": "",
+        "parent": "V1",
+        "function": "Encoding and Sanitization",
         "kind": "control"
       },
       {
-        "control_id": "V11.1.2",
-        "title": "Verify business logic limits prevent function abuse",
-        "description": "Business logic controls prevent injection from redirecting agent goal; Tool chain exploitation scenarios identified in threat model — mitigations implemented and verified; Code execution capability in agents subject to business logic controls — sandbox, allowlist, static analysis",
+        "control_id": "V1.2.4",
+        "title": "Verify that data selection or database queries (e.g., SQL, HQL, NoSQL, Cypher) use parameterized queries, ORMs, entity frameworks, or are otherwise protected from SQL Injection and other database injection attacks. This is also relevant when writing stored procedures.",
+        "description": "",
+        "parent": "V1.2",
+        "function": "Encoding and Sanitization",
         "kind": "control"
       },
       {
-        "control_id": "V4.1.3",
-        "title": "Verify access control enforces least privilege",
-        "description": "Agent tool access scoped to minimum required operations — read-only by default, write access formally approved; Agent credential scope minimum required — no over-privileged NHIs; Memory write access restricted to minimum required sources — only agent and authorised administrators can write",
+        "control_id": "V1.3",
+        "title": "Sanitization",
+        "description": "",
+        "parent": "V1",
+        "function": "Encoding and Sanitization",
         "kind": "control"
       },
       {
-        "control_id": "V4.1.1",
-        "title": "Verify all sensitive functions have access control",
-        "description": "All destructive tool operations require explicit authorisation — not inheritable from agent session; LLM cannot access sensitive functions (write, delete, execute) without explicit authorisation",
+        "control_id": "V1.3.1",
+        "title": "Verify that all untrusted HTML input from WYSIWYG editors or similar is sanitized using a well-known and secure HTML sanitization library or framework feature.",
+        "description": "",
+        "parent": "V1.3",
+        "function": "Encoding and Sanitization",
         "kind": "control"
       },
       {
-        "control_id": "V7.2.2",
-        "title": "Verify all business logic decisions logged",
-        "description": "All tool invocations logged — tool identity, parameters, agent session, timestamp; All agent tool invocations and recommendations logged — systematic bias detectable through aggregate analysis; All LLM tool invocations logged with full context — every tool call auditable",
+        "control_id": "V1.3.2",
+        "title": "Verify that the application avoids the use of eval() or other dynamic code execution features such as Spring Expression Language (SpEL). Where there is no alternative, any user input being included must be sanitized before being executed.",
+        "description": "",
+        "parent": "V1.3",
+        "function": "Encoding and Sanitization",
         "kind": "control"
       },
       {
-        "control_id": "V13.1.1",
-        "title": "Verify API rate limiting",
-        "description": "Tool API endpoints rate-limited — anomalous invocation frequency detected; Rate limiting on all agent API endpoints — cascade amplification through API exhaustion limited; Rate limiting prevents rogue agent from amplifying impact through API exhaustion",
+        "control_id": "V1.3.5",
+        "title": "Verify that the application sanitizes or disables user-supplied scriptable or expression template language content, such as Markdown, CSS or XSL stylesheets, BBCode, or similar.",
+        "description": "",
+        "parent": "V1.3",
+        "function": "Encoding and Sanitization",
         "kind": "control"
       },
       {
-        "control_id": "V2.1.1",
-        "title": "Verify credentials not in source code",
-        "description": "Agent credentials not hardcoded — secret manager required",
+        "control_id": "V1.3.6",
+        "title": "Verify that the application protects against Server-side Request Forgery (SSRF) attacks, by validating untrusted data against an allowlist of protocols, domains, paths and ports and sanitizing potentially dangerous characters before using the data to call another service.",
+        "description": "",
+        "parent": "V1.3",
+        "function": "Encoding and Sanitization",
         "kind": "control"
       },
       {
-        "control_id": "V6.1.1",
-        "title": "Verify sensitive data encrypted at rest",
-        "description": "Agent credentials encrypted at rest — no cleartext in config or agent memory; Agent memory stores encrypted at rest — embeddings, long-term memory; Training data, embeddings, RAG document stores, and prompt caches encrypted at rest",
+        "control_id": "V1.3.7",
+        "title": "Verify that the application protects against template injection attacks by not allowing templates to be built based on untrusted input. Where there is no alternative, any untrusted input being included dynamically during template creation must be sanitized or strictly validated.",
+        "description": "",
+        "parent": "V1.3",
+        "function": "Encoding and Sanitization",
         "kind": "control"
       },
       {
-        "control_id": "V7.2.1",
-        "title": "Verify access control decisions logged",
-        "description": "All credential usage logged — issuance, access, expiry detectable; All A2A messages logged — sender identity, content hash, schema validation results; All agent actions logged — no production deployment without complete observability",
+        "control_id": "V1.5",
+        "title": "Safe Deserialization",
+        "description": "",
+        "parent": "V1",
+        "function": "Encoding and Sanitization",
         "kind": "control"
       },
       {
-        "control_id": "V14.2.3",
-        "title": "Verify secrets not in source code",
-        "description": "Agent credentials not committed to source control; System prompts not hardcoded in source code — stored in secret management system",
+        "control_id": "V1.5.3",
+        "title": "Verify that different parsers used in the application for the same data type (e.g., JSON parsers, XML parsers, URL parsers), perform parsing in a consistent way and use the same character encoding mechanism to avoid issues such as JSON Interoperability vulnerabilities or different URI or file parsing behavior being exploited in Remote File Inclusion (RFI) or Server-side Request Forgery (SSRF) attacks.",
+        "description": "",
+        "parent": "V1.5",
+        "function": "Encoding and Sanitization",
         "kind": "control"
+      },
+      {
+        "control_id": "V2",
+        "title": "Validation and Business Logic",
+        "description": "",
+        "parent": null,
+        "function": "Validation and Business Logic",
+        "kind": "control"
+      },
+      {
+        "control_id": "V2.2",
+        "title": "Input Validation",
+        "description": "",
+        "parent": "V2",
+        "function": "Validation and Business Logic",
+        "kind": "control"
+      },
+      {
+        "control_id": "V2.2.1",
+        "title": "Verify that input is validated to enforce business or functional expectations for that input. This should either use positive validation against an allow list of values, patterns, and ranges, or be based on comparing the input to an expected structure and logical limits according to predefined rules. For L1, this can focus on input which is used to make specific business or security decisions. For L2 and up, this should apply to all input.",
+        "description": "",
+        "parent": "V2.2",
+        "function": "Validation and Business Logic",
+        "kind": "control"
+      },
+      {
+        "control_id": "V2.3",
+        "title": "Business Logic Security",
+        "description": "",
+        "parent": "V2",
+        "function": "Validation and Business Logic",
+        "kind": "control"
+      },
+      {
+        "control_id": "V2.3.1",
+        "title": "Verify that the application will only process business logic flows for the same user in the expected sequential step order and without skipping steps.",
+        "description": "",
+        "parent": "V2.3",
+        "function": "Validation and Business Logic",
+        "kind": "control"
+      },
+      {
+        "control_id": "V2.4",
+        "title": "Anti-automation",
+        "description": "",
+        "parent": "V2",
+        "function": "Validation and Business Logic",
+        "kind": "control"
+      },
+      {
+        "control_id": "V2.4.1",
+        "title": "Verify that anti-automation controls are in place to protect against excessive calls to application functions that could lead to data exfiltration, garbage-data creation, quota exhaustion, rate-limit breaches, denial-of-service, or overuse of costly resources.",
+        "description": "",
+        "parent": "V2.4",
+        "function": "Validation and Business Logic",
+        "kind": "control"
+      },
+      {
+        "control_id": "V2.4.2",
+        "title": "Verify that business logic flows require realistic human timing, preventing excessively rapid transaction submissions.",
+        "description": "",
+        "parent": "V2.4",
+        "function": "Validation and Business Logic",
+        "kind": "control"
+      },
+      {
+        "control_id": "V3",
+        "title": "Web Frontend Security",
+        "description": "",
+        "parent": null,
+        "function": "Web Frontend Security",
+        "kind": "control"
+      },
+      {
+        "control_id": "V3.5",
+        "title": "Browser Origin Separation",
+        "description": "",
+        "parent": "V3",
+        "function": "Web Frontend Security",
+        "kind": "control"
+      },
+      {
+        "control_id": "V3.5.1",
+        "title": "Verify that, if the application does not rely on the CORS preflight mechanism to prevent disallowed cross-origin requests to use sensitive functionality, these requests are validated to ensure they originate from the application itself. This may be done by using and validating anti-forgery tokens or requiring extra HTTP header fields that are not CORS-safelisted request-header fields. This is to defend against browser-based request forgery attacks, commonly known as cross-site request forgery (CSRF).",
+        "description": "",
+        "parent": "V3.5",
+        "function": "Web Frontend Security",
+        "kind": "control"
+      },
+      {
+        "control_id": "V3.6",
+        "title": "External Resource Integrity",
+        "description": "",
+        "parent": "V3",
+        "function": "Web Frontend Security",
+        "kind": "control"
+      },
+      {
+        "control_id": "V3.6.1",
+        "title": "Verify that client-side assets, such as JavaScript libraries, CSS, or web fonts, are only hosted externally (e.g., on a Content Delivery Network) if the resource is static and versioned and Subresource Integrity (SRI) is used to validate the integrity of the asset. If this is not possible, there should be a documented security decision to justify this for each resource.",
+        "description": "",
+        "parent": "V3.6",
+        "function": "Web Frontend Security",
+        "kind": "control"
+      },
+      {
+        "control_id": "V5",
+        "title": "File Handling",
+        "description": "",
+        "parent": null,
+        "function": "File Handling",
+        "kind": "control"
+      },
+      {
+        "control_id": "V5.2",
+        "title": "File Upload and Content",
+        "description": "",
+        "parent": "V5",
+        "function": "File Handling",
+        "kind": "control"
+      },
+      {
+        "control_id": "V5.2.1",
+        "title": "Verify that the application will only accept files of a size which it can process without causing a loss of performance or a denial of service attack.",
+        "description": "",
+        "parent": "V5.2",
+        "function": "File Handling",
+        "kind": "control"
+      },
+      {
+        "control_id": "V5.2.4",
+        "title": "Verify that a file size quota and maximum number of files per user are enforced to ensure that a single user cannot fill up the storage with too many files, or excessively large files.",
+        "description": "",
+        "parent": "V5.2",
+        "function": "File Handling",
+        "kind": "control"
+      },
+      {
+        "control_id": "V6",
+        "title": "Authentication",
+        "description": "",
+        "parent": null,
+        "function": "Authentication",
+        "kind": "control"
+      },
+      {
+        "control_id": "V6.2",
+        "title": "Password Security",
+        "description": "",
+        "parent": "V6",
+        "function": "Authentication",
+        "kind": "control"
+      },
+      {
+        "control_id": "V6.2.1",
+        "title": "Verify that user set passwords are at least 8 characters in length although a minimum of 15 characters is strongly recommended.",
+        "description": "",
+        "parent": "V6.2",
+        "function": "Authentication",
+        "kind": "control"
+      },
+      {
+        "control_id": "V7",
+        "title": "Session Management",
+        "description": "",
+        "parent": null,
+        "function": "Session Management",
+        "kind": "control"
+      },
+      {
+        "control_id": "V7.4",
+        "title": "Session Termination",
+        "description": "",
+        "parent": "V7",
+        "function": "Session Management",
+        "kind": "control"
+      },
+      {
+        "control_id": "V7.4.1",
+        "title": "Verify that when session termination is triggered (such as logout or expiration), the application disallows any further use of the session. For reference tokens or stateful sessions, this means invalidating the session data at the application backend. Applications using self-contained tokens will need a solution such as maintaining a list of terminated tokens, disallowing tokens produced before a per-user date and time or rotating a per-user signing key.",
+        "description": "",
+        "parent": "V7.4",
+        "function": "Session Management",
+        "kind": "control"
+      },
+      {
+        "control_id": "V8",
+        "title": "Authorization",
+        "description": "",
+        "parent": null,
+        "function": "Authorization",
+        "kind": "control"
+      },
+      {
+        "control_id": "V8.1.3",
+        "title": "Sensitive data not in session storage",
+        "description": "",
+        "parent": "V8",
+        "function": null,
+        "kind": "control",
+        "source_status": "absent-from-asvs-5.0.0 (DELETED, INSUFFICIENT IMPACT)"
+      },
+      {
+        "control_id": "V8.1.4",
+        "title": "Sensitive data minimisation",
+        "description": "",
+        "parent": "V8",
+        "function": null,
+        "kind": "control",
+        "source_status": "absent-from-asvs-5.0.0 (DELETED, NOT IN SCOPE)"
+      },
+      {
+        "control_id": "V8.2",
+        "title": "General Authorization Design",
+        "description": "",
+        "parent": "V8",
+        "function": "Authorization",
+        "kind": "control"
+      },
+      {
+        "control_id": "V8.2.1",
+        "title": "Verify that the application ensures that function-level access is restricted to consumers with explicit permissions.",
+        "description": "",
+        "parent": "V8.2",
+        "function": "Authorization",
+        "kind": "control"
+      },
+      {
+        "control_id": "V8.3",
+        "title": "Operation Level Authorization",
+        "description": "",
+        "parent": "V8",
+        "function": "Authorization",
+        "kind": "control"
+      },
+      {
+        "control_id": "V8.3.1",
+        "title": "Verify that the application enforces authorization rules at a trusted service layer and doesn't rely on controls that an untrusted consumer could manipulate, such as client-side JavaScript.",
+        "description": "",
+        "parent": "V8.3",
+        "function": "Authorization",
+        "kind": "control"
+      },
+      {
+        "control_id": "V8.3.3",
+        "title": "Consent obtained before PI processing",
+        "description": "",
+        "parent": "V8",
+        "function": null,
+        "kind": "control",
+        "source_status": "absent-from-asvs-5.0.0 (DELETED, NOT IN SCOPE)"
+      },
+      {
+        "control_id": "V8.3.10",
+        "title": "Personal data not kept longer than needed",
+        "description": "",
+        "parent": "V8",
+        "function": null,
+        "kind": "control",
+        "source_status": "absent-from-asvs-5.0.0 ((id absent from the official 4.0.3 mapping))"
       },
       {
         "control_id": "V10.2.1",
         "title": "Verify third-party components current and free of vulnerabilities",
         "description": "All agent component libraries scanned for CVEs — ML SBOM maintained and monitored; All LLM component libraries and dependencies scanned for CVEs — ML SBOM maintained; Training pipeline components scanned — compromised dependencies rejected",
-        "kind": "control"
+        "parent": null,
+        "function": null,
+        "kind": "control",
+        "source_status": "absent-from-asvs-5.0.0 (DELETED, NOT PRACTICAL)"
       },
       {
         "control_id": "V10.2.2",
         "title": "Verify only minimal approved external libraries",
         "description": "Approved component list — unsigned or unverified agent components rejected; Approved component list for LLM deployments — unsigned or unverified components rejected",
+        "parent": null,
+        "function": null,
+        "kind": "control",
+        "source_status": "absent-from-asvs-5.0.0 (DELETED, NOT PRACTICAL)"
+      },
+      {
+        "control_id": "V11.1.7",
+        "title": "Anti-automation controls",
+        "description": "",
+        "parent": "V11",
+        "function": null,
+        "kind": "control",
+        "source_status": "absent-from-asvs-5.0.0 (DELETED, NOT IN SCOPE)"
+      },
+      {
+        "control_id": "V12",
+        "title": "Secure Communication",
+        "description": "",
+        "parent": null,
+        "function": "Secure Communication",
+        "kind": "control"
+      },
+      {
+        "control_id": "V12.2",
+        "title": "HTTPS Communication with External Facing Services",
+        "description": "",
+        "parent": "V12",
+        "function": "Secure Communication",
+        "kind": "control"
+      },
+      {
+        "control_id": "V12.2.1",
+        "title": "Verify that TLS is used for all connectivity between a client and external facing, HTTP-based services, and does not fall back to insecure or unencrypted communications.",
+        "description": "",
+        "parent": "V12.2",
+        "function": "Secure Communication",
+        "kind": "control"
+      },
+      {
+        "control_id": "V13",
+        "title": "Configuration",
+        "description": "",
+        "parent": null,
+        "function": "Configuration",
+        "kind": "control"
+      },
+      {
+        "control_id": "V13.1.2",
+        "title": "API throttling",
+        "description": "",
+        "parent": "V13",
+        "function": null,
+        "kind": "control",
+        "source_status": "absent-from-asvs-5.0.0 ((id absent from the official 4.0.3 mapping))"
+      },
+      {
+        "control_id": "V13.2",
+        "title": "Backend Communication Configuration",
+        "description": "",
+        "parent": "V13",
+        "function": "Configuration",
+        "kind": "control"
+      },
+      {
+        "control_id": "V13.2.1",
+        "title": "Verify that communications between backend application components that don't support the application's standard user session mechanism, including APIs, middleware, and data layers, are authenticated. Authentication must use individual service accounts, short-term tokens, or certificate-based authentication and not unchanging credentials such as passwords, API keys, or shared accounts with privileged access.",
+        "description": "",
+        "parent": "V13.2",
+        "function": "Configuration",
+        "kind": "control"
+      },
+      {
+        "control_id": "V13.4",
+        "title": "Unintended Information Leakage",
+        "description": "",
+        "parent": "V13",
+        "function": "Configuration",
+        "kind": "control"
+      },
+      {
+        "control_id": "V13.4.5",
+        "title": "Verify that documentation (such as for internal APIs) and monitoring endpoints are not exposed unless explicitly intended.",
+        "description": "",
+        "parent": "V13.4",
+        "function": "Configuration",
+        "kind": "control"
+      },
+      {
+        "control_id": "V14",
+        "title": "Data Protection",
+        "description": "",
+        "parent": null,
+        "function": "Data Protection",
+        "kind": "control"
+      },
+      {
+        "control_id": "V14.1",
+        "title": "Data Protection Documentation",
+        "description": "",
+        "parent": "V14",
+        "function": "Data Protection",
+        "kind": "control"
+      },
+      {
+        "control_id": "V14.1.1",
+        "title": "Verify that all sensitive data created and processed by the application has been identified and classified into protection levels. This includes data that is only encoded and therefore easily decoded, such as Base64 strings or the plaintext payload inside a JWT. Protection levels need to take into account any data protection and privacy regulations and standards which the application is required to comply with.",
+        "description": "",
+        "parent": "V14.1",
+        "function": "Data Protection",
+        "kind": "control"
+      },
+      {
+        "control_id": "V14.1.2",
+        "title": "Verify that all sensitive data protection levels have a documented set of protection requirements. This must include (but not be limited to) requirements related to general encryption, integrity verification, retention, how the data is to be logged, access controls around sensitive data in logs, database-level encryption, privacy and privacy-enhancing technologies to be used, and other confidentiality requirements.",
+        "description": "",
+        "parent": "V14.1",
+        "function": "Data Protection",
+        "kind": "control"
+      },
+      {
+        "control_id": "V14.1.4",
+        "title": "All components inventoried",
+        "description": "",
+        "parent": "V14",
+        "function": null,
+        "kind": "control",
+        "source_status": "absent-from-asvs-5.0.0 (DELETED, NOT IN SCOPE)"
+      },
+      {
+        "control_id": "V14.2",
+        "title": "General Data Protection",
+        "description": "",
+        "parent": "V14",
+        "function": "Data Protection",
+        "kind": "control"
+      },
+      {
+        "control_id": "V14.2.1",
+        "title": "Verify that sensitive data is only sent to the server in the HTTP message body or header fields, and that the URL and query string do not contain sensitive information, such as an API key or session token.",
+        "description": "",
+        "parent": "V14.2",
+        "function": "Data Protection",
         "kind": "control"
       },
       {
         "control_id": "V14.2.2",
-        "title": "Verify build pipelines include security checks",
-        "description": "CI/CD pipeline for agent components includes integrity verification and CVE scanning; CI/CD pipeline for LLM components includes integrity verification and vulnerability scanning",
+        "title": "Verify that the application prevents sensitive data from being cached in server components, such as load balancers and application caches, or ensures that the data is securely purged after use.",
+        "description": "",
+        "parent": "V14.2",
+        "function": "Data Protection",
         "kind": "control"
       },
       {
-        "control_id": "V5.2.4",
-        "title": "Verify application does not use eval or dynamic code",
-        "description": "No eval or exec of agent-generated code — absolute prohibition enforced in code review; No eval or dynamic code execution of LLM-generated content",
+        "control_id": "V15",
+        "title": "Secure Coding and Architecture",
+        "description": "",
+        "parent": null,
+        "function": "Secure Coding and Architecture",
         "kind": "control"
       },
       {
-        "control_id": "V5.3.5",
-        "title": "Verify output encoding in SQL context",
-        "description": "No raw agent output in SQL context — parameterised execution only; LLM-generated SQL parameterised — never raw LLM output in SQL context",
+        "control_id": "V15.3",
+        "title": "Defensive Coding",
+        "description": "",
+        "parent": "V15",
+        "function": "Secure Coding and Architecture",
         "kind": "control"
       },
       {
-        "control_id": "V12.1.1",
-        "title": "Verify file upload malware scanning",
-        "description": "Content entering agent memory scanned — adversarial content, injection patterns detected before write; Training data uploads scanned before ingestion — adversarial content detected; Content validation on all vector store ingestion — adversarial content detected",
+        "control_id": "V15.3.3",
+        "title": "Verify that the application has countermeasures to protect against mass assignment attacks by limiting allowed fields per controller and action, e.g., it is not possible to insert or update a field value when it was not intended to be part of that action.",
+        "description": "",
+        "parent": "V15.3",
+        "function": "Secure Coding and Architecture",
         "kind": "control"
       },
       {
-        "control_id": "V9.1.1",
-        "title": "Verify TLS used for all client connectivity",
-        "description": "All A2A communication encrypted — mutual TLS, no cleartext inter-agent messages; All LLM API communication and data flows encrypted in transit — TLS 1.2 minimum",
+        "control_id": "V15.3.7",
+        "title": "Verify that the application has defenses against HTTP parameter pollution attacks, particularly if the application framework makes no distinction about the source of request parameters (query string, body parameters, cookies, or header fields).",
+        "description": "",
+        "parent": "V15.3",
+        "function": "Secure Coding and Architecture",
         "kind": "control"
       },
       {
-        "control_id": "V3.3.1",
-        "title": "Verify anti-replay tokens in state-changing operations",
-        "description": "Replay protection on all A2A messages — nonces, timestamps, sequence numbers",
+        "control_id": "V16",
+        "title": "Security Logging and Error Handling",
+        "description": "",
+        "parent": null,
+        "function": "Security Logging and Error Handling",
         "kind": "control"
       },
       {
-        "control_id": "V11.1.1",
-        "title": "Verify business logic assumptions documented",
-        "description": "Cascade blast radius documented as business logic assumption — maximum affected systems formally accepted; AI advisory limitations documented as business logic assumptions — verification requirements per domain; LLM accuracy limitations documented as business logic assumptions — verification requirements defined",
+        "control_id": "V16.2",
+        "title": "General Logging",
+        "description": "",
+        "parent": "V16",
+        "function": "Security Logging and Error Handling",
         "kind": "control"
       },
       {
-        "control_id": "V7.4.1",
-        "title": "Verify error handling does not expose sensitive data",
-        "description": "Cascade errors handled gracefully — no sensitive system information in error responses; Agent-influenced operator decisions logged — aggregate patterns detectable; LLM accuracy metrics and hallucination rate logged — production monitoring for output quality",
+        "control_id": "V16.2.5",
+        "title": "Verify that when logging sensitive data, the application enforces logging based on the data's protection level. For example, it may not be allowed to log certain data, such as credentials or payment details. Other data, such as session tokens, may only be logged by being hashed or masked, either in full or partially.",
+        "description": "",
+        "parent": "V16.2",
+        "function": "Security Logging and Error Handling",
         "kind": "control"
       },
       {
-        "control_id": "V13.1.3",
-        "title": "Verify API rejects large unexpected payloads",
-        "description": "Approval flows independent of agent interface — no state-changing approvals via agent chat; Token limits on LLM API inputs — requests exceeding limits rejected at the gateway",
+        "control_id": "V16.3",
+        "title": "Security Events",
+        "description": "",
+        "parent": "V16",
+        "function": "Security Logging and Error Handling",
         "kind": "control"
       },
       {
-        "control_id": "V8 Data Protection",
-        "title": "V8.1.1 — Sensitive data not transmitted in URL parameters",
+        "control_id": "V16.3.1",
+        "title": "Verify that all authentication operations are logged, including successful and unsuccessful attempts. Additional metadata, such as the type of authentication or factors used, should also be collected.",
+        "description": "",
+        "parent": "V16.3",
+        "function": "Security Logging and Error Handling",
         "kind": "control"
       },
       {
-        "control_id": "V4 Access Control",
-        "title": "V4.1.3 — Deny by default access control",
+        "control_id": "V16.3.2",
+        "title": "Verify that failed authorization attempts are logged. For L3, this must include logging all authorization decisions, including logging when sensitive data is accessed (without logging the sensitive data itself).",
+        "description": "",
+        "parent": "V16.3",
+        "function": "Security Logging and Error Handling",
         "kind": "control"
       },
       {
-        "control_id": "V5 Validation",
-        "title": "V5.2.8 — Output encoding for context",
+        "control_id": "V16.5",
+        "title": "Error Handling",
+        "description": "",
+        "parent": "V16",
+        "function": "Security Logging and Error Handling",
         "kind": "control"
       },
       {
-        "control_id": "V6 Cryptography",
-        "title": "V6.1.1 — Sensitive data not stored in cleartext",
+        "control_id": "V16.5.1",
+        "title": "Verify that a generic message is returned to the consumer when an unexpected or security-sensitive error occurs, ensuring no exposure of sensitive internal system data such as stack traces, queries, secret keys, and tokens.",
+        "description": "",
+        "parent": "V16.5",
+        "function": "Security Logging and Error Handling",
         "kind": "control"
       },
       {
-        "control_id": "V2 Authentication",
-        "title": "V2.1.1 — Passwords minimum 12 characters",
-        "kind": "control"
-      },
-      {
-        "control_id": "V1 Architecture",
-        "title": "V1.1.4 — Trust boundaries documented and enforced",
-        "kind": "control"
-      },
-      {
-        "control_id": "V7 Logging",
-        "title": "V7.2.2 — Log entries contain required information",
-        "kind": "control"
-      },
-      {
-        "control_id": "V14 Configuration",
-        "title": "V14.1.4 — All components inventoried",
-        "kind": "control"
-      },
-      {
-        "control_id": "V10 Malicious Code",
-        "title": "V10.2.1 — Application only uses official repositories",
-        "kind": "control"
-      },
-      {
-        "control_id": "V12 Files/Resources",
-        "title": "V12.1.1 — File upload size limits",
-        "kind": "control"
-      },
-      {
-        "control_id": "V9 Communication",
-        "title": "V9.1.1 — TLS for all connections",
-        "kind": "control"
-      },
-      {
-        "control_id": "V11 Business Logic",
-        "title": "V11.1.4 — Business logic limits on repeated actions",
-        "kind": "control"
-      },
-      {
-        "control_id": "V3 Session Management",
-        "title": "V3.1.1 — Session tokens unique and random",
-        "kind": "control"
-      },
-      {
-        "control_id": "V13 API",
-        "title": "V13.1.1 — API protection against enumeration",
-        "kind": "control"
-      },
-      {
-        "control_id": "V5.1.2",
-        "title": "Verify that HTTP request parts are validated, sanitised, or rejected",
-        "description": "LLM API request validation — prompt structure, content type, and character set enforced",
-        "kind": "control"
-      },
-      {
-        "control_id": "V8.1.1",
-        "title": "Verify sensitive data is not cached or exposed in logs",
-        "description": "LLM outputs containing sensitive data not logged in cleartext or cached without protection; System prompts not stored in cleartext application configuration or source code",
-        "kind": "control"
-      },
-      {
-        "control_id": "V8.3.4",
-        "title": "Verify PII is identified and protected",
-        "description": "PII in LLM training data, RAG sources, and outputs identified and handled per policy",
-        "kind": "control"
-      },
-      {
-        "control_id": "V4.2.2",
-        "title": "Verify anti-CSRF tokens in state-changing operations",
-        "description": "CSRF protection on endpoints where LLM output triggers state changes",
-        "kind": "control"
-      },
-      {
-        "control_id": "V11.1.4",
-        "title": "Verify business logic rate limits",
-        "description": "Business logic controls on LLM usage — per-tenant cost budgets, rate limit policies",
+        "control_id": "V16.5.3",
+        "title": "Verify that the application fails gracefully and securely, including when an exception occurs, preventing fail-open conditions such as processing a transaction despite errors resulting from validation logic.",
+        "description": "",
+        "parent": "V16.5",
+        "function": "Security Logging and Error Handling",
         "kind": "control"
       }
     ],
@@ -8213,14 +8383,29 @@ window.CROSSWALK_FRAMEWORKS = [
         "date": "2026-04-09",
         "change": "Initial seed — 32 ASVS verification requirements and sub-requirements",
         "author": "OWASP GenAI Data Security Initiative"
+      },
+      {
+        "date": "2026-09-18",
+        "change": "Migrated off the swapped-column ids of issue #35: 75 items -> 82, including 17 referenced by mappings but absent from the registry",
+        "author": "OWASP GenAI Data Security Initiative"
+      },
+      {
+        "date": "2026-09-18",
+        "change": "Re-mapped to ASVS 5.0.0 using the project's own mapping_v4.0.3_to_v5.0.0.yml: 82 items -> 78, titles from the 5.0.0 release; 11 id(s) 5.0.0 deleted are kept and flagged (#22)",
+        "author": "OWASP GenAI Data Security Initiative"
+      },
+      {
+        "date": "2026-09-18",
+        "change": "Re-mapped to ASVS 5.0.0 using the project's own mapping_v4.0.3_to_v5.0.0.yml: 78 items -> 78, titles from the 5.0.0 release; 11 id(s) 5.0.0 deleted are kept and flagged (#22)",
+        "author": "OWASP GenAI Data Security Initiative"
       }
     ],
     "inventory_completeness": {
-      "status": "unknown",
-      "included": 75,
-      "total": null,
-      "note": "Authoritative control count not established. Needs a count from the published framework.",
-      "source": "https://owasp.org/projects/asvs"
+      "status": "partial",
+      "included": 78,
+      "total": 345,
+      "note": "Holds the 44 requirement(s) the mappings cite plus their sections and chapters, titled from the ASVS 5.0.0 release. The standard has 345 requirements in total; the rest are not referenced by this crosswalk. 11 id(s) remain at 4.0.3 because 5.0.0 deleted them — see issue #22.",
+      "source": "https://github.com/OWASP/ASVS/releases/tag/v5.0.0_release"
     }
   },
   {
@@ -8322,6 +8507,11 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "date": "2026-09-18",
         "change": "Migrated off the swapped-column ids of issue #35: 104 items -> 10",
+        "author": "OWASP GenAI Data Security Initiative"
+      },
+      {
+        "date": "2026-09-18",
+        "change": "Migrated off the swapped-column ids of issue #35: 10 items -> 10",
         "author": "OWASP GenAI Data Security Initiative"
       }
     ]
@@ -8778,6 +8968,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "date": "2026-09-18",
         "change": "Titled 17 entries that had carried only their identifier, from the published text: PCI DSS v4.0 requirement headings, transcribed from PCI SSC \"PCI DSS v4.0 SAQ D for Merchants\" — Req 1.3, Req 2.2, Req 3.4, Req 3.5, Req 4.2, Req 5.2, Req 6.3, Req 6.4, Req 7.2, Req 7.3, Req 8.2, Req 8.3, Req 10.2, Req 10.7, Req 11.3, Req 12.3, Req 12.6",
         "author": "OWASP GenAI Data Security Initiative"
+      },
+      {
+        "date": "2026-09-18",
+        "change": "Migrated off the swapped-column ids of issue #35: 49 items -> 49",
+        "author": "OWASP GenAI Data Security Initiative"
       }
     ]
   },
@@ -9168,6 +9363,11 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "date": "2026-09-18",
         "change": "Titled 2 entries that had carried only their identifier, from the published text: TSP section 100, 2017 Trust Services Criteria (with Revised Points of Focus — 2022) — P7.1, PI1.3",
+        "author": "OWASP GenAI Data Security Initiative"
+      },
+      {
+        "date": "2026-09-18",
+        "change": "Migrated off the swapped-column ids of issue #35: 46 items -> 46",
         "author": "OWASP GenAI Data Security Initiative"
       }
     ],

@@ -339,6 +339,11 @@
       "date": "2026-09-18",
       "change": "Titled 17 entries that had carried only their identifier, from the published text: PCI DSS v4.0 requirement headings, transcribed from PCI SSC \"PCI DSS v4.0 SAQ D for Merchants\" — Req 1.3, Req 2.2, Req 3.4, Req 3.5, Req 4.2, Req 5.2, Req 6.3, Req 6.4, Req 7.2, Req 7.3, Req 8.2, Req 8.3, Req 10.2, Req 10.7, Req 11.3, Req 12.3, Req 12.6",
       "author": "OWASP GenAI Data Security Initiative"
+    },
+    {
+      "date": "2026-09-18",
+      "change": "Migrated off the swapped-column ids of issue #35: 49 items -> 49",
+      "author": "OWASP GenAI Data Security Initiative"
     }
   ]
 }

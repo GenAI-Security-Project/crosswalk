@@ -1,7 +1,7 @@
 <!--
   OWASP GenAI Crosswalk
   Source list : OWASP Top 10 for Agentic Applications 2026 (ASI01-ASI10)
-  Framework   : OWASP Application Security Verification Standard (ASVS) 4.0.3
+  Framework   : OWASP Application Security Verification Standard (ASVS) 5.0.0
   Version     : 2026-Q1
   Maintained by: OWASP GenAI Data Security Initiative — https://genai.owasp.org
   License     : CC BY-SA 4.0
@@ -17,12 +17,16 @@ to the
 the framework for testing and verifying web application and API
 security, organised into 14 chapters with three verification levels.
 
-> **Mapped against ASVS 4.0.3.** ASVS **5.0.0** is released and renumbered the
-> requirements, so the V-numbers below do not reliably denote the same
-> requirement in 5.0. These mappings are **not** current for 5.0 and have not
-> been re-mapped: doing so is expert work, tracked in
-> [issue #22](https://github.com/GenAI-Security-Project/crosswalk/issues/22).
-> Treat the requirement identifiers here as 4.0.3 identifiers.
+> **Mapped against ASVS 5.0.0.** The identifiers below were translated from 4.0.3
+> using the ASVS project’s own mapping file, [`mapping_v4.0.3_to_v5.0.0.yml`][asvs-map],
+> and the requirement text is 5.0.0’s own. The translation is mechanical: the
+> **relationship, rationale type and confidence on every row read `DRAFT`** and
+> await an ASVS-leadership reviewer ([#22][issue-22], STRAT-04). Requirements
+> 5.0.0 deleted rather than renumbered keep their 4.0.3 identifier and carry a
+> DRAFT marker naming the official disposition.
+
+[asvs-map]: https://github.com/OWASP/ASVS/blob/master/5.0/mappings/mapping_v4.0.3_to_v5.0.0.yml
+[issue-22]: https://github.com/GenAI-Security-Project/crosswalk/issues/22
 
 ---
 
@@ -128,13 +132,13 @@ vulnerability class fully covered by V5.
 
 #### ASVS mapping
 
-| Requirement | ID | Level | How it applies |
-|---|---|---|---|
-| Verify all user input validated against allowlist | V5.1.1 | L1 | All inputs to agents validated — indirect injection through processed content equally in scope |
-| Verify output encoding prevents injection | V5.2.1 | L1 | Agent responses encoded before passing to downstream renderers — outputs treated as untrusted |
-| Verify application protects against OS command injection | V5.2.5 | L1 | Agent-generated instructions not executed in system context without validation |
-| Threat modelling of all data flows | V1.1.2 | L2 | All agent input sources threat-modelled — every indirect injection path documented |
-| Verify business logic limits prevent function abuse | V11.1.2 | L2 | Business logic controls prevent injection from redirecting agent goal |
+| Requirement | ID | Level | How it applies | Relationship | Rationale type | Confidence | Framework ver. | Reviewed by |
+|---|---|---|---|---|---|---|---|---|
+| Verify that the application has defenses against HTTP parameter pollution attacks, particularly if the application framework makes no distinction about the source of request parameters (query string, body parameters, cookies, or header fields). | V15.3.7 | L1 | All inputs to agents validated — indirect injection through processed content equally in scope | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify that all untrusted HTML input from WYSIWYG editors or similar is sanitized using a well-known and secure HTML sanitization library or framework feature. | V1.3.1 | L1 | Agent responses encoded before passing to downstream renderers — outputs treated as untrusted | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify that the application protects against template injection attacks by not allowing templates to be built based on untrusted input. Where there is no alternative, any untrusted input being included dynamically during template creation must be sanitized or strictly validated. | V1.3.7 | L1 | Agent-generated instructions not executed in system context without validation | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Threat modelling of all data flows | V1.1.2 | L2 | All agent input sources threat-modelled — every indirect injection path documented — **DRAFT — ASVS 5.0.0: DELETED, NOT IN SCOPE; retarget or drop pending SME review (#22)** | DRAFT | DRAFT | DRAFT | ASVS 4.0.3 | (unreviewed) |
+| Verify that business logic flows require realistic human timing, preventing excessively rapid transaction submissions. | V2.4.2 | L2 | Business logic controls prevent injection from redirecting agent goal | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
 
 #### Mitigations by tier
 
@@ -184,13 +188,13 @@ least privilege (V4.1.3) applies to every agent tool integration.
 
 #### ASVS mapping
 
-| Requirement | ID | Level | How it applies |
-|---|---|---|---|
-| Verify access control enforces least privilege | V4.1.3 | L1 | Agent tool access scoped to minimum required operations — read-only by default, write access formally approved |
-| Verify all sensitive functions have access control | V4.1.1 | L1 | All destructive tool operations require explicit authorisation — not inheritable from agent session |
-| Verify all business logic decisions logged | V7.2.2 | L2 | All tool invocations logged — tool identity, parameters, agent session, timestamp |
-| Verify business logic abuse scenarios identified | V11.1.2 | L2 | Tool chain exploitation scenarios identified in threat model — mitigations implemented and verified |
-| Verify API rate limiting | V13.1.1 | L1 | Tool API endpoints rate-limited — anomalous invocation frequency detected |
+| Requirement | ID | Level | How it applies | Relationship | Rationale type | Confidence | Framework ver. | Reviewed by |
+|---|---|---|---|---|---|---|---|---|
+| Verify that the application ensures that function-level access is restricted to consumers with explicit permissions. | V8.2.1 | L1 | Agent tool access scoped to minimum required operations — read-only by default, write access formally approved | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify that the application enforces authorization rules at a trusted service layer and doesn't rely on controls that an untrusted consumer could manipulate, such as client-side JavaScript. | V8.3.1 | L1 | All destructive tool operations require explicit authorisation — not inheritable from agent session | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify that failed authorization attempts are logged. For L3, this must include logging all authorization decisions, including logging when sensitive data is accessed (without logging the sensitive data itself). | V16.3.2 | L2 | All tool invocations logged — tool identity, parameters, agent session, timestamp | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify that business logic flows require realistic human timing, preventing excessively rapid transaction submissions. | V2.4.2 | L2 | Tool chain exploitation scenarios identified in threat model — mitigations implemented and verified | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify API rate limiting | V1.5.3 | L1 | Verify that different parsers used in the application for the same data type (e.g., JSON parsers, XML parsers, URL parsers), perform parsing in a consistent way and use the same character encoding mechanism to avoid issues such as JSON Interoperability vulnerabilities or different URI or file parsing behavior being exploited in Remote File Inclusion (RFI) or Server-side Request Forgery (SSRF) attacks. | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
 
 #### Mitigations by tier
 
@@ -240,13 +244,13 @@ agent credential management.
 
 #### ASVS mapping
 
-| Requirement | ID | Level | How it applies |
-|---|---|---|---|
-| Verify credentials not in source code | V2.1.1 | L1 | Agent credentials not hardcoded — secret manager required |
-| Verify access control enforces least privilege | V4.1.3 | L1 | Agent credential scope minimum required — no over-privileged NHIs |
-| Verify sensitive data encrypted at rest | V6.1.1 | L2 | Agent credentials encrypted at rest — no cleartext in config or agent memory |
-| Verify access control decisions logged | V7.2.1 | L2 | All credential usage logged — issuance, access, expiry detectable |
-| Verify secrets not in source code | V14.2.3 | L2 | Agent credentials not committed to source control |
+| Requirement | ID | Level | How it applies | Relationship | Rationale type | Confidence | Framework ver. | Reviewed by |
+|---|---|---|---|---|---|---|---|---|
+| Verify that user set passwords are at least 8 characters in length although a minimum of 15 characters is strongly recommended. | V6.2.1 | L1 | Agent credentials not hardcoded — secret manager required | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify that the application ensures that function-level access is restricted to consumers with explicit permissions. | V8.2.1 | L1 | Agent credential scope minimum required — no over-privileged NHIs | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify that all sensitive data created and processed by the application has been identified and classified into protection levels. This includes data that is only encoded and therefore easily decoded, such as Base64 strings or the plaintext payload inside a JWT. Protection levels need to take into account any data protection and privacy regulations and standards which the application is required to comply with. | V14.1.1 | L2 | Agent credentials encrypted at rest — no cleartext in config or agent memory | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify that all authentication operations are logged, including successful and unsuccessful attempts. Additional metadata, such as the type of authentication or factors used, should also be collected. | V16.3.1 | L2 | All credential usage logged — issuance, access, expiry detectable | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify that client-side assets, such as JavaScript libraries, CSS, or web fonts, are only hosted externally (e.g., on a Content Delivery Network) if the resource is static and versioned and Subresource Integrity (SRI) is used to validate the integrity of the asset. If this is not possible, there should be a documented security decision to justify this for each resource. | V3.6.1 | L2 | Agent credentials not committed to source control | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
 
 #### Mitigations by tier
 
@@ -293,12 +297,12 @@ govern agent components as software supply chain elements.
 
 #### ASVS mapping
 
-| Requirement | ID | Level | How it applies |
-|---|---|---|---|
-| Verify third-party components current and free of vulnerabilities | V10.2.1 | L2 | All agent component libraries scanned for CVEs — ML SBOM maintained and monitored |
-| Verify only minimal approved external libraries | V10.2.2 | L2 | Approved component list — unsigned or unverified agent components rejected |
-| Verify build pipelines include security checks | V14.2.2 | L2 | CI/CD pipeline for agent components includes integrity verification and CVE scanning |
-| Verify threat model covers all data flows | V1.1.2 | L2 | Supply chain threat model documents all agent component sources and trust levels |
+| Requirement | ID | Level | How it applies | Relationship | Rationale type | Confidence | Framework ver. | Reviewed by |
+|---|---|---|---|---|---|---|---|---|
+| Verify third-party components current and free of vulnerabilities | V10.2.1 | L2 | All agent component libraries scanned for CVEs — ML SBOM maintained and monitored — **DRAFT — ASVS 5.0.0: DELETED, NOT PRACTICAL; retarget or drop pending SME review (#22)** | DRAFT | DRAFT | DRAFT | ASVS 4.0.3 | (unreviewed) |
+| Verify only minimal approved external libraries | V10.2.2 | L2 | Approved component list — unsigned or unverified agent components rejected — **DRAFT — ASVS 5.0.0: DELETED, NOT PRACTICAL; retarget or drop pending SME review (#22)** | DRAFT | DRAFT | DRAFT | ASVS 4.0.3 | (unreviewed) |
+| Verify that documentation (such as for internal APIs) and monitoring endpoints are not exposed unless explicitly intended. | V13.4.5 | L2 | CI/CD pipeline for agent components includes integrity verification and CVE scanning | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify threat model covers all data flows | V1.1.2 | L2 | Supply chain threat model documents all agent component sources and trust levels — **DRAFT — ASVS 5.0.0: DELETED, NOT IN SCOPE; retarget or drop pending SME review (#22)** | DRAFT | DRAFT | DRAFT | ASVS 4.0.3 | (unreviewed) |
 
 #### Mitigations by tier
 
@@ -347,13 +351,13 @@ without validation.
 
 #### ASVS mapping
 
-| Requirement | ID | Level | How it applies |
-|---|---|---|---|
-| Verify output encoding of untrusted data in HTML context | V5.2.1 | L1 | Agent code output encoded before rendering in any context |
-| Verify application does not use eval or dynamic code | V5.2.4 | L1 | No eval or exec of agent-generated code — absolute prohibition enforced in code review |
-| Verify output encoding in OS command context | V5.2.5 | L1 | Agent-generated commands validated before any shell execution |
-| Verify output encoding in SQL context | V5.3.5 | L1 | No raw agent output in SQL context — parameterised execution only |
-| Verify business logic limits | V11.1.2 | L2 | Code execution capability in agents subject to business logic controls — sandbox, allowlist, static analysis |
+| Requirement | ID | Level | How it applies | Relationship | Rationale type | Confidence | Framework ver. | Reviewed by |
+|---|---|---|---|---|---|---|---|---|
+| Verify that all untrusted HTML input from WYSIWYG editors or similar is sanitized using a well-known and secure HTML sanitization library or framework feature. | V1.3.1 | L1 | Agent code output encoded before rendering in any context | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify that the application avoids the use of eval() or other dynamic code execution features such as Spring Expression Language (SpEL). Where there is no alternative, any user input being included must be sanitized before being executed. | V1.3.2 | L1 | No eval or exec of agent-generated code — absolute prohibition enforced in code review | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify that the application protects against template injection attacks by not allowing templates to be built based on untrusted input. Where there is no alternative, any untrusted input being included dynamically during template creation must be sanitized or strictly validated. | V1.3.7 | L1 | Agent-generated commands validated before any shell execution | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify that data selection or database queries (e.g., SQL, HQL, NoSQL, Cypher) use parameterized queries, ORMs, entity frameworks, or are otherwise protected from SQL Injection and other database injection attacks. This is also relevant when writing stored procedures. | V1.2.4 | L1 | No raw agent output in SQL context — parameterised execution only | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify that business logic flows require realistic human timing, preventing excessively rapid transaction submissions. | V2.4.2 | L2 | Code execution capability in agents subject to business logic controls — sandbox, allowlist, static analysis | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
 
 #### Mitigations by tier
 
@@ -403,12 +407,12 @@ access control.
 
 #### ASVS mapping
 
-| Requirement | ID | Level | How it applies |
-|---|---|---|---|
-| Verify all user input validated against allowlist | V5.1.1 | L1 | All content entering agent memory validated — injection patterns rejected at write boundary |
-| Verify access control enforces least privilege | V4.1.3 | L1 | Memory write access restricted to minimum required sources — only agent and authorised administrators can write |
-| Verify sensitive data encrypted at rest | V6.1.1 | L2 | Agent memory stores encrypted at rest — embeddings, long-term memory |
-| Verify file upload malware scanning | V12.1.1 | L2 | Content entering agent memory scanned — adversarial content, injection patterns detected before write |
+| Requirement | ID | Level | How it applies | Relationship | Rationale type | Confidence | Framework ver. | Reviewed by |
+|---|---|---|---|---|---|---|---|---|
+| Verify that the application has defenses against HTTP parameter pollution attacks, particularly if the application framework makes no distinction about the source of request parameters (query string, body parameters, cookies, or header fields). | V15.3.7 | L1 | All content entering agent memory validated — injection patterns rejected at write boundary | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify that the application ensures that function-level access is restricted to consumers with explicit permissions. | V8.2.1 | L1 | Memory write access restricted to minimum required sources — only agent and authorised administrators can write | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify that all sensitive data created and processed by the application has been identified and classified into protection levels. This includes data that is only encoded and therefore easily decoded, such as Base64 strings or the plaintext payload inside a JWT. Protection levels need to take into account any data protection and privacy regulations and standards which the application is required to comply with. | V14.1.1 | L2 | Agent memory stores encrypted at rest — embeddings, long-term memory | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify that the application will only accept files of a size which it can process without causing a loss of performance or a denial of service attack. | V5.2.1 | L2 | Content entering agent memory scanned — adversarial content, injection patterns detected before write | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
 
 #### Mitigations by tier
 
@@ -457,12 +461,12 @@ session integrity.
 
 #### ASVS mapping
 
-| Requirement | ID | Level | How it applies |
-|---|---|---|---|
-| Verify TLS used for all client connectivity | V9.1.1 | L1 | All A2A communication encrypted — mutual TLS, no cleartext inter-agent messages |
-| Verify anti-replay tokens in state-changing operations | V3.3.1 | L1 | Replay protection on all A2A messages — nonces, timestamps, sequence numbers |
-| Verify access control enforces identity | V4.1.3 | L1 | A2A channels enforce sender identity — unauthenticated messages rejected |
-| Verify all security controls logged | V7.2.1 | L2 | All A2A messages logged — sender identity, content hash, schema validation results |
+| Requirement | ID | Level | How it applies | Relationship | Rationale type | Confidence | Framework ver. | Reviewed by |
+|---|---|---|---|---|---|---|---|---|
+| Verify that TLS is used for all connectivity between a client and external facing, HTTP-based services, and does not fall back to insecure or unencrypted communications. | V12.2.1 | L1 | All A2A communication encrypted — mutual TLS, no cleartext inter-agent messages | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify that when session termination is triggered (such as logout or expiration), the application disallows any further use of the session. For reference tokens or stateful sessions, this means invalidating the session data at the application backend. Applications using self-contained tokens will need a solution such as maintaining a list of terminated tokens, disallowing tokens produced before a per-user date and time or rotating a per-user signing key. | V7.4.1 | L1 | Replay protection on all A2A messages — nonces, timestamps, sequence numbers | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify that the application ensures that function-level access is restricted to consumers with explicit permissions. | V8.2.1 | L1 | A2A channels enforce sender identity — unauthenticated messages rejected | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify that all authentication operations are logged, including successful and unsuccessful attempts. Additional metadata, such as the type of authentication or factors used, should also be collected. | V16.3.1 | L2 | All A2A messages logged — sender identity, content hash, schema validation results | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
 
 #### Mitigations by tier
 
@@ -507,12 +511,12 @@ cascade prevention as business logic abuse and API resilience.
 
 #### ASVS mapping
 
-| Requirement | ID | Level | How it applies |
-|---|---|---|---|
-| Verify business logic assumptions documented | V11.1.1 | L2 | Cascade blast radius documented as business logic assumption — maximum affected systems formally accepted |
-| Verify business logic limits prevent abuse | V11.1.2 | L2 | Circuit breakers as business logic controls — cascade propagation limited by design |
-| Verify API rate limiting | V13.1.1 | L1 | Rate limiting on all agent API endpoints — cascade amplification through API exhaustion limited |
-| Verify error handling does not expose sensitive data | V7.4.1 | L1 | Cascade errors handled gracefully — no sensitive system information in error responses |
+| Requirement | ID | Level | How it applies | Relationship | Rationale type | Confidence | Framework ver. | Reviewed by |
+|---|---|---|---|---|---|---|---|---|
+| Verify that the application will only process business logic flows for the same user in the expected sequential step order and without skipping steps. | V2.3.1 | L2 | Cascade blast radius documented as business logic assumption — maximum affected systems formally accepted | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify that business logic flows require realistic human timing, preventing excessively rapid transaction submissions. | V2.4.2 | L2 | Circuit breakers as business logic controls — cascade propagation limited by design | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify API rate limiting | V1.5.3 | L1 | Verify that different parsers used in the application for the same data type (e.g., JSON parsers, XML parsers, URL parsers), perform parsing in a consistent way and use the same character encoding mechanism to avoid issues such as JSON Interoperability vulnerabilities or different URI or file parsing behavior being exploited in Remote File Inclusion (RFI) or Server-side Request Forgery (SSRF) attacks. | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify that a generic message is returned to the consumer when an unexpected or security-sensitive error occurs, ensuring no exposure of sensitive internal system data such as stack traces, queries, secret keys, and tokens. | V16.5.1 | L1 | Cascade errors handled gracefully — no sensitive system information in error responses | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
 
 #### Mitigations by tier
 
@@ -561,12 +565,12 @@ decision-making process.
 
 #### ASVS mapping
 
-| Requirement | ID | Level | How it applies |
-|---|---|---|---|
-| Verify business logic assumptions documented | V11.1.1 | L2 | AI advisory limitations documented as business logic assumptions — verification requirements per domain |
-| Verify outputs encoded before rendering | V5.2.1 | L1 | Agent advisory outputs clearly labelled — users cannot mistake AI output for authoritative content |
-| Verify all security controls logged | V7.4.1 | L1 | Agent-influenced operator decisions logged — aggregate patterns detectable |
-| Verify API rejects large unexpected payloads | V13.1.3 | L1 | Approval flows independent of agent interface — no state-changing approvals via agent chat |
+| Requirement | ID | Level | How it applies | Relationship | Rationale type | Confidence | Framework ver. | Reviewed by |
+|---|---|---|---|---|---|---|---|---|
+| Verify that the application will only process business logic flows for the same user in the expected sequential step order and without skipping steps. | V2.3.1 | L2 | AI advisory limitations documented as business logic assumptions — verification requirements per domain | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify that all untrusted HTML input from WYSIWYG editors or similar is sanitized using a well-known and secure HTML sanitization library or framework feature. | V1.3.1 | L1 | Agent advisory outputs clearly labelled — users cannot mistake AI output for authoritative content | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify that a generic message is returned to the consumer when an unexpected or security-sensitive error occurs, ensuring no exposure of sensitive internal system data such as stack traces, queries, secret keys, and tokens. | V16.5.1 | L1 | Agent-influenced operator decisions logged — aggregate patterns detectable | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify that sensitive data is only sent to the server in the HTTP message body or header fields, and that the URL and query string do not contain sensitive information, such as an API key or session token. | V14.2.1 | L1 | Approval flows independent of agent interface — no state-changing approvals via agent chat | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
 
 #### Mitigations by tier
 
@@ -618,12 +622,12 @@ Without complete audit trails, rogue behaviour cannot be detected.
 
 #### ASVS mapping
 
-| Requirement | ID | Level | How it applies |
-|---|---|---|---|
-| Verify access control decisions logged | V7.2.1 | L2 | All agent actions logged — no production deployment without complete observability |
-| Verify all business logic decisions logged | V7.2.2 | L2 | All agent tool invocations and recommendations logged — systematic bias detectable through aggregate analysis |
-| Verify business logic limits prevent abuse | V11.1.2 | L2 | Scope constraints as business logic controls — rogue agent cannot exceed permission envelope |
-| Verify API rate limiting | V13.1.1 | L1 | Rate limiting prevents rogue agent from amplifying impact through API exhaustion |
+| Requirement | ID | Level | How it applies | Relationship | Rationale type | Confidence | Framework ver. | Reviewed by |
+|---|---|---|---|---|---|---|---|---|
+| Verify that all authentication operations are logged, including successful and unsuccessful attempts. Additional metadata, such as the type of authentication or factors used, should also be collected. | V16.3.1 | L2 | All agent actions logged — no production deployment without complete observability | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify that failed authorization attempts are logged. For L3, this must include logging all authorization decisions, including logging when sensitive data is accessed (without logging the sensitive data itself). | V16.3.2 | L2 | All agent tool invocations and recommendations logged — systematic bias detectable through aggregate analysis | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify that business logic flows require realistic human timing, preventing excessively rapid transaction submissions. | V2.4.2 | L2 | Scope constraints as business logic controls — rogue agent cannot exceed permission envelope | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify API rate limiting | V1.5.3 | L1 | Verify that different parsers used in the application for the same data type (e.g., JSON parsers, XML parsers, URL parsers), perform parsing in a consistent way and use the same character encoding mechanism to avoid issues such as JSON Interoperability vulnerabilities or different URI or file parsing behavior being exploited in Remote File Inclusion (RFI) or Server-side Request Forgery (SSRF) attacks. | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
 
 #### Mitigations by tier
 
@@ -711,10 +715,10 @@ Without complete audit trails, rogue behaviour cannot be detected.
 
 | Phase | ASI entries | ASVS level | Priority requirements |
 |---|---|---|---|
-| 1 — L1 baseline | ASI01, ASI02, ASI05, ASI08 | L1 | V5.1.1, V4.1.3, V5.2.4, V13.1.1 |
-| 2 — L1 complete | ASI03, ASI07, ASI09 | L1 | V2.1.1, V9.1.1, V3.3.1, V5.2.1 |
-| 3 — L2 standard | ASI04, ASI06, ASI10 | L2 | V10.2.1, V7.2.1/V7.2.2, V6.1.1 |
-| 4 — L2 complete | ASI08, ASI09 | L2 | V11.1.1, V11.1.2 |
+| 1 — L1 baseline | ASI01, ASI02, ASI05, ASI08 | L1 | V15.3.7, V8.2.1, V1.3.2, V1.5.3 |
+| 2 — L1 complete | ASI03, ASI07, ASI09 | L1 | V6.2.1, V12.2.1, V7.4.1, V1.3.1 |
+| 3 — L2 standard | ASI04, ASI06, ASI10 | L2 | V10.2.1, V16.3.1/V16.3.2, V14.1.1 |
+| 4 — L2 complete | ASI08, ASI09 | L2 | V2.3.1, V2.4.2 |
 | 5 — L3 advanced | All | L3 | Adversarial testing, red team, chaos engineering |
 
 ---

@@ -326,7 +326,8 @@
       "control_name": "Verify third-party components current and free of vulnerabilities",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "All agent component libraries scanned for CVEs — ML SBOM maintained and monitored",
+      "notes": "All agent component libraries scanned for CVEs — ML SBOM maintained and monitored — **DRAFT — ASVS 5.0.0: DELETED, NOT PRACTICAL; retarget or drop pending SME review (#22)**",
+      "framework_version": "ASVS 4.0.3",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
@@ -336,17 +337,19 @@
       "control_name": "Verify only minimal approved external libraries",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Approved component list — unsigned or unverified agent components rejected",
+      "notes": "Approved component list — unsigned or unverified agent components rejected — **DRAFT — ASVS 5.0.0: DELETED, NOT PRACTICAL; retarget or drop pending SME review (#22)**",
+      "framework_version": "ASVS 4.0.3",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
-      "control_id": "V14.2.2",
-      "control_name": "Verify build pipelines include security checks",
+      "control_id": "V13.4.5",
+      "control_name": "Verify that documentation (such as for internal APIs) and monitoring endpoints are not exposed unless explicitly intended.",
       "tier": "Foundational",
       "scope": "Both",
       "notes": "CI/CD pipeline for agent components includes integrity verification and CVE scanning",
+      "framework_version": "ASVS 5.0.0",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
@@ -356,7 +359,8 @@
       "control_name": "Verify threat model covers all data flows",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Supply chain threat model documents all agent component sources and trust levels",
+      "notes": "Supply chain threat model documents all agent component sources and trust levels — **DRAFT — ASVS 5.0.0: DELETED, NOT IN SCOPE; retarget or drop pending SME review (#22)**",
+      "framework_version": "ASVS 4.0.3",
       "confidence": "unreviewed",
       "reviewed_by": []
     },

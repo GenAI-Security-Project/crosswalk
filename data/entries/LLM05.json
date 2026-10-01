@@ -259,11 +259,12 @@
     },
     {
       "framework": "OWASP ASVS 4.0.3",
-      "control_id": "V5.1.1",
-      "control_name": "Verify all inputs validated against allowlist",
+      "control_id": "V15.3.7",
+      "control_name": "Verify that the application has defenses against HTTP parameter pollution attacks, particularly if the application framework makes no distinction about the source of request parameters (query string, body parameters, cookies, or header fields).",
       "tier": "Hardening",
       "scope": "Both",
       "notes": "Training data pipeline input validation — anomalous data rejected before training",
+      "framework_version": "ASVS 5.0.0",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
@@ -273,17 +274,19 @@
       "control_name": "Verify third-party components free of vulnerabilities",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Training pipeline components scanned — compromised dependencies rejected",
+      "notes": "Training pipeline components scanned — compromised dependencies rejected — **DRAFT — ASVS 5.0.0: DELETED, NOT PRACTICAL; retarget or drop pending SME review (#22)**",
+      "framework_version": "ASVS 4.0.3",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
     {
       "framework": "OWASP ASVS 4.0.3",
-      "control_id": "V12.1.1",
-      "control_name": "Verify file uploads scanned for malware",
+      "control_id": "V5.2.1",
+      "control_name": "Verify that the application will only accept files of a size which it can process without causing a loss of performance or a denial of service attack.",
       "tier": "Hardening",
       "scope": "Both",
       "notes": "Training data uploads scanned before ingestion — adversarial content detected",
+      "framework_version": "ASVS 5.0.0",
       "confidence": "unreviewed",
       "reviewed_by": []
     },

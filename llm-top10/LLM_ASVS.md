@@ -1,7 +1,7 @@
 <!--
   OWASP GenAI Crosswalk
   Source list : OWASP Top 10 for LLM Applications 2026 (LLM01–LLM10)
-  Framework   : OWASP Application Security Verification Standard (ASVS) 4.0.3
+  Framework   : OWASP Application Security Verification Standard (ASVS) 5.0.0
   Version     : 2026-Q3
   Maintained by: OWASP GenAI Data Security Initiative — https://genai.owasp.org
   License     : CC BY-SA 4.0
@@ -22,12 +22,16 @@ controls. LLM applications are web applications and APIs with
 additional AI-specific attack surfaces — all standard ASVS controls
 apply, with specific requirements amplified by the LLM context.
 
-> **Mapped against ASVS 4.0.3.** ASVS **5.0.0** is released and renumbered the
-> requirements, so the V-numbers below do not reliably denote the same
-> requirement in 5.0. These mappings are **not** current for 5.0 and have not
-> been re-mapped: doing so is expert work, tracked in
-> [issue #22](https://github.com/GenAI-Security-Project/crosswalk/issues/22).
-> Treat the requirement identifiers here as 4.0.3 identifiers.
+> **Mapped against ASVS 5.0.0.** The identifiers below were translated from 4.0.3
+> using the ASVS project’s own mapping file, [`mapping_v4.0.3_to_v5.0.0.yml`][asvs-map],
+> and the requirement text is 5.0.0’s own. The translation is mechanical: the
+> **relationship, rationale type and confidence on every row read `DRAFT`** and
+> await an ASVS-leadership reviewer ([#22][issue-22], STRAT-04). Requirements
+> 5.0.0 deleted rather than renumbered keep their 4.0.3 identifier and carry a
+> DRAFT marker naming the official disposition.
+
+[asvs-map]: https://github.com/OWASP/ASVS/blob/master/5.0/mappings/mapping_v4.0.3_to_v5.0.0.yml
+[issue-22]: https://github.com/GenAI-Security-Project/crosswalk/issues/22
 
 ---
 
@@ -135,14 +139,14 @@ invisible-Unicode carriers survive review of the rendered interface.
 
 #### ASVS mapping
 
-| Requirement | ID | Level | How it applies |
-|---|---|---|---|
-| Verify all user input validated against an allowlist or rejected | V5.1.1 | L1 | All inputs to LLMs validated — indirect injection through processed content equally in scope |
-| Verify that HTTP request parts are validated, sanitised, or rejected | V5.1.2 | L1 | LLM API request validation — prompt structure, content type, and character set enforced |
-| Verify output encoding prevents injection attacks | V5.2.1 | L1 | LLM output encoding before passing to downstream renderers or interpreters |
-| Verify application protects against OS command injection | V5.2.5 | L1 | LLM-generated content validated before execution in any shell or interpreter context |
-| Threat modelling of all data flows | V1.1.2 | L2 | LLM data flows threat-modelled — all injection paths identified and documented |
-| Verify business logic limits prevent abuse of LLM functions | V11.1.2 | L2 | Business logic controls preventing prompt injection from triggering unauthorised actions |
+| Requirement | ID | Level | How it applies | Relationship | Rationale type | Confidence | Framework ver. | Reviewed by |
+|---|---|---|---|---|---|---|---|---|
+| Verify that the application has defenses against HTTP parameter pollution attacks, particularly if the application framework makes no distinction about the source of request parameters (query string, body parameters, cookies, or header fields). | V15.3.7 | L1 | All inputs to LLMs validated — indirect injection through processed content equally in scope | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify that the application has countermeasures to protect against mass assignment attacks by limiting allowed fields per controller and action, e.g., it is not possible to insert or update a field value when it was not intended to be part of that action. | V15.3.3 | L1 | LLM API request validation — prompt structure, content type, and character set enforced | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify that all untrusted HTML input from WYSIWYG editors or similar is sanitized using a well-known and secure HTML sanitization library or framework feature. | V1.3.1 | L1 | LLM output encoding before passing to downstream renderers or interpreters | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify that the application protects against template injection attacks by not allowing templates to be built based on untrusted input. Where there is no alternative, any untrusted input being included dynamically during template creation must be sanitized or strictly validated. | V1.3.7 | L1 | LLM-generated content validated before execution in any shell or interpreter context | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Threat modelling of all data flows | V1.1.2 | L2 | LLM data flows threat-modelled — all injection paths identified and documented — **DRAFT — ASVS 5.0.0: DELETED, NOT IN SCOPE; retarget or drop pending SME review (#22)** | DRAFT | DRAFT | DRAFT | ASVS 4.0.3 | (unreviewed) |
+| Verify that business logic flows require realistic human timing, preventing excessively rapid transaction submissions. | V2.4.2 | L2 | Business logic controls preventing prompt injection from triggering unauthorised actions | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
 
 #### Mitigations by tier
 
@@ -204,13 +208,13 @@ over-permissive RAG retrieval.
 
 #### ASVS mapping
 
-| Requirement | ID | Level | How it applies |
-|---|---|---|---|
-| Verify sensitive data is not cached or exposed in logs | V8.1.1 | L1 | LLM outputs containing sensitive data not logged in cleartext or cached without protection |
-| Verify PII is identified and protected | V8.3.4 | L1 | PII in LLM training data, RAG sources, and outputs identified and handled per policy |
-| Verify access control decisions enforce least privilege | V4.1.3 | L1 | RAG retrieval access controls — users retrieve only data they are authorised to access |
-| Verify all sensitive data encrypted at rest | V6.1.1 | L2 | Training data, embeddings, RAG document stores, and prompt caches encrypted at rest |
-| Verify all sensitive data encrypted in transit | V9.1.1 | L1 | All LLM API communication and data flows encrypted in transit — TLS 1.2 minimum |
+| Requirement | ID | Level | How it applies | Relationship | Rationale type | Confidence | Framework ver. | Reviewed by |
+|---|---|---|---|---|---|---|---|---|
+| Verify that the application prevents sensitive data from being cached in server components, such as load balancers and application caches, or ensures that the data is securely purged after use. | V14.2.2 | L1 | LLM outputs containing sensitive data not logged in cleartext or cached without protection | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify that all sensitive data created and processed by the application has been identified and classified into protection levels. This includes data that is only encoded and therefore easily decoded, such as Base64 strings or the plaintext payload inside a JWT. Protection levels need to take into account any data protection and privacy regulations and standards which the application is required to comply with. | V14.1.1 | L1 | PII in LLM training data, RAG sources, and outputs identified and handled per policy | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify that the application ensures that function-level access is restricted to consumers with explicit permissions. | V8.2.1 | L1 | RAG retrieval access controls — users retrieve only data they are authorised to access | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify that all sensitive data created and processed by the application has been identified and classified into protection levels. This includes data that is only encoded and therefore easily decoded, such as Base64 strings or the plaintext payload inside a JWT. Protection levels need to take into account any data protection and privacy regulations and standards which the application is required to comply with. | V14.1.1 | L2 | Training data, embeddings, RAG document stores, and prompt caches encrypted at rest | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify that TLS is used for all connectivity between a client and external facing, HTTP-based services, and does not fall back to insecure or unencrypted communications. | V12.2.1 | L1 | All LLM API communication and data flows encrypted in transit — TLS 1.2 minimum | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
 
 #### Mitigations by tier
 
@@ -268,12 +272,12 @@ unintended or harmful actions when manipulated.
 
 #### ASVS mapping
 
-| Requirement | ID | Level | How it applies |
-|---|---|---|---|
-| Verify access control enforces least privilege | V4.1.3 | L1 | LLM tool access enforced at minimum required scope — read-only by default |
-| Verify all sensitive functions have access control | V4.1.1 | L1 | LLM cannot access sensitive functions (write, delete, execute) without explicit authorisation |
-| Verify all business logic decisions logged | V7.2.2 | L2 | All LLM tool invocations logged with full context — every tool call auditable |
-| Verify business logic abuse scenarios identified | V11.1.2 | L2 | Business logic controls preventing tool misuse through prompt manipulation |
+| Requirement | ID | Level | How it applies | Relationship | Rationale type | Confidence | Framework ver. | Reviewed by |
+|---|---|---|---|---|---|---|---|---|
+| Verify that the application ensures that function-level access is restricted to consumers with explicit permissions. | V8.2.1 | L1 | LLM tool access enforced at minimum required scope — read-only by default | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify that the application enforces authorization rules at a trusted service layer and doesn't rely on controls that an untrusted consumer could manipulate, such as client-side JavaScript. | V8.3.1 | L1 | LLM cannot access sensitive functions (write, delete, execute) without explicit authorisation | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify that failed authorization attempts are logged. For L3, this must include logging all authorization decisions, including logging when sensitive data is accessed (without logging the sensitive data itself). | V16.3.2 | L2 | All LLM tool invocations logged with full context — every tool call auditable | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify that business logic flows require realistic human timing, preventing excessively rapid transaction submissions. | V2.4.2 | L2 | Business logic controls preventing tool misuse through prompt manipulation | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
 
 #### Mitigations by tier
 
@@ -338,11 +342,11 @@ dependency is clean.
 
 #### ASVS mapping
 
-| Requirement | ID | Level | How it applies |
-|---|---|---|---|
-| Verify third-party components are current and free from vulnerabilities | V10.2.1 | L2 | All LLM component libraries and dependencies scanned for CVEs — ML SBOM maintained |
-| Verify only minimal approved external libraries are used | V10.2.2 | L2 | Approved component list for LLM deployments — unsigned or unverified components rejected |
-| Verify build pipelines include security checks | V14.2.2 | L2 | CI/CD pipeline for LLM components includes integrity verification and vulnerability scanning |
+| Requirement | ID | Level | How it applies | Relationship | Rationale type | Confidence | Framework ver. | Reviewed by |
+|---|---|---|---|---|---|---|---|---|
+| Verify third-party components are current and free from vulnerabilities | V10.2.1 | L2 | All LLM component libraries and dependencies scanned for CVEs — ML SBOM maintained — **DRAFT — ASVS 5.0.0: DELETED, NOT PRACTICAL; retarget or drop pending SME review (#22)** | DRAFT | DRAFT | DRAFT | ASVS 4.0.3 | (unreviewed) |
+| Verify only minimal approved external libraries are used | V10.2.2 | L2 | Approved component list for LLM deployments — unsigned or unverified components rejected — **DRAFT — ASVS 5.0.0: DELETED, NOT PRACTICAL; retarget or drop pending SME review (#22)** | DRAFT | DRAFT | DRAFT | ASVS 4.0.3 | (unreviewed) |
+| Verify that documentation (such as for internal APIs) and monitoring endpoints are not exposed unless explicitly intended. | V13.4.5 | L2 | CI/CD pipeline for LLM components includes integrity verification and vulnerability scanning | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
 
 #### Mitigations by tier
 
@@ -402,11 +406,11 @@ stage that writes weights, not just the original training corpus.
 
 #### ASVS mapping
 
-| Requirement | ID | Level | How it applies |
-|---|---|---|---|
-| Verify all inputs validated against allowlist | V5.1.1 | L1 | Training data pipeline input validation — anomalous data rejected before training |
-| Verify third-party components free of vulnerabilities | V10.2.1 | L2 | Training pipeline components scanned — compromised dependencies rejected |
-| Verify file uploads scanned for malware | V12.1.1 | L2 | Training data uploads scanned before ingestion — adversarial content detected |
+| Requirement | ID | Level | How it applies | Relationship | Rationale type | Confidence | Framework ver. | Reviewed by |
+|---|---|---|---|---|---|---|---|---|
+| Verify that the application has defenses against HTTP parameter pollution attacks, particularly if the application framework makes no distinction about the source of request parameters (query string, body parameters, cookies, or header fields). | V15.3.7 | L1 | Training data pipeline input validation — anomalous data rejected before training | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify third-party components free of vulnerabilities | V10.2.1 | L2 | Training pipeline components scanned — compromised dependencies rejected — **DRAFT — ASVS 5.0.0: DELETED, NOT PRACTICAL; retarget or drop pending SME review (#22)** | DRAFT | DRAFT | DRAFT | ASVS 4.0.3 | (unreviewed) |
+| Verify that the application will only accept files of a size which it can process without causing a loss of performance or a denial of service attack. | V5.2.1 | L2 | Training data uploads scanned before ingestion — adversarial content detected | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
 
 #### Mitigations by tier
 
@@ -463,12 +467,12 @@ causing denial of service or runaway API cost.
 
 #### ASVS mapping
 
-| Requirement | ID | Level | How it applies |
-|---|---|---|---|
-| Verify API rate limiting | V13.1.1 | L1 | Rate limiting on all LLM API endpoints — per user, per session, per API key |
-| Verify API rejects large unexpected payloads | V13.1.3 | L1 | Token limits on LLM API inputs — requests exceeding limits rejected at the gateway |
-| Verify business logic rate limits | V11.1.4 | L2 | Business logic controls on LLM usage — per-tenant cost budgets, rate limit policies |
-| Verify error handling does not expose sensitive data | V7.4.1 | L1 | LLM resource exhaustion errors handled gracefully — no sensitive information in error responses |
+| Requirement | ID | Level | How it applies | Relationship | Rationale type | Confidence | Framework ver. | Reviewed by |
+|---|---|---|---|---|---|---|---|---|
+| Verify API rate limiting | V1.5.3 | L1 | Verify that different parsers used in the application for the same data type (e.g., JSON parsers, XML parsers, URL parsers), perform parsing in a consistent way and use the same character encoding mechanism to avoid issues such as JSON Interoperability vulnerabilities or different URI or file parsing behavior being exploited in Remote File Inclusion (RFI) or Server-side Request Forgery (SSRF) attacks. | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify that sensitive data is only sent to the server in the HTTP message body or header fields, and that the URL and query string do not contain sensitive information, such as an API key or session token. | V14.2.1 | L1 | Token limits on LLM API inputs — requests exceeding limits rejected at the gateway | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify that anti-automation controls are in place to protect against excessive calls to application functions that could lead to data exfiltration, garbage-data creation, quota exhaustion, rate-limit breaches, denial-of-service, or overuse of costly resources. | V2.4.1 | L2 | Business logic controls on LLM usage — per-tenant cost budgets, rate limit policies | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify that a generic message is returned to the consumer when an unexpected or security-sensitive error occurs, ensuring no exposure of sensitive internal system data such as stack traces, queries, secret keys, and tokens. | V16.5.1 | L1 | LLM resource exhaustion errors handled gracefully — no sensitive information in error responses | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
 
 #### Mitigations by tier
 
@@ -527,11 +531,11 @@ systems act upon.
 
 #### ASVS mapping
 
-| Requirement | ID | Level | How it applies |
-|---|---|---|---|
-| Verify business logic assumptions documented | V11.1.1 | L2 | LLM accuracy limitations documented as business logic assumptions — verification requirements defined |
-| Verify all security controls logged | V7.4.1 | L1 | LLM accuracy metrics and hallucination rate logged — production monitoring for output quality |
-| Verify outputs encoded before rendering | V5.2.1 | L1 | LLM advisory outputs clearly labelled — users cannot mistake model output for authoritative source |
+| Requirement | ID | Level | How it applies | Relationship | Rationale type | Confidence | Framework ver. | Reviewed by |
+|---|---|---|---|---|---|---|---|---|
+| Verify that the application will only process business logic flows for the same user in the expected sequential step order and without skipping steps. | V2.3.1 | L2 | LLM accuracy limitations documented as business logic assumptions — verification requirements defined | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify that a generic message is returned to the consumer when an unexpected or security-sensitive error occurs, ensuring no exposure of sensitive internal system data such as stack traces, queries, secret keys, and tokens. | V16.5.1 | L1 | LLM accuracy metrics and hallucination rate logged — production monitoring for output quality | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify that all untrusted HTML input from WYSIWYG editors or similar is sanitized using a well-known and secure HTML sanitization library or framework feature. | V1.3.1 | L1 | LLM advisory outputs clearly labelled — users cannot mistake model output for authoritative source | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
 
 #### Mitigations by tier
 
@@ -599,12 +603,12 @@ treat it as a security boundary.
 
 #### ASVS mapping
 
-| Requirement | ID | Level | How it applies |
-|---|---|---|---|
-| Verify sensitive data not cached in cleartext | V8.1.1 | L1 | System prompts not stored in cleartext application configuration or source code |
-| Verify access control enforces least privilege | V4.1.3 | L1 | System prompt access restricted to authorised personnel — read access logged |
-| Verify access control decisions logged | V7.2.1 | L2 | All access to system prompts logged — unauthorised access attempts detectable |
-| Verify secrets not in source code | V14.2.3 | L2 | System prompts not hardcoded in source code — stored in secret management system |
+| Requirement | ID | Level | How it applies | Relationship | Rationale type | Confidence | Framework ver. | Reviewed by |
+|---|---|---|---|---|---|---|---|---|
+| Verify that the application prevents sensitive data from being cached in server components, such as load balancers and application caches, or ensures that the data is securely purged after use. | V14.2.2 | L1 | System prompts not stored in cleartext application configuration or source code | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify that the application ensures that function-level access is restricted to consumers with explicit permissions. | V8.2.1 | L1 | System prompt access restricted to authorised personnel — read access logged | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify that all authentication operations are logged, including successful and unsuccessful attempts. Additional metadata, such as the type of authentication or factors used, should also be collected. | V16.3.1 | L2 | All access to system prompts logged — unauthorised access attempts detectable | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify that client-side assets, such as JavaScript libraries, CSS, or web fonts, are only hosted externally (e.g., on a Content Delivery Network) if the resource is static and versioned and Subresource Integrity (SRI) is used to validate the integrity of the asset. If this is not possible, there should be a documented security decision to justify this for each resource. | V3.6.1 | L2 | System prompts not hardcoded in source code — stored in secret management system | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
 
 #### Mitigations by tier
 
@@ -656,11 +660,11 @@ and inference of sensitive information from embeddings.
 
 #### ASVS mapping
 
-| Requirement | ID | Level | How it applies |
-|---|---|---|---|
-| Verify least privilege access control on data | V4.1.3 | L1 | RBAC on all vector store collections — no unauthenticated access |
-| Verify all sensitive data encrypted at rest | V6.1.1 | L2 | All vector store content encrypted at rest |
-| Verify file upload malware scanning | V12.1.1 | L2 | Content validation on all vector store ingestion — adversarial content detected |
+| Requirement | ID | Level | How it applies | Relationship | Rationale type | Confidence | Framework ver. | Reviewed by |
+|---|---|---|---|---|---|---|---|---|
+| Verify that the application ensures that function-level access is restricted to consumers with explicit permissions. | V8.2.1 | L1 | RBAC on all vector store collections — no unauthenticated access | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify that all sensitive data created and processed by the application has been identified and classified into protection levels. This includes data that is only encoded and therefore easily decoded, such as Base64 strings or the plaintext payload inside a JWT. Protection levels need to take into account any data protection and privacy regulations and standards which the application is required to comply with. | V14.1.1 | L2 | All vector store content encrypted at rest | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify that the application will only accept files of a size which it can process without causing a loss of performance or a denial of service attack. | V5.2.1 | L2 | Content validation on all vector store ingestion — adversarial content detected | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
 
 #### Mitigations by tier
 
@@ -724,13 +728,13 @@ reaches a shell, a browser, or a database.
 
 #### ASVS mapping
 
-| Requirement | ID | Level | How it applies |
-|---|---|---|---|
-| Verify output encoding of untrusted data in HTML context | V5.2.1 | L1 | LLM responses rendered in browser contexts encoded against XSS |
-| Verify output encoding in SQL query context | V5.3.5 | L1 | LLM-generated SQL parameterised — never raw LLM output in SQL context |
-| Verify output encoding in OS command context | V5.2.5 | L1 | LLM-generated commands validated — never raw output in shell context |
-| Verify application does not use eval or dynamic code | V5.2.4 | L1 | No eval or dynamic code execution of LLM-generated content |
-| Verify anti-CSRF tokens in state-changing operations | V4.2.2 | L1 | CSRF protection on endpoints where LLM output triggers state changes |
+| Requirement | ID | Level | How it applies | Relationship | Rationale type | Confidence | Framework ver. | Reviewed by |
+|---|---|---|---|---|---|---|---|---|
+| Verify that all untrusted HTML input from WYSIWYG editors or similar is sanitized using a well-known and secure HTML sanitization library or framework feature. | V1.3.1 | L1 | LLM responses rendered in browser contexts encoded against XSS | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify that data selection or database queries (e.g., SQL, HQL, NoSQL, Cypher) use parameterized queries, ORMs, entity frameworks, or are otherwise protected from SQL Injection and other database injection attacks. This is also relevant when writing stored procedures. | V1.2.4 | L1 | LLM-generated SQL parameterised — never raw LLM output in SQL context | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify that the application protects against template injection attacks by not allowing templates to be built based on untrusted input. Where there is no alternative, any untrusted input being included dynamically during template creation must be sanitized or strictly validated. | V1.3.7 | L1 | LLM-generated commands validated — never raw output in shell context | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify that the application avoids the use of eval() or other dynamic code execution features such as Spring Expression Language (SpEL). Where there is no alternative, any user input being included must be sanitized before being executed. | V1.3.2 | L1 | No eval or dynamic code execution of LLM-generated content | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
+| Verify that, if the application does not rely on the CORS preflight mechanism to prevent disallowed cross-origin requests to use sensitive functionality, these requests are validated to ensure they originate from the application itself. This may be done by using and validating anti-forgery tokens or requiring extra HTTP header fields that are not CORS-safelisted request-header fields. This is to defend against browser-based request forgery attacks, commonly known as cross-site request forgery (CSRF). | V3.5.1 | L1 | CSRF protection on endpoints where LLM output triggers state changes | DRAFT | DRAFT | DRAFT | ASVS 5.0.0 | (unreviewed) |
 
 #### Mitigations by tier
 
@@ -821,10 +825,10 @@ reaches a shell, a browser, or a database.
 
 | Phase | LLM entries | ASVS level | Priority requirements |
 |---|---|---|---|
-| 1 — L1 baseline | LLM01, LLM10, LLM03, LLM06 | L1 | V5.1.1, V5.2.1, V4.1.3, V13.1.1 |
-| 2 — L1 complete | LLM02, LLM08 | L1 | V8.1.1, V8.3.4, V4.1.1 |
-| 3 — L2 standard | LLM04, LLM05, LLM09 | L2 | V10.2.1, V10.2.2, V6.1.1, V12.1.1 |
-| 4 — L2 complete | LLM07 | L2 | V11.1.1, V7.2.2 |
+| 1 — L1 baseline | LLM01, LLM10, LLM03, LLM06 | L1 | V15.3.7, V1.3.1, V8.2.1, V1.5.3 |
+| 2 — L1 complete | LLM02, LLM08 | L1 | V14.2.2, V14.1.1, V8.3.1 |
+| 3 — L2 standard | LLM04, LLM05, LLM09 | L2 | V10.2.1, V10.2.2, V14.1.1, V5.2.1 |
+| 4 — L2 complete | LLM07 | L2 | V2.3.1, V16.3.2 |
 | 5 — L3 advanced | All | L3 | Adversarial testing, red team, inversion testing |
 
 ---

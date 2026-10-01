@@ -74,8 +74,8 @@
   },
   "freshness": {
     "checked": 5,
-    "current": 3,
-    "diverged": 2,
+    "current": 4,
+    "diverged": 1,
     "unchecked": 21,
     "diverged_frameworks": [
       {
@@ -83,20 +83,14 @@
         "mapped": "4.0",
         "current": "2026.09",
         "checked": "2026-09-17"
-      },
-      {
-        "name": "OWASP ASVS 4.0.3",
-        "mapped": "4.0.3",
-        "current": "5.0.0",
-        "checked": "2026-08-28"
       }
     ]
   },
   "controls": {
-    "total": 991,
-    "registry_items": 1125,
+    "total": 994,
+    "registry_items": 1128,
     "by_kind": {
-      "control": 991,
+      "control": 994,
       "layer": 10,
       "technique": 57,
       "threat-category": 6,
