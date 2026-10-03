@@ -97,3 +97,37 @@ test('every id in the NIST AI 600-1 registry satisfies its own grammar', async (
     assert.ok(isValidRegistryId('NIST AI 600-1', c.control_id), `${c.control_id} fails the id shape`);
   }
 });
+
+test('every NIST AI 600-1 action carries GAI risk tags drawn from the document\'s twelve', async () => {
+  // The twelve risks enumerated in section 2 of NIST AI 600-1. The suggested-action
+  // tables spell four of them differently; the registry normalises to this list.
+  const TWELVE = new Set([
+    'CBRN Information or Capabilities',
+    'Confabulation',
+    'Dangerous, Violent, or Hateful Content',
+    'Data Privacy',
+    'Environmental Impacts',
+    'Harmful Bias or Homogenization',
+    'Human-AI Configuration',
+    'Information Integrity',
+    'Information Security',
+    'Intellectual Property',
+    'Obscene, Degrading, and/or Abusive Content',
+    'Value Chain and Component Integration',
+  ]);
+  const { readFileSync } = await import('node:fs');
+  const fw = JSON.parse(readFileSync(new URL('../data/frameworks/nist-ai-600-1.json', import.meta.url)));
+  const seen = new Set();
+  for (const c of fw.controls) {
+    assert.ok(Array.isArray(c.gai_risks) && c.gai_risks.length > 0,
+      `${c.control_id} has no gai_risks`);
+    assert.equal(new Set(c.gai_risks).size, c.gai_risks.length,
+      `${c.control_id} repeats a risk`);
+    for (const r of c.gai_risks) {
+      assert.ok(TWELVE.has(r), `${c.control_id} cites "${r}", which is not one of the twelve`);
+      seen.add(r);
+    }
+  }
+  // All twelve are exercised, so a typo in the list cannot pass unnoticed.
+  assert.equal(seen.size, 12);
+});
