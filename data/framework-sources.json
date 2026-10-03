@@ -126,7 +126,7 @@
       "name": "NIST AI 600-1",
       "mapped_version": "2024-07",
       "current_version": "2024-07",
-      "checked": "2026-09-30",
+      "checked": "2026-10-03",
       "source_url": "https://doi.org/10.6028/NIST.AI.600-1",
       "notes": "NIST AI 600-1 carries no revision number; version is the publication month (July 2024). No later revision published as of the checked date."
     },
