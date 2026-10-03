@@ -1319,8 +1319,9 @@ input, select { font-family: inherit; }
   DATA.forEach(function(e) {
     e.mappings.forEach(function(m) { FW_SET.add(m.framework); });
   });
-  // Also include registry-only frameworks (e.g. CoSAI, EU AI Act CoP)
-  FW_REGISTRY.forEach(function(fw) { FW_SET.add(fw.name); });
+  // A framework counts once a mapping row cites it. A registry nothing maps yet
+  // (transcribed ahead of its rows) stays out of every count and selector, so
+  // the headline matches the README's "frameworks mapped".
   FRAMEWORKS = Array.from(FW_SET).sort();
 
   var ENTRY_MAP = {};
@@ -1807,7 +1808,9 @@ input, select { font-family: inherit; }
 
 
     // Stats
-    var totalRegControls = FW_REGISTRY.reduce(function(s, fw) { return s + (fw.controls || []).length; }, 0);
+    var totalRegControls = FW_REGISTRY.reduce(function(s, fw) {
+      return FW_SET.has(fw.name) ? s + (fw.controls || []).length : s;
+    }, 0);
     var stats = [
       [FRAMEWORKS.length, 'Frameworks'],
       [totalMappings.toLocaleString(), 'Mappings'],
