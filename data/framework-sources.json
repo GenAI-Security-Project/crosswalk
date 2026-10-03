@@ -5,10 +5,10 @@
     "aiuc-1": {
       "name": "AIUC-1",
       "mapped_version": "1.0",
-      "current_version": null,
-      "checked": null,
-      "source_url": "https://www.ai-safety-institute.org/",
-      "notes": ""
+      "current_version": "2026-07-15",
+      "checked": "2026-10-02",
+      "source_url": "https://standard.aiuc-1.com/changelog",
+      "notes": "AIUC-1 names releases by date, not number. Its changelog says: \"The most recent version of AIUC-1 was released on July 15, 2026. The next version of AIUC-1 will be released on October 15, 2026.\" Earlier releases: 2026-04-15, 2026-01-15, 2025-10-01, and 2025-07-22 (launch). \"1.0\" is not an upstream label. The registry was last synced 2026-04-10, so the rows predate at least the April and July releases. The July release added requirements A008 and B010 and renumbered several controls. Which release the rows were written against needs a human to confirm."
     },
     "cis-controls": {
       "name": "CIS Controls v8.1",

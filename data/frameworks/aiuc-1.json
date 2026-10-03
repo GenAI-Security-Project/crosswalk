@@ -3,9 +3,9 @@
   "name": "AIUC-1",
   "short_name": "AIUC-1",
   "version": "1.0",
-  "url": "https://www.ai-safety-institute.org/",
-  "license": "Open Government Licence v3.0",
-  "publisher": "UK AI Safety Institute",
+  "url": "https://www.aiuc-1.com/",
+  "license": "not verified",
+  "publisher": "Artificial Intelligence Underwriting Company (AIUC)",
   "category": "ai-governance",
   "last_synced": "2026-04-10",
   "source_sha": null,
@@ -99,9 +99,14 @@
     "included": 14,
     "total": null,
     "note": "Every item in this registry is referenced by a mapping, so the registry was derived from the mappings rather than from the framework. It cannot contain controls this crosswalk has not mapped. Authoritative total not yet established.",
-    "source": "https://www.ai-safety-institute.org/"
+    "source": "https://www.aiuc-1.com/"
   },
   "changelog": [
+    {
+      "date": "2026-10-02",
+      "change": "Corrected the attribution (#189). AIUC-1 is maintained by the Artificial Intelligence Underwriting Company (the aiuc-1.com footer), not the UK AI Safety Institute, and the old URL (ai-safety-institute.org) did not resolve. The Open Government Licence was removed: AIUC-1 is not a UK Crown publication, and no licence is stated on aiuc-1.com or in the aiunderwriting/AIUC-1-Changelog repository, so the field reads \"not verified\" until a human confirms the terms. \"version\": \"1.0\" is kept as the mapped label, but AIUC-1 names its releases by date; see data/framework-sources.json.",
+      "author": "OWASP GenAI Data Security Initiative"
+    },
     {
       "date": "2026-09-14",
       "change": "Removed 9 items that were never controls: rows from the closing summary and changelog tables of dsgai-2026 mapping files (e.g. \"Date\", \"DSGAI entries most affected\"), parsed as DSGAI21 mappings because extractSection() ran past the last entry, then extracted here.",
