@@ -143,6 +143,24 @@ test('an unknown route falls back to a page, not a blank screen', () => {
   assert.ok(app.children.length > 0, 'the fallback rendered an empty page');
 });
 
+// A registry can land before any row maps it (NIST AI 600-1 in #187). The home
+// page must not count it as a framework, or add its controls to the headline.
+test('the home page counts mapped frameworks only', () => {
+  const { window } = dom;
+  const stats = JSON.parse(readFileSync(path.join(ROOT, 'data', 'stats.json'), 'utf8'));
+  const mapped = new Set(window.CROSSWALK_DATA.flatMap((e) => e.mappings.map((m) => m.framework)));
+  const controls = window.CROSSWALK_FRAMEWORKS
+    .filter((fw) => mapped.has(fw.name))
+    .reduce((s, fw) => s + (fw.controls || []).length, 0);
+
+  const app = visit('#/');
+  const cards = Object.fromEntries([...app.querySelectorAll('.stat-card')].map((c) => [
+    c.querySelector('.stat-label').textContent, c.querySelector('.stat-num').textContent,
+  ]));
+  assert.equal(cards.Frameworks, String(stats.frameworks.mapped));
+  assert.equal(cards['Registry Controls'], String(controls));
+});
+
 // The About page is the one place in the webapp allowed to carry the creator
 // credit, and this file is not — so the test checks that the section renders
 // with content, never the name itself.

@@ -75,11 +75,17 @@
     "orphan_failures": 5
   },
   "freshness": {
-    "checked": 6,
+    "checked": 7,
     "current": 5,
-    "diverged": 1,
-    "unchecked": 21,
+    "diverged": 2,
+    "unchecked": 20,
     "diverged_frameworks": [
+      {
+        "name": "AIUC-1",
+        "mapped": "1.0",
+        "current": "2026-07-15",
+        "checked": "2026-10-02"
+      },
       {
         "name": "MITRE ATLAS",
         "mapped": "4.0",
