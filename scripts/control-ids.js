@@ -70,6 +70,12 @@ const GRAMMARS = {
     parentRe: /\b(V\d{1,2})\b(?!\.)/,
     parent: (m) => m[1],
   },
+  'NIST AI 600-1': {
+    // Suggested-action ids from the GenAI Profile: function, AI RMF subcategory,
+    // then a three-digit sequence — GV-1.1-001. GV/MP/MS/MG are Govern, Map,
+    // Measure, Manage, per the document's own key.
+    re: /\b((?:GV|MP|MS|MG)-\d{1,2}\.\d{1,2}-\d{3})\b/,
+  },
   'ISO/IEC 42001:2023': {
     // Annex A controls, Annex B guidance, and management-system clauses.
     re: /\b([AB]\.\d{1,2}(?:\.\d{1,2}){0,2})\b|\bCl(?:ause)?\.?\s*(\d{1,2}(?:\.\d{1,2}){0,2})\b/,
@@ -163,6 +169,7 @@ const ID_SHAPES = {
   'NIST SP 800-82 Rev 3': /^(?:§\d{1,2}(?:\.\d{1,2}){0,2}|[A-Z]{2}-\d{1,2})$/,
   'CWE/CVE': /^(?:CWE-\d{1,4}|CVE-\d{4}-\d{4,7})$/,
   'OWASP AI Testing Guide': /^[A-Z]{3}$/,
+  'NIST AI 600-1': /^(?:GV|MP|MS|MG)-\d{1,2}\.\d{1,2}-\d{3}$/,
   'ISO/IEC 42001:2023': /^(?:[AB]\.\d{1,2}(?:\.\d{1,2}){0,2}|\d{1,2}(?:\.\d{1,2}){0,2})$/,
   'OWASP ASVS 5.0.0': /^V\d{1,2}\.\d{1,2}\.\d{1,2}$/,
 };

@@ -36,9 +36,11 @@
     }
   },
   "frameworks": {
-    "registries": 26,
+    "registries": 27,
     "mapped": 26,
-    "unmapped_registries": [],
+    "unmapped_registries": [
+      "NIST AI 600-1"
+    ],
     "draft_only": [
       "CoSAI",
       "EU AI Act Code of Practice"
@@ -73,8 +75,8 @@
     "orphan_failures": 5
   },
   "freshness": {
-    "checked": 5,
-    "current": 4,
+    "checked": 6,
+    "current": 5,
     "diverged": 1,
     "unchecked": 21,
     "diverged_frameworks": [
@@ -87,10 +89,10 @@
     ]
   },
   "controls": {
-    "total": 973,
-    "registry_items": 1107,
+    "total": 1184,
+    "registry_items": 1318,
     "by_kind": {
-      "control": 973,
+      "control": 1184,
       "layer": 10,
       "technique": 57,
       "threat-category": 6,
