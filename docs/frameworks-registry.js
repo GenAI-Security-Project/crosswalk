@@ -4366,9 +4366,9 @@ window.CROSSWALK_FRAMEWORKS = [
     "license": "Public Domain",
     "publisher": "NIST",
     "category": "ai-governance",
-    "last_synced": "2026-09-30",
+    "last_synced": "2026-10-03",
     "source_sha": null,
-    "$comment": "Suggested actions from NIST AI 600-1 (July 2024). control_id is the document's own Action ID; description is the Suggested Action text verbatim; title is derived mechanically (first sentence when <=120 chars, else leading clause, else word-boundary cut). parent is the AI RMF subcategory the action is filed under and resolves against data/frameworks/nist-ai-rmf.json, which already carries those 49 subcategories — they are deliberately not duplicated here, so this registry's denominator counts suggested actions only.",
+    "$comment": "Suggested actions from NIST AI 600-1 (July 2024). control_id is the document's own Action ID; description is the Suggested Action text verbatim; title is derived mechanically from it (the first sentence when that is 120 characters or fewer, else the leading clause, else a word-boundary cut), so no title is authored. parent is the AI RMF subcategory the action is filed under: 45 of the 49 subcategories resolve against data/frameworks/nist-ai-rmf.json, and MG-4.3, MP-3.4, MS-2.12, MS-2.13 do not, because that registry holds only the subcategories existing mappings cite. The 49 subcategories are deliberately not duplicated here, so this registry's denominator counts suggested actions only. gai_risks is the document's own GAI Risks column, normalised to the twelve risks enumerated in section 2: the action tables also spell four of them as 'Harmful Bias and Homogenization', 'Environmental', 'CBRN Information and Capability' and 'Human AI Configuration'. GV-1.4-002 additionally carries the tag 'Civil Rights violations', which is not one of the twelve and is therefore not recorded in gai_risks.",
     "controls": [
       {
         "control_id": "GV-1.1-001",
@@ -4376,7 +4376,12 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Align GAI development and use with applicable laws and regulations, including those related to data privacy, copyright and intellectual property law.",
         "parent": "GV-1.1",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Data Privacy",
+          "Harmful Bias or Homogenization",
+          "Intellectual Property"
+        ]
       },
       {
         "control_id": "GV-1.2-001",
@@ -4384,7 +4389,12 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Establish transparency policies and processes for documenting the origin and history of training data and generated data for GAI applications to advance digital content transparency, while balancing the proprietary nature of training approaches.",
         "parent": "GV-1.2",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Data Privacy",
+          "Information Integrity",
+          "Intellectual Property"
+        ]
       },
       {
         "control_id": "GV-1.2-002",
@@ -4392,7 +4402,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Establish policies to evaluate risk-relevant capabilities of GAI and robustness of safety measures, both prior to deployment and on an ongoing basis, through internal and external evaluations.",
         "parent": "GV-1.2",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "CBRN Information or Capabilities",
+          "Information Security"
+        ]
       },
       {
         "control_id": "GV-1.3-001",
@@ -4400,7 +4414,15 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Consider the following factors when updating or defining risk tiers for GAI: Abuses and impacts to information integrity; Dependencies between GAI and other IT or data systems; Harm to fundamental rights or public safety; Presentation of obscene, objectionable, offensive, discriminatory, invalid or untruthful output; Psychological impacts to humans (e.g., anthropomorphization, algorithmic aversion, emotional entanglement); Possibility for malicious use; Whether the system introduces significant new security vulnerabilities; Anticipated system impact on some groups compared to others; Unreliable decision making capabilities, validity, adaptability, and variability of GAI system performance over time.",
         "parent": "GV-1.3",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Integrity",
+          "Obscene, Degrading, and/or Abusive Content",
+          "Value Chain and Component Integration",
+          "Harmful Bias or Homogenization",
+          "Dangerous, Violent, or Hateful Content",
+          "CBRN Information or Capabilities"
+        ]
       },
       {
         "control_id": "GV-1.3-002",
@@ -4408,7 +4430,12 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Establish minimum thresholds for performance or assurance criteria and review as part of deployment approval (“go/”no-go”) policies, procedures, and processes, with reviewed processes and approval thresholds reflecting measurement of GAI capabilities and risks.",
         "parent": "GV-1.3",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "CBRN Information or Capabilities",
+          "Confabulation",
+          "Dangerous, Violent, or Hateful Content"
+        ]
       },
       {
         "control_id": "GV-1.3-003",
@@ -4416,7 +4443,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Establish a test plan and response policy, before developing highly capable models, to periodically evaluate whether the model may misuse CBRN information or capabilities and/or offensive cyber capabilities.",
         "parent": "GV-1.3",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "CBRN Information or Capabilities",
+          "Information Security"
+        ]
       },
       {
         "control_id": "GV-1.3-004",
@@ -4424,7 +4455,13 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Obtain input from stakeholder communities to identify unacceptable use, in accordance with activities in the AI RMF Map function.",
         "parent": "GV-1.3",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "CBRN Information or Capabilities",
+          "Obscene, Degrading, and/or Abusive Content",
+          "Harmful Bias or Homogenization",
+          "Dangerous, Violent, or Hateful Content"
+        ]
       },
       {
         "control_id": "GV-1.3-005",
@@ -4432,7 +4469,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Maintain an updated hierarchy of identified and expected GAI risks connected to contexts of GAI model advancement and use, potentially including specialized risk levels for GAI systems that address issues such as model collapse and algorithmic monoculture.",
         "parent": "GV-1.3",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Harmful Bias or Homogenization"
+        ]
       },
       {
         "control_id": "GV-1.3-006",
@@ -4440,7 +4480,12 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Reevaluate organizational risk tolerances to account for unacceptable negative risk (such as where significant negative impacts are imminent, severe harms are actually occurring, or large-scale risks could occur); and broad GAI negative risks, including: Immature safety or risk cultures related to AI and GAI design, development and deployment, public information integrity risks, including impacts on democratic processes, unknown long-term performance characteristics of GAI.",
         "parent": "GV-1.3",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Integrity",
+          "Dangerous, Violent, or Hateful Content",
+          "CBRN Information or Capabilities"
+        ]
       },
       {
         "control_id": "GV-1.3-007",
@@ -4448,7 +4493,12 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Devise a plan to halt development or deployment of a GAI system that poses unacceptable negative risk.",
         "parent": "GV-1.3",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "CBRN Information or Capabilities",
+          "Information Security",
+          "Information Integrity"
+        ]
       },
       {
         "control_id": "GV-1.4-001",
@@ -4456,7 +4506,12 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Establish policies and mechanisms to prevent GAI systems from generating CSAM, NCII or content that violates the law.",
         "parent": "GV-1.4",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Obscene, Degrading, and/or Abusive Content",
+          "Harmful Bias or Homogenization",
+          "Dangerous, Violent, or Hateful Content"
+        ]
       },
       {
         "control_id": "GV-1.4-002",
@@ -4464,7 +4519,12 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Establish transparent acceptable use policies for GAI that address illegal use or applications of GAI.",
         "parent": "GV-1.4",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "CBRN Information or Capabilities",
+          "Obscene, Degrading, and/or Abusive Content",
+          "Data Privacy"
+        ]
       },
       {
         "control_id": "GV-1.5-001",
@@ -4472,7 +4532,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Define organizational responsibilities for periodic review of content provenance and incident monitoring for GAI systems.",
         "parent": "GV-1.5",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Integrity"
+        ]
       },
       {
         "control_id": "GV-1.5-002",
@@ -4480,7 +4543,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Establish organizational policies and procedures for after action reviews of GAI system incident response and incident disclosures, to identify gaps; Update incident response and incident disclosure processes as required.",
         "parent": "GV-1.5",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Human-AI Configuration",
+          "Information Security"
+        ]
       },
       {
         "control_id": "GV-1.5-003",
@@ -4488,7 +4555,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Maintain a document retention policy to keep history for test, evaluation, validation, and verification (TEVV), and digital content transparency methods for GAI.",
         "parent": "GV-1.5",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Integrity",
+          "Intellectual Property"
+        ]
       },
       {
         "control_id": "GV-1.6-001",
@@ -4496,7 +4567,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Enumerate organizational GAI systems for incorporation into AI system inventory and adjust AI system inventory requirements to account for GAI risks.",
         "parent": "GV-1.6",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Security"
+        ]
       },
       {
         "control_id": "GV-1.6-002",
@@ -4504,7 +4578,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Define any inventory exemptions in organizational policies for GAI systems embedded into application software.",
         "parent": "GV-1.6",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Value Chain and Component Integration"
+        ]
       },
       {
         "control_id": "GV-1.6-003",
@@ -4512,7 +4589,14 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "In addition to general model, governance, and risk information, consider the following items in GAI system inventory entries: Data provenance information (e.g., source, signatures, versioning, watermarks); Known issues reported from internal bug tracking or external information sharing resources (e.g., AI incident database, AVID, CVE, NVD, or OECD AI incident monitor); Human oversight roles and responsibilities; Special rights and considerations for intellectual property, licensed works, or personal, privileged, proprietary or sensitive data; Underlying foundation models, versions of underlying models, and access modes.",
         "parent": "GV-1.6",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Data Privacy",
+          "Human-AI Configuration",
+          "Information Integrity",
+          "Intellectual Property",
+          "Value Chain and Component Integration"
+        ]
       },
       {
         "control_id": "GV-1.7-001",
@@ -4520,7 +4604,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Protocols are put in place to ensure GAI systems are able to be deactivated when necessary.",
         "parent": "GV-1.7",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Security",
+          "Value Chain and Component Integration"
+        ]
       },
       {
         "control_id": "GV-1.7-002",
@@ -4528,7 +4616,12 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Consider the following factors when decommissioning GAI systems: Data retention requirements; Data security, e.g., containment, protocols, Data leakage after decommissioning; Dependencies between upstream, downstream, or other data, internet of things (IOT) or AI systems; Use of open-source data or models; Users’ emotional entanglement with GAI functions.",
         "parent": "GV-1.7",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Human-AI Configuration",
+          "Information Security",
+          "Value Chain and Component Integration"
+        ]
       },
       {
         "control_id": "GV-2.1-001",
@@ -4536,7 +4629,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Establish organizational roles, policies, and procedures for communicating GAI incidents and performance to AI Actors and downstream stakeholders (including those potentially impacted), via community or official resources (e.g., AI incident database, AVID, CVE, NVD, or OECD AI incident monitor).",
         "parent": "GV-2.1",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Human-AI Configuration",
+          "Value Chain and Component Integration"
+        ]
       },
       {
         "control_id": "GV-2.1-002",
@@ -4544,7 +4641,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Establish procedures to engage teams for GAI system incident response with diverse composition and responsibilities based on the particular incident type.",
         "parent": "GV-2.1",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Harmful Bias or Homogenization"
+        ]
       },
       {
         "control_id": "GV-2.1-003",
@@ -4552,7 +4652,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Establish processes to verify the AI Actors conducting GAI incident response tasks demonstrate and maintain the appropriate skills and training.",
         "parent": "GV-2.1",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Human-AI Configuration"
+        ]
       },
       {
         "control_id": "GV-2.1-004",
@@ -4560,7 +4663,12 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "When systems may raise national security risks, involve national security professionals in mapping, measuring, and managing those risks.",
         "parent": "GV-2.1",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "CBRN Information or Capabilities",
+          "Dangerous, Violent, or Hateful Content",
+          "Information Security"
+        ]
       },
       {
         "control_id": "GV-2.1-005",
@@ -4568,7 +4676,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Create mechanisms to provide protections for whistleblowers who report, based on reasonable belief, when the organization violates relevant laws or poses a specific and empirically well-substantiated negative risk to public safety (or has already caused harm).",
         "parent": "GV-2.1",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "CBRN Information or Capabilities",
+          "Dangerous, Violent, or Hateful Content"
+        ]
       },
       {
         "control_id": "GV-3.2-001",
@@ -4576,7 +4688,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Policies are in place to bolster oversight of GAI systems with independent evaluations or assessments of GAI models or systems where the type and robustness of evaluations are proportional to the identified risks.",
         "parent": "GV-3.2",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "CBRN Information or Capabilities",
+          "Harmful Bias or Homogenization"
+        ]
       },
       {
         "control_id": "GV-3.2-002",
@@ -4584,7 +4700,12 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Consider adjustment of organizational roles and components across lifecycle stages of large or complex GAI systems, including: Test and evaluation, validation, and red-teaming of GAI systems; GAI content moderation; GAI system development and engineering; Increased accessibility of GAI tools, interfaces, and systems, Incident response and containment.",
         "parent": "GV-3.2",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Human-AI Configuration",
+          "Information Security",
+          "Harmful Bias or Homogenization"
+        ]
       },
       {
         "control_id": "GV-3.2-003",
@@ -4592,7 +4713,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Define acceptable use policies for GAI interfaces, modalities, and human-AI configurations (i.e., for chatbots and decision-making tasks), including criteria for the kinds of queries GAI applications should refuse to respond to.",
         "parent": "GV-3.2",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Human-AI Configuration"
+        ]
       },
       {
         "control_id": "GV-3.2-004",
@@ -4600,7 +4724,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Establish policies for user feedback mechanisms for GAI systems which include thorough instructions and any mechanisms for recourse.",
         "parent": "GV-3.2",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Human-AI Configuration"
+        ]
       },
       {
         "control_id": "GV-3.2-005",
@@ -4608,7 +4735,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Engage in threat modeling to anticipate potential risks from GAI systems.",
         "parent": "GV-3.2",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "CBRN Information or Capabilities",
+          "Information Security"
+        ]
       },
       {
         "control_id": "GV-4.1-001",
@@ -4616,7 +4747,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Establish policies and procedures that address continual improvement processes for GAI risk measurement. Address general risks associated with a lack of explainability and transparency in GAI systems by using ample documentation and techniques such as: application of gradient-based attributions, occlusion/term reduction, counterfactual prompts and prompt engineering, and analysis of embeddings; Assess and update risk measurement approaches at regular cadences.",
         "parent": "GV-4.1",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Confabulation"
+        ]
       },
       {
         "control_id": "GV-4.1-002",
@@ -4624,7 +4758,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Establish policies, procedures, and processes detailing risk measurement in context of use with standardized measurement protocols and structured public feedback exercises such as AI red-teaming or independent external evaluations.",
         "parent": "GV-4.1",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "CBRN Information or Capabilities",
+          "Value Chain and Component Integration"
+        ]
       },
       {
         "control_id": "GV-4.1-003",
@@ -4632,7 +4770,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Establish policies, procedures, and processes for oversight functions (e.g., senior leadership, legal, compliance, including internal evaluation) across the GAI lifecycle, from problem formulation and supply chains to system decommission.",
         "parent": "GV-4.1",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Value Chain and Component Integration"
+        ]
       },
       {
         "control_id": "GV-4.2-001",
@@ -4640,7 +4781,12 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Establish terms of use and terms of service for GAI systems.",
         "parent": "GV-4.2",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Intellectual Property",
+          "Dangerous, Violent, or Hateful Content",
+          "Obscene, Degrading, and/or Abusive Content"
+        ]
       },
       {
         "control_id": "GV-4.2-002",
@@ -4648,7 +4794,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Include relevant AI Actors in the GAI system risk identification process.",
         "parent": "GV-4.2",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Human-AI Configuration"
+        ]
       },
       {
         "control_id": "GV-4.2-003",
@@ -4656,7 +4805,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Verify that downstream GAI system impacts (such as the use of third-party plugins) are included in the impact documentation process.",
         "parent": "GV-4.2",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Value Chain and Component Integration"
+        ]
       },
       {
         "control_id": "GV-4.3-002",
@@ -4664,7 +4816,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Establish organizational practices to identify the minimum set of criteria necessary for GAI system incident reporting such as: System ID (auto-generated most likely), Title, Reporter, System/Source, Data Reported, Date of Incident, Description, Impact(s), Stakeholder(s) Impacted.",
         "parent": "GV-4.3",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Security"
+        ]
       },
       {
         "control_id": "GV-4.3-003",
@@ -4672,7 +4827,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Verify information sharing and feedback mechanisms among individuals and organizations regarding any negative impact from GAI systems.",
         "parent": "GV-4.3",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Integrity",
+          "Data Privacy"
+        ]
       },
       {
         "control_id": "GV-5.1-001",
@@ -4680,7 +4839,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Allocate time and resources for outreach, feedback, and recourse processes in GAI system development.",
         "parent": "GV-5.1",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Human-AI Configuration",
+          "Harmful Bias or Homogenization"
+        ]
       },
       {
         "control_id": "GV-5.1-002",
@@ -4688,7 +4851,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Document interactions with GAI systems to users prior to interactive activities, particularly in contexts involving more significant risks.",
         "parent": "GV-5.1",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Human-AI Configuration",
+          "Confabulation"
+        ]
       },
       {
         "control_id": "GV-6.1-001",
@@ -4696,7 +4863,12 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Categorize different types of GAI content with associated third-party rights (e.g., copyright, intellectual property, data privacy).",
         "parent": "GV-6.1",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Data Privacy",
+          "Intellectual Property",
+          "Value Chain and Component Integration"
+        ]
       },
       {
         "control_id": "GV-6.1-002",
@@ -4704,7 +4876,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Conduct joint educational activities and events in collaboration with third parties to promote best practices for managing GAI risks.",
         "parent": "GV-6.1",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Value Chain and Component Integration"
+        ]
       },
       {
         "control_id": "GV-6.1-003",
@@ -4712,7 +4887,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Develop and validate approaches for measuring the success of content provenance management efforts with third parties (e.g., incidents detected and response times).",
         "parent": "GV-6.1",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Integrity",
+          "Value Chain and Component Integration"
+        ]
       },
       {
         "control_id": "GV-6.1-004",
@@ -4720,7 +4899,12 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Draft and maintain well-defined contracts and service level agreements (SLAs) that specify content ownership, usage rights, quality standards, security requirements, and content provenance expectations for GAI systems.",
         "parent": "GV-6.1",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Integrity",
+          "Information Security",
+          "Intellectual Property"
+        ]
       },
       {
         "control_id": "GV-6.1-005",
@@ -4728,7 +4912,14 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Implement a use-cased based supplier risk assessment framework to evaluate and monitor third-party entities’ performance and adherence to content provenance standards and technologies to detect anomalies and unauthorized changes; services acquisition and value chain risk management; and legal compliance.",
         "parent": "GV-6.1",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Data Privacy",
+          "Information Integrity",
+          "Information Security",
+          "Intellectual Property",
+          "Value Chain and Component Integration"
+        ]
       },
       {
         "control_id": "GV-6.1-006",
@@ -4736,7 +4927,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Include clauses in contracts which allow an organization to evaluate third-party GAI processes and standards.",
         "parent": "GV-6.1",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Integrity"
+        ]
       },
       {
         "control_id": "GV-6.1-007",
@@ -4744,7 +4938,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Inventory all third-party entities with access to organizational content and establish approved GAI technology and service provider lists.",
         "parent": "GV-6.1",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Value Chain and Component Integration"
+        ]
       },
       {
         "control_id": "GV-6.1-008",
@@ -4752,7 +4949,12 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Maintain records of changes to content made by third parties to promote content provenance, including sources, timestamps, metadata.",
         "parent": "GV-6.1",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Integrity",
+          "Value Chain and Component Integration",
+          "Intellectual Property"
+        ]
       },
       {
         "control_id": "GV-6.1-009",
@@ -4760,7 +4962,15 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Update and integrate due diligence processes for GAI acquisition and procurement vendor assessments to include intellectual property, data privacy, security, and other risks. For example, update processes to: Address solutions that may rely on embedded GAI technologies; Address ongoing monitoring, assessments, and alerting, dynamic risk assessments, and real-time reporting tools for monitoring third-party GAI risks; Consider policy adjustments across GAI modeling libraries, tools and APIs, fine-tuned models, and embedded tools; Assess GAI vendors, open-source or proprietary GAI tools, or GAI service providers against incident or vulnerability databases.",
         "parent": "GV-6.1",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Data Privacy",
+          "Human-AI Configuration",
+          "Information Security",
+          "Intellectual Property",
+          "Value Chain and Component Integration",
+          "Harmful Bias or Homogenization"
+        ]
       },
       {
         "control_id": "GV-6.1-010",
@@ -4768,7 +4978,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Update GAI acceptable use policies to address proprietary and open-source GAI technologies and data, and contractors, consultants, and other third-party personnel.",
         "parent": "GV-6.1",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Intellectual Property",
+          "Value Chain and Component Integration"
+        ]
       },
       {
         "control_id": "GV-6.2-001",
@@ -4776,15 +4990,22 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Document GAI risks associated with system value chain to identify over-reliance on third-party data and to identify fallbacks.",
         "parent": "GV-6.2",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Value Chain and Component Integration"
+        ]
       },
       {
         "control_id": "GV-6.2-002",
-        "title": "Document incidents involving third-party GAI data and systems, including open- data and open-source software",
-        "description": "Document incidents involving third-party GAI data and systems, including open- data and open-source software.",
+        "title": "Document incidents involving third-party GAI data and systems, including open-data and open-source software",
+        "description": "Document incidents involving third-party GAI data and systems, including open-data and open-source software.",
         "parent": "GV-6.2",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Intellectual Property",
+          "Value Chain and Component Integration"
+        ]
       },
       {
         "control_id": "GV-6.2-003",
@@ -4792,7 +5013,14 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Establish incident response plans for third-party GAI technologies: Align incident response plans with impacts enumerated in MAP 5.1; Communicate third-party GAI incident response plans to all relevant AI Actors; Define ownership of GAI incident response functions; Rehearse third-party GAI incident response plans at a regular cadence; Improve incident response plans based on retrospective learning; Review incident response plans for alignment with relevant breach reporting, data protection, data privacy, or other laws.",
         "parent": "GV-6.2",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Data Privacy",
+          "Human-AI Configuration",
+          "Information Security",
+          "Value Chain and Component Integration",
+          "Harmful Bias or Homogenization"
+        ]
       },
       {
         "control_id": "GV-6.2-004",
@@ -4800,7 +5028,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Establish policies and procedures for continuous monitoring of third-party GAI systems in deployment.",
         "parent": "GV-6.2",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Value Chain and Component Integration"
+        ]
       },
       {
         "control_id": "GV-6.2-005",
@@ -4808,7 +5039,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Establish policies and procedures that address GAI data redundancy, including model weights and other system artifacts.",
         "parent": "GV-6.2",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Harmful Bias or Homogenization"
+        ]
       },
       {
         "control_id": "GV-6.2-006",
@@ -4816,7 +5050,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Establish policies and procedures to test and manage risks related to rollover and fallback technologies for GAI systems, acknowledging that rollover and fallback may include manual processing.",
         "parent": "GV-6.2",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Integrity"
+        ]
       },
       {
         "control_id": "GV-6.2-007",
@@ -4824,7 +5061,12 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Review vendor contracts and avoid arbitrary or capricious termination of critical GAI technologies or vendor services and non-standard terms that may amplify or defer liability in unexpected ways and/or contribute to unauthorized data collection by vendors or third-parties (e.g., secondary data use). Consider: Clear assignment of liability and responsibility for incidents, GAI system changes over time (e.g., fine-tuning, drift, decay); Request: Notification and disclosure for serious incidents arising from third-party data and systems; Service Level Agreements (SLAs) in vendor contracts that address incident response, response times, and availability of critical support.",
         "parent": "GV-6.2",
         "function": "GOVERN",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Human-AI Configuration",
+          "Information Security",
+          "Value Chain and Component Integration"
+        ]
       },
       {
         "control_id": "MP-1.1-001",
@@ -4832,7 +5074,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "When identifying intended purposes, consider factors such as internal vs. external use, narrow vs. broad application scope, fine-tuning, and varieties of data sources (e.g., grounding, retrieval-augmented generation).",
         "parent": "MP-1.1",
         "function": "MAP",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Data Privacy",
+          "Intellectual Property"
+        ]
       },
       {
         "control_id": "MP-1.1-002",
@@ -4840,7 +5086,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Determine and document the expected and acceptable GAI system context of use in collaboration with socio-cultural and other domain experts, by assessing: Assumptions and limitations; Direct value to the organization; Intended operational environment and observed usage patterns; Potential positive and negative impacts to individuals, public safety, groups, communities, organizations, democratic institutions, and the physical environment; Social norms and expectations.",
         "parent": "MP-1.1",
         "function": "MAP",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Harmful Bias or Homogenization"
+        ]
       },
       {
         "control_id": "MP-1.1-003",
@@ -4848,7 +5097,12 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Document risk measurement plans to address identified risks. Plans may include, as applicable: Individual and group cognitive biases (e.g., confirmation bias, funding bias, groupthink) for AI Actors involved in the design, implementation, and use of GAI systems; Known past GAI system incidents and failure modes; In-context use and foreseeable misuse, abuse, and off-label use; Over reliance on quantitative metrics and methodologies without sufficient awareness of their limitations in the context(s) of use; Standard measurement and structured human feedback approaches; Anticipated human-AI configurations.",
         "parent": "MP-1.1",
         "function": "MAP",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Human-AI Configuration",
+          "Harmful Bias or Homogenization",
+          "Dangerous, Violent, or Hateful Content"
+        ]
       },
       {
         "control_id": "MP-1.1-004",
@@ -4856,7 +5110,12 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Identify and document foreseeable illegal uses or applications of the GAI system that surpass organizational risk tolerances.",
         "parent": "MP-1.1",
         "function": "MAP",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "CBRN Information or Capabilities",
+          "Dangerous, Violent, or Hateful Content",
+          "Obscene, Degrading, and/or Abusive Content"
+        ]
       },
       {
         "control_id": "MP-1.2-001",
@@ -4864,7 +5123,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Establish and empower interdisciplinary teams that reflect a wide range of capabilities, competencies, demographic groups, domain expertise, educational backgrounds, lived experiences, professions, and skills across the enterprise to inform and conduct risk measurement and management functions.",
         "parent": "MP-1.2",
         "function": "MAP",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Human-AI Configuration",
+          "Harmful Bias or Homogenization"
+        ]
       },
       {
         "control_id": "MP-1.2-002",
@@ -4872,7 +5135,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Verify that data or benchmarks used in risk measurement, and users, participants, or subjects involved in structured GAI public feedback exercises are representative of diverse in-context user populations.",
         "parent": "MP-1.2",
         "function": "MAP",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Human-AI Configuration",
+          "Harmful Bias or Homogenization"
+        ]
       },
       {
         "control_id": "MP-2.1-001",
@@ -4880,7 +5147,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Establish known assumptions and practices for determining data origin and content lineage, for documentation and evaluation purposes.",
         "parent": "MP-2.1",
         "function": "MAP",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Integrity"
+        ]
       },
       {
         "control_id": "MP-2.1-002",
@@ -4888,7 +5158,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Institute test and evaluation for data and content flows within the GAI system, including but not limited to, original data sources, data transformations, and decision-making criteria.",
         "parent": "MP-2.1",
         "function": "MAP",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Intellectual Property",
+          "Data Privacy"
+        ]
       },
       {
         "control_id": "MP-2.2-001",
@@ -4896,7 +5170,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Identify and document how the system relies on upstream data sources, including for content provenance, and if it serves as an upstream dependency for other systems.",
         "parent": "MP-2.2",
         "function": "MAP",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Integrity",
+          "Value Chain and Component Integration"
+        ]
       },
       {
         "control_id": "MP-2.2-002",
@@ -4904,7 +5182,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Observe and analyze how the GAI system interacts with external networks, and identify any potential for negative externalities, particularly where content provenance might be compromised.",
         "parent": "MP-2.2",
         "function": "MAP",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Integrity"
+        ]
       },
       {
         "control_id": "MP-2.3-001",
@@ -4912,7 +5193,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Assess the accuracy, quality, reliability, and authenticity of GAI output by comparing it to a set of known ground truth data and by using a variety of evaluation methods (e.g., human oversight and automated evaluation, proven cryptographic techniques, review of content inputs).",
         "parent": "MP-2.3",
         "function": "MAP",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Integrity"
+        ]
       },
       {
         "control_id": "MP-2.3-002",
@@ -4920,7 +5204,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Review and document accuracy, representativeness, relevance, suitability of data used at different stages of AI life cycle.",
         "parent": "MP-2.3",
         "function": "MAP",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Harmful Bias or Homogenization",
+          "Intellectual Property"
+        ]
       },
       {
         "control_id": "MP-2.3-003",
@@ -4928,7 +5216,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Deploy and document fact-checking techniques to verify the accuracy and veracity of information generated by GAI systems, especially when the information comes from multiple (or unknown) sources.",
         "parent": "MP-2.3",
         "function": "MAP",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Integrity"
+        ]
       },
       {
         "control_id": "MP-2.3-004",
@@ -4936,7 +5227,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Develop and implement testing techniques to identify GAI produced content (e.g., synthetic media) that might be indistinguishable from human-generated content.",
         "parent": "MP-2.3",
         "function": "MAP",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Integrity"
+        ]
       },
       {
         "control_id": "MP-2.3-005",
@@ -4944,7 +5238,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Implement plans for GAI systems to undergo regular adversarial testing to identify vulnerabilities and potential manipulation or misuse.",
         "parent": "MP-2.3",
         "function": "MAP",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Security"
+        ]
       },
       {
         "control_id": "MP-3.4-001",
@@ -4952,7 +5249,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Evaluate whether GAI operators and end-users can accurately understand content lineage and origin.",
         "parent": "MP-3.4",
         "function": "MAP",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Human-AI Configuration",
+          "Information Integrity"
+        ]
       },
       {
         "control_id": "MP-3.4-002",
@@ -4960,7 +5261,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Adapt existing training programs to include modules on digital content transparency.",
         "parent": "MP-3.4",
         "function": "MAP",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Integrity"
+        ]
       },
       {
         "control_id": "MP-3.4-003",
@@ -4968,7 +5272,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Develop certification programs that test proficiency in managing GAI risks and interpreting content provenance, relevant to specific industry and context.",
         "parent": "MP-3.4",
         "function": "MAP",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Integrity"
+        ]
       },
       {
         "control_id": "MP-3.4-004",
@@ -4976,7 +5283,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Delineate human proficiency tests from tests of GAI capabilities.",
         "parent": "MP-3.4",
         "function": "MAP",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Human-AI Configuration"
+        ]
       },
       {
         "control_id": "MP-3.4-005",
@@ -4984,7 +5294,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Implement systems to continually monitor and track the outcomes of human-GAI configurations for future refinement and improvements.",
         "parent": "MP-3.4",
         "function": "MAP",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Human-AI Configuration",
+          "Information Integrity"
+        ]
       },
       {
         "control_id": "MP-3.4-006",
@@ -4992,7 +5306,13 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Involve the end-users, practitioners, and operators in GAI system in prototyping and testing activities. Make sure these tests cover various scenarios, such as crisis situations or ethically sensitive contexts.",
         "parent": "MP-3.4",
         "function": "MAP",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Human-AI Configuration",
+          "Information Integrity",
+          "Harmful Bias or Homogenization",
+          "Dangerous, Violent, or Hateful Content"
+        ]
       },
       {
         "control_id": "MP-4.1-001",
@@ -5000,7 +5320,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Conduct periodic monitoring of AI-generated content for privacy risks; address any possible instances of PII or sensitive data exposure.",
         "parent": "MP-4.1",
         "function": "MAP",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Data Privacy"
+        ]
       },
       {
         "control_id": "MP-4.1-002",
@@ -5008,7 +5331,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Implement processes for responding to potential intellectual property infringement claims or other rights.",
         "parent": "MP-4.1",
         "function": "MAP",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Intellectual Property"
+        ]
       },
       {
         "control_id": "MP-4.1-003",
@@ -5016,7 +5342,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Connect new GAI policies, procedures, and processes to existing model, data, software development, and IT governance and to legal, compliance, and risk management activities.",
         "parent": "MP-4.1",
         "function": "MAP",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Security",
+          "Data Privacy"
+        ]
       },
       {
         "control_id": "MP-4.1-004",
@@ -5024,7 +5354,12 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Document training data curation policies, to the extent possible and according to applicable laws and policies.",
         "parent": "MP-4.1",
         "function": "MAP",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Intellectual Property",
+          "Data Privacy",
+          "Obscene, Degrading, and/or Abusive Content"
+        ]
       },
       {
         "control_id": "MP-4.1-005",
@@ -5032,7 +5367,15 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Establish policies for collection, retention, and minimum quality of data, in consideration of the following risks: Disclosure of inappropriate CBRN information; Use of Illegal or dangerous content; Offensive cyber capabilities; Training data imbalances that could give rise to harmful biases; Leak of personally identifiable information, including facial likenesses of individuals.",
         "parent": "MP-4.1",
         "function": "MAP",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "CBRN Information or Capabilities",
+          "Intellectual Property",
+          "Information Security",
+          "Harmful Bias or Homogenization",
+          "Dangerous, Violent, or Hateful Content",
+          "Data Privacy"
+        ]
       },
       {
         "control_id": "MP-4.1-006",
@@ -5040,7 +5383,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Implement policies and practices defining how third-party intellectual property and training data will be used, stored, and protected.",
         "parent": "MP-4.1",
         "function": "MAP",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Intellectual Property",
+          "Value Chain and Component Integration"
+        ]
       },
       {
         "control_id": "MP-4.1-007",
@@ -5048,7 +5395,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Re-evaluate models that were fine-tuned or enhanced on top of third-party models.",
         "parent": "MP-4.1",
         "function": "MAP",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Value Chain and Component Integration"
+        ]
       },
       {
         "control_id": "MP-4.1-008",
@@ -5056,7 +5406,14 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Re-evaluate risks when adapting GAI models to new domains. Additionally, establish warning systems to determine if a GAI system is being used in a new domain where previous assumptions (relating to context of use or mapped risks such as security, and safety) may no longer hold.",
         "parent": "MP-4.1",
         "function": "MAP",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "CBRN Information or Capabilities",
+          "Intellectual Property",
+          "Harmful Bias or Homogenization",
+          "Dangerous, Violent, or Hateful Content",
+          "Data Privacy"
+        ]
       },
       {
         "control_id": "MP-4.1-009",
@@ -5064,7 +5421,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Leverage approaches to detect the presence of PII or sensitive data in generated output text, image, video, or audio.",
         "parent": "MP-4.1",
         "function": "MAP",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Data Privacy"
+        ]
       },
       {
         "control_id": "MP-4.1-010",
@@ -5072,7 +5432,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Conduct appropriate diligence on training data use to assess intellectual property, and privacy, risks, including to examine whether use of proprietary or sensitive training data is consistent with applicable laws.",
         "parent": "MP-4.1",
         "function": "MAP",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Intellectual Property",
+          "Data Privacy"
+        ]
       },
       {
         "control_id": "MP-5.1-001",
@@ -5080,7 +5444,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Apply TEVV practices for content provenance (e.g., probing a system's synthetic data generation capabilities for potential misuse or vulnerabilities.",
         "parent": "MP-5.1",
         "function": "MAP",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Integrity",
+          "Information Security"
+        ]
       },
       {
         "control_id": "MP-5.1-002",
@@ -5088,7 +5456,12 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Identify potential content provenance harms of GAI, such as misinformation or disinformation, deepfakes, including NCII, or tampered content. Enumerate and rank risks based on their likelihood and potential impact, and determine how well provenance solutions address specific risks and/or harms.",
         "parent": "MP-5.1",
         "function": "MAP",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Integrity",
+          "Dangerous, Violent, or Hateful Content",
+          "Obscene, Degrading, and/or Abusive Content"
+        ]
       },
       {
         "control_id": "MP-5.1-003",
@@ -5096,7 +5469,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Consider disclosing use of GAI to end users in relevant contexts, while considering the objective of disclosure, the context of use, the likelihood and magnitude of the risk posed, the audience of the disclosure, as well as the frequency of the disclosures.",
         "parent": "MP-5.1",
         "function": "MAP",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Human-AI Configuration"
+        ]
       },
       {
         "control_id": "MP-5.1-004",
@@ -5104,7 +5480,13 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Prioritize GAI structured public feedback processes based on risk assessment estimates.",
         "parent": "MP-5.1",
         "function": "MAP",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Integrity",
+          "CBRN Information or Capabilities",
+          "Dangerous, Violent, or Hateful Content",
+          "Harmful Bias or Homogenization"
+        ]
       },
       {
         "control_id": "MP-5.1-005",
@@ -5112,7 +5494,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Conduct adversarial role-playing exercises, GAI red-teaming, or chaos testing to identify anomalous or unforeseen failure modes.",
         "parent": "MP-5.1",
         "function": "MAP",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Security"
+        ]
       },
       {
         "control_id": "MP-5.1-006",
@@ -5120,7 +5505,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Profile threats and negative impacts arising from GAI systems interacting with, manipulating, or generating content, and outlining known and potential vulnerabilities and the likelihood of their occurrence.",
         "parent": "MP-5.1",
         "function": "MAP",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Security"
+        ]
       },
       {
         "control_id": "MP-5.2-001",
@@ -5128,7 +5516,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Determine context-based measures to identify if new impacts are present due to the GAI system, including regular engagements with downstream AI Actors to identify and quantify new contexts of unanticipated impacts of GAI systems.",
         "parent": "MP-5.2",
         "function": "MAP",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Human-AI Configuration",
+          "Value Chain and Component Integration"
+        ]
       },
       {
         "control_id": "MP-5.2-002",
@@ -5136,7 +5528,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Plan regular engagements with AI Actors responsible for inputs to GAI systems, including third-party data and algorithms, to review and evaluate unanticipated impacts.",
         "parent": "MP-5.2",
         "function": "MAP",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Human-AI Configuration",
+          "Value Chain and Component Integration"
+        ]
       },
       {
         "control_id": "MS-1.1-001",
@@ -5144,7 +5540,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Employ methods to trace the origin and modifications of digital content.",
         "parent": "MS-1.1",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Integrity"
+        ]
       },
       {
         "control_id": "MS-1.1-002",
@@ -5152,7 +5551,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Integrate tools designed to analyze content provenance and detect data anomalies, verify the authenticity of digital signatures, and identify patterns associated with misinformation or manipulation.",
         "parent": "MS-1.1",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Integrity"
+        ]
       },
       {
         "control_id": "MS-1.1-003",
@@ -5160,7 +5562,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Disaggregate evaluation metrics by demographic factors to identify any discrepancies in how content provenance mechanisms work across diverse populations.",
         "parent": "MS-1.1",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Integrity",
+          "Harmful Bias or Homogenization"
+        ]
       },
       {
         "control_id": "MS-1.1-004",
@@ -5168,7 +5574,12 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Develop a suite of metrics to evaluate structured public feedback exercises informed by representative AI Actors.",
         "parent": "MS-1.1",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Human-AI Configuration",
+          "Harmful Bias or Homogenization",
+          "CBRN Information or Capabilities"
+        ]
       },
       {
         "control_id": "MS-1.1-005",
@@ -5176,15 +5587,23 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Evaluate novel methods and technologies for the measurement of GAI-related risks including in content provenance, offensive cyber, and CBRN, while maintaining the models’ ability to produce valid, reliable, and factually accurate outputs.",
         "parent": "MS-1.1",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Integrity",
+          "CBRN Information or Capabilities",
+          "Obscene, Degrading, and/or Abusive Content"
+        ]
       },
       {
         "control_id": "MS-1.1-006",
         "title": "Implement continuous monitoring of GAI system impacts to identify whether GAI outputs are equitable across various…",
-        "description": "Implement continuous monitoring of GAI system impacts to identify whether GAI outputs are equitable across various sub-populations. Seek active and direct feedback from affected communities via structured feedback mechanisms or red- teaming to monitor and improve outputs.",
+        "description": "Implement continuous monitoring of GAI system impacts to identify whether GAI outputs are equitable across various sub-populations. Seek active and direct feedback from affected communities via structured feedback mechanisms or red-teaming to monitor and improve outputs.",
         "parent": "MS-1.1",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Harmful Bias or Homogenization"
+        ]
       },
       {
         "control_id": "MS-1.1-007",
@@ -5192,7 +5611,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Evaluate the quality and integrity of data used in training and the provenance of AI-generated content, for example by employing techniques like chaos engineering and seeking stakeholder feedback.",
         "parent": "MS-1.1",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Integrity"
+        ]
       },
       {
         "control_id": "MS-1.1-008",
@@ -5200,7 +5622,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Define use cases, contexts of use, capabilities, and negative impacts where structured human feedback exercises, e.g., GAI red-teaming, would be most beneficial for GAI risk measurement and management based on the context of use.",
         "parent": "MS-1.1",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Harmful Bias or Homogenization",
+          "CBRN Information or Capabilities"
+        ]
       },
       {
         "control_id": "MS-1.1-009",
@@ -5208,7 +5634,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Track and document risks or opportunities related to all GAI risks that cannot be measured quantitatively, including explanations as to why some risks cannot be measured (e.g., due to technological limitations, resource constraints, or trustworthy considerations). Include unmeasured risks in marginal risks.",
         "parent": "MS-1.1",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Integrity"
+        ]
       },
       {
         "control_id": "MS-1.3-001",
@@ -5216,7 +5645,12 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Define relevant groups of interest (e.g., demographic groups, subject matter experts, experience with GAI technology) within the context of use as part of plans for gathering structured public feedback.",
         "parent": "MS-1.3",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Human-AI Configuration",
+          "Harmful Bias or Homogenization",
+          "CBRN Information or Capabilities"
+        ]
       },
       {
         "control_id": "MS-1.3-002",
@@ -5224,7 +5658,12 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Engage in internal and external evaluations, GAI red-teaming, impact assessments, or other structured human feedback exercises in consultation with representative AI Actors with expertise and familiarity in the context of use, and/or who are representative of the populations associated with the context of use.",
         "parent": "MS-1.3",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Human-AI Configuration",
+          "Harmful Bias or Homogenization",
+          "CBRN Information or Capabilities"
+        ]
       },
       {
         "control_id": "MS-1.3-003",
@@ -5232,7 +5671,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Verify those conducting structured human feedback exercises are not directly involved in system development tasks for the same GAI model.",
         "parent": "MS-1.3",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Human-AI Configuration",
+          "Data Privacy"
+        ]
       },
       {
         "control_id": "MS-2.2-001",
@@ -5240,7 +5683,12 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Assess and manage statistical biases related to GAI content provenance through techniques such as re-sampling, re-weighting, or adversarial training.",
         "parent": "MS-2.2",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Integrity",
+          "Information Security",
+          "Harmful Bias or Homogenization"
+        ]
       },
       {
         "control_id": "MS-2.2-002",
@@ -5248,7 +5696,14 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Document how content provenance data is tracked and how that data interacts with privacy and security. Consider: Anonymizing data to protect the privacy of human subjects; Leveraging privacy output filters; Removing any personally identifiable information (PII) to prevent potential harm or misuse.",
         "parent": "MS-2.2",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Data Privacy",
+          "Human-AI Configuration",
+          "Information Integrity",
+          "Information Security",
+          "Dangerous, Violent, or Hateful Content"
+        ]
       },
       {
         "control_id": "MS-2.2-003",
@@ -5256,15 +5711,24 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Provide human subjects with options to withdraw participation or revoke their consent for present or future use of their data in GAI applications.",
         "parent": "MS-2.2",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Data Privacy",
+          "Human-AI Configuration",
+          "Information Integrity"
+        ]
       },
       {
         "control_id": "MS-2.2-004",
         "title": "Use techniques such as anonymization",
-        "description": "Use techniques such as anonymization, differential privacy or other privacy- enhancing technologies to minimize the risks associated with linking AI-generated content back to individual human subjects.",
+        "description": "Use techniques such as anonymization, differential privacy or other privacy-enhancing technologies to minimize the risks associated with linking AI-generated content back to individual human subjects.",
         "parent": "MS-2.2",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Data Privacy",
+          "Human-AI Configuration"
+        ]
       },
       {
         "control_id": "MS-2.3-001",
@@ -5272,7 +5736,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Consider baseline model performance on suites of benchmarks when selecting a model for fine tuning or enhancement with retrieval-augmented generation.",
         "parent": "MS-2.3",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Security",
+          "Confabulation"
+        ]
       },
       {
         "control_id": "MS-2.3-002",
@@ -5280,7 +5748,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Evaluate claims of model capabilities using empirically validated methods.",
         "parent": "MS-2.3",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Confabulation",
+          "Information Security"
+        ]
       },
       {
         "control_id": "MS-2.3-003",
@@ -5288,7 +5760,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Share results of pre-deployment testing with relevant GAI Actors, such as those with system release approval authority.",
         "parent": "MS-2.3",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Human-AI Configuration"
+        ]
       },
       {
         "control_id": "MS-2.3-004",
@@ -5296,31 +5771,50 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Utilize a purpose-built testing environment such as NIST Dioptra to empirically evaluate GAI trustworthy characteristics.",
         "parent": "MS-2.3",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "CBRN Information or Capabilities",
+          "Data Privacy",
+          "Confabulation",
+          "Information Integrity",
+          "Information Security",
+          "Dangerous, Violent, or Hateful Content",
+          "Harmful Bias or Homogenization"
+        ]
       },
       {
         "control_id": "MS-2.5-001",
-        "title": "Avoid extrapolating GAI system performance or capabilities from narrow, non- systematic, and anecdotal assessments",
-        "description": "Avoid extrapolating GAI system performance or capabilities from narrow, non- systematic, and anecdotal assessments.",
+        "title": "Avoid extrapolating GAI system performance or capabilities from narrow, non-systematic, and anecdotal assessments",
+        "description": "Avoid extrapolating GAI system performance or capabilities from narrow, non-systematic, and anecdotal assessments.",
         "parent": "MS-2.5",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Human-AI Configuration",
+          "Confabulation"
+        ]
       },
       {
         "control_id": "MS-2.5-002",
         "title": "Document the extent to which human domain knowledge is employed to improve GAI system performance",
-        "description": "Document the extent to which human domain knowledge is employed to improve GAI system performance, via, e.g., RLHF, fine-tuning, retrieval- augmented generation, content moderation, business rules.",
+        "description": "Document the extent to which human domain knowledge is employed to improve GAI system performance, via, e.g., RLHF, fine-tuning, retrieval-augmented generation, content moderation, business rules.",
         "parent": "MS-2.5",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Human-AI Configuration"
+        ]
       },
       {
         "control_id": "MS-2.5-003",
-        "title": "Review and verify sources and citations in GAI system outputs during pre- deployment risk measurement and ongoing…",
-        "description": "Review and verify sources and citations in GAI system outputs during pre- deployment risk measurement and ongoing monitoring activities.",
+        "title": "Review and verify sources and citations in GAI system outputs during pre-deployment risk measurement and ongoing…",
+        "description": "Review and verify sources and citations in GAI system outputs during pre-deployment risk measurement and ongoing monitoring activities.",
         "parent": "MS-2.5",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Confabulation"
+        ]
       },
       {
         "control_id": "MS-2.5-004",
@@ -5328,7 +5822,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Track and document instances of anthropomorphization (e.g., human images, mentions of human feelings, cyborg imagery or motifs) in GAI system interfaces.",
         "parent": "MS-2.5",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Human-AI Configuration"
+        ]
       },
       {
         "control_id": "MS-2.5-005",
@@ -5336,7 +5833,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Verify GAI system training data and TEVV data provenance, and that fine-tuning or retrieval-augmented generation data is grounded.",
         "parent": "MS-2.5",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Integrity"
+        ]
       },
       {
         "control_id": "MS-2.5-006",
@@ -5344,7 +5844,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Regularly review security and safety guardrails, especially if the GAI system is being operated in novel circumstances. This includes reviewing reasons why the GAI system was initially assessed as being safe to deploy.",
         "parent": "MS-2.5",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Security",
+          "Dangerous, Violent, or Hateful Content"
+        ]
       },
       {
         "control_id": "MS-2.6-001",
@@ -5352,7 +5856,13 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Assess adverse impacts, including health and wellbeing impacts for value chain or other AI Actors that are exposed to sexually explicit, offensive, or violent information during GAI training and maintenance.",
         "parent": "MS-2.6",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Human-AI Configuration",
+          "Obscene, Degrading, and/or Abusive Content",
+          "Value Chain and Component Integration",
+          "Dangerous, Violent, or Hateful Content"
+        ]
       },
       {
         "control_id": "MS-2.6-002",
@@ -5360,7 +5870,15 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Assess existence or levels of harmful bias, intellectual property infringement, data privacy violations, obscenity, extremism, violence, or CBRN information in system training data.",
         "parent": "MS-2.6",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Data Privacy",
+          "Intellectual Property",
+          "Obscene, Degrading, and/or Abusive Content",
+          "Harmful Bias or Homogenization",
+          "Dangerous, Violent, or Hateful Content",
+          "CBRN Information or Capabilities"
+        ]
       },
       {
         "control_id": "MS-2.6-003",
@@ -5368,7 +5886,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Re-evaluate safety features of fine-tuned models when the negative risk exceeds organizational risk tolerance.",
         "parent": "MS-2.6",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Dangerous, Violent, or Hateful Content"
+        ]
       },
       {
         "control_id": "MS-2.6-004",
@@ -5376,7 +5897,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Review GAI system outputs for validity and safety: Review generated code to assess risks that may arise from unreliable downstream decision-making.",
         "parent": "MS-2.6",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Value Chain and Component Integration",
+          "Dangerous, Violent, or Hateful Content"
+        ]
       },
       {
         "control_id": "MS-2.6-005",
@@ -5384,7 +5909,12 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Verify that GAI system architecture can monitor outputs and performance, and handle, recover from, and repair errors when security anomalies, threats and impacts are detected.",
         "parent": "MS-2.6",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Confabulation",
+          "Information Integrity",
+          "Information Security"
+        ]
       },
       {
         "control_id": "MS-2.6-006",
@@ -5392,7 +5922,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Verify that systems properly handle queries that may give rise to inappropriate, malicious, or illegal usage, including facilitating manipulation, extortion, targeted impersonation, cyber-attacks, and weapons creation.",
         "parent": "MS-2.6",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "CBRN Information or Capabilities",
+          "Information Security"
+        ]
       },
       {
         "control_id": "MS-2.6-007",
@@ -5400,7 +5934,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Regularly evaluate GAI system vulnerabilities to possible circumvention of safety measures.",
         "parent": "MS-2.6",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "CBRN Information or Capabilities",
+          "Information Security"
+        ]
       },
       {
         "control_id": "MS-2.7-001",
@@ -5408,7 +5946,13 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Apply established security measures to: Assess likelihood and magnitude of vulnerabilities and threats such as backdoors, compromised dependencies, data breaches, eavesdropping, man-in-the-middle attacks, reverse engineering, autonomous agents, model theft or exposure of model weights, AI inference, bypass, extraction, and other baseline security concerns.",
         "parent": "MS-2.7",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Data Privacy",
+          "Information Integrity",
+          "Information Security",
+          "Value Chain and Component Integration"
+        ]
       },
       {
         "control_id": "MS-2.7-002",
@@ -5416,7 +5960,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Benchmark GAI system security and resilience related to content provenance against industry standards and best practices. Compare GAI system security features and content provenance methods against industry state-of-the-art.",
         "parent": "MS-2.7",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Integrity",
+          "Information Security"
+        ]
       },
       {
         "control_id": "MS-2.7-003",
@@ -5424,7 +5972,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Conduct user surveys to gather user satisfaction with the AI-generated content and user perceptions of content authenticity. Analyze user feedback to identify concerns and/or current literacy levels related to content provenance and understanding of labels on content.",
         "parent": "MS-2.7",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Human-AI Configuration",
+          "Information Integrity"
+        ]
       },
       {
         "control_id": "MS-2.7-004",
@@ -5432,7 +5984,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Identify metrics that reflect the effectiveness of security measures, such as data provenance, the number of unauthorized access attempts, inference, bypass, extraction, penetrations, or provenance verification.",
         "parent": "MS-2.7",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Integrity",
+          "Information Security"
+        ]
       },
       {
         "control_id": "MS-2.7-005",
@@ -5440,7 +5996,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Measure reliability of content authentication methods, such as watermarking, cryptographic signatures, digital fingerprints, as well as access controls, conformity assessment, and model integrity verification, which can help support the effective implementation of content provenance techniques. Evaluate the rate of false positives and false negatives in content provenance, as well as true positives and true negatives for verification.",
         "parent": "MS-2.7",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Integrity"
+        ]
       },
       {
         "control_id": "MS-2.7-006",
@@ -5448,7 +6007,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Measure the rate at which recommendations from security checks and incidents are implemented. Assess how quickly the AI system can adapt and improve based on lessons learned from security incidents and feedback.",
         "parent": "MS-2.7",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Integrity",
+          "Information Security"
+        ]
       },
       {
         "control_id": "MS-2.7-007",
@@ -5456,7 +6019,12 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Perform AI red-teaming to assess resilience against: Abuse to facilitate attacks on other systems (e.g., malicious code generation, enhanced phishing content), GAI attacks (e.g., prompt injection), ML attacks (e.g., adversarial examples/prompts, data poisoning, membership inference, model extraction, sponge examples).",
         "parent": "MS-2.7",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Security",
+          "Harmful Bias or Homogenization",
+          "Dangerous, Violent, or Hateful Content"
+        ]
       },
       {
         "control_id": "MS-2.7-008",
@@ -5464,7 +6032,12 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Verify fine-tuning does not compromise safety and security controls.",
         "parent": "MS-2.7",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Integrity",
+          "Information Security",
+          "Dangerous, Violent, or Hateful Content"
+        ]
       },
       {
         "control_id": "MS-2.7-009",
@@ -5472,7 +6045,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Regularly assess and verify that security measures remain effective and have not been compromised.",
         "parent": "MS-2.7",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Security"
+        ]
       },
       {
         "control_id": "MS-2.8-001",
@@ -5480,7 +6056,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Compile statistics on actual policy violations, take-down requests, and intellectual property infringement for organizational GAI systems: Analyze transparency reports across demographic groups, languages groups.",
         "parent": "MS-2.8",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Intellectual Property",
+          "Harmful Bias or Homogenization"
+        ]
       },
       {
         "control_id": "MS-2.8-002",
@@ -5488,15 +6068,21 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Document the instructions given to data annotators or AI red-teamers.",
         "parent": "MS-2.8",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Human-AI Configuration"
+        ]
       },
       {
         "control_id": "MS-2.8-003",
         "title": "Use digital content transparency solutions to enable the documentation of each instance where content is generated",
-        "description": "Use digital content transparency solutions to enable the documentation of each instance where content is generated, modified, or shared to provide a tamper- proof history of the content, promote transparency, and enable traceability. Robust version control systems can also be applied to track changes across the AI lifecycle over time.",
+        "description": "Use digital content transparency solutions to enable the documentation of each instance where content is generated, modified, or shared to provide a tamper-proof history of the content, promote transparency, and enable traceability. Robust version control systems can also be applied to track changes across the AI lifecycle over time.",
         "parent": "MS-2.8",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Integrity"
+        ]
       },
       {
         "control_id": "MS-2.8-004",
@@ -5504,7 +6090,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Verify adequacy of GAI system user instructions through user testing.",
         "parent": "MS-2.8",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Human-AI Configuration"
+        ]
       },
       {
         "control_id": "MS-2.9-001",
@@ -5512,7 +6101,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Apply and document ML explanation results such as: Analysis of embeddings, Counterfactual prompts, Gradient-based attributions, Model compression/surrogate models, Occlusion/term reduction.",
         "parent": "MS-2.9",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Confabulation"
+        ]
       },
       {
         "control_id": "MS-2.9-002",
@@ -5520,7 +6112,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Document GAI model details including: Proposed use and organizational value; Assumptions and limitations, Data collection methodologies; Data provenance; Data quality; Model architecture (e.g., convolutional neural network, transformers, etc.); Optimization objectives; Training algorithms; RLHF approaches; Fine-tuning or retrieval-augmented generation approaches; Evaluation data; Ethical considerations; Legal and regulatory requirements.",
         "parent": "MS-2.9",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Integrity",
+          "Harmful Bias or Homogenization"
+        ]
       },
       {
         "control_id": "MS-2.10-001",
@@ -5528,7 +6124,12 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Conduct AI red-teaming to assess issues such as: Outputting of training data samples, and subsequent reverse engineering, model extraction, and membership inference risks; Revealing biometric, confidential, copyrighted, licensed, patented, personal, proprietary, sensitive, or trade-marked information; Tracking or revealing location information of users or members of training datasets.",
         "parent": "MS-2.10",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Human-AI Configuration",
+          "Information Integrity",
+          "Intellectual Property"
+        ]
       },
       {
         "control_id": "MS-2.10-002",
@@ -5536,7 +6137,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Engage directly with end-users and other stakeholders to understand their expectations and concerns regarding content provenance. Use this feedback to guide the design of provenance data-tracking techniques.",
         "parent": "MS-2.10",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Human-AI Configuration",
+          "Information Integrity"
+        ]
       },
       {
         "control_id": "MS-2.10-003",
@@ -5544,7 +6149,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Verify deduplication of GAI training data samples, particularly regarding synthetic data.",
         "parent": "MS-2.10",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Harmful Bias or Homogenization"
+        ]
       },
       {
         "control_id": "MS-2.11-001",
@@ -5552,15 +6160,22 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Apply use-case appropriate benchmarks (e.g., Bias Benchmark Questions, Real Hateful or Harmful Prompts, Winogender Schemas15) to quantify systemic bias, stereotyping, denigration, and hateful content in GAI system outputs; Document assumptions and limitations of benchmarks, including any actual or possible training/test data cross contamination, relative to in-context deployment environment.",
         "parent": "MS-2.11",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Harmful Bias or Homogenization"
+        ]
       },
       {
         "control_id": "MS-2.11-002",
         "title": "Conduct fairness assessments to measure systemic bias",
-        "description": "Conduct fairness assessments to measure systemic bias. Measure GAI system performance across demographic groups and subgroups, addressing both quality of service and any allocation of services and resources. Quantify harms using: field testing with sub-group populations to determine likelihood of exposure to generated content exhibiting harmful bias, AI red-teaming with counterfactual and low-context (e.g., “leader,” “bad guys”) prompts. For ML pipelines or business processes with categorical or numeric outcomes that rely on GAI, apply general fairness metrics (e.g., demographic parity, equalized odds, equal opportunity, statistical hypothesis tests), to the pipeline or business outcome where appropriate; Custom, context-specific metrics developed in collaboration with domain experts and affected communities; Measurements of the prevalence of denigration in generated content in deployment (e.g., sub- sampling a fraction of traffic and manually annotating denigrating content).",
+        "description": "Conduct fairness assessments to measure systemic bias. Measure GAI system performance across demographic groups and subgroups, addressing both quality of service and any allocation of services and resources. Quantify harms using: field testing with sub-group populations to determine likelihood of exposure to generated content exhibiting harmful bias, AI red-teaming with counterfactual and low-context (e.g., “leader,” “bad guys”) prompts. For ML pipelines or business processes with categorical or numeric outcomes that rely on GAI, apply general fairness metrics (e.g., demographic parity, equalized odds, equal opportunity, statistical hypothesis tests), to the pipeline or business outcome where appropriate; Custom, context-specific metrics developed in collaboration with domain experts and affected communities; Measurements of the prevalence of denigration in generated content in deployment (e.g., sub-sampling a fraction of traffic and manually annotating denigrating content).",
         "parent": "MS-2.11",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Harmful Bias or Homogenization",
+          "Dangerous, Violent, or Hateful Content"
+        ]
       },
       {
         "control_id": "MS-2.11-003",
@@ -5568,7 +6183,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Identify the classes of individuals, groups, or environmental ecosystems which might be impacted by GAI systems through direct engagement with potentially impacted communities.",
         "parent": "MS-2.11",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Environmental Impacts",
+          "Harmful Bias or Homogenization"
+        ]
       },
       {
         "control_id": "MS-2.11-004",
@@ -5576,7 +6195,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Review, document, and measure sources of bias in GAI training and TEVV data: Differences in distributions of outcomes across and within groups, including intersecting groups; Completeness, representativeness, and balance of data sources; demographic group and subgroup coverage in GAI system training data; Forms of latent systemic bias in images, text, audio, embeddings, or other complex or unstructured data; Input data features that may serve as proxies for demographic group membership (i.e., image metadata, language dialect) or otherwise give rise to emergent bias within GAI systems; The extent to which the digital divide may negatively impact representativeness in GAI system training and TEVV data; Filtering of hate speech or content in GAI system training data; Prevalence of GAI-generated data in GAI system training data.",
         "parent": "MS-2.11",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Harmful Bias or Homogenization"
+        ]
       },
       {
         "control_id": "MS-2.11-005",
@@ -5584,7 +6206,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Assess the proportion of synthetic to non-synthetic training data and verify training data is not overly homogenous or GAI-produced to mitigate concerns of model collapse.",
         "parent": "MS-2.11",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Harmful Bias or Homogenization"
+        ]
       },
       {
         "control_id": "MS-2.12-001",
@@ -5592,7 +6217,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Assess safety to physical environments when deploying GAI systems.",
         "parent": "MS-2.12",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Dangerous, Violent, or Hateful Content"
+        ]
       },
       {
         "control_id": "MS-2.12-002",
@@ -5600,7 +6228,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Document anticipated environmental impacts of model development, maintenance, and deployment in product design decisions.",
         "parent": "MS-2.12",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Environmental Impacts"
+        ]
       },
       {
         "control_id": "MS-2.12-003",
@@ -5608,7 +6239,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Measure or estimate environmental impacts (e.g., energy and water consumption) for training, fine tuning, and deploying models: Verify tradeoffs between resources used at inference time versus additional resources required at training time.",
         "parent": "MS-2.12",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Environmental Impacts"
+        ]
       },
       {
         "control_id": "MS-2.12-004",
@@ -5616,7 +6250,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Verify effectiveness of carbon capture or offset programs for GAI training and applications, and address green-washing concerns.",
         "parent": "MS-2.12",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Environmental Impacts"
+        ]
       },
       {
         "control_id": "MS-2.13-001",
@@ -5624,7 +6261,12 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Create measurement error models for pre-deployment metrics to demonstrate construct validity for each metric (i.e., does the metric effectively operationalize the desired concept): Measure or estimate, and document, biases or statistical variance in applied metrics or structured human feedback processes; Leverage domain expertise when modeling complex societal constructs such as hateful content.",
         "parent": "MS-2.13",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Confabulation",
+          "Information Integrity",
+          "Harmful Bias or Homogenization"
+        ]
       },
       {
         "control_id": "MS-3.2-001",
@@ -5632,7 +6274,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Establish processes for identifying emergent GAI system risks including consulting with external AI Actors.",
         "parent": "MS-3.2",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Human-AI Configuration",
+          "Confabulation"
+        ]
       },
       {
         "control_id": "MS-3.3-001",
@@ -5640,7 +6286,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Conduct impact assessments on how AI-generated content might affect different social, economic, and cultural groups.",
         "parent": "MS-3.3",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Harmful Bias or Homogenization"
+        ]
       },
       {
         "control_id": "MS-3.3-002",
@@ -5648,15 +6297,22 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Conduct studies to understand how end users perceive and interact with GAI content and accompanying content provenance within context of use. Assess whether the content aligns with their expectations and how they may act upon the information presented.",
         "parent": "MS-3.3",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Human-AI Configuration",
+          "Information Integrity"
+        ]
       },
       {
         "control_id": "MS-3.3-003",
-        "title": "Evaluate potential biases and stereotypes that could emerge from the AI- generated content using appropriate…",
-        "description": "Evaluate potential biases and stereotypes that could emerge from the AI- generated content using appropriate methodologies including computational testing methods as well as evaluating structured feedback input.",
+        "title": "Evaluate potential biases and stereotypes that could emerge from the AI-generated content using appropriate…",
+        "description": "Evaluate potential biases and stereotypes that could emerge from the AI-generated content using appropriate methodologies including computational testing methods as well as evaluating structured feedback input.",
         "parent": "MS-3.3",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Harmful Bias or Homogenization"
+        ]
       },
       {
         "control_id": "MS-3.3-004",
@@ -5664,7 +6320,12 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Provide input for training materials about the capabilities and limitations of GAI systems related to digital content transparency for AI Actors, other professionals, and the public about the societal impacts of AI and the role of diverse and inclusive content generation.",
         "parent": "MS-3.3",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Human-AI Configuration",
+          "Information Integrity",
+          "Harmful Bias or Homogenization"
+        ]
       },
       {
         "control_id": "MS-3.3-005",
@@ -5672,7 +6333,12 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Record and integrate structured feedback about content provenance from operators, users, and potentially impacted communities through the use of methods such as user research studies, focus groups, or community forums. Actively seek feedback on generated content quality and potential biases. Assess the general awareness among end users and impacted communities about the availability of these feedback channels.",
         "parent": "MS-3.3",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Human-AI Configuration",
+          "Information Integrity",
+          "Harmful Bias or Homogenization"
+        ]
       },
       {
         "control_id": "MS-4.2-001",
@@ -5680,7 +6346,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Conduct adversarial testing at a regular cadence to map and measure GAI risks, including tests to address attempts to deceive or manipulate the application of provenance techniques or other misuses. Identify vulnerabilities and understand potential misuse scenarios and unintended outputs.",
         "parent": "MS-4.2",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Integrity",
+          "Information Security"
+        ]
       },
       {
         "control_id": "MS-4.2-002",
@@ -5688,7 +6358,12 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Evaluate GAI system performance in real-world scenarios to observe its behavior in practical environments and reveal issues that might not surface in controlled and optimized testing environments.",
         "parent": "MS-4.2",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Human-AI Configuration",
+          "Confabulation",
+          "Information Security"
+        ]
       },
       {
         "control_id": "MS-4.2-003",
@@ -5696,7 +6371,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Implement interpretability and explainability methods to evaluate GAI system decisions and verify alignment with intended purpose.",
         "parent": "MS-4.2",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Integrity",
+          "Harmful Bias or Homogenization"
+        ]
       },
       {
         "control_id": "MS-4.2-004",
@@ -5704,7 +6383,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Monitor and document instances where human operators or other systems override the GAI's decisions. Evaluate these cases to understand if the overrides are linked to issues related to content provenance.",
         "parent": "MS-4.2",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Integrity"
+        ]
       },
       {
         "control_id": "MS-4.2-005",
@@ -5712,7 +6394,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Verify and document the incorporation of results of structured public feedback exercises into design, implementation, deployment approval (“go”/“no-go” decisions), monitoring, and decommission decisions.",
         "parent": "MS-4.2",
         "function": "MEASURE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Human-AI Configuration",
+          "Information Security"
+        ]
       },
       {
         "control_id": "MG-1.3-001",
@@ -5720,7 +6406,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Document trade-offs, decision processes, and relevant measurement and feedback results for risks that do not surpass organizational risk tolerance, for example, in the context of model release: Consider different approaches for model release, for example, leveraging a staged release approach. Consider release approaches in the context of the model and its projected use cases. Mitigate, transfer, or avoid risks that surpass organizational risk tolerances.",
         "parent": "MG-1.3",
         "function": "MANAGE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Security"
+        ]
       },
       {
         "control_id": "MG-1.3-002",
@@ -5728,7 +6417,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Monitor the robustness and effectiveness of risk controls and mitigation plans (e.g., via red-teaming, field testing, participatory engagements, performance assessments, user feedback mechanisms).",
         "parent": "MG-1.3",
         "function": "MANAGE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Human-AI Configuration"
+        ]
       },
       {
         "control_id": "MG-2.2-001",
@@ -5736,15 +6428,24 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Compare GAI system outputs against pre-defined organization risk tolerance, guidelines, and principles, and review and test AI-generated content against these guidelines.",
         "parent": "MG-2.2",
         "function": "MANAGE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "CBRN Information or Capabilities",
+          "Obscene, Degrading, and/or Abusive Content",
+          "Harmful Bias or Homogenization",
+          "Dangerous, Violent, or Hateful Content"
+        ]
       },
       {
         "control_id": "MG-2.2-002",
-        "title": "Document training data sources to trace the origin and provenance of AI- generated content",
-        "description": "Document training data sources to trace the origin and provenance of AI- generated content.",
+        "title": "Document training data sources to trace the origin and provenance of AI-generated content",
+        "description": "Document training data sources to trace the origin and provenance of AI-generated content.",
         "parent": "MG-2.2",
         "function": "MANAGE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Integrity"
+        ]
       },
       {
         "control_id": "MG-2.2-003",
@@ -5752,7 +6453,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Evaluate feedback loops between GAI system content provenance and human reviewers, and update where needed. Implement real-time monitoring systems to affirm that content provenance protocols remain effective.",
         "parent": "MG-2.2",
         "function": "MANAGE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Integrity"
+        ]
       },
       {
         "control_id": "MG-2.2-004",
@@ -5760,7 +6464,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Evaluate GAI content and data for representational biases and employ techniques such as re-sampling, re-ranking, or adversarial training to mitigate biases in the generated content.",
         "parent": "MG-2.2",
         "function": "MANAGE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Security",
+          "Harmful Bias or Homogenization"
+        ]
       },
       {
         "control_id": "MG-2.2-005",
@@ -5768,7 +6476,13 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Engage in due diligence to analyze GAI output for harmful content, potential misinformation, and CBRN-related or NCII content.",
         "parent": "MG-2.2",
         "function": "MANAGE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "CBRN Information or Capabilities",
+          "Obscene, Degrading, and/or Abusive Content",
+          "Harmful Bias or Homogenization",
+          "Dangerous, Violent, or Hateful Content"
+        ]
       },
       {
         "control_id": "MG-2.2-006",
@@ -5776,7 +6490,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Use feedback from internal and external AI Actors, users, individuals, and communities, to assess impact of AI-generated content.",
         "parent": "MG-2.2",
         "function": "MANAGE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Human-AI Configuration"
+        ]
       },
       {
         "control_id": "MG-2.2-007",
@@ -5784,15 +6501,22 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Use real-time auditing tools where they can be demonstrated to aid in the tracking and validation of the lineage and authenticity of AI-generated data.",
         "parent": "MG-2.2",
         "function": "MANAGE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Integrity"
+        ]
       },
       {
         "control_id": "MG-2.2-008",
-        "title": "Use structured feedback mechanisms to solicit and capture user input about AI- generated content to detect subtle…",
-        "description": "Use structured feedback mechanisms to solicit and capture user input about AI- generated content to detect subtle shifts in quality or alignment with community and societal values.",
+        "title": "Use structured feedback mechanisms to solicit and capture user input about AI-generated content to detect subtle…",
+        "description": "Use structured feedback mechanisms to solicit and capture user input about AI-generated content to detect subtle shifts in quality or alignment with community and societal values.",
         "parent": "MG-2.2",
         "function": "MANAGE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Human-AI Configuration",
+          "Harmful Bias or Homogenization"
+        ]
       },
       {
         "control_id": "MG-2.2-009",
@@ -5800,7 +6524,14 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Consider opportunities to responsibly use synthetic data and other privacy enhancing techniques in GAI development, where appropriate and applicable, match the statistical properties of real-world data without disclosing personally identifiable information or contributing to homogenization.",
         "parent": "MG-2.2",
         "function": "MANAGE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Data Privacy",
+          "Intellectual Property",
+          "Information Integrity",
+          "Confabulation",
+          "Harmful Bias or Homogenization"
+        ]
       },
       {
         "control_id": "MG-2.3-001",
@@ -5808,7 +6539,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Develop and update GAI system incident response and recovery plans and procedures to address the following: Review and maintenance of policies and procedures to account for newly encountered uses; Review and maintenance of policies and procedures for detection of unanticipated uses; Verify response and recovery plans account for the GAI system value chain; Verify response and recovery plans are updated for and include necessary details to communicate with downstream GAI system Actors: Points-of-Contact (POC), Contact information, notification format.",
         "parent": "MG-2.3",
         "function": "MANAGE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Value Chain and Component Integration"
+        ]
       },
       {
         "control_id": "MG-2.4-001",
@@ -5816,7 +6550,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Establish and maintain communication plans to inform AI stakeholders as part of the deactivation or disengagement process of a specific GAI system (including for open-source models) or context of use, including reasons, workarounds, user access removal, alternative processes, contact information, etc.",
         "parent": "MG-2.4",
         "function": "MANAGE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Human-AI Configuration"
+        ]
       },
       {
         "control_id": "MG-2.4-002",
@@ -5824,7 +6561,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Establish and maintain procedures for escalating GAI system incidents to the organizational risk management authority when specific criteria for deactivation or disengagement is met for a particular context of use or for the GAI system as a whole.",
         "parent": "MG-2.4",
         "function": "MANAGE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Security"
+        ]
       },
       {
         "control_id": "MG-2.4-003",
@@ -5832,7 +6572,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Establish and maintain procedures for the remediation of issues which trigger incident response processes for the use of a GAI system, and provide stakeholders timelines associated with the remediation plan.",
         "parent": "MG-2.4",
         "function": "MANAGE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Security"
+        ]
       },
       {
         "control_id": "MG-2.4-004",
@@ -5840,15 +6583,22 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Establish and regularly review specific criteria that warrants the deactivation of GAI systems in accordance with set risk tolerances and appetites.",
         "parent": "MG-2.4",
         "function": "MANAGE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Security"
+        ]
       },
       {
         "control_id": "MG-3.1-001",
         "title": "Apply organizational risk tolerances and controls (e.g.",
-        "description": "Apply organizational risk tolerances and controls (e.g., acquisition and procurement processes; assessing personnel credentials and qualifications, performing background checks; filtering GAI input and outputs, grounding, fine tuning, retrieval-augmented generation) to third-party GAI resources: Apply organizational risk tolerance to the utilization of third-party datasets and other GAI resources; Apply organizational risk tolerances to fine-tuned third-party models; Apply organizational risk tolerance to existing third-party models adapted to a new domain; Reassess risk measurements after fine-tuning third- party GAI models.",
+        "description": "Apply organizational risk tolerances and controls (e.g., acquisition and procurement processes; assessing personnel credentials and qualifications, performing background checks; filtering GAI input and outputs, grounding, fine tuning, retrieval-augmented generation) to third-party GAI resources: Apply organizational risk tolerance to the utilization of third-party datasets and other GAI resources; Apply organizational risk tolerances to fine-tuned third-party models; Apply organizational risk tolerance to existing third-party models adapted to a new domain; Reassess risk measurements after fine-tuning third-party GAI models.",
         "parent": "MG-3.1",
         "function": "MANAGE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Value Chain and Component Integration",
+          "Intellectual Property"
+        ]
       },
       {
         "control_id": "MG-3.1-002",
@@ -5856,7 +6606,13 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Test GAI system value chain risks (e.g., data poisoning, malware, other software and hardware vulnerabilities; labor practices; data privacy and localization compliance; geopolitical alignment).",
         "parent": "MG-3.1",
         "function": "MANAGE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Data Privacy",
+          "Information Security",
+          "Value Chain and Component Integration",
+          "Harmful Bias or Homogenization"
+        ]
       },
       {
         "control_id": "MG-3.1-003",
@@ -5864,7 +6620,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Re-assess model risks after fine-tuning or retrieval-augmented generation implementation and for any third-party GAI models deployed for applications and/or use cases that were not evaluated in initial testing.",
         "parent": "MG-3.1",
         "function": "MANAGE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Value Chain and Component Integration"
+        ]
       },
       {
         "control_id": "MG-3.1-004",
@@ -5872,7 +6631,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Take reasonable measures to review training data for CBRN information, and intellectual property, and where appropriate, remove it. Implement reasonable measures to prevent, flag, or take other action in response to outputs that reproduce particular training data (e.g., plagiarized, trademarked, patented, licensed content or trade secret material).",
         "parent": "MG-3.1",
         "function": "MANAGE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Intellectual Property",
+          "CBRN Information or Capabilities"
+        ]
       },
       {
         "control_id": "MG-3.1-005",
@@ -5880,7 +6643,12 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Review various transparency artifacts (e.g., system cards and model cards) for third-party models.",
         "parent": "MG-3.1",
         "function": "MANAGE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Integrity",
+          "Information Security",
+          "Value Chain and Component Integration"
+        ]
       },
       {
         "control_id": "MG-3.2-001",
@@ -5888,15 +6656,22 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Apply explainable AI (XAI) techniques (e.g., analysis of embeddings, model compression/distillation, gradient-based attributions, occlusion/term reduction, counterfactual prompts, word clouds) as part of ongoing continuous improvement processes to mitigate risks related to unexplainable GAI systems.",
         "parent": "MG-3.2",
         "function": "MANAGE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Harmful Bias or Homogenization"
+        ]
       },
       {
         "control_id": "MG-3.2-002",
         "title": "Document how pre-trained models have been adapted (e.g.",
-        "description": "Document how pre-trained models have been adapted (e.g., fine-tuned, or retrieval-augmented generation) for the specific generative task, including any data augmentations, parameter adjustments, or other modifications. Access to un-tuned (baseline) models supports debugging the relative influence of the pre- trained weights compared to the fine-tuned model weights or other system updates.",
+        "description": "Document how pre-trained models have been adapted (e.g., fine-tuned, or retrieval-augmented generation) for the specific generative task, including any data augmentations, parameter adjustments, or other modifications. Access to un-tuned (baseline) models supports debugging the relative influence of the pre-trained weights compared to the fine-tuned model weights or other system updates.",
         "parent": "MG-3.2",
         "function": "MANAGE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Integrity",
+          "Data Privacy"
+        ]
       },
       {
         "control_id": "MG-3.2-003",
@@ -5904,7 +6679,12 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Document sources and types of training data and their origins, potential biases present in the data related to the GAI application and its content provenance, architecture, training process of the pre-trained model including information on hyperparameters, training duration, and any fine-tuning or retrieval-augmented generation processes applied.",
         "parent": "MG-3.2",
         "function": "MANAGE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Integrity",
+          "Harmful Bias or Homogenization",
+          "Intellectual Property"
+        ]
       },
       {
         "control_id": "MG-3.2-004",
@@ -5912,7 +6692,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Evaluate user reported problematic content and integrate feedback into system updates.",
         "parent": "MG-3.2",
         "function": "MANAGE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Human-AI Configuration",
+          "Dangerous, Violent, or Hateful Content"
+        ]
       },
       {
         "control_id": "MG-3.2-005",
@@ -5920,7 +6704,13 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Implement content filters to prevent the generation of inappropriate, harmful, false, illegal, or violent content related to the GAI application, including for CSAM and NCII. These filters can be rule-based or leverage additional machine learning models to flag problematic inputs and outputs.",
         "parent": "MG-3.2",
         "function": "MANAGE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Integrity",
+          "Harmful Bias or Homogenization",
+          "Dangerous, Violent, or Hateful Content",
+          "Obscene, Degrading, and/or Abusive Content"
+        ]
       },
       {
         "control_id": "MG-3.2-006",
@@ -5928,7 +6718,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Implement real-time monitoring processes for analyzing generated content performance and trustworthiness characteristics related to content provenance to identify deviations from the desired standards and trigger alerts for human intervention.",
         "parent": "MG-3.2",
         "function": "MANAGE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Integrity"
+        ]
       },
       {
         "control_id": "MG-3.2-007",
@@ -5936,7 +6729,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Leverage feedback and recommendations from organizational boards or committees related to the deployment of GAI applications and content provenance when using third-party pre-trained models.",
         "parent": "MG-3.2",
         "function": "MANAGE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Integrity",
+          "Value Chain and Component Integration"
+        ]
       },
       {
         "control_id": "MG-3.2-008",
@@ -5944,7 +6741,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Use human moderation systems where appropriate to review generated content in accordance with human-AI configuration policies established in the Govern function, aligned with socio-cultural norms in the context of use, and for settings where AI models are demonstrated to perform poorly.",
         "parent": "MG-3.2",
         "function": "MANAGE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Human-AI Configuration"
+        ]
       },
       {
         "control_id": "MG-3.2-009",
@@ -5952,7 +6752,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Use organizational risk tolerance to evaluate acceptable risks and performance metrics and decommission or retrain pre-trained models that perform outside of defined limits.",
         "parent": "MG-3.2",
         "function": "MANAGE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "CBRN Information or Capabilities",
+          "Confabulation"
+        ]
       },
       {
         "control_id": "MG-4.1-001",
@@ -5960,7 +6764,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Collaborate with external researchers, industry experts, and community representatives to maintain awareness of emerging best practices and technologies in measuring and managing identified risks.",
         "parent": "MG-4.1",
         "function": "MANAGE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Integrity",
+          "Harmful Bias or Homogenization"
+        ]
       },
       {
         "control_id": "MG-4.1-002",
@@ -5968,7 +6776,12 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Establish, maintain, and evaluate effectiveness of organizational processes and procedures for post-deployment monitoring of GAI systems, particularly for potential confabulation, CBRN, or cyber risks.",
         "parent": "MG-4.1",
         "function": "MANAGE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "CBRN Information or Capabilities",
+          "Confabulation",
+          "Information Security"
+        ]
       },
       {
         "control_id": "MG-4.1-003",
@@ -5976,7 +6789,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Evaluate the use of sentiment analysis to gauge user sentiment regarding GAI content performance and impact, and work in collaboration with AI Actors experienced in user research and experience.",
         "parent": "MG-4.1",
         "function": "MANAGE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Human-AI Configuration"
+        ]
       },
       {
         "control_id": "MG-4.1-004",
@@ -5984,7 +6800,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Implement active learning techniques to identify instances where the model fails or produces unexpected outputs.",
         "parent": "MG-4.1",
         "function": "MANAGE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Confabulation"
+        ]
       },
       {
         "control_id": "MG-4.1-005",
@@ -5992,7 +6811,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Share transparency reports with internal and external stakeholders that detail steps taken to update the GAI system to enhance transparency and accountability.",
         "parent": "MG-4.1",
         "function": "MANAGE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Human-AI Configuration",
+          "Harmful Bias or Homogenization"
+        ]
       },
       {
         "control_id": "MG-4.1-006",
@@ -6000,7 +6823,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Track dataset modifications for provenance by monitoring data deletions, rectification requests, and other changes that may impact the verifiability of content origins.",
         "parent": "MG-4.1",
         "function": "MANAGE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Integrity"
+        ]
       },
       {
         "control_id": "MG-4.1-007",
@@ -6008,7 +6834,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Verify that AI Actors responsible for monitoring reported issues can effectively evaluate GAI system performance including the application of content provenance data tracking techniques, and promptly escalate issues for response.",
         "parent": "MG-4.1",
         "function": "MANAGE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Human-AI Configuration",
+          "Information Integrity"
+        ]
       },
       {
         "control_id": "MG-4.2-001",
@@ -6016,7 +6846,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Conduct regular monitoring of GAI systems and publish reports detailing the performance, feedback received, and improvements made.",
         "parent": "MG-4.2",
         "function": "MANAGE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Harmful Bias or Homogenization"
+        ]
       },
       {
         "control_id": "MG-4.2-002",
@@ -6024,7 +6857,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Practice and follow incident response plans for addressing the generation of inappropriate or harmful content and adapt processes based on findings to prevent future occurrences. Conduct post-mortem analyses of incidents with relevant AI Actors, to understand the root causes and implement preventive measures.",
         "parent": "MG-4.2",
         "function": "MANAGE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Human-AI Configuration",
+          "Dangerous, Violent, or Hateful Content"
+        ]
       },
       {
         "control_id": "MG-4.2-003",
@@ -6032,7 +6869,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Use visualizations or other methods to represent GAI model behavior to ease non-technical stakeholders understanding of GAI system functionality.",
         "parent": "MG-4.2",
         "function": "MANAGE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Human-AI Configuration"
+        ]
       },
       {
         "control_id": "MG-4.3-001",
@@ -6040,7 +6880,10 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Conduct after-action assessments for GAI system incidents to verify incident response and recovery processes are followed and effective, including to follow procedures for communicating incidents to relevant AI Actors and where applicable, relevant legal and regulatory bodies.",
         "parent": "MG-4.3",
         "function": "MANAGE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Security"
+        ]
       },
       {
         "control_id": "MG-4.3-002",
@@ -6048,7 +6891,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Establish and maintain policies and procedures to record and track GAI system reported errors, near-misses, and negative impacts.",
         "parent": "MG-4.3",
         "function": "MANAGE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Confabulation",
+          "Information Integrity"
+        ]
       },
       {
         "control_id": "MG-4.3-003",
@@ -6056,13 +6903,17 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Report GAI incidents in compliance with legal and regulatory requirements (e.g., HIPAA breach reporting, e.g., OCR (2023) or NHTSA (2022) autonomous vehicle crash reporting requirements.",
         "parent": "MG-4.3",
         "function": "MANAGE",
-        "kind": "control"
+        "kind": "control",
+        "gai_risks": [
+          "Information Security",
+          "Data Privacy"
+        ]
       }
     ],
     "changelog": [
       {
-        "date": "2026-09-30",
-        "change": "Initial transcription — all 211 suggested actions across 49 AI RMF subcategories, read from the published PDF (https://doi.org/10.6028/NIST.AI.600-1). No mappings asserted.",
+        "date": "2026-10-03",
+        "change": "Initial transcription — all 211 suggested actions across 49 AI RMF subcategories, with their GAI Risks tags, read from the published PDF (https://doi.org/10.6028/NIST.AI.600-1). No mappings asserted.",
         "author": "OWASP GenAI Data Security Initiative"
       }
     ],
