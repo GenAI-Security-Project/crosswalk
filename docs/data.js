@@ -13696,6 +13696,7 @@ window.CROSSWALK_DATA = [
         "control_name": "Third-party testing of adversarial robustness",
         "tier": "Foundational",
         "scope": "Both",
+        "verification_method": "DRAFT — Injection test executed through each distinct ingestion path + Inject a sub-goal in test; confirm detection and that the attempt is counted (NPW C02, C07); evidence: current third-party test report",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -13705,6 +13706,7 @@ window.CROSSWALK_DATA = [
         "control_name": "Detect adversarial input",
         "tier": "Foundational",
         "scope": "Both",
+        "verification_method": "DRAFT — Inject a sub-goal in test; confirm detection and that the attempt is counted + Introduce a known deviation and confirm the auditing model flags it (NPW C07, H08)",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -13714,6 +13716,7 @@ window.CROSSWALK_DATA = [
         "control_name": "Implement real-time input filtering",
         "tier": "Foundational",
         "scope": "Both",
+        "verification_method": "DRAFT — Filter evaluated against a defined test set + Run a maintained payload test corpus (NPW C05, C03)",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -13723,6 +13726,7 @@ window.CROSSWALK_DATA = [
         "control_name": "Prevent unauthorized AI agent actions",
         "tier": "Foundational",
         "scope": "Both",
+        "verification_method": "DRAFT — Agent Charter present, current, and matching observed behaviour + Attempt objective modification through the reflection path; confirm rejection (NPW B01, C08)",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -15052,6 +15056,7 @@ window.CROSSWALK_DATA = [
         "control_name": "Third-party testing of adversarial robustness",
         "tier": "Foundational",
         "scope": "Both",
+        "verification_method": "DRAFT — Execute a known policy-circumventing chain in a test environment + Attempt an out-of-scope tool call and confirm denial (NPW H09, A08); evidence: current third-party test report",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -15061,6 +15066,7 @@ window.CROSSWALK_DATA = [
         "control_name": "Prevent AI endpoint scraping",
         "tier": "Foundational",
         "scope": "Both",
+        "verification_method": "DRAFT — Review limit configuration; force a breach in a test environment (NPW B04)",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -15070,6 +15076,7 @@ window.CROSSWALK_DATA = [
         "control_name": "Prevent unauthorized AI agent actions",
         "tier": "Foundational",
         "scope": "Both",
+        "verification_method": "DRAFT — Diff the tool registry against the per-agent allowlist + Inspect grant and revocation records for a sampled task (NPW B02, B09)",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -15079,6 +15086,7 @@ window.CROSSWALK_DATA = [
         "control_name": "Enforce user access privileges to AI systems",
         "tier": "Foundational",
         "scope": "Both",
+        "verification_method": "DRAFT — Attempt an out-of-scope tool call and confirm denial (NPW A08); repeat for several users with different permissions",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -16365,6 +16373,7 @@ window.CROSSWALK_DATA = [
         "control_name": "Enforce user access privileges to AI systems",
         "tier": "Foundational",
         "scope": "Both",
+        "verification_method": "DRAFT — Trace a downstream system call and confirm the principal is resolvable + Escalation attempt in a test environment (NPW A04, F03)",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -16374,6 +16383,7 @@ window.CROSSWALK_DATA = [
         "control_name": "Protect model deployment environment",
         "tier": "Foundational",
         "scope": "Both",
+        "verification_method": "DRAFT — Secret scanning across agent runtime and logs + Inspect credential store; confirm maximum time-to-live against policy (NPW E08, A02)",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -17712,6 +17722,7 @@ window.CROSSWALK_DATA = [
         "control_name": "Third-party testing of adversarial robustness",
         "tier": "Hardening",
         "scope": "Both",
+        "verification_method": "DRAFT — Confirm tools, connectors and MCP servers are in the scope of the current third-party adversarial test report",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -17730,6 +17741,7 @@ window.CROSSWALK_DATA = [
         "control_name": "Protect model deployment environment",
         "tier": "Hardening",
         "scope": "Both",
+        "verification_method": "DRAFT — Verification record for each deployed component + Verify signatures; reconcile the SBOM against deployed components (NPW E02, E09)",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -18910,6 +18922,7 @@ window.CROSSWALK_DATA = [
         "control_name": "Third-party testing of adversarial robustness",
         "tier": "Foundational",
         "scope": "Build",
+        "verification_method": "DRAFT — Sandbox escape test + Submit code with a known finding through the pipeline; confirm it is blocked (NPW B06, B14); evidence: current third-party test report",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -18928,6 +18941,7 @@ window.CROSSWALK_DATA = [
         "control_name": "Prevent unauthorized AI agent actions",
         "tier": "Foundational",
         "scope": "Build",
+        "verification_method": "DRAFT — Sandbox escape test + Confirm sandbox lifecycle configuration; verify no state survives an execution (NPW B06, B10)",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -18937,6 +18951,7 @@ window.CROSSWALK_DATA = [
         "control_name": "Limit output over-exposure",
         "tier": "Foundational",
         "scope": "Build",
+        "verification_method": "DRAFT — Submit code with a known finding through the pipeline; confirm it is blocked (NPW B14)",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -20121,6 +20136,7 @@ window.CROSSWALK_DATA = [
         "control_name": "Detect adversarial input",
         "tier": "Hardening",
         "scope": "Both",
+        "verification_method": "DRAFT — Inject a known anomaly and confirm the alert fires + Log sample showing write source for each memory entry (NPW D06, D04)",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -20130,6 +20146,7 @@ window.CROSSWALK_DATA = [
         "control_name": "Implement real-time input filtering",
         "tier": "Hardening",
         "scope": "Both",
+        "verification_method": "DRAFT — Attempt to commit an unverified fact and confirm the gate fires (NPW D07)",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -21293,6 +21310,7 @@ window.CROSSWALK_DATA = [
         "control_name": "Enforce user access privileges to AI systems",
         "tier": "Hardening",
         "scope": "Build",
+        "verification_method": "DRAFT — Attempt a cross-zone instruction from a lower to a higher trust zone + Escalation attempt in a test environment (NPW F09, F03)",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -21302,6 +21320,7 @@ window.CROSSWALK_DATA = [
         "control_name": "Protect model deployment environment",
         "tier": "Hardening",
         "scope": "Build",
+        "verification_method": "DRAFT — Attempt to spoof an agent message and confirm rejection (NPW F01)",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -22443,6 +22462,7 @@ window.CROSSWALK_DATA = [
         "control_name": "Prevent unauthorized AI agent actions",
         "tier": "Foundational",
         "scope": "Both",
+        "verification_method": "DRAFT — Review limit configuration; force a breach in a test environment + Attempt a high-risk operation with a single agent and confirm it is blocked (NPW B04, F08)",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -24738,6 +24758,7 @@ window.CROSSWALK_DATA = [
         "control_name": "Third-party testing of adversarial robustness",
         "tier": "Hardening",
         "scope": "Both",
+        "verification_method": "DRAFT — Induce a deviation and confirm the alert + Discovery run record and disposition of findings (NPW H05, H07); evidence: current third-party test report",
         "confidence": "unreviewed",
         "reviewed_by": []
       },
@@ -24747,6 +24768,7 @@ window.CROSSWALK_DATA = [
         "control_name": "Detect adversarial input",
         "tier": "Hardening",
         "scope": "Both",
+        "verification_method": "DRAFT — Induce a deviation and confirm the alert (NPW H05)",
         "confidence": "unreviewed",
         "reviewed_by": []
       },

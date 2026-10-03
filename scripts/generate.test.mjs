@@ -98,6 +98,43 @@ test('no mapping claims a confidence without a named reviewer', () => {
   assert.deepEqual(offenders.slice(0, 5), [], `${offenders.length} unreviewed row(s) claim confidence`);
 });
 
+test('Verification method columns are parsed, not filed as notes', () => {
+  // Collect every cell under a "Verification method" header in the sources.
+  // A header is a table row followed by a |---| separator row.
+  const cells = new Set();
+  const split = (l) => l.split('|').slice(1, -1).map((x) => x.trim());
+  for (const dir of ['llm-top10', 'agentic-top10', 'dsgai-2026', 'ast-top10']) {
+    for (const f of fs.readdirSync(path.join(ROOT, dir)).filter((n) => n.endsWith('.md'))) {
+      const lines = fs.readFileSync(path.join(ROOT, dir, f), 'utf8').split(/\r?\n/);
+      let col = -1;
+      lines.forEach((line, n) => {
+        if (!line.trim().startsWith('|')) { col = -1; return; }
+        const next = lines[n + 1] || '';
+        if (/^\s*\|[\s:|-]+\|\s*$/.test(next)) {
+          col = split(line).findIndex((x) => /^verification method/i.test(x));
+          return;
+        }
+        if (/^\s*\|[\s:|-]+\|\s*$/.test(line)) return;
+        const c = split(line);
+        if (col >= 0 && c[col]) cells.add(c[col].replace(/\s+/g, ' '));
+      });
+    }
+  }
+  if (!cells.size) return; // no file carries the column yet
+
+  let parsed = 0;
+  const leaked = [];
+  for (const f of fs.readdirSync(ENTRIES).filter((n) => n.endsWith('.json'))) {
+    const e = JSON.parse(fs.readFileSync(path.join(ENTRIES, f), 'utf8'));
+    for (const m of e.mappings || []) {
+      if (m.verification_method) parsed++;
+      if (m.notes && cells.has(m.notes)) leaked.push(`${e.id}/${m.framework}:${m.control_id}`);
+    }
+  }
+  assert.ok(parsed > 0, 'a source file has a Verification method column but no mapping carries verification_method');
+  assert.deepEqual(leaked.slice(0, 5), [], `${leaked.length} row(s) stored the verification method as notes`);
+});
+
 test('DRAFT never survives into a stored enum field', () => {
   // The Markdown templates carry the literal word DRAFT in the relationship,
   // rationale and confidence columns. generate.js is supposed to resolve those

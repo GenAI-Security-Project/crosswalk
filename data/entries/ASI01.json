@@ -777,6 +777,7 @@
       "control_name": "Third-party testing of adversarial robustness",
       "tier": "Foundational",
       "scope": "Both",
+      "verification_method": "DRAFT — Injection test executed through each distinct ingestion path + Inject a sub-goal in test; confirm detection and that the attempt is counted (NPW C02, C07); evidence: current third-party test report",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
@@ -786,6 +787,7 @@
       "control_name": "Detect adversarial input",
       "tier": "Foundational",
       "scope": "Both",
+      "verification_method": "DRAFT — Inject a sub-goal in test; confirm detection and that the attempt is counted + Introduce a known deviation and confirm the auditing model flags it (NPW C07, H08)",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
@@ -795,6 +797,7 @@
       "control_name": "Implement real-time input filtering",
       "tier": "Foundational",
       "scope": "Both",
+      "verification_method": "DRAFT — Filter evaluated against a defined test set + Run a maintained payload test corpus (NPW C05, C03)",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
@@ -804,6 +807,7 @@
       "control_name": "Prevent unauthorized AI agent actions",
       "tier": "Foundational",
       "scope": "Both",
+      "verification_method": "DRAFT — Agent Charter present, current, and matching observed behaviour + Attempt objective modification through the reflection path; confirm rejection (NPW B01, C08)",
       "confidence": "unreviewed",
       "reviewed_by": []
     },

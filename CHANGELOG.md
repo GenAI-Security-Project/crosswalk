@@ -21,6 +21,10 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   scope changes (LLM01 cross-modal 2.2.3/2.2.4, LLM04 artifact provenance 3.1.1/3.1.3, LLM05 fine-tuning subversion
   6.1.2/3.5.1, LLM08 hidden context 10.2.4, LLM10 generated code 9.3.7). AISVS has no requirement for scanning
   generated code itself; the LLM10 section says so.
+- **Optional `verification_method` mapping field** (#101). Records how an assessor can check the control is implemented.
+  Non-breaking: rows without it are unchanged. Documented in `docs/SCHEMA_V2_MIGRATION.md`; not exported to OLIR.
+  Piloted in `agentic-top10/Agentic_AIUC1.md` (all values DRAFT pending SME review), with methods adapted from the
+  NPW Agentic AI Control Catalogue.
 
 ### Changed
 

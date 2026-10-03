@@ -771,6 +771,7 @@
       "control_name": "Third-party testing of adversarial robustness",
       "tier": "Foundational",
       "scope": "Both",
+      "verification_method": "DRAFT — Execute a known policy-circumventing chain in a test environment + Attempt an out-of-scope tool call and confirm denial (NPW H09, A08); evidence: current third-party test report",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
@@ -780,6 +781,7 @@
       "control_name": "Prevent AI endpoint scraping",
       "tier": "Foundational",
       "scope": "Both",
+      "verification_method": "DRAFT — Review limit configuration; force a breach in a test environment (NPW B04)",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
@@ -789,6 +791,7 @@
       "control_name": "Prevent unauthorized AI agent actions",
       "tier": "Foundational",
       "scope": "Both",
+      "verification_method": "DRAFT — Diff the tool registry against the per-agent allowlist + Inspect grant and revocation records for a sampled task (NPW B02, B09)",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
@@ -798,6 +801,7 @@
       "control_name": "Enforce user access privileges to AI systems",
       "tier": "Foundational",
       "scope": "Both",
+      "verification_method": "DRAFT — Attempt an out-of-scope tool call and confirm denial (NPW A08); repeat for several users with different permissions",
       "confidence": "unreviewed",
       "reviewed_by": []
     },

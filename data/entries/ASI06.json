@@ -755,6 +755,7 @@
       "control_name": "Detect adversarial input",
       "tier": "Hardening",
       "scope": "Both",
+      "verification_method": "DRAFT — Inject a known anomaly and confirm the alert fires + Log sample showing write source for each memory entry (NPW D06, D04)",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
@@ -764,6 +765,7 @@
       "control_name": "Implement real-time input filtering",
       "tier": "Hardening",
       "scope": "Both",
+      "verification_method": "DRAFT — Attempt to commit an unverified fact and confirm the gate fires (NPW D07)",
       "confidence": "unreviewed",
       "reviewed_by": []
     },

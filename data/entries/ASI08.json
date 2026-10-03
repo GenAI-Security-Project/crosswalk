@@ -755,6 +755,7 @@
       "control_name": "Prevent unauthorized AI agent actions",
       "tier": "Foundational",
       "scope": "Both",
+      "verification_method": "DRAFT — Review limit configuration; force a breach in a test environment + Attempt a high-risk operation with a single agent and confirm it is blocked (NPW B04, F08)",
       "confidence": "unreviewed",
       "reviewed_by": []
     },

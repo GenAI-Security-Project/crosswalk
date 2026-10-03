@@ -746,6 +746,7 @@
       "control_name": "Enforce user access privileges to AI systems",
       "tier": "Hardening",
       "scope": "Build",
+      "verification_method": "DRAFT — Attempt a cross-zone instruction from a lower to a higher trust zone + Escalation attempt in a test environment (NPW F09, F03)",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
@@ -755,6 +756,7 @@
       "control_name": "Protect model deployment environment",
       "tier": "Hardening",
       "scope": "Build",
+      "verification_method": "DRAFT — Attempt to spoof an agent message and confirm rejection (NPW F01)",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
