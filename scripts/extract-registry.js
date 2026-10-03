@@ -78,7 +78,7 @@ const FRAMEWORK_META = {
     short_name: "AIUC-1",
     version: "1.0",
     url: "https://www.aiuc-1.com/",
-    license: "not verified",
+    license: "Proprietary (AIUC)",
     publisher: "Artificial Intelligence Underwriting Company (AIUC)",
     category: "ai-governance",
   },

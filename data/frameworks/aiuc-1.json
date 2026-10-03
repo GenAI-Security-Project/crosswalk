@@ -4,7 +4,7 @@
   "short_name": "AIUC-1",
   "version": "1.0",
   "url": "https://www.aiuc-1.com/",
-  "license": "not verified",
+  "license": "Proprietary (AIUC)",
   "publisher": "Artificial Intelligence Underwriting Company (AIUC)",
   "category": "ai-governance",
   "last_synced": "2026-04-10",
@@ -104,7 +104,7 @@
   "changelog": [
     {
       "date": "2026-10-02",
-      "change": "Corrected the attribution (#189). AIUC-1 is maintained by the Artificial Intelligence Underwriting Company (the aiuc-1.com footer), not the UK AI Safety Institute, and the old URL (ai-safety-institute.org) did not resolve. The Open Government Licence was removed: AIUC-1 is not a UK Crown publication, and no licence is stated on aiuc-1.com or in the aiunderwriting/AIUC-1-Changelog repository, so the field reads \"not verified\" until a human confirms the terms. \"version\": \"1.0\" is kept as the mapped label, but AIUC-1 names its releases by date; see data/framework-sources.json.",
+      "change": "Corrected the attribution (#189). AIUC-1 is maintained by the Artificial Intelligence Underwriting Company (the aiuc-1.com footer), not the UK AI Safety Institute, and the old URL (ai-safety-institute.org) did not resolve. The Open Government Licence was replaced with \"Proprietary (AIUC)\": AIUC-1 is not a UK Crown publication, and the AIUC Terms of Use (https://aiuc.com/legal/terms, last updated July 15, 2025) state that site content is \"the exclusive property of Company and its licensors\" and grant only a \"non-exclusive, limited, non-transferable, freely revocable license to use the Site for your personal, noncommercial use only\". Licence confirmed by the maintainer from those terms. \"version\": \"1.0\" is kept as the mapped label, but AIUC-1 names its releases by date; see data/framework-sources.json.",
       "author": "OWASP GenAI Data Security Initiative"
     },
     {
