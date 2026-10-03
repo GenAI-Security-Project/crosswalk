@@ -252,7 +252,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V15.3.7",
         "control_name": "Verify that the application has defenses against HTTP parameter pollution attacks, particularly if the application framework makes no distinction about the source of request parameters (query string, body parameters, cookies, or header fields).",
         "tier": "Foundational",
@@ -263,7 +263,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V15.3.3",
         "control_name": "Verify that the application has countermeasures to protect against mass assignment attacks by limiting allowed fields per controller and action, e.g., it is not possible to insert or update a field value when it was not intended to be part of that action.",
         "tier": "Foundational",
@@ -274,7 +274,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V1.3.1",
         "control_name": "Verify that all untrusted HTML input from WYSIWYG editors or similar is sanitized using a well-known and secure HTML sanitization library or framework feature.",
         "tier": "Foundational",
@@ -285,7 +285,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V1.3.7",
         "control_name": "Verify that the application protects against template injection attacks by not allowing templates to be built based on untrusted input. Where there is no alternative, any untrusted input being included dynamically during template creation must be sanitized or strictly validated.",
         "tier": "Foundational",
@@ -296,7 +296,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V1.1.2",
         "control_name": "Threat modelling of all data flows",
         "tier": "Foundational",
@@ -307,7 +307,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V2.4.2",
         "control_name": "Verify that business logic flows require realistic human timing, preventing excessively rapid transaction submissions.",
         "tier": "Foundational",
@@ -1736,7 +1736,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V14.2.2",
         "control_name": "Verify that the application prevents sensitive data from being cached in server components, such as load balancers and application caches, or ensures that the data is securely purged after use.",
         "tier": "Foundational",
@@ -1747,7 +1747,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V14.1.1",
         "control_name": "Verify that all sensitive data created and processed by the application has been identified and classified into protection levels. This includes data that is only encoded and therefore easily decoded, such as Base64 strings or the plaintext payload inside a JWT. Protection levels need to take into account any data protection and privacy regulations and standards which the application is required to comply with.",
         "tier": "Foundational",
@@ -1758,7 +1758,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V8.2.1",
         "control_name": "Verify that the application ensures that function-level access is restricted to consumers with explicit permissions.",
         "tier": "Foundational",
@@ -1769,7 +1769,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V14.1.1",
         "control_name": "Verify that all sensitive data created and processed by the application has been identified and classified into protection levels. This includes data that is only encoded and therefore easily decoded, such as Base64 strings or the plaintext payload inside a JWT. Protection levels need to take into account any data protection and privacy regulations and standards which the application is required to comply with.",
         "tier": "Foundational",
@@ -1780,7 +1780,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V12.2.1",
         "control_name": "Verify that TLS is used for all connectivity between a client and external facing, HTTP-based services, and does not fall back to insecure or unencrypted communications.",
         "tier": "Foundational",
@@ -2917,7 +2917,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V8.2.1",
         "control_name": "Verify that the application ensures that function-level access is restricted to consumers with explicit permissions.",
         "tier": "Foundational",
@@ -2928,7 +2928,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V8.3.1",
         "control_name": "Verify that the application enforces authorization rules at a trusted service layer and doesn't rely on controls that an untrusted consumer could manipulate, such as client-side JavaScript.",
         "tier": "Foundational",
@@ -2939,7 +2939,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V16.3.2",
         "control_name": "Verify that failed authorization attempts are logged. For L3, this must include logging all authorization decisions, including logging when sensitive data is accessed (without logging the sensitive data itself).",
         "tier": "Foundational",
@@ -2950,7 +2950,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V2.4.2",
         "control_name": "Verify that business logic flows require realistic human timing, preventing excessively rapid transaction submissions.",
         "tier": "Foundational",
@@ -4191,7 +4191,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V10.2.1",
         "control_name": "Verify third-party components are current and free from vulnerabilities",
         "tier": "Foundational",
@@ -4202,7 +4202,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V10.2.2",
         "control_name": "Verify only minimal approved external libraries are used",
         "tier": "Foundational",
@@ -4213,7 +4213,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V13.4.5",
         "control_name": "Verify that documentation (such as for internal APIs) and monitoring endpoints are not exposed unless explicitly intended.",
         "tier": "Foundational",
@@ -5425,7 +5425,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V15.3.7",
         "control_name": "Verify that the application has defenses against HTTP parameter pollution attacks, particularly if the application framework makes no distinction about the source of request parameters (query string, body parameters, cookies, or header fields).",
         "tier": "Hardening",
@@ -5436,7 +5436,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V10.2.1",
         "control_name": "Verify third-party components free of vulnerabilities",
         "tier": "Hardening",
@@ -5447,7 +5447,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V5.2.1",
         "control_name": "Verify that the application will only accept files of a size which it can process without causing a loss of performance or a denial of service attack.",
         "tier": "Hardening",
@@ -6572,7 +6572,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V1.5.3",
         "control_name": "Verify API rate limiting",
         "tier": "Foundational",
@@ -6583,7 +6583,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V14.2.1",
         "control_name": "Verify that sensitive data is only sent to the server in the HTTP message body or header fields, and that the URL and query string do not contain sensitive information, such as an API key or session token.",
         "tier": "Foundational",
@@ -6594,7 +6594,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V2.4.1",
         "control_name": "Verify that anti-automation controls are in place to protect against excessive calls to application functions that could lead to data exfiltration, garbage-data creation, quota exhaustion, rate-limit breaches, denial-of-service, or overuse of costly resources.",
         "tier": "Foundational",
@@ -6605,7 +6605,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V16.5.1",
         "control_name": "Verify that a generic message is returned to the consumer when an unexpected or security-sensitive error occurs, ensuring no exposure of sensitive internal system data such as stack traces, queries, secret keys, and tokens.",
         "tier": "Foundational",
@@ -7661,7 +7661,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V2.3.1",
         "control_name": "Verify that the application will only process business logic flows for the same user in the expected sequential step order and without skipping steps.",
         "tier": "Foundational",
@@ -7672,7 +7672,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V16.5.1",
         "control_name": "Verify that a generic message is returned to the consumer when an unexpected or security-sensitive error occurs, ensuring no exposure of sensitive internal system data such as stack traces, queries, secret keys, and tokens.",
         "tier": "Foundational",
@@ -7683,7 +7683,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V1.3.1",
         "control_name": "Verify that all untrusted HTML input from WYSIWYG editors or similar is sanitized using a well-known and secure HTML sanitization library or framework feature.",
         "tier": "Foundational",
@@ -8845,7 +8845,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V14.2.2",
         "control_name": "Verify that the application prevents sensitive data from being cached in server components, such as load balancers and application caches, or ensures that the data is securely purged after use.",
         "tier": "Foundational",
@@ -8856,7 +8856,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V8.2.1",
         "control_name": "Verify that the application ensures that function-level access is restricted to consumers with explicit permissions.",
         "tier": "Foundational",
@@ -8867,7 +8867,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V16.3.1",
         "control_name": "Verify that all authentication operations are logged, including successful and unsuccessful attempts. Additional metadata, such as the type of authentication or factors used, should also be collected.",
         "tier": "Foundational",
@@ -8878,7 +8878,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V3.6.1",
         "control_name": "Verify that client-side assets, such as JavaScript libraries, CSS, or web fonts, are only hosted externally (e.g., on a Content Delivery Network) if the resource is static and versioned and Subresource Integrity (SRI) is used to validate the integrity of the asset. If this is not possible, there should be a documented security decision to justify this for each resource.",
         "tier": "Foundational",
@@ -9910,7 +9910,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V8.2.1",
         "control_name": "Verify that the application ensures that function-level access is restricted to consumers with explicit permissions.",
         "tier": "Hardening",
@@ -9921,7 +9921,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V14.1.1",
         "control_name": "Verify that all sensitive data created and processed by the application has been identified and classified into protection levels. This includes data that is only encoded and therefore easily decoded, such as Base64 strings or the plaintext payload inside a JWT. Protection levels need to take into account any data protection and privacy regulations and standards which the application is required to comply with.",
         "tier": "Hardening",
@@ -9932,7 +9932,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V5.2.1",
         "control_name": "Verify that the application will only accept files of a size which it can process without causing a loss of performance or a denial of service attack.",
         "tier": "Hardening",
@@ -10988,7 +10988,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V1.3.1",
         "control_name": "Verify that all untrusted HTML input from WYSIWYG editors or similar is sanitized using a well-known and secure HTML sanitization library or framework feature.",
         "tier": "Foundational",
@@ -10999,7 +10999,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V1.2.4",
         "control_name": "Verify that data selection or database queries (e.g., SQL, HQL, NoSQL, Cypher) use parameterized queries, ORMs, entity frameworks, or are otherwise protected from SQL Injection and other database injection attacks. This is also relevant when writing stored procedures.",
         "tier": "Foundational",
@@ -11010,7 +11010,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V1.3.7",
         "control_name": "Verify that the application protects against template injection attacks by not allowing templates to be built based on untrusted input. Where there is no alternative, any untrusted input being included dynamically during template creation must be sanitized or strictly validated.",
         "tier": "Foundational",
@@ -11021,7 +11021,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V1.3.2",
         "control_name": "Verify that the application avoids the use of eval() or other dynamic code execution features such as Spring Expression Language (SpEL). Where there is no alternative, any user input being included must be sanitized before being executed.",
         "tier": "Foundational",
@@ -11032,7 +11032,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V3.5.1",
         "control_name": "Verify that, if the application does not rely on the CORS preflight mechanism to prevent disallowed cross-origin requests to use sensitive functionality, these requests are validated to ensure they originate from the application itself. This may be done by using and validating anti-forgery tokens or requiring extra HTTP header fields that are not CORS-safelisted request-header fields. This is to defend against browser-based request forgery attacks, commonly known as cross-site request forgery (CSRF).",
         "tier": "Foundational",
@@ -13229,7 +13229,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V15.3.7",
         "control_name": "Verify that the application has defenses against HTTP parameter pollution attacks, particularly if the application framework makes no distinction about the source of request parameters (query string, body parameters, cookies, or header fields).",
         "tier": "Foundational",
@@ -13240,7 +13240,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V1.3.1",
         "control_name": "Verify that all untrusted HTML input from WYSIWYG editors or similar is sanitized using a well-known and secure HTML sanitization library or framework feature.",
         "tier": "Foundational",
@@ -13251,7 +13251,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V1.3.7",
         "control_name": "Verify that the application protects against template injection attacks by not allowing templates to be built based on untrusted input. Where there is no alternative, any untrusted input being included dynamically during template creation must be sanitized or strictly validated.",
         "tier": "Foundational",
@@ -13262,7 +13262,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V1.1.2",
         "control_name": "Threat modelling of all data flows",
         "tier": "Foundational",
@@ -13273,7 +13273,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V2.4.2",
         "control_name": "Verify that business logic flows require realistic human timing, preventing excessively rapid transaction submissions.",
         "tier": "Foundational",
@@ -14598,7 +14598,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V8.2.1",
         "control_name": "Verify that the application ensures that function-level access is restricted to consumers with explicit permissions.",
         "tier": "Foundational",
@@ -14609,7 +14609,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V8.3.1",
         "control_name": "Verify that the application enforces authorization rules at a trusted service layer and doesn't rely on controls that an untrusted consumer could manipulate, such as client-side JavaScript.",
         "tier": "Foundational",
@@ -14620,7 +14620,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V16.3.2",
         "control_name": "Verify that failed authorization attempts are logged. For L3, this must include logging all authorization decisions, including logging when sensitive data is accessed (without logging the sensitive data itself).",
         "tier": "Foundational",
@@ -14631,7 +14631,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V2.4.2",
         "control_name": "Verify that business logic flows require realistic human timing, preventing excessively rapid transaction submissions.",
         "tier": "Foundational",
@@ -14642,7 +14642,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V1.5.3",
         "control_name": "Verify API rate limiting",
         "tier": "Foundational",
@@ -15902,7 +15902,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V6.2.1",
         "control_name": "Verify that user set passwords are at least 8 characters in length although a minimum of 15 characters is strongly recommended.",
         "tier": "Foundational",
@@ -15913,7 +15913,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V8.2.1",
         "control_name": "Verify that the application ensures that function-level access is restricted to consumers with explicit permissions.",
         "tier": "Foundational",
@@ -15924,7 +15924,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V14.1.1",
         "control_name": "Verify that all sensitive data created and processed by the application has been identified and classified into protection levels. This includes data that is only encoded and therefore easily decoded, such as Base64 strings or the plaintext payload inside a JWT. Protection levels need to take into account any data protection and privacy regulations and standards which the application is required to comply with.",
         "tier": "Foundational",
@@ -15935,7 +15935,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V16.3.1",
         "control_name": "Verify that all authentication operations are logged, including successful and unsuccessful attempts. Additional metadata, such as the type of authentication or factors used, should also be collected.",
         "tier": "Foundational",
@@ -15946,7 +15946,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V3.6.1",
         "control_name": "Verify that client-side assets, such as JavaScript libraries, CSS, or web fonts, are only hosted externally (e.g., on a Content Delivery Network) if the resource is static and versioned and Subresource Integrity (SRI) is used to validate the integrity of the asset. If this is not possible, there should be a documented security decision to justify this for each resource.",
         "tier": "Foundational",
@@ -16341,7 +16341,14 @@ window.CROSSWALK_DATA = [
         "tier": "Foundational",
         "scope": "Both",
         "confidence": "unreviewed",
-        "reviewed_by": []
+        "reviewed_by": [],
+        "evidence_count": 0,
+        "evidence": {
+          "confirmed": [],
+          "drafted": [
+            "INC-137"
+          ]
+        }
       },
       {
         "framework": "AIUC-1",
@@ -17269,7 +17276,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V10.2.1",
         "control_name": "Verify third-party components current and free of vulnerabilities",
         "tier": "Foundational",
@@ -17280,7 +17287,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V10.2.2",
         "control_name": "Verify only minimal approved external libraries",
         "tier": "Foundational",
@@ -17291,7 +17298,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V13.4.5",
         "control_name": "Verify that documentation (such as for internal APIs) and monitoring endpoints are not exposed unless explicitly intended.",
         "tier": "Foundational",
@@ -17302,7 +17309,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V1.1.2",
         "control_name": "Verify threat model covers all data flows",
         "tier": "Foundational",
@@ -18466,7 +18473,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V1.3.1",
         "control_name": "Verify that all untrusted HTML input from WYSIWYG editors or similar is sanitized using a well-known and secure HTML sanitization library or framework feature.",
         "tier": "Hardening",
@@ -18477,7 +18484,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V1.3.2",
         "control_name": "Verify that the application avoids the use of eval() or other dynamic code execution features such as Spring Expression Language (SpEL). Where there is no alternative, any user input being included must be sanitized before being executed.",
         "tier": "Hardening",
@@ -18488,7 +18495,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V1.3.7",
         "control_name": "Verify that the application protects against template injection attacks by not allowing templates to be built based on untrusted input. Where there is no alternative, any untrusted input being included dynamically during template creation must be sanitized or strictly validated.",
         "tier": "Hardening",
@@ -18499,7 +18506,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V1.2.4",
         "control_name": "Verify that data selection or database queries (e.g., SQL, HQL, NoSQL, Cypher) use parameterized queries, ORMs, entity frameworks, or are otherwise protected from SQL Injection and other database injection attacks. This is also relevant when writing stored procedures.",
         "tier": "Hardening",
@@ -18510,7 +18517,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V2.4.2",
         "control_name": "Verify that business logic flows require realistic human timing, preventing excessively rapid transaction submissions.",
         "tier": "Hardening",
@@ -19669,7 +19676,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V15.3.7",
         "control_name": "Verify that the application has defenses against HTTP parameter pollution attacks, particularly if the application framework makes no distinction about the source of request parameters (query string, body parameters, cookies, or header fields).",
         "tier": "Hardening",
@@ -19680,7 +19687,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V8.2.1",
         "control_name": "Verify that the application ensures that function-level access is restricted to consumers with explicit permissions.",
         "tier": "Hardening",
@@ -19691,7 +19698,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V14.1.1",
         "control_name": "Verify that all sensitive data created and processed by the application has been identified and classified into protection levels. This includes data that is only encoded and therefore easily decoded, such as Base64 strings or the plaintext payload inside a JWT. Protection levels need to take into account any data protection and privacy regulations and standards which the application is required to comply with.",
         "tier": "Hardening",
@@ -19702,7 +19709,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V5.2.1",
         "control_name": "Verify that the application will only accept files of a size which it can process without causing a loss of performance or a denial of service attack.",
         "tier": "Hardening",
@@ -20850,7 +20857,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V12.2.1",
         "control_name": "Verify that TLS is used for all connectivity between a client and external facing, HTTP-based services, and does not fall back to insecure or unencrypted communications.",
         "tier": "Hardening",
@@ -20861,7 +20868,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V7.4.1",
         "control_name": "Verify that when session termination is triggered (such as logout or expiration), the application disallows any further use of the session. For reference tokens or stateful sessions, this means invalidating the session data at the application backend. Applications using self-contained tokens will need a solution such as maintaining a list of terminated tokens, disallowing tokens produced before a per-user date and time or rotating a per-user signing key.",
         "tier": "Hardening",
@@ -20872,7 +20879,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V8.2.1",
         "control_name": "Verify that the application ensures that function-level access is restricted to consumers with explicit permissions.",
         "tier": "Hardening",
@@ -20883,7 +20890,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V16.3.1",
         "control_name": "Verify that all authentication operations are logged, including successful and unsuccessful attempts. Additional metadata, such as the type of authentication or factors used, should also be collected.",
         "tier": "Hardening",
@@ -21991,7 +21998,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V2.3.1",
         "control_name": "Verify that the application will only process business logic flows for the same user in the expected sequential step order and without skipping steps.",
         "tier": "Foundational",
@@ -22002,7 +22009,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V2.4.2",
         "control_name": "Verify that business logic flows require realistic human timing, preventing excessively rapid transaction submissions.",
         "tier": "Foundational",
@@ -22013,7 +22020,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V1.5.3",
         "control_name": "Verify API rate limiting",
         "tier": "Foundational",
@@ -22024,7 +22031,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V16.5.1",
         "control_name": "Verify that a generic message is returned to the consumer when an unexpected or security-sensitive error occurs, ensuring no exposure of sensitive internal system data such as stack traces, queries, secret keys, and tokens.",
         "tier": "Foundational",
@@ -23125,7 +23132,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V2.3.1",
         "control_name": "Verify that the application will only process business logic flows for the same user in the expected sequential step order and without skipping steps.",
         "tier": "Foundational",
@@ -23136,7 +23143,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V1.3.1",
         "control_name": "Verify that all untrusted HTML input from WYSIWYG editors or similar is sanitized using a well-known and secure HTML sanitization library or framework feature.",
         "tier": "Foundational",
@@ -23147,7 +23154,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V16.5.1",
         "control_name": "Verify that a generic message is returned to the consumer when an unexpected or security-sensitive error occurs, ensuring no exposure of sensitive internal system data such as stack traces, queries, secret keys, and tokens.",
         "tier": "Foundational",
@@ -23158,7 +23165,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V14.2.1",
         "control_name": "Verify that sensitive data is only sent to the server in the HTTP message body or header fields, and that the URL and query string do not contain sensitive information, such as an API key or session token.",
         "tier": "Foundational",
@@ -24288,7 +24295,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V16.3.1",
         "control_name": "Verify that all authentication operations are logged, including successful and unsuccessful attempts. Additional metadata, such as the type of authentication or factors used, should also be collected.",
         "tier": "Hardening",
@@ -24299,7 +24306,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V16.3.2",
         "control_name": "Verify that failed authorization attempts are logged. For L3, this must include logging all authorization decisions, including logging when sensitive data is accessed (without logging the sensitive data itself).",
         "tier": "Hardening",
@@ -24310,7 +24317,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V2.4.2",
         "control_name": "Verify that business logic flows require realistic human timing, preventing excessively rapid transaction submissions.",
         "tier": "Hardening",
@@ -24321,7 +24328,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V1.5.3",
         "control_name": "Verify API rate limiting",
         "tier": "Hardening",
@@ -25541,7 +25548,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V14.2.2",
         "control_name": "Sensitive data not transmitted in URL parameters",
         "tier": "Foundational",
@@ -25552,7 +25559,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V14.1.1",
         "control_name": "Sensitive data identified and classified",
         "tier": "Foundational",
@@ -25563,7 +25570,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V8.2.1",
         "control_name": "Deny by default access control",
         "tier": "Foundational",
@@ -25574,7 +25581,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V1.3.5",
         "control_name": "Output encoding for context",
         "tier": "Foundational",
@@ -25585,7 +25592,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V14.1.1",
         "control_name": "Sensitive data not stored in cleartext",
         "tier": "Foundational",
@@ -26785,7 +26792,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V6.2.1",
         "control_name": "Passwords minimum 12 characters",
         "tier": "Foundational",
@@ -26796,7 +26803,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V13.2.1",
         "control_name": "Integration secrets not hardcoded",
         "tier": "Foundational",
@@ -26807,7 +26814,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V8.2.1",
         "control_name": "Least privilege for service accounts",
         "tier": "Foundational",
@@ -26818,7 +26825,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V14.1.2",
         "control_name": "Data transferred using current TLS",
         "tier": "Foundational",
@@ -27878,7 +27885,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V1.1.4",
         "control_name": "Trust boundaries documented and enforced",
         "tier": "Foundational",
@@ -27890,7 +27897,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V16.5.3",
         "control_name": "Access control failures logged",
         "tier": "Foundational",
@@ -27901,7 +27908,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V16.3.2",
         "control_name": "Log entries contain required information",
         "tier": "Foundational",
@@ -27912,7 +27919,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V14.1.4",
         "control_name": "All components inventoried",
         "tier": "Foundational",
@@ -28867,7 +28874,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V2.2.1",
         "control_name": "Input validation server-side",
         "tier": "Hardening",
@@ -28878,7 +28885,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V10.2.1",
         "control_name": "Application only uses official repositories",
         "tier": "Hardening",
@@ -28890,7 +28897,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V10.2.2",
         "control_name": "Dependency managers check for vulnerabilities",
         "tier": "Hardening",
@@ -28902,7 +28909,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V5.2.1",
         "control_name": "File upload size limits",
         "tier": "Hardening",
@@ -29966,7 +29973,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V15.3.7",
         "control_name": "Input validation using allowlists",
         "tier": "Foundational",
@@ -29977,7 +29984,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V1.3.1",
         "control_name": "HTML/JS output sanitised",
         "tier": "Foundational",
@@ -29988,7 +29995,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V16.5.1",
         "control_name": "Generic error messages",
         "tier": "Foundational",
@@ -31024,7 +31031,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V8.3.1",
         "control_name": "Access control on every request",
         "tier": "Foundational",
@@ -31035,7 +31042,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V12.2.1",
         "control_name": "TLS for all connections",
         "tier": "Foundational",
@@ -31046,7 +31053,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V2.4.1",
         "control_name": "Business logic limits on repeated actions",
         "tier": "Foundational",
@@ -32018,7 +32025,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V8.1.4",
         "control_name": "Sensitive data minimisation",
         "tier": "Foundational",
@@ -32030,7 +32037,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V14.1.1",
         "control_name": "Sensitive data identified and classified",
         "tier": "Foundational",
@@ -32041,7 +32048,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V16.5.3",
         "control_name": "Attribute-based access control",
         "tier": "Foundational",
@@ -32997,7 +33004,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V8.3.3",
         "control_name": "Consent obtained before PI processing",
         "tier": "Foundational",
@@ -33009,7 +33016,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V8.3.10",
         "control_name": "Personal data not kept longer than needed",
         "tier": "Foundational",
@@ -33021,7 +33028,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V16.3.2",
         "control_name": "Audit trail sufficient for compliance",
         "tier": "Foundational",
@@ -34084,7 +34091,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V1.3.7",
         "control_name": "Unstructured data sanitised",
         "tier": "Hardening",
@@ -34095,7 +34102,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V8.1.4",
         "control_name": "Sensitive data minimised",
         "tier": "Hardening",
@@ -34107,7 +34114,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V5.2.4",
         "control_name": "Malicious file detection on upload",
         "tier": "Hardening",
@@ -35056,7 +35063,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V14.1.1",
         "control_name": "Sensitive data classified",
         "tier": "Hardening",
@@ -35067,7 +35074,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V1.3.6",
         "control_name": "Defined output structure",
         "tier": "Hardening",
@@ -35979,7 +35986,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V14.2.1",
         "control_name": "Session tokens unique and random",
         "tier": "Foundational",
@@ -35990,7 +35997,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V7.4.1",
         "control_name": "Sessions invalidated after logout",
         "tier": "Foundational",
@@ -36001,7 +36008,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V8.3.1",
         "control_name": "Access control enforced on every request",
         "tier": "Foundational",
@@ -36012,7 +36019,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V8.1.3",
         "control_name": "Sensitive data not in session storage",
         "tier": "Foundational",
@@ -36963,7 +36970,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V15.3.7",
         "control_name": "Allowlist input validation",
         "tier": "Foundational",
@@ -36974,7 +36981,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V1.2.4",
         "control_name": "SQL injection prevention",
         "tier": "Foundational",
@@ -36993,7 +37000,7 @@ window.CROSSWALK_DATA = [
         }
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V8.3.1",
         "control_name": "Access control on every request",
         "tier": "Foundational",
@@ -37004,7 +37011,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V1.5.3",
         "control_name": "API protection against enumeration",
         "tier": "Foundational",
@@ -37994,7 +38001,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V8.2.1",
         "control_name": "Deny by default",
         "tier": "Foundational",
@@ -38005,7 +38012,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V14.1.1",
         "control_name": "Sensitive data not stored in cleartext",
         "tier": "Foundational",
@@ -38016,7 +38023,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V5.2.1",
         "control_name": "File upload validation",
         "tier": "Foundational",
@@ -39019,7 +39026,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V16.2.5",
         "control_name": "No credential logging",
         "tier": "Foundational",
@@ -39030,7 +39037,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V16.2.5",
         "control_name": "No sensitive data in logs",
         "tier": "Foundational",
@@ -39041,7 +39048,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V14.2.2",
         "control_name": "Sensitive data not in URLs",
         "tier": "Foundational",
@@ -39052,7 +39059,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V8.3.1",
         "control_name": "Access control on log stores",
         "tier": "Foundational",
@@ -40043,7 +40050,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V8.2.1",
         "control_name": "Deny by default access control",
         "tier": "Foundational",
@@ -40054,7 +40061,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V8.1.4",
         "control_name": "Data minimisation",
         "tier": "Foundational",
@@ -40066,7 +40073,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V14.2.1",
         "control_name": "Session isolation",
         "tier": "Foundational",
@@ -41012,7 +41019,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V8.2.1",
         "control_name": "Least privilege",
         "tier": "Foundational",
@@ -41023,7 +41030,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V2.2.1",
         "control_name": "Business logic prevents excess data access",
         "tier": "Foundational",
@@ -41034,7 +41041,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V1.1.2",
         "control_name": "Secure architecture and design",
         "tier": "Foundational",
@@ -42025,7 +42032,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V11.1.7",
         "control_name": "Anti-automation controls",
         "tier": "Foundational",
@@ -42037,7 +42044,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V13.1.2",
         "control_name": "API throttling",
         "tier": "Foundational",
@@ -43057,7 +43064,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V14.1.1",
         "control_name": "Sensitive data identified",
         "tier": "Hardening",
@@ -43068,7 +43075,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V14.1.1",
         "control_name": "Sensitive data not stored in cleartext",
         "tier": "Hardening",
@@ -43962,7 +43969,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V8.2.1",
         "control_name": "Least privilege",
         "tier": "Foundational",
@@ -43973,7 +43980,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V8.3.3",
         "control_name": "Consent for personal data processing",
         "tier": "Foundational",
@@ -43985,7 +43992,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V6.2.1",
         "control_name": "Strong authentication",
         "tier": "Foundational",
@@ -44926,7 +44933,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V8.3.1",
         "control_name": "Access control per request",
         "tier": "Hardening",
@@ -44937,7 +44944,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V8.1.4",
         "control_name": "Data minimisation in responses",
         "tier": "Hardening",
@@ -44949,7 +44956,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V10.2.2",
         "control_name": "Component integrity checking",
         "tier": "Hardening",
@@ -45935,7 +45942,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V2.2.1",
         "control_name": "Server-side input validation",
         "tier": "Hardening",
@@ -45946,7 +45953,7 @@ window.CROSSWALK_DATA = [
         "reviewed_by": []
       },
       {
-        "framework": "OWASP ASVS 4.0.3",
+        "framework": "OWASP ASVS 5.0.0",
         "control_id": "V2.4.1",
         "control_name": "Enforce business logic limits",
         "tier": "Hardening",

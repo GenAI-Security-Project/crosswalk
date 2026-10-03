@@ -71,8 +71,8 @@
     "confirmed": 0,
     "drafted": 34,
     "mappings_with_confirmed_evidence": 0,
-    "mappings_with_drafted_evidence_only": 28,
-    "orphan_failures": 7
+    "mappings_with_drafted_evidence_only": 29,
+    "orphan_failures": 5
   },
   "freshness": {
     "checked": 6,
@@ -89,10 +89,10 @@
     ]
   },
   "controls": {
-    "total": 1205,
-    "registry_items": 1339,
+    "total": 1184,
+    "registry_items": 1318,
     "by_kind": {
-      "control": 1205,
+      "control": 1184,
       "layer": 10,
       "technique": 57,
       "threat-category": 6,

@@ -304,7 +304,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V2.2.1",
       "control_name": "Input validation server-side",
       "tier": "Hardening",
@@ -315,7 +315,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V10.2.1",
       "control_name": "Application only uses official repositories",
       "tier": "Hardening",
@@ -327,7 +327,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V10.2.2",
       "control_name": "Dependency managers check for vulnerabilities",
       "tier": "Hardening",
@@ -339,7 +339,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V5.2.1",
       "control_name": "File upload size limits",
       "tier": "Hardening",

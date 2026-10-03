@@ -247,7 +247,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V10.2.1",
       "control_name": "Verify third-party components are current and free from vulnerabilities",
       "tier": "Foundational",
@@ -258,7 +258,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V10.2.2",
       "control_name": "Verify only minimal approved external libraries are used",
       "tier": "Foundational",
@@ -269,7 +269,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V13.4.5",
       "control_name": "Verify that documentation (such as for internal APIs) and monitoring endpoints are not exposed unless explicitly intended.",
       "tier": "Foundational",

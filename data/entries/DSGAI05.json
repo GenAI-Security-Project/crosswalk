@@ -284,7 +284,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V15.3.7",
       "control_name": "Input validation using allowlists",
       "tier": "Foundational",
@@ -295,7 +295,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V1.3.1",
       "control_name": "HTML/JS output sanitised",
       "tier": "Foundational",
@@ -306,7 +306,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V16.5.1",
       "control_name": "Generic error messages",
       "tier": "Foundational",

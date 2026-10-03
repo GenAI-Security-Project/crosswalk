@@ -67,7 +67,7 @@ Todo gratuito. Todo de código abierto. Construido para profesionales.
 | [MAESTRO — CSA](https://cloudsecurityalliance.org/blog/2025/02/06/agentic-ai-threat-modeling-framework-maestro) | ✅ | ✅ | ✅ |
 | [ISO/IEC 42001:2023](https://www.iso.org/standard/81230.html) | ✅ | ✅ | ✅ |
 | [CIS Controls v8.1](https://www.cisecurity.org/controls) | ✅ | ✅ | ✅ |
-| [OWASP ASVS 4.0.3](https://owasp.org/projects/asvs) | ✅ | ✅ | ✅ |
+| [OWASP ASVS 5.0.0](https://owasp.org/projects/asvs) | ✅ | ✅ | ✅ |
 | [SOC 2 Trust Services Criteria](https://www.aicpa-cima.com/resources/landing/2017-trust-services-criteria) | ✅ | ✅ | ✅ |
 | [PCI DSS v4.0](https://www.pcisecuritystandards.org/document_library/) | ✅ | ✅ | ✅ |
 | [ENISA Multilayer Framework](https://www.enisa.europa.eu/publications/multilayer-framework-for-good-cybersecurity-practices-for-ai) | ✅ | ✅ | ✅ |
@@ -90,7 +90,7 @@ Todo gratuito. Todo de código abierto. Construido para profesionales.
 | [LLM_ISO27001.md](../../llm-top10/LLM_ISO27001.md) | ISO/IEC 27001:2022 | Lista de verificación de extensión ISMS, controles nuevos de 2022 mapeados a riesgos LLM |
 | [LLM_ISO42001.md](../../llm-top10/LLM_ISO42001.md) | ISO/IEC 42001:2023 | Lista de verificación de implementación AIMS, guía de integración con ISO 27001 |
 | [LLM_CISControls.md](../../llm-top10/LLM_CISControls.md) | CIS Controls v8.1 | Salvaguardas escalonadas IG1/IG2/IG3 por vulnerabilidad |
-| [LLM_ASVS.md](../../llm-top10/LLM_ASVS.md) | OWASP ASVS 4.0.3 | Requisitos de verificación L1/L2/L3 con lista de verificación ASVS |
+| [LLM_ASVS.md](../../llm-top10/LLM_ASVS.md) | OWASP ASVS 5.0.0 | Requisitos de verificación L1/L2/L3 con lista de verificación ASVS |
 | [LLM_ISA62443.md](../../llm-top10/LLM_ISA62443.md) | ISA/IEC 62443 — OT/ICS | Modelo de zonas, calificaciones SL, referencias FR/SR, lista de verificación de despliegue OT |
 | [LLM_NISTSP80082.md](../../llm-top10/LLM_NISTSP80082.md) | NIST SP 800-82 Rev 3 | Controles SP 800-53, mapeo cruzado regulatorio de EE.UU. (NERC CIP, AWIA, CMMC) |
 | [LLM_NISTCSF2.md](../../llm-top10/LLM_NISTCSF2.md) | NIST CSF 2.0 | Mapeo de seis funciones incluyendo la nueva función GOVERN, perfil CSF 2.0 |
@@ -120,7 +120,7 @@ Todo gratuito. Todo de código abierto. Construido para profesionales.
 | [Agentic_MAESTRO.md](../../agentic-top10/Agentic_MAESTRO.md) | MAESTRO — CSA | Modelo de amenazas arquitectónico de siete capas, mapeo capa-a-ASI, guía de sesión |
 | [Agentic_OWASP_NHI.md](../../agentic-top10/Agentic_OWASP_NHI.md) | OWASP NHI Top 10 | Mapeo cruzado completo NHI-a-ASI, tabla de madurez del programa NHI |
 | [Agentic_CISControls.md](../../agentic-top10/Agentic_CISControls.md) | CIS Controls v8.1 | Salvaguardas IG1/IG2/IG3, NHI agéntico tratado como acceso privilegiado CIS 5 |
-| [Agentic_ASVS.md](../../agentic-top10/Agentic_ASVS.md) | OWASP ASVS 4.0.3 | Lista de verificación L1/L2/L3 para despliegues agénticos |
+| [Agentic_ASVS.md](../../agentic-top10/Agentic_ASVS.md) | OWASP ASVS 5.0.0 | Lista de verificación L1/L2/L3 para despliegues agénticos |
 | [Agentic_AITG.md](../../agentic-top10/Agentic_AITG.md) | OWASP AI Testing Guide | 50 casos de prueba estructurados para ASI01–ASI10 con puertas de pre-despliegue |
 | [Agentic_AIVSS.md](../../agentic-top10/Agentic_AIVSS.md) | OWASP AIVSS | Puntuación de doble escenario (supervisado vs autónomo), prima de autonomía +1.79 |
 | [Agentic_ENISA.md](../../agentic-top10/Agentic_ENISA.md) | ENISA Multilayer Framework | Mapeo de capas L1/L2/L3, alineación con EU AI Act Art. 14/15/52, guía de evaluación de incidentes NIS2 Artículo 23 |
@@ -145,7 +145,7 @@ Todo gratuito. Todo de código abierto. Construido para profesionales.
 | [DSGAI_MAESTRO.md](../../dsgai-2026/DSGAI_MAESTRO.md) | MAESTRO — CSA | Análisis de capa de origen para las 21 entradas, L2 operaciones de datos como 52% de la superficie de amenazas DSGAI |
 | [DSGAI_SOC2.md](../../dsgai-2026/DSGAI_SOC2.md) | SOC 2 Trust Services Criteria | Mapeo TSC para despliegues GenAI en SaaS y nube |
 | [DSGAI_PCIDSS.md](../../dsgai-2026/DSGAI_PCIDSS.md) | PCI DSS v4.0 | Guía de alcance CHD, lista de verificación de auditoría PCI para datos GenAI |
-| [DSGAI_ASVS.md](../../dsgai-2026/DSGAI_ASVS.md) | OWASP ASVS 4.0.3 | Requisitos de verificación L1/L2/L3 para las 21 entradas DSGAI, prioridad de implementación en 4 fases |
+| [DSGAI_ASVS.md](../../dsgai-2026/DSGAI_ASVS.md) | OWASP ASVS 5.0.0 | Requisitos de verificación L1/L2/L3 para las 21 entradas DSGAI, prioridad de implementación en 4 fases |
 | [DSGAI_CISControls.md](../../dsgai-2026/DSGAI_CISControls.md) | CIS Controls v8.1 | Salvaguardas IG1/IG2/IG3 para las 21 entradas, grupos de implementación de seguridad de datos GenAI |
 | [DSGAI_CWE_CVE.md](../../dsgai-2026/DSGAI_CWE_CVE.md) | CWE / CVE | Taxonomía de causa raíz CWE y evidencia CVE confirmada para las 21 entradas DSGAI |
 | [DSGAI_ENISA.md](../../dsgai-2026/DSGAI_ENISA.md) | ENISA Multilayer Framework | Mapeo de capas L1/L2/L3, alineación con EU AI Act y NIS2 para las 21 entradas DSGAI |
@@ -234,7 +234,7 @@ crosswalk/
 │   ├── DSGAI_MAESTRO.md             ← Modelado de amenazas — perspectiva de operaciones de datos
 │   ├── DSGAI_SOC2.md
 │   ├── DSGAI_PCIDSS.md
-│   ├── DSGAI_ASVS.md                ← OWASP ASVS 4.0.3
+│   ├── DSGAI_ASVS.md                ← OWASP ASVS 5.0.0
 │   ├── DSGAI_CISControls.md         ← CIS Controls v8.1
 │   ├── DSGAI_CWE_CVE.md             ← Taxonomía de causa raíz + CVEs
 │   ├── DSGAI_ENISA.md               ← UE / NIS2

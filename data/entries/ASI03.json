@@ -310,7 +310,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V6.2.1",
       "control_name": "Verify that user set passwords are at least 8 characters in length although a minimum of 15 characters is strongly recommended.",
       "tier": "Foundational",
@@ -321,7 +321,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V8.2.1",
       "control_name": "Verify that the application ensures that function-level access is restricted to consumers with explicit permissions.",
       "tier": "Foundational",
@@ -332,7 +332,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V14.1.1",
       "control_name": "Verify that all sensitive data created and processed by the application has been identified and classified into protection levels. This includes data that is only encoded and therefore easily decoded, such as Base64 strings or the plaintext payload inside a JWT. Protection levels need to take into account any data protection and privacy regulations and standards which the application is required to comply with.",
       "tier": "Foundational",
@@ -343,7 +343,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V16.3.1",
       "control_name": "Verify that all authentication operations are logged, including successful and unsuccessful attempts. Additional metadata, such as the type of authentication or factors used, should also be collected.",
       "tier": "Foundational",
@@ -354,7 +354,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V3.6.1",
       "control_name": "Verify that client-side assets, such as JavaScript libraries, CSS, or web fonts, are only hosted externally (e.g., on a Content Delivery Network) if the resource is static and versioned and Subresource Integrity (SRI) is used to validate the integrity of the asset. If this is not possible, there should be a documented security decision to justify this for each resource.",
       "tier": "Foundational",
@@ -749,7 +749,14 @@
       "tier": "Foundational",
       "scope": "Both",
       "confidence": "unreviewed",
-      "reviewed_by": []
+      "reviewed_by": [],
+      "evidence_count": 0,
+      "evidence": {
+        "confirmed": [],
+        "drafted": [
+          "INC-137"
+        ]
+      }
     },
     {
       "framework": "AIUC-1",

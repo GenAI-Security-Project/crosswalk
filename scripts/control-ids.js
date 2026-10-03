@@ -63,7 +63,7 @@ const GRAMMARS = {
     // the em dash should be.
     re: /\b([A-Z]{3})\b(?=\s*[^\sA-Za-z0-9])/,
   },
-  'OWASP ASVS 4.0.3': {
+  'OWASP ASVS 5.0.0': {
     // Requirement ids are V<chapter>.<section>.<requirement>; the chapter alone
     // (V8) is the parent, and some tables put the chapter in its own column.
     re: /\b(V\d{1,2}\.\d{1,2}\.\d{1,2})\b/,
@@ -171,7 +171,7 @@ const ID_SHAPES = {
   'OWASP AI Testing Guide': /^[A-Z]{3}$/,
   'NIST AI 600-1': /^(?:GV|MP|MS|MG)-\d{1,2}\.\d{1,2}-\d{3}$/,
   'ISO/IEC 42001:2023': /^(?:[AB]\.\d{1,2}(?:\.\d{1,2}){0,2}|\d{1,2}(?:\.\d{1,2}){0,2})$/,
-  'OWASP ASVS 4.0.3': /^V\d{1,2}\.\d{1,2}\.\d{1,2}$/,
+  'OWASP ASVS 5.0.0': /^V\d{1,2}\.\d{1,2}\.\d{1,2}$/,
 };
 
 /**
@@ -184,7 +184,7 @@ const REGISTRY_EXTRA_SHAPES = {
   'CIS Controls v8.1': /^CIS-\d{1,2}$/,
   // ASVS registries carry the chapters (V8) beside the requirements (V8.1.1).
   // chapters (V8) and sections (V8.1) sit in the registry beside requirements
-  'OWASP ASVS 4.0.3': /^V\d{1,2}(\.\d{1,2})?$/,
+  'OWASP ASVS 5.0.0': /^V\d{1,2}(\.\d{1,2})?$/,
 };
 
 /** True when `id` is well-formed for `framework` in a registry file. */

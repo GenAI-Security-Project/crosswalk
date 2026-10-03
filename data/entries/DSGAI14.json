@@ -294,7 +294,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V16.2.5",
       "control_name": "No credential logging",
       "tier": "Foundational",
@@ -305,7 +305,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V16.2.5",
       "control_name": "No sensitive data in logs",
       "tier": "Foundational",
@@ -316,7 +316,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V14.2.2",
       "control_name": "Sensitive data not in URLs",
       "tier": "Foundational",
@@ -327,7 +327,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V8.3.1",
       "control_name": "Access control on log stores",
       "tier": "Foundational",
