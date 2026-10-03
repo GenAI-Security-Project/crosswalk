@@ -7569,7 +7569,7 @@ window.CROSSWALK_FRAMEWORKS = [
   },
   {
     "id": "owasp-asvs",
-    "name": "OWASP ASVS 4.0.3",
+    "name": "OWASP ASVS 5.0.0",
     "short_name": "ASVS",
     "version": "5.0.0",
     "url": "https://owasp.org/projects/asvs",

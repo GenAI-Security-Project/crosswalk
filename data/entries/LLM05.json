@@ -258,7 +258,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V15.3.7",
       "control_name": "Verify that the application has defenses against HTTP parameter pollution attacks, particularly if the application framework makes no distinction about the source of request parameters (query string, body parameters, cookies, or header fields).",
       "tier": "Hardening",
@@ -269,7 +269,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V10.2.1",
       "control_name": "Verify third-party components free of vulnerabilities",
       "tier": "Hardening",
@@ -280,7 +280,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V5.2.1",
       "control_name": "Verify that the application will only accept files of a size which it can process without causing a loss of performance or a denial of service attack.",
       "tier": "Hardening",

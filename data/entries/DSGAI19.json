@@ -284,7 +284,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V8.2.1",
       "control_name": "Least privilege",
       "tier": "Foundational",
@@ -295,7 +295,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V8.3.3",
       "control_name": "Consent for personal data processing",
       "tier": "Foundational",
@@ -307,7 +307,7 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP ASVS 4.0.3",
+      "framework": "OWASP ASVS 5.0.0",
       "control_id": "V6.2.1",
       "control_name": "Strong authentication",
       "tier": "Foundational",

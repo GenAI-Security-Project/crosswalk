@@ -163,7 +163,7 @@
       "notes": "Verified against the frozen OWASP/AISVS 1.0/en chapter files: 191 requirements, ids, text and levels identical to the registry. No tagged release upstream; 1.01-dev is in development and not yet released."
     },
     "owasp-asvs": {
-      "name": "OWASP ASVS 4.0.3",
+      "name": "OWASP ASVS 5.0.0",
       "mapped_version": "5.0.0",
       "current_version": "5.0.0",
       "checked": "2026-09-18",

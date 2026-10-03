@@ -53,7 +53,7 @@ const REPORT_FRAMEWORKS = [
   'CIS Controls v8.1',
   'ISA/IEC 62443',
   'NIST SP 800-82 Rev 3',
-  'OWASP ASVS 4.0.3',
+  'OWASP ASVS 5.0.0',
   'OWASP AISVS 1.0',
   'OWASP SAMM v2.0',
   'PCI DSS v4.0',
@@ -128,7 +128,7 @@ const FW_META = {
     audience: 'ICS/SCADA teams',
     note: 'OT-specific overlay for NIST CSF and RMF.',
   },
-  'OWASP ASVS 4.0.3': {
+  'OWASP ASVS 5.0.0': {
     short: 'OWASP ASVS',
     deadline: 'Ongoing — L1/L2/L3 verification',
     audience: 'AppSec engineers, pen testers',

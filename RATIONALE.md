@@ -95,7 +95,7 @@ Every framework was selected based on at least two of the following:
 
 | Framework | Why Included |
 |---|---|
-| **OWASP ASVS 4.0.3** | Application Security Verification Standard with three levels (L1/L2/L3). Maps GenAI risks to specific verification requirements so development teams can test for AI-specific vulnerabilities using the same ASVS methodology they use for traditional web apps. |
+| **OWASP ASVS 5.0.0** | Application Security Verification Standard with three levels (L1/L2/L3). Maps GenAI risks to specific verification requirements so development teams can test for AI-specific vulnerabilities using the same ASVS methodology they use for traditional web apps. |
 | **OWASP SAMM v2.0** | Software Assurance Maturity Model. Maps GenAI risks to maturity practices across Governance, Design, Implementation, Verification, and Operations. Helps organisations measure and improve their AI security programme maturity over time. |
 | **NIST SP 800-218A** | Secure Software Development Framework extension for AI. Maps GenAI risks to AI-specific secure development practices (PW/PS/RV). The authoritative US guidance for secure AI SDLC — directly applicable to developer workflows. |
 

@@ -30529,7 +30529,7 @@ window.CROSSWALK_BACKLINKS = [
     ]
   },
   {
-    "framework": "OWASP ASVS 4.0.3",
+    "framework": "OWASP ASVS 5.0.0",
     "control_id": "V1.1.2",
     "control_name": "Threat modelling of all data flows",
     "entries": [
@@ -30572,7 +30572,7 @@ window.CROSSWALK_BACKLINKS = [
     ]
   },
   {
-    "framework": "OWASP ASVS 4.0.3",
+    "framework": "OWASP ASVS 5.0.0",
     "control_id": "V1.1.4",
     "control_name": "Trust boundaries documented and enforced",
     "entries": [
@@ -30588,7 +30588,7 @@ window.CROSSWALK_BACKLINKS = [
     ]
   },
   {
-    "framework": "OWASP ASVS 4.0.3",
+    "framework": "OWASP ASVS 5.0.0",
     "control_id": "V1.2.4",
     "control_name": "Verify that data selection or database queries (e.g., SQL, HQL, NoSQL, Cypher) use parameterized queries, ORMs, entity frameworks, or are otherwise protected from SQL Injection and other database injection attacks. This is also relevant when writing stored procedures.",
     "entries": [
@@ -30622,7 +30622,7 @@ window.CROSSWALK_BACKLINKS = [
     ]
   },
   {
-    "framework": "OWASP ASVS 4.0.3",
+    "framework": "OWASP ASVS 5.0.0",
     "control_id": "V1.3.1",
     "control_name": "Verify that all untrusted HTML input from WYSIWYG editors or similar is sanitized using a well-known and secure HTML sanitization library or framework feature.",
     "entries": [
@@ -30692,7 +30692,7 @@ window.CROSSWALK_BACKLINKS = [
     ]
   },
   {
-    "framework": "OWASP ASVS 4.0.3",
+    "framework": "OWASP ASVS 5.0.0",
     "control_id": "V1.3.2",
     "control_name": "Verify that the application avoids the use of eval() or other dynamic code execution features such as Spring Expression Language (SpEL). Where there is no alternative, any user input being included must be sanitized before being executed.",
     "entries": [
@@ -30717,7 +30717,7 @@ window.CROSSWALK_BACKLINKS = [
     ]
   },
   {
-    "framework": "OWASP ASVS 4.0.3",
+    "framework": "OWASP ASVS 5.0.0",
     "control_id": "V1.3.5",
     "control_name": "Output encoding for context",
     "entries": [
@@ -30733,7 +30733,7 @@ window.CROSSWALK_BACKLINKS = [
     ]
   },
   {
-    "framework": "OWASP ASVS 4.0.3",
+    "framework": "OWASP ASVS 5.0.0",
     "control_id": "V1.3.6",
     "control_name": "Defined output structure",
     "entries": [
@@ -30749,7 +30749,7 @@ window.CROSSWALK_BACKLINKS = [
     ]
   },
   {
-    "framework": "OWASP ASVS 4.0.3",
+    "framework": "OWASP ASVS 5.0.0",
     "control_id": "V1.3.7",
     "control_name": "Verify that the application protects against template injection attacks by not allowing templates to be built based on untrusted input. Where there is no alternative, any untrusted input being included dynamically during template creation must be sanitized or strictly validated.",
     "entries": [
@@ -30801,7 +30801,7 @@ window.CROSSWALK_BACKLINKS = [
     ]
   },
   {
-    "framework": "OWASP ASVS 4.0.3",
+    "framework": "OWASP ASVS 5.0.0",
     "control_id": "V1.5.3",
     "control_name": "Verify API rate limiting",
     "entries": [
@@ -30853,7 +30853,7 @@ window.CROSSWALK_BACKLINKS = [
     ]
   },
   {
-    "framework": "OWASP ASVS 4.0.3",
+    "framework": "OWASP ASVS 5.0.0",
     "control_id": "V10.2.1",
     "control_name": "Verify third-party components are current and free from vulnerabilities",
     "entries": [
@@ -30896,7 +30896,7 @@ window.CROSSWALK_BACKLINKS = [
     ]
   },
   {
-    "framework": "OWASP ASVS 4.0.3",
+    "framework": "OWASP ASVS 5.0.0",
     "control_id": "V10.2.2",
     "control_name": "Verify only minimal approved external libraries are used",
     "entries": [
@@ -30939,7 +30939,7 @@ window.CROSSWALK_BACKLINKS = [
     ]
   },
   {
-    "framework": "OWASP ASVS 4.0.3",
+    "framework": "OWASP ASVS 5.0.0",
     "control_id": "V11.1.7",
     "control_name": "Anti-automation controls",
     "entries": [
@@ -30955,7 +30955,7 @@ window.CROSSWALK_BACKLINKS = [
     ]
   },
   {
-    "framework": "OWASP ASVS 4.0.3",
+    "framework": "OWASP ASVS 5.0.0",
     "control_id": "V12.2.1",
     "control_name": "Verify that TLS is used for all connectivity between a client and external facing, HTTP-based services, and does not fall back to insecure or unencrypted communications.",
     "entries": [
@@ -30989,7 +30989,7 @@ window.CROSSWALK_BACKLINKS = [
     ]
   },
   {
-    "framework": "OWASP ASVS 4.0.3",
+    "framework": "OWASP ASVS 5.0.0",
     "control_id": "V13.1.2",
     "control_name": "API throttling",
     "entries": [
@@ -31005,7 +31005,7 @@ window.CROSSWALK_BACKLINKS = [
     ]
   },
   {
-    "framework": "OWASP ASVS 4.0.3",
+    "framework": "OWASP ASVS 5.0.0",
     "control_id": "V13.2.1",
     "control_name": "Integration secrets not hardcoded",
     "entries": [
@@ -31021,7 +31021,7 @@ window.CROSSWALK_BACKLINKS = [
     ]
   },
   {
-    "framework": "OWASP ASVS 4.0.3",
+    "framework": "OWASP ASVS 5.0.0",
     "control_id": "V13.4.5",
     "control_name": "Verify that documentation (such as for internal APIs) and monitoring endpoints are not exposed unless explicitly intended.",
     "entries": [
@@ -31046,7 +31046,7 @@ window.CROSSWALK_BACKLINKS = [
     ]
   },
   {
-    "framework": "OWASP ASVS 4.0.3",
+    "framework": "OWASP ASVS 5.0.0",
     "control_id": "V14.1.1",
     "control_name": "Verify that all sensitive data created and processed by the application has been identified and classified into protection levels. This includes data that is only encoded and therefore easily decoded, such as Base64 strings or the plaintext payload inside a JWT. Protection levels need to take into account any data protection and privacy regulations and standards which the application is required to comply with.",
     "entries": [
@@ -31134,7 +31134,7 @@ window.CROSSWALK_BACKLINKS = [
     ]
   },
   {
-    "framework": "OWASP ASVS 4.0.3",
+    "framework": "OWASP ASVS 5.0.0",
     "control_id": "V14.1.2",
     "control_name": "Data transferred using current TLS",
     "entries": [
@@ -31150,7 +31150,7 @@ window.CROSSWALK_BACKLINKS = [
     ]
   },
   {
-    "framework": "OWASP ASVS 4.0.3",
+    "framework": "OWASP ASVS 5.0.0",
     "control_id": "V14.1.4",
     "control_name": "All components inventoried",
     "entries": [
@@ -31166,7 +31166,7 @@ window.CROSSWALK_BACKLINKS = [
     ]
   },
   {
-    "framework": "OWASP ASVS 4.0.3",
+    "framework": "OWASP ASVS 5.0.0",
     "control_id": "V14.2.1",
     "control_name": "Verify that sensitive data is only sent to the server in the HTTP message body or header fields, and that the URL and query string do not contain sensitive information, such as an API key or session token.",
     "entries": [
@@ -31209,7 +31209,7 @@ window.CROSSWALK_BACKLINKS = [
     ]
   },
   {
-    "framework": "OWASP ASVS 4.0.3",
+    "framework": "OWASP ASVS 5.0.0",
     "control_id": "V14.2.2",
     "control_name": "Verify that the application prevents sensitive data from being cached in server components, such as load balancers and application caches, or ensures that the data is securely purged after use.",
     "entries": [
@@ -31252,7 +31252,7 @@ window.CROSSWALK_BACKLINKS = [
     ]
   },
   {
-    "framework": "OWASP ASVS 4.0.3",
+    "framework": "OWASP ASVS 5.0.0",
     "control_id": "V15.3.3",
     "control_name": "Verify that the application has countermeasures to protect against mass assignment attacks by limiting allowed fields per controller and action, e.g., it is not possible to insert or update a field value when it was not intended to be part of that action.",
     "entries": [
@@ -31268,7 +31268,7 @@ window.CROSSWALK_BACKLINKS = [
     ]
   },
   {
-    "framework": "OWASP ASVS 4.0.3",
+    "framework": "OWASP ASVS 5.0.0",
     "control_id": "V15.3.7",
     "control_name": "Verify that the application has defenses against HTTP parameter pollution attacks, particularly if the application framework makes no distinction about the source of request parameters (query string, body parameters, cookies, or header fields).",
     "entries": [
@@ -31329,7 +31329,7 @@ window.CROSSWALK_BACKLINKS = [
     ]
   },
   {
-    "framework": "OWASP ASVS 4.0.3",
+    "framework": "OWASP ASVS 5.0.0",
     "control_id": "V16.2.5",
     "control_name": "No credential logging",
     "entries": [
@@ -31345,7 +31345,7 @@ window.CROSSWALK_BACKLINKS = [
     ]
   },
   {
-    "framework": "OWASP ASVS 4.0.3",
+    "framework": "OWASP ASVS 5.0.0",
     "control_id": "V16.3.1",
     "control_name": "Verify that all authentication operations are logged, including successful and unsuccessful attempts. Additional metadata, such as the type of authentication or factors used, should also be collected.",
     "entries": [
@@ -31388,7 +31388,7 @@ window.CROSSWALK_BACKLINKS = [
     ]
   },
   {
-    "framework": "OWASP ASVS 4.0.3",
+    "framework": "OWASP ASVS 5.0.0",
     "control_id": "V16.3.2",
     "control_name": "Verify that failed authorization attempts are logged. For L3, this must include logging all authorization decisions, including logging when sensitive data is accessed (without logging the sensitive data itself).",
     "entries": [
@@ -31440,7 +31440,7 @@ window.CROSSWALK_BACKLINKS = [
     ]
   },
   {
-    "framework": "OWASP ASVS 4.0.3",
+    "framework": "OWASP ASVS 5.0.0",
     "control_id": "V16.5.1",
     "control_name": "Verify that a generic message is returned to the consumer when an unexpected or security-sensitive error occurs, ensuring no exposure of sensitive internal system data such as stack traces, queries, secret keys, and tokens.",
     "entries": [
@@ -31492,7 +31492,7 @@ window.CROSSWALK_BACKLINKS = [
     ]
   },
   {
-    "framework": "OWASP ASVS 4.0.3",
+    "framework": "OWASP ASVS 5.0.0",
     "control_id": "V16.5.3",
     "control_name": "Access control failures logged",
     "entries": [
@@ -31517,7 +31517,7 @@ window.CROSSWALK_BACKLINKS = [
     ]
   },
   {
-    "framework": "OWASP ASVS 4.0.3",
+    "framework": "OWASP ASVS 5.0.0",
     "control_id": "V2.2.1",
     "control_name": "Input validation server-side",
     "entries": [
@@ -31551,7 +31551,7 @@ window.CROSSWALK_BACKLINKS = [
     ]
   },
   {
-    "framework": "OWASP ASVS 4.0.3",
+    "framework": "OWASP ASVS 5.0.0",
     "control_id": "V2.3.1",
     "control_name": "Verify that the application will only process business logic flows for the same user in the expected sequential step order and without skipping steps.",
     "entries": [
@@ -31585,7 +31585,7 @@ window.CROSSWALK_BACKLINKS = [
     ]
   },
   {
-    "framework": "OWASP ASVS 4.0.3",
+    "framework": "OWASP ASVS 5.0.0",
     "control_id": "V2.4.1",
     "control_name": "Verify that anti-automation controls are in place to protect against excessive calls to application functions that could lead to data exfiltration, garbage-data creation, quota exhaustion, rate-limit breaches, denial-of-service, or overuse of costly resources.",
     "entries": [
@@ -31619,7 +31619,7 @@ window.CROSSWALK_BACKLINKS = [
     ]
   },
   {
-    "framework": "OWASP ASVS 4.0.3",
+    "framework": "OWASP ASVS 5.0.0",
     "control_id": "V2.4.2",
     "control_name": "Verify that business logic flows require realistic human timing, preventing excessively rapid transaction submissions.",
     "entries": [
@@ -31689,7 +31689,7 @@ window.CROSSWALK_BACKLINKS = [
     ]
   },
   {
-    "framework": "OWASP ASVS 4.0.3",
+    "framework": "OWASP ASVS 5.0.0",
     "control_id": "V3.5.1",
     "control_name": "Verify that, if the application does not rely on the CORS preflight mechanism to prevent disallowed cross-origin requests to use sensitive functionality, these requests are validated to ensure they originate from the application itself. This may be done by using and validating anti-forgery tokens or requiring extra HTTP header fields that are not CORS-safelisted request-header fields. This is to defend against browser-based request forgery attacks, commonly known as cross-site request forgery (CSRF).",
     "entries": [
@@ -31705,7 +31705,7 @@ window.CROSSWALK_BACKLINKS = [
     ]
   },
   {
-    "framework": "OWASP ASVS 4.0.3",
+    "framework": "OWASP ASVS 5.0.0",
     "control_id": "V3.6.1",
     "control_name": "Verify that client-side assets, such as JavaScript libraries, CSS, or web fonts, are only hosted externally (e.g., on a Content Delivery Network) if the resource is static and versioned and Subresource Integrity (SRI) is used to validate the integrity of the asset. If this is not possible, there should be a documented security decision to justify this for each resource.",
     "entries": [
@@ -31730,7 +31730,7 @@ window.CROSSWALK_BACKLINKS = [
     ]
   },
   {
-    "framework": "OWASP ASVS 4.0.3",
+    "framework": "OWASP ASVS 5.0.0",
     "control_id": "V5.2.1",
     "control_name": "Verify that the application will only accept files of a size which it can process without causing a loss of performance or a denial of service attack.",
     "entries": [
@@ -31782,7 +31782,7 @@ window.CROSSWALK_BACKLINKS = [
     ]
   },
   {
-    "framework": "OWASP ASVS 4.0.3",
+    "framework": "OWASP ASVS 5.0.0",
     "control_id": "V5.2.4",
     "control_name": "Malicious file detection on upload",
     "entries": [
@@ -31798,7 +31798,7 @@ window.CROSSWALK_BACKLINKS = [
     ]
   },
   {
-    "framework": "OWASP ASVS 4.0.3",
+    "framework": "OWASP ASVS 5.0.0",
     "control_id": "V6.2.1",
     "control_name": "Verify that user set passwords are at least 8 characters in length although a minimum of 15 characters is strongly recommended.",
     "entries": [
@@ -31832,7 +31832,7 @@ window.CROSSWALK_BACKLINKS = [
     ]
   },
   {
-    "framework": "OWASP ASVS 4.0.3",
+    "framework": "OWASP ASVS 5.0.0",
     "control_id": "V7.4.1",
     "control_name": "Verify that when session termination is triggered (such as logout or expiration), the application disallows any further use of the session. For reference tokens or stateful sessions, this means invalidating the session data at the application backend. Applications using self-contained tokens will need a solution such as maintaining a list of terminated tokens, disallowing tokens produced before a per-user date and time or rotating a per-user signing key.",
     "entries": [
@@ -31857,7 +31857,7 @@ window.CROSSWALK_BACKLINKS = [
     ]
   },
   {
-    "framework": "OWASP ASVS 4.0.3",
+    "framework": "OWASP ASVS 5.0.0",
     "control_id": "V8.1.3",
     "control_name": "Sensitive data not in session storage",
     "entries": [
@@ -31873,7 +31873,7 @@ window.CROSSWALK_BACKLINKS = [
     ]
   },
   {
-    "framework": "OWASP ASVS 4.0.3",
+    "framework": "OWASP ASVS 5.0.0",
     "control_id": "V8.1.4",
     "control_name": "Sensitive data minimisation",
     "entries": [
@@ -31916,7 +31916,7 @@ window.CROSSWALK_BACKLINKS = [
     ]
   },
   {
-    "framework": "OWASP ASVS 4.0.3",
+    "framework": "OWASP ASVS 5.0.0",
     "control_id": "V8.2.1",
     "control_name": "Verify that the application ensures that function-level access is restricted to consumers with explicit permissions.",
     "entries": [
@@ -32049,7 +32049,7 @@ window.CROSSWALK_BACKLINKS = [
     ]
   },
   {
-    "framework": "OWASP ASVS 4.0.3",
+    "framework": "OWASP ASVS 5.0.0",
     "control_id": "V8.3.1",
     "control_name": "Verify that the application enforces authorization rules at a trusted service layer and doesn't rely on controls that an untrusted consumer could manipulate, such as client-side JavaScript.",
     "entries": [
@@ -32119,7 +32119,7 @@ window.CROSSWALK_BACKLINKS = [
     ]
   },
   {
-    "framework": "OWASP ASVS 4.0.3",
+    "framework": "OWASP ASVS 5.0.0",
     "control_id": "V8.3.10",
     "control_name": "Personal data not kept longer than needed",
     "entries": [
@@ -32135,7 +32135,7 @@ window.CROSSWALK_BACKLINKS = [
     ]
   },
   {
-    "framework": "OWASP ASVS 4.0.3",
+    "framework": "OWASP ASVS 5.0.0",
     "control_id": "V8.3.3",
     "control_name": "Consent obtained before PI processing",
     "entries": [

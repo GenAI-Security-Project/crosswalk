@@ -22,6 +22,17 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   6.1.2/3.5.1, LLM08 hidden context 10.2.4, LLM10 generated code 9.3.7). AISVS has no requirement for scanning
   generated code itself; the LLM10 section says so.
 
+### Changed
+
+- **ASVS framework renamed `OWASP ASVS 4.0.3` → `OWASP ASVS 5.0.0`** in the generated data, exports, registry,
+  webapp and docs. The three ASVS mapping files were already translated to 5.0.0 identifiers (#123); this brings the
+  framework's name in line. **Consumers that filter exports by framework name must update the string.** 5.0.0 is
+  the latest versioned ASVS release; ASVS's `latest` tag is its Bleeding Edge build, not a release. Six incident
+  `control_failures` (INC-138, 139, 140, 145, 146, 147) that cited 5.0.0 identifiers under the old name now carry
+  the correct one. The 24 rows whose 4.0.3 requirement 5.0.0 deleted keep their 4.0.3 identifier and their DRAFT
+  marker, and `docs/classifier-predictions.js`, the dated 2026-04-09 classifier snapshot on 4.0.3 chapters, keeps
+  its 4.0.3 label.
+
 Next: npm publish to npmjs.com, custom domain (crosswalk.owasp.org), vendor integration packs, NeMo Guardrails configs.
 
 ---
