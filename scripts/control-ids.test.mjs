@@ -11,7 +11,7 @@ import assert from 'node:assert/strict';
 import { createRequire } from 'node:module';
 
 const require = createRequire(import.meta.url);
-const { resolveControlId } = require('./control-ids.js');
+const { resolveControlId, isValidControlId, isValidRegistryId } = require('./control-ids.js');
 
 const cases = [
   // framework, row cells, expected id, expected name, expected parent, table headers
@@ -65,4 +65,69 @@ test('prose is never returned as a control name', () => {
   assert.equal(got.id, 'CC6.1');
   assert.notEqual(got.name, prose);
   assert.ok(got.name.length <= 120);
+});
+
+test('NIST AI 600-1 suggested-action ids are recognised wherever they sit in the row', () => {
+  const cases = [
+    [['GV-1.1-001', 'Align GAI development and use with applicable laws'], 'GV-1.1-001'],
+    [['Fairness assessments', 'MS-2.11-002', 'prose about the measure'], 'MS-2.11-002'],
+    [['MG-4.1-003'], 'MG-4.1-003'],
+  ];
+  for (const [cells, id] of cases) {
+    assert.equal(resolveControlId('NIST AI 600-1', cells).id, id);
+  }
+});
+
+test('NIST AI 600-1 rejects subcategory ids and malformed sequences', () => {
+  // GV-1.1 is an AI RMF subcategory, not a 600-1 suggested action.
+  assert.equal(resolveControlId('NIST AI 600-1', ['GV-1.1', 'Legal and regulatory']), null);
+  for (const bad of ['GV-1.1', 'GV-1.1-1', 'GV-1.1-0001', 'XX-1.1-001']) {
+    assert.equal(isValidControlId('NIST AI 600-1', bad), false, bad);
+  }
+  for (const good of ['GV-1.1-001', 'MP-5.1-001', 'MS-2.11-002', 'MG-4.1-003']) {
+    assert.equal(isValidControlId('NIST AI 600-1', good), true, good);
+  }
+});
+
+test('every id in the NIST AI 600-1 registry satisfies its own grammar', async () => {
+  const { readFileSync } = await import('node:fs');
+  const fw = JSON.parse(readFileSync(new URL('../data/frameworks/nist-ai-600-1.json', import.meta.url)));
+  assert.equal(fw.controls.length, 211);
+  for (const c of fw.controls) {
+    assert.ok(isValidRegistryId('NIST AI 600-1', c.control_id), `${c.control_id} fails the id shape`);
+  }
+});
+
+test('every NIST AI 600-1 action carries GAI risk tags drawn from the document\'s twelve', async () => {
+  // The twelve risks enumerated in section 2 of NIST AI 600-1. The suggested-action
+  // tables spell four of them differently; the registry normalises to this list.
+  const TWELVE = new Set([
+    'CBRN Information or Capabilities',
+    'Confabulation',
+    'Dangerous, Violent, or Hateful Content',
+    'Data Privacy',
+    'Environmental Impacts',
+    'Harmful Bias or Homogenization',
+    'Human-AI Configuration',
+    'Information Integrity',
+    'Information Security',
+    'Intellectual Property',
+    'Obscene, Degrading, and/or Abusive Content',
+    'Value Chain and Component Integration',
+  ]);
+  const { readFileSync } = await import('node:fs');
+  const fw = JSON.parse(readFileSync(new URL('../data/frameworks/nist-ai-600-1.json', import.meta.url)));
+  const seen = new Set();
+  for (const c of fw.controls) {
+    assert.ok(Array.isArray(c.gai_risks) && c.gai_risks.length > 0,
+      `${c.control_id} has no gai_risks`);
+    assert.equal(new Set(c.gai_risks).size, c.gai_risks.length,
+      `${c.control_id} repeats a risk`);
+    for (const r of c.gai_risks) {
+      assert.ok(TWELVE.has(r), `${c.control_id} cites "${r}", which is not one of the twelve`);
+      seen.add(r);
+    }
+  }
+  // All twelve are exercised, so a typo in the list cannot pass unnoticed.
+  assert.equal(seen.size, 12);
 });

@@ -169,8 +169,21 @@ test('prose-shaped control ids do not spread beyond the known set', () => {
   const registries = fs.readdirSync(fwDir).filter((f) => f.endsWith('.json'))
     .map((f) => JSON.parse(fs.readFileSync(path.join(fwDir, f), 'utf8')));
 
+  // compliance-report.js resolves --framework from the names the mappings cite,
+  // so a registry no mapping references has no catalog to export and errors out.
+  // Such a registry emits no OSCAL, so it cannot carry a prose id; skip it
+  // rather than exempting any framework that does produce one.
+  const entryDir = path.join(ROOT, 'data', 'entries');
+  const mapped = new Set();
+  for (const f of fs.readdirSync(entryDir).filter((n) => n.endsWith('.json'))) {
+    for (const m of JSON.parse(fs.readFileSync(path.join(entryDir, f), 'utf8')).mappings || []) {
+      mapped.add(m.framework);
+    }
+  }
+
   const counted = {};
   for (const reg of registries) {
+    if (!mapped.has(reg.name)) continue;
     // `--framework` is a partial match, so one call can emit several documents.
     const raw = execFileSync(process.execPath, [
       path.join(ROOT, 'scripts', 'compliance-report.js'),
