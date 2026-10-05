@@ -161,6 +161,20 @@ test('the home page counts mapped frameworks only', () => {
   assert.equal(cards['Registry Controls'], String(controls));
 });
 
+// The landing and Submit pages used to hard-code "41 entries" and "25
+// frameworks". Counts in page copy must come from the loaded data.
+test('page copy states the live entry and framework counts', () => {
+  const { window } = dom;
+  const entries = window.CROSSWALK_DATA.length;
+  const frameworks = new Set(window.CROSSWALK_DATA.flatMap((e) => e.mappings.map((m) => m.framework))).size;
+
+  const home = visit('#/').textContent;
+  assert.match(home, new RegExp(`Search ${entries} OWASP entries`));
+  assert.match(home, new RegExp(`across all ${frameworks} frameworks`));
+
+  assert.match(visit('#/submit').textContent, new RegExp(`all ${entries} OWASP GenAI entries`));
+});
+
 // The About page is the one place in the webapp allowed to carry the creator
 // credit, and this file is not — so the test checks that the section renders
 // with content, never the name itself.

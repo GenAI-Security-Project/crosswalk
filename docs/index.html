@@ -1859,7 +1859,8 @@ input, select { font-family: inherit; }
       {
         icon: '\uD83D\uDD0D',
         title: 'Explore risks & controls',
-        desc: 'Search 41 OWASP entries, filter by severity, click any entry to see all 25 framework mappings.',
+        desc: 'Search ' + DATA.length + ' OWASP entries, filter by severity, click any entry to see its mappings across all ' +
+          FRAMEWORKS.length + ' frameworks.',
         link: '#/explorer',
         cta: 'Open explorer \u2192',
         who: 'Security engineers, architects, auditors'
@@ -5654,7 +5655,7 @@ input, select { font-family: inherit; }
 
     page.appendChild(el('h2', {}, 'Submit a Standard'));
     page.appendChild(el('p', { style: 'color:var(--text-secondary);margin-bottom:20px;' },
-      'Submit a security framework for automated mapping to all 41 OWASP GenAI entries. ' +
+      'Submit a security framework for automated mapping to all ' + DATA.length + ' OWASP GenAI entries. ' +
       'Paste your framework controls as JSON below. Our classifier will propose mappings and open a PR for review.'));
 
     // Example template

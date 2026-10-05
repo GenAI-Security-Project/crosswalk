@@ -1,21 +1,23 @@
 #!/usr/bin/env node
 /**
- * render-stats.mjs — Render generated counts into README marker regions.
+ * render-stats.mjs — Render generated counts into marker regions.
  *
- * Every headline number in the README lives between a pair of HTML comments:
+ * Every headline number in the README, and in the two brand images that repeat
+ * those numbers (the social card and the banner), lives between a pair of
+ * comments. HTML and SVG share the comment syntax:
  *
  *   <!-- stats:frameworks-mapped -->23<!-- /stats -->
  *
  * The text between the markers is replaced from `data/stats.json`; everything
- * else in the file is left byte-identical. `npm run stats:check` re-renders and
- * asserts `git diff --exit-code`, so a hand-edited count fails CI.
+ * else in each file is left byte-identical. `npm run stats:check` re-renders and
+ * fails if any target would change, so a hand-edited count fails CI.
  *
- * Adding a number to the README means wrapping it in a marker and adding the
- * key to KEYS below — never hand-maintaining the digits.
+ * Adding a number means wrapping it in a marker and adding the key to KEYS
+ * below — never hand-maintaining the digits.
  *
  * Usage:
- *   node scripts/render-stats.mjs           # rewrite README.md in place
- *   node scripts/render-stats.mjs --check   # exit 1 if the README is stale
+ *   node scripts/render-stats.mjs           # rewrite every target in place
+ *   node scripts/render-stats.mjs --check   # exit 1 if any target is stale
  */
 
 import fs from 'node:fs';
@@ -23,7 +25,8 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const README = path.join(ROOT, 'README.md');
+// The badge block is Markdown, so it belongs in README.md only.
+const TARGETS = ['README.md', 'docs/og-image.svg', 'docs/banner.svg'];
 const STATS = path.join(ROOT, 'data', 'stats.json');
 
 const CHECK = process.argv.includes('--check');
@@ -107,26 +110,33 @@ function render(src) {
  * working copy as stale. The repo is LF-canonical in the index either way, so all
  * work happens in LF and git converts on checkout.
  */
-const before = fs.readFileSync(README, 'utf8').replace(/\r\n/g, '\n');
-const { out, seen, unknown } = render(before);
+let failed = false;
 
-if (unknown.length) {
-  console.error(`✗ unknown stats key(s) in README: ${[...new Set(unknown)].join(', ')}`);
-  console.error(`  known keys: ${Object.keys(KEYS).join(', ')}`);
-  process.exit(1);
-}
+for (const rel of TARGETS) {
+  const file = path.join(ROOT, rel);
+  const before = fs.readFileSync(file, 'utf8').replace(/\r\n/g, '\n');
+  const { out, seen, unknown } = render(before);
 
-if (CHECK) {
-  if (out !== before) {
-    console.error('✗ README.md is stale — run `npm run stats`');
-    process.exit(1);
+  if (unknown.length) {
+    console.error(`✗ unknown stats key(s) in ${rel}: ${[...new Set(unknown)].join(', ')}`);
+    console.error(`  known keys: ${Object.keys(KEYS).join(', ')}`);
+    failed = true;
+    continue;
   }
-  console.log(`✓ README.md is current (${seen.size} marker keys in use)`);
-} else {
-  if (out !== before) {
-    fs.writeFileSync(README, out, 'utf8');
-    console.log(`Rewritten README.md (${seen.size} marker keys)`);
+
+  if (CHECK) {
+    if (out !== before) {
+      console.error(`✗ ${rel} is stale — run \`npm run stats\``);
+      failed = true;
+    } else {
+      console.log(`✓ ${rel} is current (${seen.size} marker keys in use)`);
+    }
+  } else if (out !== before) {
+    fs.writeFileSync(file, out, 'utf8');
+    console.log(`Rewritten ${rel} (${seen.size} marker keys)`);
   } else {
-    console.log(`README.md already current (${seen.size} marker keys)`);
+    console.log(`${rel} already current (${seen.size} marker keys)`);
   }
 }
+
+if (failed) process.exit(1);
