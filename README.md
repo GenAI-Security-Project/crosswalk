@@ -1,5 +1,28 @@
 # GenAI Security Crosswalk
 
+<!-- The hero, the screenshot gallery and the collapsible sections need inline HTML. -->
+<!-- markdownlint-disable MD033 -->
+
+<p align="center">
+  <a href="https://genai-security-project.github.io/crosswalk/">
+    <img src=".github/assets/screenshots/home.png" width="900"
+      alt="The Crosswalk web app home page, showing its framework, mapping, entry and registry-control counts">
+  </a>
+</p>
+
+<p align="center">
+  <b>Which controls from framework X address GenAI risk Y?</b><br>
+  Every OWASP GenAI risk, mapped control by control to the frameworks you already have to satisfy.
+</p>
+
+<p align="center">
+  <a href="https://genai-security-project.github.io/crosswalk/"><b>Open the web app</b></a> ·
+  <a href="https://genai-security-project.github.io/crosswalk/#/score">Score your coverage</a> ·
+  <a href="https://genai-security-project.github.io/crosswalk/#/explorer">Explore entries</a> ·
+  <a href="https://genai-security-project.github.io/crosswalk/#/frameworks">Browse frameworks</a> ·
+  <a href="https://genai-security-project.github.io/crosswalk/#/incidents">View incidents</a>
+</p>
+
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 [![OWASP Lab](https://img.shields.io/badge/OWASP-GenAI%20Data%20Security-blue)](https://genai.owasp.org)
 <!-- stats:badges -->
@@ -15,22 +38,26 @@
 > **<!-- stats:frameworks-mapped -->26<!-- /stats --> frameworks** and
 > **<!-- stats:source-lists -->4<!-- /stats --> OWASP source lists**.
 
-## [Live Web App](https://genai-security-project.github.io/crosswalk/) | [Score Your Coverage](https://genai-security-project.github.io/crosswalk/#/score) | [Explore Entries](https://genai-security-project.github.io/crosswalk/#/explorer) | [View Incidents](https://genai-security-project.github.io/crosswalk/#/incidents)
-
 Created and led by **[Emmanuel Guilherme Junior](https://github.com/emmanuelgjr)**, who leads the
 [OWASP GenAI Data Security Initiative](https://genai.owasp.org) .
+
+**Contents:** [TL;DR](#tldr--what-is-this-and-what-do-i-do) · [See it in action](#see-it-in-action) ·
+[How it fits together](#how-it-fits-together) · [What's inside](#what-this-repository-provides) ·
+[Source lists](#source-lists) · [Coverage matrix](#framework-coverage-matrix) ·
+[Mapping files](#all-mapping-files) · [Repository structure](#repository-structure) ·
+[Start by role](#start-here--by-role) · [Contributing](#contributing)
 
 ---
 
 ## TL;DR — What is this and what do I do?
 
 **The problem:** You're deploying AI (LLMs, agents, RAG pipelines) and need to know which security controls
-apply — across EU AI Act, NIST, ISO, SOC 2, FedRAMP, DORA, and 14 more frameworks. No single document maps
-AI risks to all of them.
+apply — across EU AI Act, NIST, ISO, SOC 2, FedRAMP, DORA and more: <!-- stats:frameworks-mapped -->26<!-- /stats -->
+frameworks in all. No single document maps AI risks to all of them.
 
 **This repo solves that.** Every OWASP GenAI vulnerability
-(<!-- stats:entries -->51<!-- /stats --> total) is mapped to specific controls in
-<!-- stats:frameworks-mapped -->26<!-- /stats --> industry frameworks.
+(<!-- stats:entries -->51<!-- /stats --> total) is mapped to specific controls
+in <!-- stats:frameworks-mapped -->26<!-- /stats --> industry frameworks.
 Pick your risk, find your controls.
 
 ### 3 ways to use it (pick one)
@@ -63,7 +90,76 @@ node scripts/incidents-report.js --format stix              # SIEM/SOAR export
 | **Red teamer** | [LAAF guide](evals/laaf/README.md) → run S1–S6 attack stages, map results to OWASP |
 | **GRC / auditor** | `compliance-report.js --format oscal` → import into ServiceNow/Archer |
 | **Developer** | `npm install genai-security-crosswalk` → query risks + controls programmatically |
-| **Threat intel analyst** | `incidents-report.js --format stix` → ingest 50 AI incidents into Sentinel/Splunk |
+| **Threat intel analyst** | `incidents-report.js --format stix` → ingest <!-- stats:incidents -->147<!-- /stats --> AI incidents into Sentinel/Splunk |
+
+---
+
+## See it in action
+
+The [web app](https://genai-security-project.github.io/crosswalk/) runs entirely in your browser. There's nothing
+to install and no login. Click any screenshot to open that page.
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://genai-security-project.github.io/crosswalk/#/explorer">
+        <img src=".github/assets/screenshots/explorer.png"
+          alt="Explorer: a grid of OWASP entries with severity, source list and their framework, control and incident counts">
+      </a>
+      <br><b>Explorer</b>: search and filter every entry by severity and source list, then open one to see its
+      controls across all frameworks.
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://genai-security-project.github.io/crosswalk/#/frameworks/MITRE%20ATLAS">
+        <img src=".github/assets/screenshots/framework-detail.png"
+          alt="Framework view for MITRE ATLAS: the entries it covers and each mapped technique, grouped by entry">
+      </a>
+      <br><b>Frameworks</b>: every control a framework contributes, grouped by the risk it addresses (MITRE ATLAS
+      shown).
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://genai-security-project.github.io/crosswalk/#/score">
+        <img src=".github/assets/screenshots/score.png"
+          alt="Score: six frameworks selected, with an overall coverage score card and per-source-list coverage">
+      </a>
+      <br><b>Score</b>: tick the frameworks you implement and get your coverage, gaps and a shareable score card.
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://genai-security-project.github.io/crosswalk/#/incidents">
+        <img src=".github/assets/screenshots/incidents.png"
+          alt="Incidents: summary counts by severity and type, and cards for individual incidents with linked entries">
+      </a>
+      <br><b>Incidents</b>: real-world and research incidents, filterable by severity, year and MAESTRO layer, each
+      linked to the risks it exemplifies.
+    </td>
+  </tr>
+</table>
+
+<sub>Screenshots of the web app taken on 2026-10-05. The counts shown in them reflect that date; the live app is
+always current.</sub>
+
+---
+
+## How it fits together
+
+There are three main inputs: the Markdown mapping files, the framework registries and the incident records.
+The rest is generated from them, so the web app, the npm package and every export stay in step.
+
+```mermaid
+flowchart LR
+    S([OWASP source lists<br/>LLM, Agentic, DSGAI, Skills]) --> M[Mapping files<br/>one per list and framework]
+    M --> G[scripts/generate.js]
+    R[Framework registries<br/>data/frameworks] --> G
+    I[Incidents<br/>data/incidents.json] --> G
+    G --> E[Entry data<br/>data/entries]
+    G --> W[Web app bundles<br/>docs]
+    E --> N[npm package]
+    E --> X[Control exports<br/>OSCAL, CSV, JSON, OLIR]
+    R --> X
+    I --> T[Incident export<br/>STIX 2.1]
+```
 
 ---
 
@@ -93,10 +189,10 @@ All free. All open-source. Built for practitioners.
 
 | List | Entries | Version | Frameworks mapped |
 |---|---|---|---|
-| [OWASP LLM Top 10](https://genai.owasp.org/llm-top-10/) | LLM01–LLM10 | 2026 | 23 |
-| [OWASP Agentic Top 10](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/) | ASI01–ASI10 | 2026 | 23 |
-| [OWASP GenAI Data Security Risks](https://genai.owasp.org/resource/owasp-genai-data-security-risks-mitigations-2026/) | DSGAI01–DSGAI21 | 2026 | 21 |
-| [OWASP Agentic Skills Top 10](https://owasp.org/www-project-agentic-skills-top-10/) | AST01–AST10 | 2026 | — *(registered; mappings pending)* |
+| [OWASP LLM Top 10](https://genai.owasp.org/llm-top-10/) | LLM01–LLM10 | 2026 | <!-- stats:frameworks-llm -->26<!-- /stats --> |
+| [OWASP Agentic Top 10](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/) | ASI01–ASI10 | 2026 | <!-- stats:frameworks-agentic -->26<!-- /stats --> |
+| [OWASP GenAI Data Security Risks](https://genai.owasp.org/resource/owasp-genai-data-security-risks-mitigations-2026/) | DSGAI01–DSGAI21 | 2026 | <!-- stats:frameworks-dsgai -->24<!-- /stats --> |
+| [OWASP Agentic Skills Top 10](https://owasp.org/www-project-agentic-skills-top-10/) | AST01–AST10 | 2026 | 1 *(MAESTRO, DRAFT rows only)* |
 
 ---
 
@@ -231,6 +327,9 @@ All free. All open-source. Built for practitioners.
 
 ## Repository structure
 
+<details>
+<summary>Show the full directory tree</summary>
+
 ```text
 crosswalk/
 │
@@ -333,7 +432,7 @@ crosswalk/
 │
 ├── data/
 │   ├── schema.json                  ← JSON Schema (Draft 7) for entry files
-│   ├── incidents.json               ← 50 incidents with MAESTRO layer attribution
+│   ├── incidents.json               ← <!-- stats:incidents -->147<!-- /stats --> incidents with MAESTRO layer attribution
 │   ├── incidents-schema.json        ← JSON Schema for incidents
 │   ├── tools-supplement.json        ← Supplemental tools merged at generation time
 │   ├── entries/                     ← <!-- stats:entries -->51<!-- /stats --> machine-readable entry JSON files
@@ -370,6 +469,8 @@ crosswalk/
     ├── fr/                          ← French (accepting PRs)
     └── pt/                          ← Portuguese (accepting PRs)
 ```
+
+</details>
 
 ---
 
@@ -416,7 +517,8 @@ See `evals/laaf/README.md` for the full LPCI attack vector → OWASP → MAESTRO
 
 ## Incident tracker
 
-50 real-world and research-demonstrated incidents, each mapped to OWASP entries and MAESTRO architectural layers:
+The tracker holds <!-- stats:incidents -->147<!-- /stats --> real-world and research-demonstrated incidents, each
+mapped to OWASP entries and MAESTRO architectural layers:
 
 ```bash
 node scripts/incidents-report.js                      # all incidents → reports/incidents.md
@@ -441,7 +543,7 @@ No install required. Works on desktop and mobile.
 | [**Score**](https://genai-security-project.github.io/crosswalk/#/score) | Select your frameworks, see coverage gaps. Upload Garak/PyRIT/LAAF results to validate. Share your score card on LinkedIn. |
 | [**Explorer**](https://genai-security-project.github.io/crosswalk/#/explorer) | Search and filter all <!-- stats:entries -->51<!-- /stats --> entries. Click any entry to see controls across all <!-- stats:frameworks-mapped -->26<!-- /stats --> frameworks. |
 | [**Frameworks**](https://genai-security-project.github.io/crosswalk/#/frameworks) | Interactive <!-- stats:entries -->51<!-- /stats -->×<!-- stats:frameworks-mapped -->26<!-- /stats --> coverage matrix. Click any cell to see the specific controls mapped. |
-| [**Incidents**](https://genai-security-project.github.io/crosswalk/#/incidents) | Browse 50 AI security incidents. Filter by severity, year, MAESTRO layer. Full attribution details. |
+| [**Incidents**](https://genai-security-project.github.io/crosswalk/#/incidents) | Browse <!-- stats:incidents -->147<!-- /stats --> AI security incidents. Filter by severity, year, MAESTRO layer. Full attribution details. |
 
 **Evidence-based scoring** — three validation tiers:
 
@@ -558,6 +660,9 @@ manipulation scenario)
 
 ## Quick navigation
 
+<details>
+<summary>Show quick links by scenario (EU AI Act, NIS2, OT/ICS, agents, ISO, FedRAMP, DORA and more)</summary>
+
 **EU AI Act compliance by August 2026**
 → [LLM_EUAIAct.md](llm-top10/LLM_EUAIAct.md) · [Agentic_EUAIAct.md](agentic-top10/Agentic_EUAIAct.md) ·
 [DSGAI_EUAIAct.md](dsgai-2026/DSGAI_EUAIAct.md)
@@ -621,6 +726,8 @@ includes EU AI Act compliance evidence table
 
 **All risks across all three source lists**
 → [CROSSREF.md](CROSSREF.md) — master cross-reference
+
+</details>
 
 ---
 
