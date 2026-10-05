@@ -671,9 +671,6 @@ const ATTRIBUTION_EXEMPT = [
   'GOVERNANCE.md',
   // Historical record; past releases are not rewritten.
   'CHANGELOG.md',
-  // Brand assets are frozen (C2) — the webapp's logo/social images.
-  'docs/og-image.svg',
-  'docs/banner.svg',
 ];
 
 const ATTRIBUTION_SKIP_DIRS = ['node_modules', '.git', 'reports', 'dist', 'coverage'];

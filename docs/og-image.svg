@@ -1,4 +1,5 @@
 <svg xmlns='http://www.w3.org/2000/svg' width='1200' height='630' viewBox='0 0 1200 630'>
+  <!-- Counts sit between stats markers and are rendered from data/stats.json by scripts/render-stats.mjs; do not hand-edit them. -->
   <defs>
     <linearGradient id='bg' x1='0%' y1='0%' x2='100%' y2='100%'>
       <stop offset='0%' style='stop-color:#0f172a'/>
@@ -17,33 +18,33 @@
 
   <!-- Stat cards -->
   <rect x='60' y='320' width='170' height='70' rx='10' fill='rgba(37,99,235,0.15)' stroke='rgba(37,99,235,0.3)' stroke-width='1'/>
-  <text x='145' y='352' font-family='system-ui,sans-serif' font-size='32' font-weight='800' fill='#60a5fa' text-anchor='middle'>25</text>
+  <text x='145' y='352' font-family='system-ui,sans-serif' font-size='32' font-weight='800' fill='#60a5fa' text-anchor='middle'><!-- stats:frameworks-mapped -->26<!-- /stats --></text>
   <text x='145' y='377' font-family='system-ui,sans-serif' font-size='12' fill='#94a3b8' text-anchor='middle' letter-spacing='1'>FRAMEWORKS</text>
 
   <rect x='250' y='320' width='170' height='70' rx='10' fill='rgba(124,58,237,0.15)' stroke='rgba(124,58,237,0.3)' stroke-width='1'/>
-  <text x='335' y='352' font-family='system-ui,sans-serif' font-size='32' font-weight='800' fill='#a78bfa' text-anchor='middle'>1,514</text>
-  <text x='335' y='377' font-family='system-ui,sans-serif' font-size='12' fill='#94a3b8' text-anchor='middle' letter-spacing='1'>CONTROLS</text>
+  <text x='335' y='352' font-family='system-ui,sans-serif' font-size='32' font-weight='800' fill='#a78bfa' text-anchor='middle'><!-- stats:mappings -->3,771<!-- /stats --></text>
+  <text x='335' y='377' font-family='system-ui,sans-serif' font-size='12' fill='#94a3b8' text-anchor='middle' letter-spacing='1'>MAPPINGS</text>
 
   <rect x='440' y='320' width='170' height='70' rx='10' fill='rgba(16,185,129,0.15)' stroke='rgba(16,185,129,0.3)' stroke-width='1'/>
-  <text x='525' y='352' font-family='system-ui,sans-serif' font-size='32' font-weight='800' fill='#34d399' text-anchor='middle'>41</text>
+  <text x='525' y='352' font-family='system-ui,sans-serif' font-size='32' font-weight='800' fill='#34d399' text-anchor='middle'><!-- stats:entries -->51<!-- /stats --></text>
   <text x='525' y='377' font-family='system-ui,sans-serif' font-size='12' fill='#94a3b8' text-anchor='middle' letter-spacing='1'>ENTRIES</text>
 
   <rect x='630' y='320' width='170' height='70' rx='10' fill='rgba(245,158,11,0.15)' stroke='rgba(245,158,11,0.3)' stroke-width='1'/>
-  <text x='715' y='352' font-family='system-ui,sans-serif' font-size='32' font-weight='800' fill='#fbbf24' text-anchor='middle'>67</text>
+  <text x='715' y='352' font-family='system-ui,sans-serif' font-size='32' font-weight='800' fill='#fbbf24' text-anchor='middle'><!-- stats:mapping-files -->77<!-- /stats --></text>
   <text x='715' y='377' font-family='system-ui,sans-serif' font-size='12' fill='#94a3b8' text-anchor='middle' letter-spacing='1'>MAPPING FILES</text>
 
   <rect x='820' y='320' width='170' height='70' rx='10' fill='rgba(239,68,68,0.15)' stroke='rgba(239,68,68,0.3)' stroke-width='1'/>
-  <text x='905' y='352' font-family='system-ui,sans-serif' font-size='32' font-weight='800' fill='#f87171' text-anchor='middle'>114</text>
+  <text x='905' y='352' font-family='system-ui,sans-serif' font-size='32' font-weight='800' fill='#f87171' text-anchor='middle'><!-- stats:incidents -->147<!-- /stats --></text>
   <text x='905' y='377' font-family='system-ui,sans-serif' font-size='12' fill='#94a3b8' text-anchor='middle' letter-spacing='1'>INCIDENTS</text>
 
   <!-- Architecture diagram - small -->
   <rect x='60' y='430' width='280' height='36' rx='6' fill='rgba(37,99,235,0.1)' stroke='rgba(37,99,235,0.25)' stroke-width='1'/>
-  <text x='200' y='454' font-family='system-ui,sans-serif' font-size='13' fill='#60a5fa' text-anchor='middle' font-weight='600'>LLM Top 10 + Agentic Top 10 + DSGAI</text>
+  <text x='200' y='454' font-family='system-ui,sans-serif' font-size='13' fill='#60a5fa' text-anchor='middle' font-weight='600'><!-- stats:source-lists -->4<!-- /stats --> OWASP source lists</text>
 
   <text x='370' y='454' font-family='system-ui,sans-serif' font-size='18' fill='#475569'>&#x2192;</text>
 
   <rect x='400' y='430' width='180' height='36' rx='6' fill='rgba(124,58,237,0.1)' stroke='rgba(124,58,237,0.25)' stroke-width='1'/>
-  <text x='490' y='454' font-family='system-ui,sans-serif' font-size='13' fill='#a78bfa' text-anchor='middle' font-weight='600'>ML Classifier Pipeline</text>
+  <text x='490' y='454' font-family='system-ui,sans-serif' font-size='13' fill='#a78bfa' text-anchor='middle' font-weight='600'>Mapping files + registries</text>
 
   <text x='610' y='454' font-family='system-ui,sans-serif' font-size='18' fill='#475569'>&#x2192;</text>
 
@@ -51,9 +52,9 @@
   <text x='770' y='454' font-family='system-ui,sans-serif' font-size='13' fill='#34d399' text-anchor='middle' font-weight='600'>Gap Reports + OSCAL + GRC Export</text>
 
   <text x='60' y='510' font-family='system-ui,sans-serif' font-size='17' fill='#2563eb' font-weight='600'>Score your AI security coverage in 60 seconds</text>
-  <text x='60' y='540' font-family='system-ui,sans-serif' font-size='15' fill='#64748b'>EU AI Act  ·  FedRAMP  ·  DORA  ·  NIST  ·  ISO 27001  ·  SOC 2  ·  PCI DSS  ·  and 18 more</text>
+  <text x='60' y='540' font-family='system-ui,sans-serif' font-size='15' fill='#64748b'>EU AI Act  ·  FedRAMP  ·  DORA  ·  NIST  ·  ISO 27001  ·  SOC 2  ·  PCI DSS  ·  and more</text>
 
   <rect y='580' width='1200' height='50' fill='rgba(255,255,255,0.03)'/>
-  <text x='60' y='612' font-family='system-ui,sans-serif' font-size='14' fill='#64748b'>genai-security-project.github.io/GenAI-Data-Security-Initiative</text>
-  <text x='1140' y='612' font-family='system-ui,sans-serif' font-size='14' fill='#64748b' text-anchor='end'>Created by Emmanuel Guilherme Junior  ·  OWASP GenAI Data Security Initiative</text>
+  <text x='60' y='612' font-family='system-ui,sans-serif' font-size='14' fill='#64748b'>genai-security-project.github.io/crosswalk</text>
+  <text x='1140' y='612' font-family='system-ui,sans-serif' font-size='14' fill='#64748b' text-anchor='end'>OWASP GenAI Data Security Initiative  ·  CC BY-SA 4.0</text>
 </svg>
