@@ -56,7 +56,7 @@ apply — across EU AI Act, NIST, ISO, SOC 2, FedRAMP, DORA and more: <!-- stats
 frameworks in all. No single document maps AI risks to all of them.
 
 **This repo solves that.** Every OWASP GenAI vulnerability
-(<!-- stats:entries -->51<!-- /stats --> total) is mapped to specific controls in
+(<!-- stats:entries -->51<!-- /stats --> total) is mapped to specific controls in the
 <!-- stats:frameworks-mapped -->26<!-- /stats --> industry frameworks.
 Pick your risk, find your controls.
 
@@ -149,22 +149,16 @@ The rest is generated from them, so the web app, the npm package and every expor
 
 ```mermaid
 flowchart LR
-    subgraph sources["OWASP source lists"]
-        llm["LLM Top 10"]
-        asi["Agentic Top 10"]
-        dsgai["DSGAI 2026"]
-        ast["Agentic Skills Top 10"]
-    end
-    sources --> md["Mapping files<br/>one per list × framework"]
-    md --> gen["scripts/generate.js"]
-    reg["Framework registries<br/>data/frameworks/"] --> gen
-    inc["Incidents<br/>data/incidents.json"] --> gen
-    gen --> entries["data/entries/*.json"]
-    gen --> web["Web app bundles<br/>docs/*.js"]
-    entries --> npm["npm package"]
-    entries --> exp["Control exports<br/>OSCAL · CSV · JSON · OLIR"]
-    reg --> exp
-    inc --> stix["Incident export<br/>STIX 2.1"]
+    S([OWASP source lists<br/>LLM, Agentic, DSGAI, Skills]) --> M[Mapping files<br/>one per list and framework]
+    M --> G[scripts/generate.js]
+    R[Framework registries<br/>data/frameworks] --> G
+    I[Incidents<br/>data/incidents.json] --> G
+    G --> E[Entry data<br/>data/entries]
+    G --> W[Web app bundles<br/>docs]
+    E --> N[npm package]
+    E --> X[Control exports<br/>OSCAL, CSV, JSON, OLIR]
+    R --> X
+    I --> T[Incident export<br/>STIX 2.1]
 ```
 
 ---
@@ -523,8 +517,8 @@ See `evals/laaf/README.md` for the full LPCI attack vector → OWASP → MAESTRO
 
 ## Incident tracker
 
-<!-- stats:incidents -->147<!-- /stats --> real-world and research-demonstrated incidents, each mapped to OWASP entries
-and MAESTRO architectural layers:
+The tracker holds <!-- stats:incidents -->147<!-- /stats --> real-world and research-demonstrated incidents, each
+mapped to OWASP entries and MAESTRO architectural layers:
 
 ```bash
 node scripts/incidents-report.js                      # all incidents → reports/incidents.md
