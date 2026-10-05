@@ -56,8 +56,8 @@ apply — across EU AI Act, NIST, ISO, SOC 2, FedRAMP, DORA and more: <!-- stats
 frameworks in all. No single document maps AI risks to all of them.
 
 **This repo solves that.** Every OWASP GenAI vulnerability
-(<!-- stats:entries -->51<!-- /stats --> total) is mapped to specific controls in the
-<!-- stats:frameworks-mapped -->26<!-- /stats --> industry frameworks.
+(<!-- stats:entries -->51<!-- /stats --> total) is mapped to specific controls
+in <!-- stats:frameworks-mapped -->26<!-- /stats --> industry frameworks.
 Pick your risk, find your controls.
 
 ### 3 ways to use it (pick one)
