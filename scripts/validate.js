@@ -1112,6 +1112,22 @@ function checkEvidence() {
   return bad === 0;
 }
 
+/**
+ * Verification methods and links (issue #191).
+ *
+ * data/verification-methods.json and data/verification-links/<framework-id>.json
+ * are hand-edited source files. The rules live in scripts/verification.js so the
+ * tests can drive them with fixtures; this only reports what it finds.
+ */
+function checkVerificationData() {
+  const { checkVerification } = require('./verification');
+  const r = checkVerification(ROOT);
+  for (const e of r.errors) fail(e.file, e.msg);
+  for (const w of r.warnings) warn(w.file, w.msg);
+  if (!r.errors.length) pass('Verification', r.summary);
+  return r.errors.length === 0;
+}
+
 function run() {
   const args       = process.argv.slice(2);
   const quickMode  = args.includes('--quick');
@@ -1165,6 +1181,7 @@ function run() {
     checkControlIdShapes();
     checkIncidentIds();
     checkEvidence();
+    checkVerificationData();
   }
 
   // Encoding guard — mapping files plus the shared/root markdown they link to

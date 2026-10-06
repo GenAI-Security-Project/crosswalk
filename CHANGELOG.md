@@ -21,6 +21,17 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   scope changes (LLM01 cross-modal 2.2.3/2.2.4, LLM04 artifact provenance 3.1.1/3.1.3, LLM05 fine-tuning subversion
   6.1.2/3.5.1, LLM08 hidden context 10.2.4, LLM10 generated code 9.3.7). AISVS has no requirement for scanning
   generated code itself; the LLM10 section says so.
+- **Verification methods data model** (#191, follow-up to #101 / #186): how to check that a control is
+  implemented, held as data. `data/verification-methods.json` holds each method once (`VM-NNNN` ids,
+  `examine` / `interview` / `test`, procedure, expected result, provenance, review state).
+  `data/verification-links/<framework-id>.json` links methods to controls, at control level or on one risk–control
+  row, each link with its own review. Both have schemas (`verification-methods-schema.json`,
+  `verification-links-schema.json`), and `scripts/validate.js` enforces them plus the cross-file rules through
+  `scripts/verification.js` (tested in `scripts/verification.test.mjs`). A source's original wording is optional and
+  included only where its licence allows; otherwise the method cites the source by id and url. Licence
+  compatibility is judged in review, not by the validator. v1 is data, schemas and validator only: no generator,
+  export or webapp changes. Documented in `docs/VERIFICATION_METHODS.md`. No methods yet; the pilot follows in a
+  separate PR.
 
 ### Changed
 
