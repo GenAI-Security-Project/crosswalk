@@ -32,6 +32,11 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   compatibility is judged in review, not by the validator. v1 is data, schemas and validator only: no generator,
   export or webapp changes. Documented in `docs/VERIFICATION_METHODS.md`. No methods yet; the pilot follows in a
   separate PR.
+- **Verification methods pilot: NIST AI RMF 1.0** (#191). Ten draft methods in `data/verification-methods.json`,
+  linked in `data/verification-links/nist-ai-rmf.json`: six at control level and four on risk–control rows
+  (ASI01, ASI02, ASI03, ASI10), covering GV-1.6, GV-1.7, MP-2.3, MP-4.1, MP-5.1 and MS-2.6. Eight are adapted from
+  the NPW Agentic AI Control Catalogue v2.4.0 (CC BY-SA 4.0); two are project-authored. All are `draft`, pending
+  independent review.
 
 ### Changed
 
