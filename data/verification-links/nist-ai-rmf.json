@@ -1,0 +1,66 @@
+{
+  "version": "1.0",
+  "framework": "nist-ai-rmf",
+  "links": [
+    {
+      "method_id": "VM-0001",
+      "control_id": "GV-1.6",
+      "entry_id": null,
+      "reviewed_by": []
+    },
+    {
+      "method_id": "VM-0002",
+      "control_id": "GV-1.6",
+      "entry_id": "ASI03",
+      "reviewed_by": []
+    },
+    {
+      "method_id": "VM-0003",
+      "control_id": "GV-1.7",
+      "entry_id": null,
+      "reviewed_by": []
+    },
+    {
+      "method_id": "VM-0004",
+      "control_id": "GV-1.7",
+      "entry_id": "ASI02",
+      "reviewed_by": []
+    },
+    {
+      "method_id": "VM-0005",
+      "control_id": "GV-1.7",
+      "entry_id": "ASI10",
+      "reviewed_by": []
+    },
+    {
+      "method_id": "VM-0006",
+      "control_id": "MP-2.3",
+      "entry_id": null,
+      "reviewed_by": []
+    },
+    {
+      "method_id": "VM-0007",
+      "control_id": "MP-2.3",
+      "entry_id": "ASI01",
+      "reviewed_by": []
+    },
+    {
+      "method_id": "VM-0008",
+      "control_id": "MP-4.1",
+      "entry_id": null,
+      "reviewed_by": []
+    },
+    {
+      "method_id": "VM-0009",
+      "control_id": "MP-5.1",
+      "entry_id": null,
+      "reviewed_by": []
+    },
+    {
+      "method_id": "VM-0010",
+      "control_id": "MS-2.6",
+      "entry_id": null,
+      "reviewed_by": []
+    }
+  ]
+}

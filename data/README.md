@@ -14,6 +14,10 @@ dashboard integration, and downstream tooling without scraping Markdown.
 | `incidents-schema.json` | JSON Schema for incident entries |
 | `incidents.json` | 50 real-world + research AI security incidents with MAESTRO layer attribution |
 | `tools-supplement.json` | Supplemental tool entries merged into entries at generation time |
+| `verification-methods.json` | Verification methods: how to check a control is implemented (see `docs/VERIFICATION_METHODS.md`) |
+| `verification-methods-schema.json` | JSON Schema for verification methods |
+| `verification-links/` | Links from verification methods to controls, one file per framework registry id |
+| `verification-links-schema.json` | JSON Schema for a verification links file |
 | `entries/` | 41 machine-readable JSON files — one per OWASP entry (LLM01–LLM10, ASI01–ASI10, DSGAI01–DSGAI21) |
 
 ---

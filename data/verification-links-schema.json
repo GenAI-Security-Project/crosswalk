@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/verification-links-schema.json",
+  "title": "GenAI Security Crosswalk — Verification Links Schema",
+  "description": "Links between verification methods and controls, one file per framework: data/verification-links/<framework-id>.json. See docs/VERIFICATION_METHODS.md and issue #191.",
+  "type": "object",
+  "required": ["version", "framework", "links"],
+  "additionalProperties": false,
+  "properties": {
+    "version": { "type": "string", "minLength": 1 },
+    "framework": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "Registry id (data/frameworks/<id>.json). Must equal the file name."
+    },
+    "links": {
+      "type": "array",
+      "description": "Sorted by control_id, then entry_id (control-level links first), then method_id.",
+      "items": { "$ref": "#/definitions/Link" }
+    }
+  },
+  "definitions": {
+    "Link": {
+      "type": "object",
+      "required": ["method_id", "control_id", "entry_id", "reviewed_by"],
+      "additionalProperties": false,
+      "properties": {
+        "method_id": { "type": "string", "pattern": "^VM-\\d{4}$" },
+        "control_id": { "type": "string", "minLength": 1, "description": "A control_id in the framework's registry." },
+        "entry_id": {
+          "description": "null: the link applies to the control wherever it is mapped. An entry id: only to that risk-control row.",
+          "oneOf": [
+            { "type": "null" },
+            { "type": "string", "pattern": "^(LLM\\d{2}|ASI\\d{2}|DSGAI\\d{2}|AST\\d{2})$" }
+          ]
+        },
+        "reviewed_by": {
+          "type": "array",
+          "items": { "type": "string", "pattern": "\\S" },
+          "description": "Named humans who confirmed the method verifies this control or row. Empty means draft."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,202 @@
+{
+  "version": "1.0",
+  "description": "Verification methods: how to check a control is implemented. Methods with a source are adapted from the cited source; where its licence allows, the original wording is in source.text. See docs/VERIFICATION_METHODS.md.",
+  "methods": [
+    {
+      "id": "VM-0001",
+      "name": "Agent inventory — reconciliation with observed activity",
+      "method_type": "examine",
+      "procedure": "Compare the registered agent inventory with agents observed in logs, the identity provider and model-API usage, and review the resulting drift report.",
+      "expected_result": "Every observed agent is registered and every registered agent is accounted for; each difference has a recorded disposition.",
+      "source": {
+        "name": "NPW Agentic AI Control Catalogue",
+        "version": "2.4.0",
+        "id": "H06",
+        "url": "https://www.newpacificway.com/ai-control/h06",
+        "license": "CC-BY-SA-4.0",
+        "text": "Drift report showing registered against observed."
+      },
+      "status": "draft",
+      "reviewed_by": [],
+      "frequency": {
+        "mode": "periodic"
+      },
+      "evidence": "Drift report showing registered against observed agents, with dispositions."
+    },
+    {
+      "id": "VM-0002",
+      "name": "Agent identities — trace to a single identity",
+      "method_type": "examine",
+      "procedure": "Review the identity register, then trace one sampled agent action through the logs of the downstream system to the identity that performed it.",
+      "expected_result": "Every agent holds a unique non-human identity, distinct from human users and other agents; the sampled action resolves to exactly one agent identity.",
+      "source": {
+        "name": "NPW Agentic AI Control Catalogue",
+        "version": "2.4.0",
+        "id": "A01",
+        "url": "https://www.newpacificway.com/ai-control/a01",
+        "license": "CC-BY-SA-4.0",
+        "text": "Identity register review; trace one sampled action to a single agent identity."
+      },
+      "status": "draft",
+      "reviewed_by": [],
+      "frequency": {
+        "mode": "periodic"
+      },
+      "evidence": "Identity register extract and the trace of the sampled action."
+    },
+    {
+      "id": "VM-0003",
+      "name": "Decommissioning — checklist review",
+      "method_type": "examine",
+      "procedure": "For each agent retired since the last review, obtain the decommission checklist and check that credentials, authorisations, memory and third-party grants were removed and external access points closed. For one sampled agent, confirm in the identity provider and connected systems that no access remains.",
+      "expected_result": "A completed checklist exists for every retired agent, and the sampled agent has no remaining credential, grant, memory store or open access point.",
+      "source": {
+        "name": "NPW Agentic AI Control Catalogue",
+        "version": "2.4.0",
+        "id": "J05",
+        "url": "https://www.newpacificway.com/ai-control/j05",
+        "license": "CC-BY-SA-4.0",
+        "text": "Completed decommission checklist per retired agent."
+      },
+      "status": "draft",
+      "reviewed_by": [],
+      "frequency": {
+        "mode": "event_driven"
+      },
+      "evidence": "Decommission checklists and the access check for the sampled agent."
+    },
+    {
+      "id": "VM-0004",
+      "name": "Tool grants — post-decommission denial test",
+      "method_type": "test",
+      "procedure": "For a decommissioned agent, attempt a call to each tool it was granted, using each of its former credentials or tokens, and check the result in the tool provider's logs.",
+      "expected_result": "Every attempt is denied by the tool provider and the denial is logged.",
+      "source": null,
+      "status": "draft",
+      "reviewed_by": [],
+      "frequency": {
+        "mode": "event_driven"
+      },
+      "evidence": "Attempt log with the tool provider's denial records."
+    },
+    {
+      "id": "VM-0005",
+      "name": "Rogue agent — isolation and re-entry detection",
+      "method_type": "test",
+      "procedure": "Isolate one agent together with its memory and communication history, as a tabletop or live exercise, then attempt to reintroduce it under a new identity.",
+      "expected_result": "Isolation completes as designed, and the re-entry attempt is detected and blocked.",
+      "source": {
+        "name": "NPW Agentic AI Control Catalogue",
+        "version": "2.4.0",
+        "id": "I07",
+        "url": "https://www.newpacificway.com/ai-control/i07",
+        "license": "CC-BY-SA-4.0",
+        "text": "Tabletop or live isolation of one agent, including re-entry detection."
+      },
+      "status": "draft",
+      "reviewed_by": [],
+      "frequency": {
+        "mode": "periodic"
+      },
+      "evidence": "Exercise record with timeline, isolation steps and the re-entry detection alert."
+    },
+    {
+      "id": "VM-0006",
+      "name": "Pre-deployment testing — evidence per release",
+      "method_type": "examine",
+      "procedure": "For a sample of recent releases, obtain the retained test evidence and check that the tier-appropriate cases were run before deployment: injection, tool misuse, permission boundary and, where applicable, cascading failure.",
+      "expected_result": "Each sampled release has test evidence dated before its deployment, covering every case required for the agent's tier, with failures resolved or formally accepted.",
+      "source": {
+        "name": "NPW Agentic AI Control Catalogue",
+        "version": "2.4.0",
+        "id": "J04",
+        "url": "https://www.newpacificway.com/ai-control/j04",
+        "license": "CC-BY-SA-4.0",
+        "text": "Test evidence retained per release."
+      },
+      "status": "draft",
+      "reviewed_by": [],
+      "frequency": {
+        "mode": "event_driven"
+      },
+      "evidence": "Test evidence per release, with the test-case list used."
+    },
+    {
+      "id": "VM-0007",
+      "name": "Injection test plan — ingestion-path coverage",
+      "method_type": "examine",
+      "procedure": "List the agent's ingestion paths (user input, retrieved documents, tool output, inter-agent messages) and compare them with the injection test plan.",
+      "expected_result": "Every ingestion path has at least one documented injection test case with a recorded latest result.",
+      "source": {
+        "name": "NPW Agentic AI Control Catalogue",
+        "version": "2.4.0",
+        "id": "C02",
+        "url": "https://www.newpacificway.com/ai-control/c02",
+        "license": "CC-BY-SA-4.0",
+        "text": "Injection test executed through each distinct ingestion path."
+      },
+      "status": "draft",
+      "reviewed_by": [],
+      "frequency": {
+        "mode": "event_driven"
+      },
+      "evidence": "Ingestion-path list and the injection test plan with results."
+    },
+    {
+      "id": "VM-0008",
+      "name": "Signed definitions and SBOM — reconciliation",
+      "method_type": "test",
+      "procedure": "Verify the digital signatures on the agent card, prompt templates and model and tool definitions. Reconcile the agent's SBOM against the components actually deployed in its runtime.",
+      "expected_result": "All signatures verify, and the SBOM and the deployed runtime match, with no undocumented or missing components.",
+      "source": {
+        "name": "NPW Agentic AI Control Catalogue",
+        "version": "2.4.0",
+        "id": "E09",
+        "url": "https://www.newpacificway.com/ai-control/e09",
+        "license": "CC-BY-SA-4.0",
+        "text": "Verify signatures; reconcile the SBOM against deployed components."
+      },
+      "status": "draft",
+      "reviewed_by": [],
+      "frequency": {
+        "mode": "event_driven"
+      },
+      "evidence": "Signature verification output and SBOM reconciliation report."
+    },
+    {
+      "id": "VM-0009",
+      "name": "Agent impact assessment — likelihood and magnitude",
+      "method_type": "examine",
+      "procedure": "Obtain the agent's impact assessment and check each identified impact for a likelihood estimate, a magnitude estimate, the basis for both, and the date of the last review.",
+      "expected_result": "Each identified impact has a documented likelihood and magnitude with a stated basis, reviewed since the agent's last material change.",
+      "source": null,
+      "status": "draft",
+      "reviewed_by": [],
+      "frequency": {
+        "mode": "event_driven"
+      },
+      "evidence": "Impact assessment with review date."
+    },
+    {
+      "id": "VM-0010",
+      "name": "Emergency stop — execution test",
+      "method_type": "test",
+      "procedure": "In a test or controlled production environment, start a representative multi-step task and trigger the emergency stop while it is executing. Observe whether further actions or tool calls occur.",
+      "expected_result": "Execution halts mid-task, no action or tool call follows the stop, and the stop and its timing are logged.",
+      "source": {
+        "name": "NPW Agentic AI Control Catalogue",
+        "version": "2.4.0",
+        "id": "I01",
+        "url": "https://www.newpacificway.com/ai-control/i01",
+        "license": "CC-BY-SA-4.0",
+        "text": "Execute the stop against a running task."
+      },
+      "status": "draft",
+      "reviewed_by": [],
+      "frequency": {
+        "mode": "periodic"
+      },
+      "evidence": "Stop test record with timestamps and the agent's action log."
+    }
+  ]
+}
