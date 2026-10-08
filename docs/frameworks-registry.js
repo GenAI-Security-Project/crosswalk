@@ -6935,11 +6935,11 @@ window.CROSSWALK_FRAMEWORKS = [
     "name": "NIST AI RMF 1.0",
     "short_name": "AI RMF",
     "version": "1.0",
-    "url": "https://www.nist.gov/artificial-intelligence/executive-order-safe-secure-and-trustworthy-artificial-intelligence",
+    "url": "https://doi.org/10.6028/NIST.AI.100-1",
     "license": "Public Domain",
     "publisher": "NIST",
     "category": "ai-governance",
-    "last_synced": "2026-04-10",
+    "last_synced": "2026-10-08",
     "source_sha": null,
     "controls": [
       {
@@ -6961,7 +6961,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "GV-1.2",
         "title": "Trustworthy AI characteristics",
-        "description": "Trustworthy AI characteristics are integrated into organizational policies, procedures, and processes.",
+        "description": "The characteristics of trustworthy AI are integrated into organizational policies, processes, procedures, and practices.",
         "parent": "GV-1",
         "function": "GOVERN",
         "kind": "control"
@@ -6985,7 +6985,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "GV-1.5",
         "title": "Ongoing monitoring",
-        "description": "Ongoing monitoring and periodic review of the risk management process and its outcomes are planned, organizationally aligned, and documented.",
+        "description": "Ongoing monitoring and periodic review of the risk management process and its outcomes are planned and organizational roles and responsibilities clearly defined, including determining the frequency of periodic review.",
         "parent": "GV-1",
         "function": "GOVERN",
         "kind": "control"
@@ -6993,7 +6993,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "GV-1.6",
         "title": "Mechanisms for inventory",
-        "description": "Mechanisms are in place to inventory AI systems and are resourced per organizational risk priorities.",
+        "description": "Mechanisms are in place to inventory AI systems and are resourced according to organizational risk priorities.",
         "parent": "GV-1",
         "function": "GOVERN",
         "kind": "control"
@@ -7001,7 +7001,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "GV-1.7",
         "title": "Processes for termination",
-        "description": "Processes and procedures are in place for decommissioning and phasing out AI systems safely and in a manner that does not increase risks or harms.",
+        "description": "Processes and procedures are in place for decommissioning and phasing out AI systems safely and in a manner that does not increase risks or decrease the organization's trustworthiness.",
         "parent": "GV-1",
         "function": "GOVERN",
         "kind": "control"
@@ -7025,7 +7025,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "GV-2.2",
         "title": "Organizational commitment",
-        "description": "The organization's personnel and partners receive AI risk management training to enable them to perform their duties and responsibilities consistent with related policies, procedures, and agreements.",
+        "description": "The organization’s personnel and partners receive AI risk management training to enable them to perform their duties and responsibilities consistent with related policies, procedures, and agreements.",
         "parent": "GV-2",
         "function": "GOVERN",
         "kind": "control"
@@ -7049,7 +7049,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "GV-3.1",
         "title": "Decision-making diversity",
-        "description": "Decision-making related to mapping, measuring, and managing AI risks throughout the lifecycle is informed by a diverse team.",
+        "description": "Decision-making related to mapping, measuring, and managing AI risks throughout the lifecycle is informed by a diverse team (e.g., diversity of demographics, disciplines, experience, expertise, and backgrounds).",
         "parent": "GV-3",
         "function": "GOVERN",
         "kind": "control"
@@ -7072,8 +7072,8 @@ window.CROSSWALK_FRAMEWORKS = [
       },
       {
         "control_id": "GV-4.1",
-        "title": "Organizational practices and norms",
-        "description": "Organizational practices and norms that enable managing AI risk are integrated into risk management and align with established enterprise governance.",
+        "title": "Critical thinking and safety-first mindset",
+        "description": "Organizational policies and practices are in place to foster a critical thinking and safety-first mindset in the design, development, deployment, and uses of AI systems to minimize potential negative impacts.",
         "parent": "GV-4",
         "function": "GOVERN",
         "kind": "control"
@@ -7104,8 +7104,8 @@ window.CROSSWALK_FRAMEWORKS = [
       },
       {
         "control_id": "GV-5.1",
-        "title": "Engagement with external stakeholders",
-        "description": "Organizational policies and practices are in place to engage with and foster collaboration between relevant AI actors.",
+        "title": "External feedback collected and integrated",
+        "description": "Organizational policies and practices are in place to collect, consider, prioritize, and integrate feedback from those external to the team that developed or deployed the AI system regarding the potential individual and societal impacts related to AI risks.",
         "parent": "GV-5",
         "function": "GOVERN",
         "kind": "control"
@@ -7113,23 +7113,23 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "GV-5.2",
         "title": "Mechanisms for feedback",
-        "description": "Mechanisms are established to enable AI actors to regularly incorporate adjudicated feedback from relevant AI actors into the design and implementation of AI systems.",
+        "description": "Mechanisms are established to enable the team that developed or deployed AI systems to regularly incorporate adjudicated feedback from relevant AI actors into system design and implementation.",
         "parent": "GV-5",
         "function": "GOVERN",
         "kind": "control"
       },
       {
         "control_id": "GV-6",
-        "title": "Policies for third-party entities",
-        "description": "Policies and procedures are in place that address AI risks associated with third-party entities, including risks of infringement of a third party's intellectual property or other rights.",
+        "title": "Third-party software, data and supply chain",
+        "description": "Policies and procedures are in place to address AI risks and benefits arising from third-party software and data and other supply chain issues.",
         "parent": null,
         "function": "GOVERN",
         "kind": "control"
       },
       {
         "control_id": "GV-6.1",
-        "title": "Third-party risk management",
-        "description": "Policies and procedures are in place that address AI risks and benefits arising from third-party software and data and other supply chain issues.",
+        "title": "Third-party entity risks, including IP infringement",
+        "description": "Policies and procedures are in place that address AI risks associated with third-party entities, including risks of infringement of a third-party’s intellectual property or other rights.",
         "parent": "GV-6",
         "function": "GOVERN",
         "kind": "control"
@@ -7137,7 +7137,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "GV-6.2",
         "title": "Contingency processes",
-        "description": "Contingency processes are in place for third-party AI systems or AI-enabled services.",
+        "description": "Contingency processes are in place to handle failures or incidents in third-party data or AI systems deemed to be high-risk.",
         "parent": "GV-6",
         "function": "GOVERN",
         "kind": "control"
@@ -7153,7 +7153,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "MP-1.1",
         "title": "Intended purpose and setting",
-        "description": "Intended purpose, potentially beneficial uses, context of use, and the design, development, and deployment setting are understood.",
+        "description": "Intended purposes, potentially beneficial uses, context-specific laws, norms and expectations, and prospective settings in which the AI system will be deployed are understood and documented. Considerations include: the specific set or types of users along with their expectations; potential positive and negative impacts of system uses to individuals, communities, organizations, society, and the planet; assumptions and related limitations about AI system purposes, uses, and risks across the development or product AI lifecycle; and related TEVV and system metrics.",
         "parent": "MP-1",
         "function": "MAP",
         "kind": "control"
@@ -7161,23 +7161,23 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "MP-1.2",
         "title": "Interdisciplinary expertise",
-        "description": "Interdisciplinary AI actors, competencies, skills, and capacities for establishing context reflect the state of AI risks and are periodically reviewed.",
+        "description": "Interdisciplinary AI actors, competencies, skills, and capacities for establishing context reflect demographic diversity and broad domain and user experience expertise, and their participation is documented. Opportunities for interdisciplinary collaboration are prioritized.",
         "parent": "MP-1",
         "function": "MAP",
         "kind": "control"
       },
       {
         "control_id": "MP-1.3",
-        "title": "Broad set of perspectives",
-        "description": "The business value or context of business use has been clearly defined or—in the case of assessing existing AI systems—re-evaluated.",
+        "title": "Mission and goals documented",
+        "description": "The organization’s mission and relevant goals for AI technology are understood and documented.",
         "parent": "MP-1",
         "function": "MAP",
         "kind": "control"
       },
       {
         "control_id": "MP-1.4",
-        "title": "Assessment of positive and negative impacts",
-        "description": "The organization's or system's mission and relevant goals for AI technology are documented.",
+        "title": "Business value or context of use defined",
+        "description": "The business value or context of business use has been clearly defined or – in the case of assessing existing AI systems – re-evaluated.",
         "parent": "MP-1",
         "function": "MAP",
         "kind": "control"
@@ -7193,7 +7193,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "MP-1.6",
         "title": "System requirements",
-        "description": "System requirements (e.g., human-AI configuration, governance, legal compliance, privacy, safety, security, sustainability) are elicited from and understood by relevant AI actors.",
+        "description": "System requirements (e.g., “the system shall respect the privacy of its users”) are elicited from and understood by relevant AI actors. Design decisions take socio-technical implications into account to address AI risks.",
         "parent": "MP-1",
         "function": "MAP",
         "kind": "control"
@@ -7208,16 +7208,16 @@ window.CROSSWALK_FRAMEWORKS = [
       },
       {
         "control_id": "MP-2.1",
-        "title": "Intended use and known misuse",
-        "description": "The specific task, use case, or decision the AI system will be used for, and the expected benefit of the AI system is documented.",
+        "title": "Tasks and methods defined",
+        "description": "The specific tasks and methods used to implement the tasks that the AI system will support are defined (e.g., classifiers, generative models, recommenders).",
         "parent": "MP-2",
         "function": "MAP",
         "kind": "control"
       },
       {
         "control_id": "MP-2.2",
-        "title": "Technology-specific risk",
-        "description": "Information about the AI system's knowledge limits and how system output may be utilized and overseen by humans is documented; this includes considerations of how output could be misused.",
+        "title": "Knowledge limits and human oversight documented",
+        "description": "Information about the AI system’s knowledge limits and how system output may be utilized and overseen by humans is documented. Documentation provides sufficient information to assist relevant AI actors when making decisions and taking subsequent actions.",
         "parent": "MP-2",
         "function": "MAP",
         "kind": "control"
@@ -7225,7 +7225,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "MP-2.3",
         "title": "Scientific integrity",
-        "description": "Scientific integrity and TEVV considerations are identified and documented, including those related to experimental design, data collection and selection, and construct validity.",
+        "description": "Scientific integrity and TEVV considerations are identified and documented, including those related to experimental design, data collection and selection (e.g., availability, representativeness, suitability), system trustworthiness, and construct validation.",
         "parent": "MP-2",
         "function": "MAP",
         "kind": "control"
@@ -7233,15 +7233,15 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "MP-3",
         "title": "Identify benefits and costs",
-        "description": "AI system benefits and costs are identified and managed to achieve trustworthy AI.",
+        "description": "AI capabilities, targeted usage, goals, and expected benefits and costs compared with appropriate benchmarks are understood.",
         "parent": null,
         "function": "MAP",
         "kind": "control"
       },
       {
         "control_id": "MP-3.1",
-        "title": "Benefits and costs of AI",
-        "description": "Benefits of intended functionality are examined against the risks, and consideration of deployment is given against its benefits and compared to deployment of AI systems of lower risk.",
+        "title": "Potential benefits examined",
+        "description": "Potential benefits of intended AI system functionality and performance are examined and documented.",
         "parent": "MP-3",
         "function": "MAP",
         "kind": "control"
@@ -7249,15 +7249,39 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "MP-3.2",
         "title": "Potential costs",
-        "description": "Potential costs, including non-monetary costs, are examined and documented.",
+        "description": "Potential costs, including non-monetary costs, which result from expected or realized AI errors or system functionality and trustworthiness – as connected to organizational risk tolerance – are examined and documented.",
         "parent": "MP-3",
         "function": "MAP",
         "kind": "control"
       },
       {
+        "control_id": "MP-3.3",
+        "title": "Targeted application scope specified",
+        "description": "Targeted application scope is specified and documented based on the system’s capability, established context, and AI system categorization.",
+        "parent": "MP-3",
+        "function": "MAP",
+        "kind": "control"
+      },
+      {
+        "control_id": "MP-3.4",
+        "title": "Operator and practitioner proficiency",
+        "description": "Processes for operator and practitioner proficiency with AI system performance and trustworthiness – and relevant technical standards and certifications – are defined, assessed, and documented.",
+        "parent": "MP-3",
+        "function": "MAP",
+        "kind": "control"
+      },
+      {
+        "control_id": "MP-3.5",
+        "title": "Human oversight processes defined",
+        "description": "Processes for human oversight are defined, assessed, and documented in accordance with organizational policies from the GOVERN function.",
+        "kind": "control",
+        "parent": "MP-3",
+        "function": "MAP"
+      },
+      {
         "control_id": "MP-4",
-        "title": "Risk indicators",
-        "description": "Risks and benefits are mapped for all components of the AI system, including third-party software and data.",
+        "title": "Risks and benefits mapped for all components",
+        "description": "Risks and benefits are mapped for all components of the AI system including third-party software and data.",
         "parent": null,
         "function": "MAP",
         "kind": "control"
@@ -7265,7 +7289,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "MP-4.1",
         "title": "Risk mapping",
-        "description": "Approaches for mapping AI technology and legal risks of its components — including the use of third-party data or software — are in place, followed, and documented, as are risks of infringement of a third party's intellectual property or other rights.",
+        "description": "Approaches for mapping AI technology and legal risks of its components – including the use of third-party data or software – are in place, followed, and documented, as are risks of infringement of a third party’s intellectual property or other rights.",
         "parent": "MP-4",
         "function": "MAP",
         "kind": "control"
@@ -7281,15 +7305,15 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "MP-5",
         "title": "Impacts to individuals, groups, communities",
-        "description": "Likelihood and severity of each identified impact based on expected use, past uses, and system behavior is assessed and documented.",
+        "description": "Impacts to individuals, groups, communities, organizations, and society are characterized.",
         "parent": null,
         "function": "MAP",
         "kind": "control"
       },
       {
         "control_id": "MP-5.1",
-        "title": "Likelihood and severity",
-        "description": "Likelihood and severity of each identified impact based on expected use, past uses of AI systems in similar contexts, and AI system trustworthiness characteristics are assessed and documented.",
+        "title": "Likelihood and magnitude of impacts",
+        "description": "Likelihood and magnitude of each identified impact (both potentially beneficial and harmful) based on expected use, past uses of AI systems in similar contexts, public incident reports, feedback from those external to the team that developed or deployed the AI system, or other data are identified and documented.",
         "parent": "MP-5",
         "function": "MAP",
         "kind": "control"
@@ -7313,7 +7337,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "MS-1.1",
         "title": "Measurement approaches",
-        "description": "Approaches and metrics for measurement of AI risks enumerated during the MAP function are selected for implementation starting with the most significant AI risks.",
+        "description": "Approaches and metrics for measurement of AI risks enumerated during the MAP function are selected for implementation starting with the most significant AI risks. The risks or trustworthiness characteristics that will not – or cannot – be measured are properly documented.",
         "parent": "MS-1",
         "function": "MEASURE",
         "kind": "control"
@@ -7321,7 +7345,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "MS-1.2",
         "title": "Appropriateness of metrics",
-        "description": "Appropriateness of AI metrics and effectiveness of existing measures are regularly assessed and updated, including reports of errors and potential impacts on affected communities.",
+        "description": "Appropriateness of AI metrics and effectiveness of existing controls are regularly assessed and updated, including reports of errors and potential impacts on affected communities.",
         "parent": "MS-1",
         "function": "MEASURE",
         "kind": "control"
@@ -7329,7 +7353,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "MS-1.3",
         "title": "Internal and external expert feedback",
-        "description": "Internal experts who did not serve as combating designers, developers, or deployers of the AI system and/or independent assessors are involved in regular assessments and updates.",
+        "description": "Internal experts who did not serve as front-line developers for the system and/or independent assessors are involved in regular assessments and updates. Domain experts, users, AI actors external to the team that developed or deployed the AI system, and affected communities are consulted in support of assessments as necessary per organizational risk tolerance.",
         "parent": "MS-1",
         "function": "MEASURE",
         "kind": "control"
@@ -7345,15 +7369,15 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "MS-2.1",
         "title": "Test sets and metrics",
-        "description": "Test sets, metrics, and details about the tools used during test, evaluation, validation, and verification (TEVV) are documented.",
+        "description": "Test sets, metrics, and details about the tools used during TEVV are documented.",
         "parent": "MS-2",
         "function": "MEASURE",
         "kind": "control"
       },
       {
         "control_id": "MS-2.2",
-        "title": "Evaluations for bias, security, privacy",
-        "description": "Evaluations involving AI actors and affected communities for validity, trustworthiness, and fitness for purpose of the AI system, model, or data are documented.",
+        "title": "Evaluations involving human subjects",
+        "description": "Evaluations involving human subjects meet applicable requirements (including human subject protection) and are representative of the relevant population.",
         "parent": "MS-2",
         "function": "MEASURE",
         "kind": "control"
@@ -7361,31 +7385,31 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "MS-2.3",
         "title": "AI system performance",
-        "description": "AI system performance or assurance criteria are measured qualitatively or quantitatively and demonstrated for conditions similar to deployment setting(s).",
+        "description": "AI system performance or assurance criteria are measured qualitatively or quantitatively and demonstrated for conditions similar to deployment setting(s). Measures are documented.",
         "parent": "MS-2",
         "function": "MEASURE",
         "kind": "control"
       },
       {
         "control_id": "MS-2.4",
-        "title": "Values and comparisons",
-        "description": "The functionality and behavior of the AI system and its components — as identified in the MAP function — are monitored when in production.",
+        "title": "Functionality and behavior monitored in production",
+        "description": "The functionality and behavior of the AI system and its components – as identified in the MAP function – are monitored when in production.",
         "parent": "MS-2",
         "function": "MEASURE",
         "kind": "control"
       },
       {
         "control_id": "MS-2.5",
-        "title": "Adversarial testing",
-        "description": "AI system is evaluated regularly for safety risks — as identified in the MAP function. The AI system to be deployed is demonstrated to be valid and reliable. Limitations of the generalizability beyond the conditions under which the technology was developed are documented.",
+        "title": "Validity and reliability demonstrated",
+        "description": "The AI system to be deployed is demonstrated to be valid and reliable. Limitations of the generalizability beyond the conditions under which the technology was developed are documented.",
         "parent": "MS-2",
         "function": "MEASURE",
         "kind": "control"
       },
       {
         "control_id": "MS-2.6",
-        "title": "AI system evaluation frequency",
-        "description": "The AI system is evaluated regularly for safety risks — as identified in the MAP function. The AI system to be deployed is demonstrated to be valid and reliable.",
+        "title": "Safety risks evaluated regularly",
+        "description": "The AI system is evaluated regularly for safety risks – as identified in the MAP function. The AI system to be deployed is demonstrated to be safe, its residual negative risk does not exceed the risk tolerance, and it can fail safely, particularly if made to operate beyond its knowledge limits. Safety metrics reflect system reliability and robustness, real-time monitoring, and response times for AI system failures.",
         "parent": "MS-2",
         "function": "MEASURE",
         "kind": "control"
@@ -7393,23 +7417,23 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "MS-2.7",
         "title": "AI system security and resilience",
-        "description": "AI system security and resilience — as identified in the MAP function — are evaluated and documented.",
+        "description": "AI system security and resilience - as identified in the MAP function - are evaluated and documented.",
         "parent": "MS-2",
         "function": "MEASURE",
         "kind": "control"
       },
       {
         "control_id": "MS-2.8",
-        "title": "Bias and fairness",
-        "description": "Risks associated with transparency and accountability — as identified in the MAP function — are examined and documented.",
+        "title": "Transparency and accountability examined",
+        "description": "Risks associated with transparency and accountability – as identified in the MAP function – are examined and documented.",
         "parent": "MS-2",
         "function": "MEASURE",
         "kind": "control"
       },
       {
         "control_id": "MS-2.9",
-        "title": "Environmental impact",
-        "description": "The AI model is explained, validated, and documented, and AI system output is interpreted within its context — as identified in the MAP function.",
+        "title": "Model explained and validated",
+        "description": "The AI model is explained, validated, and documented, and AI system output is interpreted within its context – as identified in the MAP function – to inform responsible use and governance.",
         "parent": "MS-2",
         "function": "MEASURE",
         "kind": "control"
@@ -7417,15 +7441,31 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "MS-2.10",
         "title": "Privacy risk",
-        "description": "Privacy risk of the AI system — as identified in the MAP function — is examined and documented.",
+        "description": "Privacy risk of the AI system – as identified in the MAP function – is examined and documented.",
         "parent": "MS-2",
         "function": "MEASURE",
         "kind": "control"
       },
       {
         "control_id": "MS-2.11",
-        "title": "Fairness assessment",
-        "description": "Fairness and bias — Loss, validity, reliability, and robustness — as identified in the MAP function — are evaluated, and results are documented.",
+        "title": "Fairness and bias evaluated",
+        "description": "Fairness and bias – as identified in the MAP function – are evaluated and results are documented.",
+        "parent": "MS-2",
+        "function": "MEASURE",
+        "kind": "control"
+      },
+      {
+        "control_id": "MS-2.12",
+        "title": "Environmental impact and sustainability",
+        "description": "Environmental impact and sustainability of AI model training and management activities – as identified in the MAP function – are assessed and documented.",
+        "parent": "MS-2",
+        "function": "MEASURE",
+        "kind": "control"
+      },
+      {
+        "control_id": "MS-2.13",
+        "title": "Effectiveness of TEVV metrics and processes",
+        "description": "Effectiveness of the employed TEVV metrics and processes in the MEASURE function are evaluated and documented.",
         "parent": "MS-2",
         "function": "MEASURE",
         "kind": "control"
@@ -7449,7 +7489,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "MS-3.2",
         "title": "Tracking risk over time",
-        "description": "Risk tracking approaches are considered for settings where AI risks are difficult to assess using currently available measurement techniques or metrics.",
+        "description": "Risk tracking approaches are considered for settings where AI risks are difficult to assess using currently available measurement techniques or where metrics are not yet available.",
         "parent": "MS-3",
         "function": "MEASURE",
         "kind": "control"
@@ -7464,24 +7504,32 @@ window.CROSSWALK_FRAMEWORKS = [
       },
       {
         "control_id": "MS-4",
-        "title": "Measurement results",
-        "description": "Measurement results regarding AI system trustworthiness in deployment context(s) and across the AI lifecycle are informed by input from domain experts and relevant AI actors to validate whether the system is performing consistently as intended.",
+        "title": "Feedback on measurement efficacy",
+        "description": "Feedback about efficacy of measurement is gathered and assessed.",
         "parent": null,
         "function": "MEASURE",
         "kind": "control"
       },
       {
         "control_id": "MS-4.1",
-        "title": "Measurement results communication",
-        "description": "Measurement results regarding AI system trustworthiness in deployment context(s) and across the AI lifecycle are informed by input from domain experts and relevant AI actors to validate whether the system is performing consistently as intended.",
+        "title": "Measurement approaches connected to deployment context",
+        "description": "Measurement approaches for identifying AI risks are connected to deployment context(s) and informed through consultation with domain experts and other end users. Approaches are documented.",
         "parent": "MS-4",
         "function": "MEASURE",
         "kind": "control"
       },
       {
         "control_id": "MS-4.2",
-        "title": "Measurement results documentation",
-        "description": "Measurement results are documented and used to make decisions and inform actions related to AI system development and deployment.",
+        "title": "Measurement results validated by domain experts",
+        "description": "Measurement results regarding AI system trustworthiness in deployment context(s) and across the AI lifecycle are informed by input from domain experts and relevant AI actors to validate whether the system is performing consistently as intended. Results are documented.",
+        "parent": "MS-4",
+        "function": "MEASURE",
+        "kind": "control"
+      },
+      {
+        "control_id": "MS-4.3",
+        "title": "Performance improvements or declines identified",
+        "description": "Measurable performance improvements or declines based on consultations with relevant AI actors, including affected communities, and field data about context-relevant risks and trustworthiness characteristics are identified and documented.",
         "parent": "MS-4",
         "function": "MEASURE",
         "kind": "control"
@@ -7496,8 +7544,8 @@ window.CROSSWALK_FRAMEWORKS = [
       },
       {
         "control_id": "MG-1.1",
-        "title": "Risk treatment prioritization",
-        "description": "A determination is made as to whether the AI system achieves its intended purpose and stated objectives and whether its development or deployment should proceed.",
+        "title": "Determination to proceed with development or deployment",
+        "description": "A determination is made as to whether the AI system achieves its intended purposes and stated objectives and whether its development or deployment should proceed.",
         "parent": "MG-1",
         "function": "MANAGE",
         "kind": "control"
@@ -7520,7 +7568,7 @@ window.CROSSWALK_FRAMEWORKS = [
       },
       {
         "control_id": "MG-1.4",
-        "title": "Risk treatment resources",
+        "title": "Negative residual risks documented",
         "description": "Negative residual risks (defined as the sum of all unmitigated risks) to both downstream acquirers of AI systems and end users are documented.",
         "parent": "MG-1",
         "function": "MANAGE",
@@ -7536,15 +7584,15 @@ window.CROSSWALK_FRAMEWORKS = [
       },
       {
         "control_id": "MG-2.1",
-        "title": "Risk response — planned",
-        "description": "Resources required to manage AI risks are taken into account — along with viable non-AI alternative systems, approaches, or methods — to reduce the magnitude or likelihood of potential impacts.",
+        "title": "Resources and non-AI alternatives considered",
+        "description": "Resources required to manage AI risks are taken into account – along with viable non-AI alternative systems, approaches, or methods – to reduce the magnitude or likelihood of potential impacts.",
         "parent": "MG-2",
         "function": "MANAGE",
         "kind": "control"
       },
       {
         "control_id": "MG-2.2",
-        "title": "Risk response — incident",
+        "title": "Value of deployed systems sustained",
         "description": "Mechanisms are in place and applied to sustain the value of deployed AI systems.",
         "parent": "MG-2",
         "function": "MANAGE",
@@ -7560,7 +7608,7 @@ window.CROSSWALK_FRAMEWORKS = [
       },
       {
         "control_id": "MG-2.4",
-        "title": "Risk response — change management",
+        "title": "Supersede, disengage, or deactivate",
         "description": "Mechanisms are in place and applied, and responsibilities are assigned and understood, to supersede, disengage, or deactivate AI systems that demonstrate performance or outcomes inconsistent with intended use.",
         "parent": "MG-2",
         "function": "MANAGE",
@@ -7568,23 +7616,23 @@ window.CROSSWALK_FRAMEWORKS = [
       },
       {
         "control_id": "MG-3",
-        "title": "Communication and documentation",
-        "description": "AI risks and benefits from third-party resources are managed.",
+        "title": "Third-party risks and benefits managed",
+        "description": "AI risks and benefits from third-party entities are managed.",
         "parent": null,
         "function": "MANAGE",
         "kind": "control"
       },
       {
         "control_id": "MG-3.1",
-        "title": "Pre-deployment assessment",
-        "description": "AI risks and benefits from third-party entities are managed, and processes and procedures for third-party risk management are in place.",
+        "title": "Third-party resources monitored and controls applied",
+        "description": "AI risks and benefits from third-party resources are regularly monitored, and risk controls are applied and documented.",
         "parent": "MG-3",
         "function": "MANAGE",
         "kind": "control"
       },
       {
         "control_id": "MG-3.2",
-        "title": "Communication of incidents",
+        "title": "Pre-trained model monitoring",
         "description": "Pre-trained models which are used for development are monitored as part of AI system regular monitoring and maintenance.",
         "parent": "MG-3",
         "function": "MANAGE",
@@ -7615,9 +7663,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "kind": "control"
       },
       {
-        "control_id": "MP-3.5",
-        "title": "AI system impact",
-        "description": "Impact assessment of shadow AI on organisational data security posture — ungoverned data flows quantified; Impact assessment of endpoint AI agents — data access scope, exfiltration paths, user risk",
+        "control_id": "MG-4.3",
+        "title": "Incidents and errors communicated",
+        "description": "Incidents and errors are communicated to relevant AI actors, including affected communities. Processes for tracking, responding to, and recovering from incidents and errors are followed and documented.",
+        "parent": "MG-4",
+        "function": "MANAGE",
         "kind": "control"
       }
     ],
@@ -7626,15 +7676,21 @@ window.CROSSWALK_FRAMEWORKS = [
         "date": "2026-04-09",
         "change": "Initial seed — all GOVERN, MAP, MEASURE, MANAGE subcategories",
         "author": "OWASP GenAI Data Security Initiative"
+      },
+      {
+        "date": "2026-10-08",
+        "change": "Re-transcribed every category and subcategory from NIST AI 100-1 Tables 1-4: 50 descriptions corrected, 6 missing subcategories added (MP-3.3, MP-3.4, MS-2.12, MS-2.13, MS-4.3, MG-4.3), 30 titles corrected, and MP-3.5's missing parent/function restored. No mapping rows changed.",
+        "author": "OWASP GenAI Data Security Initiative"
       }
     ],
     "inventory_completeness": {
-      "status": "unknown",
-      "included": 85,
-      "total": null,
-      "note": "Authoritative control count not established. Needs a count from the published framework.",
-      "source": "https://www.nist.gov/artificial-intelligence/executive-order-safe-secure-and-trustworthy-artificial-intelligence"
-    }
+      "status": "complete",
+      "included": 91,
+      "total": 91,
+      "note": "The AI RMF Core defines 19 categories and 72 subcategories across GOVERN, MAP, MEASURE and MANAGE; all 91 are present. Previously the registry held only the 85 entries existing mappings cited.",
+      "source": "https://doi.org/10.6028/NIST.AI.100-1"
+    },
+    "$comment": "Subcategory and category text from NIST AI 100-1 (AI RMF 1.0, January 2023), Tables 1-4. description is the published statement verbatim; title is a short editorial label for display and is not part of the published framework. The 19 categories and 72 subcategories of the AI RMF Core are all present. No mappings are asserted here."
   },
   {
     "id": "nist-csf",
