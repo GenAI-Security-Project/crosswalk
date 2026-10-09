@@ -29,7 +29,8 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   `verification-links-schema.json`), and `scripts/validate.js` enforces them plus the cross-file rules through
   `scripts/verification.js` (tested in `scripts/verification.test.mjs`). A source's original wording is optional and
   included only where its licence allows; otherwise the method cites the source by id and url. Licence
-  compatibility is judged in review, not by the validator. v1 is data, schemas and validator only: no generator,
+  compatibility is judged in review; the validator rejects only `text` under a licence naming itself proprietary
+  or "all rights reserved". v1 is data, schemas and validator only: no generator,
   export or webapp changes. Documented in `docs/VERIFICATION_METHODS.md`. No methods yet; the pilot follows in a
   separate PR.
 

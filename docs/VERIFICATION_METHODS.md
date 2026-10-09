@@ -53,7 +53,9 @@ Write `license` as an SPDX identifier where one exists (`CC-BY-SA-4.0`).
 - **Otherwise cite by `id` and `url` only**, for example for proprietary
   standards.
 
-The validator does not judge licences; contributors and reviewers do, in the PR.
+Contributors and reviewers judge licence compatibility in the PR. The validator
+catches only the plain case: a `license` containing "proprietary" or "all rights
+reserved" (any case) together with `text` is an error.
 
 ### Status and changes
 

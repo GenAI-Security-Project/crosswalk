@@ -65,6 +65,7 @@ function loadRules(root) {
     statuses: method.properties.status.enum,
     frequencyModes: ms.definitions.Frequency.properties.mode.enum,
     url: new RegExp(source.properties.url.pattern),
+    noReproduce: new RegExp(source.if.properties.license.pattern),
     date: new RegExp(method.properties.review_date.pattern),
     frameworkId: new RegExp(ls.properties.framework.pattern),
     entryId: new RegExp(link.properties.entry_id.oneOf[1].pattern),
@@ -77,6 +78,22 @@ function shape(obj, { required, keys }, label) {
   for (const k of required) if (!(k in obj)) out.push(`${label}: missing required field "${k}"`);
   for (const k of Object.keys(obj)) if (!keys.includes(k)) out.push(`${label}: unknown field "${k}"`);
   return out;
+}
+
+/** The top-level scalars both files share: version required, description optional. */
+function topLevel(doc) {
+  const out = [];
+  if ('version' in doc && !isNonEmptyString(doc.version)) out.push('file: version must be a non-empty string');
+  if ('description' in doc && typeof doc.description !== 'string') out.push('file: description must be a string');
+  return out;
+}
+
+/** YYYY-MM-DD that names a real calendar day, so 2026-13-45 fails. */
+function isCalendarDate(s, re) {
+  if (!(typeof s === 'string' && re.test(s))) return false;
+  const [y, m, d] = s.split('-').map(Number);
+  const t = new Date(Date.UTC(y, m - 1, d));
+  return t.getUTCFullYear() === y && t.getUTCMonth() === m - 1 && t.getUTCDate() === d;
 }
 
 // ─── Methods ──────────────────────────────────────────────────────────────────
@@ -111,8 +128,8 @@ function checkMethod(m, i, R) {
   if (m.status === 'deprecated' && !('status_note' in m)) {
     out.push(`${label}: status "deprecated" requires status_note (the reason, and the replacement id if any)`);
   }
-  if ('review_date' in m && !(typeof m.review_date === 'string' && R.date.test(m.review_date))) {
-    out.push(`${label}: review_date "${m.review_date}" is not YYYY-MM-DD`);
+  if ('review_date' in m && !isCalendarDate(m.review_date, R.date)) {
+    out.push(`${label}: review_date "${m.review_date}" is not a YYYY-MM-DD calendar date`);
   }
   if ('frequency' in m) {
     if (!isObject(m.frequency)) out.push(`${label}: frequency must be an object`);
@@ -132,6 +149,9 @@ function checkMethod(m, i, R) {
         if (k in s && !isNonEmptyString(s[k])) out.push(`${label}: source.${k} must be a non-empty string`);
       }
       if (isNonEmptyString(s.url) && !R.url.test(s.url)) out.push(`${label}: source.url must start with http:// or https://`);
+      if (typeof s.license === 'string' && R.noReproduce.test(s.license) && 'text' in s) {
+        out.push(`${label}: source.license "${s.license}" does not allow reproduction; cite by id and url and drop source.text`);
+      }
     }
   }
   return out;
@@ -146,7 +166,7 @@ function checkMethods(root, R, findings) {
   const { doc, error } = readJson(file);
   if (error) { findings.errors.push({ file: where, msg: `not valid JSON: ${error}` }); return methods; }
   if (!isObject(doc)) { findings.errors.push({ file: where, msg: 'top level must be an object' }); return methods; }
-  for (const msg of shape(doc, R.methodsTop, 'file')) findings.errors.push({ file: where, msg });
+  for (const msg of [...shape(doc, R.methodsTop, 'file'), ...topLevel(doc)]) findings.errors.push({ file: where, msg });
   if (!Array.isArray(doc.methods)) {
     if ('methods' in doc) findings.errors.push({ file: where, msg: 'methods must be an array' });
     return methods;
@@ -212,7 +232,7 @@ function checkLinksFile(root, file, R, methods, ctx, findings) {
   const { doc, error } = readJson(file);
   if (error) return err(`not valid JSON: ${error}`);
   if (!isObject(doc)) return err('top level must be an object');
-  for (const msg of shape(doc, R.linksTop, 'file')) err(msg);
+  for (const msg of [...shape(doc, R.linksTop, 'file'), ...topLevel(doc)]) err(msg);
 
   if (doc.framework !== stem) err(`framework "${doc.framework}" does not match the file name "${stem}"`);
   else if (!R.frameworkId.test(stem)) err(`framework id "${stem}" is not a registry id`);

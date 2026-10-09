@@ -146,6 +146,9 @@ const methodCases = [
   ['a blank reviewer name', method({ reviewed_by: ['  '] }), /list of names/],
   ['deprecated with no note', method({ status: 'deprecated' }), /requires status_note/],
   ['a malformed review_date', method({ review_date: '06/10/2026' }), /YYYY-MM-DD/],
+  ['a review_date that is not a calendar day', method({ review_date: '2026-13-45' }), /calendar date/],
+  ['proprietary source text', method({ source: source({ license: 'Proprietary (AIUC)' }) }), /does not allow reproduction/],
+  ['all-rights-reserved source text', method({ source: source({ license: 'All rights reserved' }) }), /does not allow reproduction/],
   ['an unknown frequency mode', method({ frequency: { mode: 'weekly' } }), /frequency.mode "weekly"/],
   ['an undeclared frequency field', method({ frequency: { mode: 'periodic', interval: 'P3M' } }), /unknown field "interval"/],
   ['a source missing its url', method({ source: { ...source(), url: undefined } }), /missing required field "url"/],
@@ -161,6 +164,31 @@ for (const [what, m, re] of methodCases) {
   });
 }
 
+const topLevelCases = [
+  ['methods', 'a numeric version', { version: 1, methods: [] }, /version must be a non-empty string/],
+  ['methods', 'an empty version', { version: '', methods: [] }, /version must be a non-empty string/],
+  ['methods', 'a non-string description', { version: '1.0', description: 5, methods: [] }, /description must be a string/],
+  ['links', 'a numeric version', { version: 1, framework: 'fw', links: [] }, /version must be a non-empty string/],
+  ['links', 'an empty version', { version: '', framework: 'fw', links: [] }, /version must be a non-empty string/],
+];
+
+for (const [kind, what, doc, re] of topLevelCases) {
+  test(`a ${kind} file with ${what} fails — validator and schema agree`, () => {
+    const r = kind === 'methods'
+      ? checkVerification(withMethodsDoc(doc))
+      : run({ linkFiles: { 'fw.json': doc } });
+    assert.ok(errorsMatch(r, re), `expected ${re}, got ${JSON.stringify(r.errors)}`);
+    assert.equal((kind === 'methods' ? validMethodsDoc : validLinksDoc)(doc), false, 'schema should reject it too');
+  });
+}
+
+/** A throwaway repository whose methods file is `doc` verbatim. */
+function withMethodsDoc(doc) {
+  const root = repo();
+  fs.writeFileSync(path.join(root, 'data/verification-methods.json'), JSON.stringify(doc));
+  return root;
+}
+
 test('method ids are unique', () => {
   const r = run({ methods: [method(), method({ name: 'Another' })] });
   assert.ok(errorsMatch(r, /VM-0001 is used more than once/));
@@ -169,7 +197,8 @@ test('method ids are unique', () => {
 // ─── Methods: source ──────────────────────────────────────────────────────────
 
 test('source text is optional and not tied to a licence list', () => {
-  // Whether a licence allows reproducing text is checked in review, not here.
+  // Whether a licence allows reproducing text is checked in review, not here —
+  // except a licence that plainly forbids it (see the proprietary cases above).
   for (const m of [
     method({ source: source({ license: 'CC-BY-SA-4.0' }) }),
     method({ source: source({ license: 'Proprietary', text: undefined }) }),

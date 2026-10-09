@@ -81,6 +81,19 @@
           "minLength": 1,
           "description": "The source's original wording, unchanged. Include only if the licence allows reproduction in this CC BY-SA 4.0 repository."
         }
+      },
+      "if": {
+        "required": ["license"],
+        "properties": {
+          "license": {
+            "pattern": "[Pp][Rr][Oo][Pp][Rr][Ii][Ee][Tt][Aa][Rr][Yy]|[Aa][Ll][Ll] [Rr][Ii][Gg][Hh][Tt][Ss] [Rr][Ee][Ss][Ee][Rr][Vv][Ee][Dd]",
+            "description": "A licence that plainly forbids reproduction (case-insensitive 'proprietary' or 'all rights reserved')."
+          }
+        }
+      },
+      "then": {
+        "not": { "required": ["text"] },
+        "description": "A proprietary source is cited by id and url only; its wording is not copied into the repository."
       }
     },
     "Frequency": {
