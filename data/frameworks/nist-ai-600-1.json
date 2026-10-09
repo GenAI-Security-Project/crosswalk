@@ -9,7 +9,7 @@
   "category": "ai-governance",
   "last_synced": "2026-10-03",
   "source_sha": null,
-  "$comment": "Suggested actions from NIST AI 600-1 (July 2024). control_id is the document's own Action ID; description is the Suggested Action text verbatim; title is derived mechanically from it (the first sentence when that is 120 characters or fewer, else the leading clause, else a word-boundary cut), so no title is authored. parent is the AI RMF subcategory the action is filed under: 45 of the 49 subcategories resolve against data/frameworks/nist-ai-rmf.json, and MG-4.3, MP-3.4, MS-2.12, MS-2.13 do not, because that registry holds only the subcategories existing mappings cite. The 49 subcategories are deliberately not duplicated here, so this registry's denominator counts suggested actions only. gai_risks is the document's own GAI Risks column, normalised to the twelve risks enumerated in section 2: the action tables also spell four of them as 'Harmful Bias and Homogenization', 'Environmental', 'CBRN Information and Capability' and 'Human AI Configuration'. GV-1.4-002 additionally carries the tag 'Civil Rights violations', which is not one of the twelve and is therefore not recorded in gai_risks.",
+  "$comment": "Suggested actions from NIST AI 600-1 (July 2024). control_id is the document's own Action ID; description is the Suggested Action text verbatim; title is derived mechanically from it (the first sentence when that is 120 characters or fewer, else the leading clause, else a word-boundary cut), so no title is authored. parent is the AI RMF subcategory the action is filed under: all 49 subcategories resolve against data/frameworks/nist-ai-rmf.json (MG-4.3, MP-3.4, MS-2.12 and MS-2.13 were added there in #219). The 49 subcategories are deliberately not duplicated here, so this registry's denominator counts suggested actions only. gai_risks is the document's own GAI Risks column, normalised to the twelve risks enumerated in section 2: the action tables also spell four of them as 'Harmful Bias and Homogenization', 'Environmental', 'CBRN Information and Capability' and 'Human AI Configuration'. GV-1.4-002 additionally carries the tag 'Civil Rights violations', which is not one of the twelve and is therefore not recorded in gai_risks.",
   "controls": [
     {
       "control_id": "GV-1.1-001",
@@ -2555,6 +2555,11 @@
     {
       "date": "2026-10-03",
       "change": "Initial transcription — all 211 suggested actions across 49 AI RMF subcategories, with their GAI Risks tags, read from the published PDF (https://doi.org/10.6028/NIST.AI.600-1). No mappings asserted.",
+      "author": "OWASP GenAI Data Security Initiative"
+    },
+    {
+      "date": "2026-10-09",
+      "change": "Note updated: all 49 parent subcategories now resolve against nist-ai-rmf.json after #219. No suggested action changed.",
       "author": "OWASP GenAI Data Security Initiative"
     }
   ],
