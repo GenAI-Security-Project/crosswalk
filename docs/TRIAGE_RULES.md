@@ -2,7 +2,7 @@
   OWASP GenAI Crosswalk
   File    : docs/TRIAGE_RULES.md
   Purpose : Where an incoming item goes — incident, benchmark catalogue, or noted and closed
-  Version : 1.0.0 — 2026-09-18
+  Version : 1.1.0 — 2026-10-09
   License : CC BY-SA 4.0
 -->
 
@@ -50,6 +50,11 @@ What a catalogue row is not: it is not a profile this repository runs, not a thr
 this repository sets, and not a reproduction of anyone's results. Benchmarks are
 published with their own harness and licence, and a pass mark for someone else's
 benchmark is theirs to set.
+
+A defense paper that also introduces a **named** benchmark gets a row for the benchmark;
+the defense itself is noted. The row names the authors' own defense evaluated on it.
+A defense paper with no named benchmark is noted and closed. (Maintainer ruling,
+2026-10-09, on #194 and #198.)
 
 ## CVEs
 
