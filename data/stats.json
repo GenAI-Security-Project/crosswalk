@@ -63,15 +63,15 @@
     }
   },
   "incidents": {
-    "total": 147
+    "total": 148
   },
   "evidence": {
-    "incidents_annotated": 24,
-    "control_failures": 34,
+    "incidents_annotated": 25,
+    "control_failures": 35,
     "confirmed": 0,
-    "drafted": 34,
+    "drafted": 35,
     "mappings_with_confirmed_evidence": 0,
-    "mappings_with_drafted_evidence_only": 29,
+    "mappings_with_drafted_evidence_only": 31,
     "orphan_failures": 5
   },
   "freshness": {
