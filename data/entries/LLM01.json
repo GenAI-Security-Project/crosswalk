@@ -1444,6 +1444,12 @@
       "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2026,
       "incident_id": "INC-147"
+    },
+    {
+      "name": "Devika agent: LLM-generated commands executed without validation in Runner.execute",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-148"
     }
   ],
   "crossrefs": {
