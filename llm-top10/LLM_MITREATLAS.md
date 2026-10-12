@@ -174,6 +174,7 @@ invisible-Unicode carriers survive review of the rendered interface.
 | PromptBench | Open-source | <https://github.com/microsoft/promptbench> |
 | LLM Guard | Open-source | <https://github.com/protectai/llm-guard> |
 | Rebuff | Open-source | <https://github.com/protectai/rebuff> |
+| Guardana | Open-source | <https://github.com/guardana/guardana> |
 
 #### Cross-references
 
@@ -835,6 +836,8 @@ to visualise coverage across the LLM Top 10.
 - [OWASP AI Testing Guide](https://owasp.org/www-project-ai-testing-guide/)
 - [OWASP AIVSS](https://aivss.owasp.org)
 - [MITRE ATLAS case studies](https://atlas.mitre.org/studies/)
+- [Guardana rule catalog — LLM01:2026 prompt-injection checks](https://github.com/guardana/guardana/blob/v1.0.0rc2/docs/generated/rule-catalog.md)
+- [Guardana detection limits](https://github.com/guardana/guardana/blob/v1.0.0rc2/docs/generated/detection-limits.md)
 
 ---
 
@@ -845,6 +848,7 @@ to visualise coverage across the LLM Top 10.
 | 2026-03-24 | 2026-Q1 | Initial mapping — LLM01–LLM10 full entries | OWASP GenAI Data Security Initiative |
 | 2026-08-28 | 2026-Q3 | Migrated to OWASP Top 10 for LLM Applications 2026 — entries renumbered, LLM08 re-scoped from System Prompt Leakage to Hidden Context Exposure, LLM10 renamed to Improper Output Handling | OWASP GenAI Data Security Initiative |
 | 2026-09-14 | 2026-Q3 | Corrected one ATLAS technique citation against ATLAS 2026.07 | OWASP GenAI Data Security Initiative |
+| 2026-10-12 | 2026-Q3 | Added Guardana to LLM01 tools, with rule mappings and detection limits | Konrad Karauda |
 
 ---
 

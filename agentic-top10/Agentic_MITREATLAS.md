@@ -145,6 +145,7 @@ agents before any human can intervene.
 | Garak | Open-source | <https://github.com/leondz/garak> |
 | Rebuff | Open-source | <https://github.com/protectai/rebuff> |
 | Invariant Analyzer | Open-source | <https://github.com/invariantlabs-ai/invariant> |
+| Guardana | Open-source | <https://github.com/guardana/guardana> |
 
 #### Cross-references
 
@@ -787,6 +788,8 @@ to visualise agentic attack coverage across your threat model.
 - [OWASP AIVSS](https://aivss.owasp.org)
 - [OWASP AI Testing Guide](https://owasp.org/www-project-ai-testing-guide/)
 - [MITRE ATLAS case studies](https://atlas.mitre.org/studies/)
+- [Guardana rule catalog — ASI01:2026 indirect-injection and tool-result checks](https://github.com/guardana/guardana/blob/v1.0.0rc2/docs/generated/rule-catalog.md)
+- [Guardana detection limits](https://github.com/guardana/guardana/blob/v1.0.0rc2/docs/generated/detection-limits.md)
 
 ---
 
@@ -796,6 +799,7 @@ to visualise agentic attack coverage across your threat model.
 |---|---|---|---|
 | 2026-03-24 | 2026-Q1 | Initial mapping — ASI01–ASI10 full entries | OWASP GenAI Data Security Initiative |
 | 2026-09-14 | 2026-Q3 | Corrected three ATLAS technique citations against ATLAS 2026.07 | OWASP GenAI Data Security Initiative |
+| 2026-10-12 | 2026-Q3 | Added Guardana to ASI01 tools, with rule mappings and detection limits | Konrad Karauda |
 
 ---
 
