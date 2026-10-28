@@ -1086,6 +1086,16 @@
       "name": "LAAF v2.0",
       "url": "https://github.com/qorvexconsulting1/laaf-V2.0",
       "type": "open-source"
+    },
+    {
+      "name": "OWASP Agent Memory Guard",
+      "url": "https://github.com/OWASP/www-project-agent-memory-guard",
+      "type": "open-source"
+    },
+    {
+      "name": "AgentThreatBench (Inspect Evals)",
+      "url": "https://github.com/UKGovernmentBEIS/inspect_evals/tree/main/src/inspect_evals/agent_threat_bench",
+      "type": "open-source"
     }
   ],
   "incidents": [
