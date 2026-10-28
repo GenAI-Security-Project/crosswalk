@@ -3,7 +3,8 @@
  * OWASP GenAI Crosswalk — External Source Watcher
  * ──────────────────────────────────────────────────────────────────────────
  * Monitors OWASP repos, arXiv, NVD, and framework pages for changes.
- * Opens GitHub Issues for each new finding.
+ * Opens one digest issue per run for arXiv and for NVD, and one issue per
+ * OWASP repo or framework-page change.
  *
  * Usage:
  *   node scripts/watch.js                     # run all watchers
@@ -287,6 +288,20 @@ function mapArxivToOwasp(text) {
   return [...new Set(mappings)];
 }
 
+// Which docs/TRIAGE_RULES.md route a paper probably takes. Like the OWASP
+// hints, this only orders the digest — the triager still decides. Abstracts
+// mention "benchmarks" when they merely evaluate on one, so the abstract only
+// counts when the paper says it introduces or releases the benchmark itself.
+// `\w+Bench` is case-sensitive on purpose: it catches names like AfterDeleteBench
+// without matching "workbench".
+const BENCHMARK_TITLE_RE    = /\b[Bb]ench(mark(s|ing)?)?\b|\w+Bench\b|\b[Dd]atasets?\b|\b[Tt]est ?[Ss]uite\b/;
+const BENCHMARK_ABSTRACT_RE = /\bwe (introduce|present|release|propose|construct|build|curate)\b[^.]{0,80}\b(benchmark|dataset|test ?suite)\b/i;
+
+function triageRoute(title, abstract) {
+  if (BENCHMARK_TITLE_RE.test(title) || BENCHMARK_ABSTRACT_RE.test(abstract)) return 'benchmark';
+  return 'literature';
+}
+
 /**
  * Minimal Atom XML parser — extracts <entry> blocks and named fields.
  */
@@ -366,6 +381,16 @@ async function watchArxiv(state) {
 
     findings.push({
       label: 'new-research',
+      digest: {
+        kind:     'research',
+        id:       entry.id,
+        title:    entry.title,
+        url:      `https://arxiv.org/abs/${entry.id}`,
+        authors:  entry.authors,
+        abstract: entry.summary || '',
+        hints:    owaspHints,
+        route:    triageRoute(entry.title, entry.summary || ''),
+      },
       title: `[new-research] arXiv:${entry.id} — ${entry.title.slice(0, 80)}`,
       body: [
         `## New arXiv Research Paper`,
@@ -489,6 +514,14 @@ async function watchNvd(state, sinceOverride) {
 
       findings.push({
         label: 'new-cve',
+        digest: {
+          kind:        'cve',
+          id:          cveId,
+          url:         nvdUrl,
+          cvss:        cvssScore,
+          description: engDesc,
+          hint:        owaspHint,
+        },
         title: `[new-cve] ${cveId} — ${engDesc.slice(0, 80)}`,
         body: [
           `## New CVE — AI/LLM Related`,
@@ -658,6 +691,107 @@ async function watchFrameworks(state) {
 
 // ─── Issue Reporter ───────────────────────────────────────────────────────────
 
+// ─── Weekly Digests ──────────────────────────────────────────────────────────
+//
+// One issue per paper or CVE buried the tracker: between 2026-10-05 and
+// 2026-10-26 the watcher opened 98 issues, and docs/TRIAGE_RULES.md routes
+// almost every paper to "note and close". arXiv and NVD findings now go into
+// one checklist issue per source per run. OWASP repo commits and framework
+// page changes are rare and usually actionable, so they keep their own issues.
+
+const TRIAGE_RULES_URL     = `https://github.com/${GITHUB_REPOSITORY}/blob/main/docs/TRIAGE_RULES.md`;
+const DIGEST_EXCERPT_CHARS = 300;
+const DIGEST_MAX_BODY      = 60_000;   // GitHub rejects issue bodies over 65,536 chars
+
+const excerpt = (text) => {
+  const t = (text || '').trim();
+  return t.length > DIGEST_EXCERPT_CHARS ? `${t.slice(0, DIGEST_EXCERPT_CHARS)}…` : t;
+};
+
+function researchLine(d) {
+  const authors = d.authors.length > 3 ? `${d.authors.slice(0, 3).join(', ')} et al.` : d.authors.join(', ');
+  const hints = d.hints.length ? ` Hints: ${d.hints.join(', ')}.` : '';
+  return [
+    `- [ ] [arXiv:${d.id}](${d.url}) **${d.title}** — ${authors || 'N/A'}.${hints}`,
+    `  > ${excerpt(d.abstract)}`,
+  ].join('\n');
+}
+
+function cveLine(d) {
+  return [
+    `- [ ] [${d.id}](${d.url}) — CVSS ${d.cvss}. Hint: ${d.hint}.`,
+    `  > ${excerpt(d.description)}`,
+  ].join('\n');
+}
+
+function researchDigest(items, date) {
+  const benchmarks = items.filter((i) => i.route === 'benchmark');
+  const literature = items.filter((i) => i.route !== 'benchmark');
+  const section = (heading, list) => list.length
+    ? [`### ${heading} (${list.length})`, '', ...list.map(researchLine), '']
+    : [];
+  return {
+    label: 'new-research',
+    title: `[watch-digest] Research — ${date} (${items.length} paper${items.length === 1 ? '' : 's'})`,
+    body: [
+      `## Weekly research digest — ${date}`,
+      '',
+      `${items.length} new arXiv cs.CR paper${items.length === 1 ? '' : 's'} on GenAI security. Route each one with ` +
+      `[\`docs/TRIAGE_RULES.md\`](${TRIAGE_RULES_URL}), tick it, and close this issue when every box is ticked. ` +
+      'Open a separate issue or PR only for an item that leads to work.',
+      '',
+      'The grouping and the OWASP hints are keyword matches, not mappings.',
+      '',
+      ...section('Possible benchmarks — rule 3 candidates for `evals/EXTERNAL_BENCHMARKS.md`', benchmarks),
+      ...section('Literature — rule 1, note and close unless it documents a real-world failure', literature),
+    ].join('\n'),
+  };
+}
+
+function cveDigest(items, date) {
+  return {
+    label: 'new-cve',
+    title: `[watch-digest] CVEs — ${date} (${items.length} CVE${items.length === 1 ? '' : 's'})`,
+    body: [
+      `## Weekly CVE digest — ${date}`,
+      '',
+      `${items.length} new NVD CVE${items.length === 1 ? '' : 's'} matching the GenAI keywords. Per ` +
+      `[\`docs/TRIAGE_RULES.md\`](${TRIAGE_RULES_URL}) § CVEs, a CVE in GenAI tooling becomes an incident ` +
+      'record when it names an affected version and has a citable advisory. Tick each one once routed, and close this ' +
+      'issue when every box is ticked.',
+      '',
+      'The OWASP hints are keyword matches, not mappings.',
+      '',
+      ...items.map(cveLine),
+      '',
+    ].join('\n'),
+  };
+}
+
+function capBody(finding) {
+  if (finding.body.length <= DIGEST_MAX_BODY) return finding;
+  const cut = finding.body.lastIndexOf('\n- [ ]', DIGEST_MAX_BODY);
+  return {
+    ...finding,
+    body: `${finding.body.slice(0, cut)}\n\n_Digest truncated at ${DIGEST_MAX_BODY} characters; run the watcher with ` +
+      '`--dry-run` for the full list._\n',
+  };
+}
+
+/**
+ * Fold arXiv and NVD findings into one digest finding per source. Everything
+ * else passes through unchanged, ahead of the digests.
+ */
+function buildDigests(findings, date) {
+  const single   = findings.filter((f) => !f.digest);
+  const research = findings.filter((f) => f.digest?.kind === 'research').map((f) => f.digest);
+  const cves     = findings.filter((f) => f.digest?.kind === 'cve').map((f) => f.digest);
+  const out = [...single];
+  if (research.length) out.push(capBody(researchDigest(research, date)));
+  if (cves.length)     out.push(capBody(cveDigest(cves, date)));
+  return out;
+}
+
 /**
  * Either open GitHub Issues for each finding or print them to stdout.
  * Returns the count of successfully handled findings.
@@ -779,7 +913,7 @@ async function main() {
   }
 
   // ── Report findings ───────────────────────────────────────────────────────
-  const issueCount = await reportFindings(allFindings, DRY_RUN);
+  const issueCount = await reportFindings(buildDigests(allFindings, runDate.slice(0, 10)), DRY_RUN);
 
   // ── Update state ──────────────────────────────────────────────────────────
   if (!DRY_RUN) {
@@ -809,4 +943,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = { ARXIV_URL, ARXIV_HINT_RULES, mapArxivToOwasp };
+module.exports = { ARXIV_URL, ARXIV_HINT_RULES, mapArxivToOwasp, triageRoute, buildDigests, DIGEST_MAX_BODY };
