@@ -298,7 +298,7 @@ least one OWASP source list entry in this repo, not a duplicate.
 
 | Date | Change | Author |
 |---|---|---|
-| 2026-10-12 | Added Guardana for LLM01 and ASI01 testing, with references in the MITRE ATLAS mappings | Konrad Karauda |
+| 2026-10-12 | Added Guardana for LLM01 and ASI01 testing, with references in the MITRE ATLAS mappings | Konrad Karauda (Guardana maintainer, COI disclosed) |
 
 ---
 

@@ -799,7 +799,7 @@ to visualise agentic attack coverage across your threat model.
 |---|---|---|---|
 | 2026-03-24 | 2026-Q1 | Initial mapping — ASI01–ASI10 full entries | OWASP GenAI Data Security Initiative |
 | 2026-09-14 | 2026-Q3 | Corrected three ATLAS technique citations against ATLAS 2026.07 | OWASP GenAI Data Security Initiative |
-| 2026-10-12 | 2026-Q3 | Added Guardana to ASI01 tools, with rule mappings and detection limits | Konrad Karauda |
+| 2026-10-12 | 2026-Q3 | Added Guardana to ASI01 tools, with rule mappings and detection limits | Konrad Karauda (Guardana maintainer, COI disclosed) |
 
 ---
 
