@@ -775,81 +775,132 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP AISVS 1.0",
+      "framework": "OWASP AISVS 1.01",
       "control_id": "7.1.1",
       "control_name": "Verify that the application validates all model outputs against a defined schema and rejects any output that does not match.",
-      "tier": "Foundational",
+      "tier": "Hardening",
       "scope": "Both",
-      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C07-Model-Behavior.md#c71-output-format-enforcement",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C07-Model-Behavior.md#c71-output-format-enforcement",
       "notes": "Level 1. All model outputs validated against a defined schema, non-matching output rejected",
-      "confidence": "unreviewed",
-      "reviewed_by": []
+      "relationship": "subset-of",
+      "rationale_type": "functional",
+      "framework_version": "AISVS 1.01",
+      "confidence": "high",
+      "reviewed_by": [
+        "Otto Sulin"
+      ]
     },
     {
-      "framework": "OWASP AISVS 1.0",
+      "framework": "OWASP AISVS 1.01",
       "control_id": "7.1.2",
       "control_name": "Verify that model-generated output is bounded by length limits and termination controls.",
-      "tier": "Foundational",
+      "tier": "Hardening",
       "scope": "Both",
-      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C07-Model-Behavior.md#c71-output-format-enforcement",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C07-Model-Behavior.md#c71-output-format-enforcement",
       "notes": "Level 1. Model-generated output bounded by length limits and termination controls",
-      "confidence": "unreviewed",
-      "reviewed_by": []
+      "relationship": "subset-of",
+      "rationale_type": "functional",
+      "framework_version": "AISVS 1.01",
+      "confidence": "high",
+      "reviewed_by": [
+        "Otto Sulin"
+      ]
     },
     {
-      "framework": "OWASP AISVS 1.0",
+      "framework": "OWASP AISVS 1.01",
       "control_id": "7.3.3",
       "control_name": "Verify that model-generated output is prevented from triggering outbound requests.",
-      "tier": "Foundational",
+      "tier": "Hardening",
       "scope": "Both",
-      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C07-Model-Behavior.md#c73-output-safety",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C07-Model-Behavior.md#c73-output-safety",
       "notes": "Level 2. Model-generated output prevented from triggering outbound requests",
-      "confidence": "unreviewed",
-      "reviewed_by": []
+      "relationship": "subset-of",
+      "rationale_type": "functional",
+      "framework_version": "AISVS 1.01",
+      "confidence": "high",
+      "reviewed_by": [
+        "Otto Sulin"
+      ]
     },
     {
-      "framework": "OWASP AISVS 1.0",
+      "framework": "OWASP AISVS 1.01",
       "control_id": "9.3.2",
       "control_name": "Verify that tool outputs are validated against schemas.",
-      "tier": "Foundational",
+      "tier": "Hardening",
       "scope": "Both",
-      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
       "notes": "Level 1. Tool outputs validated against schemas before the agent consumes them",
-      "confidence": "unreviewed",
-      "reviewed_by": []
+      "relationship": "subset-of",
+      "rationale_type": "functional",
+      "framework_version": "AISVS 1.01",
+      "confidence": "high",
+      "reviewed_by": [
+        "Otto Sulin"
+      ]
     },
     {
-      "framework": "OWASP AISVS 1.0",
+      "framework": "OWASP AISVS 1.01",
       "control_id": "9.3.6",
       "control_name": "Verify that there is architectural separation between processing of untrusted tool outputs and agent operations.",
-      "tier": "Foundational",
+      "tier": "Hardening",
       "scope": "Both",
-      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
       "notes": "Level 2. Architectural separation between processing of untrusted tool outputs and agent operations",
-      "confidence": "unreviewed",
-      "reviewed_by": []
+      "relationship": "subset-of",
+      "rationale_type": "functional",
+      "framework_version": "AISVS 1.01",
+      "confidence": "high",
+      "reviewed_by": [
+        "Otto Sulin"
+      ]
     },
     {
-      "framework": "OWASP AISVS 1.0",
+      "framework": "OWASP AISVS 1.01",
       "control_id": "7.3.4",
-      "control_name": "Verify that model outputs are checked for hidden, encoded, or misleading content created through homoglyphs, formatting, metadata, or structured fi...",
-      "tier": "Foundational",
+      "control_name": "Verify that model outputs are checked for hidden, encoded, or misleading content created through homoglyphs, formatting, metadata, or structured fields.",
+      "tier": "Hardening",
       "scope": "Both",
-      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C07-Model-Behavior.md#c73-output-safety",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C07-Model-Behavior.md#c73-output-safety",
       "notes": "Level 3. Outputs checked for hidden, encoded or misleading content via homoglyphs, formatting, metadata or structured fields",
-      "confidence": "unreviewed",
-      "reviewed_by": []
+      "relationship": "subset-of",
+      "rationale_type": "functional",
+      "framework_version": "AISVS 1.01",
+      "confidence": "high",
+      "reviewed_by": [
+        "Otto Sulin"
+      ]
     },
     {
-      "framework": "OWASP AISVS 1.0",
+      "framework": "OWASP AISVS 1.01",
       "control_id": "9.3.7",
-      "control_name": "Verify that external resources named in model output are verified against an approved allow-list or registry before the agent installs or invokes t...",
-      "tier": "Foundational",
+      "control_name": "Verify that external resources named in model output are verified against an approved allow-list or registry before the agent installs or invokes them.",
+      "tier": "Hardening",
       "scope": "Both",
-      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
       "notes": "Level 2. Generated code (2026 scope): packages and external resources named in model output verified against an allow-list before they are installed or invoked",
-      "confidence": "unreviewed",
-      "reviewed_by": []
+      "relationship": "subset-of",
+      "rationale_type": "functional",
+      "framework_version": "AISVS 1.01",
+      "confidence": "high",
+      "reviewed_by": [
+        "Otto Sulin"
+      ]
+    },
+    {
+      "framework": "OWASP AISVS 1.01",
+      "control_id": "7.1.3",
+      "control_name": "Verify that, when an application uses an AI response to decide whether to perform an action, it does not perform that action if the AI refuses the request, reports a failure, or returns a response the application cannot correctly read or understand.",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C07-Model-Behavior.md#c71-output-format-enforcement",
+      "notes": "Level 2. Fail-closed action path: an AI response that is a refusal, a failure or unreadable stops the action rather than being treated as approval",
+      "relationship": "subset-of",
+      "rationale_type": "functional",
+      "framework_version": "AISVS 1.01",
+      "confidence": "high",
+      "reviewed_by": [
+        "Otto Sulin"
+      ]
     },
     {
       "framework": "OWASP NHI Top 10",

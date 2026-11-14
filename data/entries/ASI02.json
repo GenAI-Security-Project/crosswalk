@@ -952,92 +952,196 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP AISVS 1.0",
+      "framework": "OWASP AISVS 1.01",
       "control_id": "9.5.1",
-      "control_name": "Verify that agent actions are authorized against fine-grained policies enforced by the runtime that restrict which tools an agent may invoke, and w...",
+      "control_name": "Verify that agent actions are authorized against fine-grained policies enforced by the runtime that restrict which tools an agent may invoke, and which parameter values it may supply.",
       "tier": "Hardening",
       "scope": "Both",
-      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c95-agent-authorization-delegation-and-continuous-enforcement",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C09-Orchestration-and-Agentic-Action.md#c95-agent-authorization-delegation-and-continuous-enforcement",
       "notes": "Level 2. Fine-grained runtime policy over which tools may be invoked and which parameter values may be supplied, the direct control for destructive-parameter misuse",
-      "confidence": "unreviewed",
-      "reviewed_by": []
+      "relationship": "subset-of",
+      "rationale_type": "functional",
+      "framework_version": "AISVS 1.01",
+      "confidence": "high",
+      "reviewed_by": [
+        "Otto Sulin"
+      ]
     },
     {
-      "framework": "OWASP AISVS 1.0",
+      "framework": "OWASP AISVS 1.01",
       "control_id": "9.3.1",
       "control_name": "Verify that each tool/plugin executes in a least-privilege sandbox or is otherwise isolated from model operations.",
       "tier": "Hardening",
       "scope": "Both",
-      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
       "notes": "Level 1. Each tool or plugin executes in a least-privilege sandbox or is isolated from model operations",
-      "confidence": "unreviewed",
-      "reviewed_by": []
+      "relationship": "subset-of",
+      "rationale_type": "functional",
+      "framework_version": "AISVS 1.01",
+      "confidence": "high",
+      "reviewed_by": [
+        "Otto Sulin"
+      ]
     },
     {
-      "framework": "OWASP AISVS 1.0",
+      "framework": "OWASP AISVS 1.01",
       "control_id": "9.3.2",
       "control_name": "Verify that tool outputs are validated against schemas.",
       "tier": "Hardening",
       "scope": "Both",
-      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
       "notes": "Level 1. Tool outputs validated against schemas",
-      "confidence": "unreviewed",
-      "reviewed_by": []
+      "relationship": "subset-of",
+      "rationale_type": "functional",
+      "framework_version": "AISVS 1.01",
+      "confidence": "high",
+      "reviewed_by": [
+        "Otto Sulin"
+      ]
     },
     {
-      "framework": "OWASP AISVS 1.0",
+      "framework": "OWASP AISVS 1.01",
       "control_id": "9.3.3",
       "control_name": "Verify that tool manifests declare required privileges, resource limits, and output validation requirements.",
       "tier": "Hardening",
       "scope": "Both",
-      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
       "notes": "Level 2. Tool manifests declare required privileges, resource limits and output validation requirements",
-      "confidence": "unreviewed",
-      "reviewed_by": []
+      "relationship": "subset-of",
+      "rationale_type": "functional",
+      "framework_version": "AISVS 1.01",
+      "confidence": "high",
+      "reviewed_by": [
+        "Otto Sulin"
+      ]
     },
     {
-      "framework": "OWASP AISVS 1.0",
+      "framework": "OWASP AISVS 1.01",
       "control_id": "9.3.4",
       "control_name": "Verify that the runtime enforces the privileges, resource limits, and output-validation requirements declared in tool manifests.",
       "tier": "Hardening",
       "scope": "Both",
-      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
       "notes": "Level 2. Runtime enforces the privileges, resource limits and output validation declared in tool manifests",
-      "confidence": "unreviewed",
-      "reviewed_by": []
+      "relationship": "subset-of",
+      "rationale_type": "functional",
+      "framework_version": "AISVS 1.01",
+      "confidence": "high",
+      "reviewed_by": [
+        "Otto Sulin"
+      ]
     },
     {
-      "framework": "OWASP AISVS 1.0",
+      "framework": "OWASP AISVS 1.01",
       "control_id": "9.3.7",
-      "control_name": "Verify that external resources named in model output are verified against an approved allow-list or registry before the agent installs or invokes t...",
+      "control_name": "Verify that external resources named in model output are verified against an approved allow-list or registry before the agent installs or invokes them.",
       "tier": "Hardening",
       "scope": "Both",
-      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
       "notes": "Level 2. External resources named in model output verified against an approved allow-list or registry before install or invocation",
-      "confidence": "unreviewed",
-      "reviewed_by": []
+      "relationship": "subset-of",
+      "rationale_type": "functional",
+      "framework_version": "AISVS 1.01",
+      "confidence": "high",
+      "reviewed_by": [
+        "Otto Sulin"
+      ]
     },
     {
-      "framework": "OWASP AISVS 1.0",
+      "framework": "OWASP AISVS 1.01",
       "control_id": "10.2.5",
-      "control_name": "Verify that MCP servers enforce access control on every tool invocation, validating that the user's access token authorizes both the requested tool...",
+      "control_name": "Verify that MCP servers enforce access control on every tool invocation, validating that the user's access token authorizes both the requested tool and the specific argument values supplied.",
       "tier": "Hardening",
       "scope": "Both",
-      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C10-MCP-Security.md#c102-authentication--authorization",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C10-MCP-Security.md#c102-authentication--authorization",
       "notes": "Level 2. MCP servers enforce access control on every tool invocation, validating both the tool and the specific argument values",
-      "confidence": "unreviewed",
-      "reviewed_by": []
+      "relationship": "subset-of",
+      "rationale_type": "functional",
+      "framework_version": "AISVS 1.01",
+      "confidence": "high",
+      "reviewed_by": [
+        "Otto Sulin"
+      ]
     },
     {
-      "framework": "OWASP AISVS 1.0",
+      "framework": "OWASP AISVS 1.01",
       "control_id": "9.3.8",
-      "control_name": "Verify that policy violations trigger automated tool containment.",
+      "control_name": "Verify that policy violations trigger automatic containment of affected tools, such as stopping their execution, isolating them, or revoking their permissions.",
       "tier": "Hardening",
       "scope": "Both",
-      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
-      "notes": "Level 3. Policy violations trigger automated tool containment",
-      "confidence": "unreviewed",
-      "reviewed_by": []
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
+      "notes": "Level 3. Policy violations trigger automatic containment of affected tools: stopping execution, isolating them or revoking their permissions",
+      "relationship": "subset-of",
+      "rationale_type": "functional",
+      "framework_version": "AISVS 1.01",
+      "confidence": "high",
+      "reviewed_by": [
+        "Otto Sulin"
+      ]
+    },
+    {
+      "framework": "OWASP AISVS 1.01",
+      "control_id": "9.3.9",
+      "control_name": "Verify that services reachable from agent or tool sandboxes enforce the defined run, task, or tenant isolation policy on agent-writable state, including object names.",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
+      "notes": "Level 2. Services reachable from agent or tool sandboxes enforce run, task and tenant isolation on agent-writable state, including object names",
+      "relationship": "subset-of",
+      "rationale_type": "functional",
+      "framework_version": "AISVS 1.01",
+      "confidence": "high",
+      "reviewed_by": [
+        "Otto Sulin"
+      ]
+    },
+    {
+      "framework": "OWASP AISVS 1.01",
+      "control_id": "10.4.11",
+      "control_name": "Verify that MCP clients reject tool definitions containing invalid mirrored-header annotations, excluding the affected tool rather than the entire tool list.",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C10-MCP-Security.md#c104-schema-message-and-input-validation",
+      "notes": "Level 1. Tool definitions with invalid mirrored-header annotations are rejected per tool, not per list, so one poisoned definition cannot suppress the whole inventory",
+      "relationship": "subset-of",
+      "rationale_type": "functional",
+      "framework_version": "AISVS 1.01",
+      "confidence": "high",
+      "reviewed_by": [
+        "Otto Sulin"
+      ]
+    },
+    {
+      "framework": "OWASP AISVS 1.01",
+      "control_id": "10.4.14",
+      "control_name": "Verify that MCP implementations do not automatically dereference JSON Schema `$ref` values that resolve to network URIs, and that any opt-in external resolution is disabled by default and rejects loopback, link-local, and private network addresses.",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C10-MCP-Security.md#c104-schema-message-and-input-validation",
+      "notes": "Level 1. JSON Schema $ref values are not dereferenced to network URIs by default, and opt-in resolution blocks loopback, link-local and private addresses, closing SSRF through a tool schema",
+      "relationship": "subset-of",
+      "rationale_type": "functional",
+      "framework_version": "AISVS 1.01",
+      "confidence": "high",
+      "reviewed_by": [
+        "Otto Sulin"
+      ]
+    },
+    {
+      "framework": "OWASP AISVS 1.01",
+      "control_id": "10.4.15",
+      "control_name": "Verify that MCP implementations reject schemas that fail to validate due to an unresolved external `$ref` rather than treating them as permissive.",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C10-MCP-Security.md#c104-schema-message-and-input-validation",
+      "notes": "Level 2. A schema that fails on an unresolved external $ref is rejected rather than treated as permissive, so an unresolvable reference cannot silently widen it",
+      "relationship": "subset-of",
+      "rationale_type": "functional",
+      "framework_version": "AISVS 1.01",
+      "confidence": "high",
+      "reviewed_by": [
+        "Otto Sulin"
+      ]
     }
   ],
   "tools": [

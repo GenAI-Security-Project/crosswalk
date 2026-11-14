@@ -210,7 +210,7 @@ All free. All open-source. Built for practitioners.
 | [ISO/IEC 42001:2023](https://www.iso.org/standard/81230.html) | ✅ | ✅ | ✅ |
 | [CIS Controls v8.1](https://www.cisecurity.org/controls) | ✅ | ✅ | ✅ |
 | [OWASP ASVS 5.0.0](https://owasp.org/projects/asvs) | ✅ | ✅ | ✅ |
-| [OWASP AISVS 1.0](https://github.com/OWASP/AISVS/tree/main/1.0/en) | ✅ | ✅ | ✅ |
+| [OWASP AISVS 1.01](https://github.com/OWASP/AISVS/tree/main/1.01/en) | ✅ | ✅ | ✅ |
 | [SOC 2 Trust Services Criteria](https://www.aicpa-cima.com/resources/landing/2017-trust-services-criteria) | ✅ | ✅ | ✅ |
 | [PCI DSS v4.0](https://www.pcisecuritystandards.org/document_library/) | ✅ | ✅ | ✅ |
 | [ENISA Multilayer Framework](https://www.enisa.europa.eu/publications/multilayer-framework-for-good-cybersecurity-practices-for-ai) | ✅ | ✅ | ✅ |
@@ -253,7 +253,7 @@ All free. All open-source. Built for practitioners.
 | [LLM_SP800218A.md](llm-top10/LLM_SP800218A.md) | NIST SP 800-218A | Secure AI SDLC practices — PW/PS/RV practice mapping per LLM entry |
 | [LLM_FedRAMP.md](llm-top10/LLM_FedRAMP.md) | FedRAMP | SP 800-53 AI overlay — AC/AU/CA/CM/IA/IR/RA/SA/SC/SI/SR control families |
 | [LLM_DORA.md](llm-top10/LLM_DORA.md) | DORA | EU financial sector resilience — Art. 5–45 per LLM entry |
-| [LLM_AISVS.md](llm-top10/LLM_AISVS.md) | OWASP AISVS 1.0 | Level 1–3 verification requirements for all 10 entries — injection defenses, output control, agent budgets, cross-modal inputs |
+| [LLM_AISVS.md](llm-top10/LLM_AISVS.md) | OWASP AISVS 1.01 | Level 1–3 verification requirements for all 10 entries — injection defenses, output control, agent budgets, cross-modal inputs |
 
 ### Agentic Top 10 2026 — <!-- stats:frameworks-agentic -->26<!-- /stats --> framework mappings
 
@@ -281,7 +281,7 @@ All free. All open-source. Built for practitioners.
 | [Agentic_SP800218A.md](agentic-top10/Agentic_SP800218A.md) | NIST SP 800-218A | Secure agentic SDLC — tool access, memory integrity, multi-agent pipeline practices |
 | [Agentic_FedRAMP.md](agentic-top10/Agentic_FedRAMP.md) | FedRAMP | Federal agentic AI authorization — agent identity, tool access, cascade controls |
 | [Agentic_DORA.md](agentic-top10/Agentic_DORA.md) | DORA | Financial sector agentic resilience — incident reporting, third-party agent risk |
-| [Agentic_AISVS.md](agentic-top10/Agentic_AISVS.md) | OWASP AISVS 1.0 | Testable "Verify that" requirements, Levels 1–3, weighted to C9 Orchestration and C10 MCP Security |
+| [Agentic_AISVS.md](agentic-top10/Agentic_AISVS.md) | OWASP AISVS 1.01 | Testable "Verify that" requirements, Levels 1–3, weighted to C9 Orchestration and C10 MCP Security |
 
 > **Also in this folder:** [Agentic_CWE_CVE.md](agentic-top10/Agentic_CWE_CVE.md) — CWE root cause taxonomy,
 > confirmed CVEs, full CWE cross-reference index.
@@ -311,7 +311,7 @@ All free. All open-source. Built for practitioners.
 | [DSGAI_SP800218A.md](dsgai-2026/DSGAI_SP800218A.md) | NIST SP 800-218A | Secure GenAI data SDLC — training data protection, data governance, provenance practices |
 | [DSGAI_FedRAMP.md](dsgai-2026/DSGAI_FedRAMP.md) | FedRAMP | Federal data security controls — SC-28 data at rest, AU-2 logging, SR supply chain |
 | [DSGAI_DORA.md](dsgai-2026/DSGAI_DORA.md) | DORA | Financial data resilience — Art. 8 asset inventory, Art. 12 backup, Art. 28-44 vendor risk |
-| [DSGAI_AISVS.md](dsgai-2026/DSGAI_AISVS.md) | OWASP AISVS 1.0 | Level 1–3 verification requirements for all 21 entries — retrieval-time authorization, embedding sanitization, training-data provenance |
+| [DSGAI_AISVS.md](dsgai-2026/DSGAI_AISVS.md) | OWASP AISVS 1.01 | Level 1–3 verification requirements for all 21 entries — retrieval-time authorization, embedding sanitization, training-data provenance |
 
 ### Shared resources
 

@@ -880,81 +880,132 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP AISVS 1.0",
+      "framework": "OWASP AISVS 1.01",
       "control_id": "5.2.4",
       "control_name": "Verify that post-inference filtering mechanisms prevent responses from including data that the requester is not authorized to receive.",
-      "tier": "Hardening",
+      "tier": "Foundational",
       "scope": "Both",
-      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C05-Access-Control-and-Identity.md#c52-ai-resource-authorization--classification",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C05-Access-Control-and-Identity.md#c52-ai-resource-authorization--classification",
       "notes": "Level 2. Post-inference filtering prevents responses including data the requester is not authorized to receive",
-      "confidence": "unreviewed",
-      "reviewed_by": []
+      "relationship": "subset-of",
+      "rationale_type": "functional",
+      "framework_version": "AISVS 1.01",
+      "confidence": "high",
+      "reviewed_by": [
+        "Otto Sulin"
+      ]
     },
     {
-      "framework": "OWASP AISVS 1.0",
+      "framework": "OWASP AISVS 1.01",
       "control_id": "5.2.2",
-      "control_name": "Verify that retrieval pipelines (e.g., RAG queries, embedding lookups) enforce the end-user's authorization context at each retrieval and assembly ...",
-      "tier": "Hardening",
+      "control_name": "Verify that retrieval pipelines (e.g., RAG queries, embedding lookups) enforce the end-user's authorization context at each retrieval and assembly stage, rather than relying solely on the service account's permissions.",
+      "tier": "Foundational",
       "scope": "Both",
-      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C05-Access-Control-and-Identity.md#c52-ai-resource-authorization--classification",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C05-Access-Control-and-Identity.md#c52-ai-resource-authorization--classification",
       "notes": "Level 2. Retrieval pipelines enforce the end-user authorization context at each retrieval and assembly stage, the direct control for RAG over-retrieval",
-      "confidence": "unreviewed",
-      "reviewed_by": []
+      "relationship": "subset-of",
+      "rationale_type": "functional",
+      "framework_version": "AISVS 1.01",
+      "confidence": "high",
+      "reviewed_by": [
+        "Otto Sulin"
+      ]
     },
     {
-      "framework": "OWASP AISVS 1.0",
+      "framework": "OWASP AISVS 1.01",
       "control_id": "8.2.1",
       "control_name": "Verify that sensitive fields are detected before embedding and are masked, tokenized, or dropped.",
-      "tier": "Hardening",
+      "tier": "Foundational",
       "scope": "Both",
-      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c82-embedding-sanitization--validation",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c82-embedding-sanitization--validation",
       "notes": "Level 1. Sensitive fields detected before embedding and masked, tokenized or dropped",
-      "confidence": "unreviewed",
-      "reviewed_by": []
+      "relationship": "subset-of",
+      "rationale_type": "functional",
+      "framework_version": "AISVS 1.01",
+      "confidence": "high",
+      "reviewed_by": [
+        "Otto Sulin"
+      ]
     },
     {
-      "framework": "OWASP AISVS 1.0",
+      "framework": "OWASP AISVS 1.01",
       "control_id": "11.2.1",
       "control_name": "Verify that model-inferred sensitive attributes are not directly returned in outputs.",
-      "tier": "Hardening",
+      "tier": "Foundational",
       "scope": "Both",
-      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C11-Adversarial-Robustness.md#c112-membership-inference-and-model-inversion-mitigation",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C11-Adversarial-Robustness.md#c112-membership-inference-and-model-inversion-mitigation",
       "notes": "Level 1. Model-inferred sensitive attributes not returned directly in outputs",
-      "confidence": "unreviewed",
-      "reviewed_by": []
+      "relationship": "subset-of",
+      "rationale_type": "functional",
+      "framework_version": "AISVS 1.01",
+      "confidence": "high",
+      "reviewed_by": [
+        "Otto Sulin"
+      ]
     },
     {
-      "framework": "OWASP AISVS 1.0",
+      "framework": "OWASP AISVS 1.01",
       "control_id": "1.1.1",
       "control_name": "Verify that training data includes only features, attributes, and fields required for the model's stated purpose.",
-      "tier": "Hardening",
+      "tier": "Foundational",
       "scope": "Both",
-      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c11-training-data-origin--data-security",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c11-training-data-origin--data-security",
       "notes": "Level 1. Training data limited to features required for the stated purpose, bounding memorisation exposure at source",
-      "confidence": "unreviewed",
-      "reviewed_by": []
+      "relationship": "subset-of",
+      "rationale_type": "functional",
+      "framework_version": "AISVS 1.01",
+      "confidence": "high",
+      "reviewed_by": [
+        "Otto Sulin"
+      ]
     },
     {
-      "framework": "OWASP AISVS 1.0",
+      "framework": "OWASP AISVS 1.01",
       "control_id": "7.3.2",
       "control_name": "Verify that output filters detect and block responses that disclose system prompt content or backend data.",
-      "tier": "Hardening",
+      "tier": "Foundational",
       "scope": "Both",
-      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C07-Model-Behavior.md#c73-output-safety",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C07-Model-Behavior.md#c73-output-safety",
       "notes": "Level 2. Output filters block responses disclosing system prompt content or backend data",
-      "confidence": "unreviewed",
-      "reviewed_by": []
+      "relationship": "subset-of",
+      "rationale_type": "functional",
+      "framework_version": "AISVS 1.01",
+      "confidence": "high",
+      "reviewed_by": [
+        "Otto Sulin"
+      ]
     },
     {
-      "framework": "OWASP AISVS 1.0",
+      "framework": "OWASP AISVS 1.01",
       "control_id": "5.2.7",
       "control_name": "Verify that data classification labels propagate to downstream resources (embeddings, prompt caches, model outputs).",
-      "tier": "Hardening",
+      "tier": "Foundational",
       "scope": "Both",
-      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C05-Access-Control-and-Identity.md#c52-ai-resource-authorization--classification",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C05-Access-Control-and-Identity.md#c52-ai-resource-authorization--classification",
       "notes": "Level 3. Classification labels propagate to embeddings, prompt caches and outputs, addressing the aggregation effect this risk names",
-      "confidence": "unreviewed",
-      "reviewed_by": []
+      "relationship": "subset-of",
+      "rationale_type": "functional",
+      "framework_version": "AISVS 1.01",
+      "confidence": "high",
+      "reviewed_by": [
+        "Otto Sulin"
+      ]
+    },
+    {
+      "framework": "OWASP AISVS 1.01",
+      "control_id": "10.4.19",
+      "control_name": "Verify that MCP servers exclude end-user credentials and personal data from URL-mode elicitation URLs, and do not issue URLs that are pre-authenticated to a protected resource.",
+      "tier": "Foundational",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C10-MCP-Security.md#c104-schema-message-and-input-validation",
+      "notes": "Level 1. Credentials and personal data kept out of URL-mode elicitation URLs, and no URL pre-authenticated to a protected resource",
+      "relationship": "subset-of",
+      "rationale_type": "functional",
+      "framework_version": "AISVS 1.01",
+      "confidence": "high",
+      "reviewed_by": [
+        "Otto Sulin"
+      ]
     }
   ],
   "tools": [
