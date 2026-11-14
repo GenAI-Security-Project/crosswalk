@@ -27,12 +27,12 @@
     }
   },
   "mappings": {
-    "total": 3771,
+    "total": 3793,
     "by_list": {
-      "Agentic-Top10-2026": 993,
+      "Agentic-Top10-2026": 1007,
       "AST-Top10-2026": 36,
-      "DSGAI-2026": 1766,
-      "LLM-Top10-2026": 976
+      "DSGAI-2026": 1771,
+      "LLM-Top10-2026": 979
     }
   },
   "frameworks": {
@@ -95,10 +95,10 @@
     ]
   },
   "controls": {
-    "total": 1190,
-    "registry_items": 1324,
+    "total": 1212,
+    "registry_items": 1346,
     "by_kind": {
-      "control": 1190,
+      "control": 1212,
       "layer": 10,
       "technique": 57,
       "threat-category": 6,

@@ -862,81 +862,148 @@
       "reviewed_by": []
     },
     {
-      "framework": "OWASP AISVS 1.0",
+      "framework": "OWASP AISVS 1.01",
       "control_id": "9.5.4",
-      "control_name": "Verify that secrets and credentials required by an agent at runtime are not exposed within the model's observable context, including the context wi...",
+      "control_name": "Verify that secrets and credentials required by an agent at runtime are not exposed within the model's observable context, including the context window, system prompts, or tool call parameters.",
       "tier": "Hardening",
       "scope": "Both",
-      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c95-agent-authorization-delegation-and-continuous-enforcement",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C09-Orchestration-and-Agentic-Action.md#c95-agent-authorization-delegation-and-continuous-enforcement",
       "notes": "Level 2. Secrets and credentials required at runtime not exposed within the model observable context including context window, system prompts and tool call parameters, the direct control",
-      "confidence": "unreviewed",
-      "reviewed_by": []
+      "relationship": "subset-of",
+      "rationale_type": "functional",
+      "framework_version": "AISVS 1.01",
+      "confidence": "high",
+      "reviewed_by": [
+        "Otto Sulin"
+      ]
     },
     {
-      "framework": "OWASP AISVS 1.0",
+      "framework": "OWASP AISVS 1.01",
       "control_id": "10.2.3",
       "control_name": "Verify that MCP servers acting as OAuth 2.1 resource servers do not store or persist access tokens or user credentials.",
       "tier": "Hardening",
       "scope": "Both",
-      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C10-MCP-Security.md#c102-authentication--authorization",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C10-MCP-Security.md#c102-authentication--authorization",
       "notes": "Level 1. MCP servers acting as OAuth 2.1 resource servers do not store or persist access tokens or user credentials",
-      "confidence": "unreviewed",
-      "reviewed_by": []
+      "relationship": "subset-of",
+      "rationale_type": "functional",
+      "framework_version": "AISVS 1.01",
+      "confidence": "high",
+      "reviewed_by": [
+        "Otto Sulin"
+      ]
     },
     {
-      "framework": "OWASP AISVS 1.0",
+      "framework": "OWASP AISVS 1.01",
       "control_id": "9.4.1",
       "control_name": "Verify that each agent instance has a unique cryptographic identity and authenticates as a first-class principal to downstream systems.",
       "tier": "Hardening",
       "scope": "Both",
-      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c94-agent-and-orchestrator-identity",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C09-Orchestration-and-Agentic-Action.md#c94-agent-and-orchestrator-identity",
       "notes": "Level 2. Each agent instance has a unique cryptographic identity and authenticates as a first-class principal, so a shared credential is not the identity",
-      "confidence": "unreviewed",
-      "reviewed_by": []
+      "relationship": "subset-of",
+      "rationale_type": "functional",
+      "framework_version": "AISVS 1.01",
+      "confidence": "high",
+      "reviewed_by": [
+        "Otto Sulin"
+      ]
     },
     {
-      "framework": "OWASP AISVS 1.0",
+      "framework": "OWASP AISVS 1.01",
       "control_id": "10.2.7",
-      "control_name": "Verify that MCP servers do not pass through access tokens received from clients to downstream APIs.",
+      "control_name": "Verify that MCP servers only accept tokens explicitly issued for them, and do not pass tokens issued for other services through to downstream APIs.",
       "tier": "Hardening",
       "scope": "Both",
-      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C10-MCP-Security.md#c102-authentication--authorization",
-      "notes": "Level 2. MCP servers do not pass through client access tokens to downstream APIs, blocking the confused-deputy propagation this risk describes",
-      "confidence": "unreviewed",
-      "reviewed_by": []
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C10-MCP-Security.md#c102-authentication--authorization",
+      "notes": "Level 1. MCP servers accept only tokens explicitly issued for them and do not pass tokens issued for other services to downstream APIs, blocking confused-deputy propagation",
+      "relationship": "subset-of",
+      "rationale_type": "functional",
+      "framework_version": "AISVS 1.01",
+      "confidence": "high",
+      "reviewed_by": [
+        "Otto Sulin"
+      ]
     },
     {
-      "framework": "OWASP AISVS 1.0",
+      "framework": "OWASP AISVS 1.01",
       "control_id": "5.1.2",
       "control_name": "Verify that AI agents in federated or multi-system deployments authenticate using short-lived, minimal-scoped, cryptographically signed tokens.",
       "tier": "Hardening",
       "scope": "Both",
-      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C05-Access-Control-and-Identity.md#c51-authentication",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C05-Access-Control-and-Identity.md#c51-authentication",
       "notes": "Level 3. Short-lived, minimal-scoped, cryptographically signed tokens for agents in federated deployments, bounding the value of a leaked credential",
-      "confidence": "unreviewed",
-      "reviewed_by": []
+      "relationship": "subset-of",
+      "rationale_type": "functional",
+      "framework_version": "AISVS 1.01",
+      "confidence": "high",
+      "reviewed_by": [
+        "Otto Sulin"
+      ]
     },
     {
-      "framework": "OWASP AISVS 1.0",
+      "framework": "OWASP AISVS 1.01",
       "control_id": "9.4.3",
       "control_name": "Verify that agent identity credentials rotate on a defined schedule.",
       "tier": "Hardening",
       "scope": "Both",
-      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c94-agent-and-orchestrator-identity",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C09-Orchestration-and-Agentic-Action.md#c94-agent-and-orchestrator-identity",
       "notes": "Level 3. Agent identity credentials rotate on a defined schedule",
-      "confidence": "unreviewed",
-      "reviewed_by": []
+      "relationship": "subset-of",
+      "rationale_type": "functional",
+      "framework_version": "AISVS 1.01",
+      "confidence": "high",
+      "reviewed_by": [
+        "Otto Sulin"
+      ]
     },
     {
-      "framework": "OWASP AISVS 1.0",
+      "framework": "OWASP AISVS 1.01",
       "control_id": "9.2.9",
-      "control_name": "Verify that cryptographic key material or credentials used to issue approvals are isolated from the agent runtime.",
+      "control_name": "Verify that cryptographic key material or credentials used to issue approvals are isolated from the agent runtime, and that the runtime can neither read them nor use them to issue approvals.",
       "tier": "Hardening",
       "scope": "Both",
-      "url": "https://github.com/OWASP/AISVS/blob/main/1.0/en/0x10-C09-Orchestration-and-Agentic-Action.md#c92-high-impact-action-approval-and-irreversibility-controls",
-      "notes": "Level 3. Key material or credentials used to issue approvals isolated from the agent runtime",
-      "confidence": "unreviewed",
-      "reviewed_by": []
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C09-Orchestration-and-Agentic-Action.md#c92-high-impact-action-approval-and-irreversibility-controls",
+      "notes": "Level 3. Key material or credentials used to issue approvals isolated from the agent runtime, which can neither read them nor use them to issue approvals",
+      "relationship": "subset-of",
+      "rationale_type": "functional",
+      "framework_version": "AISVS 1.01",
+      "confidence": "high",
+      "reviewed_by": [
+        "Otto Sulin"
+      ]
+    },
+    {
+      "framework": "OWASP AISVS 1.01",
+      "control_id": "10.2.9",
+      "control_name": "Verify that MCP clients bind persisted OAuth client credentials to the issuing authorization server and do not present them to a different authorization server.",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C10-MCP-Security.md#c102-authentication--authorization",
+      "notes": "Level 2. Persisted OAuth client credentials are bound to the authorization server that issued them and never presented to a different one",
+      "relationship": "subset-of",
+      "rationale_type": "functional",
+      "framework_version": "AISVS 1.01",
+      "confidence": "high",
+      "reviewed_by": [
+        "Otto Sulin"
+      ]
+    },
+    {
+      "framework": "OWASP AISVS 1.01",
+      "control_id": "10.4.18",
+      "control_name": "Verify that MCP servers do not use form-mode elicitation to request secrets or payment credentials, and that in URL-mode elicitation the user completing the flow is the same user who initiated it.",
+      "tier": "Hardening",
+      "scope": "Both",
+      "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C10-MCP-Security.md#c104-schema-message-and-input-validation",
+      "notes": "Level 2. Elicitation cannot become a credential-harvesting channel: no form-mode secret or payment collection, and URL-mode is same-user",
+      "relationship": "subset-of",
+      "rationale_type": "functional",
+      "framework_version": "AISVS 1.01",
+      "confidence": "high",
+      "reviewed_by": [
+        "Otto Sulin"
+      ]
     }
   ],
   "tools": [
