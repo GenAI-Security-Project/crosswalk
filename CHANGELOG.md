@@ -45,6 +45,23 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   marker, and `docs/classifier-predictions.js`, the dated 2026-04-09 classifier snapshot on 4.0.3 chapters, keeps
   its 4.0.3 label.
 
+- **OWASP AISVS 1.0 → 1.01** across all three source lists. AISVS 1.01 is the
+  frozen October 2026 release: 191 → 213 requirements, with 23 added (C7, C9, C10,
+  C11), 10.2.6 retired, 14 reworded and 2 re-levelled (10.2.7 and 10.3.3, L2 → L1).
+  Row count 306 → 328: 24 rows added for the new requirements, 2 dropped — the
+  retired 10.2.6, plus the output-calibration row on DSGAI10, which does not
+  address anonymisation and stays on DSGAI18 where calibration does narrow the
+  reconstruction signal. The registry carries all 213 controls and reuses the
+  verified 1.01 section anchors; `data/framework-sources.json` is back to `current`.
+  The three mapping files also gain the schema v2 columns (`Relationship`,
+  `Rationale type`, `Confidence`, `Framework ver.`, `Reviewed by`), filled for all
+  328 rows with `Framework ver.` pinned to `AISVS 1.01`: 320 at high confidence and
+  8 at medium, in 326 `subset-of` and 2 `intersects-with`. 22 of the 23 new
+  requirements map to an existing entry; **11.1.6** (adversarial results reported
+  against an unattacked baseline) has no counterpart in the 41 entries and is
+  recorded as a gap rather than forced. **Consumers that filter exports by
+  framework name must update `OWASP AISVS 1.0` to `OWASP AISVS 1.01`.**
+
 Next: npm publish to npmjs.com, custom domain (crosswalk.owasp.org), vendor integration packs, NeMo Guardrails configs.
 
 ---

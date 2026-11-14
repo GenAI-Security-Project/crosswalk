@@ -45,9 +45,10 @@ const readJson = (p) => JSON.parse(fs.readFileSync(p, 'utf8'));
  */
 const COMPLETE_BY_DEFINITION = {
   STRIDE: 'STRIDE is a closed six-element mnemonic; all six are present.',
-  'OWASP AISVS 1.0':
-    'AISVS 1.0 is a frozen release (1.0/en) of 191 verification requirements; all 191 are present, ' +
-    'verified against the upstream chapter files on 2026-09-14.',
+  'OWASP AISVS 1.01':
+    'AISVS 1.01 is a frozen release (1.01/en) of 213 verification requirements; all 213 are present, ' +
+    'verified against the upstream chapter files on 2026-11-14. The retired id 10.2.6 is excluded, ' +
+    'since 1.01 keeps it only as a placeholder row marked "Requirement removed."',
 };
 
 // ── which control ids do mappings actually cite? ─────────────────────────────

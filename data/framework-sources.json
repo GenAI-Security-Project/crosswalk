@@ -1,5 +1,5 @@
 {
-  "$comment": "Upstream framework versions, for detecting mapping rot. `mapped_version` comes from data/frameworks/*.json; `current_version` is the released version upstream. A null current_version means nobody has confirmed it — agents do not fill these from memory, because a guess here recreates the staleness the file exists to catch. Confirm, set `checked`, and note how.",
+  "$comment": "Upstream framework versions, for detecting mapping rot. `mapped_version` comes from data/frameworks/*.json; `current_version` is the released version upstream. A null current_version means nobody has confirmed it \u2014 agents do not fill these from memory, because a guess here recreates the staleness the file exists to catch. Confirm, set `checked`, and note how.",
   "schema": 1,
   "frameworks": {
     "aiuc-1": {
@@ -163,12 +163,12 @@
       "notes": ""
     },
     "owasp-aisvs": {
-      "name": "OWASP AISVS 1.0",
-      "mapped_version": "1.0",
-      "current_version": "1.0",
-      "checked": "2026-09-14",
-      "source_url": "https://github.com/OWASP/AISVS/tree/main/1.0/en",
-      "notes": "Verified against the frozen OWASP/AISVS 1.0/en chapter files: 191 requirements, ids, text and levels identical to the registry. No tagged release upstream; 1.01-dev is in development and not yet released."
+      "name": "OWASP AISVS 1.01",
+      "mapped_version": "1.01",
+      "current_version": "1.01",
+      "checked": "2026-11-14",
+      "source_url": "https://github.com/OWASP/AISVS/tree/main/1.01/en",
+      "notes": "Verified against the frozen OWASP/AISVS 1.01/en chapter files (released October 2026, LOCKED.md and CI guard): 213 requirements, ids, text and levels identical to the registry. 1.01 adds 23 requirements, retires 10.2.6 (upstream keeps the row marked 'Requirement removed.'), rewords 14 and re-levels 2. The mapping rows were re-pinned to 1.01 in the same change; 11.1.6 has no counterpart in the 41 entries. 1.02-dev is in development and not released."
     },
     "owasp-asvs": {
       "name": "OWASP ASVS 5.0.0",
@@ -176,7 +176,7 @@
       "current_version": "5.0.0",
       "checked": "2026-09-18",
       "source_url": "https://owasp.org/projects/asvs",
-      "notes": "Identifiers translated from 4.0.3 with the ASVS project's own 5.0/mappings/mapping_v4.0.3_to_v5.0.0.yml; requirement text from the v5.0.0 release. Mechanical translation — relationship, rationale type and confidence on every row read DRAFT pending ASVS-leadership review (issue #22, STRAT-04). 11 identifiers 5.0.0 deleted are retained at 4.0.3 and flagged; see docs/ASVS_4_TO_5_TRANSLATION.md."
+      "notes": "Identifiers translated from 4.0.3 with the ASVS project's own 5.0/mappings/mapping_v4.0.3_to_v5.0.0.yml; requirement text from the v5.0.0 release. Mechanical translation \u2014 relationship, rationale type and confidence on every row read DRAFT pending ASVS-leadership review (issue #22, STRAT-04). 11 identifiers 5.0.0 deleted are retained at 4.0.3 and flagged; see docs/ASVS_4_TO_5_TRANSLATION.md."
     },
     "owasp-nhi": {
       "name": "OWASP NHI Top 10",
