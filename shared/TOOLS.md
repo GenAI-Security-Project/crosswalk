@@ -36,7 +36,7 @@ welcome via PR — see [CONTRIBUTING.md](../CONTRIBUTING.md) .
 | [Guardrails & Policy Enforcement](#guardrails-and-policy-enforcement) | 4 | LLM01, LLM03, ASI01 |
 | [OT & ICS Security](#ot-and-ics-security-tools) | 2 | ISA/IEC 62443, SP 800-82 |
 | [Evaluation & Benchmarking](#evaluation-and-benchmarking) | 4 | LLM07, DSGAI05 |
-| [MCP-Specific Tools](#mcp-specific-tools) | 2 | ASI02, ASI07 |
+| [MCP-Specific Tools](#mcp-specific-tools) | 4 | ASI02, ASI04, ASI07 |
 
 ---
 
@@ -237,6 +237,7 @@ server deployments.
 | MCP Inspector | Official MCP debugging and testing tool — inspect tool schemas, test tool calls, validate descriptor integrity | ASI02, ASI04, DSGAI06 | <https://github.com/modelcontextprotocol/inspector> |
 | MCP Python SDK | Official Python SDK for MCP servers — use as the base for building secure MCP servers with typed schemas and validation | ASI02, ASI04 | <https://github.com/modelcontextprotocol/python-sdk> |
 | MCP TypeScript SDK | Official TypeScript SDK — same as Python SDK for Node.js deployments | ASI02, ASI04 | <https://github.com/modelcontextprotocol/typescript-sdk> |
+| agent-perimeter | 100% passive external attack surface CLI for agentic brands — audits cross-registry MCP supply-chain provenance (Official MCP Registry, npm, PyPI), unverified 3rd-party hosted proxies, DNS-AID/DNSSEC, CT logs, and RFC 9728 OAuth metadata using a 2-axis Control Posture vs. Threat Pressure model | ASI04, ASI07, ASI03 | <https://github.com/jonadas-tech/agent-perimeter> |
 
 ---
 

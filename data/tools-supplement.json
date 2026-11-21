@@ -89,6 +89,13 @@
         "type": "open-source"
       }
     ],
+    "ASI04": [
+      {
+        "name": "agent-perimeter",
+        "url": "https://github.com/jonadas-tech/agent-perimeter",
+        "type": "open-source"
+      }
+    ],
     "ASI06": [
       {
         "name": "LAAF v2.0",
@@ -105,6 +112,11 @@
       {
         "name": "Agentic Security",
         "url": "https://github.com/msoedov/agentic_security",
+        "type": "open-source"
+      },
+      {
+        "name": "agent-perimeter",
+        "url": "https://github.com/jonadas-tech/agent-perimeter",
         "type": "open-source"
       }
     ],

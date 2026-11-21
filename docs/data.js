@@ -18016,6 +18016,11 @@ window.CROSSWALK_DATA = [
         "name": "Sigstore",
         "type": "open-source",
         "url": "https://www.sigstore.dev"
+      },
+      {
+        "name": "agent-perimeter",
+        "url": "https://github.com/jonadas-tech/agent-perimeter",
+        "type": "open-source"
       }
     ],
     "incidents": [
@@ -21617,6 +21622,11 @@ window.CROSSWALK_DATA = [
       {
         "name": "Agentic Security",
         "url": "https://github.com/msoedov/agentic_security",
+        "type": "open-source"
+      },
+      {
+        "name": "agent-perimeter",
+        "url": "https://github.com/jonadas-tech/agent-perimeter",
         "type": "open-source"
       }
     ],
