@@ -20,17 +20,13 @@
 
 const fs   = require('fs');
 const path = require('path');
+const crossrefs = require('./crossrefs');
 
 // ─── Configuration ────────────────────────────────────────────────────────────
 
 const ROOT = path.resolve(__dirname, '..');
 
-const MAPPING_FOLDERS = [
-  'llm-top10',
-  'agentic-top10',
-  'dsgai-2026',
-  'ast-top10',
-];
+const { MAPPING_FOLDERS } = crossrefs;
 
 // Every mapping file must contain these heading patterns (case-insensitive)
 const REQUIRED_SECTIONS = [
@@ -209,53 +205,23 @@ function checkCrossRefFormat(filePath, content) {
  *    should mention a link back to the source file or its parent source list.
  *
  *    This is a best-effort soft check (warn, not fail) because patterns vary.
+ *
+ *    The link graph lives in scripts/crossrefs.js, shared with
+ *    scripts/backrefs.js, which writes the missing back-references into
+ *    generated `<!-- backrefs:start -->` blocks. The full content is read
+ *    here, so a link inside such a block satisfies this check.
  */
-function buildCrossRefMap(allFiles) {
-  const map = {}; // filePath → Set of internal .md files it links to
-
-  for (const fp of allFiles) {
-    const content = fs.readFileSync(fp, 'utf8');
-    const linkRe  = /\[([^\]]*)\]\(([^)#)]+\.md)[^)]*\)/g;
-    let match;
-    map[fp] = new Set();
-
-    while ((match = linkRe.exec(content)) !== null) {
-      const href   = match[2];
-      const target = path.resolve(path.dirname(fp), href);
-      if (fs.existsSync(target)) {
-        map[fp].add(path.resolve(target));
-      }
-    }
+function checkBidirectional(allFiles) {
+  const crossRefMap = crossrefs.buildCrossRefMap(allFiles);
+  const oneWay = crossrefs.findOneWayLinks(ROOT, allFiles, crossRefMap);
+  for (const { from, to } of oneWay) {
+    warn(
+      relPath(from),
+      `One-way link to ${relPath(to)} — consider adding a back-reference ` +
+        '(between mapping files, `node scripts/backrefs.js` writes it)'
+    );
   }
-
-  return map;
-}
-
-function checkBidirectional(allFiles, crossRefMap) {
-  let issues = 0;
-
-  for (const fp of allFiles) {
-    const linked = crossRefMap[fp] || new Set();
-    for (const targetFp of linked) {
-      // Only check within mapping folders
-      const isMapping = MAPPING_FOLDERS.some(f =>
-        targetFp.includes(path.sep + f + path.sep) ||
-        targetFp.includes('/' + f + '/')
-      );
-      if (!isMapping) continue;
-
-      const targetLinks = crossRefMap[targetFp] || new Set();
-      if (!targetLinks.has(path.resolve(fp))) {
-        warn(
-          relPath(fp),
-          `One-way link to ${relPath(targetFp)} — consider adding a back-reference`
-        );
-        issues++;
-      }
-    }
-  }
-
-  return issues;
+  return oneWay.length;
 }
 
 // ─── CROSSREF.md check ───────────────────────────────────────────────────────
@@ -727,19 +693,8 @@ function collectMappingFiles(targetFile) {
     return fs.existsSync(fp) ? [fp] : [];
   }
 
-  const files = [];
-  for (const folder of MAPPING_FOLDERS) {
-    const dir = path.join(ROOT, folder);
-    if (!fs.existsSync(dir)) continue;
-    for (const filename of fs.readdirSync(dir)) {
-      // A directory README is documentation, not a mapping file: it has no
-      // framework, no entries and no quick-reference table to validate.
-      if (filename.endsWith('.md') && filename.toLowerCase() !== 'readme.md') {
-        files.push(path.join(dir, filename));
-      }
-    }
-  }
-  return files;
+  // Shared with scripts/backrefs.js, so both see the same set of files.
+  return crossrefs.collectMappingFiles(ROOT);
 }
 
 // ─── MAESTRO layer-name guard ─────────────────────────────────────────
@@ -1165,8 +1120,7 @@ function run() {
   // Bidirectional cross-reference check (expensive — skip in quick mode)
   if (!quickMode && !targetFile) {
     console.log('Checking bidirectional cross-references...\n');
-    const crossRefMap = buildCrossRefMap(allFiles);
-    checkBidirectional(allFiles, crossRefMap);
+    checkBidirectional(allFiles);
   }
 
   // Schema v2 guard — operates on generated entries, so full runs only
