@@ -122,7 +122,7 @@ attacks, which C2.2 covers for image, audio and video inputs.
   include canonicalization, strict schema validatio...
 - 2.1.1: Verify that input normalization is applied before tokenization or embedding.
 - 2.1.5: Verify that the system implements a character set restriction for all inputs. The restriction must use an
-  allow-list approach that permits only characters th...
+  allow-list approach derived from the languages and ...
 - 10.4.2: Verify that MCP tools/list and tools/call responses are screened for indirect prompt injection before being
   injected into the model context.
 - 12.2.1: Verify that the system detects and alerts on known jailbreak patterns, prompt injection attempts, and
@@ -189,6 +189,8 @@ get generated from carrying data the requester may not receive.
   context at each retrieval and assembly stage, rat...
 - 7.3.2: Verify that output filters detect and block responses that disclose system prompt content or backend data.
 - 11.2.4: Verify that training on sensitive datasets employs differentially-private optimization.
+- 10.4.21: Verify that MCP clients open URL-mode elicitation targets so that neither the client nor the model can
+  observe the page contents or the user's input.
 
 **Tier 3 - Strategic:**
 
@@ -227,10 +229,10 @@ by the model, and C9.1 caps budgets.
 
 **Tier 1 - Immediate (pre-production gate):**
 
-- 9.2.1: Verify that the agent runtime blocks execution of privileged, high-impact, or irreversible actions until
-  explicit human approval is received and verified.
-- 9.1.2: Verify that per-execution budgets (e.g., max recursion depth, token use, and monetary spend) are configured and
-  enforced by the runtime.
+- 9.2.1: Verify that the agent runtime blocks execution of privileged or irreversible actions until explicit human
+  approval is received and verified.
+- 9.1.2: Verify that per-execution budgets (e.g., max recursion depth, token use, and monetary spend) are enforced by
+  the runtime.
 - 9.3.1: Verify that each tool/plugin executes in a least-privilege sandbox or is otherwise isolated from model
   operations.
 - 9.6.1: Verify that a manual kill-switch mechanism exists to immediately halt AI model inference and outputs.
@@ -395,9 +397,10 @@ than a generic API throttle.
 
 **Tier 1 - Immediate (pre-production gate):**
 
-- 9.1.2: Verify that per-execution budgets (e.g., max recursion depth, token use, and monetary spend) are configured and
-  enforced by the runtime.
-- 9.1.1: Verify that per-tool quotas and timeouts (e.g., CPU, memory, disk, egress, and execution time) are enforced.
+- 9.1.2: Verify that per-execution budgets (e.g., max recursion depth, token use, and monetary spend) are enforced by
+  the runtime.
+- 9.1.1: Verify that per-tool quotas and timeouts (e.g., CPU, memory, disk, egress, and execution time) are enforced by
+  the runtime.
 - 2.1.4: Verify that input length controls prevent content from exceeding the context window. The controls must reject
   inputs that exceed token limits rather than tru...
 - 11.2.2: Verify that inference endpoints enforce per-principal and global rate limits sized to the extraction threat
@@ -408,6 +411,8 @@ than a generic API throttle.
 
 - 12.2.5: Verify that token usage is tracked at granular attribution levels including per user, per session, per feature
   endpoint, and per team or workspace.
+- 10.4.13: Verify that MCP implementations apply resource bounds to schema validation, such as a maximum schema depth, a
+  cap on the total number of nested schema elemen...
 
 **Tier 3 - Strategic:**
 
@@ -511,7 +516,8 @@ matching the 2026 principle that it is never a security boundary.
   observable context, including the context window, syst...
 - 12.2.3: Verify that custom rules detect AI-specific threat patterns for coordinated jailbreak attempts, prompt
   injection, and system prompt extraction attempts.
-- 10.2.4: Verify that MCP tools/list returns only tools permitted by resource owners' authorized scopes.
+- 10.2.4: Verify that MCP tools/list returns only tools permitted by the requester's authorized scopes, and that list
+  responses vary only by authorization context, nev...
 
 **Tier 3 - Strategic:**
 
@@ -610,6 +616,8 @@ C9.3.7 covers the dependency path, and code review and SAST remain outside the s
   operations.
 - 9.3.7: Verify that external resources named in model output are verified against an approved allow-list or registry
   before the agent installs or invokes them.
+- 7.1.3: Verify that, when an application uses an AI response to decide whether to perform an action, it does not
+  perform that action if the AI refuses the request, r...
 
 **Tier 3 - Strategic:**
 
@@ -651,7 +659,8 @@ C9.3.7 covers the dependency path, and code review and SAST remain outside the s
 |---|---|---|
 | 1.0.0 | 2026-08-28 | Initial release - full mapping of LLM01-LLM10 (2025 list) to OWASP AISVS 1.0 |
 | 1.1.0 | 2026-09-14 | Ported from GenAI-Security-Project/GenAI-Data-Security-Initiative#64 and re-keyed to the LLM Top 10 2026 list per MIGRATION.md: sections renumbered and renamed, cross-references renumbered, severities re-baselined, and 8 requirements added for the 2026 scope changes (LLM01 cross-modal, LLM04 artifact provenance, LLM05 fine-tuning subversion, LLM08 hidden context, LLM10 generated code) |
-| 1.1.0 | 2026-11-14 | Retargeted to OWASP AISVS 1.01 (frozen 1.01/en, October 2026): 3 rows added for new requirements 10.4.13, 10.4.21 and 7.1.3; no rows dropped; 8 rows reworded to the 1.01 text; tier re-derived for LLM10 (Hardening); schema v2 columns added and filled (83 high, 2 medium confidence, reviewer Otto Sulin). 82 -> 85 rows |
+| 1.2.0 | 2026-11-14 | Retargeted to OWASP AISVS 1.01 (frozen 1.01/en, October 2026): 3 rows added for new requirements 10.4.13, 10.4.21 and 7.1.3; no rows dropped; 8 rows reworded to the 1.01 text; tier re-derived for LLM10 (Hardening); schema v2 columns added and filled (83 high, 2 medium confidence, reviewer Otto Sulin). 82 -> 85 rows |
+| 1.2.1 | 2026-11-25 | Three-tier mitigation lists brought in line with the 1.01 tables (follow-up to #380): 3 new requirements added to their tiers and 6 bullets updated to the 1.01 wording. The 2026-11-14 row's version corrected from a duplicate 1.1.0 to 1.2.0. Tables unchanged |
 
 ---
 

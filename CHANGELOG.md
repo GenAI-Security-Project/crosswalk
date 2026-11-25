@@ -67,6 +67,17 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   recorded as a gap rather than forced. **Consumers that filter exports by
   framework name must update `OWASP AISVS 1.0` to `OWASP AISVS 1.01`.**
 
+### Fixed
+
+- **AISVS 1.01 follow-ups to #380.** The three-tier mitigation lists under each AISVS table now match the
+  1.01 tables above them. They had kept the 1.0 lists: 24 new requirements were missing, 21 bullets carried 1.0
+  wording, 10.3.3 and 10.2.7 sat in Tier 2 after being re-levelled to L1, and two bullets cited rows that had been
+  dropped (the retired 10.2.6, and 11.2.3 under DSGAI10). Each tier is rebuilt from its table's rows of that level,
+  in table order, under the existing convention (full text up to 160 characters, else 157 plus `...`). No table row,
+  relationship or confidence changed. The registry's 213 descriptions get back the chapter number the
+  regeneration dropped (`chapter  Training Data …` → `chapter C1 Training Data …`), and `docs/llms.txt` and the
+  AI-standards page now say AISVS 1.01.
+
 Next: npm publish to npmjs.com, custom domain (crosswalk.owasp.org), vendor integration packs, NeMo Guardrails configs.
 
 ---

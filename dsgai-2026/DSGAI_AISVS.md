@@ -128,6 +128,8 @@ embeddings, caches and outputs so the aggregation effect stays governed.
 - 11.2.1: Verify that model-inferred sensitive attributes are not directly returned in outputs.
 - 1.1.1: Verify that training data includes only features, attributes, and fields required for the model's stated
   purpose.
+- 10.4.19: Verify that MCP servers exclude end-user credentials and personal data from URL-mode elicitation URLs, and do
+  not issue URLs that are pre-authenticated to a ...
 
 **Tier 2 - Short-term (first 30 days):**
 
@@ -177,6 +179,8 @@ pass-through that propagates one compromise across services.
 
 - 10.2.3: Verify that MCP servers acting as OAuth 2.1 resource servers do not store or persist access tokens or user
   credentials.
+- 10.2.7: Verify that MCP servers only accept tokens explicitly issued for them, and do not pass tokens issued for other
+  services through to downstream APIs.
 
 **Tier 2 - Short-term (first 30 days):**
 
@@ -184,7 +188,10 @@ pass-through that propagates one compromise across services.
   observable context, including the context window, syst...
 - 9.4.1: Verify that each agent instance has a unique cryptographic identity and authenticates as a first-class
   principal to downstream systems.
-- 10.2.7: Verify that MCP servers do not pass through access tokens received from clients to downstream APIs.
+- 10.2.9: Verify that MCP clients bind persisted OAuth client credentials to the issuing authorization server and do not
+  present them to a different authorization server.
+- 10.4.18: Verify that MCP servers do not use form-mode elicitation to request secrets or payment credentials, and that
+  in URL-mode elicitation the user completing the ...
 
 **Tier 3 - Strategic:**
 
@@ -192,7 +199,7 @@ pass-through that propagates one compromise across services.
   cryptographically signed tokens.
 - 9.4.3: Verify that agent identity credentials rotate on a defined schedule.
 - 9.2.9: Verify that cryptographic key material or credentials used to issue approvals are isolated from the agent
-  runtime.
+  runtime, and that the runtime can neither read them...
 
 #### Cross-references
 
@@ -386,7 +393,8 @@ declared schemas before they enter the model context.
 - 9.3.3: Verify that tool manifests declare required privileges, resource limits, and output validation requirements.
 - 9.3.4: Verify that the runtime enforces the privileges, resource limits, and output-validation requirements declared
   in tool manifests.
-- 10.2.4: Verify that MCP tools/list returns only tools permitted by resource owners' authorized scopes.
+- 10.2.4: Verify that MCP tools/list returns only tools permitted by the requester's authorized scopes, and that list
+  responses vary only by authorization context, nev...
 - 9.3.6: Verify that there is architectural separation between processing of untrusted tool outputs and agent
   operations.
 
@@ -568,7 +576,6 @@ optimization where a formal guarantee is needed.
 **Tier 2 - Short-term (first 30 days):**
 
 - 11.2.4: Verify that training on sensitive datasets employs differentially-private optimization.
-- 11.2.3: Verify that model outputs are calibrated to reduce overconfident predictions.
 - 1.2.3: Verify that sensitive information in labels is redacted, anonymized, or encrypted before being used in any
   labeling artifact.
 
@@ -589,8 +596,8 @@ optimization where a formal guarantee is needed.
 ### DSGAI11 - Cross-Context Conversation Bleed
 
 AISVS addresses context bleed as a tenancy and session lifecycle problem. C5.3.1 stops one tenant's operations
-influencing or observing another's on shared serving infrastructure, C8.1.1 enforces per-tenant namespace uniqueness,
-and C10.2.6 removes session artifacts at termination.
+influencing or observing another's on shared serving infrastructure, and C8.1.1 enforces per-tenant namespace
+uniqueness.
 
 #### AISVS mapping
 
@@ -618,8 +625,13 @@ and C10.2.6 removes session artifacts at termination.
   operations from influencing or observing another t...
 - 3.3.3: Verify that model versions running in parallel use isolated runtime state so that AI-specific shared resources
   are not shared across deployments.
-- 10.2.6: Verify that MCP servers ensure all session artifacts are removed when a session terminates.
 - 8.3.2: Verify that memory can be reset.
+- 9.3.9: Verify that services reachable from agent or tool sandboxes enforce the defined run, task, or tenant isolation
+  policy on agent-writable state, including obje...
+- 10.4.16: Verify that MCP clients and intermediaries reuse cached responses marked with a private cache scope only
+  within the authorization context that produced them,...
+- 10.4.17: Verify that MCP servers mark cacheable results containing user-specific or authorization-filtered data with a
+  private cache scope.
 
 **Tier 3 - Strategic:**
 
@@ -858,8 +870,8 @@ consent, and C7.3.3 blocks the outbound request path.
 
 - 9.3.1: Verify that each tool/plugin executes in a least-privilege sandbox or is otherwise isolated from model
   operations.
-- 9.2.1: Verify that the agent runtime blocks execution of privileged, high-impact, or irreversible actions until
-  explicit human approval is received and verified.
+- 9.2.1: Verify that the agent runtime blocks execution of privileged or irreversible actions until explicit human
+  approval is received and verified.
 - 4.3.1: Verify that edge AI devices authenticate to central infrastructure using strong authentication mechanisms.
 
 **Tier 2 - Short-term (first 30 days):**
@@ -1055,6 +1067,8 @@ unauthorized copies remain identifiable.
 
 - 11.3.2: Verify that raw model outputs are not directly exposed beyond the application backend, and that externally
   visible responses are calibrated to the extraction...
+- 11.3.5: Verify that inference endpoints constrain sampling and decoding parameters supplied by untrusted callers
+  (e.g., temperature, top-k, top-p, logit bias, candid...
 
 **Tier 3 - Strategic:**
 
@@ -1158,6 +1172,7 @@ its source document.
 | 1.0.0 | 2026-08-28 | Initial release - full mapping of DSGAI01-DSGAI21 to OWASP AISVS 1.0 |
 | 1.0.1 | 2026-09-14 | Ported from GenAI-Security-Project/GenAI-Data-Security-Initiative#64 (the monorepo copy of crosswalk/) to this repo. LLM Top 10 cross-references renumbered to the 2026 list per MIGRATION.md; source-list title, links and footer aligned with this repo. Mappings unchanged |
 | 1.1.0 | 2026-11-14 | Retargeted to OWASP AISVS 1.01 (frozen 1.01/en, October 2026): 7 rows added for new C9.3, C10.2, C10.4 and C11.3 requirements; 2 dropped (the retired 10.2.6, and the 11.2.3 calibration row on DSGAI10, which does not address anonymisation); 5 rows reworded to the 1.01 text; tier re-derived for DSGAI01 (Foundational); schema v2 columns added and filled (141 high, 5 medium confidence, reviewer Otto Sulin). 141 -> 146 rows |
+| 1.1.1 | 2026-11-25 | Three-tier mitigation lists brought in line with the 1.01 tables (follow-up to #380): 7 new requirements added to their tiers, 3 bullets updated to the 1.01 wording, 10.2.7 moved from Tier 2 to Tier 1 (re-levelled to L1), and the bullets for the dropped rows removed (retired 10.2.6 under DSGAI11, 11.2.3 under DSGAI10). DSGAI11 intro no longer cites 10.2.6. Tables unchanged |
 
 ---
 

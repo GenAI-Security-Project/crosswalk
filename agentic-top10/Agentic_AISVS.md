@@ -124,12 +124,12 @@ where a hijack would survive the session.
 
 - 2.1.6: Verify that the system enforces an instruction hierarchy in which system and developer messages override user
   instructions and other untrusted inputs, even a...
-- 8.2.3: Verify that agent outputs and tool outputs are not automatically written to trusted agent memory without
-  explicit source validation.
+- 8.2.3: Verify that no component reachable from agent execution can write agent outputs or tool outputs to trusted
+  agent memory without explicit source validation.
 - 9.3.5: Verify that components processing untrusted data are isolated from tool-calling capabilities, ensuring that
   compromised data processing cannot trigger unauth...
 - 9.2.5: Verify that any self-modification capability (e.g., prompt rewriting, tool-list changes, parameter updates) is
-  restricted by enforceable boundaries.
+  restricted by boundaries that are enforced by ...
 - 9.2.6: Verify that agentic systems include an AI-augmented review of planned high-risk actions before execution that
   adds to, and does not replace, the deterministi...
 
@@ -176,6 +176,10 @@ authorization so a legitimate tool cannot be called destructively.
 - 9.3.1: Verify that each tool/plugin executes in a least-privilege sandbox or is otherwise isolated from model
   operations.
 - 9.3.2: Verify that tool outputs are validated against schemas.
+- 10.4.11: Verify that MCP clients reject tool definitions containing invalid mirrored-header annotations, excluding the
+  affected tool rather than the entire tool list.
+- 10.4.14: Verify that MCP implementations do not automatically dereference JSON Schema `$ref` values that resolve to
+  network URIs, and that any opt-in external resolut...
 
 **Tier 2 - Short-term (first 30 days):**
 
@@ -188,10 +192,15 @@ authorization so a legitimate tool cannot be called destructively.
   before the agent installs or invokes them.
 - 10.2.5: Verify that MCP servers enforce access control on every tool invocation, validating that the user's access
   token authorizes both the requested tool and the s...
+- 9.3.9: Verify that services reachable from agent or tool sandboxes enforce the defined run, task, or tenant isolation
+  policy on agent-writable state, including obje...
+- 10.4.15: Verify that MCP implementations reject schemas that fail to validate due to an unresolved external `$ref`
+  rather than treating them as permissive.
 
 **Tier 3 - Strategic:**
 
-- 9.3.8: Verify that policy violations trigger automated tool containment.
+- 9.3.8: Verify that policy violations trigger automatic containment of affected tools, such as stopping their
+  execution, isolating them, or revoking their permissions.
 
 #### Cross-references
 
@@ -235,6 +244,8 @@ C10.2 adds OAuth 2.1 token validation on the MCP path.
 - 10.2.2: Verify that MCP servers validate the presented access token's issuer, audience, expiration, and scope claims
   in accordance with OAuth 2.1.
 - 10.2.1: Verify that MCP servers validate access tokens for each request and do not rely on transport security alone.
+- 10.2.8: Verify that MCP servers protect the integrity of `requestState` that influences authorization, resource
+  access, or business logic, and reject state that fail...
 
 **Tier 2 - Short-term (first 30 days):**
 
@@ -246,6 +257,10 @@ C10.2 adds OAuth 2.1 token validation on the MCP path.
   observable context, including the context window, syst...
 - 5.2.5: Verify that the policy decision point for agent authorization is isolated from the agent's execution
   environment.
+- 9.5.7: Verify that authority derived through delegation never exceeds the delegating agent's current authority.
+- 10.2.10: Verify that MCP servers enforce single use server-side for `requestState` that must be consumed at most once.
+- 10.4.9: Verify that MCP proxy servers using a shared upstream OAuth client identity do not allow a requesting MCP
+  client to inherit authorization established for a d...
 
 **Tier 3 - Strategic:**
 
@@ -350,7 +365,8 @@ execute.
 - 9.3.2: Verify that tool outputs are validated against schemas.
 - 7.1.1: Verify that the application validates all model outputs against a defined schema and rejects any output that
   does not match.
-- 9.1.1: Verify that per-tool quotas and timeouts (e.g., CPU, memory, disk, egress, and execution time) are enforced.
+- 9.1.1: Verify that per-tool quotas and timeouts (e.g., CPU, memory, disk, egress, and execution time) are enforced by
+  the runtime.
 - 3.4.1: Verify that AI-specific runtime components are not shared across environment boundaries (e.g., development,
   staging, production).
 
@@ -399,8 +415,8 @@ and C8.3 provides quarantine and reset as recovery.
 
 **Tier 2 - Short-term (first 30 days):**
 
-- 8.2.3: Verify that agent outputs and tool outputs are not automatically written to trusted agent memory without
-  explicit source validation.
+- 8.2.3: Verify that no component reachable from agent execution can write agent outputs or tool outputs to trusted
+  agent memory without explicit source validation.
 - 8.1.2: Verify that document metadata tags are immutable after the initial write.
 - 12.5.4: Verify that every ingested document is tagged at write time with source, writer identity, and timestamp.
 - 8.3.2: Verify that memory can be reset.
@@ -449,6 +465,8 @@ cryptographic agent identity that makes spoofing detectable.
 **Tier 1 - Immediate (pre-production gate):**
 
 - 10.3.1: Verify that authenticated, encrypted streamable HTTP is used for MCP transport for remote services.
+- 10.3.3: Verify that MCP servers validate both the Origin header and the Host header independently on all HTTP-based
+  transports to prevent DNS rebinding attacks.
 
 **Tier 2 - Short-term (first 30 days):**
 
@@ -456,13 +474,15 @@ cryptographic agent identity that makes spoofing detectable.
   principal to downstream systems.
 - 9.4.2: Verify that agent-initiated actions are cryptographically bound to each step of the execution chain for
   non-repudiation.
-- 10.3.3: Verify that MCP servers validate both the Origin header and the Host header independently on all HTTP-based
-  transports to prevent DNS rebinding attacks.
-- 10.3.4: Verify that MCP clients enforce a minimum acceptable protocol version and reject initialize responses that
-  propose a version below that minimum.
+- 10.3.4: Verify that MCP clients enforce a minimum acceptable protocol version and do not retry with, or fall back to,
+  a protocol version or legacy handshake below th...
 - 10.4.6: Verify that MCP servers sign tool responses with a unique nonce and timestamp so MCP clients can detect replay
   attempts.
 - 9.5.5: Verify that inter-agent task delegation is restricted by an explicit authorization policy.
+- 10.3.6: Verify that MCP intermediaries enforcing policy on mirrored request headers confirm that the protocol version
+  indicates a revision requiring header and body ...
+- 10.4.12: Verify that MCP servers reject requests where mirrored request headers do not match the corresponding request
+  body values, after decoding any encoded header ...
 
 **Tier 3 - Strategic:**
 
@@ -501,9 +521,10 @@ chain-wide approval gates to take the highest-impact classification present.
 
 **Tier 1 - Immediate (pre-production gate):**
 
-- 9.1.2: Verify that per-execution budgets (e.g., max recursion depth, token use, and monetary spend) are configured and
-  enforced by the runtime.
-- 9.1.1: Verify that per-tool quotas and timeouts (e.g., CPU, memory, disk, egress, and execution time) are enforced.
+- 9.1.2: Verify that per-execution budgets (e.g., max recursion depth, token use, and monetary spend) are enforced by
+  the runtime.
+- 9.1.1: Verify that per-tool quotas and timeouts (e.g., CPU, memory, disk, egress, and execution time) are enforced by
+  the runtime.
 - 9.6.1: Verify that a manual kill-switch mechanism exists to immediately halt AI model inference and outputs.
 
 **Tier 2 - Short-term (first 30 days):**
@@ -515,9 +536,12 @@ chain-wide approval gates to take the highest-impact classification present.
 - 9.6.3: Verify that kill-switch commands are implemented through an out-of-band channel that is isolated from the agent
   runtime.
 - 9.2.10: Verify that approval gates for multi-step or multi-agent action chains enforce the highest-impact
-  reversibility classification present anywhere in the chain.
-- 9.3.8: Verify that policy violations trigger automated tool containment.
+  reversibility classification present anywhere in the chain,...
+- 9.3.8: Verify that policy violations trigger automatic containment of affected tools, such as stopping their
+  execution, isolating them, or revoking their permissions.
 - 12.3.4: Verify that unexplained behavioral shifts are distinguished from gradual, expected operational drift.
+- 9.2.11: Verify that agent execution which would exceed the approved action chain is blocked until a new approval is
+  obtained, and that the new approval enforces the ...
 
 #### Cross-references
 
@@ -567,11 +591,17 @@ blocks rather than proceeds when approval times out.
 - 7.2.1: Verify that the system assesses the reliability of generated answers using a confidence estimation method.
 - 12.4.2: Verify that audit logs capture security-critical proactive actions, including approver identity, timestamp,
   action parameters, and decision outcomes.
+- 10.4.10: Verify that MCP clients bind each approved MCP server's granted consent and authorization to the connection
+  endpoint approved for that server, and require us...
+- 10.4.18: Verify that MCP servers do not use form-mode elicitation to request secrets or payment credentials, and that
+  in URL-mode elicitation the user completing the ...
+- 10.4.20: Verify that MCP clients require explicit user consent and display the full URL before opening any URL-mode
+  elicitation target, and do not pre-fetch the URL o...
 
 **Tier 3 - Strategic:**
 
 - 9.2.8: Verify that approvals are cryptographically bound to action parameters, requester identity, execution context,
-  and a unique single-use nonce.
+  and a unique single-use nonce, and are rejecte...
 
 #### Cross-references
 
@@ -616,7 +646,7 @@ own boundary through self-modification.
 - 9.4.2: Verify that agent-initiated actions are cryptographically bound to each step of the execution chain for
   non-repudiation.
 - 9.2.5: Verify that any self-modification capability (e.g., prompt rewriting, tool-list changes, parameter updates) is
-  restricted by enforceable boundaries.
+  restricted by boundaries that are enforced by ...
 - 12.4.1: Verify that autonomous action triggers include proactive behavior-pattern analysis, security evaluation, and
   threat-landscape assessment.
 - 12.4.3: Verify that kill-switch activations and override commands are logged.
@@ -664,6 +694,7 @@ own boundary through self-modification.
 | 1.0.0 | 2026-08-28 | Initial release - full mapping of ASI01-ASI10 to OWASP AISVS 1.0 |
 | 1.0.1 | 2026-09-14 | Ported from GenAI-Security-Project/GenAI-Data-Security-Initiative#64 (the monorepo copy of crosswalk/) to this repo. LLM Top 10 cross-references renumbered to the 2026 list per MIGRATION.md; source-list title, links and footer aligned with this repo. Mappings unchanged |
 | 1.1.0 | 2026-11-14 | Retargeted to OWASP AISVS 1.01 (frozen 1.01/en, October 2026): 14 rows added for the new C9.2, C9.3, C9.5, C10.2, C10.3 and C10.4 requirements; no rows dropped; 13 rows reworded to the 1.01 text; tier re-derived for ASI03 (Hardening); schema v2 columns added and filled (96 high, 1 medium confidence, reviewer Otto Sulin). 83 -> 97 rows |
+| 1.1.1 | 2026-11-25 | Three-tier mitigation lists brought in line with the 1.01 tables (follow-up to #380): 14 new requirements added to their tiers, 12 bullets updated to the 1.01 wording, 10.3.3 moved from Tier 2 to Tier 1 (re-levelled to L1). Tables unchanged |
 
 ---
 

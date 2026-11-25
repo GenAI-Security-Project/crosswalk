@@ -8470,6 +8470,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "date": "2026-11-14",
         "change": "Version bump to OWASP AISVS 1.01 (frozen 1.01/en, October 2026): 12 chapters, 44 sections, 213 verification requirements. 23 requirements added (C7, C9, C10, C11), 1 retired (10.2.6, kept upstream as 'Requirement removed.'), 14 reworded, 2 re-levelled (10.2.7 and 10.3.3 L2 to L1). Requirement ids, text and levels re-verified against OWASP/AISVS 1.01/en on 2026-11-14.",
         "author": "ottosulin"
+      },
+      {
+        "date": "2026-11-25",
+        "change": "Restored the chapter number in all 213 descriptions ('chapter C1 Training Data ...'), lost in the 1.01 regeneration. The number is the one already given in each description's section id. No id, title, level or URL changed.",
+        "author": "OWASP GenAI Data Security Initiative"
       }
     ],
     "inventory_completeness": {
@@ -8483,7 +8488,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "1.1.1",
         "title": "Verify that training data includes only features, attributes, and fields required for the model's stated purpose.",
-        "description": "AISVS 1.01 Level 1 requirement in section C1.1 Training Data Origin & Data Security, chapter  Training Data Integrity & Traceability. Verify that training data includes only features, attributes, and fields required for the model's stated purpose.",
+        "description": "AISVS 1.01 Level 1 requirement in section C1.1 Training Data Origin & Data Security, chapter C1 Training Data Integrity & Traceability. Verify that training data includes only features, attributes, and fields required for the model's stated purpose.",
         "parent": null,
         "function": "Training Data",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c11-training-data-origin--data-security",
@@ -8492,7 +8497,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "1.1.2",
         "title": "Verify that an up-to-date inventory is kept of every training-data source, including its origin, responsible party, license, collection method, intended use constraints, and processing history.",
-        "description": "AISVS 1.01 Level 2 requirement in section C1.1 Training Data Origin & Data Security, chapter  Training Data Integrity & Traceability. Verify that an up-to-date inventory is kept of every training-data source, including its origin, responsible party, license, collection method, intended use constraints, and processing history.",
+        "description": "AISVS 1.01 Level 2 requirement in section C1.1 Training Data Origin & Data Security, chapter C1 Training Data Integrity & Traceability. Verify that an up-to-date inventory is kept of every training-data source, including its origin, responsible party, license, collection method, intended use constraints, and processing history.",
         "parent": null,
         "function": "Training Data",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c11-training-data-origin--data-security",
@@ -8501,7 +8506,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "1.1.3",
         "title": "Verify that data integrity is provided when training data is stored and transferred.",
-        "description": "AISVS 1.01 Level 2 requirement in section C1.1 Training Data Origin & Data Security, chapter  Training Data Integrity & Traceability. Verify that data integrity is provided when training data is stored and transferred.",
+        "description": "AISVS 1.01 Level 2 requirement in section C1.1 Training Data Origin & Data Security, chapter C1 Training Data Integrity & Traceability. Verify that data integrity is provided when training data is stored and transferred.",
         "parent": null,
         "function": "Training Data",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c11-training-data-origin--data-security",
@@ -8510,7 +8515,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "1.1.4",
         "title": "Verify that integrity monitoring is applied to guard against unauthorized modifications or corruption of training data.",
-        "description": "AISVS 1.01 Level 2 requirement in section C1.1 Training Data Origin & Data Security, chapter  Training Data Integrity & Traceability. Verify that integrity monitoring is applied to guard against unauthorized modifications or corruption of training data.",
+        "description": "AISVS 1.01 Level 2 requirement in section C1.1 Training Data Origin & Data Security, chapter C1 Training Data Integrity & Traceability. Verify that integrity monitoring is applied to guard against unauthorized modifications or corruption of training data.",
         "parent": null,
         "function": "Training Data",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c11-training-data-origin--data-security",
@@ -8519,7 +8524,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "1.1.5",
         "title": "Verify that datasets are watermarked so their use can be attributed and any unauthorized use detected.",
-        "description": "AISVS 1.01 Level 3 requirement in section C1.1 Training Data Origin & Data Security, chapter  Training Data Integrity & Traceability. Verify that datasets are watermarked so their use can be attributed and any unauthorized use detected.",
+        "description": "AISVS 1.01 Level 3 requirement in section C1.1 Training Data Origin & Data Security, chapter C1 Training Data Integrity & Traceability. Verify that datasets are watermarked so their use can be attributed and any unauthorized use detected.",
         "parent": null,
         "function": "Training Data",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c11-training-data-origin--data-security",
@@ -8528,7 +8533,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "1.2.1",
         "title": "Verify that labeling platforms enforce access controls that restrict who can create, modify, or approve annotations.",
-        "description": "AISVS 1.01 Level 1 requirement in section C1.2 Data Labeling and Annotation Security, chapter  Training Data Integrity & Traceability. Verify that labeling platforms enforce access controls that restrict who can create, modify, or approve annotations.",
+        "description": "AISVS 1.01 Level 1 requirement in section C1.2 Data Labeling and Annotation Security, chapter C1 Training Data Integrity & Traceability. Verify that labeling platforms enforce access controls that restrict who can create, modify, or approve annotations.",
         "parent": null,
         "function": "Training Data",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c12-data-labeling-and-annotation-security",
@@ -8537,7 +8542,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "1.2.2",
         "title": "Verify that cryptographic integrity is applied to labeling artifacts.",
-        "description": "AISVS 1.01 Level 2 requirement in section C1.2 Data Labeling and Annotation Security, chapter  Training Data Integrity & Traceability. Verify that cryptographic integrity is applied to labeling artifacts.",
+        "description": "AISVS 1.01 Level 2 requirement in section C1.2 Data Labeling and Annotation Security, chapter C1 Training Data Integrity & Traceability. Verify that cryptographic integrity is applied to labeling artifacts.",
         "parent": null,
         "function": "Training Data",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c12-data-labeling-and-annotation-security",
@@ -8546,7 +8551,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "1.2.3",
         "title": "Verify that sensitive information in labels is redacted, anonymized, or encrypted before being used in any labeling artifact.",
-        "description": "AISVS 1.01 Level 2 requirement in section C1.2 Data Labeling and Annotation Security, chapter  Training Data Integrity & Traceability. Verify that sensitive information in labels is redacted, anonymized, or encrypted before being used in any labeling artifact.",
+        "description": "AISVS 1.01 Level 2 requirement in section C1.2 Data Labeling and Annotation Security, chapter C1 Training Data Integrity & Traceability. Verify that sensitive information in labels is redacted, anonymized, or encrypted before being used in any labeling artifact.",
         "parent": null,
         "function": "Training Data",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c12-data-labeling-and-annotation-security",
@@ -8555,7 +8560,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "1.3.1",
         "title": "Verify that training and fine-tuning pipelines implement poisoning detection techniques to identify potential data poisoning or unintentional corruption in training data.",
-        "description": "AISVS 1.01 Level 2 requirement in section C1.3 Training Data Quality and Security Assurance, chapter  Training Data Integrity & Traceability. Verify that training and fine-tuning pipelines implement poisoning detection techniques to identify potential data poisoning or unintentional corruption in training data.",
+        "description": "AISVS 1.01 Level 2 requirement in section C1.3 Training Data Quality and Security Assurance, chapter C1 Training Data Integrity & Traceability. Verify that training and fine-tuning pipelines implement poisoning detection techniques to identify potential data poisoning or unintentional corruption in training data.",
         "parent": null,
         "function": "Training Data",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c13-training-data-quality-and-security-assurance",
@@ -8564,7 +8569,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "1.3.2",
         "title": "Verify that automatically generated labels are subject to confidence thresholds and consistency checks to detect misleading or low-confidence labels.",
-        "description": "AISVS 1.01 Level 2 requirement in section C1.3 Training Data Quality and Security Assurance, chapter  Training Data Integrity & Traceability. Verify that automatically generated labels are subject to confidence thresholds and consistency checks to detect misleading or low-confidence labels.",
+        "description": "AISVS 1.01 Level 2 requirement in section C1.3 Training Data Quality and Security Assurance, chapter C1 Training Data Integrity & Traceability. Verify that automatically generated labels are subject to confidence thresholds and consistency checks to detect misleading or low-confidence labels.",
         "parent": null,
         "function": "Training Data",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c13-training-data-quality-and-security-assurance",
@@ -8573,7 +8578,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "1.3.3",
         "title": "Verify that models used in security-relevant decisions are evaluated for bias patterns.",
-        "description": "AISVS 1.01 Level 2 requirement in section C1.3 Training Data Quality and Security Assurance, chapter  Training Data Integrity & Traceability. Verify that models used in security-relevant decisions are evaluated for bias patterns.",
+        "description": "AISVS 1.01 Level 2 requirement in section C1.3 Training Data Quality and Security Assurance, chapter C1 Training Data Integrity & Traceability. Verify that models used in security-relevant decisions are evaluated for bias patterns.",
         "parent": null,
         "function": "Training Data",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c13-training-data-quality-and-security-assurance",
@@ -8582,7 +8587,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "1.3.4",
         "title": "Verify that disallowed content is detected and removed before training.",
-        "description": "AISVS 1.01 Level 2 requirement in section C1.3 Training Data Quality and Security Assurance, chapter  Training Data Integrity & Traceability. Verify that disallowed content is detected and removed before training.",
+        "description": "AISVS 1.01 Level 2 requirement in section C1.3 Training Data Quality and Security Assurance, chapter C1 Training Data Integrity & Traceability. Verify that disallowed content is detected and removed before training.",
         "parent": null,
         "function": "Training Data",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c13-training-data-quality-and-security-assurance",
@@ -8591,7 +8596,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "1.3.5",
         "title": "Verify that defenses against clean-label poisoning attacks are implemented.",
-        "description": "AISVS 1.01 Level 3 requirement in section C1.3 Training Data Quality and Security Assurance, chapter  Training Data Integrity & Traceability. Verify that defenses against clean-label poisoning attacks are implemented.",
+        "description": "AISVS 1.01 Level 3 requirement in section C1.3 Training Data Quality and Security Assurance, chapter C1 Training Data Integrity & Traceability. Verify that defenses against clean-label poisoning attacks are implemented.",
         "parent": null,
         "function": "Training Data",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C01-Training-Data-Integrity-and-Traceability.md#c13-training-data-quality-and-security-assurance",
@@ -8600,7 +8605,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "2.1.1",
         "title": "Verify that input normalization is applied before tokenization or embedding.",
-        "description": "AISVS 1.01 Level 1 requirement in section C2.1 Prompt Injection Defenses, chapter  Input Validation. Verify that input normalization is applied before tokenization or embedding.",
+        "description": "AISVS 1.01 Level 1 requirement in section C2.1 Prompt Injection Defenses, chapter C2 Input Validation. Verify that input normalization is applied before tokenization or embedding.",
         "parent": null,
         "function": "Input Validation",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C02-Input-Validation.md#c21-prompt-injection-defenses",
@@ -8609,7 +8614,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "2.1.2",
         "title": "Verify that encoding and representation smuggling in inputs is detected and mitigated. Approved mitigations include canonicalization, strict schema validation, policy-based rejection, or explicit marking.",
-        "description": "AISVS 1.01 Level 1 requirement in section C2.1 Prompt Injection Defenses, chapter  Input Validation. Verify that encoding and representation smuggling in inputs is detected and mitigated. Approved mitigations include canonicalization, strict schema validation, policy-based rejection, or explicit marking.",
+        "description": "AISVS 1.01 Level 1 requirement in section C2.1 Prompt Injection Defenses, chapter C2 Input Validation. Verify that encoding and representation smuggling in inputs is detected and mitigated. Approved mitigations include canonicalization, strict schema validation, policy-based rejection, or explicit marking.",
         "parent": null,
         "function": "Input Validation",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C02-Input-Validation.md#c21-prompt-injection-defenses",
@@ -8618,7 +8623,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "2.1.3",
         "title": "Verify that all inputs that could steer model behavior are treated as untrusted and screened by a prompt injection detection ruleset or classifier, with flagged inputs blocked.",
-        "description": "AISVS 1.01 Level 1 requirement in section C2.1 Prompt Injection Defenses, chapter  Input Validation. Verify that all inputs that could steer model behavior are treated as untrusted and screened by a prompt injection detection ruleset or classifier, with flagged inputs blocked.",
+        "description": "AISVS 1.01 Level 1 requirement in section C2.1 Prompt Injection Defenses, chapter C2 Input Validation. Verify that all inputs that could steer model behavior are treated as untrusted and screened by a prompt injection detection ruleset or classifier, with flagged inputs blocked.",
         "parent": null,
         "function": "Input Validation",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C02-Input-Validation.md#c21-prompt-injection-defenses",
@@ -8627,7 +8632,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "2.1.4",
         "title": "Verify that input length controls prevent content from exceeding the context window. The controls must reject inputs that exceed token limits rather than truncating them.",
-        "description": "AISVS 1.01 Level 1 requirement in section C2.1 Prompt Injection Defenses, chapter  Input Validation. Verify that input length controls prevent content from exceeding the context window. The controls must reject inputs that exceed token limits rather than truncating them.",
+        "description": "AISVS 1.01 Level 1 requirement in section C2.1 Prompt Injection Defenses, chapter C2 Input Validation. Verify that input length controls prevent content from exceeding the context window. The controls must reject inputs that exceed token limits rather than truncating them.",
         "parent": null,
         "function": "Input Validation",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C02-Input-Validation.md#c21-prompt-injection-defenses",
@@ -8636,7 +8641,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "2.1.5",
         "title": "Verify that the system implements a character set restriction for all inputs. The restriction must use an allow-list approach derived from the languages and use cases the system supports, permitting only characters that are explicitly required.",
-        "description": "AISVS 1.01 Level 1 requirement in section C2.1 Prompt Injection Defenses, chapter  Input Validation. Verify that the system implements a character set restriction for all inputs. The restriction must use an allow-list approach derived from the languages and use cases the system supports, permitting only characters that are explicitly required.",
+        "description": "AISVS 1.01 Level 1 requirement in section C2.1 Prompt Injection Defenses, chapter C2 Input Validation. Verify that the system implements a character set restriction for all inputs. The restriction must use an allow-list approach derived from the languages and use cases the system supports, permitting only characters that are explicitly required.",
         "parent": null,
         "function": "Input Validation",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C02-Input-Validation.md#c21-prompt-injection-defenses",
@@ -8645,7 +8650,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "2.1.6",
         "title": "Verify that the system enforces an instruction hierarchy in which system and developer messages override user instructions and other untrusted inputs, even after user instructions have been processed. Untrusted content cannot acquire higher instruction priority through retrieval, tool processing, or persistence across conversation turns.",
-        "description": "AISVS 1.01 Level 2 requirement in section C2.1 Prompt Injection Defenses, chapter  Input Validation. Verify that the system enforces an instruction hierarchy in which system and developer messages override user instructions and other untrusted inputs, even after user instructions have been processed. Untrusted content cannot acquire higher instruction priority through retrieval, tool processing, or persistence across conversation turns.",
+        "description": "AISVS 1.01 Level 2 requirement in section C2.1 Prompt Injection Defenses, chapter C2 Input Validation. Verify that the system enforces an instruction hierarchy in which system and developer messages override user instructions and other untrusted inputs, even after user instructions have been processed. Untrusted content cannot acquire higher instruction priority through retrieval, tool processing, or persistence across conversation turns.",
         "parent": null,
         "function": "Input Validation",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C02-Input-Validation.md#c21-prompt-injection-defenses",
@@ -8654,7 +8659,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "2.1.7",
         "title": "Verify that reserved special tokens are encoded as literal characters and cannot be injected into the model context.",
-        "description": "AISVS 1.01 Level 2 requirement in section C2.1 Prompt Injection Defenses, chapter  Input Validation. Verify that reserved special tokens are encoded as literal characters and cannot be injected into the model context.",
+        "description": "AISVS 1.01 Level 2 requirement in section C2.1 Prompt Injection Defenses, chapter C2 Input Validation. Verify that reserved special tokens are encoded as literal characters and cannot be injected into the model context.",
         "parent": null,
         "function": "Input Validation",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C02-Input-Validation.md#c21-prompt-injection-defenses",
@@ -8663,7 +8668,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "2.1.8",
         "title": "Verify that the system can detect many-shot jailbreaking patterns.",
-        "description": "AISVS 1.01 Level 3 requirement in section C2.1 Prompt Injection Defenses, chapter  Input Validation. Verify that the system can detect many-shot jailbreaking patterns.",
+        "description": "AISVS 1.01 Level 3 requirement in section C2.1 Prompt Injection Defenses, chapter C2 Input Validation. Verify that the system can detect many-shot jailbreaking patterns.",
         "parent": null,
         "function": "Input Validation",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C02-Input-Validation.md#c21-prompt-injection-defenses",
@@ -8672,7 +8677,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "2.2.1",
         "title": "Verify that every prompt is scored by a content classifier for violence, self-harm, hate, and sexual content against configurable thresholds. Prompts that exceed those thresholds are rejected or sanitized before reaching the model context.",
-        "description": "AISVS 1.01 Level 1 requirement in section C2.2 Content & Policy Screening, chapter  Input Validation. Verify that every prompt is scored by a content classifier for violence, self-harm, hate, and sexual content against configurable thresholds. Prompts that exceed those thresholds are rejected or sanitized before reaching the model context.",
+        "description": "AISVS 1.01 Level 1 requirement in section C2.2 Content & Policy Screening, chapter C2 Input Validation. Verify that every prompt is scored by a content classifier for violence, self-harm, hate, and sexual content against configurable thresholds. Prompts that exceed those thresholds are rejected or sanitized before reaching the model context.",
         "parent": null,
         "function": "Input Validation",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C02-Input-Validation.md#c22-content--policy-screening",
@@ -8681,7 +8686,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "2.2.2",
         "title": "Verify that prompt content classification is evaluated for unsupported languages.",
-        "description": "AISVS 1.01 Level 1 requirement in section C2.2 Content & Policy Screening, chapter  Input Validation. Verify that prompt content classification is evaluated for unsupported languages.",
+        "description": "AISVS 1.01 Level 1 requirement in section C2.2 Content & Policy Screening, chapter C2 Input Validation. Verify that prompt content classification is evaluated for unsupported languages.",
         "parent": null,
         "function": "Input Validation",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C02-Input-Validation.md#c22-content--policy-screening",
@@ -8690,7 +8695,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "2.2.3",
         "title": "Verify that non-text inputs (image/video/audio) are checked for adversarial perturbations, steganographic payloads, hidden or embedded content, or known attack patterns.",
-        "description": "AISVS 1.01 Level 2 requirement in section C2.2 Content & Policy Screening, chapter  Input Validation. Verify that non-text inputs (image/video/audio) are checked for adversarial perturbations, steganographic payloads, hidden or embedded content, or known attack patterns.",
+        "description": "AISVS 1.01 Level 2 requirement in section C2.2 Content & Policy Screening, chapter C2 Input Validation. Verify that non-text inputs (image/video/audio) are checked for adversarial perturbations, steganographic payloads, hidden or embedded content, or known attack patterns.",
         "parent": null,
         "function": "Input Validation",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C02-Input-Validation.md#c22-content--policy-screening",
@@ -8699,7 +8704,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "2.2.4",
         "title": "Verify that coordinated attacks spanning multiple input types (e.g., steganographic payloads in images combined with prompt injection in text) are detected and blocked.",
-        "description": "AISVS 1.01 Level 3 requirement in section C2.2 Content & Policy Screening, chapter  Input Validation. Verify that coordinated attacks spanning multiple input types (e.g., steganographic payloads in images combined with prompt injection in text) are detected and blocked.",
+        "description": "AISVS 1.01 Level 3 requirement in section C2.2 Content & Policy Screening, chapter C2 Input Validation. Verify that coordinated attacks spanning multiple input types (e.g., steganographic payloads in images combined with prompt injection in text) are detected and blocked.",
         "parent": null,
         "function": "Input Validation",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C02-Input-Validation.md#c22-content--policy-screening",
@@ -8708,7 +8713,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "3.1.1",
         "title": "Verify that a model registry maintains an inventory of all deployed model artifacts and their origin.",
-        "description": "AISVS 1.01 Level 1 requirement in section C3.1 Model Authorization & Integrity, chapter  Model Lifecycle Management & Change Control. Verify that a model registry maintains an inventory of all deployed model artifacts and their origin.",
+        "description": "AISVS 1.01 Level 1 requirement in section C3.1 Model Authorization & Integrity, chapter C3 Model Lifecycle Management & Change Control. Verify that a model registry maintains an inventory of all deployed model artifacts and their origin.",
         "parent": null,
         "function": "Model Lifecycle",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C03-Model-Lifecycle-Management.md#c31-model-authorization--integrity",
@@ -8717,7 +8722,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "3.1.2",
         "title": "Verify that all model artifacts (weights, configurations, tokenizers, base models, fine-tunes, adapters, and safety/policy models) are cryptographically signed by authorized entities.",
-        "description": "AISVS 1.01 Level 2 requirement in section C3.1 Model Authorization & Integrity, chapter  Model Lifecycle Management & Change Control. Verify that all model artifacts (weights, configurations, tokenizers, base models, fine-tunes, adapters, and safety/policy models) are cryptographically signed by authorized entities.",
+        "description": "AISVS 1.01 Level 2 requirement in section C3.1 Model Authorization & Integrity, chapter C3 Model Lifecycle Management & Change Control. Verify that all model artifacts (weights, configurations, tokenizers, base models, fine-tunes, adapters, and safety/policy models) are cryptographically signed by authorized entities.",
         "parent": null,
         "function": "Model Lifecycle",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C03-Model-Lifecycle-Management.md#c31-model-authorization--integrity",
@@ -8726,7 +8731,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "3.1.3",
         "title": "Verify that model cryptographic signatures are verified at deployment admission and on load.",
-        "description": "AISVS 1.01 Level 2 requirement in section C3.1 Model Authorization & Integrity, chapter  Model Lifecycle Management & Change Control. Verify that model cryptographic signatures are verified at deployment admission and on load.",
+        "description": "AISVS 1.01 Level 2 requirement in section C3.1 Model Authorization & Integrity, chapter C3 Model Lifecycle Management & Change Control. Verify that model cryptographic signatures are verified at deployment admission and on load.",
         "parent": null,
         "function": "Model Lifecycle",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C03-Model-Lifecycle-Management.md#c31-model-authorization--integrity",
@@ -8735,7 +8740,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "3.2.1",
         "title": "Verify that models undergo automated input validation testing, safety evaluation testing, and output sanitization testing before deployment.",
-        "description": "AISVS 1.01 Level 1 requirement in section C3.2 Model Validation & Testing, chapter  Model Lifecycle Management & Change Control. Verify that models undergo automated input validation testing, safety evaluation testing, and output sanitization testing before deployment.",
+        "description": "AISVS 1.01 Level 1 requirement in section C3.2 Model Validation & Testing, chapter C3 Model Lifecycle Management & Change Control. Verify that models undergo automated input validation testing, safety evaluation testing, and output sanitization testing before deployment.",
         "parent": null,
         "function": "Model Lifecycle",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C03-Model-Lifecycle-Management.md#c32-model-validation--testing",
@@ -8744,7 +8749,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "3.2.2",
         "title": "Verify that models subjected to post-training quantization are re-evaluated against the same safety and alignment test suite on the compressed artifact before deployment.",
-        "description": "AISVS 1.01 Level 2 requirement in section C3.2 Model Validation & Testing, chapter  Model Lifecycle Management & Change Control. Verify that models subjected to post-training quantization are re-evaluated against the same safety and alignment test suite on the compressed artifact before deployment.",
+        "description": "AISVS 1.01 Level 2 requirement in section C3.2 Model Validation & Testing, chapter C3 Model Lifecycle Management & Change Control. Verify that models subjected to post-training quantization are re-evaluated against the same safety and alignment test suite on the compressed artifact before deployment.",
         "parent": null,
         "function": "Model Lifecycle",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C03-Model-Lifecycle-Management.md#c32-model-validation--testing",
@@ -8753,7 +8758,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "3.2.3",
         "title": "Verify that provider model, version, or routing changes trigger security re-evaluation before continued use.",
-        "description": "AISVS 1.01 Level 3 requirement in section C3.2 Model Validation & Testing, chapter  Model Lifecycle Management & Change Control. Verify that provider model, version, or routing changes trigger security re-evaluation before continued use.",
+        "description": "AISVS 1.01 Level 3 requirement in section C3.2 Model Validation & Testing, chapter C3 Model Lifecycle Management & Change Control. Verify that provider model, version, or routing changes trigger security re-evaluation before continued use.",
         "parent": null,
         "function": "Model Lifecycle",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C03-Model-Lifecycle-Management.md#c32-model-validation--testing",
@@ -8762,7 +8767,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "3.3.1",
         "title": "Verify that production deployments implement rollout mechanisms with automated rollback triggers.",
-        "description": "AISVS 1.01 Level 2 requirement in section C3.3 Controlled Deployment & Rollback, chapter  Model Lifecycle Management & Change Control. Verify that production deployments implement rollout mechanisms with automated rollback triggers.",
+        "description": "AISVS 1.01 Level 2 requirement in section C3.3 Controlled Deployment & Rollback, chapter C3 Model Lifecycle Management & Change Control. Verify that production deployments implement rollout mechanisms with automated rollback triggers.",
         "parent": null,
         "function": "Model Lifecycle",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C03-Model-Lifecycle-Management.md#c33-controlled-deployment--rollback",
@@ -8771,7 +8776,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "3.3.2",
         "title": "Verify that rollback capabilities restore the complete model state.",
-        "description": "AISVS 1.01 Level 2 requirement in section C3.3 Controlled Deployment & Rollback, chapter  Model Lifecycle Management & Change Control. Verify that rollback capabilities restore the complete model state.",
+        "description": "AISVS 1.01 Level 2 requirement in section C3.3 Controlled Deployment & Rollback, chapter C3 Model Lifecycle Management & Change Control. Verify that rollback capabilities restore the complete model state.",
         "parent": null,
         "function": "Model Lifecycle",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C03-Model-Lifecycle-Management.md#c33-controlled-deployment--rollback",
@@ -8780,7 +8785,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "3.3.3",
         "title": "Verify that model versions running in parallel use isolated runtime state so that AI-specific shared resources are not shared across deployments.",
-        "description": "AISVS 1.01 Level 2 requirement in section C3.3 Controlled Deployment & Rollback, chapter  Model Lifecycle Management & Change Control. Verify that model versions running in parallel use isolated runtime state so that AI-specific shared resources are not shared across deployments.",
+        "description": "AISVS 1.01 Level 2 requirement in section C3.3 Controlled Deployment & Rollback, chapter C3 Model Lifecycle Management & Change Control. Verify that model versions running in parallel use isolated runtime state so that AI-specific shared resources are not shared across deployments.",
         "parent": null,
         "function": "Model Lifecycle",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C03-Model-Lifecycle-Management.md#c33-controlled-deployment--rollback",
@@ -8789,7 +8794,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "3.4.1",
         "title": "Verify that AI-specific runtime components are not shared across environment boundaries (e.g., development, staging, production).",
-        "description": "AISVS 1.01 Level 1 requirement in section C3.4 Secure Development Practices, chapter  Model Lifecycle Management & Change Control. Verify that AI-specific runtime components are not shared across environment boundaries (e.g., development, staging, production).",
+        "description": "AISVS 1.01 Level 1 requirement in section C3.4 Secure Development Practices, chapter C3 Model Lifecycle Management & Change Control. Verify that AI-specific runtime components are not shared across environment boundaries (e.g., development, staging, production).",
         "parent": null,
         "function": "Model Lifecycle",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C03-Model-Lifecycle-Management.md#c34-secure-development-practices",
@@ -8798,7 +8803,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "3.4.2",
         "title": "Verify that model training and fine-tuning environments are isolated from production environments.",
-        "description": "AISVS 1.01 Level 2 requirement in section C3.4 Secure Development Practices, chapter  Model Lifecycle Management & Change Control. Verify that model training and fine-tuning environments are isolated from production environments.",
+        "description": "AISVS 1.01 Level 2 requirement in section C3.4 Secure Development Practices, chapter C3 Model Lifecycle Management & Change Control. Verify that model training and fine-tuning environments are isolated from production environments.",
         "parent": null,
         "function": "Model Lifecycle",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C03-Model-Lifecycle-Management.md#c34-secure-development-practices",
@@ -8807,7 +8812,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "3.5.1",
         "title": "Verify that models used in RLHF fine-tuning are versioned and integrity-verified before use in a training run.",
-        "description": "AISVS 1.01 Level 2 requirement in section C3.5 Pipeline Fine-Tuning, chapter  Model Lifecycle Management & Change Control. Verify that models used in RLHF fine-tuning are versioned and integrity-verified before use in a training run.",
+        "description": "AISVS 1.01 Level 2 requirement in section C3.5 Pipeline Fine-Tuning, chapter C3 Model Lifecycle Management & Change Control. Verify that models used in RLHF fine-tuning are versioned and integrity-verified before use in a training run.",
         "parent": null,
         "function": "Model Lifecycle",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C03-Model-Lifecycle-Management.md#c35-pipeline-fine-tuning",
@@ -8816,7 +8821,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "3.5.2",
         "title": "Verify that RLHF training stages include automated detection of reward hacking or reward model over-optimization.",
-        "description": "AISVS 1.01 Level 3 requirement in section C3.5 Pipeline Fine-Tuning, chapter  Model Lifecycle Management & Change Control. Verify that RLHF training stages include automated detection of reward hacking or reward model over-optimization.",
+        "description": "AISVS 1.01 Level 3 requirement in section C3.5 Pipeline Fine-Tuning, chapter C3 Model Lifecycle Management & Change Control. Verify that RLHF training stages include automated detection of reward hacking or reward model over-optimization.",
         "parent": null,
         "function": "Model Lifecycle",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C03-Model-Lifecycle-Management.md#c35-pipeline-fine-tuning",
@@ -8825,7 +8830,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "3.5.3",
         "title": "Verify that in multi-stage fine-tuning pipelines, each stage's output is integrity-verified before it is consumed by the next stage.",
-        "description": "AISVS 1.01 Level 3 requirement in section C3.5 Pipeline Fine-Tuning, chapter  Model Lifecycle Management & Change Control. Verify that in multi-stage fine-tuning pipelines, each stage's output is integrity-verified before it is consumed by the next stage.",
+        "description": "AISVS 1.01 Level 3 requirement in section C3.5 Pipeline Fine-Tuning, chapter C3 Model Lifecycle Management & Change Control. Verify that in multi-stage fine-tuning pipelines, each stage's output is integrity-verified before it is consumed by the next stage.",
         "parent": null,
         "function": "Model Lifecycle",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C03-Model-Lifecycle-Management.md#c35-pipeline-fine-tuning",
@@ -8834,7 +8839,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "3.5.4",
         "title": "Verify that fine-tuning checkpoints are registered as distinct artifacts.",
-        "description": "AISVS 1.01 Level 3 requirement in section C3.5 Pipeline Fine-Tuning, chapter  Model Lifecycle Management & Change Control. Verify that fine-tuning checkpoints are registered as distinct artifacts.",
+        "description": "AISVS 1.01 Level 3 requirement in section C3.5 Pipeline Fine-Tuning, chapter C3 Model Lifecycle Management & Change Control. Verify that fine-tuning checkpoints are registered as distinct artifacts.",
         "parent": null,
         "function": "Model Lifecycle",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C03-Model-Lifecycle-Management.md#c35-pipeline-fine-tuning",
@@ -8843,7 +8848,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "4.1.1",
         "title": "Verify that AI models execute in isolated sandboxes.",
-        "description": "AISVS 1.01 Level 1 requirement in section C4.1 AI Workload Sandboxing & Validation, chapter  Infrastructure, Configuration & Deployment Security. Verify that AI models execute in isolated sandboxes.",
+        "description": "AISVS 1.01 Level 1 requirement in section C4.1 AI Workload Sandboxing & Validation, chapter C4 Infrastructure, Configuration & Deployment Security. Verify that AI models execute in isolated sandboxes.",
         "parent": null,
         "function": "Infrastructure",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C04-Infrastructure.md#c41-ai-workload-sandboxing--validation",
@@ -8852,7 +8857,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "4.1.2",
         "title": "Verify that model artifact loading enforces an explicit allow-list of serialization formats that do not permit arbitrary code execution during deserialization.",
-        "description": "AISVS 1.01 Level 1 requirement in section C4.1 AI Workload Sandboxing & Validation, chapter  Infrastructure, Configuration & Deployment Security. Verify that model artifact loading enforces an explicit allow-list of serialization formats that do not permit arbitrary code execution during deserialization.",
+        "description": "AISVS 1.01 Level 1 requirement in section C4.1 AI Workload Sandboxing & Validation, chapter C4 Infrastructure, Configuration & Deployment Security. Verify that model artifact loading enforces an explicit allow-list of serialization formats that do not permit arbitrary code execution during deserialization.",
         "parent": null,
         "function": "Infrastructure",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C04-Infrastructure.md#c41-ai-workload-sandboxing--validation",
@@ -8861,7 +8866,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "4.1.3",
         "title": "Verify that workload attestation is performed before model loading to provide proof that the execution environment has not been tampered with.",
-        "description": "AISVS 1.01 Level 3 requirement in section C4.1 AI Workload Sandboxing & Validation, chapter  Infrastructure, Configuration & Deployment Security. Verify that workload attestation is performed before model loading to provide proof that the execution environment has not been tampered with.",
+        "description": "AISVS 1.01 Level 3 requirement in section C4.1 AI Workload Sandboxing & Validation, chapter C4 Infrastructure, Configuration & Deployment Security. Verify that workload attestation is performed before model loading to provide proof that the execution environment has not been tampered with.",
         "parent": null,
         "function": "Infrastructure",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C04-Infrastructure.md#c41-ai-workload-sandboxing--validation",
@@ -8870,7 +8875,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "4.1.4",
         "title": "Verify that confidential inference services protect model weights during runtime through isolated execution environments.",
-        "description": "AISVS 1.01 Level 3 requirement in section C4.1 AI Workload Sandboxing & Validation, chapter  Infrastructure, Configuration & Deployment Security. Verify that confidential inference services protect model weights during runtime through isolated execution environments.",
+        "description": "AISVS 1.01 Level 3 requirement in section C4.1 AI Workload Sandboxing & Validation, chapter C4 Infrastructure, Configuration & Deployment Security. Verify that confidential inference services protect model weights during runtime through isolated execution environments.",
         "parent": null,
         "function": "Infrastructure",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C04-Infrastructure.md#c41-ai-workload-sandboxing--validation",
@@ -8879,7 +8884,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "4.2.1",
         "title": "Verify that AI accelerator (GPU) firmware is version-pinned, signed, and attested at boot.",
-        "description": "AISVS 1.01 Level 2 requirement in section C4.2 AI Hardware Security, chapter  Infrastructure, Configuration & Deployment Security. Verify that AI accelerator (GPU) firmware is version-pinned, signed, and attested at boot.",
+        "description": "AISVS 1.01 Level 2 requirement in section C4.2 AI Hardware Security, chapter C4 Infrastructure, Configuration & Deployment Security. Verify that AI accelerator (GPU) firmware is version-pinned, signed, and attested at boot.",
         "parent": null,
         "function": "Infrastructure",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C04-Infrastructure.md#c42-ai-hardware-security",
@@ -8888,7 +8893,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "4.2.2",
         "title": "Verify that execution within a trusted execution environment (TEE) provides hardware-enforced isolation, memory encryption, and integrity protection.",
-        "description": "AISVS 1.01 Level 3 requirement in section C4.2 AI Hardware Security, chapter  Infrastructure, Configuration & Deployment Security. Verify that execution within a trusted execution environment (TEE) provides hardware-enforced isolation, memory encryption, and integrity protection.",
+        "description": "AISVS 1.01 Level 3 requirement in section C4.2 AI Hardware Security, chapter C4 Infrastructure, Configuration & Deployment Security. Verify that execution within a trusted execution environment (TEE) provides hardware-enforced isolation, memory encryption, and integrity protection.",
         "parent": null,
         "function": "Infrastructure",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C04-Infrastructure.md#c42-ai-hardware-security",
@@ -8897,7 +8902,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "4.2.3",
         "title": "Verify that AI accelerator (GPU) integrity is validated using hardware-based attestation mechanisms before each workload executes.",
-        "description": "AISVS 1.01 Level 3 requirement in section C4.2 AI Hardware Security, chapter  Infrastructure, Configuration & Deployment Security. Verify that AI accelerator (GPU) integrity is validated using hardware-based attestation mechanisms before each workload executes.",
+        "description": "AISVS 1.01 Level 3 requirement in section C4.2 AI Hardware Security, chapter C4 Infrastructure, Configuration & Deployment Security. Verify that AI accelerator (GPU) integrity is validated using hardware-based attestation mechanisms before each workload executes.",
         "parent": null,
         "function": "Infrastructure",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C04-Infrastructure.md#c42-ai-hardware-security",
@@ -8906,7 +8911,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "4.2.4",
         "title": "Verify that accelerator (GPU) memory is isolated between workloads through partitioning mechanisms with memory sanitization between jobs.",
-        "description": "AISVS 1.01 Level 3 requirement in section C4.2 AI Hardware Security, chapter  Infrastructure, Configuration & Deployment Security. Verify that accelerator (GPU) memory is isolated between workloads through partitioning mechanisms with memory sanitization between jobs.",
+        "description": "AISVS 1.01 Level 3 requirement in section C4.2 AI Hardware Security, chapter C4 Infrastructure, Configuration & Deployment Security. Verify that accelerator (GPU) memory is isolated between workloads through partitioning mechanisms with memory sanitization between jobs.",
         "parent": null,
         "function": "Infrastructure",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C04-Infrastructure.md#c42-ai-hardware-security",
@@ -8915,7 +8920,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "4.2.5",
         "title": "Verify that accelerator interconnects are restricted to approved topologies and authenticated endpoints.",
-        "description": "AISVS 1.01 Level 3 requirement in section C4.2 AI Hardware Security, chapter  Infrastructure, Configuration & Deployment Security. Verify that accelerator interconnects are restricted to approved topologies and authenticated endpoints.",
+        "description": "AISVS 1.01 Level 3 requirement in section C4.2 AI Hardware Security, chapter C4 Infrastructure, Configuration & Deployment Security. Verify that accelerator interconnects are restricted to approved topologies and authenticated endpoints.",
         "parent": null,
         "function": "Infrastructure",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C04-Infrastructure.md#c42-ai-hardware-security",
@@ -8924,7 +8929,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "4.3.1",
         "title": "Verify that edge AI devices authenticate to central infrastructure using strong authentication mechanisms.",
-        "description": "AISVS 1.01 Level 1 requirement in section C4.3 Edge & Distributed AI Security, chapter  Infrastructure, Configuration & Deployment Security. Verify that edge AI devices authenticate to central infrastructure using strong authentication mechanisms.",
+        "description": "AISVS 1.01 Level 1 requirement in section C4.3 Edge & Distributed AI Security, chapter C4 Infrastructure, Configuration & Deployment Security. Verify that edge AI devices authenticate to central infrastructure using strong authentication mechanisms.",
         "parent": null,
         "function": "Infrastructure",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C04-Infrastructure.md#c43-edge--distributed-ai-security",
@@ -8933,7 +8938,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "4.3.2",
         "title": "Verify that models deployed to edge or mobile devices are cryptographically signed during packaging, and that the on-device runtime validates these signatures or checksums before loading or inference.",
-        "description": "AISVS 1.01 Level 2 requirement in section C4.3 Edge & Distributed AI Security, chapter  Infrastructure, Configuration & Deployment Security. Verify that models deployed to edge or mobile devices are cryptographically signed during packaging, and that the on-device runtime validates these signatures or checksums before loading or inference.",
+        "description": "AISVS 1.01 Level 2 requirement in section C4.3 Edge & Distributed AI Security, chapter C4 Infrastructure, Configuration & Deployment Security. Verify that models deployed to edge or mobile devices are cryptographically signed during packaging, and that the on-device runtime validates these signatures or checksums before loading or inference.",
         "parent": null,
         "function": "Infrastructure",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C04-Infrastructure.md#c43-edge--distributed-ai-security",
@@ -8942,7 +8947,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "4.3.3",
         "title": "Verify that inference runtimes enforce process, memory, and file access isolation.",
-        "description": "AISVS 1.01 Level 3 requirement in section C4.3 Edge & Distributed AI Security, chapter  Infrastructure, Configuration & Deployment Security. Verify that inference runtimes enforce process, memory, and file access isolation.",
+        "description": "AISVS 1.01 Level 3 requirement in section C4.3 Edge & Distributed AI Security, chapter C4 Infrastructure, Configuration & Deployment Security. Verify that inference runtimes enforce process, memory, and file access isolation.",
         "parent": null,
         "function": "Infrastructure",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C04-Infrastructure.md#c43-edge--distributed-ai-security",
@@ -8951,7 +8956,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "4.3.4",
         "title": "Verify that model weights and sensitive parameters stored locally are encrypted using hardware-backed key stores or secure enclaves.",
-        "description": "AISVS 1.01 Level 3 requirement in section C4.3 Edge & Distributed AI Security, chapter  Infrastructure, Configuration & Deployment Security. Verify that model weights and sensitive parameters stored locally are encrypted using hardware-backed key stores or secure enclaves.",
+        "description": "AISVS 1.01 Level 3 requirement in section C4.3 Edge & Distributed AI Security, chapter C4 Infrastructure, Configuration & Deployment Security. Verify that model weights and sensitive parameters stored locally are encrypted using hardware-backed key stores or secure enclaves.",
         "parent": null,
         "function": "Infrastructure",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C04-Infrastructure.md#c43-edge--distributed-ai-security",
@@ -8960,7 +8965,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "4.3.5",
         "title": "Verify that models packaged within mobile, IoT, or embedded applications are encrypted at rest, and decrypted only inside a trusted runtime or secure enclave, preventing direct extraction from the app package or filesystem.",
-        "description": "AISVS 1.01 Level 3 requirement in section C4.3 Edge & Distributed AI Security, chapter  Infrastructure, Configuration & Deployment Security. Verify that models packaged within mobile, IoT, or embedded applications are encrypted at rest, and decrypted only inside a trusted runtime or secure enclave, preventing direct extraction from the app package or filesystem.",
+        "description": "AISVS 1.01 Level 3 requirement in section C4.3 Edge & Distributed AI Security, chapter C4 Infrastructure, Configuration & Deployment Security. Verify that models packaged within mobile, IoT, or embedded applications are encrypted at rest, and decrypted only inside a trusted runtime or secure enclave, preventing direct extraction from the app package or filesystem.",
         "parent": null,
         "function": "Infrastructure",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C04-Infrastructure.md#c43-edge--distributed-ai-security",
@@ -8969,7 +8974,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "5.1.1",
         "title": "Verify that high-risk AI operations (model deployment, weight export, training data access, production configuration changes) require step-up authentication.",
-        "description": "AISVS 1.01 Level 3 requirement in section C5.1 Authentication, chapter  Access Control & Identity for AI Components & Users. Verify that high-risk AI operations (model deployment, weight export, training data access, production configuration changes) require step-up authentication.",
+        "description": "AISVS 1.01 Level 3 requirement in section C5.1 Authentication, chapter C5 Access Control & Identity for AI Components & Users. Verify that high-risk AI operations (model deployment, weight export, training data access, production configuration changes) require step-up authentication.",
         "parent": null,
         "function": "Access Control",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C05-Access-Control-and-Identity.md#c51-authentication",
@@ -8978,7 +8983,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "5.1.2",
         "title": "Verify that AI agents in federated or multi-system deployments authenticate using short-lived, minimal-scoped, cryptographically signed tokens.",
-        "description": "AISVS 1.01 Level 3 requirement in section C5.1 Authentication, chapter  Access Control & Identity for AI Components & Users. Verify that AI agents in federated or multi-system deployments authenticate using short-lived, minimal-scoped, cryptographically signed tokens.",
+        "description": "AISVS 1.01 Level 3 requirement in section C5.1 Authentication, chapter C5 Access Control & Identity for AI Components & Users. Verify that AI agents in federated or multi-system deployments authenticate using short-lived, minimal-scoped, cryptographically signed tokens.",
         "parent": null,
         "function": "Access Control",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C05-Access-Control-and-Identity.md#c51-authentication",
@@ -8987,7 +8992,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "5.2.1",
         "title": "Verify that every AI resource (datasets, endpoints, vector collections, embedding indices, compute instances) enforces access controls with explicit allow-lists and default-deny policies.",
-        "description": "AISVS 1.01 Level 2 requirement in section C5.2 AI Resource Authorization & Classification, chapter  Access Control & Identity for AI Components & Users. Verify that every AI resource (datasets, endpoints, vector collections, embedding indices, compute instances) enforces access controls with explicit allow-lists and default-deny policies.",
+        "description": "AISVS 1.01 Level 2 requirement in section C5.2 AI Resource Authorization & Classification, chapter C5 Access Control & Identity for AI Components & Users. Verify that every AI resource (datasets, endpoints, vector collections, embedding indices, compute instances) enforces access controls with explicit allow-lists and default-deny policies.",
         "parent": null,
         "function": "Access Control",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C05-Access-Control-and-Identity.md#c52-ai-resource-authorization--classification",
@@ -8996,7 +9001,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "5.2.2",
         "title": "Verify that retrieval pipelines (e.g., RAG queries, embedding lookups) enforce the end-user's authorization context at each retrieval and assembly stage, rather than relying solely on the service account's permissions.",
-        "description": "AISVS 1.01 Level 2 requirement in section C5.2 AI Resource Authorization & Classification, chapter  Access Control & Identity for AI Components & Users. Verify that retrieval pipelines (e.g., RAG queries, embedding lookups) enforce the end-user's authorization context at each retrieval and assembly stage, rather than relying solely on the service account's permissions.",
+        "description": "AISVS 1.01 Level 2 requirement in section C5.2 AI Resource Authorization & Classification, chapter C5 Access Control & Identity for AI Components & Users. Verify that retrieval pipelines (e.g., RAG queries, embedding lookups) enforce the end-user's authorization context at each retrieval and assembly stage, rather than relying solely on the service account's permissions.",
         "parent": null,
         "function": "Access Control",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C05-Access-Control-and-Identity.md#c52-ai-resource-authorization--classification",
@@ -9005,7 +9010,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "5.2.3",
         "title": "Verify that sensitive data is retrieved via retrieval pipelines (e.g., RAG queries, embedding lookups) to prevent permanent storage in models.",
-        "description": "AISVS 1.01 Level 2 requirement in section C5.2 AI Resource Authorization & Classification, chapter  Access Control & Identity for AI Components & Users. Verify that sensitive data is retrieved via retrieval pipelines (e.g., RAG queries, embedding lookups) to prevent permanent storage in models.",
+        "description": "AISVS 1.01 Level 2 requirement in section C5.2 AI Resource Authorization & Classification, chapter C5 Access Control & Identity for AI Components & Users. Verify that sensitive data is retrieved via retrieval pipelines (e.g., RAG queries, embedding lookups) to prevent permanent storage in models.",
         "parent": null,
         "function": "Access Control",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C05-Access-Control-and-Identity.md#c52-ai-resource-authorization--classification",
@@ -9014,7 +9019,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "5.2.4",
         "title": "Verify that post-inference filtering mechanisms prevent responses from including data that the requester is not authorized to receive.",
-        "description": "AISVS 1.01 Level 2 requirement in section C5.2 AI Resource Authorization & Classification, chapter  Access Control & Identity for AI Components & Users. Verify that post-inference filtering mechanisms prevent responses from including data that the requester is not authorized to receive.",
+        "description": "AISVS 1.01 Level 2 requirement in section C5.2 AI Resource Authorization & Classification, chapter C5 Access Control & Identity for AI Components & Users. Verify that post-inference filtering mechanisms prevent responses from including data that the requester is not authorized to receive.",
         "parent": null,
         "function": "Access Control",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C05-Access-Control-and-Identity.md#c52-ai-resource-authorization--classification",
@@ -9023,7 +9028,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "5.2.5",
         "title": "Verify that the policy decision point for agent authorization is isolated from the agent's execution environment.",
-        "description": "AISVS 1.01 Level 2 requirement in section C5.2 AI Resource Authorization & Classification, chapter  Access Control & Identity for AI Components & Users. Verify that the policy decision point for agent authorization is isolated from the agent's execution environment.",
+        "description": "AISVS 1.01 Level 2 requirement in section C5.2 AI Resource Authorization & Classification, chapter C5 Access Control & Identity for AI Components & Users. Verify that the policy decision point for agent authorization is isolated from the agent's execution environment.",
         "parent": null,
         "function": "Access Control",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C05-Access-Control-and-Identity.md#c52-ai-resource-authorization--classification",
@@ -9032,7 +9037,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "5.2.6",
         "title": "Verify that privileged access to model weights, training pipelines, and production AI configuration is granted just in time, with a defined maximum session duration and automatic expiry. Zero Standing Privilege (ZSP) to these resources is encouraged.",
-        "description": "AISVS 1.01 Level 3 requirement in section C5.2 AI Resource Authorization & Classification, chapter  Access Control & Identity for AI Components & Users. Verify that privileged access to model weights, training pipelines, and production AI configuration is granted just in time, with a defined maximum session duration and automatic expiry. Zero Standing Privilege (ZSP) to these resources is encouraged.",
+        "description": "AISVS 1.01 Level 3 requirement in section C5.2 AI Resource Authorization & Classification, chapter C5 Access Control & Identity for AI Components & Users. Verify that privileged access to model weights, training pipelines, and production AI configuration is granted just in time, with a defined maximum session duration and automatic expiry. Zero Standing Privilege (ZSP) to these resources is encouraged.",
         "parent": null,
         "function": "Access Control",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C05-Access-Control-and-Identity.md#c52-ai-resource-authorization--classification",
@@ -9041,7 +9046,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "5.2.7",
         "title": "Verify that data classification labels propagate to downstream resources (embeddings, prompt caches, model outputs).",
-        "description": "AISVS 1.01 Level 3 requirement in section C5.2 AI Resource Authorization & Classification, chapter  Access Control & Identity for AI Components & Users. Verify that data classification labels propagate to downstream resources (embeddings, prompt caches, model outputs).",
+        "description": "AISVS 1.01 Level 3 requirement in section C5.2 AI Resource Authorization & Classification, chapter C5 Access Control & Identity for AI Components & Users. Verify that data classification labels propagate to downstream resources (embeddings, prompt caches, model outputs).",
         "parent": null,
         "function": "Access Control",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C05-Access-Control-and-Identity.md#c52-ai-resource-authorization--classification",
@@ -9050,7 +9055,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "5.3.1",
         "title": "Verify that shared model serving infrastructure prevents one tenant's fine-tuning, inference, or embedding operations from influencing or observing another tenant's operations.",
-        "description": "AISVS 1.01 Level 2 requirement in section C5.3 Multi-Tenant Isolation, chapter  Access Control & Identity for AI Components & Users. Verify that shared model serving infrastructure prevents one tenant's fine-tuning, inference, or embedding operations from influencing or observing another tenant's operations.",
+        "description": "AISVS 1.01 Level 2 requirement in section C5.3 Multi-Tenant Isolation, chapter C5 Access Control & Identity for AI Components & Users. Verify that shared model serving infrastructure prevents one tenant's fine-tuning, inference, or embedding operations from influencing or observing another tenant's operations.",
         "parent": null,
         "function": "Access Control",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C05-Access-Control-and-Identity.md#c53-multi-tenant-isolation",
@@ -9059,7 +9064,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "5.3.2",
         "title": "Verify that one tenant cannot influence or observe another tenant's operations through shared compute resources. Satisfying this requirement typically requires hardware partitioning, confidential computing, or dedicated per-tenant compute allocation.",
-        "description": "AISVS 1.01 Level 3 requirement in section C5.3 Multi-Tenant Isolation, chapter  Access Control & Identity for AI Components & Users. Verify that one tenant cannot influence or observe another tenant's operations through shared compute resources. Satisfying this requirement typically requires hardware partitioning, confidential computing, or dedicated per-tenant compute allocation.",
+        "description": "AISVS 1.01 Level 3 requirement in section C5.3 Multi-Tenant Isolation, chapter C5 Access Control & Identity for AI Components & Users. Verify that one tenant cannot influence or observe another tenant's operations through shared compute resources. Satisfying this requirement typically requires hardware partitioning, confidential computing, or dedicated per-tenant compute allocation.",
         "parent": null,
         "function": "Access Control",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C05-Access-Control-and-Identity.md#c53-multi-tenant-isolation",
@@ -9068,7 +9073,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "6.1.1",
         "title": "Verify that models are scanned for malicious code before import.",
-        "description": "AISVS 1.01 Level 1 requirement in section C6.1 Model Artifact Integrity, chapter  Supply Chain Security for Models. Verify that models are scanned for malicious code before import.",
+        "description": "AISVS 1.01 Level 1 requirement in section C6.1 Model Artifact Integrity, chapter C6 Supply Chain Security for Models. Verify that models are scanned for malicious code before import.",
         "parent": null,
         "function": "Supply Chain",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C06-Supply-Chain.md#c61-model-artifact-integrity",
@@ -9077,7 +9082,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "6.1.2",
         "title": "Verify that model weights, datasets, and fine-tuning adapters are downloaded only from approved sources.",
-        "description": "AISVS 1.01 Level 1 requirement in section C6.1 Model Artifact Integrity, chapter  Supply Chain Security for Models. Verify that model weights, datasets, and fine-tuning adapters are downloaded only from approved sources.",
+        "description": "AISVS 1.01 Level 1 requirement in section C6.1 Model Artifact Integrity, chapter C6 Supply Chain Security for Models. Verify that model weights, datasets, and fine-tuning adapters are downloaded only from approved sources.",
         "parent": null,
         "function": "Supply Chain",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C06-Supply-Chain.md#c61-model-artifact-integrity",
@@ -9086,7 +9091,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "6.1.3",
         "title": "Verify that every third-party model artifact can be integrity-verified.",
-        "description": "AISVS 1.01 Level 2 requirement in section C6.1 Model Artifact Integrity, chapter  Supply Chain Security for Models. Verify that every third-party model artifact can be integrity-verified.",
+        "description": "AISVS 1.01 Level 2 requirement in section C6.1 Model Artifact Integrity, chapter C6 Supply Chain Security for Models. Verify that every third-party model artifact can be integrity-verified.",
         "parent": null,
         "function": "Supply Chain",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C06-Supply-Chain.md#c61-model-artifact-integrity",
@@ -9095,7 +9100,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "6.1.4",
         "title": "Verify that models pass a behavioral acceptance test suite before being promoted to any non-development environment.",
-        "description": "AISVS 1.01 Level 2 requirement in section C6.1 Model Artifact Integrity, chapter  Supply Chain Security for Models. Verify that models pass a behavioral acceptance test suite before being promoted to any non-development environment.",
+        "description": "AISVS 1.01 Level 2 requirement in section C6.1 Model Artifact Integrity, chapter C6 Supply Chain Security for Models. Verify that models pass a behavioral acceptance test suite before being promoted to any non-development environment.",
         "parent": null,
         "function": "Supply Chain",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C06-Supply-Chain.md#c61-model-artifact-integrity",
@@ -9104,7 +9109,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "6.2.1",
         "title": "Verify that every model artifact publishes a version-controlled, machine-readable AI BOM listing datasets, weights, licenses, and data-origin statements.",
-        "description": "AISVS 1.01 Level 1 requirement in section C6.2 AI BOM & Supply Chain Monitoring, chapter  Supply Chain Security for Models. Verify that every model artifact publishes a version-controlled, machine-readable AI BOM listing datasets, weights, licenses, and data-origin statements.",
+        "description": "AISVS 1.01 Level 1 requirement in section C6.2 AI BOM & Supply Chain Monitoring, chapter C6 Supply Chain Security for Models. Verify that every model artifact publishes a version-controlled, machine-readable AI BOM listing datasets, weights, licenses, and data-origin statements.",
         "parent": null,
         "function": "Supply Chain",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C06-Supply-Chain.md#c62-ai-bom--supply-chain-monitoring",
@@ -9113,7 +9118,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "6.2.2",
         "title": "Verify that AI BOMs are cryptographically signed before deployment.",
-        "description": "AISVS 1.01 Level 2 requirement in section C6.2 AI BOM & Supply Chain Monitoring, chapter  Supply Chain Security for Models. Verify that AI BOMs are cryptographically signed before deployment.",
+        "description": "AISVS 1.01 Level 2 requirement in section C6.2 AI BOM & Supply Chain Monitoring, chapter C6 Supply Chain Security for Models. Verify that AI BOMs are cryptographically signed before deployment.",
         "parent": null,
         "function": "Supply Chain",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C06-Supply-Chain.md#c62-ai-bom--supply-chain-monitoring",
@@ -9122,7 +9127,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "6.2.3",
         "title": "Verify that AI BOM completeness checks fail the build if any component metadata is missing.",
-        "description": "AISVS 1.01 Level 2 requirement in section C6.2 AI BOM & Supply Chain Monitoring, chapter  Supply Chain Security for Models. Verify that AI BOM completeness checks fail the build if any component metadata is missing.",
+        "description": "AISVS 1.01 Level 2 requirement in section C6.2 AI BOM & Supply Chain Monitoring, chapter C6 Supply Chain Security for Models. Verify that AI BOM completeness checks fail the build if any component metadata is missing.",
         "parent": null,
         "function": "Supply Chain",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C06-Supply-Chain.md#c62-ai-bom--supply-chain-monitoring",
@@ -9131,7 +9136,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "7.1.1",
         "title": "Verify that the application validates all model outputs against a defined schema and rejects any output that does not match.",
-        "description": "AISVS 1.01 Level 1 requirement in section C7.1 Output Format Enforcement, chapter  Model Behavior, Output Control & Safety Assurance. Verify that the application validates all model outputs against a defined schema and rejects any output that does not match.",
+        "description": "AISVS 1.01 Level 1 requirement in section C7.1 Output Format Enforcement, chapter C7 Model Behavior, Output Control & Safety Assurance. Verify that the application validates all model outputs against a defined schema and rejects any output that does not match.",
         "parent": null,
         "function": "Model Behavior",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C07-Model-Behavior.md#c71-output-format-enforcement",
@@ -9140,7 +9145,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "7.1.2",
         "title": "Verify that model-generated output is bounded by length limits and termination controls.",
-        "description": "AISVS 1.01 Level 1 requirement in section C7.1 Output Format Enforcement, chapter  Model Behavior, Output Control & Safety Assurance. Verify that model-generated output is bounded by length limits and termination controls.",
+        "description": "AISVS 1.01 Level 1 requirement in section C7.1 Output Format Enforcement, chapter C7 Model Behavior, Output Control & Safety Assurance. Verify that model-generated output is bounded by length limits and termination controls.",
         "parent": null,
         "function": "Model Behavior",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C07-Model-Behavior.md#c71-output-format-enforcement",
@@ -9149,7 +9154,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "7.1.3",
         "title": "Verify that, when an application uses an AI response to decide whether to perform an action, it does not perform that action if the AI refuses the request, reports a failure, or returns a response the application cannot correctly read or understand.",
-        "description": "AISVS 1.01 Level 2 requirement in section C7.1 Output Format Enforcement, chapter  Model Behavior, Output Control & Safety Assurance. Verify that, when an application uses an AI response to decide whether to perform an action, it does not perform that action if the AI refuses the request, reports a failure, or returns a response the application cannot correctly read or understand.",
+        "description": "AISVS 1.01 Level 2 requirement in section C7.1 Output Format Enforcement, chapter C7 Model Behavior, Output Control & Safety Assurance. Verify that, when an application uses an AI response to decide whether to perform an action, it does not perform that action if the AI refuses the request, reports a failure, or returns a response the application cannot correctly read or understand.",
         "parent": null,
         "function": "Model Behavior",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C07-Model-Behavior.md#c71-output-format-enforcement",
@@ -9158,7 +9163,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "7.2.1",
         "title": "Verify that the system assesses the reliability of generated answers using a confidence estimation method.",
-        "description": "AISVS 1.01 Level 2 requirement in section C7.2 Hallucination Detection & Mitigation, chapter  Model Behavior, Output Control & Safety Assurance. Verify that the system assesses the reliability of generated answers using a confidence estimation method.",
+        "description": "AISVS 1.01 Level 2 requirement in section C7.2 Hallucination Detection & Mitigation, chapter C7 Model Behavior, Output Control & Safety Assurance. Verify that the system assesses the reliability of generated answers using a confidence estimation method.",
         "parent": null,
         "function": "Model Behavior",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C07-Model-Behavior.md#c72-hallucination-detection--mitigation",
@@ -9167,7 +9172,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "7.2.2",
         "title": "Verify that the application automatically blocks answers or switches to a fallback message if the confidence score drops below a defined threshold.",
-        "description": "AISVS 1.01 Level 2 requirement in section C7.2 Hallucination Detection & Mitigation, chapter  Model Behavior, Output Control & Safety Assurance. Verify that the application automatically blocks answers or switches to a fallback message if the confidence score drops below a defined threshold.",
+        "description": "AISVS 1.01 Level 2 requirement in section C7.2 Hallucination Detection & Mitigation, chapter C7 Model Behavior, Output Control & Safety Assurance. Verify that the application automatically blocks answers or switches to a fallback message if the confidence score drops below a defined threshold.",
         "parent": null,
         "function": "Model Behavior",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C07-Model-Behavior.md#c72-hallucination-detection--mitigation",
@@ -9176,7 +9181,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "7.2.3",
         "title": "Verify that for responses classified as high-risk by policy, the system performs an additional verification step.",
-        "description": "AISVS 1.01 Level 3 requirement in section C7.2 Hallucination Detection & Mitigation, chapter  Model Behavior, Output Control & Safety Assurance. Verify that for responses classified as high-risk by policy, the system performs an additional verification step.",
+        "description": "AISVS 1.01 Level 3 requirement in section C7.2 Hallucination Detection & Mitigation, chapter C7 Model Behavior, Output Control & Safety Assurance. Verify that for responses classified as high-risk by policy, the system performs an additional verification step.",
         "parent": null,
         "function": "Model Behavior",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C07-Model-Behavior.md#c72-hallucination-detection--mitigation",
@@ -9185,7 +9190,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "7.3.1",
         "title": "Verify that automated classifiers scan every response and block content that matches defined harmful content categories.",
-        "description": "AISVS 1.01 Level 1 requirement in section C7.3 Output Safety, chapter  Model Behavior, Output Control & Safety Assurance. Verify that automated classifiers scan every response and block content that matches defined harmful content categories.",
+        "description": "AISVS 1.01 Level 1 requirement in section C7.3 Output Safety, chapter C7 Model Behavior, Output Control & Safety Assurance. Verify that automated classifiers scan every response and block content that matches defined harmful content categories.",
         "parent": null,
         "function": "Model Behavior",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C07-Model-Behavior.md#c73-output-safety",
@@ -9194,7 +9199,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "7.3.2",
         "title": "Verify that output filters detect and block responses that disclose system prompt content or backend data.",
-        "description": "AISVS 1.01 Level 2 requirement in section C7.3 Output Safety, chapter  Model Behavior, Output Control & Safety Assurance. Verify that output filters detect and block responses that disclose system prompt content or backend data.",
+        "description": "AISVS 1.01 Level 2 requirement in section C7.3 Output Safety, chapter C7 Model Behavior, Output Control & Safety Assurance. Verify that output filters detect and block responses that disclose system prompt content or backend data.",
         "parent": null,
         "function": "Model Behavior",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C07-Model-Behavior.md#c73-output-safety",
@@ -9203,7 +9208,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "7.3.3",
         "title": "Verify that model-generated output is prevented from triggering outbound requests.",
-        "description": "AISVS 1.01 Level 2 requirement in section C7.3 Output Safety, chapter  Model Behavior, Output Control & Safety Assurance. Verify that model-generated output is prevented from triggering outbound requests.",
+        "description": "AISVS 1.01 Level 2 requirement in section C7.3 Output Safety, chapter C7 Model Behavior, Output Control & Safety Assurance. Verify that model-generated output is prevented from triggering outbound requests.",
         "parent": null,
         "function": "Model Behavior",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C07-Model-Behavior.md#c73-output-safety",
@@ -9212,7 +9217,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "7.3.4",
         "title": "Verify that model outputs are checked for hidden, encoded, or misleading content created through homoglyphs, formatting, metadata, or structured fields.",
-        "description": "AISVS 1.01 Level 3 requirement in section C7.3 Output Safety, chapter  Model Behavior, Output Control & Safety Assurance. Verify that model outputs are checked for hidden, encoded, or misleading content created through homoglyphs, formatting, metadata, or structured fields.",
+        "description": "AISVS 1.01 Level 3 requirement in section C7.3 Output Safety, chapter C7 Model Behavior, Output Control & Safety Assurance. Verify that model outputs are checked for hidden, encoded, or misleading content created through homoglyphs, formatting, metadata, or structured fields.",
         "parent": null,
         "function": "Model Behavior",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C07-Model-Behavior.md#c73-output-safety",
@@ -9221,7 +9226,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "7.4.1",
         "title": "Verify that responses generated using retrieval-augmented generation (RAG) include attribution to the source documents.",
-        "description": "AISVS 1.01 Level 1 requirement in section C7.4 Source Attribution & Citation Integrity, chapter  Model Behavior, Output Control & Safety Assurance. Verify that responses generated using retrieval-augmented generation (RAG) include attribution to the source documents.",
+        "description": "AISVS 1.01 Level 1 requirement in section C7.4 Source Attribution & Citation Integrity, chapter C7 Model Behavior, Output Control & Safety Assurance. Verify that responses generated using retrieval-augmented generation (RAG) include attribution to the source documents.",
         "parent": null,
         "function": "Model Behavior",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C07-Model-Behavior.md#c74-source-attribution--citation-integrity",
@@ -9230,7 +9235,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "7.4.2",
         "title": "Verify that RAG attributions are derived from retrieval metadata and are not generated by the model, so provenance cannot be fabricated.",
-        "description": "AISVS 1.01 Level 1 requirement in section C7.4 Source Attribution & Citation Integrity, chapter  Model Behavior, Output Control & Safety Assurance. Verify that RAG attributions are derived from retrieval metadata and are not generated by the model, so provenance cannot be fabricated.",
+        "description": "AISVS 1.01 Level 1 requirement in section C7.4 Source Attribution & Citation Integrity, chapter C7 Model Behavior, Output Control & Safety Assurance. Verify that RAG attributions are derived from retrieval metadata and are not generated by the model, so provenance cannot be fabricated.",
         "parent": null,
         "function": "Model Behavior",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C07-Model-Behavior.md#c74-source-attribution--citation-integrity",
@@ -9239,7 +9244,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "7.4.3",
         "title": "Verify that claims in a RAG response can be traced to the retrieved chunk.",
-        "description": "AISVS 1.01 Level 2 requirement in section C7.4 Source Attribution & Citation Integrity, chapter  Model Behavior, Output Control & Safety Assurance. Verify that claims in a RAG response can be traced to the retrieved chunk.",
+        "description": "AISVS 1.01 Level 2 requirement in section C7.4 Source Attribution & Citation Integrity, chapter C7 Model Behavior, Output Control & Safety Assurance. Verify that claims in a RAG response can be traced to the retrieved chunk.",
         "parent": null,
         "function": "Model Behavior",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C07-Model-Behavior.md#c74-source-attribution--citation-integrity",
@@ -9248,7 +9253,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "7.4.4",
         "title": "Verify that generated media is watermarked to prove it was AI-generated.",
-        "description": "AISVS 1.01 Level 3 requirement in section C7.4 Source Attribution & Citation Integrity, chapter  Model Behavior, Output Control & Safety Assurance. Verify that generated media is watermarked to prove it was AI-generated.",
+        "description": "AISVS 1.01 Level 3 requirement in section C7.4 Source Attribution & Citation Integrity, chapter C7 Model Behavior, Output Control & Safety Assurance. Verify that generated media is watermarked to prove it was AI-generated.",
         "parent": null,
         "function": "Model Behavior",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C07-Model-Behavior.md#c74-source-attribution--citation-integrity",
@@ -9257,7 +9262,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "8.1.1",
         "title": "Verify that vector identifiers and namespaces enforce uniqueness per tenant and prevent cross-tenant collisions.",
-        "description": "AISVS 1.01 Level 1 requirement in section C8.1 Access Controls on Memory & RAG Indices, chapter  Memory, Embeddings & Vector Database Security. Verify that vector identifiers and namespaces enforce uniqueness per tenant and prevent cross-tenant collisions.",
+        "description": "AISVS 1.01 Level 1 requirement in section C8.1 Access Controls on Memory & RAG Indices, chapter C8 Memory, Embeddings & Vector Database Security. Verify that vector identifiers and namespaces enforce uniqueness per tenant and prevent cross-tenant collisions.",
         "parent": null,
         "function": "Memory and Embeddings",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c81-access-controls-on-memory--rag-indices",
@@ -9266,7 +9271,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "8.1.2",
         "title": "Verify that document metadata tags are immutable after the initial write.",
-        "description": "AISVS 1.01 Level 2 requirement in section C8.1 Access Controls on Memory & RAG Indices, chapter  Memory, Embeddings & Vector Database Security. Verify that document metadata tags are immutable after the initial write.",
+        "description": "AISVS 1.01 Level 2 requirement in section C8.1 Access Controls on Memory & RAG Indices, chapter C8 Memory, Embeddings & Vector Database Security. Verify that document metadata tags are immutable after the initial write.",
         "parent": null,
         "function": "Memory and Embeddings",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c81-access-controls-on-memory--rag-indices",
@@ -9275,7 +9280,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "8.1.3",
         "title": "Verify that retrieval operations enforce scope constraints.",
-        "description": "AISVS 1.01 Level 2 requirement in section C8.1 Access Controls on Memory & RAG Indices, chapter  Memory, Embeddings & Vector Database Security. Verify that retrieval operations enforce scope constraints.",
+        "description": "AISVS 1.01 Level 2 requirement in section C8.1 Access Controls on Memory & RAG Indices, chapter C8 Memory, Embeddings & Vector Database Security. Verify that retrieval operations enforce scope constraints.",
         "parent": null,
         "function": "Memory and Embeddings",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c81-access-controls-on-memory--rag-indices",
@@ -9284,7 +9289,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "8.2.1",
         "title": "Verify that sensitive fields are detected before embedding and are masked, tokenized, or dropped.",
-        "description": "AISVS 1.01 Level 1 requirement in section C8.2 Embedding Sanitization & Validation, chapter  Memory, Embeddings & Vector Database Security. Verify that sensitive fields are detected before embedding and are masked, tokenized, or dropped.",
+        "description": "AISVS 1.01 Level 1 requirement in section C8.2 Embedding Sanitization & Validation, chapter C8 Memory, Embeddings & Vector Database Security. Verify that sensitive fields are detected before embedding and are masked, tokenized, or dropped.",
         "parent": null,
         "function": "Memory and Embeddings",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c82-embedding-sanitization--validation",
@@ -9293,7 +9298,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "8.2.2",
         "title": "Verify that vectors that fall outside normal clustering patterns are flagged and quarantined before entering production indices.",
-        "description": "AISVS 1.01 Level 2 requirement in section C8.2 Embedding Sanitization & Validation, chapter  Memory, Embeddings & Vector Database Security. Verify that vectors that fall outside normal clustering patterns are flagged and quarantined before entering production indices.",
+        "description": "AISVS 1.01 Level 2 requirement in section C8.2 Embedding Sanitization & Validation, chapter C8 Memory, Embeddings & Vector Database Security. Verify that vectors that fall outside normal clustering patterns are flagged and quarantined before entering production indices.",
         "parent": null,
         "function": "Memory and Embeddings",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c82-embedding-sanitization--validation",
@@ -9302,7 +9307,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "8.2.3",
         "title": "Verify that no component reachable from agent execution can write agent outputs or tool outputs to trusted agent memory without explicit source validation.",
-        "description": "AISVS 1.01 Level 2 requirement in section C8.2 Embedding Sanitization & Validation, chapter  Memory, Embeddings & Vector Database Security. Verify that no component reachable from agent execution can write agent outputs or tool outputs to trusted agent memory without explicit source validation.",
+        "description": "AISVS 1.01 Level 2 requirement in section C8.2 Embedding Sanitization & Validation, chapter C8 Memory, Embeddings & Vector Database Security. Verify that no component reachable from agent execution can write agent outputs or tool outputs to trusted agent memory without explicit source validation.",
         "parent": null,
         "function": "Memory and Embeddings",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c82-embedding-sanitization--validation",
@@ -9311,7 +9316,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "8.2.4",
         "title": "Verify that content crafted to manipulate retrieval results is detected and rejected or quarantined before vectorization.",
-        "description": "AISVS 1.01 Level 3 requirement in section C8.2 Embedding Sanitization & Validation, chapter  Memory, Embeddings & Vector Database Security. Verify that content crafted to manipulate retrieval results is detected and rejected or quarantined before vectorization.",
+        "description": "AISVS 1.01 Level 3 requirement in section C8.2 Embedding Sanitization & Validation, chapter C8 Memory, Embeddings & Vector Database Security. Verify that content crafted to manipulate retrieval results is detected and rejected or quarantined before vectorization.",
         "parent": null,
         "function": "Memory and Embeddings",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c82-embedding-sanitization--validation",
@@ -9320,7 +9325,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "8.2.5",
         "title": "Verify that new content written to memory is checked for contradictions with what is already stored and that conflicts trigger alerts.",
-        "description": "AISVS 1.01 Level 3 requirement in section C8.2 Embedding Sanitization & Validation, chapter  Memory, Embeddings & Vector Database Security. Verify that new content written to memory is checked for contradictions with what is already stored and that conflicts trigger alerts.",
+        "description": "AISVS 1.01 Level 3 requirement in section C8.2 Embedding Sanitization & Validation, chapter C8 Memory, Embeddings & Vector Database Security. Verify that new content written to memory is checked for contradictions with what is already stored and that conflicts trigger alerts.",
         "parent": null,
         "function": "Memory and Embeddings",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c82-embedding-sanitization--validation",
@@ -9329,7 +9334,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "8.3.1",
         "title": "Verify that expired vectors are excluded from retrieval results.",
-        "description": "AISVS 1.01 Level 2 requirement in section C8.3 Memory Expiry & Revocation, chapter  Memory, Embeddings & Vector Database Security. Verify that expired vectors are excluded from retrieval results.",
+        "description": "AISVS 1.01 Level 2 requirement in section C8.3 Memory Expiry & Revocation, chapter C8 Memory, Embeddings & Vector Database Security. Verify that expired vectors are excluded from retrieval results.",
         "parent": null,
         "function": "Memory and Embeddings",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c83-memory-expiry--revocation",
@@ -9338,7 +9343,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "8.3.2",
         "title": "Verify that memory can be reset.",
-        "description": "AISVS 1.01 Level 2 requirement in section C8.3 Memory Expiry & Revocation, chapter  Memory, Embeddings & Vector Database Security. Verify that memory can be reset.",
+        "description": "AISVS 1.01 Level 2 requirement in section C8.3 Memory Expiry & Revocation, chapter C8 Memory, Embeddings & Vector Database Security. Verify that memory can be reset.",
         "parent": null,
         "function": "Memory and Embeddings",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c83-memory-expiry--revocation",
@@ -9347,7 +9352,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "8.3.3",
         "title": "Verify that quarantined content is retained but excluded from all retrieval results.",
-        "description": "AISVS 1.01 Level 3 requirement in section C8.3 Memory Expiry & Revocation, chapter  Memory, Embeddings & Vector Database Security. Verify that quarantined content is retained but excluded from all retrieval results.",
+        "description": "AISVS 1.01 Level 3 requirement in section C8.3 Memory Expiry & Revocation, chapter C8 Memory, Embeddings & Vector Database Security. Verify that quarantined content is retained but excluded from all retrieval results.",
         "parent": null,
         "function": "Memory and Embeddings",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C08-Memory-Embeddings-and-Vector-Database.md#c83-memory-expiry--revocation",
@@ -9356,7 +9361,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "9.1.1",
         "title": "Verify that per-tool quotas and timeouts (e.g., CPU, memory, disk, egress, and execution time) are enforced by the runtime.",
-        "description": "AISVS 1.01 Level 1 requirement in section C9.1 Execution Budgets, Loop Control, and Circuit Breakers, chapter  Orchestration & Agentic Security. Verify that per-tool quotas and timeouts (e.g., CPU, memory, disk, egress, and execution time) are enforced by the runtime.",
+        "description": "AISVS 1.01 Level 1 requirement in section C9.1 Execution Budgets, Loop Control, and Circuit Breakers, chapter C9 Orchestration & Agentic Security. Verify that per-tool quotas and timeouts (e.g., CPU, memory, disk, egress, and execution time) are enforced by the runtime.",
         "parent": null,
         "function": "Agentic Orchestration",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C09-Orchestration-and-Agentic-Action.md#c91-execution-budgets-loop-control-and-circuit-breakers",
@@ -9365,7 +9370,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "9.1.2",
         "title": "Verify that per-execution budgets (e.g., max recursion depth, token use, and monetary spend) are enforced by the runtime.",
-        "description": "AISVS 1.01 Level 1 requirement in section C9.1 Execution Budgets, Loop Control, and Circuit Breakers, chapter  Orchestration & Agentic Security. Verify that per-execution budgets (e.g., max recursion depth, token use, and monetary spend) are enforced by the runtime.",
+        "description": "AISVS 1.01 Level 1 requirement in section C9.1 Execution Budgets, Loop Control, and Circuit Breakers, chapter C9 Orchestration & Agentic Security. Verify that per-execution budgets (e.g., max recursion depth, token use, and monetary spend) are enforced by the runtime.",
         "parent": null,
         "function": "Agentic Orchestration",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C09-Orchestration-and-Agentic-Action.md#c91-execution-budgets-loop-control-and-circuit-breakers",
@@ -9374,7 +9379,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "9.1.3",
         "title": "Verify that a swarm-level kill-switch exists that can halt all active agent instances.",
-        "description": "AISVS 1.01 Level 2 requirement in section C9.1 Execution Budgets, Loop Control, and Circuit Breakers, chapter  Orchestration & Agentic Security. Verify that a swarm-level kill-switch exists that can halt all active agent instances.",
+        "description": "AISVS 1.01 Level 2 requirement in section C9.1 Execution Budgets, Loop Control, and Circuit Breakers, chapter C9 Orchestration & Agentic Security. Verify that a swarm-level kill-switch exists that can halt all active agent instances.",
         "parent": null,
         "function": "Agentic Orchestration",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C09-Orchestration-and-Agentic-Action.md#c91-execution-budgets-loop-control-and-circuit-breakers",
@@ -9383,7 +9388,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "9.2.1",
         "title": "Verify that the agent runtime blocks execution of privileged or irreversible actions until explicit human approval is received and verified.",
-        "description": "AISVS 1.01 Level 1 requirement in section C9.2 High-Impact Action Approval and Irreversibility Controls, chapter  Orchestration & Agentic Security. Verify that the agent runtime blocks execution of privileged or irreversible actions until explicit human approval is received and verified.",
+        "description": "AISVS 1.01 Level 1 requirement in section C9.2 High-Impact Action Approval and Irreversibility Controls, chapter C9 Orchestration & Agentic Security. Verify that the agent runtime blocks execution of privileged or irreversible actions until explicit human approval is received and verified.",
         "parent": null,
         "function": "Agentic Orchestration",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C09-Orchestration-and-Agentic-Action.md#c92-high-impact-action-approval-and-irreversibility-controls",
@@ -9392,7 +9397,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "9.2.2",
         "title": "Verify that approval requests display canonicalized and complete action parameters, such as diffs, commands, recipients, amounts, resources, and scopes, without truncation or unsafe transformation.",
-        "description": "AISVS 1.01 Level 2 requirement in section C9.2 High-Impact Action Approval and Irreversibility Controls, chapter  Orchestration & Agentic Security. Verify that approval requests display canonicalized and complete action parameters, such as diffs, commands, recipients, amounts, resources, and scopes, without truncation or unsafe transformation.",
+        "description": "AISVS 1.01 Level 2 requirement in section C9.2 High-Impact Action Approval and Irreversibility Controls, chapter C9 Orchestration & Agentic Security. Verify that approval requests display canonicalized and complete action parameters, such as diffs, commands, recipients, amounts, resources, and scopes, without truncation or unsafe transformation.",
         "parent": null,
         "function": "Agentic Orchestration",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C09-Orchestration-and-Agentic-Action.md#c92-high-impact-action-approval-and-irreversibility-controls",
@@ -9401,7 +9406,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "9.2.3",
         "title": "Verify that each high-impact action has a trusted reversibility classification, such as read-only, reversible, externally reversible, or irreversible.",
-        "description": "AISVS 1.01 Level 2 requirement in section C9.2 High-Impact Action Approval and Irreversibility Controls, chapter  Orchestration & Agentic Security. Verify that each high-impact action has a trusted reversibility classification, such as read-only, reversible, externally reversible, or irreversible.",
+        "description": "AISVS 1.01 Level 2 requirement in section C9.2 High-Impact Action Approval and Irreversibility Controls, chapter C9 Orchestration & Agentic Security. Verify that each high-impact action has a trusted reversibility classification, such as read-only, reversible, externally reversible, or irreversible.",
         "parent": null,
         "function": "Agentic Orchestration",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C09-Orchestration-and-Agentic-Action.md#c92-high-impact-action-approval-and-irreversibility-controls",
@@ -9410,7 +9415,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "9.2.4",
         "title": "Verify that the agent runtime enforces reversibility classifications by blocking, requiring approval, or restricting actions based on their impact and ability to be reversed.",
-        "description": "AISVS 1.01 Level 2 requirement in section C9.2 High-Impact Action Approval and Irreversibility Controls, chapter  Orchestration & Agentic Security. Verify that the agent runtime enforces reversibility classifications by blocking, requiring approval, or restricting actions based on their impact and ability to be reversed.",
+        "description": "AISVS 1.01 Level 2 requirement in section C9.2 High-Impact Action Approval and Irreversibility Controls, chapter C9 Orchestration & Agentic Security. Verify that the agent runtime enforces reversibility classifications by blocking, requiring approval, or restricting actions based on their impact and ability to be reversed.",
         "parent": null,
         "function": "Agentic Orchestration",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C09-Orchestration-and-Agentic-Action.md#c92-high-impact-action-approval-and-irreversibility-controls",
@@ -9419,7 +9424,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "9.2.5",
         "title": "Verify that any self-modification capability (e.g., prompt rewriting, tool-list changes, parameter updates) is restricted by boundaries that are enforced by the runtime and cannot be changed or bypassed by the agent.",
-        "description": "AISVS 1.01 Level 2 requirement in section C9.2 High-Impact Action Approval and Irreversibility Controls, chapter  Orchestration & Agentic Security. Verify that any self-modification capability (e.g., prompt rewriting, tool-list changes, parameter updates) is restricted by boundaries that are enforced by the runtime and cannot be changed or bypassed by the agent.",
+        "description": "AISVS 1.01 Level 2 requirement in section C9.2 High-Impact Action Approval and Irreversibility Controls, chapter C9 Orchestration & Agentic Security. Verify that any self-modification capability (e.g., prompt rewriting, tool-list changes, parameter updates) is restricted by boundaries that are enforced by the runtime and cannot be changed or bypassed by the agent.",
         "parent": null,
         "function": "Agentic Orchestration",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C09-Orchestration-and-Agentic-Action.md#c92-high-impact-action-approval-and-irreversibility-controls",
@@ -9428,7 +9433,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "9.2.6",
         "title": "Verify that agentic systems include an AI-augmented review of planned high-risk actions before execution that adds to, and does not replace, the deterministic policy gate.",
-        "description": "AISVS 1.01 Level 2 requirement in section C9.2 High-Impact Action Approval and Irreversibility Controls, chapter  Orchestration & Agentic Security. Verify that agentic systems include an AI-augmented review of planned high-risk actions before execution that adds to, and does not replace, the deterministic policy gate.",
+        "description": "AISVS 1.01 Level 2 requirement in section C9.2 High-Impact Action Approval and Irreversibility Controls, chapter C9 Orchestration & Agentic Security. Verify that agentic systems include an AI-augmented review of planned high-risk actions before execution that adds to, and does not replace, the deterministic policy gate.",
         "parent": null,
         "function": "Agentic Orchestration",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C09-Orchestration-and-Agentic-Action.md#c92-high-impact-action-approval-and-irreversibility-controls",
@@ -9437,7 +9442,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "9.2.7",
         "title": "Verify that the AI-augmented review mechanism is protected against manipulation by adversarial inputs, and cannot be overridden or bypassed through prompt injection.",
-        "description": "AISVS 1.01 Level 2 requirement in section C9.2 High-Impact Action Approval and Irreversibility Controls, chapter  Orchestration & Agentic Security. Verify that the AI-augmented review mechanism is protected against manipulation by adversarial inputs, and cannot be overridden or bypassed through prompt injection.",
+        "description": "AISVS 1.01 Level 2 requirement in section C9.2 High-Impact Action Approval and Irreversibility Controls, chapter C9 Orchestration & Agentic Security. Verify that the AI-augmented review mechanism is protected against manipulation by adversarial inputs, and cannot be overridden or bypassed through prompt injection.",
         "parent": null,
         "function": "Agentic Orchestration",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C09-Orchestration-and-Agentic-Action.md#c92-high-impact-action-approval-and-irreversibility-controls",
@@ -9446,7 +9451,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "9.2.8",
         "title": "Verify that approvals are cryptographically bound to action parameters, requester identity, execution context, and a unique single-use nonce, and are rejected if any bound value changes or the nonce is reused.",
-        "description": "AISVS 1.01 Level 3 requirement in section C9.2 High-Impact Action Approval and Irreversibility Controls, chapter  Orchestration & Agentic Security. Verify that approvals are cryptographically bound to action parameters, requester identity, execution context, and a unique single-use nonce, and are rejected if any bound value changes or the nonce is reused.",
+        "description": "AISVS 1.01 Level 3 requirement in section C9.2 High-Impact Action Approval and Irreversibility Controls, chapter C9 Orchestration & Agentic Security. Verify that approvals are cryptographically bound to action parameters, requester identity, execution context, and a unique single-use nonce, and are rejected if any bound value changes or the nonce is reused.",
         "parent": null,
         "function": "Agentic Orchestration",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C09-Orchestration-and-Agentic-Action.md#c92-high-impact-action-approval-and-irreversibility-controls",
@@ -9455,7 +9460,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "9.2.9",
         "title": "Verify that cryptographic key material or credentials used to issue approvals are isolated from the agent runtime, and that the runtime can neither read them nor use them to issue approvals.",
-        "description": "AISVS 1.01 Level 3 requirement in section C9.2 High-Impact Action Approval and Irreversibility Controls, chapter  Orchestration & Agentic Security. Verify that cryptographic key material or credentials used to issue approvals are isolated from the agent runtime, and that the runtime can neither read them nor use them to issue approvals.",
+        "description": "AISVS 1.01 Level 3 requirement in section C9.2 High-Impact Action Approval and Irreversibility Controls, chapter C9 Orchestration & Agentic Security. Verify that cryptographic key material or credentials used to issue approvals are isolated from the agent runtime, and that the runtime can neither read them nor use them to issue approvals.",
         "parent": null,
         "function": "Agentic Orchestration",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C09-Orchestration-and-Agentic-Action.md#c92-high-impact-action-approval-and-irreversibility-controls",
@@ -9464,7 +9469,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "9.2.10",
         "title": "Verify that approval gates for multi-step or multi-agent action chains enforce the highest-impact reversibility classification present anywhere in the chain, where the chain is established by a component outside the control of the agent being gated.",
-        "description": "AISVS 1.01 Level 3 requirement in section C9.2 High-Impact Action Approval and Irreversibility Controls, chapter  Orchestration & Agentic Security. Verify that approval gates for multi-step or multi-agent action chains enforce the highest-impact reversibility classification present anywhere in the chain, where the chain is established by a component outside the control of the agent being gated.",
+        "description": "AISVS 1.01 Level 3 requirement in section C9.2 High-Impact Action Approval and Irreversibility Controls, chapter C9 Orchestration & Agentic Security. Verify that approval gates for multi-step or multi-agent action chains enforce the highest-impact reversibility classification present anywhere in the chain, where the chain is established by a component outside the control of the agent being gated.",
         "parent": null,
         "function": "Agentic Orchestration",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C09-Orchestration-and-Agentic-Action.md#c92-high-impact-action-approval-and-irreversibility-controls",
@@ -9473,7 +9478,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "9.2.11",
         "title": "Verify that agent execution which would exceed the approved action chain is blocked until a new approval is obtained, and that the new approval enforces the highest-impact reversibility classification present across the cumulative chain.",
-        "description": "AISVS 1.01 Level 3 requirement in section C9.2 High-Impact Action Approval and Irreversibility Controls, chapter  Orchestration & Agentic Security. Verify that agent execution which would exceed the approved action chain is blocked until a new approval is obtained, and that the new approval enforces the highest-impact reversibility classification present across the cumulative chain.",
+        "description": "AISVS 1.01 Level 3 requirement in section C9.2 High-Impact Action Approval and Irreversibility Controls, chapter C9 Orchestration & Agentic Security. Verify that agent execution which would exceed the approved action chain is blocked until a new approval is obtained, and that the new approval enforces the highest-impact reversibility classification present across the cumulative chain.",
         "parent": null,
         "function": "Agentic Orchestration",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C09-Orchestration-and-Agentic-Action.md#c92-high-impact-action-approval-and-irreversibility-controls",
@@ -9482,7 +9487,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "9.3.1",
         "title": "Verify that each tool/plugin executes in a least-privilege sandbox or is otherwise isolated from model operations.",
-        "description": "AISVS 1.01 Level 1 requirement in section C9.3 Component Isolation and Tool Authorization, chapter  Orchestration & Agentic Security. Verify that each tool/plugin executes in a least-privilege sandbox or is otherwise isolated from model operations.",
+        "description": "AISVS 1.01 Level 1 requirement in section C9.3 Component Isolation and Tool Authorization, chapter C9 Orchestration & Agentic Security. Verify that each tool/plugin executes in a least-privilege sandbox or is otherwise isolated from model operations.",
         "parent": null,
         "function": "Agentic Orchestration",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
@@ -9491,7 +9496,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "9.3.2",
         "title": "Verify that tool outputs are validated against schemas.",
-        "description": "AISVS 1.01 Level 1 requirement in section C9.3 Component Isolation and Tool Authorization, chapter  Orchestration & Agentic Security. Verify that tool outputs are validated against schemas.",
+        "description": "AISVS 1.01 Level 1 requirement in section C9.3 Component Isolation and Tool Authorization, chapter C9 Orchestration & Agentic Security. Verify that tool outputs are validated against schemas.",
         "parent": null,
         "function": "Agentic Orchestration",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
@@ -9500,7 +9505,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "9.3.3",
         "title": "Verify that tool manifests declare required privileges, resource limits, and output validation requirements.",
-        "description": "AISVS 1.01 Level 2 requirement in section C9.3 Component Isolation and Tool Authorization, chapter  Orchestration & Agentic Security. Verify that tool manifests declare required privileges, resource limits, and output validation requirements.",
+        "description": "AISVS 1.01 Level 2 requirement in section C9.3 Component Isolation and Tool Authorization, chapter C9 Orchestration & Agentic Security. Verify that tool manifests declare required privileges, resource limits, and output validation requirements.",
         "parent": null,
         "function": "Agentic Orchestration",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
@@ -9509,7 +9514,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "9.3.4",
         "title": "Verify that the runtime enforces the privileges, resource limits, and output-validation requirements declared in tool manifests.",
-        "description": "AISVS 1.01 Level 2 requirement in section C9.3 Component Isolation and Tool Authorization, chapter  Orchestration & Agentic Security. Verify that the runtime enforces the privileges, resource limits, and output-validation requirements declared in tool manifests.",
+        "description": "AISVS 1.01 Level 2 requirement in section C9.3 Component Isolation and Tool Authorization, chapter C9 Orchestration & Agentic Security. Verify that the runtime enforces the privileges, resource limits, and output-validation requirements declared in tool manifests.",
         "parent": null,
         "function": "Agentic Orchestration",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
@@ -9518,7 +9523,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "9.3.5",
         "title": "Verify that components processing untrusted data are isolated from tool-calling capabilities, ensuring that compromised data processing cannot trigger unauthorized tool invocations.",
-        "description": "AISVS 1.01 Level 2 requirement in section C9.3 Component Isolation and Tool Authorization, chapter  Orchestration & Agentic Security. Verify that components processing untrusted data are isolated from tool-calling capabilities, ensuring that compromised data processing cannot trigger unauthorized tool invocations.",
+        "description": "AISVS 1.01 Level 2 requirement in section C9.3 Component Isolation and Tool Authorization, chapter C9 Orchestration & Agentic Security. Verify that components processing untrusted data are isolated from tool-calling capabilities, ensuring that compromised data processing cannot trigger unauthorized tool invocations.",
         "parent": null,
         "function": "Agentic Orchestration",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
@@ -9527,7 +9532,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "9.3.6",
         "title": "Verify that there is architectural separation between processing of untrusted tool outputs and agent operations.",
-        "description": "AISVS 1.01 Level 2 requirement in section C9.3 Component Isolation and Tool Authorization, chapter  Orchestration & Agentic Security. Verify that there is architectural separation between processing of untrusted tool outputs and agent operations.",
+        "description": "AISVS 1.01 Level 2 requirement in section C9.3 Component Isolation and Tool Authorization, chapter C9 Orchestration & Agentic Security. Verify that there is architectural separation between processing of untrusted tool outputs and agent operations.",
         "parent": null,
         "function": "Agentic Orchestration",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
@@ -9536,7 +9541,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "9.3.7",
         "title": "Verify that external resources named in model output are verified against an approved allow-list or registry before the agent installs or invokes them.",
-        "description": "AISVS 1.01 Level 2 requirement in section C9.3 Component Isolation and Tool Authorization, chapter  Orchestration & Agentic Security. Verify that external resources named in model output are verified against an approved allow-list or registry before the agent installs or invokes them.",
+        "description": "AISVS 1.01 Level 2 requirement in section C9.3 Component Isolation and Tool Authorization, chapter C9 Orchestration & Agentic Security. Verify that external resources named in model output are verified against an approved allow-list or registry before the agent installs or invokes them.",
         "parent": null,
         "function": "Agentic Orchestration",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
@@ -9545,7 +9550,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "9.3.8",
         "title": "Verify that policy violations trigger automatic containment of affected tools, such as stopping their execution, isolating them, or revoking their permissions.",
-        "description": "AISVS 1.01 Level 3 requirement in section C9.3 Component Isolation and Tool Authorization, chapter  Orchestration & Agentic Security. Verify that policy violations trigger automatic containment of affected tools, such as stopping their execution, isolating them, or revoking their permissions.",
+        "description": "AISVS 1.01 Level 3 requirement in section C9.3 Component Isolation and Tool Authorization, chapter C9 Orchestration & Agentic Security. Verify that policy violations trigger automatic containment of affected tools, such as stopping their execution, isolating them, or revoking their permissions.",
         "parent": null,
         "function": "Agentic Orchestration",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
@@ -9554,7 +9559,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "9.3.9",
         "title": "Verify that services reachable from agent or tool sandboxes enforce the defined run, task, or tenant isolation policy on agent-writable state, including object names.",
-        "description": "AISVS 1.01 Level 2 requirement in section C9.3 Component Isolation and Tool Authorization, chapter  Orchestration & Agentic Security. Verify that services reachable from agent or tool sandboxes enforce the defined run, task, or tenant isolation policy on agent-writable state, including object names.",
+        "description": "AISVS 1.01 Level 2 requirement in section C9.3 Component Isolation and Tool Authorization, chapter C9 Orchestration & Agentic Security. Verify that services reachable from agent or tool sandboxes enforce the defined run, task, or tenant isolation policy on agent-writable state, including object names.",
         "parent": null,
         "function": "Agentic Orchestration",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C09-Orchestration-and-Agentic-Action.md#c93-component-isolation-and-tool-authorization",
@@ -9563,7 +9568,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "9.4.1",
         "title": "Verify that each agent instance has a unique cryptographic identity and authenticates as a first-class principal to downstream systems.",
-        "description": "AISVS 1.01 Level 2 requirement in section C9.4 Agent and Orchestrator Identity, chapter  Orchestration & Agentic Security. Verify that each agent instance has a unique cryptographic identity and authenticates as a first-class principal to downstream systems.",
+        "description": "AISVS 1.01 Level 2 requirement in section C9.4 Agent and Orchestrator Identity, chapter C9 Orchestration & Agentic Security. Verify that each agent instance has a unique cryptographic identity and authenticates as a first-class principal to downstream systems.",
         "parent": null,
         "function": "Agentic Orchestration",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C09-Orchestration-and-Agentic-Action.md#c94-agent-and-orchestrator-identity",
@@ -9572,7 +9577,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "9.4.2",
         "title": "Verify that agent-initiated actions are cryptographically bound to each step of the execution chain for non-repudiation.",
-        "description": "AISVS 1.01 Level 2 requirement in section C9.4 Agent and Orchestrator Identity, chapter  Orchestration & Agentic Security. Verify that agent-initiated actions are cryptographically bound to each step of the execution chain for non-repudiation.",
+        "description": "AISVS 1.01 Level 2 requirement in section C9.4 Agent and Orchestrator Identity, chapter C9 Orchestration & Agentic Security. Verify that agent-initiated actions are cryptographically bound to each step of the execution chain for non-repudiation.",
         "parent": null,
         "function": "Agentic Orchestration",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C09-Orchestration-and-Agentic-Action.md#c94-agent-and-orchestrator-identity",
@@ -9581,7 +9586,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "9.4.3",
         "title": "Verify that agent identity credentials rotate on a defined schedule.",
-        "description": "AISVS 1.01 Level 3 requirement in section C9.4 Agent and Orchestrator Identity, chapter  Orchestration & Agentic Security. Verify that agent identity credentials rotate on a defined schedule.",
+        "description": "AISVS 1.01 Level 3 requirement in section C9.4 Agent and Orchestrator Identity, chapter C9 Orchestration & Agentic Security. Verify that agent identity credentials rotate on a defined schedule.",
         "parent": null,
         "function": "Agentic Orchestration",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C09-Orchestration-and-Agentic-Action.md#c94-agent-and-orchestrator-identity",
@@ -9590,7 +9595,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "9.4.4",
         "title": "Verify that agent state persisted between invocations is integrity-protected.",
-        "description": "AISVS 1.01 Level 3 requirement in section C9.4 Agent and Orchestrator Identity, chapter  Orchestration & Agentic Security. Verify that agent state persisted between invocations is integrity-protected.",
+        "description": "AISVS 1.01 Level 3 requirement in section C9.4 Agent and Orchestrator Identity, chapter C9 Orchestration & Agentic Security. Verify that agent state persisted between invocations is integrity-protected.",
         "parent": null,
         "function": "Agentic Orchestration",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C09-Orchestration-and-Agentic-Action.md#c94-agent-and-orchestrator-identity",
@@ -9599,7 +9604,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "9.5.1",
         "title": "Verify that agent actions are authorized against fine-grained policies enforced by the runtime that restrict which tools an agent may invoke, and which parameter values it may supply.",
-        "description": "AISVS 1.01 Level 2 requirement in section C9.5 Agent Authorization, Delegation, and Continuous Enforcement, chapter  Orchestration & Agentic Security. Verify that agent actions are authorized against fine-grained policies enforced by the runtime that restrict which tools an agent may invoke, and which parameter values it may supply.",
+        "description": "AISVS 1.01 Level 2 requirement in section C9.5 Agent Authorization, Delegation, and Continuous Enforcement, chapter C9 Orchestration & Agentic Security. Verify that agent actions are authorized against fine-grained policies enforced by the runtime that restrict which tools an agent may invoke, and which parameter values it may supply.",
         "parent": null,
         "function": "Agentic Orchestration",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C09-Orchestration-and-Agentic-Action.md#c95-agent-authorization-delegation-and-continuous-enforcement",
@@ -9608,7 +9613,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "9.5.2",
         "title": "Verify that when an agent acts on a user's behalf, the runtime propagates an integrity-protected, scope-limited token that carries the user's authorization context and is enforced at every downstream call.",
-        "description": "AISVS 1.01 Level 2 requirement in section C9.5 Agent Authorization, Delegation, and Continuous Enforcement, chapter  Orchestration & Agentic Security. Verify that when an agent acts on a user's behalf, the runtime propagates an integrity-protected, scope-limited token that carries the user's authorization context and is enforced at every downstream call.",
+        "description": "AISVS 1.01 Level 2 requirement in section C9.5 Agent Authorization, Delegation, and Continuous Enforcement, chapter C9 Orchestration & Agentic Security. Verify that when an agent acts on a user's behalf, the runtime propagates an integrity-protected, scope-limited token that carries the user's authorization context and is enforced at every downstream call.",
         "parent": null,
         "function": "Agentic Orchestration",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C09-Orchestration-and-Agentic-Action.md#c95-agent-authorization-delegation-and-continuous-enforcement",
@@ -9617,7 +9622,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "9.5.3",
         "title": "Verify that all access control decisions are enforced by application logic or a policy engine, never by the AI model itself.",
-        "description": "AISVS 1.01 Level 2 requirement in section C9.5 Agent Authorization, Delegation, and Continuous Enforcement, chapter  Orchestration & Agentic Security. Verify that all access control decisions are enforced by application logic or a policy engine, never by the AI model itself.",
+        "description": "AISVS 1.01 Level 2 requirement in section C9.5 Agent Authorization, Delegation, and Continuous Enforcement, chapter C9 Orchestration & Agentic Security. Verify that all access control decisions are enforced by application logic or a policy engine, never by the AI model itself.",
         "parent": null,
         "function": "Agentic Orchestration",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C09-Orchestration-and-Agentic-Action.md#c95-agent-authorization-delegation-and-continuous-enforcement",
@@ -9626,7 +9631,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "9.5.4",
         "title": "Verify that secrets and credentials required by an agent at runtime are not exposed within the model's observable context, including the context window, system prompts, or tool call parameters.",
-        "description": "AISVS 1.01 Level 2 requirement in section C9.5 Agent Authorization, Delegation, and Continuous Enforcement, chapter  Orchestration & Agentic Security. Verify that secrets and credentials required by an agent at runtime are not exposed within the model's observable context, including the context window, system prompts, or tool call parameters.",
+        "description": "AISVS 1.01 Level 2 requirement in section C9.5 Agent Authorization, Delegation, and Continuous Enforcement, chapter C9 Orchestration & Agentic Security. Verify that secrets and credentials required by an agent at runtime are not exposed within the model's observable context, including the context window, system prompts, or tool call parameters.",
         "parent": null,
         "function": "Agentic Orchestration",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C09-Orchestration-and-Agentic-Action.md#c95-agent-authorization-delegation-and-continuous-enforcement",
@@ -9635,7 +9640,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "9.5.5",
         "title": "Verify that inter-agent task delegation is restricted by an explicit authorization policy.",
-        "description": "AISVS 1.01 Level 2 requirement in section C9.5 Agent Authorization, Delegation, and Continuous Enforcement, chapter  Orchestration & Agentic Security. Verify that inter-agent task delegation is restricted by an explicit authorization policy.",
+        "description": "AISVS 1.01 Level 2 requirement in section C9.5 Agent Authorization, Delegation, and Continuous Enforcement, chapter C9 Orchestration & Agentic Security. Verify that inter-agent task delegation is restricted by an explicit authorization policy.",
         "parent": null,
         "function": "Agentic Orchestration",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C09-Orchestration-and-Agentic-Action.md#c95-agent-authorization-delegation-and-continuous-enforcement",
@@ -9644,7 +9649,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "9.5.6",
         "title": "Verify that long-running agent sessions re-evaluate current backend authorization policy on every privileged action.",
-        "description": "AISVS 1.01 Level 3 requirement in section C9.5 Agent Authorization, Delegation, and Continuous Enforcement, chapter  Orchestration & Agentic Security. Verify that long-running agent sessions re-evaluate current backend authorization policy on every privileged action.",
+        "description": "AISVS 1.01 Level 3 requirement in section C9.5 Agent Authorization, Delegation, and Continuous Enforcement, chapter C9 Orchestration & Agentic Security. Verify that long-running agent sessions re-evaluate current backend authorization policy on every privileged action.",
         "parent": null,
         "function": "Agentic Orchestration",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C09-Orchestration-and-Agentic-Action.md#c95-agent-authorization-delegation-and-continuous-enforcement",
@@ -9653,7 +9658,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "9.5.7",
         "title": "Verify that authority derived through delegation never exceeds the delegating agent's current authority.",
-        "description": "AISVS 1.01 Level 2 requirement in section C9.5 Agent Authorization, Delegation, and Continuous Enforcement, chapter  Orchestration & Agentic Security. Verify that authority derived through delegation never exceeds the delegating agent's current authority.",
+        "description": "AISVS 1.01 Level 2 requirement in section C9.5 Agent Authorization, Delegation, and Continuous Enforcement, chapter C9 Orchestration & Agentic Security. Verify that authority derived through delegation never exceeds the delegating agent's current authority.",
         "parent": null,
         "function": "Agentic Orchestration",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C09-Orchestration-and-Agentic-Action.md#c95-agent-authorization-delegation-and-continuous-enforcement",
@@ -9662,7 +9667,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "9.6.1",
         "title": "Verify that a manual kill-switch mechanism exists to immediately halt AI model inference and outputs.",
-        "description": "AISVS 1.01 Level 1 requirement in section C9.6 Shutdown and Graceful Degradation, chapter  Orchestration & Agentic Security. Verify that a manual kill-switch mechanism exists to immediately halt AI model inference and outputs.",
+        "description": "AISVS 1.01 Level 1 requirement in section C9.6 Shutdown and Graceful Degradation, chapter C9 Orchestration & Agentic Security. Verify that a manual kill-switch mechanism exists to immediately halt AI model inference and outputs.",
         "parent": null,
         "function": "Agentic Orchestration",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C09-Orchestration-and-Agentic-Action.md#c96-shutdown-and-graceful-degradation",
@@ -9671,7 +9676,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "9.6.2",
         "title": "Verify that when a human-approval gate is not satisfied within the defined approval time, the system blocks the pending action.",
-        "description": "AISVS 1.01 Level 2 requirement in section C9.6 Shutdown and Graceful Degradation, chapter  Orchestration & Agentic Security. Verify that when a human-approval gate is not satisfied within the defined approval time, the system blocks the pending action.",
+        "description": "AISVS 1.01 Level 2 requirement in section C9.6 Shutdown and Graceful Degradation, chapter C9 Orchestration & Agentic Security. Verify that when a human-approval gate is not satisfied within the defined approval time, the system blocks the pending action.",
         "parent": null,
         "function": "Agentic Orchestration",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C09-Orchestration-and-Agentic-Action.md#c96-shutdown-and-graceful-degradation",
@@ -9680,7 +9685,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "9.6.3",
         "title": "Verify that kill-switch commands are implemented through an out-of-band channel that is isolated from the agent runtime.",
-        "description": "AISVS 1.01 Level 3 requirement in section C9.6 Shutdown and Graceful Degradation, chapter  Orchestration & Agentic Security. Verify that kill-switch commands are implemented through an out-of-band channel that is isolated from the agent runtime.",
+        "description": "AISVS 1.01 Level 3 requirement in section C9.6 Shutdown and Graceful Degradation, chapter C9 Orchestration & Agentic Security. Verify that kill-switch commands are implemented through an out-of-band channel that is isolated from the agent runtime.",
         "parent": null,
         "function": "Agentic Orchestration",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C09-Orchestration-and-Agentic-Action.md#c96-shutdown-and-graceful-degradation",
@@ -9689,7 +9694,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "10.1.1",
         "title": "Verify that MCP components are obtained only from trusted sources and cryptographically verified.",
-        "description": "AISVS 1.01 Level 1 requirement in section C10.1 Component Integrity, chapter  Model Context Protocol (MCP) Security. Verify that MCP components are obtained only from trusted sources and cryptographically verified.",
+        "description": "AISVS 1.01 Level 1 requirement in section C10.1 Component Integrity, chapter C10 Model Context Protocol (MCP) Security. Verify that MCP components are obtained only from trusted sources and cryptographically verified.",
         "parent": null,
         "function": "MCP Security",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C10-MCP-Security.md#c101-component-integrity",
@@ -9698,7 +9703,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "10.1.2",
         "title": "Verify that only allow-listed MCP servers are permitted.",
-        "description": "AISVS 1.01 Level 2 requirement in section C10.1 Component Integrity, chapter  Model Context Protocol (MCP) Security. Verify that only allow-listed MCP servers are permitted.",
+        "description": "AISVS 1.01 Level 2 requirement in section C10.1 Component Integrity, chapter C10 Model Context Protocol (MCP) Security. Verify that only allow-listed MCP servers are permitted.",
         "parent": null,
         "function": "MCP Security",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C10-MCP-Security.md#c101-component-integrity",
@@ -9707,7 +9712,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "10.1.3",
         "title": "Verify that locally launched MCP servers run in a least-privilege sandbox with restricted file system, network, and system access.",
-        "description": "AISVS 1.01 Level 2 requirement in section C10.1 Component Integrity, chapter  Model Context Protocol (MCP) Security. Verify that locally launched MCP servers run in a least-privilege sandbox with restricted file system, network, and system access.",
+        "description": "AISVS 1.01 Level 2 requirement in section C10.1 Component Integrity, chapter C10 Model Context Protocol (MCP) Security. Verify that locally launched MCP servers run in a least-privilege sandbox with restricted file system, network, and system access.",
         "parent": null,
         "function": "MCP Security",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C10-MCP-Security.md#c101-component-integrity",
@@ -9716,7 +9721,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "10.2.1",
         "title": "Verify that MCP servers validate access tokens for each request and do not rely on transport security alone.",
-        "description": "AISVS 1.01 Level 1 requirement in section C10.2 Authentication & Authorization, chapter  Model Context Protocol (MCP) Security. Verify that MCP servers validate access tokens for each request and do not rely on transport security alone.",
+        "description": "AISVS 1.01 Level 1 requirement in section C10.2 Authentication & Authorization, chapter C10 Model Context Protocol (MCP) Security. Verify that MCP servers validate access tokens for each request and do not rely on transport security alone.",
         "parent": null,
         "function": "MCP Security",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C10-MCP-Security.md#c102-authentication--authorization",
@@ -9725,7 +9730,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "10.2.2",
         "title": "Verify that MCP servers validate the presented access token's issuer, audience, expiration, and scope claims in accordance with OAuth 2.1.",
-        "description": "AISVS 1.01 Level 1 requirement in section C10.2 Authentication & Authorization, chapter  Model Context Protocol (MCP) Security. Verify that MCP servers validate the presented access token's issuer, audience, expiration, and scope claims in accordance with OAuth 2.1.",
+        "description": "AISVS 1.01 Level 1 requirement in section C10.2 Authentication & Authorization, chapter C10 Model Context Protocol (MCP) Security. Verify that MCP servers validate the presented access token's issuer, audience, expiration, and scope claims in accordance with OAuth 2.1.",
         "parent": null,
         "function": "MCP Security",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C10-MCP-Security.md#c102-authentication--authorization",
@@ -9734,7 +9739,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "10.2.3",
         "title": "Verify that MCP servers acting as OAuth 2.1 resource servers do not store or persist access tokens or user credentials.",
-        "description": "AISVS 1.01 Level 1 requirement in section C10.2 Authentication & Authorization, chapter  Model Context Protocol (MCP) Security. Verify that MCP servers acting as OAuth 2.1 resource servers do not store or persist access tokens or user credentials.",
+        "description": "AISVS 1.01 Level 1 requirement in section C10.2 Authentication & Authorization, chapter C10 Model Context Protocol (MCP) Security. Verify that MCP servers acting as OAuth 2.1 resource servers do not store or persist access tokens or user credentials.",
         "parent": null,
         "function": "MCP Security",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C10-MCP-Security.md#c102-authentication--authorization",
@@ -9743,7 +9748,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "10.2.4",
         "title": "Verify that MCP tools/list returns only tools permitted by the requester's authorized scopes, and that list responses vary only by authorization context, never by connection.",
-        "description": "AISVS 1.01 Level 2 requirement in section C10.2 Authentication & Authorization, chapter  Model Context Protocol (MCP) Security. Verify that MCP tools/list returns only tools permitted by the requester's authorized scopes, and that list responses vary only by authorization context, never by connection.",
+        "description": "AISVS 1.01 Level 2 requirement in section C10.2 Authentication & Authorization, chapter C10 Model Context Protocol (MCP) Security. Verify that MCP tools/list returns only tools permitted by the requester's authorized scopes, and that list responses vary only by authorization context, never by connection.",
         "parent": null,
         "function": "MCP Security",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C10-MCP-Security.md#c102-authentication--authorization",
@@ -9752,7 +9757,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "10.2.5",
         "title": "Verify that MCP servers enforce access control on every tool invocation, validating that the user's access token authorizes both the requested tool and the specific argument values supplied.",
-        "description": "AISVS 1.01 Level 2 requirement in section C10.2 Authentication & Authorization, chapter  Model Context Protocol (MCP) Security. Verify that MCP servers enforce access control on every tool invocation, validating that the user's access token authorizes both the requested tool and the specific argument values supplied.",
+        "description": "AISVS 1.01 Level 2 requirement in section C10.2 Authentication & Authorization, chapter C10 Model Context Protocol (MCP) Security. Verify that MCP servers enforce access control on every tool invocation, validating that the user's access token authorizes both the requested tool and the specific argument values supplied.",
         "parent": null,
         "function": "MCP Security",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C10-MCP-Security.md#c102-authentication--authorization",
@@ -9761,7 +9766,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "10.2.7",
         "title": "Verify that MCP servers only accept tokens explicitly issued for them, and do not pass tokens issued for other services through to downstream APIs.",
-        "description": "AISVS 1.01 Level 1 requirement in section C10.2 Authentication & Authorization, chapter  Model Context Protocol (MCP) Security. Verify that MCP servers only accept tokens explicitly issued for them, and do not pass tokens issued for other services through to downstream APIs.",
+        "description": "AISVS 1.01 Level 1 requirement in section C10.2 Authentication & Authorization, chapter C10 Model Context Protocol (MCP) Security. Verify that MCP servers only accept tokens explicitly issued for them, and do not pass tokens issued for other services through to downstream APIs.",
         "parent": null,
         "function": "MCP Security",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C10-MCP-Security.md#c102-authentication--authorization",
@@ -9770,7 +9775,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "10.2.8",
         "title": "Verify that MCP servers protect the integrity of `requestState` that influences authorization, resource access, or business logic, and reject state that fails verification.",
-        "description": "AISVS 1.01 Level 1 requirement in section C10.2 Authentication & Authorization, chapter  Model Context Protocol (MCP) Security. Verify that MCP servers protect the integrity of `requestState` that influences authorization, resource access, or business logic, and reject state that fails verification.",
+        "description": "AISVS 1.01 Level 1 requirement in section C10.2 Authentication & Authorization, chapter C10 Model Context Protocol (MCP) Security. Verify that MCP servers protect the integrity of `requestState` that influences authorization, resource access, or business logic, and reject state that fails verification.",
         "parent": null,
         "function": "MCP Security",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C10-MCP-Security.md#c102-authentication--authorization",
@@ -9779,7 +9784,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "10.2.9",
         "title": "Verify that MCP clients bind persisted OAuth client credentials to the issuing authorization server and do not present them to a different authorization server.",
-        "description": "AISVS 1.01 Level 2 requirement in section C10.2 Authentication & Authorization, chapter  Model Context Protocol (MCP) Security. Verify that MCP clients bind persisted OAuth client credentials to the issuing authorization server and do not present them to a different authorization server.",
+        "description": "AISVS 1.01 Level 2 requirement in section C10.2 Authentication & Authorization, chapter C10 Model Context Protocol (MCP) Security. Verify that MCP clients bind persisted OAuth client credentials to the issuing authorization server and do not present them to a different authorization server.",
         "parent": null,
         "function": "MCP Security",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C10-MCP-Security.md#c102-authentication--authorization",
@@ -9788,7 +9793,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "10.2.10",
         "title": "Verify that MCP servers enforce single use server-side for `requestState` that must be consumed at most once.",
-        "description": "AISVS 1.01 Level 2 requirement in section C10.2 Authentication & Authorization, chapter  Model Context Protocol (MCP) Security. Verify that MCP servers enforce single use server-side for `requestState` that must be consumed at most once.",
+        "description": "AISVS 1.01 Level 2 requirement in section C10.2 Authentication & Authorization, chapter C10 Model Context Protocol (MCP) Security. Verify that MCP servers enforce single use server-side for `requestState` that must be consumed at most once.",
         "parent": null,
         "function": "MCP Security",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C10-MCP-Security.md#c102-authentication--authorization",
@@ -9797,7 +9802,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "10.3.1",
         "title": "Verify that authenticated, encrypted streamable HTTP is used for MCP transport for remote services.",
-        "description": "AISVS 1.01 Level 1 requirement in section C10.3 Secure Transport, chapter  Model Context Protocol (MCP) Security. Verify that authenticated, encrypted streamable HTTP is used for MCP transport for remote services.",
+        "description": "AISVS 1.01 Level 1 requirement in section C10.3 Secure Transport, chapter C10 Model Context Protocol (MCP) Security. Verify that authenticated, encrypted streamable HTTP is used for MCP transport for remote services.",
         "parent": null,
         "function": "MCP Security",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C10-MCP-Security.md#c103-secure-transport",
@@ -9806,7 +9811,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "10.3.2",
         "title": "Verify that stdio transport is permitted only in controlled local environments.",
-        "description": "AISVS 1.01 Level 1 requirement in section C10.3 Secure Transport, chapter  Model Context Protocol (MCP) Security. Verify that stdio transport is permitted only in controlled local environments.",
+        "description": "AISVS 1.01 Level 1 requirement in section C10.3 Secure Transport, chapter C10 Model Context Protocol (MCP) Security. Verify that stdio transport is permitted only in controlled local environments.",
         "parent": null,
         "function": "MCP Security",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C10-MCP-Security.md#c103-secure-transport",
@@ -9815,7 +9820,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "10.3.3",
         "title": "Verify that MCP servers validate both the Origin header and the Host header independently on all HTTP-based transports to prevent DNS rebinding attacks.",
-        "description": "AISVS 1.01 Level 1 requirement in section C10.3 Secure Transport, chapter  Model Context Protocol (MCP) Security. Verify that MCP servers validate both the Origin header and the Host header independently on all HTTP-based transports to prevent DNS rebinding attacks.",
+        "description": "AISVS 1.01 Level 1 requirement in section C10.3 Secure Transport, chapter C10 Model Context Protocol (MCP) Security. Verify that MCP servers validate both the Origin header and the Host header independently on all HTTP-based transports to prevent DNS rebinding attacks.",
         "parent": null,
         "function": "MCP Security",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C10-MCP-Security.md#c103-secure-transport",
@@ -9824,7 +9829,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "10.3.4",
         "title": "Verify that MCP clients enforce a minimum acceptable protocol version and do not retry with, or fall back to, a protocol version or legacy handshake below that minimum.",
-        "description": "AISVS 1.01 Level 2 requirement in section C10.3 Secure Transport, chapter  Model Context Protocol (MCP) Security. Verify that MCP clients enforce a minimum acceptable protocol version and do not retry with, or fall back to, a protocol version or legacy handshake below that minimum.",
+        "description": "AISVS 1.01 Level 2 requirement in section C10.3 Secure Transport, chapter C10 Model Context Protocol (MCP) Security. Verify that MCP clients enforce a minimum acceptable protocol version and do not retry with, or fall back to, a protocol version or legacy handshake below that minimum.",
         "parent": null,
         "function": "MCP Security",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C10-MCP-Security.md#c103-secure-transport",
@@ -9833,7 +9838,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "10.3.5",
         "title": "Verify that access tokens between the MCP client and server are sender-constrained using mTLS or DPoP.",
-        "description": "AISVS 1.01 Level 3 requirement in section C10.3 Secure Transport, chapter  Model Context Protocol (MCP) Security. Verify that access tokens between the MCP client and server are sender-constrained using mTLS or DPoP.",
+        "description": "AISVS 1.01 Level 3 requirement in section C10.3 Secure Transport, chapter C10 Model Context Protocol (MCP) Security. Verify that access tokens between the MCP client and server are sender-constrained using mTLS or DPoP.",
         "parent": null,
         "function": "MCP Security",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C10-MCP-Security.md#c103-secure-transport",
@@ -9842,7 +9847,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "10.3.6",
         "title": "Verify that MCP intermediaries enforcing policy on mirrored request headers confirm that the protocol version indicates a revision requiring header and body validation before trusting those headers.",
-        "description": "AISVS 1.01 Level 2 requirement in section C10.3 Secure Transport, chapter  Model Context Protocol (MCP) Security. Verify that MCP intermediaries enforcing policy on mirrored request headers confirm that the protocol version indicates a revision requiring header and body validation before trusting those headers.",
+        "description": "AISVS 1.01 Level 2 requirement in section C10.3 Secure Transport, chapter C10 Model Context Protocol (MCP) Security. Verify that MCP intermediaries enforcing policy on mirrored request headers confirm that the protocol version indicates a revision requiring header and body validation before trusting those headers.",
         "parent": null,
         "function": "MCP Security",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C10-MCP-Security.md#c103-secure-transport",
@@ -9851,7 +9856,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "10.4.1",
         "title": "Verify that MCP tools/list and tools/call responses are validated against their declared schemas before being injected into the model context.",
-        "description": "AISVS 1.01 Level 1 requirement in section C10.4 Schema, Message, and Input Validation, chapter  Model Context Protocol (MCP) Security. Verify that MCP tools/list and tools/call responses are validated against their declared schemas before being injected into the model context.",
+        "description": "AISVS 1.01 Level 1 requirement in section C10.4 Schema, Message, and Input Validation, chapter C10 Model Context Protocol (MCP) Security. Verify that MCP tools/list and tools/call responses are validated against their declared schemas before being injected into the model context.",
         "parent": null,
         "function": "MCP Security",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C10-MCP-Security.md#c104-schema-message-and-input-validation",
@@ -9860,7 +9865,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "10.4.2",
         "title": "Verify that MCP tools/list and tools/call responses are screened for indirect prompt injection before being injected into the model context.",
-        "description": "AISVS 1.01 Level 1 requirement in section C10.4 Schema, Message, and Input Validation, chapter  Model Context Protocol (MCP) Security. Verify that MCP tools/list and tools/call responses are screened for indirect prompt injection before being injected into the model context.",
+        "description": "AISVS 1.01 Level 1 requirement in section C10.4 Schema, Message, and Input Validation, chapter C10 Model Context Protocol (MCP) Security. Verify that MCP tools/list and tools/call responses are screened for indirect prompt injection before being injected into the model context.",
         "parent": null,
         "function": "MCP Security",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C10-MCP-Security.md#c104-schema-message-and-input-validation",
@@ -9869,7 +9874,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "10.4.3",
         "title": "Verify that MCP servers reject unrecognized or oversized parameters in function calls.",
-        "description": "AISVS 1.01 Level 1 requirement in section C10.4 Schema, Message, and Input Validation, chapter  Model Context Protocol (MCP) Security. Verify that MCP servers reject unrecognized or oversized parameters in function calls.",
+        "description": "AISVS 1.01 Level 1 requirement in section C10.4 Schema, Message, and Input Validation, chapter C10 Model Context Protocol (MCP) Security. Verify that MCP servers reject unrecognized or oversized parameters in function calls.",
         "parent": null,
         "function": "MCP Security",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C10-MCP-Security.md#c104-schema-message-and-input-validation",
@@ -9878,7 +9883,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "10.4.4",
         "title": "Verify that all MCP servers enforce strict schema validation.",
-        "description": "AISVS 1.01 Level 2 requirement in section C10.4 Schema, Message, and Input Validation, chapter  Model Context Protocol (MCP) Security. Verify that all MCP servers enforce strict schema validation.",
+        "description": "AISVS 1.01 Level 2 requirement in section C10.4 Schema, Message, and Input Validation, chapter C10 Model Context Protocol (MCP) Security. Verify that all MCP servers enforce strict schema validation.",
         "parent": null,
         "function": "MCP Security",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C10-MCP-Security.md#c104-schema-message-and-input-validation",
@@ -9887,7 +9892,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "10.4.5",
         "title": "Verify that all MCP transports enforce maximum payload size limits.",
-        "description": "AISVS 1.01 Level 2 requirement in section C10.4 Schema, Message, and Input Validation, chapter  Model Context Protocol (MCP) Security. Verify that all MCP transports enforce maximum payload size limits.",
+        "description": "AISVS 1.01 Level 2 requirement in section C10.4 Schema, Message, and Input Validation, chapter C10 Model Context Protocol (MCP) Security. Verify that all MCP transports enforce maximum payload size limits.",
         "parent": null,
         "function": "MCP Security",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C10-MCP-Security.md#c104-schema-message-and-input-validation",
@@ -9896,7 +9901,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "10.4.6",
         "title": "Verify that MCP servers sign tool responses with a unique nonce and timestamp so MCP clients can detect replay attempts.",
-        "description": "AISVS 1.01 Level 2 requirement in section C10.4 Schema, Message, and Input Validation, chapter  Model Context Protocol (MCP) Security. Verify that MCP servers sign tool responses with a unique nonce and timestamp so MCP clients can detect replay attempts.",
+        "description": "AISVS 1.01 Level 2 requirement in section C10.4 Schema, Message, and Input Validation, chapter C10 Model Context Protocol (MCP) Security. Verify that MCP servers sign tool responses with a unique nonce and timestamp so MCP clients can detect replay attempts.",
         "parent": null,
         "function": "MCP Security",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C10-MCP-Security.md#c104-schema-message-and-input-validation",
@@ -9905,7 +9910,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "10.4.7",
         "title": "Verify that MCP clients present users with explicit consent dialogue and cancellation options upon installation of a local MCP server.",
-        "description": "AISVS 1.01 Level 2 requirement in section C10.4 Schema, Message, and Input Validation, chapter  Model Context Protocol (MCP) Security. Verify that MCP clients present users with explicit consent dialogue and cancellation options upon installation of a local MCP server.",
+        "description": "AISVS 1.01 Level 2 requirement in section C10.4 Schema, Message, and Input Validation, chapter C10 Model Context Protocol (MCP) Security. Verify that MCP clients present users with explicit consent dialogue and cancellation options upon installation of a local MCP server.",
         "parent": null,
         "function": "MCP Security",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C10-MCP-Security.md#c104-schema-message-and-input-validation",
@@ -9914,7 +9919,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "10.4.8",
         "title": "Verify that MCP clients maintain a snapshot of tool definitions and that any change to a tool definition triggers re-approval before the modified tool can be invoked.",
-        "description": "AISVS 1.01 Level 3 requirement in section C10.4 Schema, Message, and Input Validation, chapter  Model Context Protocol (MCP) Security. Verify that MCP clients maintain a snapshot of tool definitions and that any change to a tool definition triggers re-approval before the modified tool can be invoked.",
+        "description": "AISVS 1.01 Level 3 requirement in section C10.4 Schema, Message, and Input Validation, chapter C10 Model Context Protocol (MCP) Security. Verify that MCP clients maintain a snapshot of tool definitions and that any change to a tool definition triggers re-approval before the modified tool can be invoked.",
         "parent": null,
         "function": "MCP Security",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C10-MCP-Security.md#c104-schema-message-and-input-validation",
@@ -9923,7 +9928,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "10.4.9",
         "title": "Verify that MCP proxy servers using a shared upstream OAuth client identity do not allow a requesting MCP client to inherit authorization established for a different MCP client.",
-        "description": "AISVS 1.01 Level 2 requirement in section C10.4 Schema, Message, and Input Validation, chapter  Model Context Protocol (MCP) Security. Verify that MCP proxy servers using a shared upstream OAuth client identity do not allow a requesting MCP client to inherit authorization established for a different MCP client.",
+        "description": "AISVS 1.01 Level 2 requirement in section C10.4 Schema, Message, and Input Validation, chapter C10 Model Context Protocol (MCP) Security. Verify that MCP proxy servers using a shared upstream OAuth client identity do not allow a requesting MCP client to inherit authorization established for a different MCP client.",
         "parent": null,
         "function": "MCP Security",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C10-MCP-Security.md#c104-schema-message-and-input-validation",
@@ -9932,7 +9937,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "10.4.10",
         "title": "Verify that MCP clients bind each approved MCP server's granted consent and authorization to the connection endpoint approved for that server, and require user re-approval before any further interaction once that endpoint changes.",
-        "description": "AISVS 1.01 Level 2 requirement in section C10.4 Schema, Message, and Input Validation, chapter  Model Context Protocol (MCP) Security. Verify that MCP clients bind each approved MCP server's granted consent and authorization to the connection endpoint approved for that server, and require user re-approval before any further interaction once that endpoint changes.",
+        "description": "AISVS 1.01 Level 2 requirement in section C10.4 Schema, Message, and Input Validation, chapter C10 Model Context Protocol (MCP) Security. Verify that MCP clients bind each approved MCP server's granted consent and authorization to the connection endpoint approved for that server, and require user re-approval before any further interaction once that endpoint changes.",
         "parent": null,
         "function": "MCP Security",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C10-MCP-Security.md#c104-schema-message-and-input-validation",
@@ -9941,7 +9946,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "10.4.11",
         "title": "Verify that MCP clients reject tool definitions containing invalid mirrored-header annotations, excluding the affected tool rather than the entire tool list.",
-        "description": "AISVS 1.01 Level 1 requirement in section C10.4 Schema, Message, and Input Validation, chapter  Model Context Protocol (MCP) Security. Verify that MCP clients reject tool definitions containing invalid mirrored-header annotations, excluding the affected tool rather than the entire tool list.",
+        "description": "AISVS 1.01 Level 1 requirement in section C10.4 Schema, Message, and Input Validation, chapter C10 Model Context Protocol (MCP) Security. Verify that MCP clients reject tool definitions containing invalid mirrored-header annotations, excluding the affected tool rather than the entire tool list.",
         "parent": null,
         "function": "MCP Security",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C10-MCP-Security.md#c104-schema-message-and-input-validation",
@@ -9950,7 +9955,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "10.4.12",
         "title": "Verify that MCP servers reject requests where mirrored request headers do not match the corresponding request body values, after decoding any encoded header values.",
-        "description": "AISVS 1.01 Level 2 requirement in section C10.4 Schema, Message, and Input Validation, chapter  Model Context Protocol (MCP) Security. Verify that MCP servers reject requests where mirrored request headers do not match the corresponding request body values, after decoding any encoded header values.",
+        "description": "AISVS 1.01 Level 2 requirement in section C10.4 Schema, Message, and Input Validation, chapter C10 Model Context Protocol (MCP) Security. Verify that MCP servers reject requests where mirrored request headers do not match the corresponding request body values, after decoding any encoded header values.",
         "parent": null,
         "function": "MCP Security",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C10-MCP-Security.md#c104-schema-message-and-input-validation",
@@ -9959,7 +9964,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "10.4.13",
         "title": "Verify that MCP implementations apply resource bounds to schema validation, such as a maximum schema depth, a cap on the total number of nested schema elements, or a per-validation time budget.",
-        "description": "AISVS 1.01 Level 2 requirement in section C10.4 Schema, Message, and Input Validation, chapter  Model Context Protocol (MCP) Security. Verify that MCP implementations apply resource bounds to schema validation, such as a maximum schema depth, a cap on the total number of nested schema elements, or a per-validation time budget.",
+        "description": "AISVS 1.01 Level 2 requirement in section C10.4 Schema, Message, and Input Validation, chapter C10 Model Context Protocol (MCP) Security. Verify that MCP implementations apply resource bounds to schema validation, such as a maximum schema depth, a cap on the total number of nested schema elements, or a per-validation time budget.",
         "parent": null,
         "function": "MCP Security",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C10-MCP-Security.md#c104-schema-message-and-input-validation",
@@ -9968,7 +9973,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "10.4.14",
         "title": "Verify that MCP implementations do not automatically dereference JSON Schema `$ref` values that resolve to network URIs, and that any opt-in external resolution is disabled by default and rejects loopback, link-local, and private network addresses.",
-        "description": "AISVS 1.01 Level 1 requirement in section C10.4 Schema, Message, and Input Validation, chapter  Model Context Protocol (MCP) Security. Verify that MCP implementations do not automatically dereference JSON Schema `$ref` values that resolve to network URIs, and that any opt-in external resolution is disabled by default and rejects loopback, link-local, and private network addresses.",
+        "description": "AISVS 1.01 Level 1 requirement in section C10.4 Schema, Message, and Input Validation, chapter C10 Model Context Protocol (MCP) Security. Verify that MCP implementations do not automatically dereference JSON Schema `$ref` values that resolve to network URIs, and that any opt-in external resolution is disabled by default and rejects loopback, link-local, and private network addresses.",
         "parent": null,
         "function": "MCP Security",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C10-MCP-Security.md#c104-schema-message-and-input-validation",
@@ -9977,7 +9982,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "10.4.15",
         "title": "Verify that MCP implementations reject schemas that fail to validate due to an unresolved external `$ref` rather than treating them as permissive.",
-        "description": "AISVS 1.01 Level 2 requirement in section C10.4 Schema, Message, and Input Validation, chapter  Model Context Protocol (MCP) Security. Verify that MCP implementations reject schemas that fail to validate due to an unresolved external `$ref` rather than treating them as permissive.",
+        "description": "AISVS 1.01 Level 2 requirement in section C10.4 Schema, Message, and Input Validation, chapter C10 Model Context Protocol (MCP) Security. Verify that MCP implementations reject schemas that fail to validate due to an unresolved external `$ref` rather than treating them as permissive.",
         "parent": null,
         "function": "MCP Security",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C10-MCP-Security.md#c104-schema-message-and-input-validation",
@@ -9986,7 +9991,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "10.4.16",
         "title": "Verify that MCP clients and intermediaries reuse cached responses marked with a private cache scope only within the authorization context that produced them, and do not cache results of multi round-trip requests.",
-        "description": "AISVS 1.01 Level 2 requirement in section C10.4 Schema, Message, and Input Validation, chapter  Model Context Protocol (MCP) Security. Verify that MCP clients and intermediaries reuse cached responses marked with a private cache scope only within the authorization context that produced them, and do not cache results of multi round-trip requests.",
+        "description": "AISVS 1.01 Level 2 requirement in section C10.4 Schema, Message, and Input Validation, chapter C10 Model Context Protocol (MCP) Security. Verify that MCP clients and intermediaries reuse cached responses marked with a private cache scope only within the authorization context that produced them, and do not cache results of multi round-trip requests.",
         "parent": null,
         "function": "MCP Security",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C10-MCP-Security.md#c104-schema-message-and-input-validation",
@@ -9995,7 +10000,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "10.4.17",
         "title": "Verify that MCP servers mark cacheable results containing user-specific or authorization-filtered data with a private cache scope.",
-        "description": "AISVS 1.01 Level 2 requirement in section C10.4 Schema, Message, and Input Validation, chapter  Model Context Protocol (MCP) Security. Verify that MCP servers mark cacheable results containing user-specific or authorization-filtered data with a private cache scope.",
+        "description": "AISVS 1.01 Level 2 requirement in section C10.4 Schema, Message, and Input Validation, chapter C10 Model Context Protocol (MCP) Security. Verify that MCP servers mark cacheable results containing user-specific or authorization-filtered data with a private cache scope.",
         "parent": null,
         "function": "MCP Security",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C10-MCP-Security.md#c104-schema-message-and-input-validation",
@@ -10004,7 +10009,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "10.4.18",
         "title": "Verify that MCP servers do not use form-mode elicitation to request secrets or payment credentials, and that in URL-mode elicitation the user completing the flow is the same user who initiated it.",
-        "description": "AISVS 1.01 Level 2 requirement in section C10.4 Schema, Message, and Input Validation, chapter  Model Context Protocol (MCP) Security. Verify that MCP servers do not use form-mode elicitation to request secrets or payment credentials, and that in URL-mode elicitation the user completing the flow is the same user who initiated it.",
+        "description": "AISVS 1.01 Level 2 requirement in section C10.4 Schema, Message, and Input Validation, chapter C10 Model Context Protocol (MCP) Security. Verify that MCP servers do not use form-mode elicitation to request secrets or payment credentials, and that in URL-mode elicitation the user completing the flow is the same user who initiated it.",
         "parent": null,
         "function": "MCP Security",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C10-MCP-Security.md#c104-schema-message-and-input-validation",
@@ -10013,7 +10018,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "10.4.19",
         "title": "Verify that MCP servers exclude end-user credentials and personal data from URL-mode elicitation URLs, and do not issue URLs that are pre-authenticated to a protected resource.",
-        "description": "AISVS 1.01 Level 1 requirement in section C10.4 Schema, Message, and Input Validation, chapter  Model Context Protocol (MCP) Security. Verify that MCP servers exclude end-user credentials and personal data from URL-mode elicitation URLs, and do not issue URLs that are pre-authenticated to a protected resource.",
+        "description": "AISVS 1.01 Level 1 requirement in section C10.4 Schema, Message, and Input Validation, chapter C10 Model Context Protocol (MCP) Security. Verify that MCP servers exclude end-user credentials and personal data from URL-mode elicitation URLs, and do not issue URLs that are pre-authenticated to a protected resource.",
         "parent": null,
         "function": "MCP Security",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C10-MCP-Security.md#c104-schema-message-and-input-validation",
@@ -10022,7 +10027,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "10.4.20",
         "title": "Verify that MCP clients require explicit user consent and display the full URL before opening any URL-mode elicitation target, and do not pre-fetch the URL or its metadata.",
-        "description": "AISVS 1.01 Level 2 requirement in section C10.4 Schema, Message, and Input Validation, chapter  Model Context Protocol (MCP) Security. Verify that MCP clients require explicit user consent and display the full URL before opening any URL-mode elicitation target, and do not pre-fetch the URL or its metadata.",
+        "description": "AISVS 1.01 Level 2 requirement in section C10.4 Schema, Message, and Input Validation, chapter C10 Model Context Protocol (MCP) Security. Verify that MCP clients require explicit user consent and display the full URL before opening any URL-mode elicitation target, and do not pre-fetch the URL or its metadata.",
         "parent": null,
         "function": "MCP Security",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C10-MCP-Security.md#c104-schema-message-and-input-validation",
@@ -10031,7 +10036,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "10.4.21",
         "title": "Verify that MCP clients open URL-mode elicitation targets so that neither the client nor the model can observe the page contents or the user's input.",
-        "description": "AISVS 1.01 Level 2 requirement in section C10.4 Schema, Message, and Input Validation, chapter  Model Context Protocol (MCP) Security. Verify that MCP clients open URL-mode elicitation targets so that neither the client nor the model can observe the page contents or the user's input.",
+        "description": "AISVS 1.01 Level 2 requirement in section C10.4 Schema, Message, and Input Validation, chapter C10 Model Context Protocol (MCP) Security. Verify that MCP clients open URL-mode elicitation targets so that neither the client nor the model can observe the page contents or the user's input.",
         "parent": null,
         "function": "MCP Security",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C10-MCP-Security.md#c104-schema-message-and-input-validation",
@@ -10040,7 +10045,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "11.1.1",
         "title": "Verify that the model has undergone alignment and safety training or fine-tuning to prevent the model from generating disallowed content categories.",
-        "description": "AISVS 1.01 Level 1 requirement in section C11.1 Model Alignment, Safety, and Robustness Testing and Training, chapter  Adversarial Robustness. Verify that the model has undergone alignment and safety training or fine-tuning to prevent the model from generating disallowed content categories.",
+        "description": "AISVS 1.01 Level 1 requirement in section C11.1 Model Alignment, Safety, and Robustness Testing and Training, chapter C11 Adversarial Robustness. Verify that the model has undergone alignment and safety training or fine-tuning to prevent the model from generating disallowed content categories.",
         "parent": null,
         "function": "Adversarial Robustness",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C11-Adversarial-Robustness.md#c111-model-alignment-safety-and-robustness-testing-and-training",
@@ -10049,7 +10054,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "11.1.2",
         "title": "Verify that a version-controlled alignment test suite is run on every model update or release.",
-        "description": "AISVS 1.01 Level 1 requirement in section C11.1 Model Alignment, Safety, and Robustness Testing and Training, chapter  Adversarial Robustness. Verify that a version-controlled alignment test suite is run on every model update or release.",
+        "description": "AISVS 1.01 Level 1 requirement in section C11.1 Model Alignment, Safety, and Robustness Testing and Training, chapter C11 Adversarial Robustness. Verify that a version-controlled alignment test suite is run on every model update or release.",
         "parent": null,
         "function": "Adversarial Robustness",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C11-Adversarial-Robustness.md#c111-model-alignment-safety-and-robustness-testing-and-training",
@@ -10058,7 +10063,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "11.1.3",
         "title": "Verify that models are evaluated against known adversarial attack techniques relevant to their modality.",
-        "description": "AISVS 1.01 Level 1 requirement in section C11.1 Model Alignment, Safety, and Robustness Testing and Training, chapter  Adversarial Robustness. Verify that models are evaluated against known adversarial attack techniques relevant to their modality.",
+        "description": "AISVS 1.01 Level 1 requirement in section C11.1 Model Alignment, Safety, and Robustness Testing and Training, chapter C11 Adversarial Robustness. Verify that models are evaluated against known adversarial attack techniques relevant to their modality.",
         "parent": null,
         "function": "Adversarial Robustness",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C11-Adversarial-Robustness.md#c111-model-alignment-safety-and-robustness-testing-and-training",
@@ -10067,7 +10072,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "11.1.4",
         "title": "Verify that models are hardened against adversarial inputs.",
-        "description": "AISVS 1.01 Level 2 requirement in section C11.1 Model Alignment, Safety, and Robustness Testing and Training, chapter  Adversarial Robustness. Verify that models are hardened against adversarial inputs.",
+        "description": "AISVS 1.01 Level 2 requirement in section C11.1 Model Alignment, Safety, and Robustness Testing and Training, chapter C11 Adversarial Robustness. Verify that models are hardened against adversarial inputs.",
         "parent": null,
         "function": "Adversarial Robustness",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C11-Adversarial-Robustness.md#c111-model-alignment-safety-and-robustness-testing-and-training",
@@ -10076,7 +10081,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "11.1.5",
         "title": "Verify that an automated evaluator measures harmful-content rate and flags regressions beyond a defined threshold.",
-        "description": "AISVS 1.01 Level 3 requirement in section C11.1 Model Alignment, Safety, and Robustness Testing and Training, chapter  Adversarial Robustness. Verify that an automated evaluator measures harmful-content rate and flags regressions beyond a defined threshold.",
+        "description": "AISVS 1.01 Level 3 requirement in section C11.1 Model Alignment, Safety, and Robustness Testing and Training, chapter C11 Adversarial Robustness. Verify that an automated evaluator measures harmful-content rate and flags regressions beyond a defined threshold.",
         "parent": null,
         "function": "Adversarial Robustness",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C11-Adversarial-Robustness.md#c111-model-alignment-safety-and-robustness-testing-and-training",
@@ -10085,7 +10090,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "11.1.6",
         "title": "Verify that adversarial evaluation results are reported alongside results for the same tasks, scored the same way, with no attack applied.",
-        "description": "AISVS 1.01 Level 2 requirement in section C11.1 Model Alignment, Safety, and Robustness Testing and Training, chapter  Adversarial Robustness. Verify that adversarial evaluation results are reported alongside results for the same tasks, scored the same way, with no attack applied.",
+        "description": "AISVS 1.01 Level 2 requirement in section C11.1 Model Alignment, Safety, and Robustness Testing and Training, chapter C11 Adversarial Robustness. Verify that adversarial evaluation results are reported alongside results for the same tasks, scored the same way, with no attack applied.",
         "parent": null,
         "function": "Adversarial Robustness",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C11-Adversarial-Robustness.md#c111-model-alignment-safety-and-robustness-testing-and-training",
@@ -10094,7 +10099,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "11.2.1",
         "title": "Verify that model-inferred sensitive attributes are not directly returned in outputs.",
-        "description": "AISVS 1.01 Level 1 requirement in section C11.2 Membership-Inference and Model-Inversion Mitigation, chapter  Adversarial Robustness. Verify that model-inferred sensitive attributes are not directly returned in outputs.",
+        "description": "AISVS 1.01 Level 1 requirement in section C11.2 Membership-Inference and Model-Inversion Mitigation, chapter C11 Adversarial Robustness. Verify that model-inferred sensitive attributes are not directly returned in outputs.",
         "parent": null,
         "function": "Adversarial Robustness",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C11-Adversarial-Robustness.md#c112-membership-inference-and-model-inversion-mitigation",
@@ -10103,7 +10108,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "11.2.2",
         "title": "Verify that inference endpoints enforce per-principal and global rate limits sized to the extraction threat model, and not solely as a generic API throttle.",
-        "description": "AISVS 1.01 Level 1 requirement in section C11.2 Membership-Inference and Model-Inversion Mitigation, chapter  Adversarial Robustness. Verify that inference endpoints enforce per-principal and global rate limits sized to the extraction threat model, and not solely as a generic API throttle.",
+        "description": "AISVS 1.01 Level 1 requirement in section C11.2 Membership-Inference and Model-Inversion Mitigation, chapter C11 Adversarial Robustness. Verify that inference endpoints enforce per-principal and global rate limits sized to the extraction threat model, and not solely as a generic API throttle.",
         "parent": null,
         "function": "Adversarial Robustness",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C11-Adversarial-Robustness.md#c112-membership-inference-and-model-inversion-mitigation",
@@ -10112,7 +10117,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "11.2.3",
         "title": "Verify that model outputs are calibrated to reduce overconfident predictions.",
-        "description": "AISVS 1.01 Level 2 requirement in section C11.2 Membership-Inference and Model-Inversion Mitigation, chapter  Adversarial Robustness. Verify that model outputs are calibrated to reduce overconfident predictions.",
+        "description": "AISVS 1.01 Level 2 requirement in section C11.2 Membership-Inference and Model-Inversion Mitigation, chapter C11 Adversarial Robustness. Verify that model outputs are calibrated to reduce overconfident predictions.",
         "parent": null,
         "function": "Adversarial Robustness",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C11-Adversarial-Robustness.md#c112-membership-inference-and-model-inversion-mitigation",
@@ -10121,7 +10126,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "11.2.4",
         "title": "Verify that training on sensitive datasets employs differentially-private optimization.",
-        "description": "AISVS 1.01 Level 2 requirement in section C11.2 Membership-Inference and Model-Inversion Mitigation, chapter  Adversarial Robustness. Verify that training on sensitive datasets employs differentially-private optimization.",
+        "description": "AISVS 1.01 Level 2 requirement in section C11.2 Membership-Inference and Model-Inversion Mitigation, chapter C11 Adversarial Robustness. Verify that training on sensitive datasets employs differentially-private optimization.",
         "parent": null,
         "function": "Adversarial Robustness",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C11-Adversarial-Robustness.md#c112-membership-inference-and-model-inversion-mitigation",
@@ -10130,7 +10135,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "11.2.5",
         "title": "Verify that membership-inference attack simulations demonstrate that attack accuracy does not exceed random guessing on evaluated data.",
-        "description": "AISVS 1.01 Level 3 requirement in section C11.2 Membership-Inference and Model-Inversion Mitigation, chapter  Adversarial Robustness. Verify that membership-inference attack simulations demonstrate that attack accuracy does not exceed random guessing on evaluated data.",
+        "description": "AISVS 1.01 Level 3 requirement in section C11.2 Membership-Inference and Model-Inversion Mitigation, chapter C11 Adversarial Robustness. Verify that membership-inference attack simulations demonstrate that attack accuracy does not exceed random guessing on evaluated data.",
         "parent": null,
         "function": "Adversarial Robustness",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C11-Adversarial-Robustness.md#c112-membership-inference-and-model-inversion-mitigation",
@@ -10139,7 +10144,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "11.3.1",
         "title": "Verify that query-pattern analysis feeds an extraction-attempt detector.",
-        "description": "AISVS 1.01 Level 1 requirement in section C11.3 Model-Extraction Defense, chapter  Adversarial Robustness. Verify that query-pattern analysis feeds an extraction-attempt detector.",
+        "description": "AISVS 1.01 Level 1 requirement in section C11.3 Model-Extraction Defense, chapter C11 Adversarial Robustness. Verify that query-pattern analysis feeds an extraction-attempt detector.",
         "parent": null,
         "function": "Adversarial Robustness",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C11-Adversarial-Robustness.md#c113-model-extraction-defense",
@@ -10148,7 +10153,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "11.3.2",
         "title": "Verify that raw model outputs are not directly exposed beyond the application backend, and that externally visible responses are calibrated to the extraction risk level.",
-        "description": "AISVS 1.01 Level 2 requirement in section C11.3 Model-Extraction Defense, chapter  Adversarial Robustness. Verify that raw model outputs are not directly exposed beyond the application backend, and that externally visible responses are calibrated to the extraction risk level.",
+        "description": "AISVS 1.01 Level 2 requirement in section C11.3 Model-Extraction Defense, chapter C11 Adversarial Robustness. Verify that raw model outputs are not directly exposed beyond the application backend, and that externally visible responses are calibrated to the extraction risk level.",
         "parent": null,
         "function": "Adversarial Robustness",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C11-Adversarial-Robustness.md#c113-model-extraction-defense",
@@ -10157,7 +10162,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "11.3.3",
         "title": "Verify that model watermarking or fingerprinting techniques are applied so that unauthorized copies can be identified.",
-        "description": "AISVS 1.01 Level 3 requirement in section C11.3 Model-Extraction Defense, chapter  Adversarial Robustness. Verify that model watermarking or fingerprinting techniques are applied so that unauthorized copies can be identified.",
+        "description": "AISVS 1.01 Level 3 requirement in section C11.3 Model-Extraction Defense, chapter C11 Adversarial Robustness. Verify that model watermarking or fingerprinting techniques are applied so that unauthorized copies can be identified.",
         "parent": null,
         "function": "Adversarial Robustness",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C11-Adversarial-Robustness.md#c113-model-extraction-defense",
@@ -10166,7 +10171,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "11.3.4",
         "title": "Verify that detection of suspected extraction triggers response measures.",
-        "description": "AISVS 1.01 Level 3 requirement in section C11.3 Model-Extraction Defense, chapter  Adversarial Robustness. Verify that detection of suspected extraction triggers response measures.",
+        "description": "AISVS 1.01 Level 3 requirement in section C11.3 Model-Extraction Defense, chapter C11 Adversarial Robustness. Verify that detection of suspected extraction triggers response measures.",
         "parent": null,
         "function": "Adversarial Robustness",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C11-Adversarial-Robustness.md#c113-model-extraction-defense",
@@ -10175,7 +10180,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "11.3.5",
         "title": "Verify that inference endpoints constrain sampling and decoding parameters supplied by untrusted callers (e.g., temperature, top-k, top-p, logit bias, candidate/n count) to server-side approved ranges and defaults, rejecting out-of-policy values.",
-        "description": "AISVS 1.01 Level 2 requirement in section C11.3 Model-Extraction Defense, chapter  Adversarial Robustness. Verify that inference endpoints constrain sampling and decoding parameters supplied by untrusted callers (e.g., temperature, top-k, top-p, logit bias, candidate/n count) to server-side approved ranges and defaults, rejecting out-of-policy values.",
+        "description": "AISVS 1.01 Level 2 requirement in section C11.3 Model-Extraction Defense, chapter C11 Adversarial Robustness. Verify that inference endpoints constrain sampling and decoding parameters supplied by untrusted callers (e.g., temperature, top-k, top-p, logit bias, candidate/n count) to server-side approved ranges and defaults, rejecting out-of-policy values.",
         "parent": null,
         "function": "Adversarial Robustness",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C11-Adversarial-Robustness.md#c113-model-extraction-defense",
@@ -10184,7 +10189,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "11.4.1",
         "title": "Verify that inputs from external or untrusted sources pass through anomaly detection before model inference.",
-        "description": "AISVS 1.01 Level 2 requirement in section C11.4 Model Runtime Anomaly Detection, chapter  Adversarial Robustness. Verify that inputs from external or untrusted sources pass through anomaly detection before model inference.",
+        "description": "AISVS 1.01 Level 2 requirement in section C11.4 Model Runtime Anomaly Detection, chapter C11 Adversarial Robustness. Verify that inputs from external or untrusted sources pass through anomaly detection before model inference.",
         "parent": null,
         "function": "Adversarial Robustness",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C11-Adversarial-Robustness.md#c114-model-runtime-anomaly-detection",
@@ -10193,7 +10198,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "11.4.2",
         "title": "Verify that inputs flagged as anomalous trigger gating actions.",
-        "description": "AISVS 1.01 Level 2 requirement in section C11.4 Model Runtime Anomaly Detection, chapter  Adversarial Robustness. Verify that inputs flagged as anomalous trigger gating actions.",
+        "description": "AISVS 1.01 Level 2 requirement in section C11.4 Model Runtime Anomaly Detection, chapter C11 Adversarial Robustness. Verify that inputs flagged as anomalous trigger gating actions.",
         "parent": null,
         "function": "Adversarial Robustness",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C11-Adversarial-Robustness.md#c114-model-runtime-anomaly-detection",
@@ -10202,7 +10207,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "11.4.3",
         "title": "Verify that the safety violation feedback pipeline includes poisoning detection and human review gates to prevent adversarial manipulation of the improvement mechanism.",
-        "description": "AISVS 1.01 Level 3 requirement in section C11.4 Model Runtime Anomaly Detection, chapter  Adversarial Robustness. Verify that the safety violation feedback pipeline includes poisoning detection and human review gates to prevent adversarial manipulation of the improvement mechanism.",
+        "description": "AISVS 1.01 Level 3 requirement in section C11.4 Model Runtime Anomaly Detection, chapter C11 Adversarial Robustness. Verify that the safety violation feedback pipeline includes poisoning detection and human review gates to prevent adversarial manipulation of the improvement mechanism.",
         "parent": null,
         "function": "Adversarial Robustness",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C11-Adversarial-Robustness.md#c114-model-runtime-anomaly-detection",
@@ -10211,7 +10216,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "12.1.1",
         "title": "Verify that AI interactions are logged with session context and AI-specific telemetry.",
-        "description": "AISVS 1.01 Level 1 requirement in section C12.1 Request & Response Logging, chapter  Monitoring, Logging & Anomaly Detection. Verify that AI interactions are logged with session context and AI-specific telemetry.",
+        "description": "AISVS 1.01 Level 1 requirement in section C12.1 Request & Response Logging, chapter C12 Monitoring, Logging & Anomaly Detection. Verify that AI interactions are logged with session context and AI-specific telemetry.",
         "parent": null,
         "function": "Monitoring and Logging",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C12-Monitoring-and-Logging.md#c121-request--response-logging",
@@ -10220,7 +10225,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "12.1.2",
         "title": "Verify that safety filtering and policy decisions are logged with sufficient detail to support audit, debugging, and forensic analysis of content moderation systems.",
-        "description": "AISVS 1.01 Level 2 requirement in section C12.1 Request & Response Logging, chapter  Monitoring, Logging & Anomaly Detection. Verify that safety filtering and policy decisions are logged with sufficient detail to support audit, debugging, and forensic analysis of content moderation systems.",
+        "description": "AISVS 1.01 Level 2 requirement in section C12.1 Request & Response Logging, chapter C12 Monitoring, Logging & Anomaly Detection. Verify that safety filtering and policy decisions are logged with sufficient detail to support audit, debugging, and forensic analysis of content moderation systems.",
         "parent": null,
         "function": "Monitoring and Logging",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C12-Monitoring-and-Logging.md#c121-request--response-logging",
@@ -10229,7 +10234,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "12.1.3",
         "title": "Verify that log entries for AI inference events follow a structured, interoperable schema that includes at least the model identifier, token usage (input and output), provider name, and operation type.",
-        "description": "AISVS 1.01 Level 2 requirement in section C12.1 Request & Response Logging, chapter  Monitoring, Logging & Anomaly Detection. Verify that log entries for AI inference events follow a structured, interoperable schema that includes at least the model identifier, token usage (input and output), provider name, and operation type.",
+        "description": "AISVS 1.01 Level 2 requirement in section C12.1 Request & Response Logging, chapter C12 Monitoring, Logging & Anomaly Detection. Verify that log entries for AI inference events follow a structured, interoperable schema that includes at least the model identifier, token usage (input and output), provider name, and operation type.",
         "parent": null,
         "function": "Monitoring and Logging",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C12-Monitoring-and-Logging.md#c121-request--response-logging",
@@ -10238,7 +10243,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "12.1.4",
         "title": "Verify that RAG pipeline retrieval events are logged, including the query, documents retrieved, and knowledge source.",
-        "description": "AISVS 1.01 Level 2 requirement in section C12.1 Request & Response Logging, chapter  Monitoring, Logging & Anomaly Detection. Verify that RAG pipeline retrieval events are logged, including the query, documents retrieved, and knowledge source.",
+        "description": "AISVS 1.01 Level 2 requirement in section C12.1 Request & Response Logging, chapter C12 Monitoring, Logging & Anomaly Detection. Verify that RAG pipeline retrieval events are logged, including the query, documents retrieved, and knowledge source.",
         "parent": null,
         "function": "Monitoring and Logging",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C12-Monitoring-and-Logging.md#c121-request--response-logging",
@@ -10247,7 +10252,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "12.2.1",
         "title": "Verify that the system detects and alerts on known jailbreak patterns, prompt injection attempts, and adversarial inputs.",
-        "description": "AISVS 1.01 Level 1 requirement in section C12.2 Detection and Alerting, chapter  Monitoring, Logging & Anomaly Detection. Verify that the system detects and alerts on known jailbreak patterns, prompt injection attempts, and adversarial inputs.",
+        "description": "AISVS 1.01 Level 1 requirement in section C12.2 Detection and Alerting, chapter C12 Monitoring, Logging & Anomaly Detection. Verify that the system detects and alerts on known jailbreak patterns, prompt injection attempts, and adversarial inputs.",
         "parent": null,
         "function": "Monitoring and Logging",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C12-Monitoring-and-Logging.md#c122-detection-and-alerting",
@@ -10256,7 +10261,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "12.2.2",
         "title": "Verify that behavioral anomaly detection identifies unusual conversation patterns, excessive retry attempts, or probing behaviors.",
-        "description": "AISVS 1.01 Level 2 requirement in section C12.2 Detection and Alerting, chapter  Monitoring, Logging & Anomaly Detection. Verify that behavioral anomaly detection identifies unusual conversation patterns, excessive retry attempts, or probing behaviors.",
+        "description": "AISVS 1.01 Level 2 requirement in section C12.2 Detection and Alerting, chapter C12 Monitoring, Logging & Anomaly Detection. Verify that behavioral anomaly detection identifies unusual conversation patterns, excessive retry attempts, or probing behaviors.",
         "parent": null,
         "function": "Monitoring and Logging",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C12-Monitoring-and-Logging.md#c122-detection-and-alerting",
@@ -10265,7 +10270,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "12.2.3",
         "title": "Verify that custom rules detect AI-specific threat patterns for coordinated jailbreak attempts, prompt injection, and system prompt extraction attempts.",
-        "description": "AISVS 1.01 Level 2 requirement in section C12.2 Detection and Alerting, chapter  Monitoring, Logging & Anomaly Detection. Verify that custom rules detect AI-specific threat patterns for coordinated jailbreak attempts, prompt injection, and system prompt extraction attempts.",
+        "description": "AISVS 1.01 Level 2 requirement in section C12.2 Detection and Alerting, chapter C12 Monitoring, Logging & Anomaly Detection. Verify that custom rules detect AI-specific threat patterns for coordinated jailbreak attempts, prompt injection, and system prompt extraction attempts.",
         "parent": null,
         "function": "Monitoring and Logging",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C12-Monitoring-and-Logging.md#c122-detection-and-alerting",
@@ -10274,7 +10279,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "12.2.4",
         "title": "Verify that extraction-alert events include offending query metadata to support investigation.",
-        "description": "AISVS 1.01 Level 2 requirement in section C12.2 Detection and Alerting, chapter  Monitoring, Logging & Anomaly Detection. Verify that extraction-alert events include offending query metadata to support investigation.",
+        "description": "AISVS 1.01 Level 2 requirement in section C12.2 Detection and Alerting, chapter C12 Monitoring, Logging & Anomaly Detection. Verify that extraction-alert events include offending query metadata to support investigation.",
         "parent": null,
         "function": "Monitoring and Logging",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C12-Monitoring-and-Logging.md#c122-detection-and-alerting",
@@ -10283,7 +10288,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "12.2.5",
         "title": "Verify that token usage is tracked at granular attribution levels including per user, per session, per feature endpoint, and per team or workspace.",
-        "description": "AISVS 1.01 Level 2 requirement in section C12.2 Detection and Alerting, chapter  Monitoring, Logging & Anomaly Detection. Verify that token usage is tracked at granular attribution levels including per user, per session, per feature endpoint, and per team or workspace.",
+        "description": "AISVS 1.01 Level 2 requirement in section C12.2 Detection and Alerting, chapter C12 Monitoring, Logging & Anomaly Detection. Verify that token usage is tracked at granular attribution levels including per user, per session, per feature endpoint, and per team or workspace.",
         "parent": null,
         "function": "Monitoring and Logging",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C12-Monitoring-and-Logging.md#c122-detection-and-alerting",
@@ -10292,7 +10297,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "12.2.6",
         "title": "Verify that LLM API traffic is monitored for covert-channel indicators and communication signatures to identify malware and command-and-control (C2) activity.",
-        "description": "AISVS 1.01 Level 3 requirement in section C12.2 Detection and Alerting, chapter  Monitoring, Logging & Anomaly Detection. Verify that LLM API traffic is monitored for covert-channel indicators and communication signatures to identify malware and command-and-control (C2) activity.",
+        "description": "AISVS 1.01 Level 3 requirement in section C12.2 Detection and Alerting, chapter C12 Monitoring, Logging & Anomaly Detection. Verify that LLM API traffic is monitored for covert-channel indicators and communication signatures to identify malware and command-and-control (C2) activity.",
         "parent": null,
         "function": "Monitoring and Logging",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C12-Monitoring-and-Logging.md#c122-detection-and-alerting",
@@ -10301,7 +10306,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "12.3.1",
         "title": "Verify that data drift detection monitors input distribution changes that may impact model performance, using statistically validated methods matched to the input data type (e.g., KS test or PSI for tabular numeric features, embedding-distance metrics for text or image).",
-        "description": "AISVS 1.01 Level 1 requirement in section C12.3 Model, Data, and Performance Drift Detection, chapter  Monitoring, Logging & Anomaly Detection. Verify that data drift detection monitors input distribution changes that may impact model performance, using statistically validated methods matched to the input data type (e.g., KS test or PSI for tabular numeric features, embedding-distance metrics for text or image).",
+        "description": "AISVS 1.01 Level 1 requirement in section C12.3 Model, Data, and Performance Drift Detection, chapter C12 Monitoring, Logging & Anomaly Detection. Verify that data drift detection monitors input distribution changes that may impact model performance, using statistically validated methods matched to the input data type (e.g., KS test or PSI for tabular numeric features, embedding-distance metrics for text or image).",
         "parent": null,
         "function": "Monitoring and Logging",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C12-Monitoring-and-Logging.md#c123-model-data-and-performance-drift-detection",
@@ -10310,7 +10315,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "12.3.2",
         "title": "Verify that hallucination detection monitors identify and flag model outputs that contain factually incorrect, inconsistent, or fabricated information.",
-        "description": "AISVS 1.01 Level 2 requirement in section C12.3 Model, Data, and Performance Drift Detection, chapter  Monitoring, Logging & Anomaly Detection. Verify that hallucination detection monitors identify and flag model outputs that contain factually incorrect, inconsistent, or fabricated information.",
+        "description": "AISVS 1.01 Level 2 requirement in section C12.3 Model, Data, and Performance Drift Detection, chapter C12 Monitoring, Logging & Anomaly Detection. Verify that hallucination detection monitors identify and flag model outputs that contain factually incorrect, inconsistent, or fabricated information.",
         "parent": null,
         "function": "Monitoring and Logging",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C12-Monitoring-and-Logging.md#c123-model-data-and-performance-drift-detection",
@@ -10319,7 +10324,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "12.3.3",
         "title": "Verify that hallucination rates are tracked as continuous time-series metrics to enable trend analysis and detection of sustained model degradation.",
-        "description": "AISVS 1.01 Level 2 requirement in section C12.3 Model, Data, and Performance Drift Detection, chapter  Monitoring, Logging & Anomaly Detection. Verify that hallucination rates are tracked as continuous time-series metrics to enable trend analysis and detection of sustained model degradation.",
+        "description": "AISVS 1.01 Level 2 requirement in section C12.3 Model, Data, and Performance Drift Detection, chapter C12 Monitoring, Logging & Anomaly Detection. Verify that hallucination rates are tracked as continuous time-series metrics to enable trend analysis and detection of sustained model degradation.",
         "parent": null,
         "function": "Monitoring and Logging",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C12-Monitoring-and-Logging.md#c123-model-data-and-performance-drift-detection",
@@ -10328,7 +10333,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "12.3.4",
         "title": "Verify that unexplained behavioral shifts are distinguished from gradual, expected operational drift.",
-        "description": "AISVS 1.01 Level 3 requirement in section C12.3 Model, Data, and Performance Drift Detection, chapter  Monitoring, Logging & Anomaly Detection. Verify that unexplained behavioral shifts are distinguished from gradual, expected operational drift.",
+        "description": "AISVS 1.01 Level 3 requirement in section C12.3 Model, Data, and Performance Drift Detection, chapter C12 Monitoring, Logging & Anomaly Detection. Verify that unexplained behavioral shifts are distinguished from gradual, expected operational drift.",
         "parent": null,
         "function": "Monitoring and Logging",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C12-Monitoring-and-Logging.md#c123-model-data-and-performance-drift-detection",
@@ -10337,7 +10342,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "12.4.1",
         "title": "Verify that autonomous action triggers include proactive behavior-pattern analysis, security evaluation, and threat-landscape assessment.",
-        "description": "AISVS 1.01 Level 2 requirement in section C12.4 Proactive Security Behavior Monitoring, chapter  Monitoring, Logging & Anomaly Detection. Verify that autonomous action triggers include proactive behavior-pattern analysis, security evaluation, and threat-landscape assessment.",
+        "description": "AISVS 1.01 Level 2 requirement in section C12.4 Proactive Security Behavior Monitoring, chapter C12 Monitoring, Logging & Anomaly Detection. Verify that autonomous action triggers include proactive behavior-pattern analysis, security evaluation, and threat-landscape assessment.",
         "parent": null,
         "function": "Monitoring and Logging",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C12-Monitoring-and-Logging.md#c124-proactive-security-behavior-monitoring",
@@ -10346,7 +10351,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "12.4.2",
         "title": "Verify that audit logs capture security-critical proactive actions, including approver identity, timestamp, action parameters, and decision outcomes.",
-        "description": "AISVS 1.01 Level 2 requirement in section C12.4 Proactive Security Behavior Monitoring, chapter  Monitoring, Logging & Anomaly Detection. Verify that audit logs capture security-critical proactive actions, including approver identity, timestamp, action parameters, and decision outcomes.",
+        "description": "AISVS 1.01 Level 2 requirement in section C12.4 Proactive Security Behavior Monitoring, chapter C12 Monitoring, Logging & Anomaly Detection. Verify that audit logs capture security-critical proactive actions, including approver identity, timestamp, action parameters, and decision outcomes.",
         "parent": null,
         "function": "Monitoring and Logging",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C12-Monitoring-and-Logging.md#c124-proactive-security-behavior-monitoring",
@@ -10355,7 +10360,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "12.4.3",
         "title": "Verify that kill-switch activations and override commands are logged.",
-        "description": "AISVS 1.01 Level 2 requirement in section C12.4 Proactive Security Behavior Monitoring, chapter  Monitoring, Logging & Anomaly Detection. Verify that kill-switch activations and override commands are logged.",
+        "description": "AISVS 1.01 Level 2 requirement in section C12.4 Proactive Security Behavior Monitoring, chapter C12 Monitoring, Logging & Anomaly Detection. Verify that kill-switch activations and override commands are logged.",
         "parent": null,
         "function": "Monitoring and Logging",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C12-Monitoring-and-Logging.md#c124-proactive-security-behavior-monitoring",
@@ -10364,7 +10369,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "12.5.1",
         "title": "Verify that dataset lineage records each dataset and its components, including all transformations, augmentations, and merges.",
-        "description": "AISVS 1.01 Level 1 requirement in section C12.5 Training Data & Model Lifecycle Audit, chapter  Monitoring, Logging & Anomaly Detection. Verify that dataset lineage records each dataset and its components, including all transformations, augmentations, and merges.",
+        "description": "AISVS 1.01 Level 1 requirement in section C12.5 Training Data & Model Lifecycle Audit, chapter C12 Monitoring, Logging & Anomaly Detection. Verify that dataset lineage records each dataset and its components, including all transformations, augmentations, and merges.",
         "parent": null,
         "function": "Monitoring and Logging",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C12-Monitoring-and-Logging.md#c125-training-data--model-lifecycle-audit",
@@ -10373,7 +10378,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "12.5.2",
         "title": "Verify that all labeling activities are recorded in logs.",
-        "description": "AISVS 1.01 Level 1 requirement in section C12.5 Training Data & Model Lifecycle Audit, chapter  Monitoring, Logging & Anomaly Detection. Verify that all labeling activities are recorded in logs.",
+        "description": "AISVS 1.01 Level 1 requirement in section C12.5 Training Data & Model Lifecycle Audit, chapter C12 Monitoring, Logging & Anomaly Detection. Verify that all labeling activities are recorded in logs.",
         "parent": null,
         "function": "Monitoring and Logging",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C12-Monitoring-and-Logging.md#c125-training-data--model-lifecycle-audit",
@@ -10382,7 +10387,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "12.5.3",
         "title": "Verify that all model changes generate immutable audit records.",
-        "description": "AISVS 1.01 Level 2 requirement in section C12.5 Training Data & Model Lifecycle Audit, chapter  Monitoring, Logging & Anomaly Detection. Verify that all model changes generate immutable audit records.",
+        "description": "AISVS 1.01 Level 2 requirement in section C12.5 Training Data & Model Lifecycle Audit, chapter C12 Monitoring, Logging & Anomaly Detection. Verify that all model changes generate immutable audit records.",
         "parent": null,
         "function": "Monitoring and Logging",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C12-Monitoring-and-Logging.md#c125-training-data--model-lifecycle-audit",
@@ -10391,7 +10396,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "12.5.4",
         "title": "Verify that every ingested document is tagged at write time with source, writer identity, and timestamp.",
-        "description": "AISVS 1.01 Level 2 requirement in section C12.5 Training Data & Model Lifecycle Audit, chapter  Monitoring, Logging & Anomaly Detection. Verify that every ingested document is tagged at write time with source, writer identity, and timestamp.",
+        "description": "AISVS 1.01 Level 2 requirement in section C12.5 Training Data & Model Lifecycle Audit, chapter C12 Monitoring, Logging & Anomaly Detection. Verify that every ingested document is tagged at write time with source, writer identity, and timestamp.",
         "parent": null,
         "function": "Monitoring and Logging",
         "url": "https://github.com/OWASP/AISVS/blob/main/1.01/en/0x10-C12-Monitoring-and-Logging.md#c125-training-data--model-lifecycle-audit",
