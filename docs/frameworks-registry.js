@@ -3878,13 +3878,13 @@ window.CROSSWALK_FRAMEWORKS = [
     "id": "mitre-atlas",
     "name": "MITRE ATLAS",
     "short_name": "ATLAS",
-    "version": "2026.09",
+    "version": "2026.10",
     "url": "https://atlas.mitre.org",
     "license": "Public",
     "publisher": "MITRE Corporation",
     "category": "threat-model",
-    "last_synced": "2026-09-17",
-    "source_sha": "06842b2b9f9048ed09e3c257138cc4e4aeb7d27c",
+    "last_synced": "2026-11-24",
+    "source_sha": "d04dfaec1176b84b50ab9b55682a993c07a75dfc",
     "controls": [
       {
         "control_id": "AML.T0000",
@@ -3929,15 +3929,15 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "AML.T0006.002",
         "title": "Active Scanning: Scan for Exposed AI Infrastructure",
-        "description": "\"Adversaries may scan network ports and services to identify deployed\\ \\ AI backends, model-serving endpoints, and AI agent infrastructure reachable\\ \\ over the internet.",
+        "description": "Adversaries may scan network ports and services to identify deployed AI backends, model-serving endpoints, and AI agent infrastructure reachable over the internet.",
         "parent": "AML.T0006",
         "function": "Reconnaissance",
         "kind": "technique"
       },
       {
         "control_id": "AML.T0010",
-        "title": "AI Supply Chain Compromise",
-        "description": "Adversaries may gain initial access to a system by compromising the unique portions of the AI supply chain.",
+        "title": "Supply Chain Compromise",
+        "description": "Adversaries may manipulate products, components, or their development and delivery mechanisms before they reach downstream consumers to compromise data or systems.",
         "parent": null,
         "function": "Initial Access",
         "kind": "technique"
@@ -3992,7 +3992,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "AML.T0018",
         "title": "Manipulate AI Model",
-        "description": "\"Adversaries may manipulate an AI model artifact or its bundled components\\ \\ to change AI system behavior, introduce malicious code, or establish persistent\\ \\ malicious functionality.",
+        "description": "Adversaries may manipulate an AI model artifact or its bundled components to change AI system behavior, introduce malicious code, or establish persistent malicious functionality.",
         "parent": null,
         "function": "AI Attack Adaptation",
         "kind": "technique"
@@ -4004,7 +4004,7 @@ window.CROSSWALK_FRAMEWORKS = [
         "parent": null,
         "function": "Resource Development",
         "kind": "technique",
-        "source_status": "absent-from-atlas-2026.09"
+        "source_status": "absent-from-atlas-2026.10"
       },
       {
         "control_id": "AML.T0020",
@@ -4017,7 +4017,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "AML.T0021",
         "title": "Establish Accounts",
-        "description": "Adversaries may create accounts with various services for use in targeting, to gain access to resources needed in AI Attack Staging, or for victim impersonation.",
+        "description": "Adversaries may create accounts with various services for use in targeting, to gain access to resources needed to further their operations, or for victim impersonation.",
         "kind": "technique",
         "function": "Resource Development"
       },
@@ -4026,12 +4026,12 @@ window.CROSSWALK_FRAMEWORKS = [
         "title": "Valid Accounts",
         "description": "Exploiting legitimate agent credentials to access AI systems or data pipelines; Using compromised agent credentials to impersonate trusted agents in A2A channels",
         "kind": "technique",
-        "source_status": "absent-from-atlas-2026.09"
+        "source_status": "absent-from-atlas-2026.10"
       },
       {
         "control_id": "AML.T0024",
         "title": "Exfiltration via AI Inference API",
-        "description": "Adversaries may exfiltrate private information via AI Model Inference API Access.",
+        "description": "Adversaries may exfiltrate information from a victim-controlled AI model or service through responses returned by its inference API.",
         "parent": null,
         "function": "Exfiltration",
         "kind": "technique"
@@ -4042,7 +4042,8 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Adversaries may infer the membership of a data sample or global characteristics of the data in its training set, which raises privacy concerns.",
         "kind": "technique",
         "function": "Exfiltration",
-        "parent": "AML.T0024"
+        "parent": "AML.T0024",
+        "source_status": "absent-from-atlas-2026.10 (moved to AML.T0137.000 \"Training Data Information from AI Models: Infer Membership\" per the v2026.10 release notes)"
       },
       {
         "control_id": "AML.T0024.001",
@@ -4050,7 +4051,8 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "AI models' training data could be reconstructed by exploiting the confidence scores that are available via an inference API.",
         "parent": "AML.T0024",
         "function": "Exfiltration",
-        "kind": "technique"
+        "kind": "technique",
+        "source_status": "absent-from-atlas-2026.10 (moved to AML.T0137.002 \"Training Data Information from AI Models: Invert AI Model\" per the v2026.10 release notes)"
       },
       {
         "control_id": "AML.T0024.002",
@@ -4058,7 +4060,8 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Adversaries may extract a functional copy of a private model.",
         "parent": "AML.T0024",
         "function": "Exfiltration",
-        "kind": "technique"
+        "kind": "technique",
+        "source_status": "absent-from-atlas-2026.10 (no successor named in the v2026.10 release notes)"
       },
       {
         "control_id": "AML.T0025",
@@ -4073,7 +4076,7 @@ window.CROSSWALK_FRAMEWORKS = [
         "title": "Model Inversion",
         "description": "Adversary reconstructs sensitive training examples from model outputs through systematic query campaigns; Reconstructing sensitive training data from model outputs",
         "kind": "technique",
-        "source_status": "absent-from-atlas-2026.09"
+        "source_status": "absent-from-atlas-2026.10"
       },
       {
         "control_id": "AML.T0029",
@@ -4087,7 +4090,7 @@ window.CROSSWALK_FRAMEWORKS = [
         "title": "Information Disclosure",
         "description": "Extraction of confidential information via targeted model queries",
         "kind": "technique",
-        "source_status": "absent-from-atlas-2026.09"
+        "source_status": "absent-from-atlas-2026.10"
       },
       {
         "control_id": "AML.T0031",
@@ -4102,7 +4105,7 @@ window.CROSSWALK_FRAMEWORKS = [
         "title": "Data Poisoning",
         "description": "Injecting malicious content into agent persistent memory or RAG stores; Injecting malicious data into training pipelines to corrupt model behaviour",
         "kind": "technique",
-        "source_status": "absent-from-atlas-2026.09"
+        "source_status": "absent-from-atlas-2026.10"
       },
       {
         "control_id": "AML.T0034",
@@ -4115,7 +4118,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "AML.T0035",
         "title": "AI Artifact Collection",
-        "description": "Adversaries may collect AI artifacts for Exfiltration or for use in AI Attack Staging.",
+        "description": "Adversaries may collect AI artifacts for Exfiltration or for use in AI Attack Adaptation.",
         "parent": null,
         "function": "Collection",
         "kind": "technique"
@@ -4179,7 +4182,7 @@ window.CROSSWALK_FRAMEWORKS = [
         "title": "Disinformation",
         "description": "Agent generates persuasive false information to manipulate human approvals; Adversary publishes false content in public repositories, documentation sites, or knowledge bases indexed by RAG systems; Using AI-generated content to deliberately spread false information",
         "kind": "technique",
-        "source_status": "absent-from-atlas-2026.09"
+        "source_status": "absent-from-atlas-2026.10"
       },
       {
         "control_id": "AML.T0047",
@@ -4248,7 +4251,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "AML.T0052.000",
         "title": "Phishing: Spearphishing via Social Engineering LLM",
-        "description": "Adversaries may turn LLMs into targeted social engineers.",
+        "description": "Adversaries may use large language models (LLMs) or LLM-based AI agents to conduct targeted social engineering through electronically delivered messages and conversations.",
         "parent": "AML.T0052",
         "function": "Initial Access",
         "kind": "technique"
@@ -4283,7 +4286,8 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Adversaries may attempt to extract a large language model's (LLM) system prompt.",
         "parent": null,
         "function": "Exfiltration",
-        "kind": "technique"
+        "kind": "technique",
+        "source_status": "absent-from-atlas-2026.10 (moved to AML.T0085.003 \"Data from AI Services: System Instructions\" per the v2026.10 release notes)"
       },
       {
         "control_id": "AML.T0057",
@@ -4291,12 +4295,13 @@ window.CROSSWALK_FRAMEWORKS = [
         "description": "Adversaries may craft prompts that induce the LLM to leak sensitive information.",
         "parent": null,
         "function": "Exfiltration",
-        "kind": "technique"
+        "kind": "technique",
+        "source_status": "absent-from-atlas-2026.10 (moved to AML.T0085.002 \"Data from AI Services: Conversation Context and Memory\" per the v2026.10 release notes)"
       },
       {
         "control_id": "AML.T0063",
         "title": "Discover AI Model Outputs",
-        "description": "Adversaries may discover model outputs, such as class scores, whose presence is not required for the system to function and are not intended for use by the end user.",
+        "description": "Adversaries may discover what information an AI model or service exposes through its outputs.",
         "kind": "technique",
         "function": "Discovery"
       },
@@ -4352,14 +4357,19 @@ window.CROSSWALK_FRAMEWORKS = [
         "date": "2026-09-18",
         "change": "Added 5 ATLAS 2026.09 technique(s) now cited by corrected mapping rows: AML.T0006.002, AML.T0024.001, AML.T0052.000, AML.T0066, AML.T0070",
         "author": "OWASP GenAI Data Security Initiative"
+      },
+      {
+        "date": "2026-11-24",
+        "change": "Re-synced titles, descriptions and tactics from ATLAS 2026.10 (dist/v6/ATLAS-2026.10.yaml, blob d04dfaec1176): 1 renamed (AML.T0010), 8 description(s) updated, 5 id(s) no longer in the release marked source_status (AML.T0024.000, AML.T0024.001, AML.T0024.002, AML.T0056, AML.T0057); 6 ids already absent stay marked. No mapping row changed.",
+        "author": "OWASP GenAI Data Security Initiative"
       }
     ],
     "inventory_completeness": {
       "status": "partial",
-      "included": 51,
-      "total": 208,
-      "note": "Transcribed from ATLAS 2026.09. 6 further ids in this registry (AML.T0019, AML.T0022, AML.T0032, AML.T0045, AML.T0027, AML.T0030) are not techniques in 2026.09 and are left for review — see issue #93.",
-      "source": "https://github.com/mitre-atlas/atlas-data/blob/v2026.09/dist/v6/ATLAS-2026.09.yaml"
+      "included": 46,
+      "total": 221,
+      "note": "Transcribed from ATLAS 2026.10. 11 further ids in this registry (AML.T0019, AML.T0022, AML.T0024.000, AML.T0024.001, AML.T0024.002, AML.T0027, AML.T0030, AML.T0032, AML.T0045, AML.T0056, AML.T0057) are not techniques in 2026.10; each carries a source_status and is left for review — see issue #93.",
+      "source": "https://github.com/mitre-atlas/atlas-data/blob/v2026.10/dist/v6/ATLAS-2026.10.yaml"
     }
   },
   {

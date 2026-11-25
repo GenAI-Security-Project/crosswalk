@@ -883,61 +883,72 @@ function checkControlIdShapes() {
  * to a *different* technique — `AML.T0035` labelled "Exfiltrate via ML
  * Inference API" when ATLAS calls that id "AI Artifact Collection".
  *
- * Which technique each row meant is a mapping judgment, so this reports rather
- * than fails: it cannot be settled without an SME ruling (#93), and a hard
- * error would only block unrelated work. The counts move when a ruling lands.
+ * The comparison itself lives in scripts/atlas-rows.js (case, whitespace and
+ * typographic quotes are normalised; nothing else is). Which technique a row
+ * meant is a mapping judgment (C4), so the severity follows what is already
+ * known to be awaiting a ruling:
+ *
+ *   - a row marked DRAFT (the #108 marker) is a warning — it is on the SME
+ *     list already;
+ *   - a non-DRAFT row whose id the registry marks `source_status` (the
+ *     current ATLAS release no longer defines it) is a warning — upstream
+ *     retiring an id is a state of the world, not a defect in the commit that
+ *     surfaced it, and closing it means re-mapping;
+ *   - a non-DRAFT row with an id missing from the registry, or with a name
+ *     that is not the registry name for its id, is an error. There were none
+ *     when this became an error (#99), so a new one is a regression.
  */
 function checkAtlasMappings() {
   const regPath = path.join(ROOT, 'data', 'frameworks', 'mitre-atlas.json');
   const dir = path.join(ROOT, 'data', 'entries');
   if (!fs.existsSync(regPath) || !fs.existsSync(dir)) return true;
 
-  const titles = new Map();
-  const absent = new Map();
-  for (const c of JSON.parse(fs.readFileSync(regPath, 'utf8')).controls || []) {
-    titles.set(c.control_id, c.title);
-    // Ids the registry still carries but the published ATLAS release does not.
-    if (c.source_status) absent.set(c.control_id, c.source_status);
+  const { checkAtlasRows } = require('./atlas-rows.js');
+  const registry = JSON.parse(fs.readFileSync(regPath, 'utf8'));
+  const entries = fs.readdirSync(dir).filter((n) => n.endsWith('.json'))
+    .map((f) => JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')));
+  const { rows, violations } = checkAtlasRows(registry, entries);
+  const release = `ATLAS ${registry.version}`;
+
+  let hard = 0;
+  for (const v of violations.filter((x) => !x.draft && x.kind !== 'not-in-release')) {
+    hard++;
+    fail('MITRE ATLAS', v.kind === 'unknown-id'
+      ? `${v.entry}: ${v.control_id} ("${v.control_name}") is not in data/frameworks/mitre-atlas.json — ` +
+        'transcribe it from the ATLAS release, or mark the row DRAFT for SME review (#93)'
+      : `${v.entry}: ${v.control_id} is "${v.control_name}" here, "${v.registry_title}" in ${release} — ` +
+        'use the registry name, or mark the row DRAFT for SME review (#93)');
   }
 
-  // ATLAS renamed "ML" to "AI" across its catalogue, and sub-techniques are
-  // held as "<parent>: <sub>" — a row naming either half is not a mispairing.
-  const norm = (s) => String(s).toLowerCase().replace(/\bml\b/g, 'ai').replace(/[^a-z0-9]+/g, ' ').trim();
-  const agrees = (rowName, title) => {
-    const want = norm(rowName);
-    return norm(title) === want || title.split(':').some((part) => norm(part) === want);
+  // Group a list of violations as "AML.T0057 (LLM02 ×2), AML.T0056 (LLM08)".
+  const byId = (list) => {
+    const m = new Map();
+    for (const v of list) m.set(v.control_id, [...(m.get(v.control_id) || []), v.entry]);
+    return [...m.entries()].map(([id, es]) => {
+      const n = new Map();
+      for (const e of es) n.set(e, (n.get(e) || 0) + 1);
+      return `${id} (${[...n.entries()].map(([e, k]) => (k > 1 ? `${e} ×${k}` : e)).join(', ')})`;
+    }).join(', ');
   };
 
-  const unknownIds = new Map();
-  const mismatched = new Map();
-  let rows = 0;
-
-  for (const f of fs.readdirSync(dir).filter((n) => n.endsWith('.json'))) {
-    const entry = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8'));
-    for (const m of entry.mappings || []) {
-      if (m.framework !== 'MITRE ATLAS') continue;
-      rows++;
-      if (!titles.has(m.control_id) || absent.has(m.control_id)) {
-        unknownIds.set(m.control_id, (unknownIds.get(m.control_id) || 0) + 1);
-      } else if (!agrees(m.control_name, titles.get(m.control_id))) {
-        const key = `${m.control_id} is "${m.control_name}" here, "${titles.get(m.control_id)}" in ATLAS`;
-        mismatched.set(key, (mismatched.get(key) || 0) + 1);
-      }
-    }
+  const retired = violations.filter((x) => !x.draft && x.kind === 'not-in-release');
+  if (retired.length) {
+    warn('MITRE ATLAS', `${retired.length} of ${rows} non-DRAFT mapping rows cite an id that ${release} no longer defines: ` +
+      `${byId(retired)} — the registry records each id's source_status; retargeting is SME work (C4), see issue #93`);
   }
 
-  const sum = (map) => [...map.values()].reduce((a, b) => a + b, 0);
-  if (unknownIds.size) {
-    warn('MITRE ATLAS', `${sum(unknownIds)} of ${rows} mapping rows cite an id that the published ATLAS release does not define ` +
-      `(${[...unknownIds.keys()].join(', ')}) — SME ruling needed, see issue #93`);
+  const drafts = violations.filter((x) => x.draft);
+  if (drafts.length) {
+    const kinds = ['name-mismatch', 'not-in-release', 'unknown-id']
+      .map((k) => [k, drafts.filter((x) => x.kind === k).length]).filter(([, n]) => n)
+      .map(([k, n]) => `${n} ${k}`).join(', ');
+    warn('MITRE ATLAS', `${drafts.length} of ${rows} mapping rows marked DRAFT still disagree with the registry (${kinds}): ` +
+      `${byId(drafts)} — awaiting SME ruling, see issue #93`);
   }
-  if (mismatched.size) {
-    const worst = [...mismatched.entries()].sort((a, b) => b[1] - a[1]).slice(0, 3).map(([k, n]) => `${k} (${n} rows)`);
-    warn('MITRE ATLAS', `${sum(mismatched)} of ${rows} mapping rows name a different technique than the id they cite — ` +
-      `${mismatched.size} distinct pairs, worst: ${worst.join('; ')} — SME ruling needed, see issue #93`);
-  }
-  if (!unknownIds.size && !mismatched.size) pass('MITRE ATLAS', `All ${rows} ATLAS mapping rows agree with the registry`);
-  return true;
+
+  if (!violations.length) pass('MITRE ATLAS', `All ${rows} ATLAS mapping rows agree with the ${release} registry`);
+  else if (!hard) pass('MITRE ATLAS', `No non-DRAFT ATLAS row cites an unknown id or a name other than the registry's (${rows} rows)`);
+  return hard === 0;
 }
 
 /**
