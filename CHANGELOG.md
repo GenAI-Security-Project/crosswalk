@@ -36,6 +36,11 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Changed
 
+- **The weekly watcher files digests instead of one issue per item.** `scripts/watch.js` now opens one checklist
+  issue per run for arXiv and one for NVD, titled `[watch-digest] …`. Research items are grouped by their likely
+  `docs/TRIAGE_RULES.md` route: possible benchmarks (rule 3) first, then literature (rule 1). OWASP repo commits and
+  framework-page changes still get one issue each. In October 2026 four runs opened 98 issues, and the triage rules
+  route almost all of them to "note and close"; the same runs would now open 8.
 - **ASVS framework renamed `OWASP ASVS 4.0.3` → `OWASP ASVS 5.0.0`** in the generated data, exports, registry,
   webapp and docs. The three ASVS mapping files were already translated to 5.0.0 identifiers (#123); this brings the
   framework's name in line. **Consumers that filter exports by framework name must update the string.** 5.0.0 is
