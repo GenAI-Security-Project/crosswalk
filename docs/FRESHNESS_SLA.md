@@ -37,13 +37,14 @@ Run `npm run freshness` for today's figures.
 
 ## The commitment
 
-`TODO(maintainer)` — the values below are **not set**. An SLA is a promise
+The verified-core values were **ratified by the maintainer on 2026-11-25** (#99, Decisions 2 and 3). The
+mapped-tier window is still `TODO(maintainer)`. An SLA is a promise
 about maintainer capacity, and an agent has no basis on which to make one. Every
 number here needs a human who intends to honour it.
 
 | Tier | Frameworks | Verify within | Re-map within |
 |---|---|---|---|
-| Verified core | `TODO(maintainer)` — see T-METH06 | `TODO(maintainer)` days | `TODO(maintainer)` days |
+| Verified core | NIST CSF 2.0, NIST AI RMF 1.0, EU AI Act, OWASP AISVS 1.01, MITRE ATLAS (after #99 Decision 9) | 30 days | 90 days |
 | Mapped | everything else | `TODO(maintainer)` days | best effort |
 | Referenced | not mapped — see CROSSREF | n/a | n/a |
 
