@@ -1230,6 +1230,12 @@
       "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2024,
       "incident_id": "INC-064"
+    },
+    {
+      "name": "vLLM: continuation turns dropped the caller's cache salt, and a reused media hash crashed the receiver cache",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-150"
     }
   ],
   "crossrefs": {
