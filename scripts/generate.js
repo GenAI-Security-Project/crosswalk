@@ -423,6 +423,11 @@ function applyV2(mapping, cells) {
   if (rt) mapping.rationale_type = rt;
   if (cells.rationale) mapping.rationale = cells.rationale.replace(/\s+/g, ' ').trim();
   if (cells.framework_version) mapping.framework_version = cells.framework_version.trim();
+  // IR 8278A Rev. 1 Strength of Relationship: an integer 0-10 (#99 Decision 6).
+  // A malformed value is kept as written so validate.js reports it, rather
+  // than being dropped silently.
+  const strength = (cells.strength || '').trim();
+  if (strength) mapping.strength = /^(10|[0-9])$/.test(strength) ? Number(strength) : strength;
   if (/^(true|yes|broad)$/i.test((cells.broad_applicability || '').trim())) {
     mapping.broad_applicability = true;
   }
@@ -453,6 +458,7 @@ function v2HeaderIndex(tableText) {
   const idx = {
     relationship: -1, rationale_type: -1, rationale: -1, confidence: -1,
     framework_version: -1, reviewed_by: -1, review_date: -1, broad_applicability: -1,
+    strength: -1,
   };
   const headerLine = tableText.split('\n').find((l) => l.trim().startsWith('|'));
   if (!headerLine) return idx;
@@ -467,6 +473,7 @@ function v2HeaderIndex(tableText) {
     else if (/^reviewed by|^reviewer/.test(h)) idx.reviewed_by = i;
     else if (/^review date/.test(h)) idx.review_date = i;
     else if (/^broad/.test(h)) idx.broad_applicability = i;
+    else if (/^strength/.test(h)) idx.strength = i;
   });
   return idx;
 }
@@ -617,6 +624,7 @@ function parseControlTable(sectionBody, frameworkName, qr) {
       reviewed_by:       header.reviewed_by       >= 0 ? cols[header.reviewed_by]       : '',
       review_date:       header.review_date       >= 0 ? cols[header.review_date]       : '',
       broad_applicability: header.broad_applicability >= 0 ? cols[header.broad_applicability] : '',
+      strength:          header.strength          >= 0 ? cols[header.strength]          : '',
     });
 
     mappings.push(mapping);
