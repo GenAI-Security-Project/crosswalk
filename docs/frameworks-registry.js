@@ -4373,7 +4373,7 @@ window.CROSSWALK_FRAMEWORKS = [
     "category": "ai-governance",
     "last_synced": "2026-10-03",
     "source_sha": null,
-    "$comment": "Suggested actions from NIST AI 600-1 (July 2024). control_id is the document's own Action ID; description is the Suggested Action text verbatim; title is derived mechanically from it (the first sentence when that is 120 characters or fewer, else the leading clause, else a word-boundary cut), so no title is authored. parent is the AI RMF subcategory the action is filed under: 45 of the 49 subcategories resolve against data/frameworks/nist-ai-rmf.json, and MG-4.3, MP-3.4, MS-2.12, MS-2.13 do not, because that registry holds only the subcategories existing mappings cite. The 49 subcategories are deliberately not duplicated here, so this registry's denominator counts suggested actions only. gai_risks is the document's own GAI Risks column, normalised to the twelve risks enumerated in section 2: the action tables also spell four of them as 'Harmful Bias and Homogenization', 'Environmental', 'CBRN Information and Capability' and 'Human AI Configuration'. GV-1.4-002 additionally carries the tag 'Civil Rights violations', which is not one of the twelve and is therefore not recorded in gai_risks.",
+    "$comment": "Suggested actions from NIST AI 600-1 (July 2024). control_id is the document's own Action ID; description is the Suggested Action text verbatim; title is derived mechanically from it (the first sentence when that is 120 characters or fewer, else the leading clause, else a word-boundary cut), so no title is authored. parent is the AI RMF subcategory the action is filed under: all 49 subcategories resolve against data/frameworks/nist-ai-rmf.json (MG-4.3, MP-3.4, MS-2.12 and MS-2.13 were added there in #219). The 49 subcategories are deliberately not duplicated here, so this registry's denominator counts suggested actions only. gai_risks is the document's own GAI Risks column, normalised to the twelve risks enumerated in section 2: the action tables also spell four of them as 'Harmful Bias and Homogenization', 'Environmental', 'CBRN Information and Capability' and 'Human AI Configuration'. GV-1.4-002 additionally carries the tag 'Civil Rights violations', which is not one of the twelve and is therefore not recorded in gai_risks.",
     "controls": [
       {
         "control_id": "GV-1.1-001",
@@ -6920,6 +6920,11 @@ window.CROSSWALK_FRAMEWORKS = [
         "date": "2026-10-03",
         "change": "Initial transcription — all 211 suggested actions across 49 AI RMF subcategories, with their GAI Risks tags, read from the published PDF (https://doi.org/10.6028/NIST.AI.600-1). No mappings asserted.",
         "author": "OWASP GenAI Data Security Initiative"
+      },
+      {
+        "date": "2026-10-09",
+        "change": "Note updated: all 49 parent subcategories now resolve against nist-ai-rmf.json after #219. No suggested action changed.",
+        "author": "OWASP GenAI Data Security Initiative"
       }
     ],
     "inventory_completeness": {
@@ -6969,7 +6974,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "GV-1.3",
         "title": "Processes and procedures alignment",
-        "description": "Processes, procedures, and practices are in place to determine the needed level of risk management activities based on the organization's risk tolerance.",
+        "description": "Processes, procedures, and practices are in place to determine the needed level of risk management activities based on the organization’s risk tolerance.",
         "parent": "GV-1",
         "function": "GOVERN",
         "kind": "control"
@@ -7001,7 +7006,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "GV-1.7",
         "title": "Processes for termination",
-        "description": "Processes and procedures are in place for decommissioning and phasing out AI systems safely and in a manner that does not increase risks or decrease the organization's trustworthiness.",
+        "description": "Processes and procedures are in place for decommissioning and phasing out AI systems safely and in a manner that does not increase risks or decrease the organization’s trustworthiness.",
         "parent": "GV-1",
         "function": "GOVERN",
         "kind": "control"
@@ -7024,7 +7029,7 @@ window.CROSSWALK_FRAMEWORKS = [
       },
       {
         "control_id": "GV-2.2",
-        "title": "Organizational commitment",
+        "title": "AI risk management training",
         "description": "The organization’s personnel and partners receive AI risk management training to enable them to perform their duties and responsibilities consistent with related policies, procedures, and agreements.",
         "parent": "GV-2",
         "function": "GOVERN",
@@ -7056,7 +7061,7 @@ window.CROSSWALK_FRAMEWORKS = [
       },
       {
         "control_id": "GV-3.2",
-        "title": "Demographic diversity and domain expertise",
+        "title": "Roles for human-AI configurations and oversight",
         "description": "Policies and procedures are in place to define and differentiate roles and responsibilities for human-AI configurations and oversight of AI systems.",
         "parent": "GV-3",
         "function": "GOVERN",
@@ -7080,7 +7085,7 @@ window.CROSSWALK_FRAMEWORKS = [
       },
       {
         "control_id": "GV-4.2",
-        "title": "Organizational teams commitment",
+        "title": "Teams document and communicate impacts",
         "description": "Organizational teams document the risks and potential impacts of the AI technology they design, develop, deploy, evaluate, and use, and they communicate about the impacts more broadly.",
         "parent": "GV-4",
         "function": "GOVERN",
@@ -7088,7 +7093,7 @@ window.CROSSWALK_FRAMEWORKS = [
       },
       {
         "control_id": "GV-4.3",
-        "title": "Risk treatment approaches",
+        "title": "Testing, incident identification and information sharing",
         "description": "Organizational practices are in place to enable AI testing, identification of incidents, and information sharing.",
         "parent": "GV-4",
         "function": "GOVERN",
@@ -7184,7 +7189,7 @@ window.CROSSWALK_FRAMEWORKS = [
       },
       {
         "control_id": "MP-1.5",
-        "title": "Use case risk assessment",
+        "title": "Risk tolerances determined and documented",
         "description": "Organizational risk tolerances are determined and documented.",
         "parent": "MP-1",
         "function": "MAP",
@@ -7320,7 +7325,7 @@ window.CROSSWALK_FRAMEWORKS = [
       },
       {
         "control_id": "MP-5.2",
-        "title": "Impact assessment and documentation",
+        "title": "Engagement with AI actors and impact feedback",
         "description": "Practices and personnel for supporting regular engagement with relevant AI actors and integrating feedback about positive, negative, and unanticipated impacts are in place and documented.",
         "parent": "MP-5",
         "function": "MAP",
@@ -7417,7 +7422,7 @@ window.CROSSWALK_FRAMEWORKS = [
       {
         "control_id": "MS-2.7",
         "title": "AI system security and resilience",
-        "description": "AI system security and resilience - as identified in the MAP function - are evaluated and documented.",
+        "description": "AI system security and resilience – as identified in the MAP function – are evaluated and documented.",
         "parent": "MS-2",
         "function": "MEASURE",
         "kind": "control"
@@ -7648,7 +7653,7 @@ window.CROSSWALK_FRAMEWORKS = [
       },
       {
         "control_id": "MG-4.1",
-        "title": "Post-deployment risk treatment",
+        "title": "Post-deployment monitoring plans implemented",
         "description": "Post-deployment AI system monitoring plans are implemented, including mechanisms for capturing and evaluating input from users and other relevant AI actors, appeal and override, decommissioning, incident response, recovery, and change management.",
         "parent": "MG-4",
         "function": "MANAGE",
@@ -7656,7 +7661,7 @@ window.CROSSWALK_FRAMEWORKS = [
       },
       {
         "control_id": "MG-4.2",
-        "title": "Post-deployment monitoring results",
+        "title": "Continual improvement integrated into updates",
         "description": "Measurable activities for continual improvements are integrated into AI system updates and include regular engagement with interested parties, including relevant AI actors.",
         "parent": "MG-4",
         "function": "MANAGE",
@@ -7681,13 +7686,18 @@ window.CROSSWALK_FRAMEWORKS = [
         "date": "2026-10-08",
         "change": "Re-transcribed every category and subcategory from NIST AI 100-1 Tables 1-4: 50 descriptions corrected, 6 missing subcategories added (MP-3.3, MP-3.4, MS-2.12, MS-2.13, MS-4.3, MG-4.3), 30 titles corrected, and MP-3.5's missing parent/function restored. No mapping rows changed.",
         "author": "OWASP GenAI Data Security Initiative"
+      },
+      {
+        "date": "2026-10-09",
+        "change": "Follow-ups to #219: GV-1.3, GV-1.7 and MS-2.7 now use the apostrophe and en-dashes printed in NIST AI 100-1; 8 titles that named a different subject than their published statement corrected (GV-2.2, GV-3.2, GV-4.2, GV-4.3, MP-1.5, MP-5.2, MG-4.1, MG-4.2). No description wording or mapping rows changed.",
+        "author": "OWASP GenAI Data Security Initiative"
       }
     ],
     "inventory_completeness": {
       "status": "complete",
       "included": 91,
       "total": 91,
-      "note": "The AI RMF Core defines 19 categories and 72 subcategories across GOVERN, MAP, MEASURE and MANAGE; all 91 are present. Previously the registry held only the 85 entries existing mappings cited.",
+      "note": "The AI RMF Core defines 19 categories and 72 subcategories across GOVERN, MAP, MEASURE and MANAGE; all 91 are present. Previously the registry held 85 entries, an incomplete seed; mapping rows cite 15 distinct ids.",
       "source": "https://doi.org/10.6028/NIST.AI.100-1"
     },
     "$comment": "Subcategory and category text from NIST AI 100-1 (AI RMF 1.0, January 2023), Tables 1-4. description is the published statement verbatim; title is a short editorial label for display and is not part of the published framework. The 19 categories and 72 subcategories of the AI RMF Core are all present. No mappings are asserted here."
