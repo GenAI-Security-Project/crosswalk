@@ -98,6 +98,13 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   relationship or confidence changed. The registry's 213 descriptions get back the chapter number the
   regeneration dropped (`chapter  Training Data …` → `chapter C1 Training Data …`), and `docs/llms.txt` and the
   AI-standards page now say AISVS 1.01.
+- **OLIR export stated directional relationships backwards** (#99 Decision 7). The exporter puts the framework
+  control in the Focal Document Element and the OWASP entry in the Reference Document Element, and OLIR states
+  the Reference relative to the Focal. A stored `subset-of` (the control addresses part of the risk) was
+  exported as "subset of", which OLIR reads as the risk being part of the control. It now exports as
+  "superset of", and `superset-of` as "subset of". The 326 reviewed AISVS `subset-of` rows would have exported
+  inverted. The exporter header and the `data/schema.json` description, which named the direction the other
+  way round, now match the code. No stored value changes.
 
 Next: npm publish to npmjs.com, custom domain (crosswalk.owasp.org), vendor integration packs, NeMo Guardrails configs.
 
