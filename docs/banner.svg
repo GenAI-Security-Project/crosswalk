@@ -85,7 +85,7 @@
   <text x='612' y='330' font-family='system-ui,sans-serif' font-size='10' fill='#64748b' text-anchor='middle' letter-spacing='1'>MAPPINGS</text>
 
   <rect x='700' y='285' width='145' height='55' rx='8' fill='rgba(255,255,255,0.04)' stroke='rgba(255,255,255,0.08)' stroke-width='1'/>
-  <text x='772' y='312' font-family='system-ui,sans-serif' font-size='24' font-weight='800' fill='#f87171' text-anchor='middle'><!-- stats:incidents -->147<!-- /stats --></text>
+  <text x='772' y='312' font-family='system-ui,sans-serif' font-size='24' font-weight='800' fill='#f87171' text-anchor='middle'><!-- stats:incidents -->148<!-- /stats --></text>
   <text x='772' y='330' font-family='system-ui,sans-serif' font-size='10' fill='#64748b' text-anchor='middle' letter-spacing='1'>INCIDENTS</text>
 
   <rect x='860' y='285' width='145' height='55' rx='8' fill='rgba(255,255,255,0.04)' stroke='rgba(255,255,255,0.08)' stroke-width='1'/>

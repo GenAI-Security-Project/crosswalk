@@ -34,7 +34,7 @@
   <text x='715' y='377' font-family='system-ui,sans-serif' font-size='12' fill='#94a3b8' text-anchor='middle' letter-spacing='1'>MAPPING FILES</text>
 
   <rect x='820' y='320' width='170' height='70' rx='10' fill='rgba(239,68,68,0.15)' stroke='rgba(239,68,68,0.3)' stroke-width='1'/>
-  <text x='905' y='352' font-family='system-ui,sans-serif' font-size='32' font-weight='800' fill='#f87171' text-anchor='middle'><!-- stats:incidents -->147<!-- /stats --></text>
+  <text x='905' y='352' font-family='system-ui,sans-serif' font-size='32' font-weight='800' fill='#f87171' text-anchor='middle'><!-- stats:incidents -->148<!-- /stats --></text>
   <text x='905' y='377' font-family='system-ui,sans-serif' font-size='12' fill='#94a3b8' text-anchor='middle' letter-spacing='1'>INCIDENTS</text>
 
   <!-- Architecture diagram - small -->

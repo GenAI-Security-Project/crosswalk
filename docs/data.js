@@ -1508,6 +1508,12 @@ window.CROSSWALK_DATA = [
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-147"
+      },
+      {
+        "name": "Devika agent: LLM-generated commands executed without validation in Runner.execute",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-148"
       }
     ],
     "crossrefs": {
@@ -11441,7 +11447,14 @@ window.CROSSWALK_DATA = [
         "notes": "No eval or dynamic code execution of LLM-generated content",
         "framework_version": "ASVS 5.0.0",
         "confidence": "unreviewed",
-        "reviewed_by": []
+        "reviewed_by": [],
+        "evidence_count": 0,
+        "evidence": {
+          "confirmed": [],
+          "drafted": [
+            "INC-148"
+          ]
+        }
       },
       {
         "framework": "OWASP ASVS 5.0.0",
@@ -12299,6 +12312,12 @@ window.CROSSWALK_DATA = [
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-075"
+      },
+      {
+        "name": "Devika agent: LLM-generated commands executed without validation in Runner.execute",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-148"
       }
     ],
     "crossrefs": {
@@ -19263,7 +19282,14 @@ window.CROSSWALK_DATA = [
         "notes": "No eval or exec of agent-generated code — absolute prohibition enforced in code review",
         "framework_version": "ASVS 5.0.0",
         "confidence": "unreviewed",
-        "reviewed_by": []
+        "reviewed_by": [],
+        "evidence_count": 0,
+        "evidence": {
+          "confirmed": [],
+          "drafted": [
+            "INC-148"
+          ]
+        }
       },
       {
         "framework": "OWASP ASVS 5.0.0",
@@ -20147,6 +20173,12 @@ window.CROSSWALK_DATA = [
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-132"
+      },
+      {
+        "name": "Devika agent: LLM-generated commands executed without validation in Runner.execute",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-148"
       }
     ],
     "crossrefs": {
