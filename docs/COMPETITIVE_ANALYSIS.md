@@ -9,8 +9,9 @@
 # Comparison with other AI security control crosswalks
 
 > **Status.** The comparison sections are a research draft with a source for every statement about another
-> project. The *Definition of best* and *Recommended verified-core framework list* sections are
-> **DRAFT — maintainer ratification required**. They are recommendations for a human decision, not decisions.
+> project. The *Definition of best*, *Verified-core framework list* and *Order for adding the dangling
+> frameworks* sections were **ratified by the maintainer on 2026-11-25** (#99), with the changes recorded in
+> each section. The comparison sections remain a dated research snapshot.
 
 This document compares this crosswalk with other published AI security control catalogues and crosswalks.
 It is meant to be read by the maintainers of those projects as well as this one. Corrections from them
@@ -372,24 +373,25 @@ Numbers in square brackets refer to the *References* list.
 
 ---
 
-## Definition of best (DRAFT — `TODO(maintainer): ratify`)
+## Definition of best (ratified 2026-11-25, #99)
 
-Each criterion comes from a gap above. "Current" is measured on `main` at `db56eeb`. Targets that are value
-judgements are left as `TODO(maintainer)`.
+Each criterion comes from a gap above. "Current" is measured on `main` at `db56eeb`. All twelve criteria were
+adopted as written. Targets marked *deferred* are set once the verified core has named reviewers; on
+2026-11-25 the only reviewed rows on `main` were OWASP AISVS's 328.
 
 | # | Criterion (gap) | Metric | Current | Target |
 |---|---|---|---|---|
-| B1 | Named review (Behind 1) | % of verified-core rows with non-empty `reviewed_by` and `review_date` | 0% | `TODO(maintainer)` |
-| B2 | Typed relationships (Behind 2) | % of verified-core rows with `relationship`, `rationale_type` and `rationale` | 0% | `TODO(maintainer)` |
+| B1 | Named review (Behind 1) | % of verified-core rows with non-empty `reviewed_by` and `review_date` | 0% | deferred |
+| B2 | Typed relationships (Behind 2) | % of verified-core rows with `relationship`, `rationale_type` and `rationale` | 0% | deferred |
 | B3 | Vocabulary aligned to NIST IR 8278A Rev. 1 (Behind 3) | Test passes: 5 set-theory tokens, strength as integer 0–10, one documented direction | fails (strength enum; direction inconsistent) | pass |
-| B4 | Identifier integrity (Behind 4) | % of rows whose `control_id` resolves to an ID in the pinned upstream release and whose name matches it | not measured project-wide; ATLAS: 56 of 117 rows match exactly (computed, after #92) | 100% resolve; name-match `TODO(maintainer)` |
-| B5 | Version pinning (Behind 5) | % of rows with `framework_version` | 9.3% (326/3,497, computed) | `TODO(maintainer)` |
-| B6 | Freshness verified (Behind 5) | % of frameworks with `current_version` checked within the SLA window | 12% (3/25) | `TODO(maintainer)` (window in FRESHNESS_SLA) |
-| B7 | Upstream lag (Behind 5) | days from upstream release to verify / to re-map, per verified-core framework | not measured | `TODO(maintainer)` days |
-| B8 | External acceptance (Behind 6) | reviewed mapping sets accepted in NIST OLIR (or reviewed by the framework owner) | 0 | `TODO(maintainer)` |
-| B9 | Evidence (Behind 1, Ahead 5) | % of verified-core rows with ≥1 confirmed incident control failure | 0% (in review) | `TODO(maintainer)` |
+| B4 | Identifier integrity (Behind 4) | % of rows whose `control_id` resolves to an ID in the pinned upstream release and whose name matches it | not measured project-wide; ATLAS: 56 of 117 rows match exactly (computed, after #92) | 100% resolve; name-match 100% |
+| B5 | Version pinning (Behind 5) | % of rows with `framework_version` | 9.3% (326/3,497, computed) | deferred |
+| B6 | Freshness verified (Behind 5) | % of frameworks with `current_version` checked within the SLA window | 12% (3/25) | 100% within the 30-day verify window (`FRESHNESS_SLA.md`) |
+| B7 | Upstream lag (Behind 5) | days from upstream release to verify / to re-map, per verified-core framework | not measured | verify within 30 days; re-map within 90 days |
+| B8 | External acceptance (Behind 6) | reviewed mapping sets accepted in NIST OLIR (or reviewed by the framework owner) | 0 | deferred |
+| B9 | Evidence (Behind 1, Ahead 5) | % of verified-core rows with ≥1 confirmed incident control failure | 0% (in review) | deferred |
 | B10 | Export conformance (Ahead 6) | OSCAL exports validate against the NIST OSCAL schema in CI | not verified | pass |
-| B11 | Maintainer depth (Behind 8) | number of named reviewers with merge rights per verified-core framework | 1 code owner overall | `TODO(maintainer)` |
+| B11 | Maintainer depth (Behind 8) | number of named reviewers with merge rights per verified-core framework | 1 code owner overall | at least 1 per verified-core framework |
 | B12 | Release parity (Behind 5) | published npm version equals repository version | 2.0.0 vs 4.0.0 | equal |
 
 B4's ATLAS figure: 117 rows, less 53 rows with a differing name and 8 rows whose ID is absent from 2026.08
@@ -398,10 +400,20 @@ quality.
 
 ---
 
-## Recommended verified-core framework list (DRAFT — `TODO(maintainer): ratify`)
+## Verified-core framework list (ratified 2026-11-25, #99)
 
-Five of the 25 mapped frameworks, chosen for regulatory or registry pull and for how much existing work
-elsewhere can be compared against. Row counts are on `main` (computed).
+**Ratified list:** NIST CSF 2.0, NIST AI RMF 1.0, EU AI Act, OWASP AISVS 1.01, and MITRE ATLAS once its
+registry re-sync and identifier check (#99 Decision 9) have landed. **Excluded:** ISO/IEC 42001:2023, whose
+text is paywalled and cannot be checked publicly, and OWASP ASVS, whose slot AISVS fills. AISVS 1.01 was
+added at ratification: it is the only framework whose rows already all carry a named reviewer (#380).
+
+**What "verified" requires:** one named reviewer per row. Owner-community review (for example, the ATLAS
+maintainers or an ISO liaison) remains a goal, not a gate. **OLIR:** deferred until the verified core is
+reviewed; OLIR entries 198 and 229 already cover the obvious first filings.
+
+The original recommendation, kept for the record: five of the 25 mapped frameworks, chosen for regulatory
+or registry pull and for how much existing work elsewhere can be compared against. Row counts are on
+`main` (computed) at the time of writing.
 
 1. **NIST CSF 2.0** (164 rows). An OLIR focal document with 24 entries [75], and the focal document already
    chosen in `docs/OLIR_SUBMISSION.md` [5]; CSF 2.0 was published in February 2024 [88]. OLIR entry 198
@@ -424,15 +436,16 @@ elsewhere can be compared against. Row counts are on `main` (computed).
 Alternative considered: **OWASP ASVS** (151 rows). The owner community is inside OWASP, but the 5.0.0
 renumbering means review would be a re-map rather than a verification [15].
 
-`TODO(maintainer)`: confirm the five, and decide whether owner-community review (for example, requests to
-the ATLAS or ISO liaison communities) is a requirement for "verified".
+Ratified with the changes above, including the question left open here: owner-community review is a goal,
+not a requirement for "verified".
 
 ---
 
-## Recommended order for adding the dangling frameworks
+## Order for adding the dangling frameworks (ratified 2026-11-25, #99)
 
 These frameworks are named in CROSSREF.md's *Referenced but not yet mapped* table [12] and roadmap issue #19
-[16]. The order is a recommendation for the scope decision in #19.
+[16]. **Ratified:** the order below, with NIST AI 600-1 already done (registered in #187); BSIMM and COBIT
+declared out of scope (proprietary or paywalled); CycloneDX referenced as tooling only.
 
 1. **NIST AI 600-1** — the GenAI profile of the AI RMF, with 12 GAI risks [84]; SCF maps 139 controls to it
    [22] and CSA maps AICM to it [32]. It is not an OLIR focal document [75], so the value is content, not
