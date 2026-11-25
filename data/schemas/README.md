@@ -15,6 +15,12 @@ The crosswalk emits three machine-readable formats that other tools consume:
 | OSCAL 1.1.2 Component Definition | `compliance-report.js --format oscal` | `oscal-component-definition.subset.json` |
 | OSCAL 1.1.2 Catalog | `compliance-report.js --format oscal-catalog` | `oscal-catalog.subset.json` |
 | STIX 2.1 Bundle | `incidents-report.js --format stix` | `stix-bundle.subset.json` |
+| AIBOM index (this project's own format) | `export-aibom-index.js` → `data/exports/aibom-index.json` | `aibom-index.schema.json` (full definition) |
+| AIBOM applicability profiles (hand-authored) | `data/aibom-applicability.json` | `aibom-applicability.schema.json` (full definition) |
+
+The two AIBOM schemas are the exception to the subset rule below: the format is
+the crosswalk's own, so the schema here is its definition. `scripts/aibom-index.test.mjs`
+validates both. See [`../../docs/AIBOM_INTEGRATION.md`](../../docs/AIBOM_INTEGRATION.md).
 
 `scripts/exports.test.mjs` validates every emitted document against these on
 each `node --test` run, and `npm run ci` includes it.

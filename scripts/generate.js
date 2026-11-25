@@ -10,7 +10,8 @@
  * Output: data/entries/LLM01.json … AST10.json (51 files)
  *
  * A full run also refreshes the generated "Referenced by" blocks in the
- * mapping Markdown files (scripts/backrefs.js).
+ * mapping Markdown files (scripts/backrefs.js) and the AIBOM index,
+ * data/exports/aibom-index.json (scripts/export-aibom-index.js).
  */
 
 'use strict';
@@ -20,6 +21,7 @@ const path = require('path');
 const { indexFailures, evidenceForMapping } = require('./evidence');
 const { resolveControlId } = require('./control-ids.js');
 const backrefs = require('./backrefs');
+const aibomIndex = require('./export-aibom-index');
 
 const ROOT        = path.resolve(__dirname, '..');
 const ENTRIES_DIR = path.join(ROOT, 'data', 'entries');
@@ -1068,6 +1070,11 @@ function main() {
   if (!DRY_RUN && !SINGLE_ID) {
     const changed = backrefs.run({ root: ROOT });
     console.log(`Back-references: ${changed.length} mapping file(s) updated`);
+
+    // The AIBOM index (T-AIBOM01) is built from the entries just written, so
+    // it runs last; CI's generator-reproducibility diff covers it.
+    const indexChanged = aibomIndex.run({ root: ROOT });
+    console.log(`AIBOM index: data/exports/aibom-index.json ${indexChanged ? 'updated' : 'unchanged'}`);
   }
 
   console.log(`\n${'─'.repeat(50)}`);

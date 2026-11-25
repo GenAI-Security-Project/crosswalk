@@ -17,6 +17,7 @@ on:
       - 'scripts/verification.js'
       - 'scripts/generate.js'
       - 'scripts/backrefs.js'
+      - 'scripts/export-aibom-index.js'
       - 'scripts/crossrefs.js'
       - 'scripts/*.test.mjs'
       - 'package.json'
@@ -37,6 +38,7 @@ on:
       - 'scripts/verification.js'
       - 'scripts/generate.js'
       - 'scripts/backrefs.js'
+      - 'scripts/export-aibom-index.js'
       - 'scripts/crossrefs.js'
       - 'scripts/*.test.mjs'
       - 'package.json'
@@ -129,7 +131,7 @@ jobs:
       - name: Assert generated output is current
         run: >-
           git diff --exit-code --
-          data/entries data/backlinks.json
+          data/entries data/backlinks.json data/exports
           llm-top10 agentic-top10 dsgai-2026 ast-top10
           docs/data.js docs/backlinks.js docs/frameworks-registry.js docs/incidents.js
 
