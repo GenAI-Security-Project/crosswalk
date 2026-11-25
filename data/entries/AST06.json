@@ -86,6 +86,12 @@
       "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2026,
       "incident_id": "INC-127"
+    },
+    {
+      "name": "KnotScryer: 612 insecure compositions of individually clean skills found among 13,598 ClawHub skills",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-161"
     }
   ],
   "crossrefs": {},

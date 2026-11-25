@@ -2,7 +2,7 @@
   OWASP GenAI Crosswalk
   File    : docs/TRIAGE_RULES.md
   Purpose : Where an incoming item goes — incident, benchmark catalogue, or noted and closed
-  Version : 1.1.0 — 2026-10-09
+  Version : 1.2.0 — 2026-11-25
   License : CC BY-SA 4.0
 -->
 
@@ -40,6 +40,11 @@ Applies **only** when the item is a post-mortem, dataset or deep-dive analysis o
 incident record for that failure, naming the record. If no record exists, the item is
 evidence for creating one — under the same standard the index already holds.
 
+A measurement study that finds a flaw **in live third-party deployments** — public MCP
+servers, a live skill registry — reports systems that failed in the wild, not a
+laboratory demonstration, and gets one incident record for the study. (Precedents
+INC-114, INC-118, INC-121 and INC-126; maintainer ruling, 2026-11-25, on #225 and #302.)
+
 ### 3. Exception — catalogue as an external benchmark
 
 Applies when the item introduces a **structural benchmark or evaluation dataset meant
@@ -54,12 +59,26 @@ benchmark is theirs to set.
 A defense paper that also introduces a **named** benchmark gets a row for the benchmark;
 the defense itself is noted. The row names the authors' own defense evaluated on it.
 A defense paper with no named benchmark is noted and closed. (Maintainer ruling,
-2026-10-09, on #194 and #198.)
+2026-10-09, on #194 and #198.) An attack paper that introduces a named benchmark is
+treated the same way: the row is for the benchmark and names the authors' own attack.
+(Maintainer ruling, 2026-11-25, on #283.)
 
 ## CVEs
 
 A published CVE in GenAI tooling is an incident record when it names an affected version
-and has a citable advisory. Record it with:
+and has a citable advisory. Two clarifications (maintainer ruling, 2026-11-25, on #324):
+
+- **GenAI tooling means the flaw is in the GenAI-specific function.** A flaw in a
+  general-purpose product's AI feature counts (the JeecgBoot AIRAG handler, #254). A
+  generic bug in a product that merely serves the GenAI ecosystem does not (the Docling
+  parser CVEs, #255–#264).
+- **The affected version must be the product's own.** An advisory that names only a
+  downstream distribution package, not a version of the product, does not meet the bar
+  (Goose, #319).
+
+Record one incident per product per disclosure batch — the advisories a vendor publishes
+together — citing every CVE and advisory id, rather than one record per CVE. Record it
+with:
 
 - severity **transcribed** from the published CVSS base severity, never authored;
 - a `basis` on every control failure quoting the source, with `confirmed_by` empty until
