@@ -12,9 +12,9 @@
  *
  *   crosswalk                    OLIR template
  *   ─────────────────────────    ─────────────────────────
- *   entry id + name              Focal Document Element (+ Description)
- *   control_id + control_name    Reference Document Element (+ Description)
- *   relationship                 Relationship        (hyphens → spaces)
+ *   control_id + control_name    Focal Document Element (+ Description)
+ *   entry id + name              Reference Document Element (+ Description)
+ *   relationship                 Relationship        (restated from the entry's side, below)
  *   rationale_type               Rationale
  *   rationale                    Comments
  *   confidence                   Strength of Relationship
@@ -49,11 +49,23 @@ const arg = (name, dflt = null) => {
 const FOCAL = arg('--focal', 'NIST CSF 2.0');
 const INCLUDE_UNREVIEWED = argv.includes('--include-unreviewed');
 
-/** Hyphenated storage token → the spec's spelling (IR 8278A Rev. 1 §3.1). */
+/**
+ * Stored token → the OLIR Relationship value (IR 8278A Rev. 1 §3.1 spelling).
+ *
+ * Direction (ratified in #99, Decision 7): the framework control is the Focal
+ * Document Element and the OWASP entry is the Reference Document Element. OLIR
+ * defines Relationship as the comparison "for the Reference Document Element
+ * compared to the Focal Document Element" — the entry relative to the control.
+ *
+ * The crosswalk stores the opposite side: `subset-of` means the control
+ * addresses part of the risk (docs/SCHEMA_V2_MIGRATION.md). The same assertion
+ * stated from the entry's side is "superset of", so the two directional tokens
+ * swap on export. The symmetric ones do not.
+ */
 const RELATIONSHIP_OUT = {
   'equal': 'equal',
-  'subset-of': 'subset of',
-  'superset-of': 'superset of',
+  'subset-of': 'superset of',
+  'superset-of': 'subset of',
   'intersects-with': 'intersects with',
   'not-related-to': 'not related to',
 };

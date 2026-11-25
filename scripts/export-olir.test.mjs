@@ -30,8 +30,17 @@ test('relationship values map to the IR 8278A Rev. 1 spelling', () => {
     Object.values(RELATIONSHIP_OUT).sort(),
     ['equal', 'intersects with', 'not related to', 'subset of', 'superset of'],
   );
-  assert.equal(RELATIONSHIP_OUT['subset-of'], 'subset of');
   assert.equal(RELATIONSHIP_OUT['not-related-to'], 'not related to');
+});
+
+test('directional relationships are restated from the Reference (entry) side', () => {
+  // Stored: the control relative to the risk ("subset-of": the control covers
+  // part of the risk). OLIR: the Reference Document Element (the entry)
+  // compared to the Focal Document Element (the control) — #99 Decision 7.
+  assert.equal(RELATIONSHIP_OUT['subset-of'], 'superset of');
+  assert.equal(RELATIONSHIP_OUT['superset-of'], 'subset of');
+  assert.equal(RELATIONSHIP_OUT['equal'], 'equal');
+  assert.equal(RELATIONSHIP_OUT['intersects-with'], 'intersects with');
 });
 
 test('every stored enum value has an export mapping', () => {

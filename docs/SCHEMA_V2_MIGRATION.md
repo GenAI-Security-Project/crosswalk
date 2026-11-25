@@ -48,16 +48,23 @@ compared to the Focal Document Element,"* and states the vocabulary verbatim:
 
 Stored hyphenated so the value is a stable machine token:
 
-| Stored | OLIR spelling | Means |
+| Stored | Means (the control relative to the risk) | OLIR export (the entry relative to the control) |
 |---|---|---|
-| `equal` | equal | the control and the risk cover the same ground |
-| `subset-of` | subset of | the control addresses part of the risk |
-| `superset-of` | superset of | the control covers the risk and more besides |
-| `intersects-with` | intersects with | they overlap, neither contains the other |
-| `not-related-to` | not related to | asserted non-relationship — useful, and rarely recorded |
+| `equal` | the control and the risk cover the same ground | equal |
+| `subset-of` | the control addresses part of the risk | superset of |
+| `superset-of` | the control covers the risk and more besides | subset of |
+| `intersects-with` | they overlap, neither contains the other | intersects with |
+| `not-related-to` | asserted non-relationship — useful, and rarely recorded | not related to |
 
-The export expands the hyphens back to the spec's spacing. Nothing else in the
-vocabulary is invented, extended, or renamed.
+**Direction** (ratified in #99, Decision 7). In an OLIR export the framework control is the **Focal Document
+Element** and the OWASP entry is the **Reference Document Element**. OLIR states the Reference relative to the
+Focal, which is the opposite side from the stored value, so the exporter restates the two directional tokens:
+"the control addresses part of the risk" is "the risk is a superset of the control". The stored meaning is
+what reviewers assert and does not change.
+
+The export expands the hyphens back to the spec's spacing, and swaps the two
+directional tokens as above. Nothing else in the vocabulary is invented,
+extended, or renamed.
 
 ### `rationale_type` vs `rationale` — why there are two
 
