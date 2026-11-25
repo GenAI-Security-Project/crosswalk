@@ -2774,6 +2774,12 @@ window.CROSSWALK_DATA = [
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2024,
         "incident_id": "INC-064"
+      },
+      {
+        "name": "vLLM: continuation turns dropped the caller's cache salt, and a reused media hash crashed the receiver cache",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-150"
       }
     ],
     "crossrefs": {
@@ -5343,6 +5349,12 @@ window.CROSSWALK_DATA = [
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-143"
+      },
+      {
+        "name": "MLflow: serialized third-party scorer data could instantiate any allowlisted-module class with chosen arguments",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-158"
       }
     ],
     "crossrefs": {
@@ -7704,6 +7716,42 @@ window.CROSSWALK_DATA = [
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-142"
+      },
+      {
+        "name": "vLLM: seven request-handling flaws let one API caller crash the engine, exhaust it, or overwrite another request's cached embedding",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-149"
+      },
+      {
+        "name": "vLLM: continuation turns dropped the caller's cache salt, and a reused media hash crashed the receiver cache",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-150"
+      },
+      {
+        "name": "Pydantic AI: web fetch buffered the whole response body before applying its size limit",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-151"
+      },
+      {
+        "name": "Pydantic AI: two SSRF blocklist bypasses, quadratic processing of fetched pages, and agent content in exception telemetry",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-154"
+      },
+      {
+        "name": "Pydantic AI: deeply nested HTML exhausted CPU and memory during HTML-to-Markdown conversion",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-155"
+      },
+      {
+        "name": "Pydantic AI: streamed requests could keep concurrency slots, starving the model limiter",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-156"
       }
     ],
     "crossrefs": {
@@ -16197,6 +16245,24 @@ window.CROSSWALK_DATA = [
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-147"
+      },
+      {
+        "name": "Pydantic AI: a web page could drive a loopback-hosted agent to run tools, and telemetry exported retry prompts",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-152"
+      },
+      {
+        "name": "Pydantic AI: no Host header check, so DNS rebinding let a website reach a loopback-hosted agent",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-153"
+      },
+      {
+        "name": "Pydantic AI: two SSRF blocklist bypasses, quadratic processing of fetched pages, and agent content in exception telemetry",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-154"
       }
     ],
     "crossrefs": {
@@ -18928,6 +18994,12 @@ window.CROSSWALK_DATA = [
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-136"
+      },
+      {
+        "name": "9router: config injection through the Hermes Agent settings endpoint ran a shell command after an LLM call",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-157"
       }
     ],
     "crossrefs": {
@@ -20179,6 +20251,12 @@ window.CROSSWALK_DATA = [
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-148"
+      },
+      {
+        "name": "9router: config injection through the Hermes Agent settings endpoint ran a shell command after an LLM call",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-157"
       }
     ],
     "crossrefs": {
@@ -32088,6 +32166,12 @@ window.CROSSWALK_DATA = [
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-108"
+      },
+      {
+        "name": "MLflow: serialized third-party scorer data could instantiate any allowlisted-module class with chosen arguments",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-158"
       }
     ],
     "crossrefs": {
@@ -38215,6 +38299,18 @@ window.CROSSWALK_DATA = [
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-106"
+      },
+      {
+        "name": "vLLM: seven request-handling flaws let one API caller crash the engine, exhaust it, or overwrite another request's cached embedding",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-149"
+      },
+      {
+        "name": "vLLM: continuation turns dropped the caller's cache salt, and a reused media hash crashed the receiver cache",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-150"
       }
     ],
     "crossrefs": {
@@ -41404,6 +41500,18 @@ window.CROSSWALK_DATA = [
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2025,
         "incident_id": "INC-072"
+      },
+      {
+        "name": "Pydantic AI: a web page could drive a loopback-hosted agent to run tools, and telemetry exported retry prompts",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-152"
+      },
+      {
+        "name": "Pydantic AI: two SSRF blocklist bypasses, quadratic processing of fetched pages, and agent content in exception telemetry",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-154"
       }
     ],
     "crossrefs": {
