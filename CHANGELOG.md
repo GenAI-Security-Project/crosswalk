@@ -36,6 +36,15 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Changed
 
+- **Back-references between mapping files are generated** (T-FIX02). `scripts/validate.js` warned about 82
+  one-way links (file A links file B, B never links A). `scripts/backrefs.js` now writes the missing direction
+  into a `<!-- backrefs:start -->` … `<!-- backrefs:end -->` block headed "Referenced by", placed just before
+  each file's `## Changelog`: one relative link per referring file, sorted by path. It reads authored links only
+  (links inside existing blocks are ignored), so it is a fixed point, and it removes a block that is no longer
+  needed. 48 mapping files gained a block. `scripts/generate.js` runs it, and CI's generator-reproducibility job
+  now diffs the four mapping folders as well. The validator and the generator share one link graph,
+  `scripts/crossrefs.js`; the validator also now reads a folder README's links, so `AST_MAESTRO.md` →
+  `ast-top10/README.md` (which links back) is no longer reported. One-way warnings: 82 → 0; total 92 → 10.
 - **The weekly watcher files digests instead of one issue per item.** `scripts/watch.js` now opens one checklist
   issue per run for arXiv and one for NVD, titled `[watch-digest] …`. Research items are grouped by their likely
   `docs/TRIAGE_RULES.md` route: possible benchmarks (rule 3) first, then literature (rule 1). OWASP repo commits and
