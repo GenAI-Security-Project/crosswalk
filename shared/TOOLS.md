@@ -8,7 +8,7 @@
 
 # Open-Source Security Tools for GenAI Systems
 
-> **57+ tools** across 13 categories — covering adversarial testing, prompt injection detection, data
+> **58+ tools** across 13 categories — covering adversarial testing, prompt injection detection, data
 > validation, agent security, observability, guardrails, OT/ICS, and more.
 
 A curated, practitioner-oriented catalogue of open-source and freely available tools for securing LLM
@@ -24,7 +24,7 @@ welcome via PR — see [CONTRIBUTING.md](../CONTRIBUTING.md) .
 
 | Category | Tools | Primary risks addressed |
 |----------|-------|------------------------|
-| [Adversarial Testing & Red Teaming](#adversarial-testing-and-red-teaming) | 12 | LLM01, ASI01, LLM09 |
+| [Adversarial Testing & Red Teaming](#adversarial-testing-and-red-teaming) | 13 | LLM01, ASI01, LLM09 |
 | [Prompt Injection Detection](#prompt-injection-detection) | 4 | LLM01, LLM08, ASI01 |
 | [Output Scanning & Redaction](#output-scanning-and-redaction) | 4 | LLM02, DSGAI01, DSGAI09 |
 | [Data Validation & Ingestion](#data-validation-and-ingestion-security) | 6 | LLM05, DSGAI05, DSGAI17 |
@@ -59,6 +59,7 @@ patterns before production deployment.
 | Agentic Security | Open-source scanner for agentic AI systems — tests for goal hijacking, tool abuse, lateral movement, and cascade failures in multi-agent deployments | ASI01, ASI02, ASI07, ASI08 | <https://github.com/msoedov/agentic_security> |
 | OpenAI Evals | OpenAI evaluation framework — build and run custom eval suites for LLMs with structured datasets, completion functions, and metric reporting | LLM01, LLM07, LLM03 | <https://github.com/openai/evals> |
 | PurpleLlama CyberSecEval | Meta benchmark suite for LLM cybersecurity evaluation — covers insecure code generation, prompt injection, and cyberattack assistance detection | LLM01, LLM10, LLM08 | <https://github.com/meta-llama/PurpleLlama> |
+| Guardana | CLI for direct and indirect prompt-injection checks, agent probes and saved-run regression checks; beta | LLM01, ASI01 | <https://github.com/guardana/guardana> |
 
 ---
 
@@ -290,6 +291,14 @@ least one OWASP source list entry in this repo, not a duplicate.
 - OWASP GenAI Data Security Risks 2026:
   <https://genai.owasp.org/resource/owasp-genai-data-security-risks-mitigations-2026/>
 - OWASP NHI Top 10: <https://owasp.org/www-project-non-human-identities-top-10/>
+
+---
+
+## Changelog
+
+| Date | Change | Author |
+|---|---|---|
+| 2026-10-12 | Added Guardana for LLM01 and ASI01 testing, with references in the MITRE ATLAS mappings | Konrad Karauda (Guardana maintainer, COI disclosed) |
 
 ---
 

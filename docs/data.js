@@ -1141,6 +1141,11 @@ window.CROSSWALK_DATA = [
         "url": "https://github.com/protectai/rebuff"
       },
       {
+        "name": "Guardana",
+        "type": "open-source",
+        "url": "https://github.com/guardana/guardana"
+      },
+      {
         "name": "NIST AI RMF Playbook",
         "type": "open-source",
         "url": "https://airc.nist.gov/AI_RMF_Knowledge_Base/Playbook"
@@ -13980,6 +13985,11 @@ window.CROSSWALK_DATA = [
         "name": "Invariant Analyzer",
         "type": "open-source",
         "url": "https://github.com/invariantlabs-ai/invariant"
+      },
+      {
+        "name": "Guardana",
+        "type": "open-source",
+        "url": "https://github.com/guardana/guardana"
       },
       {
         "name": "Claroty",
