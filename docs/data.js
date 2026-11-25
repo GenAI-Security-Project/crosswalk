@@ -7752,6 +7752,12 @@ window.CROSSWALK_DATA = [
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-156"
+      },
+      {
+        "name": "JeecgBoot AIRAG: any authenticated user could run LLM evaluation experiments on other users' prompts and datasets",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-160"
       }
     ],
     "crossrefs": {
@@ -12366,6 +12372,12 @@ window.CROSSWALK_DATA = [
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-148"
+      },
+      {
+        "name": "ToFu: fuzzing 273 open-source MCP servers found verified CWE-class bugs in 343 tools across 118 of them",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-159"
       }
     ],
     "crossrefs": {
@@ -13083,6 +13095,12 @@ window.CROSSWALK_DATA = [
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-127"
+      },
+      {
+        "name": "KnotScryer: 612 insecure compositions of individually clean skills found among 13,598 ClawHub skills",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-161"
       }
     ],
     "crossrefs": {},
@@ -13276,6 +13294,12 @@ window.CROSSWALK_DATA = [
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-129"
+      },
+      {
+        "name": "KnotScryer: 612 insecure compositions of individually clean skills found among 13,598 ClawHub skills",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-161"
       }
     ],
     "crossrefs": {},
@@ -16263,6 +16287,12 @@ window.CROSSWALK_DATA = [
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-154"
+      },
+      {
+        "name": "ToFu: fuzzing 273 open-source MCP servers found verified CWE-class bugs in 343 tools across 118 of them",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-159"
       }
     ],
     "crossrefs": {
@@ -32172,6 +32202,12 @@ window.CROSSWALK_DATA = [
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-158"
+      },
+      {
+        "name": "JeecgBoot AIRAG: any authenticated user could run LLM evaluation experiments on other users' prompts and datasets",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-160"
       }
     ],
     "crossrefs": {

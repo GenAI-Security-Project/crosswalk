@@ -1068,6 +1068,12 @@
       "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2026,
       "incident_id": "INC-158"
+    },
+    {
+      "name": "JeecgBoot AIRAG: any authenticated user could run LLM evaluation experiments on other users' prompts and datasets",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-160"
     }
   ],
   "crossrefs": {

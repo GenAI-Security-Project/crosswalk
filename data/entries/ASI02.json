@@ -1407,6 +1407,12 @@
       "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2026,
       "incident_id": "INC-154"
+    },
+    {
+      "name": "ToFu: fuzzing 273 open-source MCP servers found verified CWE-class bugs in 343 tools across 118 of them",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-159"
     }
   ],
   "crossrefs": {
