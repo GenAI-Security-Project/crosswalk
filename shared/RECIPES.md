@@ -1,7 +1,7 @@
 <!--
   OWASP GenAI Crosswalk — Shared Resources
   File        : RECIPES.md — Security Implementation Patterns for GenAI Systems
-  Version     : 2026-Q1
+  Version     : 2026-Q4
   Maintained by: OWASP GenAI Data Security Initiative — https://genai.owasp.org
   License     : CC BY-SA 4.0
 -->
@@ -1859,7 +1859,7 @@ instructions should be detected and redacted, authority spoofing
 phrases should generate warnings, and clean entries should pass
 through without modification.
 
-**Crosswalk:** ASI06 — DSGAI04 — LLM01 — MAESTRO L2 — NIST AI RMF MANAGE-2.4
+**Crosswalk:** ASI06 — DSGAI04 — LLM01 — MAESTRO L2 — NIST AI RMF MG-2.4
 
 ---
 
@@ -2050,7 +2050,7 @@ Test credential issuance, expiry after TTL, use counting with
 exhaustion at max_uses, automatic rotation on re-issue, and verify
 the audit trail contains all lifecycle events.
 
-**Crosswalk:** ASI02 — ASI03 — OWASP NHI Top 10 — ISO 27001 A.9.2 — FedRAMP IA-4
+**Crosswalk:** ASI02 — ASI03 — OWASP NHI Top 10 — ISO 27001:2013 A.9.2 (DRAFT — SME review required, #323) — FedRAMP IA-4
 
 ---
 
@@ -2142,7 +2142,7 @@ Test allowed tool calls (pass), forbidden tool name (block), argument
 pattern violation (block), and rate limit exhaustion (block after
 max_calls_per_session invocations).
 
-**Crosswalk:** ASI01 — LLM10 — ASI02 — NIST AI RMF MANAGE-4.1 — EU AI Act Art. 14
+**Crosswalk:** ASI01 — LLM10 — ASI02 — NIST AI RMF MG-4.1 — EU AI Act Art. 14
 
 ---
 
@@ -2270,7 +2270,7 @@ one record's file_hash and verify that chain verification detects the
 break. Confirm audit_report accurately reflects consent breakdown and
 PII flags.
 
-**Crosswalk:** DSGAI05 — DSGAI06 — LLM04 — ISO 42001 A.7.4 — NIST AI RMF MAP-2.3
+**Crosswalk:** DSGAI05 — DSGAI06 — LLM04 — ISO 42001 A.7.4 — NIST AI RMF MP-2.3
 
 ---
 
@@ -2449,7 +2449,7 @@ membership inference attack against both. The DP-trained model should
 show significantly lower attack success rate, confirming the privacy
 guarantee holds in practice.
 
-**Crosswalk:** DSGAI10 — DSGAI18 — DSGAI16 — GDPR Art. 25 (privacy by design) — NIST AI RMF MANAGE-3.2
+**Crosswalk:** DSGAI10 — DSGAI18 — DSGAI16 — GDPR Art. 25 (privacy by design) — NIST AI RMF MG-3.2
 
 ---
 
@@ -2586,12 +2586,12 @@ contains complete records of all enforcement actions.
 
 | Recipe | Primary framework controls |
 |---|---|
-| R-01 | ISO 27001 A.8.3 — NIST AI RMF MS-2.5 — ASVS V4.1 |
-| R-02 | ISO 27001 A.8.26/A.8.28 — CIS Controls CIS 16 — ASVS V12 |
+| R-01 | ISO 27001 A.8.3 — NIST AI RMF MS-2.5 — ASVS 4.0.3 V4.1 (DRAFT — SME review required, #323) |
+| R-02 | ISO 27001 A.8.26/A.8.28 — CIS Controls CIS 16 — ASVS 4.0.3 V12 (DRAFT — SME review required, #323) |
 | R-03 | ISO 27001 A.8.11/A.8.12 — NIST AI RMF GV-1.6 |
 | R-04 | ISA/IEC 62443 SR 7.6 — NIST SP 800-82 |
 | R-05 | ISO 27001 A.8.15 — GDPR Art. 32 |
-| M-01 | ASVS V5.1 — CIS Controls CIS 16 — ISO 27001 A.8.28 |
+| M-01 | ASVS 4.0.3 V5.1 (DRAFT — SME review required, #323) — CIS Controls CIS 16 — ISO 27001 A.8.28 |
 | M-02 | ISO 27001 A.5.19/A.5.21 — NIST AI RMF MP-5.1 |
 | M-03 | OWASP NHI NHI-5/7/9 — ISO 27001 A.8.2 — AIUC-1 A/B007 |
 | M-04 | CIS Controls CIS 12 — ISA/IEC 62443 SR 7.6 |
@@ -2599,13 +2599,13 @@ contains complete records of all enforcement actions.
 | O-02 | ISA/IEC 62443 SR 3.7 — NIST AI RMF MS-2.5 |
 | O-03 | ISA/IEC 62443 SR 7.6/7.7 — NIST AI RMF MP-4.1 |
 | O-04 | EU AI Act Art. 14 — ISA/IEC 62443 SR 2.1 — NIST SP 800-82 |
-| A-01 | MAESTRO L2 — NIST AI RMF MANAGE-2.4 |
+| A-01 | MAESTRO L2 — NIST AI RMF MG-2.4 |
 | A-02 | MAESTRO L7 — ISA/IEC 62443 SR-3.1 |
-| A-03 | ISO 27001 A.9.2 — FedRAMP IA-4 — OWASP NHI Top 10 |
-| A-04 | NIST AI RMF MANAGE-4.1 — EU AI Act Art. 14 |
-| D-01 | ISO 42001 A.7.4 — NIST AI RMF MAP-2.3 |
+| A-03 | ISO 27001:2013 A.9.2 (DRAFT — SME review required, #323) — FedRAMP IA-4 — OWASP NHI Top 10 |
+| A-04 | NIST AI RMF MG-4.1 — EU AI Act Art. 14 |
+| D-01 | ISO 42001 A.7.4 — NIST AI RMF MP-2.3 |
 | D-02 | GDPR Art. 5(1)(c) — ISO 27001 A.8.11 |
-| D-03 | GDPR Art. 25 — NIST AI RMF MANAGE-3.2 |
+| D-03 | GDPR Art. 25 — NIST AI RMF MG-3.2 |
 | D-04 | GDPR Art. 5(1)(e) — DORA Art. 12 — SOC 2 CC7.2 |
 
 ---
@@ -2627,6 +2627,7 @@ contains complete records of all enforcement actions.
 
 | Date | Version | Change | Author |
 |---|---|---|---|
+| 2026-11-25 | 2026-Q4 | Appendix and Crosswalk lines (#323): NIST AI RMF `MANAGE-`/`MAP-` ids written in the registry form (`MG-`/`MP-`). ASVS V4.1, V12 and V5.1 and ISO 27001 A.9.2 now name the edition they were written against (ASVS 4.0.3, ISO/IEC 27001:2013) and are marked DRAFT pending SME review: under ASVS 5.0.0 those ASVS ids name different chapters, and A.9.2 does not exist in 27001:2022 | OWASP GenAI Data Security Initiative |
 | 2026-03-28 | 2026-Q1 | Add Part 4 (Agentic AI, A-01 to A-04) and Part 5 (Data Pipelines, D-01 to D-04) — 21 recipes total | OWASP GenAI Data Security Initiative |
 | 2026-03-24 | 2026-Q1 | Initial release — 13 recipes across RAG, MCP, and OT patterns | OWASP GenAI Data Security Initiative |
 
