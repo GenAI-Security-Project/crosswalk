@@ -1139,6 +1139,18 @@
       "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2026,
       "incident_id": "INC-147"
+    },
+    {
+      "name": "MLflow: scorer deserialization imported caller-placed modules, prompt versions read server files, and CrewAI autologging put provider API keys in traces",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-163"
+    },
+    {
+      "name": "LLMKube: Model.spec.source accepted any absolute path, so a namespace user could copy controller or node secrets into model storage",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-166"
     }
   ],
   "crossrefs": {

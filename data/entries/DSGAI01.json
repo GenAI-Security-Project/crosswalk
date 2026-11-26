@@ -1267,6 +1267,24 @@
       "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2026,
       "incident_id": "INC-145"
+    },
+    {
+      "name": "MLflow: scorer deserialization imported caller-placed modules, prompt versions read server files, and CrewAI autologging put provider API keys in traces",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-163"
+    },
+    {
+      "name": "LMDeploy: remote media URL check and HTTP client parsed backslashes differently, so a URL passed the SSRF guard and reached internal hosts",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-164"
+    },
+    {
+      "name": "yt-mcp: add_attachment read any file the caller named, so an LLM steered by indirect prompt injection could exfiltrate secrets into a YouTrack issue",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-165"
     }
   ],
   "crossrefs": {

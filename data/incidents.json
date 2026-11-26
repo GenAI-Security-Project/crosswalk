@@ -6466,6 +6466,11 @@
           "title": "Replit introduces safer vibe coding with databases",
           "url": "https://blog.replit.com/introducing-a-safer-way-to-vibe-code-with-replit-databases",
           "type": "vendor"
+        },
+        {
+          "title": "Replication of Agentic Security Events: Audit and Investigation (ROGUE-AI) (arXiv:2611.26553) — secondary replication study",
+          "url": "https://arxiv.org/abs/2611.26553",
+          "type": "research"
         }
       ],
       "tags": [
@@ -10690,6 +10695,537 @@
         "draft-evidence",
         "draft-mapping",
         "draft-severity"
+      ]
+    },
+    {
+      "id": "INC-162",
+      "title": "vLLM: seven flaws fixed in 0.32.0 let API callers crash or exhaust the engine, reach pickle.loads() through a forged shared-memory handle, or hand image bytes to any Pillow decoder",
+      "date": "2026-10",
+      "year": 2026,
+      "category": "research-demonstrated",
+      "incident_class": "tooling-cve",
+      "severity": "High",
+      "description": "Seven advisories published by the vLLM maintainers on 2026-10-20, all fixed in 0.32.0 (released 2026-10-18): CVE-2026-115911 to CVE-2026-115916 and CVE-2026-115918. Five let a request take down or exhaust the serving engine: a request or model-repository chat template is \"compiled and rendered by tokenizer.apply_chat_template() without a wall-clock timeout, output-size limit, or iteration bound\" (115911); on /v1/responses a caller's chat_template_kwargs template is kept \"without enforcing trust_request_chat_template\" (115918; the same fix as 115911); the Phi-4 multimodal audio encoder's \"quadratic GPU-memory use can cause an out-of-memory condition and terminate EngineCore for all users\" (115913); a DeepSeek-OCR image \"whose normalized pixels sum to zero\" triggers \"a fatal assertion that shuts down the engine for all users\" (115914); and an off-by-one lets \"a pre-tokenized prompt ID equal to the vocabulary size\" pass validation and cause \"a CUDA device-side assertion\" (115916). One reaches code execution: in scale-out deployments with shared-memory multimodal caching enabled, workers trust forged \"shared-memory address and monotonic_id values\" and \"pass attacker-selected bytes to pickle.loads(), allowing arbitrary Python execution even when insecure serialization is disabled\" (115912). One takes its impact from a dependency (115915): ImageMediaIO \"passes attacker-controlled image bytes to Pillow through Image.open(BytesIO(data)) without restricting decoder selection\", so an EPS payload can reach host components. \"A host with Ghostscript affected by CVE-2024-29510 can execute commands with the vLLM process's privileges, while environments using Pillow 12.0.0 through 12.2.0 can trigger CVE-2026-59203 and exhaust media-loading workers. Deployments without the applicable vulnerable dependency are not affected by that corresponding impact.\" The advisory notes that vLLM's requirements declare Pillow but not Ghostscript, which comes from the host or deployment image, that no new Ghostscript flaw is claimed, and that the HTTP request path \"is source-traced but was not exercised end to end\". Provenance: the CNA is GitHub, acting on the maintainers' advisories; the CNA scores run from 6.5 to 8.1 and NVD has analysed all seven. NVD's own score is higher for two: 8.8 against the CNA's 7.5 for CVE-2026-115912 (the advisory text itself states 8.8), and 9.8 (Critical) against the CNA's 8.1 for CVE-2026-115915; the severity here is the CNA's highest, 8.1 (High). The advisories' package version ranges are narrower than the CVE text for several of the seven (for example 0.30.0 only for CVE-2026-115914 and CVE-2026-115915); this record follows the CVE text.",
+      "owasp_entries": [
+        "LLM06",
+        "LLM04"
+      ],
+      "mapping_status": "draft",
+      "maestro_layers": [
+        {
+          "layer": "L4",
+          "label": "Deployment & Infrastructure",
+          "role": "origin",
+          "notes": "Chat templates, multimodal inputs, prompt token ids and shared-memory cache handles from callers reach the engine without bounds or validation, and image bytes select any Pillow decoder on the host"
+        },
+        {
+          "layer": "L4",
+          "label": "Deployment & Infrastructure",
+          "role": "impact",
+          "notes": "EngineCore terminates or exhausts memory for every tenant; a forged cache handle, or a vulnerable host Ghostscript, runs code as the vLLM process"
+        }
+      ],
+      "attack_vector": "API requests to a vLLM server carrying an unbounded chat template, a long Phi-4 audio clip, a zero-sum DeepSeek-OCR image, an out-of-vocabulary prompt token id, a forged shared-memory multimodal handle, or EPS bytes labelled as an image",
+      "affected": "vLLM before 0.32.0 per the CVE records; CVE-2026-115911 from 0.19.0, CVE-2026-115914 from 0.11.1, CVE-2026-115918 from 0.16.0. CVE-2026-115912 needs shared-memory multimodal caching in a scale-out deployment; CVE-2026-115915's impacts need a host Ghostscript affected by CVE-2024-29510 or Pillow 12.0.0 to 12.2.0",
+      "impact": "Denial of service of the inference engine for all users, and arbitrary code execution with the vLLM process's privileges through the shared-memory cache or a vulnerable host Ghostscript",
+      "mitigations": [
+        "Upgrade to vLLM 0.32.0 or later",
+        "Do not expose a vLLM server directly to untrusted callers; put authentication and request validation in front of it",
+        "Configure a server-side chat template, and keep Ghostscript out of serving images or patch it, along with Pillow"
+      ],
+      "external_refs": [
+        {
+          "source": "CVE",
+          "id": "CVE-2026-115911",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115911"
+        },
+        {
+          "source": "GHSA",
+          "id": "GHSA-542m-9234-8gvf",
+          "url": "https://github.com/vllm-project/vllm/security/advisories/GHSA-542m-9234-8gvf"
+        },
+        {
+          "source": "CVE",
+          "id": "CVE-2026-115912",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115912"
+        },
+        {
+          "source": "GHSA",
+          "id": "GHSA-6757-hggm-hp2w",
+          "url": "https://github.com/vllm-project/vllm/security/advisories/GHSA-6757-hggm-hp2w"
+        },
+        {
+          "source": "CVE",
+          "id": "CVE-2026-115913",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115913"
+        },
+        {
+          "source": "GHSA",
+          "id": "GHSA-8397-8qf6-f2gm",
+          "url": "https://github.com/vllm-project/vllm/security/advisories/GHSA-8397-8qf6-f2gm"
+        },
+        {
+          "source": "CVE",
+          "id": "CVE-2026-115914",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115914"
+        },
+        {
+          "source": "GHSA",
+          "id": "GHSA-gq5q-89c7-vhvx",
+          "url": "https://github.com/vllm-project/vllm/security/advisories/GHSA-gq5q-89c7-vhvx"
+        },
+        {
+          "source": "CVE",
+          "id": "CVE-2026-115915",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115915"
+        },
+        {
+          "source": "GHSA",
+          "id": "GHSA-h3rc-j82p-2c3h",
+          "url": "https://github.com/vllm-project/vllm/security/advisories/GHSA-h3rc-j82p-2c3h"
+        },
+        {
+          "source": "CVE",
+          "id": "CVE-2026-115916",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115916"
+        },
+        {
+          "source": "GHSA",
+          "id": "GHSA-q97c-p368-75c4",
+          "url": "https://github.com/vllm-project/vllm/security/advisories/GHSA-q97c-p368-75c4"
+        },
+        {
+          "source": "CVE",
+          "id": "CVE-2026-115918",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115918"
+        },
+        {
+          "source": "GHSA",
+          "id": "GHSA-x567-49g5-p4cf",
+          "url": "https://github.com/vllm-project/vllm/security/advisories/GHSA-x567-49g5-p4cf"
+        }
+      ],
+      "references": [
+        {
+          "title": "vLLM advisory GHSA-542m-9234-8gvf (CVE-2026-115911)",
+          "url": "https://github.com/vllm-project/vllm/security/advisories/GHSA-542m-9234-8gvf",
+          "type": "advisory"
+        },
+        {
+          "title": "NVD — CVE-2026-115911",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115911",
+          "type": "advisory"
+        },
+        {
+          "title": "vLLM advisory GHSA-6757-hggm-hp2w (CVE-2026-115912)",
+          "url": "https://github.com/vllm-project/vllm/security/advisories/GHSA-6757-hggm-hp2w",
+          "type": "advisory"
+        },
+        {
+          "title": "NVD — CVE-2026-115912",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115912",
+          "type": "advisory"
+        },
+        {
+          "title": "vLLM advisory GHSA-8397-8qf6-f2gm (CVE-2026-115913)",
+          "url": "https://github.com/vllm-project/vllm/security/advisories/GHSA-8397-8qf6-f2gm",
+          "type": "advisory"
+        },
+        {
+          "title": "NVD — CVE-2026-115913",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115913",
+          "type": "advisory"
+        },
+        {
+          "title": "vLLM advisory GHSA-gq5q-89c7-vhvx (CVE-2026-115914)",
+          "url": "https://github.com/vllm-project/vllm/security/advisories/GHSA-gq5q-89c7-vhvx",
+          "type": "advisory"
+        },
+        {
+          "title": "NVD — CVE-2026-115914",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115914",
+          "type": "advisory"
+        },
+        {
+          "title": "vLLM advisory GHSA-h3rc-j82p-2c3h (CVE-2026-115915)",
+          "url": "https://github.com/vllm-project/vllm/security/advisories/GHSA-h3rc-j82p-2c3h",
+          "type": "advisory"
+        },
+        {
+          "title": "NVD — CVE-2026-115915",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115915",
+          "type": "advisory"
+        },
+        {
+          "title": "vLLM advisory GHSA-q97c-p368-75c4 (CVE-2026-115916)",
+          "url": "https://github.com/vllm-project/vllm/security/advisories/GHSA-q97c-p368-75c4",
+          "type": "advisory"
+        },
+        {
+          "title": "NVD — CVE-2026-115916",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115916",
+          "type": "advisory"
+        },
+        {
+          "title": "vLLM advisory GHSA-x567-49g5-p4cf (CVE-2026-115918)",
+          "url": "https://github.com/vllm-project/vllm/security/advisories/GHSA-x567-49g5-p4cf",
+          "type": "advisory"
+        },
+        {
+          "title": "NVD — CVE-2026-115918",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115918",
+          "type": "advisory"
+        }
+      ],
+      "tags": [
+        "cve",
+        "ghsa",
+        "tooling-cve",
+        "denial-of-service",
+        "deserialization",
+        "code-execution",
+        "multimodal",
+        "inference",
+        "vllm",
+        "draft-mapping"
+      ]
+    },
+    {
+      "id": "INC-163",
+      "title": "MLflow: scorer deserialization imported caller-placed modules, prompt versions read server files, and CrewAI autologging put provider API keys in traces",
+      "date": "2026-10",
+      "year": 2026,
+      "category": "research-demonstrated",
+      "incident_class": "tooling-cve",
+      "severity": "Critical",
+      "description": "Three advisories published by the MLflow maintainers on 2026-10-09 and 2026-10-13, all fixed in 3.17.0 (released 2026-10-07): CVE-2026-116690 to CVE-2026-116692. They are a separate batch from INC-158 (CVE-2026-115886, advisory of 2026-10-22). GHSA-26p8-2jq9-3vq9 (116692, 2026-10-09) is in the same third-party scorer deserialization as INC-158: it \"accepts request-selected descendants of THIRD_PARTY_SCORER_ALLOWED_MODULES rather than requiring an exact allowed module\", so a caller can \"use MLflow artifact endpoints to place a Python module beneath a writable allowed package and submit its module and class through /ajax-api/3.0/mlflow/scorer/invoke\"; \"Authentication-disabled deployments permit this code execution without credentials\", and \"the allowed scorer package must be writable by the server process.\" GHSA-m65p-9j7q-6w33 (116690, 2026-10-13): the prompt branch in _create_model_version() \"accepts schemeless relative sources because path validation runs only when a source has a URL scheme\", letting a caller \"read files accessible to the MLflow server process\"; the advisory traces it to the fix for CVE-2026-2614 in 3.10.0, and on basic-auth servers a low-privilege account can \"read the authentication database, including the admin password hash\". GHSA-j7qq-vr8c-xvw3 (116691, 2026-10-13): mlflow.crewai.autolog() \"records CrewAI Agent objects without consistently sanitizing nested credential-bearing values\", so \"Applications can therefore send plaintext provider credentials to the MLflow trace backend or a configured OTLP destination, where trace readers can obtain them.\" Provenance: the CNA is GitHub, acting on the maintainers' advisories; the CNA scores are 9.8 (Critical) for 116692, 7.5 for 116690 and 6.5 for 116691, and NVD lists all three as Awaiting Analysis with no score of its own. The severity here is the CNA's highest.",
+      "owasp_entries": [
+        "LLM04",
+        "DSGAI05",
+        "DSGAI01",
+        "DSGAI14",
+        "DSGAI02"
+      ],
+      "mapping_status": "draft",
+      "maestro_layers": [
+        {
+          "layer": "L5",
+          "label": "Evaluation & Observability",
+          "role": "origin",
+          "notes": "Evaluation scorers are rebuilt by importing any module beneath an allowed package, and CrewAI autologging serialises credential-bearing agent fields into trace spans"
+        },
+        {
+          "layer": "L4",
+          "label": "Deployment & Infrastructure",
+          "role": "origin",
+          "notes": "The model registry stores a schemeless local path as a prompt version's artifact location and serves files from it"
+        },
+        {
+          "layer": "L4",
+          "label": "Deployment & Infrastructure",
+          "role": "impact",
+          "notes": "Code runs as the MLflow server process, and files readable by that process are returned to the caller"
+        }
+      ],
+      "attack_vector": "HTTP calls to an MLflow server that upload a Python module as a run artifact and invoke it as a scorer, or create a prompt model version whose source is a schemeless local path; separately, CrewAI autologging sends provider API keys to whoever can read the traces",
+      "affected": "MLflow before 3.17.0: CVE-2026-116692 from 3.12.0rc0, CVE-2026-116690 from 3.10.0, CVE-2026-116691 from 2.19.0 when mlflow.crewai.autolog() is used",
+      "impact": "Unauthenticated code execution on default no-auth servers, arbitrary file read including the basic-auth database, and plaintext LLM provider API keys in trace telemetry",
+      "mitigations": [
+        "Upgrade to MLflow 3.17.0 or later",
+        "Do not run an MLflow server without authentication where untrusted callers can reach it, and run it without write access to its installed packages",
+        "Rotate LLM provider keys used by applications that enabled CrewAI autologging, and restrict who can read traces"
+      ],
+      "external_refs": [
+        {
+          "source": "CVE",
+          "id": "CVE-2026-116690",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116690"
+        },
+        {
+          "source": "GHSA",
+          "id": "GHSA-m65p-9j7q-6w33",
+          "url": "https://github.com/mlflow/mlflow/security/advisories/GHSA-m65p-9j7q-6w33"
+        },
+        {
+          "source": "CVE",
+          "id": "CVE-2026-116691",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116691"
+        },
+        {
+          "source": "GHSA",
+          "id": "GHSA-j7qq-vr8c-xvw3",
+          "url": "https://github.com/mlflow/mlflow/security/advisories/GHSA-j7qq-vr8c-xvw3"
+        },
+        {
+          "source": "CVE",
+          "id": "CVE-2026-116692",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116692"
+        },
+        {
+          "source": "GHSA",
+          "id": "GHSA-26p8-2jq9-3vq9",
+          "url": "https://github.com/mlflow/mlflow/security/advisories/GHSA-26p8-2jq9-3vq9"
+        }
+      ],
+      "references": [
+        {
+          "title": "MLflow advisory GHSA-m65p-9j7q-6w33 (CVE-2026-116690)",
+          "url": "https://github.com/mlflow/mlflow/security/advisories/GHSA-m65p-9j7q-6w33",
+          "type": "advisory"
+        },
+        {
+          "title": "NVD — CVE-2026-116690",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116690",
+          "type": "advisory"
+        },
+        {
+          "title": "MLflow advisory GHSA-j7qq-vr8c-xvw3 (CVE-2026-116691)",
+          "url": "https://github.com/mlflow/mlflow/security/advisories/GHSA-j7qq-vr8c-xvw3",
+          "type": "advisory"
+        },
+        {
+          "title": "NVD — CVE-2026-116691",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116691",
+          "type": "advisory"
+        },
+        {
+          "title": "MLflow advisory GHSA-26p8-2jq9-3vq9 (CVE-2026-116692)",
+          "url": "https://github.com/mlflow/mlflow/security/advisories/GHSA-26p8-2jq9-3vq9",
+          "type": "advisory"
+        },
+        {
+          "title": "NVD — CVE-2026-116692",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116692",
+          "type": "advisory"
+        }
+      ],
+      "tags": [
+        "cve",
+        "ghsa",
+        "tooling-cve",
+        "evaluation",
+        "code-execution",
+        "path-traversal",
+        "telemetry-leakage",
+        "credential-exposure",
+        "mlflow",
+        "draft-mapping"
+      ]
+    },
+    {
+      "id": "INC-164",
+      "title": "LMDeploy: remote media URL check and HTTP client parsed backslashes differently, so a URL passed the SSRF guard and reached internal hosts",
+      "date": "2026-09",
+      "year": 2026,
+      "category": "research-demonstrated",
+      "incident_class": "tooling-cve",
+      "severity": "High",
+      "description": "GHSA-39wr-7q6h-cf68 / CVE-2026-123818, published by the LMDeploy maintainers on 2026-09-16 (the same day as the three advisories recorded as INC-138, INC-139 and INC-140) and fixed in 0.15.0 (released 2026-07-31): \"_is_safe_url validates remote media URLs with urlparse while requests.Session().get interprets backslashes differently when sending the request. An attacker can provide a URL whose validation hostname appears globally routable but whose request destination resolves to an internal host, bypassing non-global address checks.\" The advisory's example is http://127.0.0.1:6666\\@1.1.1.1, which urlparse() reads as host 1.1.1.1 and requests sends to 127.0.0.1. Applications that accept attacker-controlled remote media URLs \"can therefore be induced to access internal HTTP services and expose data available from those services.\" Provenance: the CNA is GitHub, acting on the maintainers' advisory; the CVSS 3.1 score of 7.5 (High) is that CNA's score, carried by NVD as a secondary metric, and NVD lists the record as Deferred with no score of its own. The CVE was published on 2026-11-09, almost two months after the advisory. The advisory lists CWE-436 and CWE-918; NVD lists CWE-918.",
+      "owasp_entries": [
+        "DSGAI01"
+      ],
+      "mapping_status": "draft",
+      "maestro_layers": [
+        {
+          "layer": "L4",
+          "label": "Deployment & Infrastructure",
+          "role": "origin",
+          "notes": "The inference server's remote-media fetcher validates a URL with one parser and requests it with another"
+        },
+        {
+          "layer": "L4",
+          "label": "Deployment & Infrastructure",
+          "role": "impact",
+          "notes": "Internal HTTP services reachable from the serving host answer the attacker's request"
+        }
+      ],
+      "attack_vector": "A request supplies a remote media URL such as http://127.0.0.1:6666\\@1.1.1.1, which _is_safe_url resolves to a public host while requests connects to the internal one",
+      "affected": "LMDeploy 0.12.3 up to but not including 0.15.0",
+      "impact": "Server-side requests to internal HTTP services and exposure of the data they return",
+      "mitigations": [
+        "Upgrade to LMDeploy 0.15.0 or later",
+        "Validate a URL with the same parser that sends the request, and re-check the address actually connected to",
+        "Do not accept remote media URLs from untrusted callers, or fetch them through an egress proxy that blocks internal ranges"
+      ],
+      "external_refs": [
+        {
+          "source": "CVE",
+          "id": "CVE-2026-123818",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123818"
+        },
+        {
+          "source": "GHSA",
+          "id": "GHSA-39wr-7q6h-cf68",
+          "url": "https://github.com/InternLM/lmdeploy/security/advisories/GHSA-39wr-7q6h-cf68"
+        }
+      ],
+      "references": [
+        {
+          "title": "LMDeploy advisory GHSA-39wr-7q6h-cf68 (CVE-2026-123818)",
+          "url": "https://github.com/InternLM/lmdeploy/security/advisories/GHSA-39wr-7q6h-cf68",
+          "type": "advisory"
+        },
+        {
+          "title": "NVD — CVE-2026-123818",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123818",
+          "type": "advisory"
+        }
+      ],
+      "tags": [
+        "cve",
+        "ghsa",
+        "tooling-cve",
+        "ssrf",
+        "parser-differential",
+        "multimodal",
+        "inference",
+        "lmdeploy",
+        "draft-mapping"
+      ]
+    },
+    {
+      "id": "INC-165",
+      "title": "yt-mcp: add_attachment read any file the caller named, so an LLM steered by indirect prompt injection could exfiltrate secrets into a YouTrack issue",
+      "date": "2026-07",
+      "year": 2026,
+      "category": "research-demonstrated",
+      "incident_class": "tooling-cve",
+      "severity": "High",
+      "description": "GHSA-99mq-fjjc-6v9j / CVE-2026-75612, published by the yt-mcp maintainer on 2026-07-09 and fixed in 1.18.1 (released 2026-07-10). yt-mcp is \"a YouTrack MCP server for Claude Code\". Its add_attachment tool \"accepts a caller-controlled file_path, checks only that the file exists, reads it without directory confinement, and uploads the bytes to a YouTrack issue. A compromised MCP client or an LLM steered by indirect prompt injection can read any file accessible to the server process and exfiltrate secrets through an issue the caller can access.\" The advisory says this \"collapses private-data read and an external egress channel into a single tool.\" The same release fixes a lower-severity traversal: get_project_health interpolates \"a caller-controlled project value into snapshot filenames, allowing parent-directory traversal to write JSON files outside the snapshots directory.\" Provenance: the CNA is GitHub, acting on the maintainer's advisory; the CVSS 3.1 score of 7.5 (High) is that CNA's score, carried by NVD as a secondary metric, and NVD lists the record as Received with no score of its own. The advisory gives 7.5 for the SSE / streamable-HTTP transport and \"approximately 6.2 (`AV:L`) for the default stdio-local deployment\"; the severity here is the CNA's 7.5. The CVE was published on 2026-11-18, four months after the advisory, and the advisory is not in GitHub's global advisory database.",
+      "owasp_entries": [
+        "LLM01",
+        "ASI02",
+        "DSGAI01"
+      ],
+      "mapping_status": "draft",
+      "maestro_layers": [
+        {
+          "layer": "L3",
+          "label": "Agent Frameworks",
+          "role": "origin",
+          "notes": "An MCP tool reads any path given in model-controlled arguments, with only an existence check"
+        },
+        {
+          "layer": "L6",
+          "label": "Security & Compliance",
+          "role": "impact",
+          "notes": "Secrets readable by the server process leave through a YouTrack issue the caller can read"
+        }
+      ],
+      "attack_vector": "Indirect prompt injection, or a compromised MCP client, has the model call add_attachment with a file_path pointing at a secret on the server host",
+      "affected": "yt-mcp 1.18.0 and earlier",
+      "impact": "Read and exfiltration of any file the MCP server process can access, such as SSH private keys and credential files, and JSON files written outside the snapshots directory",
+      "mitigations": [
+        "Upgrade to yt-mcp 1.18.1 or later, where the file_path mode is off unless YOUTRACK_ATTACHMENT_ROOTS allowlists directories",
+        "Until upgrading, use the content / content_base64 mode of add_attachment instead of file_path, as the advisory advises",
+        "Confine every file-path argument an MCP tool accepts to an allowed root, and do not pair private-data read with an egress channel in one tool"
+      ],
+      "external_refs": [
+        {
+          "source": "CVE",
+          "id": "CVE-2026-75612",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75612"
+        },
+        {
+          "source": "GHSA",
+          "id": "GHSA-99mq-fjjc-6v9j",
+          "url": "https://github.com/velesnitski/yt-mcp/security/advisories/GHSA-99mq-fjjc-6v9j"
+        }
+      ],
+      "references": [
+        {
+          "title": "yt-mcp advisory GHSA-99mq-fjjc-6v9j (CVE-2026-75612)",
+          "url": "https://github.com/velesnitski/yt-mcp/security/advisories/GHSA-99mq-fjjc-6v9j",
+          "type": "advisory"
+        },
+        {
+          "title": "NVD — CVE-2026-75612",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75612",
+          "type": "advisory"
+        }
+      ],
+      "tags": [
+        "cve",
+        "ghsa",
+        "tooling-cve",
+        "mcp",
+        "prompt-injection",
+        "path-traversal",
+        "data-exfiltration",
+        "yt-mcp",
+        "draft-mapping"
+      ]
+    },
+    {
+      "id": "INC-166",
+      "title": "LLMKube: Model.spec.source accepted any absolute path, so a namespace user could copy controller or node secrets into model storage",
+      "date": "2026-07",
+      "year": 2026,
+      "category": "research-demonstrated",
+      "incident_class": "tooling-cve",
+      "severity": "High",
+      "description": "GHSA-jw3m-8q7m-f35r / CVE-2026-68903, published by the LLMKube maintainers on 2026-07-08 and fixed in 0.9.0 (released 2026-07-05). LLMKube is \"a Kubernetes operator for self-hosted large language model inference across heterogeneous hardware\". Its ModelReconciler \"accepts arbitrary absolute paths and file:// URIs in Model.spec.source without restricting them to approved roots\": a namespace user who can create or update Model and InferenceService resources can make copyLocalModel \"open an attacker-selected file in the controller pod\" or make a HostPathVolumeSource \"mount an attacker-selected node file when modelCache.enabled is enabled, which is the default.\" \"The selected file is copied into model storage and can expose controller service-account credentials or other node secrets outside the attacker's namespace.\" The flaw is in how the operator fetches model artifacts, the same kind of flaw as INC-143. Provenance: the CNA is GitHub, acting on the maintainers' advisory; the CVSS 3.1 score of 7.7 (High, scope changed) is that CNA's score, carried by NVD as a secondary metric, and NVD lists the record as Received with no score of its own. The CVE was published on 2026-11-18, four months after the advisory. The advisory lists the affected range as 0.8.28 and earlier.",
+      "owasp_entries": [
+        "LLM04",
+        "DSGAI02"
+      ],
+      "mapping_status": "draft",
+      "maestro_layers": [
+        {
+          "layer": "L4",
+          "label": "Deployment & Infrastructure",
+          "role": "origin",
+          "notes": "The operator turns a user-supplied model source into a controller file open or a node hostPath mount without an allowed root"
+        },
+        {
+          "layer": "L4",
+          "label": "Deployment & Infrastructure",
+          "role": "impact",
+          "notes": "Controller service-account credentials or node secrets are copied into model storage outside the user's namespace"
+        }
+      ],
+      "attack_vector": "A namespace user creates a Model whose spec.source is an absolute path or file:// URI to a secret, such as the controller's service-account token, and an InferenceService that uses it",
+      "affected": "LLMKube before 0.9.0 (0.8.28 and earlier per the advisory); the node-file path needs model caching, which is enabled by default",
+      "impact": "Disclosure of the controller's Kubernetes service-account credentials or other node files across namespace boundaries",
+      "mitigations": [
+        "Upgrade to LLMKube 0.9.0 or later",
+        "Restrict who can create or update Model and InferenceService resources",
+        "Confine local model sources to approved roots, and disable model caching where it is not needed"
+      ],
+      "external_refs": [
+        {
+          "source": "CVE",
+          "id": "CVE-2026-68903",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68903"
+        },
+        {
+          "source": "GHSA",
+          "id": "GHSA-jw3m-8q7m-f35r",
+          "url": "https://github.com/defilantech/LLMKube/security/advisories/GHSA-jw3m-8q7m-f35r"
+        }
+      ],
+      "references": [
+        {
+          "title": "LLMKube advisory GHSA-jw3m-8q7m-f35r (CVE-2026-68903)",
+          "url": "https://github.com/defilantech/LLMKube/security/advisories/GHSA-jw3m-8q7m-f35r",
+          "type": "advisory"
+        },
+        {
+          "title": "NVD — CVE-2026-68903",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68903",
+          "type": "advisory"
+        }
+      ],
+      "tags": [
+        "cve",
+        "ghsa",
+        "tooling-cve",
+        "path-traversal",
+        "kubernetes",
+        "credential-exposure",
+        "inference",
+        "llmkube",
+        "draft-mapping"
       ]
     }
   ]
