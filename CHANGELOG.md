@@ -36,6 +36,27 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Changed
 
+- **MITRE ATLAS registry re-synced to the 2026.10 data release** (#99, follows #93 / #106 / #108).
+  `data/frameworks/mitre-atlas.json` is transcribed from `mitre-atlas/atlas-data` tag `v2026.10`
+  (`dist/v6/ATLAS-2026.10.yaml`, format 6.1.0, 221 techniques): `AML.T0010` is renamed *Supply Chain Compromise*,
+  8 descriptions follow the release (two were also garbled by the earlier YAML transcription), and the 5 ids
+  2026.10 no longer defines (`AML.T0024.000`, `.001`, `.002`, `AML.T0056`, `AML.T0057`) keep their entry with a
+  `source_status` naming the successor MITRE's release notes give, where they give one. No id is deleted or reused,
+  and no mapping row changed. `data/framework-sources.json` now records 2026.10 as current.
+- **The ATLAS row check is stricter and can fail.** `scripts/validate.js` now uses `scripts/atlas-rows.js`
+  (tested in `scripts/atlas-rows.test.mjs`): a row's name must equal the registry name for its id after
+  normalising only case, whitespace and typographic quotes. A non-DRAFT row with an id missing from the registry or
+  another name is an **error** (there are none). DRAFT rows (18) and non-DRAFT rows citing an id the release no
+  longer defines (11) are warnings; retargeting them is SME work (C4), see #93.
+- **Back-references between mapping files are generated** (T-FIX02). `scripts/validate.js` warned about 82
+  one-way links (file A links file B, B never links A). `scripts/backrefs.js` now writes the missing direction
+  into a `<!-- backrefs:start -->` … `<!-- backrefs:end -->` block headed "Referenced by", placed just before
+  each file's `## Changelog`: one relative link per referring file, sorted by path. It reads authored links only
+  (links inside existing blocks are ignored), so it is a fixed point, and it removes a block that is no longer
+  needed. 48 mapping files gained a block. `scripts/generate.js` runs it, and CI's generator-reproducibility job
+  now diffs the four mapping folders as well. The validator and the generator share one link graph,
+  `scripts/crossrefs.js`; the validator also now reads a folder README's links, so `AST_MAESTRO.md` →
+  `ast-top10/README.md` (which links back) is no longer reported. One-way warnings: 82 → 0; total 92 → 10.
 - **The weekly watcher files digests instead of one issue per item.** `scripts/watch.js` now opens one checklist
   issue per run for arXiv and one for NVD, titled `[watch-digest] …`. Research items are grouped by their likely
   `docs/TRIAGE_RULES.md` route: possible benchmarks (rule 3) first, then literature (rule 1). OWASP repo commits and

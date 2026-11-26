@@ -8,6 +8,9 @@
  *   node scripts/generate.js --id LLM01 # generate a single entry
  *
  * Output: data/entries/LLM01.json … AST10.json (51 files)
+ *
+ * A full run also refreshes the generated "Referenced by" blocks in the
+ * mapping Markdown files (scripts/backrefs.js).
  */
 
 'use strict';
@@ -16,6 +19,7 @@ const fs   = require('fs');
 const path = require('path');
 const { indexFailures, evidenceForMapping } = require('./evidence');
 const { resolveControlId } = require('./control-ids.js');
+const backrefs = require('./backrefs');
 
 const ROOT        = path.resolve(__dirname, '..');
 const ENTRIES_DIR = path.join(ROOT, 'data', 'entries');
@@ -1064,6 +1068,14 @@ function main() {
       writeIfChanged(incPath, incData);
       console.log(`Written docs/incidents.js (${incDb.incidents.length} incidents)`);
     }
+  }
+
+  // Back-reference blocks in the mapping Markdown (T-FIX02). They sit outside
+  // every entry section, so they never feed the parse above; they are written
+  // here so CI's generator-reproducibility diff catches a stale block.
+  if (!DRY_RUN && !SINGLE_ID) {
+    const changed = backrefs.run({ root: ROOT });
+    console.log(`Back-references: ${changed.length} mapping file(s) updated`);
   }
 
   console.log(`\n${'─'.repeat(50)}`);

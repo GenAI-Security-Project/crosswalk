@@ -1389,6 +1389,30 @@
       "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2026,
       "incident_id": "INC-147"
+    },
+    {
+      "name": "Pydantic AI: a web page could drive a loopback-hosted agent to run tools, and telemetry exported retry prompts",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-152"
+    },
+    {
+      "name": "Pydantic AI: no Host header check, so DNS rebinding let a website reach a loopback-hosted agent",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-153"
+    },
+    {
+      "name": "Pydantic AI: two SSRF blocklist bypasses, quadratic processing of fetched pages, and agent content in exception telemetry",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-154"
+    },
+    {
+      "name": "ToFu: fuzzing 273 open-source MCP servers found verified CWE-class bugs in 343 tools across 118 of them",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-159"
     }
   ],
   "crossrefs": {
