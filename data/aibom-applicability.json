@@ -39,7 +39,7 @@
     }
   ],
   "default_frameworks": {
-    "$comment": "The verified core ratified in #99 (2026-11-25), less MITRE ATLAS until its registry re-sync (#434) lands. A tool may let the user choose any framework in the index; these are shown when the user chooses none.",
-    "framework_ids": ["owasp-aisvs", "nist-ai-rmf", "nist-csf", "eu-ai-act"]
+    "$comment": "The verified core ratified in #99 (2026-11-25); MITRE ATLAS joined when its registry re-sync (#434) landed. A tool may let the user choose any framework in the index; these are shown when the user chooses none.",
+    "framework_ids": ["owasp-aisvs", "nist-ai-rmf", "nist-csf", "eu-ai-act", "mitre-atlas"]
   }
 }

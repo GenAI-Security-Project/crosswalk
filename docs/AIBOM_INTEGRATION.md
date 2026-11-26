@@ -48,8 +48,8 @@ A model page alone cannot show how a model is deployed, so every profile but
 `llm` is opt-in. The table is `DRAFT — SME review required` (security judgment,
 C4); a tool should show that status.
 
-`default_frameworks.framework_ids` is the verified core ratified in #99 (less
-MITRE ATLAS until its registry re-sync lands). Show these when the user picks no
+`default_frameworks.framework_ids` is the verified core ratified in #99, MITRE
+ATLAS included since its registry re-sync (#434). Show these when the user picks no
 framework; let the user pick any framework in the index.
 
 ## Reading the links: `aibom-index.json`

@@ -460,7 +460,7 @@
     {
       "id": "mitre-atlas",
       "name": "MITRE ATLAS",
-      "version": "2026.09",
+      "version": "2026.10",
       "license": "Public",
       "redistributable": true,
       "url": "https://atlas.mitre.org"
@@ -2607,7 +2607,7 @@
       "control_id": "AML.T0006.002",
       "url": "https://atlas.mitre.org/techniques/AML.T0006.002",
       "title": "Active Scanning: Scan for Exposed AI Infrastructure",
-      "description": "\"Adversaries may scan network ports and services to identify deployed\\ \\ AI backends, model-serving endpoints, and AI agent infrastructure reachable\\ \\ over the internet."
+      "description": "Adversaries may scan network ports and services to identify deployed AI backends, model-serving endpoints, and AI agent infrastructure reachable over the internet."
     },
     {
       "framework_id": "mitre-atlas",
@@ -2635,7 +2635,7 @@
       "control_id": "AML.T0018",
       "url": "https://atlas.mitre.org/techniques/AML.T0018",
       "title": "Manipulate AI Model",
-      "description": "\"Adversaries may manipulate an AI model artifact or its bundled components\\ \\ to change AI system behavior, introduce malicious code, or establish persistent\\ \\ malicious functionality."
+      "description": "Adversaries may manipulate an AI model artifact or its bundled components to change AI system behavior, introduce malicious code, or establish persistent malicious functionality."
     },
     {
       "framework_id": "mitre-atlas",
@@ -2649,7 +2649,7 @@
       "control_id": "AML.T0024",
       "url": "https://atlas.mitre.org/techniques/AML.T0024",
       "title": "Exfiltration via AI Inference API",
-      "description": "Adversaries may exfiltrate private information via AI Model Inference API Access."
+      "description": "Adversaries may exfiltrate information from a victim-controlled AI model or service through responses returned by its inference API."
     },
     {
       "framework_id": "mitre-atlas",
@@ -2768,7 +2768,7 @@
       "control_id": "AML.T0052.000",
       "url": "https://atlas.mitre.org/techniques/AML.T0052.000",
       "title": "Phishing: Spearphishing via Social Engineering LLM",
-      "description": "Adversaries may turn LLMs into targeted social engineers."
+      "description": "Adversaries may use large language models (LLMs) or LLM-based AI agents to conduct targeted social engineering through electronically delivered messages and conversations."
     },
     {
       "framework_id": "mitre-atlas",
