@@ -1269,6 +1269,7 @@ input, select { font-family: inherit; }
     { term: "A2A (Agent-to-Agent communication)", definition: "Direct communication between two autonomous AI agents, typically via a protocol such as Google A2A or MCP. A2A channels are an attack surface for spoofing, replay, and agent-in-the-middle attacks (ASI07).", refs: ["ASI07"] },
     { term: "Agent", definition: "An autonomous or semi-autonomous AI system that uses an LLM to perceive its environment, plan, make decisions, and execute actions \u2014 often using external tools, memory, and other agents. Distinct from a simple LLM that only generates text responses.", refs: [] },
     { term: "Agent Goal Hijack", definition: "The redirection of an agent\u2019s objectives or decision logic by an attacker, typically through prompt injection, poisoned content, or crafted tool outputs. See ASI01.", refs: ["ASI01"] },
+    { term: "AIBOM (AI Bill of Materials)", definition: "A Bill of Materials for an AI model: what the model is made of (weights, datasets, licences, model card), usually as CycloneDX. The Crosswalk publishes data/exports/aibom-index.json so an AIBOM tool such as the OWASP AIBOM Generator can add the model’s candidate OWASP GenAI risks and their mapped controls, each with its review status. Candidates, not an assessment. See About → Use it in an AI Bill of Materials.", refs: [] },
     { term: "AIVSS (AI Vulnerability Scoring System)", definition: "OWASP\u2019s scoring framework for AI vulnerabilities, extending CVSS v4.0 with ten agentic amplifier factors. Reference: https://aivss.owasp.org", refs: [] },
     { term: "AIUC-1", definition: "The world\u2019s first AI agent security, safety and reliability certification standard. Covers six domains: Data & Privacy (A), Security (B), Safety (C), Reliability (D), Accountability (E), Society (F). Reference: https://www.aiuc-1.com", refs: [] },
     { term: "Agentic supply chain", definition: "The set of runtime components an agent depends on: tools, MCP servers, prompt templates, model files, plugins, external agents. Unlike traditional software supply chains, agentic supply chains are often loaded dynamically at runtime. See ASI04.", refs: ["ASI04"] },
@@ -5621,6 +5622,7 @@ input, select { font-family: inherit; }
       ['2026 Q2', 'v3.1: Registry expanded to 25 frameworks (1,514 controls, 100% GT coverage). Gap analysis heatmap. OSCAL catalog + GRC export. Bi-encoder fine-tuning pipeline. Framework version diffing.'],
       ['2026 Q3', 'v4.0: Migrated to OWASP LLM Top 10 2026 (entries renumbered; Hidden Context Exposure, Improper Output Handling). Every headline count generated from the data layer. Registry items typed by kind — 1,372 controls, separated from techniques, weaknesses and layers. npm package ships the registries, so the control-level join works.'],
       ['2026 Q3', 'Data repair: control identifiers are parsed by each framework’s own grammar rather than by column position. 611 mapping rows had carried requirement text where the identifier belongs, and the registries had been seeded from those rows — 1,541 → 991 controls once the duplicates they created were collapsed. MITRE ATLAS re-transcribed from the 2026.09 release; 34 ATLAS rows marked DRAFT pending review.'],
+      ['2026 Q4', 'AI Bill of Materials export: every risk → control link with its review status, plus DRAFT rules for which risk lists apply to which kind of model, so an AIBOM tool can list a model’s candidate risks and mapped controls in CycloneDX.'],
     ];
     events.forEach(function(ev) {
       var item = el('div', { className: 'timeline-item' });
@@ -5632,6 +5634,49 @@ input, select { font-family: inherit; }
 
     content.appendChild(el('h3', {}, 'OWASP GenAI Data Security Initiative'));
     content.appendChild(el('p', {}, 'This project is the flagship output of the OWASP GenAI Data Security Initiative, led by Emmanuel Guilherme Junior. The initiative provides practical guidance for securing generative AI systems across the full lifecycle — from training data to production deployment. All content is developed under the OWASP open-source model and is freely available to the community.'));
+
+    // Use it in an AI Bill of Materials (T-AIBOM03). Text and links only; the
+    // images are the ones docs/AIBOM_INTEGRATION.md uses.
+    var GH = 'https://github.com/GenAI-Security-Project/';
+    var ext = function(href, text) { return el('a', { href: href, target: '_blank', rel: 'noopener' }, text); };
+    var imgStyle = 'display:block;max-width:100%;height:auto;margin:8px 0 6px;border:1px solid var(--border);border-radius:8px;';
+    var capStyle = 'font-size:0.85rem;color:var(--text-muted);margin-bottom:20px;';
+    var listStyle = 'color:var(--text-secondary);line-height:1.7;margin:0 0 16px 20px;';
+
+    content.appendChild(el('h3', { id: 'aibom' }, 'Use it in an AI Bill of Materials'));
+    var aiIntro = el('p');
+    aiIntro.appendChild(document.createTextNode('An AI Bill of Materials (AIBOM) records what a model is made of. The Crosswalk can add which OWASP GenAI risks apply to that kind of model, and which framework controls are mapped to each, inside the same CycloneDX file. The '));
+    aiIntro.appendChild(ext(GH + 'aibom-generator', 'OWASP AIBOM Generator'));
+    aiIntro.appendChild(document.createTextNode(' is the first tool to use it.'));
+    content.appendChild(aiIntro);
+    content.appendChild(el('img', { src: 'assets/aibom/aibom-flow.svg', alt: 'The Crosswalk publishes aibom-index.json and the DRAFT aibom-applicability.json; an AIBOM tool vendors them at a pinned commit and writes a CycloneDX AIBOM with candidate risks, mapped controls with review status, and provenance.', loading: 'lazy', style: imgStyle }));
+    content.appendChild(el('p', { style: capStyle }, 'How the data flows from the Crosswalk into a model’s AIBOM.'));
+
+    content.appendChild(el('p', {}, [el('strong', {}, 'What it gives you'), ' — for a model such as openai-community/gpt2:']));
+    content.appendChild(el('ul', { style: listStyle }, [
+      el('li', {}, 'The candidate risks: the LLM Top 10 for a generative model, plus the Agentic, GenAI Data Security or Agentic Skills lists if you say the deployment uses them.'),
+      el('li', {}, 'For each risk, the mapped controls in the frameworks you pick (by default OWASP AISVS, NIST AI RMF, NIST CSF 2.0, the EU AI Act and MITRE ATLAS). Each control shows whether its mapping is reviewed, draft or unreviewed.'),
+      el('li', {}, 'Provenance: the Crosswalk version and commit, the status of the selection rules, and the CC BY-SA attribution.')
+    ]));
+    content.appendChild(el('p', {}, [el('strong', {}, 'What it does not do'), ' — assess the model. Every item is labelled “candidate risk — not assessed”. Use the list to decide what to test and which controls to check, not as evidence that the model is safe or compliant.']));
+
+    content.appendChild(el('p', {}, [el('strong', {}, 'How to do it'), ' — in the AIBOM Generator’s form, open “Optional: add candidate OWASP GenAI risks and mapped controls”, tick what the deployment does, and generate. The result page gets a Risks tab.']));
+    content.appendChild(el('img', { src: 'assets/aibom/aibom-generator-form.png', alt: 'AIBOM Generator form for openai-community/gpt2 with the OWASP risk section ticked, runs in an agent ticked, and the default frameworks selected', loading: 'lazy', style: imgStyle }));
+    content.appendChild(el('p', { style: capStyle }, 'Choose the model, what the deployment does, and the frameworks.'));
+    content.appendChild(el('img', { src: 'assets/aibom/aibom-generator-risks.png', alt: 'The Risks tab: LLM01 and LLM02, each with mapped controls per framework and a reviewed, draft or unreviewed badge on each control', loading: 'lazy', style: imgStyle }));
+    content.appendChild(el('p', { style: capStyle }, 'Each candidate risk with its mapped controls and their review status.'));
+
+    var aiHow = el('p');
+    aiHow.appendChild(document.createTextNode('Generator support is in review as '));
+    aiHow.appendChild(ext(GH + 'aibom-generator/pull/142', 'aibom-generator #142'));
+    aiHow.appendChild(document.createTextNode('; until it is merged and the hosted Space redeployed, run it from that branch. Any other tool can read the two files at a pinned commit — the '));
+    aiHow.appendChild(ext(GH + 'crosswalk/blob/main/docs/AIBOM_INTEGRATION.md', 'integration guide'));
+    aiHow.appendChild(document.createTextNode(' covers the fields, where each goes in CycloneDX, and the licence rules. Reviewers can help: the selection rules ('));
+    aiHow.appendChild(ext(GH + 'crosswalk/issues/438', '#438'));
+    aiHow.appendChild(document.createTextNode(') and most non-AISVS mappings ('));
+    aiHow.appendChild(ext(GH + 'crosswalk/issues/439', '#439'));
+    aiHow.appendChild(document.createTextNode(') still need SME review.'));
+    content.appendChild(aiHow);
 
     content.appendChild(el('h3', {}, 'Contributing'));
     var contrib = el('p');

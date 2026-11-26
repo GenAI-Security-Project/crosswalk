@@ -11,6 +11,10 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Added
 
+- **Web app: "Use it in an AI Bill of Materials"** on the About page (T-AIBOM03). It covers what the AIBOM
+  integration gives you, what it doesn't do, and how to do it, with the flow diagram and the generator
+  screenshots from `docs/assets/aibom/`. Also an "AIBOM (AI Bill of Materials)" glossary term and a 2026 Q4
+  timeline entry. No new routes, navigation or CSS rules.
 - **How to use the crosswalk in an AI Bill of Materials** (T-AIBOM02). A README section ("Use it in an AI
   Bill of Materials") and a quick start in `docs/AIBOM_INTEGRATION.md` (1.1.0): what the OWASP AIBOM
   Generator adds to a CycloneDX BOM, how to turn it on in the web form and CLI, and what to do with the
