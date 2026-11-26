@@ -83,7 +83,7 @@ is visible rather than silent:
 |---|---|---|
 | MITRE ATT&CK | Enterprise adversary techniques that AI attacks chain into | Not mapped |
 | ISO/IEC 27701 | Privacy information management, extending ISO 27001 | Not mapped |
-| CycloneDX ML-BOM | Machine-readable model and dataset inventory | Not mapped |
+| CycloneDX ML-BOM | Machine-readable model and dataset inventory | Not mapped as a framework; the crosswalk is exported for AIBOM tools in `data/exports/aibom-index.json` ([AIBOM integration](docs/AIBOM_INTEGRATION.md)) |
 | BSIMM | Software security maturity measurement | Not mapped |
 | COBIT | IT governance and management objectives | Not mapped |
 

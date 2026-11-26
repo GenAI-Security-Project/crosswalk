@@ -12,7 +12,11 @@
     "data/incidents.json",
     "data/schema.json",
     "data/framework-schema.json",
-    "data/incidents-schema.json"
+    "data/incidents-schema.json",
+    "data/exports/",
+    "data/aibom-applicability.json",
+    "data/schemas/aibom-index.schema.json",
+    "data/schemas/aibom-applicability.schema.json"
   ],
   "engines": {
     "node": ">=18.0.0"

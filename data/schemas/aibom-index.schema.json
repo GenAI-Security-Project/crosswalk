@@ -1,0 +1,126 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/schemas/aibom-index.schema.json",
+  "title": "OWASP GenAI Crosswalk — AIBOM index",
+  "description": "The format of data/exports/aibom-index.json, which scripts/export-aibom-index.js emits for AI Bill of Materials tools (T-AIBOM01). Unlike the other schemas in this folder, this format is the crosswalk's own, so this is its full definition, not a subset. See docs/AIBOM_INTEGRATION.md.",
+  "type": "object",
+  "required": ["meta", "source_lists", "entries", "frameworks", "controls", "links"],
+  "additionalProperties": false,
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["name", "format_version", "crosswalk_version", "source", "license", "attribution", "status", "counts"],
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string" },
+        "format_version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+        "crosswalk_version": { "type": "string" },
+        "source": { "type": "string", "format": "uri" },
+        "pin_note": { "type": "string" },
+        "license": { "const": "CC BY-SA 4.0" },
+        "attribution": { "type": "string", "minLength": 1 },
+        "status": { "type": "string", "minLength": 1 },
+        "applicability": { "type": "string" },
+        "counts": {
+          "type": "object",
+          "required": ["entries", "frameworks", "controls", "links", "links_by_review_status"],
+          "additionalProperties": false,
+          "properties": {
+            "entries": { "type": "integer", "minimum": 0 },
+            "frameworks": { "type": "integer", "minimum": 0 },
+            "controls": { "type": "integer", "minimum": 0 },
+            "links": { "type": "integer", "minimum": 0 },
+            "links_by_review_status": {
+              "type": "object",
+              "required": ["reviewed", "unreviewed", "draft"],
+              "additionalProperties": false,
+              "properties": {
+                "reviewed": { "type": "integer", "minimum": 0 },
+                "unreviewed": { "type": "integer", "minimum": 0 },
+                "draft": { "type": "integer", "minimum": 0 }
+              }
+            }
+          }
+        },
+        "unresolved_frameworks": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "source_lists": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "url"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "url": { "type": "string", "format": "uri" }
+        }
+      }
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "source_list", "severity"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "pattern": "^(LLM|ASI|DSGAI|AST)\\d{2}$" },
+          "name": { "type": "string", "minLength": 1 },
+          "source_list": { "type": "string" },
+          "severity": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "frameworks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "version", "license", "redistributable", "url"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "version": { "type": ["string", "null"] },
+          "license": { "type": ["string", "null"] },
+          "redistributable": { "type": "boolean", "description": "True when the registry's licence allows its control text to be redistributed. When false, controls of this framework carry no title or description." },
+          "url": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "controls": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["framework_id", "control_id", "url"],
+        "additionalProperties": false,
+        "properties": {
+          "framework_id": { "type": "string" },
+          "control_id": { "type": "string", "minLength": 1 },
+          "url": { "type": ["string", "null"] },
+          "title": { "type": ["string", "null"] },
+          "description": { "type": "string" },
+          "in_registry": { "const": false, "description": "Present only when a mapping cites a control id its registry does not hold." }
+        }
+      }
+    },
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["entry", "framework_id", "control_id", "confidence", "review_status", "reviewed_by"],
+        "additionalProperties": false,
+        "properties": {
+          "entry": { "type": "string", "pattern": "^(LLM|ASI|DSGAI|AST)\\d{2}$" },
+          "framework_id": { "type": "string" },
+          "control_id": { "type": "string", "minLength": 1 },
+          "relationship": { "enum": ["equal", "subset-of", "superset-of", "intersects-with", "not-related-to"], "description": "The control relative to the risk (docs/SCHEMA_V2_MIGRATION.md). subset-of: the control addresses part of the risk." },
+          "strength": { "type": "integer", "minimum": 0, "maximum": 10 },
+          "confidence": { "enum": ["high", "medium", "low", "unreviewed"] },
+          "review_status": { "enum": ["reviewed", "unreviewed", "draft"], "description": "reviewed: the row names a reviewer. draft: its notes carry the DRAFT marker. unreviewed: neither." },
+          "reviewed_by": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    }
+  }
+}
