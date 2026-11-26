@@ -46,6 +46,18 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Changed
 
+- **MITRE ATLAS registry re-synced to the 2026.10 data release** (#99, follows #93 / #106 / #108).
+  `data/frameworks/mitre-atlas.json` is transcribed from `mitre-atlas/atlas-data` tag `v2026.10`
+  (`dist/v6/ATLAS-2026.10.yaml`, format 6.1.0, 221 techniques): `AML.T0010` is renamed *Supply Chain Compromise*,
+  8 descriptions follow the release (two were also garbled by the earlier YAML transcription), and the 5 ids
+  2026.10 no longer defines (`AML.T0024.000`, `.001`, `.002`, `AML.T0056`, `AML.T0057`) keep their entry with a
+  `source_status` naming the successor MITRE's release notes give, where they give one. No id is deleted or reused,
+  and no mapping row changed. `data/framework-sources.json` now records 2026.10 as current.
+- **The ATLAS row check is stricter and can fail.** `scripts/validate.js` now uses `scripts/atlas-rows.js`
+  (tested in `scripts/atlas-rows.test.mjs`): a row's name must equal the registry name for its id after
+  normalising only case, whitespace and typographic quotes. A non-DRAFT row with an id missing from the registry or
+  another name is an **error** (there are none). DRAFT rows (18) and non-DRAFT rows citing an id the release no
+  longer defines (11) are warnings; retargeting them is SME work (C4), see #93.
 - **Back-references between mapping files are generated** (T-FIX02). `scripts/validate.js` warned about 82
   one-way links (file A links file B, B never links A). `scripts/backrefs.js` now writes the missing direction
   into a `<!-- backrefs:start -->` … `<!-- backrefs:end -->` block headed "Referenced by", placed just before
@@ -96,6 +108,18 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   relationship or confidence changed. The registry's 213 descriptions get back the chapter number the
   regeneration dropped (`chapter  Training Data …` → `chapter C1 Training Data …`), and `docs/llms.txt` and the
   AI-standards page now say AISVS 1.01.
+- **OLIR export stated directional relationships backwards** (#99 Decision 7). The exporter puts the framework
+  control in the Focal Document Element and the OWASP entry in the Reference Document Element, and OLIR states
+  the Reference relative to the Focal. A stored `subset-of` (the control addresses part of the risk) was
+  exported as "subset of", which OLIR reads as the risk being part of the control. It now exports as
+  "superset of", and `superset-of` as "subset of". The 326 reviewed AISVS `subset-of` rows would have exported
+  inverted. The exporter header and the `data/schema.json` description, which named the direction the other
+  way round, now match the code. No stored value changes.
+- **OLIR Strength of Relationship came from the `confidence` enum** (#99 Decision 6). IR 8278A Rev. 1
+  defines it as an integer 0–10, so the export wrote "high" into an integer field. A new optional
+  `strength` field (integer 0–10, from a `Strength` column in a mapping table) now supplies it, blank
+  when unset; `confidence` stays as review state and is no longer exported. `validate.js` fails a
+  `strength` outside 0–10, or on a row with no named reviewer. No existing row carries one.
 
 Next: npm publish to npmjs.com, custom domain (crosswalk.owasp.org), vendor integration packs, NeMo Guardrails configs.
 

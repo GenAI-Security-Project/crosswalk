@@ -32,7 +32,8 @@ than a rewrite of it.
 | `relationship` | enum | OLIR **Relationship** |
 | `rationale_type` | enum | OLIR **Rationale** |
 | `rationale` | string | OLIR **Comments** |
-| `confidence` | enum | OLIR **Strength of Relationship** |
+| `confidence` | enum | crosswalk (review state; not exported) |
+| `strength` | integer 0–10 | OLIR **Strength of Relationship** |
 | `framework_version` | string | crosswalk |
 | `reviewed_by` | string[] | crosswalk |
 | `review_date` | date | crosswalk |
@@ -48,16 +49,23 @@ compared to the Focal Document Element,"* and states the vocabulary verbatim:
 
 Stored hyphenated so the value is a stable machine token:
 
-| Stored | OLIR spelling | Means |
+| Stored | Means (the control relative to the risk) | OLIR export (the entry relative to the control) |
 |---|---|---|
-| `equal` | equal | the control and the risk cover the same ground |
-| `subset-of` | subset of | the control addresses part of the risk |
-| `superset-of` | superset of | the control covers the risk and more besides |
-| `intersects-with` | intersects with | they overlap, neither contains the other |
-| `not-related-to` | not related to | asserted non-relationship — useful, and rarely recorded |
+| `equal` | the control and the risk cover the same ground | equal |
+| `subset-of` | the control addresses part of the risk | superset of |
+| `superset-of` | the control covers the risk and more besides | subset of |
+| `intersects-with` | they overlap, neither contains the other | intersects with |
+| `not-related-to` | asserted non-relationship — useful, and rarely recorded | not related to |
 
-The export expands the hyphens back to the spec's spacing. Nothing else in the
-vocabulary is invented, extended, or renamed.
+**Direction** (ratified in #99, Decision 7). In an OLIR export the framework control is the **Focal Document
+Element** and the OWASP entry is the **Reference Document Element**. OLIR states the Reference relative to the
+Focal, which is the opposite side from the stored value, so the exporter restates the two directional tokens:
+"the control addresses part of the risk" is "the risk is a superset of the control". The stored meaning is
+what reviewers assert and does not change.
+
+The export expands the hyphens back to the spec's spacing, and swaps the two
+directional tokens as above. Nothing else in the vocabulary is invented,
+extended, or renamed.
 
 ### `rationale_type` vs `rationale` — why there are two
 
@@ -82,8 +90,8 @@ disclosure — hence subset, not equal" is a rationale. "Applies to LLM02" is no
 
 ### `confidence` — and the rule that protects it
 
-`high | medium | low | unreviewed`, mapping to the optional OLIR *Strength of
-Relationship*.
+`high | medium | low | unreviewed`: how firmly a named reviewer holds the row.
+It is review state and is **not** exported (#99 Decision 6).
 
 **A row may not claim review it does not have.** `validate.js` fails any mapping
 whose `confidence` is above `unreviewed` while `reviewed_by` is empty. Confidence
@@ -94,6 +102,16 @@ nothing.
 Rows written before schema v2 carry `confidence: unreviewed`. That is an honest
 label, not a defect: it says the relationship has not been typed, scored, or
 signed by anyone. Leaving the field absent would have read as "fine".
+
+### `strength` — OLIR Strength of Relationship
+
+IR 8278A Rev. 1 defines Strength of Relationship as an **integer from 0 to 10**,
+which an enum cannot express. A mapping table may carry an optional `Strength`
+column; `generate.js` reads it into `strength`, and the OLIR export writes it to
+*Strength of Relationship* (blank when unset). The same rule as `confidence`
+applies: `validate.js` fails a `strength` outside 0–10, and any `strength` on a
+row with an empty `reviewed_by`. No existing row has one; the value is a
+reviewer's to set.
 
 ### `framework_version`, `reviewed_by`, `review_date`
 

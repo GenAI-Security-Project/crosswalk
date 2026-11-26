@@ -131,7 +131,7 @@
               "intersects-with",
               "not-related-to"
             ],
-            "description": "OLIR Relationship: the logical comparison asserted between this control (Reference Document Element) and the risk entry (Focal Document Element). Hyphenated form of the spec vocabulary \"equal, subset of, superset of, intersects with, not related to\" (NIST IR 8278A Rev. 1 §3.1)."
+            "description": "The logical comparison asserted for this control relative to the risk entry: subset-of means the control addresses part of the risk. In an OLIR export the control is the Focal Document Element and the entry the Reference Document Element, and OLIR states the Reference relative to the Focal, so subset-of and superset-of swap on export (#99 Decision 7). Hyphenated form of the spec vocabulary \"equal, subset of, superset of, intersects with, not related to\" (NIST IR 8278A Rev. 1 §3.1)."
           },
           "rationale_type": {
             "type": "string",
@@ -158,7 +158,13 @@
               "low",
               "unreviewed"
             ],
-            "description": "How strongly the relationship is asserted; maps to the optional OLIR \"Strength of Relationship\". Rows predating schema v2 carry `unreviewed`, which is an honest label rather than a quality claim."
+            "description": "Review state: how firmly a named reviewer holds the row. It is not exported to OLIR, whose Strength of Relationship is the integer `strength` (#99 Decision 6). Rows predating schema v2 carry `unreviewed`, which is an honest label rather than a quality claim."
+          },
+          "strength": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 10,
+            "description": "OLIR Strength of Relationship: an integer 0-10 (NIST IR 8278A Rev. 1). Optional; set only by a named reviewer, from a Strength column in the mapping table (#99 Decision 6)."
           },
           "framework_version": {
             "type": "string",
