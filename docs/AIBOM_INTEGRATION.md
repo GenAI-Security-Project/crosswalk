@@ -2,7 +2,7 @@
   OWASP GenAI Crosswalk
   File    : docs/AIBOM_INTEGRATION.md
   Purpose : How an AI Bill of Materials tool consumes the crosswalk (T-AIBOM01)
-  Version : 1.0.0 — 2026-11-25
+  Version : 1.1.0 — 2026-11-26
   License : CC BY-SA 4.0
 -->
 
@@ -22,6 +22,44 @@ Two files carry everything:
 
 Schemas: [`data/schemas/aibom-index.schema.json`](../data/schemas/aibom-index.schema.json) and
 [`data/schemas/aibom-applicability.schema.json`](../data/schemas/aibom-applicability.schema.json).
+
+![How the crosswalk reaches an AI Bill of Materials: two published files, vendored at a pinned commit by an AIBOM tool, which writes candidate risks, mapped controls with review status, and provenance into a CycloneDX AIBOM](assets/aibom/aibom-flow.svg)
+
+## Quick start: the OWASP AIBOM Generator
+
+Generator support is in review as
+[aibom-generator #142](https://github.com/GenAI-Security-Project/aibom-generator/pull/142). Until it merges and
+the hosted Space is redeployed, run it from that branch. It is off by default.
+
+**In the web form**, open *Optional: add candidate OWASP GenAI risks and mapped controls*:
+
+1. Tick **Add the OWASP risk section**. For a generative model this adds the LLM Top 10.
+2. Tick what is true of the deployment: it runs in an agent, uses retrieval or organisational
+   training data, or loads agent skills. Each one adds a whole list.
+3. Pick frameworks, or keep the default verified core.
+
+![The AIBOM Generator form with the OWASP risk section open, 'runs in an agent' ticked and the default frameworks selected](assets/aibom/aibom-generator-form.png)
+
+The result page gets a **Risks** tab: each candidate risk, its mapped controls per framework, and a
+`reviewed` / `draft` / `unreviewed` badge on each control. The downloaded JSON carries the same content in
+the places described under [CycloneDX placement](#cyclonedx-placement-as-used-by-the-owasp-aibom-generator).
+
+![The Risks tab for openai-community/gpt2: LLM01 and LLM02 with controls from the EU AI Act, MITRE ATLAS, NIST AI RMF, NIST CSF and OWASP AISVS, each with a review badge](assets/aibom/aibom-generator-risks.png)
+
+**From the command line:**
+
+```bash
+python -m src.cli openai-community/gpt2 --owasp-risks
+python -m src.cli openai-community/gpt2 --agentic --rag --training-data --skills \
+  --frameworks "OWASP AISVS 1.01,NIST AI RMF 1.0,ISO/IEC 27001:2022"
+```
+
+`--llm` adds the LLM Top 10 whatever the model's task. `--frameworks` takes ids or names. An unknown
+framework is an error, not a silent fallback.
+
+**What to do with the result.** Treat the list as a starting point. Test the model and its deployment
+against each candidate risk, and check the mapped controls you're responsible for. Weigh a `reviewed`
+mapping above an `unreviewed` one. None of it is evidence that the model is safe or compliant.
 
 ## The one rule: candidate, not assessed
 
@@ -86,8 +124,16 @@ links[]       { entry, framework_id, control_id, relationship?, confidence,
   entries as requirements) and one per selected framework (its linked controls
   as requirements, text only when redistributable), each with an external
   reference back to the crosswalk.
-- **Properties** under `owasp:aibom:risk:*` for the source (crosswalk version
-  and commit), the status (`candidate-not-assessed`) and the profiles applied.
+- **Properties** under `owasp:aibom:risk:*`:
+  - `status`: `candidate-not-assessed`;
+  - `source`: the crosswalk version and commit;
+  - `profiles` and `frameworks`: what was applied;
+  - `applicabilityStatus`: the status of the applicability table;
+  - `linkReviewStatus`: counts of the selected links by review status;
+  - `attribution`.
+
+  Each control in `definitions.standards` also carries one
+  `owasp:aibom:risk:link` property per mapping, as `<entry>|<relationship>|<review_status>`.
   `genai:aibom:*` is reserved for the official CycloneDX taxonomy.
 
 ## Pinning and attribution
@@ -98,11 +144,14 @@ links[]       { entry, framework_id, control_id, relationship?, confidence,
   (and the applicability file at the same SHA), and record the SHA in the BOM.
 - **Attribution.** The data is CC BY-SA 4.0. Carry `meta.attribution` in the BOM
   or its tool notes, and keep derived data under the same licence.
-- **Changes.** `meta.format_version` follows semantic versioning: a minor
-  version adds fields, a major version changes or removes them.
+- **Changes.** `meta.format_version` (and `format_version` in the applicability
+  file) follows semantic versioning: a minor version adds fields, a major
+  version changes or removes them. A consumer should refuse a major version it
+  wasn't written for. The AIBOM Generator does this on load.
 
 ## Changelog
 
 | Version | Date | Change |
 |---|---|---|
 | 1.0.0 | 2026-11-25 | Created with the index and applicability profiles (T-AIBOM01). |
+| 1.1.0 | 2026-11-26 | Quick start for the OWASP AIBOM Generator with screenshots and a diagram. Full list of the `owasp:aibom:risk:*` properties; consumers should check the format major version. |

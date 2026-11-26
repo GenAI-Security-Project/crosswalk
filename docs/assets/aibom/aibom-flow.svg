@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" width="960" height="400" role="img" aria-labelledby="t d">
+  <title id="t">How the crosswalk reaches an AI Bill of Materials</title>
+  <desc id="d">The crosswalk publishes two files, a generated index of risks, controls and links with review status, and a DRAFT applicability table. An AIBOM tool such as the OWASP AIBOM Generator vendors them at a pinned commit, takes a model id, the deployment profile and the frameworks to show, and writes a CycloneDX 1.6 or 1.7 AIBOM whose model card lists candidate risks, whose definitions list the mapped controls with review status, and whose metadata records the source.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+    <style>
+      text { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; fill: #0f172a; }
+      .h { font-size: 15px; font-weight: 700; }
+      .s { font-size: 12.5px; fill: #334155; }
+      .m { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; font-size: 12px; fill: #0f172a; }
+      .k { font-size: 11px; font-weight: 700; letter-spacing: .06em; fill: #64748b; }
+      .lbl { font-size: 11.5px; fill: #475569; font-style: italic; }
+      .note { font-size: 13px; fill: #7c2d12; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="960" height="400" rx="14" fill="#ffffff"/>
+
+  <!-- column headings -->
+  <text class="k" x="24" y="34">THE CROSSWALK</text>
+  <text class="k" x="262" y="34">PUBLISHES</text>
+  <text class="k" x="522" y="34">AN AIBOM TOOL</text>
+  <text class="k" x="752" y="34">WRITES</text>
+
+  <!-- 1. crosswalk -->
+  <rect x="20" y="50" width="200" height="250" rx="10" fill="#eef2ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text class="h" x="36" y="80">OWASP GenAI</text>
+  <text class="h" x="36" y="99">Crosswalk</text>
+  <text class="s" x="36" y="132">4 OWASP risk lists:</text>
+  <text class="s" x="36" y="150">LLM, Agentic, Data</text>
+  <text class="s" x="36" y="168">Security, Agentic Skills</text>
+  <text class="s" x="36" y="198">framework registries</text>
+  <text class="s" x="36" y="228">risk → control mapping</text>
+  <text class="s" x="36" y="246">rows, each with its</text>
+  <text class="s" x="36" y="264">own review status</text>
+
+  <!-- arrow 1 -> 2 -->
+  <line x1="222" y1="175" x2="254" y2="175" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow)"/>
+
+  <!-- 2. two files -->
+  <rect x="258" y="50" width="232" height="118" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text class="m" x="272" y="76">aibom-index.json</text>
+  <text class="s" x="272" y="98">generated: risks, controls,</text>
+  <text class="s" x="272" y="116">links, review status;</text>
+  <text class="s" x="272" y="134">control text only where</text>
+  <text class="s" x="272" y="152">the licence allows</text>
+
+  <rect x="258" y="182" width="232" height="118" rx="10" fill="#fff7ed" stroke="#ea580c" stroke-width="1.5"/>
+  <text class="m" x="272" y="208">aibom-applicability.json</text>
+  <text class="s" x="272" y="230">hand-authored, DRAFT:</text>
+  <text class="s" x="272" y="248">which risk lists apply to</text>
+  <text class="s" x="272" y="266">which kind of model, and</text>
+  <text class="s" x="272" y="284">the default frameworks</text>
+
+  <!-- arrow 2 -> 3 -->
+  <line x1="492" y1="175" x2="514" y2="175" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <text class="lbl" x="403" y="324" text-anchor="middle">vendored at a pinned commit SHA</text>
+
+  <!-- 3. generator -->
+  <rect x="518" y="50" width="200" height="250" rx="10" fill="#f8fafc" stroke="#475569" stroke-width="1.5"/>
+  <text class="h" x="534" y="80">OWASP AIBOM</text>
+  <text class="h" x="534" y="99">Generator</text>
+  <text class="s" x="534" y="132">You give it:</text>
+  <text class="s" x="534" y="156">• a Hugging Face model id</text>
+  <text class="s" x="534" y="180">• what the deployment</text>
+  <text class="s" x="546" y="198">does: agent, RAG,</text>
+  <text class="s" x="546" y="216">training data, skills</text>
+  <text class="s" x="534" y="240">• the frameworks to show</text>
+  <text class="s" x="534" y="272">LLM Top 10 is added for</text>
+  <text class="s" x="534" y="290">generative models</text>
+
+  <!-- arrow 3 -> 4 -->
+  <line x1="720" y1="175" x2="744" y2="175" stroke="#475569" stroke-width="1.8" marker-end="url(#arrow)"/>
+
+  <!-- 4. BOM -->
+  <rect x="748" y="50" width="192" height="250" rx="10" fill="#f1f5f9" stroke="#0f172a" stroke-width="1.5"/>
+  <text class="h" x="762" y="80">CycloneDX 1.6 / 1.7</text>
+  <text class="h" x="762" y="99">AIBOM</text>
+  <rect x="760" y="114" width="168" height="54" rx="6" fill="#ffffff" stroke="#cbd5e1"/>
+  <text class="m" x="770" y="134">modelCard …</text>
+  <text class="s" x="770" y="155">candidate risks</text>
+  <rect x="760" y="176" width="168" height="54" rx="6" fill="#ffffff" stroke="#cbd5e1"/>
+  <text class="m" x="770" y="196">definitions.standards</text>
+  <text class="s" x="770" y="217">controls + review status</text>
+  <rect x="760" y="238" width="168" height="54" rx="6" fill="#ffffff" stroke="#cbd5e1"/>
+  <text class="m" x="770" y="258">metadata.properties</text>
+  <text class="s" x="770" y="279">source, commit, status</text>
+
+  <!-- the rule -->
+  <rect x="20" y="344" width="920" height="40" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="1"/>
+  <text class="note" x="480" y="369" text-anchor="middle">Candidate risks — not an assessment. Every control keeps its crosswalk review status: reviewed · draft · unreviewed.</text>
+</svg>

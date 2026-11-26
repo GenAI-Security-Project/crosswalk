@@ -11,6 +11,11 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Added
 
+- **How to use the crosswalk in an AI Bill of Materials** (T-AIBOM02). A README section ("Use it in an AI
+  Bill of Materials") and a quick start in `docs/AIBOM_INTEGRATION.md` (1.1.0): what the OWASP AIBOM
+  Generator adds to a CycloneDX BOM, how to turn it on in the web form and CLI, and what to do with the
+  result. Includes a flow diagram (`docs/assets/aibom/aibom-flow.svg`) and two screenshots from a local
+  run of aibom-generator #142. The README's flowchart now shows the AIBOM index.
 - **AIBOM index for AI Bill of Materials tools** (T-AIBOM01). `scripts/export-aibom-index.js` writes
   `data/exports/aibom-index.json`: the 51 entries, the framework registries, the controls the mappings cite,
   and all 3,793 entry → control links, each with `review_status` (`reviewed` only where a row names a
