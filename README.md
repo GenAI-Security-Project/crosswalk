@@ -42,7 +42,8 @@ Created and led by **[Emmanuel Guilherme Junior](https://github.com/emmanuelgjr)
 [OWASP GenAI Data Security Initiative](https://genai.owasp.org) .
 
 **Contents:** [TL;DR](#tldr--what-is-this-and-what-do-i-do) · [See it in action](#see-it-in-action) ·
-[How it fits together](#how-it-fits-together) · [What's inside](#what-this-repository-provides) ·
+[How it fits together](#how-it-fits-together) · [AI Bill of Materials](#use-it-in-an-ai-bill-of-materials) ·
+[What's inside](#what-this-repository-provides) ·
 [Source lists](#source-lists) · [Coverage matrix](#framework-coverage-matrix) ·
 [Mapping files](#all-mapping-files) · [Repository structure](#repository-structure) ·
 [Start by role](#start-here--by-role) · [Contributing](#contributing)
@@ -90,6 +91,7 @@ node scripts/incidents-report.js --format stix              # SIEM/SOAR export
 | **Red teamer** | [LAAF guide](evals/laaf/README.md) → run S1–S6 attack stages, map results to OWASP |
 | **GRC / auditor** | `compliance-report.js --format oscal` → import into ServiceNow/Archer |
 | **Developer** | `npm install genai-security-crosswalk` → query risks + controls programmatically |
+| **ML engineer shipping a model** | [AI Bill of Materials](#use-it-in-an-ai-bill-of-materials) → add the model's candidate risks and mapped controls to its AIBOM |
 | **Threat intel analyst** | `incidents-report.js --format stix` → ingest <!-- stats:incidents -->161<!-- /stats --> AI incidents into Sentinel/Splunk |
 
 ---
@@ -158,8 +160,113 @@ flowchart LR
     E --> N[npm package]
     E --> X[Control exports<br/>OSCAL, CSV, JSON, OLIR]
     R --> X
+    E --> B[AIBOM index<br/>data/exports]
+    R --> B
     I --> T[Incident export<br/>STIX 2.1]
 ```
+
+---
+
+## Use it in an AI Bill of Materials
+
+An AI Bill of Materials (AIBOM) records what a model is made of. The crosswalk can add **which OWASP GenAI risks
+apply to that kind of model, and which framework controls are mapped to each one**, inside the same
+CycloneDX file.
+
+<p align="center">
+  <img src="docs/assets/aibom/aibom-flow.svg" width="900"
+    alt="The crosswalk publishes aibom-index.json and the DRAFT aibom-applicability.json. An AIBOM tool
+      vendors them at a pinned commit and writes a CycloneDX AIBOM with candidate risks, mapped controls with
+      review status, and provenance.">
+</p>
+
+**What it gives you.** For a model such as `openai-community/gpt2`, the BOM gains:
+
+- **The candidate risks.** The LLM Top 10 for a generative model, plus the Agentic, GenAI Data Security or Agentic
+  Skills lists if you say the deployment uses them.
+- **For each risk, the mapped controls** in the frameworks you pick, by default OWASP AISVS, NIST AI RMF, NIST CSF
+  2.0, the EU AI Act and MITRE ATLAS. Each control shows whether its mapping is `reviewed`, `draft` or
+  `unreviewed`.
+- **Provenance:** the crosswalk version and commit, the status of the selection rules, and the CC BY-SA attribution.
+
+**What it doesn't do: assess the model.** Every item says *candidate risk — not assessed*. Use the list to decide
+what to test and which controls to check, not as evidence that the model is safe or compliant.
+
+### How to do it
+
+**With the [OWASP AIBOM Generator](https://github.com/GenAI-Security-Project/aibom-generator).** In the web form,
+open *Optional: add candidate OWASP GenAI risks and mapped controls*, tick what the deployment does, and generate.
+The result page gets a **Risks** tab.
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="docs/assets/aibom/aibom-generator-form.png"
+        alt="AIBOM Generator form for openai-community/gpt2 with the OWASP risk section ticked,
+          'runs in an agent' ticked, and the default frameworks selected">
+      <br><b>Choose</b>: the model, what the deployment does, and the frameworks.
+    </td>
+    <td width="50%" valign="top">
+      <img src="docs/assets/aibom/aibom-generator-risks.png"
+        alt="The Risks tab: LLM01 and LLM02, each with mapped controls per framework and a reviewed,
+          draft or unreviewed badge on each control">
+      <br><b>Read</b>: each candidate risk with its mapped controls and their review status.
+    </td>
+  </tr>
+</table>
+
+From the command line:
+
+```bash
+python -m src.cli openai-community/gpt2 --owasp-risks                  # LLM Top 10, default frameworks
+python -m src.cli openai-community/gpt2 --agentic --rag \
+  --frameworks "OWASP AISVS 1.01,NIST AI RMF 1.0,EU AI Act"           # add Agentic + Data Security lists
+```
+
+> **Status:** generator support is in review as
+> [aibom-generator #142](https://github.com/GenAI-Security-Project/aibom-generator/pull/142). Until it merges and
+> the hosted Space is redeployed, run it from that branch. The screenshots above come from a local run of it.
+
+**With any other tool.** Read two files at a pinned commit:
+[`data/exports/aibom-index.json`](data/exports/aibom-index.json) (risks, controls, and links with review status) and
+[`data/aibom-applicability.json`](data/aibom-applicability.json) (which lists apply to which kind of model).
+[docs/AIBOM_INTEGRATION.md](docs/AIBOM_INTEGRATION.md) covers the fields, where each part goes in CycloneDX, and
+the licence rules.
+
+<details>
+<summary><b>What lands in the CycloneDX file</b> (excerpt from the gpt2 run)</summary>
+
+```jsonc
+// components[0].modelCard.considerations.ethicalConsiderations[] — one per candidate risk
+{
+  "name": "LLM01 Prompt Injection (OWASP Top 10 for LLM Applications 2026)",
+  "mitigationStrategy": "Candidate risk — not assessed. Mapped controls — OWASP AISVS 1.01: 10.4.2 (reviewed), …"
+}
+
+// definitions.standards[] — one standard per OWASP list and per framework; each control links back to its risks
+{
+  "bom-ref": "owasp-crosswalk:control:owasp-aisvs:10.4.2",
+  "identifier": "10.4.2",
+  "title": "Verify that MCP tools/list and tools/call responses are screened for indirect prompt injection …",
+  "properties": [{ "name": "owasp:aibom:risk:link", "value": "LLM01|subset-of|reviewed" }]
+}
+
+// metadata.properties — provenance
+{ "name": "owasp:aibom:risk:status",              "value": "candidate-not-assessed" }
+{ "name": "owasp:aibom:risk:source",              "value": "OWASP GenAI Crosswalk 4.0.0 @ aea7398…" }
+{ "name": "owasp:aibom:risk:applicabilityStatus", "value": "DRAFT — SME review required" }
+{ "name": "owasp:aibom:risk:linkReviewStatus",    "value": "reviewed=85,draft=8,unreviewed=129" }
+```
+
+Control text appears only for frameworks whose licence allows it. ISO, PCI DSS, SOC 2, AIUC-1, ISA/IEC 62443 and
+CIS controls carry an id and a link.
+
+</details>
+
+**Help wanted from reviewers.** The rules for which lists apply are DRAFT
+([#438](https://github.com/GenAI-Security-Project/crosswalk/issues/438)). Outside OWASP AISVS, most mapped controls
+are unreviewed ([#439](https://github.com/GenAI-Security-Project/crosswalk/issues/439)). Every review shows up in the
+next BOM.
 
 ---
 
