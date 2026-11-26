@@ -1138,6 +1138,12 @@
       "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2026,
       "incident_id": "INC-160"
+    },
+    {
+      "name": "vLLM: seven flaws fixed in 0.32.0 let API callers crash or exhaust the engine, reach pickle.loads() through a forged shared-memory handle, or hand image bytes to any Pillow decoder",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-162"
     }
   ],
   "crossrefs": {

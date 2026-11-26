@@ -1514,6 +1514,12 @@ window.CROSSWALK_DATA = [
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-148"
+      },
+      {
+        "name": "yt-mcp: add_attachment read any file the caller named, so an LLM steered by indirect prompt injection could exfiltrate secrets into a YouTrack issue",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-165"
       }
     ],
     "crossrefs": {
@@ -5355,6 +5361,24 @@ window.CROSSWALK_DATA = [
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-158"
+      },
+      {
+        "name": "vLLM: seven flaws fixed in 0.32.0 let API callers crash or exhaust the engine, reach pickle.loads() through a forged shared-memory handle, or hand image bytes to any Pillow decoder",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-162"
+      },
+      {
+        "name": "MLflow: scorer deserialization imported caller-placed modules, prompt versions read server files, and CrewAI autologging put provider API keys in traces",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-163"
+      },
+      {
+        "name": "LLMKube: Model.spec.source accepted any absolute path, so a namespace user could copy controller or node secrets into model storage",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-166"
       }
     ],
     "crossrefs": {
@@ -7758,6 +7782,12 @@ window.CROSSWALK_DATA = [
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-160"
+      },
+      {
+        "name": "vLLM: seven flaws fixed in 0.32.0 let API callers crash or exhaust the engine, reach pickle.loads() through a forged shared-memory handle, or hand image bytes to any Pillow decoder",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-162"
       }
     ],
     "crossrefs": {
@@ -16293,6 +16323,12 @@ window.CROSSWALK_DATA = [
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-159"
+      },
+      {
+        "name": "yt-mcp: add_attachment read any file the caller named, so an LLM steered by indirect prompt injection could exfiltrate secrets into a YouTrack issue",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-165"
       }
     ],
     "crossrefs": {
@@ -27758,6 +27794,24 @@ window.CROSSWALK_DATA = [
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-145"
+      },
+      {
+        "name": "MLflow: scorer deserialization imported caller-placed modules, prompt versions read server files, and CrewAI autologging put provider API keys in traces",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-163"
+      },
+      {
+        "name": "LMDeploy: remote media URL check and HTTP client parsed backslashes differently, so a URL passed the SSRF guard and reached internal hosts",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-164"
+      },
+      {
+        "name": "yt-mcp: add_attachment read any file the caller named, so an LLM steered by indirect prompt injection could exfiltrate secrets into a YouTrack issue",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-165"
       }
     ],
     "crossrefs": {
@@ -28925,6 +28979,18 @@ window.CROSSWALK_DATA = [
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-147"
+      },
+      {
+        "name": "MLflow: scorer deserialization imported caller-placed modules, prompt versions read server files, and CrewAI autologging put provider API keys in traces",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-163"
+      },
+      {
+        "name": "LLMKube: Model.spec.source accepted any absolute path, so a namespace user could copy controller or node secrets into model storage",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-166"
       }
     ],
     "crossrefs": {
@@ -32208,6 +32274,12 @@ window.CROSSWALK_DATA = [
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-160"
+      },
+      {
+        "name": "MLflow: scorer deserialization imported caller-placed modules, prompt versions read server files, and CrewAI autologging put provider API keys in traces",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-163"
       }
     ],
     "crossrefs": {
@@ -41548,6 +41620,12 @@ window.CROSSWALK_DATA = [
         "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
         "year": 2026,
         "incident_id": "INC-154"
+      },
+      {
+        "name": "MLflow: scorer deserialization imported caller-placed modules, prompt versions read server files, and CrewAI autologging put provider API keys in traces",
+        "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+        "year": 2026,
+        "incident_id": "INC-163"
       }
     ],
     "crossrefs": {

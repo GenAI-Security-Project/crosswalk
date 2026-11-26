@@ -1243,6 +1243,24 @@
       "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
       "year": 2026,
       "incident_id": "INC-158"
+    },
+    {
+      "name": "vLLM: seven flaws fixed in 0.32.0 let API callers crash or exhaust the engine, reach pickle.loads() through a forged shared-memory handle, or hand image bytes to any Pillow decoder",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-162"
+    },
+    {
+      "name": "MLflow: scorer deserialization imported caller-placed modules, prompt versions read server files, and CrewAI autologging put provider API keys in traces",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-163"
+    },
+    {
+      "name": "LLMKube: Model.spec.source accepted any absolute path, so a namespace user could copy controller or node secrets into model storage",
+      "url": "https://github.com/GenAI-Security-Project/crosswalk/blob/main/data/incidents.json",
+      "year": 2026,
+      "incident_id": "INC-166"
     }
   ],
   "crossrefs": {

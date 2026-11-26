@@ -92,7 +92,7 @@ node scripts/incidents-report.js --format stix              # SIEM/SOAR export
 | **GRC / auditor** | `compliance-report.js --format oscal` → import into ServiceNow/Archer |
 | **Developer** | `npm install genai-security-crosswalk` → query risks + controls programmatically |
 | **ML engineer shipping a model** | [AI Bill of Materials](#use-it-in-an-ai-bill-of-materials) → add the model's candidate risks and mapped controls to its AIBOM |
-| **Threat intel analyst** | `incidents-report.js --format stix` → ingest <!-- stats:incidents -->161<!-- /stats --> AI incidents into Sentinel/Splunk |
+| **Threat intel analyst** | `incidents-report.js --format stix` → ingest <!-- stats:incidents -->166<!-- /stats --> AI incidents into Sentinel/Splunk |
 
 ---
 
@@ -285,7 +285,7 @@ Every file answers one question: **which controls from framework X address vulne
 | **70+** open-source tools | Catalogued and organised by function |
 | **25** eval profiles | Runnable Garak (13) + PyRIT (6) + LAAF (6) tests mapped to OWASP entries |
 | **<!-- stats:frameworks-mapped -->26<!-- /stats -->** compliance reports | Per-framework gap assessments auto-generated from data layer (MD, CSV, JSON, OSCAL) |
-| **<!-- stats:incidents -->161<!-- /stats -->** documented incidents | Real-world + research incidents with MAESTRO layer attribution (MD, CSV, JSON, STIX 2.1) |
+| **<!-- stats:incidents -->166<!-- /stats -->** documented incidents | Real-world + research incidents with MAESTRO layer attribution (MD, CSV, JSON, STIX 2.1) |
 | **LAAF v2.0** | First agentic LPCI red-teaming framework — fully integrated with 6-stage × OWASP crosswalk |
 
 All free. All open-source. Built for practitioners.
@@ -539,7 +539,7 @@ crosswalk/
 │
 ├── data/
 │   ├── schema.json                  ← JSON Schema (Draft 7) for entry files
-│   ├── incidents.json               ← <!-- stats:incidents -->161<!-- /stats --> incidents with MAESTRO layer attribution
+│   ├── incidents.json               ← <!-- stats:incidents -->166<!-- /stats --> incidents with MAESTRO layer attribution
 │   ├── incidents-schema.json        ← JSON Schema for incidents
 │   ├── tools-supplement.json        ← Supplemental tools merged at generation time
 │   ├── entries/                     ← <!-- stats:entries -->51<!-- /stats --> machine-readable entry JSON files
@@ -624,7 +624,7 @@ See `evals/laaf/README.md` for the full LPCI attack vector → OWASP → MAESTRO
 
 ## Incident tracker
 
-The tracker holds <!-- stats:incidents -->161<!-- /stats --> real-world and research-demonstrated incidents, each
+The tracker holds <!-- stats:incidents -->166<!-- /stats --> real-world and research-demonstrated incidents, each
 mapped to OWASP entries and MAESTRO architectural layers:
 
 ```bash
@@ -650,7 +650,7 @@ No install required. Works on desktop and mobile.
 | [**Score**](https://genai-security-project.github.io/crosswalk/#/score) | Select your frameworks, see coverage gaps. Upload Garak/PyRIT/LAAF results to validate. Share your score card on LinkedIn. |
 | [**Explorer**](https://genai-security-project.github.io/crosswalk/#/explorer) | Search and filter all <!-- stats:entries -->51<!-- /stats --> entries. Click any entry to see controls across all <!-- stats:frameworks-mapped -->26<!-- /stats --> frameworks. |
 | [**Frameworks**](https://genai-security-project.github.io/crosswalk/#/frameworks) | Interactive <!-- stats:entries -->51<!-- /stats -->×<!-- stats:frameworks-mapped -->26<!-- /stats --> coverage matrix. Click any cell to see the specific controls mapped. |
-| [**Incidents**](https://genai-security-project.github.io/crosswalk/#/incidents) | Browse <!-- stats:incidents -->161<!-- /stats --> AI security incidents. Filter by severity, year, MAESTRO layer. Full attribution details. |
+| [**Incidents**](https://genai-security-project.github.io/crosswalk/#/incidents) | Browse <!-- stats:incidents -->166<!-- /stats --> AI security incidents. Filter by severity, year, MAESTRO layer. Full attribution details. |
 
 **Evidence-based scoring** — three validation tiers:
 
