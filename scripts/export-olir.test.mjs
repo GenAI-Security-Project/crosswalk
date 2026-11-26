@@ -8,7 +8,7 @@
  */
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { COLUMNS, RELATIONSHIP_OUT } from './export-olir.mjs';
+import { COLUMNS, RELATIONSHIP_OUT, strengthOut } from './export-olir.mjs';
 
 test('column set matches the OLIR template', () => {
   assert.deepEqual(COLUMNS, [
@@ -41,6 +41,16 @@ test('directional relationships are restated from the Reference (entry) side', (
   assert.equal(RELATIONSHIP_OUT['superset-of'], 'subset of');
   assert.equal(RELATIONSHIP_OUT['equal'], 'equal');
   assert.equal(RELATIONSHIP_OUT['intersects-with'], 'intersects with');
+});
+
+test('Strength of Relationship is the integer strength, never confidence', () => {
+  // IR 8278A Rev. 1: an integer 0-10. confidence is review state (#99 Decision 6).
+  assert.equal(strengthOut({ strength: 7, confidence: 'high' }), '7');
+  assert.equal(strengthOut({ strength: 0 }), '0');
+  assert.equal(strengthOut({ strength: 10 }), '10');
+  assert.equal(strengthOut({ confidence: 'high' }), '');
+  assert.equal(strengthOut({ strength: 11 }), '');
+  assert.equal(strengthOut({ strength: '7' }), '');
 });
 
 test('every stored enum value has an export mapping', () => {

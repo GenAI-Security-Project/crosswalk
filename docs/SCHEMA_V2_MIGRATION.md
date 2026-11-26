@@ -32,7 +32,8 @@ than a rewrite of it.
 | `relationship` | enum | OLIR **Relationship** |
 | `rationale_type` | enum | OLIR **Rationale** |
 | `rationale` | string | OLIR **Comments** |
-| `confidence` | enum | OLIR **Strength of Relationship** |
+| `confidence` | enum | crosswalk (review state; not exported) |
+| `strength` | integer 0–10 | OLIR **Strength of Relationship** |
 | `framework_version` | string | crosswalk |
 | `reviewed_by` | string[] | crosswalk |
 | `review_date` | date | crosswalk |
@@ -89,8 +90,8 @@ disclosure — hence subset, not equal" is a rationale. "Applies to LLM02" is no
 
 ### `confidence` — and the rule that protects it
 
-`high | medium | low | unreviewed`, mapping to the optional OLIR *Strength of
-Relationship*.
+`high | medium | low | unreviewed`: how firmly a named reviewer holds the row.
+It is review state and is **not** exported (#99 Decision 6).
 
 **A row may not claim review it does not have.** `validate.js` fails any mapping
 whose `confidence` is above `unreviewed` while `reviewed_by` is empty. Confidence
@@ -101,6 +102,16 @@ nothing.
 Rows written before schema v2 carry `confidence: unreviewed`. That is an honest
 label, not a defect: it says the relationship has not been typed, scored, or
 signed by anyone. Leaving the field absent would have read as "fine".
+
+### `strength` — OLIR Strength of Relationship
+
+IR 8278A Rev. 1 defines Strength of Relationship as an **integer from 0 to 10**,
+which an enum cannot express. A mapping table may carry an optional `Strength`
+column; `generate.js` reads it into `strength`, and the OLIR export writes it to
+*Strength of Relationship* (blank when unset). The same rule as `confidence`
+applies: `validate.js` fails a `strength` outside 0–10, and any `strength` on a
+row with an empty `reviewed_by`. No existing row has one; the value is a
+reviewer's to set.
 
 ### `framework_version`, `reviewed_by`, `review_date`
 

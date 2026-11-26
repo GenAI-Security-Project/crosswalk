@@ -158,7 +158,13 @@
               "low",
               "unreviewed"
             ],
-            "description": "How strongly the relationship is asserted; maps to the optional OLIR \"Strength of Relationship\". Rows predating schema v2 carry `unreviewed`, which is an honest label rather than a quality claim."
+            "description": "Review state: how firmly a named reviewer holds the row. It is not exported to OLIR, whose Strength of Relationship is the integer `strength` (#99 Decision 6). Rows predating schema v2 carry `unreviewed`, which is an honest label rather than a quality claim."
+          },
+          "strength": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 10,
+            "description": "OLIR Strength of Relationship: an integer 0-10 (NIST IR 8278A Rev. 1). Optional; set only by a named reviewer, from a Strength column in the mapping table (#99 Decision 6)."
           },
           "framework_version": {
             "type": "string",

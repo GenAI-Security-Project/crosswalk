@@ -17,7 +17,8 @@
  *   relationship                 Relationship        (restated from the entry's side, below)
  *   rationale_type               Rationale
  *   rationale                    Comments
- *   confidence                   Strength of Relationship
+ *   strength (integer 0-10)      Strength of Relationship   (#99 Decision 6)
+ *   confidence                   not exported: it is review state
  *
  * > NIST IR 8278A Rev. 1, *National Online Informative References (OLIR)
  * > Program: Submission Guidance for OLIR Developers*, February 2024.
@@ -70,6 +71,15 @@ const RELATIONSHIP_OUT = {
   'not-related-to': 'not related to',
 };
 
+/**
+ * OLIR Strength of Relationship is an integer 0-10 (IR 8278A Rev. 1). It comes
+ * from `strength` only; `confidence` is review state, and exporting "high" in
+ * an integer field would be rejected (#99 Decision 6). Blank when unset.
+ */
+export function strengthOut(m) {
+  return Number.isInteger(m.strength) && m.strength >= 0 && m.strength <= 10 ? String(m.strength) : '';
+}
+
 /** OLIR template column order. */
 const COLUMNS = [
   'Focal Document Element',
@@ -117,7 +127,7 @@ for (const f of fs.readdirSync(entryDir).filter((n) => n.endsWith('.json'))) {
       'Reference Document Element': entry.id,
       'Reference Document Element Description': entry.name,
       'Rationale': m.rationale_type || '',
-      'Strength of Relationship': m.confidence && m.confidence !== 'unreviewed' ? m.confidence : '',
+      'Strength of Relationship': strengthOut(m),
       'Comments': (m.rationale || '').replace(/\s+/g, ' ').trim(),
     });
   }

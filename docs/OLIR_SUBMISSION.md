@@ -36,7 +36,7 @@ rather than a re-derivation. `scripts/export-olir.mjs` performs it:
 | entry id + name | Reference Document Element (+ Description) |
 | `relationship` | Relationship — hyphens expanded to the spec's spacing; `subset-of` and `superset-of` swap, because OLIR states the entry relative to the control (#99 Decision 7) |
 | `rationale_type` | Rationale |
-| `confidence` | Strength of Relationship |
+| `strength` (integer 0–10) | Strength of Relationship; `confidence` is review state and is not exported (#99 Decision 6) |
 | `rationale` | Comments |
 
 ```bash

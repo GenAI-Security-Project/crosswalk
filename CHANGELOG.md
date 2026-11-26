@@ -105,6 +105,11 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   "superset of", and `superset-of` as "subset of". The 326 reviewed AISVS `subset-of` rows would have exported
   inverted. The exporter header and the `data/schema.json` description, which named the direction the other
   way round, now match the code. No stored value changes.
+- **OLIR Strength of Relationship came from the `confidence` enum** (#99 Decision 6). IR 8278A Rev. 1
+  defines it as an integer 0–10, so the export wrote "high" into an integer field. A new optional
+  `strength` field (integer 0–10, from a `Strength` column in a mapping table) now supplies it, blank
+  when unset; `confidence` stays as review state and is no longer exported. `validate.js` fails a
+  `strength` outside 0–10, or on a row with no named reviewer. No existing row carries one.
 
 Next: npm publish to npmjs.com, custom domain (crosswalk.owasp.org), vendor integration packs, NeMo Guardrails configs.
 

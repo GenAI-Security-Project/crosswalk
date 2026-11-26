@@ -536,6 +536,18 @@ function checkSchemaV2() {
           `${where} — confidence "${m.confidence}" but reviewed_by is empty; only a named reviewer may raise confidence`);
         violations++;
       }
+      // Strength of Relationship (IR 8278A Rev. 1): an integer 0-10, and like
+      // confidence it is a claim about human judgment, so it needs a reviewer.
+      if (m.strength !== undefined) {
+        if (!Number.isInteger(m.strength) || m.strength < 0 || m.strength > 10) {
+          fail('data/entries/' + f, `${where} — strength "${m.strength}" is not an integer 0-10 (IR 8278A Rev. 1)`);
+          violations++;
+        } else if (!(m.reviewed_by || []).length) {
+          fail('data/entries/' + f,
+            `${where} — strength ${m.strength} but reviewed_by is empty; only a named reviewer may assert strength`);
+          violations++;
+        }
+      }
       if (m.relationship) seen.typed++;
       if ((m.reviewed_by || []).length) seen.reviewed++;
     });
