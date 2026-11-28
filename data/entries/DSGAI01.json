@@ -764,6 +764,60 @@
     },
     {
       "framework": "OWASP NHI Top 10",
+      "control_id": "NHI-2",
+      "control_name": "Secret Leakage",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "Output scanning for credential patterns",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP NHI Top 10",
+      "control_id": "NHI-5",
+      "control_name": "Over-Privileged NHI",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "Minimum scope for retrieval service accounts",
+      "confidence": "unreviewed",
+      "reviewed_by": [],
+      "evidence_count": 0,
+      "evidence": {
+        "confirmed": [],
+        "drafted": [
+          "INC-137"
+        ]
+      }
+    },
+    {
+      "framework": "OWASP NHI Top 10",
+      "control_id": "NHI-5",
+      "control_name": "Over-Privileged NHI",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "Scope pipeline credentials to approved data sources only",
+      "confidence": "unreviewed",
+      "reviewed_by": [],
+      "evidence_count": 0,
+      "evidence": {
+        "confirmed": [],
+        "drafted": [
+          "INC-137"
+        ]
+      }
+    },
+    {
+      "framework": "OWASP NHI Top 10",
+      "control_id": "NHI-2",
+      "control_name": "Secret Leakage",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "Audit config files for embedded credentials",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP NHI Top 10",
       "control_id": "NHI-5",
       "control_name": "Over-Privileged NHI",
       "tier": "Foundational",

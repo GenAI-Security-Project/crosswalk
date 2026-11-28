@@ -13,10 +13,10 @@
       "entries": 51,
       "frameworks": 27,
       "controls": 788,
-      "links": 3793,
+      "links": 3819,
       "links_by_review_status": {
         "reviewed": 328,
-        "unreviewed": 3137,
+        "unreviewed": 3163,
         "draft": 328
       }
     },
@@ -14841,6 +14841,38 @@
     {
       "entry": "DSGAI01",
       "framework_id": "owasp-nhi",
+      "control_id": "NHI-2",
+      "confidence": "unreviewed",
+      "review_status": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "entry": "DSGAI01",
+      "framework_id": "owasp-nhi",
+      "control_id": "NHI-2",
+      "confidence": "unreviewed",
+      "review_status": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "entry": "DSGAI01",
+      "framework_id": "owasp-nhi",
+      "control_id": "NHI-5",
+      "confidence": "unreviewed",
+      "review_status": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "entry": "DSGAI01",
+      "framework_id": "owasp-nhi",
+      "control_id": "NHI-5",
+      "confidence": "unreviewed",
+      "review_status": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "entry": "DSGAI01",
+      "framework_id": "owasp-nhi",
       "control_id": "NHI-5",
       "confidence": "unreviewed",
       "review_status": "unreviewed",
@@ -15596,6 +15628,54 @@
     {
       "entry": "DSGAI02",
       "framework_id": "owasp-nhi",
+      "control_id": "NHI-1",
+      "confidence": "unreviewed",
+      "review_status": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "entry": "DSGAI02",
+      "framework_id": "owasp-nhi",
+      "control_id": "NHI-10",
+      "confidence": "unreviewed",
+      "review_status": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "entry": "DSGAI02",
+      "framework_id": "owasp-nhi",
+      "control_id": "NHI-2",
+      "confidence": "unreviewed",
+      "review_status": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "entry": "DSGAI02",
+      "framework_id": "owasp-nhi",
+      "control_id": "NHI-4",
+      "confidence": "unreviewed",
+      "review_status": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "entry": "DSGAI02",
+      "framework_id": "owasp-nhi",
+      "control_id": "NHI-5",
+      "confidence": "unreviewed",
+      "review_status": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "entry": "DSGAI02",
+      "framework_id": "owasp-nhi",
+      "control_id": "NHI-5",
+      "confidence": "unreviewed",
+      "review_status": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "entry": "DSGAI02",
+      "framework_id": "owasp-nhi",
       "control_id": "NHI-5",
       "confidence": "unreviewed",
       "review_status": "unreviewed",
@@ -15613,6 +15693,30 @@
       "entry": "DSGAI02",
       "framework_id": "owasp-nhi",
       "control_id": "NHI-7",
+      "confidence": "unreviewed",
+      "review_status": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "entry": "DSGAI02",
+      "framework_id": "owasp-nhi",
+      "control_id": "NHI-7",
+      "confidence": "unreviewed",
+      "review_status": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "entry": "DSGAI02",
+      "framework_id": "owasp-nhi",
+      "control_id": "NHI-9",
+      "confidence": "unreviewed",
+      "review_status": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "entry": "DSGAI02",
+      "framework_id": "owasp-nhi",
+      "control_id": "NHI-9",
       "confidence": "unreviewed",
       "review_status": "unreviewed",
       "reviewed_by": []
@@ -16302,6 +16406,14 @@
     {
       "entry": "DSGAI03",
       "framework_id": "owasp-nhi",
+      "control_id": "NHI-10",
+      "confidence": "unreviewed",
+      "review_status": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "entry": "DSGAI03",
+      "framework_id": "owasp-nhi",
       "control_id": "NHI-2",
       "confidence": "unreviewed",
       "review_status": "unreviewed",
@@ -16310,7 +16422,7 @@
     {
       "entry": "DSGAI03",
       "framework_id": "owasp-nhi",
-      "control_id": "NHI-5",
+      "control_id": "NHI-3",
       "confidence": "unreviewed",
       "review_status": "unreviewed",
       "reviewed_by": []
@@ -17070,7 +17182,31 @@
     {
       "entry": "DSGAI04",
       "framework_id": "owasp-nhi",
-      "control_id": "NHI-4",
+      "control_id": "NHI-2",
+      "confidence": "unreviewed",
+      "review_status": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "entry": "DSGAI04",
+      "framework_id": "owasp-nhi",
+      "control_id": "NHI-2",
+      "confidence": "unreviewed",
+      "review_status": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "entry": "DSGAI04",
+      "framework_id": "owasp-nhi",
+      "control_id": "NHI-3",
+      "confidence": "unreviewed",
+      "review_status": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "entry": "DSGAI04",
+      "framework_id": "owasp-nhi",
+      "control_id": "NHI-3",
       "confidence": "unreviewed",
       "review_status": "unreviewed",
       "reviewed_by": []
@@ -17086,7 +17222,55 @@
     {
       "entry": "DSGAI04",
       "framework_id": "owasp-nhi",
-      "control_id": "NHI-9",
+      "control_id": "NHI-5",
+      "confidence": "unreviewed",
+      "review_status": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "entry": "DSGAI04",
+      "framework_id": "owasp-nhi",
+      "control_id": "NHI-6",
+      "confidence": "unreviewed",
+      "review_status": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "entry": "DSGAI04",
+      "framework_id": "owasp-nhi",
+      "control_id": "NHI-6",
+      "confidence": "unreviewed",
+      "review_status": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "entry": "DSGAI04",
+      "framework_id": "owasp-nhi",
+      "control_id": "NHI-7",
+      "confidence": "unreviewed",
+      "review_status": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "entry": "DSGAI04",
+      "framework_id": "owasp-nhi",
+      "control_id": "NHI-7",
+      "confidence": "unreviewed",
+      "review_status": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "entry": "DSGAI04",
+      "framework_id": "owasp-nhi",
+      "control_id": "NHI-8",
+      "confidence": "unreviewed",
+      "review_status": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "entry": "DSGAI04",
+      "framework_id": "owasp-nhi",
+      "control_id": "NHI-8",
       "confidence": "unreviewed",
       "review_status": "unreviewed",
       "reviewed_by": []
@@ -17793,7 +17977,23 @@
     {
       "entry": "DSGAI05",
       "framework_id": "owasp-nhi",
+      "control_id": "NHI-4",
+      "confidence": "unreviewed",
+      "review_status": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "entry": "DSGAI05",
+      "framework_id": "owasp-nhi",
       "control_id": "NHI-5",
+      "confidence": "unreviewed",
+      "review_status": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "entry": "DSGAI05",
+      "framework_id": "owasp-nhi",
+      "control_id": "NHI-9",
       "confidence": "unreviewed",
       "review_status": "unreviewed",
       "reviewed_by": []
@@ -18478,7 +18678,7 @@
     {
       "entry": "DSGAI06",
       "framework_id": "owasp-nhi",
-      "control_id": "NHI-2",
+      "control_id": "NHI-3",
       "confidence": "unreviewed",
       "review_status": "unreviewed",
       "reviewed_by": []
@@ -18487,6 +18687,14 @@
       "entry": "DSGAI06",
       "framework_id": "owasp-nhi",
       "control_id": "NHI-5",
+      "confidence": "unreviewed",
+      "review_status": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "entry": "DSGAI06",
+      "framework_id": "owasp-nhi",
+      "control_id": "NHI-9",
       "confidence": "unreviewed",
       "review_status": "unreviewed",
       "reviewed_by": []
@@ -19171,23 +19379,39 @@
     {
       "entry": "DSGAI07",
       "framework_id": "owasp-nhi",
+      "control_id": "NHI-1",
+      "confidence": "unreviewed",
+      "review_status": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "entry": "DSGAI07",
+      "framework_id": "owasp-nhi",
+      "control_id": "NHI-10",
+      "confidence": "unreviewed",
+      "review_status": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "entry": "DSGAI07",
+      "framework_id": "owasp-nhi",
+      "control_id": "NHI-10",
+      "confidence": "unreviewed",
+      "review_status": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "entry": "DSGAI07",
+      "framework_id": "owasp-nhi",
+      "control_id": "NHI-2",
+      "confidence": "unreviewed",
+      "review_status": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "entry": "DSGAI07",
+      "framework_id": "owasp-nhi",
       "control_id": "NHI-5",
-      "confidence": "unreviewed",
-      "review_status": "unreviewed",
-      "reviewed_by": []
-    },
-    {
-      "entry": "DSGAI07",
-      "framework_id": "owasp-nhi",
-      "control_id": "NHI-7",
-      "confidence": "unreviewed",
-      "review_status": "unreviewed",
-      "reviewed_by": []
-    },
-    {
-      "entry": "DSGAI07",
-      "framework_id": "owasp-nhi",
-      "control_id": "NHI-9",
       "confidence": "unreviewed",
       "review_status": "unreviewed",
       "reviewed_by": []
@@ -19869,7 +20093,7 @@
     {
       "entry": "DSGAI08",
       "framework_id": "owasp-nhi",
-      "control_id": "NHI-4",
+      "control_id": "NHI-10",
       "confidence": "unreviewed",
       "review_status": "unreviewed",
       "reviewed_by": []
@@ -19877,15 +20101,7 @@
     {
       "entry": "DSGAI08",
       "framework_id": "owasp-nhi",
-      "control_id": "NHI-5",
-      "confidence": "unreviewed",
-      "review_status": "unreviewed",
-      "reviewed_by": []
-    },
-    {
-      "entry": "DSGAI08",
-      "framework_id": "owasp-nhi",
-      "control_id": "NHI-9",
+      "control_id": "NHI-2",
       "confidence": "unreviewed",
       "review_status": "unreviewed",
       "reviewed_by": []
@@ -20532,23 +20748,7 @@
     {
       "entry": "DSGAI09",
       "framework_id": "owasp-nhi",
-      "control_id": "NHI-5",
-      "confidence": "unreviewed",
-      "review_status": "unreviewed",
-      "reviewed_by": []
-    },
-    {
-      "entry": "DSGAI09",
-      "framework_id": "owasp-nhi",
-      "control_id": "NHI-6",
-      "confidence": "unreviewed",
-      "review_status": "unreviewed",
-      "reviewed_by": []
-    },
-    {
-      "entry": "DSGAI09",
-      "framework_id": "owasp-nhi",
-      "control_id": "NHI-7",
+      "control_id": "NHI-3",
       "confidence": "unreviewed",
       "review_status": "unreviewed",
       "reviewed_by": []
@@ -21153,6 +21353,14 @@
       "entry": "DSGAI10",
       "framework_id": "owasp-nhi",
       "control_id": "NHI-5",
+      "confidence": "unreviewed",
+      "review_status": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "entry": "DSGAI10",
+      "framework_id": "owasp-nhi",
+      "control_id": "NHI-8",
       "confidence": "unreviewed",
       "review_status": "unreviewed",
       "reviewed_by": []
@@ -22541,6 +22749,14 @@
     {
       "entry": "DSGAI12",
       "framework_id": "owasp-nhi",
+      "control_id": "NHI-10",
+      "confidence": "unreviewed",
+      "review_status": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "entry": "DSGAI12",
+      "framework_id": "owasp-nhi",
       "control_id": "NHI-5",
       "confidence": "unreviewed",
       "review_status": "unreviewed",
@@ -22549,7 +22765,7 @@
     {
       "entry": "DSGAI12",
       "framework_id": "owasp-nhi",
-      "control_id": "NHI-7",
+      "control_id": "NHI-9",
       "confidence": "unreviewed",
       "review_status": "unreviewed",
       "reviewed_by": []
@@ -23234,7 +23450,7 @@
     {
       "entry": "DSGAI13",
       "framework_id": "owasp-nhi",
-      "control_id": "NHI-3",
+      "control_id": "NHI-4",
       "confidence": "unreviewed",
       "review_status": "unreviewed",
       "reviewed_by": []
@@ -23924,7 +24140,7 @@
     {
       "entry": "DSGAI14",
       "framework_id": "owasp-nhi",
-      "control_id": "NHI-5",
+      "control_id": "NHI-2",
       "confidence": "unreviewed",
       "review_status": "unreviewed",
       "reviewed_by": []
@@ -23932,7 +24148,7 @@
     {
       "entry": "DSGAI14",
       "framework_id": "owasp-nhi",
-      "control_id": "NHI-6",
+      "control_id": "NHI-5",
       "confidence": "unreviewed",
       "review_status": "unreviewed",
       "reviewed_by": []
@@ -24591,14 +24807,6 @@
       "entry": "DSGAI15",
       "framework_id": "owasp-asvs",
       "control_id": "V8.2.1",
-      "confidence": "unreviewed",
-      "review_status": "unreviewed",
-      "reviewed_by": []
-    },
-    {
-      "entry": "DSGAI15",
-      "framework_id": "owasp-nhi",
-      "control_id": "NHI-2",
       "confidence": "unreviewed",
       "review_status": "unreviewed",
       "reviewed_by": []
@@ -25291,6 +25499,14 @@
     {
       "entry": "DSGAI16",
       "framework_id": "owasp-nhi",
+      "control_id": "NHI-10",
+      "confidence": "unreviewed",
+      "review_status": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "entry": "DSGAI16",
+      "framework_id": "owasp-nhi",
       "control_id": "NHI-2",
       "confidence": "unreviewed",
       "review_status": "unreviewed",
@@ -25299,7 +25515,7 @@
     {
       "entry": "DSGAI16",
       "framework_id": "owasp-nhi",
-      "control_id": "NHI-3",
+      "control_id": "NHI-6",
       "confidence": "unreviewed",
       "review_status": "unreviewed",
       "reviewed_by": []
@@ -25307,7 +25523,7 @@
     {
       "entry": "DSGAI16",
       "framework_id": "owasp-nhi",
-      "control_id": "NHI-8",
+      "control_id": "NHI-7",
       "confidence": "unreviewed",
       "review_status": "unreviewed",
       "reviewed_by": []
@@ -25976,7 +26192,7 @@
     {
       "entry": "DSGAI17",
       "framework_id": "owasp-nhi",
-      "control_id": "NHI-2",
+      "control_id": "NHI-5",
       "confidence": "unreviewed",
       "review_status": "unreviewed",
       "reviewed_by": []
@@ -25984,15 +26200,7 @@
     {
       "entry": "DSGAI17",
       "framework_id": "owasp-nhi",
-      "control_id": "NHI-3",
-      "confidence": "unreviewed",
-      "review_status": "unreviewed",
-      "reviewed_by": []
-    },
-    {
-      "entry": "DSGAI17",
-      "framework_id": "owasp-nhi",
-      "control_id": "NHI-8",
+      "control_id": "NHI-9",
       "confidence": "unreviewed",
       "review_status": "unreviewed",
       "reviewed_by": []
@@ -26629,7 +26837,7 @@
     {
       "entry": "DSGAI18",
       "framework_id": "owasp-nhi",
-      "control_id": "NHI-10",
+      "control_id": "NHI-5",
       "confidence": "unreviewed",
       "review_status": "unreviewed",
       "reviewed_by": []
@@ -26637,7 +26845,7 @@
     {
       "entry": "DSGAI18",
       "framework_id": "owasp-nhi",
-      "control_id": "NHI-5",
+      "control_id": "NHI-7",
       "confidence": "unreviewed",
       "review_status": "unreviewed",
       "reviewed_by": []
@@ -27276,7 +27484,7 @@
     {
       "entry": "DSGAI19",
       "framework_id": "owasp-nhi",
-      "control_id": "NHI-5",
+      "control_id": "NHI-1",
       "confidence": "unreviewed",
       "review_status": "unreviewed",
       "reviewed_by": []
@@ -27284,7 +27492,15 @@
     {
       "entry": "DSGAI19",
       "framework_id": "owasp-nhi",
-      "control_id": "NHI-9",
+      "control_id": "NHI-10",
+      "confidence": "unreviewed",
+      "review_status": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "entry": "DSGAI19",
+      "framework_id": "owasp-nhi",
+      "control_id": "NHI-3",
       "confidence": "unreviewed",
       "review_status": "unreviewed",
       "reviewed_by": []
@@ -27983,7 +28199,7 @@
     {
       "entry": "DSGAI20",
       "framework_id": "owasp-nhi",
-      "control_id": "NHI-10",
+      "control_id": "NHI-5",
       "confidence": "unreviewed",
       "review_status": "unreviewed",
       "reviewed_by": []
@@ -27991,7 +28207,7 @@
     {
       "entry": "DSGAI20",
       "framework_id": "owasp-nhi",
-      "control_id": "NHI-2",
+      "control_id": "NHI-7",
       "confidence": "unreviewed",
       "review_status": "unreviewed",
       "reviewed_by": []
@@ -28687,7 +28903,7 @@
     {
       "entry": "DSGAI21",
       "framework_id": "owasp-nhi",
-      "control_id": "NHI-1",
+      "control_id": "NHI-3",
       "confidence": "unreviewed",
       "review_status": "unreviewed",
       "reviewed_by": []
@@ -28695,15 +28911,7 @@
     {
       "entry": "DSGAI21",
       "framework_id": "owasp-nhi",
-      "control_id": "NHI-10",
-      "confidence": "unreviewed",
-      "review_status": "unreviewed",
-      "reviewed_by": []
-    },
-    {
-      "entry": "DSGAI21",
-      "framework_id": "owasp-nhi",
-      "control_id": "NHI-2",
+      "control_id": "NHI-5",
       "confidence": "unreviewed",
       "review_status": "unreviewed",
       "reviewed_by": []

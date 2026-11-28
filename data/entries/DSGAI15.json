@@ -678,19 +678,9 @@
       "framework": "OWASP NHI Top 10",
       "control_id": "NHI-5",
       "control_name": "Over-Privileged NHI",
-      "tier": "Foundational",
+      "tier": "Hardening",
       "scope": "Both",
-      "notes": "Minimum scope: only authorised audit function can read inference logs",
-      "confidence": "unreviewed",
-      "reviewed_by": []
-    },
-    {
-      "framework": "OWASP NHI Top 10",
-      "control_id": "NHI-2",
-      "control_name": "Secret Leakage",
-      "tier": "Foundational",
-      "scope": "Both",
-      "notes": "Scan and scrub credentials from inference logs",
+      "notes": "Scope data feed credentials to approved data only",
       "confidence": "unreviewed",
       "reviewed_by": []
     },

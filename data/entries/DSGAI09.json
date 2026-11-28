@@ -677,31 +677,11 @@
     },
     {
       "framework": "OWASP NHI Top 10",
-      "control_id": "NHI-5",
-      "control_name": "Over-Privileged NHI",
-      "tier": "Hardening",
+      "control_id": "NHI-3",
+      "control_name": "Vulnerable Third-Party NHI",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Separate read and write credentials; write accounts require MFA",
-      "confidence": "unreviewed",
-      "reviewed_by": []
-    },
-    {
-      "framework": "OWASP NHI Top 10",
-      "control_id": "NHI-6",
-      "control_name": "Insecure Credential Storage",
-      "tier": "Hardening",
-      "scope": "Both",
-      "notes": "Vault all corpus write credentials",
-      "confidence": "unreviewed",
-      "reviewed_by": []
-    },
-    {
-      "framework": "OWASP NHI Top 10",
-      "control_id": "NHI-7",
-      "control_name": "Long-Lived Credentials",
-      "tier": "Hardening",
-      "scope": "Both",
-      "notes": "Rotate corpus write credentials; implement short-lived write pattern",
+      "notes": "Assess third-party multimodal services; minimum-scope tokens and contractual retention limits",
       "confidence": "unreviewed",
       "reviewed_by": []
     },

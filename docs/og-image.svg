@@ -22,7 +22,7 @@
   <text x='145' y='377' font-family='system-ui,sans-serif' font-size='12' fill='#94a3b8' text-anchor='middle' letter-spacing='1'>FRAMEWORKS</text>
 
   <rect x='250' y='320' width='170' height='70' rx='10' fill='rgba(124,58,237,0.15)' stroke='rgba(124,58,237,0.3)' stroke-width='1'/>
-  <text x='335' y='352' font-family='system-ui,sans-serif' font-size='32' font-weight='800' fill='#a78bfa' text-anchor='middle'><!-- stats:mappings -->3,793<!-- /stats --></text>
+  <text x='335' y='352' font-family='system-ui,sans-serif' font-size='32' font-weight='800' fill='#a78bfa' text-anchor='middle'><!-- stats:mappings -->3,819<!-- /stats --></text>
   <text x='335' y='377' font-family='system-ui,sans-serif' font-size='12' fill='#94a3b8' text-anchor='middle' letter-spacing='1'>MAPPINGS</text>
 
   <rect x='440' y='320' width='170' height='70' rx='10' fill='rgba(16,185,129,0.15)' stroke='rgba(16,185,129,0.3)' stroke-width='1'/>

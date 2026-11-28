@@ -32528,13 +32528,31 @@ window.CROSSWALK_BACKLINKS = [
         "notes": "Formal agent offboarding triggered immediately on rogue detection — all credentials revoked"
       },
       {
-        "id": "DSGAI21",
-        "name": "Disinformation via Data Poisoning",
+        "id": "DSGAI02",
+        "name": "Agent Identity and Credential Exposure",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Revoke credentials when an agent, tool or integration is decommissioned"
+      },
+      {
+        "id": "DSGAI07",
+        "name": "Data Governance and Lifecycle",
         "source_list": "DSGAI-2026",
         "severity": "High",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Timely offboarding of pipeline NHIs"
+      },
+      {
+        "id": "DSGAI19",
+        "name": "Human-in-Loop and Labeler Overexposure",
+        "source_list": "DSGAI-2026",
+        "severity": "Medium",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Revoke access at project close"
       }
     ]
   },
@@ -32571,17 +32589,35 @@ window.CROSSWALK_BACKLINKS = [
         "notes": "Strict separation: agent credentials machine-only, human credentials human-only"
       },
       {
-        "id": "DSGAI18",
-        "name": "Inference and Data Reconstruction",
+        "id": "DSGAI02",
+        "name": "Agent Identity and Credential Exposure",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Prohibit human use of agent identities; give people their own identities"
+      },
+      {
+        "id": "DSGAI03",
+        "name": "Shadow AI and Unsanctioned Data Flows",
         "source_list": "DSGAI-2026",
         "severity": "High",
         "tier": "Foundational",
         "scope": "Both",
-        "notes": "Enforce human identity for all compliance operations"
+        "notes": "Monitor service-credential use from interactive clients"
       },
       {
-        "id": "DSGAI20",
-        "name": "Model Exfiltration and IP Replication",
+        "id": "DSGAI07",
+        "name": "Data Governance and Lifecycle",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Enforce machine identity per pipeline component; log with component identity"
+      },
+      {
+        "id": "DSGAI08",
+        "name": "Non-Compliance and Regulatory Violations",
         "source_list": "DSGAI-2026",
         "severity": "High",
         "tier": "Foundational",
@@ -32589,13 +32625,31 @@ window.CROSSWALK_BACKLINKS = [
         "notes": "Enforce human identity for all regulated data operations"
       },
       {
-        "id": "DSGAI21",
-        "name": "Disinformation via Data Poisoning",
+        "id": "DSGAI12",
+        "name": "Unsafe Natural Language Data Gateways",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "No human use of the gateway's service identity"
+      },
+      {
+        "id": "DSGAI16",
+        "name": "Endpoint and Browser Overreach",
         "source_list": "DSGAI-2026",
         "severity": "High",
         "tier": "Foundational",
         "scope": "Both",
-        "notes": "Enforce machine identity per pipeline component; log with component identity"
+        "notes": "A distinct identity for the assistant, recorded in audit trails"
+      },
+      {
+        "id": "DSGAI19",
+        "name": "Human-in-Loop and Labeler Overexposure",
+        "source_list": "DSGAI-2026",
+        "severity": "Medium",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Individual labeler identities"
       }
     ]
   },
@@ -32677,26 +32731,62 @@ window.CROSSWALK_BACKLINKS = [
         "notes": "Scan all paths where memory store credentials could leak — logs, config, agent context"
       },
       {
+        "id": "DSGAI01",
+        "name": "Sensitive Data Leakage",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Output scanning for credential patterns"
+      },
+      {
+        "id": "DSGAI02",
+        "name": "Agent Identity and Credential Exposure",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Keep credentials out of model context; inject them at the tool boundary"
+      },
+      {
         "id": "DSGAI03",
         "name": "Shadow AI and Unsanctioned Data Flows",
         "source_list": "DSGAI-2026",
         "severity": "High",
         "tier": "Foundational",
         "scope": "Both",
-        "notes": "Audit config files for embedded credentials"
+        "notes": "Secret scanning that flags keys for unapproved AI providers"
       },
       {
-        "id": "DSGAI06",
-        "name": "Tool Plugin and Agent Data Exchange",
+        "id": "DSGAI04",
+        "name": "Data Model and Artifact Poisoning",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Vault all model provider credentials"
+      },
+      {
+        "id": "DSGAI07",
+        "name": "Data Governance and Lifecycle",
         "source_list": "DSGAI-2026",
         "severity": "High",
         "tier": "Foundational",
         "scope": "Both",
-        "notes": "Output scanning for credential patterns"
+        "notes": "Protect lineage system credentials"
       },
       {
-        "id": "DSGAI15",
-        "name": "Over-Broad Context Windows",
+        "id": "DSGAI08",
+        "name": "Non-Compliance and Regulatory Violations",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Protect audit credential integrity"
+      },
+      {
+        "id": "DSGAI14",
+        "name": "Excessive Telemetry and Monitoring Leakage",
         "source_list": "DSGAI-2026",
         "severity": "High",
         "tier": "Foundational",
@@ -32710,34 +32800,7 @@ window.CROSSWALK_BACKLINKS = [
         "severity": "High",
         "tier": "Foundational",
         "scope": "Both",
-        "notes": "Vault all third-party data source credentials"
-      },
-      {
-        "id": "DSGAI17",
-        "name": "Data Availability and Resilience Failures",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "Vault all model provider credentials"
-      },
-      {
-        "id": "DSGAI20",
-        "name": "Model Exfiltration and IP Replication",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "Protect audit credential integrity"
-      },
-      {
-        "id": "DSGAI21",
-        "name": "Disinformation via Data Poisoning",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "Protect lineage system credentials"
+        "notes": "Exclude secret-bearing files and pages from assistant context"
       }
     ]
   },
@@ -32792,8 +32855,26 @@ window.CROSSWALK_BACKLINKS = [
         "notes": "Validate all third-party NHIs at connection — revoke tokens from unverified sources"
       },
       {
-        "id": "DSGAI13",
-        "name": "Vector Store Platform Security",
+        "id": "DSGAI03",
+        "name": "Shadow AI and Unsanctioned Data Flows",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Review and approve third-party AI integrations before granting access"
+      },
+      {
+        "id": "DSGAI04",
+        "name": "Data Model and Artifact Poisoning",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Review and scope all model provider credentials"
+      },
+      {
+        "id": "DSGAI06",
+        "name": "Tool Plugin and Agent Data Exchange",
         "source_list": "DSGAI-2026",
         "severity": "High",
         "tier": "Foundational",
@@ -32801,22 +32882,31 @@ window.CROSSWALK_BACKLINKS = [
         "notes": "Review all third-party tool credentials; reduce to minimum scope"
       },
       {
-        "id": "DSGAI16",
-        "name": "Endpoint and Browser Overreach",
+        "id": "DSGAI09",
+        "name": "Multimodal Cross-Channel Leakage",
         "source_list": "DSGAI-2026",
         "severity": "High",
         "tier": "Foundational",
         "scope": "Both",
-        "notes": "Review all third-party credentials; reduce to minimum"
+        "notes": "Assess third-party multimodal services; minimum-scope tokens and contractual retention limits"
       },
       {
-        "id": "DSGAI17",
-        "name": "Data Availability and Resilience Failures",
+        "id": "DSGAI19",
+        "name": "Human-in-Loop and Labeler Overexposure",
         "source_list": "DSGAI-2026",
-        "severity": "High",
+        "severity": "Medium",
         "tier": "Foundational",
         "scope": "Both",
-        "notes": "Review and scope all model provider credentials"
+        "notes": "Vendor tokens scoped to assigned batches"
+      },
+      {
+        "id": "DSGAI21",
+        "name": "Disinformation via Data Poisoning",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Write scopes limited to each feed's own source partition"
       }
     ]
   },
@@ -32853,17 +32943,26 @@ window.CROSSWALK_BACKLINKS = [
         "notes": "Strong mutual authentication on all A2A channels — mTLS, certificate-based, short-lived"
       },
       {
-        "id": "DSGAI04",
-        "name": "Data Model and Artifact Poisoning",
+        "id": "DSGAI02",
+        "name": "Agent Identity and Credential Exposure",
         "source_list": "DSGAI-2026",
         "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Authenticate every caller of an agent, tool server or proxy; do not rely on network position"
+      },
+      {
+        "id": "DSGAI05",
+        "name": "Data Integrity and Validation Failures",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Require mTLS or token auth for all pipeline connections"
       },
       {
-        "id": "DSGAI08",
-        "name": "Non-Compliance and Regulatory Violations",
+        "id": "DSGAI13",
+        "name": "Vector Store Platform Security",
         "source_list": "DSGAI-2026",
         "severity": "High",
         "tier": "Hardening",
@@ -33001,11 +33100,20 @@ window.CROSSWALK_BACKLINKS = [
         "severity": "Critical",
         "tier": "Foundational",
         "scope": "Both",
-        "notes": "Apply least-privilege to all data pipeline credentials"
+        "notes": "Minimum scope for retrieval service accounts"
       },
       {
         "id": "DSGAI02",
         "name": "Agent Identity and Credential Exposure",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Per-task, least-privilege scopes; for delegated calls, pass the user's identity so access is bounded by both the user's and the agent's permissions"
+      },
+      {
+        "id": "DSGAI04",
+        "name": "Data Model and Artifact Poisoning",
         "source_list": "DSGAI-2026",
         "severity": "Critical",
         "tier": "Hardening",
@@ -33013,31 +33121,13 @@ window.CROSSWALK_BACKLINKS = [
         "notes": "Separate read and write credentials; write requires MFA"
       },
       {
-        "id": "DSGAI03",
-        "name": "Shadow AI and Unsanctioned Data Flows",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "Scope pipeline credentials to approved data sources only"
-      },
-      {
-        "id": "DSGAI04",
-        "name": "Data Model and Artifact Poisoning",
-        "source_list": "DSGAI-2026",
-        "severity": "Critical",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "Per-stage credentials with minimum scope"
-      },
-      {
         "id": "DSGAI05",
         "name": "Data Integrity and Validation Failures",
         "source_list": "DSGAI-2026",
         "severity": "High",
-        "tier": "Hardening",
+        "tier": "Foundational",
         "scope": "Both",
-        "notes": "Minimum scope; no service account has guardrail disable capability"
+        "notes": "Per-stage credentials with minimum scope"
       },
       {
         "id": "DSGAI06",
@@ -33046,7 +33136,7 @@ window.CROSSWALK_BACKLINKS = [
         "severity": "High",
         "tier": "Foundational",
         "scope": "Both",
-        "notes": "Minimum scope for retrieval service accounts"
+        "notes": "Minimum scope per tool integration"
       },
       {
         "id": "DSGAI07",
@@ -33055,34 +33145,16 @@ window.CROSSWALK_BACKLINKS = [
         "severity": "High",
         "tier": "Foundational",
         "scope": "Both",
-        "notes": "Audit and reduce credential scope per system component"
-      },
-      {
-        "id": "DSGAI08",
-        "name": "Non-Compliance and Regulatory Violations",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Hardening",
-        "scope": "Both",
-        "notes": "Per-tenant credentials or row-level security with minimum scope"
-      },
-      {
-        "id": "DSGAI09",
-        "name": "Multimodal Cross-Channel Leakage",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Hardening",
-        "scope": "Both",
-        "notes": "Separate read and write credentials; write accounts require MFA"
+        "notes": "Minimum scope for data access credentials"
       },
       {
         "id": "DSGAI10",
         "name": "Synthetic Data and Anonymization Pitfalls",
         "source_list": "DSGAI-2026",
         "severity": "Medium",
-        "tier": "Hardening",
+        "tier": "Foundational",
         "scope": "Both",
-        "notes": "Scope data feed credentials to approved data only"
+        "notes": "Scope generation jobs to the source data they need, for as long as they need it"
       },
       {
         "id": "DSGAI11",
@@ -33100,29 +33172,20 @@ window.CROSSWALK_BACKLINKS = [
         "severity": "Critical",
         "tier": "Hardening",
         "scope": "Both",
-        "notes": "Per-user quotas; minimum default quota"
+        "notes": "Run queries under the requesting user's identity, or a credential scoped to that user"
       },
       {
         "id": "DSGAI13",
         "name": "Vector Store Platform Security",
         "source_list": "DSGAI-2026",
         "severity": "High",
-        "tier": "Foundational",
+        "tier": "Hardening",
         "scope": "Both",
-        "notes": "Minimum scope per tool integration"
+        "notes": "Per-tenant credentials or row-level security with minimum scope"
       },
       {
         "id": "DSGAI14",
         "name": "Excessive Telemetry and Monitoring Leakage",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Hardening",
-        "scope": "Both",
-        "notes": "Minimum scope: only authorised inference service can read model weights"
-      },
-      {
-        "id": "DSGAI15",
-        "name": "Over-Broad Context Windows",
         "source_list": "DSGAI-2026",
         "severity": "High",
         "tier": "Foundational",
@@ -33130,22 +33193,49 @@ window.CROSSWALK_BACKLINKS = [
         "notes": "Minimum scope: only authorised audit function can read inference logs"
       },
       {
+        "id": "DSGAI15",
+        "name": "Over-Broad Context Windows",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Scope data feed credentials to approved data only"
+      },
+      {
+        "id": "DSGAI17",
+        "name": "Data Availability and Resilience Failures",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Per-stage minimum scope credentials"
+      },
+      {
         "id": "DSGAI18",
         "name": "Inference and Data Reconstruction",
         "source_list": "DSGAI-2026",
         "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "Minimum scope for data access credentials"
-      },
-      {
-        "id": "DSGAI19",
-        "name": "Human-in-Loop and Labeler Overexposure",
-        "source_list": "DSGAI-2026",
-        "severity": "Medium",
         "tier": "Hardening",
         "scope": "Both",
-        "notes": "Per-stage minimum scope credentials"
+        "notes": "Restrict direct embedding access; expose only query interfaces"
+      },
+      {
+        "id": "DSGAI20",
+        "name": "Model Exfiltration and IP Replication",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Per-user quotas; minimum default quota"
+      },
+      {
+        "id": "DSGAI21",
+        "name": "Disinformation via Data Poisoning",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Separate write credentials per trusted source"
       }
     ]
   },
@@ -33204,18 +33294,18 @@ window.CROSSWALK_BACKLINKS = [
         "name": "Agent Identity and Credential Exposure",
         "source_list": "DSGAI-2026",
         "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Vault all model storage credentials"
+      },
+      {
+        "id": "DSGAI04",
+        "name": "Data Model and Artifact Poisoning",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
         "tier": "Hardening",
         "scope": "Both",
         "notes": "Vault all training pipeline credentials"
-      },
-      {
-        "id": "DSGAI09",
-        "name": "Multimodal Cross-Channel Leakage",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Hardening",
-        "scope": "Both",
-        "notes": "Vault all corpus write credentials"
       },
       {
         "id": "DSGAI11",
@@ -33227,13 +33317,13 @@ window.CROSSWALK_BACKLINKS = [
         "notes": "Vault session store credentials"
       },
       {
-        "id": "DSGAI14",
-        "name": "Excessive Telemetry and Monitoring Leakage",
+        "id": "DSGAI16",
+        "name": "Endpoint and Browser Overreach",
         "source_list": "DSGAI-2026",
         "severity": "High",
-        "tier": "Hardening",
+        "tier": "Foundational",
         "scope": "Both",
-        "notes": "Vault all model storage credentials"
+        "notes": "Use the platform's secure credential store"
       }
     ]
   },
@@ -33328,33 +33418,42 @@ window.CROSSWALK_BACKLINKS = [
         "name": "Agent Identity and Credential Exposure",
         "source_list": "DSGAI-2026",
         "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Issue short-lived, task-bound tokens"
+      },
+      {
+        "id": "DSGAI04",
+        "name": "Data Model and Artifact Poisoning",
+        "source_list": "DSGAI-2026",
+        "severity": "Critical",
         "tier": "Hardening",
         "scope": "Both",
         "notes": "Short-lived write tokens; rotate frequently"
       },
       {
-        "id": "DSGAI07",
-        "name": "Data Governance and Lifecycle",
+        "id": "DSGAI16",
+        "name": "Endpoint and Browser Overreach",
         "source_list": "DSGAI-2026",
         "severity": "High",
         "tier": "Foundational",
         "scope": "Both",
-        "notes": "Rotate or replace with short-lived tokens"
+        "notes": "Short-lived tokens with refresh"
       },
       {
-        "id": "DSGAI09",
-        "name": "Multimodal Cross-Channel Leakage",
+        "id": "DSGAI18",
+        "name": "Inference and Data Reconstruction",
         "source_list": "DSGAI-2026",
         "severity": "High",
         "tier": "Hardening",
         "scope": "Both",
-        "notes": "Rotate corpus write credentials; implement short-lived write pattern"
+        "notes": "Short-lived keys with per-identity rate limits"
       },
       {
-        "id": "DSGAI12",
-        "name": "Unsafe Natural Language Data Gateways",
+        "id": "DSGAI20",
+        "name": "Model Exfiltration and IP Replication",
         "source_list": "DSGAI-2026",
-        "severity": "Critical",
+        "severity": "High",
         "tier": "Hardening",
         "scope": "Both",
         "notes": "Rotate API credentials; implement per-session tokens"
@@ -33394,22 +33493,22 @@ window.CROSSWALK_BACKLINKS = [
         "notes": "Strict environment isolation for code execution — dedicated sandboxed identity"
       },
       {
-        "id": "DSGAI16",
-        "name": "Endpoint and Browser Overreach",
+        "id": "DSGAI04",
+        "name": "Data Model and Artifact Poisoning",
         "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "Enforce environment isolation for third-party credentials"
-      },
-      {
-        "id": "DSGAI17",
-        "name": "Data Availability and Resilience Failures",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Foundational",
+        "severity": "Critical",
+        "tier": "Hardening",
         "scope": "Both",
         "notes": "Separate credentials per environment"
+      },
+      {
+        "id": "DSGAI10",
+        "name": "Synthetic Data and Anonymization Pitfalls",
+        "source_list": "DSGAI-2026",
+        "severity": "Medium",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "Separate credentials per environment; no production read access from non-production"
       }
     ]
   },
@@ -33491,35 +33590,26 @@ window.CROSSWALK_BACKLINKS = [
         "notes": "Unique identity per agent — cascade cannot leverage shared credentials for lateral movement"
       },
       {
-        "id": "DSGAI04",
-        "name": "Data Model and Artifact Poisoning",
+        "id": "DSGAI02",
+        "name": "Agent Identity and Credential Exposure",
         "source_list": "DSGAI-2026",
         "severity": "Critical",
+        "tier": "Foundational",
+        "scope": "Both",
+        "notes": "A distinct identity per agent and per tool integration"
+      },
+      {
+        "id": "DSGAI05",
+        "name": "Data Integrity and Validation Failures",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
         "tier": "Foundational",
         "scope": "Both",
         "notes": "Separate credentials per stage"
       },
       {
-        "id": "DSGAI07",
-        "name": "Data Governance and Lifecycle",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Foundational",
-        "scope": "Both",
-        "notes": "Separate credentials per function"
-      },
-      {
-        "id": "DSGAI08",
-        "name": "Non-Compliance and Regulatory Violations",
-        "source_list": "DSGAI-2026",
-        "severity": "High",
-        "tier": "Hardening",
-        "scope": "Both",
-        "notes": "Separate credentials per tenant or use row-level security"
-      },
-      {
-        "id": "DSGAI13",
-        "name": "Vector Store Platform Security",
+        "id": "DSGAI06",
+        "name": "Tool Plugin and Agent Data Exchange",
         "source_list": "DSGAI-2026",
         "severity": "High",
         "tier": "Foundational",
@@ -33527,10 +33617,28 @@ window.CROSSWALK_BACKLINKS = [
         "notes": "Separate credentials per tool"
       },
       {
-        "id": "DSGAI19",
-        "name": "Human-in-Loop and Labeler Overexposure",
+        "id": "DSGAI12",
+        "name": "Unsafe Natural Language Data Gateways",
         "source_list": "DSGAI-2026",
-        "severity": "Medium",
+        "severity": "Critical",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Per-user or per-role credentials for the gateway"
+      },
+      {
+        "id": "DSGAI13",
+        "name": "Vector Store Platform Security",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
+        "tier": "Hardening",
+        "scope": "Both",
+        "notes": "Separate credentials per tenant or use row-level security"
+      },
+      {
+        "id": "DSGAI17",
+        "name": "Data Availability and Resilience Failures",
+        "source_list": "DSGAI-2026",
+        "severity": "High",
         "tier": "Hardening",
         "scope": "Both",
         "notes": "Separate credentials per pipeline stage"
