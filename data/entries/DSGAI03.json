@@ -698,21 +698,31 @@
     },
     {
       "framework": "OWASP NHI Top 10",
-      "control_id": "NHI-5",
-      "control_name": "Over-Privileged NHI",
+      "control_id": "NHI-2",
+      "control_name": "Secret Leakage",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Scope pipeline credentials to approved data sources only",
+      "notes": "Secret scanning that flags keys for unapproved AI providers",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
-      "control_id": "NHI-2",
-      "control_name": "Secret Leakage",
+      "control_id": "NHI-3",
+      "control_name": "Vulnerable Third-Party NHI",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Audit config files for embedded credentials",
+      "notes": "Review and approve third-party AI integrations before granting access",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP NHI Top 10",
+      "control_id": "NHI-10",
+      "control_name": "Human Use of NHI",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "Monitor service-credential use from interactive clients",
       "confidence": "unreviewed",
       "reviewed_by": []
     },

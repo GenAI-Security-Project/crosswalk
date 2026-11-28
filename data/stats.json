@@ -27,11 +27,11 @@
     }
   },
   "mappings": {
-    "total": 3793,
+    "total": 3819,
     "by_list": {
       "Agentic-Top10-2026": 1007,
       "AST-Top10-2026": 36,
-      "DSGAI-2026": 1771,
+      "DSGAI-2026": 1797,
       "LLM-Top10-2026": 979
     }
   },
@@ -71,8 +71,8 @@
     "confirmed": 0,
     "drafted": 35,
     "mappings_with_confirmed_evidence": 0,
-    "mappings_with_drafted_evidence_only": 31,
-    "orphan_failures": 5
+    "mappings_with_drafted_evidence_only": 36,
+    "orphan_failures": 4
   },
   "freshness": {
     "checked": 7,

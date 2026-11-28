@@ -676,21 +676,31 @@
     },
     {
       "framework": "OWASP NHI Top 10",
-      "control_id": "NHI-3",
-      "control_name": "Vulnerable Third-Party NHI",
+      "control_id": "NHI-6",
+      "control_name": "Insecure Credential Storage",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Review all third-party credentials; reduce to minimum",
+      "notes": "Use the platform's secure credential store",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
-      "control_id": "NHI-8",
-      "control_name": "Environment Isolation Failure",
+      "control_id": "NHI-7",
+      "control_name": "Long-Lived Credentials",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Enforce environment isolation for third-party credentials",
+      "notes": "Short-lived tokens with refresh",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP NHI Top 10",
+      "control_id": "NHI-10",
+      "control_name": "Human Use of NHI",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "A distinct identity for the assistant, recorded in audit trails",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
@@ -700,7 +710,7 @@
       "control_name": "Secret Leakage",
       "tier": "Foundational",
       "scope": "Both",
-      "notes": "Vault all third-party data source credentials",
+      "notes": "Exclude secret-bearing files and pages from assistant context",
       "confidence": "unreviewed",
       "reviewed_by": []
     },

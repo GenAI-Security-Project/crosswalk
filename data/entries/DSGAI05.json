@@ -686,11 +686,31 @@
     },
     {
       "framework": "OWASP NHI Top 10",
+      "control_id": "NHI-4",
+      "control_name": "Insecure Authentication",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "Require mTLS or token auth for all pipeline connections",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP NHI Top 10",
       "control_id": "NHI-5",
       "control_name": "Over-Privileged NHI",
-      "tier": "Hardening",
+      "tier": "Foundational",
       "scope": "Both",
-      "notes": "Minimum scope; no service account has guardrail disable capability",
+      "notes": "Per-stage credentials with minimum scope",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP NHI Top 10",
+      "control_id": "NHI-9",
+      "control_name": "NHI Reuse",
+      "tier": "Foundational",
+      "scope": "Both",
+      "notes": "Separate credentials per stage",
       "confidence": "unreviewed",
       "reviewed_by": []
     },

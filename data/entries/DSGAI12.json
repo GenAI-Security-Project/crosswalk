@@ -738,17 +738,27 @@
       "control_name": "Over-Privileged NHI",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Per-user quotas; minimum default quota",
+      "notes": "Run queries under the requesting user's identity, or a credential scoped to that user",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
     {
       "framework": "OWASP NHI Top 10",
-      "control_id": "NHI-7",
-      "control_name": "Long-Lived Credentials",
+      "control_id": "NHI-9",
+      "control_name": "NHI Reuse",
       "tier": "Hardening",
       "scope": "Both",
-      "notes": "Rotate API credentials; implement per-session tokens",
+      "notes": "Per-user or per-role credentials for the gateway",
+      "confidence": "unreviewed",
+      "reviewed_by": []
+    },
+    {
+      "framework": "OWASP NHI Top 10",
+      "control_id": "NHI-10",
+      "control_name": "Human Use of NHI",
+      "tier": "Hardening",
+      "scope": "Both",
+      "notes": "No human use of the gateway's service identity",
       "confidence": "unreviewed",
       "reviewed_by": []
     },
