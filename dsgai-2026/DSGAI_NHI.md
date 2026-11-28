@@ -149,7 +149,14 @@ cause damage proportional to the credential scope of the pipeline.
 
 ### DSGAI02 — Agent Identity & Credential Exposure
 
-This is the entry where the NHI Top 10 applies most directly: agents, tools and pipelines are non-human identities. Exposure comes from over-scoped agent tokens, credentials passed through prompts, tools or memory, identities shared across agents, and agents that call downstream systems with their own identity instead of the identity of the user who delegated the task. In that last case, the downstream system authorizes the agent rather than the user, so the user can reach data they are not entitled to.
+This is the entry where the NHI Top 10 applies most directly: agents,
+tools and pipelines are non-human identities. Exposure comes from
+over-scoped agent tokens, credentials passed through prompts, tools or
+memory, identities shared across agents, and agents that call downstream
+systems with their own identity instead of the identity of the user who
+delegated the task. In that last case, the downstream system authorizes
+the agent rather than the user, so the user can reach data they are not
+entitled to.
 
 Data access scope is a direct function of credential scope. This
 entry is the DSGAI expression of NHI-5 — it describes what happens
@@ -196,7 +203,10 @@ conditions for weight theft.
 
 ### DSGAI03 — Shadow AI & Unsanctioned Data Flows
 
-Shadow AI usually runs on credentials outside the identity inventory: personal API keys, ad hoc tokens for unsanctioned services and integrations that no one reviewed. Those credentials are what let data leave without visibility.
+Shadow AI usually runs on credentials outside the identity inventory:
+personal API keys, ad hoc tokens for unsanctioned services and
+integrations that no one reviewed. Those credentials are what let data
+leave without visibility.
 
 #### NHI mapping
 
@@ -368,7 +378,10 @@ regulatory audit trails.
 
 ### DSGAI09 — Multimodal Capture & Cross-Channel Data Leakage
 
-The NHI Top 10 applies only in part here: most of this risk sits in content handling, not identity. The NHI angle is the credentials of external services, such as OCR, transcription or image analysis, that receive multimodal content.
+The NHI Top 10 applies only in part here: most of this risk sits in
+content handling, not identity. The NHI angle is the credentials of
+external services, such as OCR, transcription or image analysis, that
+receive multimodal content.
 
 #### NHI mapping
 
@@ -384,7 +397,10 @@ The NHI Top 10 applies only in part here: most of this risk sits in content hand
 
 ### DSGAI10 — Synthetic Data, Anonymization & Transformation Pitfalls
 
-The NHI Top 10 applies only in part here. The NHI angle is environment separation: when test or development pipelines hold production credentials, they read real records where synthetic or de-identified data was intended.
+The NHI Top 10 applies only in part here. The NHI angle is environment
+separation: when test or development pipelines hold production
+credentials, they read real records where synthetic or de-identified
+data was intended.
 
 #### NHI mapping
 
@@ -424,7 +440,10 @@ cross-session attacks.
 
 ### DSGAI12 — Unsafe Natural-Language Data Gateways (LLM-to-SQL/Graph)
 
-A natural-language gateway usually runs every generated query under its own service identity. The database then sees one privileged caller and cannot apply the requesting user's permissions, so the scope of the gateway's credential becomes the scope of every user's query.
+A natural-language gateway usually runs every generated query under its
+own service identity. The database then sees one privileged caller and
+cannot apply the requesting user's permissions, so the scope of the
+gateway's credential becomes the scope of every user's query.
 
 #### NHI mapping
 
@@ -507,7 +526,9 @@ expand the attack surface for context poisoning.
 
 ### DSGAI16 — Endpoint & Browser Assistant Overreach
 
-Browser, IDE and desktop assistants hold tokens on the endpoint and often act with the user's own session. Their tokens are exposed to local compromise, and their actions are hard to tell apart from the user's.
+Browser, IDE and desktop assistants hold tokens on the endpoint and
+often act with the user's own session. Their tokens are exposed to local
+compromise, and their actions are hard to tell apart from the user's.
 
 #### NHI mapping
 
@@ -550,7 +571,9 @@ credentials amplify the blast radius of any single-stage failure.
 
 ### DSGAI18 — Inference & Data Reconstruction
 
-Reconstruction attacks need access, either query access at volume or read access to stored vectors. The scope and lifetime of those credentials decide whether such an attack is practical.
+Reconstruction attacks need access, either query access at volume or
+read access to stored vectors. The scope and lifetime of those
+credentials decide whether such an attack is practical.
 
 #### NHI mapping
 
@@ -568,7 +591,9 @@ Reconstruction attacks need access, either query access at volume or read access
 
 ### DSGAI19 — Human-in-the-Loop & Labeler Overexposure
 
-Labeling platforms and vendors reach raw data through tokens and shared accounts. Over-scoped vendor tokens, access left in place after a project ends and shared labeler accounts all widen exposure.
+Labeling platforms and vendors reach raw data through tokens and shared
+accounts. Over-scoped vendor tokens, access left in place after a
+project ends and shared labeler accounts all widen exposure.
 
 #### NHI mapping
 
@@ -610,7 +635,9 @@ extraction attack surface.
 
 ### DSGAI21 — Disinformation & Integrity Attacks via Data Poisoning
 
-Runtime disinformation enters through sources the system already trusts. The credentials that external feeds and connectors use to write into those sources decide who can change what the model treats as reliable.
+Runtime disinformation enters through sources the system already trusts.
+The credentials that external feeds and connectors use to write into
+those sources decide who can change what the model treats as reliable.
 
 #### NHI mapping
 
@@ -658,14 +685,7 @@ Runtime disinformation enters through sources the system already trusts. The cre
 | Version | Date | Change |
 |---|---|---|
 | 1.0.0 | 2026-03-27 | Initial release — full mapping DSGAI01–DSGAI21 to NHI Top 10 |
-
----
-
-## Changelog
-
-| Date | Version | Change | Author |
-|---|---|---|---|
-| 2026-11-27 | 2026-Q4 | Aligned headings with the DSGAI 2026 v1.0 taxonomy ([#444](https://github.com/GenAI-Security-Project/crosswalk/issues/444)): moved existing sections to the entries they address, added sections for DSGAI03, DSGAI09, DSGAI10, DSGAI12, DSGAI16, DSGAI18, DSGAI19 and DSGAI21 and new rows for DSGAI02, removed the section with no 2026 counterpart (Guardrail Circumvention) | Muyan Li |
+| 1.1.0 | 2026-11-27 | Aligned headings with the DSGAI 2026 v1.0 taxonomy ([#444](https://github.com/GenAI-Security-Project/crosswalk/issues/444)): moved existing sections to the entries they address, added sections for DSGAI03, DSGAI09, DSGAI10, DSGAI12, DSGAI16, DSGAI18, DSGAI19 and DSGAI21 and new rows for DSGAI02, removed the section with no 2026 counterpart (Guardrail Circumvention) |
 
 ---
 
